@@ -612,7 +612,7 @@ def syllabus_page(syl, sched, built):
 <div class="grid two grade-cards" style="margin-top:26px"><div class="card"><h3>Grading scale</h3><div class="scale">{scale}</div><p class="small muted scale-note">Out of 1,000 points. Grades are not rounded — 749.9 is an F.</p></div>
 <div class="card"><h3>Rules that matter</h3><ul>{"".join(f"<li>{html.escape(r)}</li>" for r in g["rules"])}<li><strong>Bonus:</strong> {html.escape(g["bonus"]["rule"])}</li></ul></div></div></div></section>
 <section class="section" id="calc"><div class="wrap"><p class="kicker">Grade calculator</p><h2>Where your grade stands</h2>
-<p class="muted">Tap a category, type your scores. Saved only in this browser.</p>
+<p class="muted">Enter scores as you get them. Saved only in this browser.</p>
 <div id="calcapp"></div>
 <script type="application/json" id="grade-data">{data}</script></div></section>
 <section class="section" id="final"><div class="wrap"><p class="kicker">The final</p><h2>What you need on the final</h2>
