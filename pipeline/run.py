@@ -122,6 +122,30 @@ def status():
         print(f"{lid:6} {lec.get('date', ''):11} {'yes' if slides_file(lid) else '-':7} {'yes' if (work / 'content.json').exists() else '-':8} {audit_s:6} {lec['title']}")
 
 
+LOCK = ROOT / "inputs" / "ORIGINALS.sha256"
+
+
+def originals():
+    """The files the professor gave (lectures, study guide, syllabus) are read-only sources.
+    Their fingerprints are recorded once; every run checks nothing has changed them."""
+    import hashlib
+    files = sorted(p for p in (ROOT / "inputs").rglob("*") if p.is_file() and p != LOCK and not p.name.startswith("."))
+    return {str(p.relative_to(ROOT)): hashlib.sha256(p.read_bytes()).hexdigest() for p in files}
+
+
+def check_originals():
+    now = originals()
+    known = dict(l.split("  ", 1)[::-1] for l in LOCK.read_text().splitlines() if l.strip()) if LOCK.exists() else {}
+    changed = [f for f in known if f in now and now[f] != known[f]] + [f for f in known if f not in now]
+    if changed:
+        sys.exit("STOP: these original course files were changed or removed:\n  " + "\n  ".join(changed) +
+                 "\nRestore them from the original upload before building.")
+    new = [f for f in now if f not in known]
+    if new:  # a newly added lecture/syllabus gets fingerprinted the first time it is seen
+        LOCK.write_text("".join(f"{h}  {f}\n" for f, h in sorted({**known, **{f: now[f] for f in new}}.items())))
+        print("Recorded fingerprints for new originals:", ", ".join(new))
+
+
 def setup():
     for lec in syllabus()["lectures"]:
         (ROOT / "inputs" / "lectures" / lec["id"]).mkdir(parents=True, exist_ok=True)
@@ -130,6 +154,7 @@ def setup():
 
 if __name__ == "__main__":
     arg = (sys.argv[1] if len(sys.argv) > 1 else "status").strip()
+    check_originals()
     if arg == "status":
         status()
     elif arg == "setup":

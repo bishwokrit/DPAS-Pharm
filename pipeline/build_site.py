@@ -87,11 +87,11 @@ def page(title, body, depth=0, nav_links="", sidekick=False, active="", subtitle
 {body}
 <footer class="site-foot"><div class="wrap">
 <div class="foot-grid"><div><span class="brand-mark" aria-hidden="true">Rx</span> <strong>{SITE_NAME}</strong>
-<p>An independent, student-made supplement for studying clinical pharmacology. It is not affiliated with, reviewed, or endorsed by any school, program, instructor, hospital, or publisher.</p>
-<p><strong>Use it alongside your course, not instead of it.</strong> Everything here was written carefully and checked against its sources, and it is built to help you learn faster and remember longer. But it is a study aid: you are responsible for learning the official course material and confirming anything here against your lectures, readings, and instructors before you rely on it.</p></div>
-<div><p><strong>How to read citations</strong><br>S12 = slide 12 · p. 17 = textbook page · SG = study guide · TB = textbook only</p>
-<p><strong>Privacy</strong><br>Your progress is saved only in this browser. The optional AI chat sends your question straight to Anthropic using your own key; nothing comes to this site.</p></div></div>
-<p class="foot-fine">Textbook references point to chapters and page numbers in <em>Katzung's Basic &amp; Clinical Pharmacology</em>, 16th ed. (McGraw Hill), for cross-reference only. Textbook content is summarized in the author's own words; no passages are reproduced, and this site is not affiliated with or endorsed by the authors or publisher. Slide and page numbers are given so you can find the original material yourself. All trademarks and copyrights belong to their respective owners. This site is for educational purposes only and is not medical advice.</p>
+<p>An independent, student-made study supplement. Not affiliated with or endorsed by any school, program, instructor, hospital, or publisher.</p>
+<p><strong>A supplement, not a substitute.</strong> Carefully checked against its sources, but you are responsible for learning the official course material and confirming details against your lectures and readings.</p></div>
+<div><p><strong>Citations</strong> S12 slide · p. 17 textbook page · SG study guide · TB textbook only</p>
+<p><strong>Privacy</strong> Progress stays in this browser. The optional AI chat goes straight to Anthropic on your own key.</p></div></div>
+<p class="foot-fine">Textbook references cite chapters and pages of <em>Katzung's Basic &amp; Clinical Pharmacology</em>, 16th ed. (McGraw Hill), for cross-reference only; content is summarized in the author's own words, no passages are reproduced, and there is no affiliation with the authors or publisher. Slide and page numbers help you find the original material. Trademarks and copyrights belong to their owners. Educational use only; not medical advice.</p>
 </div></footer>
 <div class="progress-bar" aria-hidden="true"></div>
 <script src="{up}assets/site.js"></script><script src="{up}assets/quizmode.js"></script>{f'<script type="module" src="{up}assets/sidekick.js"></script>' if sidekick else ""}
@@ -532,22 +532,41 @@ def syllabus_page(syl, sched, built):
         monday = date.fromordinal(d.toordinal() - d.weekday())
         weeks.setdefault(monday, []).append(it)
     kind_label = {"class": "Class", "exam": "Exam", "final": "Final", "quiz": "Quiz", "db": "Discussion", "case": "Case", "checkpoint": "Bonus"}
+    def short(it):
+        t = it["label"].split(" · ")[0]
+        k = it["kind"]
+        n = re.search(r"\d+", t)
+        n = n.group(0) if n else ""
+        return {"exam": (f"Exam {n}", f"E{n}"), "final": ("Final", "F"), "quiz": (f"Quiz {n}", f"Q{n}"), "db": (f"DB {n}", f"D{n}"),
+                "case": (f"Case {n}", f"C{n}"), "checkpoint": (f"CP {n}", f"CP{n}")}.get(k, (t, ""))
     wk_html = []
     for monday, its in weeks.items():
-        rows = []
-        for it in its:
-            label = html.escape(it["label"])
-            if it["kind"] == "class" and it.get("lec") in built:
-                label = f'<a href="../{it["lec"]}/index.html">{label}</a>'
-            title, _, detail = it["label"].partition(" · ") if it["kind"] != "class" else (it["label"], "", "")
-            if it["kind"] != "class":
-                label = f'<strong>{html.escape(title)}</strong>' + (f' <span class="muted">· {html.escape(detail)}</span>' if detail else "")
-            note = f'<div class="sch-note">⚠ {html.escape(it["note"])}</div>' if it.get("note") else ""
-            rows.append(f'<li class="sch-item k-{it["kind"]}" data-kind="{it["kind"]}" data-date="{it["date"]}">'
-                        f'<span class="sch-date">{date.fromisoformat(it["date"]).strftime("%a")}<b>{date.fromisoformat(it["date"]).strftime("%-d")}</b></span>'
-                        f'<span class="sch-kind">{kind_label[it["kind"]]}</span><span class="sch-label">{label}{note}</span></li>')
-        wk_html.append(f'<div class="sch-week" data-week="{monday.isoformat()}" data-end="{date.fromordinal(monday.toordinal() + 6).isoformat()}">'
-                       f'<div class="sch-wk-head">Week of {monday.strftime("%b %-d")}</div><ul>{"".join(rows)}</ul></div>')
+        days = []
+        for i in range(5):
+            d = date.fromordinal(monday.toordinal() + i)
+            day = [it for it in its if it["date"] == d.isoformat()]
+            cls = next((it for it in day if it["kind"] == "class"), None)
+            topic = ""
+            if cls:
+                t = cls["label"]
+                topic = f'<span class="cal-topic{" off" if t.lower().startswith("no class") else ""}">{html.escape(re.sub(r"^Unit \d+: ", "", t))}</span>'
+            pills = "".join(f'<span class="cal-pill k-{it["kind"]}" data-kind="{it["kind"]}"><span class="lg">{html.escape(short(it)[0])}</span><span class="sh">{html.escape(short(it)[1])}</span>{"<i>!</i>" if it.get("note") else ""}</span>'
+                            for it in day if it["kind"] != "class")
+            rows = []
+            for it in day:
+                label = html.escape(it["label"])
+                if it["kind"] == "class" and it.get("lec") in built:
+                    label = f'<a href="../{it["lec"]}/index.html">{label} →</a>'
+                elif it["kind"] != "class":
+                    title, _, detail = it["label"].partition(" · ")
+                    label = f'<strong>{html.escape(title)}</strong>' + (f'<span class="muted"> · {html.escape(detail)}</span>' if detail else "")
+                note = f'<div class="sch-note">{html.escape(it["note"])}</div>' if it.get("note") else ""
+                rows.append(f'<li class="k-{it["kind"]}" data-kind="{it["kind"]}"><span class="cal-dot"></span><div>{label}{note}</div></li>')
+            days.append(f'<button class="cal-day{"" if day else " empty"}" data-date="{d.isoformat()}" {"" if day else "disabled"}>'
+                        f'<span class="cal-num"><small>{d.strftime("%a")}</small>{d.strftime("%-d")}</span>{topic}<span class="cal-pills">{pills}</span>'
+                        f'<template><div class="cal-dh">{d.strftime("%A, %B %-d")}</div><ul>{"".join(rows)}</ul></template></button>')
+        wk_html.append(f'<div class="cal-week" data-week="{monday.isoformat()}" data-end="{date.fromordinal(monday.toordinal() + 6).isoformat()}">'
+                       f'<div class="cal-wk">{monday.strftime("%b %-d")}</div><div class="cal-days">{"".join(days)}</div><div class="cal-detail" hidden></div></div>')
     chips = "".join(f'<button class="sch-chip{" on" if k == "all" else ""}" data-filter="{k}">{lbl}</button>'
                     for k, lbl in [("all", "All"), ("exam", "Exams"), ("quiz", "Quizzes"), ("db", "Discussions"), ("case", "Cases"), ("checkpoint", "Bonus"), ("class", "Classes")])
     legend = "".join(f'<li data-key="{it["key"]}" style="--c:var(--c-{it["key"]})"><span class="lg-dot"></span><span class="lg-name">{html.escape(it["label"])}</span>'
@@ -590,8 +609,8 @@ def syllabus_page(syl, sched, built):
 <section class="section" id="final"><div class="wrap"><p class="kicker">The final</p><h2>What you need on the final</h2>
 <div id="finalapp"></div></div></section>
 <section class="section" id="schedule"><div class="wrap"><p class="kicker">Schedule</p><h2>Week by week</h2><p class="muted">From the course syllabus; subject to revision. Any material covered in lecture or assigned as reading is testable.</p>
-<div class="sch-chips noprint">{chips}</div><details class="sch-past noprint" id="sch-past" hidden><summary>Show past weeks</summary><div id="sch-past-list"></div></details>
-<div class="sch-list" id="sch-list">{"".join(wk_html)}</div>
+<div class="sch-chips noprint">{chips}</div>
+<div class="cal" id="sch-list"><div class="cal-head"><span></span><div class="cal-days">{"".join(f"<span>{d}</span>" for d in ["Mon", "Tue", "Wed", "Thu", "Fri"])}</div></div>{"".join(wk_html)}</div>
 <p class="small muted">DB = discussion board · PTX = pharmacotherapy · Bonus = optional checkpoint quiz (Brightspace, 2 attempts).</p></div></section>
 <section class="section" id="units"><div class="wrap"><p class="kicker">Units</p><h2>Readings &amp; objectives</h2><div class="grid two">{"".join(units)}</div></div></section>
 <section class="section" id="outcomes"><div class="wrap narrow"><p class="kicker">Outcomes</p><h2>Course goal &amp; outcomes</h2>

@@ -64,8 +64,8 @@
         <button class="pc-clear" data-clear>Clear</button></div>`;
     if (froot) froot.innerHTML = `<div class="fn-cards" id="fn-cards"></div>
       <div class="fn-try"><div class="fn-res"><span class="fn-score" id="fn-score">—</span><span class="fn-arrow">→</span><span class="fn-letter" id="fn-letter">—</span></div>
-        <div class="fn-range"><div class="fn-fill" id="fn-fill"></div><div class="fn-min" title="75% minimum to pass"></div><input type="range" min="0" max="100" step="1" id="fn-in" aria-label="Try a final exam score"></div>
-        <div class="fn-scale"><span>0</span><span style="left:75%">75 min</span><span>100</span></div>
+        <div class="fn-range"><div class="fn-zones" id="fn-zones"></div><div class="fn-bubble" id="fn-bubble"></div><input type="range" min="0" max="100" step="1" id="fn-in" aria-label="Try a final exam score"></div>
+        <div class="fn-scale"><span>0</span><span style="left:75%">75</span><span>100</span></div>
         <label class="fn-real">Already took it?<input type="number" inputmode="decimal" min="0" max="100" step="0.1" placeholder="Score" aria-label="Final exam percent" data-k="final" data-i="0"></label></div>`;
 
     const all = document.querySelectorAll("#calcapp input[data-k], #finalapp input[data-k]");
@@ -144,7 +144,16 @@
       fin.disabled = hasFinal; fin.value = tryF;
       froot.querySelector("#fn-score").textContent = `${Math.round(tryF * 10) / 10}%`;
       const le = froot.querySelector("#fn-letter"); le.textContent = fl; le.style.color = LC[fl];
-      const fill = froot.querySelector("#fn-fill"); fill.style.width = `${tryF}%`; fill.style.background = LC[fl];
+      // zones: the range of final scores that lands each letter (below 75 is always F)
+      let lo = 0, zones = "";
+      const cuts = [["F", 0]].concat([...ticks].reverse().map(([L, min]) => [L, Math.max(75, ((min - projNoFinal - bonus) / final.points_each) * 100)]));
+      cuts.forEach(([L, start], i) => {
+        const a = Math.min(100, Math.max(lo, start)), b = Math.min(100, i + 1 < cuts.length ? Math.max(a, cuts[i + 1][1]) : 100);
+        if (b > a) zones += `<span class="fn-zone${L === fl ? " on" : ""}" style="left:${a}%;width:${b - a}%;--lc:${LC[L]}"><b>${L}</b></span>`;
+        lo = b;
+      });
+      froot.querySelector("#fn-zones").innerHTML = zones;
+      const bub = froot.querySelector("#fn-bubble"); bub.style.left = `${tryF}%`; bub.textContent = Math.round(tryF);
       froot.querySelector(".fn-try").style.setProperty("--lc", LC[fl]);
     }
     calc();
@@ -163,26 +172,34 @@
     }).join("") : '<p class="muted">Nothing left — the course is done.</p>';
   }
 
-  // ---------------------------------------------------------------- schedule: today marker, past weeks folded, filters
-  const list = document.getElementById("sch-list");
-  if (list) {
-    const past = [...list.querySelectorAll(".sch-week")].filter((w) => w.dataset.end < iso);
-    if (past.length) {
-      const box = document.getElementById("sch-past");
-      box.hidden = false;
-      box.querySelector("summary").textContent = `Show ${past.length} past week${past.length > 1 ? "s" : ""}`;
-      past.forEach((w) => document.getElementById("sch-past-list").append(w));
+  // ---------------------------------------------------------------- schedule: Mon–Fri calendar, tap a day for details, filters
+  const cal = document.getElementById("sch-list");
+  if (cal) {
+    const days = [...cal.querySelectorAll(".cal-day")];
+    days.forEach((d) => { if (d.dataset.date < iso) d.classList.add("past"); if (d.dataset.date === iso) d.classList.add("today"); });
+    cal.querySelectorAll(".cal-week").forEach((w) => { if (w.dataset.week <= iso && iso <= w.dataset.end) w.classList.add("this-week"); });
+    const pick = (d, scroll) => {
+      cal.querySelectorAll(".cal-day.sel").forEach((x) => x.classList.remove("sel"));
+      cal.querySelectorAll(".cal-detail").forEach((x) => { x.hidden = true; x.innerHTML = ""; });
+      if (!d) return;
+      d.classList.add("sel");
+      const box = d.closest(".cal-week").querySelector(".cal-detail");
+      box.innerHTML = d.querySelector("template").innerHTML; box.hidden = false;
+      applyFilter();
+      if (scroll) box.scrollIntoView({ block: "nearest", behavior: calm ? "auto" : "smooth" });
+    };
+    days.forEach((d) => d.addEventListener("click", () => pick(d.classList.contains("sel") ? null : d, true)));
+    let filter = "all";
+    const match = (k) => filter === "all" || k === filter || (filter === "exam" && k === "final");
+    function applyFilter() {
+      cal.querySelectorAll("[data-kind]").forEach((el) => el.classList.toggle("dim", !match(el.dataset.kind)));
+      days.forEach((d) => d.classList.toggle("dim", filter !== "all" && ![...d.querySelectorAll(".cal-pill")].some((p) => match(p.dataset.kind)) && !(filter === "class" && d.querySelector(".cal-topic"))));
     }
-    document.querySelectorAll(".sch-item").forEach((li) => {
-      if (li.dataset.date < iso) li.classList.add("past");
-      if (li.dataset.date === iso) li.classList.add("today");
-    });
-    document.querySelectorAll(".sch-week").forEach((w) => { if (w.dataset.week <= iso && iso <= w.dataset.end) w.classList.add("this-week"); });
-    document.querySelectorAll(".sch-chip").forEach((b) => b.addEventListener("click", () => {
-      document.querySelectorAll(".sch-chip").forEach((x) => x.classList.toggle("on", x === b));
-      const f = b.dataset.filter;
-      document.querySelectorAll(".sch-item").forEach((li) => li.classList.toggle("hide", f !== "all" && !(li.dataset.kind === f || (f === "exam" && li.dataset.kind === "final"))));
-      document.querySelectorAll(".sch-week").forEach((w) => w.classList.toggle("hide", !w.querySelector(".sch-item:not(.hide)")));
+    document.querySelectorAll(".sch-chip[data-filter]").forEach((b) => b.addEventListener("click", () => {
+      document.querySelectorAll(".sch-chip[data-filter]").forEach((x) => x.classList.toggle("on", x === b));
+      filter = b.dataset.filter; applyFilter();
     }));
+    // open on today, or the next day that has something on it
+    pick(days.find((d) => !d.disabled && d.dataset.date >= iso), false);
   }
 })();
