@@ -58,6 +58,18 @@ in the browser. **AI chat** is optional: each person pastes their own Anthropic 
 Sidekick → Ask → "Turn on AI chat". The key stays in that browser and goes only to Anthropic.
 Claude answers only from the lecture's cited source.
 
+**Highlight anything** in a study guide to get a small toolbar: Explain, Source (shows the actual
+slide, speaker notes, textbook page, or study-guide item), Quiz me, Card (make your own flashcard),
+Save (keeps the highlight; it collects in Sidekick → Notes), and Copy (copies with its citation).
+Hover any citation like `S23` to preview the slide, or click it to see the full source.
+
+**Focus quizzes:** "Start focus quiz" (self-test), "Full screen" (Sidekick quiz), and "Start focus
+session" (practice exam) open a distraction-free, full-screen quiz. Study mode shows explanations as
+you go; Timed mode gives 1 minute per question (PANCE pace) and shows results at the end. Every
+session ends with a debrief: score, time, weakest topics with "Study →" links, every miss, and
+suggestions. Remote rings and keyboards: ↑/↓ choose · Enter lock in · → next · ← back · F flag ·
+Esc exit (rings that act as a mouse wheel also work).
+
 **Sharing with classmates:** just send the website link. Everyone's progress is private to their
 own browser, and the footer says it's an unofficial student-made aid. The textbook PDF and its
 extracted text are never put on the website or in this repo.

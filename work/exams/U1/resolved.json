@@ -60,6 +60,10 @@
     "why": "After 1 half-life, 50% is eliminated.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L02/index.html#pk-calculations-half-life-steady-state-clearance",
+   "label": "Study this: L02 · Part 3 →"
   }
  },
  {
@@ -123,6 +127,10 @@
     "why": "Inhibiting the CYP that clears the substrate raises its level — always check CYP interactions before adding a drug; one of the most preventable causes of toxicity.",
     "correct": true
    }
+  },
+  "link": {
+   "href": "../../L02/index.html#drug-metabolism-cyp450-interactions",
+   "label": "Study this: L02 · Part 1 →"
   }
  },
  {
@@ -187,6 +195,10 @@
     "why": "It is a key screening consideration.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L02/index.html#pharmacogenomics",
+   "label": "Study this: L02 · Part 4 →"
   }
  },
  {
@@ -250,6 +262,10 @@
     "why": "IV drugs are still metabolized; they skip absorption and first-pass.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L01/index.html#pharmacokinetics-adme-absorption-distribution",
+   "label": "Study this: L01 · Part 5 →"
   }
  },
  {
@@ -311,6 +327,10 @@
     "why": "Vd relates total drug in the body to plasma concentration; a high Vd suggests extensive tissue distribution.",
     "correct": true
    }
+  },
+  "link": {
+   "href": "../../L01/index.html#pharmacokinetics-adme-absorption-distribution",
+   "label": "Study this: L01 · Part 5 →"
   }
  },
  {
@@ -372,6 +392,10 @@
     "why": "Not every drug needs Phase I.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L02/index.html#drug-metabolism-cyp450-interactions",
+   "label": "Study this: L02 · Part 1 →"
   }
  },
  {
@@ -433,6 +457,10 @@
     "why": "Names have no PK effect.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L02/index.html#pk-calculations-half-life-steady-state-clearance",
+   "label": "Study this: L02 · Part 3 →"
   }
  },
  {
@@ -496,6 +524,10 @@
     "why": "Variation alters metabolism, transport, targets, and response.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L02/index.html#pharmacogenomics",
+   "label": "Study this: L02 · Part 4 →"
   }
  },
  {
@@ -557,6 +589,10 @@
     "why": "A minor route that matters in lactation.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L02/index.html#drug-excretion-renal-dosing",
+   "label": "Study this: L02 · Part 2 →"
   }
  },
  {
@@ -620,6 +656,10 @@
     "why": "A narrow TI means a SMALLER safety margin.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L01/index.html#dose-response-relationships",
+   "label": "Study this: L01 · Part 4 →"
   }
  },
  {
@@ -681,6 +721,10 @@
     "why": "MedWatch is about safety signals, not names.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L01/index.html#drug-development-regulation",
+   "label": "Study this: L01 · Part 2 →"
   }
  },
  {
@@ -744,6 +788,10 @@
     "why": "This checklist is the clinical decision-making framework from 'Putting It All Together.'",
     "correct": true
    }
+  },
+  "link": {
+   "href": "../../L02/index.html#putting-it-all-together-clinical-decision-making",
+   "label": "Study this: L02 · Part 5 →"
   }
  },
  {
@@ -805,6 +853,10 @@
     "why": "Phase I — functionalization: oxidation, reduction, hydrolysis; primarily by CYP450 enzymes.",
     "correct": true
    }
+  },
+  "link": {
+   "href": "../../L02/index.html#drug-metabolism-cyp450-interactions",
+   "label": "Study this: L02 · Part 1 →"
   }
  },
  {
@@ -866,6 +918,10 @@
     "why": "Highly perfused — they receive drug fastest.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L01/index.html#pharmacokinetics-adme-absorption-distribution",
+   "label": "Study this: L01 · Part 5 →"
   }
  },
  {
@@ -927,6 +983,10 @@
     "why": "Receptors: G-protein-coupled, ligand-gated ion channel, enzyme-linked, nuclear.",
     "correct": true
    }
+  },
+  "link": {
+   "href": "../../L01/index.html#pharmacodynamics-targets-receptors",
+   "label": "Study this: L01 · Part 3 →"
   }
  },
  {
@@ -988,6 +1048,10 @@
     "why": "IM is systemic and good for depot forms.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L01/index.html#pharmacokinetics-adme-absorption-distribution",
+   "label": "Study this: L01 · Part 5 →"
   }
  },
  {
@@ -1050,6 +1114,10 @@
     "why": "Reduced clearance does the opposite.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L02/index.html#pk-calculations-half-life-steady-state-clearance",
+   "label": "Study this: L02 · Part 3 →"
   }
  },
  {
@@ -1113,6 +1181,10 @@
     "why": "FDA review is a regulatory step, not a trial phase.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L01/index.html#drug-development-regulation",
+   "label": "Study this: L01 · Part 2 →"
   }
  },
  {
@@ -1174,6 +1246,10 @@
     "why": "Listed: activate a prodrug.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L02/index.html#drug-metabolism-cyp450-interactions",
+   "label": "Study this: L02 · Part 1 →"
   }
  },
  {
@@ -1238,6 +1314,10 @@
     "why": "That is the HLA-B*5801–allopurinol example.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L02/index.html#pharmacogenomics",
+   "label": "Study this: L02 · Part 4 →"
   }
  },
  {
@@ -1299,6 +1379,10 @@
     "why": "It is one of the four listed distribution factors.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L01/index.html#pharmacokinetics-adme-absorption-distribution",
+   "label": "Study this: L01 · Part 5 →"
   }
  },
  {
@@ -1362,6 +1446,10 @@
     "why": "Vd describes distribution, not the fraction absorbed.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L01/index.html#pharmacokinetics-adme-absorption-distribution",
+   "label": "Study this: L01 · Part 5 →"
   }
  },
  {
@@ -1423,6 +1511,10 @@
     "why": "Efficacy matters much more clinically.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L01/index.html#dose-response-relationships",
+   "label": "Study this: L01 · Part 4 →"
   }
  },
  {
@@ -1484,6 +1576,10 @@
     "why": "Metabolism and excretion are the clearing steps.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L02/index.html#putting-it-all-together-clinical-decision-making",
+   "label": "Study this: L02 · Part 5 →"
   }
  },
  {
@@ -1547,6 +1643,10 @@
     "why": "Transporters are carrier proteins that move substances.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L01/index.html#pharmacodynamics-targets-receptors",
+   "label": "Study this: L01 · Part 3 →"
   }
  },
  {
@@ -1610,6 +1710,10 @@
     "why": "There is one generic name per drug, regardless of manufacturer.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L01/index.html#the-language-of-pharmacology",
+   "label": "Study this: L01 · Part 1 →"
   }
  },
  {
@@ -1671,6 +1775,10 @@
     "why": "These describe absorption.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L02/index.html#drug-excretion-renal-dosing",
+   "label": "Study this: L02 · Part 2 →"
   }
  },
  {
@@ -1734,6 +1842,10 @@
     "why": "That is at 30 hours (5 half-lives).",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L02/index.html#pk-calculations-half-life-steady-state-clearance",
+   "label": "Study this: L02 · Part 3 →"
   }
  },
  {
@@ -1795,6 +1907,10 @@
     "why": "Synthetic sources are designed small molecules (and recombinant proteins via biotech).",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L01/index.html#drug-development-regulation",
+   "label": "Study this: L01 · Part 2 →"
   }
  },
  {
@@ -1856,6 +1972,10 @@
     "why": "Heparin was named for the subcutaneous route.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L01/index.html#pharmacokinetics-adme-absorption-distribution",
+   "label": "Study this: L01 · Part 5 →"
   }
  },
  {
@@ -1917,6 +2037,10 @@
     "why": "Binding to the target starts signal transduction.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L01/index.html#pharmacodynamics-targets-receptors",
+   "label": "Study this: L01 · Part 3 →"
   }
  },
  {
@@ -1978,6 +2102,10 @@
     "why": "Important for some large or protein-bound drugs.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L02/index.html#drug-excretion-renal-dosing",
+   "label": "Study this: L02 · Part 2 →"
   }
  },
  {
@@ -2041,6 +2169,10 @@
     "why": "Reversed — the toxic dose goes on top.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L01/index.html#dose-response-relationships",
+   "label": "Study this: L01 · Part 4 →"
   }
  },
  {
@@ -2102,6 +2234,10 @@
     "why": "That is volume of distribution.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L02/index.html#pk-calculations-half-life-steady-state-clearance",
+   "label": "Study this: L02 · Part 3 →"
   }
  },
  {
@@ -2165,6 +2301,10 @@
     "why": "HLA-B*5801 affects allopurinol reactions.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L02/index.html#pharmacogenomics",
+   "label": "Study this: L02 · Part 4 →"
   }
  },
  {
@@ -2228,6 +2368,10 @@
     "why": "Portal circulation carries the drug TO the liver.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L01/index.html#pharmacokinetics-adme-absorption-distribution",
+   "label": "Study this: L01 · Part 5 →"
   }
  },
  {
@@ -2289,6 +2433,10 @@
     "why": "Reversed.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L02/index.html#pk-calculations-half-life-steady-state-clearance",
+   "label": "Study this: L02 · Part 3 →"
   }
  },
  {
@@ -2351,6 +2499,10 @@
     "why": "A drug can have pharmacologic effects that are not therapeutic — that is often exactly what an adverse effect is.",
     "correct": true
    }
+  },
+  "link": {
+   "href": "../../L01/index.html#the-language-of-pharmacology",
+   "label": "Study this: L01 · Part 1 →"
   }
  },
  {
@@ -2415,6 +2567,10 @@
     "why": "All oral doses go GI → portal circulation → liver first.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L01/index.html#pharmacokinetics-adme-absorption-distribution",
+   "label": "Study this: L01 · Part 5 →"
   }
  },
  {
@@ -2476,6 +2632,10 @@
     "why": "Highly perfused organs (brain, heart, kidney) receive drug faster than poorly perfused tissue (fat, bone).",
     "correct": true
    }
+  },
+  "link": {
+   "href": "../../L01/index.html#pharmacokinetics-adme-absorption-distribution",
+   "label": "Study this: L01 · Part 5 →"
   }
  },
  {
@@ -2538,6 +2698,10 @@
     "why": "Reduced renal clearance raises exposure; respond with a lower dose, a longer interval, or both, guided by eGFR/CrCl.",
     "correct": true
    }
+  },
+  "link": {
+   "href": "../../L02/index.html#drug-excretion-renal-dosing",
+   "label": "Study this: L02 · Part 2 →"
   }
  },
  {
@@ -2599,6 +2763,10 @@
     "why": "Albuterol acts on the β2 receptor and causes relaxation.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L01/index.html#pharmacodynamics-targets-receptors",
+   "label": "Study this: L01 · Part 3 →"
   }
  },
  {
@@ -2662,6 +2830,10 @@
     "why": "Higher Emax = more efficacious, not more potent.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L01/index.html#dose-response-relationships",
+   "label": "Study this: L01 · Part 4 →"
   }
  },
  {
@@ -2723,6 +2895,10 @@
     "why": "Vd, not bioavailability, pairs with clearance.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L02/index.html#pk-calculations-half-life-steady-state-clearance",
+   "label": "Study this: L02 · Part 3 →"
   }
  },
  {
@@ -2786,6 +2962,10 @@
     "why": "Baseline is the comparison point, not the risk.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L02/index.html#drug-metabolism-cyp450-interactions",
+   "label": "Study this: L02 · Part 1 →"
   }
  },
  {
@@ -2849,6 +3029,10 @@
     "why": "Reporting is both voluntary and mandatory.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L01/index.html#drug-development-regulation",
+   "label": "Study this: L01 · Part 2 →"
   }
  },
  {
@@ -2913,6 +3097,10 @@
     "why": "CKD reduces renal clearance, raising the drug's concentration and prolonging its half-life regardless of the new drug.",
     "correct": true
    }
+  },
+  "link": {
+   "href": "../../L01/index.html#drug-development-regulation",
+   "label": "Study this: L01 · Part 2 →"
   }
  },
  {
@@ -2974,6 +3162,10 @@
     "why": "NAPQI (from acetaminophen) is the textbook example of a toxic metabolite produced by normal Phase I metabolism.",
     "correct": true
    }
+  },
+  "link": {
+   "href": "../../L02/index.html#drug-metabolism-cyp450-interactions",
+   "label": "Study this: L02 · Part 1 →"
   }
  },
  {
@@ -3035,6 +3227,10 @@
     "why": "Generic = the official, non-proprietary name of the active drug.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L01/index.html#the-language-of-pharmacology",
+   "label": "Study this: L01 · Part 1 →"
   }
  },
  {
@@ -3096,6 +3292,10 @@
     "why": "The lungs clear volatile agents.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L02/index.html#drug-excretion-renal-dosing",
+   "label": "Study this: L02 · Part 2 →"
   }
  },
  {
@@ -3157,6 +3357,10 @@
     "why": "Fatty-tissue drug is distributed, not the active plasma fraction.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L01/index.html#pharmacokinetics-adme-absorption-distribution",
+   "label": "Study this: L01 · Part 5 →"
   }
  },
  {
@@ -3221,6 +3425,10 @@
     "why": "Narrow TI: effective and toxic doses are close — careful dosing and often blood-level monitoring.",
     "correct": true
    }
+  },
+  "link": {
+   "href": "../../L01/index.html#dose-response-relationships",
+   "label": "Study this: L01 · Part 4 →"
   }
  },
  {
@@ -3284,6 +3492,10 @@
     "why": "Irreversible antagonism would not be overcome by raising the dose.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L02/index.html#putting-it-all-together-clinical-decision-making",
+   "label": "Study this: L02 · Part 5 →"
   }
  },
  {
@@ -3347,6 +3559,10 @@
     "why": "Phase I = safety, tolerability, dose-finding in a small group of healthy volunteers.",
     "correct": true
    }
+  },
+  "link": {
+   "href": "../../L01/index.html#drug-development-regulation",
+   "label": "Study this: L01 · Part 2 →"
   }
  },
  {
@@ -3410,6 +3626,10 @@
     "why": "6.25% remains after 4 half-lives.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L02/index.html#pk-calculations-half-life-steady-state-clearance",
+   "label": "Study this: L02 · Part 3 →"
   }
  },
  {
@@ -3473,6 +3693,10 @@
     "why": "Lithium was named as narrow-TI.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L01/index.html#pharmacokinetics-adme-absorption-distribution",
+   "label": "Study this: L01 · Part 5 →"
   }
  },
  {
@@ -3538,6 +3762,10 @@
     "why": "Exposure is already increased; adjust and monitor closely.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L01/index.html#pharmacodynamics-targets-receptors",
+   "label": "Study this: L01 · Part 3 →"
   }
  },
  {
@@ -3599,6 +3827,10 @@
     "why": "That is a receptor concept, not a dosing harm.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L01/index.html#the-language-of-pharmacology",
+   "label": "Study this: L01 · Part 1 →"
   }
  },
  {
@@ -3660,6 +3892,10 @@
     "why": "Drug repurposing = an existing approved drug found to treat a new condition.",
     "correct": true
    }
+  },
+  "link": {
+   "href": "../../L01/index.html#drug-development-regulation",
+   "label": "Study this: L01 · Part 2 →"
   }
  },
  {
@@ -3721,6 +3957,10 @@
     "why": "CYP450 is Phase I.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L02/index.html#drug-metabolism-cyp450-interactions",
+   "label": "Study this: L02 · Part 1 →"
   }
  },
  {
@@ -3782,6 +4022,10 @@
     "why": "That is filtration, which adds drug to the tubule.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L02/index.html#drug-excretion-renal-dosing",
+   "label": "Study this: L02 · Part 2 →"
   }
  },
  {
@@ -3845,6 +4089,10 @@
     "why": "Lower dose for the same effect = greater potency; same Emax = equal efficacy. Potency and efficacy are independent.",
     "correct": true
    }
+  },
+  "link": {
+   "href": "../../L01/index.html#dose-response-relationships",
+   "label": "Study this: L01 · Part 4 →"
   }
  },
  {
@@ -3906,6 +4154,10 @@
     "why": "IV: 100% bioavailable, immediate onset, no absorption phase.",
     "correct": true
    }
+  },
+  "link": {
+   "href": "../../L01/index.html#pharmacokinetics-adme-absorption-distribution",
+   "label": "Study this: L01 · Part 5 →"
   }
  },
  {
@@ -3969,6 +4221,10 @@
     "why": "Those are pharmacogenomics and toxicology.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L01/index.html#the-language-of-pharmacology",
+   "label": "Study this: L01 · Part 1 →"
   }
  },
  {
@@ -4032,6 +4288,10 @@
     "why": "Propranolol was named for first-pass effect, not narrow TI.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L01/index.html#dose-response-relationships",
+   "label": "Study this: L01 · Part 4 →"
   }
  },
  {
@@ -4095,6 +4355,10 @@
     "why": "Potency affects dosing, not effectiveness in practice.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L01/index.html#drug-development-regulation",
+   "label": "Study this: L01 · Part 2 →"
   }
  },
  {
@@ -4156,6 +4420,10 @@
     "why": "Phase II targets excretion, not Vd.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L02/index.html#drug-metabolism-cyp450-interactions",
+   "label": "Study this: L02 · Part 1 →"
   }
  },
  {
@@ -4219,6 +4487,10 @@
     "why": "Listed.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L02/index.html#putting-it-all-together-clinical-decision-making",
+   "label": "Study this: L02 · Part 5 →"
   }
  },
  {
@@ -4282,6 +4554,10 @@
     "why": "Partial agonists activate submaximally.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L01/index.html#pharmacodynamics-targets-receptors",
+   "label": "Study this: L01 · Part 3 →"
   }
  },
  {
@@ -4344,6 +4620,10 @@
     "why": "Inflamed meninges are the stated exception.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L01/index.html#pharmacokinetics-adme-absorption-distribution",
+   "label": "Study this: L01 · Part 5 →"
   }
  },
  {
@@ -4407,6 +4687,10 @@
     "why": "That describes a loading dose reaching target.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L02/index.html#pk-calculations-half-life-steady-state-clearance",
+   "label": "Study this: L02 · Part 3 →"
   }
  },
  {
@@ -4469,6 +4753,10 @@
     "why": "Propranolol was named for first-pass effect.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L02/index.html#drug-excretion-renal-dosing",
+   "label": "Study this: L02 · Part 2 →"
   }
  },
  {
@@ -4533,6 +4821,10 @@
     "why": "Induction lowers, not raises, the level.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L02/index.html#drug-metabolism-cyp450-interactions",
+   "label": "Study this: L02 · Part 1 →"
   }
  },
  {
@@ -4594,6 +4886,10 @@
     "why": "A loading dose reaches the therapeutic target immediately instead of waiting ~4–5 half-lives.",
     "correct": true
    }
+  },
+  "link": {
+   "href": "../../L02/index.html#pk-calculations-half-life-steady-state-clearance",
+   "label": "Study this: L02 · Part 3 →"
   }
  },
  {
@@ -4657,6 +4953,10 @@
     "why": "Irreversible antagonists inactivate receptors until new ones are made.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L01/index.html#pharmacodynamics-targets-receptors",
+   "label": "Study this: L01 · Part 3 →"
   }
  },
  {
@@ -4718,6 +5018,10 @@
     "why": "A therapeutic effect is intended and beneficial.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L01/index.html#the-language-of-pharmacology",
+   "label": "Study this: L01 · Part 1 →"
   }
  },
  {
@@ -4779,6 +5083,10 @@
     "why": "Reabsorption moves drug back into the blood.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L02/index.html#drug-excretion-renal-dosing",
+   "label": "Study this: L02 · Part 2 →"
   }
  },
  {
@@ -4843,6 +5151,10 @@
     "why": "Not the concern described.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L01/index.html",
+   "label": "Study this: L01 →"
   }
  },
  {
@@ -4904,6 +5216,10 @@
     "why": "Clearance down → half-life up → time to steady state up → accumulation risk up if the regimen isn't adjusted.",
     "correct": true
    }
+  },
+  "link": {
+   "href": "../../L02/index.html#pk-calculations-half-life-steady-state-clearance",
+   "label": "Study this: L02 · Part 3 →"
   }
  },
  {
@@ -4967,6 +5283,10 @@
     "why": "A true antagonist blocks the agonist without lowering baseline itself.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L01/index.html#pharmacodynamics-targets-receptors",
+   "label": "Study this: L01 · Part 3 →"
   }
  },
  {
@@ -5030,6 +5350,10 @@
     "why": "TPMT affects thiopurine toxicity.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L02/index.html#pharmacogenomics",
+   "label": "Study this: L02 · Part 4 →"
   }
  },
  {
@@ -5091,6 +5415,10 @@
     "why": "These properties cross the BBB poorly.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L01/index.html#pharmacokinetics-adme-absorption-distribution",
+   "label": "Study this: L01 · Part 5 →"
   }
  },
  {
@@ -5155,6 +5483,10 @@
     "why": "Effect size at the receptor is PD; bioavailability is about how much drug arrives — PK.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L01/index.html#pharmacokinetics-adme-absorption-distribution",
+   "label": "Study this: L01 · Part 5 →"
   }
  },
  {
@@ -5217,6 +5549,10 @@
     "why": "Transdermal is listed among routes that bypass first-pass.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L01/index.html#pharmacokinetics-adme-absorption-distribution",
+   "label": "Study this: L01 · Part 5 →"
   }
  },
  {
@@ -5280,6 +5616,10 @@
     "why": "Bioavailability (F) is a PK parameter.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L01/index.html#dose-response-relationships",
+   "label": "Study this: L01 · Part 4 →"
   }
  },
  {
@@ -5341,6 +5681,10 @@
     "why": "Subcutaneous (SC): slower, steady absorption; common for insulin, heparin.",
     "correct": true
    }
+  },
+  "link": {
+   "href": "../../L01/index.html#pharmacokinetics-adme-absorption-distribution",
+   "label": "Study this: L01 · Part 5 →"
   }
  },
  {
@@ -5402,6 +5746,10 @@
     "why": "Toxicity = harmful effects that occur as the dose or exposure exceeds the therapeutic range.",
     "correct": true
    }
+  },
+  "link": {
+   "href": "../../L01/index.html#the-language-of-pharmacology",
+   "label": "Study this: L01 · Part 1 →"
   }
  },
  {
@@ -5464,6 +5812,10 @@
     "why": "Urine pH works by blocking reabsorption.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L02/index.html#drug-excretion-renal-dosing",
+   "label": "Study this: L02 · Part 2 →"
   }
  },
  {
@@ -5527,6 +5879,10 @@
     "why": "First-pass is not the issue; duplicate dosing is.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L01/index.html#the-language-of-pharmacology",
+   "label": "Study this: L01 · Part 1 →"
   }
  },
  {
@@ -5590,6 +5946,10 @@
     "why": "IV is 100% bioavailable by definition.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L01/index.html#pharmacokinetics-adme-absorption-distribution",
+   "label": "Study this: L01 · Part 5 →"
   }
  },
  {
@@ -5651,6 +6011,10 @@
     "why": "P-gp pumps drugs OUT; it isn't the paracellular barrier.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L01/index.html#pharmacokinetics-adme-absorption-distribution",
+   "label": "Study this: L01 · Part 5 →"
   }
  },
  {
@@ -5712,6 +6076,10 @@
     "why": "Genes alter the patient's handling, not the drug's structure.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L02/index.html#pharmacogenomics",
+   "label": "Study this: L02 · Part 4 →"
   }
  },
  {
@@ -5773,6 +6141,10 @@
     "why": "P-gp transports; it does not metabolize.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L01/index.html#pharmacokinetics-adme-absorption-distribution",
+   "label": "Study this: L01 · Part 5 →"
   }
  },
  {
@@ -5834,6 +6206,10 @@
     "why": "Half-life is not a clearance component.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L02/index.html#pk-calculations-half-life-steady-state-clearance",
+   "label": "Study this: L02 · Part 3 →"
   }
  },
  {
@@ -5898,6 +6274,10 @@
     "why": "A CYP inhibitor slows metabolic clearance.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L02/index.html#drug-metabolism-cyp450-interactions",
+   "label": "Study this: L02 · Part 1 →"
   }
  },
  {
@@ -5961,6 +6341,10 @@
     "why": "First-pass reduces bioavailability; it isn't the real-world gap described.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L01/index.html#drug-development-regulation",
+   "label": "Study this: L01 · Part 2 →"
   }
  },
  {
@@ -6024,6 +6408,10 @@
     "why": "Five target classes: receptors, ion channels, enzymes, transporters, and nucleic acids.",
     "correct": true
    }
+  },
+  "link": {
+   "href": "../../L01/index.html#pharmacodynamics-targets-receptors",
+   "label": "Study this: L01 · Part 3 →"
   }
  },
  {
@@ -6087,6 +6475,10 @@
     "why": "Chemical names describe structure only.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L02/index.html#putting-it-all-together-clinical-decision-making",
+   "label": "Study this: L02 · Part 5 →"
   }
  },
  {
@@ -6150,6 +6542,10 @@
     "why": "These curves show effect only, not toxicity.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L01/index.html#dose-response-relationships",
+   "label": "Study this: L01 · Part 4 →"
   }
  },
  {
@@ -6211,6 +6607,10 @@
     "why": "Benefit alone isn't decisive; it depends on alternatives.",
     "correct": false
    }
+  },
+  "link": {
+   "href": "../../L01/index.html#drug-development-regulation",
+   "label": "Study this: L01 · Part 2 →"
   }
  }
 ]

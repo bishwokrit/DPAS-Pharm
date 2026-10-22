@@ -52,7 +52,7 @@ function search(q, k = 6) {
 }
 
 // ---------------------------------------------------------------- panel shell
-const TABS = [["ask", "Ask"], ["listen", "Listen"], ["cards", "Flashcards"], ["quiz", "Quiz"], ["map", "Mind map"], ["brief", "Briefing"], ["faq", "FAQ"]];
+const TABS = [["ask", "Ask"], ["notes", "Notes"], ["cards", "Flashcards"], ["quiz", "Quiz"], ["listen", "Listen"], ["map", "Mind map"], ["brief", "Briefing"], ["faq", "FAQ"]];
 function mount() {
   const fab = document.createElement("button");
   fab.className = "sk-fab noprint";
@@ -82,7 +82,7 @@ function show(id, arg) {
   tab = id; store.set("sk:tab", id);
   panel.querySelectorAll("[data-tab]").forEach((b) => b.setAttribute("aria-selected", b.dataset.tab === id));
   if (id !== "listen") speechSynthesis?.cancel();
-  ({ ask: askTab, listen: listenTab, cards: cardsTab, quiz: quizTab, map: mapTab, brief: briefTab, faq: faqTab })[id](arg);
+  ({ ask: askTab, listen: listenTab, cards: cardsTab, quiz: quizTab, map: mapTab, brief: briefTab, faq: faqTab, notes: notesTab, source: sourceView, explain: explainFree, card: newCard })[id](arg);
   body.scrollTop = 0;
 }
 
@@ -93,6 +93,7 @@ function askTab(prefill) {
   body.innerHTML = `<form class="sk-ask"><input name="q" placeholder="Ask about this lecture…" autocomplete="off" value="${esc(prefill || "")}"><button class="btn">Ask</button></form>
     <div class="sk-ai-line small">${key ? `AI chat <strong>on</strong> · ${esc(MODELS.find((m) => m[0] === store.get("sk:model", MODELS[0][0]))?.[1].split(" —")[0])} · <a href="#" data-ai>settings</a>${chat.history.length ? ' · <a href="#" data-clear>new chat</a>' : ""}`
       : `Searching your study materials. <a href="#" data-ai>Turn on AI chat</a> (optional, uses your own Claude API key).`}</div>
+    ${chat.history.length ? "" : '<p class="sk-tip small">Tip: <strong>highlight any text</strong> in the guide to Explain it, see its Source slide or textbook page, get quizzed, make a flashcard, or save it to Notes.</p>'}
     <div class="sk-thread"></div><div class="sk-results"></div>`;
   const form = body.querySelector("form");
   body.querySelector("[data-ai]").addEventListener("click", (e) => { e.preventDefault(); aiSettings(); });
@@ -105,8 +106,10 @@ function askTab(prefill) {
 function renderThread() {
   const t = body.querySelector(".sk-thread");
   if (!t) return;
-  t.innerHTML = chat.history.map((m) => m.role === "user" ? `<div class="sk-msg me">${esc(m.content)}</div>`
-    : `<div class="sk-msg ai">${md(m.content).replace(/\n/g, "<br>")}</div>`).join("");
+  t.innerHTML = chat.history.map((m) => m.role === "user" ? `<div class="sk-msg me">${esc(m.label || m.content)}</div>`
+    : `<div class="sk-msg ai">${md(m.content).replace(/\n/g, "<br>")}</div>`).join("") +
+    (chat.history.length && !chat.busy ? `<div class="sk-follow">${FOLLOW.map(([l]) => `<button data-f="${l}">${l}</button>`).join("")}</div>` : "");
+  t.querySelectorAll("[data-f]").forEach((b) => b.addEventListener("click", () => aiAnswer(FOLLOW.find(([l]) => l === b.dataset.f)[1], b.dataset.f)));
 }
 function ask(q) {
   const hits = search(q);
@@ -121,10 +124,21 @@ async function loadSource() {
   if (!sourceText && kb.source) sourceText = await fetch(kb.source).then((r) => r.text()).catch(() => "");
   return sourceText;
 }
-async function aiAnswer(q) {
+const FOLLOW = [
+  ["Simpler", "Explain that again more simply, like you're talking to a first-year student. Same facts, same citations."],
+  ["Clinical example", "Give a short clinical example (a patient scenario) that shows this — using only drugs and facts from the source, with citations."],
+  ["Mnemonic", "Give one memory aid for this. Label it \"Mnemonic (memory aid)\" and do not add any fact that isn't in the source."],
+  ["Quiz me", "Ask me one PANCE-style question (options A–E) on this, from the source only. Don't give the answer until I reply."],
+];
+async function askAI(prompt, label) {
+  if (!panel.classList.contains("open")) open();
+  if (tab !== "ask") show("ask");
+  aiAnswer(prompt, label);
+}
+async function aiAnswer(q, label) {
   if (chat.busy) return;
   chat.busy = true;
-  chat.history.push({ role: "user", content: q });
+  chat.history.push({ role: "user", content: q, label });
   renderThread();
   const t = body.querySelector(".sk-thread");
   const out = document.createElement("div");
@@ -153,6 +167,7 @@ async function aiAnswer(q) {
     if (msg.stop_reason === "refusal") text = text || "Claude declined to answer this one. Try rephrasing the question.";
     if (msg.stop_reason === "max_tokens") text += "\n\n(Answer cut off — ask me to continue.)";
     chat.history.push({ role: "assistant", content: text });
+    chat.busy = false;
     renderThread();
   } catch (err) {
     console.error("Sidekick chat:", err);
@@ -235,15 +250,18 @@ function listenTab() {
 }
 
 // ---------------------------------------------------------------- Flashcards: Leitner boxes (spaced repetition)
+function allCards() {
+  return [...kb.cards.map((c, i) => ({ ...c, id: i })), ...store.get(`sk:mycards:${kb.lecture}`, []).map((c, i) => ({ ...c, id: "m" + i, mine: true }))];
+}
 function cardsTab() {
-  const key = `sk:fc:${kb.lecture}`, boxes = store.get(key, {});
-  const queue = shuffle(kb.cards.map((c, i) => i)).sort((a, b) => (boxes[a] || 1) - (boxes[b] || 1));
+  const key = `sk:fc:${kb.lecture}`, boxes = store.get(key, {}), cards = allCards();
+  const queue = shuffle(cards.map((c, i) => i)).sort((a, b) => (boxes[cards[a].id] || 1) - (boxes[cards[b].id] || 1));
   let n = 0;
-  const counts = () => [1, 2, 3, 4, 5].map((b) => kb.cards.filter((_, i) => (boxes[i] || 1) === b).length);
+  const counts = () => [1, 2, 3, 4, 5].map((b) => cards.filter((c) => (boxes[c.id] || 1) === b).length);
   const draw = () => {
-    const i = queue[n % queue.length], c = kb.cards[i], cs = counts();
+    const c = cards[queue[n % queue.length]], i = c.id, cs = counts();
     body.innerHTML = `<div class="sk-boxes">${cs.map((k, b) => `<div><strong>${k}</strong><span>${["New", "Learning", "Familiar", "Strong", "Mastered"][b]}</span></div>`).join("")}</div>
-      <div class="sk-card" tabindex="0"><div class="sk-face"><div class="small muted">Card ${(n % queue.length) + 1} of ${queue.length} · tap to flip</div><div class="sk-q">${tags(c)}${md(c.q)}</div></div>
+      <div class="sk-card" tabindex="0"><div class="sk-face"><div class="small muted">Card ${(n % queue.length) + 1} of ${queue.length} · tap to flip</div><div class="sk-q">${c.mine ? '<span class="tag mine">MINE</span>' : ""}${tags(c)}${md(c.q)}</div></div>
       <div class="sk-face back"><div class="sk-a">${md(c.a)}</div>${cite(c.src)}</div></div>
       <div class="sk-row sk-rate" hidden><button class="btn ghost" data-again>Again</button><button class="btn" data-good>Got it</button></div>
       <p class="small muted">"Again" sends a card back to New; "Got it" moves it up a box. Lower boxes come up first. Saved in this browser.</p>`;
@@ -256,27 +274,33 @@ function cardsTab() {
     body.querySelector("[data-good]").addEventListener("click", () => grade(true));
     card.focus();
   };
-  if (!kb.cards.length) { body.innerHTML = '<p class="muted">No flashcards for this lecture yet.</p>'; return; }
+  if (!cards.length) { body.innerHTML = '<p class="muted">No flashcards for this lecture yet.</p>'; return; }
   draw();
 }
 
 // ---------------------------------------------------------------- Quiz: 10 random questions
-function quizTab() {
-  const qs = shuffle([...kb.quiz]).slice(0, 10);
+function quizTab(list) {
+  const qs = Array.isArray(list) ? list : shuffle([...kb.quiz]).slice(0, 10);
   let n = 0, score = 0;
   const draw = () => {
     if (n >= qs.length) {
-      body.innerHTML = `<div class="sk-done"><div class="sk-score">${score}/${qs.length}</div><p>${score >= 8 ? "Strong — you're ready for this lecture." : score >= 6 ? "Close. Review the parts you missed, then go again." : "Worth another pass through the guide first."}</p><button class="btn" data-again>New quiz</button></div>`;
-      body.querySelector("[data-again]").addEventListener("click", quizTab);
+      body.innerHTML = `<div class="sk-done"><div class="sk-score">${score}/${qs.length}</div><p>${score >= 0.8 * qs.length ? "Strong — you're ready for this lecture." : score >= 0.6 * qs.length ? "Close. Review the parts you missed, then go again." : "Worth another pass through the guide first."}</p><button class="btn" data-again>New quiz</button></div>`;
+      body.querySelector("[data-again]").addEventListener("click", () => quizTab());
       return;
     }
     const q = qs[n];
-    body.innerHTML = `<div class="small muted">Question ${n + 1} of ${qs.length} · ${esc(q.label)} · score ${score}</div><div class="sk-stem">${md(q.stem)}</div>
+    body.innerHTML = `<div class="sk-row small"><span class="muted" style="flex:1">Question ${n + 1} of ${qs.length} · score ${score}</span><a href="#" data-full>⛶ Full screen</a></div><div class="small muted">${esc(q.label)}</div><div class="sk-stem">${md(q.stem)}</div>
       <div class="opts">${Object.entries(q.options).map(([L, t]) => `<button class="opt" data-l="${L}"><span class="L">${L}</span><span>${md(t)}</span></button>`).join("")}</div><div class="sk-why"></div>`;
+    body.querySelector("[data-full]").addEventListener("click", (e) => {
+      e.preventDefault();
+      const key = "miss:" + kb.lecture;
+      window.dpasQuiz?.setup(kb.quiz, { title: "Quiz", missed: store.get(key, []), onAnswer: (x, L, ok) => { const m = new Set(store.get(key, [])); ok ? m.delete(x.id) : m.add(x.id); store.set(key, [...m]); if (ok) store.set("done:" + kb.lecture, [...new Set([...store.get("done:" + kb.lecture, []), x.id])]); } });
+    });
     body.querySelectorAll(".opt").forEach((b) => b.addEventListener("click", () => {
       if (body.querySelector(".opt.right")) return;
       const ok = b.dataset.l === q.answer;
       if (ok) score++;
+      if (q.id) { const key = "miss:" + kb.lecture, m = new Set(store.get(key, [])); ok ? m.delete(q.id) : m.add(q.id); store.set(key, [...m]); if (ok) store.set("done:" + kb.lecture, [...new Set([...store.get("done:" + kb.lecture, []), q.id])]); }
       body.querySelectorAll(".opt").forEach((o) => { if (o.dataset.l === q.answer) o.classList.add("right"); });
       if (!ok) b.classList.add("wrong");
       const whys = q.whys ? Object.entries(q.whys).filter(([L]) => L !== q.answer).map(([L, w]) => `<li><strong>${L}.</strong> ${md(w)}</li>`).join("") : "";
@@ -316,5 +340,231 @@ function faqTab() {
   body.querySelectorAll(".sk-faq").forEach((b) => b.addEventListener("click", () => show("ask", kb.faq[+b.dataset.i])));
 }
 
+
+// ---------------------------------------------------------------- highlight toolbar: act on any selected text
+// Select text anywhere in the guide → Explain · Source · Quiz me · Card · Save · Copy
+const refsOf = (src) => {
+  const out = { slides: [], notes: [], pages: [], sg: [] };
+  const sg = String(src || "").match(/SG\s*U\d+-[A-Z]\d*/g) || [];
+  out.sg = sg.map((x) => x.replace(/SG\s*/, ""));
+  const rest = String(src || "").replace(/SG\s*U\d+-[A-Z]\d*/g, "");
+  for (const m of rest.matchAll(/S\s*(\d+)(?:\s*[-–]\s*S?\s*(\d+))?(\s*\(notes\))?/g)) {
+    for (let n = +m[1]; n <= +(m[2] || m[1]); n++) (m[3] ? out.notes : out.slides).push(n);
+  }
+  for (const m of rest.matchAll(/pp?\.\s*(\d+)(?:\s*[-–]\s*(\d+))?/g)) out.pages.push(+m[1]);
+  out.slides = [...new Set([...out.slides, ...out.notes])];
+  return out;
+};
+function selectionContext() {
+  const sel = getSelection();
+  if (!sel || sel.isCollapsed || !sel.rangeCount) return null;
+  const text = sel.toString().replace(/\s+/g, " ").trim();
+  const node = sel.getRangeAt(0).commonAncestorContainer;
+  const el = node.nodeType === 1 ? node : node.parentElement;
+  if (!text || text.length < 2 || text.length > 1500 || !el || el.closest(".sk-panel, .nav, .sk-sel, input, textarea, .sk-fab")) return null;
+  const block = el.closest("li, tr, .callout, figcaption, .stem, .opt, .flow, p, h2, h3, td") || el;
+  const section = el.closest("section[id]");
+  let src = [...block.querySelectorAll(".cite")].map((c) => c.textContent).join("; ");
+  const clone = block.cloneNode(true);
+  clone.querySelectorAll(".cite, .tag, .jump").forEach((x) => x.remove());
+  const blockText = clone.textContent.replace(/\s+/g, " ").trim();
+  let guessed = false;
+  if (!src) { const hit = search(text + " " + blockText, 1)[0]; if (hit) { src = hit.src; guessed = true; } }
+  return { text, blockText: blockText.slice(0, 700), src, guessed, anchor: section?.id || "", where: section?.querySelector("h2")?.textContent || kb.title, rect: sel.getRangeAt(0).getBoundingClientRect() };
+}
+let bar, ctx;
+function hideBar() { bar?.classList.remove("show"); }
+function showBar() {
+  ctx = selectionContext();
+  if (!ctx) { hideBar(); return; }
+  if (!bar) {
+    bar = document.createElement("div");
+    bar.className = "sk-sel noprint";
+    bar.innerHTML = [["explain", "✦", "Explain"], ["source", "📍", "Source"], ["quiz", "❓", "Quiz me"], ["card", "🃏", "Card"], ["save", "🖍", "Save"], ["copy", "⧉", "Copy"]]
+      .map(([a, i, l]) => `<button data-act="${a}" title="${l}"><span>${i}</span>${l}</button>`).join("");
+    bar.addEventListener("mousedown", (e) => e.preventDefault());  // keep the selection while clicking
+    bar.addEventListener("click", (e) => { const b = e.target.closest("[data-act]"); if (b && ctx) { act(b.dataset.act, ctx); hideBar(); } });
+    document.body.append(bar);
+  }
+  const r = ctx.rect, w = bar.offsetWidth || 420;
+  bar.style.left = Math.max(8, Math.min(innerWidth - w - 8, r.left + r.width / 2 - w / 2)) + "px";
+  bar.style.top = (r.top + scrollY - 52 < scrollY + 60 ? r.bottom + scrollY + 10 : r.top + scrollY - 52) + "px";
+  bar.classList.add("show");
+}
+document.addEventListener("mouseup", () => setTimeout(showBar, 10));
+document.addEventListener("keyup", (e) => { if (e.shiftKey) setTimeout(showBar, 10); });
+document.addEventListener("touchend", () => setTimeout(showBar, 350));
+document.addEventListener("selectionchange", () => { if (getSelection()?.isCollapsed) hideBar(); });
+
+function toast(msg) {
+  const t = Object.assign(document.createElement("div"), { className: "sk-toast", textContent: msg });
+  document.body.append(t);
+  setTimeout(() => t.remove(), 2200);
+}
+const quote = (c) => `“${c.text.length > 90 ? c.text.slice(0, 88) + "…" : c.text}”`;
+function act(a, c) {
+  if (a === "copy") {
+    navigator.clipboard?.writeText(`${c.text} (${c.src || kb.title})`).then(() => toast("Copied with citation"), () => toast("Couldn't copy"));
+    return;
+  }
+  if (a === "save") { saveNote(c); return; }
+  if (!panel.classList.contains("open")) open();
+  const ai = !!store.get("sk:key", "");
+  const where = `It appears in "${c.where}": "${c.blockText}" (${c.src || "no citation"})`;
+  if (a === "explain") {
+    if (ai) askAI(`Explain this from the lecture in more depth: why it's true, how it connects to the rest of the lecture, and why it matters clinically. Stay within the source and cite.\n\nHighlighted: "${c.text}"\n${where}`, `Explain ${quote(c)}`);
+    else show("explain", c);
+  } else if (a === "quiz") {
+    if (ai) askAI(`Ask me one PANCE-style question (options A–E) that tests this, from the source only. Don't give the answer until I reply.\n\nHighlighted: "${c.text}"\n${where}`, `Quiz me on ${quote(c)}`);
+    else {
+      const t = new Set(terms(c.text + " " + c.blockText));
+      const scored = kb.quiz.map((q) => [terms(q.stem + " " + Object.values(q.options).join(" ")).filter((w) => t.has(w)).length, q]).filter(([n]) => n >= 2).sort((x, y) => y[0] - x[0]).slice(0, 5).map(([, q]) => q);
+      if (scored.length) show("quiz", scored);
+      else { show("explain", c); toast("No matching practice questions — turn on AI chat to generate one"); }
+    }
+  } else if (a === "source") show("source", c);
+  else if (a === "card") show("card", c);
+}
+
+// Explain without AI: the full fact, its source, and the closest related facts
+function explainFree(c) {
+  if (!c) { askTab(); return; }
+  const related = search(c.text + " " + c.blockText, 7).filter((h) => !c.blockText.includes(plain(h.text).slice(0, 40))).slice(0, 5);
+  body.innerHTML = `<h4>You highlighted</h4><blockquote class="sk-quote">${esc(c.text)}</blockquote>
+    <h4>In context</h4><div class="sk-hit"><div class="small muted">${esc(c.where)}</div>${esc(c.blockText)}${cite(c.src)}</div>
+    <div class="sk-row"><button class="btn ghost" data-src>📍 See the source</button></div>
+    <h4>Related in this lecture</h4>${related.map((h) => `<div class="sk-hit"><div class="small muted">${esc(h.where)}</div><div>${tags(h)}${md(h.text)}${cite(h.src)}</div><a href="#${esc(h.anchor)}" data-go="${esc(h.anchor)}" class="small">Go to section →</a></div>`).join("") || '<p class="muted">Nothing closely related.</p>'}
+    <p class="small muted">Want a real explanation in your own words? <a href="#" data-ai>Turn on AI chat</a>.</p>`;
+  body.querySelector("[data-src]").addEventListener("click", () => show("source", c));
+  body.querySelector("[data-ai]").addEventListener("click", (e) => { e.preventDefault(); show("ask"); aiSettings(); });
+  body.querySelectorAll("[data-go]").forEach((a) => a.addEventListener("click", (e) => { e.preventDefault(); goTo(a.dataset.go); }));
+}
+
+// Source: the actual slide image(s), speaker notes, textbook page, study-guide item
+function sourceView(c) {
+  if (!c) { askTab(); return; }
+  const r = refsOf(c.src);
+  const slides = r.slides.slice(0, 4).map((n) => {
+    const s = kb.slides[n] || {};
+    return `<div class="sk-slide"><div class="small muted">Slide ${n}${s.title ? " · " + esc(s.title) : ""}</div>
+      ${s.img ? `<img src="slides/S${n}.jpg" alt="Lecture slide ${n}" loading="lazy" data-zoom>` : ""}
+      ${r.notes.includes(n) && s.notes ? `<div class="sk-notes"><strong>Speaker notes:</strong> ${esc(s.notes)}</div>` : ""}</div>`;
+  }).join("");
+  const pages = r.pages.map((pg) => `<div class="sk-tb"><div><strong>Katzung p. ${pg}</strong><div class="small muted">${esc(kb.textbook.book)}</div></div>
+      <button class="btn" data-page="${pg}">Open my PDF</button><a class="btn ghost" href="${esc(kb.textbook.am)}" target="_blank" rel="noopener">AccessMedicine</a></div>`).join("");
+  const sg = r.sg.map((id) => kb.sg[id] ? `<div class="sk-hit"><div class="small muted">Course study guide · ${esc(id)}</div><div><strong>Q:</strong> ${esc(kb.sg[id].question)}</div><div><strong>A:</strong> ${esc(kb.sg[id].answer)}</div></div>` : "").join("");
+  body.innerHTML = `<h4>Where this comes from</h4><blockquote class="sk-quote">${esc(c.text)}</blockquote>
+    ${c.src ? `<p class="small muted">${c.guessed ? "No citation right here — closest match in the lecture: " : "Cited as: "}${cite(c.src)}</p>` : '<p class="muted">Not covered in materials.</p>'}
+    ${slides}${pages}${sg}
+    ${kb.deck ? `<p class="small muted">Want the whole deck? <a href="${esc(kb.deck)}">Download the slides (.pptx)</a>.</p>` : ""}`;
+  body.querySelectorAll("[data-page]").forEach((b) => b.addEventListener("click", () => window.dpasTextbook?.open(+b.dataset.page, kb.textbook.offset)));
+  body.querySelectorAll("[data-zoom]").forEach((img) => img.addEventListener("click", () => {
+    const z = Object.assign(document.createElement("div"), { className: "sk-zoom" });
+    z.innerHTML = `<img src="${img.src}" alt="">`;
+    z.addEventListener("click", () => z.remove());
+    document.body.append(z);
+  }));
+}
+
+// Card: turn the highlight into your own flashcard
+function newCard(c) {
+  if (!c) { cardsTab(); return; }
+  const m = c.blockText.match(/^([^:]{2,60}):\s*(.+)$/);
+  const front = m && c.blockText.includes(c.text) ? m[1] : c.text;
+  const back = m ? m[2] : c.blockText;
+  body.innerHTML = `<h4>New flashcard</h4>
+    <label class="sk-field">Front<textarea rows="2" name="q">${esc(front)}</textarea></label>
+    <label class="sk-field">Back<textarea rows="4" name="a">${esc(back.replace(/\s*(S\d+.*|p\. \d+.*)$/, ""))}</textarea></label>
+    <div class="sk-row"><button class="btn" data-save>Add to my flashcards</button><button class="btn ghost" data-cancel>Cancel</button></div>
+    <p class="small muted">It joins this lecture's deck as a <span class="tag mine">MINE</span> card. Saved in this browser.</p>`;
+  body.querySelector("[data-save]").addEventListener("click", () => {
+    const key = `sk:mycards:${kb.lecture}`, mine = store.get(key, []);
+    mine.push({ q: body.querySelector("[name=q]").value.trim(), a: body.querySelector("[name=a]").value.trim(), src: c.src });
+    store.set(key, mine); toast("Flashcard added"); cardsTab();
+  });
+  body.querySelector("[data-cancel]").addEventListener("click", () => cardsTab());
+}
+
+// Notes: saved highlights, re-highlighted on the page, with your own comments
+const notesKey = () => `sk:notes:${kb.lecture}`;
+function markOnPage(n) {
+  const sec = document.getElementById(n.anchor) || document.body;
+  const walk = document.createTreeWalker(sec, NodeFilter.SHOW_TEXT);
+  for (let t; (t = walk.nextNode());) {
+    const i = t.data.indexOf(n.text);
+    if (i >= 0 && !t.parentElement.closest(".hl, .sk-panel")) {
+      const r = document.createRange(); r.setStart(t, i); r.setEnd(t, i + n.text.length);
+      const mk = Object.assign(document.createElement("mark"), { className: "hl" }); mk.dataset.note = n.id;
+      r.surroundContents(mk); return mk;
+    }
+  }
+  const blk = [...sec.querySelectorAll("li, td, p, figcaption")].find((b) => b.textContent.replace(/\s+/g, " ").includes(n.text));
+  if (blk) { blk.classList.add("hl-block"); blk.dataset.note = n.id; }
+  return blk;
+}
+function saveNote(c) {
+  const notes = store.get(notesKey(), []);
+  const n = { id: Date.now().toString(36), text: c.text, src: c.src, anchor: c.anchor, where: c.where, note: "" };
+  notes.push(n); store.set(notesKey(), notes);
+  getSelection()?.removeAllRanges();
+  markOnPage(n);
+  toast("Saved to Notes");
+  if (tab === "notes" && panel.classList.contains("open")) notesTab();
+}
+function notesTab() {
+  const notes = store.get(notesKey(), []);
+  if (!notes.length) { body.innerHTML = '<p class="muted">No notes yet. Highlight text in the guide and tap <strong>🖍 Save</strong>. Your highlights stay on the page and collect here.</p>'; return; }
+  body.innerHTML = `<div class="sk-row"><button class="btn ghost" data-export>Copy all as text</button></div>` + notes.map((n) =>
+    `<div class="sk-note" data-id="${n.id}"><div class="small muted">${esc(n.where)}</div><mark class="hl">${esc(n.text)}</mark>${cite(n.src)}
+     <textarea rows="2" placeholder="Add your own note…">${esc(n.note)}</textarea>
+     <div class="sk-row small"><a href="#" data-jump>Show on page</a><a href="#" data-src>Source</a><a href="#" data-del>Delete</a></div></div>`).join("");
+  const upd = (id, f) => { const all = store.get(notesKey(), []); const i = all.findIndex((x) => x.id === id); if (i >= 0) { f(all, i); store.set(notesKey(), all); } };
+  body.querySelectorAll(".sk-note").forEach((el) => {
+    const id = el.dataset.id, n = notes.find((x) => x.id === id);
+    el.querySelector("textarea").addEventListener("input", (e) => upd(id, (all, i) => { all[i].note = e.target.value; }));
+    el.querySelector("[data-jump]").addEventListener("click", (e) => { e.preventDefault(); const mk = document.querySelector(`[data-note="${id}"]`); if (mk) { mk.scrollIntoView({ behavior: "smooth", block: "center" }); mk.classList.add("flash"); setTimeout(() => mk.classList.remove("flash"), 1600); } else goTo(n.anchor); });
+    el.querySelector("[data-src]").addEventListener("click", (e) => { e.preventDefault(); show("source", { ...n, blockText: n.text }); });
+    el.querySelector("[data-del]").addEventListener("click", (e) => {
+      e.preventDefault(); upd(id, (all, i) => all.splice(i, 1));
+      document.querySelectorAll(`[data-note="${id}"]`).forEach((mk) => { if (mk.tagName === "MARK") mk.replaceWith(...mk.childNodes); else mk.classList.remove("hl-block"); });
+      notesTab();
+    });
+  });
+  body.querySelector("[data-export]").addEventListener("click", () => {
+    const txt = notes.map((n) => `• ${n.text} (${n.src || n.where})${n.note ? "\n  ↳ " + n.note : ""}`).join("\n");
+    navigator.clipboard?.writeText(`${kb.title} — my notes\n\n${txt}`).then(() => toast("Notes copied"));
+  });
+}
+
+// ---------------------------------------------------------------- citation peek: hover S23 / p. 47 to preview, click for the full source
+let tip;
+function citeTip(c) {
+  const r = refsOf(c.textContent);
+  if (!r.slides.length && !r.pages.length && !r.sg.length) return;
+  tip ||= Object.assign(document.createElement("div"), { className: "cite-tip noprint" });
+  const n = r.slides[0], s = kb.slides[n] || {};
+  tip.innerHTML = (n ? `${s.img ? `<img src="slides/S${n}.jpg" alt="">` : ""}<div><strong>Slide ${n}</strong>${s.title ? " · " + esc(s.title) : ""}${r.slides.length > 1 ? `<span class="muted"> +${r.slides.length - 1} more</span>` : ""}</div>` : "") +
+    (r.pages.length ? `<div>📖 Katzung p. ${r.pages.join(", ")}</div>` : "") +
+    (r.sg.length ? `<div>Study guide ${r.sg.join(", ")}</div>` : "") + '<div class="muted small">Click for the full source</div>';
+  document.body.append(tip);
+  const b = c.getBoundingClientRect(), w = 280;
+  tip.style.left = Math.max(8, Math.min(innerWidth - w - 8, b.left + b.width / 2 - w / 2)) + "px";
+  tip.style.top = (b.top > 260 ? b.top + scrollY - tip.offsetHeight - 8 : b.bottom + scrollY + 8) + "px";
+  tip.classList.add("show");
+}
+document.addEventListener("mouseover", (e) => { const c = e.target.closest?.(".cite"); if (c && kb) citeTip(c); });
+document.addEventListener("mouseout", (e) => { if (e.target.closest?.(".cite")) tip?.classList.remove("show"); });
+document.addEventListener("click", (e) => {
+  const c = e.target.closest?.(".cite");
+  if (!c || !kb || c.closest(".sk-panel")) return;
+  const block = c.closest("li, tr, .callout, figcaption, p, td, .q") || c.parentElement;
+  const clone = block.cloneNode(true);
+  clone.querySelectorAll(".cite, .tag, .jump").forEach((x) => x.remove());
+  const text = clone.textContent.replace(/\s+/g, " ").trim().slice(0, 300);
+  tip?.classList.remove("show");
+  if (!panel.classList.contains("open")) open();
+  show("source", { text, blockText: text, src: c.textContent, where: c.closest("section[id]")?.querySelector("h2")?.textContent || kb.title });
+});
+
 // ---------------------------------------------------------------- start
-fetch("kb.json").then((r) => r.json()).then((data) => { kb = data; buildIndex(); mount(); }).catch(() => { /* no Sidekick data on this page */ });
+fetch("kb.json").then((r) => r.json()).then((data) => { kb = data; buildIndex(); mount(); store.get(notesKey(), []).forEach(markOnPage); }).catch(() => { /* no Sidekick data on this page */ });

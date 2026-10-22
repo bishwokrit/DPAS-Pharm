@@ -62,31 +62,40 @@
     byId.forEach((_, id) => { const el = document.getElementById(id); if (el) spy.observe(el); });
   }
 
-  // "Go deeper" textbook links: open your own Katzung PDF at the page (kept on this device), or AccessMedicine
+  // Textbook: open your own Katzung PDF at a printed page (the file stays on this device), or AccessMedicine.
+  // Shared with Sidekick through window.dpasTextbook.
   const db = () => new Promise((ok, bad) => { const r = indexedDB.open("dpas", 1); r.onupgradeneeded = () => r.result.createObjectStore("files"); r.onsuccess = () => ok(r.result); r.onerror = () => bad(r.error); });
   const idb = async (mode, fn) => { const d = await db(); return new Promise((ok, bad) => { const t = d.transaction("files", mode); const q = fn(t.objectStore("files")); t.oncomplete = () => ok(q?.result); t.onerror = () => bad(t.error); }); };
-  const getPdf = () => idb("readonly", (st) => st.get("katzung")).catch(() => null);
-  const savePdf = (file) => idb("readwrite", (st) => st.put(file, "katzung"));
+  const textbook = {
+    get: () => idb("readonly", (st) => st.get("katzung")).catch(() => null),
+    pick: () => new Promise((ok) => {
+      const input = Object.assign(document.createElement("input"), { type: "file", accept: "application/pdf" });
+      input.addEventListener("change", async () => { const f = input.files[0]; if (f) await idb("readwrite", (st) => st.put(f, "katzung")).catch(() => {}); ok(f || null); });
+      input.click();
+    }),
+    async open(page, offset, file) {
+      file = file || (await textbook.get()) || (await textbook.pick());
+      if (!file) return;
+      if (!window.open(URL.createObjectURL(file) + "#page=" + (page + offset), "_blank")) alert("Allow pop-ups to open the textbook.");
+    },
+  };
+  window.dpasTextbook = textbook;
   let pop;
   const closePop = () => { pop?.remove(); pop = null; };
   document.addEventListener("click", (e) => { if (pop && !pop.contains(e.target) && !e.target.closest(".deeper-btn")) closePop(); });
   document.addEventListener("keydown", (e) => { if (e.key === "Escape") closePop(); });
   document.querySelectorAll(".deeper-btn").forEach((btn) => btn.addEventListener("click", async () => {
     if (pop) { closePop(); return; }
-    const page = +btn.dataset.page, pdfPage = page + +btn.dataset.offset, have = await getPdf();
+    const page = +btn.dataset.page, offset = +btn.dataset.offset, have = await textbook.get();
     pop = document.createElement("div");
     pop.className = "deeper-pop";
     pop.innerHTML = `<div class="small muted">${btn.dataset.label}</div>
       <button data-open>${have ? "Open in my textbook PDF" : "Choose my Katzung PDF…"}<span>${have ? `Jumps to page ${page}` : "Pick it once; it stays on this device only"}</span></button>
       <a href="${btn.dataset.am}" target="_blank" rel="noopener">Find on AccessMedicine<span>School library login · Chapter ${btn.dataset.label.match(/Ch\. (\d+)/)[1]}</span></a>
-      ${have ? '<button data-change class="small-link">Use a different PDF</button>' : ""}
-      <input type="file" accept="application/pdf" hidden>`;
+      ${have ? '<button data-change class="small-link">Use a different PDF</button>' : ""}`;
     btn.after(pop);
-    const input = pop.querySelector("input");
-    const open = (file) => { const w = window.open(URL.createObjectURL(file) + "#page=" + pdfPage, "_blank"); if (!w) alert("Allow pop-ups to open the textbook."); closePop(); };
-    pop.querySelector("[data-open]").addEventListener("click", () => (have ? open(have) : input.click()));
-    pop.querySelector("[data-change]")?.addEventListener("click", () => input.click());
-    input.addEventListener("change", async () => { const f = input.files[0]; if (!f) return; await savePdf(f).catch(() => {}); open(f); });
+    pop.querySelector("[data-open]").addEventListener("click", () => { closePop(); textbook.open(page, offset, have); });
+    pop.querySelector("[data-change]")?.addEventListener("click", async () => { closePop(); const f = await textbook.pick(); if (f) textbook.open(page, offset, f); });
   }));
 
   // cram sheet: hide answers for active recall; tap a cell to peek
@@ -100,6 +109,34 @@
     table.addEventListener("click", (e) => { const td = e.target.closest("td:last-child"); if (td && table.classList.contains("hide")) td.classList.toggle("show"); });
   });
 
+  // self-test misses: a question stays "missed" until you get it right (inline or in focus mode)
+  const qdata = (() => { try { return JSON.parse(document.getElementById("quiz-data")?.textContent || "null"); } catch { return null; } })();
+  const missKey = qdata ? "miss:" + qdata.lecture : null;
+  const record = (id, ok) => {
+    if (!missKey) return;
+    const m = new Set(store.get(missKey, []));
+    ok ? m.delete(id) : m.add(id);
+    store.set(missKey, [...m]);
+    if (ok) store.set("done:" + qdata.lecture, [...new Set([...store.get("done:" + qdata.lecture, []), id])]);
+    renderMisses();
+  };
+  function renderMisses() {
+    const box = document.getElementById("misses");
+    if (!box || !qdata) return;
+    const ids = store.get(missKey, []), items = qdata.items.filter((q) => ids.includes(q.id));
+    box.hidden = !items.length;
+    if (!items.length) return;
+    box.innerHTML = `<div class="callout trap"><div class="label">Review your misses (${items.length})</div><ul>${items.map((q) =>
+      `<li><a href="#${q.id}">${q.stem.length > 110 ? q.stem.slice(0, 108) + "…" : q.stem}</a> ${q.link ? `<a class="jump" href="${q.link.href}">${q.link.label.replace("Study this: ", "")}</a>` : ""}</li>`).join("")}</ul>
+      <button class="btn" data-retry-misses style="margin-top:10px">Retry these in focus mode →</button></div>`;
+    box.querySelector("[data-retry-misses]").addEventListener("click", () => window.dpasQuiz?.start(items, { title: "Retry: misses", onAnswer: (q, L, ok) => record(q.id, ok) }));
+  }
+  renderMisses();
+  document.querySelectorAll("[data-focus-quiz]").forEach((b) => b.addEventListener("click", () => {
+    if (!qdata || !window.dpasQuiz) return;
+    window.dpasQuiz.setup(qdata.items, { title: "Self-test", missed: store.get(missKey, []), onAnswer: (q, L, ok) => record(q.id, ok) });
+  }));
+
   // self-test: first tap answers the question and reveals the explanation
   document.querySelectorAll(".q").forEach((q) => {
     q.querySelectorAll(".opt").forEach((opt) => opt.addEventListener("click", () => {
@@ -107,13 +144,32 @@
       q.classList.add("answered");
       q.querySelectorAll(".opt").forEach((o) => { if (o.dataset.correct === "1") o.classList.add("right"); });
       if (opt.dataset.correct !== "1") opt.classList.add("wrong");
+      if (q.dataset.qid) record(q.dataset.qid, opt.dataset.correct === "1");
     }));
   });
 
-  // objectives checklist, remembered per page
+  // objectives checklist, remembered per lecture (older saves were keyed by page path)
   document.querySelectorAll("input[data-check]").forEach((box) => {
-    const key = "check:" + location.pathname + ":" + box.dataset.check;
-    box.checked = store.get(key, false);
+    const key = "check:" + (qdata?.lecture || location.pathname) + ":" + box.dataset.check;
+    box.checked = store.get(key, store.get("check:" + location.pathname + ":" + box.dataset.check, false));
     box.addEventListener("change", () => store.set(key, box.checked));
+  });
+
+  // home page: progress rings per lecture and exam (all from this browser's saved progress)
+  const ring = (n, d, label) => { const p = d ? Math.round((100 * n) / d) : 0;
+    return `<div class="pring" title="${label}: ${n} of ${d}"><div class="pring-c" style="--p:${p}"><span>${p}%</span></div><div><strong>${n}/${d}</strong><span>${label}</span></div></div>`; };
+  document.querySelectorAll("[data-progress]").forEach((card) => {
+    const d = card.dataset, lid = d.lid, out = card.querySelector(".progress");
+    if (d.progress === "exam") {
+      const st = store.get("exam:" + d.slug + ":v1", null), ans = st ? Object.keys(st.answers).length : 0;
+      if (ans) out.innerHTML = ring(ans, +d.total, "answered");
+      return;
+    }
+    const objs = d.objs.split(","), checked = objs.filter((o) => store.get("check:" + lid + ":" + o, false)).length;
+    const boxes = store.get("sk:fc:" + lid, {}), mine = store.get("sk:mycards:" + lid, []).length;
+    const strong = Object.values(boxes).filter((b) => b >= 4).length;
+    const done = store.get("done:" + lid, []).length;
+    if (checked + strong + done === 0) return;
+    out.innerHTML = ring(checked, objs.length, "objectives") + ring(strong, +d.cards + mine, "flashcards strong") + ring(done, +d.qs, "questions right");
   });
 })();

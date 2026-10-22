@@ -200,6 +200,20 @@ def drug_audit(bank, src):
     return tested, {d: d in src for d in tested}, unverified
 
 
+def study_link(src, lectures):
+    """'L02 S19; S30; SG U1-R11' -> link to the study-guide part that covers those slides."""
+    sys.path.insert(0, str(ROOT / "pipeline"))
+    from build_site import part_finder
+    m = re.match(r"\s*(L\d+)\s*(.*)", src)
+    lid, rest = (m.group(1), m.group(2)) if m else (lectures[0], src)
+    resolved = ROOT / "work" / lid / "content.resolved.json"
+    if not resolved.exists():
+        return None
+    part = part_finder(json.loads(resolved.read_text()))(rest)
+    return {"href": f"../../{lid}/index.html" + (f"#{part[1]}" if part else ""),
+            "label": f"Study this: {lid}" + (f" · Part {part[0]} →" if part else " →")}
+
+
 # ---------------------------------------------------------------- app
 APP_JS = r"""
 const EXAM = __DATA__;
@@ -257,6 +271,7 @@ function render() {
     h += `</div><div class="callout hy"><div class="label">High-yield takeaway</div>${md(q.takeaway)}</div>`;
     h += `<div class="callout why"><div class="label">How to tell it apart</div>${md(q.discriminator)}</div>`;
     h += `<p class="small muted">Source: ${md(q.src)}</p>`;
+    if (q.link) h += `<a class="jump" href="${q.link.href}">${md(q.link.label)}</a>`;
   }
   card.innerHTML = h;
   card.querySelectorAll(".opt").forEach((b) => b.addEventListener("click", () => answer(b.dataset.l)));
@@ -293,7 +308,26 @@ function renderScorecard() {
   $("#logcount").textContent = `${log.length} miss${log.length === 1 ? "" : "es"} recorded (kept even when you reset)`;
 }
 
+function asQuiz(q) {
+  const opts = {}, whys = {};
+  for (const L of "ABCDE") { opts[L] = q.options[L].text; if (L !== q.answer) whys[L] = q.options[L].why; }
+  return { id: q.id, stem: q.stem, options: opts, answer: q.answer, why: q.options[q.answer].why, whys, takeaway: q.takeaway,
+           discriminator: q.discriminator, src: q.src, topic: q.topic, kind: q.kind, link: q.link };
+}
+function focusSession() {
+  window.dpasQuiz.setup(EXAM.questions.map(asQuiz), {
+    title: EXAM.title || "Practice exam", missed: [...missedEver()],
+    onAnswer: (q, L, ok) => {
+      S.answers[q.id] = L;
+      if (!ok) { log.push({ id: q.id, topic: q.topic, chose: L, at: new Date().toISOString() }); store.set(LOG, log); }
+      save();
+    },
+    onExit: () => { buildView(); render(); renderScorecard(); },
+  });
+}
+
 function init() {
+  $("#focus").addEventListener("click", focusSession);
   const sel = $("#mode");
   sel.innerHTML = `<option value="all">All questions</option><option value="missed">Missed (ever)</option><option value="flagged">Flagged</option><optgroup label="Topic">` +
     EXAM.topics.map((t) => `<option value="${md(t)}">${md(t)}</option>`).join("") + "</optgroup>";
@@ -348,6 +382,8 @@ def app_html(meta, data):
 <h1 style="font-size:clamp(30px,5vw,44px)">{html.escape(meta['title'])}</h1>
 <p class="lede">One question at a time. Tap an answer to see why every option is right or wrong. Built only from the Unit 1 slides and study guide.</p></header>
 <section class="wrap narrow">
+  <div class="callout why noprint" style="margin-top:18px"><div class="label">Best way to practice</div>Full screen, one question at a time — study mode or <strong>timed at PANCE pace</strong> (1 min/question), with a debrief at the end. Works with a Bluetooth remote ring.
+    <div style="margin-top:12px"><button class="btn" id="focus">Start focus session →</button></div></div>
   <div class="exam-top"><select id="mode" aria-label="Filter"></select><span id="score" class="muted"></span></div>
   <div class="track"><div id="bar"></div></div><div class="small muted" id="progress"></div>
   <div class="card" id="card" style="margin-top:16px"></div>
@@ -368,7 +404,7 @@ def app_html(meta, data):
 <body><nav class="nav"><div class="nav-in"><a class="brand" href="{up}index.html">DPAS Pharm</a><div class="nav-links"><a href="{up}index.html#exams">Practice exams</a></div><button class="theme-btn" aria-label="Change theme"></button></div></nav>
 {body}
 <footer class="wrap narrow">Progress and your wrong-answer log are saved in this browser.</footer>
-<script src="{up}assets/site.js"></script></body></html>"""
+<script src="{up}assets/site.js"></script><script src="{up}assets/quizmode.js"></script></body></html>"""
 
 
 # ---------------------------------------------------------------- main
@@ -428,8 +464,10 @@ def main(exam_id):
     (out / f"{exam_id}_exam_audit.md").write_text("\n".join(lines) + "\n")
 
     # ---- app
-    data = {"slug": meta["slug"], "topics": topics,
-            "questions": [{k: q[k] for k in ("id", "topic", "kind", "stem", "options", "answer", "takeaway", "discriminator", "src")} for q in order]}
+    for q in order:
+        q["link"] = study_link(q["src"], meta["lectures"])
+    data = {"slug": meta["slug"], "title": meta["short"], "topics": topics,
+            "questions": [{k: q[k] for k in ("id", "topic", "kind", "stem", "options", "answer", "takeaway", "discriminator", "src", "link")} for q in order]}
     d = ROOT / "docs" / "exams" / meta["slug"]
     d.mkdir(parents=True, exist_ok=True)
     (d / "index.html").write_text(app_html(meta, data))
