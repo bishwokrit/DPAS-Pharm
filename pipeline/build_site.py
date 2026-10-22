@@ -581,7 +581,7 @@ def syllabus_page(syl, sched, built):
 <div class="grid two grade-cards" style="margin-top:26px"><div class="card"><h3>Grading scale</h3><div class="scale">{scale}</div><p class="small muted scale-note">Out of 1,000 points. Grades are not rounded — 749.9 is an F.</p></div>
 <div class="card"><h3>Rules that matter</h3><ul>{"".join(f"<li>{html.escape(r)}</li>" for r in g["rules"])}<li><strong>Bonus:</strong> {html.escape(g["bonus"]["rule"])}</li></ul></div></div></div></section>
 <section class="section" id="calc"><div class="wrap"><p class="kicker">Grade calculator</p><h2>Where your grade stands</h2>
-<p class="muted">Type each score as a percent when you get it. Saved only in this browser.</p>
+<p class="muted">Tap a bar and type your score. Saved only in this browser.</p>
 <div class="calc" id="calcapp"></div>
 <script type="application/json" id="grade-data">{data}</script></div></section>
 <section class="section" id="schedule"><div class="wrap"><p class="kicker">Schedule</p><h2>Week by week</h2><p class="muted">{html.escape(sched["source"])} Any material covered in lecture or assigned as reading is testable.</p>
