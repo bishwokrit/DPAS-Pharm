@@ -24,7 +24,7 @@ ROOT = Path(__file__).resolve().parent.parent
 DOCS = ROOT / "docs"
 SRC = ROOT / "site_src"
 STYLE = json.loads((ROOT / "templates" / "deck_style.json").read_text())["themes"]["light"]["section"]
-SITE_NAME = "DPAS Pharm"
+SITE_NAME = "Clinical Pharmacology"
 
 
 # ---------------------------------------------------------------- helpers
@@ -86,9 +86,12 @@ def page(title, body, depth=0, nav_links="", sidekick=False, active="", subtitle
 {nav_html(up, active, nav_links, subtitle)}
 {body}
 <footer class="site-foot"><div class="wrap">
-<div class="foot-grid"><div><span class="brand-mark" aria-hidden="true">Rx</span> <strong>{SITE_NAME}</strong><p>An unofficial, student-made study aid — not written, reviewed, or endorsed by DPAS 625 faculty. Built only from the course materials (lecture slides, syllabus, study guide, assigned Katzung chapters); always check against the official materials.</p></div>
-<div><p><strong>How to read citations</strong><br>S12 = slide 12 · p. 17 = Katzung page · SG = study guide · TB = textbook only</p>
-<p><strong>Privacy</strong><br>Your progress is saved only in this browser — nothing is sent anywhere.</p></div></div>
+<div class="foot-grid"><div><span class="brand-mark" aria-hidden="true">Rx</span> <strong>{SITE_NAME}</strong>
+<p>An independent, student-made supplement for studying clinical pharmacology. It is not affiliated with, reviewed, or endorsed by any school, program, instructor, hospital, or publisher.</p>
+<p><strong>Use it alongside your course, not instead of it.</strong> Everything here was written carefully and checked against its sources, and it is built to help you learn faster and remember longer. But it is a study aid: you are responsible for learning the official course material and confirming anything here against your lectures, readings, and instructors before you rely on it.</p></div>
+<div><p><strong>How to read citations</strong><br>S12 = slide 12 · p. 17 = textbook page · SG = study guide · TB = textbook only</p>
+<p><strong>Privacy</strong><br>Your progress is saved only in this browser. The optional AI chat sends your question straight to Anthropic using your own key; nothing comes to this site.</p></div></div>
+<p class="foot-fine">Textbook references point to chapters and page numbers in <em>Katzung's Basic &amp; Clinical Pharmacology</em>, 16th ed. (McGraw Hill), for cross-reference only. Textbook content is summarized in the author's own words; no passages are reproduced, and this site is not affiliated with or endorsed by the authors or publisher. Slide and page numbers are given so you can find the original material yourself. All trademarks and copyrights belong to their respective owners. This site is for educational purposes only and is not medical advice.</p>
 </div></footer>
 <div class="progress-bar" aria-hidden="true"></div>
 <script src="{up}assets/site.js"></script><script src="{up}assets/quizmode.js"></script>{f'<script type="module" src="{up}assets/sidekick.js"></script>' if sidekick else ""}
@@ -365,7 +368,7 @@ def home_page(syl, built, exams_built):
     upnext = json.dumps({"exams": syl.get("exams", []), "due": sched["due"]}).replace("</", "<\\/")
     hero = f"""<section class="first-screen">
 <header class="hero home-hero wrap">
-<p class="eyebrow appear">DPAS 625 · Clinical Pharmacology I · Fall 2026</p>
+<p class="eyebrow appear">Clinical Pharmacology I · Fall 2026</p>
 <h1 class="hero-title"><span class="line">Study smarter.</span><span class="line accent-text">Remember longer.</span></h1>
 <p class="lede hero-teaser" id="home-teaser">{html.escape(teasers[-1]["text"]) if teasers else ""}</p>
 <script type="application/json" id="teaser-data">{json.dumps(teasers).replace("</", "<\\/")}</script>
@@ -568,7 +571,7 @@ def syllabus_page(syl, sched, built):
     data = json.dumps({"items": g["items"], "bonus": g["bonus"], "scale": g["scale"], "due": sched["due"]}, ensure_ascii=False).replace("</", "<\\/")
     facts = [("3", "credit hours"), ("2×", "a week · 2.5 h"), ("1,000", "points"), ("6 + 1", "unit exams + final"), ("75%", "to pass")]
     body = f"""<header class="hero wrap syl-hero"><p class="eyebrow appear">Syllabus · v5 · October 9, 2026</p>
-<h1 class="appear" style="--d:.05s">DPAS 625<br><span class="accent-text">Clinical Pharmacology I</span></h1>
+<h1 class="appear" style="--d:.05s">Clinical<br><span class="accent-text">Pharmacology I</span></h1>
 <p class="lede appear" style="--d:.12s">Fall 2026 · Course Director Diane S. Allen-Gipson, Ph.D., M.S. · office hours by Webex appointment.</p>
 <div class="fact-pills appear" style="--d:.2s">{"".join(f'<div><strong>{a}</strong><span>{b}</span></div>' for a, b in facts)}</div>
 <div class="btns noprint appear" style="--d:.28s"><a class="btn" href="#calc">Grade calculator</a><a class="btn ghost" href="#schedule">Schedule</a><a class="btn ghost" href="Syllabus_DPAS625_v5.pdf">Original PDF</a></div></header>
@@ -584,7 +587,7 @@ def syllabus_page(syl, sched, built):
 <p class="muted">Tap a bar and type your score. Saved only in this browser.</p>
 <div class="calc" id="calcapp"></div>
 <script type="application/json" id="grade-data">{data}</script></div></section>
-<section class="section" id="schedule"><div class="wrap"><p class="kicker">Schedule</p><h2>Week by week</h2><p class="muted">{html.escape(sched["source"])} Any material covered in lecture or assigned as reading is testable.</p>
+<section class="section" id="schedule"><div class="wrap"><p class="kicker">Schedule</p><h2>Week by week</h2><p class="muted">From the course syllabus; subject to revision. Any material covered in lecture or assigned as reading is testable.</p>
 <div class="sch-chips noprint">{chips}</div><details class="sch-past noprint" id="sch-past" hidden><summary>Show past weeks</summary><div id="sch-past-list"></div></details>
 <div class="sch-list" id="sch-list">{"".join(wk_html)}</div>
 <p class="small muted">DB = discussion board · PTX = pharmacotherapy · Bonus = optional checkpoint quiz (Brightspace, 2 attempts).</p></div></section>
@@ -595,11 +598,11 @@ def syllabus_page(syl, sched, built):
 <h3 style="margin-top:28px">Texts</h3><ul><li><strong>Required:</strong> Katzung's Basic and Clinical Pharmacology, 16th ed. (Vanderah, 2025) — <a href="https://accessmedicine.mhmedical.com/book.aspx?bookid=3382" target="_blank" rel="noopener">AccessMedicine</a></li>
 <li><strong>Recommended:</strong> Pharmacotherapy Principles and Practice (Chisholm-Burns et al., 2022)</li></ul>
 <h3 style="margin-top:28px">Policies (summary)</h3><ul class="small"><li>Program policies (attendance, grading, progression): PA Studies Student Program Guide.</li>
-<li>Religious observances: tell the course instructor in the first week.</li><li>Accommodations: contact Disability Support Services, then meet the course director with your letter.</li>
-<li>Grade concerns go first to the course director. AI use: follow each assignment's instructions.</li><li>Class cancellations are announced through official university email.</li></ul></div></section>
+<li>Religious observances: notify the course in the first week.</li><li>Accommodations: contact your disability services office first, then share your letter with the course.</li>
+<li>Grade concerns go to the course first. AI use: follow each assignment's instructions.</li><li>Class cancellations are announced through official email.</li></ul></div></section>
 <script src="../assets/grades.js"></script>"""
     nav = '<a href="#next">Coming up</a><a href="#grading">Grading</a><a href="#calc">Calculator</a><a href="#schedule">Schedule</a><a href="#units">Units</a><a href="#outcomes">Outcomes</a>'
-    return page("Syllabus · DPAS 625", body, depth=1, nav_links=nav, active="syllabus", subtitle="Syllabus")
+    return page("Syllabus · Clinical Pharmacology I", body, depth=1, nav_links=nav, active="syllabus", subtitle="Syllabus")
 
 
 # ---------------------------------------------------------------- site-wide search index
@@ -667,7 +670,7 @@ def review_page(syl, built, exams):
 </div></div></section>
 <script type="application/json" id="review-data">{cfg}</script>
 <script src="../assets/review.js"></script>"""
-    return page("Review · DPAS Pharm", body, depth=1, active="review")
+    return page("Review · Clinical Pharmacology", body, depth=1, active="review")
 
 
 # ---------------------------------------------------------------- cumulative drug index
@@ -707,7 +710,7 @@ def drugs_page(built, exams):
 <aside class="dx-sheet" id="dx-sheet" aria-label="Drug details" hidden><div class="dx-sheet-in" id="dx-sheet-in"></div></aside><div class="dx-scrim" id="dx-scrim" hidden></div>
 <script type="application/json" id="drug-data">{cfg}</script>
 <script src="../assets/drugs.js"></script>"""
-    return page("Drug index · DPAS Pharm", body, depth=1, active="drugs")
+    return page("Drug index · Clinical Pharmacology", body, depth=1, active="drugs")
 
 # ---------------------------------------------------------------- main
 def main(pdf=True):

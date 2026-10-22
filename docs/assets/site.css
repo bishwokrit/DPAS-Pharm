@@ -1,4 +1,4 @@
-/* DPAS Pharm — one design system for every page. Calm, spacious, Apple-like. */
+/* Clinical Pharmacology — one design system for every page. Calm, spacious, Apple-like. */
 :root {
   --bg: #fbfbfd; --surface: #ffffff; --surface-2: #f5f5f7; --text: #1d1d1f; --text-2: #6e6e73; --hair: rgba(0,0,0,.08);
   --accent: #0071e3; --accent-soft: #e8f1fc; --good: #1d8f4e; --good-soft: #e6f4ea; --bad: #d70015; --bad-soft: #fdecee;
@@ -182,6 +182,7 @@ footer { padding: 48px 0 64px; color: var(--text-2); font-size: 13px; }
 .foot-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 32px; }
 .foot-grid p { margin: 8px 0 12px; line-height: 1.55; } .foot-grid strong { color: var(--text); font-weight: 600; }
 .site-foot .brand-mark { width: 22px; height: 22px; font-size: 10px; border-radius: 7px; vertical-align: -5px; margin-right: 4px; }
+.foot-fine { font-size: 11.5px; line-height: 1.55; color: var(--text-2); opacity: .8; margin: 4px 0 0; padding-top: 14px; border-top: 1px solid var(--hair); max-width: 900px; }
 @media (max-width: 720px) { .foot-grid { grid-template-columns: 1fr; gap: 0; } }
 
 @media print {

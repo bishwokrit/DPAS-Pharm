@@ -306,7 +306,7 @@
       box = document.createElement("div");
       box.className = "sr-box";
       box.innerHTML = `<div class="sr-panel" role="dialog" aria-label="Search"><div class="sr-in"><svg viewBox="0 0 16 16" width="18" height="18"><circle cx="7" cy="7" r="5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M11 11l3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
-        <input type="search" placeholder="Search DPAS Pharm…" autocomplete="off" spellcheck="false"><kbd>Esc</kbd></div><div class="sr-list"></div>
+        <input type="search" placeholder="Search…" autocomplete="off" spellcheck="false"><kbd>Esc</kbd></div><div class="sr-list"></div>
         <div class="sr-foot"><span><kbd>↑</kbd><kbd>↓</kbd> move</span><span><kbd>Enter</kbd> open</span><span>Results open at the spot, highlighted</span></div></div>`;
       document.body.append(box);
       input = box.querySelector("input"); list = box.querySelector(".sr-list");
