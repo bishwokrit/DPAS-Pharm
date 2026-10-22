@@ -361,20 +361,21 @@ def home_page(syl, built, exams_built):
     n_q = sum(b["qs"] for b in built.values()) + sum(e["count"] for e in exams_built)
     n_cards = sum(b["cards"] for b in built.values())
     upnext = json.dumps({"exams": syl.get("exams", []), "due": sched["due"]}).replace("</", "<\\/")
-    hero = f"""<header class="hero home-hero wrap">
+    hero = f"""<section class="first-screen">
+<header class="hero home-hero wrap">
 <p class="eyebrow appear">DPAS 625 · Clinical Pharmacology I · Fall 2026</p>
 <h1 class="hero-title"><span class="line">Study smarter.</span><span class="line accent-text">Remember longer.</span></h1>
-<p class="lede appear" style="--d:.25s">Study guides, decks, and practice exams for every lecture — built only from your course materials, with every fact cited to its slide.</p>
-<div class="btns appear" style="--d:.35s"><a class="btn" href="review/index.html">Start today's review</a><a class="btn ghost" href="#study">Browse lectures</a></div>
 </header>
-<section class="wrap upnext-strip" aria-label="Coming up"><div class="up3" id="home-up"></div>
-<script type="application/json" id="home-data">{upnext}</script></section>
-<section class="wrap stats appear" aria-label="At a glance"><div class="stats-in">
+<div class="wrap"><div class="up3" id="home-up"></div>
+<script type="application/json" id="home-data">{upnext}</script></div>
+<div class="wrap stats appear" style="--d:.55s" aria-label="At a glance"><div class="stats-in">
   <div><strong data-count="{len(built)}">{len(built)}</strong><span>lectures ready</span></div>
   <div><strong data-count="{n_q}">{n_q}</strong><span>practice questions</span></div>
   <div><strong data-count="{n_cards}">{n_cards}</strong><span>flashcards</span></div>
   <div><strong>100%</strong><span>facts cited to a source</span></div>
-</div></section>"""
+</div></div>
+<a class="scroll-cue" href="#practice" aria-label="Scroll to practice"><span></span></a>
+</section>"""
     # practice: a small bento grid
     tiles = [f'<a class="tile tile-wide appear" href="review/index.html"><span class="tile-ic">{icon("review")}</span><div><div class="tile-k">Exam week</div>'
              '<h3>Review dashboard</h3><p>Daily 10, every miss and flag in one place, weak topics, weak flashcards, and mixed timed exams.</p></div><span class="tile-go">Open →</span></a>']

@@ -569,3 +569,32 @@ a.upcard { transition: transform .2s, box-shadow .2s; } a.upcard:hover { transfo
 .focus-btn::before { content: "◎ "; }
 body.focus .focus-btn { background: var(--accent-soft) !important; color: var(--accent) !important; border-color: transparent !important; }
 @media (max-width: 520px) { .focus-btn { padding: 0 8px !important; } .subnav-title { display: none; } }
+
+/* home first screen: everything you need, no scrolling */
+.first-screen { min-height: calc(100svh - 53px); display: flex; flex-direction: column; justify-content: center; padding: 24px 0 28px; position: relative; }
+.first-screen .home-hero { padding-top: 0; padding-bottom: 28px; }
+.first-screen .hero-title { font-size: clamp(44px, 7.2vw, 80px); margin: 0; }
+.first-screen .stats { margin: 14px auto 0; }
+.first-screen + .section { border-top: 0; }
+.scroll-cue { position: absolute; left: 50%; bottom: 14px; transform: translateX(-50%); width: 34px; height: 34px; display: grid; place-items: center; border-radius: 50%; }
+.scroll-cue span { width: 10px; height: 10px; border-right: 2px solid var(--text-2); border-bottom: 2px solid var(--text-2); transform: rotate(45deg); animation: cue 2.2s ease-in-out infinite; }
+.scroll-cue { opacity: 0; animation: cue-in .8s ease 1.1s forwards; } @keyframes cue-in { to { opacity: 1; } }
+@keyframes cue { 0%, 100% { translate: 0 -3px; opacity: .5; } 50% { translate: 0 3px; opacity: 1; } }
+@media (max-height: 700px) { .scroll-cue { display: none; } }
+@media (prefers-reduced-motion: reduce) { .scroll-cue span { animation: none; } }
+
+.first-screen > * { width: 100%; }   /* flex items with auto margins would otherwise shrink to their content */
+@media (max-width: 600px) {
+  .first-screen { min-height: 0; padding: 18px 0 8px; justify-content: flex-start; }
+  .first-screen .home-hero { padding-bottom: 18px; }
+  .first-screen .hero-title { font-size: clamp(32px, 10vw, 48px); }
+  .up3 { gap: 8px; }
+  .upcard { padding: 12px 14px; gap: 12px; border-radius: 16px; }
+  .up-num { min-width: 46px; } .up-num strong { font-size: 24px; } .up-num span { font-size: 11px; }
+  .up-k { font-size: 10.5px; } .up-t { font-size: 15px; margin: 1px 0; } .up-s { font-size: 12.5px; }
+  .first-screen .stats { margin-top: 8px; }
+  .first-screen .stats-in { grid-template-columns: repeat(4, 1fr); border-radius: 16px; }
+  .first-screen .stats-in > div { padding: 10px 8px; text-align: center; }
+  .first-screen .stats strong { font-size: 19px; } .first-screen .stats span { font-size: 10.5px; line-height: 1.25; display: block; }
+  .scroll-cue { display: none; }
+}
