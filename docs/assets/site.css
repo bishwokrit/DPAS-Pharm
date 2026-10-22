@@ -670,12 +670,16 @@ body.focus .focus-btn { background: var(--accent-soft) !important; color: var(--
 .pd .pd-seg { fill: none; stroke: var(--c); stroke-width: 26; transition: stroke-dasharray .7s cubic-bezier(.2,.7,.2,1), stroke-width .25s, opacity .25s; cursor: pointer; }
 .pd.focus [data-key]:not(.on) { opacity: .25; } .pd .pd-seg.on, .pd .pd-proj.on { stroke-width: 34; }
 #pd-big { font-size: 46px; transition: color .3s; } #pd-big small { display: block; font-size: 16px; font-weight: 600; color: var(--text-2); letter-spacing: 0; margin-top: 2px; }
-.pc-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 10px; width: 100%; }
-.pc { background: var(--surface); border-radius: 16px; padding: 14px 16px; box-shadow: var(--shadow); transition: transform .2s, box-shadow .2s; }
-.pc.on { transform: translateY(-2px); box-shadow: var(--shadow), 0 0 0 2px var(--c); }
-.pc-top { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
-.pc-name { font-weight: 600; font-size: 14.5px; flex: 1; } .pc-avg { font-size: 20px; font-weight: 700; color: var(--c); font-variant-numeric: tabular-nums; letter-spacing: -.02em; }
-.pc-dots { display: flex; flex-wrap: wrap; gap: 7px; }
+.pc-list { display: grid; gap: 8px; width: 100%; }
+.pc { background: var(--surface); border-radius: 14px; box-shadow: var(--shadow); transition: transform .2s, box-shadow .2s; }
+.pc.on { transform: translateX(6px); box-shadow: var(--shadow), 0 0 0 2px var(--c); }
+.pc-top { width: 100%; display: flex; align-items: center; gap: 12px; padding: 13px 16px; border: 0; background: none; color: var(--text); font: inherit; cursor: pointer; text-align: left; }
+.pc-name { font-weight: 600; font-size: 15px; flex: 1; } .pc-name small { font-size: 12px; font-weight: 500; color: var(--text-2); margin-left: 8px; }
+.pc-avg { font-size: 20px; font-weight: 700; color: var(--c); font-variant-numeric: tabular-nums; letter-spacing: -.02em; }
+.pc-chev { width: 8px; height: 8px; border-right: 2px solid var(--text-2); border-bottom: 2px solid var(--text-2); transform: rotate(45deg) translateY(-2px); transition: transform .25s; opacity: .6; }
+.pc.open .pc-chev { transform: rotate(225deg) translate(-2px, 0); }
+.pc-dots { display: flex; flex-wrap: wrap; gap: 7px; padding: 0 16px; max-height: 0; overflow: hidden; opacity: 0; transition: max-height .3s ease, opacity .25s, padding .3s; }
+.pc.open .pc-dots { max-height: 140px; opacity: 1; padding: 2px 16px 14px; }
 .pc-dot { --v: 0; position: relative; width: 42px; height: 42px; border-radius: 50%; display: grid; place-items: center; cursor: text;
   background: conic-gradient(var(--c) calc(var(--v) * 1%), color-mix(in srgb, var(--c) 14%, var(--surface-2)) 0); transition: transform .15s; }
 .pc-dot::before { content: ""; position: absolute; inset: 4px; border-radius: 50%; background: var(--surface); }

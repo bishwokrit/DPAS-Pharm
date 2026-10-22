@@ -46,7 +46,7 @@
   const root = document.getElementById("calcapp"), froot = document.getElementById("finalapp");
   if (root) {
     const ticks = D.scale.filter(([, min]) => min > 0), final = D.items.find((i) => i.key === "final");
-    const R = 78, C = 2 * Math.PI * R, ASSUME = [70, 75, 80, 85, 90, 95, 100];
+    const R = 78, C = 2 * Math.PI * R, ASSUME = [75, 80, 85, 90, 95];
     let off = 0;
     const arcs = D.items.map((it) => { const len = (it.weight / 100) * C, o = off; off += len;
       return `<circle cx="100" cy="100" r="${R}" class="pd-bg" style="--c:var(--c-${it.key});stroke-dasharray:${len - 2.5} ${C};stroke-dashoffset:${-o}"/>
@@ -55,12 +55,12 @@
     root.innerHTML = `<div class="grade-split pd-split"><div class="donut-wrap"><svg class="donut pd" viewBox="0 0 200 200" id="pd">${arcs}</svg>
         <div class="donut-center"><strong id="pd-big">—</strong><span id="pd-sub">projected</span></div></div>
       <div class="pc-list">${D.items.filter((it) => it.key !== "final").map((it) => `<div class="pc" data-key="${it.key}" style="--c:var(--c-${it.key})">
-          <div class="pc-top"><span class="lg-dot"></span><span class="pc-name">${it.label}</span><span class="pc-avg" data-avg="${it.key}">—</span></div>
+          <button class="pc-top" type="button"><span class="lg-dot"></span><span class="pc-name">${it.label}<small data-n="${it.key}"></small></span><span class="pc-avg" data-avg="${it.key}">—</span><span class="pc-chev" aria-hidden="true"></span></button>
           <div class="pc-dots">${Array.from({ length: it.count }, (_, i) => `<label class="pc-dot" title="${NAMES[it.key](i)}"><input type="number" inputmode="decimal" min="0" max="100" step="0.1" placeholder="${it.count > 1 ? i + 1 : "—"}" aria-label="${NAMES[it.key](i)} percent" data-k="${it.key}" data-i="${i}"></label>`).join("")}</div></div>`).join("")}
-        <div class="pc" data-key="bonus" style="--c:var(--c-bonus)"><div class="pc-top"><span class="lg-dot"></span><span class="pc-name">Bonus checkpoints</span><span class="pc-avg" id="bonus-pts">—</span></div>
+        <div class="pc" data-key="bonus" style="--c:var(--c-bonus)"><button class="pc-top" type="button"><span class="lg-dot"></span><span class="pc-name">Bonus</span><span class="pc-avg" id="bonus-pts">—</span><span class="pc-chev" aria-hidden="true"></span></button>
           <div class="pc-dots">${Array.from({ length: D.bonus.count }, (_, i) => `<label class="pc-cp" title="Checkpoint ${i + 1} (≥90%)"><input type="checkbox" data-cp="${i}"><i>${i + 1}</i></label>`).join("")}</div></div>
       </div></div>
-      <div class="pc-assume"><span>Not graded yet? Assume</span><div class="seg" id="assume">${ASSUME.map((v) => `<button data-v="${v}">${v}</button>`).join("")}</div>
+      <div class="pc-assume"><span>Assume for the rest</span><div class="seg" id="assume">${ASSUME.map((v) => `<button data-v="${v}">${v}</button>`).join("")}</div>
         <button class="pc-clear" data-clear>Clear</button></div>`;
     if (froot) froot.innerHTML = `<div class="fn-cards" id="fn-cards"></div>
       <div class="fn-try"><div class="fn-res"><span class="fn-score" id="fn-score">—</span><span class="fn-arrow">→</span><span class="fn-letter" id="fn-letter">—</span></div>
@@ -96,6 +96,12 @@
     const focus = (k) => { focusKey = k; pd.classList.toggle("focus", !!k);
       pd.querySelectorAll("[data-key]").forEach((s) => s.classList.toggle("on", s.dataset.key === k));
       root.querySelectorAll(".pc").forEach((c) => c.classList.toggle("on", c.dataset.key === k)); calc(); };
+    // tap a row to open its score circles (one open at a time)
+    root.querySelectorAll(".pc-top").forEach((b) => b.addEventListener("click", () => {
+      const pc = b.closest(".pc"), open = !pc.classList.contains("open");
+      root.querySelectorAll(".pc.open").forEach((x) => x.classList.remove("open"));
+      if (open) { pc.classList.add("open"); setTimeout(() => pc.querySelector("input[type=number]")?.focus({ preventScroll: true }), 180); }
+    }));
     root.querySelectorAll(".pc").forEach((c) => { c.addEventListener("mouseenter", () => focus(c.dataset.key)); c.addEventListener("mouseleave", () => focus(null)); c.addEventListener("focusin", () => focus(c.dataset.key)); });
     pd.querySelectorAll(".pd-seg, .pd-proj").forEach((s) => { s.addEventListener("mouseenter", () => focus(s.dataset.key)); s.addEventListener("mouseleave", () => focus(null)); });
 
@@ -114,6 +120,7 @@
           if (it.key !== "final") projNoFinal += ((has ? v : assume) / 100) * it.points_each;
         }
         avg[it.key] = n ? sum / n : null;
+        const nc = root.querySelector(`[data-n="${it.key}"]`); if (nc) nc.textContent = `${n}/${it.count}`;
         const el = root.querySelector(`[data-avg="${it.key}"]`); if (el) el.textContent = n ? `${trunc1(sum / n)}%` : "—";
         // donut: solid = points earned, tint = projected, per category (1,000 points around the ring)
         pd.querySelector(`.pd-seg[data-key="${it.key}"]`).style.strokeDasharray = `${Math.max(0, (e / 1000) * C - (e ? 2.5 : 0))} ${C}`;
@@ -126,10 +133,7 @@
       const total = (f) => Math.min(1000, projNoFinal + (f / 100) * final.points_each + bonus);
       const projTotal = total(hasFinal ? finalScore : assume), [pl] = letterOf(projTotal), cur = possible ? (100 * earned) / possible : null;
       const big = root.querySelector("#pd-big"), sub = root.querySelector("#pd-sub");
-      const fit = focusKey && D.items.find((i) => i.key === focusKey);
-      if (fit) { big.textContent = avg[fit.key] == null ? "—" : `${trunc1(avg[fit.key])}%`; big.style.color = `var(--c-${fit.key})`; sub.textContent = `${fit.label} average`; }
-      else if (focusKey === "bonus") { big.textContent = `+${+bonus.toFixed(2)}`; big.style.color = "var(--c-bonus)"; sub.textContent = "bonus points"; }
-      else { big.innerHTML = `${pl}<small>${trunc1(projTotal / 10)}%</small>`; big.style.color = LC[pl]; sub.textContent = cur === null ? "projected" : `projected · ${trunc1(cur)}% so far`; }
+      { big.innerHTML = `${pl}<small>${trunc1(projTotal / 10)}%</small>`; big.style.color = LC[pl]; sub.textContent = "projected"; }
 
       if (!froot) return;
       // final: one ring per letter showing the score you'd need; tap a ring to try that score
