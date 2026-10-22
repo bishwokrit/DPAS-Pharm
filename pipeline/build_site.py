@@ -517,22 +517,38 @@ KIND = {"exam": ("Exam", "bad"), "final": ("Final", "bad"), "quiz": ("Quiz", "wa
 def syllabus_page(syl, sched, built):
     g = sched["grading"]
     when = lambda d: date.fromisoformat(d).strftime("%a, %b %-d")
-    # schedule table: one row per class day, with what's due that week attached to the nearest class day before it
-    days = sorted({c["date"] for c in sched["classes"]} | {d["date"] for d in sched["due"]})
-    rows = []
-    for d in days:
-        cls = next((c for c in sched["classes"] if c["date"] == d), None)
-        dues = [x for x in sched["due"] if x["date"] == d]
-        topic = ""
-        if cls:
-            lec = cls.get("lecture")
-            topic = (f'<a href="{lec}/index.html">{html.escape(cls["topic"])}</a>' if lec in built else html.escape(cls["topic"]))
-        chips = "".join(f'<div class="due k-{x["kind"]}"><span class="kchip">{KIND[x["kind"]][0]}</span>{html.escape(x["label"])}'
-                        + (f'<div class="small" style="color:var(--warn)">⚠ {html.escape(x["note"])}</div>' if x.get("note") else "") + "</div>" for x in dues)
-        rows.append(f'<tr data-date="{d}"><td class="nowrap">{when(d)}</td><td>{topic}</td><td>{chips}</td></tr>')
-    weights = "".join(f'<div class="wbar" style="--w:{it["weight"]}"><div class="wfill k-{it["key"]}"></div><span><strong>{it["weight"]}%</strong> {html.escape(it["label"])} '
-                      f'<span class="muted small">({it["count"]} × {round(it["points_each"], 2):g} pts)</span></span></div>' for it in g["items"])
-    scale = "".join(f'<tr><td><strong>{L}</strong></td><td>{"≥ " + str(pts) if pts else "< 750"}</td><td>{"≥ " + str(pts // 10) + "%" if pts else "< 75%"}</td><td>{st}</td></tr>' for L, pts, st in g["scale"])
+    # schedule grouped by week (Mon–Sun); every class day and every deadline is a row you can filter by kind
+    items = [{"date": c["date"], "kind": "class", "label": c["topic"], "lec": c.get("lecture")} for c in sched["classes"]]
+    items += [{"date": d["date"], "kind": d["kind"], "label": d["label"], "note": d.get("note")} for d in sched["due"]]
+    order = {"class": 0, "final": 1, "exam": 1, "quiz": 2, "case": 3, "db": 4, "checkpoint": 5}
+    items.sort(key=lambda x: (x["date"], order[x["kind"]]))
+    weeks = {}
+    for it in items:
+        d = date.fromisoformat(it["date"])
+        monday = date.fromordinal(d.toordinal() - d.weekday())
+        weeks.setdefault(monday, []).append(it)
+    kind_label = {"class": "Class", "exam": "Exam", "final": "Final", "quiz": "Quiz", "db": "Discussion", "case": "Case", "checkpoint": "Bonus"}
+    wk_html = []
+    for monday, its in weeks.items():
+        rows = []
+        for it in its:
+            label = html.escape(it["label"])
+            if it["kind"] == "class" and it.get("lec") in built:
+                label = f'<a href="../{it["lec"]}/index.html">{label}</a>'
+            title, _, detail = it["label"].partition(" · ") if it["kind"] != "class" else (it["label"], "", "")
+            if it["kind"] != "class":
+                label = f'<strong>{html.escape(title)}</strong>' + (f' <span class="muted">· {html.escape(detail)}</span>' if detail else "")
+            note = f'<div class="sch-note">⚠ {html.escape(it["note"])}</div>' if it.get("note") else ""
+            rows.append(f'<li class="sch-item k-{it["kind"]}" data-kind="{it["kind"]}" data-date="{it["date"]}">'
+                        f'<span class="sch-date">{date.fromisoformat(it["date"]).strftime("%a")}<b>{date.fromisoformat(it["date"]).strftime("%-d")}</b></span>'
+                        f'<span class="sch-kind">{kind_label[it["kind"]]}</span><span class="sch-label">{label}{note}</span></li>')
+        wk_html.append(f'<div class="sch-week" data-week="{monday.isoformat()}" data-end="{date.fromordinal(monday.toordinal() + 6).isoformat()}">'
+                       f'<div class="sch-wk-head">Week of {monday.strftime("%b %-d")}</div><ul>{"".join(rows)}</ul></div>')
+    chips = "".join(f'<button class="sch-chip{" on" if k == "all" else ""}" data-filter="{k}">{lbl}</button>'
+                    for k, lbl in [("all", "All"), ("exam", "Exams"), ("quiz", "Quizzes"), ("db", "Discussions"), ("case", "Cases"), ("checkpoint", "Bonus"), ("class", "Classes")])
+    legend = "".join(f'<li data-key="{it["key"]}" style="--c:var(--c-{it["key"]})"><span class="lg-dot"></span><span class="lg-name">{html.escape(it["label"])}</span>'
+                     f'<span class="lg-w">{it["weight"]}%</span><span class="lg-pts">{it["count"]} × {round(it["points_each"], 2):g} pts</span></li>' for it in g["items"])
+    scale = "".join(f'<div class="scale-step s-{L}"><b>{L}</b><span>{("≥ " + str(pts // 10) + "%") if pts else "< 75%"}</span><em>{st}</em></div>' for L, pts, st in g["scale"])
     units = []
     for u, name in syl["units"].items():
         objs = {o["id"]: o["text"] for l in syl["lectures"] if str(l["unit"]) == u for o in l["objectives"]}
@@ -542,23 +558,30 @@ def syllabus_page(syl, sched, built):
                      f'<p class="small"><strong>Reading:</strong> {html.escape(sched["readings"].get(u, ""))}</p>'
                      + (f'<ul>{"".join(f"<li><strong>{k}</strong> {html.escape(v)}</li>" for k, v in objs.items())}</ul>' if objs else '<p class="small muted">Objectives listed in the syllabus PDF.</p>') + "</details>")
     data = json.dumps({"items": g["items"], "bonus": g["bonus"], "scale": g["scale"], "due": sched["due"]}, ensure_ascii=False).replace("</", "<\\/")
-    body = f"""<header class="hero wrap"><p class="eyebrow">Syllabus · v5 · October 9, 2026</p><h1>{html.escape(syl["course"])}</h1>
-<p class="lede">3 credit hours · Tue &amp; Thu, 2.5 h · Course Director Diane S. Allen-Gipson, Ph.D., M.S. · office hours by virtual appointment (Webex).</p>
-<div class="btns noprint"><a class="btn" href="#calc">Grade calculator</a><a class="btn ghost" href="#schedule">Schedule</a><a class="btn ghost" href="Syllabus_DPAS625_v5.pdf">Original PDF</a></div></header>
-<section class="section" id="next"><div class="wrap"><h2>Coming up</h2><div class="upnext" id="upnext"></div></div></section>
-<section class="section" id="grading"><div class="wrap"><h2>How you're graded</h2><p class="muted">1,000 points total — each 1% of the grade is 10 points.</p>
-<div class="weights">{weights}</div>
-<div class="grid two" style="margin-top:22px"><div class="card"><h3>Grading scale</h3><div class="table-wrap" style="box-shadow:none;margin:0"><table><thead><tr><th>Grade</th><th>Points</th><th>Percent</th><th>Status</th></tr></thead><tbody>{scale}</tbody></table></div></div>
+    facts = [("3", "credit hours"), ("2×", "a week · 2.5 h"), ("1,000", "points"), ("6 + 1", "unit exams + final"), ("75%", "to pass")]
+    body = f"""<header class="hero wrap syl-hero"><p class="eyebrow appear">Syllabus · v5 · October 9, 2026</p>
+<h1 class="appear" style="--d:.05s">DPAS 625<br><span class="accent-text">Clinical Pharmacology I</span></h1>
+<p class="lede appear" style="--d:.12s">Fall 2026 · Course Director Diane S. Allen-Gipson, Ph.D., M.S. · office hours by Webex appointment.</p>
+<div class="fact-pills appear" style="--d:.2s">{"".join(f'<div><strong>{a}</strong><span>{b}</span></div>' for a, b in facts)}</div>
+<div class="btns noprint appear" style="--d:.28s"><a class="btn" href="#calc">Grade calculator</a><a class="btn ghost" href="#schedule">Schedule</a><a class="btn ghost" href="Syllabus_DPAS625_v5.pdf">Original PDF</a></div></header>
+<section class="section" id="next"><div class="wrap"><p class="kicker">Coming up</p><h2>What's due next</h2><div class="upnext" id="upnext"></div></div></section>
+<section class="section" id="grading"><div class="wrap"><p class="kicker">Grading</p><h2>Where your 1,000 points come from</h2>
+<p class="muted">Each 1% of the grade is 10 points. Hover a slice or a row.</p>
+<div class="grade-split"><div class="donut-wrap"><svg class="donut" viewBox="0 0 200 200" id="donut" aria-label="Grade weights"></svg>
+<div class="donut-center" id="donut-center"><strong>1,000</strong><span>points</span></div></div>
+<ul class="legend" id="legend">{legend}<li class="lg-bonus" data-key="bonus" style="--c:var(--c-bonus)"><span class="lg-dot"></span><span class="lg-name">Bonus checkpoints</span><span class="lg-w">+3%</span><span class="lg-pts">8 × 3.75 pts, max 30</span></li></ul></div>
+<div class="grid two" style="margin-top:26px"><div class="card"><h3>Grading scale</h3><div class="scale">{scale}</div><p class="small muted" style="margin-top:12px">Grades are not rounded — 749.9 is an F.</p></div>
 <div class="card"><h3>Rules that matter</h3><ul>{"".join(f"<li>{html.escape(r)}</li>" for r in g["rules"])}<li><strong>Bonus:</strong> {html.escape(g["bonus"]["rule"])}</li></ul></div></div></div></section>
-<section class="section" id="calc"><div class="wrap"><h2>Grade calculator</h2>
-<p class="muted">Enter scores as you get them (percent). Leave blank what hasn't happened yet. Saved only in this browser.</p>
+<section class="section" id="calc"><div class="wrap"><p class="kicker">Grade calculator</p><h2>Watch your grade take shape</h2>
+<p class="muted">Type scores as you get them (percent). Each square below is 1% of your grade; it fills as you go. Saved only in this browser.</p>
 <div class="calc" id="calcapp"></div>
 <script type="application/json" id="grade-data">{data}</script></div></section>
-<section class="section" id="schedule"><div class="wrap"><h2>Schedule</h2><p class="muted">{html.escape(sched["source"])} Today is highlighted; past rows fade.</p>
-<div class="table-wrap"><table class="sched"><thead><tr><th>Date</th><th>Class</th><th>Due / assessments</th></tr></thead><tbody>{"".join(rows)}</tbody></table></div>
-<p class="small muted">DB = discussion board · PTX = pharmacotherapy · Checkpoint = optional bonus quiz (Brightspace, 2 attempts). Any material covered in lecture or assigned as reading is testable.</p></div></section>
-<section class="section" id="units"><div class="wrap"><h2>Units, readings &amp; objectives</h2><div class="grid two">{"".join(units)}</div></div></section>
-<section class="section" id="outcomes"><div class="wrap narrow"><h2>Course goal &amp; outcomes</h2>
+<section class="section" id="schedule"><div class="wrap"><p class="kicker">Schedule</p><h2>Week by week</h2><p class="muted">{html.escape(sched["source"])} Any material covered in lecture or assigned as reading is testable.</p>
+<div class="sch-chips noprint">{chips}</div><details class="sch-past noprint" id="sch-past" hidden><summary>Show past weeks</summary><div id="sch-past-list"></div></details>
+<div class="sch-list" id="sch-list">{"".join(wk_html)}</div>
+<p class="small muted">DB = discussion board · PTX = pharmacotherapy · Bonus = optional checkpoint quiz (Brightspace, 2 attempts).</p></div></section>
+<section class="section" id="units"><div class="wrap"><p class="kicker">Units</p><h2>Readings &amp; objectives</h2><div class="grid two">{"".join(units)}</div></div></section>
+<section class="section" id="outcomes"><div class="wrap narrow"><p class="kicker">Outcomes</p><h2>Course goal &amp; outcomes</h2>
 <p>By the end of this course, students will integrate foundational pharmacologic principles with therapeutic reasoning to select, evaluate, and communicate safe, effective, evidence-based pharmacotherapy for common conditions encountered in clinical practice.</p>
 <ol class="summary">{"".join(f"<li>{html.escape(o)}</li>" for o in OUTCOMES)}</ol>
 <h3 style="margin-top:28px">Texts</h3><ul><li><strong>Required:</strong> Katzung's Basic and Clinical Pharmacology, 16th ed. (Vanderah, 2025) — <a href="https://accessmedicine.mhmedical.com/book.aspx?bookid=3382" target="_blank" rel="noopener">AccessMedicine</a></li>
