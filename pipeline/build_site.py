@@ -573,8 +573,8 @@ def syllabus_page(syl, sched, built):
 <ul class="legend" id="legend">{legend}<li class="lg-bonus" data-key="bonus" style="--c:var(--c-bonus)"><span class="lg-dot"></span><span class="lg-name">Bonus checkpoints</span><span class="lg-w">+3%</span><span class="lg-pts">8 × 3.75 pts, max 30</span></li></ul></div>
 <div class="grid two" style="margin-top:26px"><div class="card"><h3>Grading scale</h3><div class="scale">{scale}</div><p class="small muted" style="margin-top:12px">Grades are not rounded — 749.9 is an F.</p></div>
 <div class="card"><h3>Rules that matter</h3><ul>{"".join(f"<li>{html.escape(r)}</li>" for r in g["rules"])}<li><strong>Bonus:</strong> {html.escape(g["bonus"]["rule"])}</li></ul></div></div></div></section>
-<section class="section" id="calc"><div class="wrap"><p class="kicker">Grade calculator</p><h2>Watch your grade take shape</h2>
-<p class="muted">Type scores as you get them (percent). Each square below is 1% of your grade; it fills as you go. Saved only in this browser.</p>
+<section class="section" id="calc"><div class="wrap"><p class="kicker">Grade calculator</p><h2>Where your grade stands</h2>
+<p class="muted">Type each score as a percent when you get it. Saved only in this browser.</p>
 <div class="calc" id="calcapp"></div>
 <script type="application/json" id="grade-data">{data}</script></div></section>
 <section class="section" id="schedule"><div class="wrap"><p class="kicker">Schedule</p><h2>Week by week</h2><p class="muted">{html.escape(sched["source"])} Any material covered in lecture or assigned as reading is testable.</p>

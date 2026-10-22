@@ -1,4 +1,4 @@
-// Syllabus page: interactive grade breakdown (donut), a live 100-square grade grid + calculator,
+// Syllabus page: interactive grade breakdown (donut), a grade calculator,
 // "coming up" deadlines, and a filterable week-by-week schedule. Weights come from the syllabus (grade-data JSON).
 // Scores are saved only in this browser.
 (function () {
@@ -41,33 +41,27 @@
     }
   }
 
-  // ---------------------------------------------------------------- calculator + live grade grid
+  // ---------------------------------------------------------------- calculator: summary numbers, one points bar, score ledger
   const root = document.getElementById("calcapp");
   if (root) {
-    root.innerHTML = `<div class="calc-grid"><div class="calc-inputs">${D.items.map((it) => `
-        <div class="calc-group" style="--c:var(--c-${it.key})"><div class="calc-head"><span class="cg-dot"></span><strong>${it.label}</strong><span class="cg-avg" data-avg="${it.key}">—</span><span class="muted small">${it.weight}%</span></div>
-        <div class="calc-row">${Array.from({ length: it.count }, (_, i) => `<label class="cin"><span>${NAMES[it.key](i)}</span><input type="number" inputmode="decimal" min="0" max="100" step="0.1" placeholder="—" data-k="${it.key}" data-i="${i}"><i class="cin-bar"></i></label>`).join("")}</div></div>`).join("")}
-        <div class="calc-group" style="--c:var(--c-bonus)"><div class="calc-head"><span class="cg-dot"></span><strong>Bonus checkpoints</strong><span class="muted small">≥90% on either attempt · +${D.bonus.points_each} each</span></div>
-        <div class="calc-row cp">${Array.from({ length: D.bonus.count }, (_, i) => `<label class="cpbox"><input type="checkbox" data-cp="${i}"><span>CP ${i + 1}</span></label>`).join("")}</div></div>
+    const ticks = D.scale.filter(([, min]) => min > 0);
+    root.innerHTML = `<div class="gc-sum">
+        <div><div class="gc-num" id="cur-num">—</div><div class="gc-lbl">Graded so far</div></div>
+        <div><div class="gc-num" id="proj-num">—</div><div class="gc-lbl">Projected</div></div>
+        <div><div class="gc-num" id="proj-letter">—</div><div class="gc-lbl">Projected letter</div></div></div>
+      <div class="gc-bar" aria-hidden="true"><i class="gc-earned" id="bar-e"></i><i class="gc-proj" id="bar-p"></i>
+        ${ticks.map(([L, min]) => `<span class="gc-tick" style="left:${min / 10}%"><b>${L}</b></span>`).join("")}</div>
+      <div class="gc-bar-key"><span id="bar-txt"></span><span><i class="k-e"></i>Earned <i class="k-p"></i>Projected</span></div>
+      <div class="gc-ledger">${D.items.map((it) => `
+        <div class="gc-row"><div class="gc-cat"><strong>${it.label}</strong><span>${it.weight}% · ${it.count > 1 ? `${it.count} × ${+it.points_each.toFixed(1)} pts` : `${it.points_each} pts`}</span></div>
+          <div class="gc-ins">${Array.from({ length: it.count }, (_, i) => `<input type="number" inputmode="decimal" min="0" max="100" step="0.1" placeholder="${it.count > 1 ? i + 1 : "%"}" aria-label="${NAMES[it.key](i)} percent" title="${NAMES[it.key](i)}" data-k="${it.key}" data-i="${i}">`).join("")}</div>
+          <div class="gc-avg" data-avg="${it.key}">—</div></div>`).join("")}
+        <div class="gc-row"><div class="gc-cat"><strong>Bonus checkpoints</strong><span>≥90% on either attempt · +${D.bonus.points_each} each, max ${D.bonus.max}</span></div>
+          <div class="gc-ins">${Array.from({ length: D.bonus.count }, (_, i) => `<label class="gc-cp"><input type="checkbox" data-cp="${i}">${i + 1}</label>`).join("")}</div>
+          <div class="gc-avg" id="bonus-pts">—</div></div></div>
+      <div class="gc-foot"><label class="gc-assume">For anything not graded yet, assume <strong id="as-v">85%</strong><input type="range" min="50" max="100" step="1" data-assume></label>
         <button class="btn ghost small" data-clear>Clear all</button></div>
-      <div class="calc-out">
-        <div class="calc-card gg-card"><div class="gg-head"><div><div class="small muted">Projected final grade</div><div class="gg-big"><span id="proj-num">0.0</span>%<span class="gg-letter" id="proj-letter">—</span></div></div>
-          <div class="gg-cur"><div class="small muted">Graded so far</div><div><strong id="cur-num">—</strong></div></div></div>
-          <div class="gg" id="gg" aria-label="Each square is 1% of your grade"></div>
-          <div class="gg-key"><span><i class="k-earned"></i>Earned</span><span><i class="k-lost"></i>Lost</span><span><i class="k-proj"></i>Projected</span><span><i class="k-bonus"></i>Bonus</span></div>
-          <div class="track"><div class="track-zones"><span style="left:75%"></span><span style="left:80%"></span><span style="left:90%"></span></div>
-            <div class="track-lbl"><b style="left:75%">C</b><b style="left:80%">B</b><b style="left:90%">A</b></div>
-            <div class="track-mark cur" id="mk-cur" title="Graded so far"></div><div class="track-mark proj" id="mk-proj" title="Projected"></div></div>
-          <label class="calc-assume">If I average <strong id="as-v">85%</strong> on everything left<input type="range" min="50" max="100" step="1" data-assume></label></div>
-        <div class="calc-card"><div class="small muted" id="need-h">What you need on the final</div><div id="need"></div></div>
-      </div></div>`;
-
-    // 100 squares: one per 1% of the grade, grouped by category in syllabus order (+ up to 3 bonus squares)
-    const gg = root.querySelector("#gg"), cells = [];
-    D.items.forEach((it) => { for (let i = 0; i < it.weight; i++) cells.push(it.key); });
-    gg.innerHTML = cells.map((k, i) => `<i data-k="${k}" style="--c:var(--c-${k});--i:${i}"></i>`).join("") +
-      `<span class="gg-plus">+</span>` + [0, 1, 2].map((i) => `<i class="b" style="--c:var(--c-bonus);--i:${100 + i}"></i>`).join("");
-    const sq = [...gg.querySelectorAll("i:not(.b)")], bsq = [...gg.querySelectorAll("i.b")];
+      <h3 class="gc-need-h" id="need-h">What you need on the final</h3><div id="need"></div>`;
 
     root.querySelectorAll("input[data-k]").forEach((inp) => {
       const v = S[inp.dataset.k]?.[inp.dataset.i];
@@ -91,79 +85,46 @@
       calc();
     });
 
-    // smooth number tweening
-    const tweens = new Map();
-    const tween = (el, to, fmt) => {
-      const from = +(el.dataset.v ?? to); el.dataset.v = to;
-      if (calm || from === to) { el.textContent = fmt(to); return; }
-      cancelAnimationFrame(tweens.get(el));
-      const t0 = performance.now(), dur = 550;
-      const step = (t) => { const k = Math.min(1, (t - t0) / dur), e = 1 - Math.pow(1 - k, 3); el.textContent = fmt(from + (to - from) * e); if (k < 1) tweens.set(el, requestAnimationFrame(step)); };
-      tweens.set(el, requestAnimationFrame(step));
-    };
-    const LCOL = { A: "var(--good)", B: "var(--accent)", C: "var(--warn)", F: "var(--bad)" };
-
     function calc() {
       const assume = S.assume ?? 85;
       root.querySelector("#as-v").textContent = assume + "%";
       let earned = 0, possible = 0, projNoFinal = 0, projected = 0;
       const final = D.items.find((i) => i.key === "final");
-      // per-category points: earned / lost (graded) and projected earned / lost (ungraded at the slider value)
-      const cat = {};
       for (const it of D.items) {
-        const c = (cat[it.key] = { e: 0, l: 0, pe: 0, pl: 0, n: 0, sum: 0 });
+        let n = 0, sum = 0;
         for (let i = 0; i < it.count; i++) {
           const v = S[it.key]?.[i], has = v !== null && v !== undefined && v !== "";
-          if (has) { c.e += (v / 100) * it.points_each; c.l += (1 - v / 100) * it.points_each; c.n++; c.sum += v; earned += (v / 100) * it.points_each; possible += it.points_each; }
-          else { c.pe += (assume / 100) * it.points_each; c.pl += (1 - assume / 100) * it.points_each; }
+          if (has) { n++; sum += v; earned += (v / 100) * it.points_each; possible += it.points_each; }
           if (it.key !== "final") projNoFinal += ((has ? v : assume) / 100) * it.points_each;
           projected += ((has ? v : assume) / 100) * it.points_each;
         }
-        const avg = root.querySelector(`[data-avg="${it.key}"]`);
-        avg.textContent = c.n ? `${trunc1(c.sum / c.n)}% avg` : "—";
-        avg.classList.toggle("has", !!c.n);
-      }
-      // inputs: little fill bar under each score
-      root.querySelectorAll("label.cin").forEach((l) => { const v = +l.querySelector("input").value; l.style.setProperty("--v", l.querySelector("input").value === "" ? 0 : Math.max(0, Math.min(100, v))); });
-
-      // paint the grid: within each category, earned → lost → projected-earned → (projected-lost stays empty)
-      let idx = 0;
-      for (const it of D.items) {
-        const c = cat[it.key], per = 10;  // 1 square = 10 points
-        let e = Math.round(c.e / per), l = Math.round((c.e + c.l) / per) - e, pe = Math.round((c.e + c.l + c.pe) / per) - e - l;
-        for (let i = 0; i < it.weight; i++, idx++) {
-          const st = i < e ? "earned" : i < e + l ? "lost" : i < e + l + pe ? "proj" : "";
-          if (sq[idx].dataset.s !== st) { sq[idx].dataset.s = st; sq[idx].style.setProperty("--dl", `${(i % 20) * 12}ms`); }
-        }
+        root.querySelector(`[data-avg="${it.key}"]`).textContent = n ? `${trunc1(sum / n)}%` : "—";
       }
       const bonus = Math.min(D.bonus.max, (S.cp || []).filter(Boolean).length * D.bonus.points_each);
-      bsq.forEach((b, i) => (b.dataset.s = bonus >= (i + 1) * 10 - 0.01 ? "earned" : bonus > i * 10 ? "half" : ""));
+      root.querySelector("#bonus-pts").textContent = bonus ? `+${+bonus.toFixed(2)}` : "—";
 
-      const projTotal = Math.min(1000, projected + bonus), [pl] = letterOf(projTotal);
-      const cur = possible ? (100 * earned) / possible : null;
-      tween(root.querySelector("#proj-num"), projTotal / 10, (x) => trunc1(x));
-      const le = root.querySelector("#proj-letter");
-      if (le.textContent !== pl) { le.textContent = pl; le.style.background = LCOL[pl]; le.classList.remove("pop"); void le.offsetWidth; le.classList.add("pop"); }
-      root.querySelector("#cur-num").textContent = cur === null ? "—" : `${trunc1(cur)}% ${letterOf(cur * 10)[0]}`;
-      const pos = (pct) => `${Math.max(0, Math.min(100, (pct - 50) * 2))}%`;  // track shows 50–100%
-      root.querySelector("#mk-proj").style.left = pos(projTotal / 10);
-      root.querySelector("#mk-proj").style.background = LCOL[pl];
-      const mc = root.querySelector("#mk-cur");
-      mc.hidden = cur === null; if (cur !== null) mc.style.left = pos(cur);
+      const projTotal = Math.min(1000, projected + bonus), cur = possible ? (100 * earned) / possible : null;
+      root.querySelector("#cur-num").textContent = cur === null ? "—" : `${trunc1(cur)}%`;
+      root.querySelector("#proj-num").textContent = `${trunc1(projTotal / 10)}%`;
+      root.querySelector("#proj-letter").textContent = letterOf(projTotal)[0];
+      const got = Math.min(1000, earned + bonus);
+      root.querySelector("#bar-e").style.width = `${got / 10}%`;
+      root.querySelector("#bar-p").style.width = `${Math.max(0, projTotal - got) / 10}%`;
+      root.querySelector("#bar-txt").textContent = `${trunc1(got)} of 1,000 points earned · ${Math.round(1000 - possible)} still to be graded`;
 
-      // what you need on the final, as three mini gauges
+      // what you need on the final: one plain row per letter
       const finalScore = S.final?.[0], need = root.querySelector("#need");
       if (finalScore != null && finalScore !== "") {
         root.querySelector("#need-h").textContent = "Final exam";
-        need.innerHTML = `<p class="small">${finalScore >= 75 ? "✓ At least 75% on the final — passing requirement met." : "⚠ Below 75% on the final means not passing the course, whatever the total."}</p>`;
+        need.innerHTML = `<p class="small">${finalScore >= 75 ? "At least 75% on the final — passing requirement met." : "Below 75% on the final means not passing the course, whatever the total."}</p>`;
         return;
       }
       root.querySelector("#need-h").textContent = "What you need on the final";
-      need.innerHTML = D.scale.filter(([, min]) => min > 0).map(([L, min]) => {
-        const req = Math.max(((min - projNoFinal - bonus) / final.points_each) * 100, 75), out = req > 100;
-        return `<div class="need-row"><span class="gg-letter" style="background:${LCOL[L]}">${L}</span><div class="need-bar"><i style="width:${out ? 100 : req}%;background:${out ? "var(--hair)" : LCOL[L]}"></i></div>
-          <strong>${out ? "—" : trunc1(req) + "%"}</strong></div><div class="need-sub small muted">${out ? "Out of reach with these assumptions" : req === 75 ? "The 75% minimum" : "on the final"}</div>`;
-      }).join("") + '<p class="small muted" style="margin-top:8px">Assumes your other remaining work matches the slider. ≥75% on the final is required to pass.</p>';
+      need.innerHTML = `<table class="gc-need"><thead><tr><th>To finish with</th><th>You need on the final</th><th></th></tr></thead><tbody>${ticks.map(([L, min]) => {
+        const raw = ((min - projNoFinal - bonus) / final.points_each) * 100, req = Math.max(raw, 75);
+        const note = req > 100 ? "Out of reach with these assumptions" : raw <= 75 ? "Only the 75% minimum" : "";
+        return `<tr class="${req > 100 ? "out" : ""}"><td><strong>${L}</strong> <span class="muted">(${min / 10}%)</span></td><td class="num">${req > 100 ? "—" : trunc1(req) + "%"}</td><td class="muted small">${note}</td></tr>`;
+      }).join("")}</tbody></table><p class="small muted" style="margin-top:10px">Assumes your other remaining work matches the setting above. At least 75% on the final is required to pass.</p>`;
     }
     calc();
   }
