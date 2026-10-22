@@ -360,11 +360,14 @@ def home_page(syl, built, exams_built):
     sched = json.loads((ROOT / "work" / "schedule.json").read_text())
     n_q = sum(b["qs"] for b in built.values()) + sum(e["count"] for e in exams_built)
     n_cards = sum(b["cards"] for b in built.values())
+    teasers = [{"date": l["date"], "text": built[l["id"]]["teaser"]} for l in syl["lectures"] if l["id"] in built and built[l["id"]].get("teaser")]
     upnext = json.dumps({"exams": syl.get("exams", []), "due": sched["due"]}).replace("</", "<\\/")
     hero = f"""<section class="first-screen">
 <header class="hero home-hero wrap">
 <p class="eyebrow appear">DPAS 625 · Clinical Pharmacology I · Fall 2026</p>
 <h1 class="hero-title"><span class="line">Study smarter.</span><span class="line accent-text">Remember longer.</span></h1>
+<p class="lede hero-teaser" id="home-teaser">{html.escape(teasers[-1]["text"]) if teasers else ""}</p>
+<script type="application/json" id="teaser-data">{json.dumps(teasers).replace("</", "<\\/")}</script>
 </header>
 <div class="wrap"><div class="up3" id="home-up"></div>
 <script type="application/json" id="home-data">{upnext}</script></div>
@@ -626,7 +629,7 @@ def main(pdf=True):
         if pdf:
             make_pdf(lec_dir / "index.html", lec_dir / pdf_name)
         n_q = sum(len(cl.get("questions", [])) for cl in c["classes"]) + len(lecture_checks.extract(slides))
-        built[lid] = {"title": c["lecture"]["title"], "objs": ",".join(o["id"] for o in c["objectives"]),
+        built[lid] = {"title": c["lecture"]["title"], "teaser": c.get("guide", {}).get("teaser", ""), "objs": ",".join(o["id"] for o in c["objectives"]),
                       "cards": len(c.get("guide", {}).get("cram", [])), "qs": len(quiz_items(c, slides)),
                       "meta": f'{len(c["classes"])} parts · {len(c.get("guide", {}).get("cram", []))}-row cram sheet · {n_q} practice questions',
                       "links": [("Study guide", f"{lid}/index.html"), ("PDF", f"{lid}/{pdf_name}"), ("Deck", f"{lid}/" + next((n for l, n in files if l.startswith("Slide")), ""))]}

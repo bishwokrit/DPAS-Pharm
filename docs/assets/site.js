@@ -116,6 +116,14 @@
     document.querySelectorAll(".appear").forEach((el) => ro.observe(el));
   } else document.querySelectorAll(".appear").forEach((el) => el.classList.add("in"));
 
+  // home teaser: the most recent lecture's two-sentence pitch (switches on each class day, no rebuild needed)
+  const td = document.getElementById("teaser-data"), tp = document.getElementById("home-teaser");
+  if (td && tp) {
+    const list = JSON.parse(td.textContent), t = new Date(); t.setHours(23, 59, 59, 0);
+    const pick = list.filter((x) => new Date(x.date + "T00:00") <= t).pop() || list[0];
+    if (pick) tp.textContent = pick.text;
+  }
+
   // home: "coming up" cards, computed in the browser so they stay current without a rebuild
   const hd = document.getElementById("home-data"), hu = document.getElementById("home-up");
   if (hd && hu) {

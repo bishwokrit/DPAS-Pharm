@@ -1,5 +1,8 @@
 """Study-guide extras for L01 (6-sentence summary, flow diagrams, cram sheet). Imported by author_L01.py."""
 
+# Home-page teaser (two sentences, shown on the class day and until the next lecture)
+TEASER = 'This week: how drugs act on receptors, why potency isn’t efficacy, and what first-pass metabolism does to an oral dose. One cited guide and exam-style practice — no more hours lost rereading the textbook.'
+
 SUMMARY = [
     ("Pharmacology studies how drugs interact with living systems: **pharmacokinetics** is what the body does to the drug (ADME), and **pharmacodynamics** is what the drug does to the body.", "S5; S6"),
     ("Learn and prescribe by **generic name** — brand names can hide a shared ingredient and cause unintentional double-dosing.", "S7; S9"),

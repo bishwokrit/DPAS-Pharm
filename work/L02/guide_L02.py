@@ -1,5 +1,8 @@
 """Study-guide extras for L02 (6-sentence summary, flow diagrams, cram sheet). Imported by author_L02.py."""
 
+# Home-page teaser (two sentences, shown on the class day and until the next lecture)
+TEASER = 'Today: CYP450 interactions, half-life and steady-state math, renal dosing, and the gene‑drug pairs that change a prescription. One cited guide and exam-style practice — no more hours lost rereading the textbook.'
+
 SUMMARY = [
     ("Metabolism inactivates drugs, activates prodrugs, or makes active or **toxic metabolites** (e.g., NAPQI); **Phase I** (CYP450 oxidation, reduction, hydrolysis) functionalizes and **Phase II** conjugates for excretion.", "S4; S4 (notes); S5"),
     ("A **CYP inhibitor raises** a substrate's level (toxicity) and an **inducer lowers** it (therapeutic failure) — always check CYP450 interactions before adding a drug.", "S6; S7 (notes); S40"),

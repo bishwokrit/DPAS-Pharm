@@ -205,6 +205,9 @@ Learning objectives covered: SO3, IO1.1, IO1.3
 ### Figure: Figure 8 · Steady state with and without a loading dose
 - Original illustrative multi-dose simulation: maintenance dosing alone climbs gradually (a sawtooth climb) to steady state; adding a loading dose reaches the target level immediately, right from the first dose. (S24; S24 (notes))
 
+### Figure: Textbook concept · Five to fill, five to empty
+- Original diagram: starting regular dosing, each half-life closes half of the remaining gap to steady state (50 → 75 → 87.5 → 93.75 → ~97%); after stopping, each half-life removes half of what remains (50 → 25 → 12.5 → 6.25 → 3.125%). The same 4–5 half-lives govern both. (S19; S23; p. 47)
+
 ### Comparison: Half-life worked example (t½ = 6 h, start 100 mg/L) (S19)
 | Half-lives | Time | Concentration | % remaining | % eliminated |
 |---|---|---|---|---|

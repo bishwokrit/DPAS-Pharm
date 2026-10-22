@@ -686,7 +686,7 @@ content = {
 import sys as _sys
 _sys.path.insert(0, str(Path(__file__).parent))
 import guide_L01 as G
-content["guide"] = {"summary": [{"text": t, "src": s} for t, s in G.SUMMARY],
+content["guide"] = {"summary": [{"text": t, "src": s} for t, s in G.SUMMARY], "teaser": getattr(G, "TEASER", ""),
                     "cram": [{"prompt": p, "answer": a, "src": s} for p, a, s in G.CRAM],
                     "discrepancies": []}
 for _cl in content["classes"]:

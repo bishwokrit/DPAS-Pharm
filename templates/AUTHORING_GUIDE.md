@@ -85,3 +85,9 @@ Never skip anything that contains a fact.
 ## After writing
 Run `./run.sh <LEC>`. Read `outputs/<LEC>/<LEC>_audit.md`. Fix every "Missing" item in
 content.json and re-run until it says PASS. Check "cited to a different slide" items too.
+
+## Home-page teaser (every lecture)
+In `work/<ID>/guide_<ID>.py`, set `TEASER` to two professional sentences: sentence 1 names what that
+session teaches (start "Today:" for the class day's lecture); sentence 2 is the value line ("One cited
+guide and exam-style practice — no more hours lost rereading the textbook."). Keep it under ~35 words,
+no hype words or exclamation marks. The home page shows the latest lecture's teaser automatically.

@@ -598,3 +598,14 @@ body.focus .focus-btn { background: var(--accent-soft) !important; color: var(--
   .first-screen .stats strong { font-size: 19px; } .first-screen .stats span { font-size: 10.5px; line-height: 1.25; display: block; }
   .scroll-cue { display: none; }
 }
+
+.hero-teaser { max-width: 880px; margin-top: 20px; font-size: clamp(17px, 1.9vw, 21px); line-height: 1.5; text-wrap: pretty; }
+.js .hero-teaser { opacity: 0; animation: rise .9s cubic-bezier(.2,.7,.2,1) .3s forwards; }
+@media (prefers-reduced-motion: reduce) { .js .hero-teaser { opacity: 1; animation: none; } }
+@media (max-width: 600px) { .hero-teaser { margin-top: 12px; font-size: 15.5px; } }
+@media (max-height: 780px) and (min-width: 601px) {
+  .first-screen .hero-title { font-size: clamp(44px, 6vw, 66px); }
+  .first-screen .home-hero { padding-bottom: 20px; } .hero-teaser { margin-top: 14px; font-size: 18px; }
+  .upcard { padding: 14px 18px; } .first-screen .stats-in > div { padding: 12px 18px; } .first-screen .stats strong { font-size: 26px; }
+  .scroll-cue { display: none; }
+}

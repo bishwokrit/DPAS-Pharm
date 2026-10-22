@@ -306,6 +306,9 @@ Learning objectives covered: SO4, IO1.1
 ### Figure: Figure 4 · Wide vs. narrow therapeutic index
 - Original illustrative number-line comparison: a wide gap between ED₅₀ and TD₅₀ is safer to dose than a narrow one (illustrative values). Note how close ED₅₀ and TD₅₀ sit for the narrow-TI example (e.g., warfarin, lithium, digoxin, phenytoin). (S39; S39 (notes))
 
+### Figure: Textbook concept · Quantal dose-response and the therapeutic window
+- Original diagram (illustrative values) of a textbook concept: the % of a population showing the therapeutic effect (blue) or a toxic effect (red) as dose rises. ED₅₀ and TD₅₀ give TI = TD₅₀ ÷ ED₅₀ (an animal-study measure); the therapeutic window — minimum therapeutic dose to minimum toxic dose — is the more practical range for dosing a patient. (p. 38)
+
 ### Comparison: Potency vs. efficacy (S30; S34; S37)
 |  | Potency | Efficacy (Emax) |
 |---|---|---|
@@ -321,6 +324,14 @@ Learning objectives covered: SO4, IO1.1
 | Dosing | Generally safer to dose | Careful dosing; small errors → toxic |
 | Monitoring | Not covered in materials | Often **blood-level monitoring** |
 | Examples | Not covered in materials | **Warfarin, lithium, digoxin, phenytoin** |
+
+### Comparison: The narrow-TI drugs in numbers (textbook Table 3–1) ([TB] p. 44; p. 45)
+| Drug | Half-life | Target level | Toxic above | Worth knowing |
+|---|---|---|---|---|
+| Digoxin | 39 h | 1 ng/mL | 2 ng/mL | Vd ~500 L (sequestered in tissue); 67% excreted in urine |
+| Lithium | 22 h | 0.7 mEq/L | 2 mEq/L | 95% excreted in urine, 0% protein-bound — renal function rules |
+| Phenytoin | Concentration-dependent | 10 mg/L | 20 mg/L | Saturable (capacity-limited) elimination; 89% protein-bound |
+| Warfarin | 37 h | Not in table | Not in table | 99% protein-bound |
 
 ### Dose-Response Relationships — Memory hooks
 - Why it happens: Why do narrow-TI drugs need blood levels? The effective dose and the toxic dose sit so close together that a small dosing error can push the patient from effective to toxic. (S38; S41)
@@ -360,6 +371,7 @@ Learning objectives covered: SO5, IO1.2, IO1.3, IO1.5
 - Blood-brain barrier — **Why can some drugs readily enter the CNS while others cannot?** Tight junctions between endothelial cells restrict paracellular movement. (S53)
 - Small, lipophilic, non-ionized drugs cross the BBB more easily than large, polar, or highly protein-bound drugs. (S53)
 - Efflux transporters (like P-glycoprotein) can actively pump some drugs back out of the CNS. (S53)
+- [TB] First-pass loss can happen in the **gut wall** (e.g., intestinal CYP3A4) as well as the liver; grapefruit juice inhibits gut-wall metabolism and P-glycoprotein, raising absorption of some drugs. (p. 48)
 - [TB] **P-glycoprotein (MDR1)** pumps drugs out of cells in brain, testes, and gut; inhibiting it raises digoxin blood levels. (p. 9)
 - [TB] Ion trapping: weak acids are excreted faster in **alkaline** urine; weak bases faster in **acidic** urine. (p. 10; p. 11)
 
@@ -404,6 +416,17 @@ Learning objectives covered: SO5, IO1.2, IO1.3, IO1.5
 | Chemistry | Lipophilic, non-ionized | Polar |
 | Protein binding | Not covered in materials | Highly protein-bound |
 | Other | Not covered in materials | Pumped out by efflux transporters (P-glycoprotein) |
+
+### Comparison: Bioavailability by route (textbook Table 3–3) ([TB] p. 48)
+| Route | Bioavailability (%) | Note |
+|---|---|---|
+| Intravenous (IV) | 100 | Most rapid onset |
+| Intramuscular (IM) | 75 to ≤100 | Large volumes often feasible; may be painful |
+| Subcutaneous (SC) | 75 to ≤100 | Smaller volumes than IM; may be painful |
+| Oral (PO) | 5 to <100 | Most convenient; first-pass effect may be important |
+| Rectal (PR) | 30 to <100 | Less first-pass effect than oral |
+| Inhalation | 5 to <100 | Often very rapid onset |
+| Transdermal | 80 to ≤100 | Usually very slow absorption; prolonged duration |
 
 ### Pharmacokinetics: ADME — Absorption & Distribution — Memory hooks
 - Why it happens: Why is IV bioavailability 100%? The whole dose enters the bloodstream directly — there is no absorption step and no trip through the liver first. (S50; S49)

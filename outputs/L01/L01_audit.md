@@ -2,7 +2,7 @@
 
 **Result: PASS ✅ nothing missing**
 
-Checked 1875 source lines (57 slides; 10 study-guide items; 56 textbook pages read; 11 textbook sentences used, the rest left out as not needed for this lecture (info only).)
+Checked 1875 source lines (57 slides; 10 study-guide items; 56 textbook pages read; 14 textbook sentences used, the rest left out as not needed for this lecture (info only).)
 
 ## Missing from the study materials
 - None ✅
@@ -38,7 +38,7 @@ Checked 1875 source lines (57 slides; 10 study-guide items; 56 textbook pages re
 
 ## Objectives with thin coverage
 - ⚠ IO1.1: Define and describe fundamental pharmacologic concepts, including pharmacokinetics, pharmacodynamics, drug-receptor interactions, dose-response relationships, therapeutic index, half-life, and steady state. — 3 class(es), 91 facts (Half-life and steady state are taught in Session 2 (L02))
-- ⚠ IO1.2: Describe the processes of drug absorption, distribution, metabolism, and excretion and factors that influence these processes. — 1 class(es), 35 facts (This session: absorption + distribution; metabolism + excretion detail in Session 2 (L02))
-- ⚠ IO1.3: Explain how patient-specific factors, including age, pregnancy, renal and hepatic function, and pharmacogenetic variation, may affect medication response. — 1 class(es), 35 facts (Barely covered this session; pharmacogenomics and renal dosing in Session 2 (L02))
+- ⚠ IO1.2: Describe the processes of drug absorption, distribution, metabolism, and excretion and factors that influence these processes. — 1 class(es), 36 facts (This session: absorption + distribution; metabolism + excretion detail in Session 2 (L02))
+- ⚠ IO1.3: Explain how patient-specific factors, including age, pregnancy, renal and hepatic function, and pharmacogenetic variation, may affect medication response. — 1 class(es), 36 facts (Barely covered this session; pharmacogenomics and renal dosing in Session 2 (L02))
 - ⚠ IO1.4: Identify common types and mechanisms of adverse drug reactions, drug-drug interactions, and drug-disease interactions. — 2 class(es), 61 facts (Only ADR definition + adverse-event reporting this session; drug interactions in Session 2 (L02))
-- ⚠ IO1.5: Interpret common components of medication orders and prescriptions, including drug name, dose, route, frequency, and duration. — 2 class(es), 61 facts (Only drug names (generic vs brand) and routes this session)
+- ⚠ IO1.5: Interpret common components of medication orders and prescriptions, including drug name, dose, route, frequency, and duration. — 2 class(es), 62 facts (Only drug names (generic vs brand) and routes this session)

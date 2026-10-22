@@ -1451,6 +1451,13 @@
      "title": "Figure 4 · Wide vs. narrow therapeutic index",
      "src": "S39; S39 (notes)",
      "caption": "Original illustrative number-line comparison: a wide gap between ED₅₀ and TD₅₀ is safer to dose than a narrow one (illustrative values). Note how close ED₅₀ and TD₅₀ sit for the narrow-TI example (e.g., warfarin, lithium, digoxin, phenytoin)."
+    },
+    {
+     "image": "TB_quantal.png",
+     "title": "Textbook concept · Quantal dose-response and the therapeutic window",
+     "tb": true,
+     "src": "p. 38",
+     "caption": "Original diagram (illustrative values) of a textbook concept: the % of a population showing the therapeutic effect (blue) or a toxic effect (red) as dose rises. ED₅₀ and TD₅₀ give TI = TD₅₀ ÷ ED₅₀ (an animal-study measure); the therapeutic window — minimum therapeutic dose to minimum toxic dose — is the more practical range for dosing a patient."
     }
    ],
    "comparisons": [
@@ -1515,6 +1522,48 @@
       ]
      ],
      "src": "S38; S39; S41"
+    },
+    {
+     "title": "The narrow-TI drugs in numbers (textbook Table 3–1)",
+     "tb": true,
+     "src": "p. 44; p. 45",
+     "columns": [
+      "Drug",
+      "Half-life",
+      "Target level",
+      "Toxic above",
+      "Worth knowing"
+     ],
+     "rows": [
+      [
+       "Digoxin",
+       "39 h",
+       "1 ng/mL",
+       "2 ng/mL",
+       "Vd ~500 L (sequestered in tissue); 67% excreted in urine"
+      ],
+      [
+       "Lithium",
+       "22 h",
+       "0.7 mEq/L",
+       "2 mEq/L",
+       "95% excreted in urine, 0% protein-bound — renal function rules"
+      ],
+      [
+       "Phenytoin",
+       "Concentration-dependent",
+       "10 mg/L",
+       "20 mg/L",
+       "Saturable (capacity-limited) elimination; 89% protein-bound"
+      ],
+      [
+       "Warfarin",
+       "37 h",
+       "Not in table",
+       "Not in table",
+       "99% protein-bound"
+      ]
+     ]
     }
    ],
    "hooks": [
@@ -1713,7 +1762,19 @@
      "src": "S30; S34; S34 (notes)"
     }
    ],
-   "flows": [],
+   "flows": [
+    {
+     "title": "Asthma + propranolol (textbook case)",
+     "tb": true,
+     "src": "p. 41",
+     "steps": [
+      "Nonselective β blocker (propranolol)",
+      "Blocks β2 in the airways",
+      "Bronchoconstriction / no bronchodilation",
+      "Use a β1-selective blocker (metoprolol) or another antihypertensive"
+     ]
+    }
+   ],
    "deeper": {
     "chapter": 2,
     "first": 37,
@@ -1813,6 +1874,11 @@
      {
       "text": "Efflux transporters (like P-glycoprotein) can actively pump some drugs back out of the CNS.",
       "src": "S53"
+     },
+     {
+      "text": "First-pass loss can happen in the **gut wall** (e.g., intestinal CYP3A4) as well as the liver; grapefruit juice inhibits gut-wall metabolism and P-glycoprotein, raising absorption of some drugs.",
+      "src": "p. 48",
+      "tb": true
      },
      {
       "text": "**P-glycoprotein (MDR1)** pumps drugs out of cells in brain, testes, and gut; inhibiting it raises digoxin blood levels.",
@@ -1975,6 +2041,53 @@
       ]
      ],
      "src": "S53"
+    },
+    {
+     "title": "Bioavailability by route (textbook Table 3–3)",
+     "tb": true,
+     "src": "p. 48",
+     "columns": [
+      "Route",
+      "Bioavailability (%)",
+      "Note"
+     ],
+     "rows": [
+      [
+       "Intravenous (IV)",
+       "100",
+       "Most rapid onset"
+      ],
+      [
+       "Intramuscular (IM)",
+       "75 to ≤100",
+       "Large volumes often feasible; may be painful"
+      ],
+      [
+       "Subcutaneous (SC)",
+       "75 to ≤100",
+       "Smaller volumes than IM; may be painful"
+      ],
+      [
+       "Oral (PO)",
+       "5 to <100",
+       "Most convenient; first-pass effect may be important"
+      ],
+      [
+       "Rectal (PR)",
+       "30 to <100",
+       "Less first-pass effect than oral"
+      ],
+      [
+       "Inhalation",
+       "5 to <100",
+       "Often very rapid onset"
+      ],
+      [
+       "Transdermal",
+       "80 to ≤100",
+       "Usually very slow absorption; prolonged duration"
+      ]
+     ]
     }
    ],
    "hooks": [
@@ -2147,6 +2260,17 @@
       "Systemic circulation"
      ],
      "src": "S51"
+    },
+    {
+     "title": "Aspirin overdose and urine pH (textbook case)",
+     "tb": true,
+     "src": "p. 20",
+     "steps": [
+      "Aspirin = weak acid",
+      "Acidosis drives it into tissues and back from urine",
+      "Sodium bicarbonate alkalinizes blood and urine",
+      "Drug ionized → trapped in urine → faster renal clearance"
+     ]
     }
    ],
    "deeper": {
@@ -2250,6 +2374,7 @@
     "src": "S50; S51; S52; S53"
    }
   ],
+  "teaser": "This week: how drugs act on receptors, why potency isn’t efficacy, and what first-pass metabolism does to an oral dose. One cited guide and exam-style practice — no more hours lost rereading the textbook.",
   "cram": [
    {
     "prompt": "Pharmacology",
@@ -2541,6 +2666,14 @@
    }
   ],
   "discrepancies": [
+   {
+    "text": "**First-pass effect:** slides describe hepatic first-pass and say essentially every route except oral bypasses it. The textbook adds that drug can also be metabolized in the gut wall, and that the rectal route only partly avoids the liver (about 50%).",
+    "src": "S49 (notes); S51; p. 48; p. 49"
+   },
+   {
+    "text": "**Therapeutic index:** slides define TI = TD₅₀ ÷ ED₅₀. The textbook notes this is measured in animals; for a patient, the therapeutic window (minimum therapeutic to minimum toxic dose) is more useful.",
+    "src": "S38; p. 38"
+   },
    {
     "text": "**Phase I population:** slides say healthy volunteers; the textbook adds that patients with the disease are used when significant toxicity is expected (cancer, AIDS).",
     "src": "S13; p. 17"
