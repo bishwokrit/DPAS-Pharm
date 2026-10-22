@@ -3,7 +3,9 @@
   ./run.sh status        what's ready, what's missing
   ./run.sh setup         make a folder per lecture from the syllabus
   ./run.sh L01           build one lecture
-  ./run.sh all           build every lecture that has its slides + content
+  ./run.sh all           build every lecture that has its slides + content, then the website
+  ./run.sh site          rebuild the website (study guides, PDFs, home page) into docs/
+  ./run.sh exam U1       rebuild a practice exam (bank in work/exams/U1/)
 """
 import json
 import re
@@ -133,5 +135,15 @@ if __name__ == "__main__":
         print("\nSummary:")
         for k, v in results.items():
             print(f"  {k}: {v}")
+        import build_site
+        build_site.main()
+    elif arg == "site":
+        import build_site
+        build_site.main()
+    elif arg == "exam":
+        import build_exam
+        build_exam.main(sys.argv[2] if len(sys.argv) > 2 else "U1")
+        import build_site
+        build_site.main(pdf=False)
     else:
         build(arg)

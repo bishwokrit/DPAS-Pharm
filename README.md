@@ -42,6 +42,14 @@ Your files appear in `outputs/L05/`. Open `L05_audit.md` first — it should say
 | `./run.sh L05` | Builds one lecture (deck + NotebookLM + audit) |
 | `./run.sh all` | Rebuilds every lecture that's ready |
 | `./run.sh setup` | Makes a folder for each lecture from the syllabus |
+| `./run.sh site` | Rebuilds the website (study guides + PDFs + home page) |
+| `./run.sh exam U1` | Rebuilds the Unit 1 practice exam app |
+
+## The website
+
+Everything in `docs/` is the website (GitHub Pages serves it). It has a home page with your next
+exam, a study guide per lecture (web + PDF, with cram sheet and self-test), and practice exams.
+Progress, flags, and your wrong-answer log are saved in your browser.
 
 ## Adding the textbook later
 
