@@ -48,7 +48,7 @@ def slug(text):
 def page(title, body, depth=0, nav_links="", sidekick=False):
     up = "../" * depth
     return f"""<!doctype html>
-<html lang="en">
+<html lang="en" data-root="{up}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -60,6 +60,8 @@ def page(title, body, depth=0, nav_links="", sidekick=False):
 <nav class="nav"><div class="nav-in">
   <a class="brand" href="{up}index.html">{SITE_NAME}</a>
   <div class="nav-links">{nav_links}</div>
+  <a class="nav-syl" href="{up}syllabus/index.html">Syllabus</a>
+  <button class="search-btn" aria-label="Search (Ctrl+K)" title="Search everything (⌘K / Ctrl+K)"><svg viewBox="0 0 16 16" width="15" height="15"><circle cx="7" cy="7" r="5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M11 11l3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg><span>Search</span><kbd>⌘K</kbd></button>
   <button class="theme-btn" aria-label="Change theme"></button>
 </div></nav>
 {body}
@@ -338,8 +340,10 @@ def home_page(syl, built, exams_built):
         cards.append(f'<a class="card lec" data-progress="exam" data-slug="{ex["id"]}" data-total="{ex["count"]}" href="exams/{ex["id"]}/index.html" style="color:inherit"><div class="small muted">Practice exam</div>'
                      f'<h3 style="margin:2px 0">{html.escape(ex["title"])}</h3><div class="meta">{ex["count"]} questions · study or timed mode · debrief · tracks what you miss</div><div class="progress"></div>'
                      f'<div class="links"><span style="color:var(--accent)">Start →</span></div></a>')
+    cards.append('<a class="card lec" href="syllabus/index.html" style="color:inherit"><div class="small muted">Course</div><h3 style="margin:2px 0">Syllabus &amp; grade calculator</h3>'
+                 '<div class="meta">What\'s due next · full schedule · grading rules · "what do I need on the final?"</div><div class="links"><span style="color:var(--accent)">Open →</span></div></a>')
     if cards:
-        body.append(f'<section class="section" id="exams"><div class="wrap"><h2>Practice exams</h2><div class="grid">{"".join(cards)}</div></div></section>')
+        body.append(f'<section class="section" id="exams"><div class="wrap"><h2>Practice &amp; planning</h2><div class="grid">{"".join(cards)}</div></div></section>')
     # units
     for u, name in syl.get("units", {}).items():
         lecs = [l for l in syl["lectures"] if str(l["unit"]) == u]
@@ -405,6 +409,110 @@ def knowledge_base(c, slides, n_img=0):
             "source": next((p.name for p in sorted((ROOT / "outputs" / lid / "notebooklm").glob("*_source*.md"))), "")}
 
 
+
+# ---------------------------------------------------------------- syllabus + grade calculator
+OUTCOMES = ["Explain foundational principles of pharmacology and their relationship to medication effects.",
+            "Compare pharmacologic agents based on their therapeutic and pharmacologic characteristics.",
+            "Apply pharmacologic knowledge to select safe and effective pharmacotherapy for common medical conditions.",
+            "Apply principles of safe medication prescribing and management.",
+            "Communicate medication-related information effectively to patients and caregivers."]
+KIND = {"exam": ("Exam", "bad"), "final": ("Final", "bad"), "quiz": ("Quiz", "warn"), "db": ("Discussion", "accent"),
+        "case": ("Case", "violet"), "checkpoint": ("Bonus", "good")}
+
+
+def syllabus_page(syl, sched, built):
+    g = sched["grading"]
+    when = lambda d: date.fromisoformat(d).strftime("%a, %b %-d")
+    # schedule table: one row per class day, with what's due that week attached to the nearest class day before it
+    days = sorted({c["date"] for c in sched["classes"]} | {d["date"] for d in sched["due"]})
+    rows = []
+    for d in days:
+        cls = next((c for c in sched["classes"] if c["date"] == d), None)
+        dues = [x for x in sched["due"] if x["date"] == d]
+        topic = ""
+        if cls:
+            lec = cls.get("lecture")
+            topic = (f'<a href="{lec}/index.html">{html.escape(cls["topic"])}</a>' if lec in built else html.escape(cls["topic"]))
+        chips = "".join(f'<div class="due k-{x["kind"]}"><span class="kchip">{KIND[x["kind"]][0]}</span>{html.escape(x["label"])}'
+                        + (f'<div class="small" style="color:var(--warn)">⚠ {html.escape(x["note"])}</div>' if x.get("note") else "") + "</div>" for x in dues)
+        rows.append(f'<tr data-date="{d}"><td class="nowrap">{when(d)}</td><td>{topic}</td><td>{chips}</td></tr>')
+    weights = "".join(f'<div class="wbar" style="--w:{it["weight"]}"><div class="wfill k-{it["key"]}"></div><span><strong>{it["weight"]}%</strong> {html.escape(it["label"])} '
+                      f'<span class="muted small">({it["count"]} × {round(it["points_each"], 2):g} pts)</span></span></div>' for it in g["items"])
+    scale = "".join(f'<tr><td><strong>{L}</strong></td><td>{"≥ " + str(pts) if pts else "< 750"}</td><td>{"≥ " + str(pts // 10) + "%" if pts else "< 75%"}</td><td>{st}</td></tr>' for L, pts, st in g["scale"])
+    units = []
+    for u, name in syl["units"].items():
+        objs = {o["id"]: o["text"] for l in syl["lectures"] if str(l["unit"]) == u for o in l["objectives"]}
+        exam = next((e for e in syl["exams"] if str(e["unit"]) == u), None)
+        units.append(f'<details class="card unit"><summary><span class="part">Unit {u}</span><strong>{html.escape(name)}</strong>'
+                     f'<span class="muted small">{("Exam " + when(exam["date"])) if exam else ""}</span></summary>'
+                     f'<p class="small"><strong>Reading:</strong> {html.escape(sched["readings"].get(u, ""))}</p>'
+                     + (f'<ul>{"".join(f"<li><strong>{k}</strong> {html.escape(v)}</li>" for k, v in objs.items())}</ul>' if objs else '<p class="small muted">Objectives listed in the syllabus PDF.</p>') + "</details>")
+    data = json.dumps({"items": g["items"], "bonus": g["bonus"], "scale": g["scale"], "due": sched["due"]}, ensure_ascii=False).replace("</", "<\\/")
+    body = f"""<header class="hero wrap"><p class="eyebrow">Syllabus · v5 · October 9, 2026</p><h1>{html.escape(syl["course"])}</h1>
+<p class="lede">3 credit hours · Tue &amp; Thu, 2.5 h · Course Director Diane S. Allen-Gipson, Ph.D., M.S. · office hours by virtual appointment (Webex).</p>
+<div class="btns noprint"><a class="btn" href="#calc">Grade calculator</a><a class="btn ghost" href="#schedule">Schedule</a><a class="btn ghost" href="Syllabus_DPAS625_v5.pdf">Original PDF</a></div></header>
+<section class="section" id="next"><div class="wrap"><h2>Coming up</h2><div class="upnext" id="upnext"></div></div></section>
+<section class="section" id="grading"><div class="wrap"><h2>How you're graded</h2><p class="muted">1,000 points total — each 1% of the grade is 10 points.</p>
+<div class="weights">{weights}</div>
+<div class="grid two" style="margin-top:22px"><div class="card"><h3>Grading scale</h3><div class="table-wrap" style="box-shadow:none;margin:0"><table><thead><tr><th>Grade</th><th>Points</th><th>Percent</th><th>Status</th></tr></thead><tbody>{scale}</tbody></table></div></div>
+<div class="card"><h3>Rules that matter</h3><ul>{"".join(f"<li>{html.escape(r)}</li>" for r in g["rules"])}<li><strong>Bonus:</strong> {html.escape(g["bonus"]["rule"])}</li></ul></div></div></div></section>
+<section class="section" id="calc"><div class="wrap"><h2>Grade calculator</h2>
+<p class="muted">Enter scores as you get them (percent). Leave blank what hasn't happened yet. Saved only in this browser.</p>
+<div class="calc" id="calcapp"></div>
+<script type="application/json" id="grade-data">{data}</script></div></section>
+<section class="section" id="schedule"><div class="wrap"><h2>Schedule</h2><p class="muted">{html.escape(sched["source"])} Today is highlighted; past rows fade.</p>
+<div class="table-wrap"><table class="sched"><thead><tr><th>Date</th><th>Class</th><th>Due / assessments</th></tr></thead><tbody>{"".join(rows)}</tbody></table></div>
+<p class="small muted">DB = discussion board · PTX = pharmacotherapy · Checkpoint = optional bonus quiz (Brightspace, 2 attempts). Any material covered in lecture or assigned as reading is testable.</p></div></section>
+<section class="section" id="units"><div class="wrap"><h2>Units, readings &amp; objectives</h2><div class="grid two">{"".join(units)}</div></div></section>
+<section class="section" id="outcomes"><div class="wrap narrow"><h2>Course goal &amp; outcomes</h2>
+<p>By the end of this course, students will integrate foundational pharmacologic principles with therapeutic reasoning to select, evaluate, and communicate safe, effective, evidence-based pharmacotherapy for common conditions encountered in clinical practice.</p>
+<ol class="summary">{"".join(f"<li>{html.escape(o)}</li>" for o in OUTCOMES)}</ol>
+<h3 style="margin-top:28px">Texts</h3><ul><li><strong>Required:</strong> Katzung's Basic and Clinical Pharmacology, 16th ed. (Vanderah, 2025) — <a href="https://accessmedicine.mhmedical.com/book.aspx?bookid=3382" target="_blank" rel="noopener">AccessMedicine</a></li>
+<li><strong>Recommended:</strong> Pharmacotherapy Principles and Practice (Chisholm-Burns et al., 2022)</li></ul>
+<h3 style="margin-top:28px">Policies (summary)</h3><ul class="small"><li>Program policies (attendance, grading, progression): PA Studies Student Program Guide.</li>
+<li>Religious observances: tell the course instructor in the first week.</li><li>Accommodations: contact Disability Support Services, then meet the course director with your letter.</li>
+<li>Grade concerns go first to the course director. AI use: follow each assignment's instructions.</li><li>Class cancellations are announced through official university email.</li></ul></div></section>
+<script src="../assets/grades.js"></script>"""
+    nav = '<a href="#next">Coming up</a><a href="#grading">Grading</a><a href="#calc">Calculator</a><a href="#schedule">Schedule</a><a href="#units">Units</a><a href="#outcomes">Outcomes</a>'
+    return page("Syllabus · DPAS 625", body, depth=1, nav_links=nav)
+
+
+# ---------------------------------------------------------------- site-wide search index
+def search_index(syl, sched, built, exams):
+    """Small entries for the ⌘K search: {t: text, g: group, u: url (from site root), s: citation}."""
+    out = [{"t": "Home — next exam, lectures, practice exams", "g": "Pages", "u": "index.html"},
+           {"t": "Syllabus — schedule, grading, grade calculator", "g": "Pages", "u": "syllabus/index.html"},
+           {"t": "Grade calculator", "g": "Pages", "u": "syllabus/index.html#calc"}]
+    for ex in exams:
+        out.append({"t": f"{ex['title']} — practice exam", "g": "Pages", "u": f"exams/{ex['id']}/index.html"})
+    for lid, b in built.items():
+        kb = json.loads((DOCS / lid / "kb.json").read_text())
+        out.append({"t": f"{lid} · {b['title']} — study guide", "g": "Pages", "u": f"{lid}/index.html"})
+        for ch in kb["chunks"]:
+            out.append({"t": ch["text"], "g": f"{lid} · {ch['where']}", "u": f"{lid}/index.html#{ch['anchor']}", "s": ch["src"]})
+        for c in kb["cards"]:
+            out.append({"t": f"{c['q']} — {c['a']}", "g": f"{lid} · Cram sheet", "u": f"{lid}/index.html#cram", "s": c["src"]})
+        for q in kb["quiz"]:
+            out.append({"t": q["stem"], "g": f"{lid} · Self-test", "u": f"{lid}/index.html#{q['id']}", "s": q.get("src", "")})
+        for s in kb["summary"]:
+            out.append({"t": s["text"], "g": f"{lid} · Summary", "u": f"{lid}/index.html#summary", "s": s["src"]})
+    for l in syl["lectures"]:
+        for o in l["objectives"]:
+            if l["id"] in built:
+                out.append({"t": f"{o['id']} {o['text']}", "g": f"{l['id']} · Objectives", "u": f"{l['id']}/index.html#objectives"})
+    for ex in exams:
+        res = DOCS / "exams" / ex["id"] / "questions.json"
+        if res.exists():
+            for q in json.loads(res.read_text()):
+                out.append({"t": q["stem"], "g": f"{ex['title']}", "u": f"exams/{ex['id']}/index.html#q-{q['id']}", "s": q.get("src", "")})
+    for d in sched["due"]:
+        out.append({"t": f"{d['label']} — {date.fromisoformat(d['date']).strftime('%a, %b %-d')}", "g": "Schedule", "u": "syllabus/index.html#schedule"})
+    for u, r in sched["readings"].items():
+        out.append({"t": f"Unit {u} reading: {r}", "g": "Syllabus", "u": "syllabus/index.html#units"})
+    for r in sched["grading"]["rules"]:
+        out.append({"t": r, "g": "Syllabus · rules", "u": "syllabus/index.html#grading"})
+    return out
+
 # ---------------------------------------------------------------- main
 def main(pdf=True):
     syl = json.loads((ROOT / "work" / "syllabus.json").read_text())
@@ -444,6 +552,11 @@ def main(pdf=True):
     exams = []
     for ex_dir in sorted((DOCS / "exams").glob("*/meta.json")) if (DOCS / "exams").exists() else []:
         exams.append(json.loads(ex_dir.read_text()))
+    sched = json.loads((ROOT / "work" / "schedule.json").read_text())
+    (DOCS / "syllabus").mkdir(exist_ok=True)
+    shutil.copy(next((ROOT / "inputs" / "syllabus").glob("*.pdf")), DOCS / "syllabus" / "Syllabus_DPAS625_v5.pdf")
+    (DOCS / "syllabus" / "index.html").write_text(syllabus_page(syl, sched, built))
+    (DOCS / "search.json").write_text(json.dumps(search_index(syl, sched, built, exams), ensure_ascii=False))
     (DOCS / "index.html").write_text(home_page(syl, built, exams))
     print(f"  site: home page ({len(built)} lectures, {len(exams)} practice exams) -> docs/")
 

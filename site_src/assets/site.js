@@ -173,3 +173,118 @@
     out.innerHTML = ring(checked, objs.length, "objectives") + ring(strong, +d.cards + mine, "flashcards strong") + ring(done, +d.qs, "questions right");
   });
 })();
+
+// Site-wide search (⌘K / Ctrl+K or the Search button): every fact, cram row, question, objective,
+// deadline and page. Results open at the right section with the words highlighted.
+(function () {
+  const root = document.documentElement.dataset.root ?? "";
+  let index = null, box, input, list, sel = 0, hits = [];
+  const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  const norm = (s) => String(s).toLowerCase().normalize("NFKD").replace(/[̀-ͯ]/g, "").replace(/\*\*/g, "");
+  const GROUP_RANK = (g) => (g === "Pages" ? 0 : /Objectives|Summary/.test(g) ? 1 : /Part|Sources|Why|Mnemonic/.test(g) ? 2 : /Cram/.test(g) ? 3 : /Self-test|Exam/.test(g) ? 4 : 5);
+
+  async function load() {
+    if (!index) index = await fetch(root + "search.json").then((r) => r.json()).catch(() => []);
+    index.forEach((e) => (e._n ||= norm(e.t + " " + e.g + " " + (e.s || ""))));
+  }
+  function run(q) {
+    const terms = norm(q).split(/[^a-z0-9.]+/).filter((t) => t.length > 0);
+    if (!terms.length) return [];
+    const here = location.pathname.split("/").slice(-2).join("/");
+    return index.map((e) => {
+      let score = 0;
+      for (const t of terms) {
+        const re = new RegExp("(^|[^a-z0-9])" + t.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"));
+        if (!re.test(e._n)) return null;
+        score += norm(e.t).includes(t) ? 3 : 1;
+      }
+      if (terms.length > 1 && e._n.includes(terms.join(" "))) score += 4;
+      if (e.u.split("#")[0].endsWith(here)) score += 1.5;  // this page first
+      return { e, score: score - GROUP_RANK(e.g) * 0.4 - e.t.length / 900 };
+    }).filter(Boolean).sort((a, b) => b.score - a.score).slice(0, 40).map((x) => x.e);
+  }
+  const mark = (text, q) => {
+    let h = esc(text.replace(/\*\*/g, ""));
+    norm(q).split(/[^a-z0-9.]+/).filter((t) => t.length > 1).forEach((t) => { h = h.replace(new RegExp("(" + t.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + ")", "ig"), "<mark>$1</mark>"); });
+    return h;
+  };
+  function draw() {
+    const q = input.value;
+    hits = q.trim() ? run(q) : [];
+    sel = 0;
+    if (!q.trim()) { list.innerHTML = '<div class="sr-empty">Search every lecture, cram row, question, objective, and deadline. Try <em>CYP3A4</em>, <em>half-life</em>, <em>quiz 2</em>, or <em>loading dose</em>.</div>'; return; }
+    if (!hits.length) { list.innerHTML = '<div class="sr-empty">No matches. Not covered in materials — or try fewer words.</div>'; return; }
+    let last = "";
+    list.innerHTML = hits.map((h, i) => {
+      const head = h.g !== last ? `<div class="sr-g">${esc(h.g)}</div>` : "";
+      last = h.g;
+      const t = h.t.length > 220 ? h.t.slice(0, 218) + "…" : h.t;
+      return `${head}<a class="sr" href="${root + h.u + (h.u.includes("#") && h.g !== "Pages" ? "" : "")}" data-i="${i}">${mark(t, q)}${h.s ? ` <span class="cite">${esc(h.s)}</span>` : ""}</a>`;
+    }).join("");
+    list.querySelectorAll(".sr").forEach((a) => a.addEventListener("click", (e) => { e.preventDefault(); go(+a.dataset.i); }));
+    paint();
+  }
+  function paint() { list.querySelectorAll(".sr").forEach((a, i) => a.classList.toggle("on", i === sel)); list.querySelector(".sr.on")?.scrollIntoView({ block: "nearest" }); }
+  function go(i) {
+    const h = hits[i]; if (!h) return;
+    try { sessionStorage.setItem("find", input.value); } catch { /* ignore */ }
+    const [path, hash] = (root + h.u).split("#");
+    const samePage = new URL(path, location.href).pathname === location.pathname;
+    close();
+    if (samePage) { if (hash) location.hash = hash; highlight(input.value, hash); }
+    else location.href = root + h.u;
+  }
+  async function open() {
+    if (!box) {
+      box = document.createElement("div");
+      box.className = "sr-box";
+      box.innerHTML = `<div class="sr-panel" role="dialog" aria-label="Search"><div class="sr-in"><svg viewBox="0 0 16 16" width="18" height="18"><circle cx="7" cy="7" r="5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M11 11l3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+        <input type="search" placeholder="Search DPAS Pharm…" autocomplete="off" spellcheck="false"><kbd>Esc</kbd></div><div class="sr-list"></div>
+        <div class="sr-foot"><span><kbd>↑</kbd><kbd>↓</kbd> move</span><span><kbd>Enter</kbd> open</span><span>Results open at the spot, highlighted</span></div></div>`;
+      document.body.append(box);
+      input = box.querySelector("input"); list = box.querySelector(".sr-list");
+      box.addEventListener("mousedown", (e) => { if (e.target === box) close(); });
+      input.addEventListener("input", () => index && draw());
+      input.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowDown") { sel = Math.min(hits.length - 1, sel + 1); paint(); e.preventDefault(); }
+        else if (e.key === "ArrowUp") { sel = Math.max(0, sel - 1); paint(); e.preventDefault(); }
+        else if (e.key === "Enter") { go(sel); e.preventDefault(); }
+        else if (e.key === "Escape") close();
+      });
+    }
+    box.classList.add("open");
+    document.documentElement.style.overflow = "hidden";
+    input.focus(); input.select();  // focus first so fast typing isn't lost while the index loads
+    await load();
+    draw();
+  }
+  function close() { box?.classList.remove("open"); document.documentElement.style.overflow = ""; }
+  document.querySelectorAll(".search-btn").forEach((b) => b.addEventListener("click", open));
+  document.addEventListener("keydown", (e) => {
+    if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") { e.preventDefault(); box?.classList.contains("open") ? close() : open(); }
+  });
+
+  // Arriving from a search: highlight the words inside the target section and scroll to them
+  function highlight(q, hash) {
+    const terms = norm(q || "").split(/[^a-z0-9.]+/).filter((t) => t.length > 2);
+    if (!terms.length) return;
+    const scope = (hash && document.getElementById(hash)) || document.querySelector("main, body");
+    document.querySelectorAll("mark.find").forEach((m) => m.replaceWith(...m.childNodes));
+    const walk = document.createTreeWalker(scope, NodeFilter.SHOW_TEXT, { acceptNode: (n) => n.parentElement.closest("script, style, .sr-box, .sk-panel") ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT });
+    const re = new RegExp(terms.map((t) => t.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|"), "i");
+    const nodes = [];
+    for (let n; (n = walk.nextNode());) if (re.test(n.data)) nodes.push(n);
+    let first = null;
+    nodes.slice(0, 60).forEach((n) => {
+      const parts = n.data.split(new RegExp("(" + re.source + ")", "ig"));
+      const frag = document.createDocumentFragment();
+      parts.forEach((p, i) => { if (i % 2) { const m = Object.assign(document.createElement("mark"), { className: "find", textContent: p }); first ||= m; frag.append(m); } else if (p) frag.append(p); });
+      n.replaceWith(frag);
+    });
+    if (first) setTimeout(() => first.scrollIntoView({ behavior: "smooth", block: "center" }), 150);
+    setTimeout(() => document.querySelectorAll("mark.find").forEach((m) => m.classList.add("fade")), 6000);
+  }
+  let pending = null;
+  try { pending = sessionStorage.getItem("find"); sessionStorage.removeItem("find"); } catch { /* ignore */ }
+  if (pending) addEventListener("load", () => highlight(pending, location.hash.slice(1)));
+})();

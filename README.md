@@ -70,6 +70,16 @@ session ends with a debrief: score, time, weakest topics with "Study →" links,
 suggestions. Remote rings and keyboards: ↑/↓ choose · Enter lock in · → next · ← back · F flag ·
 Esc exit (rings that act as a mouse wheel also work).
 
+**Syllabus page** (`Syllabus` in the top bar): what's due next with countdowns, the full schedule
+(past rows fade, today is highlighted), grading weights and rules, readings and objectives per unit,
+and a **grade calculator** (current grade, projected grade, and "what do I need on the final" for
+A/B/C, with the 75%-on-the-final rule and checkpoint bonus built in). The dates and weights live in
+`work/schedule.json`; edit that file if the syllabus changes.
+
+**Search** (⌘K / Ctrl+K or the Search button): searches every lecture fact, cram row, self-test and
+exam question, objective, deadline, and rule. Opening a result jumps to the spot with your words
+highlighted.
+
 **Sharing with classmates:** just send the website link. Everyone's progress is private to their
 own browser, and the footer says it's an unofficial student-made aid. The textbook PDF and its
 extracted text are never put on the website or in this repo.

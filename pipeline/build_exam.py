@@ -346,7 +346,10 @@ function init() {
     else if (e.key === "ArrowLeft") go(-1);
     else if (k === "F") toggleFlag();
   });
-  buildView(); pos = Math.min(S.last || 0, view.length - 1); render(); renderScorecard();
+  buildView(); pos = Math.min(S.last || 0, view.length - 1);
+  const deep = location.hash.match(/^#q-(.+)$/);  // links from site search
+  if (deep && byId[deep[1]]) { mode = "all"; buildView(); pos = view.indexOf(deep[1]); }
+  render(); renderScorecard();
 }
 init();
 """
@@ -399,9 +402,9 @@ def app_html(meta, data):
 <style>{APP_CSS}</style>
 <script>{APP_JS.replace("__DATA__", json.dumps(data, ensure_ascii=False))}</script>"""
     return f"""<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex">
+<html lang="en" data-root="{up}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex">
 <title>{html.escape(meta['short'])}</title><link rel="stylesheet" href="{up}assets/site.css"></head>
-<body><nav class="nav"><div class="nav-in"><a class="brand" href="{up}index.html">DPAS Pharm</a><div class="nav-links"><a href="{up}index.html#exams">Practice exams</a></div><button class="theme-btn" aria-label="Change theme"></button></div></nav>
+<body><nav class="nav"><div class="nav-in"><a class="brand" href="{up}index.html">DPAS Pharm</a><div class="nav-links"><a href="{up}index.html#exams">Practice exams</a></div><a class="nav-syl" href="{up}syllabus/index.html">Syllabus</a><button class="search-btn" aria-label="Search (Ctrl+K)"><svg viewBox="0 0 16 16" width="15" height="15"><circle cx="7" cy="7" r="5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M11 11l3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg><span>Search</span><kbd>⌘K</kbd></button><button class="theme-btn" aria-label="Change theme"></button></div></nav>
 {body}
 <footer class="wrap narrow">Progress and your wrong-answer log are saved in this browser.</footer>
 <script src="{up}assets/site.js"></script><script src="{up}assets/quizmode.js"></script></body></html>"""
@@ -471,6 +474,7 @@ def main(exam_id):
     d = ROOT / "docs" / "exams" / meta["slug"]
     d.mkdir(parents=True, exist_ok=True)
     (d / "index.html").write_text(app_html(meta, data))
+    (d / "questions.json").write_text(json.dumps([{"id": q["id"], "stem": q["stem"], "src": q["src"]} for q in order], ensure_ascii=False))
     (d / "meta.json").write_text(json.dumps({"id": meta["slug"], "title": meta["short"], "count": len(order)}))
     (ROOT / "work" / "exams" / exam_id / "resolved.json").write_text(json.dumps(order, indent=1, ensure_ascii=False))
     print(f"  exam {exam_id}: {len(order)} questions -> docs/exams/{meta['slug']}/ ; audit -> outputs/exams/{exam_id}_exam_audit.md")

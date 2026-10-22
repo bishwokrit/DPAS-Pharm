@@ -1,7 +1,7 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex">
+<html lang="en" data-root="../../"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex">
 <title>Unit 1 Practice Exam</title><link rel="stylesheet" href="../../assets/site.css"></head>
-<body><nav class="nav"><div class="nav-in"><a class="brand" href="../../index.html">DPAS Pharm</a><div class="nav-links"><a href="../../index.html#exams">Practice exams</a></div><button class="theme-btn" aria-label="Change theme"></button></div></nav>
+<body><nav class="nav"><div class="nav-in"><a class="brand" href="../../index.html">DPAS Pharm</a><div class="nav-links"><a href="../../index.html#exams">Practice exams</a></div><a class="nav-syl" href="../../syllabus/index.html">Syllabus</a><button class="search-btn" aria-label="Search (Ctrl+K)"><svg viewBox="0 0 16 16" width="15" height="15"><circle cx="7" cy="7" r="5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M11 11l3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg><span>Search</span><kbd>⌘K</kbd></button><button class="theme-btn" aria-label="Change theme"></button></div></nav>
 <header class="hero wrap narrow" style="padding-bottom:0"><p class="eyebrow">Practice exam · 100 questions</p>
 <h1 style="font-size:clamp(30px,5vw,44px)">Unit 1 Practice Exam — Introduction to Pharmacology</h1>
 <p class="lede">One question at a time. Tap an answer to see why every option is right or wrong. Built only from the Unit 1 slides and study guide.</p></header>
@@ -174,7 +174,10 @@ function init() {
     else if (e.key === "ArrowLeft") go(-1);
     else if (k === "F") toggleFlag();
   });
-  buildView(); pos = Math.min(S.last || 0, view.length - 1); render(); renderScorecard();
+  buildView(); pos = Math.min(S.last || 0, view.length - 1);
+  const deep = location.hash.match(/^#q-(.+)$/);  // links from site search
+  if (deep && byId[deep[1]]) { mode = "all"; buildView(); pos = view.indexOf(deep[1]); }
+  render(); renderScorecard();
 }
 init();
 </script>
