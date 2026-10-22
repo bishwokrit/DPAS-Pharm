@@ -45,7 +45,31 @@ def slug(text):
     return re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")
 
 
-def page(title, body, depth=0, nav_links="", sidekick=False):
+SEARCH_ICON = ('<svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><circle cx="7" cy="7" r="5" fill="none" stroke="currentColor" stroke-width="1.7"/>'
+               '<path d="M11 11l3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>')
+
+
+def nav_html(up, active="", nav_links="", subtitle=""):
+    """Two-level bar: a calm global nav (4 destinations + search + theme), and — only when a page has
+    sections — a slim local bar under it with that page's own links."""
+    main = [("Study", f"{up}index.html#study", "study"), ("Practice", f"{up}index.html#practice", "practice"),
+            ("Review", f"{up}review/index.html", "review"), ("Syllabus", f"{up}syllabus/index.html", "syllabus")]
+    links = "".join(f'<a href="{href}"{" aria-current=page" if key == active else ""}>{label}</a>' for label, href, key in main)
+    sub = (f'<div class="subnav"><div class="subnav-in"><span class="subnav-title">{html.escape(subtitle)}</span>'
+           f'<div class="nav-links">{nav_links}</div><span class="subnav-tools"></span></div></div>') if nav_links else ""
+    return f"""<header class="topbar">
+<nav class="nav" aria-label="Site"><div class="nav-in">
+  <a class="brand" href="{up}index.html"><span class="brand-mark" aria-hidden="true">Rx</span><span class="brand-name">{SITE_NAME}</span></a>
+  <div class="nav-main">{links}</div>
+  <div class="nav-tools">
+    <button class="search-btn" aria-label="Search (Ctrl+K)" title="Search everything (⌘K / Ctrl+K)">{SEARCH_ICON}<span>Search</span><kbd>⌘K</kbd></button>
+    <button class="theme-btn" aria-label="Change theme"></button>
+  </div>
+</div></nav>{sub}
+</header>"""
+
+
+def page(title, body, depth=0, nav_links="", sidekick=False, active="", subtitle=""):
     up = "../" * depth
     return f"""<!doctype html>
 <html lang="en" data-root="{up}">
@@ -55,19 +79,16 @@ def page(title, body, depth=0, nav_links="", sidekick=False):
 <meta name="robots" content="noindex">
 <title>{html.escape(title)}</title>
 <link rel="stylesheet" href="{up}assets/site.css">
+<script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
-<nav class="nav"><div class="nav-in">
-  <a class="brand" href="{up}index.html">{SITE_NAME}</a>
-  <div class="nav-links">{nav_links}</div>
-  <a class="nav-syl" href="{up}review/index.html">Review</a>
-  <a class="nav-syl" href="{up}syllabus/index.html">Syllabus</a>
-  <button class="search-btn" aria-label="Search (Ctrl+K)" title="Search everything (⌘K / Ctrl+K)"><svg viewBox="0 0 16 16" width="15" height="15"><circle cx="7" cy="7" r="5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M11 11l3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg><span>Search</span><kbd>⌘K</kbd></button>
-  <button class="theme-btn" aria-label="Change theme"></button>
-</div></nav>
+{nav_html(up, active, nav_links, subtitle)}
 {body}
-<footer class="wrap"><p>An unofficial, student-made study aid — not written, reviewed, or endorsed by DPAS 625 faculty. Built only from the course materials (lecture slides, syllabus, study guide, assigned Katzung chapters); always check against the official materials. TB = textbook only · SG = study guide only · S12 = slide 12.</p>
-<p>Your progress (checklists, missed questions, flashcards) is saved only in this browser — nothing is sent anywhere.</p></footer>
+<footer class="site-foot"><div class="wrap">
+<div class="foot-grid"><div><span class="brand-mark" aria-hidden="true">Rx</span> <strong>{SITE_NAME}</strong><p>An unofficial, student-made study aid — not written, reviewed, or endorsed by DPAS 625 faculty. Built only from the course materials (lecture slides, syllabus, study guide, assigned Katzung chapters); always check against the official materials.</p></div>
+<div><p><strong>How to read citations</strong><br>S12 = slide 12 · p. 17 = Katzung page · SG = study guide · TB = textbook only</p>
+<p><strong>Privacy</strong><br>Your progress is saved only in this browser — nothing is sent anywhere.</p></div></div>
+</div></footer>
 <div class="progress-bar" aria-hidden="true"></div>
 <script src="{up}assets/site.js"></script><script src="{up}assets/quizmode.js"></script>{f'<script type="module" src="{up}assets/sidekick.js"></script>' if sidekick else ""}
 </body>
@@ -300,7 +321,8 @@ def guide_page(lec, c, slides, lec_dir, files):
                         " ".join(jump(anchors[cl["name"]], f"Part {anchors[cl['name']][0]} →") for cl in c["classes"] if o["id"] in cl.get("objectives", [])) +
                         "</span></label>" for o in c["objectives"]) +
                 "</div></section>")
-    return page(f"{lid} · {c['lecture']['title']}", "".join(body), depth=1, nav_links=nav, sidekick=True)
+    return page(f"{lid} · {c['lecture']['title']}", "".join(body), depth=1, nav_links=nav, sidekick=True, active="study",
+                subtitle=f"{lid} · Session {lec['session']}")
 
 
 def make_pdf(html_path, pdf_path):
@@ -322,51 +344,78 @@ const pw = (() => {{ try {{ return require('playwright'); }} catch {{ return req
 
 
 # ---------------------------------------------------------------- home
+ICONS = {  # simple line icons (inherit currentColor)
+    "review": '<path d="M4 12a8 8 0 1 0 2.3-5.6M4 4v4h4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>',
+    "exam": '<rect x="5" y="3" width="14" height="18" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M9 8h6M9 12h6M9 16h3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>',
+    "timer": '<circle cx="12" cy="13" r="7.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 9v4l2.5 2M10 2.5h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>',
+    "calendar": '<rect x="3.5" y="5" width="17" height="15" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3.5 10h17M8 3v4M16 3v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>',
+}
+
+
+def icon(name):
+    return f'<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">{ICONS[name]}</svg>'
+
+
 def home_page(syl, built, exams_built):
+    sched = json.loads((ROOT / "work" / "schedule.json").read_text())
+    n_q = sum(b["qs"] for b in built.values()) + sum(e["count"] for e in exams_built)
+    n_cards = sum(b["cards"] for b in built.values())
+    upnext = json.dumps({"exams": syl.get("exams", []), "due": sched["due"]}).replace("</", "<\\/")
+    hero = f"""<header class="hero home-hero wrap">
+<p class="eyebrow appear">DPAS 625 · Clinical Pharmacology I · Fall 2026</p>
+<h1 class="hero-title"><span class="line">Study smarter.</span><span class="line accent-text">Remember longer.</span></h1>
+<p class="lede appear" style="--d:.25s">Study guides, decks, and practice exams for every lecture — built only from your course materials, with every fact cited to its slide.</p>
+<div class="btns appear" style="--d:.35s"><a class="btn" href="review/index.html">Start today's review</a><a class="btn ghost" href="#study">Browse lectures</a></div>
+</header>
+<section class="wrap upnext-strip" aria-label="Coming up"><div class="up3" id="home-up"></div>
+<script type="application/json" id="home-data">{upnext}</script></section>
+<section class="wrap stats appear" aria-label="At a glance"><div class="stats-in">
+  <div><strong data-count="{len(built)}">{len(built)}</strong><span>lectures ready</span></div>
+  <div><strong data-count="{n_q}">{n_q}</strong><span>practice questions</span></div>
+  <div><strong data-count="{n_cards}">{n_cards}</strong><span>flashcards</span></div>
+  <div><strong>100%</strong><span>facts cited to a source</span></div>
+</div></section>"""
+    # practice: a small bento grid
+    tiles = [f'<a class="tile tile-wide appear" href="review/index.html"><span class="tile-ic">{icon("review")}</span><div><div class="tile-k">Exam week</div>'
+             '<h3>Review dashboard</h3><p>Daily 10, every miss and flag in one place, weak topics, weak flashcards, and mixed timed exams.</p></div><span class="tile-go">Open →</span></a>']
+    for i, ex in enumerate(exams_built):
+        timed = f' · {ex["minutes"]} min' if ex.get("minutes") else ""
+        tiles.append(f'<a class="tile appear" style="--d:{.08 * (i + 1):.2f}s" href="exams/{ex["id"]}/index.html" data-progress="exam" data-slug="{ex["id"]}" data-total="{ex["count"]}">'
+                     f'<span class="tile-ic">{icon("timer" if ex.get("minutes") else "exam")}</span><div><div class="tile-k">Practice exam · {ex["count"]} Q{timed}</div>'
+                     f'<h3>{html.escape(ex["title"].split(" (")[0])}</h3><p>Study or timed mode, a debrief at the end, and a log of what you miss.</p><div class="progress"></div></div><span class="tile-go">Start →</span></a>')
+    wide = " tile-wide" if (2 + len(exams_built) + 1) % 3 == 2 else ""  # fill the grid's last row
+    tiles.append(f'<a class="tile{wide} appear" style="--d:{.08 * (len(exams_built) + 1):.2f}s" href="syllabus/index.html"><span class="tile-ic">{icon("calendar")}</span><div><div class="tile-k">Course</div>'
+                 '<h3>Syllabus &amp; grade calculator</h3><p>What\'s due next, the full schedule, and "what do I need on the final?"</p></div><span class="tile-go">Open →</span></a>')
+    practice = f'<section class="section" id="practice"><div class="wrap"><p class="kicker appear">Practice</p><h2 class="appear">Test yourself. Then test yourself again.</h2><div class="bento">{"".join(tiles)}</div></div></section>'
+    # course roadmap: one compact row per unit; the current unit opens with its lecture cards
     today = date.today().isoformat()
-    nxt = next((e for e in syl.get("exams", []) if e["date"] >= today), None)
-    hero = ['<header class="hero wrap"><p class="eyebrow">DPAS 625 · Clinical Pharmacology I · Fall 2026</p>',
-            "<h1>Study smarter.<br>Remember longer.</h1>",
-            '<p class="lede">Study guides, decks, and practice exams for every lecture — built only from your course materials, with every fact cited to its slide.</p>']
-    if nxt:
-        days = (date.fromisoformat(nxt["date"]) - date.today()).days
-        when = "today" if days == 0 else f"in {days} day{'s' if days != 1 else ''}"
-        hero.append(f'<div class="card" style="margin-top:28px;max-width:520px"><div class="small muted">Next exam</div>'
-                    f'<h3 style="margin:4px 0">{html.escape(nxt["label"])} — {when}</h3>'
-                    f'<div class="small muted">{date.fromisoformat(nxt["date"]).strftime("%a, %b %-d")} · {html.escape(nxt["time"])} · {html.escape(nxt["where"])}</div></div>')
-    hero.append("</header>")
-    body = ["".join(hero)]
-    # practice exams
-    cards = []
-    for ex in exams_built:
-        cards.append(f'<a class="card lec" data-progress="exam" data-slug="{ex["id"]}" data-total="{ex["count"]}" href="exams/{ex["id"]}/index.html" style="color:inherit"><div class="small muted">Practice exam</div>'
-                     f'<h3 style="margin:2px 0">{html.escape(ex["title"])}</h3><div class="meta">{ex["count"]} questions · study or timed mode · debrief · tracks what you miss</div><div class="progress"></div>'
-                     f'<div class="links"><span style="color:var(--accent)">Start →</span></div></a>')
-    cards.insert(0, '<a class="card lec" href="review/index.html" style="color:inherit"><div class="small muted">Exam week</div><h3 style="margin:2px 0">Review dashboard</h3>'
-                 '<div class="meta">Daily 10 · every miss and flag in one place · weak topics · weak flashcards · mixed timed exam</div><div class="links"><span style="color:var(--accent)">Open →</span></div></a>')
-    cards.append('<a class="card lec" href="syllabus/index.html" style="color:inherit"><div class="small muted">Course</div><h3 style="margin:2px 0">Syllabus &amp; grade calculator</h3>'
-                 '<div class="meta">What\'s due next · full schedule · grading rules · "what do I need on the final?"</div><div class="links"><span style="color:var(--accent)">Open →</span></div></a>')
-    if cards:
-        body.append(f'<section class="section" id="exams"><div class="wrap"><h2>Practice &amp; planning</h2><div class="grid">{"".join(cards)}</div></div></section>')
-    # units
-    for u, name in syl.get("units", {}).items():
+    exam_of = {str(e["unit"]): e for e in syl.get("exams", [])}
+    current = next((u for u in syl["units"] if exam_of.get(u, {}).get("date", "9999") >= today), None)
+    rows = []
+    for k, (u, name) in enumerate(syl["units"].items()):
         lecs = [l for l in syl["lectures"] if str(l["unit"]) == u]
-        exam = next((e for e in syl.get("exams", []) if str(e["unit"]) == u), None)
-        items = []
+        ex = exam_of.get(u)
+        state = "done" if ex and ex["date"] < today else ("now" if u == current else "later")
+        badge = {"done": "Done", "now": "Current unit", "later": ""}[state]
+        cards = []
         for l in lecs:
+            d = date.fromisoformat(l["date"]).strftime("%a, %b %-d")
             if l["id"] in built:
                 b = built[l["id"]]
                 links = "".join(f'<a href="{href}">{label}</a>' for label, href in b["links"])
-                items.append(f'<div class="card lec" data-progress="lecture" data-lid="{l["id"]}" data-objs="{b["objs"]}" data-cards="{b["cards"]}" data-qs="{b["qs"]}"><div class="small muted">Session {l["session"]} · {date.fromisoformat(l["date"]).strftime("%a, %b %-d")}</div>'
-                             f'<h3 style="margin:2px 0"><a class="stretch" href="{l["id"]}/index.html" style="color:inherit">{html.escape(b["title"])}</a></h3>'
+                cards.append(f'<div class="card lec" data-progress="lecture" data-lid="{l["id"]}" data-objs="{b["objs"]}" data-cards="{b["cards"]}" data-qs="{b["qs"]}">'
+                             f'<div class="small muted">Session {l["session"]} · {d}</div><h3 style="margin:2px 0"><a class="stretch" href="{l["id"]}/index.html" style="color:inherit">{html.escape(b["title"])}</a></h3>'
                              f'<div class="meta">{b["meta"]}</div><div class="progress"></div><div class="links">{links}</div></div>')
             else:
-                items.append(f'<div class="card lec soon"><div class="small muted">Session {l["session"]} · {date.fromisoformat(l["date"]).strftime("%a, %b %-d")}</div>'
-                             f'<h3 style="margin:2px 0">{html.escape(name)} — Session {l["session"]}</h3><div class="meta">Coming after the lecture</div></div>')
-        exam_line = (f'<p class="muted">{html.escape(exam["label"])}: {date.fromisoformat(exam["date"]).strftime("%a, %b %-d")} · {html.escape(exam["time"])}</p>' if exam else "")
-        body.append(f'<section class="section" id="unit{u}"><div class="wrap"><div class="part">Unit {u}</div><h2>{html.escape(name)}</h2>{exam_line}<div class="grid">{"".join(items)}</div></div></section>')
-    nav = '<a href="#exams">Practice exams</a>' + "".join(f'<a href="#unit{u}">Unit {u}</a>' for u in syl.get("units", {}))
-    return page(SITE_NAME, "".join(body), nav_links=nav)
+                cards.append(f'<div class="card lec soon"><div class="small muted">Session {l["session"]} · {d}</div><h3 style="margin:2px 0">Session {l["session"]}</h3><div class="meta">Available after the lecture</div></div>')
+        open_ = state == "now" or any(l["id"] in built for l in lecs)
+        sessions = " · ".join(date.fromisoformat(l["date"]).strftime("%b %-d") for l in lecs)
+        rows.append(f'<details class="unit-row {state} appear" style="--d:{.05 * k:.2f}s"{" open" if open_ else ""}>'
+                    f'<summary><span class="unit-num">{u}</span><span class="unit-name"><strong>{html.escape(name)}</strong><span class="small muted">Sessions {sessions}</span></span>'
+                    f'{f"<span class=unit-badge>{badge}</span>" if badge else ""}<span class="unit-exam small">{("Exam " + date.fromisoformat(ex["date"]).strftime("%a, %b %-d")) if ex else ""}</span><span class="unit-chev" aria-hidden="true"></span></summary>'
+                    f'<div class="grid unit-cards">{"".join(cards)}</div></details>')
+    study = f'<section class="section" id="study"><div class="wrap"><p class="kicker appear">Study</p><h2 class="appear">Your course, one unit at a time.</h2><div class="roadmap">{"".join(rows)}</div></div></section>'
+    return page(SITE_NAME, hero + practice + study)
 
 
 # ---------------------------------------------------------------- sidekick data
@@ -481,7 +530,7 @@ def syllabus_page(syl, sched, built):
 <li>Grade concerns go first to the course director. AI use: follow each assignment's instructions.</li><li>Class cancellations are announced through official university email.</li></ul></div></section>
 <script src="../assets/grades.js"></script>"""
     nav = '<a href="#next">Coming up</a><a href="#grading">Grading</a><a href="#calc">Calculator</a><a href="#schedule">Schedule</a><a href="#units">Units</a><a href="#outcomes">Outcomes</a>'
-    return page("Syllabus · DPAS 625", body, depth=1, nav_links=nav)
+    return page("Syllabus · DPAS 625", body, depth=1, nav_links=nav, active="syllabus", subtitle="Syllabus")
 
 
 # ---------------------------------------------------------------- site-wide search index
@@ -543,7 +592,7 @@ def review_page(syl, built, exams):
 </div></div></section>
 <script type="application/json" id="review-data">{cfg}</script>
 <script src="../assets/review.js"></script>"""
-    return page("Review · DPAS Pharm", body, depth=1, nav_links='<a href="#weak">Weak topics</a>')
+    return page("Review · DPAS Pharm", body, depth=1, active="review")
 
 # ---------------------------------------------------------------- main
 def main(pdf=True):

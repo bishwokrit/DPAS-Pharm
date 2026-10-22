@@ -404,6 +404,8 @@ kbd { font: 12px var(--font); background: var(--surface-2); border: 1px solid va
 
 
 def app_html(meta, data):
+    sys.path.insert(0, str(ROOT / "pipeline"))
+    from build_site import nav_html
     up = "../../"
     body = f"""<header class="hero wrap narrow" style="padding-bottom:0"><p class="eyebrow">Practice exam · {len(data['questions'])} questions</p>
 <h1 style="font-size:clamp(30px,5vw,44px)">{html.escape(meta['title'])}</h1>
@@ -427,8 +429,8 @@ def app_html(meta, data):
 <script>{APP_JS.replace("__DATA__", json.dumps(data, ensure_ascii=False))}</script>"""
     return f"""<!doctype html>
 <html lang="en" data-root="{up}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex">
-<title>{html.escape(meta['short'])}</title><link rel="stylesheet" href="{up}assets/site.css"></head>
-<body><nav class="nav"><div class="nav-in"><a class="brand" href="{up}index.html">DPAS Pharm</a><div class="nav-links"><a href="{up}index.html#exams">Practice exams</a></div><a class="nav-syl" href="{up}review/index.html">Review</a><a class="nav-syl" href="{up}syllabus/index.html">Syllabus</a><button class="search-btn" aria-label="Search (Ctrl+K)"><svg viewBox="0 0 16 16" width="15" height="15"><circle cx="7" cy="7" r="5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M11 11l3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg><span>Search</span><kbd>⌘K</kbd></button><button class="theme-btn" aria-label="Change theme"></button></div></nav>
+<title>{html.escape(meta['short'])}</title><link rel="stylesheet" href="{up}assets/site.css"><script>document.documentElement.classList.add("js")</script></head>
+<body>{nav_html(up, "practice")}
 {body}
 <footer class="wrap narrow">Progress and your wrong-answer log are saved in this browser.</footer>
 <script src="{up}assets/site.js"></script><script src="{up}assets/quizmode.js"></script></body></html>"""

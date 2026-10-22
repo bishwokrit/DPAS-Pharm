@@ -32,7 +32,7 @@
 
   // focus mode: the section you're reading stays bright, the rest fades back (long pages only)
   const sections = document.querySelectorAll(".section");
-  if (sections.length > 4 && "IntersectionObserver" in window) {
+  if (sections.length > 4 && document.querySelector(".subnav") && "IntersectionObserver" in window) {
     const io = new IntersectionObserver((es) => es.forEach((e) => e.target.classList.toggle("in-view", e.isIntersecting)), { rootMargin: "-35% 0px -45% 0px" });
     sections.forEach((s) => io.observe(s));
     const btn = document.createElement("button");
@@ -42,7 +42,7 @@
     const set = (on) => { document.body.classList.toggle("focus", on); btn.setAttribute("aria-pressed", on); };
     set(store.get("focus", true));
     btn.addEventListener("click", () => { const on = !document.body.classList.contains("focus"); store.set("focus", on); set(on); });
-    document.querySelector(".theme-btn")?.before(btn);
+    document.querySelector(".subnav-tools")?.append(btn);
   }
 
   // nav highlights the section you're in
@@ -97,6 +97,49 @@
     pop.querySelector("[data-open]").addEventListener("click", () => { closePop(); textbook.open(page, offset, have); });
     pop.querySelector("[data-change]")?.addEventListener("click", async () => { closePop(); const f = await textbook.pick(); if (f) textbook.open(page, offset, f); });
   }));
+
+  // scroll reveal + count-up numbers (skipped for reduced motion)
+  const calm = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const countUp = (el) => {
+    const to = +el.dataset.count; if (calm || !to) return;
+    const t0 = performance.now(), dur = 1100;
+    const step = (t) => { const k = Math.min(1, (t - t0) / dur); el.textContent = Math.round(to * (1 - Math.pow(1 - k, 3))); if (k < 1) requestAnimationFrame(step); };
+    requestAnimationFrame(step);
+  };
+  if ("IntersectionObserver" in window) {
+    const ro = new IntersectionObserver((es) => es.forEach((e) => {
+      if (!e.isIntersecting) return;
+      e.target.classList.add("in");
+      e.target.querySelectorAll("[data-count]").forEach(countUp);
+      ro.unobserve(e.target);
+    }), { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+    document.querySelectorAll(".appear").forEach((el) => ro.observe(el));
+  } else document.querySelectorAll(".appear").forEach((el) => el.classList.add("in"));
+
+  // home: "coming up" cards, computed in the browser so they stay current without a rebuild
+  const hd = document.getElementById("home-data"), hu = document.getElementById("home-up");
+  if (hd && hu) {
+    const D = JSON.parse(hd.textContent), now = new Date(); now.setHours(0, 0, 0, 0);
+    const day = (s) => new Date(s + "T00:00"), days = (s) => Math.round((day(s) - now) / 864e5);
+    const fmt = (s) => day(s).toLocaleDateString(undefined, { weekday: "short", month: "short", day: "numeric" });
+    const ex = D.exams.find((e) => day(e.date) >= now);
+    const due = D.due.find((d) => day(d.date) >= now && !["exam", "final"].includes(d.kind));
+    const dl = store.get("daily:log", {});
+    const ymd = (d) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+    let streak = 0;
+    const d = new Date(now);
+    if (!dl[ymd(d)]) d.setDate(d.getDate() - 1);  // today not done yet: count back from yesterday
+    while (dl[ymd(d)] && streak < 366) { streak++; d.setDate(d.getDate() - 1); }
+    const num = (n, unit) => `<div class="up-num"><strong>${n}</strong><span>${unit}</span></div>`;
+    const card = (href, n, unit, k, t, sub, kc) => `<a class="upcard appear" href="${href}" style="--kc:${kc}">${num(n, unit)}<div><div class="up-k">${k}</div><div class="up-t">${t}</div><div class="up-s">${sub}</div></div></a>`;
+    const out = [];
+    if (ex) { const d = days(ex.date); out.push(card("syllabus/index.html#schedule", d === 0 ? "Today" : d, d === 0 ? "" : d === 1 ? "day" : "days", "Next exam", ex.label, `${fmt(ex.date)} · ${ex.time}`, "var(--bad)")); }
+    if (due) { const d = days(due.date); out.push(card("syllabus/index.html#schedule", d === 0 ? "Today" : d, d === 0 ? "" : d === 1 ? "day" : "days", "Next deadline", due.label.split(" · ")[0], fmt(due.date), "var(--warn)")); }
+    const done = dl[ymd(now)];
+    out.push(card("review/index.html", done ? "✓" : "10", done ? "done" : "questions", "Today", done ? `Daily 10: ${done.score}/${done.of}` : "Daily 10", streak ? `${streak}-day streak — keep it going` : "A quick, weighted daily set", "var(--good)"));
+    hu.innerHTML = out.join("");
+    hu.querySelectorAll(".appear").forEach((el, i) => { el.style.setProperty("--d", `${0.45 + i * 0.08}s`); requestAnimationFrame(() => el.classList.add("in")); });
+  }
 
   // cram sheet: hide answers for active recall; tap a cell to peek
   document.querySelectorAll("[data-cram-toggle]").forEach((btn) => {
