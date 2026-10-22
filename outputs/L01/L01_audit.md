@@ -2,7 +2,7 @@
 
 **Result: PASS ✅ nothing missing**
 
-Checked 248 source lines (57 slides; 10 study-guide items; Textbook pending — slides only.)
+Checked 254 source lines (57 slides; 10 study-guide items; Textbook pending — slides only.)
 
 ## Missing from the study materials
 - None ✅

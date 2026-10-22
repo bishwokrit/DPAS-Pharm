@@ -1,0 +1,95 @@
+{
+ "lecture": "L02",
+ "passed": true,
+ "units_checked": 209,
+ "missing": [],
+ "uncited": [
+  {
+   "ref": "S1",
+   "text": "PA PHARMACOLOGY COURSE · LECTURE 1 · SESSION 2 OF 2",
+   "kind": "slide"
+  },
+  {
+   "ref": "S15",
+   "text": "This is the pharmacokinetic foundation for the renal-impairment clinical case coming up next, and for the NSAID-in-CKD case on Thursday.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S19",
+   "text": "Example 2: Percentage-based half-life: Basic decay",
+   "kind": "slide"
+  },
+  {
+   "ref": "S19",
+   "text": "Example 1: Basic decay:",
+   "kind": "slide"
+  },
+  {
+   "ref": "S23",
+   "text": "Loading doses are based on Vd; maintenance doses are based on clearance — worth stating explicitly if students have seen the formulas.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S33",
+   "text": "Students will see HLA-B*5801 and allopurinol again directly in Thursday’s gout lecture — flag that connection now.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S46",
+   "text": "D.  No change in either parameter",
+   "kind": "slide"
+  },
+  {
+   "ref": "SG:U1-R10",
+   "text": "induction lowers it (faster clearance).",
+   "kind": "study guide"
+  }
+ ],
+ "emphasis_not_bold": [],
+ "skipped": [
+  {
+   "ref": "S7",
+   "text": "This is the graphical version of the previous slide — point out how far inhibition pushes the level above 100% (toxicity risk) versus how far induction pushes it below 100% (therapeutic failure risk).",
+   "kind": "speaker note",
+   "reason": "teaching instruction; covered in Figure 6 and clinical relevance"
+  },
+  {
+   "ref": "S20",
+   "text": "Point out each marked half-life on the curve — this visual is what students should picture whenever a half-life-based elimination question comes up.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; Figure 7 caption covers the content"
+  },
+  {
+   "ref": "S24",
+   "text": "This is the graphical version of the previous slide’s three definitions — trace the sawtooth climb for maintenance-only dosing, then show how the loading dose starts at the target level right away.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; Figure 8 caption covers the content"
+  },
+  {
+   "ref": "S49",
+   "text": "This slide documents AI-tool use for original figure generation per university citation requirements.",
+   "kind": "speaker note",
+   "reason": "administrative note on AI-tool citation"
+  }
+ ],
+ "not_in_deck": [],
+ "not_in_notebooklm": [],
+ "layout_problems": [],
+ "question_issues": [],
+ "question_stats": {
+  "count": 24,
+  "letters": {
+   "A": 5,
+   "B": 5,
+   "C": 5,
+   "D": 4,
+   "E": 5
+  },
+  "vignette": 12,
+  "mechanism": 12
+ },
+ "thin_objectives": [
+  "IO1.3: Explain how patient-specific factors, including age, pregnancy, renal and hepatic function, and pharmacogenetic variation, may affect medication response. — 4 class(es), 83 facts (Age and pregnancy are only named in the prescribing checklist)",
+  "IO1.5: Interpret common components of medication orders and prescriptions, including drug name, dose, route, frequency, and duration. — 2 class(es), 41 facts (Only dose, route, interval, and monitoring (checklist, renal dosing); no prescription-reading content)"
+ ]
+}

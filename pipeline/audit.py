@@ -92,8 +92,9 @@ def source_units(slides, textbook, guide):
         ref = f"S{s['slide']}"
         divider = any(it["text"].strip().upper() == "SECTION" for it in s["items"])
         for it in s["items"]:
-            if it.get("heading") or divider:
-                continue  # titles, labels, and section-divider taglines carry no facts
+            label = it["text"].strip() == s.get("title", "").strip() or it["text"].isupper() or len(toks(it["text"])) < 4
+            if divider or (it.get("heading") and label):
+                continue  # slide titles, ALL-CAPS labels, short tags, and divider taglines carry no facts
             units.append({"ref": ref, "text": it["text"], "kind": "slide"})
         for t in s["tables"]:
             head = t[0] if t else []
@@ -146,7 +147,7 @@ def question_checks(c):
         others = [v for L, v in lens.items() if L != q["answer"]]
         if correct_len > 1.3 * max(others):
             issues.append(f"Q{q['number']}: correct answer is noticeably the longest option.")
-        if max(lens.values()) > 2.2 * max(1, min(lens.values())):
+        if max(lens.values()) > 2.2 * max(1, min(lens.values())) and max(lens.values()) > 12:  # short numeric answers are fine
             issues.append(f"Q{q['number']}: option lengths very uneven ({min(lens.values())}–{max(lens.values())} chars).")
     return issues, {"count": len(qs), "letters": dict(sorted(dist.items())), "vignette": kinds["vignette"], "mechanism": kinds["mechanism"]}
 
@@ -193,7 +194,7 @@ def main(lec, work_dir, out_dir, deck_path, nlm_dir, threshold, guide_ids=()):
     emph_missing = []
     for s in slides:
         # quiz/answer slides and the title slide style everything bold; that isn't emphasis
-        if s["slide"] == 1 or re.match(r"(quick check|answer)\b", s.get("title", ""), re.I):
+        if s["slide"] == 1 or re.search(r"quick check|answer|quiz", s.get("title", ""), re.I):
             continue
         for it in s["items"]:
             for e in it["emphasis"]:
