@@ -29,6 +29,9 @@ Checked 248 source lines (57 slides; 10 study-guide items; Textbook pending — 
 - None ✅
 
 
+## Deck layout (text overflow / overlap / off-slide)
+- None ✅
+
 ## Practice questions
 20 questions · 9 vignette / 11 mechanism · answer letters {'A': 4, 'B': 4, 'C': 4, 'D': 4, 'E': 4}
 - None ✅

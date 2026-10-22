@@ -18,6 +18,7 @@ from pathlib import Path
 
 from pptx import Presentation
 
+from check_layout import check as check_layout
 from content import sections_for
 
 STOP = set("""a an the and or of to in on for with by is are was were be been being as at from that this these those it its
@@ -208,6 +209,7 @@ def main(lec, work_dir, out_dir, deck_path, nlm_dir, threshold, guide_ids=()):
     not_in_nlm = [i for i in items if i["fact"] and norm(i["text"]) not in nlm_text]
 
     q_issues, q_stats = question_checks(c)
+    layout = check_layout(deck_path)
 
     thin = []
     for o in c["objectives"]:
@@ -216,10 +218,10 @@ def main(lec, work_dir, out_dir, deck_path, nlm_dir, threshold, guide_ids=()):
         if not cls or n < 4 or o.get("thin_note"):
             thin.append(f"{o['id']}: {o['text']} — {len(cls)} class(es), {n} facts" + (f" ({o['thin_note']})" if o.get("thin_note") else ""))
 
-    passed = not (missing or not_in_deck or not_in_nlm)
+    passed = not (missing or not_in_deck or not_in_nlm or layout)
     result = {"lecture": lec, "passed": passed, "units_checked": len(units), "missing": missing, "uncited": uncited,
               "emphasis_not_bold": emph_missing, "skipped": skipped, "not_in_deck": not_in_deck, "not_in_notebooklm": not_in_nlm,
-              "question_issues": q_issues, "question_stats": q_stats, "thin_objectives": thin}
+              "layout_problems": layout, "question_issues": q_issues, "question_stats": q_stats, "thin_objectives": thin}
     (work / "audit.json").write_text(json.dumps(result, indent=1, ensure_ascii=False))
 
     def lst(rows, fmt):
@@ -248,6 +250,9 @@ Checked {len(units)} source lines ({len(slides)} slides; {len(guide)} study-guid
 {lst(not_in_deck, lambda i: f"- Deck: {i['where']}: {i['text'][:120]}")}
 {lst(not_in_nlm, lambda i: f"- NotebookLM: {i['where']}: {i['text'][:120]}") if not_in_nlm else ''}
 
+## Deck layout (text overflow / overlap / off-slide)
+{lst(layout, lambda s: f"- {s}")}
+
 ## Practice questions
 {q_stats.get('count', 0)} questions · {q_stats.get('vignette', 0)} vignette / {q_stats.get('mechanism', 0)} mechanism · answer letters {q_stats.get('letters', {})}
 {lst(q_issues, lambda s: f"- {s}")}
@@ -257,7 +262,7 @@ Checked {len(units)} source lines ({len(slides)} slides; {len(guide)} study-guid
 """
     (out / f"{lec}_audit.md").write_text(report)
     print(f"  audit: {'PASS' if passed else 'NEEDS FIXES'} — {len(missing)} missing, {len(uncited)} citation checks, "
-          f"{len(emph_missing)} emphasis, {len(not_in_deck)} not in deck, {len(q_issues)} question notes")
+          f"{len(emph_missing)} emphasis, {len(not_in_deck)} not in deck, {len(layout)} layout, {len(q_issues)} question notes")
     return 0 if passed else 2
 
 

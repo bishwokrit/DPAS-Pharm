@@ -57,14 +57,48 @@ async function icon(name, color) {
   return iconCache[key];
 }
 
-// Rough text-height estimate (inches) so slides can be split before they overflow.
-function lines(text, widthIn, pt) {
-  const perLine = Math.max(8, Math.floor(widthIn / ((pt * 0.44) / 72))); // Calibri averages ~0.44 em per character
-  return String(text).split("\n").reduce((n, seg) => n + Math.max(1, Math.ceil(seg.length / perLine)), 0);
+// Exact word-wrap using real Calibri character widths (from measure.py), so text never
+// depends on "shrink to fit" (PowerPoint ignores it until you edit the box).
+const WIDTHS = JSON.parse(fs.readFileSync(path.join(path.dirname(contentPath), "char_widths.json"), "utf8"));
+function textWidth(str, pt, bold) {
+  const table = bold ? WIDTHS.bold : WIDTHS.regular;
+  let em = 0;
+  for (const ch of str) em += table[ch] ?? 0.6;
+  return (em * pt) / 72;
+}
+// Lines needed for text with **bold** parts, wrapped at word boundaries within widthIn.
+function lines(text, widthIn, pt, allBold = false) {
+  let total = 0;
+  for (const para of String(text).split("\n")) {
+    const words = [];
+    para.split(/(\*\*[^*]+\*\*)/).forEach((part) => {
+      if (!part) return;
+      const bold = allBold || (part.startsWith("**") && part.endsWith("**"));
+      const clean = bold && part.startsWith("**") ? part.slice(2, -2) : part;
+      clean.split(/(?<= )/).forEach((w) => w && words.push({ w, bold }));
+    });
+    let n = 1, cur = 0;
+    for (const { w, bold } of words) {
+      const ww = textWidth(w, pt, bold);
+      if (cur > 0 && cur + textWidth(w.trimEnd(), pt, bold) > widthIn) { n++; cur = 0; }
+      cur += ww;
+      while (cur > widthIn) { n++; cur -= widthIn; } // a single word longer than the line
+    }
+    total += n;
+  }
+  return total;
 }
 const lineH = (pt) => (pt * 1.22) / 72;
+// Largest font size (maxPt..minPt) that keeps text within maxLines.
+function fitPt(text, widthIn, maxPt, minPt, bold, maxLines = 1) {
+  for (let pt = maxPt; pt >= minPt; pt--) if (lines(text, widthIn, pt, bold) <= maxLines) return pt;
+  return null;
+}
+function factLine(f) {
+  return (f.tb ? "TB  " : "") + (f.sg ? "SG  " : "") + (typeof f === "string" ? f : f.text || "") + "  " + (f.src || "");
+}
 function bulletsHeight(facts, widthIn, pt) {
-  return facts.reduce((h, f) => h + lines(plain(f) + "   " + (f.src || "") + (f.tb ? " TB  " : "") + (f.sg ? " SG  " : ""), widthIn - 0.35, pt) * lineH(pt) + 0.08, 0);
+  return facts.reduce((h, f) => h + lines(factLine(f), widthIn - 0.3, pt) * lineH(pt) + 0.12, 0);
 }
 const plain = (f) => (typeof f === "string" ? f : f.text || "").replace(/\*\*/g, "");
 
@@ -116,10 +150,17 @@ function base(kicker, title, objectives) {
   const s = pres.addSlide();
   slideNo++;
   s.background = { color: T.bg };
-  if (kicker) s.addText(kicker.toUpperCase(), { x: MX, y: 0.32, w: 9.4, h: 0.3, fontSize: 12, fit: "shrink", bold: true, color: T.accent, charSpacing: 1, margin: 0, isTextBox: true, objectName: "Kicker" });
-  s.addText(title, { x: MX, y: 0.62, w: objectives ? 9.2 : W - 2 * MX, h: 0.7, fontSize: 30, bold: true, color: T.text, fontFace: F.head, margin: 0, valign: "top", fit: "shrink", isTextBox: true, objectName: "Title" });
+  const titleW = objectives ? W - 2 * MX - 3.3 : W - 2 * MX;
+  let kick = kicker ? kicker.toUpperCase() : "";
+  const kickPt = kick ? fitPt(kick, titleW, 12, 9, true) || 9 : 12;
+  while (kick && lines(kick, titleW, kickPt, true) > 1) kick = kick.slice(0, -2).trimEnd() + "…";
+  if (kick) s.addText(kick, { x: MX, y: 0.32, w: titleW, h: 0.3, fontSize: kickPt, bold: true, color: T.accent, charSpacing: 1, margin: 0, isTextBox: true, objectName: "Kicker" });
+  // one line from 30pt down to 20pt; otherwise two lines at up to 22pt (box holds both)
+  const titlePt = fitPt(title, titleW, 30, 20, true) || fitPt(title, titleW, 22, 16, true, 2) || 16;
+  s.addText(title, { x: MX, y: 0.62, w: titleW, h: 0.78, fontSize: titlePt, bold: true, color: T.text, fontFace: F.head, margin: 0, valign: "top", isTextBox: true, objectName: "Title" });
   if (objectives && objectives.length) {
-    s.addText("Objectives: " + objectives.join(" · "), { shape: pres.shapes.ROUNDED_RECTANGLE, rectRadius: 0.15, x: W - MX - 3.0, y: 0.4, w: 3.0, h: 0.42, fontSize: objectives.join(" · ").length > 22 ? 10 : 12, fit: "shrink", bold: true, color: T.chipText, fill: { color: T.chip }, align: "center", valign: "middle", margin: 2, objectName: "Objective chip" });
+    const chip = "Objectives: " + objectives.join(" · ");
+    s.addText(chip, { shape: pres.shapes.ROUNDED_RECTANGLE, rectRadius: 0.15, x: W - MX - 3.0, y: 0.4, w: 3.0, h: 0.42, fontSize: fitPt(chip, 2.8, 12, 8, true) || 8, bold: true, color: T.chipText, fill: { color: T.chip }, align: "center", valign: "middle", margin: 2, objectName: "Objective chip" });
   }
   s.addText(`${content.lecture.id} · ${content.lecture.title}`, { x: MX, y: 7.02, w: 8, h: 0.3, fontSize: 10, color: T.muted, margin: 0, isTextBox: true, objectName: "Footer" });
   s.addText(String(slideNo), { x: W - MX - 1, y: 7.02, w: 1, h: 0.3, fontSize: 10, color: T.muted, align: "right", margin: 0, isTextBox: true, objectName: "Slide number" });
@@ -159,7 +200,7 @@ async function titleSlide() {
   slideNo++;
   s.background = { color: T.bg };
   s.addText(content.lecture.id + (content.lecture.date ? ` · ${content.lecture.date}` : ""), { x: MX, y: 1.5, w: 10, h: 0.4, fontSize: 16, bold: true, color: T.accent, margin: 0, isTextBox: true });
-  s.addText(content.lecture.title, { x: MX, y: 1.95, w: W - 2 * MX, h: 1.4, fontSize: 44, bold: true, color: T.text, fontFace: F.head, margin: 0, valign: "top", fit: "shrink", isTextBox: true, objectName: "Title" });
+  s.addText(content.lecture.title, { x: MX, y: 1.95, w: W - 2 * MX, h: 1.4, fontSize: fitPt(content.lecture.title, W - 2 * MX, 44, 32, true) || fitPt(content.lecture.title, W - 2 * MX, 38, 24, true, 2) || 24, bold: true, color: T.text, fontFace: F.head, margin: 0, valign: "top", isTextBox: true, objectName: "Title" });
   s.addText(`Pharmacology study deck · organized by ${allConcept ? "topic" : "drug class"}`, { x: MX, y: 3.35, w: 10, h: 0.4, fontSize: 18, color: T.muted, margin: 0, isTextBox: true });
   // legend
   const ly = 4.2;
@@ -215,8 +256,8 @@ async function roadmapSlide() {
     s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x, y, w: colW, h: rowH, rectRadius: 0.1, fill: { color: T.card }, line: { color: T.card } });
     s.addShape(pres.shapes.OVAL, { x: x + 0.2, y: y + rowH / 2 - 0.25, w: 0.5, h: 0.5, fill: { color: T.accent }, line: { color: T.accent } });
     s.addText(String(i + 1), { x: x + 0.2, y: y + rowH / 2 - 0.25, w: 0.5, h: 0.5, fontSize: 16, bold: true, color: "FFFFFF", align: "center", valign: "middle", margin: 0, isTextBox: true });
-    s.addText([{ text: c.name, options: { fontSize: 18, bold: true, color: T.text, breakLine: true } }, { text: "Objectives: " + ((c.objectives || []).join(", ") || "—"), options: { fontSize: 12, color: T.muted } }],
-      { x: x + 0.9, y, w: colW - 1.1, h: rowH, valign: "middle", margin: 0, fit: "shrink", isTextBox: true });
+    s.addText([{ text: c.name, options: { fontSize: fitPt(c.name, colW - 1.1, 18, 13, true, 2) || 13, bold: true, color: T.text, breakLine: true } }, { text: "Objectives: " + ((c.objectives || []).join(", ") || "—"), options: { fontSize: 12, color: T.muted } }],
+      { x: x + 0.9, y, w: colW - 1.1, h: rowH, valign: "middle", margin: 0, isTextBox: true });
   });
 }
 
@@ -236,7 +277,7 @@ async function dividerSlide(c, idx) {
   slideNo++;
   s.background = { color: T.accentDark };
   s.addText(`${unitName(c)} ${idx + 1} of ${content.classes.length}`, { x: MX, y: 1.6, w: 8, h: 0.4, fontSize: 16, bold: true, color: T.onAccentMuted, margin: 0, isTextBox: true });
-  s.addText(c.name, { x: MX, y: 2.05, w: W - 2 * MX, h: 1.3, fontSize: 44, bold: true, color: "FFFFFF", fontFace: F.head, margin: 0, valign: "top", fit: "shrink", isTextBox: true, objectName: "Title" });
+  s.addText(c.name, { x: MX, y: 2.05, w: W - 2 * MX, h: 1.3, fontSize: fitPt(c.name, W - 2 * MX, 44, 32, true) || fitPt(c.name, W - 2 * MX, 36, 24, true, 2) || 24, bold: true, color: "FFFFFF", fontFace: F.head, margin: 0, valign: "top", isTextBox: true, objectName: "Title" });
   s.addText("Covers objectives: " + ((c.objectives || []).join(" · ") || "—"), { x: MX, y: 3.4, w: 10, h: 0.4, fontSize: 18, color: T.onAccentMuted, margin: 0, isTextBox: true });
   // the 8-step template as an icon row: same order in every class
   const SECTIONS = sectionsFor(c);
@@ -327,8 +368,8 @@ async function comparisonSlides(c) {
     // 16pt by default; drop to 14pt if that keeps the table on one slide
     let pt, rowH, headH, pages;
     for (pt of [TPT, 14]) {
-      rowH = (row) => Math.max(...row.map((cell, j) => lines(String(cell).replace(/\*\*/g, ""), colW[j] - 0.2, pt))) * lineH(pt) + 0.12;
-      headH = rowH(tbl.columns);
+      rowH = (row, head = false) => Math.max(...row.map((cell, j) => lines(String(cell), colW[j] - 0.25, pt, head || j === 0))) * lineH(pt) + 0.14;
+      headH = rowH(tbl.columns, true);
       pages = paginate(tbl.rows, (rows) => headH + rows.reduce((h, r) => h + rowH(r), 0) <= BOTTOM - TOP - 0.45);
       if (pages.length === 1) break;
     }
@@ -412,9 +453,9 @@ async function questionSlides(c) {
     const ans = q.options[q.answer];
     const wrong = Object.entries(q.options).filter(([, o]) => !o.correct);
     const apt = 16;
-    const ansH = Math.max(0.6, lines(`${q.answer}. ${ans.text}`, full - 1.0, 16) * lineH(16) + 0.2);
-    const whyH = lines(ans.why, full - 0.5, apt) * lineH(apt) + 0.2;
-    const wrongH = (arr) => arr.reduce((h, [L, o]) => h + lines(`${L}. ${o.text} — ${o.why}`, full - 0.5, apt) * lineH(apt) + 0.07, 0) + 0.45;
+    const ansH = Math.max(0.6, lines(`${q.answer}. ${ans.text}`, full - 1.0, 16, true) * lineH(16) + 0.2);
+    const whyH = lines(ans.why + "  " + (q.src || ""), full - 0.5, apt) * lineH(apt) + 0.25;
+    const wrongH = (arr) => arr.reduce((h, [L, o]) => h + lines(`**${L}. ${o.text} — **${o.why}`, full - 0.5, apt) * lineH(apt) + 0.07, 0) + 0.5;
     const roomFirst = BOTTOM - TOP - ansH - whyH - 0.3;
     const wrongPages = paginate(wrong, (arr) => wrongH(arr) <= roomFirst);
     const later = wrongPages.length > 1 ? paginate(wrongPages.slice(1).flat(), (arr) => wrongH(arr) <= BOTTOM - TOP) : [];
@@ -439,7 +480,7 @@ async function questionSlides(c) {
         runs[runs.length - 1].options.paraSpaceAfter = 4;
         if (i < pageWrong.length - 1) runs[runs.length - 1].options.breakLine = true;
       });
-      s.addText(runs, { x: MX + 0.25, y: yy + 0.12, w: full - 0.5, h: Math.min(h, BOTTOM - yy) - 0.2, valign: "top", margin: 0, fit: "shrink", isTextBox: true, objectName: "Why others wrong" });
+      s.addText(runs, { x: MX + 0.25, y: yy + 0.12, w: full - 0.5, h: Math.min(h, BOTTOM - yy) - 0.2, valign: "top", margin: 0, isTextBox: true, objectName: "Why others wrong" });
     }
   }
 }

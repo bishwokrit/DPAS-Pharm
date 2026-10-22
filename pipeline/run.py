@@ -94,6 +94,8 @@ def build(lid):
 
     out.mkdir(parents=True, exist_ok=True)
     deck = out / f"{lid}_{slug(lec['title'])}_study_deck.pptx"
+    import measure
+    measure.main(work / "content.resolved.json", work / "char_widths.json")
     subprocess.run(["node", str(ROOT / "pipeline" / "build_deck.js"), str(work / "content.resolved.json"), str(deck), CFG.get("theme", "light")], check=True)
     nlm = out / "notebooklm"
     notebooklm.main(work / "content.resolved.json", nlm, CFG["notebooklm_max_words_per_source"])
