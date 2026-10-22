@@ -25,6 +25,12 @@ DOCS = ROOT / "docs"
 SRC = ROOT / "site_src"
 STYLE = json.loads((ROOT / "templates" / "deck_style.json").read_text())["themes"]["light"]["section"]
 SITE_NAME = "Clinical Pharmacology"
+# Browser security policy: the pages may load files only from this site, and talk only to this site and
+# Anthropic (the optional AI chat, on the student's own key). No plugins, no form posts, no outside scripts.
+SECURITY_META = ('<meta http-equiv="Content-Security-Policy" content="default-src \'self\'; script-src \'self\' \'unsafe-inline\'; '
+                 'style-src \'self\' \'unsafe-inline\'; img-src \'self\' data: blob:; font-src \'self\' data:; '
+                 'connect-src \'self\' https://api.anthropic.com; media-src \'self\' blob:; object-src \'none\'; base-uri \'none\'; form-action \'none\'">'
+                 '<meta name="referrer" content="no-referrer">')
 
 
 # ---------------------------------------------------------------- helpers
@@ -78,6 +84,7 @@ def page(title, body, depth=0, nav_links="", sidekick=False, active="", subtitle
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
+{SECURITY_META}
 <title>{html.escape(title)}</title>
 <link rel="stylesheet" href="{up}assets/site.css">
 <script>document.documentElement.classList.add("js")</script>

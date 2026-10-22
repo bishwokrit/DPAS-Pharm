@@ -405,7 +405,7 @@ kbd { font: 12px var(--font); background: var(--surface-2); border: 1px solid va
 
 def app_html(meta, data):
     sys.path.insert(0, str(ROOT / "pipeline"))
-    from build_site import nav_html
+    from build_site import nav_html, SECURITY_META
     up = "../../"
     body = f"""<header class="hero wrap narrow" style="padding-bottom:0"><p class="eyebrow">Practice exam · {len(data['questions'])} questions</p>
 <h1 style="font-size:clamp(30px,5vw,44px)">{html.escape(meta['title'])}</h1>
@@ -426,9 +426,9 @@ def app_html(meta, data):
   <h3 style="margin-top:28px">Wrong-answer log</h3><p class="small muted" id="logcount"></p><ul id="log"></ul>
 </div></section>
 <style>{APP_CSS}</style>
-<script>{APP_JS.replace("__DATA__", json.dumps(data, ensure_ascii=False))}</script>"""
+<script>{APP_JS.replace("__DATA__", json.dumps(data, ensure_ascii=False).replace("</", "<\\/"))}</script>"""
     return f"""<!doctype html>
-<html lang="en" data-root="{up}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex">
+<html lang="en" data-root="{up}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex">{SECURITY_META}
 <title>{html.escape(meta['short'])}</title><link rel="stylesheet" href="{up}assets/site.css"><script>document.documentElement.classList.add("js")</script></head>
 <body>{nav_html(up, "practice")}
 {body}
