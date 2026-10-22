@@ -645,7 +645,13 @@
      ],
      "src": "S6; S7 (notes); S8"
     }
-   ]
+   ],
+   "deeper": {
+    "chapter": 4,
+    "first": 60,
+    "last": 67,
+    "why": "CYP families, the inducer/inhibitor tables, and acetaminophen toxicity step by step"
+   }
   },
   {
    "name": "Drug Excretion & Renal Dosing",
@@ -1716,7 +1722,13 @@
      ],
      "src": "S19"
     }
-   ]
+   ],
+   "deeper": {
+    "chapter": 3,
+    "first": 46,
+    "last": 52,
+    "why": "Worked dosing math: steady state, loading and maintenance doses"
+   }
   },
   {
    "name": "Pharmacogenomics",
@@ -2174,7 +2186,13 @@
      }
     }
    ],
-   "flows": []
+   "flows": [],
+   "deeper": {
+    "chapter": 5,
+    "first": 78,
+    "last": 83,
+    "why": "CPIC dosing tables for CYP2D6, CYP2C19, and TPMT"
+   }
   },
   {
    "name": "Putting It All Together: Clinical Decision-Making",

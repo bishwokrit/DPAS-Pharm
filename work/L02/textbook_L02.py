@@ -83,3 +83,10 @@ QUESTIONS = [
      ],
      "src": "p. 81-82"},
 ]
+
+# One "Go deeper" textbook link per part, only where the chapter adds real depth: (chapter, first page, last page, why)
+DEEPER = {
+    "Drug Metabolism & CYP450 Interactions": (4, 60, 67, "CYP families, the inducer/inhibitor tables, and acetaminophen toxicity step by step"),
+    "PK Calculations: Half-Life, Steady State & Clearance": (3, 46, 52, "Worked dosing math: steady state, loading and maintenance doses"),
+    "Pharmacogenomics": (5, 78, 83, "CPIC dosing tables for CYP2D6, CYP2C19, and TPMT"),
+}

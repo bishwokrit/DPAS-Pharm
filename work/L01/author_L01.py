@@ -704,6 +704,8 @@ for _q in TBK.QUESTIONS:
     _q = dict(_q)
     _topic = _q.pop("topic")
     _by_name[_topic]["questions"].append({**Q(**_q), "tb": True})
+for _name, (_ch, _a, _b, _why) in TBK.DEEPER.items():
+    _by_name[_name]["deeper"] = {"chapter": _ch, "first": _a, "last": _b, "why": _why}
 content["guide"]["discrepancies"] = [{"text": t, "src": s} for t, s in TBK.DISCREPANCIES]
 content["guide"]["cram"] += [{"prompt": p, "answer": a, "src": s, "tb": True} for p, a, s in TBK.CRAM]
 

@@ -15,6 +15,7 @@ from datetime import date
 from pathlib import Path
 
 import lecture_checks
+from PIL import Image
 from content import sections_for
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -70,6 +71,43 @@ def page(title, body, depth=0, nav_links="", sidekick=False):
 """
 
 
+# ---------------------------------------------------------------- links between sections
+TB_META = json.loads((ROOT / "work" / "textbook_meta.json").read_text())
+
+
+def part_finder(c):
+    """Return f(src) -> (part number, anchor) of the part whose facts cite those slides/pages most."""
+    from audit import cited_refs
+    refs = []
+    for i, cl in enumerate(c["classes"], 1):
+        n = {}
+        for fs in cl["sections"].values():
+            for f in fs:
+                for r in cited_refs(f.get("src", "")):
+                    n[r] = n.get(r, 0) + 1
+        refs.append((i, slug(cl["name"]), n))
+
+    def find(src):
+        want = cited_refs(src or "")
+        best = max(refs, key=lambda t: sum(t[2].get(r, 0) for r in want))
+        return (best[0], best[1]) if sum(best[2].get(r, 0) for r in want) else None
+    return find
+
+
+def jump(target, text):
+    return f'<a class="jump noprint" href="#{target[1] if isinstance(target, tuple) else target}">{text}</a>' if target else ""
+
+
+def deeper_html(d):
+    if not d:
+        return ""
+    pages = f"pp. {d['first']}–{d['last']}"
+    return (f'<div class="deeper noprint"><button class="deeper-btn" data-page="{d["first"]}" data-offset="{TB_META["pdf_page_offset"]}" '
+            f'data-am="{TB_META["accessmedicine"]}" data-label="Katzung Ch. {d["chapter"]}, {pages}">'
+            f'<span class="deeper-ic">📖</span><span><strong>Go deeper</strong> · Katzung Ch. {d["chapter"]}, {pages}'
+            f'<span class="deeper-why">{html.escape(d["why"])}</span></span></button></div>')
+
+
 # ---------------------------------------------------------------- study guide
 def study_plan(c, checks):
     words = sum(len(f["text"].split()) for cl in c["classes"] for fs in cl["sections"].values() for f in fs)
@@ -77,11 +115,12 @@ def study_plan(c, checks):
     visuals = sum(len(cl.get("comparisons", [])) + len(cl.get("flows", [])) + len(cl.get("figures", [])) for cl in c["classes"])
     cram = len(c.get("guide", {}).get("cram", []))
     qs = len(checks) + sum(1 for cl in c["classes"] for q in cl.get("questions", []) if not q.get("from_slides"))
-    return [("Read the guide", read, "One pass, top to bottom. Bold = what the lecture emphasized."),
-            ("Diagrams & tables", max(5, 5 * math.ceil(visuals * 2 / 5)), "Redraw each flow from memory; cover a table column and recall it."),
-            ("Cram sheet", max(5, 5 * math.ceil(cram * 0.5 / 5)), "Hide answers and quiz yourself. Repeat until it's automatic."),
-            ("Self-test", max(5, 5 * math.ceil(qs * 1.5 / 5)), "Answer before you look. Read every explanation, even when right."),
-            ("Objectives check", 5, "Tick each objective only if you can teach it out loud.")]
+    first = slug(c["classes"][0]["name"])
+    return [("Read the guide", read, "One pass, top to bottom. Bold = what the lecture emphasized.", "summary"),
+            ("Diagrams & tables", max(5, 5 * math.ceil(visuals * 2 / 5)), "Redraw each flow from memory; cover a table column and recall it.", first),
+            ("Cram sheet", max(5, 5 * math.ceil(cram * 0.5 / 5)), "Hide answers and quiz yourself. Repeat until it's automatic.", "cram"),
+            ("Self-test", max(5, 5 * math.ceil(qs * 1.5 / 5)), "Answer before you look. Read every explanation, even when right.", "selftest"),
+            ("Objectives check", 5, "Tick each objective only if you can teach it out loud.", "checklist")]
 
 
 def flows_html(flows):
@@ -122,6 +161,7 @@ def part_html(c, cl, n, lec_dir, pending):
     out = [f'<section class="section part-start part-sec" id="{slug(cl["name"])}" style="--pc:var(--p{(n - 1) % 6})"><div class="wrap">',
            f'<div class="part"><span class="pnum">{n}</span>Part {n} · {kind}</div><h2>{md(cl["name"])}</h2>',
            '<div class="chips">' + "".join(f'<span class="chip">{o}</span>' for o in cl.get("objectives", [])) + "</div>",
+           deeper_html(cl.get("deeper")),
            f'<div class="grid two">{"".join(cards)}</div>']
     for key, (cls, label) in callout_keys.items():
         if key in secs:
@@ -131,7 +171,8 @@ def part_html(c, cl, n, lec_dir, pending):
         out.append("<h3 style='margin-top:26px'>Step by step</h3>" + flows_html(cl["flows"]))
     for fig in cl.get("figures", []):
         shutil.copy(ROOT / "work" / c["lecture"]["id"] / "figures" / fig["image"], lec_dir / fig["image"])
-        out.append(f'<figure><img src="{fig["image"]}" alt="{html.escape(fig.get("title", ""))}" loading="lazy">'
+        w, h = Image.open(lec_dir / fig["image"]).size  # fixed size so lazy images don't shift links mid-scroll
+        out.append(f'<figure><img src="{fig["image"]}" width="{w}" height="{h}" style="height:auto" alt="{html.escape(fig.get("title", ""))}" loading="lazy">'
                    f'<figcaption><strong>{md(fig.get("title", ""))}.</strong> {md(fig["caption"])}{cite(fig.get("src", ""))}</figcaption></figure>')
     for i, t in enumerate(cl.get("comparisons", [])):
         out.append(table_html(t, i))
@@ -148,7 +189,7 @@ def part_html(c, cl, n, lec_dir, pending):
     return "".join(out)
 
 
-def question_html(stem, options, answer, why_correct, src, whys=None, label=""):
+def question_html(stem, options, answer, why_correct, src, whys=None, label="", review=None):
     opts = "".join(f'<button class="opt" data-correct="{1 if L == answer else 0}"><span class="L">{L}</span><span>{md(t)}</span></button>'
                    for L, t in options.items())
     why_list = ""
@@ -156,7 +197,7 @@ def question_html(stem, options, answer, why_correct, src, whys=None, label=""):
         why_list = '<ul class="why-list">' + "".join(f"<li><strong>{L}.</strong> {md(w)}</li>" for L, w in whys.items() if L != answer) + "</ul>"
     return (f'<div class="card q"><div class="small muted">{html.escape(label)}</div><div class="stem">{md(stem)}</div><div class="opts">{opts}</div>'
             f'<div class="reveal"><div class="callout clin" style="margin-bottom:0"><div class="label">Answer: {answer}</div>'
-            f'{md(why_correct)}{cite(src)}{why_list}</div></div></div>')
+            f'{md(why_correct)}{cite(src)}{why_list}{"<div>" + jump(review, f"Review Part {review[0]} →") + "</div>" if review else ""}</div></div></div>')
 
 
 def guide_page(lec, c, slides, lec_dir, files):
@@ -165,7 +206,9 @@ def guide_page(lec, c, slides, lec_dir, files):
     checks = lecture_checks.extract(slides)
     g = c.get("guide", {})
     plan = study_plan(c, checks)
-    total = sum(m for _, m, _ in plan)
+    total = sum(p[1] for p in plan)
+    find = part_finder(c)
+    anchors = {cl["name"]: (i, slug(cl["name"])) for i, cl in enumerate(c["classes"], 1)}
     nav = "".join(f'<a href="#{a}">{t}</a>' for a, t in [("plan", "Plan"), ("summary", "Summary"), ("objectives", "Objectives")] +
                   [(slug(cl["name"]), f"Part {i}") for i, cl in enumerate(c["classes"], 1)] + [("cram", "Cram sheet"), ("selftest", "Self-test"), ("checklist", "Checklist")])
     dl = "".join(f'<a class="btn {"" if i == 0 else "ghost"}" href="{href}">{label}</a>' for i, (label, href) in enumerate(files))
@@ -175,7 +218,7 @@ def guide_page(lec, c, slides, lec_dir, files):
             f'<div class="btns noprint">{dl}</div></header>']
     # plan
     body.append('<section class="section" id="plan"><div class="wrap"><h2>Study plan</h2><div class="plan">' +
-                "".join(f'<div class="card"><div class="mins">{m}<span class="small muted"> min</span></div><h3 style="margin:6px 0 4px">{t}</h3><div class="small muted">{d}</div></div>' for t, m, d in plan) +
+                "".join(f'<a class="card link-card" href="#{a}"><div class="mins">{m}<span class="small muted"> min</span></div><h3 style="margin:6px 0 4px">{t} <span class="go">→</span></h3><div class="small muted">{d}</div></a>' for t, m, d, a in plan) +
                 "</div>" + ('<p class="small muted" style="margin-top:14px">Textbook not added yet — this guide is built from the slides and study guide only.</p>' if pending else "") +
                 '<div class="callout why" style="margin-top:18px"><div class="label">How to read this guide</div><ul>'
                 '<li><strong>Bold</strong> = emphasized on the lecture slides</li>'
@@ -184,13 +227,13 @@ def guide_page(lec, c, slides, lec_dir, files):
                 '<li>Open <strong>Sidekick</strong> (bottom right) to search, listen, drill flashcards, quiz, or chat about this lecture</li></ul></div></div></section>')
     # summary
     body.append('<section class="section" id="summary"><div class="wrap narrow"><h2>The whole lecture in 6 sentences</h2><ol class="summary">' +
-                "".join(f"<li>{md(s['text'])}{cite(s['src'])}</li>" for s in g.get("summary", [])) + "</ol></div></section>")
+                "".join(f"<li>{md(s['text'])}{cite(s['src'])} {jump(find(s['src']), 'Part ' + str(find(s['src'])[0]) + ' →' if find(s['src']) else '')}</li>" for s in g.get("summary", [])) + "</ol></div></section>")
     # objectives
     rows = []
     for o in c["objectives"]:
-        where = [cl["name"] for cl in c["classes"] if o["id"] in cl.get("objectives", [])]
+        where = [f'<a href="#{anchors[cl["name"]][1]}">Part {anchors[cl["name"]][0]} · {html.escape(cl["name"])}</a>' for cl in c["classes"] if o["id"] in cl.get("objectives", [])]
         note = f'<div class="small" style="color:var(--warn)">⚠ {html.escape(o["thin_note"])}</div>' if o.get("thin_note") else ""
-        rows.append(f'<tr><td>{o["id"]}</td><td>{md(o["text"])}{note}</td><td class="small muted">{html.escape(", ".join(where) or "—")}</td></tr>')
+        rows.append(f'<tr><td>{o["id"]}</td><td>{md(o["text"])}{note}</td><td class="small covered">{"<br>".join(where) or "—"}</td></tr>')
     body.append('<section class="section" id="objectives"><div class="wrap"><h2>Learning objectives</h2><p class="muted">IO = syllabus unit objective · SO = this session\'s objectives slide.</p>'
                 '<div class="table-wrap"><table><thead><tr><th>ID</th><th>Objective</th><th>Covered in</th></tr></thead><tbody>' + "".join(rows) + "</tbody></table></div>")
     if c.get("about"):
@@ -213,7 +256,7 @@ def guide_page(lec, c, slides, lec_dir, files):
           f'<p class="muted">First, the lecture\'s own {len(checks)} knowledge checks — exactly as written. Then original PANCE-style questions. Tap an answer to reveal the explanation.</p>',
           '<h3 style="margin-top:26px">From the lecture</h3>']
     for k, q in enumerate(checks, 1):
-        st.append(question_html(q["stem"], q["options"], q["answer"], q["why"], q["src"], label=f"Lecture check {k} · {q['src']}"))
+        st.append(question_html(q["stem"], q["options"], q["answer"], q["why"], q["src"], label=f"Lecture check {k} · {q['src']}", review=find(q["src"])))
     st.append('<h3 style="margin-top:30px">Original questions</h3>')
     k = 0
     for cl in c["classes"]:
@@ -224,12 +267,14 @@ def guide_page(lec, c, slides, lec_dir, files):
             opts = {L: o["text"] for L, o in q["options"].items()}
             whys = {L: o["why"] for L, o in q["options"].items()}
             st.append(question_html(q["stem"], opts, q["answer"], q.get("why_correct", ""), q.get("src", ""), whys,
-                                    label=f"Q{k} · {'Clinical vignette' if q['kind'] == 'vignette' else 'Mechanism'} · {cl['name']}"))
+                                    label=f"Q{k} · {'Clinical vignette' if q['kind'] == 'vignette' else 'Mechanism'} · {cl['name']}", review=anchors[cl["name"]]))
     st.append("</div></section>")
     body.append("".join(st))
     # checklist
     body.append('<section class="section" id="checklist"><div class="wrap narrow"><h2>Objectives checklist</h2><p class="muted">Tick only what you could teach out loud. Saved on this device.</p>' +
-                "".join(f'<label class="check"><input type="checkbox" data-check="{o["id"]}"><span><strong>{o["id"]}</strong> {md(o["text"])}</span></label>' for o in c["objectives"]) +
+                "".join(f'<label class="check"><input type="checkbox" data-check="{o["id"]}"><span><strong>{o["id"]}</strong> {md(o["text"])} ' +
+                        " ".join(jump(anchors[cl["name"]], f"Part {anchors[cl['name']][0]} →") for cl in c["classes"] if o["id"] in cl.get("objectives", [])) +
+                        "</span></label>" for o in c["objectives"]) +
                 "</div></section>")
     return page(f"{lid} · {c['lecture']['title']}", "".join(body), depth=1, nav_links=nav, sidekick=True)
 
@@ -285,7 +330,7 @@ def home_page(syl, built, exams_built):
                 b = built[l["id"]]
                 links = "".join(f'<a href="{href}">{label}</a>' for label, href in b["links"])
                 items.append(f'<div class="card lec"><div class="small muted">Session {l["session"]} · {date.fromisoformat(l["date"]).strftime("%a, %b %-d")}</div>'
-                             f'<h3 style="margin:2px 0"><a href="{l["id"]}/index.html" style="color:inherit">{html.escape(b["title"])}</a></h3>'
+                             f'<h3 style="margin:2px 0"><a class="stretch" href="{l["id"]}/index.html" style="color:inherit">{html.escape(b["title"])}</a></h3>'
                              f'<div class="meta">{b["meta"]}</div><div class="links">{links}</div></div>')
             else:
                 items.append(f'<div class="card lec soon"><div class="small muted">Session {l["session"]} · {date.fromisoformat(l["date"]).strftime("%a, %b %-d")}</div>'

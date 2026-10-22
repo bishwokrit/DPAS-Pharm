@@ -209,6 +209,36 @@ body.focus:not(.at-top) .section:not(.in-view) { opacity: .38; }
 .focus-btn { border: 0; background: var(--surface-2); color: var(--text-2); height: 34px; padding: 0 12px; border-radius: 980px; cursor: pointer; font: 600 13px var(--font); flex: none; }
 body.focus .focus-btn { background: var(--accent); color: #fff; }
 
+/* ---------- links between sections ---------- */
+a.link-card { color: inherit; display: block; transition: transform .18s, box-shadow .18s; }
+a.link-card:hover { text-decoration: none; transform: translateY(-2px); box-shadow: var(--shadow), 0 0 0 1px var(--accent); }
+.link-card .go { color: var(--accent); opacity: 0; transition: opacity .18s, transform .18s; display: inline-block; }
+.link-card:hover .go { opacity: 1; transform: translateX(3px); }
+.jump { display: inline-block; font-size: 13px; font-weight: 600; color: var(--accent); background: var(--accent-soft); border-radius: 980px; padding: 1px 9px; margin-left: 4px; white-space: nowrap; }
+.jump:hover { text-decoration: none; filter: brightness(1.1); }
+.covered a { color: var(--accent); }
+.reveal .jump { margin: 10px 0 0; }
+.nav-links a.active { color: var(--text); font-weight: 600; }
+.lec { position: relative; }
+.lec .stretch::after { content: ""; position: absolute; inset: 0; border-radius: var(--radius); }
+.lec .links a { position: relative; z-index: 1; }
+@media (hover: hover) { .lec:hover { transform: translateY(-2px); box-shadow: var(--shadow), 0 0 0 1px var(--accent); } }
+.lec { transition: transform .18s, box-shadow .18s; }
+:target { scroll-margin-top: 72px; }
+/* Go deeper (textbook) */
+.deeper { position: relative; margin: -8px 0 22px; }
+.deeper-btn { display: inline-flex; align-items: center; gap: 12px; text-align: left; border: 1px solid color-mix(in srgb, var(--tb) 55%, transparent); background: color-mix(in srgb, var(--tb) 10%, var(--surface));
+  color: var(--text); border-radius: 14px; padding: 10px 16px; font: inherit; font-size: 15px; cursor: pointer; max-width: 100%; }
+.deeper-btn:hover { border-color: var(--tb); }
+.deeper-ic { font-size: 22px; }
+.deeper-why { display: block; color: var(--text-2); font-size: 13.5px; }
+.deeper-pop { position: absolute; z-index: 25; top: calc(100% + 6px); left: 0; width: min(340px, 92vw); background: var(--surface); border: 1px solid var(--hair); border-radius: 16px;
+  box-shadow: 0 18px 50px rgba(0,0,0,.25); padding: 12px; display: grid; gap: 6px; }
+.deeper-pop > button, .deeper-pop > a { display: block; text-align: left; border: 0; background: var(--surface-2); color: var(--text); border-radius: 12px; padding: 10px 12px; font: 600 15px var(--font); cursor: pointer; }
+.deeper-pop > button:hover, .deeper-pop > a:hover { text-decoration: none; outline: 2px solid var(--accent); }
+.deeper-pop span { display: block; font-weight: 400; font-size: 13px; color: var(--text-2); }
+.deeper-pop .small-link { background: none; color: var(--accent); font-size: 13px; padding: 4px 12px; }
+
 /* ---------- Sidekick ---------- */
 .sk-fab { position: fixed; right: 20px; bottom: 20px; z-index: 40; border: 0; border-radius: 980px; padding: 13px 20px; font: 650 15px var(--font); color: #fff; cursor: pointer;
   background: linear-gradient(135deg, var(--p0), var(--p2)); box-shadow: 0 10px 30px rgba(10,132,255,.35); }

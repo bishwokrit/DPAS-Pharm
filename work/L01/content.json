@@ -810,7 +810,13 @@
       "src": "p. 17"
      }
     }
-   ]
+   ],
+   "deeper": {
+    "chapter": 1,
+    "first": 12,
+    "last": 18,
+    "why": "Every trial phase in detail, the FDA laws, and how generics get approved"
+   }
   },
   {
    "name": "Pharmacodynamics: Targets & Receptors",
@@ -1292,7 +1298,13 @@
      ],
      "src": "S22; S22 (notes); S25"
     }
-   ]
+   ],
+   "deeper": {
+    "chapter": 2,
+    "first": 22,
+    "last": 27,
+    "why": "Spare receptors and each antagonist type, with dose-response curves"
+   }
   },
   {
    "name": "Dose-Response Relationships",
@@ -1701,7 +1713,13 @@
      "src": "S30; S34; S34 (notes)"
     }
    ],
-   "flows": []
+   "flows": [],
+   "deeper": {
+    "chapter": 2,
+    "first": 37,
+    "last": 41,
+    "why": "Quantal curves, therapeutic window, and the propranolol–asthma case"
+   }
   },
   {
    "name": "Pharmacokinetics: ADME — Absorption & Distribution",
@@ -2130,7 +2148,13 @@
      ],
      "src": "S51"
     }
-   ]
+   ],
+   "deeper": {
+    "chapter": 1,
+    "first": 8,
+    "last": 11,
+    "why": "How drugs cross membranes, ion trapping, and transporters like P-glycoprotein"
+   }
   }
  ],
  "notebooklm": {

@@ -118,3 +118,11 @@ QUESTIONS = [
      ],
      "src": "p. 17"},
 ]
+
+# One "Go deeper" textbook link per part, only where the chapter adds real depth: (chapter, first page, last page, why)
+DEEPER = {
+    "Drug Development & Regulation": (1, 12, 18, "Every trial phase in detail, the FDA laws, and how generics get approved"),
+    "Pharmacodynamics: Targets & Receptors": (2, 22, 27, "Spare receptors and each antagonist type, with dose-response curves"),
+    "Dose-Response Relationships": (2, 37, 41, "Quantal curves, therapeutic window, and the propranolol–asthma case"),
+    "Pharmacokinetics: ADME — Absorption & Distribution": (1, 8, 11, "How drugs cross membranes, ion trapping, and transporters like P-glycoprotein"),
+}

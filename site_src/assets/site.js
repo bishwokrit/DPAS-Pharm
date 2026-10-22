@@ -45,6 +45,50 @@
     document.querySelector(".theme-btn")?.before(btn);
   }
 
+  // nav highlights the section you're in
+  const navLinks = [...document.querySelectorAll(".nav-links a[href^='#']")];
+  if (navLinks.length && "IntersectionObserver" in window) {
+    const byId = new Map(navLinks.map((a) => [a.getAttribute("href").slice(1), a]));
+    const spy = new IntersectionObserver((es) => es.forEach((e) => {
+      if (!e.isIntersecting) return;
+      navLinks.forEach((a) => a.classList.remove("active"));
+      const a = byId.get(e.target.id);
+      if (a) {  // keep the active link visible in the nav without scrolling the page
+        a.classList.add("active");
+        const bar = a.parentElement;
+        bar.scrollTo({ left: a.offsetLeft - bar.clientWidth / 2 + a.offsetWidth / 2, behavior: "smooth" });
+      }
+    }), { rootMargin: "-45% 0px -50% 0px" });
+    byId.forEach((_, id) => { const el = document.getElementById(id); if (el) spy.observe(el); });
+  }
+
+  // "Go deeper" textbook links: open your own Katzung PDF at the page (kept on this device), or AccessMedicine
+  const db = () => new Promise((ok, bad) => { const r = indexedDB.open("dpas", 1); r.onupgradeneeded = () => r.result.createObjectStore("files"); r.onsuccess = () => ok(r.result); r.onerror = () => bad(r.error); });
+  const idb = async (mode, fn) => { const d = await db(); return new Promise((ok, bad) => { const t = d.transaction("files", mode); const q = fn(t.objectStore("files")); t.oncomplete = () => ok(q?.result); t.onerror = () => bad(t.error); }); };
+  const getPdf = () => idb("readonly", (st) => st.get("katzung")).catch(() => null);
+  const savePdf = (file) => idb("readwrite", (st) => st.put(file, "katzung"));
+  let pop;
+  const closePop = () => { pop?.remove(); pop = null; };
+  document.addEventListener("click", (e) => { if (pop && !pop.contains(e.target) && !e.target.closest(".deeper-btn")) closePop(); });
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape") closePop(); });
+  document.querySelectorAll(".deeper-btn").forEach((btn) => btn.addEventListener("click", async () => {
+    if (pop) { closePop(); return; }
+    const page = +btn.dataset.page, pdfPage = page + +btn.dataset.offset, have = await getPdf();
+    pop = document.createElement("div");
+    pop.className = "deeper-pop";
+    pop.innerHTML = `<div class="small muted">${btn.dataset.label}</div>
+      <button data-open>${have ? "Open in my textbook PDF" : "Choose my Katzung PDF…"}<span>${have ? `Jumps to page ${page}` : "Pick it once; it stays on this device only"}</span></button>
+      <a href="${btn.dataset.am}" target="_blank" rel="noopener">Find on AccessMedicine<span>School library login · Chapter ${btn.dataset.label.match(/Ch\. (\d+)/)[1]}</span></a>
+      ${have ? '<button data-change class="small-link">Use a different PDF</button>' : ""}
+      <input type="file" accept="application/pdf" hidden>`;
+    btn.after(pop);
+    const input = pop.querySelector("input");
+    const open = (file) => { const w = window.open(URL.createObjectURL(file) + "#page=" + pdfPage, "_blank"); if (!w) alert("Allow pop-ups to open the textbook."); closePop(); };
+    pop.querySelector("[data-open]").addEventListener("click", () => (have ? open(have) : input.click()));
+    pop.querySelector("[data-change]")?.addEventListener("click", () => input.click());
+    input.addEventListener("change", async () => { const f = input.files[0]; if (!f) return; await savePdf(f).catch(() => {}); open(f); });
+  }));
+
   // cram sheet: hide answers for active recall; tap a cell to peek
   document.querySelectorAll("[data-cram-toggle]").forEach((btn) => {
     const table = document.getElementById(btn.dataset.cramToggle);
