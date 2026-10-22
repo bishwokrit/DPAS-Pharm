@@ -740,3 +740,39 @@ body.focus .focus-btn { background: var(--accent-soft) !important; color: var(--
 .hero-title .accent-text { padding-bottom: .1em; margin-bottom: -.1em; }
 .hero-teaser { font-size: clamp(15.5px, 1.55vw, 18px) !important; color: var(--text-2); max-width: 720px !important; line-height: 1.55; }
 @media (max-height: 780px) and (min-width: 601px) { .hero-teaser { font-size: 16px !important; } }
+
+/* ================= drug index ================= */
+.dx-bar { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+.dx-search { flex: 1; min-width: 240px; display: flex; align-items: center; gap: 10px; background: var(--surface); box-shadow: var(--shadow); border-radius: 14px; padding: 0 16px; color: var(--text-2); }
+.dx-search input { flex: 1; border: 0; outline: 0; background: none; font: 500 17px var(--font); color: var(--text); padding: 14px 0; min-width: 0; }
+.dx-search:focus-within { box-shadow: var(--shadow), 0 0 0 2px var(--accent); }
+.dx-tools { display: flex; gap: 8px; } .dx-tools .btn[disabled] { opacity: .45; cursor: default; }
+.dx-tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 20px; }
+.dx-grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); }
+.dx-tile { position: relative; text-align: left; border: 0; font: inherit; color: var(--text); cursor: pointer; background: var(--surface); border-radius: 18px; padding: 18px 18px 16px; box-shadow: var(--shadow);
+  display: flex; flex-direction: column; gap: 6px; transition: transform .2s, box-shadow .2s; }
+.dx-tile:hover { transform: translateY(-3px); box-shadow: var(--shadow), 0 0 0 1px var(--accent); }
+.dx-name { font-size: 18px; font-weight: 700; letter-spacing: -.01em; padding-right: 30px; }
+.dx-cls { font-size: 13.5px; color: var(--text-2); min-height: 2.6em; }
+.dx-tags-mini { display: flex; flex-wrap: wrap; gap: 5px; }
+.dx-tags-mini i { font-style: normal; font-size: 11.5px; font-weight: 650; padding: 2px 8px; border-radius: 980px; background: var(--accent-soft); color: var(--accent); }
+.dx-meta { font-size: 12px; color: var(--text-2); margin-top: 4px; }
+.dx-pick { position: absolute; top: 14px; right: 14px; width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; font-weight: 700; color: var(--text-2); background: var(--surface-2); transition: background .2s, color .2s; }
+.dx-pick:hover { color: var(--accent); } .dx-pick.on { background: var(--accent); color: #fff; }
+.dx-scrim { position: fixed; inset: 0; background: rgba(0,0,0,.3); z-index: 55; opacity: 0; transition: opacity .28s; }
+.dx-scrim.open { opacity: 1; }
+.dx-sheet { position: fixed; top: 0; right: 0; bottom: 0; width: min(620px, 100vw); z-index: 56; background: var(--bg); box-shadow: -30px 0 80px rgba(0,0,0,.25); transform: translateX(104%); transition: transform .32s cubic-bezier(.2,.8,.2,1); overflow-y: auto; }
+.dx-sheet.open { transform: none; }
+@media (max-width: 700px) { .dx-sheet { top: auto; height: 90vh; width: 100vw; border-radius: 22px 22px 0 0; transform: translateY(104%); } }
+.dx-sheet-in { padding: 26px 28px 60px; }
+.dx-sh-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; }
+.dx-sh-top h2 { margin: 2px 0 4px; font-size: 32px; }
+.dx-acts { display: flex; gap: 10px; flex-wrap: wrap; margin: 14px 0 6px; align-items: center; }
+.dx-acts select { font: inherit; font-size: 14px; padding: 8px 12px; border-radius: 980px; border: 1px solid var(--hair); background: var(--surface); color: var(--text); }
+.dx-sheet h4 { font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--text-2); margin: 24px 0 8px; }
+.dx-facts { padding-left: 20px; } .dx-facts li { margin: 8px 0; }
+.dx-ment { list-style: none; padding: 0; margin: 0; } .dx-ment li { padding: 10px 0; border-top: 1px solid var(--hair); } .dx-ment li:first-child { border-top: 0; }
+.dx-cmp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 16px; }
+.dx-cmp-grid > div { background: var(--surface); border-radius: 16px; padding: 16px; box-shadow: var(--shadow); }
+.dx-cmp-grid ul { padding-left: 18px; font-size: 14.5px; } .dx-cmp-grid li { margin: 6px 0; }
+@media (max-width: 600px) { .dx-cmp-grid { grid-template-columns: 1fr; } }

@@ -11,6 +11,7 @@ import math
 import re
 import shutil
 import subprocess
+import sys
 from datetime import date
 from pathlib import Path
 
@@ -53,7 +54,7 @@ def nav_html(up, active="", nav_links="", subtitle=""):
     """Two-level bar: a calm global nav (4 destinations + search + theme), and — only when a page has
     sections — a slim local bar under it with that page's own links."""
     main = [("Study", f"{up}index.html#study", "study"), ("Practice", f"{up}index.html#practice", "practice"),
-            ("Review", f"{up}review/index.html", "review"), ("Syllabus", f"{up}syllabus/index.html", "syllabus")]
+            ("Drugs", f"{up}drugs/index.html", "drugs"), ("Review", f"{up}review/index.html", "review"), ("Syllabus", f"{up}syllabus/index.html", "syllabus")]
     links = "".join(f'<a href="{href}"{" aria-current=page" if key == active else ""}>{label}</a>' for label, href, key in main)
     sub = (f'<div class="subnav"><div class="subnav-in"><span class="subnav-title">{html.escape(subtitle)}</span>'
            f'<div class="nav-links">{nav_links}</div><span class="subnav-tools"></span></div></div>') if nav_links else ""
@@ -418,7 +419,7 @@ def home_page(syl, built, exams_built):
                     f'<summary><span class="unit-num">{u}</span><span class="unit-name"><strong>{html.escape(name)}</strong><span class="small muted">Sessions {sessions}</span></span>'
                     f'{f"<span class=unit-badge>{badge}</span>" if badge else ""}<span class="unit-exam small">{("Exam " + date.fromisoformat(ex["date"]).strftime("%a, %b %-d")) if ex else ""}</span><span class="unit-chev" aria-hidden="true"></span></summary>'
                     f'<div class="grid unit-cards">{"".join(cards)}</div></details>')
-    study = f'<section class="section" id="study"><div class="wrap"><p class="kicker appear">Study</p><h2 class="appear">Your course, one unit at a time.</h2><div class="roadmap">{"".join(rows)}</div></div></section>'
+    study = f'<section class="section" id="study"><div class="wrap"><p class="kicker appear">Study</p><h2 class="appear">Your course, one unit at a time.</h2><p class="appear"><a class="jump" href="drugs/index.html">Open the drug index →</a></p><div class="roadmap">{"".join(rows)}</div></div></section>'
     return page(SITE_NAME, hero + now_section(syl, built, sched) + study + practice)
 
 
@@ -622,6 +623,12 @@ def search_index(syl, sched, built, exams):
         if res.exists():
             for q in json.loads(res.read_text()):
                 out.append({"t": q["stem"], "g": f"{ex['title']}", "u": f"exams/{ex['id']}/index.html#q-{q['id']}", "s": q.get("src", "")})
+    sys.path.insert(0, str(ROOT / "work"))
+    import drugs as DR
+    for d in DR.DRUGS:
+        out.append({"t": f"{d['name']} — {d['cls']}", "g": "Drug index", "u": f"drugs/index.html#{slug(d['name'])}"})
+        for f in d["facts"]:
+            out.append({"t": f"{d['name']}: {f['text']}", "g": "Drug index", "u": f"drugs/index.html#{slug(d['name'])}", "s": f["src"]})
     for d in sched["due"]:
         out.append({"t": f"{d['label']} — {date.fromisoformat(d['date']).strftime('%a, %b %-d')}", "g": "Schedule", "u": "syllabus/index.html#schedule"})
     for u, r in sched["readings"].items():
@@ -654,6 +661,46 @@ def review_page(syl, built, exams):
 <script type="application/json" id="review-data">{cfg}</script>
 <script src="../assets/review.js"></script>"""
     return page("Review · DPAS Pharm", body, depth=1, active="review")
+
+
+# ---------------------------------------------------------------- cumulative drug index
+def drug_data(built):
+    """work/drugs.py entries + every place each drug is mentioned in the study guides (auto-collected)."""
+    sys.path.insert(0, str(ROOT / "work"))
+    import drugs as DR
+    kbs = {lid: json.loads((DOCS / lid / "kb.json").read_text()) for lid in built}
+    out = []
+    for d in DR.DRUGS:
+        names = [d["name"]] + d["aliases"]
+        pat = re.compile(r"\b(" + "|".join(re.escape(n) for n in names) + r")\b", re.I)
+        mentions, seen = [], set()
+        for lid, kb in kbs.items():
+            for ch in kb["chunks"]:
+                key = ch["text"][:80]
+                if pat.search(ch["text"]) and key not in seen:
+                    seen.add(key)
+                    mentions.append({"lid": lid, "where": ch["where"], "text": ch["text"], "src": ch["src"], "tb": ch.get("tb", False), "href": f"../{lid}/index.html#{ch['anchor']}"})
+        out.append({**d, "mentions": mentions[:12], "n_mentions": len(mentions), "pattern": "|".join(re.escape(n) for n in names)})
+    return out
+
+
+def drugs_page(built, exams):
+    data = drug_data(built)
+    tags = sorted({t for d in data for t in d["tags"]})
+    cfg = json.dumps({"drugs": data, "lectures": list(built), "exams": [e["id"] for e in exams]}, ensure_ascii=False).replace("</", "<\\/")
+    body = f"""<header class="hero wrap"><p class="eyebrow appear">Drug index · cumulative</p>
+<h1 class="appear" style="--d:.05s">Every drug, <span class="accent-text">one place.</span></h1>
+<p class="lede appear" style="--d:.12s">{len(data)} drugs from the lectures and assigned reading so far — each fact cited, every mention linked back to its lecture. It grows with every unit.</p></header>
+<section class="section" style="border-top:0;padding-top:0"><div class="wrap">
+<div class="dx-bar"><div class="dx-search">{SEARCH_ICON}<input id="dx-q" type="search" placeholder="Search drugs, classes, or facts…" autocomplete="off"></div>
+<div class="dx-tools"><button class="btn ghost small" id="dx-drill">Drill drug flashcards</button><button class="btn ghost small" id="dx-cmp" disabled>Compare (0/2)</button></div></div>
+<div class="dx-tags" id="dx-tags"><button class="sch-chip on" data-tag="">All</button>{"".join(f'<button class="sch-chip" data-tag="{html.escape(t)}">{html.escape(t)}</button>' for t in tags)}</div>
+<div class="dx-grid" id="dx-grid"></div><p class="muted" id="dx-empty" hidden>No drugs match. It may be <strong>not covered in materials</strong> yet.</p>
+</div></section>
+<aside class="dx-sheet" id="dx-sheet" aria-label="Drug details" hidden><div class="dx-sheet-in" id="dx-sheet-in"></div></aside><div class="dx-scrim" id="dx-scrim" hidden></div>
+<script type="application/json" id="drug-data">{cfg}</script>
+<script src="../assets/drugs.js"></script>"""
+    return page("Drug index · DPAS Pharm", body, depth=1, active="drugs")
 
 # ---------------------------------------------------------------- main
 def main(pdf=True):
@@ -706,6 +753,9 @@ def main(pdf=True):
     shutil.copy(next((ROOT / "inputs" / "syllabus").glob("*.pdf")), DOCS / "syllabus" / "Syllabus_DPAS625_v5.pdf")
     (DOCS / "syllabus" / "index.html").write_text(syllabus_page(syl, sched, built))
     (DOCS / "search.json").write_text(json.dumps(search_index(syl, sched, built, exams), ensure_ascii=False))
+    (DOCS / "robots.txt").write_text("User-agent: *\nDisallow: /\n")
+    (DOCS / "drugs").mkdir(exist_ok=True)
+    (DOCS / "drugs" / "index.html").write_text(drugs_page(built, exams))
     (DOCS / "review").mkdir(exist_ok=True)
     (DOCS / "review" / "index.html").write_text(review_page(syl, built, exams))
     (DOCS / "index.html").write_text(home_page(syl, built, exams))
