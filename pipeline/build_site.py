@@ -549,7 +549,14 @@ def syllabus_page(syl, sched, built):
                     for k, lbl in [("all", "All"), ("exam", "Exams"), ("quiz", "Quizzes"), ("db", "Discussions"), ("case", "Cases"), ("checkpoint", "Bonus"), ("class", "Classes")])
     legend = "".join(f'<li data-key="{it["key"]}" style="--c:var(--c-{it["key"]})"><span class="lg-dot"></span><span class="lg-name">{html.escape(it["label"])}</span>'
                      f'<span class="lg-w">{it["weight"]}%</span><span class="lg-pts">{it["count"]} × {round(it["points_each"], 2):g} pts</span></li>' for it in g["items"])
-    scale = "".join(f'<div class="scale-step s-{L}"><b>{L}</b><span>{("≥ " + str(pts // 10) + "%") if pts else "< 75%"}</span><em>{st}</em></div>' for L, pts, st in g["scale"])
+    sc = g["scale"]
+    def band(i):
+        lo, hi = sc[i][1], (sc[i - 1][1] if i else 1000)
+        pct = f"{lo // 10}–100%" if not i else (f"Below {hi // 10}%" if not lo else f"{lo // 10}–{hi / 10 - 0.01:.2f}%")
+        pts = f"{lo:,}–1,000" if not i else (f"Below {hi:,}" if not lo else f"{lo:,}–{hi - 0.1:,.1f}")
+        return pct, pts
+    scale = "".join(f'<div class="scale-row s-{L}"><b>{L}</b><span class="sr-pct">{band(i)[0]}</span><span class="sr-pts">{band(i)[1]} pts</span><em>{st}</em></div>'
+                    for i, (L, pts, st) in enumerate(sc))
     units = []
     for u, name in syl["units"].items():
         objs = {o["id"]: o["text"] for l in syl["lectures"] if str(l["unit"]) == u for o in l["objectives"]}
@@ -571,7 +578,7 @@ def syllabus_page(syl, sched, built):
 <div class="grade-split"><div class="donut-wrap"><svg class="donut" viewBox="0 0 200 200" id="donut" aria-label="Grade weights"></svg>
 <div class="donut-center" id="donut-center"><strong>1,000</strong><span>points</span></div></div>
 <ul class="legend" id="legend">{legend}<li class="lg-bonus" data-key="bonus" style="--c:var(--c-bonus)"><span class="lg-dot"></span><span class="lg-name">Bonus checkpoints</span><span class="lg-w">+3%</span><span class="lg-pts">8 × 3.75 pts, max 30</span></li></ul></div>
-<div class="grid two" style="margin-top:26px"><div class="card"><h3>Grading scale</h3><div class="scale">{scale}</div><p class="small muted" style="margin-top:12px">Grades are not rounded — 749.9 is an F.</p></div>
+<div class="grid two grade-cards" style="margin-top:26px"><div class="card"><h3>Grading scale</h3><div class="scale">{scale}</div><p class="small muted scale-note">Out of 1,000 points. Grades are not rounded — 749.9 is an F.</p></div>
 <div class="card"><h3>Rules that matter</h3><ul>{"".join(f"<li>{html.escape(r)}</li>" for r in g["rules"])}<li><strong>Bonus:</strong> {html.escape(g["bonus"]["rule"])}</li></ul></div></div></div></section>
 <section class="section" id="calc"><div class="wrap"><p class="kicker">Grade calculator</p><h2>Where your grade stands</h2>
 <p class="muted">Type each score as a percent when you get it. Saved only in this browser.</p>

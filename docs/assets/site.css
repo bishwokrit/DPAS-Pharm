@@ -646,9 +646,13 @@ body.focus .focus-btn { background: var(--accent-soft) !important; color: var(--
 .lg-dot { width: 12px; height: 12px; border-radius: 4px; background: var(--c); grid-row: 1 / 3; }
 .lg-name { font-weight: 600; } .lg-w { font-size: 22px; font-weight: 750; letter-spacing: -.02em; grid-row: 1 / 3; grid-column: 3; color: var(--c); }
 .lg-pts { font-size: 13px; color: var(--text-2); grid-column: 2; }
-.scale { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
-.scale-step { border-radius: 12px; padding: 12px; text-align: center; background: var(--surface-2); display: flex; flex-direction: column; gap: 2px; }
-.scale-step b { font-size: 26px; } .scale-step span { font-weight: 600; font-size: 14px; } .scale-step em { font-style: normal; font-size: 12.5px; color: var(--text-2); }
+.grade-cards { align-items: stretch; } .grade-cards > .card { display: flex; flex-direction: column; }
+.scale { display: flex; flex-direction: column; flex: 1; border-top: 1px solid var(--hair); margin-top: 6px; }
+.scale-row { flex: 1; display: grid; grid-template-columns: 34px 1fr 1fr auto; align-items: center; gap: 12px; padding: 12px 0; border-bottom: 1px solid var(--hair); font-variant-numeric: tabular-nums; }
+.scale-row b { font-size: 22px; font-weight: 700; } .sr-pct { font-weight: 600; } .sr-pts { color: var(--text-2); font-size: 14px; }
+.scale-row em { font-style: normal; font-size: 13.5px; color: var(--text-2); text-align: right; }
+@media (max-width: 520px) { .scale-row { grid-template-columns: 30px 1fr auto; } .sr-pts { display: none; } }
+.scale-note { margin: 14px 0 0; }
 .s-A b { color: var(--good); } .s-B b { color: var(--accent); } .s-C b { color: var(--warn); } .s-F b { color: var(--bad); }
 /* calculator: summary numbers, one points bar, plain ledger */
 .calc { background: var(--surface); border-radius: 18px; box-shadow: var(--shadow); padding: 28px; }
