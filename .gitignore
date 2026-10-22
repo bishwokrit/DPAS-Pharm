@@ -2,3 +2,7 @@ node_modules/
 work/*/slide_images/
 __pycache__/
 outputs/*.zip
+
+# Textbook is copyrighted: never commit it (it lives in a separate private repo)
+inputs/textbook/
+*.textbook.pdf
