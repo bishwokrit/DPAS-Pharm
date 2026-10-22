@@ -172,7 +172,7 @@ def main(lec, work_dir, out_dir, deck_path, nlm_dir, threshold, guide_ids=()):
             by_ref.setdefault(r, set()).update(toks(it["text"]))
     all_toks = set().union(*(toks(i["text"]) for i in teach)) if teach else set()
 
-    missing, uncited, skipped = [], [], []
+    missing, uncited, skipped, tb_unused = [], [], [], []
     units = source_units(slides, textbook, guide)
     skips = c.get("audit_skip", [])
     for u in units:
@@ -183,6 +183,9 @@ def main(lec, work_dir, out_dir, deck_path, nlm_dir, threshold, guide_ids=()):
         ut = toks(u["text"])
         cited_score = len(ut & by_ref.get(u["ref"], set())) / len(ut)
         if cited_score >= threshold:
+            continue
+        if u["kind"] == "textbook":
+            tb_unused.append(u)  # textbook is used "wherever appropriate", so unused sentences are info only
             continue
         if len(ut & all_toks) / len(ut) >= threshold:
             uncited.append(u)
@@ -222,13 +225,15 @@ def main(lec, work_dir, out_dir, deck_path, nlm_dir, threshold, guide_ids=()):
     passed = not (missing or not_in_deck or not_in_nlm or layout)
     result = {"lecture": lec, "passed": passed, "units_checked": len(units), "missing": missing, "uncited": uncited,
               "emphasis_not_bold": emph_missing, "skipped": skipped, "not_in_deck": not_in_deck, "not_in_notebooklm": not_in_nlm,
-              "layout_problems": layout, "question_issues": q_issues, "question_stats": q_stats, "thin_objectives": thin}
+              "layout_problems": layout, "question_issues": q_issues, "question_stats": q_stats, "thin_objectives": thin, "textbook_unused": len(tb_unused)}
     (work / "audit.json").write_text(json.dumps(result, indent=1, ensure_ascii=False))
 
     def lst(rows, fmt):
         return "\n".join(fmt(r) for r in rows) if rows else "- None ✅"
 
-    tb_note = f"{len(textbook)} textbook pages checked." if textbook else "Textbook pending — slides only."
+    tb_used = sum(1 for u in units if u["kind"] == "textbook") - len(tb_unused)
+    tb_note = (f"{len(textbook)} textbook pages read; {tb_used} textbook sentences used, the rest left out as not needed for this lecture (info only)."
+               if textbook else "Textbook pending — slides only.")
     report = f"""# Coverage audit — {lec}: {c['lecture']['title']}
 
 **Result: {'PASS ✅ nothing missing' if passed else 'NEEDS FIXES ❌'}**

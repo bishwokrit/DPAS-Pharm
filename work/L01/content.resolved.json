@@ -4,7 +4,7 @@
   "title": "Introduction to Pharmacology — Session 1",
   "date": "Thu, Oct 15, 2026"
  },
- "textbook_status": "pending",
+ "textbook_status": "included",
  "objectives": [
   {
    "id": "IO1.1",
@@ -135,6 +135,16 @@
      {
       "text": "**Brand (trade) name:** the manufacturer's marketed name; the same generic drug may have several brand names, and brand names change between countries.",
       "src": "S7"
+     },
+     {
+      "text": "**Prodrug:** an inactive precursor converted to the active drug in the body (usually by metabolism).",
+      "src": "p. 8",
+      "tb": true
+     },
+     {
+      "text": "**Poisons** are drugs with almost exclusively harmful effects — but \"the dose makes the poison\" (Paracelsus): any substance can harm at the wrong dose.",
+      "src": "p. 3",
+      "tb": true
      }
     ],
     "how": [
@@ -179,6 +189,11 @@
      {
       "text": "Precise vocabulary (generic names, therapeutic vs. adverse effects) protects patients.",
       "src": "S56"
+     },
+     {
+      "text": "More than half of prescriptions in the USA are for generic drugs.",
+      "src": "p. 18",
+      "tb": true
      }
     ],
     "examples": [
@@ -332,22 +347,22 @@
      "src": "S7; S8-9",
      "from_slides": "S8-9",
      "number": 1,
-     "answer": "C",
+     "answer": "A",
      "options": {
       "A": {
+       "text": "Brand names can obscure a shared generic ingredient, risking unintentional double-dosing",
+       "why": "Different brand-name products (Tylenol, many combination cold/flu products) can share the same active generic ingredient; prescribing and counseling by generic name avoids hiding duplicate therapy (S9).",
+       "correct": true
+      },
+      "B": {
        "text": "Pharmacologic effect and therapeutic effect are simply two words for one thing",
        "why": "They are not synonyms — a pharmacologic effect may not be therapeutic (S5 notes); it also doesn't explain this case.",
        "correct": false
       },
-      "B": {
+      "C": {
        "text": "Brand names are identical worldwide, so the two products must contain different drugs",
        "why": "Brand names change between countries, and one generic drug may have several brand names (S7).",
        "correct": false
-      },
-      "C": {
-       "text": "Brand names can obscure a shared generic ingredient, risking unintentional double-dosing",
-       "why": "Different brand-name products (Tylenol, many combination cold/flu products) can share the same active generic ingredient; prescribing and counseling by generic name avoids hiding duplicate therapy (S9).",
-       "correct": true
       },
       "D": {
        "text": "Chemical names are standardized internationally, so this mix-up could not happen",
@@ -386,7 +401,7 @@
      ],
      "src": "S5",
      "number": 2,
-     "answer": "E",
+     "answer": "C",
      "options": {
       "A": {
        "text": "Toxicity, because any harmful drug response counts as toxicity",
@@ -399,19 +414,19 @@
        "correct": false
       },
       "C": {
+       "text": "An adverse drug reaction, because it occurred at a normal therapeutic dose",
+       "why": "An ADR is an unintended and harmful response occurring at normal therapeutic doses (S5).",
+       "correct": true
+      },
+      "D": {
        "text": "A pharmacologic effect only, because it was a measurable biological change",
        "why": "Every ADR is a pharmacologic effect, but 'unintended and harmful at normal doses' is the more specific, best answer (S5).",
        "correct": false
       },
-      "D": {
+      "E": {
        "text": "Irreversible antagonism, because the receptor was permanently inactivated",
        "why": "Irreversible antagonism describes receptor inactivation until new receptor is synthesized (S22) — not a type of adverse event.",
        "correct": false
-      },
-      "E": {
-       "text": "An adverse drug reaction, because it occurred at a normal therapeutic dose",
-       "why": "An ADR is an unintended and harmful response occurring at normal therapeutic doses (S5).",
-       "correct": true
       }
      }
     },
@@ -440,7 +455,7 @@
      ],
      "src": "S6",
      "number": 3,
-     "answer": "C",
+     "answer": "E",
      "options": {
       "A": {
        "text": "Pharmacokinetics studies receptor binding; pharmacodynamics studies absorption and excretion",
@@ -453,19 +468,19 @@
        "correct": false
       },
       "C": {
-       "text": "Pharmacokinetics is what the body does to the drug; pharmacodynamics is what the drug does to the body",
-       "why": "PK = what the body does to the drug (ADME); PD = what the drug does to the body (receptors & effect) (S6).",
-       "correct": true
-      },
-      "D": {
        "text": "Pharmacokinetics studies genetic variation; pharmacodynamics studies poisoning and overdose",
        "why": "Genetic variation = pharmacogenomics; poisoning = clinical pharmacology/toxicology (S6).",
        "correct": false
       },
-      "E": {
+      "D": {
        "text": "Pharmacokinetics is what the drug does to the body; pharmacodynamics is what the body does to the drug",
        "why": "This reverses the definitions (S6).",
        "correct": false
+      },
+      "E": {
+       "text": "Pharmacokinetics is what the body does to the drug; pharmacodynamics is what the drug does to the body",
+       "why": "PK = what the body does to the drug (ADME); PD = what the drug does to the body (receptors & effect) (S6).",
+       "correct": true
       }
      }
     }
@@ -547,6 +562,31 @@
      {
       "text": "Every approved drug has passed through a structured development and regulatory pipeline (Phases I–IV).",
       "src": "S56"
+     },
+     {
+      "text": "Phase II has the **highest failure rate** — only about 25% of new drugs move on to Phase III.",
+      "src": "p. 17",
+      "tb": true
+     },
+     {
+      "text": "Phase III usually enrolls **thousands** of patients (Figure 1–6: 1000–6000), often double-blind and crossover, in settings like the drug's eventual use.",
+      "src": "p. 12; p. 17",
+      "tb": true
+     },
+     {
+      "text": "Less than one-third of drugs studied in humans survive clinical trials and reach the market.",
+      "src": "p. 14",
+      "tb": true
+     },
+     {
+      "text": "To see one case of a toxicity occurring 1 in 10,000, several hundred thousand patients may need exposure — so rare effects usually surface only in Phase IV, which has **no fixed duration**.",
+      "src": "p. 18",
+      "tb": true
+     },
+     {
+      "text": "Marketing requires a **New Drug Application (NDA)** after Phase III; human testing starts only after an **IND** (Investigational New Drug) application.",
+      "src": "p. 12; p. 17",
+      "tb": true
      }
     ],
     "clinical": [
@@ -565,6 +605,21 @@
      {
       "text": "Ask \"compared to what?\" rather than judging the number in isolation.",
       "src": "S15 (notes)"
+     },
+     {
+      "text": "A patent lasts 20 years; after it expires, generics are approved through an **abbreviated new drug application (ANDA)** that requires bioequivalence data.",
+      "src": "p. 16; p. 18",
+      "tb": true
+     },
+     {
+      "text": "Placebo responses can occur in as many as 30–40% of subjects — the reason controlled, blinded trials are needed.",
+      "src": "p. 14",
+      "tb": true
+     },
+     {
+      "text": "Adverse events that are both **serious and unexpected** must be reported to the FDA within 15 days; clinicians can report through MedWatch.",
+      "src": "p. 18; p. 19",
+      "tb": true
      }
     ],
     "examples": [
@@ -575,6 +630,16 @@
      {
       "text": "Biologic DMARDs (MSK unit, later) are a direct example of the \"biotechnology\" drug source.",
       "src": "S11 (notes)"
+     },
+     {
+      "text": "**Thalidomide** (sold in Europe as a \"nontoxic\" hypnotic) caused about 10,000 birth defects and led to the **Kefauver-Harris Amendments (1962)**, which required proof of efficacy as well as safety.",
+      "src": "p. 16",
+      "tb": true
+     },
+     {
+      "text": "The **Orphan Drug Amendment (1983)** gives incentives for drugs treating diseases with fewer than 200,000 US patients.",
+      "src": "p. 16",
+      "tb": true
      }
     ],
     "traps": [
@@ -718,27 +783,27 @@
      "src": "S13; S16-17",
      "from_slides": "S16-17",
      "number": 4,
-     "answer": "A",
+     "answer": "D",
      "options": {
       "A": {
-       "text": "Phase III",
-       "why": "Phase III trials enroll hundreds to thousands of patients, often at multiple sites, to confirm efficacy and monitor safety at scale before approval (S17).",
-       "correct": true
-      },
-      "B": {
        "text": "Phase I",
        "why": "Phase I is small-scale safety/dosing in healthy volunteers (S17).",
        "correct": false
       },
-      "C": {
+      "B": {
        "text": "Phase II",
        "why": "Phase II is preliminary efficacy in a few hundred patients (S17).",
        "correct": false
       },
-      "D": {
+      "C": {
        "text": "FDA review",
        "why": "FDA review comes after clinical trials are complete, before approval (S12).",
        "correct": false
+      },
+      "D": {
+       "text": "Phase III",
+       "why": "Phase III trials enroll hundreds to thousands of patients, often at multiple sites, to confirm efficacy and monitor safety at scale before approval (S17).",
+       "correct": true
       },
       "E": {
        "text": "Phase IV",
@@ -772,7 +837,7 @@
      ],
      "src": "S14; S14 (notes)",
      "number": 5,
-     "answer": "D",
+     "answer": "B",
      "options": {
       "A": {
        "text": "A narrow therapeutic index that appeared after approval",
@@ -780,19 +845,19 @@
        "correct": false
       },
       "B": {
+       "text": "Real-world effectiveness falling below the drug's trial efficacy",
+       "why": "Efficacy is performance under ideal trial conditions; effectiveness is performance in everyday practice with real-world adherence and comorbidities (S14).",
+       "correct": true
+      },
+      "C": {
        "text": "Lower potency than was measured during trial dose-finding",
        "why": "Potency is the dose needed for an effect and matters for dosing, not for whether patients improve (S34).",
        "correct": false
       },
-      "C": {
+      "D": {
        "text": "Extensive first-pass metabolism in the clinic's patients",
        "why": "First-pass effect lowers oral bioavailability (S50-51); it doesn't explain adherence- and comorbidity-driven differences.",
        "correct": false
-      },
-      "D": {
-       "text": "Real-world effectiveness falling below the drug's trial efficacy",
-       "why": "Efficacy is performance under ideal trial conditions; effectiveness is performance in everyday practice with real-world adherence and comorbidities (S14).",
-       "correct": true
       },
       "E": {
        "text": "Competitive antagonism of the drug by the comorbid conditions",
@@ -826,7 +891,7 @@
      ],
      "src": "S12 (notes); S13; S14",
      "number": 6,
-     "answer": "E",
+     "answer": "C",
      "options": {
       "A": {
        "text": "Adverse-event reporting systems accept only voluntary reports",
@@ -839,19 +904,74 @@
        "correct": false
       },
       "C": {
+       "text": "Trial populations were too small and too short to detect so rare an event",
+       "why": "Rare adverse effects are often first detected in Phase IV because trial populations are too small and too short in duration to catch 1-in-10,000 events (S12 notes).",
+       "correct": true
+      },
+      "D": {
        "text": "Phase I trials enrolled patients who already had the target condition",
        "why": "Phase I uses a small group of healthy volunteers (S13).",
        "correct": false
       },
-      "D": {
+      "E": {
        "text": "Phase III trials are not designed to monitor adverse effects",
        "why": "Phase III confirms efficacy AND monitors adverse effects at scale (S13).",
        "correct": false
+      }
+     }
+    },
+    {
+     "kind": "mechanism",
+     "stem": "According to the textbook, which clinical trial phase has the highest rate of drug failures?",
+     "correct": "Phase II",
+     "why_correct": "Phase II has the highest failure rate; only about 25% of drugs move on to Phase III (p. 17).",
+     "distractors": [
+      {
+       "text": "Phase I",
+       "why": "Phase I sets the safe dose range in 20–100 subjects; it is not the main failure point (p. 17)."
+      },
+      {
+       "text": "Phase III",
+       "why": "Phase III confirms efficacy in thousands, after most failures have occurred (p. 17)."
+      },
+      {
+       "text": "Phase IV",
+       "why": "Phase IV is postmarketing surveillance after approval (p. 17)."
+      },
+      {
+       "text": "FDA review",
+       "why": "FDA review is the approval step after Phase III, not a trial phase (p. 17)."
+      }
+     ],
+     "src": "p. 17",
+     "tb": true,
+     "number": 7,
+     "answer": "B",
+     "options": {
+      "A": {
+       "text": "Phase IV",
+       "why": "Phase IV is postmarketing surveillance after approval (p. 17).",
+       "correct": false
+      },
+      "B": {
+       "text": "Phase II",
+       "why": "Phase II has the highest failure rate; only about 25% of drugs move on to Phase III (p. 17).",
+       "correct": true
+      },
+      "C": {
+       "text": "FDA review",
+       "why": "FDA review is the approval step after Phase III, not a trial phase (p. 17).",
+       "correct": false
+      },
+      "D": {
+       "text": "Phase III",
+       "why": "Phase III confirms efficacy in thousands, after most failures have occurred (p. 17).",
+       "correct": false
       },
       "E": {
-       "text": "Trial populations were too small and too short to detect so rare an event",
-       "why": "Rare adverse effects are often first detected in Phase IV because trial populations are too small and too short in duration to catch 1-in-10,000 events (S12 notes).",
-       "correct": true
+       "text": "Phase I",
+       "why": "Phase I sets the safe dose range in 20–100 subjects; it is not the main failure point (p. 17).",
+       "correct": false
       }
      }
     }
@@ -868,6 +988,30 @@
       "Postmarket surveillance (Phase IV)"
      ],
      "src": "S12; S13"
+    }
+   ],
+   "conflicts": [
+    {
+     "topic": "Phase I population",
+     "slides": {
+      "text": "Phase I: a small group of healthy volunteers.",
+      "src": "S13"
+     },
+     "textbook": {
+      "text": "Phase I: 20–100 healthy volunteers — but if significant toxicity is expected (cancer, AIDS therapy), volunteer **patients with the disease** are used instead.",
+      "src": "p. 17"
+     }
+    },
+    {
+     "topic": "Phase II size",
+     "slides": {
+      "text": "Phase II: a few hundred patients with the target condition.",
+      "src": "S13"
+     },
+     "textbook": {
+      "text": "Phase II: a modest number of patients (100–200) with the target disease.",
+      "src": "p. 17"
+     }
     }
    ]
   },
@@ -961,6 +1105,31 @@
      {
       "text": "An inverse agonist actively reduces constitutive (baseline) receptor activity below normal; a true antagonist merely blocks the agonist without lowering baseline activity itself.",
       "src": "S28"
+     },
+     {
+      "text": "**Spare receptors:** a maximal response can occur without occupying every receptor (e.g., about 90% of cardiac β receptors can be blocked and maximal inotropic response still preserved).",
+      "src": "p. 23",
+      "tb": true
+     },
+     {
+      "text": "**Irreversible antagonist** effects last until new receptors are made — duration depends on receptor turnover, not drug elimination (phenoxybenzamine for pheochromocytoma).",
+      "src": "p. 25",
+      "tb": true
+     },
+     {
+      "text": "A partial agonist's lower maximal effect is **not** due to lower affinity — it can occupy all receptors and still produce less response.",
+      "src": "p. 26",
+      "tb": true
+     },
+     {
+      "text": "**Allosteric modulators** bind a different site from the agonist (e.g., benzodiazepines enhance GABA's effect).",
+      "src": "p. 25",
+      "tb": true
+     },
+     {
+      "text": "Agonist-induced **desensitization** (tachyphylaxis) and downregulation reduce response with continued exposure.",
+      "src": "p. 39",
+      "tb": true
      }
     ],
     "clinical": [
@@ -983,12 +1152,32 @@
      {
       "text": "Albuterol bridges introductory pharmacodynamics into the pulmonary pharmacology seen later in the curriculum.",
       "src": "S26 (notes)"
+     },
+     {
+      "text": "Competitive antagonism is surmountable in real life: exercise or stress raises catecholamines enough to overcome a fixed propranolol dose.",
+      "src": "p. 25",
+      "tb": true
+     },
+     {
+      "text": "Propranolol markedly slows the heart rate in pheochromocytoma (high catecholamines) but not the resting rate of a trained marathon runner.",
+      "src": "p. 39",
+      "tb": true
      }
     ],
     "examples": [
      {
       "text": "Albuterol — selective β2-adrenergic agonist (example of agonism).",
       "src": "S26"
+     },
+     {
+      "text": "**Chemical antagonism** needs no receptor: positively charged protamine binds and neutralizes negatively charged heparin.",
+      "src": "p. 26",
+      "tb": true
+     },
+     {
+      "text": "**Physiologic antagonism:** two drugs act on different receptors with opposing effects (e.g., insulin opposes glucocorticoid-induced hyperglycemia).",
+      "src": "p. 27",
+      "tb": true
      }
     ],
     "traps": [
@@ -1170,28 +1359,28 @@
      ],
      "src": "S23; S24-25",
      "from_slides": "S24-25",
-     "number": 7,
-     "answer": "A",
+     "number": 8,
+     "answer": "D",
      "options": {
       "A": {
-       "text": "More agonist is needed to reach the same effect, but the same maximal effect is still achievable",
-       "why": "A rightward shift with an unchanged plateau is the signature of competitive antagonism: potency falls, but because the antagonism is surmountable, enough agonist can still reach the original Emax (S25).",
-       "correct": true
-      },
-      "B": {
-       "text": "The competitive antagonist has no measurable effect on the agonist's curve",
-       "why": "The curve is clearly shifted right (S24-25).",
+       "text": "The competitive antagonist increases the agonist's potency at every dose given",
+       "why": "A rightward shift means MORE drug is needed — potency falls (S25).",
        "correct": false
       },
-      "C": {
+      "B": {
        "text": "The competitive antagonist turns the agonist into a partial agonist at the receptor",
        "why": "A partial agonist gives submaximal activation even at full occupancy (S22); here the full plateau is still reached.",
        "correct": false
       },
-      "D": {
-       "text": "The competitive antagonist increases the agonist's potency at every dose given",
-       "why": "A rightward shift means MORE drug is needed — potency falls (S25).",
+      "C": {
+       "text": "The competitive antagonist has no measurable effect on the agonist's curve",
+       "why": "The curve is clearly shifted right (S24-25).",
        "correct": false
+      },
+      "D": {
+       "text": "More agonist is needed to reach the same effect, but the same maximal effect is still achievable",
+       "why": "A rightward shift with an unchanged plateau is the signature of competitive antagonism: potency falls, but because the antagonism is surmountable, enough agonist can still reach the original Emax (S25).",
+       "correct": true
       },
       "E": {
        "text": "The competitive antagonist lowers the agonist's efficacy, so its Emax falls",
@@ -1225,17 +1414,17 @@
      ],
      "src": "S22; S27-28",
      "from_slides": "S27-28",
-     "number": 8,
-     "answer": "D",
+     "number": 9,
+     "answer": "E",
      "options": {
       "A": {
-       "text": "Partial agonist",
-       "why": "A partial agonist produces submaximal activation, not activity below baseline (S22).",
+       "text": "Irreversible antagonist",
+       "why": "An irreversible antagonist permanently inactivates the receptor (S22); it does not lower baseline activity with no agonist present.",
        "correct": false
       },
       "B": {
-       "text": "Irreversible antagonist",
-       "why": "An irreversible antagonist permanently inactivates the receptor (S22); it does not lower baseline activity with no agonist present.",
+       "text": "Full agonist",
+       "why": "A full agonist produces maximal receptor activation (S22).",
        "correct": false
       },
       "C": {
@@ -1244,14 +1433,14 @@
        "correct": false
       },
       "D": {
+       "text": "Partial agonist",
+       "why": "A partial agonist produces submaximal activation, not activity below baseline (S22).",
+       "correct": false
+      },
+      "E": {
        "text": "Inverse agonist",
        "why": "An inverse agonist actively reduces constitutive (baseline) receptor activity below normal (S28).",
        "correct": true
-      },
-      "E": {
-       "text": "Full agonist",
-       "why": "A full agonist produces maximal receptor activation (S22).",
-       "correct": false
       }
      }
     },
@@ -1279,32 +1468,32 @@
       }
      ],
      "src": "S26",
-     "number": 9,
-     "answer": "A",
+     "number": 10,
+     "answer": "D",
      "options": {
       "A": {
-       "text": "β2 receptor activation → rising intracellular cAMP → smooth muscle relaxation",
-       "why": "Albuterol is a selective β2 agonist: binding activates β2 → increases cAMP → relaxes bronchial smooth muscle → bronchodilation (S26).",
-       "correct": true
-      },
-      "B": {
-       "text": "Inverse agonism at β2 → lowered baseline activity → smooth muscle relaxation",
-       "why": "Inverse agonists reduce baseline activity (S22); albuterol is a selective β2 agonist (S26).",
-       "correct": false
-      },
-      "C": {
        "text": "β2 receptor blockade → falling intracellular cAMP → smooth muscle relaxation",
        "why": "Albuterol is an agonist — it activates, not blocks, β2, and cAMP rises (S26).",
        "correct": false
       },
-      "D": {
+      "B": {
        "text": "Enzyme inhibition → falling intracellular cAMP → bronchial smooth muscle dilation",
        "why": "The mechanism is receptor activation with rising cAMP (S26).",
        "correct": false
       },
-      "E": {
+      "C": {
        "text": "Ion channel opening → rising intracellular cAMP → smooth muscle contraction",
        "why": "Albuterol acts on the β2 receptor, and the result is relaxation, not contraction (S26).",
+       "correct": false
+      },
+      "D": {
+       "text": "β2 receptor activation → rising intracellular cAMP → smooth muscle relaxation",
+       "why": "Albuterol is a selective β2 agonist: binding activates β2 → increases cAMP → relaxes bronchial smooth muscle → bronchodilation (S26).",
+       "correct": true
+      },
+      "E": {
+       "text": "Inverse agonism at β2 → lowered baseline activity → smooth muscle relaxation",
+       "why": "Inverse agonists reduce baseline activity (S22); albuterol is a selective β2 agonist (S26).",
        "correct": false
       }
      }
@@ -1333,8 +1522,8 @@
       }
      ],
      "src": "S22; S22 (notes)",
-     "number": 10,
-     "answer": "C",
+     "number": 11,
+     "answer": "B",
      "options": {
       "A": {
        "text": "Noncompetitive antagonist",
@@ -1342,14 +1531,14 @@
        "correct": false
       },
       "B": {
-       "text": "Inverse agonist",
-       "why": "An inverse agonist lowers baseline activity; the scenario describes surmountable blockade (S22, S28).",
-       "correct": false
-      },
-      "C": {
        "text": "Competitive antagonist",
        "why": "A competitive antagonist reversibly competes at the same site and is overcome by more agonist — same Emax, curve shifted right (S22, S22 notes).",
        "correct": true
+      },
+      "C": {
+       "text": "Inverse agonist",
+       "why": "An inverse agonist lowers baseline activity; the scenario describes surmountable blockade (S22, S28).",
+       "correct": false
       },
       "D": {
        "text": "Irreversible antagonist",
@@ -1360,6 +1549,61 @@
        "text": "Partial agonist",
        "why": "A partial agonist itself gives submaximal activation (S22); it is not described as a blocker overcome by more agonist.",
        "correct": false
+      }
+     }
+    },
+    {
+     "kind": "vignette",
+     "stem": "A 54-year-old is given phenoxybenzamine before surgery for pheochromocytoma. Blood pressure stays controlled even when the tumor releases large catecholamine surges. What best explains why the blockade persists?",
+     "correct": "It binds receptors irreversibly; effect lasts until new receptors are made",
+     "why_correct": "An irreversible antagonist's duration depends on receptor turnover, and high agonist levels cannot overcome it (p. 25).",
+     "distractors": [
+      {
+       "text": "It competes reversibly, so high catecholamine levels easily displace it",
+       "why": "That describes competitive antagonism, which surges CAN overcome (p. 25)."
+      },
+      {
+       "text": "It neutralizes catecholamines chemically in plasma before they reach receptors",
+       "why": "That is chemical antagonism, like protamine–heparin (p. 26)."
+      },
+      {
+       "text": "It activates opposing receptors, producing a physiologic counter-effect instead",
+       "why": "That is physiologic antagonism, like insulin vs glucocorticoids (p. 27)."
+      },
+      {
+       "text": "It is a partial agonist that caps the maximal catecholamine response",
+       "why": "Partial agonists produce a submaximal response; phenoxybenzamine is an irreversible antagonist (p. 25; p. 26)."
+      }
+     ],
+     "src": "p. 25-27",
+     "tb": true,
+     "number": 12,
+     "answer": "E",
+     "options": {
+      "A": {
+       "text": "It activates opposing receptors, producing a physiologic counter-effect instead",
+       "why": "That is physiologic antagonism, like insulin vs glucocorticoids (p. 27).",
+       "correct": false
+      },
+      "B": {
+       "text": "It is a partial agonist that caps the maximal catecholamine response",
+       "why": "Partial agonists produce a submaximal response; phenoxybenzamine is an irreversible antagonist (p. 25; p. 26).",
+       "correct": false
+      },
+      "C": {
+       "text": "It neutralizes catecholamines chemically in plasma before they reach receptors",
+       "why": "That is chemical antagonism, like protamine–heparin (p. 26).",
+       "correct": false
+      },
+      "D": {
+       "text": "It competes reversibly, so high catecholamine levels easily displace it",
+       "why": "That describes competitive antagonism, which surges CAN overcome (p. 25).",
+       "correct": false
+      },
+      "E": {
+       "text": "It binds receptors irreversibly; effect lasts until new receptors are made",
+       "why": "An irreversible antagonist's duration depends on receptor turnover, and high agonist levels cannot overcome it (p. 25).",
+       "correct": true
       }
      }
     }
@@ -1422,6 +1666,16 @@
      {
       "text": "**Therapeutic Index (TI) = TD₅₀ ÷ ED₅₀ (toxic dose in 50% ÷ effective dose in 50%).**",
       "src": "S38; SG U1-R7"
+     },
+     {
+      "text": "**Quantal dose-response:** ED₅₀ (effective in 50%), TD₅₀ (toxic in 50%), LD₅₀ (lethal in 50% of animals).",
+      "src": "p. 38",
+      "tb": true
+     },
+     {
+      "text": "**Therapeutic window:** the range between the minimum therapeutic dose and the minimum toxic dose — more practical than TI for dosing a patient.",
+      "src": "p. 38",
+      "tb": true
      }
     ],
     "how": [
@@ -1478,6 +1732,16 @@
      {
       "text": "Students should be able to name all four narrow-TI drugs without hesitation and know that each requires therapeutic drug monitoring.",
       "src": "S38 (notes)"
+     },
+     {
+      "text": "No drug causes only a single specific effect — drugs are **selective**, not specific.",
+      "src": "p. 40",
+      "tb": true
+     },
+     {
+      "text": "Asthma + hypertension on propranolol: nonselective β blockade can cause bronchoconstriction; a β₁-selective blocker (metoprolol) is an alternative.",
+      "src": "p. 41",
+      "tb": true
      }
     ],
     "examples": [
@@ -1655,22 +1919,22 @@
      ],
      "src": "S31; S32-33",
      "from_slides": "S32-33",
-     "number": 11,
-     "answer": "B",
+     "number": 13,
+     "answer": "A",
      "options": {
       "A": {
-       "text": "The dose at which the drug first becomes toxic",
-       "why": "EC₅₀ is a measure of potency, not toxicity (S33).",
-       "correct": false
-      },
-      "B": {
        "text": "The concentration producing 50% of the drug's maximal effect",
        "why": "EC₅₀ is read at the halfway point between baseline and Emax — the standard graphical measure of potency (S33).",
        "correct": true
       },
+      "B": {
+       "text": "The concentration producing the drug's maximal effect",
+       "why": "The maximal effect is Emax — the plateau (S30-31).",
+       "correct": false
+      },
       "C": {
-       "text": "The fraction of the dose reaching circulation",
-       "why": "That is bioavailability (S50), not EC₅₀ (S33).",
+       "text": "The dose at which the drug first becomes toxic",
+       "why": "EC₅₀ is a measure of potency, not toxicity (S33).",
        "correct": false
       },
       "D": {
@@ -1679,8 +1943,8 @@
        "correct": false
       },
       "E": {
-       "text": "The concentration producing the drug's maximal effect",
-       "why": "The maximal effect is Emax — the plateau (S30-31).",
+       "text": "The fraction of the dose reaching circulation",
+       "why": "That is bioavailability (S50), not EC₅₀ (S33).",
        "correct": false
       }
      }
@@ -1710,12 +1974,12 @@
      ],
      "src": "S35; S36-37",
      "from_slides": "S36-37",
-     "number": 12,
-     "answer": "E",
+     "number": 14,
+     "answer": "D",
      "options": {
       "A": {
-       "text": "Drug B is more potent than Drug A in this panel",
-       "why": "The curve farther LEFT (Drug A) is more potent (S37).",
+       "text": "Drug A is more efficacious than Drug B at every dose",
+       "why": "Efficacy is the plateau height, and the plateaus are equal (S37).",
        "correct": false
       },
       "B": {
@@ -1724,19 +1988,19 @@
        "correct": false
       },
       "C": {
-       "text": "Drug A and Drug B have different Emax values here",
-       "why": "Both curves reach the same plateau, so Emax is the same (S37).",
+       "text": "Drug B is more potent than Drug A in this panel",
+       "why": "The curve farther LEFT (Drug A) is more potent (S37).",
        "correct": false
       },
       "D": {
-       "text": "Drug A is more efficacious than Drug B at every dose",
-       "why": "Efficacy is the plateau height, and the plateaus are equal (S37).",
-       "correct": false
-      },
-      "E": {
        "text": "Drug A is more potent than Drug B, and both have equal efficacy",
        "why": "A curve farther left reaches the same effect at a lower dose (greater potency); the same plateau height means identical Emax (S37).",
        "correct": true
+      },
+      "E": {
+       "text": "Drug A and Drug B have different Emax values here",
+       "why": "Both curves reach the same plateau, so Emax is the same (S37).",
+       "correct": false
       }
      }
     },
@@ -1765,8 +2029,8 @@
      ],
      "src": "S39; S40-41",
      "from_slides": "S40-41",
-     "number": 13,
-     "answer": "D",
+     "number": 15,
+     "answer": "C",
      "options": {
       "A": {
        "text": "The narrow-TI drug must have lower efficacy (Emax) overall",
@@ -1774,19 +2038,19 @@
        "correct": false
       },
       "B": {
-       "text": "The narrow-TI drug is safer because it requires a lower dose",
-       "why": "A narrow TI means a SMALLER safety margin, not a safer drug (S38, S41).",
-       "correct": false
-      },
-      "C": {
        "text": "The wide-TI drug is the one more likely to cause toxicity",
        "why": "A wide TI means a large margin — generally safer to dose (S38).",
        "correct": false
       },
-      "D": {
+      "C": {
        "text": "Smaller effective-to-toxic margin, so closer monitoring is needed",
        "why": "The ED₅₀–TD₅₀ gap is the therapeutic index; a narrow gap means a small dosing error can move a patient from effective to toxic, so these drugs need blood-level monitoring (S41).",
        "correct": true
+      },
+      "D": {
+       "text": "The narrow-TI drug is safer because it requires a lower dose",
+       "why": "A narrow TI means a SMALLER safety margin, not a safer drug (S38, S41).",
+       "correct": false
       },
       "E": {
        "text": "Therapeutic index has no real bearing on dosing safety",
@@ -1820,7 +2084,7 @@
      ],
      "src": "S42-43; SG U1-R6",
      "from_slides": "S42-43",
-     "number": 14,
+     "number": 16,
      "answer": "B",
      "options": {
       "A": {
@@ -1834,18 +2098,18 @@
        "correct": true
       },
       "C": {
+       "text": "Drug X has a narrower therapeutic index",
+       "why": "Nothing about toxic doses is given; TI = TD₅₀ ÷ ED₅₀ (S38).",
+       "correct": false
+      },
+      "D": {
        "text": "Drug Y is more potent than Drug X",
        "why": "The drug needing the LOWER dose (X) is more potent (S30).",
        "correct": false
       },
-      "D": {
+      "E": {
        "text": "Drug X and Drug Y have different Emax values",
        "why": "The stem states both reach the same Emax (S43).",
-       "correct": false
-      },
-      "E": {
-       "text": "Drug X has a narrower therapeutic index",
-       "why": "Nothing about toxic doses is given; TI = TD₅₀ ÷ ED₅₀ (S38).",
        "correct": false
       }
      }
@@ -1874,32 +2138,32 @@
       }
      ],
      "src": "S38; S38 (notes)",
-     "number": 15,
-     "answer": "A",
+     "number": 17,
+     "answer": "C",
      "options": {
       "A": {
-       "text": "Effective and toxic doses are close, so dose carefully and monitor blood levels",
-       "why": "A narrow TI means effective and toxic doses are close together — requiring careful dosing and often blood-level monitoring; lithium is a classic narrow-TI drug (S38).",
-       "correct": true
-      },
-      "B": {
-       "text": "Lithium is 100% bioavailable, so blood levels never need to be checked",
-       "why": "Bioavailability is a different concept (S50); narrow-TI drugs need monitoring (S38).",
-       "correct": false
-      },
-      "C": {
-       "text": "Lithium has a large safety margin, so dosing errors are well tolerated",
-       "why": "That describes a WIDE TI (S38).",
-       "correct": false
-      },
-      "D": {
        "text": "Lithium is more potent, so it can be dosed without monitoring levels",
        "why": "Potency matters for dosing amount, not safety margin; narrow-TI drugs need monitoring (S34, S38).",
        "correct": false
       },
-      "E": {
+      "B": {
+       "text": "Lithium has a large safety margin, so dosing errors are well tolerated",
+       "why": "That describes a WIDE TI (S38).",
+       "correct": false
+      },
+      "C": {
+       "text": "Effective and toxic doses are close, so dose carefully and monitor blood levels",
+       "why": "A narrow TI means effective and toxic doses are close together — requiring careful dosing and often blood-level monitoring; lithium is a classic narrow-TI drug (S38).",
+       "correct": true
+      },
+      "D": {
        "text": "Lithium has a higher Emax, so lower doses than usual are always enough",
        "why": "TI is about toxic vs. effective doses, not Emax (S30, S38).",
+       "correct": false
+      },
+      "E": {
+       "text": "Lithium is 100% bioavailable, so blood levels never need to be checked",
+       "why": "Bioavailability is a different concept (S50); narrow-TI drugs need monitoring (S38).",
        "correct": false
       }
      }
@@ -1928,18 +2192,18 @@
       }
      ],
      "src": "S30; S34; S34 (notes)",
-     "number": 16,
-     "answer": "B",
+     "number": 18,
+     "answer": "D",
      "options": {
       "A": {
-       "text": "Drug A should be chosen because greater potency means it works better",
-       "why": "Potency alone never tells you whether a drug works better (S34 notes).",
+       "text": "Drug B has greater potency because its maximal effect is much higher",
+       "why": "Higher Emax = more efficacious, not more potent (S34).",
        "correct": false
       },
       "B": {
-       "text": "Drug B has greater efficacy, which matters more clinically than Drug A's potency",
-       "why": "Efficacy (Emax) clinically matters much more than potency — a highly potent drug with low efficacy may be clinically useless (S34).",
-       "correct": true
+       "text": "Both drugs have equal efficacy because both relieve the same symptom",
+       "why": "Drug B reaches a higher maximal effect, so its efficacy is greater (S30).",
+       "correct": false
       },
       "C": {
        "text": "Drug A has greater efficacy because it needs a much smaller dose",
@@ -1947,13 +2211,13 @@
        "correct": false
       },
       "D": {
-       "text": "Drug B has greater potency because its maximal effect is much higher",
-       "why": "Higher Emax = more efficacious, not more potent (S34).",
-       "correct": false
+       "text": "Drug B has greater efficacy, which matters more clinically than Drug A's potency",
+       "why": "Efficacy (Emax) clinically matters much more than potency — a highly potent drug with low efficacy may be clinically useless (S34).",
+       "correct": true
       },
       "E": {
-       "text": "Both drugs have equal efficacy because both relieve the same symptom",
-       "why": "Drug B reaches a higher maximal effect, so its efficacy is greater (S30).",
+       "text": "Drug A should be chosen because greater potency means it works better",
+       "why": "Potency alone never tells you whether a drug works better (S34 notes).",
        "correct": false
       }
      }
@@ -2053,6 +2317,16 @@
      {
       "text": "Efflux transporters (like P-glycoprotein) can actively pump some drugs back out of the CNS.",
       "src": "S53"
+     },
+     {
+      "text": "**P-glycoprotein (MDR1)** pumps drugs out of cells in brain, testes, and gut; inhibiting it raises digoxin blood levels.",
+      "src": "p. 9",
+      "tb": true
+     },
+     {
+      "text": "Ion trapping: weak acids are excreted faster in **alkaline** urine; weak bases faster in **acidic** urine.",
+      "src": "p. 10; p. 11",
+      "tb": true
      }
     ],
     "clinical": [
@@ -2071,6 +2345,11 @@
      {
       "text": "A highly polar antibiotic would generally not cross the BBB well — unless the meninges are inflamed, as in meningitis.",
       "src": "S53 (notes)"
+     },
+     {
+      "text": "Aspirin overdose: sodium bicarbonate alkalinizes blood and urine, reducing aspirin entry into tissues and speeding its renal excretion.",
+      "src": "p. 20",
+      "tb": true
      }
     ],
     "examples": [
@@ -2272,17 +2551,17 @@
      ],
      "src": "S46; S47-48",
      "from_slides": "S47-48",
-     "number": 17,
-     "answer": "D",
+     "number": 19,
+     "answer": "A",
      "options": {
       "A": {
-       "text": "Absorption and distribution — how the drug arrives and spreads",
-       "why": "Absorption and distribution govern how the drug arrives and spreads, not how it leaves (S48).",
-       "correct": false
+       "text": "Metabolism and excretion — how the drug is transformed and cleared",
+       "why": "The M arrow (liver, biotransformation) and E arrow (kidney, elimination) are the back half of ADME — how the body gets rid of the drug (S48).",
+       "correct": true
       },
       "B": {
-       "text": "Distribution only — how the drug moves out into the tissues",
-       "why": "Distribution is the arrow to the peripheral compartment, not to the liver/kidney (S46).",
+       "text": "Absorption and distribution — how the drug arrives and spreads",
+       "why": "Absorption and distribution govern how the drug arrives and spreads, not how it leaves (S48).",
        "correct": false
       },
       "C": {
@@ -2291,13 +2570,13 @@
        "correct": false
       },
       "D": {
-       "text": "Metabolism and excretion — how the drug is transformed and cleared",
-       "why": "The M arrow (liver, biotransformation) and E arrow (kidney, elimination) are the back half of ADME — how the body gets rid of the drug (S48).",
-       "correct": true
-      },
-      "E": {
        "text": "Absorption only — movement from the dose site into the blood",
        "why": "Absorption is how the dose enters the bloodstream (S45), before the central compartment.",
+       "correct": false
+      },
+      "E": {
+       "text": "Distribution only — how the drug moves out into the tissues",
+       "why": "Distribution is the arrow to the peripheral compartment, not to the liver/kidney (S46).",
        "correct": false
       }
      }
@@ -2327,12 +2606,12 @@
      ],
      "src": "S54-55",
      "from_slides": "S54-55",
-     "number": 18,
-     "answer": "E",
+     "number": 20,
+     "answer": "C",
      "options": {
       "A": {
-       "text": "Oral, crushed tablet",
-       "why": "Any oral dose goes GI → portal circulation → liver (S51).",
+       "text": "Oral, empty stomach",
+       "why": "Oral drugs are absorbed into the portal circulation and pass through the liver first (S55).",
        "correct": false
       },
       "B": {
@@ -2341,19 +2620,19 @@
        "correct": false
       },
       "C": {
+       "text": "Sublingual route",
+       "why": "Sublingual absorption enters systemic venous circulation directly, bypassing the portal vein and liver (S55).",
+       "correct": true
+      },
+      "D": {
        "text": "Oral, taken with food",
        "why": "Food doesn't change the oral route's path through the portal vein and liver (S55).",
        "correct": false
       },
-      "D": {
-       "text": "Oral, empty stomach",
-       "why": "Oral drugs are absorbed into the portal circulation and pass through the liver first (S55).",
-       "correct": false
-      },
       "E": {
-       "text": "Sublingual route",
-       "why": "Sublingual absorption enters systemic venous circulation directly, bypassing the portal vein and liver (S55).",
-       "correct": true
+       "text": "Oral, crushed tablet",
+       "why": "Any oral dose goes GI → portal circulation → liver (S51).",
+       "correct": false
       }
      }
     },
@@ -2381,33 +2660,33 @@
       }
      ],
      "src": "S50; S51",
-     "number": 19,
-     "answer": "B",
+     "number": 21,
+     "answer": "E",
      "options": {
       "A": {
-       "text": "Propranolol is highly protein-bound, so the oral form is inactive in plasma",
-       "why": "Protein binding affects free drug in plasma regardless of route (S52); the IV-to-oral gap is the first-pass effect (S51).",
-       "correct": false
-      },
-      "B": {
-       "text": "Extensive first-pass hepatic metabolism lowers the drug's oral bioavailability",
-       "why": "Propranolol has a large first-pass effect; oral doses pass GI → portal → liver before systemic circulation, so higher oral doses are needed to match IV exposure (S51, S50).",
-       "correct": true
-      },
-      "C": {
        "text": "Oral propranolol cannot cross the blood-brain barrier, so more must be given",
        "why": "BBB crossing relates to CNS entry (S53), not systemic exposure after an oral dose.",
        "correct": false
       },
-      "D": {
+      "B": {
        "text": "Propranolol has a narrow therapeutic index, so oral doses must be higher",
        "why": "Narrow TI calls for careful dosing and monitoring (S38); propranolol is named for first-pass, not narrow TI (S51).",
        "correct": false
       },
-      "E": {
+      "C": {
        "text": "The IV form was less than 100% bioavailable, so less drug reached the blood",
        "why": "IV has 100% bioavailability by definition (S50).",
        "correct": false
+      },
+      "D": {
+       "text": "Propranolol is highly protein-bound, so the oral form is inactive in plasma",
+       "why": "Protein binding affects free drug in plasma regardless of route (S52); the IV-to-oral gap is the first-pass effect (S51).",
+       "correct": false
+      },
+      "E": {
+       "text": "Extensive first-pass hepatic metabolism lowers the drug's oral bioavailability",
+       "why": "Propranolol has a large first-pass effect; oral doses pass GI → portal → liver before systemic circulation, so higher oral doses are needed to match IV exposure (S51, S50).",
+       "correct": true
       }
      }
     },
@@ -2435,13 +2714,13 @@
       }
      ],
      "src": "S53; S53 (notes)",
-     "number": 20,
-     "answer": "C",
+     "number": 22,
+     "answer": "A",
      "options": {
       "A": {
-       "text": "Polar drugs cross easily because tight junctions favor polar molecules",
-       "why": "Tight junctions restrict paracellular movement; small lipophilic non-ionized drugs cross more easily (S53).",
-       "correct": false
+       "text": "Polar drugs usually cross poorly, but inflamed meninges allow better entry",
+       "why": "A highly polar antibiotic generally would not cross the BBB well — unless the meninges are inflamed, as in meningitis (S53 notes).",
+       "correct": true
       },
       "B": {
        "text": "Polar drugs never reach the CNS, even when the meninges are inflamed",
@@ -2449,13 +2728,13 @@
        "correct": false
       },
       "C": {
-       "text": "Polar drugs usually cross poorly, but inflamed meninges allow better entry",
-       "why": "A highly polar antibiotic generally would not cross the BBB well — unless the meninges are inflamed, as in meningitis (S53 notes).",
-       "correct": true
-      },
-      "D": {
        "text": "Polar drugs cross easily because P-glycoprotein pumps them into the CNS",
        "why": "Efflux transporters like P-glycoprotein pump some drugs back OUT of the CNS (S53).",
+       "correct": false
+      },
+      "D": {
+       "text": "Polar drugs cross easily because tight junctions favor polar molecules",
+       "why": "Tight junctions restrict paracellular movement; small lipophilic non-ionized drugs cross more easily (S53).",
        "correct": false
       },
       "E": {
@@ -2825,8 +3104,65 @@
     "prompt": "Polar antibiotic + meningitis",
     "answer": "Usually poor BBB entry — better when meninges are inflamed",
     "src": "S53 (notes)"
+   },
+   {
+    "prompt": "Phase I size (textbook)",
+    "answer": "20–100 healthy volunteers; patients if drug is very toxic (cancer, AIDS)",
+    "src": "p. 17",
+    "tb": true
+   },
+   {
+    "prompt": "Phase with highest failure",
+    "answer": "Phase II — only ~25% move to Phase III",
+    "src": "p. 17",
+    "tb": true
+   },
+   {
+    "prompt": "Kefauver-Harris (1962)",
+    "answer": "Required proof of **efficacy** (thalidomide)",
+    "src": "p. 16",
+    "tb": true
+   },
+   {
+    "prompt": "Generic approval",
+    "answer": "ANDA with bioequivalence data; patent life 20 years",
+    "src": "p. 16; p. 18",
+    "tb": true
+   },
+   {
+    "prompt": "Spare receptors",
+    "answer": "Max response without full occupancy (~90% cardiac β can be blocked)",
+    "src": "p. 23",
+    "tb": true
+   },
+   {
+    "prompt": "Chemical antagonist",
+    "answer": "Protamine neutralizes heparin — no receptor",
+    "src": "p. 26",
+    "tb": true
+   },
+   {
+    "prompt": "Therapeutic window",
+    "answer": "Min therapeutic → min toxic dose; more practical than TI",
+    "src": "p. 38",
+    "tb": true
+   },
+   {
+    "prompt": "Aspirin overdose",
+    "answer": "Sodium bicarbonate → alkaline urine → faster excretion",
+    "src": "p. 20",
+    "tb": true
    }
   ],
-  "discrepancies": []
+  "discrepancies": [
+   {
+    "text": "**Phase I population:** slides say healthy volunteers; the textbook adds that patients with the disease are used when significant toxicity is expected (cancer, AIDS).",
+    "src": "S13; p. 17"
+   },
+   {
+    "text": "**Phase II size:** slides say a few hundred patients; the textbook says 100–200. Exams may use either — know both.",
+    "src": "S13; p. 17"
+   }
+  ]
  }
 }

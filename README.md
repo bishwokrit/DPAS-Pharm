@@ -51,17 +51,34 @@ Everything in `docs/` is the website (GitHub Pages serves it). It has a home pag
 exam, a study guide per lecture (web + PDF, with cram sheet and self-test), and practice exams.
 Progress, flags, and your wrong-answer log are saved in your browser.
 
+**Sidekick** (the ✦ button on every lecture page, or press `/`) is a built-in study assistant:
+Ask (searches the lecture, with citations), Listen (audio overview read aloud), Flashcards (with
+spaced repetition), Quiz, Mind map, Briefing (printable), and FAQ. All of these are free and run
+in the browser. **AI chat** is optional: each person pastes their own Anthropic API key in
+Sidekick → Ask → "Turn on AI chat". The key stays in that browser and goes only to Anthropic.
+Claude answers only from the lecture's cited source.
+
+**Sharing with classmates:** just send the website link. Everyone's progress is private to their
+own browser, and the footer says it's an unofficial student-made aid. The textbook PDF and its
+extracted text are never put on the website or in this repo.
+
+(Maintainer note: the chat uses the official Anthropic SDK bundled into
+`site_src/assets/vendor/`. To update it: `npm i -D @anthropic-ai/sdk@<version>` then
+`node pipeline/build_vendor.mjs`.)
+
 ## Adding the textbook later
 
-Put the PDF in `inputs/textbook/`. On the next run, each lecture's assigned pages are cut out
+The textbook PDF lives in your private `dpas-textbook` repo (cloned next to this one), or put it in
+`inputs/textbook/`. Neither is ever committed here. On the next run, each lecture's assigned pages are cut out
 automatically (using the syllabus readings). The run will say which lectures need the textbook
-folded in — tell Claude **"add textbook to L05"**, then re-run.
+folded in — tell Claude **"add textbook to L05"**, then re-run. Textbook additions live in
+`work/<ID>/textbook_<ID>.py` (tagged TB, cited by printed page).
 
 ## Switching light/dark
 
 Open `config.json`, change `"theme": "light"` to `"dark"`, and run `./run.sh all`.
 
-## Using NotebookLM
+## Using NotebookLM (optional — Sidekick covers this on the website)
 
 In `outputs/<ID>/notebooklm/`: upload the `_source` file(s) to a new notebook, then open
 `_instructions.md` and paste each box into the matching NotebookLM **Customize** field.

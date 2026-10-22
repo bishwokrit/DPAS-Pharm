@@ -4,7 +4,6 @@ Pharmacology study source. Built ONLY from the lecture slides, the assigned text
 Citation key: S12 = lecture slide 12; p. 245 = textbook page 245; SG U1-R3 = course study guide, Unit 1 item R3.
 [TB] = from the textbook, not on the lecture slides. [SG] = from the course study guide, not on the lecture slides.
 Bold text = emphasized on the lecture slides.
-NOTE: The textbook has not been added yet; this source covers the lecture slides only.
 
 ## Learning objectives
 - IO1.1: Define and describe fundamental pharmacologic concepts, including pharmacokinetics, pharmacodynamics, drug-receptor interactions, dose-response relationships, therapeutic index, half-life, and steady state. (Syllabus)
@@ -43,6 +42,8 @@ Learning objectives covered: SO1, IO1.2, IO1.4
 - Phase II attaches a polar group to the molecule, producing a more water-soluble product for renal/biliary excretion. (S5)
 - Phase I often comes before Phase II, but not always — some drugs go straight to conjugation. (S5 (notes))
 - Inhibition slows clearance (substrate level rises); induction speeds clearance (substrate level falls). (S6; SG U1-R10)
+- [TB] CYP3A4 alone metabolizes over 50% of the prescription drugs metabolized by the liver. (p. 60)
+- [TB] Acetaminophen is mostly conjugated (glucuronide/sulfate); in overdose glutathione is depleted and the toxic metabolite (NAPQI) injures the liver — **N-acetylcysteine** given within 8–16 hours protects against fulminant hepatotoxicity. (p. 66)
 
 ### Drug Metabolism & CYP450 Interactions — Clinical relevance
 - CYP450 interactions are one of the highest-yield concepts in all of pharmacology — nearly every major drug class has at least one clinically important CYP interaction. (S6 (notes))
@@ -50,10 +51,14 @@ Learning objectives covered: SO1, IO1.2, IO1.4
 - Inhibition pushes a substrate's level ABOVE 100% of baseline (toxicity risk); induction pushes it BELOW 100% (therapeutic-failure risk). (S7 (notes))
 - Inhibiting the CYP that clears a substrate is especially dangerous when the substrate has a narrow therapeutic index. (S11)
 - Enzyme induction speeds substrate clearance, lowering its level and effect — the opposite of inhibition. (S48)
+- [TB] Liver disease (e.g., cirrhosis, hepatitis) slows metabolism of some drugs enough that ordinary doses can cause coma. (p. 73)
+- [TB] Severe ADRs contribute to about 100,000 US deaths a year and about 7% of hospital admissions. (p. 71)
 
 ### Drug Metabolism & CYP450 Interactions — Drugs named as examples
 - NAPQI (from acetaminophen) is the textbook example of a toxic metabolite produced by normal Phase I metabolism — previewing the acetaminophen toxicity lecture. (S4 (notes))
 - CYP3A4 — the enzyme in the lecture's inhibitor/substrate example. (S6)
+- [TB] **Inducers:** rifampin, carbamazepine, phenytoin, barbiturates, St. John's wort; **inhibitors:** ketoconazole, clarithromycin/erythromycin, ritonavir, grapefruit juice. (p. 63; p. 64)
+- [TB] St. John's wort induces CYP3A4 and speeds metabolism of oral contraceptives, warfarin, cyclosporine, and others. (p. 72)
 
 ### Drug Metabolism & CYP450 Interactions — Exam traps
 - Inhibitor → substrate level UP (toxicity); inducer → substrate level DOWN (therapeutic failure). Don't swap them. (S7 (notes); S9)
@@ -159,6 +164,8 @@ Learning objectives covered: SO3, IO1.1, IO1.3
 - **Loading dose:** a larger initial dose used to rapidly reach a therapeutic concentration, without waiting for steady state. (S23)
 - **Maintenance dose:** the regular, ongoing dose that keeps the drug within the therapeutic range once steady state is reached. (S23)
 - **Clearance = the volume of plasma from which drug is completely removed per unit time.** (S27)
+- [TB] **t½ = 0.7 × Vd / CL** — half-life rises when Vd rises or clearance falls. (p. 56)
+- [TB] **Loading dose = Vd × target concentration** (e.g., theophylline: 35 L × 10 mg/L = 350 mg for a 70-kg adult). (p. 52)
 
 ### PK Calculations: Half-Life, Steady State & Clearance — How it works
 - PK calculations = the math PAs actually use at the bedside. (S18)
@@ -172,6 +179,9 @@ Learning objectives covered: SO3, IO1.1, IO1.3
 - Loading doses are based on Vd; maintenance doses are based on clearance. (S23 (notes))
 - Steady state takes ~4–5 half-lives regardless of dose size — the same reason a drug is ~97% eliminated ~5 half-lives after stopping it. (S30)
 - Time to steady state (about 4–5 half-lives) is governed by half-life. (S48)
+- [TB] During regular dosing: 50% of steady state after 1 half-life, 75% after 2, and over 90% after 4 — the textbook's "four half-lives" rule of thumb. (p. 47)
+- [TB] If the dosing interval is shorter than four half-lives, accumulation will be detectable. (p. 48)
+- [TB] **Capacity-limited (saturable) elimination:** clearance falls as concentration rises — important for phenytoin, ethanol, and aspirin. (p. 47)
 
 ### PK Calculations: Half-Life, Steady State & Clearance — Clinical relevance
 - Case: significant CKD + a medication primarily eliminated unchanged by the kidney. **What happens to the drug's concentration and half-life, and would you adjust the dose, the dosing interval, or both?** (S28)
@@ -239,6 +249,10 @@ Learning objectives covered: SO4, IO1.3, IO1.4
 - It can alter overall drug response and risk of adverse reactions. (S32)
 - Personalized pharmacotherapy combines genotype, phenotype, disease state, and other medications into individualized therapy. (S34)
 - **Pharmacogenomics is one input among several — genotype alone never dictates therapy in isolation.** (S34)
+- [TB] Codeine is converted to morphine (200× more potent) by CYP2D6; CPIC recommends an alternative analgesic for CYP2D6 poor **and** ultrarapid metabolizers. (p. 81; p. 83)
+- [TB] Clopidogrel: about 85% of a dose is inactivated by esterases; CYP2C19 activates the rest. CYP2C19 poor/intermediate metabolizers → prasugrel or ticagrelor. (p. 81; p. 82)
+- [TB] TPMT intermediate activity: start thiopurines at 30–70% of the target dose; deficient: use a drastically reduced dose or an alternative. (p. 83)
+- [TB] Warfarin dose varies up to 20-fold between patients; CYP2C9 and VKORC1 genotypes explain much of it. (p. 90)
 
 ### Pharmacogenomics — Clinical relevance
 - CYP2D6 variation alters metabolism of many antidepressants and opioids (e.g., codeine activation). (S33; SG U1-R12)
@@ -249,6 +263,9 @@ Learning objectives covered: SO4, IO1.3, IO1.4
 
 ### Pharmacogenomics — Drugs named as examples
 - Codeine (CYP2D6), clopidogrel (CYP2C19), azathioprine (TPMT), allopurinol (HLA-B*5801); also antidepressants, opioids, PPIs. (S33; S36)
+- [TB] CYP2D6 metabolizes up to one-quarter of clinically used drugs (β blockers, antidepressants, antipsychotics, opioids). (p. 78)
+- [TB] CYP2D6 ultrarapid metabolizers: up to one-third of Ethiopians and Saudi Arabians; CYP2C19 poor metabolizers: 3–5% of Caucasians, 18–23% of Japanese. (p. 67)
+- [TB] **HLA-B*57:01** → abacavir hypersensitivity; **G6PD deficiency** → rasburicase contraindicated; slow NAT2 acetylators (~50% in the USA) → isoniazid toxicity. (p. 70; p. 83; p. 88)
 
 ### Pharmacogenomics — Exam traps
 - HLA-B*5801 before allopurinol = severe hypersensitivity risk — not absorption, not taste, and not irrelevant to drug selection. (S35-36)

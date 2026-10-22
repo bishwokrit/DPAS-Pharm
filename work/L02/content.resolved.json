@@ -4,7 +4,7 @@
   "title": "Introduction to Pharmacology — Session 2",
   "date": "Thu, Oct 22, 2026"
  },
- "textbook_status": "pending",
+ "textbook_status": "included",
  "objectives": [
   {
    "id": "IO1.1",
@@ -141,6 +141,16 @@
      {
       "text": "Inhibition slows clearance (substrate level rises); induction speeds clearance (substrate level falls).",
       "src": "S6; SG U1-R10"
+     },
+     {
+      "text": "CYP3A4 alone metabolizes over 50% of the prescription drugs metabolized by the liver.",
+      "src": "p. 60",
+      "tb": true
+     },
+     {
+      "text": "Acetaminophen is mostly conjugated (glucuronide/sulfate); in overdose glutathione is depleted and the toxic metabolite (NAPQI) injures the liver — **N-acetylcysteine** given within 8–16 hours protects against fulminant hepatotoxicity.",
+      "src": "p. 66",
+      "tb": true
      }
     ],
     "clinical": [
@@ -163,6 +173,16 @@
      {
       "text": "Enzyme induction speeds substrate clearance, lowering its level and effect — the opposite of inhibition.",
       "src": "S48"
+     },
+     {
+      "text": "Liver disease (e.g., cirrhosis, hepatitis) slows metabolism of some drugs enough that ordinary doses can cause coma.",
+      "src": "p. 73",
+      "tb": true
+     },
+     {
+      "text": "Severe ADRs contribute to about 100,000 US deaths a year and about 7% of hospital admissions.",
+      "src": "p. 71",
+      "tb": true
      }
     ],
     "examples": [
@@ -173,6 +193,16 @@
      {
       "text": "CYP3A4 — the enzyme in the lecture's inhibitor/substrate example.",
       "src": "S6"
+     },
+     {
+      "text": "**Inducers:** rifampin, carbamazepine, phenytoin, barbiturates, St. John's wort; **inhibitors:** ketoconazole, clarithromycin/erythromycin, ritonavir, grapefruit juice.",
+      "src": "p. 63; p. 64",
+      "tb": true
+     },
+     {
+      "text": "St. John's wort induces CYP3A4 and speeds metabolism of oral contraceptives, warfarin, cyclosporine, and others.",
+      "src": "p. 72",
+      "tb": true
      }
     ],
     "traps": [
@@ -334,17 +364,17 @@
      "src": "S7; S8-9",
      "from_slides": "S8-9",
      "number": 1,
-     "answer": "A",
+     "answer": "B",
      "options": {
       "A": {
-       "text": "Enzyme inhibition, because it raises the substrate drug's blood level",
-       "why": "The inhibitor bar at 240% shows the substrate accumulating because it can no longer be cleared normally, raising toxicity risk (S9).",
-       "correct": true
-      },
-      "B": {
        "text": "Both equally, because any CYP change doubles the toxicity risk",
        "why": "Only inhibition raises the level; induction lowers it (S6, S9).",
        "correct": false
+      },
+      "B": {
+       "text": "Enzyme inhibition, because it raises the substrate drug's blood level",
+       "why": "The inhibitor bar at 240% shows the substrate accumulating because it can no longer be cleared normally, raising toxicity risk (S9).",
+       "correct": true
       },
       "C": {
        "text": "Neither condition, because CYP changes do not alter drug levels",
@@ -389,7 +419,7 @@
      "src": "S10-11",
      "from_slides": "S10-11",
      "number": 2,
-     "answer": "B",
+     "answer": "C",
      "options": {
       "A": {
        "text": "Decreased substrate drug level and reduced drug effect",
@@ -397,14 +427,14 @@
        "correct": false
       },
       "B": {
-       "text": "Increased substrate drug level and increased toxicity risk",
-       "why": "Inhibiting the CYP enzyme that clears the substrate slows its metabolism and raises its level — especially dangerous with a narrow therapeutic index (S11).",
-       "correct": true
-      },
-      "C": {
        "text": "No change, since CYP3A4 only affects Phase II metabolism",
        "why": "CYP450 enzymes carry out Phase I metabolism (S5).",
        "correct": false
+      },
+      "C": {
+       "text": "Increased substrate drug level and increased toxicity risk",
+       "why": "Inhibiting the CYP enzyme that clears the substrate slows its metabolism and raises its level — especially dangerous with a narrow therapeutic index (S11).",
+       "correct": true
       },
       "D": {
        "text": "Decreased substrate level from faster CYP3A4 clearance",
@@ -523,6 +553,61 @@
       "E": {
        "text": "A reduction reaction that converts a prodrug into its active form",
        "why": "Reduction is a Phase I reaction (S5).",
+       "correct": false
+      }
+     }
+    },
+    {
+     "kind": "vignette",
+     "stem": "A 19-year-old arrives 6 hours after a large intentional acetaminophen ingestion. Labs are pending. Which treatment best protects against fulminant liver injury?",
+     "correct": "N-acetylcysteine, started within the 8–16 hour window",
+     "why_correct": "N-acetylcysteine given within 8–16 hours protects against acetaminophen hepatotoxicity by replacing depleted glutathione (p. 66).",
+     "distractors": [
+      {
+       "text": "Sodium bicarbonate to alkalinize the urine and speed excretion",
+       "why": "Urine alkalinization is used for aspirin overdose, a weak acid (p. 20)."
+      },
+      {
+       "text": "Rifampin to induce CYP enzymes and clear the drug faster",
+       "why": "Induction would increase toxic metabolite formation, not protect the liver (p. 66)."
+      },
+      {
+       "text": "Protamine to bind and neutralize the circulating drug",
+       "why": "Protamine neutralizes heparin (p. 26), not acetaminophen."
+      },
+      {
+       "text": "Waiting for levels before giving any treatment at all",
+       "why": "The protective window is 8–16 hours, so delay risks liver failure (p. 66)."
+      }
+     ],
+     "src": "p. 66",
+     "tb": true,
+     "number": 5,
+     "answer": "B",
+     "options": {
+      "A": {
+       "text": "Sodium bicarbonate to alkalinize the urine and speed excretion",
+       "why": "Urine alkalinization is used for aspirin overdose, a weak acid (p. 20).",
+       "correct": false
+      },
+      "B": {
+       "text": "N-acetylcysteine, started within the 8–16 hour window",
+       "why": "N-acetylcysteine given within 8–16 hours protects against acetaminophen hepatotoxicity by replacing depleted glutathione (p. 66).",
+       "correct": true
+      },
+      "C": {
+       "text": "Protamine to bind and neutralize the circulating drug",
+       "why": "Protamine neutralizes heparin (p. 26), not acetaminophen.",
+       "correct": false
+      },
+      "D": {
+       "text": "Rifampin to induce CYP enzymes and clear the drug faster",
+       "why": "Induction would increase toxic metabolite formation, not protect the liver (p. 66).",
+       "correct": false
+      },
+      "E": {
+       "text": "Waiting for levels before giving any treatment at all",
+       "why": "The protective window is 8–16 hours, so delay risks liver failure (p. 66).",
        "correct": false
       }
      }
@@ -783,32 +868,32 @@
      ],
      "src": "S15; S16-17",
      "from_slides": "S16-17",
-     "number": 5,
-     "answer": "C",
+     "number": 6,
+     "answer": "D",
      "options": {
       "A": {
-       "text": "No dose or interval adjustment is needed",
-       "why": "Decreased renal function raises exposure and accumulation risk (S15).",
-       "correct": false
-      },
-      "B": {
-       "text": "Switch to IV administration only for now",
-       "why": "Route doesn't fix reduced renal clearance; adjust dose/interval (S17).",
-       "correct": false
-      },
-      "C": {
-       "text": "Decrease the dose and/or extend the dosing interval",
-       "why": "Reduced renal clearance raises exposure to renally-eliminated drugs; the standard response is a lower dose, a longer interval, or both, guided by eGFR/CrCl (S17).",
-       "correct": true
-      },
-      "D": {
        "text": "Increase the dose to maintain the effect",
        "why": "Exposure is already increased; a higher dose would worsen accumulation (S15).",
        "correct": false
       },
-      "E": {
+      "B": {
+       "text": "No dose or interval adjustment is needed",
+       "why": "Decreased renal function raises exposure and accumulation risk (S15).",
+       "correct": false
+      },
+      "C": {
        "text": "Shorten the dosing interval to every few hours",
        "why": "Intervals should be EXTENDED, not shortened, in renal impairment (S17).",
+       "correct": false
+      },
+      "D": {
+       "text": "Decrease the dose and/or extend the dosing interval",
+       "why": "Reduced renal clearance raises exposure to renally-eliminated drugs; the standard response is a lower dose, a longer interval, or both, guided by eGFR/CrCl (S17).",
+       "correct": true
+      },
+      "E": {
+       "text": "Switch to IV administration only for now",
+       "why": "Route doesn't fix reduced renal clearance; adjust dose/interval (S17).",
        "correct": false
       }
      }
@@ -837,7 +922,7 @@
       }
      ],
      "src": "S14; S14 (notes)",
-     "number": 6,
+     "number": 7,
      "answer": "A",
      "options": {
       "A": {
@@ -851,13 +936,13 @@
        "correct": false
       },
       "C": {
-       "text": "It increases glomerular filtration of protein-bound drug",
-       "why": "Only free (unbound) drug is filtered (S14).",
+       "text": "It shifts elimination from the kidney to bile and feces",
+       "why": "The mechanism acts in the renal tubule (S14 notes).",
        "correct": false
       },
       "D": {
-       "text": "It shifts elimination from the kidney to bile and feces",
-       "why": "The mechanism acts in the renal tubule (S14 notes).",
+       "text": "It increases glomerular filtration of protein-bound drug",
+       "why": "Only free (unbound) drug is filtered (S14).",
        "correct": false
       },
       "E": {
@@ -891,32 +976,32 @@
       }
      ],
      "src": "S14",
-     "number": 7,
-     "answer": "B",
+     "number": 8,
+     "answer": "D",
      "options": {
       "A": {
-       "text": "Tubular secretion by active transporters",
-       "why": "Secretion moves additional drug INTO the tubule (S14).",
-       "correct": false
-      },
-      "B": {
-       "text": "Passive reabsorption of lipophilic, un-ionized drug",
-       "why": "Tubular reabsorption: lipophilic, un-ionized drug passively diffuses back into the blood, reducing net elimination (S14).",
-       "correct": true
-      },
-      "C": {
        "text": "Excretion of volatile agents by the lungs",
        "why": "Lung elimination removes volatile agents; it's not a renal process (S13).",
        "correct": false
       },
-      "D": {
+      "B": {
+       "text": "Filtration of drug based on molecular size",
+       "why": "This is glomerular filtration, which adds drug to the tubule (S14).",
+       "correct": false
+      },
+      "C": {
        "text": "Glomerular filtration of free, unbound drug",
        "why": "Filtration moves drug INTO the tubule (S14).",
        "correct": false
       },
+      "D": {
+       "text": "Passive reabsorption of lipophilic, un-ionized drug",
+       "why": "Tubular reabsorption: lipophilic, un-ionized drug passively diffuses back into the blood, reducing net elimination (S14).",
+       "correct": true
+      },
       "E": {
-       "text": "Filtration of drug based on molecular size",
-       "why": "This is glomerular filtration, which adds drug to the tubule (S14).",
+       "text": "Tubular secretion by active transporters",
+       "why": "Secretion moves additional drug INTO the tubule (S14).",
        "correct": false
       }
      }
@@ -964,6 +1049,16 @@
      {
       "text": "**Clearance = the volume of plasma from which drug is completely removed per unit time.**",
       "src": "S27"
+     },
+     {
+      "text": "**t½ = 0.7 × Vd / CL** — half-life rises when Vd rises or clearance falls.",
+      "src": "p. 56",
+      "tb": true
+     },
+     {
+      "text": "**Loading dose = Vd × target concentration** (e.g., theophylline: 35 L × 10 mg/L = 350 mg for a 70-kg adult).",
+      "src": "p. 52",
+      "tb": true
      }
     ],
     "how": [
@@ -1010,6 +1105,21 @@
      {
       "text": "Time to steady state (about 4–5 half-lives) is governed by half-life.",
       "src": "S48"
+     },
+     {
+      "text": "During regular dosing: 50% of steady state after 1 half-life, 75% after 2, and over 90% after 4 — the textbook's \"four half-lives\" rule of thumb.",
+      "src": "p. 47",
+      "tb": true
+     },
+     {
+      "text": "If the dosing interval is shorter than four half-lives, accumulation will be detectable.",
+      "src": "p. 48",
+      "tb": true
+     },
+     {
+      "text": "**Capacity-limited (saturable) elimination:** clearance falls as concentration rises — important for phenytoin, ethanol, and aspirin.",
+      "src": "p. 47",
+      "tb": true
      }
     ],
     "clinical": [
@@ -1224,27 +1334,27 @@
      ],
      "src": "S20; S21-22",
      "from_slides": "S21-22",
-     "number": 8,
+     "number": 9,
      "answer": "E",
      "options": {
       "A": {
+       "text": "25%",
+       "why": "25% remains after 2 half-lives (S22).",
+       "correct": false
+      },
+      "B": {
        "text": "6.25%",
        "why": "6.25% remains after 4 half-lives (S19).",
        "correct": false
       },
-      "B": {
+      "C": {
        "text": "3%",
        "why": "About 3% remains after 5 half-lives (S22).",
        "correct": false
       },
-      "C": {
+      "D": {
        "text": "50%",
        "why": "50% remains after 1 half-life (S22).",
-       "correct": false
-      },
-      "D": {
-       "text": "25%",
-       "why": "25% remains after 2 half-lives (S22).",
        "correct": false
       },
       "E": {
@@ -1279,7 +1389,7 @@
      ],
      "src": "S24; S25-26",
      "from_slides": "S25-26",
-     "number": 9,
+     "number": 10,
      "answer": "A",
      "options": {
       "A": {
@@ -1288,18 +1398,18 @@
        "correct": true
       },
       "B": {
+       "text": "It has no real advantage over maintenance dosing used alone",
+       "why": "It reaches the target immediately (S26).",
+       "correct": false
+      },
+      "C": {
        "text": "It eliminates the need for any therapeutic drug level monitoring",
        "why": "A loading dose does not remove the need for monitoring (S26).",
        "correct": false
       },
-      "C": {
+      "D": {
        "text": "It shortens the drug's half-life so steady state comes sooner",
        "why": "Half-life is set by clearance and Vd, not by a loading dose (S19).",
-       "correct": false
-      },
-      "D": {
-       "text": "It has no real advantage over maintenance dosing used alone",
-       "why": "It reaches the target immediately (S26).",
        "correct": false
       },
       "E": {
@@ -1334,33 +1444,33 @@
      ],
      "src": "S29-30; SG U1-R11",
      "from_slides": "S29-30",
-     "number": 10,
-     "answer": "C",
+     "number": 11,
+     "answer": "E",
      "options": {
       "A": {
-       "text": "After the first dose",
-       "why": "That describes a LOADING dose reaching target (S26), not steady state from regular dosing.",
-       "correct": false
-      },
-      "B": {
-       "text": "8–10 half-lives",
-       "why": "Too many — steady state takes about 4–5 half-lives (S30).",
-       "correct": false
-      },
-      "C": {
-       "text": "4–5 half-lives",
-       "why": "Steady state is reached in roughly 4–5 half-lives, regardless of dose size (S30).",
-       "correct": true
-      },
-      "D": {
        "text": "2–3 half-lives",
        "why": "Too few — about 4–5 half-lives are needed (S23, S30).",
        "correct": false
       },
-      "E": {
+      "B": {
+       "text": "After the first dose",
+       "why": "That describes a LOADING dose reaching target (S26), not steady state from regular dosing.",
+       "correct": false
+      },
+      "C": {
        "text": "1–2 half-lives",
        "why": "Too few — steady state takes about 4–5 half-lives (S30).",
        "correct": false
+      },
+      "D": {
+       "text": "8–10 half-lives",
+       "why": "Too many — steady state takes about 4–5 half-lives (S30).",
+       "correct": false
+      },
+      "E": {
+       "text": "4–5 half-lives",
+       "why": "Steady state is reached in roughly 4–5 half-lives, regardless of dose size (S30).",
+       "correct": true
       }
      }
     },
@@ -1389,13 +1499,13 @@
      ],
      "src": "S46; S48",
      "from_slides": "S46, S48",
-     "number": 11,
-     "answer": "A",
+     "number": 12,
+     "answer": "D",
      "options": {
       "A": {
-       "text": "Increased half-life and increased concentration",
-       "why": "Reduced renal clearance raises both drug concentration and half-life (S48, S28).",
-       "correct": true
+       "text": "No change in either half-life or concentration",
+       "why": "Reduced clearance raises concentration and prolongs half-life (S28).",
+       "correct": false
       },
       "B": {
        "text": "Decreased half-life and increased concentration",
@@ -1403,14 +1513,14 @@
        "correct": false
       },
       "C": {
-       "text": "No change in either half-life or concentration",
-       "why": "Reduced clearance raises concentration and prolongs half-life (S28).",
-       "correct": false
-      },
-      "D": {
        "text": "Decreased half-life and decreased concentration",
        "why": "Lower clearance has the opposite effect (S28).",
        "correct": false
+      },
+      "D": {
+       "text": "Increased half-life and increased concentration",
+       "why": "Reduced renal clearance raises both drug concentration and half-life (S48, S28).",
+       "correct": true
       },
       "E": {
        "text": "Increased clearance and decreased Vd",
@@ -1444,17 +1554,17 @@
      ],
      "src": "S47-48",
      "from_slides": "S47-48",
-     "number": 12,
-     "answer": "E",
+     "number": 13,
+     "answer": "A",
      "options": {
       "A": {
-       "text": "Chemical name of the drug",
-       "why": "A chemical name describes structure; it has no effect on PK (S48).",
-       "correct": false
+       "text": "Half-life of the drug",
+       "why": "Time to steady state (about 4–5 half-lives) is governed by half-life (S48).",
+       "correct": true
       },
       "B": {
-       "text": "Size of each dose given",
-       "why": "Steady state takes ~4–5 half-lives regardless of dose size (S30).",
+       "text": "Chemical name of the drug",
+       "why": "A chemical name describes structure; it has no effect on PK (S48).",
        "correct": false
       },
       "C": {
@@ -1468,9 +1578,9 @@
        "correct": false
       },
       "E": {
-       "text": "Half-life of the drug",
-       "why": "Time to steady state (about 4–5 half-lives) is governed by half-life (S48).",
-       "correct": true
+       "text": "Size of each dose given",
+       "why": "Steady state takes ~4–5 half-lives regardless of dose size (S30).",
+       "correct": false
       }
      }
     },
@@ -1498,32 +1608,32 @@
       }
      ],
      "src": "S19",
-     "number": 13,
-     "answer": "B",
+     "number": 14,
+     "answer": "D",
      "options": {
       "A": {
+       "text": "3.125 mg/L, with about 97% eliminated",
+       "why": "That is 30 h — 5 half-lives (S19).",
+       "correct": false
+      },
+      "B": {
        "text": "6.25 mg/L, with 93.75% of the drug eliminated",
        "why": "That is 24 h — 4 half-lives (S19).",
        "correct": false
       },
-      "B": {
-       "text": "12.5 mg/L, with 87.5% of the drug eliminated",
-       "why": "18 h = 3 half-lives: C(t) = 100 × (1/2)^3 = 12.5 mg/L (87.5% eliminated) (S19).",
-       "correct": true
-      },
       "C": {
-       "text": "25 mg/L, with 75% of the drug eliminated",
-       "why": "That is 12 h — 2 half-lives (S19).",
-       "correct": false
-      },
-      "D": {
        "text": "50 mg/L, with 50% of the drug eliminated",
        "why": "That is 6 h — 1 half-life (S19).",
        "correct": false
       },
+      "D": {
+       "text": "12.5 mg/L, with 87.5% of the drug eliminated",
+       "why": "18 h = 3 half-lives: C(t) = 100 × (1/2)^3 = 12.5 mg/L (87.5% eliminated) (S19).",
+       "correct": true
+      },
       "E": {
-       "text": "3.125 mg/L, with about 97% eliminated",
-       "why": "That is 30 h — 5 half-lives (S19).",
+       "text": "25 mg/L, with 75% of the drug eliminated",
+       "why": "That is 12 h — 2 half-lives (S19).",
        "correct": false
       }
      }
@@ -1552,32 +1662,32 @@
       }
      ],
      "src": "S23 (notes)",
-     "number": 14,
-     "answer": "D",
+     "number": 15,
+     "answer": "C",
      "options": {
       "A": {
-       "text": "Both loading and maintenance doses are based on clearance alone",
-       "why": "Loading doses are based on Vd (S23 notes).",
-       "correct": false
-      },
-      "B": {
        "text": "Loading dose is based on bioavailability; maintenance dose on Vd",
        "why": "Loading = Vd; maintenance = clearance (S23 notes).",
        "correct": false
       },
-      "C": {
-       "text": "Both loading and maintenance doses are based on half-life alone",
-       "why": "The lecture pairs loading with Vd and maintenance with clearance (S23 notes).",
+      "B": {
+       "text": "Loading dose is based on clearance; maintenance dose is based on Vd",
+       "why": "This reverses the pairing (S23 notes).",
        "correct": false
       },
-      "D": {
+      "C": {
        "text": "Loading dose is based on Vd; maintenance dose is based on clearance",
        "why": "Loading doses are based on Vd; maintenance doses are based on clearance (S23 notes).",
        "correct": true
       },
+      "D": {
+       "text": "Both loading and maintenance doses are based on clearance alone",
+       "why": "Loading doses are based on Vd (S23 notes).",
+       "correct": false
+      },
       "E": {
-       "text": "Loading dose is based on clearance; maintenance dose is based on Vd",
-       "why": "This reverses the pairing (S23 notes).",
+       "text": "Both loading and maintenance doses are based on half-life alone",
+       "why": "The lecture pairs loading with Vd and maintenance with clearance (S23 notes).",
        "correct": false
       }
      }
@@ -1651,6 +1761,26 @@
      {
       "text": "**Pharmacogenomics is one input among several — genotype alone never dictates therapy in isolation.**",
       "src": "S34"
+     },
+     {
+      "text": "Codeine is converted to morphine (200× more potent) by CYP2D6; CPIC recommends an alternative analgesic for CYP2D6 poor **and** ultrarapid metabolizers.",
+      "src": "p. 81; p. 83",
+      "tb": true
+     },
+     {
+      "text": "Clopidogrel: about 85% of a dose is inactivated by esterases; CYP2C19 activates the rest. CYP2C19 poor/intermediate metabolizers → prasugrel or ticagrelor.",
+      "src": "p. 81; p. 82",
+      "tb": true
+     },
+     {
+      "text": "TPMT intermediate activity: start thiopurines at 30–70% of the target dose; deficient: use a drastically reduced dose or an alternative.",
+      "src": "p. 83",
+      "tb": true
+     },
+     {
+      "text": "Warfarin dose varies up to 20-fold between patients; CYP2C9 and VKORC1 genotypes explain much of it.",
+      "src": "p. 90",
+      "tb": true
      }
     ],
     "clinical": [
@@ -1679,6 +1809,21 @@
      {
       "text": "Codeine (CYP2D6), clopidogrel (CYP2C19), azathioprine (TPMT), allopurinol (HLA-B*5801); also antidepressants, opioids, PPIs.",
       "src": "S33; S36"
+     },
+     {
+      "text": "CYP2D6 metabolizes up to one-quarter of clinically used drugs (β blockers, antidepressants, antipsychotics, opioids).",
+      "src": "p. 78",
+      "tb": true
+     },
+     {
+      "text": "CYP2D6 ultrarapid metabolizers: up to one-third of Ethiopians and Saudi Arabians; CYP2C19 poor metabolizers: 3–5% of Caucasians, 18–23% of Japanese.",
+      "src": "p. 67",
+      "tb": true
+     },
+     {
+      "text": "**HLA-B*57:01** → abacavir hypersensitivity; **G6PD deficiency** → rasburicase contraindicated; slow NAT2 acetylators (~50% in the USA) → isoniazid toxicity.",
+      "src": "p. 70; p. 83; p. 88",
+      "tb": true
      }
     ],
     "traps": [
@@ -1781,7 +1926,7 @@
      ],
      "src": "S35-36",
      "from_slides": "S35-36",
-     "number": 15,
+     "number": 16,
      "answer": "B",
      "options": {
       "A": {
@@ -1795,13 +1940,13 @@
        "correct": true
       },
       "C": {
-       "text": "It predicts reduced absorption of allopurinol from the gut",
-       "why": "The allele flags hypersensitivity risk, not absorption (S36).",
+       "text": "It predicts faster CYP2D6 metabolism of allopurinol",
+       "why": "HLA alleles relate to hypersensitivity; CYP2D6 relates to metabolism (S33).",
        "correct": false
       },
       "D": {
-       "text": "It predicts faster CYP2D6 metabolism of allopurinol",
-       "why": "HLA alleles relate to hypersensitivity; CYP2D6 relates to metabolism (S33).",
+       "text": "It predicts reduced absorption of allopurinol from the gut",
+       "why": "The allele flags hypersensitivity risk, not absorption (S36).",
        "correct": false
       },
       "E": {
@@ -1835,32 +1980,32 @@
       }
      ],
      "src": "S33",
-     "number": 16,
-     "answer": "D",
+     "number": 17,
+     "answer": "C",
      "options": {
       "A": {
-       "text": "Faster CYP2D6 metabolism of the drug and lost effect",
-       "why": "CYP2D6 variation affects antidepressants and opioids (S33).",
-       "correct": false
-      },
-      "B": {
        "text": "No concern, since genotype never affects therapy",
        "why": "Genotype is one input among several — it still matters (S34).",
        "correct": false
       },
-      "C": {
+      "B": {
        "text": "Reduced activation of the drug into its active form",
        "why": "Reduced activation is the CYP2C19–clopidogrel example (S33).",
        "correct": false
       },
-      "D": {
+      "C": {
        "text": "Increased risk of toxicity from the thiopurine drug",
        "why": "TPMT deficiency raises toxicity risk with thiopurine drugs such as azathioprine (S33).",
        "correct": true
       },
-      "E": {
+      "D": {
        "text": "Severe HLA-associated hypersensitivity to the drug",
        "why": "That is the HLA allele example (e.g., HLA-B*5801 with allopurinol) (S33, S36).",
+       "correct": false
+      },
+      "E": {
+       "text": "Faster CYP2D6 metabolism of the drug and lost effect",
+       "why": "CYP2D6 variation affects antidepressants and opioids (S33).",
        "correct": false
       }
      }
@@ -1889,23 +2034,23 @@
       }
      ],
      "src": "S33; S36",
-     "number": 17,
-     "answer": "C",
+     "number": 18,
+     "answer": "B",
      "options": {
       "A": {
-       "text": "CYP2C19 variation — allopurinol reactions",
-       "why": "Allopurinol reactions are HLA-B*5801 (S36).",
+       "text": "HLA-B*5801 — clopidogrel activation",
+       "why": "HLA-B*5801 is tied to allopurinol hypersensitivity (S36).",
        "correct": false
       },
       "B": {
-       "text": "TPMT variation — codeine activation",
-       "why": "Codeine activation is CYP2D6 (S33).",
-       "correct": false
-      },
-      "C": {
        "text": "CYP2C19 variation — clopidogrel activation",
        "why": "CYP2C19 variation affects clopidogrel activation and some antidepressant/PPI dosing (S33).",
        "correct": true
+      },
+      "C": {
+       "text": "CYP2C19 variation — allopurinol reactions",
+       "why": "Allopurinol reactions are HLA-B*5801 (S36).",
+       "correct": false
       },
       "D": {
        "text": "CYP2D6 variation — azathioprine toxicity",
@@ -1913,8 +2058,8 @@
        "correct": false
       },
       "E": {
-       "text": "HLA-B*5801 — clopidogrel activation",
-       "why": "HLA-B*5801 is tied to allopurinol hypersensitivity (S36).",
+       "text": "TPMT variation — codeine activation",
+       "why": "Codeine activation is CYP2D6 (S33).",
        "correct": false
       }
      }
@@ -1943,33 +2088,88 @@
       }
      ],
      "src": "S32; S34",
-     "number": 18,
-     "answer": "E",
+     "number": 19,
+     "answer": "A",
      "options": {
       "A": {
-       "text": "Genotype affects adverse-reaction risk but never drug metabolism",
-       "why": "Genetic variation can alter metabolism (e.g., CYP activity) (S32).",
-       "correct": false
+       "text": "Genotype is one input alongside phenotype, disease, and other drugs",
+       "why": "Pharmacogenomics is one input among several — genotype alone never dictates therapy in isolation (S34).",
+       "correct": true
       },
       "B": {
-       "text": "Genotype becomes irrelevant once a drug reaches steady state",
-       "why": "Nothing in the materials limits genotype's relevance this way (S32, S34).",
-       "correct": false
-      },
-      "C": {
-       "text": "Genotype matters only for drugs that are given by the IV route",
-       "why": "Genetic variation alters metabolism, transport, targets, and response (S32).",
-       "correct": false
-      },
-      "D": {
        "text": "Genotype alone should determine both the drug and its dose",
        "why": "Genotype alone never dictates therapy in isolation (S34).",
        "correct": false
       },
+      "C": {
+       "text": "Genotype affects adverse-reaction risk but never drug metabolism",
+       "why": "Genetic variation can alter metabolism (e.g., CYP activity) (S32).",
+       "correct": false
+      },
+      "D": {
+       "text": "Genotype matters only for drugs that are given by the IV route",
+       "why": "Genetic variation alters metabolism, transport, targets, and response (S32).",
+       "correct": false
+      },
       "E": {
-       "text": "Genotype is one input alongside phenotype, disease, and other drugs",
-       "why": "Pharmacogenomics is one input among several — genotype alone never dictates therapy in isolation (S34).",
+       "text": "Genotype becomes irrelevant once a drug reaches steady state",
+       "why": "Nothing in the materials limits genotype's relevance this way (S32, S34).",
+       "correct": false
+      }
+     }
+    },
+    {
+     "kind": "vignette",
+     "stem": "A 62-year-old has a coronary stent placed. Genotyping shows he is a CYP2C19 poor metabolizer. Which antiplatelet choice does CPIC guidance support?",
+     "correct": "Prasugrel or ticagrelor instead of clopidogrel",
+     "why_correct": "Clopidogrel needs CYP2C19 activation; poor metabolizers make little active drug, so prasugrel or ticagrelor is recommended (p. 81; p. 82).",
+     "distractors": [
+      {
+       "text": "Clopidogrel at the standard dose with routine follow-up",
+       "why": "Standard clopidogrel risks stent thrombosis in poor metabolizers (p. 81)."
+      },
+      {
+       "text": "Clopidogrel plus a CYP2C19 inhibitor to raise its level",
+       "why": "Inhibiting CYP2C19 would reduce clopidogrel activation further (p. 81)."
+      },
+      {
+       "text": "Codeine-free analgesia plus standard-dose clopidogrel",
+       "why": "Codeine relates to CYP2D6, not antiplatelet choice (p. 81)."
+      },
+      {
+       "text": "Azathioprine at 30–70% of the usual starting dose",
+       "why": "That dose rule is for TPMT-intermediate thiopurine use (p. 83)."
+      }
+     ],
+     "src": "p. 81-82",
+     "tb": true,
+     "number": 20,
+     "answer": "D",
+     "options": {
+      "A": {
+       "text": "Azathioprine at 30–70% of the usual starting dose",
+       "why": "That dose rule is for TPMT-intermediate thiopurine use (p. 83).",
+       "correct": false
+      },
+      "B": {
+       "text": "Clopidogrel plus a CYP2C19 inhibitor to raise its level",
+       "why": "Inhibiting CYP2C19 would reduce clopidogrel activation further (p. 81).",
+       "correct": false
+      },
+      "C": {
+       "text": "Codeine-free analgesia plus standard-dose clopidogrel",
+       "why": "Codeine relates to CYP2D6, not antiplatelet choice (p. 81).",
+       "correct": false
+      },
+      "D": {
+       "text": "Prasugrel or ticagrelor instead of clopidogrel",
+       "why": "Clopidogrel needs CYP2C19 activation; poor metabolizers make little active drug, so prasugrel or ticagrelor is recommended (p. 81; p. 82).",
        "correct": true
+      },
+      "E": {
+       "text": "Clopidogrel at the standard dose with routine follow-up",
+       "why": "Standard clopidogrel risks stent thrombosis in poor metabolizers (p. 81).",
+       "correct": false
       }
      }
     }
@@ -2169,32 +2369,32 @@
      ],
      "src": "S42-43",
      "from_slides": "S42-43",
-     "number": 19,
-     "answer": "B",
+     "number": 21,
+     "answer": "A",
      "options": {
       "A": {
-       "text": "Confirming the drug's brand name with the patient",
-       "why": "Brand names don't screen for interactions (S43).",
-       "correct": false
-      },
-      "B": {
        "text": "Reviewing CYP450 interactions with the current medications",
        "why": "CYP450 interaction screening is one of the highest-yield steps for preventing predictable, preventable toxicity (S43).",
        "correct": true
       },
-      "C": {
+      "B": {
        "text": "Reviewing the drug's half-life alone before dosing",
        "why": "Half-life alone doesn't identify a drug-drug interaction (S43).",
        "correct": false
       },
+      "C": {
+       "text": "Confirming the drug's brand name with the patient",
+       "why": "Brand names don't screen for interactions (S43).",
+       "correct": false
+      },
       "D": {
-       "text": "Checking the drug's chemical name in a reference",
-       "why": "Chemical names describe structure; they don't screen interactions (S43).",
+       "text": "Confirming the route of administration on the order",
+       "why": "Route is part of the checklist, but interaction review targets this risk (S39, S43).",
        "correct": false
       },
       "E": {
-       "text": "Confirming the route of administration on the order",
-       "why": "Route is part of the checklist, but interaction review targets this risk (S39, S43).",
+       "text": "Checking the drug's chemical name in a reference",
+       "why": "Chemical names describe structure; they don't screen interactions (S43).",
        "correct": false
       }
      }
@@ -2224,8 +2424,8 @@
      ],
      "src": "S47-48",
      "from_slides": "S47-48",
-     "number": 20,
-     "answer": "D",
+     "number": 22,
+     "answer": "B",
      "options": {
       "A": {
        "text": "Therapeutic index testing of the drug",
@@ -2233,23 +2433,23 @@
        "correct": false
       },
       "B": {
-       "text": "Receptor pharmacology considered alone",
-       "why": "Receptor pharmacology is one stop on the pathway (S38).",
-       "correct": false
-      },
-      "C": {
-       "text": "Phase IV postmarketing surveillance",
-       "why": "Phase IV is postmarketing surveillance after approval (Session 1; S47).",
-       "correct": false
-      },
-      "D": {
        "text": "The clinical decision-making framework",
        "why": "This checklist is the clinical decision-making framework from \"Putting It All Together\" (S48, S39).",
        "correct": true
       },
-      "E": {
+      "C": {
        "text": "Pharmacogenomic screening of the patient",
        "why": "Pharmacogenomics is one input among several, not the whole checklist (S34).",
+       "correct": false
+      },
+      "D": {
+       "text": "Receptor pharmacology considered alone",
+       "why": "Receptor pharmacology is one stop on the pathway (S38).",
+       "correct": false
+      },
+      "E": {
+       "text": "Phase IV postmarketing surveillance",
+       "why": "Phase IV is postmarketing surveillance after approval (Session 1; S47).",
        "correct": false
       }
      }
@@ -2279,17 +2479,17 @@
      ],
      "src": "S46; S48",
      "from_slides": "S46, S48",
-     "number": 21,
+     "number": 23,
      "answer": "C",
      "options": {
       "A": {
-       "text": "Neither one",
-       "why": "Efficacy predicts the maximum achievable benefit (S48).",
+       "text": "Both equally",
+       "why": "Efficacy matters more than potency (S48).",
        "correct": false
       },
       "B": {
-       "text": "Potency",
-       "why": "Potency is the dose needed; it doesn't set the maximum effect (S48).",
+       "text": "Neither one",
+       "why": "Efficacy predicts the maximum achievable benefit (S48).",
        "correct": false
       },
       "C": {
@@ -2298,13 +2498,13 @@
        "correct": true
       },
       "D": {
-       "text": "Half-life",
-       "why": "Half-life governs time to steady state, not maximal effect (S48).",
+       "text": "Potency",
+       "why": "Potency is the dose needed; it doesn't set the maximum effect (S48).",
        "correct": false
       },
       "E": {
-       "text": "Both equally",
-       "why": "Efficacy matters more than potency (S48).",
+       "text": "Half-life",
+       "why": "Half-life governs time to steady state, not maximal effect (S48).",
        "correct": false
       }
      }
@@ -2334,33 +2534,33 @@
      ],
      "src": "S46; S48",
      "from_slides": "S46, S48",
-     "number": 22,
-     "answer": "D",
+     "number": 24,
+     "answer": "E",
      "options": {
       "A": {
-       "text": "Competitive raises Emax; noncompetitive shifts the curve left at the same Emax",
-       "why": "Neither raises Emax or shifts left (S48).",
-       "correct": false
-      },
-      "B": {
-       "text": "Competitive lowers Emax; noncompetitive shifts the curve right with the same Emax",
-       "why": "This reverses the two (S48).",
-       "correct": false
-      },
-      "C": {
        "text": "They are pharmacologically identical and produce the same dose-response curve",
        "why": "Their curve effects differ (S48).",
        "correct": false
       },
-      "D": {
-       "text": "Noncompetitive lowers Emax; competitive shifts the curve right without changing Emax",
-       "why": "Noncompetitive/irreversible antagonists lower Emax; competitive antagonists shift the curve right without changing Emax (S48).",
-       "correct": true
-      },
-      "E": {
+      "B": {
        "text": "Only competitive antagonists cause adverse effects; noncompetitive ones never do",
        "why": "Adverse effects are not what separates them (S46, S48).",
        "correct": false
+      },
+      "C": {
+       "text": "Competitive raises Emax; noncompetitive shifts the curve left at the same Emax",
+       "why": "Neither raises Emax or shifts left (S48).",
+       "correct": false
+      },
+      "D": {
+       "text": "Competitive lowers Emax; noncompetitive shifts the curve right with the same Emax",
+       "why": "This reverses the two (S48).",
+       "correct": false
+      },
+      "E": {
+       "text": "Noncompetitive lowers Emax; competitive shifts the curve right without changing Emax",
+       "why": "Noncompetitive/irreversible antagonists lower Emax; competitive antagonists shift the curve right without changing Emax (S48).",
+       "correct": true
       }
      }
     },
@@ -2388,17 +2588,17 @@
       }
      ],
      "src": "S41",
-     "number": 23,
+     "number": 25,
      "answer": "C",
      "options": {
       "A": {
-       "text": "The new drug is a strong CYP3A4 inducer",
-       "why": "Nothing here involves CYP metabolism; it's receptor competition (S41).",
+       "text": "The home medication has become toxic",
+       "why": "A weaker effect restored by a higher dose points to competition (S41).",
        "correct": false
       },
       "B": {
-       "text": "The home medication has become toxic",
-       "why": "A weaker effect restored by a higher dose points to competition (S41).",
+       "text": "The new drug is a full agonist itself",
+       "why": "A drug that weakens the home medication's effect is acting as an antagonist (S41).",
        "correct": false
       },
       "C": {
@@ -2412,8 +2612,8 @@
        "correct": false
       },
       "E": {
-       "text": "The new drug is a full agonist itself",
-       "why": "A drug that weakens the home medication's effect is acting as an antagonist (S41).",
+       "text": "The new drug is a strong CYP3A4 inducer",
+       "why": "Nothing here involves CYP metabolism; it's receptor competition (S41).",
        "correct": false
       }
      }
@@ -2442,27 +2642,27 @@
       }
      ],
      "src": "SG U1-S; S15; S28",
-     "number": 24,
+     "number": 26,
      "answer": "E",
      "options": {
       "A": {
-       "text": "Increase the dose, since the CYP3A4 inhibitor will lower the drug's level",
-       "why": "A CYP3A4 inhibitor RAISES substrate levels (S6); induction lowers them.",
-       "correct": false
-      },
-      "B": {
-       "text": "Start the drug, and check renal function only if symptoms appear later",
-       "why": "Check eGFR/CrCl and adjust BEFORE dispensing, then monitor closely (SG U1-S).",
-       "correct": false
-      },
-      "C": {
        "text": "Shorten the dosing interval so steady state is reached more quickly",
        "why": "Intervals are EXTENDED in renal impairment; shortening raises accumulation (S17, S28).",
        "correct": false
       },
-      "D": {
+      "B": {
        "text": "Prescribe the standard dose, since only hepatic drugs are affected by CKD",
        "why": "CKD reduces renal clearance, raising concentration and half-life of renally-eliminated drugs (S15, SG U1-S).",
+       "correct": false
+      },
+      "C": {
+       "text": "Start the drug, and check renal function only if symptoms appear later",
+       "why": "Check eGFR/CrCl and adjust BEFORE dispensing, then monitor closely (SG U1-S).",
+       "correct": false
+      },
+      "D": {
+       "text": "Increase the dose, since the CYP3A4 inhibitor will lower the drug's level",
+       "why": "A CYP3A4 inhibitor RAISES substrate levels (S6); induction lowers them.",
        "correct": false
       },
       "E": {
@@ -2753,8 +2953,61 @@
     "prompt": "Single best check vs. predictable toxicity",
     "answer": "Review CYP450 interactions with current medications",
     "src": "S43"
+   },
+   {
+    "prompt": "t½ formula",
+    "answer": "t½ = 0.7 × Vd / CL",
+    "src": "p. 56",
+    "tb": true
+   },
+   {
+    "prompt": "Loading dose formula",
+    "answer": "Vd × target concentration",
+    "src": "p. 52",
+    "tb": true
+   },
+   {
+    "prompt": "% of steady state",
+    "answer": "1 t½ = 50% · 2 = 75% · 4 = >90%",
+    "src": "p. 47",
+    "tb": true
+   },
+   {
+    "prompt": "Saturable elimination",
+    "answer": "Phenytoin, ethanol, aspirin",
+    "src": "p. 47",
+    "tb": true
+   },
+   {
+    "prompt": "CYP3A4 share",
+    "answer": ">50% of liver-metabolized prescription drugs",
+    "src": "p. 60",
+    "tb": true
+   },
+   {
+    "prompt": "Acetaminophen antidote",
+    "answer": "N-acetylcysteine within 8–16 h",
+    "src": "p. 66",
+    "tb": true
+   },
+   {
+    "prompt": "CYP2C19 PM on clopidogrel",
+    "answer": "Switch to prasugrel or ticagrelor",
+    "src": "p. 82",
+    "tb": true
+   },
+   {
+    "prompt": "HLA-B*57:01",
+    "answer": "Abacavir hypersensitivity",
+    "src": "p. 88",
+    "tb": true
    }
   ],
-  "discrepancies": []
+  "discrepancies": [
+   {
+    "text": "**Time to steady state:** slides say ~4–5 half-lives; the textbook's rule of thumb is four half-lives (over 90% of steady state). These agree — the textbook just rounds down.",
+    "src": "S23; p. 47"
+   }
+  ]
  }
 }

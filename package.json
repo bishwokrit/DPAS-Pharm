@@ -15,5 +15,9 @@
     "react-dom": "^19.3.1",
     "react-icons": "^5.7.0",
     "sharp": "^0.35.5"
+  },
+  "devDependencies": {
+    "@anthropic-ai/sdk": "^0.99.0",
+    "esbuild": "^0.23.1"
   }
 }

@@ -4,7 +4,6 @@ Pharmacology study source. Built ONLY from the lecture slides, the assigned text
 Citation key: S12 = lecture slide 12; p. 245 = textbook page 245; SG U1-R3 = course study guide, Unit 1 item R3.
 [TB] = from the textbook, not on the lecture slides. [SG] = from the course study guide, not on the lecture slides.
 Bold text = emphasized on the lecture slides.
-NOTE: The textbook has not been added yet; this source covers the lecture slides only.
 
 ## Learning objectives
 - IO1.1: Define and describe fundamental pharmacologic concepts, including pharmacokinetics, pharmacodynamics, drug-receptor interactions, dose-response relationships, therapeutic index, half-life, and steady state. (Syllabus)
@@ -39,6 +38,8 @@ Learning objectives covered: SO1, IO1.1, IO1.4, IO1.5
 - **Chemical name:** describes the exact molecular structure (rarely used in clinical practice). (S7)
 - **Generic name:** the official, non-proprietary name assigned to the active drug — one generic name per drug, regardless of manufacturer. (S7)
 - **Brand (trade) name:** the manufacturer's marketed name; the same generic drug may have several brand names, and brand names change between countries. (S7)
+- [TB] **Prodrug:** an inactive precursor converted to the active drug in the body (usually by metabolism). (p. 8)
+- [TB] **Poisons** are drugs with almost exclusively harmful effects — but "the dose makes the poison" (Paracelsus): any substance can harm at the wrong dose. (p. 3)
 
 ### The Language of Pharmacology — How it works
 - Pharmacokinetics = what the body does to the drug — ADME. (S6; SG U1-R1)
@@ -53,6 +54,7 @@ Learning objectives covered: SO1, IO1.1, IO1.4, IO1.5
 - Prescribing and counseling by generic name avoids hiding duplicate therapy — the reason PAs default to generic names. (S9; SG U1-R2)
 - If a patient says they take "Tylenol" and separately "acetaminophen," check for accidental double-dosing — this previews the acetaminophen toxicity discussion. (S7 (notes))
 - Precise vocabulary (generic names, therapeutic vs. adverse effects) protects patients. (S56)
+- [TB] More than half of prescriptions in the USA are for generic drugs. (p. 18)
 
 ### The Language of Pharmacology — Drugs named as examples
 - Acetaminophen (generic) is sold as Tylenol and under many store brands. (S7)
@@ -110,21 +112,39 @@ Learning objectives covered: SO2, IO1.4
 - Phase III: confirm efficacy and monitor adverse effects at scale — hundreds to thousands of patients, often multi-site. (S13; SG U1-R3)
 - Phase IV: postmarketing surveillance after approval — the general prescribed population. (S13; SG U1-R3)
 - Every approved drug has passed through a structured development and regulatory pipeline (Phases I–IV). (S56)
+- [TB] Phase II has the **highest failure rate** — only about 25% of new drugs move on to Phase III. (p. 17)
+- [TB] Phase III usually enrolls **thousands** of patients (Figure 1–6: 1000–6000), often double-blind and crossover, in settings like the drug's eventual use. (p. 12; p. 17)
+- [TB] Less than one-third of drugs studied in humans survive clinical trials and reach the market. (p. 14)
+- [TB] To see one case of a toxicity occurring 1 in 10,000, several hundred thousand patients may need exposure — so rare effects usually surface only in Phase IV, which has **no fixed duration**. (p. 18)
+- [TB] Marketing requires a **New Drug Application (NDA)** after Phase III; human testing starts only after an **IND** (Investigational New Drug) application. (p. 12; p. 17)
 
 ### Drug Development & Regulation — Clinical relevance
 - Postmarketing surveillance (Phase IV) is where rare adverse effects are often first detected — trial populations are too small and too short in duration to catch 1-in-10,000 events. (S12 (notes))
 - Case: a new medication improves symptoms in 70% of patients with a chronic, non-life-threatening condition, but postmarketing data show serious hepatotoxicity in about 1%. **Would you prescribe it — and does your answer depend on what else is available?** (S15)
 - **Clinical pearl:** risk-benefit analysis is always comparative — a 1% serious-toxicity rate reads very differently if it is the only effective option versus if three safer alternatives already exist. (S15)
 - Ask "compared to what?" rather than judging the number in isolation. (S15 (notes))
+- [TB] A patent lasts 20 years; after it expires, generics are approved through an **abbreviated new drug application (ANDA)** that requires bioequivalence data. (p. 16; p. 18)
+- [TB] Placebo responses can occur in as many as 30–40% of subjects — the reason controlled, blinded trials are needed. (p. 14)
+- [TB] Adverse events that are both **serious and unexpected** must be reported to the FDA within 15 days; clinicians can report through MedWatch. (p. 18; p. 19)
 
 ### Drug Development & Regulation — Drugs named as examples
 - FDA MedWatch — an adverse-event reporting system. (S14)
 - Biologic DMARDs (MSK unit, later) are a direct example of the "biotechnology" drug source. (S11 (notes))
+- [TB] **Thalidomide** (sold in Europe as a "nontoxic" hypnotic) caused about 10,000 birth defects and led to the **Kefauver-Harris Amendments (1962)**, which required proof of efficacy as well as safety. (p. 16)
+- [TB] The **Orphan Drug Amendment (1983)** gives incentives for drugs treating diseases with fewer than 200,000 US patients. (p. 16)
 
 ### Drug Development & Regulation — Exam traps
 - Efficacy vs. effectiveness is a favorite exam distinction: efficacy is the trial result; effectiveness is what happens once real patients with real adherence patterns use the drug. (S14 (notes))
 - Phase III — not Phase I, II, or IV — is the large pre-approval trial that confirms efficacy and monitors safety at scale. (S17)
 - Phase III is what most people picture as "the" clinical trial, but regulatory decisions already begin shaping the drug long before that. (S13 (notes))
+
+### Conflict between sources: Phase I population
+- Lecture slides: Phase I: a small group of healthy volunteers. (S13)
+- Textbook: Phase I: 20–100 healthy volunteers — but if significant toxicity is expected (cancer, AIDS therapy), volunteer **patients with the disease** are used instead. (p. 17)
+
+### Conflict between sources: Phase II size
+- Lecture slides: Phase II: a few hundred patients with the target condition. (S13)
+- Textbook: Phase II: a modest number of patients (100–200) with the target disease. (p. 17)
 
 ### Comparison: Clinical trial phases (S13; S12 (notes))
 | Phase | Primary purpose | Typical population | How to tell apart |
@@ -178,6 +198,11 @@ Learning objectives covered: SO3, IO1.1
 - Transporters & nucleic acids: carrier proteins; or DNA/RNA for some antimicrobials & gene therapies. (S20)
 - Most drugs target receptors or enzymes — ion channels and transporters matter especially for cardiac and CNS drugs. (S20 (notes))
 - An inverse agonist actively reduces constitutive (baseline) receptor activity below normal; a true antagonist merely blocks the agonist without lowering baseline activity itself. (S28)
+- [TB] **Spare receptors:** a maximal response can occur without occupying every receptor (e.g., about 90% of cardiac β receptors can be blocked and maximal inotropic response still preserved). (p. 23)
+- [TB] **Irreversible antagonist** effects last until new receptors are made — duration depends on receptor turnover, not drug elimination (phenoxybenzamine for pheochromocytoma). (p. 25)
+- [TB] A partial agonist's lower maximal effect is **not** due to lower affinity — it can occupy all receptors and still produce less response. (p. 26)
+- [TB] **Allosteric modulators** bind a different site from the agonist (e.g., benzodiazepines enhance GABA's effect). (p. 25)
+- [TB] Agonist-induced **desensitization** (tachyphylaxis) and downregulation reduce response with continued exposure. (p. 39)
 
 ### Pharmacodynamics: Targets & Receptors — Clinical relevance
 - Albuterol is a selective β2-adrenergic receptor agonist. (S26)
@@ -185,9 +210,13 @@ Learning objectives covered: SO3, IO1.1
 - Rising cAMP relaxes bronchial smooth muscle → bronchodilation. (S26)
 - **This is the same receptor-to-response logic you will reuse for every agonist drug this term.** (S26)
 - Albuterol bridges introductory pharmacodynamics into the pulmonary pharmacology seen later in the curriculum. (S26 (notes))
+- [TB] Competitive antagonism is surmountable in real life: exercise or stress raises catecholamines enough to overcome a fixed propranolol dose. (p. 25)
+- [TB] Propranolol markedly slows the heart rate in pheochromocytoma (high catecholamines) but not the resting rate of a trained marathon runner. (p. 39)
 
 ### Pharmacodynamics: Targets & Receptors — Drugs named as examples
 - Albuterol — selective β2-adrenergic agonist (example of agonism). (S26)
+- [TB] **Chemical antagonism** needs no receptor: positively charged protamine binds and neutralizes negatively charged heparin. (p. 26)
+- [TB] **Physiologic antagonism:** two drugs act on different receptors with opposing effects (e.g., insulin opposes glucocorticoid-induced hyperglycemia). (p. 27)
 
 ### Pharmacodynamics: Targets & Receptors — Exam traps
 - Classic exam trap: a competitive antagonist shifts the dose-response curve **right** (same Emax, more drug needed); a noncompetitive/irreversible antagonist **lowers the Emax** instead. (S22 (notes))
@@ -237,6 +266,8 @@ Learning objectives covered: SO4, IO1.1
 - **Efficacy (Emax):** the maximum effect a drug can produce, no matter how high the dose goes. (S30; SG U1-R6)
 - **EC₅₀:** the drug concentration producing 50% of the maximal effect — the standard measure of potency. (S30)
 - **Therapeutic Index (TI) = TD₅₀ ÷ ED₅₀ (toxic dose in 50% ÷ effective dose in 50%).** (S38; SG U1-R7)
+- [TB] **Quantal dose-response:** ED₅₀ (effective in 50%), TD₅₀ (toxic in 50%), LD₅₀ (lethal in 50% of animals). (p. 38)
+- [TB] **Therapeutic window:** the range between the minimum therapeutic dose and the minimum toxic dose — more practical than TI for dosing a patient. (p. 38)
 
 ### Dose-Response Relationships — How it works
 - The sigmoidal dose-response curve: x-axis = log(dose), y-axis = effect. EC₅₀ is on the x-axis; Emax is the plateau — the ceiling effect. (S30 (notes); S31)
@@ -254,6 +285,8 @@ Learning objectives covered: SO4, IO1.1
 - Efficacy clinically matters much more than potency — a highly potent drug with low efficacy may be clinically useless. (S34)
 - With a narrow TI, a small dosing error can move a patient from effective to toxic — which is why these drugs require blood-level monitoring. (S41; S39 (notes))
 - Students should be able to name all four narrow-TI drugs without hesitation and know that each requires therapeutic drug monitoring. (S38 (notes))
+- [TB] No drug causes only a single specific effect — drugs are **selective**, not specific. (p. 40)
+- [TB] Asthma + hypertension on propranolol: nonselective β blockade can cause bronchoconstriction; a β₁-selective blocker (metoprolol) is an alternative. (p. 41)
 
 ### Dose-Response Relationships — Drugs named as examples
 - **Classic narrow-TI drugs: warfarin, lithium, digoxin, phenytoin.** (S38; SG U1-R7)
@@ -327,12 +360,15 @@ Learning objectives covered: SO5, IO1.2, IO1.3, IO1.5
 - Blood-brain barrier — **Why can some drugs readily enter the CNS while others cannot?** Tight junctions between endothelial cells restrict paracellular movement. (S53)
 - Small, lipophilic, non-ionized drugs cross the BBB more easily than large, polar, or highly protein-bound drugs. (S53)
 - Efflux transporters (like P-glycoprotein) can actively pump some drugs back out of the CNS. (S53)
+- [TB] **P-glycoprotein (MDR1)** pumps drugs out of cells in brain, testes, and gut; inhibiting it raises digoxin blood levels. (p. 9)
+- [TB] Ion trapping: weak acids are excreted faster in **alkaline** urine; weak bases faster in **acidic** urine. (p. 10; p. 11)
 
 ### Pharmacokinetics: ADME — Absorption & Distribution — Clinical relevance
 - Routes that bypass first-pass metabolism: essentially everything except oral — IV, sublingual, inhaled, transdermal, topical, SC, IM. (S49 (notes))
 - Sublingual absorption enters systemic venous circulation directly, bypassing the portal vein and the liver's first-pass metabolism; oral dosing passes through the liver first. (S55; SG U1-R9)
 - Because the liver can inactivate a large fraction of drug first, some drugs are given sublingually or transdermally instead of orally. (S51 (notes))
 - A highly polar antibiotic would generally not cross the BBB well — unless the meninges are inflamed, as in meningitis. (S53 (notes))
+- [TB] Aspirin overdose: sodium bicarbonate alkalinizes blood and urine, reducing aspirin entry into tissues and speeding its renal excretion. (p. 20)
 
 ### Pharmacokinetics: ADME — Absorption & Distribution — Drugs named as examples
 - Large first-pass effect: nitroglycerin, propranolol, morphine — all require higher oral doses (or a non-oral route) to achieve the same systemic exposure as IV. (S51; SG U1-R9)

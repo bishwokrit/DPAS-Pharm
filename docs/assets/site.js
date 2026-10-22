@@ -23,6 +23,28 @@
     b.addEventListener("click", () => { theme = theme === "auto" ? "light" : theme === "light" ? "dark" : "auto"; store.set("theme", theme); applyTheme(theme); icon(); });
   });
 
+  // reading progress bar
+  const bar = document.querySelector(".progress-bar");
+  if (bar) {
+    const upd = () => { document.body.classList.toggle("at-top", scrollY < 240); const h = document.documentElement.scrollHeight - innerHeight; bar.style.width = (h > 0 ? (scrollY / h) * 100 : 0) + "%"; };
+    addEventListener("scroll", upd, { passive: true }); upd();
+  }
+
+  // focus mode: the section you're reading stays bright, the rest fades back (long pages only)
+  const sections = document.querySelectorAll(".section");
+  if (sections.length > 4 && "IntersectionObserver" in window) {
+    const io = new IntersectionObserver((es) => es.forEach((e) => e.target.classList.toggle("in-view", e.isIntersecting)), { rootMargin: "-35% 0px -45% 0px" });
+    sections.forEach((s) => io.observe(s));
+    const btn = document.createElement("button");
+    btn.className = "focus-btn";
+    btn.textContent = "Focus";
+    btn.title = "Focus mode: fade everything except the section you're reading";
+    const set = (on) => { document.body.classList.toggle("focus", on); btn.setAttribute("aria-pressed", on); };
+    set(store.get("focus", true));
+    btn.addEventListener("click", () => { const on = !document.body.classList.contains("focus"); store.set("focus", on); set(on); });
+    document.querySelector(".theme-btn")?.before(btn);
+  }
+
   // cram sheet: hide answers for active recall; tap a cell to peek
   document.querySelectorAll("[data-cram-toggle]").forEach((btn) => {
     const table = document.getElementById(btn.dataset.cramToggle);

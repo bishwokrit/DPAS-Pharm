@@ -4,7 +4,7 @@
   "title": "Introduction to Pharmacology — Session 2",
   "date": "Thu, Oct 22, 2026"
  },
- "textbook_status": "pending",
+ "textbook_status": "included",
  "objectives": [
   {
    "id": "IO1.1",
@@ -141,6 +141,16 @@
      {
       "text": "Inhibition slows clearance (substrate level rises); induction speeds clearance (substrate level falls).",
       "src": "S6; SG U1-R10"
+     },
+     {
+      "text": "CYP3A4 alone metabolizes over 50% of the prescription drugs metabolized by the liver.",
+      "src": "p. 60",
+      "tb": true
+     },
+     {
+      "text": "Acetaminophen is mostly conjugated (glucuronide/sulfate); in overdose glutathione is depleted and the toxic metabolite (NAPQI) injures the liver — **N-acetylcysteine** given within 8–16 hours protects against fulminant hepatotoxicity.",
+      "src": "p. 66",
+      "tb": true
      }
     ],
     "clinical": [
@@ -163,6 +173,16 @@
      {
       "text": "Enzyme induction speeds substrate clearance, lowering its level and effect — the opposite of inhibition.",
       "src": "S48"
+     },
+     {
+      "text": "Liver disease (e.g., cirrhosis, hepatitis) slows metabolism of some drugs enough that ordinary doses can cause coma.",
+      "src": "p. 73",
+      "tb": true
+     },
+     {
+      "text": "Severe ADRs contribute to about 100,000 US deaths a year and about 7% of hospital admissions.",
+      "src": "p. 71",
+      "tb": true
      }
     ],
     "examples": [
@@ -173,6 +193,16 @@
      {
       "text": "CYP3A4 — the enzyme in the lecture's inhibitor/substrate example.",
       "src": "S6"
+     },
+     {
+      "text": "**Inducers:** rifampin, carbamazepine, phenytoin, barbiturates, St. John's wort; **inhibitors:** ketoconazole, clarithromycin/erythromycin, ritonavir, grapefruit juice.",
+      "src": "p. 63; p. 64",
+      "tb": true
+     },
+     {
+      "text": "St. John's wort induces CYP3A4 and speeds metabolism of oral contraceptives, warfarin, cyclosporine, and others.",
+      "src": "p. 72",
+      "tb": true
      }
     ],
     "traps": [
@@ -410,6 +440,32 @@
       }
      ],
      "src": "S5"
+    },
+    {
+     "kind": "vignette",
+     "stem": "A 19-year-old arrives 6 hours after a large intentional acetaminophen ingestion. Labs are pending. Which treatment best protects against fulminant liver injury?",
+     "correct": "N-acetylcysteine, started within the 8–16 hour window",
+     "why_correct": "N-acetylcysteine given within 8–16 hours protects against acetaminophen hepatotoxicity by replacing depleted glutathione (p. 66).",
+     "distractors": [
+      {
+       "text": "Sodium bicarbonate to alkalinize the urine and speed excretion",
+       "why": "Urine alkalinization is used for aspirin overdose, a weak acid (p. 20)."
+      },
+      {
+       "text": "Rifampin to induce CYP enzymes and clear the drug faster",
+       "why": "Induction would increase toxic metabolite formation, not protect the liver (p. 66)."
+      },
+      {
+       "text": "Protamine to bind and neutralize the circulating drug",
+       "why": "Protamine neutralizes heparin (p. 26), not acetaminophen."
+      },
+      {
+       "text": "Waiting for levels before giving any treatment at all",
+       "why": "The protective window is 8–16 hours, so delay risks liver failure (p. 66)."
+      }
+     ],
+     "src": "p. 66",
+     "tb": true
     }
    ],
    "flows": [
@@ -761,6 +817,16 @@
      {
       "text": "**Clearance = the volume of plasma from which drug is completely removed per unit time.**",
       "src": "S27"
+     },
+     {
+      "text": "**t½ = 0.7 × Vd / CL** — half-life rises when Vd rises or clearance falls.",
+      "src": "p. 56",
+      "tb": true
+     },
+     {
+      "text": "**Loading dose = Vd × target concentration** (e.g., theophylline: 35 L × 10 mg/L = 350 mg for a 70-kg adult).",
+      "src": "p. 52",
+      "tb": true
      }
     ],
     "how": [
@@ -807,6 +873,21 @@
      {
       "text": "Time to steady state (about 4–5 half-lives) is governed by half-life.",
       "src": "S48"
+     },
+     {
+      "text": "During regular dosing: 50% of steady state after 1 half-life, 75% after 2, and over 90% after 4 — the textbook's \"four half-lives\" rule of thumb.",
+      "src": "p. 47",
+      "tb": true
+     },
+     {
+      "text": "If the dosing interval is shorter than four half-lives, accumulation will be detectable.",
+      "src": "p. 48",
+      "tb": true
+     },
+     {
+      "text": "**Capacity-limited (saturable) elimination:** clearance falls as concentration rises — important for phenytoin, ethanol, and aspirin.",
+      "src": "p. 47",
+      "tb": true
      }
     ],
     "clinical": [
@@ -1245,6 +1326,26 @@
      {
       "text": "**Pharmacogenomics is one input among several — genotype alone never dictates therapy in isolation.**",
       "src": "S34"
+     },
+     {
+      "text": "Codeine is converted to morphine (200× more potent) by CYP2D6; CPIC recommends an alternative analgesic for CYP2D6 poor **and** ultrarapid metabolizers.",
+      "src": "p. 81; p. 83",
+      "tb": true
+     },
+     {
+      "text": "Clopidogrel: about 85% of a dose is inactivated by esterases; CYP2C19 activates the rest. CYP2C19 poor/intermediate metabolizers → prasugrel or ticagrelor.",
+      "src": "p. 81; p. 82",
+      "tb": true
+     },
+     {
+      "text": "TPMT intermediate activity: start thiopurines at 30–70% of the target dose; deficient: use a drastically reduced dose or an alternative.",
+      "src": "p. 83",
+      "tb": true
+     },
+     {
+      "text": "Warfarin dose varies up to 20-fold between patients; CYP2C9 and VKORC1 genotypes explain much of it.",
+      "src": "p. 90",
+      "tb": true
      }
     ],
     "clinical": [
@@ -1273,6 +1374,21 @@
      {
       "text": "Codeine (CYP2D6), clopidogrel (CYP2C19), azathioprine (TPMT), allopurinol (HLA-B*5801); also antidepressants, opioids, PPIs.",
       "src": "S33; S36"
+     },
+     {
+      "text": "CYP2D6 metabolizes up to one-quarter of clinically used drugs (β blockers, antidepressants, antipsychotics, opioids).",
+      "src": "p. 78",
+      "tb": true
+     },
+     {
+      "text": "CYP2D6 ultrarapid metabolizers: up to one-third of Ethiopians and Saudi Arabians; CYP2C19 poor metabolizers: 3–5% of Caucasians, 18–23% of Japanese.",
+      "src": "p. 67",
+      "tb": true
+     },
+     {
+      "text": "**HLA-B*57:01** → abacavir hypersensitivity; **G6PD deficiency** → rasburicase contraindicated; slow NAT2 acetylators (~50% in the USA) → isoniazid toxicity.",
+      "src": "p. 70; p. 83; p. 88",
+      "tb": true
      }
     ],
     "traps": [
@@ -1450,6 +1566,32 @@
       }
      ],
      "src": "S32; S34"
+    },
+    {
+     "kind": "vignette",
+     "stem": "A 62-year-old has a coronary stent placed. Genotyping shows he is a CYP2C19 poor metabolizer. Which antiplatelet choice does CPIC guidance support?",
+     "correct": "Prasugrel or ticagrelor instead of clopidogrel",
+     "why_correct": "Clopidogrel needs CYP2C19 activation; poor metabolizers make little active drug, so prasugrel or ticagrelor is recommended (p. 81; p. 82).",
+     "distractors": [
+      {
+       "text": "Clopidogrel at the standard dose with routine follow-up",
+       "why": "Standard clopidogrel risks stent thrombosis in poor metabolizers (p. 81)."
+      },
+      {
+       "text": "Clopidogrel plus a CYP2C19 inhibitor to raise its level",
+       "why": "Inhibiting CYP2C19 would reduce clopidogrel activation further (p. 81)."
+      },
+      {
+       "text": "Codeine-free analgesia plus standard-dose clopidogrel",
+       "why": "Codeine relates to CYP2D6, not antiplatelet choice (p. 81)."
+      },
+      {
+       "text": "Azathioprine at 30–70% of the usual starting dose",
+       "why": "That dose rule is for TPMT-intermediate thiopurine use (p. 83)."
+      }
+     ],
+     "src": "p. 81-82",
+     "tb": true
     }
    ],
    "flows": []
@@ -2057,8 +2199,61 @@
     "prompt": "Single best check vs. predictable toxicity",
     "answer": "Review CYP450 interactions with current medications",
     "src": "S43"
+   },
+   {
+    "prompt": "t½ formula",
+    "answer": "t½ = 0.7 × Vd / CL",
+    "src": "p. 56",
+    "tb": true
+   },
+   {
+    "prompt": "Loading dose formula",
+    "answer": "Vd × target concentration",
+    "src": "p. 52",
+    "tb": true
+   },
+   {
+    "prompt": "% of steady state",
+    "answer": "1 t½ = 50% · 2 = 75% · 4 = >90%",
+    "src": "p. 47",
+    "tb": true
+   },
+   {
+    "prompt": "Saturable elimination",
+    "answer": "Phenytoin, ethanol, aspirin",
+    "src": "p. 47",
+    "tb": true
+   },
+   {
+    "prompt": "CYP3A4 share",
+    "answer": ">50% of liver-metabolized prescription drugs",
+    "src": "p. 60",
+    "tb": true
+   },
+   {
+    "prompt": "Acetaminophen antidote",
+    "answer": "N-acetylcysteine within 8–16 h",
+    "src": "p. 66",
+    "tb": true
+   },
+   {
+    "prompt": "CYP2C19 PM on clopidogrel",
+    "answer": "Switch to prasugrel or ticagrelor",
+    "src": "p. 82",
+    "tb": true
+   },
+   {
+    "prompt": "HLA-B*57:01",
+    "answer": "Abacavir hypersensitivity",
+    "src": "p. 88",
+    "tb": true
    }
   ],
-  "discrepancies": []
+  "discrepancies": [
+   {
+    "text": "**Time to steady state:** slides say ~4–5 half-lives; the textbook's rule of thumb is four half-lives (over 90% of steady state). These agree — the textbook just rounds down.",
+    "src": "S23; p. 47"
+   }
+  ]
  }
 }

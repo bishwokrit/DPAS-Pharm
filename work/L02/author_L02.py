@@ -585,7 +585,7 @@ t5 = {
 
 content = {
     "lecture": {"id": "L02", "title": "Introduction to Pharmacology — Session 2", "date": "Thu, Oct 22, 2026"},
-    "textbook_status": "pending",
+    "textbook_status": "included",
     "objectives": objectives,
     "about": about,
     "classes": [t1, t2, t3, t4, t5],
@@ -620,6 +620,21 @@ content["guide"] = {"summary": [{"text": t, "src": s} for t, s in G.SUMMARY],
                     "discrepancies": []}
 for _cl in content["classes"]:
     _cl["flows"] = G.FLOWS.get(_cl["name"], [])
+
+# ---- textbook additions (see textbook_L02.py): TB-tagged, cited to printed pages
+import textbook_L02 as TBK
+_by_name = {cl["name"]: cl for cl in content["classes"]}
+for _name, _secs in TBK.ADD.items():
+    for _key, _facts in _secs.items():
+        _by_name[_name]["sections"][_key] += [F(t, s, tb=True) for t, s in _facts]
+for _name, _cfs in TBK.CONFLICTS.items():
+    _by_name[_name].setdefault("conflicts", []).extend(_cfs)
+for _q in TBK.QUESTIONS:
+    _q = dict(_q)
+    _topic = _q.pop("topic")
+    _by_name[_topic]["questions"].append({**Q(**_q), "tb": True})
+content["guide"]["discrepancies"] = [{"text": t, "src": s} for t, s in TBK.DISCREPANCIES]
+content["guide"]["cram"] += [{"prompt": p, "answer": a, "src": s, "tb": True} for p, a, s in TBK.CRAM]
 
 out = Path(__file__).with_name("content.json")
 out.write_text(json.dumps(content, indent=1, ensure_ascii=False))

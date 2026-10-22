@@ -41,12 +41,6 @@
     },
     {
      "chapter": "3"
-    },
-    {
-     "chapter": "4"
-    },
-    {
-     "chapter": "5"
     }
    ],
    "study_guide": [
@@ -60,7 +54,8 @@
     "U1-R8",
     "U1-R9",
     "U1-M"
-   ]
+   ],
+   "readings_note": "Unit 1 reading is Ch 1–5; Session 1 uses the chapters matching its topics (Ch 3 is shared)."
   },
   {
    "id": "L02",
@@ -92,12 +87,6 @@
    ],
    "readings": [
     {
-     "chapter": "1"
-    },
-    {
-     "chapter": "2"
-    },
-    {
      "chapter": "3"
     },
     {
@@ -112,7 +101,8 @@
     "U1-R11",
     "U1-R12",
     "U1-S"
-   ]
+   ],
+   "readings_note": "Unit 1 reading is Ch 1–5; Session 2 uses the chapters matching its topics (Ch 3 is shared)."
   },
   {
    "id": "L03",

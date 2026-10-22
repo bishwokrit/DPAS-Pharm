@@ -4,7 +4,7 @@
   "title": "Introduction to Pharmacology — Session 1",
   "date": "Thu, Oct 15, 2026"
  },
- "textbook_status": "pending",
+ "textbook_status": "included",
  "objectives": [
   {
    "id": "IO1.1",
@@ -135,6 +135,16 @@
      {
       "text": "**Brand (trade) name:** the manufacturer's marketed name; the same generic drug may have several brand names, and brand names change between countries.",
       "src": "S7"
+     },
+     {
+      "text": "**Prodrug:** an inactive precursor converted to the active drug in the body (usually by metabolism).",
+      "src": "p. 8",
+      "tb": true
+     },
+     {
+      "text": "**Poisons** are drugs with almost exclusively harmful effects — but \"the dose makes the poison\" (Paracelsus): any substance can harm at the wrong dose.",
+      "src": "p. 3",
+      "tb": true
      }
     ],
     "how": [
@@ -179,6 +189,11 @@
      {
       "text": "Precise vocabulary (generic names, therapeutic vs. adverse effects) protects patients.",
       "src": "S56"
+     },
+     {
+      "text": "More than half of prescriptions in the USA are for generic drugs.",
+      "src": "p. 18",
+      "tb": true
      }
     ],
     "examples": [
@@ -460,6 +475,31 @@
      {
       "text": "Every approved drug has passed through a structured development and regulatory pipeline (Phases I–IV).",
       "src": "S56"
+     },
+     {
+      "text": "Phase II has the **highest failure rate** — only about 25% of new drugs move on to Phase III.",
+      "src": "p. 17",
+      "tb": true
+     },
+     {
+      "text": "Phase III usually enrolls **thousands** of patients (Figure 1–6: 1000–6000), often double-blind and crossover, in settings like the drug's eventual use.",
+      "src": "p. 12; p. 17",
+      "tb": true
+     },
+     {
+      "text": "Less than one-third of drugs studied in humans survive clinical trials and reach the market.",
+      "src": "p. 14",
+      "tb": true
+     },
+     {
+      "text": "To see one case of a toxicity occurring 1 in 10,000, several hundred thousand patients may need exposure — so rare effects usually surface only in Phase IV, which has **no fixed duration**.",
+      "src": "p. 18",
+      "tb": true
+     },
+     {
+      "text": "Marketing requires a **New Drug Application (NDA)** after Phase III; human testing starts only after an **IND** (Investigational New Drug) application.",
+      "src": "p. 12; p. 17",
+      "tb": true
      }
     ],
     "clinical": [
@@ -478,6 +518,21 @@
      {
       "text": "Ask \"compared to what?\" rather than judging the number in isolation.",
       "src": "S15 (notes)"
+     },
+     {
+      "text": "A patent lasts 20 years; after it expires, generics are approved through an **abbreviated new drug application (ANDA)** that requires bioequivalence data.",
+      "src": "p. 16; p. 18",
+      "tb": true
+     },
+     {
+      "text": "Placebo responses can occur in as many as 30–40% of subjects — the reason controlled, blinded trials are needed.",
+      "src": "p. 14",
+      "tb": true
+     },
+     {
+      "text": "Adverse events that are both **serious and unexpected** must be reported to the FDA within 15 days; clinicians can report through MedWatch.",
+      "src": "p. 18; p. 19",
+      "tb": true
      }
     ],
     "examples": [
@@ -488,6 +543,16 @@
      {
       "text": "Biologic DMARDs (MSK unit, later) are a direct example of the \"biotechnology\" drug source.",
       "src": "S11 (notes)"
+     },
+     {
+      "text": "**Thalidomide** (sold in Europe as a \"nontoxic\" hypnotic) caused about 10,000 birth defects and led to the **Kefauver-Harris Amendments (1962)**, which required proof of efficacy as well as safety.",
+      "src": "p. 16",
+      "tb": true
+     },
+     {
+      "text": "The **Orphan Drug Amendment (1983)** gives incentives for drugs treating diseases with fewer than 200,000 US patients.",
+      "src": "p. 16",
+      "tb": true
      }
     ],
     "traps": [
@@ -680,6 +745,32 @@
       }
      ],
      "src": "S12 (notes); S13; S14"
+    },
+    {
+     "kind": "mechanism",
+     "stem": "According to the textbook, which clinical trial phase has the highest rate of drug failures?",
+     "correct": "Phase II",
+     "why_correct": "Phase II has the highest failure rate; only about 25% of drugs move on to Phase III (p. 17).",
+     "distractors": [
+      {
+       "text": "Phase I",
+       "why": "Phase I sets the safe dose range in 20–100 subjects; it is not the main failure point (p. 17)."
+      },
+      {
+       "text": "Phase III",
+       "why": "Phase III confirms efficacy in thousands, after most failures have occurred (p. 17)."
+      },
+      {
+       "text": "Phase IV",
+       "why": "Phase IV is postmarketing surveillance after approval (p. 17)."
+      },
+      {
+       "text": "FDA review",
+       "why": "FDA review is the approval step after Phase III, not a trial phase (p. 17)."
+      }
+     ],
+     "src": "p. 17",
+     "tb": true
     }
    ],
    "flows": [
@@ -694,6 +785,30 @@
       "Postmarket surveillance (Phase IV)"
      ],
      "src": "S12; S13"
+    }
+   ],
+   "conflicts": [
+    {
+     "topic": "Phase I population",
+     "slides": {
+      "text": "Phase I: a small group of healthy volunteers.",
+      "src": "S13"
+     },
+     "textbook": {
+      "text": "Phase I: 20–100 healthy volunteers — but if significant toxicity is expected (cancer, AIDS therapy), volunteer **patients with the disease** are used instead.",
+      "src": "p. 17"
+     }
+    },
+    {
+     "topic": "Phase II size",
+     "slides": {
+      "text": "Phase II: a few hundred patients with the target condition.",
+      "src": "S13"
+     },
+     "textbook": {
+      "text": "Phase II: a modest number of patients (100–200) with the target disease.",
+      "src": "p. 17"
+     }
     }
    ]
   },
@@ -787,6 +902,31 @@
      {
       "text": "An inverse agonist actively reduces constitutive (baseline) receptor activity below normal; a true antagonist merely blocks the agonist without lowering baseline activity itself.",
       "src": "S28"
+     },
+     {
+      "text": "**Spare receptors:** a maximal response can occur without occupying every receptor (e.g., about 90% of cardiac β receptors can be blocked and maximal inotropic response still preserved).",
+      "src": "p. 23",
+      "tb": true
+     },
+     {
+      "text": "**Irreversible antagonist** effects last until new receptors are made — duration depends on receptor turnover, not drug elimination (phenoxybenzamine for pheochromocytoma).",
+      "src": "p. 25",
+      "tb": true
+     },
+     {
+      "text": "A partial agonist's lower maximal effect is **not** due to lower affinity — it can occupy all receptors and still produce less response.",
+      "src": "p. 26",
+      "tb": true
+     },
+     {
+      "text": "**Allosteric modulators** bind a different site from the agonist (e.g., benzodiazepines enhance GABA's effect).",
+      "src": "p. 25",
+      "tb": true
+     },
+     {
+      "text": "Agonist-induced **desensitization** (tachyphylaxis) and downregulation reduce response with continued exposure.",
+      "src": "p. 39",
+      "tb": true
      }
     ],
     "clinical": [
@@ -809,12 +949,32 @@
      {
       "text": "Albuterol bridges introductory pharmacodynamics into the pulmonary pharmacology seen later in the curriculum.",
       "src": "S26 (notes)"
+     },
+     {
+      "text": "Competitive antagonism is surmountable in real life: exercise or stress raises catecholamines enough to overcome a fixed propranolol dose.",
+      "src": "p. 25",
+      "tb": true
+     },
+     {
+      "text": "Propranolol markedly slows the heart rate in pheochromocytoma (high catecholamines) but not the resting rate of a trained marathon runner.",
+      "src": "p. 39",
+      "tb": true
      }
     ],
     "examples": [
      {
       "text": "Albuterol — selective β2-adrenergic agonist (example of agonism).",
       "src": "S26"
+     },
+     {
+      "text": "**Chemical antagonism** needs no receptor: positively charged protamine binds and neutralizes negatively charged heparin.",
+      "src": "p. 26",
+      "tb": true
+     },
+     {
+      "text": "**Physiologic antagonism:** two drugs act on different receptors with opposing effects (e.g., insulin opposes glucocorticoid-induced hyperglycemia).",
+      "src": "p. 27",
+      "tb": true
      }
     ],
     "traps": [
@@ -1072,6 +1232,32 @@
       }
      ],
      "src": "S22; S22 (notes)"
+    },
+    {
+     "kind": "vignette",
+     "stem": "A 54-year-old is given phenoxybenzamine before surgery for pheochromocytoma. Blood pressure stays controlled even when the tumor releases large catecholamine surges. What best explains why the blockade persists?",
+     "correct": "It binds receptors irreversibly; effect lasts until new receptors are made",
+     "why_correct": "An irreversible antagonist's duration depends on receptor turnover, and high agonist levels cannot overcome it (p. 25).",
+     "distractors": [
+      {
+       "text": "It competes reversibly, so high catecholamine levels easily displace it",
+       "why": "That describes competitive antagonism, which surges CAN overcome (p. 25)."
+      },
+      {
+       "text": "It neutralizes catecholamines chemically in plasma before they reach receptors",
+       "why": "That is chemical antagonism, like protamine–heparin (p. 26)."
+      },
+      {
+       "text": "It activates opposing receptors, producing a physiologic counter-effect instead",
+       "why": "That is physiologic antagonism, like insulin vs glucocorticoids (p. 27)."
+      },
+      {
+       "text": "It is a partial agonist that caps the maximal catecholamine response",
+       "why": "Partial agonists produce a submaximal response; phenoxybenzamine is an irreversible antagonist (p. 25; p. 26)."
+      }
+     ],
+     "src": "p. 25-27",
+     "tb": true
     }
    ],
    "flows": [
@@ -1132,6 +1318,16 @@
      {
       "text": "**Therapeutic Index (TI) = TD₅₀ ÷ ED₅₀ (toxic dose in 50% ÷ effective dose in 50%).**",
       "src": "S38; SG U1-R7"
+     },
+     {
+      "text": "**Quantal dose-response:** ED₅₀ (effective in 50%), TD₅₀ (toxic in 50%), LD₅₀ (lethal in 50% of animals).",
+      "src": "p. 38",
+      "tb": true
+     },
+     {
+      "text": "**Therapeutic window:** the range between the minimum therapeutic dose and the minimum toxic dose — more practical than TI for dosing a patient.",
+      "src": "p. 38",
+      "tb": true
      }
     ],
     "how": [
@@ -1188,6 +1384,16 @@
      {
       "text": "Students should be able to name all four narrow-TI drugs without hesitation and know that each requires therapeutic drug monitoring.",
       "src": "S38 (notes)"
+     },
+     {
+      "text": "No drug causes only a single specific effect — drugs are **selective**, not specific.",
+      "src": "p. 40",
+      "tb": true
+     },
+     {
+      "text": "Asthma + hypertension on propranolol: nonselective β blockade can cause bronchoconstriction; a β₁-selective blocker (metoprolol) is an alternative.",
+      "src": "p. 41",
+      "tb": true
      }
     ],
     "examples": [
@@ -1589,6 +1795,16 @@
      {
       "text": "Efflux transporters (like P-glycoprotein) can actively pump some drugs back out of the CNS.",
       "src": "S53"
+     },
+     {
+      "text": "**P-glycoprotein (MDR1)** pumps drugs out of cells in brain, testes, and gut; inhibiting it raises digoxin blood levels.",
+      "src": "p. 9",
+      "tb": true
+     },
+     {
+      "text": "Ion trapping: weak acids are excreted faster in **alkaline** urine; weak bases faster in **acidic** urine.",
+      "src": "p. 10; p. 11",
+      "tb": true
      }
     ],
     "clinical": [
@@ -1607,6 +1823,11 @@
      {
       "text": "A highly polar antibiotic would generally not cross the BBB well — unless the meninges are inflamed, as in meningitis.",
       "src": "S53 (notes)"
+     },
+     {
+      "text": "Aspirin overdose: sodium bicarbonate alkalinizes blood and urine, reducing aspirin entry into tissues and speeding its renal excretion.",
+      "src": "p. 20",
+      "tb": true
      }
     ],
     "examples": [
@@ -2245,8 +2466,65 @@
     "prompt": "Polar antibiotic + meningitis",
     "answer": "Usually poor BBB entry — better when meninges are inflamed",
     "src": "S53 (notes)"
+   },
+   {
+    "prompt": "Phase I size (textbook)",
+    "answer": "20–100 healthy volunteers; patients if drug is very toxic (cancer, AIDS)",
+    "src": "p. 17",
+    "tb": true
+   },
+   {
+    "prompt": "Phase with highest failure",
+    "answer": "Phase II — only ~25% move to Phase III",
+    "src": "p. 17",
+    "tb": true
+   },
+   {
+    "prompt": "Kefauver-Harris (1962)",
+    "answer": "Required proof of **efficacy** (thalidomide)",
+    "src": "p. 16",
+    "tb": true
+   },
+   {
+    "prompt": "Generic approval",
+    "answer": "ANDA with bioequivalence data; patent life 20 years",
+    "src": "p. 16; p. 18",
+    "tb": true
+   },
+   {
+    "prompt": "Spare receptors",
+    "answer": "Max response without full occupancy (~90% cardiac β can be blocked)",
+    "src": "p. 23",
+    "tb": true
+   },
+   {
+    "prompt": "Chemical antagonist",
+    "answer": "Protamine neutralizes heparin — no receptor",
+    "src": "p. 26",
+    "tb": true
+   },
+   {
+    "prompt": "Therapeutic window",
+    "answer": "Min therapeutic → min toxic dose; more practical than TI",
+    "src": "p. 38",
+    "tb": true
+   },
+   {
+    "prompt": "Aspirin overdose",
+    "answer": "Sodium bicarbonate → alkaline urine → faster excretion",
+    "src": "p. 20",
+    "tb": true
    }
   ],
-  "discrepancies": []
+  "discrepancies": [
+   {
+    "text": "**Phase I population:** slides say healthy volunteers; the textbook adds that patients with the disease are used when significant toxicity is expected (cancer, AIDS).",
+    "src": "S13; p. 17"
+   },
+   {
+    "text": "**Phase II size:** slides say a few hundred patients; the textbook says 100–200. Exams may use either — know both.",
+    "src": "S13; p. 17"
+   }
+  ]
  }
 }

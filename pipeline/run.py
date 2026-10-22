@@ -45,8 +45,12 @@ def slides_file(lid):
 
 
 def textbook_pdf():
-    pdfs = sorted((ROOT / "inputs" / "textbook").glob("*.pdf"))
-    return pdfs[0] if pdfs else None
+    """The textbook lives outside this public repo (config textbook_dir, a private repo); inputs/textbook is a fallback."""
+    for d in [ROOT / CFG.get("textbook_dir", ""), ROOT / "inputs" / "textbook"]:
+        pdfs = sorted(d.resolve().glob("*.pdf")) if CFG.get("textbook_dir") or d.name == "textbook" else []
+        if pdfs:
+            return pdfs[0]
+    return None
 
 
 def slug(text):
