@@ -1,13 +1,14 @@
 # Coverage audit — L01: Introduction to Pharmacology — Session 1
 
-**Result: PASS ✅ nothing missing**
+**Result: NEEDS FIXES ❌**
 
 Checked 1875 source lines (57 slides; 10 study-guide items; 56 textbook pages read; 14 textbook sentences used, the rest left out as not needed for this lecture (info only).)
 
 ## Missing from the study materials
-- None ✅
+- S1 (slide): Diane S. Allen-Gipson, Ph.D., M.S., Course Director
 
 ## Covered but cited to a different slide/page (check citation)
+- S1: PA PHARMACOLOGY COURSE · LECTURE 1 · SESSION 1 OF 2
 - SG:U1-R2: Generic names are unambiguous and international, preventing confusion when the same ingredient hides under multiple brand names (e.g., acetaminophen/Tylenol), w
 
 ## Left out on purpose (no study content)

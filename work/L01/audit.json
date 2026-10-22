@@ -1,9 +1,21 @@
 {
  "lecture": "L01",
- "passed": true,
+ "passed": false,
  "units_checked": 1875,
- "missing": [],
+ "missing": [
+  {
+   "ref": "S1",
+   "text": "Diane S. Allen-Gipson, Ph.D., M.S., Course Director",
+   "kind": "slide",
+   "score": 0.0
+  }
+ ],
  "uncited": [
+  {
+   "ref": "S1",
+   "text": "PA PHARMACOLOGY COURSE · LECTURE 1 · SESSION 1 OF 2",
+   "kind": "slide"
+  },
   {
    "ref": "SG:U1-R2",
    "text": "Generic names are unambiguous and international, preventing confusion when the same ingredient hides under multiple brand names (e.g., acetaminophen/Tylenol), which can cause unintentional double-dosing.",

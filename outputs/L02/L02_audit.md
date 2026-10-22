@@ -1,11 +1,11 @@
 # Coverage audit — L02: Introduction to Pharmacology — Session 2
 
-**Result: PASS ✅ nothing missing**
+**Result: NEEDS FIXES ❌**
 
 Checked 1508 source lines (49 slides; 4 study-guide items; 51 textbook pages read; 7 textbook sentences used, the rest left out as not needed for this lecture (info only).)
 
 ## Missing from the study materials
-- None ✅
+- S1 (slide): Diane S. Allen-Gipson, Ph.D., M.S., Course Director
 
 ## Covered but cited to a different slide/page (check citation)
 - S1: PA PHARMACOLOGY COURSE · LECTURE 1 · SESSION 2 OF 2

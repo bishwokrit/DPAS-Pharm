@@ -1,8 +1,15 @@
 {
  "lecture": "L02",
- "passed": true,
+ "passed": false,
  "units_checked": 1508,
- "missing": [],
+ "missing": [
+  {
+   "ref": "S1",
+   "text": "Diane S. Allen-Gipson, Ph.D., M.S., Course Director",
+   "kind": "slide",
+   "score": 0.0
+  }
+ ],
  "uncited": [
   {
    "ref": "S1",

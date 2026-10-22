@@ -572,7 +572,7 @@ def syllabus_page(syl, sched, built):
     facts = [("3", "credit hours"), ("2×", "a week · 2.5 h"), ("1,000", "points"), ("6 + 1", "unit exams + final"), ("75%", "to pass")]
     body = f"""<header class="hero wrap syl-hero"><p class="eyebrow appear">Syllabus · v5 · October 9, 2026</p>
 <h1 class="appear" style="--d:.05s">Clinical<br><span class="accent-text">Pharmacology I</span></h1>
-<p class="lede appear" style="--d:.12s">Fall 2026 · Course Director Diane S. Allen-Gipson, Ph.D., M.S. · office hours by Webex appointment.</p>
+<p class="lede appear" style="--d:.12s">Fall 2026 · schedule, grading, and a calculator in one place.</p>
 <div class="fact-pills appear" style="--d:.2s">{"".join(f'<div><strong>{a}</strong><span>{b}</span></div>' for a, b in facts)}</div>
 <div class="btns noprint appear" style="--d:.28s"><a class="btn" href="#calc">Grade calculator</a><a class="btn ghost" href="#schedule">Schedule</a><a class="btn ghost" href="Syllabus_DPAS625_v5.pdf">Original PDF</a></div></header>
 <section class="section" id="next"><div class="wrap"><p class="kicker">Coming up</p><h2>What's due next</h2><div class="upnext" id="upnext"></div></div></section>
@@ -584,9 +584,11 @@ def syllabus_page(syl, sched, built):
 <div class="grid two grade-cards" style="margin-top:26px"><div class="card"><h3>Grading scale</h3><div class="scale">{scale}</div><p class="small muted scale-note">Out of 1,000 points. Grades are not rounded — 749.9 is an F.</p></div>
 <div class="card"><h3>Rules that matter</h3><ul>{"".join(f"<li>{html.escape(r)}</li>" for r in g["rules"])}<li><strong>Bonus:</strong> {html.escape(g["bonus"]["rule"])}</li></ul></div></div></div></section>
 <section class="section" id="calc"><div class="wrap"><p class="kicker">Grade calculator</p><h2>Where your grade stands</h2>
-<p class="muted">Tap a bar and type your score. Saved only in this browser.</p>
-<div class="calc" id="calcapp"></div>
+<p class="muted">Tap a circle, type your score. Saved only in this browser.</p>
+<div id="calcapp"></div>
 <script type="application/json" id="grade-data">{data}</script></div></section>
+<section class="section" id="final"><div class="wrap"><p class="kicker">The final</p><h2>What you need on the final</h2>
+<div id="finalapp"></div></div></section>
 <section class="section" id="schedule"><div class="wrap"><p class="kicker">Schedule</p><h2>Week by week</h2><p class="muted">From the course syllabus; subject to revision. Any material covered in lecture or assigned as reading is testable.</p>
 <div class="sch-chips noprint">{chips}</div><details class="sch-past noprint" id="sch-past" hidden><summary>Show past weeks</summary><div id="sch-past-list"></div></details>
 <div class="sch-list" id="sch-list">{"".join(wk_html)}</div>

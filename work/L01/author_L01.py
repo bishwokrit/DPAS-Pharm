@@ -39,7 +39,7 @@ objectives = [
 ]
 
 about = [
-    F("Session 1 of 2 on Introduction to Pharmacology (Thursday, October 15): language, drug development, pharmacodynamics, dose-response, and ADME through distribution. Lecturer: Diane S. Allen-Gipson, Ph.D., M.S., Course Director.", "S1; S2 (notes)"),
+    F("Session 1 of 2 on Introduction to Pharmacology (Thursday, October 15): language, drug development, pharmacodynamics, dose-response, and ADME through distribution.", "S1; S2 (notes)"),
     F("Session 2 (Thursday, October 22) continues with metabolism, excretion, PK calculations (half-life, steady state, clearance), pharmacogenomics, and the integrated clinical decision-making framework.", "S2; S56"),
     F("ADME is only half-finished after Session 1 — the lecture stopped after Distribution; Metabolism and Excretion pick up first in Session 2.", "S56 (notes)"),
     F("Required text: Katzung's Basic and Clinical Pharmacology, 16th Edition (Todd W. Vanderah · 2025 · McGraw-Hill Education · ISBN 1260463303 eBook) — Unit 1 reading: Chapters 1, 2, 3, 4, and 5. AccessMedicine: accessmedicine.mhmedical.com/book.aspx?bookid=3382", "S3"),

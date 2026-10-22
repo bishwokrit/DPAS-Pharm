@@ -41,30 +41,35 @@
     }
   }
 
-  // ---------------------------------------------------------------- calculator: a grade ruler, score bars you type into, a what-if slider for the final
-  const root = document.getElementById("calcapp");
+  // ---------------------------------------------------------------- calculator: a progress donut (same language as the weights donut),
+  // category cards with tap-to-type score circles, and a separate "what you need on the final" section
+  const root = document.getElementById("calcapp"), froot = document.getElementById("finalapp");
   if (root) {
-    const ticks = D.scale.filter(([, min]) => min > 0), LO = 50;  // ruler shows 50–100%
-    const at = (pct) => `${Math.max(0, Math.min(100, ((pct - LO) / (100 - LO)) * 100))}%`;
-    const bands = D.scale.map(([L, min], i) => { const hi = i ? D.scale[i - 1][1] / 10 : 100, lo = Math.max(LO, min / 10); return `<span class="gr-band" style="left:${at(lo)};width:calc(${at(hi)} - ${at(lo)})"><b>${L}</b></span>`; }).join("");
-    const final = D.items.find((i) => i.key === "final");
-    root.innerHTML = `<div class="gr-head"><span class="gr-letter" id="proj-letter">—</span><span class="gr-pct" id="proj-num">—</span></div>
-      <div class="gr"><div class="gr-track">${bands}</div><i class="gr-mark" id="mk-proj"></i><i class="gr-ghost" id="mk-cur" title="Graded so far"></i></div>
-      <div class="gr-scale"><span>50%</span><span>100%</span></div>
-      <div class="gr-key"><span><i class="gk-p"></i>Projected</span><span><i class="gk-c"></i>Graded so far <b id="cur-num"></b></span></div>
-      <div class="sb">${D.items.filter((it) => it.key !== "final").map((it) => `
-        <div class="sb-row"><div class="sb-name">${it.label}<span>${it.weight}%</span></div>
-          <div class="sb-cells">${Array.from({ length: it.count }, (_, i) => `<label class="sb-cell" title="${NAMES[it.key](i)}"><input type="number" inputmode="decimal" min="0" max="100" step="0.1" aria-label="${NAMES[it.key](i)} percent" data-k="${it.key}" data-i="${i}"></label>`).join("")}</div></div>`).join("")}
-        <div class="sb-row"><div class="sb-name">Bonus<span>+${D.bonus.max} max</span></div>
-          <div class="sb-cells sb-cp">${Array.from({ length: D.bonus.count }, (_, i) => `<label title="Checkpoint ${i + 1}: ≥90%"><input type="checkbox" data-cp="${i}"><i></i></label>`).join("")}</div></div></div>
-      <label class="sb-assume"><span>Assume <b id="as-v">85%</b> on work not yet graded</span><input type="range" min="50" max="100" step="1" data-assume></label>
-      <div class="fx"><div class="fx-h"><h3>The final</h3><span class="muted small" id="fx-sub">${final.weight}% of your grade · 75% required to pass</span></div>
-        <div class="fx-bar"><div class="fx-pins" id="fx-pins"></div><input type="range" min="0" max="100" step="1" id="fx-try" aria-label="Try a final exam score"><div class="fx-min" style="left:75%"></div></div>
-        <div class="fx-scale"><span>0%</span><span style="left:75%">75%</span><span>100%</span></div>
-        <div class="fx-foot"><div class="fx-out" id="fx-out"></div><label class="fx-real-l">Took it? <span class="sb-cell fx-real"><input type="number" inputmode="decimal" min="0" max="100" step="0.1" aria-label="Final exam percent" data-k="final" data-i="0"></span></label></div></div>
-      <button class="btn ghost small gc-clear" data-clear>Clear all</button>`;
+    const ticks = D.scale.filter(([, min]) => min > 0), final = D.items.find((i) => i.key === "final");
+    const R = 78, C = 2 * Math.PI * R, ASSUME = [70, 75, 80, 85, 90, 95, 100];
+    let off = 0;
+    const arcs = D.items.map((it) => { const len = (it.weight / 100) * C, o = off; off += len;
+      return `<circle cx="100" cy="100" r="${R}" class="pd-bg" style="--c:var(--c-${it.key});stroke-dasharray:${len - 2.5} ${C};stroke-dashoffset:${-o}"/>
+        <circle cx="100" cy="100" r="${R}" class="pd-proj" data-key="${it.key}" style="--c:var(--c-${it.key});stroke-dashoffset:${-o}"/>
+        <circle cx="100" cy="100" r="${R}" class="pd-seg" data-key="${it.key}" style="--c:var(--c-${it.key});stroke-dashoffset:${-o}"/>`; }).join("");
+    root.innerHTML = `<div class="grade-split pd-split"><div class="donut-wrap"><svg class="donut pd" viewBox="0 0 200 200" id="pd">${arcs}</svg>
+        <div class="donut-center"><strong id="pd-big">—</strong><span id="pd-sub">projected</span></div></div>
+      <div class="pc-list">${D.items.filter((it) => it.key !== "final").map((it) => `<div class="pc" data-key="${it.key}" style="--c:var(--c-${it.key})">
+          <div class="pc-top"><span class="lg-dot"></span><span class="pc-name">${it.label}</span><span class="pc-avg" data-avg="${it.key}">—</span></div>
+          <div class="pc-dots">${Array.from({ length: it.count }, (_, i) => `<label class="pc-dot" title="${NAMES[it.key](i)}"><input type="number" inputmode="decimal" min="0" max="100" step="0.1" placeholder="${it.count > 1 ? i + 1 : "—"}" aria-label="${NAMES[it.key](i)} percent" data-k="${it.key}" data-i="${i}"></label>`).join("")}</div></div>`).join("")}
+        <div class="pc" data-key="bonus" style="--c:var(--c-bonus)"><div class="pc-top"><span class="lg-dot"></span><span class="pc-name">Bonus checkpoints</span><span class="pc-avg" id="bonus-pts">—</span></div>
+          <div class="pc-dots">${Array.from({ length: D.bonus.count }, (_, i) => `<label class="pc-cp" title="Checkpoint ${i + 1} (≥90%)"><input type="checkbox" data-cp="${i}"><i>${i + 1}</i></label>`).join("")}</div></div>
+      </div></div>
+      <div class="pc-assume"><span>Not graded yet? Assume</span><div class="seg" id="assume">${ASSUME.map((v) => `<button data-v="${v}">${v}</button>`).join("")}</div>
+        <button class="pc-clear" data-clear>Clear</button></div>`;
+    if (froot) froot.innerHTML = `<div class="fn-cards" id="fn-cards"></div>
+      <div class="fn-try"><div class="fn-res"><span class="fn-score" id="fn-score">—</span><span class="fn-arrow">→</span><span class="fn-letter" id="fn-letter">—</span></div>
+        <div class="fn-range"><div class="fn-fill" id="fn-fill"></div><div class="fn-min" title="75% minimum to pass"></div><input type="range" min="0" max="100" step="1" id="fn-in" aria-label="Try a final exam score"></div>
+        <div class="fn-scale"><span>0</span><span style="left:75%">75 min</span><span>100</span></div>
+        <label class="fn-real">Already took it?<input type="number" inputmode="decimal" min="0" max="100" step="0.1" placeholder="Score" aria-label="Final exam percent" data-k="final" data-i="0"></label></div>`;
 
-    root.querySelectorAll("input[data-k]").forEach((inp) => {
+    const all = document.querySelectorAll("#calcapp input[data-k], #finalapp input[data-k]");
+    all.forEach((inp) => {
       const v = S[inp.dataset.k]?.[inp.dataset.i];
       if (v !== undefined && v !== null && v !== "") inp.value = v;
       inp.addEventListener("input", () => {
@@ -76,48 +81,71 @@
       cb.checked = !!S.cp?.[cb.dataset.cp];
       cb.addEventListener("change", () => { (S.cp ||= [])[cb.dataset.cp] = cb.checked; saveAll(S); calc(); });
     });
-    const slider = root.querySelector("[data-assume]"), fx = root.querySelector("#fx-try");
-    slider.value = S.assume ?? 85; fx.value = S.fxTry ?? 85;
-    slider.addEventListener("input", () => { S.assume = +slider.value; saveAll(S); calc(); });
-    fx.addEventListener("input", () => { S.fxTry = +fx.value; saveAll(S); calc(); });
+    root.querySelectorAll("#assume button").forEach((b) => b.addEventListener("click", () => { S.assume = +b.dataset.v; saveAll(S); calc(); }));
+    const fin = froot?.querySelector("#fn-in");
+    if (fin) { fin.value = S.fxTry ?? 85; fin.addEventListener("input", () => { S.fxTry = +fin.value; saveAll(S); calc(); }); }
     root.querySelector("[data-clear]").addEventListener("click", () => {
       if (!confirm("Clear all scores?")) return;
-      S = { assume: S.assume }; saveAll(S);
-      root.querySelectorAll("input[data-k]").forEach((i) => (i.value = "")); root.querySelectorAll("input[data-cp]").forEach((c) => (c.checked = false));
+      S = { assume: S.assume, fxTry: S.fxTry }; saveAll(S);
+      all.forEach((i) => (i.value = "")); root.querySelectorAll("input[data-cp]").forEach((c) => (c.checked = false));
       calc();
     });
+    // hover a category: the donut focuses on it, the center shows its average
+    const pd = root.querySelector("#pd");
+    let focusKey = null;
+    const focus = (k) => { focusKey = k; pd.classList.toggle("focus", !!k);
+      pd.querySelectorAll("[data-key]").forEach((s) => s.classList.toggle("on", s.dataset.key === k));
+      root.querySelectorAll(".pc").forEach((c) => c.classList.toggle("on", c.dataset.key === k)); calc(); };
+    root.querySelectorAll(".pc").forEach((c) => { c.addEventListener("mouseenter", () => focus(c.dataset.key)); c.addEventListener("mouseleave", () => focus(null)); c.addEventListener("focusin", () => focus(c.dataset.key)); });
+    pd.querySelectorAll(".pd-seg, .pd-proj").forEach((s) => { s.addEventListener("mouseenter", () => focus(s.dataset.key)); s.addEventListener("mouseleave", () => focus(null)); });
 
+    const LC = { A: "var(--good)", B: "var(--accent)", C: "var(--warn)", F: "var(--bad)" };
     function calc() {
       const assume = S.assume ?? 85, finalScore = S.final?.[0], hasFinal = finalScore != null && finalScore !== "";
-      const tryF = hasFinal ? finalScore : +fx.value;
-      root.querySelector("#as-v").textContent = assume + "%";
+      root.querySelectorAll("#assume button").forEach((b) => b.classList.toggle("on", +b.dataset.v === assume));
       let earned = 0, possible = 0, projNoFinal = 0;
-      for (const it of D.items) for (let i = 0; i < it.count; i++) {
-        const v = S[it.key]?.[i], has = v !== null && v !== undefined && v !== "";
-        if (has) { earned += (v / 100) * it.points_each; possible += it.points_each; }
-        if (it.key !== "final") projNoFinal += ((has ? v : assume) / 100) * it.points_each;
+      const avg = {};
+      for (const it of D.items) {
+        let n = 0, sum = 0, e = 0, p = 0;
+        for (let i = 0; i < it.count; i++) {
+          const v = S[it.key]?.[i], has = v !== null && v !== undefined && v !== "";
+          if (has) { n++; sum += v; e += (v / 100) * it.points_each; earned += (v / 100) * it.points_each; possible += it.points_each; }
+          p += ((has ? v : assume) / 100) * it.points_each;
+          if (it.key !== "final") projNoFinal += ((has ? v : assume) / 100) * it.points_each;
+        }
+        avg[it.key] = n ? sum / n : null;
+        const el = root.querySelector(`[data-avg="${it.key}"]`); if (el) el.textContent = n ? `${trunc1(sum / n)}%` : "—";
+        // donut: solid = points earned, tint = projected, per category (1,000 points around the ring)
+        pd.querySelector(`.pd-seg[data-key="${it.key}"]`).style.strokeDasharray = `${Math.max(0, (e / 1000) * C - (e ? 2.5 : 0))} ${C}`;
+        pd.querySelector(`.pd-proj[data-key="${it.key}"]`).style.strokeDasharray = `${Math.max(0, (p / 1000) * C - 2.5)} ${C}`;
       }
-      // each score cell fills to its score
-      root.querySelectorAll(".sb-cells .sb-cell").forEach((c) => { const inp = c.querySelector("input"), has = inp.value !== "";
-        c.classList.toggle("has", has); c.style.setProperty("--v", has ? Math.max(0, Math.min(100, +inp.value)) : 0); });
+      root.querySelectorAll(".pc-dot").forEach((d) => { const inp = d.querySelector("input"), has = inp.value !== ""; d.classList.toggle("has", has); d.style.setProperty("--v", has ? Math.max(0, Math.min(100, +inp.value)) : 0); });
       const bonus = Math.min(D.bonus.max, (S.cp || []).filter(Boolean).length * D.bonus.points_each);
+      root.querySelector("#bonus-pts").textContent = bonus ? `+${+bonus.toFixed(2)}` : "—";
+      const tryF = hasFinal ? finalScore : fin ? +fin.value : assume;
       const total = (f) => Math.min(1000, projNoFinal + (f / 100) * final.points_each + bonus);
-      const projTotal = total(tryF), [pl] = letterOf(projTotal), cur = possible ? (100 * earned) / possible : null;
-      root.querySelector("#proj-num").textContent = `${trunc1(projTotal / 10)}%`;
-      const le = root.querySelector("#proj-letter"); le.textContent = pl; le.dataset.l = pl;
-      root.querySelector("#mk-proj").style.left = at(projTotal / 10);
-      const mc = root.querySelector("#mk-cur"); mc.hidden = cur === null; if (cur !== null) mc.style.left = at(cur);
-      root.querySelector("#cur-num").textContent = cur === null ? "" : `${trunc1(cur)}%`;
+      const projTotal = total(hasFinal ? finalScore : assume), [pl] = letterOf(projTotal), cur = possible ? (100 * earned) / possible : null;
+      const big = root.querySelector("#pd-big"), sub = root.querySelector("#pd-sub");
+      const fit = focusKey && D.items.find((i) => i.key === focusKey);
+      if (fit) { big.textContent = avg[fit.key] == null ? "—" : `${trunc1(avg[fit.key])}%`; big.style.color = `var(--c-${fit.key})`; sub.textContent = `${fit.label} average`; }
+      else if (focusKey === "bonus") { big.textContent = `+${+bonus.toFixed(2)}`; big.style.color = "var(--c-bonus)"; sub.textContent = "bonus points"; }
+      else { big.innerHTML = `${pl}<small>${trunc1(projTotal / 10)}%</small>`; big.style.color = LC[pl]; sub.textContent = cur === null ? "projected" : `projected · ${trunc1(cur)}% so far`; }
 
-      // the final: letter pins sit at the score you'd need; drag the slider to try a score
-      fx.disabled = hasFinal; fx.value = tryF;
-      const pins = {};  // letters needing the same score share one pin (e.g. "B C" at the 75% minimum)
-      ticks.forEach(([L, min]) => { const req = Math.max(75, ((min - projNoFinal - bonus) / final.points_each) * 100), k = req > 100 ? "out" : trunc1(req); (pins[k] ||= []).push(L); });
-      root.querySelector("#fx-pins").innerHTML = Object.entries(pins).map(([k, Ls]) => k === "out"
-        ? `<span class="fx-pin out" style="left:100%" title="Out of reach">${Ls.join(" ")}</span>`
-        : `<span class="fx-pin" style="left:${k}%" title="${Ls.join(", ")}: ${k}% on the final">${Ls.join(" ")}</span>`).join("");
-      const pass = tryF >= 75 && projTotal >= 750;
-      root.querySelector("#fx-out").innerHTML = `${hasFinal ? "Your final" : "If you score"} <b>${trunc1(tryF)}%</b> → <span class="fx-res" data-l="${pass ? pl : "F"}">${pass ? pl : "F"}</span>${tryF < 75 ? '<span class="muted small"> · below the 75% minimum</span>' : ""}`;
+      if (!froot) return;
+      // final: one ring per letter showing the score you'd need; tap a ring to try that score
+      froot.querySelector("#fn-cards").innerHTML = ticks.map(([L, min]) => {
+        const req = Math.max(75, ((min - projNoFinal - bonus) / final.points_each) * 100), out = req > 100, rc = 2 * Math.PI * 40;
+        return `<button class="fn-card${out ? " out" : ""}" style="--lc:${LC[L]}" ${out ? "disabled" : `data-try="${Math.ceil(req)}"`}>
+          <span class="fn-ring"><svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" class="fn-bg"/><circle cx="50" cy="50" r="40" class="fn-arc" style="stroke-dasharray:${out ? 0 : (req / 100) * rc} ${rc}"/></svg>
+          <span class="fn-need">${out ? "—" : Math.ceil(req) + "<small>%</small>"}</span></span><span class="fn-for">${out ? `<b>${L}</b> out of reach` : `for <b>${L}</b>`}</span></button>`;
+      }).join("");
+      froot.querySelectorAll("[data-try]").forEach((b) => b.addEventListener("click", () => { if (hasFinal) return; fin.value = S.fxTry = +b.dataset.try; saveAll(S); calc(); }));
+      const fl = (() => { const t = total(tryF); return tryF < 75 || t < 750 ? "F" : letterOf(t)[0]; })();
+      fin.disabled = hasFinal; fin.value = tryF;
+      froot.querySelector("#fn-score").textContent = `${Math.round(tryF * 10) / 10}%`;
+      const le = froot.querySelector("#fn-letter"); le.textContent = fl; le.style.color = LC[fl];
+      const fill = froot.querySelector("#fn-fill"); fill.style.width = `${tryF}%`; fill.style.background = LC[fl];
+      froot.querySelector(".fn-try").style.setProperty("--lc", LC[fl]);
     }
     calc();
   }
