@@ -878,8 +878,8 @@
     "why": "Highly perfused — they receive drug fastest."
    },
    {
-    "text": "Kidney and brain",
-    "why": "Highly perfused — they receive drug fastest."
+    "text": "Fat and heart",
+    "why": "Fat is slow, but the heart is highly perfused and receives drug fast."
    },
    {
     "text": "Brain and kidney",
@@ -914,8 +914,8 @@
     "correct": true
    },
    "E": {
-    "text": "Kidney and brain",
-    "why": "Highly perfused — they receive drug fastest.",
+    "text": "Fat and heart",
+    "why": "Fat is slow, but the heart is highly perfused and receives drug fast.",
     "correct": false
    }
   },
@@ -3528,7 +3528,7 @@
    }
   ],
   "why_correct": "Phase I = safety, tolerability, dose-finding in a small group of healthy volunteers.",
-  "takeaway": "Phase I is the only phase in healthy volunteers.",
+  "takeaway": "Per the slides, Phase I is the healthy-volunteer phase (textbook: 20–100 people; very toxic drugs, e.g., cancer, are tested in patients instead, p. 17).",
   "discriminator": "Healthy volunteers → Phase I; patients with the condition → Phase II onward.",
   "src": "L01 S13; SG U1-R3",
   "id": "U1-009",
@@ -5518,7 +5518,7 @@
    }
   ],
   "why_correct": "Routes that bypass first-pass: essentially everything except oral — IV, sublingual, inhaled, transdermal, topical, SC, IM.",
-  "takeaway": "Oral is the only route with first-pass metabolism.",
+  "takeaway": "Per the lecture, oral is the route that meets first-pass metabolism (textbook: rectal is partly subject to it too, p. 48–49).",
   "discriminator": "If it isn't swallowed, it skips the portal first pass.",
   "src": "L01 S49 (notes)",
   "id": "U1-040",

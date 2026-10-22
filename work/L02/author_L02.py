@@ -633,6 +633,12 @@ for _q in TBK.QUESTIONS:
     _q = dict(_q)
     _topic = _q.pop("topic")
     _by_name[_topic]["questions"].append({**Q(**_q), "tb": True})
+for _name, _tbls in getattr(TBK, "COMPARISONS", {}).items():
+    _by_name[_name].setdefault("comparisons", []).extend(_tbls)
+for _name, _fl in getattr(TBK, "FLOWS", {}).items():
+    _by_name[_name]["flows"] = _by_name[_name].get("flows", []) + _fl
+for _name, _figs in getattr(TBK, "FIGURES", {}).items():
+    _by_name[_name].setdefault("figures", []).extend(_figs)
 for _name, (_ch, _a, _b, _why) in TBK.DEEPER.items():
     _by_name[_name]["deeper"] = {"chapter": _ch, "first": _a, "last": _b, "why": _why}
 content["guide"]["discrepancies"] = [{"text": t, "src": s} for t, s in TBK.DISCREPANCIES]

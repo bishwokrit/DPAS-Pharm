@@ -60,6 +60,7 @@ def page(title, body, depth=0, nav_links="", sidekick=False):
 <nav class="nav"><div class="nav-in">
   <a class="brand" href="{up}index.html">{SITE_NAME}</a>
   <div class="nav-links">{nav_links}</div>
+  <a class="nav-syl" href="{up}review/index.html">Review</a>
   <a class="nav-syl" href="{up}syllabus/index.html">Syllabus</a>
   <button class="search-btn" aria-label="Search (Ctrl+K)" title="Search everything (⌘K / Ctrl+K)"><svg viewBox="0 0 16 16" width="15" height="15"><circle cx="7" cy="7" r="5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M11 11l3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg><span>Search</span><kbd>⌘K</kbd></button>
   <button class="theme-btn" aria-label="Change theme"></button>
@@ -130,7 +131,8 @@ def flows_html(flows):
     out = []
     for fl in flows:
         steps = '<span class="arrow">→</span>'.join(f'<span class="step">{md(s)}</span>' for s in fl["steps"])
-        out.append(f'<div class="card" style="margin:12px 0"><h3>{md(fl["title"])}{cite(fl.get("src", ""))}</h3><div class="flow">{steps}</div></div>')
+        tag = '<span class="tag tb">TB</span>' if fl.get("tb") else ""
+        out.append(f'<div class="card" style="margin:12px 0"><h3>{tag}{md(fl["title"])}{cite(fl.get("src", ""))}</h3><div class="flow">{steps}</div></div>')
     return "".join(out)
 
 
@@ -176,7 +178,7 @@ def part_html(c, cl, n, lec_dir, pending):
         shutil.copy(ROOT / "work" / c["lecture"]["id"] / "figures" / fig["image"], lec_dir / fig["image"])
         w, h = Image.open(lec_dir / fig["image"]).size  # fixed size so lazy images don't shift links mid-scroll
         out.append(f'<figure><img src="{fig["image"]}" width="{w}" height="{h}" style="height:auto" alt="{html.escape(fig.get("title", ""))}" loading="lazy">'
-                   f'<figcaption><strong>{md(fig.get("title", ""))}.</strong> {md(fig["caption"])}{cite(fig.get("src", ""))}</figcaption></figure>')
+                   f'<figcaption>{"<span class=\"tag tb\">TB</span>" if fig.get("tb") else ""}<strong>{md(fig.get("title", ""))}.</strong> {md(fig["caption"])}{cite(fig.get("src", ""))}</figcaption></figure>')
     for i, t in enumerate(cl.get("comparisons", [])):
         out.append(table_html(t, i))
     for cf in cl.get("conflicts", []):
@@ -340,6 +342,8 @@ def home_page(syl, built, exams_built):
         cards.append(f'<a class="card lec" data-progress="exam" data-slug="{ex["id"]}" data-total="{ex["count"]}" href="exams/{ex["id"]}/index.html" style="color:inherit"><div class="small muted">Practice exam</div>'
                      f'<h3 style="margin:2px 0">{html.escape(ex["title"])}</h3><div class="meta">{ex["count"]} questions · study or timed mode · debrief · tracks what you miss</div><div class="progress"></div>'
                      f'<div class="links"><span style="color:var(--accent)">Start →</span></div></a>')
+    cards.insert(0, '<a class="card lec" href="review/index.html" style="color:inherit"><div class="small muted">Exam week</div><h3 style="margin:2px 0">Review dashboard</h3>'
+                 '<div class="meta">Daily 10 · every miss and flag in one place · weak topics · weak flashcards · mixed timed exam</div><div class="links"><span style="color:var(--accent)">Open →</span></div></a>')
     cards.append('<a class="card lec" href="syllabus/index.html" style="color:inherit"><div class="small muted">Course</div><h3 style="margin:2px 0">Syllabus &amp; grade calculator</h3>'
                  '<div class="meta">What\'s due next · full schedule · grading rules · "what do I need on the final?"</div><div class="links"><span style="color:var(--accent)">Open →</span></div></a>')
     if cards:
@@ -406,6 +410,9 @@ def knowledge_base(c, slides, n_img=0):
             "deck": next((p.name for p in (ROOT / "outputs" / lid).glob("*_study_deck.pptx")), ""),
             "cards": cards, "quiz": quiz, "tree": tree, "brief": brief,
             "faq": c.get("notebooklm", {}).get("suggested_questions", []),
+            "lectures": [{"id": l["id"], "title": json.loads((ROOT / "work" / l["id"] / "content.resolved.json").read_text())["lecture"]["title"],
+                          "source": f'{l["id"]}_source.md'}
+                         for l in json.loads((ROOT / "work" / "syllabus.json").read_text())["lectures"] if (ROOT / "work" / l["id"] / "content.resolved.json").exists()],
             "source": next((p.name for p in sorted((ROOT / "outputs" / lid / "notebooklm").glob("*_source*.md"))), "")}
 
 
@@ -513,6 +520,31 @@ def search_index(syl, sched, built, exams):
         out.append({"t": r, "g": "Syllabus · rules", "u": "syllabus/index.html#grading"})
     return out
 
+
+# ---------------------------------------------------------------- exam-week review dashboard
+def review_page(syl, built, exams):
+    today = date.today().isoformat()
+    nxt = next((e for e in syl.get("exams", []) if e["date"] >= today), None)
+    when = ""
+    if nxt:
+        days = (date.fromisoformat(nxt["date"]) - date.today()).days
+        when = f'{html.escape(nxt["label"])} {"is today" if days == 0 else f"in {days} day" + ("s" if days != 1 else "")} · {date.fromisoformat(nxt["date"]).strftime("%a, %b %-d")} · {html.escape(nxt["time"])}'
+    cfg = json.dumps({"lectures": [{"id": lid, "title": b["title"]} for lid, b in built.items()],
+                      "exams": [{"id": e["id"], "title": e["title"]} for e in exams]}).replace("</", "<\\/")
+    body = f"""<header class="hero wrap"><p class="eyebrow">Exam week</p><h1>Review</h1>
+<p class="lede">{when or "Everything you've missed, flagged, and saved — in one place."}</p><p class="small muted" id="counts"></p></header>
+<section class="section" style="border-top:0;padding-top:0"><div class="wrap"><div class="acts" id="act"></div></div></section>
+<section class="section" id="weak"><div class="wrap"><h2>Weakest topics</h2><p class="muted">From every question you've answered — self-tests, Sidekick quizzes, and practice exams.</p><div id="topics"></div></div></section>
+<section class="section"><div class="wrap"><div class="grid two">
+<div class="card"><h3>Missed questions</h3><div id="misses"></div></div>
+<div class="card"><h3>Flagged exam questions</h3><div id="flags"></div></div>
+<div class="card"><h3>Weak flashcards</h3><div id="cards"></div></div>
+<div class="card"><h3>My notes</h3><div id="notes"></div></div>
+</div></div></section>
+<script type="application/json" id="review-data">{cfg}</script>
+<script src="../assets/review.js"></script>"""
+    return page("Review · DPAS Pharm", body, depth=1, nav_links='<a href="#weak">Weak topics</a>')
+
 # ---------------------------------------------------------------- main
 def main(pdf=True):
     syl = json.loads((ROOT / "work" / "syllabus.json").read_text())
@@ -557,6 +589,8 @@ def main(pdf=True):
     shutil.copy(next((ROOT / "inputs" / "syllabus").glob("*.pdf")), DOCS / "syllabus" / "Syllabus_DPAS625_v5.pdf")
     (DOCS / "syllabus" / "index.html").write_text(syllabus_page(syl, sched, built))
     (DOCS / "search.json").write_text(json.dumps(search_index(syl, sched, built, exams), ensure_ascii=False))
+    (DOCS / "review").mkdir(exist_ok=True)
+    (DOCS / "review" / "index.html").write_text(review_page(syl, built, exams))
     (DOCS / "index.html").write_text(home_page(syl, built, exams))
     print(f"  site: home page ({len(built)} lectures, {len(exams)} practice exams) -> docs/")
 

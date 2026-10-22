@@ -58,6 +58,7 @@ ADD = {
     },
     "Pharmacokinetics: ADME — Absorption & Distribution": {
         "how": [
+            ("First-pass loss can happen in the **gut wall** (e.g., intestinal CYP3A4) as well as the liver; grapefruit juice inhibits gut-wall metabolism and P-glycoprotein, raising absorption of some drugs.", "p. 48"),
             ("**P-glycoprotein (MDR1)** pumps drugs out of cells in brain, testes, and gut; inhibiting it raises digoxin blood levels.", "p. 9"),
             ("Ion trapping: weak acids are excreted faster in **alkaline** urine; weak bases faster in **acidic** urine.", "p. 10; p. 11"),
         ],
@@ -79,6 +80,8 @@ CONFLICTS = {
 }
 
 DISCREPANCIES = [
+    ("**First-pass effect:** slides describe hepatic first-pass and say essentially every route except oral bypasses it. The textbook adds that drug can also be metabolized in the gut wall, and that the rectal route only partly avoids the liver (about 50%).", "S49 (notes); S51; p. 48; p. 49"),
+    ("**Therapeutic index:** slides define TI = TD₅₀ ÷ ED₅₀. The textbook notes this is measured in animals; for a patient, the therapeutic window (minimum therapeutic to minimum toxic dose) is more useful.", "S38; p. 38"),
     ("**Phase I population:** slides say healthy volunteers; the textbook adds that patients with the disease are used when significant toxicity is expected (cancer, AIDS).", "S13; p. 17"),
     ("**Phase II size:** slides say a few hundred patients; the textbook says 100–200. Exams may use either — know both.", "S13; p. 17"),
 ]
@@ -118,6 +121,45 @@ QUESTIONS = [
      ],
      "src": "p. 17"},
 ]
+
+# Textbook comparison tables, flows, and original diagrams of textbook concepts
+COMPARISONS = {
+    "Dose-Response Relationships": [
+        {"title": "The narrow-TI drugs in numbers (textbook Table 3–1)", "tb": True, "src": "p. 44; p. 45",
+         "columns": ["Drug", "Half-life", "Target level", "Toxic above", "Worth knowing"],
+         "rows": [["Digoxin", "39 h", "1 ng/mL", "2 ng/mL", "Vd ~500 L (sequestered in tissue); 67% excreted in urine"],
+                  ["Lithium", "22 h", "0.7 mEq/L", "2 mEq/L", "95% excreted in urine, 0% protein-bound — renal function rules"],
+                  ["Phenytoin", "Concentration-dependent", "10 mg/L", "20 mg/L", "Saturable (capacity-limited) elimination; 89% protein-bound"],
+                  ["Warfarin", "37 h", "Not in table", "Not in table", "99% protein-bound"]]},
+    ],
+    "Pharmacokinetics: ADME — Absorption & Distribution": [
+        {"title": "Bioavailability by route (textbook Table 3–3)", "tb": True, "src": "p. 48",
+         "columns": ["Route", "Bioavailability (%)", "Note"],
+         "rows": [["Intravenous (IV)", "100", "Most rapid onset"],
+                  ["Intramuscular (IM)", "75 to ≤100", "Large volumes often feasible; may be painful"],
+                  ["Subcutaneous (SC)", "75 to ≤100", "Smaller volumes than IM; may be painful"],
+                  ["Oral (PO)", "5 to <100", "Most convenient; first-pass effect may be important"],
+                  ["Rectal (PR)", "30 to <100", "Less first-pass effect than oral"],
+                  ["Inhalation", "5 to <100", "Often very rapid onset"],
+                  ["Transdermal", "80 to ≤100", "Usually very slow absorption; prolonged duration"]]},
+    ],
+}
+FLOWS = {
+    "Dose-Response Relationships": [
+        {"title": "Asthma + propranolol (textbook case)", "tb": True, "src": "p. 41",
+         "steps": ["Nonselective β blocker (propranolol)", "Blocks β2 in the airways", "Bronchoconstriction / no bronchodilation", "Use a β1-selective blocker (metoprolol) or another antihypertensive"]},
+    ],
+    "Pharmacokinetics: ADME — Absorption & Distribution": [
+        {"title": "Aspirin overdose and urine pH (textbook case)", "tb": True, "src": "p. 20",
+         "steps": ["Aspirin = weak acid", "Acidosis drives it into tissues and back from urine", "Sodium bicarbonate alkalinizes blood and urine", "Drug ionized → trapped in urine → faster renal clearance"]},
+    ],
+}
+FIGURES = {
+    "Dose-Response Relationships": [
+        {"image": "TB_quantal.png", "title": "Textbook concept · Quantal dose-response and the therapeutic window", "tb": True, "src": "p. 38",
+         "caption": "Original diagram (illustrative values) of a textbook concept: the % of a population showing the therapeutic effect (blue) or a toxic effect (red) as dose rises. ED₅₀ and TD₅₀ give TI = TD₅₀ ÷ ED₅₀ (an animal-study measure); the therapeutic window — minimum therapeutic dose to minimum toxic dose — is the more practical range for dosing a patient."},
+    ],
+}
 
 # One "Go deeper" textbook link per part, only where the chapter adds real depth: (chapter, first page, last page, why)
 DEEPER = {

@@ -216,7 +216,8 @@
       ${topics.length > 1 ? `<label class="qm-field">Topic<select name="topic"><option value="">All topics (mixed)</option>${topics.map((t) => `<option>${esc(t)}</option>`).join("")}</select></label>` : ""}
       ${base.missed?.length ? `<label class="qm-check"><input type="checkbox" name="missed"> Only questions I've missed (${base.missed.length})</label>` : ""}
       <div class="qm-modes">
-        <label><input type="radio" name="mode" value="study" checked><span><strong>Study</strong>Explanation after every question</span></label>
+        <label><input type="radio" name="mode" value="study" ${base.minutes ? "" : "checked"}><span><strong>Study</strong>Explanation after every question</span></label>
+        ${base.minutes ? `<label><input type="radio" name="mode" value="exam" checked><span><strong>Exam conditions</strong>All ${all.length} questions in ${base.minutes} minutes, results at the end</span></label>` : ""}
         <label><input type="radio" name="mode" value="timed"><span><strong>Timed (PANCE pace)</strong>1 min per question, results at the end</span></label>
       </div>
       <div class="btns"><button class="btn" data-go>Start</button><button class="btn ghost" data-cancel>Cancel</button></div>
@@ -230,9 +231,10 @@
       if (val("missed")?.checked) qs = qs.filter((q) => base.missed.includes(q.id));
       if (base.shuffle !== false) for (let i = qs.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [qs[i], qs[j]] = [qs[j], qs[i]]; }
       qs = qs.slice(0, +val("n").value);
-      const timed = el.querySelector("[name=mode]:checked").value === "timed";
+      const mode = el.querySelector("[name=mode]:checked").value, timed = mode !== "study";
+      if (mode === "exam") qs = all.slice();  // the full exam, in its built order
       el.remove();
-      start(qs, { ...base, timed, feedback: timed ? "end" : "each" });
+      start(qs, { ...base, timed, feedback: timed ? "end" : "each", secondsPer: mode === "exam" ? (base.minutes * 60) / qs.length : 60 });
     });
     el.querySelector("[data-go]").focus();
   }

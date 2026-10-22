@@ -60,7 +60,7 @@
 - thiopurine: 3 question(s) — found in sources ✅
 - tylenol: 1 question(s) — found in sources ✅
 - warfarin: 2 question(s) — found in sources ✅
-- Other drug-like words not found in sources: database (U1-096), maintain (U1-067), conjugate (U1-059), dominate (U1-094)
+- Other drug-like words not found in sources: none ✅
 
 ## Answer integrity
 - Every question: exactly 5 distinct options, one keyed answer, an explanation for each option, a takeaway, a discriminator, and a source ✅

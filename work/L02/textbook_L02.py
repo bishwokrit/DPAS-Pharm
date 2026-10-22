@@ -84,6 +84,26 @@ QUESTIONS = [
      "src": "p. 81-82"},
 ]
 
+COMPARISONS = {}
+FLOWS = {
+    "Drug Metabolism & CYP450 Interactions": [
+        {"title": "Acetaminophen: normal dose vs. overdose (textbook)", "tb": True, "src": "p. 66",
+         "steps": ["Acetaminophen", "Mostly glucuronide/sulfate conjugates → excreted", "Small fraction → CYP → NAPQI, detoxified by glutathione", "Overdose: glutathione depleted → NAPQI injures the liver", "N-acetylcysteine within 8–16 h protects"]},
+    ],
+    "Pharmacogenomics": [
+        {"title": "Codeine and CYP2D6 (textbook)", "tb": True, "src": "p. 81; p. 82",
+         "steps": ["Codeine (prodrug)", "CYP2D6 → morphine (200× more potent)", "Poor metabolizer: little morphine → poor pain relief", "Ultrarapid: too much morphine → toxicity", "CPIC: alternative analgesic for PM and UM"]},
+        {"title": "Clopidogrel and CYP2C19 (textbook)", "tb": True, "src": "p. 81; p. 82",
+         "steps": ["Clopidogrel (prodrug)", "~85% inactivated by esterases", "CYP2C19 makes the active metabolite", "Poor/intermediate metabolizer: less active drug → more stent thrombosis after PCI", "CPIC: prasugrel or ticagrelor instead"]},
+    ],
+}
+FIGURES = {
+    "PK Calculations: Half-Life, Steady State & Clearance": [
+        {"image": "TB_fill_empty.png", "title": "Textbook concept · Five to fill, five to empty", "tb": True, "src": "S19; S23; p. 47",
+         "caption": "Original diagram: starting regular dosing, each half-life closes half of the remaining gap to steady state (50 → 75 → 87.5 → 93.75 → ~97%); after stopping, each half-life removes half of what remains (50 → 25 → 12.5 → 6.25 → 3.125%). The same 4–5 half-lives govern both."},
+    ],
+}
+
 # One "Go deeper" textbook link per part, only where the chapter adds real depth: (chapter, first page, last page, why)
 DEEPER = {
     "Drug Metabolism & CYP450 Interactions": (4, 60, 67, "CYP families, the inducer/inhibitor tables, and acetaminophen toxicity step by step"),

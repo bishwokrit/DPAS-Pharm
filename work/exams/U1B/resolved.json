@@ -1,0 +1,3301 @@
+[
+ {
+  "topic": "Distribution",
+  "objectives": [
+   "IO1.2"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "In a 70-kg adult, Drug X has a Vd of 5 L and Drug Y has a Vd of 500 L. Which statement is correct?",
+  "correct": "Drug Y is mostly in tissue, not plasma",
+  "distractors": [
+   {
+    "text": "Drug X is mostly in tissue, not plasma",
+    "why": "A small Vd means the drug stays mostly in plasma."
+   },
+   {
+    "text": "Drug Y occupies a real 500-L body space",
+    "why": "Vd is theoretical, not an anatomic space."
+   },
+   {
+    "text": "Both drugs are mostly confined to plasma",
+    "why": "Y's very high Vd means extensive tissue distribution."
+   },
+   {
+    "text": "Vd shows which drug is more potent",
+    "why": "Vd describes distribution, not potency."
+   }
+  ],
+  "why_correct": "A high Vd suggests extensive tissue distribution; it is a calculated, theoretical volume. Digoxin, with a Vd of about 500 L, is the classic example.",
+  "takeaway": "High Vd = sequestered in tissue (digoxin ~500 L).",
+  "discriminator": "Vd is math, not anatomy.",
+  "src": "L01 S52; S52 (notes); p. 44",
+  "id": "U1B-028",
+  "answer": "E",
+  "options": {
+   "A": {
+    "text": "Drug X is mostly in tissue, not plasma",
+    "why": "A small Vd means the drug stays mostly in plasma.",
+    "correct": false
+   },
+   "B": {
+    "text": "Drug Y occupies a real 500-L body space",
+    "why": "Vd is theoretical, not an anatomic space.",
+    "correct": false
+   },
+   "C": {
+    "text": "Vd shows which drug is more potent",
+    "why": "Vd describes distribution, not potency.",
+    "correct": false
+   },
+   "D": {
+    "text": "Both drugs are mostly confined to plasma",
+    "why": "Y's very high Vd means extensive tissue distribution.",
+    "correct": false
+   },
+   "E": {
+    "text": "Drug Y is mostly in tissue, not plasma",
+    "why": "A high Vd suggests extensive tissue distribution; it is a calculated, theoretical volume. Digoxin, with a Vd of about 500 L, is the classic example.",
+    "correct": true
+   }
+  },
+  "link": {
+   "href": "../../L01/index.html#pharmacokinetics-adme-absorption-distribution",
+   "label": "Study this: L01 · Part 5 →"
+  }
+ },
+ {
+  "topic": "Excretion & renal dosing",
+  "objectives": [
+   "IO1.2"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "After surgery, an inhaled anesthetic gas leaves the body mainly through which route?",
+  "correct": "The lungs",
+  "distractors": [
+   {
+    "text": "The kidneys",
+    "why": "The kidney is dominant for MOST drugs, but not volatile gases."
+   },
+   {
+    "text": "Bile and feces",
+    "why": "For some large or protein-bound drugs."
+   },
+   {
+    "text": "Sweat",
+    "why": "A minor route."
+   },
+   {
+    "text": "Breast milk",
+    "why": "A minor route that matters in lactation."
+   }
+  ],
+  "why_correct": "Lungs eliminate volatile agents such as anesthetic gases.",
+  "takeaway": "Volatile → lungs.",
+  "discriminator": "Match the drug type to the route.",
+  "src": "L02 S13",
+  "id": "U1B-039",
+  "answer": "B",
+  "options": {
+   "A": {
+    "text": "The kidneys",
+    "why": "The kidney is dominant for MOST drugs, but not volatile gases.",
+    "correct": false
+   },
+   "B": {
+    "text": "The lungs",
+    "why": "Lungs eliminate volatile agents such as anesthetic gases.",
+    "correct": true
+   },
+   "C": {
+    "text": "Bile and feces",
+    "why": "For some large or protein-bound drugs.",
+    "correct": false
+   },
+   "D": {
+    "text": "Sweat",
+    "why": "A minor route.",
+    "correct": false
+   },
+   "E": {
+    "text": "Breast milk",
+    "why": "A minor route that matters in lactation.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L02/index.html#drug-excretion-renal-dosing",
+   "label": "Study this: L02 · Part 2 →"
+  }
+ },
+ {
+  "topic": "Receptors & drug targets",
+  "objectives": [
+   "IO1.1"
+  ],
+  "sg": [
+   "U1-M"
+  ],
+  "kind": "vignette",
+  "stem": "A patient received an irreversible antagonist; its plasma level is now undetectable, yet the blockade persists for days. Why?",
+  "correct": "Recovery must wait for new receptor synthesis",
+  "distractors": [
+   {
+    "text": "The drug slowly leaks back out of fat",
+    "why": "The plasma level is undetectable; the receptor itself is inactivated."
+   },
+   {
+    "text": "Competitive binding still holds the site",
+    "why": "Irreversible, not competitive, binding."
+   },
+   {
+    "text": "Its plasma half-life is several days",
+    "why": "Its level is already gone."
+   },
+   {
+    "text": "Protein binding keeps the drug active",
+    "why": "Bound drug isn't active."
+   }
+  ],
+  "why_correct": "An irreversible antagonist permanently inactivates the receptor until new receptor is synthesized, so its effect depends on receptor turnover, not drug elimination.",
+  "takeaway": "Irreversible effect lasts as long as receptor turnover.",
+  "discriminator": "Effect outlasting the drug → irreversible antagonist.",
+  "src": "L01 S22; p. 25; SG U1-M",
+  "id": "U1B-014",
+  "answer": "A",
+  "options": {
+   "A": {
+    "text": "Recovery must wait for new receptor synthesis",
+    "why": "An irreversible antagonist permanently inactivates the receptor until new receptor is synthesized, so its effect depends on receptor turnover, not drug elimination.",
+    "correct": true
+   },
+   "B": {
+    "text": "Protein binding keeps the drug active",
+    "why": "Bound drug isn't active.",
+    "correct": false
+   },
+   "C": {
+    "text": "Its plasma half-life is several days",
+    "why": "Its level is already gone.",
+    "correct": false
+   },
+   "D": {
+    "text": "Competitive binding still holds the site",
+    "why": "Irreversible, not competitive, binding.",
+    "correct": false
+   },
+   "E": {
+    "text": "The drug slowly leaks back out of fat",
+    "why": "The plasma level is undetectable; the receptor itself is inactivated.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L01/index.html#pharmacodynamics-targets-receptors",
+   "label": "Study this: L01 · Part 3 →"
+  }
+ },
+ {
+  "topic": "Excretion & renal dosing",
+  "objectives": [
+   "IO1.3",
+   "IO1.5"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A patient on lithium develops worsening chronic kidney disease. What is the safest plan?",
+  "correct": "Lower the dose or extend the interval and check levels",
+  "distractors": [
+   {
+    "text": "Keep the dose, since lithium is liver-cleared",
+    "why": "Lithium is renally cleared."
+   },
+   {
+    "text": "Raise the dose to maintain the effect",
+    "why": "Exposure is already rising; a higher dose adds risk."
+   },
+   {
+    "text": "Switch to IV lithium to bypass the kidney",
+    "why": "Route doesn't change renal clearance."
+   },
+   {
+    "text": "Stop monitoring since levels are predictable",
+    "why": "Narrow-TI drugs need closer monitoring in CKD."
+   }
+  ],
+  "why_correct": "Renally cleared, narrow-TI drugs (lithium, digoxin, many antibiotics) need a dose or interval adjustment in renal impairment, guided by eGFR/CrCl, with blood levels.",
+  "takeaway": "CKD + renally cleared narrow-TI drug → adjust + monitor.",
+  "discriminator": "Less clearance → more exposure.",
+  "src": "L02 S15; S17; L01 S38",
+  "id": "U1B-040",
+  "answer": "A",
+  "options": {
+   "A": {
+    "text": "Lower the dose or extend the interval and check levels",
+    "why": "Renally cleared, narrow-TI drugs (lithium, digoxin, many antibiotics) need a dose or interval adjustment in renal impairment, guided by eGFR/CrCl, with blood levels.",
+    "correct": true
+   },
+   "B": {
+    "text": "Raise the dose to maintain the effect",
+    "why": "Exposure is already rising; a higher dose adds risk.",
+    "correct": false
+   },
+   "C": {
+    "text": "Stop monitoring since levels are predictable",
+    "why": "Narrow-TI drugs need closer monitoring in CKD.",
+    "correct": false
+   },
+   "D": {
+    "text": "Switch to IV lithium to bypass the kidney",
+    "why": "Route doesn't change renal clearance.",
+    "correct": false
+   },
+   "E": {
+    "text": "Keep the dose, since lithium is liver-cleared",
+    "why": "Lithium is renally cleared.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L02/index.html#drug-excretion-renal-dosing",
+   "label": "Study this: L02 · Part 2 →"
+  }
+ },
+ {
+  "topic": "Half-life, steady state & clearance",
+  "objectives": [
+   "IO1.1"
+  ],
+  "sg": [],
+  "kind": "mechanism",
+  "stem": "A drug has a Vd of 70 L and a clearance of 7 L/h. Using t½ = 0.7 × Vd ÷ CL, what is its half-life?",
+  "correct": "7 hours",
+  "distractors": [
+   {
+    "text": "10 hours",
+    "why": "That is Vd ÷ CL without the 0.7 factor."
+   },
+   {
+    "text": "0.7 hours",
+    "why": "Check the arithmetic: 0.7 × 70 ÷ 7."
+   },
+   {
+    "text": "49 hours",
+    "why": "That multiplies instead of dividing by clearance."
+   },
+   {
+    "text": "70 hours",
+    "why": "That ignores clearance."
+   }
+  ],
+  "why_correct": "t½ = 0.7 × Vd ÷ CL = 0.7 × 70 ÷ 7 = 7 hours. Half-life rises when Vd rises or clearance falls.",
+  "takeaway": "t½ ∝ Vd ÷ CL.",
+  "discriminator": "Lower clearance (e.g., CKD) → longer half-life.",
+  "src": "L02 p. 56; S19; S27",
+  "id": "U1B-041",
+  "answer": "B",
+  "options": {
+   "A": {
+    "text": "0.7 hours",
+    "why": "Check the arithmetic: 0.7 × 70 ÷ 7.",
+    "correct": false
+   },
+   "B": {
+    "text": "7 hours",
+    "why": "t½ = 0.7 × Vd ÷ CL = 0.7 × 70 ÷ 7 = 7 hours. Half-life rises when Vd rises or clearance falls.",
+    "correct": true
+   },
+   "C": {
+    "text": "49 hours",
+    "why": "That multiplies instead of dividing by clearance.",
+    "correct": false
+   },
+   "D": {
+    "text": "70 hours",
+    "why": "That ignores clearance.",
+    "correct": false
+   },
+   "E": {
+    "text": "10 hours",
+    "why": "That is Vd ÷ CL without the 0.7 factor.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L02/index.html#pk-calculations-half-life-steady-state-clearance",
+   "label": "Study this: L02 · Part 3 →"
+  }
+ },
+ {
+  "topic": "Pharmacogenomics & decisions",
+  "objectives": [
+   "IO1.3",
+   "IO1.4"
+  ],
+  "sg": [
+   "U1-R12"
+  ],
+  "kind": "vignette",
+  "stem": "A patient who is a CYP2D6 ultrarapid metabolizer is prescribed codeine. What is the main concern?",
+  "correct": "Too much morphine forms, risking toxicity",
+  "distractors": [
+   {
+    "text": "Too little morphine forms, so no pain relief",
+    "why": "That is the POOR metabolizer problem."
+   },
+   {
+    "text": "Codeine cannot be absorbed by mouth",
+    "why": "Absorption is not the issue."
+   },
+   {
+    "text": "Severe HLA-linked hypersensitivity",
+    "why": "HLA alleles relate to hypersensitivity, not CYP2D6."
+   },
+   {
+    "text": "Thiopurine toxicity from low TPMT",
+    "why": "TPMT relates to thiopurines."
+   }
+  ],
+  "why_correct": "CYP2D6 converts codeine to morphine (about 200× more potent); ultrarapid metabolizers make too much morphine. CPIC recommends an alternative analgesic for ultrarapid and poor metabolizers.",
+  "takeaway": "UM → too much active drug; PM → too little.",
+  "discriminator": "For a prodrug, faster activation = more effect and toxicity.",
+  "src": "L02 S33; p. 81; p. 82; SG U1-R12",
+  "id": "U1B-046",
+  "answer": "D",
+  "options": {
+   "A": {
+    "text": "Too little morphine forms, so no pain relief",
+    "why": "That is the POOR metabolizer problem.",
+    "correct": false
+   },
+   "B": {
+    "text": "Thiopurine toxicity from low TPMT",
+    "why": "TPMT relates to thiopurines.",
+    "correct": false
+   },
+   "C": {
+    "text": "Codeine cannot be absorbed by mouth",
+    "why": "Absorption is not the issue.",
+    "correct": false
+   },
+   "D": {
+    "text": "Too much morphine forms, risking toxicity",
+    "why": "CYP2D6 converts codeine to morphine (about 200× more potent); ultrarapid metabolizers make too much morphine. CPIC recommends an alternative analgesic for ultrarapid and poor metabolizers.",
+    "correct": true
+   },
+   "E": {
+    "text": "Severe HLA-linked hypersensitivity",
+    "why": "HLA alleles relate to hypersensitivity, not CYP2D6.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L02/index.html#pharmacogenomics",
+   "label": "Study this: L02 · Part 4 →"
+  }
+ },
+ {
+  "topic": "Metabolism & CYP450",
+  "objectives": [
+   "IO1.2"
+  ],
+  "sg": [],
+  "kind": "mechanism",
+  "stem": "Which statement describes Phase I metabolism?",
+  "correct": "It often creates or unmasks a reactive group",
+  "distractors": [
+   {
+    "text": "It attaches a polar group such as glucuronide",
+    "why": "That is Phase II conjugation."
+   },
+   {
+    "text": "It always follows Phase II conjugation",
+    "why": "Phase I usually comes FIRST, but not always."
+   },
+   {
+    "text": "It is carried out mainly by TPMT",
+    "why": "Phase I is mainly CYP450."
+   },
+   {
+    "text": "It makes a drug less water-soluble for storage",
+    "why": "Metabolism moves toward excretion."
+   }
+  ],
+  "why_correct": "Phase I (oxidation, reduction, hydrolysis; mainly CYP450) often creates or unmasks a reactive functional group; Phase II then attaches a polar group.",
+  "takeaway": "Phase I unmasks; Phase II conjugates.",
+  "discriminator": "'Reactive group' → Phase I; 'polar group' → Phase II.",
+  "src": "L02 S5",
+  "id": "U1B-034",
+  "answer": "A",
+  "options": {
+   "A": {
+    "text": "It often creates or unmasks a reactive group",
+    "why": "Phase I (oxidation, reduction, hydrolysis; mainly CYP450) often creates or unmasks a reactive functional group; Phase II then attaches a polar group.",
+    "correct": true
+   },
+   "B": {
+    "text": "It makes a drug less water-soluble for storage",
+    "why": "Metabolism moves toward excretion.",
+    "correct": false
+   },
+   "C": {
+    "text": "It is carried out mainly by TPMT",
+    "why": "Phase I is mainly CYP450.",
+    "correct": false
+   },
+   "D": {
+    "text": "It attaches a polar group such as glucuronide",
+    "why": "That is Phase II conjugation.",
+    "correct": false
+   },
+   "E": {
+    "text": "It always follows Phase II conjugation",
+    "why": "Phase I usually comes FIRST, but not always.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L02/index.html#drug-metabolism-cyp450-interactions",
+   "label": "Study this: L02 · Part 1 →"
+  }
+ },
+ {
+  "topic": "Dose-response & therapeutic index",
+  "objectives": [
+   "IO1.1",
+   "IO1.4"
+  ],
+  "sg": [
+   "U1-R7"
+  ],
+  "kind": "vignette",
+  "stem": "A patient on digoxin has nausea and a level of 2.6 ng/mL (textbook target about 1 ng/mL; toxic above 2). What is the best interpretation?",
+  "correct": "The level is in the toxic range for a narrow-TI drug",
+  "distractors": [
+   {
+    "text": "The level is ideal; continue the same dose",
+    "why": "2.6 ng/mL is above the 2 ng/mL toxic threshold."
+   },
+   {
+    "text": "The level is low; increase the dose",
+    "why": "The level is high, not low."
+   },
+   {
+    "text": "Digoxin levels are not clinically useful",
+    "why": "Narrow-TI drugs rely on blood levels."
+   },
+   {
+    "text": "Nausea proves the drug is ineffective",
+    "why": "Symptoms plus a high level suggest toxicity."
+   }
+  ],
+  "why_correct": "Digoxin is a classic narrow-TI drug (target ~1 ng/mL, toxic >2 ng/mL in the textbook table); small changes push it into toxicity, so levels are monitored.",
+  "takeaway": "Narrow TI → monitor levels; know the toxic threshold.",
+  "discriminator": "Level above the toxic cutoff + symptoms = toxicity.",
+  "src": "L01 S38; p. 44; SG U1-R7",
+  "id": "U1B-018",
+  "answer": "A",
+  "options": {
+   "A": {
+    "text": "The level is in the toxic range for a narrow-TI drug",
+    "why": "Digoxin is a classic narrow-TI drug (target ~1 ng/mL, toxic >2 ng/mL in the textbook table); small changes push it into toxicity, so levels are monitored.",
+    "correct": true
+   },
+   "B": {
+    "text": "Digoxin levels are not clinically useful",
+    "why": "Narrow-TI drugs rely on blood levels.",
+    "correct": false
+   },
+   "C": {
+    "text": "Nausea proves the drug is ineffective",
+    "why": "Symptoms plus a high level suggest toxicity.",
+    "correct": false
+   },
+   "D": {
+    "text": "The level is ideal; continue the same dose",
+    "why": "2.6 ng/mL is above the 2 ng/mL toxic threshold.",
+    "correct": false
+   },
+   "E": {
+    "text": "The level is low; increase the dose",
+    "why": "The level is high, not low.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L01/index.html#dose-response-relationships",
+   "label": "Study this: L01 · Part 4 →"
+  }
+ },
+ {
+  "topic": "Language & drug names",
+  "objectives": [
+   "IO1.5"
+  ],
+  "sg": [
+   "U1-R2"
+  ],
+  "kind": "vignette",
+  "stem": "An older patient brings two bottles with different brand names; both list acetaminophen as the active ingredient. What is the best counseling step?",
+  "correct": "Name the shared generic and flag the duplicate",
+  "distractors": [
+   {
+    "text": "Assume the two brands are different drugs",
+    "why": "Different brand names can hide the SAME generic ingredient."
+   },
+   {
+    "text": "Advise relabeling both by chemical name",
+    "why": "Chemical names are rarely used clinically and won't help the patient."
+   },
+   {
+    "text": "Stop the store brand since brands differ",
+    "why": "The problem is the duplicated ingredient, not which brand."
+   },
+   {
+    "text": "Reassure that OTC products are always safe",
+    "why": "Duplicate acetaminophen risks unintentional double-dosing."
+   }
+  ],
+  "why_correct": "Counseling by generic name exposes a shared ingredient hidden under multiple brand names, preventing double-dosing.",
+  "takeaway": "Generic names reveal duplicate therapy that brand names hide.",
+  "discriminator": "Two brands + one generic = duplicate therapy.",
+  "src": "L01 S7; S9; SG U1-R2",
+  "id": "U1B-001",
+  "answer": "D",
+  "options": {
+   "A": {
+    "text": "Assume the two brands are different drugs",
+    "why": "Different brand names can hide the SAME generic ingredient.",
+    "correct": false
+   },
+   "B": {
+    "text": "Advise relabeling both by chemical name",
+    "why": "Chemical names are rarely used clinically and won't help the patient.",
+    "correct": false
+   },
+   "C": {
+    "text": "Stop the store brand since brands differ",
+    "why": "The problem is the duplicated ingredient, not which brand.",
+    "correct": false
+   },
+   "D": {
+    "text": "Name the shared generic and flag the duplicate",
+    "why": "Counseling by generic name exposes a shared ingredient hidden under multiple brand names, preventing double-dosing.",
+    "correct": true
+   },
+   "E": {
+    "text": "Reassure that OTC products are always safe",
+    "why": "Duplicate acetaminophen risks unintentional double-dosing.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L01/index.html#the-language-of-pharmacology",
+   "label": "Study this: L01 · Part 1 →"
+  }
+ },
+ {
+  "topic": "Metabolism & CYP450",
+  "objectives": [
+   "IO1.4"
+  ],
+  "sg": [
+   "U1-R10"
+  ],
+  "kind": "vignette",
+  "stem": "A patient on an oral contraceptive starts St. John's wort for low mood. What is the main risk?",
+  "correct": "Lower contraceptive levels and failure",
+  "distractors": [
+   {
+    "text": "Higher contraceptive levels and toxicity",
+    "why": "St. John's wort is an INDUCER — levels fall."
+   },
+   {
+    "text": "No interaction, since it is an herbal product",
+    "why": "Herbal products can cause major CYP interactions."
+   },
+   {
+    "text": "Faster absorption of the contraceptive",
+    "why": "The effect is on metabolism, not absorption."
+   },
+   {
+    "text": "Severe HLA-linked hypersensitivity",
+    "why": "HLA reactions are genetic, not CYP-induced."
+   }
+  ],
+  "why_correct": "St. John's wort induces CYP3A4, speeding metabolism of drugs such as oral contraceptives, warfarin, and cyclosporine — lowering their levels.",
+  "takeaway": "Inducer → substrate ↓ → therapeutic failure.",
+  "discriminator": "Ask about herbal products before prescribing.",
+  "src": "L02 p. 72; S6; SG U1-R10",
+  "id": "U1B-032",
+  "answer": "C",
+  "options": {
+   "A": {
+    "text": "No interaction, since it is an herbal product",
+    "why": "Herbal products can cause major CYP interactions.",
+    "correct": false
+   },
+   "B": {
+    "text": "Higher contraceptive levels and toxicity",
+    "why": "St. John's wort is an INDUCER — levels fall.",
+    "correct": false
+   },
+   "C": {
+    "text": "Lower contraceptive levels and failure",
+    "why": "St. John's wort induces CYP3A4, speeding metabolism of drugs such as oral contraceptives, warfarin, and cyclosporine — lowering their levels.",
+    "correct": true
+   },
+   "D": {
+    "text": "Severe HLA-linked hypersensitivity",
+    "why": "HLA reactions are genetic, not CYP-induced.",
+    "correct": false
+   },
+   "E": {
+    "text": "Faster absorption of the contraceptive",
+    "why": "The effect is on metabolism, not absorption.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L02/index.html#drug-metabolism-cyp450-interactions",
+   "label": "Study this: L02 · Part 1 →"
+  }
+ },
+ {
+  "topic": "Language & drug names",
+  "objectives": [
+   "IO1.1",
+   "IO1.3"
+  ],
+  "sg": [
+   "U1-R12"
+  ],
+  "kind": "vignette",
+  "stem": "A researcher studies why the same codeine dose relieves pain in one patient but not in their sibling, because of inherited enzyme differences. Which branch is this?",
+  "correct": "Pharmacogenomics",
+  "distractors": [
+   {
+    "text": "Pharmacokinetics alone",
+    "why": "PK covers ADME broadly; inherited variation in response is pharmacogenomics."
+   },
+   {
+    "text": "Pharmacodynamics alone",
+    "why": "PD is what the drug does to the body, not genetic differences between people."
+   },
+   {
+    "text": "Toxicology",
+    "why": "Toxicology is the study of poisoning."
+   },
+   {
+    "text": "Drug development",
+    "why": "Development is the discovery-to-approval pipeline."
+   }
+  ],
+  "why_correct": "Pharmacogenomics studies how genetic variation shapes an individual's drug response (e.g., CYP2D6 and codeine).",
+  "takeaway": "Genes → different response = pharmacogenomics.",
+  "discriminator": "Look for 'inherited' or 'genetic' in the stem.",
+  "src": "L01 S6; L02 S32; S33",
+  "id": "U1B-005",
+  "answer": "B",
+  "options": {
+   "A": {
+    "text": "Pharmacodynamics alone",
+    "why": "PD is what the drug does to the body, not genetic differences between people.",
+    "correct": false
+   },
+   "B": {
+    "text": "Pharmacogenomics",
+    "why": "Pharmacogenomics studies how genetic variation shapes an individual's drug response (e.g., CYP2D6 and codeine).",
+    "correct": true
+   },
+   "C": {
+    "text": "Pharmacokinetics alone",
+    "why": "PK covers ADME broadly; inherited variation in response is pharmacogenomics.",
+    "correct": false
+   },
+   "D": {
+    "text": "Toxicology",
+    "why": "Toxicology is the study of poisoning.",
+    "correct": false
+   },
+   "E": {
+    "text": "Drug development",
+    "why": "Development is the discovery-to-approval pipeline.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L01/index.html#the-language-of-pharmacology",
+   "label": "Study this: L01 · Part 1 →"
+  }
+ },
+ {
+  "topic": "Half-life, steady state & clearance",
+  "objectives": [
+   "IO1.1",
+   "IO1.3"
+  ],
+  "sg": [
+   "U1-R11"
+  ],
+  "kind": "vignette",
+  "stem": "In worsening CKD, a renally cleared drug's half-life rises from 6 to 12 hours. About how long will a new steady state take with regular dosing?",
+  "correct": "About 48–60 hours",
+  "distractors": [
+   {
+    "text": "About 24–30 hours",
+    "why": "That uses the OLD half-life (4–5 × 6 h)."
+   },
+   {
+    "text": "About 12 hours",
+    "why": "That is just one new half-life."
+   },
+   {
+    "text": "About 6 hours",
+    "why": "That is one old half-life."
+   },
+   {
+    "text": "No change, since dose size is unchanged",
+    "why": "Time to steady state depends on half-life, which doubled."
+   }
+  ],
+  "why_correct": "Steady state takes about 4–5 half-lives: 4–5 × 12 h = 48–60 h. Clearance ↓ → t½ ↑ → time to steady state ↑ → accumulation risk.",
+  "takeaway": "Time to steady state = 4–5 × the CURRENT half-life.",
+  "discriminator": "When half-life changes, recompute the clock.",
+  "src": "L02 S23; S28 (notes); S30; SG U1-R11",
+  "id": "U1B-045",
+  "answer": "D",
+  "options": {
+   "A": {
+    "text": "About 24–30 hours",
+    "why": "That uses the OLD half-life (4–5 × 6 h).",
+    "correct": false
+   },
+   "B": {
+    "text": "About 6 hours",
+    "why": "That is one old half-life.",
+    "correct": false
+   },
+   "C": {
+    "text": "No change, since dose size is unchanged",
+    "why": "Time to steady state depends on half-life, which doubled.",
+    "correct": false
+   },
+   "D": {
+    "text": "About 48–60 hours",
+    "why": "Steady state takes about 4–5 half-lives: 4–5 × 12 h = 48–60 h. Clearance ↓ → t½ ↑ → time to steady state ↑ → accumulation risk.",
+    "correct": true
+   },
+   "E": {
+    "text": "About 12 hours",
+    "why": "That is just one new half-life.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L02/index.html#pk-calculations-half-life-steady-state-clearance",
+   "label": "Study this: L02 · Part 3 →"
+  }
+ },
+ {
+  "topic": "Pharmacogenomics & decisions",
+  "objectives": [
+   "IO1.3",
+   "IO1.4"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A patient with HIV tests positive for HLA-B*57:01. What does this mean for abacavir?",
+  "correct": "Abacavir is contraindicated (hypersensitivity)",
+  "distractors": [
+   {
+    "text": "Abacavir needs a higher dose",
+    "why": "The allele predicts hypersensitivity, not low levels."
+   },
+   {
+    "text": "Abacavir is safe at any dose",
+    "why": "HLA-B*57:01 positivity is a contraindication."
+   },
+   {
+    "text": "Abacavir must be given IV only",
+    "why": "Route doesn't prevent the immune reaction."
+   },
+   {
+    "text": "Abacavir will be poorly absorbed",
+    "why": "Absorption is not the concern."
+   }
+  ],
+  "why_correct": "Abacavir is contraindicated in HLA-B*57:01-positive patients because of hypersensitivity — like HLA-B*58:01 with allopurinol.",
+  "takeaway": "HLA allele + specific drug = severe hypersensitivity → avoid.",
+  "discriminator": "HLA-B*57:01 → abacavir; HLA-B*58:01 → allopurinol.",
+  "src": "L02 S33; p. 83; p. 88",
+  "id": "U1B-048",
+  "answer": "A",
+  "options": {
+   "A": {
+    "text": "Abacavir is contraindicated (hypersensitivity)",
+    "why": "Abacavir is contraindicated in HLA-B*57:01-positive patients because of hypersensitivity — like HLA-B*58:01 with allopurinol.",
+    "correct": true
+   },
+   "B": {
+    "text": "Abacavir will be poorly absorbed",
+    "why": "Absorption is not the concern.",
+    "correct": false
+   },
+   "C": {
+    "text": "Abacavir must be given IV only",
+    "why": "Route doesn't prevent the immune reaction.",
+    "correct": false
+   },
+   "D": {
+    "text": "Abacavir needs a higher dose",
+    "why": "The allele predicts hypersensitivity, not low levels.",
+    "correct": false
+   },
+   "E": {
+    "text": "Abacavir is safe at any dose",
+    "why": "HLA-B*57:01 positivity is a contraindication.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L02/index.html#pharmacogenomics",
+   "label": "Study this: L02 · Part 4 →"
+  }
+ },
+ {
+  "topic": "Receptors & drug targets",
+  "objectives": [
+   "IO1.1"
+  ],
+  "sg": [],
+  "kind": "mechanism",
+  "stem": "How does protamine reverse heparin's anticoagulant effect?",
+  "correct": "It binds heparin directly (chemical antagonism)",
+  "distractors": [
+   {
+    "text": "It competes with heparin at its receptor",
+    "why": "Heparin isn't blocked at a receptor; protamine binds it."
+   },
+   {
+    "text": "It activates opposing receptors instead",
+    "why": "That is physiologic antagonism."
+   },
+   {
+    "text": "It irreversibly inactivates the receptor",
+    "why": "No receptor is involved."
+   },
+   {
+    "text": "It induces enzymes that clear heparin",
+    "why": "Reversal is by direct binding, not metabolism."
+   }
+  ],
+  "why_correct": "Positively charged protamine binds negatively charged heparin, neutralizing it — chemical antagonism needs no receptor.",
+  "takeaway": "Chemical antagonism = one drug binds the other.",
+  "discriminator": "Same receptor = competitive; opposite receptors = physiologic; direct binding = chemical.",
+  "src": "L01 p. 26",
+  "id": "U1B-011",
+  "answer": "C",
+  "options": {
+   "A": {
+    "text": "It competes with heparin at its receptor",
+    "why": "Heparin isn't blocked at a receptor; protamine binds it.",
+    "correct": false
+   },
+   "B": {
+    "text": "It irreversibly inactivates the receptor",
+    "why": "No receptor is involved.",
+    "correct": false
+   },
+   "C": {
+    "text": "It binds heparin directly (chemical antagonism)",
+    "why": "Positively charged protamine binds negatively charged heparin, neutralizing it — chemical antagonism needs no receptor.",
+    "correct": true
+   },
+   "D": {
+    "text": "It induces enzymes that clear heparin",
+    "why": "Reversal is by direct binding, not metabolism.",
+    "correct": false
+   },
+   "E": {
+    "text": "It activates opposing receptors instead",
+    "why": "That is physiologic antagonism.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L01/index.html#pharmacodynamics-targets-receptors",
+   "label": "Study this: L01 · Part 3 →"
+  }
+ },
+ {
+  "topic": "Dose-response & therapeutic index",
+  "objectives": [
+   "IO1.1"
+  ],
+  "sg": [],
+  "kind": "mechanism",
+  "stem": "On a quantal dose-response curve, what does ED₅₀ mean?",
+  "correct": "The dose at which 50% of individuals respond",
+  "distractors": [
+   {
+    "text": "The dose giving 50% of one patient's Emax",
+    "why": "That is the graded EC₅₀, a different measure."
+   },
+   {
+    "text": "The dose that is toxic in 50% of subjects",
+    "why": "That is TD₅₀."
+   },
+   {
+    "text": "The dose that is lethal in 50% of animals",
+    "why": "That is LD₅₀."
+   },
+   {
+    "text": "The fraction of a dose that is absorbed",
+    "why": "That is bioavailability."
+   }
+  ],
+  "why_correct": "In quantal curves, ED₅₀ is the dose at which 50% of individuals show the specified effect (different from graded EC₅₀).",
+  "takeaway": "Quantal = % of people responding; graded = size of one response.",
+  "discriminator": "ED₅₀ (people) vs. EC₅₀ (effect size).",
+  "src": "L01 p. 38; S30",
+  "id": "U1B-020",
+  "answer": "B",
+  "options": {
+   "A": {
+    "text": "The dose that is toxic in 50% of subjects",
+    "why": "That is TD₅₀.",
+    "correct": false
+   },
+   "B": {
+    "text": "The dose at which 50% of individuals respond",
+    "why": "In quantal curves, ED₅₀ is the dose at which 50% of individuals show the specified effect (different from graded EC₅₀).",
+    "correct": true
+   },
+   "C": {
+    "text": "The dose that is lethal in 50% of animals",
+    "why": "That is LD₅₀.",
+    "correct": false
+   },
+   "D": {
+    "text": "The dose giving 50% of one patient's Emax",
+    "why": "That is the graded EC₅₀, a different measure.",
+    "correct": false
+   },
+   "E": {
+    "text": "The fraction of a dose that is absorbed",
+    "why": "That is bioavailability.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L01/index.html#dose-response-relationships",
+   "label": "Study this: L01 · Part 4 →"
+  }
+ },
+ {
+  "topic": "Absorption & routes",
+  "objectives": [
+   "IO1.5"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A patient needs slow, sustained systemic drug delivery through the skin over several days. Which route fits?",
+  "correct": "Transdermal",
+  "distractors": [
+   {
+    "text": "Topical",
+    "why": "Topical is for a LOCAL effect with minimal systemic absorption."
+   },
+   {
+    "text": "Sublingual",
+    "why": "Sublingual is rapid, not sustained over days."
+   },
+   {
+    "text": "Inhaled",
+    "why": "Inhaled gives a rapid local lung effect."
+   },
+   {
+    "text": "Intravenous",
+    "why": "IV is immediate, not slow through the skin."
+   }
+  ],
+  "why_correct": "Transdermal: slow, sustained systemic absorption through the skin (and it avoids hepatic first-pass).",
+  "takeaway": "Skin + systemic = transdermal; skin + local = topical.",
+  "discriminator": "'Systemic' vs. 'local' separates transdermal from topical.",
+  "src": "L01 S49; p. 48",
+  "id": "U1B-025",
+  "answer": "C",
+  "options": {
+   "A": {
+    "text": "Sublingual",
+    "why": "Sublingual is rapid, not sustained over days.",
+    "correct": false
+   },
+   "B": {
+    "text": "Inhaled",
+    "why": "Inhaled gives a rapid local lung effect.",
+    "correct": false
+   },
+   "C": {
+    "text": "Transdermal",
+    "why": "Transdermal: slow, sustained systemic absorption through the skin (and it avoids hepatic first-pass).",
+    "correct": true
+   },
+   "D": {
+    "text": "Topical",
+    "why": "Topical is for a LOCAL effect with minimal systemic absorption.",
+    "correct": false
+   },
+   "E": {
+    "text": "Intravenous",
+    "why": "IV is immediate, not slow through the skin.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L01/index.html#pharmacokinetics-adme-absorption-distribution",
+   "label": "Study this: L01 · Part 5 →"
+  }
+ },
+ {
+  "topic": "Distribution",
+  "objectives": [
+   "IO1.2",
+   "IO1.4"
+  ],
+  "sg": [],
+  "kind": "mechanism",
+  "stem": "A second drug displaces a highly protein-bound drug from plasma proteins. What does the textbook say usually happens?",
+  "correct": "Free drug rises briefly, then returns to baseline",
+  "distractors": [
+   {
+    "text": "Free drug stays high for as long as both are given",
+    "why": "Higher free drug is cleared faster, so it re-equilibrates."
+   },
+   {
+    "text": "Total drug level always rises permanently",
+    "why": "Elimination increases and levels re-equilibrate."
+   },
+   {
+    "text": "Displacement always causes serious toxicity",
+    "why": "Usually it is not clinically important."
+   },
+   {
+    "text": "Bound drug becomes the active fraction",
+    "why": "Only FREE drug is active."
+   }
+  ],
+  "why_correct": "If unbound drug rises from displacement, its elimination increases, and after about four half-lives the unbound concentration returns to its previous value (if unbound clearance is unchanged).",
+  "takeaway": "Only free drug is active — and the body re-balances free drug.",
+  "discriminator": "Displacement alone is rarely the cause of toxicity.",
+  "src": "L01 S52; L02 p. 55",
+  "id": "U1B-030",
+  "answer": "A",
+  "options": {
+   "A": {
+    "text": "Free drug rises briefly, then returns to baseline",
+    "why": "If unbound drug rises from displacement, its elimination increases, and after about four half-lives the unbound concentration returns to its previous value (if unbound clearance is unchanged).",
+    "correct": true
+   },
+   "B": {
+    "text": "Total drug level always rises permanently",
+    "why": "Elimination increases and levels re-equilibrate.",
+    "correct": false
+   },
+   "C": {
+    "text": "Bound drug becomes the active fraction",
+    "why": "Only FREE drug is active.",
+    "correct": false
+   },
+   "D": {
+    "text": "Free drug stays high for as long as both are given",
+    "why": "Higher free drug is cleared faster, so it re-equilibrates.",
+    "correct": false
+   },
+   "E": {
+    "text": "Displacement always causes serious toxicity",
+    "why": "Usually it is not clinically important.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L01/index.html#pharmacokinetics-adme-absorption-distribution",
+   "label": "Study this: L01 · Part 5 →"
+  }
+ },
+ {
+  "topic": "Drug development & approval",
+  "objectives": [
+   "IO1.4"
+  ],
+  "sg": [],
+  "kind": "mechanism",
+  "stem": "After a brand's patent expires, how does a generic version usually win FDA approval?",
+  "correct": "An abbreviated application with bioequivalence data",
+  "distractors": [
+   {
+    "text": "A full new application with new Phase III trials",
+    "why": "Generics use an abbreviated application instead."
+   },
+   {
+    "text": "An IND application for first human testing",
+    "why": "An IND starts clinical trials of a new drug."
+   },
+   {
+    "text": "Orphan-drug designation for a rare disease",
+    "why": "Orphan status is for diseases with <200,000 US patients."
+   },
+   {
+    "text": "Postmarketing MedWatch safety reports",
+    "why": "MedWatch collects adverse-event reports."
+   }
+  ],
+  "why_correct": "Generic manufacturers file an abbreviated new drug application (ANDA) showing bioequivalence; patents last 20 years.",
+  "takeaway": "Generic = ANDA + bioequivalence.",
+  "discriminator": "New drug → IND then NDA; generic copy → ANDA.",
+  "src": "L01 p. 16; p. 18",
+  "id": "U1B-008",
+  "answer": "D",
+  "options": {
+   "A": {
+    "text": "Postmarketing MedWatch safety reports",
+    "why": "MedWatch collects adverse-event reports.",
+    "correct": false
+   },
+   "B": {
+    "text": "An IND application for first human testing",
+    "why": "An IND starts clinical trials of a new drug.",
+    "correct": false
+   },
+   "C": {
+    "text": "A full new application with new Phase III trials",
+    "why": "Generics use an abbreviated application instead.",
+    "correct": false
+   },
+   "D": {
+    "text": "An abbreviated application with bioequivalence data",
+    "why": "Generic manufacturers file an abbreviated new drug application (ANDA) showing bioequivalence; patents last 20 years.",
+    "correct": true
+   },
+   "E": {
+    "text": "Orphan-drug designation for a rare disease",
+    "why": "Orphan status is for diseases with <200,000 US patients.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L01/index.html#drug-development-regulation",
+   "label": "Study this: L01 · Part 2 →"
+  }
+ },
+ {
+  "topic": "Pharmacogenomics & decisions",
+  "objectives": [
+   "IO1.3",
+   "IO1.5"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "Before prescribing for a patient who is 10 weeks pregnant, which checklist item directly prompts the PA to reconsider the drug choice?",
+  "correct": "Age, pregnancy, and patient-specific factors",
+  "distractors": [
+   {
+    "text": "Indication — is there a reason to treat?",
+    "why": "Indication asks whether to treat at all."
+   },
+   {
+    "text": "Drug interactions, including CYP450",
+    "why": "Interactions concern other drugs, not pregnancy."
+   },
+   {
+    "text": "Renal and hepatic function",
+    "why": "Organ function is a separate checklist item."
+   },
+   {
+    "text": "The drug's brand and generic names",
+    "why": "Names are not on the checklist."
+   }
+  ],
+  "why_correct": "The checklist: indication; contraindications and allergies; renal and hepatic function; drug interactions (incl. CYP450); age, pregnancy, and other patient-specific factors; correct dose, route, and monitoring.",
+  "takeaway": "Memorize all six checklist items.",
+  "discriminator": "Pregnancy lives under 'age, pregnancy, patient factors.'",
+  "src": "L02 S39; S39 (notes)",
+  "id": "U1B-049",
+  "answer": "C",
+  "options": {
+   "A": {
+    "text": "The drug's brand and generic names",
+    "why": "Names are not on the checklist.",
+    "correct": false
+   },
+   "B": {
+    "text": "Indication — is there a reason to treat?",
+    "why": "Indication asks whether to treat at all.",
+    "correct": false
+   },
+   "C": {
+    "text": "Age, pregnancy, and patient-specific factors",
+    "why": "The checklist: indication; contraindications and allergies; renal and hepatic function; drug interactions (incl. CYP450); age, pregnancy, and other patient-specific factors; correct dose, route, and monitoring.",
+    "correct": true
+   },
+   "D": {
+    "text": "Drug interactions, including CYP450",
+    "why": "Interactions concern other drugs, not pregnancy.",
+    "correct": false
+   },
+   "E": {
+    "text": "Renal and hepatic function",
+    "why": "Organ function is a separate checklist item.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L02/index.html#putting-it-all-together-clinical-decision-making",
+   "label": "Study this: L02 · Part 5 →"
+  }
+ },
+ {
+  "topic": "Receptors & drug targets",
+  "objectives": [
+   "IO1.1"
+  ],
+  "sg": [
+   "U1-R5"
+  ],
+  "kind": "mechanism",
+  "stem": "Some antimicrobials and gene therapies act on which drug target class?",
+  "correct": "Nucleic acids (DNA/RNA)",
+  "distractors": [
+   {
+    "text": "Ion channels",
+    "why": "Ion channels gate the flow of ions across membranes."
+   },
+   {
+    "text": "Enzymes",
+    "why": "Drugs inhibit (or rarely activate) enzymes."
+   },
+   {
+    "text": "Transporters",
+    "why": "Transporters are carrier proteins."
+   },
+   {
+    "text": "Nuclear receptors",
+    "why": "Nuclear receptors are one receptor subtype."
+   }
+  ],
+  "why_correct": "Transporters & nucleic acids: carrier proteins; or DNA/RNA for some antimicrobials & gene therapies.",
+  "takeaway": "Five classes: receptors, ion channels, enzymes, transporters, nucleic acids.",
+  "discriminator": "DNA/RNA target → nucleic acids.",
+  "src": "L01 S20; SG U1-R5",
+  "id": "U1B-015",
+  "answer": "B",
+  "options": {
+   "A": {
+    "text": "Ion channels",
+    "why": "Ion channels gate the flow of ions across membranes.",
+    "correct": false
+   },
+   "B": {
+    "text": "Nucleic acids (DNA/RNA)",
+    "why": "Transporters & nucleic acids: carrier proteins; or DNA/RNA for some antimicrobials & gene therapies.",
+    "correct": true
+   },
+   "C": {
+    "text": "Nuclear receptors",
+    "why": "Nuclear receptors are one receptor subtype.",
+    "correct": false
+   },
+   "D": {
+    "text": "Transporters",
+    "why": "Transporters are carrier proteins.",
+    "correct": false
+   },
+   "E": {
+    "text": "Enzymes",
+    "why": "Drugs inhibit (or rarely activate) enzymes.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L01/index.html#pharmacodynamics-targets-receptors",
+   "label": "Study this: L01 · Part 3 →"
+  }
+ },
+ {
+  "topic": "Excretion & renal dosing",
+  "objectives": [
+   "IO1.3",
+   "IO1.4"
+  ],
+  "sg": [],
+  "kind": "mechanism",
+  "stem": "Which narrow-TI drug is about 95% excreted unchanged in urine and essentially not protein-bound?",
+  "correct": "Lithium",
+  "distractors": [
+   {
+    "text": "Digoxin",
+    "why": "Digoxin is ~67% urinary with a huge Vd."
+   },
+   {
+    "text": "Phenytoin",
+    "why": "Phenytoin is ~89% bound with saturable metabolism."
+   },
+   {
+    "text": "Warfarin",
+    "why": "Warfarin is ~99% protein-bound."
+   },
+   {
+    "text": "Propranolol",
+    "why": "Propranolol is a first-pass drug, not a narrow-TI example."
+   }
+  ],
+  "why_correct": "Lithium: ~95% urinary excretion, 0% protein binding, target ~0.7 mEq/L, toxic above 2 — renal function drives its dosing.",
+  "takeaway": "Lithium + kidney function = constant watch.",
+  "discriminator": "Renally cleared + narrow TI → adjust in CKD.",
+  "src": "L02 S15; L01 p. 44",
+  "id": "U1B-037",
+  "answer": "E",
+  "options": {
+   "A": {
+    "text": "Phenytoin",
+    "why": "Phenytoin is ~89% bound with saturable metabolism.",
+    "correct": false
+   },
+   "B": {
+    "text": "Warfarin",
+    "why": "Warfarin is ~99% protein-bound.",
+    "correct": false
+   },
+   "C": {
+    "text": "Digoxin",
+    "why": "Digoxin is ~67% urinary with a huge Vd.",
+    "correct": false
+   },
+   "D": {
+    "text": "Propranolol",
+    "why": "Propranolol is a first-pass drug, not a narrow-TI example.",
+    "correct": false
+   },
+   "E": {
+    "text": "Lithium",
+    "why": "Lithium: ~95% urinary excretion, 0% protein binding, target ~0.7 mEq/L, toxic above 2 — renal function drives its dosing.",
+    "correct": true
+   }
+  },
+  "link": {
+   "href": "../../L02/index.html#drug-excretion-renal-dosing",
+   "label": "Study this: L02 · Part 2 →"
+  }
+ },
+ {
+  "topic": "Drug development & approval",
+  "objectives": [
+   "IO1.4"
+  ],
+  "sg": [],
+  "kind": "mechanism",
+  "stem": "Which law first required proof of efficacy, not just safety, for new drugs (after the thalidomide disaster)?",
+  "correct": "Kefauver-Harris Amendments (1962)",
+  "distractors": [
+   {
+    "text": "Food, Drug, and Cosmetic Act (1938)",
+    "why": "The 1938 act required proof of SAFETY."
+   },
+   {
+    "text": "Orphan Drug Amendment (1983)",
+    "why": "It gave incentives for rare-disease drugs."
+   },
+   {
+    "text": "Durham-Humphrey Act (1952)",
+    "why": "It decided which drugs need a prescription."
+   },
+   {
+    "text": "Drug Price Competition Act (1984)",
+    "why": "It created abbreviated applications for generics."
+   }
+  ],
+  "why_correct": "The Kefauver-Harris Amendments (1962) required proof of efficacy as well as safety; thalidomide's birth defects spurred them.",
+  "takeaway": "1938 = safety; 1962 = efficacy.",
+  "discriminator": "Thalidomide → Kefauver-Harris → efficacy.",
+  "src": "L01 p. 16",
+  "id": "U1B-007",
+  "answer": "C",
+  "options": {
+   "A": {
+    "text": "Orphan Drug Amendment (1983)",
+    "why": "It gave incentives for rare-disease drugs.",
+    "correct": false
+   },
+   "B": {
+    "text": "Durham-Humphrey Act (1952)",
+    "why": "It decided which drugs need a prescription.",
+    "correct": false
+   },
+   "C": {
+    "text": "Kefauver-Harris Amendments (1962)",
+    "why": "The Kefauver-Harris Amendments (1962) required proof of efficacy as well as safety; thalidomide's birth defects spurred them.",
+    "correct": true
+   },
+   "D": {
+    "text": "Drug Price Competition Act (1984)",
+    "why": "It created abbreviated applications for generics.",
+    "correct": false
+   },
+   "E": {
+    "text": "Food, Drug, and Cosmetic Act (1938)",
+    "why": "The 1938 act required proof of SAFETY.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L01/index.html#drug-development-regulation",
+   "label": "Study this: L01 · Part 2 →"
+  }
+ },
+ {
+  "topic": "Language & drug names",
+  "objectives": [
+   "IO1.4"
+  ],
+  "sg": [],
+  "kind": "mechanism",
+  "stem": "Paracelsus wrote that \"the dose makes the poison.\" What does this mean?",
+  "correct": "Any substance can harm at the wrong dose",
+  "distractors": [
+   {
+    "text": "Only true poisons can ever cause harm",
+    "why": "Even useful drugs harm at the wrong dose."
+   },
+   {
+    "text": "Toxins are always made in a laboratory",
+    "why": "Toxins are poisons of biologic origin."
+   },
+   {
+    "text": "Drugs become harmless at very high doses",
+    "why": "Higher doses raise, not remove, the risk of harm."
+   },
+   {
+    "text": "Harm depends mostly on the brand name",
+    "why": "Harm depends on dose, not on the name."
+   }
+  ],
+  "why_correct": "The textbook explains Paracelsus's point: any substance can be harmful if taken in the wrong dosage.",
+  "takeaway": "Dose, not the label 'drug' or 'poison', decides harm.",
+  "discriminator": "Links to toxicity: harm as exposure exceeds the therapeutic range.",
+  "src": "L01 p. 3; S5",
+  "id": "U1B-003",
+  "answer": "C",
+  "options": {
+   "A": {
+    "text": "Drugs become harmless at very high doses",
+    "why": "Higher doses raise, not remove, the risk of harm.",
+    "correct": false
+   },
+   "B": {
+    "text": "Only true poisons can ever cause harm",
+    "why": "Even useful drugs harm at the wrong dose.",
+    "correct": false
+   },
+   "C": {
+    "text": "Any substance can harm at the wrong dose",
+    "why": "The textbook explains Paracelsus's point: any substance can be harmful if taken in the wrong dosage.",
+    "correct": true
+   },
+   "D": {
+    "text": "Harm depends mostly on the brand name",
+    "why": "Harm depends on dose, not on the name.",
+    "correct": false
+   },
+   "E": {
+    "text": "Toxins are always made in a laboratory",
+    "why": "Toxins are poisons of biologic origin.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L01/index.html#the-language-of-pharmacology",
+   "label": "Study this: L01 · Part 1 →"
+  }
+ },
+ {
+  "topic": "Absorption & routes",
+  "objectives": [
+   "IO1.2",
+   "IO1.5"
+  ],
+  "sg": [
+   "U1-R9"
+  ],
+  "kind": "vignette",
+  "stem": "A patient with angina is told to place nitroglycerin under the tongue rather than swallow it. Why?",
+  "correct": "Sublingual dosing avoids its large first-pass loss",
+  "distractors": [
+   {
+    "text": "Swallowed tablets cannot be absorbed at all",
+    "why": "Oral drugs are absorbed, then lose drug in the liver."
+   },
+   {
+    "text": "Sublingual dosing makes the drug more potent",
+    "why": "Route doesn't change potency."
+   },
+   {
+    "text": "Sublingual dosing lengthens its half-life",
+    "why": "Half-life is set by clearance and Vd."
+   },
+   {
+    "text": "Swallowing it causes nitroglycerin toxicity",
+    "why": "The issue is too LITTLE reaching circulation."
+   }
+  ],
+  "why_correct": "Nitroglycerin has a large first-pass effect; sublingual absorption enters systemic veins directly, bypassing the portal vein and liver.",
+  "takeaway": "Big first-pass drug → choose a route that skips the liver.",
+  "discriminator": "Under the tongue = straight to systemic veins.",
+  "src": "L01 S51; S55; SG U1-R9",
+  "id": "U1B-022",
+  "answer": "E",
+  "options": {
+   "A": {
+    "text": "Swallowed tablets cannot be absorbed at all",
+    "why": "Oral drugs are absorbed, then lose drug in the liver.",
+    "correct": false
+   },
+   "B": {
+    "text": "Swallowing it causes nitroglycerin toxicity",
+    "why": "The issue is too LITTLE reaching circulation.",
+    "correct": false
+   },
+   "C": {
+    "text": "Sublingual dosing makes the drug more potent",
+    "why": "Route doesn't change potency.",
+    "correct": false
+   },
+   "D": {
+    "text": "Sublingual dosing lengthens its half-life",
+    "why": "Half-life is set by clearance and Vd.",
+    "correct": false
+   },
+   "E": {
+    "text": "Sublingual dosing avoids its large first-pass loss",
+    "why": "Nitroglycerin has a large first-pass effect; sublingual absorption enters systemic veins directly, bypassing the portal vein and liver.",
+    "correct": true
+   }
+  },
+  "link": {
+   "href": "../../L01/index.html#pharmacokinetics-adme-absorption-distribution",
+   "label": "Study this: L01 · Part 5 →"
+  }
+ },
+ {
+  "topic": "Dose-response & therapeutic index",
+  "objectives": [
+   "IO1.1"
+  ],
+  "sg": [
+   "U1-R6"
+  ],
+  "kind": "vignette",
+  "stem": "Drug A has an EC₅₀ of 2 mg and reaches 60% of maximal response; Drug B has an EC₅₀ of 20 mg and reaches 100%. Which is true?",
+  "correct": "A is more potent; B is more efficacious",
+  "distractors": [
+   {
+    "text": "A is more potent and more efficacious",
+    "why": "A's lower Emax means LESS efficacy."
+   },
+   {
+    "text": "B is more potent and more efficacious",
+    "why": "B's higher EC₅₀ means LESS potency."
+   },
+   {
+    "text": "B is more potent; A is more efficacious",
+    "why": "Reversed on both counts."
+   },
+   {
+    "text": "They are equal, since both relieve symptoms",
+    "why": "EC₅₀ and Emax both differ."
+   }
+  ],
+  "why_correct": "Lower EC₅₀ = more potent (Drug A). Higher Emax = more efficacious (Drug B). Potency and efficacy are independent.",
+  "takeaway": "Read EC₅₀ for potency and Emax for efficacy — separately.",
+  "discriminator": "Efficacy matters more clinically: B can do more.",
+  "src": "L01 S30; S34; SG U1-R6",
+  "id": "U1B-017",
+  "answer": "D",
+  "options": {
+   "A": {
+    "text": "B is more potent; A is more efficacious",
+    "why": "Reversed on both counts.",
+    "correct": false
+   },
+   "B": {
+    "text": "B is more potent and more efficacious",
+    "why": "B's higher EC₅₀ means LESS potency.",
+    "correct": false
+   },
+   "C": {
+    "text": "They are equal, since both relieve symptoms",
+    "why": "EC₅₀ and Emax both differ.",
+    "correct": false
+   },
+   "D": {
+    "text": "A is more potent; B is more efficacious",
+    "why": "Lower EC₅₀ = more potent (Drug A). Higher Emax = more efficacious (Drug B). Potency and efficacy are independent.",
+    "correct": true
+   },
+   "E": {
+    "text": "A is more potent and more efficacious",
+    "why": "A's lower Emax means LESS efficacy.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L01/index.html#dose-response-relationships",
+   "label": "Study this: L01 · Part 4 →"
+  }
+ },
+ {
+  "topic": "Half-life, steady state & clearance",
+  "objectives": [
+   "IO1.1"
+  ],
+  "sg": [
+   "U1-R11"
+  ],
+  "kind": "vignette",
+  "stem": "An IV dose gives 200 mg/L; the half-life is 8 hours. What is the concentration at 24 hours?",
+  "correct": "25 mg/L",
+  "distractors": [
+   {
+    "text": "50 mg/L",
+    "why": "That is at 16 hours (2 half-lives)."
+   },
+   {
+    "text": "100 mg/L",
+    "why": "That is at 8 hours (1 half-life)."
+   },
+   {
+    "text": "12.5 mg/L",
+    "why": "That is at 32 hours (4 half-lives)."
+   },
+   {
+    "text": "66.7 mg/L",
+    "why": "Concentrations halve; they don't fall by thirds."
+   }
+  ],
+  "why_correct": "24 h ÷ 8 h = 3 half-lives: 200 × (1/2)³ = 25 mg/L (87.5% eliminated).",
+  "takeaway": "C(t) = C₀ × (1/2)^(t/t½).",
+  "discriminator": "Count half-lives first, then halve each time.",
+  "src": "L02 S19; SG U1-R11",
+  "id": "U1B-043",
+  "answer": "E",
+  "options": {
+   "A": {
+    "text": "100 mg/L",
+    "why": "That is at 8 hours (1 half-life).",
+    "correct": false
+   },
+   "B": {
+    "text": "12.5 mg/L",
+    "why": "That is at 32 hours (4 half-lives).",
+    "correct": false
+   },
+   "C": {
+    "text": "66.7 mg/L",
+    "why": "Concentrations halve; they don't fall by thirds.",
+    "correct": false
+   },
+   "D": {
+    "text": "50 mg/L",
+    "why": "That is at 16 hours (2 half-lives).",
+    "correct": false
+   },
+   "E": {
+    "text": "25 mg/L",
+    "why": "24 h ÷ 8 h = 3 half-lives: 200 × (1/2)³ = 25 mg/L (87.5% eliminated).",
+    "correct": true
+   }
+  },
+  "link": {
+   "href": "../../L02/index.html#pk-calculations-half-life-steady-state-clearance",
+   "label": "Study this: L02 · Part 3 →"
+  }
+ },
+ {
+  "topic": "Language & drug names",
+  "objectives": [
+   "IO1.1"
+  ],
+  "sg": [],
+  "kind": "mechanism",
+  "stem": "Which term describes an inactive precursor that the body converts into the active drug?",
+  "correct": "A prodrug",
+  "distractors": [
+   {
+    "text": "An active metabolite",
+    "why": "An active metabolite comes from an already-active drug and extends its effect."
+   },
+   {
+    "text": "A toxic metabolite",
+    "why": "A toxic metabolite (e.g., NAPQI) causes injury."
+   },
+   {
+    "text": "A generic equivalent",
+    "why": "A generic is a bioequivalent copy, not an inactive precursor."
+   },
+   {
+    "text": "A competitive antagonist",
+    "why": "An antagonist blocks a receptor; it isn't a precursor."
+   }
+  ],
+  "why_correct": "A prodrug is an inactive precursor converted to the active drug, usually by metabolism — one of the purposes of metabolism is to activate a prodrug.",
+  "takeaway": "Metabolism can turn a prodrug ON (e.g., codeine → morphine, clopidogrel → active metabolite).",
+  "discriminator": "Inactive until metabolized = prodrug.",
+  "src": "L01 p. 8; L02 S4",
+  "id": "U1B-004",
+  "answer": "A",
+  "options": {
+   "A": {
+    "text": "A prodrug",
+    "why": "A prodrug is an inactive precursor converted to the active drug, usually by metabolism — one of the purposes of metabolism is to activate a prodrug.",
+    "correct": true
+   },
+   "B": {
+    "text": "A competitive antagonist",
+    "why": "An antagonist blocks a receptor; it isn't a precursor.",
+    "correct": false
+   },
+   "C": {
+    "text": "An active metabolite",
+    "why": "An active metabolite comes from an already-active drug and extends its effect.",
+    "correct": false
+   },
+   "D": {
+    "text": "A generic equivalent",
+    "why": "A generic is a bioequivalent copy, not an inactive precursor.",
+    "correct": false
+   },
+   "E": {
+    "text": "A toxic metabolite",
+    "why": "A toxic metabolite (e.g., NAPQI) causes injury.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L01/index.html#the-language-of-pharmacology",
+   "label": "Study this: L01 · Part 1 →"
+  }
+ },
+ {
+  "topic": "Excretion & renal dosing",
+  "objectives": [
+   "IO1.2"
+  ],
+  "sg": [],
+  "kind": "mechanism",
+  "stem": "Which renal process uses active transporters to move additional drug from blood into the tubule?",
+  "correct": "Tubular secretion",
+  "distractors": [
+   {
+    "text": "Glomerular filtration",
+    "why": "Filtration is size-based passage of free drug."
+   },
+   {
+    "text": "Tubular reabsorption",
+    "why": "Reabsorption moves drug back into the blood."
+   },
+   {
+    "text": "Ion trapping",
+    "why": "Ion trapping blocks reabsorption by ionizing drug."
+   },
+   {
+    "text": "Biliary excretion",
+    "why": "Biliary excretion is not a renal process."
+   }
+  ],
+  "why_correct": "Tubular secretion: active transporters move additional drug from blood into the tubule.",
+  "takeaway": "Filter (size) · Secrete (transporters) · Reabsorb (lipophilic).",
+  "discriminator": "'Active transporters' → secretion.",
+  "src": "L02 S14",
+  "id": "U1B-038",
+  "answer": "D",
+  "options": {
+   "A": {
+    "text": "Glomerular filtration",
+    "why": "Filtration is size-based passage of free drug.",
+    "correct": false
+   },
+   "B": {
+    "text": "Biliary excretion",
+    "why": "Biliary excretion is not a renal process.",
+    "correct": false
+   },
+   "C": {
+    "text": "Ion trapping",
+    "why": "Ion trapping blocks reabsorption by ionizing drug.",
+    "correct": false
+   },
+   "D": {
+    "text": "Tubular secretion",
+    "why": "Tubular secretion: active transporters move additional drug from blood into the tubule.",
+    "correct": true
+   },
+   "E": {
+    "text": "Tubular reabsorption",
+    "why": "Reabsorption moves drug back into the blood.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L02/index.html#drug-excretion-renal-dosing",
+   "label": "Study this: L02 · Part 2 →"
+  }
+ },
+ {
+  "topic": "Absorption & routes",
+  "objectives": [
+   "IO1.2"
+  ],
+  "sg": [
+   "U1-R8"
+  ],
+  "kind": "mechanism",
+  "stem": "An oral dose of 100 mg delivers 40 mg unchanged to the systemic circulation. What is its bioavailability (F)?",
+  "correct": "40%",
+  "distractors": [
+   {
+    "text": "60%",
+    "why": "60% is the fraction LOST."
+   },
+   {
+    "text": "100%",
+    "why": "Only an IV dose is 100% by definition."
+   },
+   {
+    "text": "4%",
+    "why": "Check the arithmetic: 40/100."
+   },
+   {
+    "text": "140%",
+    "why": "F cannot exceed 100%."
+   }
+  ],
+  "why_correct": "F = fraction of an administered dose reaching systemic circulation unchanged = 40 mg ÷ 100 mg = 40%.",
+  "takeaway": "F = amount reaching circulation ÷ dose given.",
+  "discriminator": "Fraction reaching vs. fraction lost — read carefully.",
+  "src": "L01 S50; SG U1-R8",
+  "id": "U1B-024",
+  "answer": "B",
+  "options": {
+   "A": {
+    "text": "140%",
+    "why": "F cannot exceed 100%.",
+    "correct": false
+   },
+   "B": {
+    "text": "40%",
+    "why": "F = fraction of an administered dose reaching systemic circulation unchanged = 40 mg ÷ 100 mg = 40%.",
+    "correct": true
+   },
+   "C": {
+    "text": "60%",
+    "why": "60% is the fraction LOST.",
+    "correct": false
+   },
+   "D": {
+    "text": "100%",
+    "why": "Only an IV dose is 100% by definition.",
+    "correct": false
+   },
+   "E": {
+    "text": "4%",
+    "why": "Check the arithmetic: 40/100.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L01/index.html#pharmacokinetics-adme-absorption-distribution",
+   "label": "Study this: L01 · Part 5 →"
+  }
+ },
+ {
+  "topic": "Half-life, steady state & clearance",
+  "objectives": [
+   "IO1.1"
+  ],
+  "sg": [],
+  "kind": "mechanism",
+  "stem": "For which drugs does the textbook stress capacity-limited (saturable) elimination?",
+  "correct": "Phenytoin, ethanol, and aspirin",
+  "distractors": [
+   {
+    "text": "Lithium, digoxin, and gentamicin",
+    "why": "These are not the saturable examples given."
+   },
+   {
+    "text": "Albuterol, insulin, and heparin",
+    "why": "These were route and receptor examples."
+   },
+   {
+    "text": "Codeine, clopidogrel, and azathioprine",
+    "why": "These were pharmacogenomic examples."
+   },
+   {
+    "text": "Nitroglycerin, propranolol, and morphine",
+    "why": "These were first-pass examples."
+   }
+  ],
+  "why_correct": "Capacity-limited elimination (clearance falls as concentration rises) matters for phenytoin, ethanol, and aspirin; clearance has no fixed meaning for these drugs.",
+  "takeaway": "Saturable: phenytoin, ethanol, aspirin.",
+  "discriminator": "Small dose increase → big level jump for phenytoin.",
+  "src": "L02 p. 47",
+  "id": "U1B-044",
+  "answer": "C",
+  "options": {
+   "A": {
+    "text": "Albuterol, insulin, and heparin",
+    "why": "These were route and receptor examples.",
+    "correct": false
+   },
+   "B": {
+    "text": "Nitroglycerin, propranolol, and morphine",
+    "why": "These were first-pass examples.",
+    "correct": false
+   },
+   "C": {
+    "text": "Phenytoin, ethanol, and aspirin",
+    "why": "Capacity-limited elimination (clearance falls as concentration rises) matters for phenytoin, ethanol, and aspirin; clearance has no fixed meaning for these drugs.",
+    "correct": true
+   },
+   "D": {
+    "text": "Lithium, digoxin, and gentamicin",
+    "why": "These are not the saturable examples given.",
+    "correct": false
+   },
+   "E": {
+    "text": "Codeine, clopidogrel, and azathioprine",
+    "why": "These were pharmacogenomic examples.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L02/index.html#pk-calculations-half-life-steady-state-clearance",
+   "label": "Study this: L02 · Part 3 →"
+  }
+ },
+ {
+  "topic": "Receptors & drug targets",
+  "objectives": [
+   "IO1.1"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A patient on propranolol has a well-controlled resting heart rate, but during hard exercise the rate rises markedly. What best explains this?",
+  "correct": "Surging catecholamines outcompete the blocker",
+  "distractors": [
+   {
+    "text": "Propranolol is irreversible, so it wears off",
+    "why": "Propranolol is a COMPETITIVE β antagonist."
+   },
+   {
+    "text": "Exercise induces CYP enzymes immediately",
+    "why": "Induction takes time and isn't the mechanism here."
+   },
+   {
+    "text": "Propranolol acts as a full agonist in exercise",
+    "why": "It is an antagonist."
+   },
+   {
+    "text": "Exercise permanently destroys β receptors",
+    "why": "Receptors aren't destroyed by exercise."
+   }
+  ],
+  "why_correct": "With a competitive antagonist, the response depends on how much agonist competes: exercise-driven norepinephrine and epinephrine can overcome a fixed propranolol dose.",
+  "takeaway": "Competitive blockade is surmountable — by drug OR by the body's own agonist.",
+  "discriminator": "More agonist → competitive block overcome.",
+  "src": "L01 p. 25; S22",
+  "id": "U1B-012",
+  "answer": "E",
+  "options": {
+   "A": {
+    "text": "Exercise induces CYP enzymes immediately",
+    "why": "Induction takes time and isn't the mechanism here.",
+    "correct": false
+   },
+   "B": {
+    "text": "Propranolol acts as a full agonist in exercise",
+    "why": "It is an antagonist.",
+    "correct": false
+   },
+   "C": {
+    "text": "Propranolol is irreversible, so it wears off",
+    "why": "Propranolol is a COMPETITIVE β antagonist.",
+    "correct": false
+   },
+   "D": {
+    "text": "Exercise permanently destroys β receptors",
+    "why": "Receptors aren't destroyed by exercise.",
+    "correct": false
+   },
+   "E": {
+    "text": "Surging catecholamines outcompete the blocker",
+    "why": "With a competitive antagonist, the response depends on how much agonist competes: exercise-driven norepinephrine and epinephrine can overcome a fixed propranolol dose.",
+    "correct": true
+   }
+  },
+  "link": {
+   "href": "../../L01/index.html#pharmacodynamics-targets-receptors",
+   "label": "Study this: L01 · Part 3 →"
+  }
+ },
+ {
+  "topic": "Distribution",
+  "objectives": [
+   "IO1.2"
+  ],
+  "sg": [],
+  "kind": "mechanism",
+  "stem": "A drug's volume of distribution is about 0.04 L/kg (about 2.8 L in a 70-kg adult). Where is it mostly found?",
+  "correct": "In the plasma",
+  "distractors": [
+   {
+    "text": "In total body water",
+    "why": "Total body water is about 0.6 L/kg."
+   },
+   {
+    "text": "In extracellular water",
+    "why": "Extracellular water is about 0.2 L/kg."
+   },
+   {
+    "text": "In body fat",
+    "why": "Fat is about 0.2–0.35 L/kg, for highly lipid-soluble drugs."
+   },
+   {
+    "text": "Sequestered in tissues",
+    "why": "Tissue sequestration gives a very HIGH Vd (e.g., digoxin)."
+   }
+  ],
+  "why_correct": "A drug restricted to the plasma has a Vd near the plasma volume, about 0.04 L/kg (2.8 L/70 kg); large protein molecules such as antibodies behave this way.",
+  "takeaway": "Small Vd = stays in plasma; huge Vd = in tissues.",
+  "discriminator": "Compare Vd to the body's real compartments.",
+  "src": "L01 S52; p. 43; p. 46",
+  "id": "U1B-027",
+  "answer": "D",
+  "options": {
+   "A": {
+    "text": "In total body water",
+    "why": "Total body water is about 0.6 L/kg.",
+    "correct": false
+   },
+   "B": {
+    "text": "In extracellular water",
+    "why": "Extracellular water is about 0.2 L/kg.",
+    "correct": false
+   },
+   "C": {
+    "text": "In body fat",
+    "why": "Fat is about 0.2–0.35 L/kg, for highly lipid-soluble drugs.",
+    "correct": false
+   },
+   "D": {
+    "text": "In the plasma",
+    "why": "A drug restricted to the plasma has a Vd near the plasma volume, about 0.04 L/kg (2.8 L/70 kg); large protein molecules such as antibodies behave this way.",
+    "correct": true
+   },
+   "E": {
+    "text": "Sequestered in tissues",
+    "why": "Tissue sequestration gives a very HIGH Vd (e.g., digoxin).",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L01/index.html#pharmacokinetics-adme-absorption-distribution",
+   "label": "Study this: L01 · Part 5 →"
+  }
+ },
+ {
+  "topic": "Dose-response & therapeutic index",
+  "objectives": [
+   "IO1.4"
+  ],
+  "sg": [],
+  "kind": "mechanism",
+  "stem": "Which statement reflects the textbook's view of drug selectivity?",
+  "correct": "No drug causes only a single specific effect",
+  "distractors": [
+   {
+    "text": "Each drug binds only one receptor type",
+    "why": "Drugs bind more than one kind of receptor."
+   },
+   {
+    "text": "Side effects occur only at toxic doses",
+    "why": "Unwanted effects can occur at normal doses (ADRs)."
+   },
+   {
+    "text": "Potent drugs are always more selective",
+    "why": "Potency and selectivity are different properties."
+   },
+   {
+    "text": "Selectivity is the same as efficacy",
+    "why": "Efficacy is the maximal effect."
+   }
+  ],
+  "why_correct": "Drugs are selective rather than specific: no drug causes only a single effect, so 'side effects' are expected pharmacologic effects.",
+  "takeaway": "Selective, not specific.",
+  "discriminator": "Expect more than one effect from every drug.",
+  "src": "L01 p. 40; S5",
+  "id": "U1B-019",
+  "answer": "C",
+  "options": {
+   "A": {
+    "text": "Each drug binds only one receptor type",
+    "why": "Drugs bind more than one kind of receptor.",
+    "correct": false
+   },
+   "B": {
+    "text": "Side effects occur only at toxic doses",
+    "why": "Unwanted effects can occur at normal doses (ADRs).",
+    "correct": false
+   },
+   "C": {
+    "text": "No drug causes only a single specific effect",
+    "why": "Drugs are selective rather than specific: no drug causes only a single effect, so 'side effects' are expected pharmacologic effects.",
+    "correct": true
+   },
+   "D": {
+    "text": "Selectivity is the same as efficacy",
+    "why": "Efficacy is the maximal effect.",
+    "correct": false
+   },
+   "E": {
+    "text": "Potent drugs are always more selective",
+    "why": "Potency and selectivity are different properties.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L01/index.html#the-language-of-pharmacology",
+   "label": "Study this: L01 · Part 1 →"
+  }
+ },
+ {
+  "topic": "Drug development & approval",
+  "objectives": [
+   "IO1.4"
+  ],
+  "sg": [
+   "U1-R3"
+  ],
+  "kind": "vignette",
+  "stem": "A new cancer drug expected to be highly toxic enters its first human trial. According to the textbook, who is enrolled?",
+  "correct": "Volunteer patients who have the cancer",
+  "distractors": [
+   {
+    "text": "Healthy volunteers, as in usual Phase I",
+    "why": "Usual Phase I uses healthy volunteers, but not when significant toxicity is expected."
+   },
+   {
+    "text": "Thousands of patients at many sites",
+    "why": "That describes Phase III."
+   },
+   {
+    "text": "The general prescribed population",
+    "why": "That describes Phase IV, after approval."
+   },
+   {
+    "text": "No humans, only animals, until approval",
+    "why": "Phase I is the first human testing."
+   }
+  ],
+  "why_correct": "Phase I usually uses 20–100 healthy volunteers, but if significant toxicity is expected (e.g., cancer, AIDS), volunteer patients with the disease take part instead.",
+  "takeaway": "Slides: Phase I = healthy volunteers. Textbook exception: very toxic drugs → patients.",
+  "discriminator": "Expected toxicity changes who is in Phase I.",
+  "src": "L01 p. 17; S13; SG U1-R3",
+  "id": "U1B-006",
+  "answer": "E",
+  "options": {
+   "A": {
+    "text": "No humans, only animals, until approval",
+    "why": "Phase I is the first human testing.",
+    "correct": false
+   },
+   "B": {
+    "text": "Healthy volunteers, as in usual Phase I",
+    "why": "Usual Phase I uses healthy volunteers, but not when significant toxicity is expected.",
+    "correct": false
+   },
+   "C": {
+    "text": "Thousands of patients at many sites",
+    "why": "That describes Phase III.",
+    "correct": false
+   },
+   "D": {
+    "text": "The general prescribed population",
+    "why": "That describes Phase IV, after approval.",
+    "correct": false
+   },
+   "E": {
+    "text": "Volunteer patients who have the cancer",
+    "why": "Phase I usually uses 20–100 healthy volunteers, but if significant toxicity is expected (e.g., cancer, AIDS), volunteer patients with the disease take part instead.",
+    "correct": true
+   }
+  },
+  "link": {
+   "href": "../../L01/index.html#drug-development-regulation",
+   "label": "Study this: L01 · Part 2 →"
+  }
+ },
+ {
+  "topic": "Pharmacogenomics & decisions",
+  "objectives": [
+   "IO1.3"
+  ],
+  "sg": [
+   "U1-R12"
+  ],
+  "kind": "mechanism",
+  "stem": "For a patient with intermediate TPMT activity, how does CPIC guidance adjust a thiopurine such as azathioprine?",
+  "correct": "Start at about 30–70% of the target dose",
+  "distractors": [
+   {
+    "text": "Start at double the usual target dose",
+    "why": "Low TPMT raises toxicity — lower, not higher."
+   },
+   {
+    "text": "Give the standard dose without monitoring",
+    "why": "Intermediate activity needs reduced dosing and monitoring."
+   },
+   {
+    "text": "Switch to codeine for the same purpose",
+    "why": "Codeine is an opioid, not an immunosuppressant."
+   },
+   {
+    "text": "Avoid all drugs metabolized by CYP3A4",
+    "why": "TPMT is not a CYP enzyme."
+   }
+  ],
+  "why_correct": "TPMT intermediate activity: start at 30–70% of the target dose and titrate with close monitoring (e.g., white blood cell counts); deficient patients need a drastically reduced dose or an alternative.",
+  "takeaway": "Less TPMT → less thiopurine.",
+  "discriminator": "TPMT deficiency raises thiopurine toxicity risk.",
+  "src": "L02 S33; p. 83; SG U1-R12",
+  "id": "U1B-047",
+  "answer": "E",
+  "options": {
+   "A": {
+    "text": "Give the standard dose without monitoring",
+    "why": "Intermediate activity needs reduced dosing and monitoring.",
+    "correct": false
+   },
+   "B": {
+    "text": "Switch to codeine for the same purpose",
+    "why": "Codeine is an opioid, not an immunosuppressant.",
+    "correct": false
+   },
+   "C": {
+    "text": "Avoid all drugs metabolized by CYP3A4",
+    "why": "TPMT is not a CYP enzyme.",
+    "correct": false
+   },
+   "D": {
+    "text": "Start at double the usual target dose",
+    "why": "Low TPMT raises toxicity — lower, not higher.",
+    "correct": false
+   },
+   "E": {
+    "text": "Start at about 30–70% of the target dose",
+    "why": "TPMT intermediate activity: start at 30–70% of the target dose and titrate with close monitoring (e.g., white blood cell counts); deficient patients need a drastically reduced dose or an alternative.",
+    "correct": true
+   }
+  },
+  "link": {
+   "href": "../../L02/index.html#pharmacogenomics",
+   "label": "Study this: L02 · Part 4 →"
+  }
+ },
+ {
+  "topic": "Drug development & approval",
+  "objectives": [
+   "IO1.4"
+  ],
+  "sg": [
+   "U1-R3"
+  ],
+  "kind": "vignette",
+  "stem": "Before approval, a new drug is compared with standard care in 3,000 patients at 40 hospitals to confirm efficacy and watch for adverse effects. Which phase is this?",
+  "correct": "Phase III",
+  "distractors": [
+   {
+    "text": "Phase I",
+    "why": "Phase I is small-scale safety and dosing."
+   },
+   {
+    "text": "Phase II",
+    "why": "Phase II gives preliminary efficacy in a few hundred patients."
+   },
+   {
+    "text": "Phase IV",
+    "why": "Phase IV happens AFTER approval."
+   },
+   {
+    "text": "Preclinical",
+    "why": "Preclinical testing comes before any human trial."
+   }
+  ],
+  "why_correct": "Phase III confirms efficacy and monitors adverse effects at scale — hundreds to thousands of patients (textbook: usually thousands), often multi-site.",
+  "takeaway": "Large, multi-site, pre-approval = Phase III.",
+  "discriminator": "Before approval → III; after approval → IV.",
+  "src": "L01 S13; S17; p. 17; SG U1-R3",
+  "id": "U1B-010",
+  "answer": "A",
+  "options": {
+   "A": {
+    "text": "Phase III",
+    "why": "Phase III confirms efficacy and monitors adverse effects at scale — hundreds to thousands of patients (textbook: usually thousands), often multi-site.",
+    "correct": true
+   },
+   "B": {
+    "text": "Phase I",
+    "why": "Phase I is small-scale safety and dosing.",
+    "correct": false
+   },
+   "C": {
+    "text": "Preclinical",
+    "why": "Preclinical testing comes before any human trial.",
+    "correct": false
+   },
+   "D": {
+    "text": "Phase IV",
+    "why": "Phase IV happens AFTER approval.",
+    "correct": false
+   },
+   "E": {
+    "text": "Phase II",
+    "why": "Phase II gives preliminary efficacy in a few hundred patients.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L01/index.html#drug-development-regulation",
+   "label": "Study this: L01 · Part 2 →"
+  }
+ },
+ {
+  "topic": "Metabolism & CYP450",
+  "objectives": [
+   "IO1.4"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A patient on warfarin and a barbiturate (a CYP inducer) has the barbiturate stopped. What should the PA anticipate?",
+  "correct": "Warfarin levels rise, raising bleeding risk",
+  "distractors": [
+   {
+    "text": "Warfarin levels fall, raising clot risk",
+    "why": "Stopping an inducer slows metabolism — levels RISE."
+   },
+   {
+    "text": "No change, since warfarin is renally cleared",
+    "why": "Warfarin is cleared by CYP metabolism."
+   },
+   {
+    "text": "Warfarin becomes a prodrug once again",
+    "why": "Not a feature of warfarin."
+   },
+   {
+    "text": "The barbiturate's effect on CYP persists forever",
+    "why": "Induction fades after the inducer is stopped."
+   }
+  ],
+  "why_correct": "Inducers raise warfarin dose needs; stopping the inducer reduces warfarin metabolism, raising plasma levels and causing bleeding.",
+  "takeaway": "Stopping an inducer acts like adding an inhibitor.",
+  "discriminator": "Watch narrow-TI drugs whenever an interacting drug is STOPPED, too.",
+  "src": "L02 p. 72; S6; S11",
+  "id": "U1B-035",
+  "answer": "B",
+  "options": {
+   "A": {
+    "text": "Warfarin levels fall, raising clot risk",
+    "why": "Stopping an inducer slows metabolism — levels RISE.",
+    "correct": false
+   },
+   "B": {
+    "text": "Warfarin levels rise, raising bleeding risk",
+    "why": "Inducers raise warfarin dose needs; stopping the inducer reduces warfarin metabolism, raising plasma levels and causing bleeding.",
+    "correct": true
+   },
+   "C": {
+    "text": "Warfarin becomes a prodrug once again",
+    "why": "Not a feature of warfarin.",
+    "correct": false
+   },
+   "D": {
+    "text": "No change, since warfarin is renally cleared",
+    "why": "Warfarin is cleared by CYP metabolism.",
+    "correct": false
+   },
+   "E": {
+    "text": "The barbiturate's effect on CYP persists forever",
+    "why": "Induction fades after the inducer is stopped.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L02/index.html#drug-metabolism-cyp450-interactions",
+   "label": "Study this: L02 · Part 1 →"
+  }
+ },
+ {
+  "topic": "Distribution",
+  "objectives": [
+   "IO1.2",
+   "IO1.4"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A patient stable on digoxin starts a drug that inhibits P-glycoprotein (MDR1). What does the textbook predict?",
+  "correct": "Digoxin blood levels rise",
+  "distractors": [
+   {
+    "text": "Digoxin blood levels fall",
+    "why": "Blocking the efflux pump raises, not lowers, digoxin levels."
+   },
+   {
+    "text": "Digoxin becomes a prodrug",
+    "why": "P-gp inhibition doesn't change how digoxin is activated."
+   },
+   {
+    "text": "Digoxin stops reaching tissues",
+    "why": "Digoxin's large Vd reflects tissue uptake, unchanged here."
+   },
+   {
+    "text": "Digoxin's therapeutic index widens",
+    "why": "TI is a drug property; the interaction raises toxicity risk."
+   }
+  ],
+  "why_correct": "P-glycoprotein (MDR1) pumps drugs out of cells; inhibiting it increases blood levels of digoxin — dangerous for a narrow-TI drug.",
+  "takeaway": "Transporters cause interactions too, not only CYP enzymes.",
+  "discriminator": "Efflux pump blocked → more drug stays in → level up.",
+  "src": "L01 p. 9; S53; S38",
+  "id": "U1B-026",
+  "answer": "C",
+  "options": {
+   "A": {
+    "text": "Digoxin stops reaching tissues",
+    "why": "Digoxin's large Vd reflects tissue uptake, unchanged here.",
+    "correct": false
+   },
+   "B": {
+    "text": "Digoxin's therapeutic index widens",
+    "why": "TI is a drug property; the interaction raises toxicity risk.",
+    "correct": false
+   },
+   "C": {
+    "text": "Digoxin blood levels rise",
+    "why": "P-glycoprotein (MDR1) pumps drugs out of cells; inhibiting it increases blood levels of digoxin — dangerous for a narrow-TI drug.",
+    "correct": true
+   },
+   "D": {
+    "text": "Digoxin becomes a prodrug",
+    "why": "P-gp inhibition doesn't change how digoxin is activated.",
+    "correct": false
+   },
+   "E": {
+    "text": "Digoxin blood levels fall",
+    "why": "Blocking the efflux pump raises, not lowers, digoxin levels.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L01/index.html#pharmacokinetics-adme-absorption-distribution",
+   "label": "Study this: L01 · Part 5 →"
+  }
+ },
+ {
+  "topic": "Excretion & renal dosing",
+  "objectives": [
+   "IO1.2",
+   "IO1.4"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A patient overdoses on a weak base. Based on ion trapping, which urine change would speed its excretion?",
+  "correct": "Acidifying the urine",
+  "distractors": [
+   {
+    "text": "Alkalinizing the urine",
+    "why": "Alkaline urine speeds excretion of weak ACIDS (e.g., aspirin)."
+   },
+   {
+    "text": "Making the drug more lipophilic",
+    "why": "Lipophilic, un-ionized drug is reabsorbed."
+   },
+   {
+    "text": "Increasing plasma protein binding",
+    "why": "Only free drug is filtered."
+   },
+   {
+    "text": "Leaving urine pH unchanged",
+    "why": "Changing pH is the ion-trapping strategy."
+   }
+  ],
+  "why_correct": "Weak acids are excreted faster in alkaline urine; weak bases faster in acidic urine — the ionized form is trapped in the tubule and can't be reabsorbed.",
+  "takeaway": "Trap the ionized form: acid → alkaline urine; base → acidic urine.",
+  "discriminator": "Aspirin (acid) → bicarbonate; a base → the opposite.",
+  "src": "L02 S14 (notes); L01 p. 10; p. 11",
+  "id": "U1B-036",
+  "answer": "C",
+  "options": {
+   "A": {
+    "text": "Leaving urine pH unchanged",
+    "why": "Changing pH is the ion-trapping strategy.",
+    "correct": false
+   },
+   "B": {
+    "text": "Making the drug more lipophilic",
+    "why": "Lipophilic, un-ionized drug is reabsorbed.",
+    "correct": false
+   },
+   "C": {
+    "text": "Acidifying the urine",
+    "why": "Weak acids are excreted faster in alkaline urine; weak bases faster in acidic urine — the ionized form is trapped in the tubule and can't be reabsorbed.",
+    "correct": true
+   },
+   "D": {
+    "text": "Alkalinizing the urine",
+    "why": "Alkaline urine speeds excretion of weak ACIDS (e.g., aspirin).",
+    "correct": false
+   },
+   "E": {
+    "text": "Increasing plasma protein binding",
+    "why": "Only free drug is filtered.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L02/index.html#drug-excretion-renal-dosing",
+   "label": "Study this: L02 · Part 2 →"
+  }
+ },
+ {
+  "topic": "Metabolism & CYP450",
+  "objectives": [
+   "IO1.2"
+  ],
+  "sg": [
+   "U1-R10"
+  ],
+  "kind": "mechanism",
+  "stem": "Roughly what share of prescription drugs metabolized by the liver does CYP3A4 handle?",
+  "correct": "More than 50%",
+  "distractors": [
+   {
+    "text": "About 5%",
+    "why": "Far too low."
+   },
+   {
+    "text": "About 10%",
+    "why": "Far too low."
+   },
+   {
+    "text": "About 25%",
+    "why": "Too low — that is closer to CYP2D6's share of all drugs."
+   },
+   {
+    "text": "Exactly 100%",
+    "why": "Many other enzymes are involved."
+   }
+  ],
+  "why_correct": "CYP3A4 alone metabolizes over 50% of the prescription drugs metabolized by the liver — why the lecture's interaction example uses CYP3A4.",
+  "takeaway": "CYP3A4 = the busiest drug-metabolizing enzyme.",
+  "discriminator": "CYP3A4 inhibitors and inducers affect many drugs.",
+  "src": "L02 p. 60; S6; SG U1-R10",
+  "id": "U1B-031",
+  "answer": "E",
+  "options": {
+   "A": {
+    "text": "Exactly 100%",
+    "why": "Many other enzymes are involved.",
+    "correct": false
+   },
+   "B": {
+    "text": "About 25%",
+    "why": "Too low — that is closer to CYP2D6's share of all drugs.",
+    "correct": false
+   },
+   "C": {
+    "text": "About 5%",
+    "why": "Far too low.",
+    "correct": false
+   },
+   "D": {
+    "text": "About 10%",
+    "why": "Far too low.",
+    "correct": false
+   },
+   "E": {
+    "text": "More than 50%",
+    "why": "CYP3A4 alone metabolizes over 50% of the prescription drugs metabolized by the liver — why the lecture's interaction example uses CYP3A4.",
+    "correct": true
+   }
+  },
+  "link": {
+   "href": "../../L02/index.html#drug-metabolism-cyp450-interactions",
+   "label": "Study this: L02 · Part 1 →"
+  }
+ },
+ {
+  "topic": "Dose-response & therapeutic index",
+  "objectives": [
+   "IO1.1"
+  ],
+  "sg": [
+   "U1-R7"
+  ],
+  "kind": "vignette",
+  "stem": "A PA is choosing a starting dose for an individual patient. According to the textbook, which range is most useful?",
+  "correct": "The therapeutic window",
+  "distractors": [
+   {
+    "text": "The animal-derived TD₅₀ ÷ ED₅₀ ratio",
+    "why": "TI is measured in animals; the window is more practical in a patient."
+   },
+   {
+    "text": "The range from EC₅₀ up to Emax",
+    "why": "That describes potency and efficacy, not safety."
+   },
+   {
+    "text": "The range from LD₅₀ down to TD₅₀",
+    "why": "Lethal-dose data come from animal studies."
+   },
+   {
+    "text": "The fraction of the dose absorbed",
+    "why": "That is bioavailability."
+   }
+  ],
+  "why_correct": "The therapeutic window — between the minimum therapeutic dose and the minimum toxic dose — is of greater practical value in choosing a dose for a patient.",
+  "takeaway": "TI (animals) vs. therapeutic window (patients).",
+  "discriminator": "Choosing a real patient's dose → therapeutic window.",
+  "src": "L01 p. 38; S38; SG U1-R7",
+  "id": "U1B-016",
+  "answer": "E",
+  "options": {
+   "A": {
+    "text": "The range from EC₅₀ up to Emax",
+    "why": "That describes potency and efficacy, not safety.",
+    "correct": false
+   },
+   "B": {
+    "text": "The animal-derived TD₅₀ ÷ ED₅₀ ratio",
+    "why": "TI is measured in animals; the window is more practical in a patient.",
+    "correct": false
+   },
+   "C": {
+    "text": "The range from LD₅₀ down to TD₅₀",
+    "why": "Lethal-dose data come from animal studies.",
+    "correct": false
+   },
+   "D": {
+    "text": "The fraction of the dose absorbed",
+    "why": "That is bioavailability.",
+    "correct": false
+   },
+   "E": {
+    "text": "The therapeutic window",
+    "why": "The therapeutic window — between the minimum therapeutic dose and the minimum toxic dose — is of greater practical value in choosing a dose for a patient.",
+    "correct": true
+   }
+  },
+  "link": {
+   "href": "../../L01/index.html#dose-response-relationships",
+   "label": "Study this: L01 · Part 4 →"
+  }
+ },
+ {
+  "topic": "Metabolism & CYP450",
+  "objectives": [
+   "IO1.4"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "Why does a large acetaminophen overdose injure the liver?",
+  "correct": "Glutathione runs out, so NAPQI builds up",
+  "distractors": [
+   {
+    "text": "Acetaminophen itself is directly toxic at any dose",
+    "why": "Toxicity comes from the NAPQI metabolite."
+   },
+   {
+    "text": "Phase II conjugation produces NAPQI",
+    "why": "NAPQI comes from CYP (Phase I) metabolism."
+   },
+   {
+    "text": "The kidneys stop excreting the drug",
+    "why": "The injury is hepatic, from NAPQI."
+   },
+   {
+    "text": "Overdose induces CYP3A4 in the gut wall",
+    "why": "Not the mechanism of injury."
+   }
+  ],
+  "why_correct": "Most acetaminophen is conjugated; a small fraction becomes NAPQI, normally detoxified by glutathione. In overdose glutathione is depleted and NAPQI injures the liver; N-acetylcysteine within 8–16 h protects.",
+  "takeaway": "Toxic metabolite + depleted defense = liver injury.",
+  "discriminator": "NAPQI is made normally; overdose overwhelms glutathione.",
+  "src": "L02 S4 (notes); p. 66",
+  "id": "U1B-033",
+  "answer": "D",
+  "options": {
+   "A": {
+    "text": "Phase II conjugation produces NAPQI",
+    "why": "NAPQI comes from CYP (Phase I) metabolism.",
+    "correct": false
+   },
+   "B": {
+    "text": "Overdose induces CYP3A4 in the gut wall",
+    "why": "Not the mechanism of injury.",
+    "correct": false
+   },
+   "C": {
+    "text": "The kidneys stop excreting the drug",
+    "why": "The injury is hepatic, from NAPQI.",
+    "correct": false
+   },
+   "D": {
+    "text": "Glutathione runs out, so NAPQI builds up",
+    "why": "Most acetaminophen is conjugated; a small fraction becomes NAPQI, normally detoxified by glutathione. In overdose glutathione is depleted and NAPQI injures the liver; N-acetylcysteine within 8–16 h protects.",
+    "correct": true
+   },
+   "E": {
+    "text": "Acetaminophen itself is directly toxic at any dose",
+    "why": "Toxicity comes from the NAPQI metabolite.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L02/index.html#drug-metabolism-cyp450-interactions",
+   "label": "Study this: L02 · Part 1 →"
+  }
+ },
+ {
+  "topic": "Receptors & drug targets",
+  "objectives": [
+   "IO1.1"
+  ],
+  "sg": [],
+  "kind": "mechanism",
+  "stem": "What does the textbook mean by \"spare receptors\"?",
+  "correct": "Maximal response occurs without full receptor occupancy",
+  "distractors": [
+   {
+    "text": "Receptors that cannot bind any drug at all",
+    "why": "Spare receptors are functional receptors."
+   },
+   {
+    "text": "Receptors that bind only antagonist drugs",
+    "why": "They bind agonists normally."
+   },
+   {
+    "text": "Receptors that bind drug irreversibly",
+    "why": "Irreversible binding is a different concept."
+   },
+   {
+    "text": "New receptors made after long-term use",
+    "why": "Spareness isn't about new synthesis."
+   }
+  ],
+  "why_correct": "Receptors are 'spare' when a maximal response can be produced without occupying all of them (e.g., ~90% of cardiac β receptors can be blocked and maximal inotropic response preserved).",
+  "takeaway": "Spare receptors = reserve capacity.",
+  "discriminator": "Full response at partial occupancy → spare receptors.",
+  "src": "L01 p. 23",
+  "id": "U1B-013",
+  "answer": "D",
+  "options": {
+   "A": {
+    "text": "New receptors made after long-term use",
+    "why": "Spareness isn't about new synthesis.",
+    "correct": false
+   },
+   "B": {
+    "text": "Receptors that bind only antagonist drugs",
+    "why": "They bind agonists normally.",
+    "correct": false
+   },
+   "C": {
+    "text": "Receptors that bind drug irreversibly",
+    "why": "Irreversible binding is a different concept.",
+    "correct": false
+   },
+   "D": {
+    "text": "Maximal response occurs without full receptor occupancy",
+    "why": "Receptors are 'spare' when a maximal response can be produced without occupying all of them (e.g., ~90% of cardiac β receptors can be blocked and maximal inotropic response preserved).",
+    "correct": true
+   },
+   "E": {
+    "text": "Receptors that cannot bind any drug at all",
+    "why": "Spare receptors are functional receptors.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L01/index.html#pharmacodynamics-targets-receptors",
+   "label": "Study this: L01 · Part 3 →"
+  }
+ },
+ {
+  "topic": "Distribution",
+  "objectives": [
+   "IO1.2"
+  ],
+  "sg": [],
+  "kind": "mechanism",
+  "stem": "Which efflux transporter is found in the brain and testes and limits drug entry there?",
+  "correct": "P-glycoprotein (MDR1)",
+  "distractors": [
+   {
+    "text": "CYP3A4",
+    "why": "CYP3A4 is a metabolizing enzyme."
+   },
+   {
+    "text": "TPMT",
+    "why": "TPMT metabolizes thiopurines."
+   },
+   {
+    "text": "Plasma albumin",
+    "why": "Albumin binds drug in plasma."
+   },
+   {
+    "text": "VKORC1",
+    "why": "VKORC1 is the warfarin target gene."
+   }
+  ],
+  "why_correct": "P-glycoprotein (MDR1), an ABC efflux transporter in the brain, testes, and other tissues, pumps drugs back out.",
+  "takeaway": "P-gp = efflux pump at the BBB (and testes).",
+  "discriminator": "Pumps move drugs; enzymes change drugs.",
+  "src": "L01 S53; p. 9",
+  "id": "U1B-029",
+  "answer": "B",
+  "options": {
+   "A": {
+    "text": "CYP3A4",
+    "why": "CYP3A4 is a metabolizing enzyme.",
+    "correct": false
+   },
+   "B": {
+    "text": "P-glycoprotein (MDR1)",
+    "why": "P-glycoprotein (MDR1), an ABC efflux transporter in the brain, testes, and other tissues, pumps drugs back out.",
+    "correct": true
+   },
+   "C": {
+    "text": "TPMT",
+    "why": "TPMT metabolizes thiopurines.",
+    "correct": false
+   },
+   "D": {
+    "text": "VKORC1",
+    "why": "VKORC1 is the warfarin target gene.",
+    "correct": false
+   },
+   "E": {
+    "text": "Plasma albumin",
+    "why": "Albumin binds drug in plasma.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L01/index.html#pharmacokinetics-adme-absorption-distribution",
+   "label": "Study this: L01 · Part 5 →"
+  }
+ },
+ {
+  "topic": "Absorption & routes",
+  "objectives": [
+   "IO1.2",
+   "IO1.5"
+  ],
+  "sg": [],
+  "kind": "mechanism",
+  "stem": "Which route has a bioavailability of about 30% to <100% and less first-pass effect than oral dosing?",
+  "correct": "Rectal",
+  "distractors": [
+   {
+    "text": "Intravenous",
+    "why": "IV is 100%."
+   },
+   {
+    "text": "Intramuscular",
+    "why": "IM is about 75% to ≤100%."
+   },
+   {
+    "text": "Transdermal",
+    "why": "Transdermal is about 80% to ≤100% and very slow."
+   },
+   {
+    "text": "Inhalation",
+    "why": "Inhalation is 5% to <100% with very rapid onset."
+   }
+  ],
+  "why_correct": "Rectal (PR): 30% to <100%, less first-pass effect than oral — about half of a rectal dose bypasses the liver.",
+  "takeaway": "Rectal partly avoids first-pass; sublingual largely avoids it.",
+  "discriminator": "Not every non-oral route fully escapes the liver.",
+  "src": "L01 p. 48; p. 49; S49",
+  "id": "U1B-021",
+  "answer": "A",
+  "options": {
+   "A": {
+    "text": "Rectal",
+    "why": "Rectal (PR): 30% to <100%, less first-pass effect than oral — about half of a rectal dose bypasses the liver.",
+    "correct": true
+   },
+   "B": {
+    "text": "Transdermal",
+    "why": "Transdermal is about 80% to ≤100% and very slow.",
+    "correct": false
+   },
+   "C": {
+    "text": "Inhalation",
+    "why": "Inhalation is 5% to <100% with very rapid onset.",
+    "correct": false
+   },
+   "D": {
+    "text": "Intramuscular",
+    "why": "IM is about 75% to ≤100%.",
+    "correct": false
+   },
+   "E": {
+    "text": "Intravenous",
+    "why": "IV is 100%.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L01/index.html#pharmacokinetics-adme-absorption-distribution",
+   "label": "Study this: L01 · Part 5 →"
+  }
+ },
+ {
+  "topic": "Language & drug names",
+  "objectives": [
+   "IO1.1"
+  ],
+  "sg": [],
+  "kind": "mechanism",
+  "stem": "A drug lowers blood pressure, whether or not that was the reason it was given. What is this measurable change called?",
+  "correct": "A pharmacologic effect",
+  "distractors": [
+   {
+    "text": "A therapeutic effect",
+    "why": "Therapeutic = the INTENDED, beneficial effect for a condition."
+   },
+   {
+    "text": "An adverse drug reaction",
+    "why": "An ADR is unintended AND harmful at normal doses."
+   },
+   {
+    "text": "Drug toxicity",
+    "why": "Toxicity is harm above the therapeutic range."
+   },
+   {
+    "text": "The drug's efficacy",
+    "why": "Efficacy is the maximal effect (Emax) a drug can produce."
+   }
+  ],
+  "why_correct": "Pharmacologic effect = any measurable biological change a drug produces (e.g., lower blood pressure).",
+  "takeaway": "Pharmacologic effect is the umbrella; therapeutic effect is the intended subset.",
+  "discriminator": "'Whether or not intended' → pharmacologic effect.",
+  "src": "L01 S5",
+  "id": "U1B-002",
+  "answer": "E",
+  "options": {
+   "A": {
+    "text": "Drug toxicity",
+    "why": "Toxicity is harm above the therapeutic range.",
+    "correct": false
+   },
+   "B": {
+    "text": "The drug's efficacy",
+    "why": "Efficacy is the maximal effect (Emax) a drug can produce.",
+    "correct": false
+   },
+   "C": {
+    "text": "An adverse drug reaction",
+    "why": "An ADR is unintended AND harmful at normal doses.",
+    "correct": false
+   },
+   "D": {
+    "text": "A therapeutic effect",
+    "why": "Therapeutic = the INTENDED, beneficial effect for a condition.",
+    "correct": false
+   },
+   "E": {
+    "text": "A pharmacologic effect",
+    "why": "Pharmacologic effect = any measurable biological change a drug produces (e.g., lower blood pressure).",
+    "correct": true
+   }
+  },
+  "link": {
+   "href": "../../L01/index.html#the-language-of-pharmacology",
+   "label": "Study this: L01 · Part 1 →"
+  }
+ },
+ {
+  "topic": "Half-life, steady state & clearance",
+  "objectives": [
+   "IO1.1"
+  ],
+  "sg": [],
+  "kind": "mechanism",
+  "stem": "Theophylline's Vd is 35 L, and the target level is 10 mg/L. Using loading dose = Vd × target, what loading dose is needed?",
+  "correct": "350 mg",
+  "distractors": [
+   {
+    "text": "35 mg",
+    "why": "That leaves out the target concentration."
+   },
+   {
+    "text": "3.5 mg",
+    "why": "Check the arithmetic: 35 × 10."
+   },
+   {
+    "text": "3,500 mg",
+    "why": "Too large by a factor of ten."
+   },
+   {
+    "text": "45 mg",
+    "why": "That adds instead of multiplying."
+   }
+  ],
+  "why_correct": "Loading dose = Vd × target concentration = 35 L × 10 mg/L = 350 mg — loading doses are based on Vd.",
+  "takeaway": "Loading → Vd; maintenance → clearance.",
+  "discriminator": "Fill the volume to the target.",
+  "src": "L02 p. 52; S23 (notes)",
+  "id": "U1B-042",
+  "answer": "A",
+  "options": {
+   "A": {
+    "text": "350 mg",
+    "why": "Loading dose = Vd × target concentration = 35 L × 10 mg/L = 350 mg — loading doses are based on Vd.",
+    "correct": true
+   },
+   "B": {
+    "text": "3.5 mg",
+    "why": "Check the arithmetic: 35 × 10.",
+    "correct": false
+   },
+   "C": {
+    "text": "45 mg",
+    "why": "That adds instead of multiplying.",
+    "correct": false
+   },
+   "D": {
+    "text": "35 mg",
+    "why": "That leaves out the target concentration.",
+    "correct": false
+   },
+   "E": {
+    "text": "3,500 mg",
+    "why": "Too large by a factor of ten.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L02/index.html#pk-calculations-half-life-steady-state-clearance",
+   "label": "Study this: L02 · Part 3 →"
+  }
+ },
+ {
+  "topic": "Absorption & routes",
+  "objectives": [
+   "IO1.2",
+   "IO1.4"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A patient who drinks grapefruit juice daily has a higher level of a CYP3A4-substrate drug. What does the textbook say explains this?",
+  "correct": "Gut-wall CYP3A4 and P-gp are inhibited",
+  "distractors": [
+   {
+    "text": "Grapefruit induces liver CYP3A4",
+    "why": "Induction would LOWER the level."
+   },
+   {
+    "text": "Grapefruit speeds renal clearance",
+    "why": "Faster clearance would lower the level."
+   },
+   {
+    "text": "Grapefruit binds the drug in the gut",
+    "why": "Binding would reduce absorption."
+   },
+   {
+    "text": "Grapefruit lowers plasma protein binding",
+    "why": "Not the mechanism described."
+   }
+  ],
+  "why_correct": "Grapefruit juice inhibits P-glycoprotein and gut-wall CYP3A4 metabolism, which can substantially increase drug absorption — first-pass loss can happen in the gut wall as well as the liver.",
+  "takeaway": "First-pass happens in the gut wall too.",
+  "discriminator": "Grapefruit = inhibitor (↑ levels), not inducer.",
+  "src": "L01 p. 48; L02 p. 64; S6",
+  "id": "U1B-023",
+  "answer": "D",
+  "options": {
+   "A": {
+    "text": "Grapefruit lowers plasma protein binding",
+    "why": "Not the mechanism described.",
+    "correct": false
+   },
+   "B": {
+    "text": "Grapefruit induces liver CYP3A4",
+    "why": "Induction would LOWER the level.",
+    "correct": false
+   },
+   "C": {
+    "text": "Grapefruit binds the drug in the gut",
+    "why": "Binding would reduce absorption.",
+    "correct": false
+   },
+   "D": {
+    "text": "Gut-wall CYP3A4 and P-gp are inhibited",
+    "why": "Grapefruit juice inhibits P-glycoprotein and gut-wall CYP3A4 metabolism, which can substantially increase drug absorption — first-pass loss can happen in the gut wall as well as the liver.",
+    "correct": true
+   },
+   "E": {
+    "text": "Grapefruit speeds renal clearance",
+    "why": "Faster clearance would lower the level.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L01/index.html#the-language-of-pharmacology",
+   "label": "Study this: L01 · Part 1 →"
+  }
+ },
+ {
+  "topic": "Drug development & approval",
+  "objectives": [
+   "IO1.4"
+  ],
+  "sg": [],
+  "kind": "mechanism",
+  "stem": "Under FDA rules, how soon must an adverse event that is both serious and unexpected be reported?",
+  "correct": "Within 15 days",
+  "distractors": [
+   {
+    "text": "Within 24 hours",
+    "why": "Not the stated deadline."
+   },
+   {
+    "text": "Within 7 days",
+    "why": "Not the stated deadline."
+   },
+   {
+    "text": "Within 30 days",
+    "why": "Not the stated deadline."
+   },
+   {
+    "text": "Within 90 days",
+    "why": "Not the stated deadline."
+   }
+  ],
+  "why_correct": "Events that are both serious and unexpected must be reported to the FDA within 15 days.",
+  "takeaway": "Serious + unexpected → 15 days.",
+  "discriminator": "Postmarketing reporting is how rare effects surface.",
+  "src": "L01 p. 18; S14",
+  "id": "U1B-009",
+  "answer": "B",
+  "options": {
+   "A": {
+    "text": "Within 90 days",
+    "why": "Not the stated deadline.",
+    "correct": false
+   },
+   "B": {
+    "text": "Within 15 days",
+    "why": "Events that are both serious and unexpected must be reported to the FDA within 15 days.",
+    "correct": true
+   },
+   "C": {
+    "text": "Within 7 days",
+    "why": "Not the stated deadline.",
+    "correct": false
+   },
+   "D": {
+    "text": "Within 30 days",
+    "why": "Not the stated deadline.",
+    "correct": false
+   },
+   "E": {
+    "text": "Within 24 hours",
+    "why": "Not the stated deadline.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L01/index.html#drug-development-regulation",
+   "label": "Study this: L01 · Part 2 →"
+  }
+ },
+ {
+  "topic": "Pharmacogenomics & decisions",
+  "objectives": [
+   "IO1.3",
+   "IO1.4"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A patient with G6PD deficiency develops very high uric acid during cancer treatment. Which drug does the textbook say is contraindicated?",
+  "correct": "Rasburicase",
+  "distractors": [
+   {
+    "text": "Allopurinol",
+    "why": "Allopurinol is the suggested alternative agent."
+   },
+   {
+    "text": "Acetaminophen",
+    "why": "Not the G6PD contraindication described."
+   },
+   {
+    "text": "Lithium",
+    "why": "Lithium is a narrow-TI renal drug, unrelated here."
+   },
+   {
+    "text": "Albuterol",
+    "why": "Albuterol is a β2 agonist, unrelated here."
+   }
+  ],
+  "why_correct": "Rasburicase is contraindicated in G6PD deficiency (risk of hemolytic anemia); an alternative such as allopurinol is used.",
+  "takeaway": "G6PD deficiency → avoid rasburicase.",
+  "discriminator": "Genotype is one input — here it changes the drug choice.",
+  "src": "L02 p. 83; S34",
+  "id": "U1B-050",
+  "answer": "B",
+  "options": {
+   "A": {
+    "text": "Acetaminophen",
+    "why": "Not the G6PD contraindication described.",
+    "correct": false
+   },
+   "B": {
+    "text": "Rasburicase",
+    "why": "Rasburicase is contraindicated in G6PD deficiency (risk of hemolytic anemia); an alternative such as allopurinol is used.",
+    "correct": true
+   },
+   "C": {
+    "text": "Allopurinol",
+    "why": "Allopurinol is the suggested alternative agent.",
+    "correct": false
+   },
+   "D": {
+    "text": "Lithium",
+    "why": "Lithium is a narrow-TI renal drug, unrelated here.",
+    "correct": false
+   },
+   "E": {
+    "text": "Albuterol",
+    "why": "Albuterol is a β2 agonist, unrelated here.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L02/index.html#pharmacogenomics",
+   "label": "Study this: L02 · Part 4 →"
+  }
+ }
+]

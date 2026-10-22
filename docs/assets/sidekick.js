@@ -27,18 +27,19 @@ let Anthropic, kb, sourceText = "", panel, body, tab = store.get("sk:tab", "ask"
 const STOP = new Set("a an and are as at be by can do does for from has have how i in is it its of on or that the this to was what when which who why will with you your vs versus".split(" "));
 const stem = (w) => w.replace(/(ations?|ization|ments?|ness|ically|ical|ally|ing|ed|ies|es|s|ly)$/, "") || w;
 const terms = (s) => plain(s).toLowerCase().normalize("NFKC").match(/[a-z0-9₀-₉]+/g)?.filter((w) => !STOP.has(w)).map(stem) || [];
-let index;
-function buildIndex() {
-  const docs = kb.chunks.map((c) => terms(c.text + " " + c.where));
+let index, indexAll = null, allSources = "";
+function makeIndex(chunks) {
+  const docs = chunks.map((c) => terms(c.text + " " + c.where));
   const df = new Map();
   docs.forEach((d) => new Set(d).forEach((t) => df.set(t, (df.get(t) || 0) + 1)));
-  const avg = docs.reduce((n, d) => n + d.length, 0) / docs.length;
-  index = { docs, df, avg, N: docs.length };
+  const avg = docs.reduce((n, d) => n + d.length, 0) / Math.max(1, docs.length);
+  return { docs, df, avg, N: docs.length, chunks };
 }
-function search(q, k = 6) {
+function buildIndex() { index = makeIndex(kb.chunks.map((c) => ({ ...c, lid: kb.lecture }))); }
+function search(q, k = 6, idx = index) {
   const qt = [...new Set(terms(q))];
   if (!qt.length) return [];
-  const { docs, df, avg, N } = index;
+  const { docs, df, avg, N } = idx;
   return docs.map((d, i) => {
     let s = 0;
     for (const t of qt) {
@@ -48,7 +49,28 @@ function search(q, k = 6) {
       s += idf * (tf * 2.2) / (tf + 1.2 * (0.25 + 0.75 * d.length / avg));
     }
     return [s, i];
-  }).filter(([s]) => s > 0).sort((a, b) => b[0] - a[0]).slice(0, k).map(([, i]) => kb.chunks[i]);
+  }).filter(([s]) => s > 0).sort((a, b) => b[0] - a[0]).slice(0, k).map(([, i]) => idx.chunks[i]);
+}
+// Every lecture at once (for cumulative review): loads the other lectures' cited chunks on first use
+async function ensureAll() {
+  if (indexAll) return indexAll;
+  const others = await Promise.all((kb.lectures || []).filter((l) => l.id !== kb.lecture).map((l) =>
+    fetch(`../${l.id}/kb.json`).then((r) => r.json()).then((k) => ({ k, l })).catch(() => null)));
+  const chunks = kb.chunks.map((c) => ({ ...c, lid: kb.lecture }));
+  others.filter(Boolean).forEach(({ k }) => k.chunks.forEach((c) => chunks.push({ ...c, lid: k.lecture, where: `${k.lecture} · ${c.where}` })));
+  indexAll = makeIndex(chunks);
+  return indexAll;
+}
+async function loadAllSources() {
+  if (allSources) return allSources;
+  const parts = await Promise.all((kb.lectures || []).map((l) => fetch(`../${l.id}/${l.source}`).then((r) => r.text()).then((t) => `=== ${l.id}: ${l.title} ===\n${t}`).catch(() => "")));
+  return (allSources = parts.filter(Boolean).join("\n\n"));
+}
+const hitLink = (h) => (h.lid && h.lid !== kb.lecture ? `../${h.lid}/index.html#${h.anchor}` : `#${h.anchor}`);
+function wireGo(root) {
+  root.querySelectorAll("[data-go]").forEach((a) => a.addEventListener("click", (e) => {
+    if (a.getAttribute("href").startsWith("#")) { e.preventDefault(); goTo(a.dataset.go); }
+  }));
 }
 
 // ---------------------------------------------------------------- panel shell
@@ -82,22 +104,25 @@ function show(id, arg) {
   tab = id; store.set("sk:tab", id);
   panel.querySelectorAll("[data-tab]").forEach((b) => b.setAttribute("aria-selected", b.dataset.tab === id));
   if (id !== "listen") speechSynthesis?.cancel();
-  ({ ask: askTab, listen: listenTab, cards: cardsTab, quiz: quizTab, map: mapTab, brief: briefTab, faq: faqTab, notes: notesTab, source: sourceView, explain: explainFree, card: newCard })[id](arg);
+  ({ ask: askTab, listen: listenTab, cards: cardsTab, quiz: quizTab, map: mapTab, brief: briefTab, faq: faqTab, notes: notesTab, source: sourceView, explain: explainFree, card: newCard, compare: compareView })[id](arg);
   body.scrollTop = 0;
 }
 
 // ---------------------------------------------------------------- Ask: search + optional AI chat
 const chat = { history: [], busy: false };
+let scope = store.get("sk:scope", "this");
 function askTab(prefill) {
   const key = store.get("sk:key", "");
   body.innerHTML = `<form class="sk-ask"><input name="q" placeholder="Ask about this lecture…" autocomplete="off" value="${esc(prefill || "")}"><button class="btn">Ask</button></form>
     <div class="sk-ai-line small">${key ? `AI chat <strong>on</strong> · ${esc(MODELS.find((m) => m[0] === store.get("sk:model", MODELS[0][0]))?.[1].split(" —")[0])} · <a href="#" data-ai>settings</a>${chat.history.length ? ' · <a href="#" data-clear>new chat</a>' : ""}`
       : `Searching your study materials. <a href="#" data-ai>Turn on AI chat</a> (optional, uses your own Claude API key).`}</div>
+    ${(kb.lectures || []).length > 1 ? `<div class="sk-scope small"><button data-scope="this" class="${scope === "this" ? "on" : ""}">This lecture</button><button data-scope="all" class="${scope === "all" ? "on" : ""}">All lectures (${kb.lectures.length})</button></div>` : ""}
     ${chat.history.length ? "" : '<p class="sk-tip small">Tip: <strong>highlight any text</strong> in the guide to Explain it, see its Source slide or textbook page, get quizzed, make a flashcard, or save it to Notes.</p>'}
     <div class="sk-thread"></div><div class="sk-results"></div>`;
   const form = body.querySelector("form");
   body.querySelector("[data-ai]").addEventListener("click", (e) => { e.preventDefault(); aiSettings(); });
   body.querySelector("[data-clear]")?.addEventListener("click", (e) => { e.preventDefault(); chat.history = []; askTab(); });
+  body.querySelectorAll("[data-scope]").forEach((b) => b.addEventListener("click", () => { scope = b.dataset.scope; store.set("sk:scope", scope); chat.history = []; askTab(); }));
   renderThread();
   form.addEventListener("submit", (e) => { e.preventDefault(); const q = form.q.value.trim(); if (q) ask(q); form.q.value = ""; });
   if (prefill) ask(prefill);
@@ -111,13 +136,14 @@ function renderThread() {
     (chat.history.length && !chat.busy ? `<div class="sk-follow">${FOLLOW.map(([l]) => `<button data-f="${l}">${l}</button>`).join("")}</div>` : "");
   t.querySelectorAll("[data-f]").forEach((b) => b.addEventListener("click", () => aiAnswer(FOLLOW.find(([l]) => l === b.dataset.f)[1], b.dataset.f)));
 }
-function ask(q) {
-  const hits = search(q);
-  body.querySelector(".sk-results").innerHTML = `<h4>From your study materials</h4>` + (hits.length ? hits.map((h) =>
+async function ask(q) {
+  const idx = scope === "all" ? await ensureAll() : index;
+  const hits = search(q, scope === "all" ? 8 : 6, idx);
+  body.querySelector(".sk-results").innerHTML = `<h4>From your study materials${scope === "all" ? " · all lectures" : ""}</h4>` + (hits.length ? hits.map((h) =>
     `<div class="sk-hit"><div class="small muted">${esc(h.where)}</div><div>${tags(h)}${md(h.text)}${cite(h.src)}</div>
-     <a href="#${esc(h.anchor)}" data-go="${esc(h.anchor)}" class="small">Go to section →</a></div>`).join("")
+     <a href="${esc(hitLink(h))}" data-go="${esc(h.anchor)}" class="small">${h.lid !== kb.lecture ? `Open in ${esc(h.lid)} →` : "Go to section →"}</a></div>`).join("")
     : `<p class="muted">Nothing matched. Try different words (e.g., a drug name or term) — or it may be <strong>not covered in materials</strong>.</p>`);
-  body.querySelectorAll("[data-go]").forEach((a) => a.addEventListener("click", (e) => { e.preventDefault(); goTo(a.dataset.go); }));
+  wireGo(body);
   if (store.get("sk:key", "")) aiAnswer(q);
 }
 async function loadSource() {
@@ -148,8 +174,11 @@ async function aiAnswer(q, label) {
   let text = "";
   try {
     Anthropic ||= (await import(SDK_URL)).default;
-    const client = new Anthropic({ apiKey: store.get("sk:key", ""), dangerouslyAllowBrowser: true });
-    const source = await loadSource();
+    // Only ever the student's own key from this browser, sent straight to Anthropic — no proxy, no shared key.
+    const key = store.get("sk:key", "");
+    if (!/^sk-ant-/.test(key)) throw new Error("No personal API key saved");
+    const client = new Anthropic({ apiKey: key, authToken: null, baseURL: "https://api.anthropic.com", dangerouslyAllowBrowser: true });
+    const source = scope === "all" ? await loadAllSources() : await loadSource();
     const model = store.get("sk:model", MODELS[0][0]);
     const stream = client.beta.messages.stream({
       model,
@@ -158,7 +187,7 @@ async function aiAnswer(q, label) {
       output_config: { effort: "low" },
       system: [
         { type: "text", text: "You are Sidekick, a study assistant for a physician assistant student in clinical pharmacology. Answer only from the lecture source below. Cite every fact the way the source does, e.g. (S12), (S12 notes), (p. 17), (SG U1-R3). If the source does not cover something, say \"Not covered in materials\" rather than using outside knowledge. Keep answers short and scannable: a direct answer first, then up to 5 bullets. Use **bold** for the single most testable point. When asked to quiz, ask one PANCE-style question at a time and wait for the answer." },
-        { type: "text", text: `LECTURE SOURCE (${kb.title}):\n\n${source}`, cache_control: { type: "ephemeral" } },
+        { type: "text", text: scope === "all" ? `COURSE SOURCES (every lecture so far):\n\n${source}` : `LECTURE SOURCE (${kb.title}):\n\n${source}`, cache_control: { type: "ephemeral" } },
       ],
       messages: chat.history.map(({ role, content }) => ({ role, content })),
     });
@@ -173,7 +202,8 @@ async function aiAnswer(q, label) {
     console.error("Sidekick chat:", err);
     chat.history.pop();
     const is = (cls) => Anthropic && err instanceof Anthropic[cls];
-    const why = is("AuthenticationError") ? "Your API key was rejected — check it in settings."
+    const why = /No personal API key/.test(err?.message) ? "AI chat needs your own Anthropic API key (it starts with sk-ant-). Add it in settings."
+      : is("AuthenticationError") ? "Your API key was rejected — check it in settings."
       : is("RateLimitError") ? "Rate limited — wait a moment and try again."
       : is("PermissionDeniedError") || is("NotFoundError") ? "This key can't use that model — try another model in settings."
       : is("APIConnectionError") || !Anthropic ? "Couldn't reach Claude — check your connection."
@@ -188,14 +218,16 @@ function aiSettings() {
   body.innerHTML = `<h3>AI chat (optional)</h3>
     <p class="small">Chat with Claude about <strong>this lecture only</strong>. It answers from the same cited source this page is built from, and says "Not covered in materials" otherwise.</p>
     <div class="callout why small"><div class="label">How it works</div><ul>
-      <li>Uses <strong>your own</strong> Anthropic API key (get one at console.anthropic.com). Usage is billed to your key.</li>
-      <li>The key is saved only in this browser and sent only to Anthropic — never to this site or anyone else.</li>
+      <li>Uses <strong>your own</strong> Anthropic API key (create one at console.anthropic.com → API keys). Any usage is billed to <strong>your</strong> Anthropic account — never to the person who shared this site.</li>
+      <li>This site has no key of its own and no server: your key is saved only in this browser and sent only to Anthropic. Nobody else can see or use it, and it gives you no access to anyone else's Claude account.</li>
+      <li>API keys are separate from a Claude.ai subscription. Tip: set a monthly spend limit in the Anthropic Console.</li>
       <li>Don't use this on a shared or public computer. Click "Forget key" when done.</li></ul></div>
     <label class="sk-field">API key<input type="password" name="key" placeholder="sk-ant-…" value="${esc(key)}" autocomplete="off"></label>
     <label class="sk-field">Model<select name="model">${MODELS.map(([id, l]) => `<option value="${id}" ${id === model ? "selected" : ""}>${l}</option>`).join("")}</select></label>
     <div class="btns"><button class="btn" data-save>Save</button>${key ? '<button class="btn ghost" data-forget>Forget key</button>' : ""}<button class="btn ghost" data-back>Back</button></div>`;
   body.querySelector("[data-save]").addEventListener("click", () => {
     const k = body.querySelector("[name=key]").value.trim();
+    if (k && !/^sk-ant-/.test(k)) { alert("That doesn't look like an Anthropic API key (it should start with sk-ant-)."); return; }
     if (k) store.set("sk:key", k); else store.del("sk:key");
     store.set("sk:model", body.querySelector("[name=model]").value);
     askTab();
@@ -380,7 +412,7 @@ function showBar() {
   if (!bar) {
     bar = document.createElement("div");
     bar.className = "sk-sel noprint";
-    bar.innerHTML = [["explain", "✦", "Explain"], ["source", "📍", "Source"], ["quiz", "❓", "Quiz me"], ["card", "🃏", "Card"], ["save", "🖍", "Save"], ["copy", "⧉", "Copy"]]
+    bar.innerHTML = [["explain", "✦", "Explain"], ["source", "📍", "Source"], ["quiz", "❓", "Quiz me"], ["compare", "⇄", "Compare"], ["card", "🃏", "Card"], ["save", "🖍", "Save"], ["copy", "⧉", "Copy"]]
       .map(([a, i, l]) => `<button data-act="${a}" title="${l}"><span>${i}</span>${l}</button>`).join("");
     bar.addEventListener("mousedown", (e) => e.preventDefault());  // keep the selection while clicking
     bar.addEventListener("click", (e) => { const b = e.target.closest("[data-act]"); if (b && ctx) { act(b.dataset.act, ctx); hideBar(); } });
@@ -408,6 +440,14 @@ function act(a, c) {
     return;
   }
   if (a === "save") { saveNote(c); return; }
+  if (a === "compare") {
+    if (!cmpA || cmpA.text === c.text) { cmpA = c; getSelection()?.removeAllRanges(); toast(`Comparing “${c.text.slice(0, 30)}” — now highlight the second thing`); return; }
+    const pair = { a: cmpA, b: c };
+    cmpA = null;
+    if (!panel.classList.contains("open")) open();
+    show("compare", pair);
+    return;
+  }
   if (!panel.classList.contains("open")) open();
   const ai = !!store.get("sk:key", "");
   const where = `It appears in "${c.where}": "${c.blockText}" (${c.src || "no citation"})`;
@@ -565,6 +605,33 @@ document.addEventListener("click", (e) => {
   if (!panel.classList.contains("open")) open();
   show("source", { text, blockText: text, src: c.textContent, where: c.closest("section[id]")?.querySelector("h2")?.textContent || kb.title });
 });
+
+// Compare: highlight one thing, then another → side by side from every lecture (and a Claude table if AI is on)
+let cmpA = null;
+async function compareView(pair) {
+  if (!pair) { askTab(); return; }
+  const { a, b } = pair;
+  body.innerHTML = '<p class="muted">Gathering facts from every lecture…</p>';
+  const idx = await ensureAll();
+  const label = (h) => h.where.split(" · ").slice(-1)[0];
+  const side = (x) => search(x.text + " " + x.text, 8, idx);
+  const A = side(a), B = side(b);
+  // use the words that DIFFER between the two (e.g., "competitive" vs "noncompetitive"), so a shared word doesn't match everything
+  const ta0 = new Set(terms(a.text)), tb0 = new Set(terms(b.text));
+  const ta = [...ta0].filter((w) => !tb0.has(w)), tb = [...tb0].filter((w) => !ta0.has(w));
+  const both = idx.chunks.filter((ch) => { const t = new Set(terms(ch.text)); return (ta.length ? ta : [...ta0]).some((w) => t.has(w)) && (tb.length ? tb : [...tb0]).some((w) => t.has(w)); }).slice(0, 6);
+  const groups = [...new Set([...A, ...B].map(label))];
+  const cell = (hs, g) => hs.filter((h) => label(h) === g).slice(0, 2).map((h) => `<div class="cmp-fact">${tags(h)}${md(h.text)}${cite(h.src)}</div>`).join("") || '<span class="muted small">—</span>';
+  body.innerHTML = `<h4>Compare</h4><div class="cmp-head"><span>${esc(a.text.slice(0, 60))}</span><span>vs</span><span>${esc(b.text.slice(0, 60))}</span></div>
+    ${store.get("sk:key", "") ? '<button class="btn" data-ai-cmp style="margin:6px 0 12px">✦ Build a comparison table with Claude</button>' : '<p class="small muted">Turn on AI chat in Ask for a ready-made comparison table.</p>'}
+    ${both.length ? `<h4>Mentioned together</h4>${both.map((h) => `<div class="sk-hit"><div class="small muted">${esc(h.where)}</div>${tags(h)}${md(h.text)}${cite(h.src)} <a href="${esc(hitLink(h))}" data-go="${esc(h.anchor)}" class="small">Open →</a></div>`).join("")}` : ""}
+    <h4>Side by side</h4><div class="cmp-table">${groups.map((g) => `<div class="cmp-row"><div class="cmp-label">${esc(g)}</div><div>${cell(A, g)}</div><div>${cell(B, g)}</div></div>`).join("") || '<p class="muted">Not covered in materials.</p>'}</div>`;
+  wireGo(body);
+  body.querySelector("[data-ai-cmp]")?.addEventListener("click", () => {
+    scope = "all"; store.set("sk:scope", "all");
+    askAI(`Compare "${a.text}" with "${b.text}" in a compact markdown-free table-like list: one line per feature (definition, mechanism, clinical use, examples, key exam trap), "A: … | B: …", using only the course sources and citing each fact. Say "Not covered in materials" for any gap.`, `Compare “${a.text.slice(0, 30)}” vs “${b.text.slice(0, 30)}”`);
+  });
+}
 
 // ---------------------------------------------------------------- start
 fetch("kb.json").then((r) => r.json()).then((data) => { kb = data; buildIndex(); mount(); store.get(notesKey(), []).forEach(markOnPage); }).catch(() => { /* no Sidekick data on this page */ });

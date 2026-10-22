@@ -1,4 +1,4 @@
-"""Unit 1 practice exam — questions 44–100 (distribution, metabolism, excretion, PK math, pharmacogenomics & decisions)."""
+"""Unit 1 practice exam — questions 51–100 (distribution, metabolism, excretion, PK math, pharmacogenomics & decisions)."""
 from bank_a import Q
 
 BANK_B = [
@@ -622,7 +622,7 @@ BANK_B = [
       "Fat and bone",
       [("Brain and heart", "Highly perfused — they receive drug fastest."),
        ("Heart and kidney", "Highly perfused — they receive drug fastest."),
-       ("Kidney and brain", "Highly perfused — they receive drug fastest."),
+       ("Fat and heart", "Fat is slow, but the heart is highly perfused and receives drug fast."),
        ("Brain and kidney", "Highly perfused — they receive drug fastest.")],
       "Highly perfused organs (brain, heart, kidney) receive drug faster than poorly perfused tissue (fat, bone).",
       "Poor perfusion = slow delivery: fat, bone.",

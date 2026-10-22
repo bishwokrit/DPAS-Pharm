@@ -17,15 +17,25 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 LETTERS = "ABCDE"
 EXAMS = {"U1": {"slug": "unit1", "title": "Unit 1 Practice Exam — Introduction to Pharmacology",
-                "short": "Unit 1 Practice Exam", "lectures": ["L01", "L02"], "seed": 625}}
+                "short": "Unit 1 Practice Exam", "lectures": ["L01", "L02"], "seed": 625, "unit": 1,
+                "about": "Built only from the Unit 1 slides and study guide."},
+         "U1B": {"slug": "unit1b", "title": "Unit 1 Practice Exam B — Exam Conditions",
+                 "short": "Unit 1 Practice Exam B (50 Q · 60 min)", "lectures": ["L01", "L02"], "seed": 1030, "unit": 1, "minutes": 60,
+                 "about": "50 new questions at real exam length — slides, study guide, and the assigned Katzung chapters (textbook questions are cited by page). Best taken timed: 60 minutes."}}
 
 
 def load_bank(exam_id):
+    """Every BANK_* list from work/exams/<id>/bank*.py, in file order (loaded under unique names so exams don't collide)."""
+    import importlib.util
     d = ROOT / "work" / "exams" / exam_id
     sys.path.insert(0, str(d))
-    from bank_a import BANK_A  # noqa: E402
-    from bank_b import BANK_B  # noqa: E402
-    bank = BANK_A + BANK_B
+    bank = []
+    for f in sorted(d.glob("bank*.py")):
+        spec = importlib.util.spec_from_file_location(f"{exam_id}_{f.stem}", f)
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+        bank += [q for name in sorted(vars(mod)) if name.startswith("BANK_") for q in getattr(mod, name)]
+    sys.path.remove(str(d))
     for i, q in enumerate(bank, 1):
         q["id"] = f"{exam_id}-{i:03d}"
     return bank
@@ -175,6 +185,10 @@ def source_text(lectures):
     for lid in lectures:
         for s in json.loads((ROOT / "work" / lid / "slides.json").read_text()):
             parts += [it["text"] for it in s["items"]] + [s.get("notes", "")] + [" ".join(map(str, r)) for t in s["tables"] for r in t]
+    for lid in lectures:
+        tb = ROOT / "work" / lid / "textbook.json"
+        if tb.exists():
+            parts += [p["text"] for p in json.loads(tb.read_text())]
     sg = ROOT / "work" / "study_guide.json"
     if sg.exists():
         parts += [v["question"] + " " + v["answer"] for v in json.loads(sg.read_text()).values()]
@@ -200,6 +214,14 @@ def drug_audit(bank, src):
     return tested, {d: d in src for d in tested}, unverified
 
 
+def as_quiz(q):
+    """The shared focus-quiz format (assets/quizmode.js)."""
+    return {"id": q["id"], "stem": q["stem"], "options": {L: o["text"] for L, o in q["options"].items()}, "answer": q["answer"],
+            "why": q["options"][q["answer"]]["why"], "whys": {L: o["why"] for L, o in q["options"].items() if not o["correct"]},
+            "takeaway": q["takeaway"], "discriminator": q["discriminator"], "src": q["src"], "topic": q["topic"], "kind": q["kind"],
+            "link": q.get("link")}
+
+
 def study_link(src, lectures):
     """'L02 S19; S30; SG U1-R11' -> link to the study-guide part that covers those slides."""
     sys.path.insert(0, str(ROOT / "pipeline"))
@@ -221,6 +243,8 @@ const KEY = "exam:" + EXAM.slug + ":v1", LOG = "exam:" + EXAM.slug + ":log";
 const store = { get(k, d) { try { const v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); } catch { return d; } },
                 set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} } };
 let S = store.get(KEY, null) || fresh();
+if (!S.order || S.order.length !== EXAM.questions.length) S.order = fresh().order;  // progress saved from other pages may lack the order
+S.answers ||= {}; S.flags ||= [];
 let log = store.get(LOG, []);
 let mode = "all", view = [], pos = 0;
 const byId = Object.fromEntries(EXAM.questions.map((q) => [q.id, q]));
@@ -316,7 +340,7 @@ function asQuiz(q) {
 }
 function focusSession() {
   window.dpasQuiz.setup(EXAM.questions.map(asQuiz), {
-    title: EXAM.title || "Practice exam", missed: [...missedEver()],
+    title: EXAM.title || "Practice exam", missed: [...missedEver()], minutes: EXAM.minutes || 0,
     onAnswer: (q, L, ok) => {
       S.answers[q.id] = L;
       if (!ok) { log.push({ id: q.id, topic: q.topic, chose: L, at: new Date().toISOString() }); store.set(LOG, log); }
@@ -383,7 +407,7 @@ def app_html(meta, data):
     up = "../../"
     body = f"""<header class="hero wrap narrow" style="padding-bottom:0"><p class="eyebrow">Practice exam · {len(data['questions'])} questions</p>
 <h1 style="font-size:clamp(30px,5vw,44px)">{html.escape(meta['title'])}</h1>
-<p class="lede">One question at a time. Tap an answer to see why every option is right or wrong. Built only from the Unit 1 slides and study guide.</p></header>
+<p class="lede">One question at a time. Tap an answer to see why every option is right or wrong. {html.escape(meta['about'])}</p></header>
 <section class="wrap narrow">
   <div class="callout why noprint" style="margin-top:18px"><div class="label">Best way to practice</div>Full screen, one question at a time — study mode or <strong>timed at PANCE pace</strong> (1 min/question), with a debrief at the end. Works with a Bluetooth remote ring.
     <div style="margin-top:12px"><button class="btn" id="focus">Start focus session →</button></div></div>
@@ -404,7 +428,7 @@ def app_html(meta, data):
     return f"""<!doctype html>
 <html lang="en" data-root="{up}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex">
 <title>{html.escape(meta['short'])}</title><link rel="stylesheet" href="{up}assets/site.css"></head>
-<body><nav class="nav"><div class="nav-in"><a class="brand" href="{up}index.html">DPAS Pharm</a><div class="nav-links"><a href="{up}index.html#exams">Practice exams</a></div><a class="nav-syl" href="{up}syllabus/index.html">Syllabus</a><button class="search-btn" aria-label="Search (Ctrl+K)"><svg viewBox="0 0 16 16" width="15" height="15"><circle cx="7" cy="7" r="5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M11 11l3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg><span>Search</span><kbd>⌘K</kbd></button><button class="theme-btn" aria-label="Change theme"></button></div></nav>
+<body><nav class="nav"><div class="nav-in"><a class="brand" href="{up}index.html">DPAS Pharm</a><div class="nav-links"><a href="{up}index.html#exams">Practice exams</a></div><a class="nav-syl" href="{up}review/index.html">Review</a><a class="nav-syl" href="{up}syllabus/index.html">Syllabus</a><button class="search-btn" aria-label="Search (Ctrl+K)"><svg viewBox="0 0 16 16" width="15" height="15"><circle cx="7" cy="7" r="5" fill="none" stroke="currentColor" stroke-width="1.7"/><path d="M11 11l3.5 3.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg><span>Search</span><kbd>⌘K</kbd></button><button class="theme-btn" aria-label="Change theme"></button></div></nav>
 {body}
 <footer class="wrap narrow">Progress and your wrong-answer log are saved in this browser.</footer>
 <script src="{up}assets/site.js"></script><script src="{up}assets/quizmode.js"></script></body></html>"""
@@ -469,13 +493,14 @@ def main(exam_id):
     # ---- app
     for q in order:
         q["link"] = study_link(q["src"], meta["lectures"])
-    data = {"slug": meta["slug"], "title": meta["short"], "topics": topics,
+    data = {"slug": meta["slug"], "title": meta["short"], "topics": topics, "minutes": meta.get("minutes"),
             "questions": [{k: q[k] for k in ("id", "topic", "kind", "stem", "options", "answer", "takeaway", "discriminator", "src", "link")} for q in order]}
     d = ROOT / "docs" / "exams" / meta["slug"]
     d.mkdir(parents=True, exist_ok=True)
     (d / "index.html").write_text(app_html(meta, data))
     (d / "questions.json").write_text(json.dumps([{"id": q["id"], "stem": q["stem"], "src": q["src"]} for q in order], ensure_ascii=False))
-    (d / "meta.json").write_text(json.dumps({"id": meta["slug"], "title": meta["short"], "count": len(order)}))
+    (d / "meta.json").write_text(json.dumps({"id": meta["slug"], "title": meta["short"], "count": len(order), "unit": meta.get("unit"), "minutes": meta.get("minutes")}))
+    (d / "quiz.json").write_text(json.dumps([as_quiz(q) for q in order], ensure_ascii=False))
     (ROOT / "work" / "exams" / exam_id / "resolved.json").write_text(json.dumps(order, indent=1, ensure_ascii=False))
     print(f"  exam {exam_id}: {len(order)} questions -> docs/exams/{meta['slug']}/ ; audit -> outputs/exams/{exam_id}_exam_audit.md")
     print(f"  letters {dict(c)} | length ranks {dict(sorted(ranks.items()))} | patterns {len(pp)} | max same-topic run {mx}")

@@ -56,7 +56,9 @@ Ask (searches the lecture, with citations), Listen (audio overview read aloud), 
 spaced repetition), Quiz, Mind map, Briefing (printable), and FAQ. All of these are free and run
 in the browser. **AI chat** is optional: each person pastes their own Anthropic API key in
 Sidekick → Ask → "Turn on AI chat". The key stays in that browser and goes only to Anthropic.
-Claude answers only from the lecture's cited source.
+Claude answers only from the lecture's cited source. The site has no key and no server of its own:
+each student's key stays in their browser and goes straight to Anthropic, so nobody can use your
+Claude account or credits, and students are billed only on their own Anthropic accounts.
 
 **Highlight anything** in a study guide to get a small toolbar: Explain, Source (shows the actual
 slide, speaker notes, textbook page, or study-guide item), Quiz me, Card (make your own flashcard),
@@ -69,6 +71,19 @@ you go; Timed mode gives 1 minute per question (PANCE pace) and shows results at
 session ends with a debrief: score, time, weakest topics with "Study →" links, every miss, and
 suggestions. Remote rings and keyboards: ↑/↓ choose · Enter lock in · → next · ← back · F flag ·
 Esc exit (rings that act as a mouse wheel also work).
+
+**Review page** (`Review` in the top bar) for exam week: Daily 10 (a 10-question set each day,
+weighted toward what you've missed or haven't seen, with a streak), every missed and flagged question
+from all lectures and exams in one list, weakest topics with "Study →" links, a weak-flashcard drill,
+all your saved notes, and mixed exams across every lecture (a 40-question timed weak-spot exam, or
+a custom one).
+
+**Practice exams:** Exam A (100 questions) and Exam B (50 new questions, real exam length, includes
+the assigned Katzung reading). Exam B's focus session defaults to exam conditions: 50 questions in
+60 minutes. Build another with `./run.sh exam U1B` (banks live in `work/exams/<ID>/bank*.py`).
+
+**Sidekick extras:** Ask can search *this lecture* or *all lectures*; highlight two things and tap
+⇄ Compare for a side-by-side from every lecture.
 
 **Syllabus page** (`Syllabus` in the top bar): what's due next with countdowns, the full schedule
 (past rows fade, today is highlighted), grading weights and rules, readings and objectives per unit,
