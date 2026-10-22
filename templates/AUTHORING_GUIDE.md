@@ -33,7 +33,9 @@ API with this file as the instructions — the format is plain JSON on purpose.
 
 ## Structure
 - One entry in `classes` per drug class (or per topic), in lecture order. Each has a `"template"`:
-  - `"drug_class"` (Units 2–6): `overview, prototype, moa, indications, pk, adverse, contra, monitoring`
+  - `"drug_class"` (Units 2–6): `overview` (Class), `prototype` (Prototype + other drugs named), `moa`,
+    `indications`, `adverse` (BOXED WARNINGS FIRST), `contra`, `interactions`, `pk`, `monitoring`,
+    `pearls` (clinical pearls / "why" hook)
   - `"concept"` (principles lectures like Unit 1): `definitions, how, clinical, examples, traps`
     (Key definitions → How it works → Clinical relevance → Drugs named as examples → Exam traps)
 - Every class/topic has all of its template's sections (use `[]` if not covered).

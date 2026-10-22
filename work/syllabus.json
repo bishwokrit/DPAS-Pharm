@@ -752,5 +752,90 @@
    ],
    "study_guide_note": "Unit items not yet split between the two sessions; split when authoring."
   }
- ]
+ ],
+ "exams": [
+  {
+   "unit": 1,
+   "label": "Unit 1 Exam",
+   "date": "2026-10-30",
+   "time": "8:30–9:30 am",
+   "where": "In person, Rm NAB2243"
+  },
+  {
+   "unit": 2,
+   "label": "Unit 2 Exam",
+   "date": "2026-11-06",
+   "time": "8:30–9:30 am",
+   "where": "In person, Rm NAB2243"
+  },
+  {
+   "unit": 3,
+   "label": "Unit 3 Exam",
+   "date": "2026-11-13",
+   "time": "8:30–9:30 am",
+   "where": "In person, Rm NAB2243"
+  },
+  {
+   "unit": 4,
+   "label": "Unit 4 Exam",
+   "date": "2026-11-20",
+   "time": "8:30–9:30 am",
+   "where": "In person, Rm NAB2243"
+  },
+  {
+   "unit": 5,
+   "label": "Unit 5 Exam",
+   "date": "2026-12-01",
+   "time": "8:35–9:35 am",
+   "where": "Virtual, Lockdown Browser"
+  },
+  {
+   "unit": 6,
+   "label": "Unit 6 Exam",
+   "date": "2026-12-04",
+   "time": "1:00–2:00 pm",
+   "where": "In person, Rm NAB2243"
+  },
+  {
+   "unit": 0,
+   "label": "Comprehensive Final",
+   "date": "2026-12-11",
+   "time": "1:00–2:00 pm",
+   "where": "In person, Rm NAB2243"
+  }
+ ],
+ "quizzes": [
+  {
+   "unit": 1,
+   "date": "2026-10-27"
+  },
+  {
+   "unit": 2,
+   "date": "2026-11-03"
+  },
+  {
+   "unit": 3,
+   "date": "2026-11-10"
+  },
+  {
+   "unit": 4,
+   "date": "2026-11-17"
+  },
+  {
+   "unit": 5,
+   "date": "2026-11-24"
+  },
+  {
+   "unit": 6,
+   "date": "2026-12-03"
+  }
+ ],
+ "units": {
+  "1": "Introduction to Pharmacology",
+  "2": "Musculoskeletal",
+  "3": "GI & Nutrition",
+  "4": "Endocrine",
+  "5": "Renal",
+  "6": "GU & Reproductive"
+ }
 }

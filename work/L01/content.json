@@ -382,7 +382,8 @@
      ],
      "src": "S6"
     }
-   ]
+   ],
+   "flows": []
   },
   {
    "name": "Drug Development & Regulation",
@@ -679,6 +680,20 @@
       }
      ],
      "src": "S12 (notes); S13; S14"
+    }
+   ],
+   "flows": [
+    {
+     "title": "From discovery to patient",
+     "steps": [
+      "Discovery",
+      "Preclinical testing",
+      "Clinical trials (Phases I–III)",
+      "FDA review",
+      "Approval",
+      "Postmarket surveillance (Phase IV)"
+     ],
+     "src": "S12; S13"
     }
    ]
   },
@@ -1057,6 +1072,39 @@
       }
      ],
      "src": "S22; S22 (notes)"
+    }
+   ],
+   "flows": [
+    {
+     "title": "The pharmacodynamic pathway",
+     "steps": [
+      "Drug",
+      "Target (e.g., receptor)",
+      "Signal transduction",
+      "Pharmacologic response"
+     ],
+     "src": "S19 (notes); S21"
+    },
+    {
+     "title": "Albuterol: receptor → second messenger → effect",
+     "steps": [
+      "Albuterol binds β2-adrenergic receptor",
+      "β2 receptor activated",
+      "↑ intracellular cAMP",
+      "Bronchial smooth muscle relaxes",
+      "Bronchodilation"
+     ],
+     "src": "S26"
+    },
+    {
+     "title": "Competitive antagonism",
+     "steps": [
+      "Antagonist reversibly occupies the agonist's site",
+      "More agonist needed for same effect",
+      "Curve shifts right",
+      "Same Emax still reachable (surmountable)"
+     ],
+     "src": "S22; S22 (notes); S25"
     }
    ]
   },
@@ -1446,7 +1494,8 @@
      ],
      "src": "S30; S34; S34 (notes)"
     }
-   ]
+   ],
+   "flows": []
   },
   {
    "name": "Pharmacokinetics: ADME — Absorption & Distribution",
@@ -1836,6 +1885,30 @@
      ],
      "src": "S53; S53 (notes)"
     }
+   ],
+   "flows": [
+    {
+     "title": "ADME",
+     "steps": [
+      "Dose",
+      "Absorption → blood",
+      "Distribution → tissues",
+      "Metabolism (mainly liver)",
+      "Excretion (mainly kidney)"
+     ],
+     "src": "S45; S46"
+    },
+    {
+     "title": "First-pass effect (oral route)",
+     "steps": [
+      "Oral drug",
+      "GI tract",
+      "Portal circulation",
+      "Liver (first-pass metabolism)",
+      "Systemic circulation"
+     ],
+     "src": "S51"
+    }
    ]
   }
  ],
@@ -1904,5 +1977,276 @@
    "starts_with": "This slide documents",
    "reason": "administrative note on AI-tool citation"
   }
- ]
+ ],
+ "guide": {
+  "summary": [
+   {
+    "text": "Pharmacology studies how drugs interact with living systems: **pharmacokinetics** is what the body does to the drug (ADME), and **pharmacodynamics** is what the drug does to the body.",
+    "src": "S5; S6"
+   },
+   {
+    "text": "Learn and prescribe by **generic name** — brand names can hide a shared ingredient and cause unintentional double-dosing.",
+    "src": "S7; S9"
+   },
+   {
+    "text": "Drugs move from discovery through preclinical testing, **Phase I–III** trials, FDA review, and **Phase IV** postmarketing surveillance — where rare adverse effects are often first found.",
+    "src": "S12; S13; S12 (notes)"
+   },
+   {
+    "text": "Drugs act on five target classes; a **competitive antagonist** shifts the dose-response curve right (same Emax), while a **noncompetitive/irreversible** antagonist lowers Emax.",
+    "src": "S20; S22 (notes)"
+   },
+   {
+    "text": "**Potency** (EC₅₀) is the dose needed and **efficacy** (Emax) is the ceiling — efficacy matters more — and narrow-TI drugs (**warfarin, lithium, digoxin, phenytoin**) need careful dosing and blood levels.",
+    "src": "S30; S34; S38"
+   },
+   {
+    "text": "Oral drugs face **first-pass** hepatic metabolism that lowers bioavailability (IV = 100%), and distribution depends on protein binding, lipid solubility, perfusion, and barriers like the BBB.",
+    "src": "S50; S51; S52; S53"
+   }
+  ],
+  "cram": [
+   {
+    "prompt": "Pharmacology",
+    "answer": "Study of how drugs interact with living systems — molecule to whole patient",
+    "src": "S5"
+   },
+   {
+    "prompt": "Drug (medication)",
+    "answer": "Chemical used to diagnose, treat, cure, prevent disease, or alter a physiologic process",
+    "src": "S5"
+   },
+   {
+    "prompt": "Pharmacologic vs. therapeutic effect",
+    "answer": "Any measurable biological change vs. the intended, beneficial effect",
+    "src": "S5"
+   },
+   {
+    "prompt": "Adverse drug reaction (ADR)",
+    "answer": "Unintended, harmful response at **normal therapeutic doses**",
+    "src": "S5"
+   },
+   {
+    "prompt": "Toxicity",
+    "answer": "Harm when dose/exposure **exceeds the therapeutic range**",
+    "src": "S5"
+   },
+   {
+    "prompt": "Chemical / generic / brand name",
+    "answer": "Exact structure (rarely used) / official non-proprietary, one per drug / manufacturer's, many, vary by country",
+    "src": "S7"
+   },
+   {
+    "prompt": "Why prescribe by generic name",
+    "answer": "Unambiguous, international; avoids hidden duplicate therapy (double-dosing)",
+    "src": "S7; S9"
+   },
+   {
+    "prompt": "Tylenol",
+    "answer": "Brand name of acetaminophen",
+    "src": "S7"
+   },
+   {
+    "prompt": "Pharmacokinetics vs. pharmacodynamics",
+    "answer": "Body → drug (ADME) vs. drug → body (receptors & effect)",
+    "src": "S6"
+   },
+   {
+    "prompt": "Pharmacogenomics",
+    "answer": "How genetic variation shapes individual drug response",
+    "src": "S6"
+   },
+   {
+    "prompt": "Clinical pharmacology / toxicology",
+    "answer": "Applying PK/PD to real patients; the study of poisoning",
+    "src": "S6"
+   },
+   {
+    "prompt": "4 sources of new drugs",
+    "answer": "Natural products · synthetic & biotech · biologics · drug repurposing",
+    "src": "S11"
+   },
+   {
+    "prompt": "Biologics",
+    "answer": "Monoclonal antibodies, gene- and cell-based therapies",
+    "src": "S11"
+   },
+   {
+    "prompt": "Drug pipeline",
+    "answer": "Discovery → preclinical → clinical trials → FDA review → approval → postmarket surveillance",
+    "src": "S12"
+   },
+   {
+    "prompt": "Phase I",
+    "answer": "Safety, tolerability, dose-finding — small group of **healthy volunteers**",
+    "src": "S13"
+   },
+   {
+    "prompt": "Phase II",
+    "answer": "Preliminary efficacy & side effects — a few hundred patients with the condition",
+    "src": "S13"
+   },
+   {
+    "prompt": "Phase III",
+    "answer": "Confirm efficacy, monitor AEs at scale — hundreds to thousands, multi-site",
+    "src": "S13"
+   },
+   {
+    "prompt": "Phase IV",
+    "answer": "Postmarketing surveillance — general prescribed population",
+    "src": "S13"
+   },
+   {
+    "prompt": "Rare AE (1 in 10,000)",
+    "answer": "Often first found in Phase IV — trials too small/short",
+    "src": "S12 (notes)"
+   },
+   {
+    "prompt": "Efficacy vs. effectiveness",
+    "answer": "Ideal trial conditions vs. everyday practice (adherence, comorbidities)",
+    "src": "S14"
+   },
+   {
+    "prompt": "FDA MedWatch",
+    "answer": "Adverse-event reporting system (voluntary + mandatory)",
+    "src": "S14"
+   },
+   {
+    "prompt": "Risk-benefit case: 70% improve, 1% serious hepatotoxicity",
+    "answer": "Always comparative — \"compared to what?\"",
+    "src": "S15; S15 (notes)"
+   },
+   {
+    "prompt": "5 drug target classes",
+    "answer": "Receptors · ion channels · enzymes · transporters · nucleic acids",
+    "src": "S20"
+   },
+   {
+    "prompt": "Receptor types",
+    "answer": "G-protein-coupled · ligand-gated ion channel · enzyme-linked · nuclear",
+    "src": "S20"
+   },
+   {
+    "prompt": "Most common targets",
+    "answer": "Receptors and enzymes (ion channels/transporters: cardiac & CNS drugs)",
+    "src": "S20 (notes)"
+   },
+   {
+    "prompt": "Full / partial / inverse agonist",
+    "answer": "Maximal activation / submaximal even at full occupancy / lowers baseline activity",
+    "src": "S22"
+   },
+   {
+    "prompt": "Competitive antagonist",
+    "answer": "Same site, reversible, overcome by more agonist → **curve right, same Emax**",
+    "src": "S22; S22 (notes)"
+   },
+   {
+    "prompt": "Noncompetitive / irreversible antagonist",
+    "answer": "Binds elsewhere or irreversibly → **lower Emax**; irreversible lasts until new receptor made",
+    "src": "S22; S22 (notes)"
+   },
+   {
+    "prompt": "Albuterol",
+    "answer": "Selective β2 agonist → ↑ cAMP → bronchial smooth muscle relaxes → bronchodilation",
+    "src": "S26"
+   },
+   {
+    "prompt": "Potency",
+    "answer": "Dose needed for an effect — **lower EC₅₀ = more potent**",
+    "src": "S30; S34"
+   },
+   {
+    "prompt": "Efficacy (Emax)",
+    "answer": "Maximum possible effect — **higher Emax = more efficacious**; matters more clinically",
+    "src": "S30; S34"
+   },
+   {
+    "prompt": "EC₅₀",
+    "answer": "Concentration giving 50% of Emax — standard measure of potency",
+    "src": "S30"
+   },
+   {
+    "prompt": "Therapeutic index",
+    "answer": "**TI = TD₅₀ ÷ ED₅₀**; narrow = careful dosing + blood levels",
+    "src": "S38"
+   },
+   {
+    "prompt": "Narrow-TI drugs",
+    "answer": "**Warfarin, lithium, digoxin, phenytoin**",
+    "src": "S38"
+   },
+   {
+    "prompt": "ADME",
+    "answer": "Absorption → distribution → metabolism (mainly liver) → excretion (mainly kidney)",
+    "src": "S45"
+   },
+   {
+    "prompt": "Bioavailability (F)",
+    "answer": "Fraction of dose reaching systemic circulation unchanged; **IV = 100%**",
+    "src": "S50"
+   },
+   {
+    "prompt": "Why oral F < 100%",
+    "answer": "Incomplete absorption + first-pass hepatic metabolism",
+    "src": "S50"
+   },
+   {
+    "prompt": "First-pass path",
+    "answer": "Oral → GI tract → portal circulation → liver → systemic circulation",
+    "src": "S51"
+   },
+   {
+    "prompt": "Big first-pass drugs",
+    "answer": "Nitroglycerin, propranolol, morphine — need higher oral doses",
+    "src": "S51"
+   },
+   {
+    "prompt": "Routes that bypass first-pass",
+    "answer": "Every route except oral (IV, sublingual, inhaled, transdermal, topical, SC, IM)",
+    "src": "S49 (notes)"
+   },
+   {
+    "prompt": "Sublingual",
+    "answer": "Directly into systemic venous circulation — skips portal vein & liver",
+    "src": "S49; S55"
+   },
+   {
+    "prompt": "IM / SC / transdermal",
+    "answer": "Faster than oral, depot · slower steady (insulin, heparin) · slow sustained",
+    "src": "S49"
+   },
+   {
+    "prompt": "Inhaled / topical",
+    "answer": "Rapid local lung effect · local effect, minimal systemic absorption",
+    "src": "S49"
+   },
+   {
+    "prompt": "Plasma protein binding",
+    "answer": "Only **free (unbound)** drug is active and crosses membranes",
+    "src": "S52"
+   },
+   {
+    "prompt": "Tissue perfusion",
+    "answer": "Brain, heart, kidney get drug fast; fat, bone slowly",
+    "src": "S52"
+   },
+   {
+    "prompt": "Volume of distribution (Vd)",
+    "answer": "Total drug in body vs. plasma concentration; theoretical; high = in tissue (digoxin)",
+    "src": "S52; S52 (notes)"
+   },
+   {
+    "prompt": "Blood-brain barrier",
+    "answer": "Tight junctions; small, lipophilic, non-ionized cross; P-glycoprotein pumps out",
+    "src": "S53"
+   },
+   {
+    "prompt": "Polar antibiotic + meningitis",
+    "answer": "Usually poor BBB entry — better when meninges are inflamed",
+    "src": "S53 (notes)"
+   }
+  ],
+  "discrepancies": []
+ }
 }

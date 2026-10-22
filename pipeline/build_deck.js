@@ -22,14 +22,16 @@ const TOP = 1.45, BOTTOM = 6.85; // content band
 // Must match TEMPLATES in content.py
 const TEMPLATES = {
   drug_class: [
-    ["overview", "Class overview", "FaLayerGroup"],
-    ["prototype", "Prototype drug", "FaPills"],
+    ["overview", "Class", "FaLayerGroup"],
+    ["prototype", "Prototype + other drugs named", "FaPills"],
     ["moa", "Mechanism of action", "FaCogs"],
     ["indications", "Indications", "FaCheckCircle"],
+    ["adverse", "Adverse effects (boxed warnings first)", "FaExclamationTriangle"],
+    ["contra", "Contraindications", "FaBan"],
+    ["interactions", "Drug interactions", "FaExchangeAlt"],
     ["pk", "Pharmacokinetics", "FaRoute"],
-    ["adverse", "Adverse effects", "FaExclamationTriangle"],
-    ["contra", "Contraindications & interactions", "FaBan"],
     ["monitoring", "Monitoring", "FaHeartbeat"],
+    ["pearls", "Clinical pearls / \"why\" hook", "FaLightbulb"],
   ],
   concept: [
     ["definitions", "Key definitions", "FaBookOpen"],
@@ -286,7 +288,7 @@ async function dividerSlide(c, idx) {
     const x = MX + i * step;
     s.addShape(pres.shapes.OVAL, { x: x + step / 2 - 0.35, y: 4.7, w: 0.7, h: 0.7, fill: { color: T.section[SECTIONS[i][0]] }, line: { color: "FFFFFF", width: 1.5 } });
     s.addImage({ data: await icon(ic, "FFFFFF"), x: x + step / 2 - 0.18, y: 4.87, w: 0.36, h: 0.36 });
-    s.addText(label, { x: x + 0.05, y: 5.5, w: step - 0.1, h: 0.7, fontSize: 12, color: "FFFFFF", align: "center", valign: "top", margin: 0, isTextBox: true });
+    s.addText(label.replace(/ \(.*\)| \/ .*| \+ .*/, ""), { x: x + 0.05, y: 5.5, w: step - 0.1, h: 0.7, fontSize: SECTIONS.length > 8 ? 10 : 12, color: "FFFFFF", align: "center", valign: "top", margin: 0, isTextBox: true });
   }
   s.addText(String(slideNo), { x: W - MX - 1, y: 7.02, w: 1, h: 0.3, fontSize: 10, color: T.onAccentMuted, align: "right", margin: 0, isTextBox: true });
 }

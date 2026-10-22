@@ -89,7 +89,7 @@ def instructions(c):
     concept = all(cl.get("template") == "concept" for cl in c["classes"])
     path = ("For each topic follow the same path: key definitions, how it works, clinical relevance, drugs named as examples, exam traps."
             if concept else
-            "For each class follow the same path: class overview, prototype drug, mechanism of action, indications, pharmacokinetics, adverse effects, contraindications and interactions, monitoring.")
+            "For each class follow the same path: class, prototype and other drugs named, mechanism of action, indications, adverse effects (boxed warnings first), contraindications, drug interactions, pharmacokinetics, monitoring, clinical pearls.")
     story_steps = ("At each step, show how the concept explains something that happens to this patient's medicines, using the drugs named in the source."
                    if concept else
                    "At each step, show why this patient would get (or must avoid) a drug in that class, its mechanism, what side effects to watch for in this patient, and what to monitor.")

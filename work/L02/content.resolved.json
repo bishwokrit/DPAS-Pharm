@@ -527,6 +527,39 @@
       }
      }
     }
+   ],
+   "flows": [
+    {
+     "title": "Two phases of metabolism",
+     "steps": [
+      "Drug",
+      "Phase I — functionalization (CYP450)",
+      "Phase II — conjugation (adds polar group)",
+      "More water-soluble product",
+      "Renal/biliary excretion"
+     ],
+     "src": "S5"
+    },
+    {
+     "title": "CYP inhibition",
+     "steps": [
+      "Drug A inhibits CYP3A4",
+      "Drug B (CYP3A4 substrate) cleared more slowly",
+      "Drug B accumulates (Figure 6: 240%)",
+      "Toxicity risk ↑"
+     ],
+     "src": "S6; S8"
+    },
+    {
+     "title": "CYP induction",
+     "steps": [
+      "Inducer ↑ CYP enzyme production",
+      "Substrate cleared faster",
+      "Level and effect ↓ (Figure 6: 42%)",
+      "Therapeutic-failure risk ↑"
+     ],
+     "src": "S6; S7 (notes); S8"
+    }
    ]
   },
   {
@@ -887,6 +920,18 @@
        "correct": false
       }
      }
+    }
+   ],
+   "flows": [
+    {
+     "title": "Renal handling of a drug",
+     "steps": [
+      "Free drug filtered at glomerulus (by size)",
+      "Transporters secrete more into tubule",
+      "Lipophilic, un-ionized drug reabsorbed",
+      "Remainder eliminated in urine"
+     ],
+     "src": "S14"
     }
    ]
   },
@@ -1537,6 +1582,30 @@
       }
      }
     }
+   ],
+   "flows": [
+    {
+     "title": "Renal impairment logic chain",
+     "steps": [
+      "Clearance ↓",
+      "Half-life ↑",
+      "Time to steady state ↑",
+      "Accumulation risk ↑ (if regimen not adjusted)"
+     ],
+     "src": "S28 (notes)"
+    },
+    {
+     "title": "Half-life decay (100 mg/L, t½ 6 h)",
+     "steps": [
+      "0 h: 100 mg/L",
+      "6 h: 50",
+      "12 h: 25",
+      "18 h: 12.5",
+      "24 h: 6.25",
+      "30 h: 3.125 (~97% gone)"
+     ],
+     "src": "S19"
+    }
    ]
   },
   {
@@ -1904,7 +1973,8 @@
       }
      }
     }
-   ]
+   ],
+   "flows": []
   },
   {
    "name": "Putting It All Together: Clinical Decision-Making",
@@ -2402,6 +2472,21 @@
       }
      }
     }
+   ],
+   "flows": [
+    {
+     "title": "One integrated pathway",
+     "steps": [
+      "Dose",
+      "Absorption",
+      "Distribution",
+      "Receptor / target",
+      "Effect",
+      "Metabolism",
+      "Excretion"
+     ],
+     "src": "S38"
+    }
    ]
   }
  ],
@@ -2440,5 +2525,236 @@
    "starts_with": "This slide documents",
    "reason": "administrative note on AI-tool citation"
   }
- ]
+ ],
+ "guide": {
+  "summary": [
+   {
+    "text": "Metabolism inactivates drugs, activates prodrugs, or makes active or **toxic metabolites** (e.g., NAPQI); **Phase I** (CYP450 oxidation, reduction, hydrolysis) functionalizes and **Phase II** conjugates for excretion.",
+    "src": "S4; S4 (notes); S5"
+   },
+   {
+    "text": "A **CYP inhibitor raises** a substrate's level (toxicity) and an **inducer lowers** it (therapeutic failure) — always check CYP450 interactions before adding a drug.",
+    "src": "S6; S7 (notes); S40"
+   },
+   {
+    "text": "The **kidney** is the main elimination route — filtration of free drug, active secretion, reabsorption of lipophilic un-ionized drug — and less renal function means less clearance and more exposure.",
+    "src": "S13; S14; S15"
+   },
+   {
+    "text": "**Half-life** (time for concentration to fall 50%) depends on clearance and Vd: ~**4–5 half-lives** to steady state and ~**97%** eliminated after ~5.",
+    "src": "S19; S23"
+   },
+   {
+    "text": "**Loading doses** (based on Vd) reach the target immediately; **maintenance doses** (based on clearance) keep levels in range; in CKD adjust dose and/or interval by eGFR/CrCl.",
+    "src": "S23; S23 (notes); S28"
+   },
+   {
+    "text": "**Pharmacogenomic** variants (CYP2D6, CYP2C19, TPMT, HLA-B*5801) change drug response, but genotype is one input in a checklist of indication, contraindications, organ function, interactions, patient factors, and dose/route/monitoring.",
+    "src": "S33; S34; S39"
+   }
+  ],
+  "cram": [
+   {
+    "prompt": "4 purposes of metabolism",
+    "answer": "Inactivate drug · activate prodrug · active metabolite · occasionally toxic metabolite",
+    "src": "S4"
+   },
+   {
+    "prompt": "NAPQI",
+    "answer": "Toxic metabolite from acetaminophen via normal Phase I metabolism",
+    "src": "S4 (notes)"
+   },
+   {
+    "prompt": "Phase I",
+    "answer": "Functionalization: oxidation, reduction, hydrolysis; mainly CYP450; unmasks reactive group",
+    "src": "S5"
+   },
+   {
+    "prompt": "Phase II",
+    "answer": "Conjugation: glucuronidation, sulfation, acetylation, methylation, glutathione → water-soluble",
+    "src": "S5"
+   },
+   {
+    "prompt": "Phase order",
+    "answer": "Phase I often first — but some drugs go straight to conjugation",
+    "src": "S5 (notes)"
+   },
+   {
+    "prompt": "CYP enzyme inhibition",
+    "answer": "Slows CYP → substrate level **↑** → toxicity risk",
+    "src": "S6"
+   },
+   {
+    "prompt": "CYP enzyme induction",
+    "answer": "More CYP made → substrate level **↓** → therapeutic failure",
+    "src": "S6; S7 (notes)"
+   },
+   {
+    "prompt": "Figure 6 values",
+    "answer": "Inhibitor: 240% of baseline; inducer: 42%",
+    "src": "S8"
+   },
+   {
+    "prompt": "CYP3A4 inhibitor + narrow-TI substrate",
+    "answer": "Level ↑ and toxicity risk ↑ — especially dangerous",
+    "src": "S11"
+   },
+   {
+    "prompt": "Main elimination route",
+    "answer": "Kidney (most drugs and metabolites)",
+    "src": "S13"
+   },
+   {
+    "prompt": "Bile / feces",
+    "answer": "Some large or protein-bound drugs",
+    "src": "S13"
+   },
+   {
+    "prompt": "Lungs",
+    "answer": "Volatile agents (anesthetic gases)",
+    "src": "S13"
+   },
+   {
+    "prompt": "Sweat / breast milk",
+    "answer": "Minor; breast milk matters in lactation",
+    "src": "S13"
+   },
+   {
+    "prompt": "Glomerular filtration",
+    "answer": "Free (unbound) drug, by molecular size",
+    "src": "S14"
+   },
+   {
+    "prompt": "Tubular secretion",
+    "answer": "Active transporters move more drug into tubule",
+    "src": "S14"
+   },
+   {
+    "prompt": "Tubular reabsorption",
+    "answer": "Lipophilic, un-ionized drug diffuses back → less elimination",
+    "src": "S14"
+   },
+   {
+    "prompt": "Alkalinize urine (aspirin overdose)",
+    "answer": "Traps ionized drug in tubule, blocks reabsorption",
+    "src": "S14 (notes)"
+   },
+   {
+    "prompt": "Renal function estimates",
+    "answer": "eGFR and creatinine clearance (CrCl)",
+    "src": "S15"
+   },
+   {
+    "prompt": "Renally cleared narrow-TI drugs",
+    "answer": "Many antibiotics, digoxin, lithium — adjust dose or interval",
+    "src": "S15"
+   },
+   {
+    "prompt": "CKD dosing",
+    "answer": "Decrease dose and/or extend interval, guided by eGFR/CrCl",
+    "src": "S17; S28"
+   },
+   {
+    "prompt": "Half-life (t½)",
+    "answer": "Time for plasma concentration to fall 50%; set by clearance + Vd",
+    "src": "S19"
+   },
+   {
+    "prompt": "% remaining formula",
+    "answer": "100% x (1/2)^(number of half-lives)",
+    "src": "S19"
+   },
+   {
+    "prompt": "Concentration formula",
+    "answer": "C(t) = C₀ x (1/2)^(t/t½)",
+    "src": "S19"
+   },
+   {
+    "prompt": "Remaining after 1/2/3/4/5 t½",
+    "answer": "50% / 25% / 12.5% / 6.25% / 3.125%",
+    "src": "S19"
+   },
+   {
+    "prompt": "~97% eliminated",
+    "answer": "After about 5 half-lives",
+    "src": "S19; S30"
+   },
+   {
+    "prompt": "Steady state",
+    "answer": "Intake = elimination; ~4–5 half-lives, regardless of dose",
+    "src": "S23; S30"
+   },
+   {
+    "prompt": "Time to steady state set by",
+    "answer": "Half-life",
+    "src": "S48"
+   },
+   {
+    "prompt": "Loading dose",
+    "answer": "Larger first dose → target immediately; based on **Vd**",
+    "src": "S23; S23 (notes); S26"
+   },
+   {
+    "prompt": "Maintenance dose",
+    "answer": "Ongoing dose to stay in range; based on **clearance**",
+    "src": "S23; S23 (notes)"
+   },
+   {
+    "prompt": "Clearance",
+    "answer": "Plasma volume completely cleared of drug per unit time; total = hepatic + renal",
+    "src": "S27"
+   },
+   {
+    "prompt": "CKD effect on PK",
+    "answer": "Clearance ↓ → t½ ↑ → concentration ↑ → time to steady state ↑",
+    "src": "S28; S28 (notes)"
+   },
+   {
+    "prompt": "Pharmacogenomics",
+    "answer": "Genetic variation changing drug response (metabolism, transport, target, ADR risk)",
+    "src": "S32"
+   },
+   {
+    "prompt": "CYP2D6 variation",
+    "answer": "Antidepressants, opioids — codeine activation",
+    "src": "S33"
+   },
+   {
+    "prompt": "CYP2C19 variation",
+    "answer": "Clopidogrel activation; some antidepressant/PPI dosing",
+    "src": "S33"
+   },
+   {
+    "prompt": "TPMT deficiency",
+    "answer": "↑ Toxicity with thiopurines (azathioprine)",
+    "src": "S33"
+   },
+   {
+    "prompt": "HLA-B*5801",
+    "answer": "Severe hypersensitivity to allopurinol",
+    "src": "S36"
+   },
+   {
+    "prompt": "Personalized therapy inputs",
+    "answer": "Genotype + phenotype + disease state + other medications",
+    "src": "S34"
+   },
+   {
+    "prompt": "Prescribing checklist",
+    "answer": "Indication · contraindications/allergies · renal/hepatic · interactions (CYP450) · age/pregnancy · dose/route/monitoring",
+    "src": "S39"
+   },
+   {
+    "prompt": "Effect weakened, restored by higher agonist dose",
+    "answer": "Competitive (not irreversible) antagonism",
+    "src": "S41"
+   },
+   {
+    "prompt": "Single best check vs. predictable toxicity",
+    "answer": "Review CYP450 interactions with current medications",
+    "src": "S43"
+   }
+  ],
+  "discrepancies": []
+ }
 }

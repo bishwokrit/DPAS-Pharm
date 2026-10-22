@@ -136,7 +136,14 @@
      }
     ],
     "contra": [],
-    "monitoring": []
+    "monitoring": [],
+    "interactions": [],
+    "pearls": [
+     {
+      "text": "Example pearl: purple tongue means stop zentarilol.",
+      "src": "S2 (notes)"
+     }
+    ]
    },
    "conflicts": [
     {
@@ -323,7 +330,14 @@
      }
     ],
     "contra": [],
-    "monitoring": []
+    "monitoring": [],
+    "interactions": [],
+    "pearls": [
+     {
+      "text": "Example pearl: purple tongue means stop zentarilol.",
+      "src": "S2 (notes)"
+     }
+    ]
    },
    "conflicts": [
     {

@@ -42,7 +42,9 @@
     "how": "7030A0",
     "clinical": "548235",
     "examples": "4472C4",
-    "traps": "C00000"
+    "traps": "C00000",
+    "interactions": "7F6000",
+    "pearls": "2E75B6"
    },
    "officeTheme": {
     "dk1": "000000",
@@ -96,7 +98,9 @@
     "how": "C39BE8",
     "clinical": "8FD16A",
     "examples": "6FA0F0",
-    "traps": "FF7B7B"
+    "traps": "FF7B7B",
+    "interactions": "FFD966",
+    "pearls": "6EC1F0"
    },
    "officeTheme": {
     "dk1": "FFFFFF",

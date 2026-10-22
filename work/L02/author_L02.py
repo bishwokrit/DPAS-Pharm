@@ -611,6 +611,16 @@ content = {
     ],
 }
 
+# ---- study-guide extras (see guide_L02.py)
+import sys as _sys
+_sys.path.insert(0, str(Path(__file__).parent))
+import guide_L02 as G
+content["guide"] = {"summary": [{"text": t, "src": s} for t, s in G.SUMMARY],
+                    "cram": [{"prompt": p, "answer": a, "src": s} for p, a, s in G.CRAM],
+                    "discrepancies": []}
+for _cl in content["classes"]:
+    _cl["flows"] = G.FLOWS.get(_cl["name"], [])
+
 out = Path(__file__).with_name("content.json")
 out.write_text(json.dumps(content, indent=1, ensure_ascii=False))
 print("wrote", out)

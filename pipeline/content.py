@@ -10,14 +10,16 @@ from pathlib import Path
 # Two fixed templates: drug-class lectures (Units 2-6) and concept lectures (e.g., Unit 1).
 TEMPLATES = {
     "drug_class": [
-        ("overview", "Class overview"),
-        ("prototype", "Prototype drug"),
+        ("overview", "Class"),
+        ("prototype", "Prototype + other drugs named"),
         ("moa", "Mechanism of action"),
         ("indications", "Indications"),
+        ("adverse", "Adverse effects (boxed warnings first)"),
+        ("contra", "Contraindications"),
+        ("interactions", "Drug interactions"),
         ("pk", "Pharmacokinetics"),
-        ("adverse", "Adverse effects"),
-        ("contra", "Contraindications & interactions"),
         ("monitoring", "Monitoring"),
+        ("pearls", "Clinical pearls / \"why\" hook"),
     ],
     "concept": [
         ("definitions", "Key definitions"),
