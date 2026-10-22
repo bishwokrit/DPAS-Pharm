@@ -96,7 +96,9 @@ function mount() {
     if (e.key === "/" && !/input|textarea|select/i.test(document.activeElement.tagName)) { e.preventDefault(); open(); }
     if (e.key === "Escape" && panel.classList.contains("open")) close();
   });
-  if (store.get("sk:open", false)) open();
+  const want = new URLSearchParams(location.search).get("sk");  // e.g. ?sk=listen from the home page
+  if (want && TABS.some(([id]) => id === want)) { tab = want; open(); }
+  else if (store.get("sk:open", false)) open();
 }
 function open() { panel.classList.add("open"); document.body.classList.add("sk-on"); store.set("sk:open", true); show(tab); }
 function close() { panel.classList.remove("open"); document.body.classList.remove("sk-on"); store.set("sk:open", false); speechSynthesis?.cancel(); }

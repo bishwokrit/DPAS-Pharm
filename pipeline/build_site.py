@@ -419,8 +419,42 @@ def home_page(syl, built, exams_built):
                     f'{f"<span class=unit-badge>{badge}</span>" if badge else ""}<span class="unit-exam small">{("Exam " + date.fromisoformat(ex["date"]).strftime("%a, %b %-d")) if ex else ""}</span><span class="unit-chev" aria-hidden="true"></span></summary>'
                     f'<div class="grid unit-cards">{"".join(cards)}</div></details>')
     study = f'<section class="section" id="study"><div class="wrap"><p class="kicker appear">Study</p><h2 class="appear">Your course, one unit at a time.</h2><div class="roadmap">{"".join(rows)}</div></div></section>'
-    return page(SITE_NAME, hero + practice + study)
+    return page(SITE_NAME, hero + now_section(syl, built, sched) + study + practice)
 
+
+
+def now_section(syl, built, sched):
+    """One panel per built lecture; the browser shows the one matching today's date (latest lecture so far)."""
+    exam_of = {e["unit"]: e for e in syl.get("exams", [])}
+    panels = []
+    for lid, b in built.items():
+        d = date.fromisoformat(b["date"])
+        week_end = (d.toordinal() + 7)
+        due = [x for x in sched["due"] if d.toordinal() <= date.fromisoformat(x["date"]).toordinal() <= week_end and x["kind"] not in ("exam", "final")][:3]
+        ex = exam_of.get(b["unit"])
+        due_html = "".join(f'<li><span class="small muted">{date.fromisoformat(x["date"]).strftime("%a %b %-d")}</span> {html.escape(x["label"].split(" · ")[0])}</li>' for x in due)
+        if ex:
+            due_html += f'<li><span class="small muted">{date.fromisoformat(ex["date"]).strftime("%a %b %-d")}</span> <strong>{html.escape(ex["label"])}</strong></li>'
+        chips = "".join(f'<a class="topic-chip" href="{lid}/index.html#{a}"><span>{i}</span>{html.escape(n)}</a>' for i, n, a in b["parts"])
+        hy = "".join(f'<li><a href="{lid}/index.html#{a}">{md(t)}</a></li>' for i, a, t in b["hy"][:4])
+        fig = (f'<a class="now-fig" href="{lid}/index.html"><img src="{b["figure"]}" alt="{html.escape(b["figure_title"])}" loading="lazy"><span>{md(b["figure_title"])}</span></a>' if b["figure"] else "")
+        panels.append(f"""<article class="now-panel" data-date="{b['date']}" hidden>
+<div class="now-head"><div><p class="kicker" data-now-kicker>Current lecture</p>
+<h2>{html.escape(b['title'])}</h2>
+<p class="muted">Unit {b['unit']} · Session {b['session']} · {d.strftime('%A, %B %-d')}{f" · Katzung Ch. {b['readings']}" if b['readings'] else ""}</p></div>
+<div class="now-acts"><a class="btn" href="{lid}/index.html">Open study guide</a><a class="btn ghost" href="{lid}/index.html?quiz=1">Focus quiz</a><a class="btn ghost" href="{lid}/index.html?sk=listen">Listen</a></div></div>
+<div class="topic-chips">{chips}</div>
+<div class="now-grid">
+  <div class="card now-hy"><h3>High-yield from this lecture</h3><ul>{hy}</ul></div>
+  {fig}
+  <div class="card now-side" data-progress="lecture" data-lid="{lid}" data-objs="{b['objs']}" data-cards="{b['cards']}" data-qs="{b['qs']}">
+    <h3>Your progress</h3><div class="progress"></div><p class="small muted now-empty">Start the self-test or flashcards and your progress shows here.</p>
+    <h3 style="margin-top:14px">Coming up</h3><ul class="now-due">{due_html or '<li class="muted small">Nothing due this week.</li>'}</ul>
+    <div class="links"><a href="{b['pdf']}">PDF</a><a href="{b['deck']}">Slide deck</a></div>
+  </div>
+</div>
+</article>""")
+    return f'<section class="section now-sec" id="now"><div class="wrap">{"".join(panels)}</div></section>'
 
 # ---------------------------------------------------------------- sidekick data
 def knowledge_base(c, slides, n_img=0):
@@ -632,7 +666,14 @@ def main(pdf=True):
         built[lid] = {"title": c["lecture"]["title"], "teaser": c.get("guide", {}).get("teaser", ""), "objs": ",".join(o["id"] for o in c["objectives"]),
                       "cards": len(c.get("guide", {}).get("cram", [])), "qs": len(quiz_items(c, slides)),
                       "meta": f'{len(c["classes"])} parts · {len(c.get("guide", {}).get("cram", []))}-row cram sheet · {n_q} practice questions',
-                      "links": [("Study guide", f"{lid}/index.html"), ("PDF", f"{lid}/{pdf_name}"), ("Deck", f"{lid}/" + next((n for l, n in files if l.startswith("Slide")), ""))]}
+                      "links": [("Study guide", f"{lid}/index.html"), ("PDF", f"{lid}/{pdf_name}"), ("Deck", f"{lid}/" + next((n for l, n in files if l.startswith("Slide")), ""))],
+                      "date": lec["date"], "unit": lec["unit"], "session": lec["session"], "pdf": f"{lid}/{pdf_name}",
+                      "deck": f"{lid}/" + next((n for l, n in files if l.startswith("Slide")), ""),
+                      "readings": ", ".join(r["chapter"] for r in lec.get("readings", [])),
+                      "parts": [(i, cl["name"], slug(cl["name"])) for i, cl in enumerate(c["classes"], 1)],
+                      "hy": [(i, slug(cl["name"]), cl["high_yield"][0]["text"]) for i, cl in enumerate(c["classes"], 1) if cl.get("high_yield")],
+                      "figure": next((f"{lid}/{fig['image']}" for cl in c["classes"] for fig in cl.get("figures", []) if not fig.get("tb")), ""),
+                      "figure_title": next((fig.get("title", "") for cl in c["classes"] for fig in cl.get("figures", []) if not fig.get("tb")), "")}
         print(f"  site: {lid} study guide" + (" + PDF" if pdf else ""))
     exams = []
     for ex_dir in sorted((DOCS / "exams").glob("*/meta.json")) if (DOCS / "exams").exists() else []:

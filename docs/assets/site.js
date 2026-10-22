@@ -116,6 +116,18 @@
     document.querySelectorAll(".appear").forEach((el) => ro.observe(el));
   } else document.querySelectorAll(".appear").forEach((el) => el.classList.add("in"));
 
+  // home: show the current lecture (latest one on or before today) and label it Today / This week / Last lecture
+  const panels = [...document.querySelectorAll(".now-panel")];
+  if (panels.length) {
+    const t0 = new Date(); t0.setHours(0, 0, 0, 0);
+    const past = panels.filter((p) => new Date(p.dataset.date + "T00:00") <= t0);
+    const cur = past.pop() || panels[0], d = Math.round((t0 - new Date(cur.dataset.date + "T00:00")) / 864e5);
+    cur.hidden = false;
+    const k = cur.querySelector("[data-now-kicker]");
+    if (k) k.textContent = d === 0 ? "Today's lecture" : d < 0 ? "Next lecture" : d <= 6 ? "This week's lecture" : "Latest lecture";
+    if (cur.querySelector(".progress")?.innerHTML.trim()) cur.querySelector(".now-empty")?.remove();
+  }
+
   // home teaser: the most recent lecture's two-sentence pitch (switches on each class day, no rebuild needed)
   const td = document.getElementById("teaser-data"), tp = document.getElementById("home-teaser");
   if (td && tp) {
@@ -187,6 +199,10 @@
     if (!qdata || !window.dpasQuiz) return;
     window.dpasQuiz.setup(qdata.items, { title: "Self-test", missed: store.get(missKey, []), onAnswer: (q, L, ok) => record(q.id, ok) });
   }));
+
+  if (qdata && new URLSearchParams(location.search).get("quiz")) {  // ?quiz=1 from the home page
+    addEventListener("load", () => window.dpasQuiz?.setup(qdata.items, { title: "Self-test", missed: store.get(missKey, []), onAnswer: (q, L, ok) => record(q.id, ok) }));
+  }
 
   // self-test: first tap answers the question and reveals the explanation
   document.querySelectorAll(".q").forEach((q) => {
