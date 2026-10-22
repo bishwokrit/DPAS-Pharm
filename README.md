@@ -8,7 +8,7 @@ Turns each lecture's slides + textbook reading + syllabus into:
 ## Where to put your files
 
 ```
-pharm-study/
+dpas-pharm/
   inputs/
     syllabus/      <- your syllabus (PDF, Word, or PowerPoint)
     textbook/      <- the full textbook PDF (when you have it)
