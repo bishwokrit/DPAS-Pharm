@@ -30,18 +30,41 @@
     addEventListener("scroll", upd, { passive: true }); upd();
   }
 
-  // focus mode: the section you're reading stays bright, the rest fades back (long pages only)
+  // focus mode: hides navigation, sidebars, and decoration; only the section you're reading stays lit.
+  // A slim bar shows where you are, a session timer, and an exit. Esc leaves.
   const sections = document.querySelectorAll(".section");
   if (sections.length > 4 && document.querySelector(".subnav") && "IntersectionObserver" in window) {
-    const io = new IntersectionObserver((es) => es.forEach((e) => e.target.classList.toggle("in-view", e.isIntersecting)), { rootMargin: "-35% 0px -45% 0px" });
+    let current = null;
+    const bar = document.createElement("div");
+    bar.className = "fbar"; bar.setAttribute("role", "status");
+    bar.innerHTML = `<span class="fbar-dot" aria-hidden="true"></span><span class="fbar-sec"></span><span class="fbar-time" title="Time in this focus session">0:00</span>
+      <span class="fbar-prog" aria-hidden="true"><i></i></span><button class="fbar-x" type="button">Exit <kbd>Esc</kbd></button>`;
+    document.body.append(bar);
+    const name = (sec) => (sec.querySelector("h2")?.textContent || sec.querySelector(".kicker")?.textContent || "").trim();
+    const io = new IntersectionObserver((es) => es.forEach((e) => {
+      e.target.classList.toggle("in-view", e.isIntersecting);
+      if (e.isIntersecting) { current = e.target; bar.querySelector(".fbar-sec").textContent = name(current); }
+    }), { rootMargin: "-35% 0px -45% 0px" });
     sections.forEach((s) => io.observe(s));
+    let t0 = 0, tick = null;
+    const clock = () => { const sec = Math.floor((Date.now() - t0) / 1000); bar.querySelector(".fbar-time").textContent = `${Math.floor(sec / 60)}:${String(sec % 60).padStart(2, "0")}`; };
+    const prog = () => { const h = document.documentElement; bar.querySelector(".fbar-prog i").style.width = `${Math.min(100, (100 * h.scrollTop) / Math.max(1, h.scrollHeight - h.clientHeight))}%`; };
     const btn = document.createElement("button");
-    btn.className = "focus-btn";
-    btn.textContent = "Focus";
-    btn.title = "Focus mode: fade everything except the section you're reading";
-    const set = (on) => { document.body.classList.toggle("focus", on); btn.setAttribute("aria-pressed", on); };
-    set(store.get("focus", true));
-    btn.addEventListener("click", () => { const on = !document.body.classList.contains("focus"); store.set("focus", on); set(on); });
+    btn.className = "focus-btn"; btn.textContent = "Focus";
+    btn.title = "Focus mode: hide everything except what you're reading";
+    const set = (on) => {
+      const y = current?.getBoundingClientRect().top;
+      document.body.classList.toggle("focus", on); btn.setAttribute("aria-pressed", on);
+      clearInterval(tick);
+      if (on) { t0 = Date.now(); clock(); tick = setInterval(clock, 1000); prog(); }
+      if (current && y !== undefined) scrollBy(0, current.getBoundingClientRect().top - y);  // keep your place when chrome hides
+    };
+    set(store.get("focus:v2", false));
+    const toggle = (on) => { store.set("focus:v2", on); set(on); };
+    btn.addEventListener("click", () => toggle(!document.body.classList.contains("focus")));
+    bar.querySelector(".fbar-x").addEventListener("click", () => toggle(false));
+    addEventListener("keydown", (e) => { if (e.key === "Escape" && document.body.classList.contains("focus") && !document.querySelector(".qm, .sr-wrap:not([hidden]), .sk-panel.open")) toggle(false); });
+    addEventListener("scroll", () => { if (document.body.classList.contains("focus")) prog(); }, { passive: true });
     document.querySelector(".subnav-tools")?.append(btn);
   }
 
