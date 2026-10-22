@@ -1,0 +1,461 @@
+{
+ "_note": "FORMAT EXAMPLE ONLY - made-up drugs, not real pharmacology.",
+ "lecture": {
+  "id": "T01",
+  "title": "Demo Zentaril Agents",
+  "date": "2026-10-30"
+ },
+ "textbook_status": "pending",
+ "objectives": [
+  {
+   "id": "O1",
+   "text": "Describe the mechanism of zentarils"
+  },
+  {
+   "id": "O2",
+   "text": "Compare zentarilol and mexotaril"
+  },
+  {
+   "id": "O3",
+   "text": "Recall a topic nobody covered"
+  }
+ ],
+ "classes": [
+  {
+   "name": "Zentarils (Q-receptor blockers)",
+   "objectives": [
+    "O1",
+    "O2"
+   ],
+   "sections": {
+    "overview": [
+     {
+      "text": "Zentarils block the fictional **Q-receptor** in the kidney",
+      "src": "S2",
+      "tb": false
+     },
+     {
+      "text": "Class only discussed in this demo lecture",
+      "src": "S2",
+      "tb": false
+     }
+    ],
+    "prototype": [
+     {
+      "text": "Prototype: **zentarilol**",
+      "src": "S2",
+      "tb": false
+     }
+    ],
+    "moa": [
+     {
+      "text": "Blockade of renal Q-receptor lowers Z-pressure",
+      "src": "S2",
+      "tb": false
+     },
+     {
+      "text": "Extra mechanism detail from textbook",
+      "src": "p. 11",
+      "tb": true
+     }
+    ],
+    "indications": [
+     {
+      "text": "Used for imaginary hypertension type Z",
+      "src": "S2",
+      "tb": false
+     }
+    ],
+    "pk": [
+     {
+      "text": "zentarilol half-life 4 h; mexotaril half-life 12 h",
+      "src": "S3",
+      "tb": false
+     }
+    ],
+    "adverse": [
+     {
+      "text": "Zentarilol fake fact number 0 describing a **renal Q-receptor** effect that matters for dosing in older adults with reduced clearance",
+      "src": "S2",
+      "tb": false
+     },
+     {
+      "text": "Zentarilol fake fact number 1 describing a **renal Q-receptor** effect that matters for dosing in older adults with reduced clearance",
+      "src": "S2",
+      "tb": false
+     },
+     {
+      "text": "Zentarilol fake fact number 2 describing a **renal Q-receptor** effect that matters for dosing in older adults with reduced clearance",
+      "src": "S2",
+      "tb": false
+     },
+     {
+      "text": "Zentarilol fake fact number 3 describing a **renal Q-receptor** effect that matters for dosing in older adults with reduced clearance",
+      "src": "S2",
+      "tb": false
+     },
+     {
+      "text": "Zentarilol fake fact number 4 describing a **renal Q-receptor** effect that matters for dosing in older adults with reduced clearance",
+      "src": "S2",
+      "tb": false
+     },
+     {
+      "text": "Zentarilol fake fact number 5 describing a **renal Q-receptor** effect that matters for dosing in older adults with reduced clearance",
+      "src": "S2",
+      "tb": false
+     },
+     {
+      "text": "Zentarilol fake fact number 6 describing a **renal Q-receptor** effect that matters for dosing in older adults with reduced clearance",
+      "src": "S2",
+      "tb": false
+     },
+     {
+      "text": "Zentarilol fake fact number 7 describing a **renal Q-receptor** effect that matters for dosing in older adults with reduced clearance",
+      "src": "S2",
+      "tb": false
+     },
+     {
+      "text": "Zentarilol fake fact number 8 describing a **renal Q-receptor** effect that matters for dosing in older adults with reduced clearance",
+      "src": "S2",
+      "tb": false
+     },
+     {
+      "text": "Zentarilol fake fact number 9 describing a **renal Q-receptor** effect that matters for dosing in older adults with reduced clearance",
+      "src": "S2",
+      "tb": false
+     },
+     {
+      "text": "Zentarilol fake fact number 10 describing a **renal Q-receptor** effect that matters for dosing in older adults with reduced clearance",
+      "src": "S2",
+      "tb": false
+     },
+     {
+      "text": "Zentarilol fake fact number 11 describing a **renal Q-receptor** effect that matters for dosing in older adults with reduced clearance",
+      "src": "S2",
+      "tb": false
+     }
+    ],
+    "contra": [],
+    "monitoring": []
+   },
+   "conflicts": [
+    {
+     "topic": "Half-life of mexotaril",
+     "slides": {
+      "text": "12 h",
+      "src": "S3"
+     },
+     "textbook": {
+      "text": "10 h",
+      "src": "p. 12"
+     }
+    }
+   ],
+   "comparisons": [
+    {
+     "title": "zentarilol vs mexotaril",
+     "columns": [
+      "Drug",
+      "Half-life",
+      "Key AE",
+      "How to tell apart"
+     ],
+     "rows": [
+      [
+       "zentarilol",
+       "4 h",
+       "**purple tongue**",
+       "Short half-life"
+      ],
+      [
+       "mexotaril",
+       "12 h",
+       "green nails",
+       "Long half-life, nails"
+      ]
+     ],
+     "src": "S3"
+    }
+   ],
+   "hooks": [
+    {
+     "kind": "why",
+     "text": "Blocking the renal Q-receptor lowers Z-pressure, so too much blockade causes dizziness-like Z-drop.",
+     "src": "S2"
+    },
+    {
+     "kind": "mnemonic",
+     "text": "**Z**entarilol = **Z**-pressure down, purple **Z**unge (tongue)",
+     "src": "S2; S3"
+    },
+    {
+     "kind": "why",
+     "text": "Long half-life of mexotaril means once-daily dosing in the demo.",
+     "src": "S3"
+    }
+   ],
+   "high_yield": [
+    {
+     "text": "Prototype **zentarilol**",
+     "src": "S2",
+     "tb": false
+    },
+    {
+     "text": "Purple tongue = zentarilol",
+     "src": "S2 (notes)",
+     "tb": false
+    },
+    {
+     "text": "Mexotaril: 12 h half-life, green nails",
+     "src": "S3",
+     "tb": false
+    }
+   ],
+   "questions": [
+    {
+     "kind": "vignette",
+     "stem": "A 54-year-old man with imaginary hypertension type Z is started on zentarilol. Two weeks later he reports a purple discoloration of his tongue. Which mechanism best explains the drug's therapeutic effect?",
+     "correct": "Blocks the renal Q-receptor, lowering Z-pressure",
+     "why_correct": "Zentarils block the fictional Q-receptor in the kidney (S2), which lowers Z-pressure.",
+     "distractors": [
+      {
+       "text": "Activates the hepatic R-receptor, raising Z-pressure",
+       "why": "No R-receptor activity is described."
+      },
+      {
+       "text": "Inhibits renal sodium pumps, lowering Z-volume",
+       "why": "Sodium pumps are not part of the mechanism."
+      },
+      {
+       "text": "Blocks cardiac Q-channels, slowing heart rate",
+       "why": "The Q-receptor is renal, not cardiac."
+      },
+      {
+       "text": "Stimulates renal Q-receptor, increasing Z-flow",
+       "why": "Zentarils block, not stimulate."
+      }
+     ],
+     "src": "S2"
+    },
+    {
+     "kind": "mechanism",
+     "stem": "Which best describes how zentarils work?",
+     "correct": "Blocks the renal Q-receptor, lowering Z-pressure",
+     "why_correct": "Zentarils block the fictional Q-receptor in the kidney (S2), which lowers Z-pressure.",
+     "distractors": [
+      {
+       "text": "Activates the hepatic R-receptor, raising Z-pressure",
+       "why": "No R-receptor activity is described."
+      },
+      {
+       "text": "Inhibits renal sodium pumps, lowering Z-volume",
+       "why": "Sodium pumps are not part of the mechanism."
+      },
+      {
+       "text": "Blocks cardiac Q-channels, slowing heart rate",
+       "why": "The Q-receptor is renal, not cardiac."
+      },
+      {
+       "text": "Stimulates renal Q-receptor, increasing Z-flow",
+       "why": "Zentarils block, not stimulate."
+      }
+     ],
+     "src": "S2"
+    }
+   ]
+  },
+  {
+   "name": "Mexotarils",
+   "objectives": [
+    "O2"
+   ],
+   "sections": {
+    "overview": [
+     {
+      "text": "Zentarils block the fictional **Q-receptor** in the kidney",
+      "src": "S2",
+      "tb": false
+     },
+     {
+      "text": "Class only discussed in this demo lecture",
+      "src": "S2",
+      "tb": false
+     }
+    ],
+    "prototype": [
+     {
+      "text": "Prototype: **zentarilol**",
+      "src": "S2",
+      "tb": false
+     }
+    ],
+    "moa": [
+     {
+      "text": "Blockade of renal Q-receptor lowers Z-pressure",
+      "src": "S2",
+      "tb": false
+     },
+     {
+      "text": "Extra mechanism detail from textbook",
+      "src": "p. 11",
+      "tb": true
+     }
+    ],
+    "indications": [
+     {
+      "text": "Used for imaginary hypertension type Z",
+      "src": "S2",
+      "tb": false
+     }
+    ],
+    "pk": [
+     {
+      "text": "zentarilol half-life 4 h; mexotaril half-life 12 h",
+      "src": "S3",
+      "tb": false
+     }
+    ],
+    "adverse": [
+     {
+      "text": "zentarilol: **purple tongue**",
+      "src": "S2 (notes); S3",
+      "tb": false
+     }
+    ],
+    "contra": [],
+    "monitoring": []
+   },
+   "conflicts": [
+    {
+     "topic": "Half-life of mexotaril",
+     "slides": {
+      "text": "12 h",
+      "src": "S3"
+     },
+     "textbook": {
+      "text": "10 h",
+      "src": "p. 12"
+     }
+    }
+   ],
+   "comparisons": [
+    {
+     "title": "zentarilol vs mexotaril",
+     "columns": [
+      "Drug",
+      "Half-life",
+      "Key AE",
+      "How to tell apart"
+     ],
+     "rows": [
+      [
+       "zentarilol",
+       "4 h",
+       "**purple tongue**",
+       "Short half-life"
+      ],
+      [
+       "mexotaril",
+       "12 h",
+       "green nails",
+       "Long half-life, nails"
+      ]
+     ],
+     "src": "S3"
+    }
+   ],
+   "hooks": [
+    {
+     "kind": "why",
+     "text": "Blocking the renal Q-receptor lowers Z-pressure, so too much blockade causes dizziness-like Z-drop.",
+     "src": "S2"
+    },
+    {
+     "kind": "mnemonic",
+     "text": "**Z**entarilol = **Z**-pressure down, purple **Z**unge (tongue)",
+     "src": "S2; S3"
+    },
+    {
+     "kind": "why",
+     "text": "Long half-life of mexotaril means once-daily dosing in the demo.",
+     "src": "S3"
+    }
+   ],
+   "high_yield": [
+    {
+     "text": "Prototype **zentarilol**",
+     "src": "S2",
+     "tb": false
+    },
+    {
+     "text": "Purple tongue = zentarilol",
+     "src": "S2 (notes)",
+     "tb": false
+    },
+    {
+     "text": "Mexotaril: 12 h half-life, green nails",
+     "src": "S3",
+     "tb": false
+    }
+   ],
+   "questions": [
+    {
+     "kind": "vignette",
+     "stem": "A 54-year-old man with imaginary hypertension type Z is started on zentarilol. Two weeks later he reports a purple discoloration of his tongue. Which mechanism best explains the drug's therapeutic effect?",
+     "correct": "Blocks the renal Q-receptor, lowering Z-pressure",
+     "why_correct": "Zentarils block the fictional Q-receptor in the kidney (S2), which lowers Z-pressure.",
+     "distractors": [
+      {
+       "text": "Activates the hepatic R-receptor, raising Z-pressure",
+       "why": "No R-receptor activity is described."
+      },
+      {
+       "text": "Inhibits renal sodium pumps, lowering Z-volume",
+       "why": "Sodium pumps are not part of the mechanism."
+      },
+      {
+       "text": "Blocks cardiac Q-channels, slowing heart rate",
+       "why": "The Q-receptor is renal, not cardiac."
+      },
+      {
+       "text": "Stimulates renal Q-receptor, increasing Z-flow",
+       "why": "Zentarils block, not stimulate."
+      }
+     ],
+     "src": "S2"
+    },
+    {
+     "kind": "mechanism",
+     "stem": "Which best describes how zentarils work?",
+     "correct": "Blocks the renal Q-receptor, lowering Z-pressure",
+     "why_correct": "Zentarils block the fictional Q-receptor in the kidney (S2), which lowers Z-pressure.",
+     "distractors": [
+      {
+       "text": "Activates the hepatic R-receptor, raising Z-pressure",
+       "why": "No R-receptor activity is described."
+      },
+      {
+       "text": "Inhibits renal sodium pumps, lowering Z-volume",
+       "why": "Sodium pumps are not part of the mechanism."
+      },
+      {
+       "text": "Blocks cardiac Q-channels, slowing heart rate",
+       "why": "The Q-receptor is renal, not cardiac."
+      },
+      {
+       "text": "Stimulates renal Q-receptor, increasing Z-flow",
+       "why": "Zentarils block, not stimulate."
+      }
+     ],
+     "src": "S2"
+    }
+   ]
+  }
+ ],
+ "notebooklm": {
+  "patient": "Mr. Z, 54, with imaginary hypertension type Z",
+  "suggested_questions": [
+   "How do I tell zentarilol from mexotaril?"
+  ]
+ }
+}

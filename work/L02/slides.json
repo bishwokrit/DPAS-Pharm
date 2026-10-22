@@ -1,0 +1,4153 @@
+[
+ {
+  "slide": 1,
+  "title": "Introduction to Pharmacology",
+  "items": [
+   {
+    "text": "PA PHARMACOLOGY COURSE · LECTURE 1 · SESSION 2 OF 2",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "PA PHARMACOLOGY COURSE · LECTURE 1 · SESSION 2 OF 2",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**PA PHARMACOLOGY COURSE · LECTURE 1 · SESSION 2 OF 2**",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Introduction to Pharmacology",
+    "level": 0,
+    "emphasis": [],
+    "md": "Introduction to Pharmacology",
+    "heading": true,
+    "size": 40.0
+   },
+   {
+    "text": "Session 2: Metabolism, Excretion, PK Calculations, Pharmacogenomics & Clinical Integration  |  Thursday, October 22",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Session 2: Metabolism, Excretion, PK Calculations, Pharmacogenomics & Clinical Integration  |  Thursday, October 22",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Session 2: Metabolism, Excretion, PK Calculations, Pharmacogenomics & Clinical Integration  |  Thursday, October 22**",
+    "heading": false,
+    "size": 19.0
+   },
+   {
+    "text": "Diane S. Allen-Gipson, Ph.D., M.S., Course Director",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Diane S. Allen-Gipson, Ph.D., M.S., Course Director",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Diane S. Allen-Gipson, Ph.D., M.S., Course Director**",
+    "heading": false,
+    "size": 14.5
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 2,
+  "title": "Learning Objectives — Session 2",
+  "items": [
+   {
+    "text": "BY THE END OF THIS LECTURE",
+    "level": 0,
+    "emphasis": [],
+    "md": "BY THE END OF THIS LECTURE",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Learning Objectives — Session 2",
+    "level": 0,
+    "emphasis": [],
+    "md": "Learning Objectives — Session 2",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Recap: Session 1 covered pharmacology vocabulary, drug development, pharmacodynamics, dose-response relationships, and ADME through distribution.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Recap: Session 1 covered pharmacology vocabulary, drug development, pharmacodynamics, dose-response relationships, and ADME through distribution.",
+    "heading": false,
+    "size": 15.5
+   },
+   {
+    "text": "Explain drug biotransformation (Phase I/II metabolism) and the clinical impact of CYP450 enzyme inhibition and induction.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Explain drug biotransformation (Phase I/II metabolism) and the clinical impact of CYP450 enzyme inhibition and induction.",
+    "heading": false,
+    "size": 15.5
+   },
+   {
+    "text": "Explain mechanisms of drug excretion and how renal function affects dosing.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Explain mechanisms of drug excretion and how renal function affects dosing.",
+    "heading": false,
+    "size": 15.5
+   },
+   {
+    "text": "Calculate and apply basic pharmacokinetic parameters (half-life, steady state, clearance).",
+    "level": 0,
+    "emphasis": [],
+    "md": "Calculate and apply basic pharmacokinetic parameters (half-life, steady state, clearance).",
+    "heading": false,
+    "size": 15.5
+   },
+   {
+    "text": "Describe how pharmacogenomic variation can alter drug response.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Describe how pharmacogenomic variation can alter drug response.",
+    "heading": false,
+    "size": 15.5
+   },
+   {
+    "text": "Apply a structured framework to clinical prescribing decisions.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Apply a structured framework to clinical prescribing decisions.",
+    "heading": false,
+    "size": 15.5
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Briefly recap Session 1 (Oct 15) before diving in: language of pharmacology, drug development/regulation, pharmacodynamics, dose-response, and ADME through distribution. Today picks up with metabolism (Section 6) and runs through the integrated clinical framework and recall quiz."
+ },
+ {
+  "slide": 3,
+  "title": "06",
+  "items": [
+   {
+    "text": "SECTION",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "SECTION",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**SECTION**",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "06",
+    "level": 0,
+    "emphasis": [],
+    "md": "06",
+    "heading": true,
+    "size": 68.0
+   },
+   {
+    "text": "Drug Metabolism",
+    "level": 0,
+    "emphasis": [],
+    "md": "Drug Metabolism",
+    "heading": true,
+    "size": 32.0
+   },
+   {
+    "text": "How the body chemically transforms drugs.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "How the body chemically transforms drugs.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**How the body chemically transforms drugs.**",
+    "heading": false,
+    "size": 15.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 4,
+  "title": "Why Do We Metabolize Drugs?",
+  "items": [
+   {
+    "text": "PURPOSE",
+    "level": 0,
+    "emphasis": [],
+    "md": "PURPOSE",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Why Do We Metabolize Drugs?",
+    "level": 0,
+    "emphasis": [],
+    "md": "Why Do We Metabolize Drugs?",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Inactivate an active drug, making it easier to excrete.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Inactivate an active drug, making it easier to excrete.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Activate a prodrug into its active form.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Activate a prodrug into its active form.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Produce an active metabolite that contributes to (or extends) the drug effect.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Produce an active metabolite that contributes to (or extends) the drug effect.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Occasionally produce a toxic metabolite — the basis of some drug-induced organ injury.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Occasionally produce a toxic metabolite — the basis of some drug-induced organ injury.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Occasionally produce a toxic metabolite — the basis of some drug-induced organ injury.**",
+    "heading": false,
+    "size": 16.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Preview Thursday’s acetaminophen toxicity lecture here — NAPQI is the textbook example of a toxic metabolite produced by normal Phase I metabolism."
+ },
+ {
+  "slide": 5,
+  "title": "Phase I vs. Phase II Reactions",
+  "items": [
+   {
+    "text": "TWO PHASES",
+    "level": 0,
+    "emphasis": [],
+    "md": "TWO PHASES",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Phase I vs. Phase II Reactions",
+    "level": 0,
+    "emphasis": [],
+    "md": "Phase I vs. Phase II Reactions",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Phase I — Functionalization",
+    "level": 0,
+    "emphasis": [],
+    "md": "Phase I — Functionalization",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Phase II — Conjugation",
+    "level": 0,
+    "emphasis": [],
+    "md": "Phase II — Conjugation",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Oxidation, reduction, hydrolysis",
+    "level": 0,
+    "emphasis": [],
+    "md": "Oxidation, reduction, hydrolysis",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Primarily carried out by cytochrome P450 (CYP450) enzymes",
+    "level": 0,
+    "emphasis": [],
+    "md": "Primarily carried out by cytochrome P450 (CYP450) enzymes",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Often creates or unmasks a reactive functional group",
+    "level": 0,
+    "emphasis": [],
+    "md": "Often creates or unmasks a reactive functional group",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Glucuronidation, sulfation, acetylation, methylation, glutathione conjugation",
+    "level": 0,
+    "emphasis": [],
+    "md": "Glucuronidation, sulfation, acetylation, methylation, glutathione conjugation",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Attaches a polar group to the molecule",
+    "level": 0,
+    "emphasis": [],
+    "md": "Attaches a polar group to the molecule",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Produces a more water-soluble product for renal/biliary excretion",
+    "level": 0,
+    "emphasis": [],
+    "md": "Produces a more water-soluble product for renal/biliary excretion",
+    "heading": false,
+    "size": 14.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Phase I often comes before Phase II, but not always — some drugs go straight to conjugation."
+ },
+ {
+  "slide": 6,
+  "title": "CYP450 Drug Interactions",
+  "items": [
+   {
+    "text": "CLINICALLY CRITICAL",
+    "level": 0,
+    "emphasis": [],
+    "md": "CLINICALLY CRITICAL",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "CYP450 Drug Interactions",
+    "level": 0,
+    "emphasis": [],
+    "md": "CYP450 Drug Interactions",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "●  Enzyme inhibition: a drug slows a CYP enzyme, raising the blood level of any drug that CYP normally clears.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "●  Enzyme inhibition:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**●  Enzyme inhibition:** a drug slows a CYP enzyme, raising the blood level of any drug that CYP normally clears.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "●  Enzyme induction: a drug increases CYP enzyme production, lowering the blood level (and effect) of drugs that CYP clears.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "●  Enzyme induction:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**●  Enzyme induction:** a drug increases CYP enzyme production, lowering the blood level (and effect) of drugs that CYP clears.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Example: Drug A inhibits CYP3A4 → Drug B (a CYP3A4 substrate) accumulates → toxicity risk rises.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Example: Drug A inhibits CYP3A4 → Drug B (a CYP3A4 substrate) accumulates → toxicity risk rises.",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Example: Drug A inhibits CYP3A4 → Drug B (a CYP3A4 substrate) accumulates → toxicity risk rises.**",
+    "heading": false,
+    "size": 16.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "This is one of the highest-yield concepts in all of pharmacology — nearly every major drug class has at least one clinically important CYP interaction."
+ },
+ {
+  "slide": 7,
+  "title": "CYP450 Inhibition vs. Induction",
+  "items": [
+   {
+    "text": "ORIGINAL ILLUSTRATION · FIGURE 6",
+    "level": 0,
+    "emphasis": [],
+    "md": "ORIGINAL ILLUSTRATION · FIGURE 6",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "CYP450 Inhibition vs. Induction",
+    "level": 0,
+    "emphasis": [],
+    "md": "CYP450 Inhibition vs. Induction",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Figure 6. Original illustrative bar chart (illustrative values): a CYP450 inhibitor raises a substrate drug’s blood level; an inducer lowers it.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Figure 6. Original illustrative bar chart (illustrative values): a CYP450 inhibitor raises a substrate drug’s blood level; an inducer lowers it.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Figure 6. Original illustrative bar chart (illustrative values): a CYP450 inhibitor raises a substrate drug’s blood level; an inducer lowers it.**",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 2,
+  "figures": [
+   "S7_1.png"
+  ],
+  "notes": "This is the graphical version of the previous slide — point out how far inhibition pushes the level above 100% (toxicity risk) versus how far induction pushes it below 100% (therapeutic failure risk)."
+ },
+ {
+  "slide": 8,
+  "title": "Quick Check",
+  "items": [
+   {
+    "text": "QUICK CHECK · FIGURE 6",
+    "level": 0,
+    "emphasis": [],
+    "md": "QUICK CHECK · FIGURE 6",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Quick Check",
+    "level": 0,
+    "emphasis": [],
+    "md": "Quick Check",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "In Figure 6, the \"+ Enzyme inhibitor\" bar rises to 240% of baseline, while the \"+ Enzyme inducer\" bar falls to 42%. For a patient on a stable dose of the substrate drug, which condition poses the greatest risk of toxicity?",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "In Figure 6, the \"+ Enzyme inhibitor\" bar rises to 240% of baseline, while the \"+ Enzyme inducer\" bar falls to 42%. For a patient on a stable dose of the substrate drug, which condition poses the greatest risk of toxicity?",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**In Figure 6, the \"+ Enzyme inhibitor\" bar rises to 240% of baseline, while the \"+ Enzyme inducer\" bar falls to 42%. For a patient on a stable dose of the substrate drug, which condition poses the greatest risk of toxicity?**",
+    "heading": false,
+    "size": 18.5
+   },
+   {
+    "text": "Normal metabolism",
+    "level": 0,
+    "emphasis": [],
+    "md": "Normal metabolism",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Enzyme induction",
+    "level": 0,
+    "emphasis": [],
+    "md": "Enzyme induction",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "A",
+    "level": 0,
+    "emphasis": [],
+    "md": "A",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "B",
+    "level": 0,
+    "emphasis": [],
+    "md": "B",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "C",
+    "level": 0,
+    "emphasis": [],
+    "md": "C",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Neither condition changes risk",
+    "level": 0,
+    "emphasis": [],
+    "md": "Neither condition changes risk",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "D",
+    "level": 0,
+    "emphasis": [],
+    "md": "D",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Enzyme inhibition — because it raises the substrate drug’s blood level",
+    "level": 0,
+    "emphasis": [],
+    "md": "Enzyme inhibition — because it raises the substrate drug’s blood level",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 9,
+  "title": "Answer",
+  "items": [
+   {
+    "text": "ANSWER · FIGURE 6",
+    "level": 0,
+    "emphasis": [],
+    "md": "ANSWER · FIGURE 6",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Answer",
+    "level": 0,
+    "emphasis": [],
+    "md": "Answer",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "D",
+    "level": 0,
+    "emphasis": [],
+    "md": "D",
+    "heading": true,
+    "size": 26.0
+   },
+   {
+    "text": "Enzyme inhibition — because it raises the substrate drug’s blood level.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Enzyme inhibition — because it raises the substrate drug’s blood level.",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Enzyme inhibition — because it raises the substrate drug’s blood level.**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Why:  The tallest bar in the chart is the enzyme-inhibitor condition at 240% of baseline — the substrate drug accumulates because it can no longer be cleared normally, raising toxicity risk. The inducer bar shows the opposite problem (42%, risking therapeutic failure), not toxicity.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Why:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Why:** The tallest bar in the chart is the enzyme-inhibitor condition at 240% of baseline — the substrate drug accumulates because it can no longer be cleared normally, raising toxicity risk. The inducer bar shows the opposite problem (42%, risking therapeutic failure), not toxicity.",
+    "heading": false,
+    "size": 15.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 10,
+  "title": "Quick Check",
+  "items": [
+   {
+    "text": "QUICK CHECK · DRUG METABOLISM",
+    "level": 0,
+    "emphasis": [],
+    "md": "QUICK CHECK · DRUG METABOLISM",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Quick Check",
+    "level": 0,
+    "emphasis": [],
+    "md": "Quick Check",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "A patient stable on a CYP3A4-substrate medication with a narrow therapeutic index is started on a new drug that is a strong CYP3A4 inhibitor. What is the most likely consequence?",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "A patient stable on a CYP3A4-substrate medication with a narrow therapeutic index is started on a new drug that is a strong CYP3A4 inhibitor. What is the most likely consequence?",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**A patient stable on a CYP3A4-substrate medication with a narrow therapeutic index is started on a new drug that is a strong CYP3A4 inhibitor. What is the most likely consequence?**",
+    "heading": false,
+    "size": 18.5
+   },
+   {
+    "text": "No change, since CYP3A4 only affects Phase II metabolism",
+    "level": 0,
+    "emphasis": [],
+    "md": "No change, since CYP3A4 only affects Phase II metabolism",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Decreased substrate drug level and reduced effect",
+    "level": 0,
+    "emphasis": [],
+    "md": "Decreased substrate drug level and reduced effect",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "A",
+    "level": 0,
+    "emphasis": [],
+    "md": "A",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "B",
+    "level": 0,
+    "emphasis": [],
+    "md": "B",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "C",
+    "level": 0,
+    "emphasis": [],
+    "md": "C",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Increased substrate drug level and increased toxicity risk",
+    "level": 0,
+    "emphasis": [],
+    "md": "Increased substrate drug level and increased toxicity risk",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "D",
+    "level": 0,
+    "emphasis": [],
+    "md": "D",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Increased renal clearance of the substrate drug",
+    "level": 0,
+    "emphasis": [],
+    "md": "Increased renal clearance of the substrate drug",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 11,
+  "title": "Answer",
+  "items": [
+   {
+    "text": "ANSWER · DRUG METABOLISM",
+    "level": 0,
+    "emphasis": [],
+    "md": "ANSWER · DRUG METABOLISM",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Answer",
+    "level": 0,
+    "emphasis": [],
+    "md": "Answer",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "C",
+    "level": 0,
+    "emphasis": [],
+    "md": "C",
+    "heading": true,
+    "size": 26.0
+   },
+   {
+    "text": "Increased substrate drug level and increased toxicity risk.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Increased substrate drug level and increased toxicity risk.",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Increased substrate drug level and increased toxicity risk.**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Why:  Inhibiting the CYP enzyme responsible for clearing the substrate drug slows its metabolism, raising its blood level — especially dangerous when the substrate has a narrow therapeutic index.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Why:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Why:** Inhibiting the CYP enzyme responsible for clearing the substrate drug slows its metabolism, raising its blood level — especially dangerous when the substrate has a narrow therapeutic index.",
+    "heading": false,
+    "size": 15.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 12,
+  "title": "07",
+  "items": [
+   {
+    "text": "SECTION",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "SECTION",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**SECTION**",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "07",
+    "level": 0,
+    "emphasis": [],
+    "md": "07",
+    "heading": true,
+    "size": 68.0
+   },
+   {
+    "text": "Drug Excretion",
+    "level": 0,
+    "emphasis": [],
+    "md": "Drug Excretion",
+    "heading": true,
+    "size": 32.0
+   },
+   {
+    "text": "Clearing drug from the body.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Clearing drug from the body.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Clearing drug from the body.**",
+    "heading": false,
+    "size": 15.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 13,
+  "title": "Routes of Drug Elimination",
+  "items": [
+   {
+    "text": "ROUTES",
+    "level": 0,
+    "emphasis": [],
+    "md": "ROUTES",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Routes of Drug Elimination",
+    "level": 0,
+    "emphasis": [],
+    "md": "Routes of Drug Elimination",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Kidney",
+    "level": 0,
+    "emphasis": [],
+    "md": "Kidney",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Bile / Feces",
+    "level": 0,
+    "emphasis": [],
+    "md": "Bile / Feces",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "The dominant route for most drugs and metabolites",
+    "level": 0,
+    "emphasis": [],
+    "md": "The dominant route for most drugs and metabolites",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "Important for some large or protein-bound drugs",
+    "level": 0,
+    "emphasis": [],
+    "md": "Important for some large or protein-bound drugs",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "Lungs",
+    "level": 0,
+    "emphasis": [],
+    "md": "Lungs",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Sweat / Breast Milk",
+    "level": 0,
+    "emphasis": [],
+    "md": "Sweat / Breast Milk",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Volatile agents (e.g., anesthetic gases)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Volatile agents (e.g., anesthetic gases)",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "Minor routes, but breast milk matters for lactating patients",
+    "level": 0,
+    "emphasis": [],
+    "md": "Minor routes, but breast milk matters for lactating patients",
+    "heading": false,
+    "size": 13.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 14,
+  "title": "Renal Elimination",
+  "items": [
+   {
+    "text": "THE KIDNEY IN DETAIL",
+    "level": 0,
+    "emphasis": [],
+    "md": "THE KIDNEY IN DETAIL",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Renal Elimination",
+    "level": 0,
+    "emphasis": [],
+    "md": "Renal Elimination",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "●  Glomerular filtration: free (unbound) drug passes from blood into the renal tubule based on molecular size.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "●  Glomerular filtration:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**●  Glomerular filtration:** free (unbound) drug passes from blood into the renal tubule based on molecular size.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "●  Tubular secretion: active transporters move additional drug from blood into the tubule.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "●  Tubular secretion:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**●  Tubular secretion:** active transporters move additional drug from blood into the tubule.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "●  Tubular reabsorption: lipophilic, un-ionized drug can passively diffuse back into the blood, reducing net elimination.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "●  Tubular reabsorption:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**●  Tubular reabsorption:** lipophilic, un-ionized drug can passively diffuse back into the blood, reducing net elimination.",
+    "heading": false,
+    "size": 16.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Urine pH manipulation (e.g., alkalinizing urine in aspirin overdose) works by trapping ionized drug in the tubule, blocking reabsorption."
+ },
+ {
+  "slide": 15,
+  "title": "Renal Disease and Drug Dosing",
+  "items": [
+   {
+    "text": "CLINICAL CONNECTION",
+    "level": 0,
+    "emphasis": [],
+    "md": "CLINICAL CONNECTION",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Renal Disease and Drug Dosing",
+    "level": 0,
+    "emphasis": [],
+    "md": "Renal Disease and Drug Dosing",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Decreased renal function → decreased drug clearance → increased drug exposure and accumulation risk.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Decreased renal function → decreased drug clearance → increased drug exposure and accumulation risk.",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Decreased renal function → decreased drug clearance → increased drug exposure and accumulation risk.**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "eGFR and creatinine clearance (CrCl) are the standard bedside estimates of renal function used to adjust dosing.",
+    "level": 0,
+    "emphasis": [],
+    "md": "eGFR and creatinine clearance (CrCl) are the standard bedside estimates of renal function used to adjust dosing.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Any renally-cleared, narrow-therapeutic-index drug (think: many antibiotics, digoxin, lithium) needs a dose or interval adjustment in renal impairment.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Any renally-cleared, narrow-therapeutic-index drug (think: many antibiotics, digoxin, lithium) needs a dose or interval adjustment in renal impairment.",
+    "heading": false,
+    "size": 16.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "This is the pharmacokinetic foundation for the renal-impairment clinical case coming up next, and for the NSAID-in-CKD case on Thursday."
+ },
+ {
+  "slide": 16,
+  "title": "Quick Check",
+  "items": [
+   {
+    "text": "QUICK CHECK · DRUG EXCRETION",
+    "level": 0,
+    "emphasis": [],
+    "md": "QUICK CHECK · DRUG EXCRETION",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Quick Check",
+    "level": 0,
+    "emphasis": [],
+    "md": "Quick Check",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "A patient’s eGFR drops significantly due to new chronic kidney disease. For a drug that is primarily renally eliminated, what dosing adjustment is most appropriate?",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "A patient’s eGFR drops significantly due to new chronic kidney disease. For a drug that is primarily renally eliminated, what dosing adjustment is most appropriate?",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**A patient’s eGFR drops significantly due to new chronic kidney disease. For a drug that is primarily renally eliminated, what dosing adjustment is most appropriate?**",
+    "heading": false,
+    "size": 18.5
+   },
+   {
+    "text": "No adjustment is needed",
+    "level": 0,
+    "emphasis": [],
+    "md": "No adjustment is needed",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Increase the dose",
+    "level": 0,
+    "emphasis": [],
+    "md": "Increase the dose",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "A",
+    "level": 0,
+    "emphasis": [],
+    "md": "A",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "B",
+    "level": 0,
+    "emphasis": [],
+    "md": "B",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "C",
+    "level": 0,
+    "emphasis": [],
+    "md": "C",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Switch to IV administration only",
+    "level": 0,
+    "emphasis": [],
+    "md": "Switch to IV administration only",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "D",
+    "level": 0,
+    "emphasis": [],
+    "md": "D",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Decrease the dose and/or extend the dosing interval",
+    "level": 0,
+    "emphasis": [],
+    "md": "Decrease the dose and/or extend the dosing interval",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 17,
+  "title": "Answer",
+  "items": [
+   {
+    "text": "ANSWER · DRUG EXCRETION",
+    "level": 0,
+    "emphasis": [],
+    "md": "ANSWER · DRUG EXCRETION",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Answer",
+    "level": 0,
+    "emphasis": [],
+    "md": "Answer",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "D",
+    "level": 0,
+    "emphasis": [],
+    "md": "D",
+    "heading": true,
+    "size": 26.0
+   },
+   {
+    "text": "Decrease the dose and/or extend the dosing interval.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Decrease the dose and/or extend the dosing interval.",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Decrease the dose and/or extend the dosing interval.**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Why:  Reduced renal clearance raises drug exposure for renally-eliminated drugs; the standard response is a lower dose, a longer interval, or both, guided by eGFR/CrCl.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Why:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Why:** Reduced renal clearance raises drug exposure for renally-eliminated drugs; the standard response is a lower dose, a longer interval, or both, guided by eGFR/CrCl.",
+    "heading": false,
+    "size": 15.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 18,
+  "title": "08",
+  "items": [
+   {
+    "text": "SECTION",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "SECTION",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**SECTION**",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "08",
+    "level": 0,
+    "emphasis": [],
+    "md": "08",
+    "heading": true,
+    "size": 68.0
+   },
+   {
+    "text": "Pharmacokinetic Calculations",
+    "level": 0,
+    "emphasis": [],
+    "md": "Pharmacokinetic Calculations",
+    "heading": true,
+    "size": 32.0
+   },
+   {
+    "text": "The math PAs actually use at the bedside.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "The math PAs actually use at the bedside.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**The math PAs actually use at the bedside.**",
+    "heading": false,
+    "size": 15.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 19,
+  "title": "Half-Life (t½)",
+  "items": [
+   {
+    "text": "CORE PARAMETER",
+    "level": 0,
+    "emphasis": [],
+    "md": "CORE PARAMETER",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Half-Life (t½)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Half-Life (t½)",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Half-life (t½) = the time required for the plasma drug concentration to fall by 50%.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Half-life (t½) = the time required for the plasma drug concentration to fall by 50%.",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Half-life (t½) = the time required for the plasma drug concentration to fall by 50%.**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Half-life is determined by clearance and volume of distribution together — it is not a fixed drug \"property\" independent of physiology.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Half-life is determined by clearance and volume of distribution together — it is not a fixed drug \"property\" independent of physiology.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "A drug is roughly 97% eliminated after about 5 half-lives.",
+    "level": 0,
+    "emphasis": [],
+    "md": "A drug is roughly 97% eliminated after about 5 half-lives.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Example 2: Percentage-based half-life: Basic decay",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": ":",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "Example 2**:** Percentage-based half-life: Basic decay",
+    "heading": false,
+    "size": 0
+   },
+   {
+    "text": "Formula: % remaining = 100% x (1/2)^(number of half-life)",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Formula: % remaining = 100% x (1/2)^(number of half-life)",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Formula: % remaining = 100% x (1/2)^(number of half-life)**",
+    "heading": false,
+    "size": 0
+   },
+   {
+    "text": "A drug has a half-life of 6 hours. A Patient receives an IV dose giving a starting plasma concentration of 100mg/L",
+    "level": 0,
+    "emphasis": [],
+    "md": "A drug has a half-life of 6 hours. A Patient receives an IV dose giving a starting plasma concentration of 100mg/L",
+    "heading": false,
+    "size": 0
+   },
+   {
+    "text": "1 half-life: 50% remains",
+    "level": 0,
+    "emphasis": [],
+    "md": "1 half-life: 50% remains",
+    "heading": false,
+    "size": 0
+   },
+   {
+    "text": "2 half-life: 25% remains",
+    "level": 0,
+    "emphasis": [],
+    "md": "2 half-life: 25% remains",
+    "heading": false,
+    "size": 0
+   },
+   {
+    "text": "3 half-life: 12.5% remains",
+    "level": 0,
+    "emphasis": [],
+    "md": "3 half-life: 12.5% remains",
+    "heading": false,
+    "size": 0
+   },
+   {
+    "text": "4 half-life:  6.25% remains",
+    "level": 0,
+    "emphasis": [],
+    "md": "4 half-life:  6.25% remains",
+    "heading": false,
+    "size": 0
+   },
+   {
+    "text": "5 half-life:  3.125% remains (estimated 97% “eliminated”",
+    "level": 0,
+    "emphasis": [],
+    "md": "5 half-life:  3.125% remains (estimated 97% “eliminated”",
+    "heading": false,
+    "size": 0
+   },
+   {
+    "text": "Example 1: Basic decay:",
+    "level": 0,
+    "emphasis": [],
+    "md": "Example 1: Basic decay:",
+    "heading": false,
+    "size": 0
+   },
+   {
+    "text": "Formula: C(t) = Co x (1/2)^(t/t1/2)",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Formula: C(t) = C",
+      "marks": [
+       "bold"
+      ]
+     },
+     {
+      "text": "o",
+      "marks": [
+       "bold"
+      ]
+     },
+     {
+      "text": "x (1/2)^(t/t",
+      "marks": [
+       "bold"
+      ]
+     },
+     {
+      "text": "1/2",
+      "marks": [
+       "bold"
+      ]
+     },
+     {
+      "text": ")",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Formula: C(t) = C** **o** **x (1/2)^(t/t** **1/2** **)**",
+    "heading": false,
+    "size": 0
+   },
+   {
+    "text": "A drug has a half-life of 6 hours. A Patient receives an IV dose giving a starting plasma concentration of 100mg/L",
+    "level": 0,
+    "emphasis": [],
+    "md": "A drug has a half-life of 6 hours. A Patient receives an IV dose giving a starting plasma concentration of 100mg/L",
+    "heading": false,
+    "size": 0
+   },
+   {
+    "text": "t = 6 h (1 half-life): 50mg/L (50% remains)",
+    "level": 0,
+    "emphasis": [],
+    "md": "t = 6 h (1 half-life): 50mg/L (50% remains)",
+    "heading": false,
+    "size": 0
+   },
+   {
+    "text": "t = 12 h (2 half-life): 25 mg/L (75% eliminated)",
+    "level": 0,
+    "emphasis": [],
+    "md": "t = 12 h (2 half-life): 25 mg/L (75% eliminated)",
+    "heading": false,
+    "size": 0
+   },
+   {
+    "text": "t = 18 h (3 half-life): 12.5 mg/L (87.5% eliminated)",
+    "level": 0,
+    "emphasis": [],
+    "md": "t = 18 h (3 half-life): 12.5 mg/L (87.5% eliminated)",
+    "heading": false,
+    "size": 0
+   },
+   {
+    "text": "t = 24 h (4 half-life): 6.25 mg/L  (93.75% eliminated)",
+    "level": 0,
+    "emphasis": [],
+    "md": "t = 24 h (4 half-life): 6.25 mg/L  (93.75% eliminated)",
+    "heading": false,
+    "size": 0
+   },
+   {
+    "text": "t = 30 h (5 half-life): 3.125 mg/L (97% eliminated)",
+    "level": 0,
+    "emphasis": [],
+    "md": "t = 30 h (5 half-life): 3.125 mg/L (97% eliminated)",
+    "heading": false,
+    "size": 0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 20,
+  "title": "Exponential Decay Over Half-Lives",
+  "items": [
+   {
+    "text": "ORIGINAL ILLUSTRATION · FIGURE 7",
+    "level": 0,
+    "emphasis": [],
+    "md": "ORIGINAL ILLUSTRATION · FIGURE 7",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Exponential Decay Over Half-Lives",
+    "level": 0,
+    "emphasis": [],
+    "md": "Exponential Decay Over Half-Lives",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Figure 7. Original illustrative decay curve: plasma concentration falls by 50% with each half-life, leaving ~3% remaining after 5 half-lives.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Figure 7. Original illustrative decay curve: plasma concentration falls by 50% with each half-life, leaving ~3% remaining after 5 half-lives.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Figure 7. Original illustrative decay curve: plasma concentration falls by 50% with each half-life, leaving ~3% remaining after 5 half-lives.**",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 2,
+  "figures": [
+   "S20_1.png"
+  ],
+  "notes": "Point out each marked half-life on the curve — this visual is what students should picture whenever a half-life-based elimination question comes up."
+ },
+ {
+  "slide": 21,
+  "title": "Quick Check",
+  "items": [
+   {
+    "text": "QUICK CHECK · FIGURE 7",
+    "level": 0,
+    "emphasis": [],
+    "md": "QUICK CHECK · FIGURE 7",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Quick Check",
+    "level": 0,
+    "emphasis": [],
+    "md": "Quick Check",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Using Figure 7, approximately what percentage of the original drug concentration remains after 3 half-lives (3 t½)?",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Using Figure 7, approximately what percentage of the original drug concentration remains after 3 half-lives (3 t½)?",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Using Figure 7, approximately what percentage of the original drug concentration remains after 3 half-lives (3 t½)?**",
+    "heading": false,
+    "size": 18.5
+   },
+   {
+    "text": "50%",
+    "level": 0,
+    "emphasis": [],
+    "md": "50%",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "25%",
+    "level": 0,
+    "emphasis": [],
+    "md": "25%",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "A",
+    "level": 0,
+    "emphasis": [],
+    "md": "A",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "B",
+    "level": 0,
+    "emphasis": [],
+    "md": "B",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "C",
+    "level": 0,
+    "emphasis": [],
+    "md": "C",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "12.5%",
+    "level": 0,
+    "emphasis": [],
+    "md": "12.5%",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "D",
+    "level": 0,
+    "emphasis": [],
+    "md": "D",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "3%",
+    "level": 0,
+    "emphasis": [],
+    "md": "3%",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 22,
+  "title": "Answer",
+  "items": [
+   {
+    "text": "ANSWER · FIGURE 7",
+    "level": 0,
+    "emphasis": [],
+    "md": "ANSWER · FIGURE 7",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Answer",
+    "level": 0,
+    "emphasis": [],
+    "md": "Answer",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "C",
+    "level": 0,
+    "emphasis": [],
+    "md": "C",
+    "heading": true,
+    "size": 26.0
+   },
+   {
+    "text": "12.5%.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "12.5%.",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**12.5%.**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Why:  Each half-life cuts the remaining concentration in half: 100% → 50% (1 t½) → 25% (2 t½) → 12.5% (3 t½), exactly as marked on the curve. By 5 half-lives the drug is roughly 97% eliminated (about 3% remaining).",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Why:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Why:** Each half-life cuts the remaining concentration in half: 100% → 50% (1 t½) → 25% (2 t½) → 12.5% (3 t½), exactly as marked on the curve. By 5 half-lives the drug is roughly 97% eliminated (about 3% remaining).",
+    "heading": false,
+    "size": 15.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 23,
+  "title": "Steady State, Loading, and Maintenance Dosing",
+  "items": [
+   {
+    "text": "DOSING IN PRACTICE",
+    "level": 0,
+    "emphasis": [],
+    "md": "DOSING IN PRACTICE",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Steady State, Loading, and Maintenance Dosing",
+    "level": 0,
+    "emphasis": [],
+    "md": "Steady State, Loading, and Maintenance Dosing",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "●  Steady state: the point at which drug intake equals drug elimination; reached in about 4–5 half-lives with regular dosing.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "●  Steady state:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**●  Steady state:** the point at which drug intake equals drug elimination; reached in about 4–5 half-lives with regular dosing.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "●  Loading dose: a larger initial dose used to rapidly reach a therapeutic concentration, without waiting for steady state.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "●  Loading dose:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**●  Loading dose:** a larger initial dose used to rapidly reach a therapeutic concentration, without waiting for steady state.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "●  Maintenance dose: the regular, ongoing dose that keeps the drug within the therapeutic range once steady state is reached.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "●  Maintenance dose:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**●  Maintenance dose:** the regular, ongoing dose that keeps the drug within the therapeutic range once steady state is reached.",
+    "heading": false,
+    "size": 16.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Loading doses are based on Vd; maintenance doses are based on clearance — worth stating explicitly if students have seen the formulas."
+ },
+ {
+  "slide": 24,
+  "title": "Reaching Steady State: With and Without a Loading Dose",
+  "items": [
+   {
+    "text": "ORIGINAL ILLUSTRATION · FIGURE 8",
+    "level": 0,
+    "emphasis": [],
+    "md": "ORIGINAL ILLUSTRATION · FIGURE 8",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Reaching Steady State: With and Without a Loading Dose",
+    "level": 0,
+    "emphasis": [],
+    "md": "Reaching Steady State: With and Without a Loading Dose",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Figure 8. Original illustrative multi-dose simulation: maintenance dosing alone climbs gradually to steady state; adding a loading dose reaches the target level immediately.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Figure 8. Original illustrative multi-dose simulation: maintenance dosing alone climbs gradually to steady state; adding a loading dose reaches the target level immediately.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Figure 8. Original illustrative multi-dose simulation: maintenance dosing alone climbs gradually to steady state; adding a loading dose reaches the target level immediately.**",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 2,
+  "figures": [
+   "S24_1.png"
+  ],
+  "notes": "This is the graphical version of the previous slide’s three definitions — trace the sawtooth climb for maintenance-only dosing, then show how the loading dose starts at the target level right away."
+ },
+ {
+  "slide": 25,
+  "title": "Quick Check",
+  "items": [
+   {
+    "text": "QUICK CHECK · FIGURE 8",
+    "level": 0,
+    "emphasis": [],
+    "md": "QUICK CHECK · FIGURE 8",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Quick Check",
+    "level": 0,
+    "emphasis": [],
+    "md": "Quick Check",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "In Figure 8, the dashed orange line (loading dose + maintenance) starts at the target concentration immediately, while the solid teal line (maintenance only) climbs gradually over several doses. What is the clinical advantage of adding a loading dose?",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "In Figure 8, the dashed orange line (loading dose + maintenance) starts at the target concentration immediately, while the solid teal line (maintenance only) climbs gradually over several doses. What is the clinical advantage of adding a loading dose?",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**In Figure 8, the dashed orange line (loading dose + maintenance) starts at the target concentration immediately, while the solid teal line (maintenance only) climbs gradually over several doses. What is the clinical advantage of adding a loading dose?**",
+    "heading": false,
+    "size": 18.5
+   },
+   {
+    "text": "It permanently lowers the maintenance dose needed",
+    "level": 0,
+    "emphasis": [],
+    "md": "It permanently lowers the maintenance dose needed",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "It eliminates the need for monitoring",
+    "level": 0,
+    "emphasis": [],
+    "md": "It eliminates the need for monitoring",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "A",
+    "level": 0,
+    "emphasis": [],
+    "md": "A",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "B",
+    "level": 0,
+    "emphasis": [],
+    "md": "B",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "C",
+    "level": 0,
+    "emphasis": [],
+    "md": "C",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "It has no advantage over maintenance dosing alone",
+    "level": 0,
+    "emphasis": [],
+    "md": "It has no advantage over maintenance dosing alone",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "D",
+    "level": 0,
+    "emphasis": [],
+    "md": "D",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "It reaches the therapeutic target immediately instead of waiting ~4–5 half-lives",
+    "level": 0,
+    "emphasis": [],
+    "md": "It reaches the therapeutic target immediately instead of waiting ~4–5 half-lives",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 26,
+  "title": "Answer",
+  "items": [
+   {
+    "text": "ANSWER · FIGURE 8",
+    "level": 0,
+    "emphasis": [],
+    "md": "ANSWER · FIGURE 8",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Answer",
+    "level": 0,
+    "emphasis": [],
+    "md": "Answer",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "D",
+    "level": 0,
+    "emphasis": [],
+    "md": "D",
+    "heading": true,
+    "size": 26.0
+   },
+   {
+    "text": "It reaches the therapeutic target immediately instead of waiting ~4–5 half-lives.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "It reaches the therapeutic target immediately instead of waiting ~4–5 half-lives.",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**It reaches the therapeutic target immediately instead of waiting ~4–5 half-lives.**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Why:  The dashed loading-dose curve starts at the dotted steady-state line from the very first dose, while the solid maintenance-only curve needs several dosing intervals (~4–5 half-lives) to climb to that same level — exactly as defined on the previous slide. A loading dose does not change the maintenance dose itself or remove the need for monitoring.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Why:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Why:** The dashed loading-dose curve starts at the dotted steady-state line from the very first dose, while the solid maintenance-only curve needs several dosing intervals (~4–5 half-lives) to climb to that same level — exactly as defined on the previous slide. A loading dose does not change the maintenance dose itself or remove the need for monitoring.",
+    "heading": false,
+    "size": 15.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 27,
+  "title": "Clearance",
+  "items": [
+   {
+    "text": "EFFICIENCY OF ELIMINATION",
+    "level": 0,
+    "emphasis": [],
+    "md": "EFFICIENCY OF ELIMINATION",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Clearance",
+    "level": 0,
+    "emphasis": [],
+    "md": "Clearance",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Clearance = the volume of plasma from which drug is completely removed per unit time.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Clearance = the volume of plasma from which drug is completely removed per unit time.",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Clearance = the volume of plasma from which drug is completely removed per unit time.**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Clearance determines how efficiently a drug is removed from the body — and, along with Vd, determines half-life.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Clearance determines how efficiently a drug is removed from the body — and, along with Vd, determines half-life.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Total clearance is usually the sum of hepatic and renal clearance.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Total clearance is usually the sum of hepatic and renal clearance.",
+    "heading": false,
+    "size": 16.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 28,
+  "title": "Renal Impairment and Drug Accumulation",
+  "items": [
+   {
+    "text": "CLINICAL CASE",
+    "level": 0,
+    "emphasis": [],
+    "md": "CLINICAL CASE",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Renal Impairment and Drug Accumulation",
+    "level": 0,
+    "emphasis": [],
+    "md": "Renal Impairment and Drug Accumulation",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "A patient with significant chronic kidney disease is prescribed a medication that is primarily eliminated unchanged by the kidney.",
+    "level": 0,
+    "emphasis": [],
+    "md": "A patient with significant chronic kidney disease is prescribed a medication that is primarily eliminated unchanged by the kidney.",
+    "heading": false,
+    "size": 17.0
+   },
+   {
+    "text": "Ask yourself:  What happens to the drug’s concentration and half-life, and would you adjust the dose, the dosing interval, or both?",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Ask yourself:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     },
+     {
+      "text": "What happens to the drug’s concentration and half-life, and would you adjust the dose, the dosing interval, or both?",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Ask yourself:** **What happens to the drug’s concentration and half-life, and would you adjust the dose, the dosing interval, or both?**",
+    "heading": false,
+    "size": 18.0
+   },
+   {
+    "text": "Clinical pearl:  Reduced clearance raises drug concentration and prolongs half-life; many renally-cleared drugs are managed by extending the dosing interval, reducing the dose, or both, guided by eGFR/CrCl.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Clinical pearl:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     },
+     {
+      "text": "Reduced clearance raises drug concentration and prolongs half-life; many renally-cleared drugs are managed by extending the dosing interval, reducing the dose, or both, guided by eGFR/CrCl.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Clinical pearl:** **Reduced clearance raises drug concentration and prolongs half-life; many renally-cleared drugs are managed by extending the dosing interval, reducing the dose, or both, guided by eGFR/CrCl.**",
+    "heading": false,
+    "size": 14.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Walk through the logic explicitly: clearance down -> half-life up -> time to steady state up -> accumulation risk up if the regimen is not adjusted."
+ },
+ {
+  "slide": 29,
+  "title": "Quick Check",
+  "items": [
+   {
+    "text": "QUICK CHECK · PHARMACOKINETIC CALCULATIONS",
+    "level": 0,
+    "emphasis": [],
+    "md": "QUICK CHECK · PHARMACOKINETIC CALCULATIONS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Quick Check",
+    "level": 0,
+    "emphasis": [],
+    "md": "Quick Check",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Approximately how many half-lives are required for a drug to reach steady state with regular, repeated dosing?",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Approximately how many half-lives are required for a drug to reach steady state with regular, repeated dosing?",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Approximately how many half-lives are required for a drug to reach steady state with regular, repeated dosing?**",
+    "heading": false,
+    "size": 18.5
+   },
+   {
+    "text": "1–2",
+    "level": 0,
+    "emphasis": [],
+    "md": "1–2",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "4–5",
+    "level": 0,
+    "emphasis": [],
+    "md": "4–5",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "A",
+    "level": 0,
+    "emphasis": [],
+    "md": "A",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "B",
+    "level": 0,
+    "emphasis": [],
+    "md": "B",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "C",
+    "level": 0,
+    "emphasis": [],
+    "md": "C",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "8–10",
+    "level": 0,
+    "emphasis": [],
+    "md": "8–10",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "D",
+    "level": 0,
+    "emphasis": [],
+    "md": "D",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Steady state is reached immediately after the first dose",
+    "level": 0,
+    "emphasis": [],
+    "md": "Steady state is reached immediately after the first dose",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 30,
+  "title": "Answer",
+  "items": [
+   {
+    "text": "ANSWER · PHARMACOKINETIC CALCULATIONS",
+    "level": 0,
+    "emphasis": [],
+    "md": "ANSWER · PHARMACOKINETIC CALCULATIONS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Answer",
+    "level": 0,
+    "emphasis": [],
+    "md": "Answer",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "B",
+    "level": 0,
+    "emphasis": [],
+    "md": "B",
+    "heading": true,
+    "size": 26.0
+   },
+   {
+    "text": "4–5 half-lives.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "4–5 half-lives.",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**4–5 half-lives.**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Why:  Steady state — where drug intake equals drug elimination — is reached in roughly 4–5 half-lives, regardless of dose size. This is also why a drug is roughly 97% eliminated about 5 half-lives after stopping it.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Why:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Why:** Steady state — where drug intake equals drug elimination — is reached in roughly 4–5 half-lives, regardless of dose size. This is also why a drug is roughly 97% eliminated about 5 half-lives after stopping it.",
+    "heading": false,
+    "size": 15.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 31,
+  "title": "09",
+  "items": [
+   {
+    "text": "SECTION",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "SECTION",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**SECTION**",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "09",
+    "level": 0,
+    "emphasis": [],
+    "md": "09",
+    "heading": true,
+    "size": 68.0
+   },
+   {
+    "text": "Pharmacogenomics",
+    "level": 0,
+    "emphasis": [],
+    "md": "Pharmacogenomics",
+    "heading": true,
+    "size": 32.0
+   },
+   {
+    "text": "Why the same dose does not work the same way in everyone.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Why the same dose does not work the same way in everyone.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Why the same dose does not work the same way in everyone.**",
+    "heading": false,
+    "size": 15.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 32,
+  "title": "What Is Pharmacogenomics?",
+  "items": [
+   {
+    "text": "DEFINITION",
+    "level": 0,
+    "emphasis": [],
+    "md": "DEFINITION",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "What Is Pharmacogenomics?",
+    "level": 0,
+    "emphasis": [],
+    "md": "What Is Pharmacogenomics?",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Pharmacogenomics studies how genetic variation changes an individual’s response to a drug.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Pharmacogenomics studies how genetic variation changes an individual’s response to a drug.",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Pharmacogenomics studies how genetic variation changes an individual’s response to a drug.**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Genetic variation can alter:",
+    "level": 0,
+    "emphasis": [],
+    "md": "Genetic variation can alter:",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Drug metabolism (e.g., CYP enzyme activity)",
+    "level": 1,
+    "emphasis": [],
+    "md": "Drug metabolism (e.g., CYP enzyme activity)",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Drug transport across membranes",
+    "level": 1,
+    "emphasis": [],
+    "md": "Drug transport across membranes",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Drug target structure or expression",
+    "level": 1,
+    "emphasis": [],
+    "md": "Drug target structure or expression",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Overall drug response and risk of adverse reactions",
+    "level": 1,
+    "emphasis": [],
+    "md": "Overall drug response and risk of adverse reactions",
+    "heading": false,
+    "size": 14.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 33,
+  "title": "Pharmacogenomics in Practice",
+  "items": [
+   {
+    "text": "HIGH-YIELD EXAMPLES",
+    "level": 0,
+    "emphasis": [],
+    "md": "HIGH-YIELD EXAMPLES",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Pharmacogenomics in Practice",
+    "level": 0,
+    "emphasis": [],
+    "md": "Pharmacogenomics in Practice",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "CYP2D6 Variation",
+    "level": 0,
+    "emphasis": [],
+    "md": "CYP2D6 Variation",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "CYP2C19 Variation",
+    "level": 0,
+    "emphasis": [],
+    "md": "CYP2C19 Variation",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Alters metabolism of many antidepressants, opioids (e.g., codeine activation)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Alters metabolism of many antidepressants, opioids (e.g., codeine activation)",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "Affects clopidogrel activation and some antidepressant/PPI dosing",
+    "level": 0,
+    "emphasis": [],
+    "md": "Affects clopidogrel activation and some antidepressant/PPI dosing",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "TPMT Variation",
+    "level": 0,
+    "emphasis": [],
+    "md": "TPMT Variation",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "HLA-Associated Reactions",
+    "level": 0,
+    "emphasis": [],
+    "md": "HLA-Associated Reactions",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Deficiency raises toxicity risk with thiopurine drugs (e.g., azathioprine)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Deficiency raises toxicity risk with thiopurine drugs (e.g., azathioprine)",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "Certain HLA alleles sharply raise risk of severe hypersensitivity to specific drugs",
+    "level": 0,
+    "emphasis": [],
+    "md": "Certain HLA alleles sharply raise risk of severe hypersensitivity to specific drugs",
+    "heading": false,
+    "size": 13.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Students will see HLA-B*5801 and allopurinol again directly in Thursday’s gout lecture — flag that connection now."
+ },
+ {
+  "slide": 34,
+  "title": "Personalized Pharmacotherapy",
+  "items": [
+   {
+    "text": "PUTTING IT TOGETHER",
+    "level": 0,
+    "emphasis": [],
+    "md": "PUTTING IT TOGETHER",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Personalized Pharmacotherapy",
+    "level": 0,
+    "emphasis": [],
+    "md": "Personalized Pharmacotherapy",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Genotype",
+    "level": 0,
+    "emphasis": [],
+    "md": "Genotype",
+    "heading": true,
+    "size": 13.0
+   },
+   {
+    "text": "Phenotype",
+    "level": 0,
+    "emphasis": [],
+    "md": "Phenotype",
+    "heading": true,
+    "size": 13.0
+   },
+   {
+    "text": "Disease",
+    "level": 0,
+    "emphasis": [],
+    "md": "Disease",
+    "heading": true,
+    "size": 13.0
+   },
+   {
+    "text": "State",
+    "level": 0,
+    "emphasis": [],
+    "md": "State",
+    "heading": true,
+    "size": 13.0
+   },
+   {
+    "text": "Other",
+    "level": 0,
+    "emphasis": [],
+    "md": "Other",
+    "heading": true,
+    "size": 13.0
+   },
+   {
+    "text": "Medications",
+    "level": 0,
+    "emphasis": [],
+    "md": "Medications",
+    "heading": true,
+    "size": 13.0
+   },
+   {
+    "text": "Individualized",
+    "level": 0,
+    "emphasis": [],
+    "md": "Individualized",
+    "heading": true,
+    "size": 13.0
+   },
+   {
+    "text": "Therapy",
+    "level": 0,
+    "emphasis": [],
+    "md": "Therapy",
+    "heading": true,
+    "size": 13.0
+   },
+   {
+    "text": "Pharmacogenomics is one input among several — genotype alone never dictates therapy in isolation.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Pharmacogenomics is one input among several — genotype alone never dictates therapy in isolation.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Pharmacogenomics is one input among several — genotype alone never dictates therapy in isolation.**",
+    "heading": false,
+    "size": 14.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 35,
+  "title": "Quick Check",
+  "items": [
+   {
+    "text": "QUICK CHECK · PHARMACOGENOMICS",
+    "level": 0,
+    "emphasis": [],
+    "md": "QUICK CHECK · PHARMACOGENOMICS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Quick Check",
+    "level": 0,
+    "emphasis": [],
+    "md": "Quick Check",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "A patient is found to carry the HLA-B*5801 allele before starting allopurinol. Why does this matter clinically?",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "A patient is found to carry the HLA-B*5801 allele before starting allopurinol. Why does this matter clinically?",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**A patient is found to carry the HLA-B*5801 allele before starting allopurinol. Why does this matter clinically?**",
+    "heading": false,
+    "size": 18.5
+   },
+   {
+    "text": "It identifies a sharply increased risk of a severe hypersensitivity reaction",
+    "level": 0,
+    "emphasis": [],
+    "md": "It identifies a sharply increased risk of a severe hypersensitivity reaction",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "It predicts reduced drug absorption",
+    "level": 0,
+    "emphasis": [],
+    "md": "It predicts reduced drug absorption",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "A",
+    "level": 0,
+    "emphasis": [],
+    "md": "A",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "B",
+    "level": 0,
+    "emphasis": [],
+    "md": "B",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "C",
+    "level": 0,
+    "emphasis": [],
+    "md": "C",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "It only affects how the drug tastes",
+    "level": 0,
+    "emphasis": [],
+    "md": "It only affects how the drug tastes",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "D",
+    "level": 0,
+    "emphasis": [],
+    "md": "D",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "It has no bearing on drug selection",
+    "level": 0,
+    "emphasis": [],
+    "md": "It has no bearing on drug selection",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 36,
+  "title": "Answer",
+  "items": [
+   {
+    "text": "ANSWER · PHARMACOGENOMICS",
+    "level": 0,
+    "emphasis": [],
+    "md": "ANSWER · PHARMACOGENOMICS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Answer",
+    "level": 0,
+    "emphasis": [],
+    "md": "Answer",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "A",
+    "level": 0,
+    "emphasis": [],
+    "md": "A",
+    "heading": true,
+    "size": 26.0
+   },
+   {
+    "text": "It identifies a sharply increased risk of a severe hypersensitivity reaction.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "It identifies a sharply increased risk of a severe hypersensitivity reaction.",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**It identifies a sharply increased risk of a severe hypersensitivity reaction.**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Why:  HLA-B*5801 is associated with severe hypersensitivity reactions to allopurinol — a textbook pharmacogenomic screening consideration you will see again in Thursday’s gout lecture.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Why:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Why:** HLA-B*5801 is associated with severe hypersensitivity reactions to allopurinol — a textbook pharmacogenomic screening consideration you will see again in Thursday’s gout lecture.",
+    "heading": false,
+    "size": 15.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 37,
+  "title": "10",
+  "items": [
+   {
+    "text": "SECTION",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "SECTION",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**SECTION**",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "10",
+    "level": 0,
+    "emphasis": [],
+    "md": "10",
+    "heading": true,
+    "size": 68.0
+   },
+   {
+    "text": "Putting It All Together",
+    "level": 0,
+    "emphasis": [],
+    "md": "Putting It All Together",
+    "heading": true,
+    "size": 32.0
+   },
+   {
+    "text": "From concepts to clinical decisions.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "From concepts to clinical decisions.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**From concepts to clinical decisions.**",
+    "heading": false,
+    "size": 15.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 38,
+  "title": "One Integrated Pharmacology Pathway",
+  "items": [
+   {
+    "text": "THE COMPLETE MODEL",
+    "level": 0,
+    "emphasis": [],
+    "md": "THE COMPLETE MODEL",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "One Integrated Pharmacology Pathway",
+    "level": 0,
+    "emphasis": [],
+    "md": "One Integrated Pharmacology Pathway",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Dose",
+    "level": 0,
+    "emphasis": [],
+    "md": "Dose",
+    "heading": true,
+    "size": 13.0
+   },
+   {
+    "text": "Absorption",
+    "level": 0,
+    "emphasis": [],
+    "md": "Absorption",
+    "heading": true,
+    "size": 13.0
+   },
+   {
+    "text": "Distribution",
+    "level": 0,
+    "emphasis": [],
+    "md": "Distribution",
+    "heading": true,
+    "size": 13.0
+   },
+   {
+    "text": "Receptor /",
+    "level": 0,
+    "emphasis": [],
+    "md": "Receptor /",
+    "heading": true,
+    "size": 13.0
+   },
+   {
+    "text": "Target",
+    "level": 0,
+    "emphasis": [],
+    "md": "Target",
+    "heading": true,
+    "size": 13.0
+   },
+   {
+    "text": "Effect",
+    "level": 0,
+    "emphasis": [],
+    "md": "Effect",
+    "heading": true,
+    "size": 13.0
+   },
+   {
+    "text": "Metabolism",
+    "level": 0,
+    "emphasis": [],
+    "md": "Metabolism",
+    "heading": true,
+    "size": 13.0
+   },
+   {
+    "text": "Excretion",
+    "level": 0,
+    "emphasis": [],
+    "md": "Excretion",
+    "heading": true,
+    "size": 13.0
+   },
+   {
+    "text": "Every topic in this lecture is a stop somewhere along this pathway — use it as your mental checklist when you evaluate any drug.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Every topic in this lecture is a stop somewhere along this pathway — use it as your mental checklist when you evaluate any drug.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Every topic in this lecture is a stop somewhere along this pathway — use it as your mental checklist when you evaluate any drug.**",
+    "heading": false,
+    "size": 14.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 39,
+  "title": "A Clinical Decision-Making Checklist",
+  "items": [
+   {
+    "text": "BEFORE YOU PRESCRIBE",
+    "level": 0,
+    "emphasis": [],
+    "md": "BEFORE YOU PRESCRIBE",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "A Clinical Decision-Making Checklist",
+    "level": 0,
+    "emphasis": [],
+    "md": "A Clinical Decision-Making Checklist",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Indication — is there a clear reason to treat?",
+    "level": 0,
+    "emphasis": [],
+    "md": "Indication — is there a clear reason to treat?",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Contraindications and allergies",
+    "level": 0,
+    "emphasis": [],
+    "md": "Contraindications and allergies",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Renal and hepatic function",
+    "level": 0,
+    "emphasis": [],
+    "md": "Renal and hepatic function",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Drug interactions (including CYP450)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Drug interactions (including CYP450)",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Age, pregnancy, and other patient-specific factors",
+    "level": 0,
+    "emphasis": [],
+    "md": "Age, pregnancy, and other patient-specific factors",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Correct dose, route, and monitoring plan",
+    "level": 0,
+    "emphasis": [],
+    "md": "Correct dose, route, and monitoring plan",
+    "heading": false,
+    "size": 16.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "This list previews exactly the checklist students will apply in the Thursday MSK cases (NSAID in CKD, methotrexate in pregnancy, etc.) — tell them explicitly to memorize this list."
+ },
+ {
+  "slide": 40,
+  "title": "CYP Interaction in Action",
+  "items": [
+   {
+    "text": "INTEGRATED VIGNETTE",
+    "level": 0,
+    "emphasis": [],
+    "md": "INTEGRATED VIGNETTE",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "CYP Interaction in Action",
+    "level": 0,
+    "emphasis": [],
+    "md": "CYP Interaction in Action",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "A patient stable on a CYP3A4-substrate medication is started on a new drug that is a potent CYP3A4 inhibitor.",
+    "level": 0,
+    "emphasis": [],
+    "md": "A patient stable on a CYP3A4-substrate medication is started on a new drug that is a potent CYP3A4 inhibitor.",
+    "heading": false,
+    "size": 17.0
+   },
+   {
+    "text": "Ask yourself:  What happens to the first drug’s level, and what would you watch for clinically?",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Ask yourself:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     },
+     {
+      "text": "What happens to the first drug’s level, and what would you watch for clinically?",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Ask yourself:** **What happens to the first drug’s level, and what would you watch for clinically?**",
+    "heading": false,
+    "size": 18.0
+   },
+   {
+    "text": "Clinical pearl:  Always check for CYP450 interactions before adding a new drug to an existing regimen — this is one of the most preventable causes of toxicity.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Clinical pearl:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     },
+     {
+      "text": "Always check for CYP450 interactions before adding a new drug to an existing regimen — this is one of the most preventable causes of toxicity.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Clinical pearl:** **Always check for CYP450 interactions before adding a new drug to an existing regimen — this is one of the most preventable causes of toxicity.**",
+    "heading": false,
+    "size": 14.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 41,
+  "title": "Agonist or Antagonist?",
+  "items": [
+   {
+    "text": "INTEGRATED VIGNETTE",
+    "level": 0,
+    "emphasis": [],
+    "md": "INTEGRATED VIGNETTE",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Agonist or Antagonist?",
+    "level": 0,
+    "emphasis": [],
+    "md": "Agonist or Antagonist?",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "A patient is given a drug that binds the same receptor as their home medication, but their home medication’s effect becomes weaker after the new drug is started.",
+    "level": 0,
+    "emphasis": [],
+    "md": "A patient is given a drug that binds the same receptor as their home medication, but their home medication’s effect becomes weaker after the new drug is started.",
+    "heading": false,
+    "size": 17.0
+   },
+   {
+    "text": "Ask yourself:  Is the new drug most likely a competitive antagonist, and how could you confirm it pharmacologically?",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Ask yourself:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     },
+     {
+      "text": "Is the new drug most likely a competitive antagonist, and how could you confirm it pharmacologically?",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Ask yourself:** **Is the new drug most likely a competitive antagonist, and how could you confirm it pharmacologically?**",
+    "heading": false,
+    "size": 18.0
+   },
+   {
+    "text": "Clinical pearl:  A competitive antagonist can be overcome by increasing the agonist dose — if raising the home medication’s dose restores the effect, that supports competitive (rather than irreversible) antagonism.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Clinical pearl:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     },
+     {
+      "text": "A competitive antagonist can be overcome by increasing the agonist dose — if raising the home medication’s dose restores the effect, that supports competitive (rather than irreversible) antagonism.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Clinical pearl:** **A competitive antagonist can be overcome by increasing the agonist dose — if raising the home medication’s dose restores the effect, that supports competitive (rather than irreversible) antagonism.**",
+    "heading": false,
+    "size": 14.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 42,
+  "title": "Quick Check",
+  "items": [
+   {
+    "text": "QUICK CHECK · PUTTING IT ALL TOGETHER",
+    "level": 0,
+    "emphasis": [],
+    "md": "QUICK CHECK · PUTTING IT ALL TOGETHER",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Quick Check",
+    "level": 0,
+    "emphasis": [],
+    "md": "Quick Check",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Before prescribing any new medication, which single check is most directly aimed at preventing a toxic, often-predictable drug-drug interaction?",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Before prescribing any new medication, which single check is most directly aimed at preventing a toxic, often-predictable drug-drug interaction?",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Before prescribing any new medication, which single check is most directly aimed at preventing a toxic, often-predictable drug-drug interaction?**",
+    "heading": false,
+    "size": 18.5
+   },
+   {
+    "text": "Confirming the drug’s brand name",
+    "level": 0,
+    "emphasis": [],
+    "md": "Confirming the drug’s brand name",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Checking the drug’s chemical name",
+    "level": 0,
+    "emphasis": [],
+    "md": "Checking the drug’s chemical name",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "A",
+    "level": 0,
+    "emphasis": [],
+    "md": "A",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "B",
+    "level": 0,
+    "emphasis": [],
+    "md": "B",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "C",
+    "level": 0,
+    "emphasis": [],
+    "md": "C",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Reviewing the drug’s half-life alone",
+    "level": 0,
+    "emphasis": [],
+    "md": "Reviewing the drug’s half-life alone",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "D",
+    "level": 0,
+    "emphasis": [],
+    "md": "D",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Reviewing CYP450 interactions with the patient’s current medications",
+    "level": 0,
+    "emphasis": [],
+    "md": "Reviewing CYP450 interactions with the patient’s current medications",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 43,
+  "title": "Answer",
+  "items": [
+   {
+    "text": "ANSWER · PUTTING IT ALL TOGETHER",
+    "level": 0,
+    "emphasis": [],
+    "md": "ANSWER · PUTTING IT ALL TOGETHER",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Answer",
+    "level": 0,
+    "emphasis": [],
+    "md": "Answer",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "D",
+    "level": 0,
+    "emphasis": [],
+    "md": "D",
+    "heading": true,
+    "size": 26.0
+   },
+   {
+    "text": "Reviewing CYP450 interactions with the patient’s current medications.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Reviewing CYP450 interactions with the patient’s current medications.",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Reviewing CYP450 interactions with the patient’s current medications.**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Why:  CYP450 interaction screening is one of the single highest-yield steps for preventing predictable, preventable toxicity before adding any new drug to a regimen.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Why:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Why:** CYP450 interaction screening is one of the single highest-yield steps for preventing predictable, preventable toxicity before adding any new drug to a regimen.",
+    "heading": false,
+    "size": 15.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 44,
+  "title": "Key Takeaways",
+  "items": [
+   {
+    "text": "BIG PICTURE",
+    "level": 0,
+    "emphasis": [],
+    "md": "BIG PICTURE",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Key Takeaways",
+    "level": 0,
+    "emphasis": [],
+    "md": "Key Takeaways",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Pharmacodynamics = what the drug does to the body (receptors, potency, efficacy).",
+    "level": 0,
+    "emphasis": [],
+    "md": "Pharmacodynamics = what the drug does to the body (receptors, potency, efficacy).",
+    "heading": true,
+    "size": 16.5
+   },
+   {
+    "text": "1",
+    "level": 0,
+    "emphasis": [],
+    "md": "1",
+    "heading": true,
+    "size": 20.0
+   },
+   {
+    "text": "Pharmacokinetics = what the body does to the drug (ADME).",
+    "level": 0,
+    "emphasis": [],
+    "md": "Pharmacokinetics = what the body does to the drug (ADME).",
+    "heading": true,
+    "size": 16.5
+   },
+   {
+    "text": "2",
+    "level": 0,
+    "emphasis": [],
+    "md": "2",
+    "heading": true,
+    "size": 20.0
+   },
+   {
+    "text": "Receptor interactions (agonism, antagonism) explain most drug effects.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Receptor interactions (agonism, antagonism) explain most drug effects.",
+    "heading": true,
+    "size": 16.5
+   },
+   {
+    "text": "3",
+    "level": 0,
+    "emphasis": [],
+    "md": "3",
+    "heading": true,
+    "size": 20.0
+   },
+   {
+    "text": "ADME together determine how much drug reaches the target, and for how long.",
+    "level": 0,
+    "emphasis": [],
+    "md": "ADME together determine how much drug reaches the target, and for how long.",
+    "heading": true,
+    "size": 16.5
+   },
+   {
+    "text": "4",
+    "level": 0,
+    "emphasis": [],
+    "md": "4",
+    "heading": true,
+    "size": 20.0
+   },
+   {
+    "text": "Patient-specific factors — renal/hepatic function, genetics, interactions — determine the individual response.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Patient-specific factors — renal/hepatic function, genetics, interactions — determine the individual response.",
+    "heading": true,
+    "size": 16.5
+   },
+   {
+    "text": "5",
+    "level": 0,
+    "emphasis": [],
+    "md": "5",
+    "heading": true,
+    "size": 20.0
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": "Close by telling students these five ideas are the toolkit they will use for every single drug class for the rest of the course, starting with musculoskeletal pharmacology next."
+ },
+ {
+  "slide": 45,
+  "title": "11",
+  "items": [
+   {
+    "text": "SECTION",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "SECTION",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**SECTION**",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "11",
+    "level": 0,
+    "emphasis": [],
+    "md": "11",
+    "heading": true,
+    "size": 68.0
+   },
+   {
+    "text": "Lecture Recall Quiz",
+    "level": 0,
+    "emphasis": [],
+    "md": "Lecture Recall Quiz",
+    "heading": true,
+    "size": 32.0
+   },
+   {
+    "text": "A cumulative self-test covering both sessions — use this to review before exams.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "A cumulative self-test covering both sessions — use this to review before exams.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**A cumulative self-test covering both sessions — use this to review before exams.**",
+    "heading": false,
+    "size": 15.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 46,
+  "title": "Lecture Recall Quiz (1 of 2)",
+  "items": [
+   {
+    "text": "LECTURE RECALL QUIZ",
+    "level": 0,
+    "emphasis": [],
+    "md": "LECTURE RECALL QUIZ",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Lecture Recall Quiz (1 of 2)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Lecture Recall Quiz (1 of 2)",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "1.  A drug has high potency but low efficacy compared to an alternative. For a patient needing maximum symptom relief, which factor matters more when choosing between the two?",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "1.  A drug has high potency but low efficacy compared to an alternative. For a patient needing maximum symptom relief, which factor matters more when choosing between the two?",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**1.  A drug has high potency but low efficacy compared to an alternative. For a patient needing maximum symptom relief, which factor matters more when choosing between the two?**",
+    "heading": false,
+    "size": 14.5
+   },
+   {
+    "text": "A.  Efficacy",
+    "level": 1,
+    "emphasis": [],
+    "md": "A.  Efficacy",
+    "heading": false,
+    "size": 12.5
+   },
+   {
+    "text": "B.  Potency",
+    "level": 1,
+    "emphasis": [],
+    "md": "B.  Potency",
+    "heading": false,
+    "size": 12.5
+   },
+   {
+    "text": "C.  Both matter equally",
+    "level": 1,
+    "emphasis": [],
+    "md": "C.  Both matter equally",
+    "heading": false,
+    "size": 12.5
+   },
+   {
+    "text": "D.  Neither predicts clinical benefit",
+    "level": 1,
+    "emphasis": [],
+    "md": "D.  Neither predicts clinical benefit",
+    "heading": false,
+    "size": 12.5
+   },
+   {
+    "text": "2.  A patient with CKD is prescribed a renally-cleared, narrow-TI drug without dose adjustment. Which two consequences would you expect together?",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "2.  A patient with CKD is prescribed a renally-cleared, narrow-TI drug without dose adjustment. Which two consequences would you expect together?",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**2.  A patient with CKD is prescribed a renally-cleared, narrow-TI drug without dose adjustment. Which two consequences would you expect together?**",
+    "heading": false,
+    "size": 14.5
+   },
+   {
+    "text": "A.  Decreased half-life and decreased concentration",
+    "level": 1,
+    "emphasis": [],
+    "md": "A.  Decreased half-life and decreased concentration",
+    "heading": false,
+    "size": 12.5
+   },
+   {
+    "text": "B.  Increased clearance and decreased Vd",
+    "level": 1,
+    "emphasis": [],
+    "md": "B.  Increased clearance and decreased Vd",
+    "heading": false,
+    "size": 12.5
+   },
+   {
+    "text": "C.  Increased half-life and increased concentration",
+    "level": 1,
+    "emphasis": [],
+    "md": "C.  Increased half-life and increased concentration",
+    "heading": false,
+    "size": 12.5
+   },
+   {
+    "text": "D.  No change in either parameter",
+    "level": 1,
+    "emphasis": [],
+    "md": "D.  No change in either parameter",
+    "heading": false,
+    "size": 12.5
+   },
+   {
+    "text": "3.  Which best differentiates a competitive antagonist from a noncompetitive antagonist?",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "3.  Which best differentiates a competitive antagonist from a noncompetitive antagonist?",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**3.  Which best differentiates a competitive antagonist from a noncompetitive antagonist?**",
+    "heading": false,
+    "size": 14.5
+   },
+   {
+    "text": "A.  Competitive lowers Emax; noncompetitive does not",
+    "level": 1,
+    "emphasis": [],
+    "md": "A.  Competitive lowers Emax; noncompetitive does not",
+    "heading": false,
+    "size": 12.5
+   },
+   {
+    "text": "B.  Noncompetitive lowers Emax; competitive shifts the curve right without changing Emax",
+    "level": 1,
+    "emphasis": [],
+    "md": "B.  Noncompetitive lowers Emax; competitive shifts the curve right without changing Emax",
+    "heading": false,
+    "size": 12.5
+   },
+   {
+    "text": "C.  They are pharmacologically identical",
+    "level": 1,
+    "emphasis": [],
+    "md": "C.  They are pharmacologically identical",
+    "heading": false,
+    "size": 12.5
+   },
+   {
+    "text": "D.  Only competitive antagonists cause adverse effects",
+    "level": 1,
+    "emphasis": [],
+    "md": "D.  Only competitive antagonists cause adverse effects",
+    "heading": false,
+    "size": 12.5
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 47,
+  "title": "Lecture Recall Quiz (2 of 2)",
+  "items": [
+   {
+    "text": "LECTURE RECALL QUIZ",
+    "level": 0,
+    "emphasis": [],
+    "md": "LECTURE RECALL QUIZ",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Lecture Recall Quiz (2 of 2)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Lecture Recall Quiz (2 of 2)",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "4.  Drug A, a CYP enzyme inducer, is started in a patient taking Drug B, a substrate of that same CYP enzyme. What happens to Drug B’s level and effect?",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "4.  Drug A, a CYP enzyme inducer, is started in a patient taking Drug B, a substrate of that same CYP enzyme. What happens to Drug B’s level and effect?",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**4.  Drug A, a CYP enzyme inducer, is started in a patient taking Drug B, a substrate of that same CYP enzyme. What happens to Drug B’s level and effect?**",
+    "heading": false,
+    "size": 14.5
+   },
+   {
+    "text": "A.  Increases, raising toxicity risk",
+    "level": 1,
+    "emphasis": [],
+    "md": "A.  Increases, raising toxicity risk",
+    "heading": false,
+    "size": 12.5
+   },
+   {
+    "text": "B.  No change",
+    "level": 1,
+    "emphasis": [],
+    "md": "B.  No change",
+    "heading": false,
+    "size": 12.5
+   },
+   {
+    "text": "C.  Drug B’s route of elimination changes to biliary",
+    "level": 1,
+    "emphasis": [],
+    "md": "C.  Drug B’s route of elimination changes to biliary",
+    "heading": false,
+    "size": 12.5
+   },
+   {
+    "text": "D.  Decreases, risking therapeutic failure",
+    "level": 1,
+    "emphasis": [],
+    "md": "D.  Decreases, risking therapeutic failure",
+    "heading": false,
+    "size": 12.5
+   },
+   {
+    "text": "5.  A narrow-therapeutic-index medication requires monitoring. Which pharmacokinetic parameter most directly determines how long it takes to reach steady-state concentration?",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "5.  A narrow-therapeutic-index medication requires monitoring. Which pharmacokinetic parameter most directly determines how long it takes to reach steady-state concentration?",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**5.  A narrow-therapeutic-index medication requires monitoring. Which pharmacokinetic parameter most directly determines how long it takes to reach steady-state concentration?**",
+    "heading": false,
+    "size": 14.5
+   },
+   {
+    "text": "A.  Half-life",
+    "level": 1,
+    "emphasis": [],
+    "md": "A.  Half-life",
+    "heading": false,
+    "size": 12.5
+   },
+   {
+    "text": "B.  Bioavailability",
+    "level": 1,
+    "emphasis": [],
+    "md": "B.  Bioavailability",
+    "heading": false,
+    "size": 12.5
+   },
+   {
+    "text": "C.  Route of administration",
+    "level": 1,
+    "emphasis": [],
+    "md": "C.  Route of administration",
+    "heading": false,
+    "size": 12.5
+   },
+   {
+    "text": "D.  Chemical name",
+    "level": 1,
+    "emphasis": [],
+    "md": "D.  Chemical name",
+    "heading": false,
+    "size": 12.5
+   },
+   {
+    "text": "6.  A PA reviews indication, contraindications, renal/hepatic function, interactions, and a monitoring plan before prescribing. This process best reflects:",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "6.  A PA reviews indication, contraindications, renal/hepatic function, interactions, and a monitoring plan before prescribing. This process best reflects:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**6.  A PA reviews indication, contraindications, renal/hepatic function, interactions, and a monitoring plan before prescribing. This process best reflects:**",
+    "heading": false,
+    "size": 14.5
+   },
+   {
+    "text": "A.  Pharmacogenomic testing",
+    "level": 1,
+    "emphasis": [],
+    "md": "A.  Pharmacogenomic testing",
+    "heading": false,
+    "size": 12.5
+   },
+   {
+    "text": "B.  Receptor pharmacology alone",
+    "level": 1,
+    "emphasis": [],
+    "md": "B.  Receptor pharmacology alone",
+    "heading": false,
+    "size": 12.5
+   },
+   {
+    "text": "C.  The clinical decision-making framework",
+    "level": 1,
+    "emphasis": [],
+    "md": "C.  The clinical decision-making framework",
+    "heading": false,
+    "size": 12.5
+   },
+   {
+    "text": "D.  Phase IV surveillance",
+    "level": 1,
+    "emphasis": [],
+    "md": "D.  Phase IV surveillance",
+    "heading": false,
+    "size": 12.5
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 48,
+  "title": "Lecture Recall Quiz — Answer Key",
+  "items": [
+   {
+    "text": "ANSWER KEY",
+    "level": 0,
+    "emphasis": [],
+    "md": "ANSWER KEY",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Lecture Recall Quiz — Answer Key",
+    "level": 0,
+    "emphasis": [],
+    "md": "Lecture Recall Quiz — Answer Key",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "1.  A — Efficacy (the maximum achievable effect) matters more than potency for most clinical outcomes.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "1.  A —",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     },
+     {
+      "text": "Efficacy (the maximum achievable effect) matters more than potency for most clinical outcomes.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**1.  A —** **Efficacy (the maximum achievable effect) matters more than potency for most clinical outcomes.**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "2.  C — Reduced renal clearance raises both drug concentration and half-life.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "2.  C —",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     },
+     {
+      "text": "Reduced renal clearance raises both drug concentration and half-life.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**2.  C —** **Reduced renal clearance raises both drug concentration and half-life.**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "3.  B — Noncompetitive/irreversible antagonists lower Emax; competitive antagonists shift the curve right without changing Emax.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "3.  B —",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     },
+     {
+      "text": "Noncompetitive/irreversible antagonists lower Emax; competitive antagonists shift the curve right without changing Emax.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**3.  B —** **Noncompetitive/irreversible antagonists lower Emax; competitive antagonists shift the curve right without changing Emax.**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "4.  D — Enzyme induction speeds substrate clearance, lowering its level and effect — the opposite of inhibition.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "4.  D —",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     },
+     {
+      "text": "Enzyme induction speeds substrate clearance, lowering its level and effect — the opposite of inhibition.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**4.  D —** **Enzyme induction speeds substrate clearance, lowering its level and effect — the opposite of inhibition.**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "5.  A — Time to steady state (about 4–5 half-lives) is governed by half-life.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "5.  A —",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     },
+     {
+      "text": "Time to steady state (about 4–5 half-lives) is governed by half-life.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**5.  A —** **Time to steady state (about 4–5 half-lives) is governed by half-life.**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "6.  C — This checklist is the clinical decision-making framework from the \"Putting It All Together\" section.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "6.  C —",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     },
+     {
+      "text": "This checklist is the clinical decision-making framework from the \"Putting It All Together\" section.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**6.  C —** **This checklist is the clinical decision-making framework from the \"Putting It All Together\" section.**",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": "Encourage students to revisit this quiz on their own before the exam — it is designed as a standalone recall resource, separate from the in-lecture quick checks, and now spans both Session 1 and Session 2 content."
+ },
+ {
+  "slide": 49,
+  "title": "Image Attribution",
+  "items": [
+   {
+    "text": "APPENDIX",
+    "level": 0,
+    "emphasis": [],
+    "md": "APPENDIX",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Image Attribution",
+    "level": 0,
+    "emphasis": [],
+    "md": "Image Attribution",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "●  Original figures in this deck: Figures 6–8 (CYP450 Inhibition vs. Induction; Exponential Decay Over Half-Lives; Reaching Steady State: With and Without a Loading Dose) were generated by the course director using the AI tool Claude to illustrate standard, non-copyrighted pharmacologic concepts. They are original diagrams, not reproduced from Katzung’s Basic and Clinical Pharmacology or any other copyrighted source.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "●  Original figures in this deck:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**●  Original figures in this deck:** Figures 6–8 (CYP450 Inhibition vs. Induction; Exponential Decay Over Half-Lives; Reaching Steady State: With and Without a Loading Dose) were generated by the course director using the AI tool Claude to illustrate standard, non-copyrighted pharmacologic concepts. They are original diagrams, not reproduced from Katzung’s Basic and Clinical Pharmacology or any other copyrighted source.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "●  Reference: Anthropic. (2026). Claude (Sonnet 5) [Large language model]. https://claude.ai",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "●  Reference:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**●  Reference:** Anthropic. (2026). Claude (Sonnet 5) [Large language model]. https://claude.ai",
+    "heading": false,
+    "size": 16.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "This slide documents AI-tool use for original figure generation per university citation requirements. It covers every original diagram in this deck (Figures 6–8); none are reproduced from any textbook."
+ }
+]

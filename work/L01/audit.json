@@ -1,0 +1,98 @@
+{
+ "lecture": "L01",
+ "passed": true,
+ "units_checked": 248,
+ "missing": [],
+ "uncited": [
+  {
+   "ref": "SG:U1-R2",
+   "text": "Generic names are unambiguous and international, preventing confusion when the same ingredient hides under multiple brand names (e.g., acetaminophen/Tylenol), which can cause unintentional double-dosing.",
+   "kind": "study guide"
+  }
+ ],
+ "emphasis_not_bold": [],
+ "skipped": [
+  {
+   "ref": "S3",
+   "text": "Point students to the required and recommended texts for Unit 1 before diving into content.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; readings are in About this lecture"
+  },
+  {
+   "ref": "S15",
+   "text": "Good discussion question — push students to ask \"compared to what?\" rather than judging the number in isolation.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; 'compared to what?' is covered"
+  },
+  {
+   "ref": "S23",
+   "text": "This is the same distinction from the previous slide, now shown graphically.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S26",
+   "text": "This bridges introductory pharmacodynamics into the pulmonary pharmacology they will see later in the curriculum, and reinforces the agonist definition from the previous slide.",
+   "kind": "speaker note",
+   "reason": "teaching note; covered under Clinical relevance"
+  },
+  {
+   "ref": "S31",
+   "text": "Point to EC50 and Emax directly on the plotted curve — this is the same curve concept described on the previous slide, now shown graphically.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; the facts are in Figure 2's caption"
+  },
+  {
+   "ref": "S35",
+   "text": "This is the graphical version of the table on the previous slide.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S46",
+   "text": "Trace the arrows A-D-M-E with your finger as you narrate — this is the visual skeleton for the rest of the ADME discussion (and for the remaining PK sections in Session 2).",
+   "kind": "speaker note",
+   "reason": "teaching instruction; ADME skeleton covered"
+  },
+  {
+   "ref": "S50",
+   "text": "This naturally sets up the next slide on first-pass metabolism as the main reason oral bioavailability is less than 100%.",
+   "kind": "speaker note",
+   "reason": "transition between slides; facts covered"
+  },
+  {
+   "ref": "S56",
+   "text": "Close Session 1 by previewing Session 2 explicitly — students should leave knowing ADME is half-finished (we stopped after Distribution) and that Metabolism/Excretion pick up first next time.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; covered in About this lecture"
+  },
+  {
+   "ref": "S57",
+   "text": "This slide documents AI-tool use for original figure generation per university citation requirements.",
+   "kind": "speaker note",
+   "reason": "administrative note on AI-tool citation"
+  }
+ ],
+ "not_in_deck": [],
+ "not_in_notebooklm": [],
+ "question_issues": [],
+ "question_stats": {
+  "count": 20,
+  "letters": {
+   "A": 4,
+   "B": 4,
+   "C": 4,
+   "D": 4,
+   "E": 4
+  },
+  "vignette": 9,
+  "mechanism": 11
+ },
+ "thin_objectives": [
+  "IO1.1: Define and describe fundamental pharmacologic concepts, including pharmacokinetics, pharmacodynamics, drug-receptor interactions, dose-response relationships, therapeutic index, half-life, and steady state. — 3 class(es), 75 facts (Half-life and steady state are taught in Session 2 (L02))",
+  "IO1.2: Describe the processes of drug absorption, distribution, metabolism, and excretion and factors that influence these processes. — 1 class(es), 32 facts (This session: absorption + distribution; metabolism + excretion detail in Session 2 (L02))",
+  "IO1.3: Explain how patient-specific factors, including age, pregnancy, renal and hepatic function, and pharmacogenetic variation, may affect medication response. — 1 class(es), 32 facts (Barely covered this session; pharmacogenomics and renal dosing in Session 2 (L02))",
+  "IO1.4: Identify common types and mechanisms of adverse drug reactions, drug-drug interactions, and drug-disease interactions. — 2 class(es), 48 facts (Only ADR definition + adverse-event reporting this session; drug interactions in Session 2 (L02))",
+  "IO1.5: Interpret common components of medication orders and prescriptions, including drug name, dose, route, frequency, and duration. — 2 class(es), 55 facts (Only drug names (generic vs brand) and routes this session)"
+ ]
+}

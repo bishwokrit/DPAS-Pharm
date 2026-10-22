@@ -1,0 +1,756 @@
+{
+ "course": "DPAS 625 Clinical Pharmacology I, Fall 2026",
+ "source": "inputs/syllabus/Syllabus_DPAS625_v5.pdf (v.5, Oct 9 2026)",
+ "textbook": "Katzung's Basic and Clinical Pharmacology, 16th ed. (2025)",
+ "note": "Objectives and readings are listed per unit in the syllabus; both sessions of a unit share them.",
+ "lectures": [
+  {
+   "id": "L01",
+   "unit": 1,
+   "session": 1,
+   "title": "Unit 1: Introduction to Pharmacology — Session 1",
+   "date": "2026-10-15",
+   "objectives": [
+    {
+     "id": "IO1.1",
+     "text": "Define and describe fundamental pharmacologic concepts, including pharmacokinetics, pharmacodynamics, drug-receptor interactions, dose-response relationships, therapeutic index, half-life, and steady state."
+    },
+    {
+     "id": "IO1.2",
+     "text": "Describe the processes of drug absorption, distribution, metabolism, and excretion and factors that influence these processes."
+    },
+    {
+     "id": "IO1.3",
+     "text": "Explain how patient-specific factors, including age, pregnancy, renal and hepatic function, and pharmacogenetic variation, may affect medication response."
+    },
+    {
+     "id": "IO1.4",
+     "text": "Identify common types and mechanisms of adverse drug reactions, drug-drug interactions, and drug-disease interactions."
+    },
+    {
+     "id": "IO1.5",
+     "text": "Interpret common components of medication orders and prescriptions, including drug name, dose, route, frequency, and duration."
+    }
+   ],
+   "readings": [
+    {
+     "chapter": "1"
+    },
+    {
+     "chapter": "2"
+    },
+    {
+     "chapter": "3"
+    },
+    {
+     "chapter": "4"
+    },
+    {
+     "chapter": "5"
+    }
+   ],
+   "study_guide": [
+    "U1-R1",
+    "U1-R2",
+    "U1-R3",
+    "U1-R4",
+    "U1-R5",
+    "U1-R6",
+    "U1-R7",
+    "U1-R8",
+    "U1-R9",
+    "U1-M"
+   ]
+  },
+  {
+   "id": "L02",
+   "unit": 1,
+   "session": 2,
+   "title": "Unit 1: Introduction to Pharmacology — Session 2",
+   "date": "2026-10-22",
+   "objectives": [
+    {
+     "id": "IO1.1",
+     "text": "Define and describe fundamental pharmacologic concepts, including pharmacokinetics, pharmacodynamics, drug-receptor interactions, dose-response relationships, therapeutic index, half-life, and steady state."
+    },
+    {
+     "id": "IO1.2",
+     "text": "Describe the processes of drug absorption, distribution, metabolism, and excretion and factors that influence these processes."
+    },
+    {
+     "id": "IO1.3",
+     "text": "Explain how patient-specific factors, including age, pregnancy, renal and hepatic function, and pharmacogenetic variation, may affect medication response."
+    },
+    {
+     "id": "IO1.4",
+     "text": "Identify common types and mechanisms of adverse drug reactions, drug-drug interactions, and drug-disease interactions."
+    },
+    {
+     "id": "IO1.5",
+     "text": "Interpret common components of medication orders and prescriptions, including drug name, dose, route, frequency, and duration."
+    }
+   ],
+   "readings": [
+    {
+     "chapter": "1"
+    },
+    {
+     "chapter": "2"
+    },
+    {
+     "chapter": "3"
+    },
+    {
+     "chapter": "4"
+    },
+    {
+     "chapter": "5"
+    }
+   ],
+   "study_guide": [
+    "U1-R10",
+    "U1-R11",
+    "U1-R12",
+    "U1-S"
+   ]
+  },
+  {
+   "id": "L03",
+   "unit": 2,
+   "session": 1,
+   "title": "Unit 2: Musculoskeletal — Session 1",
+   "date": "2026-10-27",
+   "objectives": [
+    {
+     "id": "IO2.1",
+     "text": "Identify major pharmacologic classes used in the management of musculoskeletal conditions and describe their mechanisms of action."
+    },
+    {
+     "id": "IO2.2",
+     "text": "Describe the indications, contraindications, adverse effects, and clinically significant interactions associated with medications used to treat musculoskeletal conditions."
+    },
+    {
+     "id": "IO2.3",
+     "text": "Compare pharmacologic agents within and across therapeutic classes to distinguish clinically relevant differences in efficacy, safety, and use."
+    },
+    {
+     "id": "IO2.4",
+     "text": "Select appropriate pharmacologic therapy for common musculoskeletal conditions based on clinical presentation and patient-specific factors."
+    },
+    {
+     "id": "IO2.5",
+     "text": "Identify appropriate dosing, administration, and monitoring considerations for medications used in musculoskeletal conditions."
+    },
+    {
+     "id": "IO2.6",
+     "text": "Explain important medication-use and safety information to patients receiving pharmacotherapy for musculoskeletal."
+    }
+   ],
+   "readings": [
+    {
+     "chapter": "27"
+    },
+    {
+     "chapter": "36"
+    },
+    {
+     "chapter": "42"
+    }
+   ],
+   "study_guide": [
+    "U2-R1",
+    "U2-R2",
+    "U2-R3",
+    "U2-R4",
+    "U2-R5",
+    "U2-R6",
+    "U2-R7",
+    "U2-R8",
+    "U2-R9",
+    "U2-R10",
+    "U2-R11",
+    "U2-R12",
+    "U2-R13",
+    "U2-M",
+    "U2-S"
+   ],
+   "study_guide_note": "Unit items not yet split between the two sessions; split when authoring."
+  },
+  {
+   "id": "L04",
+   "unit": 2,
+   "session": 2,
+   "title": "Unit 2: Musculoskeletal — Session 2",
+   "date": "2026-10-29",
+   "objectives": [
+    {
+     "id": "IO2.1",
+     "text": "Identify major pharmacologic classes used in the management of musculoskeletal conditions and describe their mechanisms of action."
+    },
+    {
+     "id": "IO2.2",
+     "text": "Describe the indications, contraindications, adverse effects, and clinically significant interactions associated with medications used to treat musculoskeletal conditions."
+    },
+    {
+     "id": "IO2.3",
+     "text": "Compare pharmacologic agents within and across therapeutic classes to distinguish clinically relevant differences in efficacy, safety, and use."
+    },
+    {
+     "id": "IO2.4",
+     "text": "Select appropriate pharmacologic therapy for common musculoskeletal conditions based on clinical presentation and patient-specific factors."
+    },
+    {
+     "id": "IO2.5",
+     "text": "Identify appropriate dosing, administration, and monitoring considerations for medications used in musculoskeletal conditions."
+    },
+    {
+     "id": "IO2.6",
+     "text": "Explain important medication-use and safety information to patients receiving pharmacotherapy for musculoskeletal."
+    }
+   ],
+   "readings": [
+    {
+     "chapter": "27"
+    },
+    {
+     "chapter": "36"
+    },
+    {
+     "chapter": "42"
+    }
+   ],
+   "study_guide": [
+    "U2-R1",
+    "U2-R2",
+    "U2-R3",
+    "U2-R4",
+    "U2-R5",
+    "U2-R6",
+    "U2-R7",
+    "U2-R8",
+    "U2-R9",
+    "U2-R10",
+    "U2-R11",
+    "U2-R12",
+    "U2-R13",
+    "U2-M",
+    "U2-S"
+   ],
+   "study_guide_note": "Unit items not yet split between the two sessions; split when authoring."
+  },
+  {
+   "id": "L05",
+   "unit": 3,
+   "session": 1,
+   "title": "Unit 3: GI & Nutrition — Session 1",
+   "date": "2026-11-03",
+   "objectives": [
+    {
+     "id": "IO3.1",
+     "text": "Identify major pharmacologic classes used in the management of gastrointestinal and nutrition-related conditions and describe their mechanisms of action."
+    },
+    {
+     "id": "IO3.2",
+     "text": "Describe the indications, contraindications, adverse effects, and clinically significant interactions associated with medications used to treat gastrointestinal and nutrition-related conditions."
+    },
+    {
+     "id": "IO3.3",
+     "text": "Compare pharmacologic agents within and across therapeutic classes to distinguish clinically relevant differences in efficacy, safety, and use."
+    },
+    {
+     "id": "IO3.4",
+     "text": "Select appropriate pharmacologic therapy for common gastrointestinal and nutrition-related conditions based on clinical presentation and patient-specific factors."
+    },
+    {
+     "id": "IO3.5",
+     "text": "Identify appropriate dosing, administration, and monitoring considerations for medications used in gastrointestinal and nutrition-related conditions."
+    },
+    {
+     "id": "IO3.6",
+     "text": "Explain important medication-use and safety information to patients receiving pharmacotherapy for gastrointestinal and nutrition-related."
+    }
+   ],
+   "readings": [
+    {
+     "chapter": "62",
+     "title": "Drugs Used in the Treatment of Gastrointestinal Diseases"
+    },
+    {
+     "chapter": "65",
+     "title": "Dietary Supplements & Herbal Medications"
+    }
+   ],
+   "study_guide": [
+    "U3-R1",
+    "U3-R2",
+    "U3-R3",
+    "U3-R4",
+    "U3-R5",
+    "U3-R6",
+    "U3-R7",
+    "U3-R8",
+    "U3-R9",
+    "U3-R10",
+    "U3-R11",
+    "U3-R12",
+    "U3-R13",
+    "U3-M",
+    "U3-S"
+   ],
+   "study_guide_note": "Unit items not yet split between the two sessions; split when authoring."
+  },
+  {
+   "id": "L06",
+   "unit": 3,
+   "session": 2,
+   "title": "Unit 3: GI & Nutrition — Session 2",
+   "date": "2026-11-05",
+   "objectives": [
+    {
+     "id": "IO3.1",
+     "text": "Identify major pharmacologic classes used in the management of gastrointestinal and nutrition-related conditions and describe their mechanisms of action."
+    },
+    {
+     "id": "IO3.2",
+     "text": "Describe the indications, contraindications, adverse effects, and clinically significant interactions associated with medications used to treat gastrointestinal and nutrition-related conditions."
+    },
+    {
+     "id": "IO3.3",
+     "text": "Compare pharmacologic agents within and across therapeutic classes to distinguish clinically relevant differences in efficacy, safety, and use."
+    },
+    {
+     "id": "IO3.4",
+     "text": "Select appropriate pharmacologic therapy for common gastrointestinal and nutrition-related conditions based on clinical presentation and patient-specific factors."
+    },
+    {
+     "id": "IO3.5",
+     "text": "Identify appropriate dosing, administration, and monitoring considerations for medications used in gastrointestinal and nutrition-related conditions."
+    },
+    {
+     "id": "IO3.6",
+     "text": "Explain important medication-use and safety information to patients receiving pharmacotherapy for gastrointestinal and nutrition-related."
+    }
+   ],
+   "readings": [
+    {
+     "chapter": "62",
+     "title": "Drugs Used in the Treatment of Gastrointestinal Diseases"
+    },
+    {
+     "chapter": "65",
+     "title": "Dietary Supplements & Herbal Medications"
+    }
+   ],
+   "study_guide": [
+    "U3-R1",
+    "U3-R2",
+    "U3-R3",
+    "U3-R4",
+    "U3-R5",
+    "U3-R6",
+    "U3-R7",
+    "U3-R8",
+    "U3-R9",
+    "U3-R10",
+    "U3-R11",
+    "U3-R12",
+    "U3-R13",
+    "U3-M",
+    "U3-S"
+   ],
+   "study_guide_note": "Unit items not yet split between the two sessions; split when authoring."
+  },
+  {
+   "id": "L07",
+   "unit": 4,
+   "session": 1,
+   "title": "Unit 4: Endocrine — Session 1",
+   "date": "2026-11-10",
+   "objectives": [
+    {
+     "id": "IO4.1",
+     "text": "Identify major pharmacologic classes used in the management of endocrine conditions and describe their mechanisms of action."
+    },
+    {
+     "id": "IO4.2",
+     "text": "Describe the indications, contraindications, adverse effects, and clinically significant interactions associated with medications used to treat endocrine conditions."
+    },
+    {
+     "id": "IO4.3",
+     "text": "Compare pharmacologic agents within and across therapeutic classes to distinguish clinically relevant differences in efficacy, safety, and use."
+    },
+    {
+     "id": "IO4.4",
+     "text": "Select appropriate pharmacologic therapy for common endocrine conditions based on clinical presentation and patient-specific factors."
+    },
+    {
+     "id": "IO4.5",
+     "text": "Identify appropriate dosing, administration, and monitoring considerations for medications used in endocrine conditions."
+    },
+    {
+     "id": "IO4.6",
+     "text": "Explain important medication-use and safety information to patients receiving pharmacotherapy for endocrine."
+    }
+   ],
+   "readings": [
+    {
+     "chapter": "37"
+    },
+    {
+     "chapter": "38"
+    },
+    {
+     "chapter": "39"
+    },
+    {
+     "chapter": "40"
+    },
+    {
+     "chapter": "41"
+    },
+    {
+     "chapter": "42"
+    }
+   ],
+   "study_guide": [
+    "U4-R1",
+    "U4-R2",
+    "U4-R3",
+    "U4-R4",
+    "U4-R5",
+    "U4-R6",
+    "U4-R7",
+    "U4-R8",
+    "U4-R9",
+    "U4-R10",
+    "U4-R11",
+    "U4-R12",
+    "U4-R13",
+    "U4-M",
+    "U4-S"
+   ],
+   "study_guide_note": "Unit items not yet split between the two sessions; split when authoring."
+  },
+  {
+   "id": "L08",
+   "unit": 4,
+   "session": 2,
+   "title": "Unit 4: Endocrine — Session 2",
+   "date": "2026-11-12",
+   "objectives": [
+    {
+     "id": "IO4.1",
+     "text": "Identify major pharmacologic classes used in the management of endocrine conditions and describe their mechanisms of action."
+    },
+    {
+     "id": "IO4.2",
+     "text": "Describe the indications, contraindications, adverse effects, and clinically significant interactions associated with medications used to treat endocrine conditions."
+    },
+    {
+     "id": "IO4.3",
+     "text": "Compare pharmacologic agents within and across therapeutic classes to distinguish clinically relevant differences in efficacy, safety, and use."
+    },
+    {
+     "id": "IO4.4",
+     "text": "Select appropriate pharmacologic therapy for common endocrine conditions based on clinical presentation and patient-specific factors."
+    },
+    {
+     "id": "IO4.5",
+     "text": "Identify appropriate dosing, administration, and monitoring considerations for medications used in endocrine conditions."
+    },
+    {
+     "id": "IO4.6",
+     "text": "Explain important medication-use and safety information to patients receiving pharmacotherapy for endocrine."
+    }
+   ],
+   "readings": [
+    {
+     "chapter": "37"
+    },
+    {
+     "chapter": "38"
+    },
+    {
+     "chapter": "39"
+    },
+    {
+     "chapter": "40"
+    },
+    {
+     "chapter": "41"
+    },
+    {
+     "chapter": "42"
+    }
+   ],
+   "study_guide": [
+    "U4-R1",
+    "U4-R2",
+    "U4-R3",
+    "U4-R4",
+    "U4-R5",
+    "U4-R6",
+    "U4-R7",
+    "U4-R8",
+    "U4-R9",
+    "U4-R10",
+    "U4-R11",
+    "U4-R12",
+    "U4-R13",
+    "U4-M",
+    "U4-S"
+   ],
+   "study_guide_note": "Unit items not yet split between the two sessions; split when authoring."
+  },
+  {
+   "id": "L09",
+   "unit": 5,
+   "session": 1,
+   "title": "Unit 5: Renal — Session 1",
+   "date": "2026-11-17",
+   "objectives": [
+    {
+     "id": "IO5.1",
+     "text": "Identify major pharmacologic classes used in the management of renal conditions and describe their mechanisms of action."
+    },
+    {
+     "id": "IO5.2",
+     "text": "Describe the indications, contraindications, adverse effects, and clinically significant interactions associated with medications used to treat renal conditions."
+    },
+    {
+     "id": "IO5.3",
+     "text": "Compare pharmacologic agents within and across therapeutic classes to distinguish clinically relevant differences in efficacy, safety, and use."
+    },
+    {
+     "id": "IO5.4",
+     "text": "Select appropriate pharmacologic therapy for common renal conditions based on clinical presentation and patient-specific factors."
+    },
+    {
+     "id": "IO5.5",
+     "text": "Identify appropriate dosing, administration, and monitoring considerations for medications used in renal conditions."
+    },
+    {
+     "id": "IO5.6",
+     "text": "Explain important medication-use and safety information to patients receiving pharmacotherapy for renal."
+    }
+   ],
+   "readings": [
+    {
+     "chapter": "15",
+     "title": "Diuretic Agents"
+    },
+    {
+     "chapter": "3",
+     "title": "Pharmacokinetics & Pharmacodynamics: Rational Dosing and the Time Course of Drug Action"
+    }
+   ],
+   "study_guide": [
+    "U5-R1",
+    "U5-R2",
+    "U5-R3",
+    "U5-R4",
+    "U5-R5",
+    "U5-R6",
+    "U5-R7",
+    "U5-R8",
+    "U5-R9",
+    "U5-R10",
+    "U5-R11",
+    "U5-R12",
+    "U5-M",
+    "U5-S"
+   ],
+   "study_guide_note": "Unit items not yet split between the two sessions; split when authoring."
+  },
+  {
+   "id": "L10",
+   "unit": 5,
+   "session": 2,
+   "title": "Unit 5: Renal — Session 2",
+   "date": "2026-11-19",
+   "objectives": [
+    {
+     "id": "IO5.1",
+     "text": "Identify major pharmacologic classes used in the management of renal conditions and describe their mechanisms of action."
+    },
+    {
+     "id": "IO5.2",
+     "text": "Describe the indications, contraindications, adverse effects, and clinically significant interactions associated with medications used to treat renal conditions."
+    },
+    {
+     "id": "IO5.3",
+     "text": "Compare pharmacologic agents within and across therapeutic classes to distinguish clinically relevant differences in efficacy, safety, and use."
+    },
+    {
+     "id": "IO5.4",
+     "text": "Select appropriate pharmacologic therapy for common renal conditions based on clinical presentation and patient-specific factors."
+    },
+    {
+     "id": "IO5.5",
+     "text": "Identify appropriate dosing, administration, and monitoring considerations for medications used in renal conditions."
+    },
+    {
+     "id": "IO5.6",
+     "text": "Explain important medication-use and safety information to patients receiving pharmacotherapy for renal."
+    }
+   ],
+   "readings": [
+    {
+     "chapter": "15",
+     "title": "Diuretic Agents"
+    },
+    {
+     "chapter": "3",
+     "title": "Pharmacokinetics & Pharmacodynamics: Rational Dosing and the Time Course of Drug Action"
+    }
+   ],
+   "study_guide": [
+    "U5-R1",
+    "U5-R2",
+    "U5-R3",
+    "U5-R4",
+    "U5-R5",
+    "U5-R6",
+    "U5-R7",
+    "U5-R8",
+    "U5-R9",
+    "U5-R10",
+    "U5-R11",
+    "U5-R12",
+    "U5-M",
+    "U5-S"
+   ],
+   "study_guide_note": "Unit items not yet split between the two sessions; split when authoring."
+  },
+  {
+   "id": "L11",
+   "unit": 6,
+   "session": 1,
+   "title": "Unit 6: GU & Reproductive — Session 1",
+   "date": "2026-11-24",
+   "objectives": [
+    {
+     "id": "IO6.1",
+     "text": "Identify major pharmacologic classes used in the management of genitourinary and reproductive conditions and describe their mechanisms of action."
+    },
+    {
+     "id": "IO6.2",
+     "text": "Describe the indications, contraindications, adverse effects, and clinically significant interactions associated with medications used to treat genitourinary and reproductive conditions."
+    },
+    {
+     "id": "IO6.3",
+     "text": "Compare pharmacologic agents within and across therapeutic classes to distinguish clinically relevant differences in efficacy, safety, and use."
+    },
+    {
+     "id": "IO6.4",
+     "text": "Select appropriate pharmacologic therapy for common genitourinary & reproductive conditions based on clinical presentation and patient-specific factors."
+    },
+    {
+     "id": "IO6.5",
+     "text": "Identify appropriate dosing, administration, and monitoring considerations for medications used in genitourinary and reproductive conditions."
+    },
+    {
+     "id": "IO6.6",
+     "text": "Explain important medication-use and safety information to patients receiving pharmacotherapy for genitourinary & reproductive."
+    }
+   ],
+   "readings": [
+    {
+     "chapter": "40",
+     "title": "The Gonadal Hormones and Inhibitors"
+    },
+    {
+     "chapter": "41",
+     "title": "Pancreatic Hormones & Antidiabetic Drugs",
+     "note": "selected sections only: reproductive/metabolic overlap (e.g., PCOS and insulin resistance)"
+    }
+   ],
+   "study_guide": [
+    "U6-R1",
+    "U6-R2",
+    "U6-R3",
+    "U6-R4",
+    "U6-R5",
+    "U6-R6",
+    "U6-R7",
+    "U6-R8",
+    "U6-R9",
+    "U6-R10",
+    "U6-R11",
+    "U6-R12",
+    "U6-R13",
+    "U6-R14",
+    "U6-R15",
+    "U6-R16",
+    "U6-M",
+    "U6-S"
+   ],
+   "study_guide_note": "Unit items not yet split between the two sessions; split when authoring."
+  },
+  {
+   "id": "L12",
+   "unit": 6,
+   "session": 2,
+   "title": "Unit 6: GU & Reproductive — Session 2",
+   "date": "2026-12-01",
+   "objectives": [
+    {
+     "id": "IO6.1",
+     "text": "Identify major pharmacologic classes used in the management of genitourinary and reproductive conditions and describe their mechanisms of action."
+    },
+    {
+     "id": "IO6.2",
+     "text": "Describe the indications, contraindications, adverse effects, and clinically significant interactions associated with medications used to treat genitourinary and reproductive conditions."
+    },
+    {
+     "id": "IO6.3",
+     "text": "Compare pharmacologic agents within and across therapeutic classes to distinguish clinically relevant differences in efficacy, safety, and use."
+    },
+    {
+     "id": "IO6.4",
+     "text": "Select appropriate pharmacologic therapy for common genitourinary & reproductive conditions based on clinical presentation and patient-specific factors."
+    },
+    {
+     "id": "IO6.5",
+     "text": "Identify appropriate dosing, administration, and monitoring considerations for medications used in genitourinary and reproductive conditions."
+    },
+    {
+     "id": "IO6.6",
+     "text": "Explain important medication-use and safety information to patients receiving pharmacotherapy for genitourinary & reproductive."
+    }
+   ],
+   "readings": [
+    {
+     "chapter": "40",
+     "title": "The Gonadal Hormones and Inhibitors"
+    },
+    {
+     "chapter": "41",
+     "title": "Pancreatic Hormones & Antidiabetic Drugs",
+     "note": "selected sections only: reproductive/metabolic overlap (e.g., PCOS and insulin resistance)"
+    }
+   ],
+   "study_guide": [
+    "U6-R1",
+    "U6-R2",
+    "U6-R3",
+    "U6-R4",
+    "U6-R5",
+    "U6-R6",
+    "U6-R7",
+    "U6-R8",
+    "U6-R9",
+    "U6-R10",
+    "U6-R11",
+    "U6-R12",
+    "U6-R13",
+    "U6-R14",
+    "U6-R15",
+    "U6-R16",
+    "U6-M",
+    "U6-S"
+   ],
+   "study_guide_note": "Unit items not yet split between the two sessions; split when authoring."
+  }
+ ]
+}

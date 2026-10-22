@@ -1,0 +1,135 @@
+"""One command for everything. See README.md.
+
+  ./run.sh status        what's ready, what's missing
+  ./run.sh setup         make a folder per lecture from the syllabus
+  ./run.sh L01           build one lecture
+  ./run.sh all           build every lecture that has its slides + content
+"""
+import json
+import re
+import subprocess
+import sys
+from pathlib import Path
+
+import audit
+import content as C
+import extract
+import notebooklm
+
+ROOT = Path(__file__).resolve().parent.parent
+CFG = json.loads((ROOT / "config.json").read_text())
+SYLLABUS = ROOT / "work" / "syllabus.json"
+
+
+def syllabus():
+    if not SYLLABUS.exists():
+        sys.exit("No syllabus yet. Put your syllabus in inputs/syllabus/ and ask Claude: \"read my syllabus\".")
+    return json.loads(SYLLABUS.read_text())
+
+
+def lecture(lid):
+    for lec in syllabus()["lectures"]:
+        if lec["id"].lower() == lid.lower():
+            return lec
+    sys.exit(f"{lid} is not in the syllabus. Run ./run.sh status to see lecture IDs.")
+
+
+def slides_file(lid):
+    files = sorted((ROOT / "inputs" / "lectures" / lid).glob("*.pptx"))
+    files = [f for f in files if not f.name.startswith("~$")]
+    if len(files) > 1:
+        sys.exit(f"{lid}: more than one .pptx in inputs/lectures/{lid}/ — keep only the lecture's slides there.")
+    return files[0] if files else None
+
+
+def textbook_pdf():
+    pdfs = sorted((ROOT / "inputs" / "textbook").glob("*.pdf"))
+    return pdfs[0] if pdfs else None
+
+
+def slug(text):
+    return re.sub(r"[^A-Za-z0-9]+", "_", text).strip("_")[:50]
+
+
+def build(lid):
+    lec = lecture(lid)
+    lid = lec["id"]
+    work, out = ROOT / "work" / lid, ROOT / "outputs" / lid
+    work.mkdir(parents=True, exist_ok=True)
+    print(f"\n== {lid}: {lec['title']} ==")
+
+    pptx = slides_file(lid)
+    if not pptx:
+        print(f"  waiting for slides: put the .pptx in inputs/lectures/{lid}/")
+        return "no slides"
+    sj = work / "slides.json"
+    if not sj.exists() or sj.stat().st_mtime < pptx.stat().st_mtime:
+        extract.main(pptx, work)
+
+    pdf = textbook_pdf()
+    if pdf and lec.get("readings"):
+        tj = work / "textbook.json"
+        if not tj.exists() or tj.stat().st_mtime < pdf.stat().st_mtime:
+            subprocess.run([sys.executable, str(ROOT / "pipeline" / "textbook.py"), str(pdf), json.dumps(lec["readings"]), str(work)], check=True)
+
+    guide_docx = sorted((ROOT / "inputs" / "study_guide").glob("*.docx"))
+    sg = ROOT / "work" / "study_guide.json"
+    if guide_docx and (not sg.exists() or sg.stat().st_mtime < guide_docx[0].stat().st_mtime):
+        import study_guide
+        study_guide.main(guide_docx[0], ROOT / "work")
+
+    cj = work / "content.json"
+    if not cj.exists():
+        print(f"  slides extracted. Next step: ask Claude \"author {lid}\" to organize the content.")
+        return "needs authoring"
+    c = C.load(cj)
+    if (work / "textbook.json").exists() and c.get("textbook_status") != "included":
+        print(f"  ! textbook pages are now available — ask Claude \"add textbook to {lid}\" to fold them in.")
+    errs = C.validate(c)
+    if errs:
+        print("  content.json problems:\n   - " + "\n   - ".join(errs))
+        return "content errors"
+    C.resolve(c)
+    (work / "content.resolved.json").write_text(json.dumps(c, indent=1, ensure_ascii=False))
+
+    out.mkdir(parents=True, exist_ok=True)
+    deck = out / f"{lid}_{slug(lec['title'])}_study_deck.pptx"
+    subprocess.run(["node", str(ROOT / "pipeline" / "build_deck.js"), str(work / "content.resolved.json"), str(deck), CFG.get("theme", "light")], check=True)
+    nlm = out / "notebooklm"
+    notebooklm.main(work / "content.resolved.json", nlm, CFG["notebooklm_max_words_per_source"])
+    code = audit.main(lid, work, out, deck, nlm, CFG["audit_match_threshold"], lec.get("study_guide", []))
+    return "built ✅" if code == 0 else "built — audit found gaps"
+
+
+def status():
+    syl = syllabus()
+    pdf = textbook_pdf()
+    print(f"Textbook PDF: {pdf.name if pdf else 'not added yet (decks use slides only)'}   Theme: {CFG.get('theme')}\n")
+    print(f"{'ID':6} {'Date':11} {'Slides':7} {'Content':8} {'Audit':6} Title")
+    for lec in syl["lectures"]:
+        lid = lec["id"]
+        work = ROOT / "work" / lid
+        a = work / "audit.json"
+        audit_s = ("pass" if json.loads(a.read_text())["passed"] else "gaps") if a.exists() else "-"
+        print(f"{lid:6} {lec.get('date', ''):11} {'yes' if slides_file(lid) else '-':7} {'yes' if (work / 'content.json').exists() else '-':8} {audit_s:6} {lec['title']}")
+
+
+def setup():
+    for lec in syllabus()["lectures"]:
+        (ROOT / "inputs" / "lectures" / lec["id"]).mkdir(parents=True, exist_ok=True)
+    print("Made a folder for each lecture in inputs/lectures/.")
+
+
+if __name__ == "__main__":
+    arg = (sys.argv[1] if len(sys.argv) > 1 else "status").strip()
+    if arg == "status":
+        status()
+    elif arg == "setup":
+        setup()
+    elif arg == "all":
+        results = {lec["id"]: build(lec["id"]) for lec in syllabus()["lectures"]}
+        print("\nSummary:")
+        for k, v in results.items():
+            print(f"  {k}: {v}")
+    else:
+        build(arg)

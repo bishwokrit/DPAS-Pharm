@@ -1,0 +1,6 @@
+{
+  "theme": "light",
+  "max_bullets_per_card": 7,
+  "notebooklm_max_words_per_source": 400000,
+  "audit_match_threshold": 0.6
+}

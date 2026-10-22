@@ -1,0 +1,4509 @@
+[
+ {
+  "slide": 1,
+  "title": "Introduction to Pharmacology",
+  "items": [
+   {
+    "text": "PA PHARMACOLOGY COURSE · LECTURE 1 · SESSION 1 OF 2",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "PA PHARMACOLOGY COURSE · LECTURE 1 · SESSION 1 OF 2",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**PA PHARMACOLOGY COURSE · LECTURE 1 · SESSION 1 OF 2**",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Introduction to Pharmacology",
+    "level": 0,
+    "emphasis": [],
+    "md": "Introduction to Pharmacology",
+    "heading": true,
+    "size": 40.0
+   },
+   {
+    "text": "Session 1: Foundations — Language, Drug Development, Pharmacodynamics, Dose-Response & ADME  |  Thursday, October 15",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Session 1: Foundations — Language, Drug Development, Pharmacodynamics, Dose-Response & ADME  |  Thursday, October 15",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Session 1: Foundations — Language, Drug Development, Pharmacodynamics, Dose-Response & ADME  |  Thursday, October 15**",
+    "heading": false,
+    "size": 19.0
+   },
+   {
+    "text": "Diane S. Allen-Gipson, Ph.D., M.S., Course Director",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Diane S. Allen-Gipson, Ph.D., M.S., Course Director",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Diane S. Allen-Gipson, Ph.D., M.S., Course Director**",
+    "heading": false,
+    "size": 14.5
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 2,
+  "title": "Learning Objectives — Session 1",
+  "items": [
+   {
+    "text": "BY THE END OF THIS LECTURE",
+    "level": 0,
+    "emphasis": [],
+    "md": "BY THE END OF THIS LECTURE",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Learning Objectives — Session 1",
+    "level": 0,
+    "emphasis": [],
+    "md": "Learning Objectives — Session 1",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Define pharmacology, pharmacodynamics, and pharmacokinetics.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Define pharmacology, pharmacodynamics, and pharmacokinetics.",
+    "heading": false,
+    "size": 15.5
+   },
+   {
+    "text": "Describe the major stages of drug development and FDA approval.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Describe the major stages of drug development and FDA approval.",
+    "heading": false,
+    "size": 15.5
+   },
+   {
+    "text": "Explain how drugs interact with receptors to produce an effect.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Explain how drugs interact with receptors to produce an effect.",
+    "heading": false,
+    "size": 15.5
+   },
+   {
+    "text": "Interpret a dose-response curve, including potency and efficacy.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Interpret a dose-response curve, including potency and efficacy.",
+    "heading": false,
+    "size": 15.5
+   },
+   {
+    "text": "Explain absorption, distribution, metabolism, and excretion (ADME), including bioavailability and the first-pass effect.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Explain absorption, distribution, metabolism, and excretion (ADME), including bioavailability and the first-pass effect.",
+    "heading": false,
+    "size": 15.5
+   },
+   {
+    "text": "Preview: metabolism/excretion detail, PK calculations, pharmacogenomics, and the integrated clinical framework continue in Session 2 (Thursday, October 22).",
+    "level": 0,
+    "emphasis": [],
+    "md": "Preview: metabolism/excretion detail, PK calculations, pharmacogenomics, and the integrated clinical framework continue in Session 2 (Thursday, October 22).",
+    "heading": false,
+    "size": 15.5
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Orient students to the arc of this session: definitions, drug development, pharmacodynamics, dose-response, and ADME through distribution. Tell them this is the first of two 2.5-hour sessions on Introduction to Pharmacology — Session 2 picks up with metabolism, excretion, PK math, pharmacogenomics, and the integrated clinical framework on Oct 22."
+ },
+ {
+  "slide": 3,
+  "title": "Required & Recommended Readings — Unit 1",
+  "items": [
+   {
+    "text": "COURSE MATERIALS",
+    "level": 0,
+    "emphasis": [],
+    "md": "COURSE MATERIALS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Required & Recommended Readings — Unit 1",
+    "level": 0,
+    "emphasis": [],
+    "md": "Required & Recommended Readings — Unit 1",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Required Text",
+    "level": 0,
+    "emphasis": [],
+    "md": "Required Text",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Recommended Text (for additional support)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Recommended Text (for additional support)",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Katzung's Basic and Clinical Pharmacology, 16th Edition",
+    "level": 0,
+    "emphasis": [],
+    "md": "Katzung's Basic and Clinical Pharmacology, 16th Edition",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Todd W. Vanderah · 2025 · McGraw-Hill Education",
+    "level": 0,
+    "emphasis": [],
+    "md": "Todd W. Vanderah · 2025 · McGraw-Hill Education",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "ISBN 1260463303 (eBook)",
+    "level": 0,
+    "emphasis": [],
+    "md": "ISBN 1260463303 (eBook)",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "AccessMedicine: accessmedicine.mhmedical.com/book.aspx?bookid=3382",
+    "level": 0,
+    "emphasis": [],
+    "md": "AccessMedicine: accessmedicine.mhmedical.com/book.aspx?bookid=3382",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Unit 1 — Introduction to Pharmacology: Chapters 1, 2, 3, 4, and 5",
+    "level": 0,
+    "emphasis": [],
+    "md": "Unit 1 — Introduction to Pharmacology: Chapters 1, 2, 3, 4, and 5",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Pharmacotherapy Principles and Practice",
+    "level": 0,
+    "emphasis": [],
+    "md": "Pharmacotherapy Principles and Practice",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Chisholm-Burns, Schwinghammer, Malone, Kolesar, Lee · 2022 · McGraw-Hill Education",
+    "level": 0,
+    "emphasis": [],
+    "md": "Chisholm-Burns, Schwinghammer, Malone, Kolesar, Lee · 2022 · McGraw-Hill Education",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Print ISBN 9781260460278 · eText ISBN 9781260460285",
+    "level": 0,
+    "emphasis": [],
+    "md": "Print ISBN 9781260460278 · eText ISBN 9781260460285",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Use as supplemental support alongside Katzung’s Chapters 1–5 for Unit 1",
+    "level": 0,
+    "emphasis": [],
+    "md": "Use as supplemental support alongside Katzung’s Chapters 1–5 for Unit 1",
+    "heading": false,
+    "size": 14.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Point students to the required and recommended texts for Unit 1 before diving into content. Katzung’s Chapters 1-5 is the required reading for this unit; Pharmacotherapy Principles and Practice is recommended as additional support, not a substitute."
+ },
+ {
+  "slide": 4,
+  "title": "01",
+  "items": [
+   {
+    "text": "SECTION",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "SECTION",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**SECTION**",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "01",
+    "level": 0,
+    "emphasis": [],
+    "md": "01",
+    "heading": true,
+    "size": 68.0
+   },
+   {
+    "text": "The Language of Pharmacology",
+    "level": 0,
+    "emphasis": [],
+    "md": "The Language of Pharmacology",
+    "heading": true,
+    "size": 32.0
+   },
+   {
+    "text": "Shared vocabulary before we talk mechanisms.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Shared vocabulary before we talk mechanisms.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Shared vocabulary before we talk mechanisms.**",
+    "heading": false,
+    "size": 15.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 5,
+  "title": "What Is Pharmacology?",
+  "items": [
+   {
+    "text": "DEFINITIONS",
+    "level": 0,
+    "emphasis": [],
+    "md": "DEFINITIONS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "What Is Pharmacology?",
+    "level": 0,
+    "emphasis": [],
+    "md": "What Is Pharmacology?",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "●  Pharmacology: the scientific study of how drugs interact with living systems — from the molecular level to the whole patient.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "●  Pharmacology:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**●  Pharmacology:** the scientific study of how drugs interact with living systems — from the molecular level to the whole patient.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "●  Drug (medication): any chemical substance used to diagnose, treat, cure, or prevent disease, or to alter a physiologic process.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "●  Drug (medication):",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**●  Drug (medication):** any chemical substance used to diagnose, treat, cure, or prevent disease, or to alter a physiologic process.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "●  Pharmacologic effect: a measurable biological change a drug produces (e.g., lower blood pressure).",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "●  Pharmacologic effect:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**●  Pharmacologic effect:** a measurable biological change a drug produces (e.g., lower blood pressure).",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "●  Therapeutic effect: the intended, beneficial pharmacologic effect for a given condition.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "●  Therapeutic effect:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**●  Therapeutic effect:** the intended, beneficial pharmacologic effect for a given condition.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "●  Adverse drug reaction (ADR): an unintended and harmful response occurring at normal therapeutic doses.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "●  Adverse drug reaction (ADR):",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**●  Adverse drug reaction (ADR):** an unintended and harmful response occurring at normal therapeutic doses.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "●  Toxicity: harmful effects that occur as the dose or exposure exceeds the therapeutic range.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "●  Toxicity:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**●  Toxicity:** harmful effects that occur as the dose or exposure exceeds the therapeutic range.",
+    "heading": false,
+    "size": 16.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Emphasize that \"therapeutic effect\" and \"pharmacologic effect\" are not synonyms — a drug can have pharmacologic effects that are not therapeutic (that is often exactly what an adverse effect is)."
+ },
+ {
+  "slide": 6,
+  "title": "The Major Branches of Pharmacology",
+  "items": [
+   {
+    "text": "OVERVIEW",
+    "level": 0,
+    "emphasis": [],
+    "md": "OVERVIEW",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "The Major Branches of Pharmacology",
+    "level": 0,
+    "emphasis": [],
+    "md": "The Major Branches of Pharmacology",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Pharmacokinetics",
+    "level": 0,
+    "emphasis": [],
+    "md": "Pharmacokinetics",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Pharmacodynamics",
+    "level": 0,
+    "emphasis": [],
+    "md": "Pharmacodynamics",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "What the body does to the drug — ADME",
+    "level": 0,
+    "emphasis": [],
+    "md": "What the body does to the drug — ADME",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "What the drug does to the body — receptors & effect",
+    "level": 0,
+    "emphasis": [],
+    "md": "What the drug does to the body — receptors & effect",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "Pharmacogenomics",
+    "level": 0,
+    "emphasis": [],
+    "md": "Pharmacogenomics",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Clinical Pharmacology / Toxicology",
+    "level": 0,
+    "emphasis": [],
+    "md": "Clinical Pharmacology / Toxicology",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "How genetic variation shapes individual drug response",
+    "level": 0,
+    "emphasis": [],
+    "md": "How genetic variation shapes individual drug response",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "Applying PK/PD to real patients, and the study of poisoning",
+    "level": 0,
+    "emphasis": [],
+    "md": "Applying PK/PD to real patients, and the study of poisoning",
+    "heading": false,
+    "size": 13.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "This slide is a map for the whole lecture — PK and PD are the two biggest buckets, and nearly everything else (toxicology, pharmacogenomics, therapeutics) sits on top of them."
+ },
+ {
+  "slide": 7,
+  "title": "Chemical, Generic, and Brand Names",
+  "items": [
+   {
+    "text": "NAMING A DRUG",
+    "level": 0,
+    "emphasis": [],
+    "md": "NAMING A DRUG",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Chemical, Generic, and Brand Names",
+    "level": 0,
+    "emphasis": [],
+    "md": "Chemical, Generic, and Brand Names",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "●  Chemical name: describes the exact molecular structure (rarely used in clinical practice).",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "●  Chemical name:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**●  Chemical name:** describes the exact molecular structure (rarely used in clinical practice).",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "●  Generic name: the official, non-proprietary name assigned to the active drug — one generic name per drug, regardless of manufacturer.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "●  Generic name:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**●  Generic name:** the official, non-proprietary name assigned to the active drug — one generic name per drug, regardless of manufacturer.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "●  Brand (trade) name: the manufacturer’s marketed name; the same generic drug may have several brand names, and brand names change between countries.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "●  Brand (trade) name:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**●  Brand (trade) name:** the manufacturer’s marketed name; the same generic drug may have several brand names, and brand names change between countries.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Example: acetaminophen (generic) is sold as Tylenol and under many store brands.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Example: acetaminophen (generic) is sold as Tylenol and under many store brands.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "PA students should learn and prescribe by generic name — it is unambiguous, international, and avoids confusing a patient’s multiple brand-name products for different drugs.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "PA students should learn and prescribe by generic name — it is unambiguous, international, and avoids confusing a patient’s multiple brand-name products for different drugs.",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**PA students should learn and prescribe by generic name — it is unambiguous, international, and avoids confusing a patient’s multiple brand-name products for different drugs.**",
+    "heading": false,
+    "size": 16.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Ask the class: if a patient says they take \"Tylenol\" and separately \"acetaminophen,\" what should you check for? (Accidental double-dosing — this previews the acetaminophen toxicity discussion on Thursday.)"
+ },
+ {
+  "slide": 8,
+  "title": "Quick Check",
+  "items": [
+   {
+    "text": "QUICK CHECK · THE LANGUAGE OF PHARMACOLOGY",
+    "level": 0,
+    "emphasis": [],
+    "md": "QUICK CHECK · THE LANGUAGE OF PHARMACOLOGY",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Quick Check",
+    "level": 0,
+    "emphasis": [],
+    "md": "Quick Check",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "A patient says they take no medications, but separately mentions using \"Tylenol\" for headaches and a combination cold-and-flu product. What does this scenario illustrate?",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "A patient says they take no medications, but separately mentions using \"Tylenol\" for headaches and a combination cold-and-flu product. What does this scenario illustrate?",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**A patient says they take no medications, but separately mentions using \"Tylenol\" for headaches and a combination cold-and-flu product. What does this scenario illustrate?**",
+    "heading": false,
+    "size": 18.5
+   },
+   {
+    "text": "Brand names can obscure a shared generic ingredient, risking unintentional double-dosing",
+    "level": 0,
+    "emphasis": [],
+    "md": "Brand names can obscure a shared generic ingredient, risking unintentional double-dosing",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Chemical names are standardized internationally, so this mix-up could not happen",
+    "level": 0,
+    "emphasis": [],
+    "md": "Chemical names are standardized internationally, so this mix-up could not happen",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "A",
+    "level": 0,
+    "emphasis": [],
+    "md": "A",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "B",
+    "level": 0,
+    "emphasis": [],
+    "md": "B",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "C",
+    "level": 0,
+    "emphasis": [],
+    "md": "C",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Generic names vary by manufacturer, which caused the confusion",
+    "level": 0,
+    "emphasis": [],
+    "md": "Generic names vary by manufacturer, which caused the confusion",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "D",
+    "level": 0,
+    "emphasis": [],
+    "md": "D",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Pharmacologic effect and therapeutic effect are simply two words for the same thing",
+    "level": 0,
+    "emphasis": [],
+    "md": "Pharmacologic effect and therapeutic effect are simply two words for the same thing",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 9,
+  "title": "Answer",
+  "items": [
+   {
+    "text": "ANSWER · THE LANGUAGE OF PHARMACOLOGY",
+    "level": 0,
+    "emphasis": [],
+    "md": "ANSWER · THE LANGUAGE OF PHARMACOLOGY",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Answer",
+    "level": 0,
+    "emphasis": [],
+    "md": "Answer",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "A",
+    "level": 0,
+    "emphasis": [],
+    "md": "A",
+    "heading": true,
+    "size": 26.0
+   },
+   {
+    "text": "Brand names can obscure a shared generic ingredient, risking unintentional double-dosing.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Brand names can obscure a shared generic ingredient, risking unintentional double-dosing.",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Brand names can obscure a shared generic ingredient, risking unintentional double-dosing.**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Why:  Different brand-name products (Tylenol, many combination cold/flu products) can share the same active generic ingredient. Prescribing and counseling by generic name avoids hiding duplicate therapy — the reason PAs default to generic names.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Why:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Why:** Different brand-name products (Tylenol, many combination cold/flu products) can share the same active generic ingredient. Prescribing and counseling by generic name avoids hiding duplicate therapy — the reason PAs default to generic names.",
+    "heading": false,
+    "size": 15.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 10,
+  "title": "02",
+  "items": [
+   {
+    "text": "SECTION",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "SECTION",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**SECTION**",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "02",
+    "level": 0,
+    "emphasis": [],
+    "md": "02",
+    "heading": true,
+    "size": 68.0
+   },
+   {
+    "text": "Drug Development & Regulation",
+    "level": 0,
+    "emphasis": [],
+    "md": "Drug Development & Regulation",
+    "heading": true,
+    "size": 32.0
+   },
+   {
+    "text": "How a molecule becomes a prescription.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "How a molecule becomes a prescription.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**How a molecule becomes a prescription.**",
+    "heading": false,
+    "size": 15.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 11,
+  "title": "Where Do New Drugs Come From?",
+  "items": [
+   {
+    "text": "ORIGINS",
+    "level": 0,
+    "emphasis": [],
+    "md": "ORIGINS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Where Do New Drugs Come From?",
+    "level": 0,
+    "emphasis": [],
+    "md": "Where Do New Drugs Come From?",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Natural Products",
+    "level": 0,
+    "emphasis": [],
+    "md": "Natural Products",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Synthetic & Biotech",
+    "level": 0,
+    "emphasis": [],
+    "md": "Synthetic & Biotech",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Plants, fungi, microbes, marine organisms",
+    "level": 0,
+    "emphasis": [],
+    "md": "Plants, fungi, microbes, marine organisms",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "Designed small molecules; recombinant proteins",
+    "level": 0,
+    "emphasis": [],
+    "md": "Designed small molecules; recombinant proteins",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "Biologics",
+    "level": 0,
+    "emphasis": [],
+    "md": "Biologics",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Drug Repurposing",
+    "level": 0,
+    "emphasis": [],
+    "md": "Drug Repurposing",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Monoclonal antibodies, gene- and cell-based therapies",
+    "level": 0,
+    "emphasis": [],
+    "md": "Monoclonal antibodies, gene- and cell-based therapies",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "An existing approved drug found to treat a new condition",
+    "level": 0,
+    "emphasis": [],
+    "md": "An existing approved drug found to treat a new condition",
+    "heading": false,
+    "size": 13.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Biologic DMARDs later in the MSK unit are a direct example of the \"biotechnology\" category here."
+ },
+ {
+  "slide": 12,
+  "title": "From Discovery to Patient",
+  "items": [
+   {
+    "text": "PROCESS",
+    "level": 0,
+    "emphasis": [],
+    "md": "PROCESS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "From Discovery to Patient",
+    "level": 0,
+    "emphasis": [],
+    "md": "From Discovery to Patient",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Discovery",
+    "level": 0,
+    "emphasis": [],
+    "md": "Discovery",
+    "heading": true,
+    "size": 13.0
+   },
+   {
+    "text": "Preclinical",
+    "level": 0,
+    "emphasis": [],
+    "md": "Preclinical",
+    "heading": true,
+    "size": 13.0
+   },
+   {
+    "text": "Testing",
+    "level": 0,
+    "emphasis": [],
+    "md": "Testing",
+    "heading": true,
+    "size": 13.0
+   },
+   {
+    "text": "Clinical",
+    "level": 0,
+    "emphasis": [],
+    "md": "Clinical",
+    "heading": true,
+    "size": 13.0
+   },
+   {
+    "text": "Trials",
+    "level": 0,
+    "emphasis": [],
+    "md": "Trials",
+    "heading": true,
+    "size": 13.0
+   },
+   {
+    "text": "FDA",
+    "level": 0,
+    "emphasis": [],
+    "md": "FDA",
+    "heading": true,
+    "size": 13.0
+   },
+   {
+    "text": "Review",
+    "level": 0,
+    "emphasis": [],
+    "md": "Review",
+    "heading": true,
+    "size": 13.0
+   },
+   {
+    "text": "Approval",
+    "level": 0,
+    "emphasis": [],
+    "md": "Approval",
+    "heading": true,
+    "size": 13.0
+   },
+   {
+    "text": "Postmarket",
+    "level": 0,
+    "emphasis": [],
+    "md": "Postmarket",
+    "heading": true,
+    "size": 13.0
+   },
+   {
+    "text": "Surveillance",
+    "level": 0,
+    "emphasis": [],
+    "md": "Surveillance",
+    "heading": true,
+    "size": 13.0
+   },
+   {
+    "text": "Most candidate drugs fail somewhere along this pipeline — approval is the exception, not the rule.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Most candidate drugs fail somewhere along this pipeline — approval is the exception, not the rule.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Most candidate drugs fail somewhere along this pipeline — approval is the exception, not the rule.**",
+    "heading": false,
+    "size": 14.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Postmarketing surveillance (Phase IV) is where rare adverse effects are often first detected, because trial populations are too small and too short in duration to catch 1-in-10,000 events."
+ },
+ {
+  "slide": 13,
+  "title": "Clinical Trial Phases",
+  "items": [
+   {
+    "text": "REFERENCE · TABLE 1",
+    "level": 0,
+    "emphasis": [],
+    "md": "REFERENCE · TABLE 1",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Clinical Trial Phases",
+    "level": 0,
+    "emphasis": [],
+    "md": "Clinical Trial Phases",
+    "heading": true,
+    "size": 28.0
+   }
+  ],
+  "tables": [
+   [
+    [
+     "Phase",
+     "Primary Purpose",
+     "Typical Population"
+    ],
+    [
+     "Phase I",
+     "Safety, tolerability, dose-finding",
+     "A small group of healthy volunteers"
+    ],
+    [
+     "Phase II",
+     "Preliminary efficacy and side-effect profile",
+     "A few hundred patients with the target condition"
+    ],
+    [
+     "Phase III",
+     "Confirm efficacy and monitor adverse effects at scale",
+     "Hundreds to thousands of patients, often multi-site"
+    ],
+    [
+     "Phase IV",
+     "Postmarketing surveillance after approval",
+     "The general prescribed population"
+    ]
+   ]
+  ],
+  "images": 1,
+  "figures": [],
+  "notes": "Phase III is what most people picture as \"the\" clinical trial, but regulatory decisions already begin shaping the drug long before that."
+ },
+ {
+  "slide": 14,
+  "title": "Evidence-Based Drug Approval",
+  "items": [
+   {
+    "text": "JUDGMENT",
+    "level": 0,
+    "emphasis": [],
+    "md": "JUDGMENT",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Evidence-Based Drug Approval",
+    "level": 0,
+    "emphasis": [],
+    "md": "Evidence-Based Drug Approval",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "●  Efficacy: how well a drug works under ideal, controlled trial conditions.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "●  Efficacy:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**●  Efficacy:** how well a drug works under ideal, controlled trial conditions.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "●  Effectiveness: how well a drug works in everyday clinical practice, with real-world adherence and comorbidities.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "●  Effectiveness:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**●  Effectiveness:** how well a drug works in everyday clinical practice, with real-world adherence and comorbidities.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "●  Benefit vs. risk: the central question regulators and prescribers must weigh for every approval and every prescription.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "●  Benefit vs. risk:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**●  Benefit vs. risk:** the central question regulators and prescribers must weigh for every approval and every prescription.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "●  Adverse-event reporting: ongoing, voluntary and mandatory reporting systems (e.g., FDA MedWatch) that catch safety signals after approval.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "●  Adverse-event reporting:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**●  Adverse-event reporting:** ongoing, voluntary and mandatory reporting systems (e.g., FDA MedWatch) that catch safety signals after approval.",
+    "heading": false,
+    "size": 16.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Efficacy vs. effectiveness is a favorite exam distinction — efficacy is the trial result, effectiveness is what happens once real patients with real adherence patterns use the drug."
+ },
+ {
+  "slide": 15,
+  "title": "Would You Prescribe It?",
+  "items": [
+   {
+    "text": "CLINICAL CASE",
+    "level": 0,
+    "emphasis": [],
+    "md": "CLINICAL CASE",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Would You Prescribe It?",
+    "level": 0,
+    "emphasis": [],
+    "md": "Would You Prescribe It?",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "A new medication improves symptoms in 70% of patients with a chronic, non-life-threatening condition. In postmarketing data, it causes serious hepatotoxicity in about 1% of patients who take it.",
+    "level": 0,
+    "emphasis": [],
+    "md": "A new medication improves symptoms in 70% of patients with a chronic, non-life-threatening condition. In postmarketing data, it causes serious hepatotoxicity in about 1% of patients who take it.",
+    "heading": false,
+    "size": 17.0
+   },
+   {
+    "text": "Ask yourself:  Would you prescribe it — and does your answer depend on what else is available?",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Ask yourself:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     },
+     {
+      "text": "Would you prescribe it — and does your answer depend on what else is available?",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Ask yourself:** **Would you prescribe it — and does your answer depend on what else is available?**",
+    "heading": false,
+    "size": 18.0
+   },
+   {
+    "text": "Clinical pearl:  Risk-benefit analysis is always comparative: a 1% serious-toxicity rate reads very differently if it is the only effective option versus if three safer alternatives already exist.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Clinical pearl:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     },
+     {
+      "text": "Risk-benefit analysis is always comparative: a 1% serious-toxicity rate reads very differently if it is the only effective option versus if three safer alternatives already exist.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Clinical pearl:** **Risk-benefit analysis is always comparative: a 1% serious-toxicity rate reads very differently if it is the only effective option versus if three safer alternatives already exist.**",
+    "heading": false,
+    "size": 14.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Good discussion question — push students to ask \"compared to what?\" rather than judging the number in isolation."
+ },
+ {
+  "slide": 16,
+  "title": "Quick Check",
+  "items": [
+   {
+    "text": "QUICK CHECK · DRUG DEVELOPMENT & REGULATION",
+    "level": 0,
+    "emphasis": [],
+    "md": "QUICK CHECK · DRUG DEVELOPMENT & REGULATION",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Quick Check",
+    "level": 0,
+    "emphasis": [],
+    "md": "Quick Check",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "In which clinical trial phase is a drug first tested in a large patient population specifically to confirm efficacy and monitor for adverse effects at scale, just before approval?",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "In which clinical trial phase is a drug first tested in a large patient population specifically to confirm efficacy and monitor for adverse effects at scale, just before approval?",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**In which clinical trial phase is a drug first tested in a large patient population specifically to confirm efficacy and monitor for adverse effects at scale, just before approval?**",
+    "heading": false,
+    "size": 18.5
+   },
+   {
+    "text": "Phase I",
+    "level": 0,
+    "emphasis": [],
+    "md": "Phase I",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Phase II",
+    "level": 0,
+    "emphasis": [],
+    "md": "Phase II",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "A",
+    "level": 0,
+    "emphasis": [],
+    "md": "A",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "B",
+    "level": 0,
+    "emphasis": [],
+    "md": "B",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "C",
+    "level": 0,
+    "emphasis": [],
+    "md": "C",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Phase III",
+    "level": 0,
+    "emphasis": [],
+    "md": "Phase III",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "D",
+    "level": 0,
+    "emphasis": [],
+    "md": "D",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Phase IV",
+    "level": 0,
+    "emphasis": [],
+    "md": "Phase IV",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 17,
+  "title": "Answer",
+  "items": [
+   {
+    "text": "ANSWER · DRUG DEVELOPMENT & REGULATION",
+    "level": 0,
+    "emphasis": [],
+    "md": "ANSWER · DRUG DEVELOPMENT & REGULATION",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Answer",
+    "level": 0,
+    "emphasis": [],
+    "md": "Answer",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "C",
+    "level": 0,
+    "emphasis": [],
+    "md": "C",
+    "heading": true,
+    "size": 26.0
+   },
+   {
+    "text": "Phase III.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Phase III.",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Phase III.**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Why:  Phase III trials enroll hundreds to thousands of patients, often at multiple sites, to confirm efficacy and monitor safety at scale before approval. Phase I is small-scale safety/dosing, Phase II is preliminary efficacy, and Phase IV is postmarketing surveillance after approval.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Why:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Why:** Phase III trials enroll hundreds to thousands of patients, often at multiple sites, to confirm efficacy and monitor safety at scale before approval. Phase I is small-scale safety/dosing, Phase II is preliminary efficacy, and Phase IV is postmarketing surveillance after approval.",
+    "heading": false,
+    "size": 15.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 18,
+  "title": "03",
+  "items": [
+   {
+    "text": "SECTION",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "SECTION",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**SECTION**",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "03",
+    "level": 0,
+    "emphasis": [],
+    "md": "03",
+    "heading": true,
+    "size": 68.0
+   },
+   {
+    "text": "Pharmacodynamics",
+    "level": 0,
+    "emphasis": [],
+    "md": "Pharmacodynamics",
+    "heading": true,
+    "size": 32.0
+   },
+   {
+    "text": "What the drug does to the body.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "What the drug does to the body.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**What the drug does to the body.**",
+    "heading": false,
+    "size": 15.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 19,
+  "title": "Pharmacodynamics in One Pathway",
+  "items": [
+   {
+    "text": "OVERVIEW",
+    "level": 0,
+    "emphasis": [],
+    "md": "OVERVIEW",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Pharmacodynamics in One Pathway",
+    "level": 0,
+    "emphasis": [],
+    "md": "Pharmacodynamics in One Pathway",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "●  Drug target: the specific molecule a drug binds to produce its effect.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "●  Drug target:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**●  Drug target:** the specific molecule a drug binds to produce its effect.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "●  Receptor: a protein target whose activation (or blockade) triggers a cellular response.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "●  Receptor:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**●  Receptor:** a protein target whose activation (or blockade) triggers a cellular response.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "●  Signal transduction: the chain of molecular events that converts receptor binding into a cellular effect.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "●  Signal transduction:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**●  Signal transduction:** the chain of molecular events that converts receptor binding into a cellular effect.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "●  Pharmacologic response: the measurable downstream result — contraction, secretion, gene transcription, and so on.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "●  Pharmacologic response:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**●  Pharmacologic response:** the measurable downstream result — contraction, secretion, gene transcription, and so on.",
+    "heading": false,
+    "size": 16.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Write the chain on the board: drug -> target -> signal transduction -> response. Every pharmacodynamics topic for the rest of the course maps onto this chain somewhere."
+ },
+ {
+  "slide": 20,
+  "title": "The Five Major Drug Target Classes",
+  "items": [
+   {
+    "text": "TARGETS",
+    "level": 0,
+    "emphasis": [],
+    "md": "TARGETS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "The Five Major Drug Target Classes",
+    "level": 0,
+    "emphasis": [],
+    "md": "The Five Major Drug Target Classes",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Receptors",
+    "level": 0,
+    "emphasis": [],
+    "md": "Receptors",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Ion Channels",
+    "level": 0,
+    "emphasis": [],
+    "md": "Ion Channels",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "G-protein-coupled, ligand-gated ion channel, enzyme-linked, nuclear",
+    "level": 0,
+    "emphasis": [],
+    "md": "G-protein-coupled, ligand-gated ion channel, enzyme-linked, nuclear",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "Directly gate the flow of ions across a membrane",
+    "level": 0,
+    "emphasis": [],
+    "md": "Directly gate the flow of ions across a membrane",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "Enzymes",
+    "level": 0,
+    "emphasis": [],
+    "md": "Enzymes",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Transporters & Nucleic Acids",
+    "level": 0,
+    "emphasis": [],
+    "md": "Transporters & Nucleic Acids",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Drugs can inhibit or, less commonly, activate an enzyme’s activity",
+    "level": 0,
+    "emphasis": [],
+    "md": "Drugs can inhibit or, less commonly, activate an enzyme’s activity",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "Carrier proteins; or DNA/RNA for some antimicrobials & gene therapies",
+    "level": 0,
+    "emphasis": [],
+    "md": "Carrier proteins; or DNA/RNA for some antimicrobials & gene therapies",
+    "heading": false,
+    "size": 13.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Most drugs students will encounter target receptors or enzymes — ion channels and transporters matter especially for cardiac and CNS drugs."
+ },
+ {
+  "slide": 21,
+  "title": "The Receptor Concept",
+  "items": [
+   {
+    "text": "CORE CONCEPT",
+    "level": 0,
+    "emphasis": [],
+    "md": "CORE CONCEPT",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "The Receptor Concept",
+    "level": 0,
+    "emphasis": [],
+    "md": "The Receptor Concept",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Drug",
+    "level": 0,
+    "emphasis": [],
+    "md": "Drug",
+    "heading": true,
+    "size": 13.0
+   },
+   {
+    "text": "+ Receptor",
+    "level": 0,
+    "emphasis": [],
+    "md": "+ Receptor",
+    "heading": true,
+    "size": 13.0
+   },
+   {
+    "text": "Drug-Receptor",
+    "level": 0,
+    "emphasis": [],
+    "md": "Drug-Receptor",
+    "heading": true,
+    "size": 13.0
+   },
+   {
+    "text": "Complex",
+    "level": 0,
+    "emphasis": [],
+    "md": "Complex",
+    "heading": true,
+    "size": 13.0
+   },
+   {
+    "text": "Cellular",
+    "level": 0,
+    "emphasis": [],
+    "md": "Cellular",
+    "heading": true,
+    "size": 13.0
+   },
+   {
+    "text": "Response",
+    "level": 0,
+    "emphasis": [],
+    "md": "Response",
+    "heading": true,
+    "size": 13.0
+   },
+   {
+    "text": "This single chain underlies agonism, antagonism, potency, and efficacy — all of which describe different features of this interaction.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "This single chain underlies agonism, antagonism, potency, and efficacy — all of which describe different features of this interaction.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**This single chain underlies agonism, antagonism, potency, and efficacy — all of which describe different features of this interaction.**",
+    "heading": false,
+    "size": 14.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 22,
+  "title": "Agonists vs. Antagonists",
+  "items": [
+   {
+    "text": "BINDING & ACTIVATION",
+    "level": 0,
+    "emphasis": [],
+    "md": "BINDING & ACTIVATION",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Agonists vs. Antagonists",
+    "level": 0,
+    "emphasis": [],
+    "md": "Agonists vs. Antagonists",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Agonists (activate)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Agonists (activate)",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Antagonists (block)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Antagonists (block)",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Full agonist — maximal receptor activation",
+    "level": 0,
+    "emphasis": [],
+    "md": "Full agonist — maximal receptor activation",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Partial agonist — submaximal activation, even at full receptor occupancy",
+    "level": 0,
+    "emphasis": [],
+    "md": "Partial agonist — submaximal activation, even at full receptor occupancy",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Inverse agonist — reduces baseline (constitutive) receptor activity",
+    "level": 0,
+    "emphasis": [],
+    "md": "Inverse agonist — reduces baseline (constitutive) receptor activity",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Competitive — reversibly competes with agonist at the same site; overcome by more agonist",
+    "level": 0,
+    "emphasis": [],
+    "md": "Competitive — reversibly competes with agonist at the same site; overcome by more agonist",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Noncompetitive — binds elsewhere or irreversibly reduces the maximal effect",
+    "level": 0,
+    "emphasis": [],
+    "md": "Noncompetitive — binds elsewhere or irreversibly reduces the maximal effect",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Irreversible — permanently inactivates the receptor until new receptor is synthesized",
+    "level": 0,
+    "emphasis": [],
+    "md": "Irreversible — permanently inactivates the receptor until new receptor is synthesized",
+    "heading": false,
+    "size": 14.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "A classic exam trap: a competitive antagonist shifts the dose-response curve right (same Emax, more drug needed); a noncompetitive/irreversible antagonist lowers the Emax instead."
+ },
+ {
+  "slide": 23,
+  "title": "Visualizing Agonist & Antagonist Effects",
+  "items": [
+   {
+    "text": "ORIGINAL ILLUSTRATION · FIGURE 1",
+    "level": 0,
+    "emphasis": [],
+    "md": "ORIGINAL ILLUSTRATION · FIGURE 1",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Visualizing Agonist & Antagonist Effects",
+    "level": 0,
+    "emphasis": [],
+    "md": "Visualizing Agonist & Antagonist Effects",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Figure 1. Original illustrative curves (not Katzung data): a competitive antagonist shifts the curve right with the same Emax; a noncompetitive/irreversible antagonist lowers Emax instead.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Figure 1. Original illustrative curves (not Katzung data): a competitive antagonist shifts the curve right with the same Emax; a noncompetitive/irreversible antagonist lowers Emax instead.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Figure 1. Original illustrative curves (not Katzung data): a competitive antagonist shifts the curve right with the same Emax; a noncompetitive/irreversible antagonist lowers Emax instead.**",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 2,
+  "figures": [
+   "S23_1.png"
+  ],
+  "notes": "Walk the curve left to right: agonist alone, then show how the competitive-antagonist curve shifts right (same ceiling), then how the noncompetitive curve lowers the ceiling instead. This is the same distinction from the previous slide, now shown graphically."
+ },
+ {
+  "slide": 24,
+  "title": "Quick Check",
+  "items": [
+   {
+    "text": "QUICK CHECK · FIGURE 1",
+    "level": 0,
+    "emphasis": [],
+    "md": "QUICK CHECK · FIGURE 1",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Quick Check",
+    "level": 0,
+    "emphasis": [],
+    "md": "Quick Check",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "In Figure 1 above, the dashed curve (+ Competitive antagonist) is shifted to the right of the agonist-alone curve but reaches the same plateau at the top. What does this pattern show?",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "In Figure 1 above, the dashed curve (+ Competitive antagonist) is shifted to the right of the agonist-alone curve but reaches the same plateau at the top. What does this pattern show?",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**In Figure 1 above, the dashed curve (+ Competitive antagonist) is shifted to the right of the agonist-alone curve but reaches the same plateau at the top. What does this pattern show?**",
+    "heading": false,
+    "size": 18.5
+   },
+   {
+    "text": "More agonist is needed to reach the same effect, but the same maximal effect is still achievable",
+    "level": 0,
+    "emphasis": [],
+    "md": "More agonist is needed to reach the same effect, but the same maximal effect is still achievable",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "The competitive antagonist lowers the drug’s efficacy (Emax)",
+    "level": 0,
+    "emphasis": [],
+    "md": "The competitive antagonist lowers the drug’s efficacy (Emax)",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "A",
+    "level": 0,
+    "emphasis": [],
+    "md": "A",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "B",
+    "level": 0,
+    "emphasis": [],
+    "md": "B",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "C",
+    "level": 0,
+    "emphasis": [],
+    "md": "C",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "The competitive antagonist increases the drug’s potency",
+    "level": 0,
+    "emphasis": [],
+    "md": "The competitive antagonist increases the drug’s potency",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "D",
+    "level": 0,
+    "emphasis": [],
+    "md": "D",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "The competitive antagonist has no measurable effect on the agonist’s curve",
+    "level": 0,
+    "emphasis": [],
+    "md": "The competitive antagonist has no measurable effect on the agonist’s curve",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 25,
+  "title": "Answer",
+  "items": [
+   {
+    "text": "ANSWER · FIGURE 1",
+    "level": 0,
+    "emphasis": [],
+    "md": "ANSWER · FIGURE 1",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Answer",
+    "level": 0,
+    "emphasis": [],
+    "md": "Answer",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "A",
+    "level": 0,
+    "emphasis": [],
+    "md": "A",
+    "heading": true,
+    "size": 26.0
+   },
+   {
+    "text": "More agonist is needed to reach the same effect, but the same maximal effect is still achievable.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "More agonist is needed to reach the same effect, but the same maximal effect is still achievable.",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**More agonist is needed to reach the same effect, but the same maximal effect is still achievable.**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Why:  A rightward shift with an unchanged plateau is the graphical signature of competitive antagonism: it takes more drug to reach a given effect (potency falls), but because the antagonism is surmountable, enough agonist can still reach the original Emax. Contrast this with the noncompetitive/irreversible curve in the same figure, which plateaus lower instead of shifting right.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Why:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Why:** A rightward shift with an unchanged plateau is the graphical signature of competitive antagonism: it takes more drug to reach a given effect (potency falls), but because the antagonism is surmountable, enough agonist can still reach the original Emax. Contrast this with the noncompetitive/irreversible curve in the same figure, which plateaus lower instead of shifting right.",
+    "heading": false,
+    "size": 15.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 26,
+  "title": "Agonism in Practice: Albuterol",
+  "items": [
+   {
+    "text": "CLINICAL TIE-IN",
+    "level": 0,
+    "emphasis": [],
+    "md": "CLINICAL TIE-IN",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Agonism in Practice: Albuterol",
+    "level": 0,
+    "emphasis": [],
+    "md": "Agonism in Practice: Albuterol",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Albuterol is a selective β2-adrenergic receptor agonist.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Albuterol is a selective β2-adrenergic receptor agonist.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Binding activates the β2 receptor → increases intracellular cAMP.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Binding activates the β2 receptor → increases intracellular cAMP.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Rising cAMP relaxes bronchial smooth muscle → bronchodilation.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Rising cAMP relaxes bronchial smooth muscle → bronchodilation.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "This is the same receptor-to-response logic you will reuse for every agonist drug this term.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "This is the same receptor-to-response logic you will reuse for every agonist drug this term.",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**This is the same receptor-to-response logic you will reuse for every agonist drug this term.**",
+    "heading": false,
+    "size": 16.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "This bridges introductory pharmacodynamics into the pulmonary pharmacology they will see later in the curriculum, and reinforces the agonist definition from the previous slide."
+ },
+ {
+  "slide": 27,
+  "title": "Quick Check",
+  "items": [
+   {
+    "text": "QUICK CHECK · PHARMACODYNAMICS",
+    "level": 0,
+    "emphasis": [],
+    "md": "QUICK CHECK · PHARMACODYNAMICS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Quick Check",
+    "level": 0,
+    "emphasis": [],
+    "md": "Quick Check",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "A drug binds the same receptor as an endogenous agonist and lowers the tissue’s baseline (constitutive) activity below normal, without any agonist present. This drug is best classified as a(n):",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "A drug binds the same receptor as an endogenous agonist and lowers the tissue’s baseline (constitutive) activity below normal, without any agonist present. This drug is best classified as a(n):",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**A drug binds the same receptor as an endogenous agonist and lowers the tissue’s baseline (constitutive) activity below normal, without any agonist present. This drug is best classified as a(n):**",
+    "heading": false,
+    "size": 18.5
+   },
+   {
+    "text": "Full agonist",
+    "level": 0,
+    "emphasis": [],
+    "md": "Full agonist",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Partial agonist",
+    "level": 0,
+    "emphasis": [],
+    "md": "Partial agonist",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "A",
+    "level": 0,
+    "emphasis": [],
+    "md": "A",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "B",
+    "level": 0,
+    "emphasis": [],
+    "md": "B",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "C",
+    "level": 0,
+    "emphasis": [],
+    "md": "C",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Competitive antagonist",
+    "level": 0,
+    "emphasis": [],
+    "md": "Competitive antagonist",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "D",
+    "level": 0,
+    "emphasis": [],
+    "md": "D",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Inverse agonist",
+    "level": 0,
+    "emphasis": [],
+    "md": "Inverse agonist",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 28,
+  "title": "Answer",
+  "items": [
+   {
+    "text": "ANSWER · PHARMACODYNAMICS",
+    "level": 0,
+    "emphasis": [],
+    "md": "ANSWER · PHARMACODYNAMICS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Answer",
+    "level": 0,
+    "emphasis": [],
+    "md": "Answer",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "D",
+    "level": 0,
+    "emphasis": [],
+    "md": "D",
+    "heading": true,
+    "size": 26.0
+   },
+   {
+    "text": "Inverse agonist.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Inverse agonist.",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Inverse agonist.**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Why:  An inverse agonist actively reduces constitutive (baseline) receptor activity below normal — a true antagonist merely blocks the agonist without lowering baseline activity itself.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Why:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Why:** An inverse agonist actively reduces constitutive (baseline) receptor activity below normal — a true antagonist merely blocks the agonist without lowering baseline activity itself.",
+    "heading": false,
+    "size": 15.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 29,
+  "title": "04",
+  "items": [
+   {
+    "text": "SECTION",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "SECTION",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**SECTION**",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "04",
+    "level": 0,
+    "emphasis": [],
+    "md": "04",
+    "heading": true,
+    "size": 68.0
+   },
+   {
+    "text": "Dose-Response Relationships",
+    "level": 0,
+    "emphasis": [],
+    "md": "Dose-Response Relationships",
+    "heading": true,
+    "size": 32.0
+   },
+   {
+    "text": "Quantifying how much drug produces how much effect.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Quantifying how much drug produces how much effect.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Quantifying how much drug produces how much effect.**",
+    "heading": false,
+    "size": 15.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 30,
+  "title": "The Dose-Response Curve",
+  "items": [
+   {
+    "text": "READING THE CURVE",
+    "level": 0,
+    "emphasis": [],
+    "md": "READING THE CURVE",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "The Dose-Response Curve",
+    "level": 0,
+    "emphasis": [],
+    "md": "The Dose-Response Curve",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "●  Potency: how much drug is required to produce a given effect — a more potent drug needs a lower dose.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "●  Potency:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**●  Potency:** how much drug is required to produce a given effect — a more potent drug needs a lower dose.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "●  Efficacy (Emax): the maximum effect a drug can produce, no matter how high the dose goes.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "●  Efficacy (Emax):",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**●  Efficacy (Emax):** the maximum effect a drug can produce, no matter how high the dose goes.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "●  EC₅₀: the drug concentration producing 50% of the maximal effect — the standard measure of potency.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "●  EC₅₀:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**●  EC₅₀:** the drug concentration producing 50% of the maximal effect — the standard measure of potency.",
+    "heading": false,
+    "size": 16.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Draw a sigmoidal dose-response curve on the board: x-axis = log(dose), y-axis = effect. Point out EC50 on the x-axis and Emax as the plateau."
+ },
+ {
+  "slide": 31,
+  "title": "The Sigmoidal Dose-Response Curve",
+  "items": [
+   {
+    "text": "ORIGINAL ILLUSTRATION · FIGURE 2",
+    "level": 0,
+    "emphasis": [],
+    "md": "ORIGINAL ILLUSTRATION · FIGURE 2",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "The Sigmoidal Dose-Response Curve",
+    "level": 0,
+    "emphasis": [],
+    "md": "The Sigmoidal Dose-Response Curve",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Figure 2. Original illustrative curve (illustrative values, not from any textbook): EC₅₀ marks 50% of Emax; Emax is the plateau — the ceiling effect.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Figure 2. Original illustrative curve (illustrative values, not from any textbook): EC₅₀ marks 50% of Emax; Emax is the plateau — the ceiling effect.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Figure 2. Original illustrative curve (illustrative values, not from any textbook): EC₅₀ marks 50% of Emax; Emax is the plateau — the ceiling effect.**",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 2,
+  "figures": [
+   "S31_1.png"
+  ],
+  "notes": "Point to EC50 and Emax directly on the plotted curve — this is the same curve concept described on the previous slide, now shown graphically."
+ },
+ {
+  "slide": 32,
+  "title": "Quick Check",
+  "items": [
+   {
+    "text": "QUICK CHECK · FIGURE 2",
+    "level": 0,
+    "emphasis": [],
+    "md": "QUICK CHECK · FIGURE 2",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Quick Check",
+    "level": 0,
+    "emphasis": [],
+    "md": "Quick Check",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "On the dose-response curve in Figure 2, the point marked EC₅₀ sits exactly halfway up the rising part of the curve. What does this point represent?",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "On the dose-response curve in Figure 2, the point marked EC₅₀ sits exactly halfway up the rising part of the curve. What does this point represent?",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**On the dose-response curve in Figure 2, the point marked EC₅₀ sits exactly halfway up the rising part of the curve. What does this point represent?**",
+    "heading": false,
+    "size": 18.5
+   },
+   {
+    "text": "The dose at which the drug becomes toxic",
+    "level": 0,
+    "emphasis": [],
+    "md": "The dose at which the drug becomes toxic",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "The concentration producing 50% of the drug’s maximal effect",
+    "level": 0,
+    "emphasis": [],
+    "md": "The concentration producing 50% of the drug’s maximal effect",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "A",
+    "level": 0,
+    "emphasis": [],
+    "md": "A",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "B",
+    "level": 0,
+    "emphasis": [],
+    "md": "B",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "C",
+    "level": 0,
+    "emphasis": [],
+    "md": "C",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "The point where the drug has zero effect",
+    "level": 0,
+    "emphasis": [],
+    "md": "The point where the drug has zero effect",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "D",
+    "level": 0,
+    "emphasis": [],
+    "md": "D",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "The drug’s bioavailability",
+    "level": 0,
+    "emphasis": [],
+    "md": "The drug’s bioavailability",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 33,
+  "title": "Answer",
+  "items": [
+   {
+    "text": "ANSWER · FIGURE 2",
+    "level": 0,
+    "emphasis": [],
+    "md": "ANSWER · FIGURE 2",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Answer",
+    "level": 0,
+    "emphasis": [],
+    "md": "Answer",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "B",
+    "level": 0,
+    "emphasis": [],
+    "md": "B",
+    "heading": true,
+    "size": 26.0
+   },
+   {
+    "text": "The concentration producing 50% of the drug’s maximal effect.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "The concentration producing 50% of the drug’s maximal effect.",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**The concentration producing 50% of the drug’s maximal effect.**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Why:  EC₅₀ is read directly off the curve at the halfway point between baseline and Emax (the plateau) — it is the standard graphical measure of potency, not a measure of toxicity or bioavailability.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Why:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Why:** EC₅₀ is read directly off the curve at the halfway point between baseline and Emax (the plateau) — it is the standard graphical measure of potency, not a measure of toxicity or bioavailability.",
+    "heading": false,
+    "size": 15.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 34,
+  "title": "Potency vs. Efficacy",
+  "items": [
+   {
+    "text": "HIGH-YIELD DISTINCTION",
+    "level": 0,
+    "emphasis": [],
+    "md": "HIGH-YIELD DISTINCTION",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Potency vs. Efficacy",
+    "level": 0,
+    "emphasis": [],
+    "md": "Potency vs. Efficacy",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Potency",
+    "level": 0,
+    "emphasis": [],
+    "md": "Potency",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Efficacy",
+    "level": 0,
+    "emphasis": [],
+    "md": "Efficacy",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "How much drug is needed to get an effect",
+    "level": 0,
+    "emphasis": [],
+    "md": "How much drug is needed to get an effect",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Lower EC50 = more potent",
+    "level": 0,
+    "emphasis": [],
+    "md": "Lower EC50 = more potent",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Clinically matters for dosing — not for choosing the \"better\" drug",
+    "level": 0,
+    "emphasis": [],
+    "md": "Clinically matters for dosing — not for choosing the \"better\" drug",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "The maximum effect the drug can produce",
+    "level": 0,
+    "emphasis": [],
+    "md": "The maximum effect the drug can produce",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Higher Emax = more efficacious",
+    "level": 0,
+    "emphasis": [],
+    "md": "Higher Emax = more efficacious",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Clinically matters much more than potency — a highly potent drug with low efficacy may be clinically useless",
+    "level": 0,
+    "emphasis": [],
+    "md": "Clinically matters much more than potency — a highly potent drug with low efficacy may be clinically useless",
+    "heading": false,
+    "size": 14.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Classic PA-exam framing: a drug can be very potent (tiny dose) but have low efficacy — potency alone never tells you whether a drug \"works better.\""
+ },
+ {
+  "slide": 35,
+  "title": "Potency vs. Efficacy, Side by Side",
+  "items": [
+   {
+    "text": "ORIGINAL ILLUSTRATION · FIGURE 3",
+    "level": 0,
+    "emphasis": [],
+    "md": "ORIGINAL ILLUSTRATION · FIGURE 3",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Potency vs. Efficacy, Side by Side",
+    "level": 0,
+    "emphasis": [],
+    "md": "Potency vs. Efficacy, Side by Side",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Figure 3. Original illustrative curves: potency (left) and efficacy (right) are independent properties — a drug can differ in one without differing in the other.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Figure 3. Original illustrative curves: potency (left) and efficacy (right) are independent properties — a drug can differ in one without differing in the other.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Figure 3. Original illustrative curves: potency (left) and efficacy (right) are independent properties — a drug can differ in one without differing in the other.**",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 2,
+  "figures": [
+   "S35_1.png"
+  ],
+  "notes": "Left panel: two drugs with the same Emax but different EC50 (potency differs). Right panel: two drugs with the same EC50 but different Emax (efficacy differs). This is the graphical version of the table on the previous slide."
+ },
+ {
+  "slide": 36,
+  "title": "Quick Check",
+  "items": [
+   {
+    "text": "QUICK CHECK · FIGURE 3",
+    "level": 0,
+    "emphasis": [],
+    "md": "QUICK CHECK · FIGURE 3",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Quick Check",
+    "level": 0,
+    "emphasis": [],
+    "md": "Quick Check",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "In the left panel of Figure 3, Drug A’s curve sits to the left of Drug B’s curve, but both curves plateau at the same height. What does this tell you?",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "In the left panel of Figure 3, Drug A’s curve sits to the left of Drug B’s curve, but both curves plateau at the same height. What does this tell you?",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**In the left panel of Figure 3, Drug A’s curve sits to the left of Drug B’s curve, but both curves plateau at the same height. What does this tell you?**",
+    "heading": false,
+    "size": 18.5
+   },
+   {
+    "text": "Drug A is more potent than Drug B, and both have equal efficacy",
+    "level": 0,
+    "emphasis": [],
+    "md": "Drug A is more potent than Drug B, and both have equal efficacy",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Drug A is more efficacious than Drug B",
+    "level": 0,
+    "emphasis": [],
+    "md": "Drug A is more efficacious than Drug B",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "A",
+    "level": 0,
+    "emphasis": [],
+    "md": "A",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "B",
+    "level": 0,
+    "emphasis": [],
+    "md": "B",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "C",
+    "level": 0,
+    "emphasis": [],
+    "md": "C",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Drug A and Drug B have different Emax values",
+    "level": 0,
+    "emphasis": [],
+    "md": "Drug A and Drug B have different Emax values",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "D",
+    "level": 0,
+    "emphasis": [],
+    "md": "D",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Drug B is more potent than Drug A",
+    "level": 0,
+    "emphasis": [],
+    "md": "Drug B is more potent than Drug A",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 37,
+  "title": "Answer",
+  "items": [
+   {
+    "text": "ANSWER · FIGURE 3",
+    "level": 0,
+    "emphasis": [],
+    "md": "ANSWER · FIGURE 3",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Answer",
+    "level": 0,
+    "emphasis": [],
+    "md": "Answer",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "A",
+    "level": 0,
+    "emphasis": [],
+    "md": "A",
+    "heading": true,
+    "size": 26.0
+   },
+   {
+    "text": "Drug A is more potent than Drug B, and both have equal efficacy.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Drug A is more potent than Drug B, and both have equal efficacy.",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Drug A is more potent than Drug B, and both have equal efficacy.**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Why:  A curve positioned farther left reaches the same effect at a lower dose — that is greater potency. Because both curves reach the same plateau height, their Emax (efficacy) is identical; only potency differs, exactly as the right panel then shows the reverse case (same potency, different efficacy).",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Why:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Why:** A curve positioned farther left reaches the same effect at a lower dose — that is greater potency. Because both curves reach the same plateau height, their Emax (efficacy) is identical; only potency differs, exactly as the right panel then shows the reverse case (same potency, different efficacy).",
+    "heading": false,
+    "size": 15.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 38,
+  "title": "The Therapeutic Index",
+  "items": [
+   {
+    "text": "SAFETY MARGIN",
+    "level": 0,
+    "emphasis": [],
+    "md": "SAFETY MARGIN",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "The Therapeutic Index",
+    "level": 0,
+    "emphasis": [],
+    "md": "The Therapeutic Index",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Therapeutic Index (TI) = TD₅₀ ÷ ED₅₀ (toxic dose in 50% ÷ effective dose in 50%).",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Therapeutic Index (TI) = TD₅₀ ÷ ED₅₀ (toxic dose in 50% ÷ effective dose in 50%).",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Therapeutic Index (TI) = TD₅₀ ÷ ED₅₀ (toxic dose in 50% ÷ effective dose in 50%).**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "A wide TI means a large margin between an effective dose and a toxic dose — generally safer to dose.",
+    "level": 0,
+    "emphasis": [],
+    "md": "A wide TI means a large margin between an effective dose and a toxic dose — generally safer to dose.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "A narrow TI means effective and toxic doses are close together — requires careful dosing and often blood-level monitoring.",
+    "level": 0,
+    "emphasis": [],
+    "md": "A narrow TI means effective and toxic doses are close together — requires careful dosing and often blood-level monitoring.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Classic narrow-TI drugs: warfarin, lithium, digoxin, phenytoin.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Classic narrow-TI drugs: warfarin, lithium, digoxin, phenytoin.",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Classic narrow-TI drugs: warfarin, lithium, digoxin, phenytoin.**",
+    "heading": false,
+    "size": 16.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "These four narrow-TI drugs are extremely high-yield — students should be able to name all four without hesitation and know that each requires therapeutic drug monitoring."
+ },
+ {
+  "slide": 39,
+  "title": "Wide vs. Narrow Therapeutic Index",
+  "items": [
+   {
+    "text": "ORIGINAL ILLUSTRATION · FIGURE 4",
+    "level": 0,
+    "emphasis": [],
+    "md": "ORIGINAL ILLUSTRATION · FIGURE 4",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Wide vs. Narrow Therapeutic Index",
+    "level": 0,
+    "emphasis": [],
+    "md": "Wide vs. Narrow Therapeutic Index",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Figure 4. Original illustrative number-line comparison: a wide gap between ED₅₀ and TD₅₀ is safer to dose than a narrow one (illustrative values).",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Figure 4. Original illustrative number-line comparison: a wide gap between ED₅₀ and TD₅₀ is safer to dose than a narrow one (illustrative values).",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Figure 4. Original illustrative number-line comparison: a wide gap between ED₅₀ and TD₅₀ is safer to dose than a narrow one (illustrative values).**",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 2,
+  "figures": [
+   "S39_1.png"
+  ],
+  "notes": "Point out how close ED50 and TD50 sit for the narrow-TI example — this is exactly why warfarin, lithium, digoxin, and phenytoin require blood-level monitoring."
+ },
+ {
+  "slide": 40,
+  "title": "Quick Check",
+  "items": [
+   {
+    "text": "QUICK CHECK · FIGURE 4",
+    "level": 0,
+    "emphasis": [],
+    "md": "QUICK CHECK · FIGURE 4",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Quick Check",
+    "level": 0,
+    "emphasis": [],
+    "md": "Quick Check",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Comparing the two number lines in Figure 4, the narrow-TI drug’s ED₅₀ and TD₅₀ markers sit much closer together than the wide-TI drug’s. What is the clinical implication?",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Comparing the two number lines in Figure 4, the narrow-TI drug’s ED₅₀ and TD₅₀ markers sit much closer together than the wide-TI drug’s. What is the clinical implication?",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Comparing the two number lines in Figure 4, the narrow-TI drug’s ED₅₀ and TD₅₀ markers sit much closer together than the wide-TI drug’s. What is the clinical implication?**",
+    "heading": false,
+    "size": 18.5
+   },
+   {
+    "text": "The narrow-TI drug is safer because it requires a lower dose",
+    "level": 0,
+    "emphasis": [],
+    "md": "The narrow-TI drug is safer because it requires a lower dose",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "The narrow-TI drug has a smaller margin between an effective and a toxic dose, requiring closer monitoring",
+    "level": 0,
+    "emphasis": [],
+    "md": "The narrow-TI drug has a smaller margin between an effective and a toxic dose, requiring closer monitoring",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "A",
+    "level": 0,
+    "emphasis": [],
+    "md": "A",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "B",
+    "level": 0,
+    "emphasis": [],
+    "md": "B",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "C",
+    "level": 0,
+    "emphasis": [],
+    "md": "C",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "The wide-TI drug is more likely to cause toxicity",
+    "level": 0,
+    "emphasis": [],
+    "md": "The wide-TI drug is more likely to cause toxicity",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "D",
+    "level": 0,
+    "emphasis": [],
+    "md": "D",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Therapeutic index has no bearing on dosing safety",
+    "level": 0,
+    "emphasis": [],
+    "md": "Therapeutic index has no bearing on dosing safety",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 41,
+  "title": "Answer",
+  "items": [
+   {
+    "text": "ANSWER · FIGURE 4",
+    "level": 0,
+    "emphasis": [],
+    "md": "ANSWER · FIGURE 4",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Answer",
+    "level": 0,
+    "emphasis": [],
+    "md": "Answer",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "B",
+    "level": 0,
+    "emphasis": [],
+    "md": "B",
+    "heading": true,
+    "size": 26.0
+   },
+   {
+    "text": "The narrow-TI drug has a smaller margin between an effective and a toxic dose, requiring closer monitoring.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "The narrow-TI drug has a smaller margin between an effective and a toxic dose, requiring closer monitoring.",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**The narrow-TI drug has a smaller margin between an effective and a toxic dose, requiring closer monitoring.**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Why:  The distance between the ED₅₀ and TD₅₀ markers on the number line is the therapeutic index itself — a narrow gap (as with warfarin, lithium, digoxin, phenytoin) means a small dosing error can move a patient from effective to toxic, which is why these drugs require blood-level monitoring.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Why:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Why:** The distance between the ED₅₀ and TD₅₀ markers on the number line is the therapeutic index itself — a narrow gap (as with warfarin, lithium, digoxin, phenytoin) means a small dosing error can move a patient from effective to toxic, which is why these drugs require blood-level monitoring.",
+    "heading": false,
+    "size": 15.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 42,
+  "title": "Quick Check",
+  "items": [
+   {
+    "text": "QUICK CHECK · DOSE-RESPONSE RELATIONSHIPS",
+    "level": 0,
+    "emphasis": [],
+    "md": "QUICK CHECK · DOSE-RESPONSE RELATIONSHIPS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Quick Check",
+    "level": 0,
+    "emphasis": [],
+    "md": "Quick Check",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Drug X requires a much lower dose than Drug Y to achieve the same effect, but both drugs achieve the same maximum effect (Emax). Which statement is correct?",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Drug X requires a much lower dose than Drug Y to achieve the same effect, but both drugs achieve the same maximum effect (Emax). Which statement is correct?",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Drug X requires a much lower dose than Drug Y to achieve the same effect, but both drugs achieve the same maximum effect (Emax). Which statement is correct?**",
+    "heading": false,
+    "size": 18.5
+   },
+   {
+    "text": "Drug X is more efficacious than Drug Y",
+    "level": 0,
+    "emphasis": [],
+    "md": "Drug X is more efficacious than Drug Y",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Drug X is more potent than Drug Y",
+    "level": 0,
+    "emphasis": [],
+    "md": "Drug X is more potent than Drug Y",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "A",
+    "level": 0,
+    "emphasis": [],
+    "md": "A",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "B",
+    "level": 0,
+    "emphasis": [],
+    "md": "B",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "C",
+    "level": 0,
+    "emphasis": [],
+    "md": "C",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Drug X has a narrower therapeutic index than Drug Y",
+    "level": 0,
+    "emphasis": [],
+    "md": "Drug X has a narrower therapeutic index than Drug Y",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "D",
+    "level": 0,
+    "emphasis": [],
+    "md": "D",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Drug X and Drug Y have different Emax values",
+    "level": 0,
+    "emphasis": [],
+    "md": "Drug X and Drug Y have different Emax values",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 43,
+  "title": "Answer",
+  "items": [
+   {
+    "text": "ANSWER · DOSE-RESPONSE RELATIONSHIPS",
+    "level": 0,
+    "emphasis": [],
+    "md": "ANSWER · DOSE-RESPONSE RELATIONSHIPS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Answer",
+    "level": 0,
+    "emphasis": [],
+    "md": "Answer",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "B",
+    "level": 0,
+    "emphasis": [],
+    "md": "B",
+    "heading": true,
+    "size": 26.0
+   },
+   {
+    "text": "Drug X is more potent than Drug Y.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Drug X is more potent than Drug Y.",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Drug X is more potent than Drug Y.**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Why:  Needing a lower dose for the same effect is the definition of greater potency. Since both drugs reach the same Emax, their efficacy is equal — potency and efficacy are independent properties.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Why:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Why:** Needing a lower dose for the same effect is the definition of greater potency. Since both drugs reach the same Emax, their efficacy is equal — potency and efficacy are independent properties.",
+    "heading": false,
+    "size": 15.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 44,
+  "title": "05",
+  "items": [
+   {
+    "text": "SECTION",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "SECTION",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**SECTION**",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "05",
+    "level": 0,
+    "emphasis": [],
+    "md": "05",
+    "heading": true,
+    "size": 68.0
+   },
+   {
+    "text": "Pharmacokinetics: ADME",
+    "level": 0,
+    "emphasis": [],
+    "md": "Pharmacokinetics: ADME",
+    "heading": true,
+    "size": 32.0
+   },
+   {
+    "text": "What the body does to the drug.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "What the body does to the drug.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**What the body does to the drug.**",
+    "heading": false,
+    "size": 15.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 45,
+  "title": "ADME",
+  "items": [
+   {
+    "text": "THE CORE FRAMEWORK",
+    "level": 0,
+    "emphasis": [],
+    "md": "THE CORE FRAMEWORK",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "ADME",
+    "level": 0,
+    "emphasis": [],
+    "md": "ADME",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "A — Absorption",
+    "level": 0,
+    "emphasis": [],
+    "md": "A — Absorption",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "D — Distribution",
+    "level": 0,
+    "emphasis": [],
+    "md": "D — Distribution",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Movement of drug from the site of administration into the bloodstream",
+    "level": 0,
+    "emphasis": [],
+    "md": "Movement of drug from the site of administration into the bloodstream",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "Movement of drug from blood into tissues",
+    "level": 0,
+    "emphasis": [],
+    "md": "Movement of drug from blood into tissues",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "M — Metabolism",
+    "level": 0,
+    "emphasis": [],
+    "md": "M — Metabolism",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "E — Excretion",
+    "level": 0,
+    "emphasis": [],
+    "md": "E — Excretion",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Chemical transformation of drug, mainly in the liver",
+    "level": 0,
+    "emphasis": [],
+    "md": "Chemical transformation of drug, mainly in the liver",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "Removal of drug/metabolites from the body, mainly via the kidney",
+    "level": 0,
+    "emphasis": [],
+    "md": "Removal of drug/metabolites from the body, mainly via the kidney",
+    "heading": false,
+    "size": 13.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Tell students ADME is the organizing skeleton for the rest of this lecture — each remaining pharmacokinetics section is really just one ADME letter in depth."
+ },
+ {
+  "slide": 46,
+  "title": "The ADME Compartment Model",
+  "items": [
+   {
+    "text": "ORIGINAL ILLUSTRATION · FIGURE 5",
+    "level": 0,
+    "emphasis": [],
+    "md": "ORIGINAL ILLUSTRATION · FIGURE 5",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "The ADME Compartment Model",
+    "level": 0,
+    "emphasis": [],
+    "md": "The ADME Compartment Model",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Figure 5. Original illustrative compartment diagram: how a dose moves from administration through distribution, metabolism, and excretion.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Figure 5. Original illustrative compartment diagram: how a dose moves from administration through distribution, metabolism, and excretion.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Figure 5. Original illustrative compartment diagram: how a dose moves from administration through distribution, metabolism, and excretion.**",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 2,
+  "figures": [
+   "S46_1.png"
+  ],
+  "notes": "Trace the arrows A-D-M-E with your finger as you narrate — this is the visual skeleton for the rest of the ADME discussion (and for the remaining PK sections in Session 2)."
+ },
+ {
+  "slide": 47,
+  "title": "Quick Check",
+  "items": [
+   {
+    "text": "QUICK CHECK · FIGURE 5",
+    "level": 0,
+    "emphasis": [],
+    "md": "QUICK CHECK · FIGURE 5",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Quick Check",
+    "level": 0,
+    "emphasis": [],
+    "md": "Quick Check",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "In Figure 5, two separate arrows leave the Central Compartment box: one labeled \"M\" pointing to Metabolism (Liver), and one labeled \"E\" pointing to Excretion (Kidney). Together, these two arrows represent which part of ADME?",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "In Figure 5, two separate arrows leave the Central Compartment box: one labeled \"M\" pointing to Metabolism (Liver), and one labeled \"E\" pointing to Excretion (Kidney). Together, these two arrows represent which part of ADME?",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**In Figure 5, two separate arrows leave the Central Compartment box: one labeled \"M\" pointing to Metabolism (Liver), and one labeled \"E\" pointing to Excretion (Kidney). Together, these two arrows represent which part of ADME?**",
+    "heading": false,
+    "size": 18.5
+   },
+   {
+    "text": "Absorption and Distribution",
+    "level": 0,
+    "emphasis": [],
+    "md": "Absorption and Distribution",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Distribution only",
+    "level": 0,
+    "emphasis": [],
+    "md": "Distribution only",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "A",
+    "level": 0,
+    "emphasis": [],
+    "md": "A",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "B",
+    "level": 0,
+    "emphasis": [],
+    "md": "B",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "C",
+    "level": 0,
+    "emphasis": [],
+    "md": "C",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Metabolism and Excretion — how the drug is transformed and cleared",
+    "level": 0,
+    "emphasis": [],
+    "md": "Metabolism and Excretion — how the drug is transformed and cleared",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "D",
+    "level": 0,
+    "emphasis": [],
+    "md": "D",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Only the Excretion step",
+    "level": 0,
+    "emphasis": [],
+    "md": "Only the Excretion step",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 48,
+  "title": "Answer",
+  "items": [
+   {
+    "text": "ANSWER · FIGURE 5",
+    "level": 0,
+    "emphasis": [],
+    "md": "ANSWER · FIGURE 5",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Answer",
+    "level": 0,
+    "emphasis": [],
+    "md": "Answer",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "C",
+    "level": 0,
+    "emphasis": [],
+    "md": "C",
+    "heading": true,
+    "size": 26.0
+   },
+   {
+    "text": "Metabolism and Excretion — how the drug is transformed and cleared.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Metabolism and Excretion — how the drug is transformed and cleared.",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Metabolism and Excretion — how the drug is transformed and cleared.**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Why:  The diagram shows drug leaving the Central Compartment by two separate routes: the \"M\" arrow to the liver (biotransformation) and the \"E\" arrow to the kidney (elimination). Together these are the back half of ADME — how the body gets rid of the drug, as opposed to Absorption and Distribution, which govern how the drug arrives and spreads.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Why:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Why:** The diagram shows drug leaving the Central Compartment by two separate routes: the \"M\" arrow to the liver (biotransformation) and the \"E\" arrow to the kidney (elimination). Together these are the back half of ADME — how the body gets rid of the drug, as opposed to Absorption and Distribution, which govern how the drug arrives and spreads.",
+    "heading": false,
+    "size": 15.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 49,
+  "title": "Routes of Administration",
+  "items": [
+   {
+    "text": "COMPARISON · TABLE 2",
+    "level": 0,
+    "emphasis": [],
+    "md": "COMPARISON · TABLE 2",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Routes of Administration",
+    "level": 0,
+    "emphasis": [],
+    "md": "Routes of Administration",
+    "heading": true,
+    "size": 28.0
+   }
+  ],
+  "tables": [
+   [
+    [
+     "Route",
+     "Key Feature"
+    ],
+    [
+     "Oral (PO)",
+     "Convenient; subject to first-pass metabolism and variable absorption"
+    ],
+    [
+     "Sublingual",
+     "Absorbed directly into systemic circulation; bypasses first-pass metabolism"
+    ],
+    [
+     "Intravenous (IV)",
+     "100% bioavailable; immediate onset; no absorption phase"
+    ],
+    [
+     "Intramuscular (IM)",
+     "Faster than oral; good for depot/long-acting formulations"
+    ],
+    [
+     "Subcutaneous (SC)",
+     "Slower, steady absorption; common for insulin, heparin"
+    ],
+    [
+     "Inhaled",
+     "Rapid local effect in the lungs; minimizes systemic exposure for some drugs"
+    ],
+    [
+     "Transdermal",
+     "Slow, sustained systemic absorption through the skin"
+    ],
+    [
+     "Topical",
+     "Local effect at the site of application; minimal systemic absorption"
+    ]
+   ]
+  ],
+  "images": 1,
+  "figures": [],
+  "notes": "Ask students which routes bypass first-pass metabolism (IV, sublingual, inhaled, transdermal, topical, SC, IM — essentially everything except oral)."
+ },
+ {
+  "slide": 50,
+  "title": "Bioavailability",
+  "items": [
+   {
+    "text": "ABSORPTION",
+    "level": 0,
+    "emphasis": [],
+    "md": "ABSORPTION",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Bioavailability",
+    "level": 0,
+    "emphasis": [],
+    "md": "Bioavailability",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Bioavailability (F) = the fraction of an administered dose that reaches systemic circulation unchanged.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Bioavailability (F) = the fraction of an administered dose that reaches systemic circulation unchanged.",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Bioavailability (F) = the fraction of an administered dose that reaches systemic circulation unchanged.**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "By definition, an IV dose has 100% bioavailability — the entire dose enters the bloodstream directly.",
+    "level": 0,
+    "emphasis": [],
+    "md": "By definition, an IV dose has 100% bioavailability — the entire dose enters the bloodstream directly.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Oral bioavailability is reduced by incomplete absorption and by first-pass hepatic metabolism.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Oral bioavailability is reduced by incomplete absorption and by first-pass hepatic metabolism.",
+    "heading": false,
+    "size": 16.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "This naturally sets up the next slide on first-pass metabolism as the main reason oral bioavailability is less than 100%."
+ },
+ {
+  "slide": 51,
+  "title": "The First-Pass Effect",
+  "items": [
+   {
+    "text": "WHY ORAL DOSES DIFFER",
+    "level": 0,
+    "emphasis": [],
+    "md": "WHY ORAL DOSES DIFFER",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "The First-Pass Effect",
+    "level": 0,
+    "emphasis": [],
+    "md": "The First-Pass Effect",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Oral Drug",
+    "level": 0,
+    "emphasis": [],
+    "md": "Oral Drug",
+    "heading": true,
+    "size": 13.0
+   },
+   {
+    "text": "GI Tract",
+    "level": 0,
+    "emphasis": [],
+    "md": "GI Tract",
+    "heading": true,
+    "size": 13.0
+   },
+   {
+    "text": "Portal",
+    "level": 0,
+    "emphasis": [],
+    "md": "Portal",
+    "heading": true,
+    "size": 13.0
+   },
+   {
+    "text": "Circulation",
+    "level": 0,
+    "emphasis": [],
+    "md": "Circulation",
+    "heading": true,
+    "size": 13.0
+   },
+   {
+    "text": "Liver",
+    "level": 0,
+    "emphasis": [],
+    "md": "Liver",
+    "heading": true,
+    "size": 13.0
+   },
+   {
+    "text": "Systemic",
+    "level": 0,
+    "emphasis": [],
+    "md": "Systemic",
+    "heading": true,
+    "size": 13.0
+   },
+   {
+    "text": "Circulation",
+    "level": 0,
+    "emphasis": [],
+    "md": "Circulation",
+    "heading": true,
+    "size": 13.0
+   },
+   {
+    "text": "Examples with a large first-pass effect: nitroglycerin, propranolol, morphine — all require higher oral doses (or a non-oral route) to achieve the same systemic exposure as IV.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Examples with a large first-pass effect: nitroglycerin, propranolol, morphine — all require higher oral doses (or a non-oral route) to achieve the same systemic exposure as IV.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Examples with a large first-pass effect: nitroglycerin, propranolol, morphine — all require higher oral doses (or a non-oral route) to achieve the same systemic exposure as IV.**",
+    "heading": false,
+    "size": 14.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "The liver can inactivate a large fraction of drug before it ever reaches systemic circulation — this is why some drugs are given sublingually or transdermally instead of orally."
+ },
+ {
+  "slide": 52,
+  "title": "Distribution",
+  "items": [
+   {
+    "text": "WHERE THE DRUG GOES",
+    "level": 0,
+    "emphasis": [],
+    "md": "WHERE THE DRUG GOES",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Distribution",
+    "level": 0,
+    "emphasis": [],
+    "md": "Distribution",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "●  Plasma protein binding: only unbound (\"free\") drug is pharmacologically active and able to cross membranes.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "●  Plasma protein binding:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**●  Plasma protein binding:** only unbound (\"free\") drug is pharmacologically active and able to cross membranes.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "●  Lipid solubility: lipophilic drugs cross membranes more readily and distribute into fatty tissue.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "●  Lipid solubility:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**●  Lipid solubility:** lipophilic drugs cross membranes more readily and distribute into fatty tissue.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "●  Tissue perfusion: highly perfused organs (brain, heart, kidney) receive drug faster than poorly perfused tissue (fat, bone).",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "●  Tissue perfusion:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**●  Tissue perfusion:** highly perfused organs (brain, heart, kidney) receive drug faster than poorly perfused tissue (fat, bone).",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "●  Volume of distribution (Vd): a calculated value relating total drug in the body to plasma concentration — a high Vd suggests extensive tissue distribution.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "●  Volume of distribution (Vd):",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**●  Volume of distribution (Vd):** a calculated value relating total drug in the body to plasma concentration — a high Vd suggests extensive tissue distribution.",
+    "heading": false,
+    "size": 16.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Vd is a theoretical volume, not a real anatomic space — a drug with a very high Vd (like digoxin) is telling you it is mostly sequestered in tissue, not floating around in plasma."
+ },
+ {
+  "slide": 53,
+  "title": "The Blood-Brain Barrier",
+  "items": [
+   {
+    "text": "DISCUSSION",
+    "level": 0,
+    "emphasis": [],
+    "md": "DISCUSSION",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "The Blood-Brain Barrier",
+    "level": 0,
+    "emphasis": [],
+    "md": "The Blood-Brain Barrier",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Why can some drugs readily enter the CNS while others cannot?",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Why can some drugs readily enter the CNS while others cannot?",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Why can some drugs readily enter the CNS while others cannot?**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Tight junctions between endothelial cells restrict paracellular movement.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Tight junctions between endothelial cells restrict paracellular movement.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Small, lipophilic, non-ionized drugs cross more easily than large, polar, or highly protein-bound drugs.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Small, lipophilic, non-ionized drugs cross more easily than large, polar, or highly protein-bound drugs.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Efflux transporters (like P-glycoprotein) can actively pump some drugs back out of the CNS.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Efflux transporters (like P-glycoprotein) can actively pump some drugs back out of the CNS.",
+    "heading": false,
+    "size": 16.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Use this as a think-pair-share — ask students to predict whether a highly polar antibiotic would cross the BBB well (generally no, unless meninges are inflamed, as in meningitis)."
+ },
+ {
+  "slide": 54,
+  "title": "Quick Check",
+  "items": [
+   {
+    "text": "QUICK CHECK · PHARMACOKINETICS: ADME",
+    "level": 0,
+    "emphasis": [],
+    "md": "QUICK CHECK · PHARMACOKINETICS: ADME",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Quick Check",
+    "level": 0,
+    "emphasis": [],
+    "md": "Quick Check",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Which route of administration bypasses first-pass hepatic metabolism entirely, by entering systemic venous circulation directly?",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Which route of administration bypasses first-pass hepatic metabolism entirely, by entering systemic venous circulation directly?",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Which route of administration bypasses first-pass hepatic metabolism entirely, by entering systemic venous circulation directly?**",
+    "heading": false,
+    "size": 18.5
+   },
+   {
+    "text": "Sublingual",
+    "level": 0,
+    "emphasis": [],
+    "md": "Sublingual",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Oral, taken on an empty stomach",
+    "level": 0,
+    "emphasis": [],
+    "md": "Oral, taken on an empty stomach",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "A",
+    "level": 0,
+    "emphasis": [],
+    "md": "A",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "B",
+    "level": 0,
+    "emphasis": [],
+    "md": "B",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "C",
+    "level": 0,
+    "emphasis": [],
+    "md": "C",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "All routes undergo first-pass metabolism equally",
+    "level": 0,
+    "emphasis": [],
+    "md": "All routes undergo first-pass metabolism equally",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "D",
+    "level": 0,
+    "emphasis": [],
+    "md": "D",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Oral, taken with food",
+    "level": 0,
+    "emphasis": [],
+    "md": "Oral, taken with food",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 55,
+  "title": "Answer",
+  "items": [
+   {
+    "text": "ANSWER · PHARMACOKINETICS: ADME",
+    "level": 0,
+    "emphasis": [],
+    "md": "ANSWER · PHARMACOKINETICS: ADME",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Answer",
+    "level": 0,
+    "emphasis": [],
+    "md": "Answer",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "A",
+    "level": 0,
+    "emphasis": [],
+    "md": "A",
+    "heading": true,
+    "size": 26.0
+   },
+   {
+    "text": "Sublingual.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Sublingual.",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Sublingual.**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Why:  Sublingual absorption enters systemic venous circulation directly, bypassing the portal vein and the liver’s first-pass metabolism — unlike oral dosing, which is absorbed into the portal circulation and passes through the liver first.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Why:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Why:** Sublingual absorption enters systemic venous circulation directly, bypassing the portal vein and the liver’s first-pass metabolism — unlike oral dosing, which is absorbed into the portal circulation and passes through the liver first.",
+    "heading": false,
+    "size": 15.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 56,
+  "title": "Session 1 Recap — To Be Continued",
+  "items": [
+   {
+    "text": "BIG PICTURE",
+    "level": 0,
+    "emphasis": [],
+    "md": "BIG PICTURE",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Session 1 Recap — To Be Continued",
+    "level": 0,
+    "emphasis": [],
+    "md": "Session 1 Recap — To Be Continued",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Pharmacology connects a drug’s chemistry to its clinical effect — precise vocabulary (generic names, therapeutic vs. adverse effects) protects patients.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Pharmacology connects a drug’s chemistry to its clinical effect — precise vocabulary (generic names, therapeutic vs. adverse effects) protects patients.",
+    "heading": true,
+    "size": 16.5
+   },
+   {
+    "text": "1",
+    "level": 0,
+    "emphasis": [],
+    "md": "1",
+    "heading": true,
+    "size": 20.0
+   },
+   {
+    "text": "Every approved drug has passed through a structured development and regulatory pipeline (Phases I–IV).",
+    "level": 0,
+    "emphasis": [],
+    "md": "Every approved drug has passed through a structured development and regulatory pipeline (Phases I–IV).",
+    "heading": true,
+    "size": 16.5
+   },
+   {
+    "text": "2",
+    "level": 0,
+    "emphasis": [],
+    "md": "2",
+    "heading": true,
+    "size": 20.0
+   },
+   {
+    "text": "Pharmacodynamics explains how drugs bind receptors to produce agonism or antagonism, and dose-response curves describe potency and efficacy.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Pharmacodynamics explains how drugs bind receptors to produce agonism or antagonism, and dose-response curves describe potency and efficacy.",
+    "heading": true,
+    "size": 16.5
+   },
+   {
+    "text": "3",
+    "level": 0,
+    "emphasis": [],
+    "md": "3",
+    "heading": true,
+    "size": 20.0
+   },
+   {
+    "text": "ADME determines how much drug reaches its target and for how long — today we covered absorption, distribution, bioavailability, and the first-pass effect.",
+    "level": 0,
+    "emphasis": [],
+    "md": "ADME determines how much drug reaches its target and for how long — today we covered absorption, distribution, bioavailability, and the first-pass effect.",
+    "heading": true,
+    "size": 16.5
+   },
+   {
+    "text": "4",
+    "level": 0,
+    "emphasis": [],
+    "md": "4",
+    "heading": true,
+    "size": 20.0
+   },
+   {
+    "text": "Session 2 (Thursday, October 22) continues with metabolism, excretion, PK calculations (half-life, steady state, clearance), pharmacogenomics, and the integrated clinical decision-making framework.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Session 2 (Thursday, October 22) continues with metabolism, excretion, PK calculations (half-life, steady state, clearance), pharmacogenomics, and the integrated clinical decision-making framework.",
+    "heading": true,
+    "size": 16.5
+   },
+   {
+    "text": "5",
+    "level": 0,
+    "emphasis": [],
+    "md": "5",
+    "heading": true,
+    "size": 20.0
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": "Close Session 1 by previewing Session 2 explicitly — students should leave knowing ADME is half-finished (we stopped after Distribution) and that Metabolism/Excretion pick up first next time."
+ },
+ {
+  "slide": 57,
+  "title": "Image Attribution",
+  "items": [
+   {
+    "text": "APPENDIX",
+    "level": 0,
+    "emphasis": [],
+    "md": "APPENDIX",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Image Attribution",
+    "level": 0,
+    "emphasis": [],
+    "md": "Image Attribution",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "●  Original figures in this deck: Figures 1–5 (Visualizing Agonist & Antagonist Effects; The Sigmoidal Dose-Response Curve; Potency vs. Efficacy, Side by Side; Wide vs. Narrow Therapeutic Index; The ADME Compartment Model) were generated by the course director using the AI tool Claude to illustrate standard, non-copyrighted pharmacologic concepts. They are original diagrams, not reproduced from Katzung’s Basic and Clinical Pharmacology or any other copyrighted source.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "●  Original figures in this deck:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**●  Original figures in this deck:** Figures 1–5 (Visualizing Agonist & Antagonist Effects; The Sigmoidal Dose-Response Curve; Potency vs. Efficacy, Side by Side; Wide vs. Narrow Therapeutic Index; The ADME Compartment Model) were generated by the course director using the AI tool Claude to illustrate standard, non-copyrighted pharmacologic concepts. They are original diagrams, not reproduced from Katzung’s Basic and Clinical Pharmacology or any other copyrighted source.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "●  Reference: Anthropic. (2026). Claude (Sonnet 5) [Large language model]. https://claude.ai",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "●  Reference:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**●  Reference:** Anthropic. (2026). Claude (Sonnet 5) [Large language model]. https://claude.ai",
+    "heading": false,
+    "size": 16.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "This slide documents AI-tool use for original figure generation per university citation requirements. It covers every original diagram in this deck (Figures 1–5); none are reproduced from any textbook."
+ }
+]
