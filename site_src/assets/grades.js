@@ -59,7 +59,7 @@
           ${cats.map((it) => `<div class="gs-col" style="--c:var(--c-${it.key})"><span class="gs-val" data-avg="${it.key}"></span><div class="gs-bar" data-bar="${it.key}"></div></div>`).join("")}</div>
         <div class="gs-axis"><span>100</span><span>50</span></div><div class="gs-x">${cats.map((it) => `<span>${SHORT[it.key] || it.label}</span>`).join("")}</div>
         <p class="gs-hint" id="gs-hint">Enter your first score on the left. Until then, the faded bars show the "ungraded work" setting below.</p>
-        <div class="gs-foot"><span>Ungraded work at</span><div class="seg" id="assume">${ASSUME.map((v) => `<button data-v="${v}">${v}%</button>`).join("")}</div><button class="pc-clear" data-clear>Clear</button></div>
+        <div class="gs-foot"><span id="assume-lbl">Ungraded work at</span><div class="seg" id="assume">${ASSUME.map((v) => `<button data-v="${v}">${v}%</button>`).join("")}</div><button class="pc-clear" data-clear>Clear</button></div>
       </div></div>`;
     if (froot) froot.innerHTML = `<div class="fs">
       <div class="fs-top"><div><div class="fs-lbl">Final exam score</div><div class="fs-num" id="fn-score">—</div></div>
@@ -81,7 +81,7 @@
       cb.checked = !!S.cp?.[cb.dataset.cp];
       cb.addEventListener("change", () => { (S.cp ||= [])[cb.dataset.cp] = cb.checked; saveAll(S); calc(); });
     });
-    root.querySelectorAll("#assume button").forEach((b) => b.addEventListener("click", () => { S.assume = +b.dataset.v; saveAll(S); calc(); }));
+    root.querySelectorAll("#assume button").forEach((b) => b.addEventListener("click", () => { S.assume = S.assume === +b.dataset.v ? "avg" : +b.dataset.v; saveAll(S); calc(); }));
     const fin = froot?.querySelector("#fn-in");
     // while you drag, the page corners glow faintly in the grade's color
     const amb = document.createElement("div"); amb.className = "fs-ambient"; amb.setAttribute("aria-hidden", "true"); document.body.append(amb);
@@ -102,8 +102,12 @@
 
     const LC = { A: "var(--good)", B: "var(--accent)", C: "var(--warn)", F: "var(--bad)" };
     function calc() {
-      const assume = S.assume ?? 85, finalScore = S.final?.[0], hasFinal = finalScore != null && finalScore !== "";
-      root.querySelectorAll("#assume button").forEach((b) => b.classList.toggle("on", +b.dataset.v === assume));
+      // no pill picked (tap the active one again) → ungraded work counts at your current average
+      const entered = D.items.filter((it) => it.key !== "final").flatMap((it) => (S[it.key] || []).filter((v) => v !== null && v !== undefined && v !== ""));
+      const useAvg = S.assume === "avg", avg = entered.length ? entered.reduce((a, b) => a + b, 0) / entered.length : 85;
+      const assume = useAvg ? avg : S.assume ?? 85, finalScore = S.final?.[0], hasFinal = finalScore != null && finalScore !== "";
+      root.querySelectorAll("#assume button").forEach((b) => { const on = !useAvg && +b.dataset.v === assume; b.classList.toggle("on", on); b.setAttribute("aria-pressed", on); });
+      root.querySelector("#assume-lbl").textContent = useAvg ? `Ungraded work at your average (${Math.round(avg)}%)` : "Ungraded work at";
       let projNoFinal = 0;
       for (const it of D.items) {
         let n = 0, sum = 0;
