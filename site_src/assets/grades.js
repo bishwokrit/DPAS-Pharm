@@ -62,7 +62,7 @@
       </div></div>`;
     if (froot) froot.innerHTML = `<div class="fs">
       <div class="fs-top"><div><div class="fs-lbl">Final exam score</div><div class="fs-num" id="fn-score">—</div></div>
-        <div class="fs-right"><div class="fs-lbl">Course grade</div><div class="fs-num"><span id="fn-letter">—</span><small id="fn-total"></small></div></div></div>
+        <div class="fs-right"><div class="fs-lbl">Course grade</div><div class="fs-num"><span id="fn-letter">—</span><small id="fn-total"></small></div><div class="fs-verdict" id="fn-verdict"></div></div></div>
       <div class="fs-track"><div class="fs-fill" id="fn-fill"></div><div class="fs-marks" id="fn-marks"></div><input type="range" min="0" max="100" step="1" id="fn-in" aria-label="Final exam score"></div>
       <div class="fs-need" id="fn-need"></div>
       <div class="fs-bottom"><span>Drag to try a score. At least 75% is required to pass.</span><label>Actual score <input type="number" inputmode="decimal" min="0" max="100" step="0.1" placeholder="—" aria-label="Final exam percent" data-k="final" data-i="0"></label></div></div>`;
@@ -125,8 +125,16 @@
       const tryF = hasFinal ? finalScore : +fin.value, fl = letter(tryF);
       fin.disabled = hasFinal; fin.value = tryF;
       froot.querySelector("#fn-score").textContent = `${Math.round(tryF * 10) / 10}%`;
-      const le = froot.querySelector("#fn-letter"); le.textContent = fl; le.style.color = LC[fl];
+      // the whole card takes on the grade's color: glow, fill, knob; the letter springs when it changes
+      const card = froot.querySelector(".fs"), le = froot.querySelector("#fn-letter");
+      card.style.setProperty("--lc", LC[fl]); card.dataset.l = fl;
+      if (le.textContent !== fl) {
+        le.textContent = fl; le.style.color = LC[fl];
+        if (!calm && le.dataset.seen) { le.classList.remove("pop", "shake"); void le.offsetWidth; le.classList.add(fl === "F" ? "shake" : "pop"); }
+        le.dataset.seen = 1;
+      }
       froot.querySelector("#fn-total").textContent = `${trunc1(total(tryF) / 10)}%`;
+      froot.querySelector("#fn-verdict").textContent = fl === "F" ? (tryF < 75 ? "Below the 75% final minimum" : "Not passing") : (D.scale.find(([L]) => L === fl) || [])[2] || "";
       froot.querySelector("#fn-fill").style.width = `${tryF}%`;
       // marks on the track: the score needed for each letter (letters needing the same score share a mark)
       const need = {};

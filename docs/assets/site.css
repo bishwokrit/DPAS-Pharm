@@ -725,8 +725,18 @@ body.focus .focus-btn { background: var(--accent-soft) !important; color: var(--
 .seg button { border: 0; background: transparent; color: var(--text-2); font: 600 12px var(--font); padding: 5px 9px; border-radius: 7px; cursor: pointer; transition: background .2s, color .2s; }
 .seg button.on { background: var(--surface); color: var(--text); box-shadow: 0 1px 3px rgba(0,0,0,.2); }
 .pc-clear { margin-left: auto; border: 0; background: none; color: var(--text-2); font: 500 12.5px var(--font); cursor: pointer; } .pc-clear:hover { color: var(--bad); }
-/* final */
-.fs { padding: 24px 26px 20px; }
+/* final: the card takes on the grade's color as you drag */
+@property --lc { syntax: "<color>"; inherits: true; initial-value: #0a84ff; }
+.fs { position: relative; overflow: hidden; padding: 24px 26px 20px; --lc: var(--accent); transition: --lc .5s ease; }
+.fs::before { content: ""; position: absolute; inset: -40% -10% auto auto; width: 70%; height: 160%; pointer-events: none;
+  background: radial-gradient(closest-side, color-mix(in srgb, var(--lc) 22%, transparent), transparent); transition: opacity .5s; }
+.fs[data-l="F"]::before { opacity: .9; } .fs[data-l="C"]::before { opacity: .7; }
+.fs > * { position: relative; }
+.fs-verdict { margin-top: 4px; font-size: 13px; font-weight: 600; color: var(--lc); }
+#fn-score { transition: color .5s; } .fs[data-l="F"] #fn-score { color: var(--bad); }
+#fn-letter { display: inline-block; }
+#fn-letter.pop { animation: fs-pop .55s cubic-bezier(.2,1.6,.4,1); } @keyframes fs-pop { 0% { transform: scale(.7); opacity: .4; } 100% { transform: none; opacity: 1; } }
+#fn-letter.shake { animation: fs-shake .45s ease; } @keyframes fs-shake { 20%, 60% { transform: translateX(-5px); } 40%, 80% { transform: translateX(5px); } }
 .fs-top { display: flex; justify-content: space-between; align-items: flex-end; }
 .fs-right { text-align: right; }
 .fs-num { font-size: 40px; font-weight: 700; letter-spacing: -.03em; line-height: 1.05; font-variant-numeric: tabular-nums; }
@@ -734,16 +744,22 @@ body.focus .focus-btn { background: var(--accent-soft) !important; color: var(--
 #fn-letter { transition: color .3s; }
 .fs-track { position: relative; height: 28px; margin: 26px 0 0; }
 .fs-track::before { content: ""; position: absolute; left: 0; right: 0; top: 11px; height: 6px; border-radius: 3px; background: var(--surface-2); }
-.fs-fill { position: absolute; left: 0; top: 11px; height: 6px; border-radius: 3px; background: var(--accent); }
-.fs-marks i { position: absolute; top: 7px; width: 2px; height: 14px; margin-left: -1px; border-radius: 1px; background: var(--text-2); opacity: .7; transition: left .4s; } .fs-marks i.hit { background: #fff; opacity: .9; }
+.fs-fill { position: absolute; left: 0; top: 11px; height: 6px; border-radius: 3px; overflow: hidden;
+  background: linear-gradient(90deg, var(--bad), color-mix(in srgb, var(--bad) 30%, var(--lc)) 55%, var(--lc)); box-shadow: 0 0 14px color-mix(in srgb, var(--lc) 45%, transparent); }
+.fs[data-l="F"] .fs-fill { background: var(--bad); box-shadow: 0 0 10px color-mix(in srgb, var(--bad) 40%, transparent); }
+.fs[data-l="A"] .fs-fill::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, transparent, rgba(255,255,255,.55), transparent); width: 40%; animation: fs-shine 2.2s ease-in-out infinite; }
+@keyframes fs-shine { from { transform: translateX(-120%); } to { transform: translateX(320%); } }
+@media (prefers-reduced-motion: reduce) { .fs[data-l="A"] .fs-fill::after { animation: none; display: none; } }
+.fs-marks i { position: absolute; top: 7px; width: 2px; height: 14px; margin-left: -1px; border-radius: 1px; background: var(--text-2); opacity: .7; transition: left .4s, transform .3s cubic-bezier(.2,1.6,.4,1), background .3s; } .fs-marks i.hit { background: #fff; opacity: 1; transform: scaleY(1.35); }
 #fn-in { position: absolute; inset: 0; width: 100%; margin: 0; background: transparent; -webkit-appearance: none; appearance: none; cursor: pointer; }
 #fn-in::-webkit-slider-runnable-track { height: 28px; background: transparent; }
-#fn-in::-webkit-slider-thumb { -webkit-appearance: none; width: 26px; height: 26px; margin-top: 1px; border-radius: 50%; background: #fff; box-shadow: 0 1px 2px rgba(0,0,0,.2), 0 3px 10px rgba(0,0,0,.25); transition: transform .15s; }
+#fn-in::-webkit-slider-thumb { -webkit-appearance: none; width: 26px; height: 26px; margin-top: 1px; border-radius: 50%; background: #fff; box-shadow: 0 0 0 4px color-mix(in srgb, var(--lc) 35%, transparent), 0 3px 10px rgba(0,0,0,.25); transition: transform .15s, box-shadow .3s; }
+.fs[data-l="A"] #fn-in::-webkit-slider-thumb { box-shadow: 0 0 0 7px color-mix(in srgb, var(--lc) 30%, transparent), 0 0 24px color-mix(in srgb, var(--lc) 60%, transparent); }
 #fn-in:active::-webkit-slider-thumb { transform: scale(1.1); }
 #fn-in::-moz-range-thumb { width: 26px; height: 26px; border: 0; border-radius: 50%; background: #fff; box-shadow: 0 1px 2px rgba(0,0,0,.2), 0 3px 10px rgba(0,0,0,.25); }
 #fn-in::-moz-range-track { background: transparent; } #fn-in:disabled { cursor: default; }
 .fs-need { display: flex; gap: 24px; margin-top: 14px; font-size: 13px; color: var(--text-2); font-variant-numeric: tabular-nums; }
-.fs-need b { font-weight: 700; margin-right: 6px; color: var(--text-2); } .fs-need span.hit, .fs-need span.hit b { color: var(--text); } .fs-need span.out { opacity: .5; }
+.fs-need span { transition: color .3s, transform .3s; } .fs-need b { font-weight: 700; margin-right: 6px; color: var(--text-2); transition: color .3s; } .fs-need span.hit { color: var(--text); } .fs-need span.hit b { color: var(--lc); } .fs-need span.out { opacity: .5; }
 .fs-bottom { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--hair); font-size: 12.5px; color: var(--text-2); }
 .fs-bottom label { display: flex; align-items: center; gap: 8px; }
 .fs-bottom input { width: 62px; height: 30px; border: 0; border-radius: 8px; background: var(--surface-2); color: var(--text); text-align: center; font: 600 13.5px var(--font); }

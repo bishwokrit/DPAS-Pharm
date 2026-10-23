@@ -94,7 +94,7 @@ def page(title, body, depth=0, nav_links="", sidekick=False, active="", subtitle
 {body}
 <footer class="site-foot"><div class="wrap">
 <div class="foot-top appear"><div class="foot-brand"><span class="brand-mark" aria-hidden="true">Rx</span><div><strong>{SITE_NAME}</strong><span>Study smarter. Remember longer.</span></div></div>
-<p class="foot-pledge">Built with care and checked against its sources to help you master the material. <strong>Your grade is yours</strong>, so confirm the details against your own lectures and readings.</p></div>
+<p class="foot-pledge">Crafted and source-checked to help you master the material faster. Pair it with your lectures and readings: <strong>they are always the final word.</strong></p></div>
 <div class="foot-tiles">
 <div class="foot-tile appear" style="--d:.05s"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6z"/></svg><div><strong>Independent</strong><span>Student-made. Not affiliated with or endorsed by any school, program, instructor, hospital, or publisher.</span></div></div>
 <div class="foot-tile appear" style="--d:.12s"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><div><strong>Private</strong><span>Progress stays in your browser. Optional AI chat goes straight to Anthropic on your own key.</span></div></div>
