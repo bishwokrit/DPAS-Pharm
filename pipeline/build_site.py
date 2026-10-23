@@ -416,6 +416,11 @@ def main(pdf=True):
     syl = json.loads((ROOT / "work" / "syllabus.json").read_text())
     DOCS.mkdir(exist_ok=True)
     shutil.copytree(SRC / "assets", DOCS / "assets", dirs_exist_ok=True)
+    css = (SRC / "assets" / "site.css").read_text()  # publish a compact copy; site_src keeps the readable one
+    css = re.sub(r"/\*.*?\*/", "", css, flags=re.S)
+    css = re.sub(r"\s+", " ", css)
+    css = re.sub(r"\s*([{};,>])\s*", r"\1", css).replace(";}", "}")
+    (DOCS / "assets" / "site.css").write_text(css.strip())
     (DOCS / ".nojekyll").write_text("")
     built = {}
     for lec in syl["lectures"]:
