@@ -15,6 +15,8 @@ const store = {
 };
 const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 const md = (s) => esc(s).replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+// markdown links to pages on this site only (paths like syllabus/index.html#calc); anything else stays plain text
+const links = (h) => h.replace(/\[([^\]]{1,80})\]\(((?:L\d+|syllabus|drugs|review|exams)[\w\-./#]*|index\.html[\w#\-]*)\)/g, (m, t, u) => `<a href="${(document.documentElement.dataset.root || "") + u}">${t} →</a>`);
 const plain = (s) => String(s ?? "").replace(/\*\*/g, "");
 const cite = (src) => (src ? `<span class="cite">${esc(src)}</span>` : "");
 const tags = (o) => (o.tb ? '<span class="tag tb">TB</span>' : "") + (o.sg ? '<span class="tag sg">SG</span>' : "");
@@ -22,6 +24,8 @@ const shuffle = (a) => { for (let i = a.length - 1; i > 0; i--) { const j = Math
 const goTo = (anchor) => { const el = document.getElementById(anchor); if (el) { el.scrollIntoView({ behavior: "smooth" }); if (matchMedia("(max-width: 760px)").matches) close(); } };
 
 let Anthropic, kb, sourceText = "", panel, body, tab = store.get("sk:tab", "ask");
+// Lecture pages get that lecture's Sidekick; every other page gets one built from all lectures + the site map + the course calendar.
+const ROOT = document.documentElement.dataset.root || "", GLOBAL = document.documentElement.dataset.sk === "global";
 
 // ---------------------------------------------------------------- search (BM25 over cited chunks)
 const STOP = new Set("a an and are as at be by can do does for from has have how i in is it its of on or that the this to was what when which who why will with you your vs versus".split(" "));
@@ -35,7 +39,7 @@ function makeIndex(chunks) {
   const avg = docs.reduce((n, d) => n + d.length, 0) / Math.max(1, docs.length);
   return { docs, df, avg, N: docs.length, chunks };
 }
-function buildIndex() { index = makeIndex(kb.chunks.map((c) => ({ ...c, lid: kb.lecture }))); }
+function buildIndex() { index = makeIndex(kb.chunks.map((c) => ({ ...c, lid: c.lid || kb.lecture }))); }
 function search(q, k = 6, idx = index) {
   const qt = [...new Set(terms(q))];
   if (!qt.length) return [];
@@ -53,9 +57,10 @@ function search(q, k = 6, idx = index) {
 }
 // Every lecture at once (for cumulative review): loads the other lectures' cited chunks on first use
 async function ensureAll() {
+  if (GLOBAL) return index;
   if (indexAll) return indexAll;
   const others = await Promise.all((kb.lectures || []).filter((l) => l.id !== kb.lecture).map((l) =>
-    fetch(`../${l.id}/kb.json`).then((r) => r.json()).then((k) => ({ k, l })).catch(() => null)));
+    fetch(`${ROOT}${l.id}/kb.json`).then((r) => r.json()).then((k) => ({ k, l })).catch(() => null)));
   const chunks = kb.chunks.map((c) => ({ ...c, lid: kb.lecture }));
   others.filter(Boolean).forEach(({ k }) => k.chunks.forEach((c) => chunks.push({ ...c, lid: k.lecture, where: `${k.lecture} · ${c.where}` })));
   indexAll = makeIndex(chunks);
@@ -63,10 +68,10 @@ async function ensureAll() {
 }
 async function loadAllSources() {
   if (allSources) return allSources;
-  const parts = await Promise.all((kb.lectures || []).map((l) => fetch(`../${l.id}/${l.source}`).then((r) => r.text()).then((t) => `=== ${l.id}: ${l.title} ===\n${t}`).catch(() => "")));
+  const parts = await Promise.all((kb.lectures || []).map((l) => fetch(`${ROOT}${l.id}/${l.source}`).then((r) => r.text()).then((t) => `=== ${l.id}: ${l.title} ===\n${t}`).catch(() => "")));
   return (allSources = parts.filter(Boolean).join("\n\n"));
 }
-const hitLink = (h) => (h.lid && h.lid !== kb.lecture ? `../${h.lid}/index.html#${h.anchor}` : `#${h.anchor}`);
+const hitLink = (h) => (h.lid && h.lid !== kb.lecture ? `${ROOT}${h.lid}/index.html#${h.anchor}` : `#${h.anchor}`);
 function wireGo(root) {
   root.querySelectorAll("[data-go]").forEach((a) => a.addEventListener("click", (e) => {
     if (a.getAttribute("href").startsWith("#")) { e.preventDefault(); goTo(a.dataset.go); }
@@ -74,7 +79,8 @@ function wireGo(root) {
 }
 
 // ---------------------------------------------------------------- panel shell
-const TABS = [["ask", "Ask"], ["notes", "Notes"], ["cards", "Flashcards"], ["quiz", "Quiz"], ["pod", "Podcast"], ["listen", "Listen"], ["map", "Mind map"], ["brief", "Briefing"], ["faq", "FAQ"]];
+const TABS = [["ask", "Ask"], ["notes", "Notes"], ["cards", "Flashcards"], ["quiz", "Quiz"], ["pod", "Podcast"], ["listen", "Listen"], ["map", "Mind map"], ["brief", "Briefing"], ["faq", "FAQ"]]
+  .filter(([id]) => !GLOBAL || ["ask", "pod", "cards", "quiz", "brief", "faq"].includes(id));
 function mount() {
   const fab = document.createElement("button");
   fab.className = "sk-fab noprint";
@@ -89,6 +95,11 @@ function mount() {
     <div class="sk-tabs" role="tablist">${TABS.map(([id, l]) => `<button role="tab" data-tab="${id}">${l}</button>`).join("")}</div>
     <div class="sk-body"></div>`;
   document.body.append(fab, panel);
+  const HOME = GLOBAL && ROOT === "";
+  if (HOME) {  // on the home page the button waits until you scroll past the first screen
+    const upd = () => fab.classList.toggle("later", scrollY < innerHeight * 0.6 && !panel.classList.contains("open"));
+    addEventListener("scroll", upd, { passive: true }); upd();
+  }
   body = panel.querySelector(".sk-body");
   panel.querySelector(".sk-x").addEventListener("click", close);
   panel.querySelectorAll("[data-tab]").forEach((b) => b.addEventListener("click", () => show(b.dataset.tab)));
@@ -98,7 +109,7 @@ function mount() {
   });
   const want = new URLSearchParams(location.search).get("sk");  // e.g. ?sk=listen from the home page
   if (want && TABS.some(([id]) => id === want)) { tab = want; open(); }
-  else if (store.get("sk:open", false)) open();
+  else if (store.get("sk:open", false) && !HOME) open();
 }
 function open() { panel.classList.add("open"); document.body.classList.add("sk-on"); store.set("sk:open", true); show(tab); }
 function close() { panel.classList.remove("open"); document.body.classList.remove("sk-on"); store.set("sk:open", false); speechSynthesis?.cancel(); }
@@ -112,19 +123,20 @@ function show(id, arg) {
 
 // ---------------------------------------------------------------- Ask: search + optional AI chat
 const chat = { history: [], busy: false };
-let scope = store.get("sk:scope", "this");
+let scope = GLOBAL ? "all" : store.get("sk:scope", "this");
 function askTab(prefill) {
   const key = store.get("sk:key", "");
-  body.innerHTML = `<form class="sk-ask"><input name="q" placeholder="Ask about this lecture…" autocomplete="off" value="${esc(prefill || "")}"><button class="btn">Ask</button></form>
+  body.innerHTML = `<form class="sk-ask"><input name="q" placeholder="${GLOBAL ? "Ask anything: a drug, a topic, a due date, where something is…" : "Ask about this lecture…"}" autocomplete="off" value="${esc(prefill || "")}"><button class="btn">Ask</button></form>
     <div class="sk-ai-line small">${key ? `AI chat <strong>on</strong> · ${esc(MODELS.find((m) => m[0] === store.get("sk:model", MODELS[0][0]))?.[1].split(" —")[0])} · <a href="#" data-ai>settings</a>${chat.history.length ? ' · <a href="#" data-clear>new chat</a>' : ""}`
       : `Searching your study materials. <a href="#" data-ai>Turn on AI chat</a> (optional, uses your own Claude API key).`}</div>
-    ${(kb.lectures || []).length > 1 ? `<div class="sk-scope small"><button data-scope="this" class="${scope === "this" ? "on" : ""}">This lecture</button><button data-scope="all" class="${scope === "all" ? "on" : ""}">All lectures (${kb.lectures.length})</button></div>` : ""}
-    ${chat.history.length ? "" : '<p class="sk-tip small">Tip: <strong>highlight any text</strong> in the guide to Explain it, see its Source slide or textbook page, get quizzed, make a flashcard, or save it to Notes.</p>'}
+    ${!GLOBAL && (kb.lectures || []).length > 1 ? `<div class="sk-scope small"><button data-scope="this" class="${scope === "this" ? "on" : ""}">This lecture</button><button data-scope="all" class="${scope === "all" ? "on" : ""}">All lectures (${kb.lectures.length})</button></div>` : ""}
+    ${chat.history.length ? "" : GLOBAL ? `<p class="sk-tip small">Ask about any lecture, drug, or due date, or where to find something on the site.</p><div class="sk-sugg">${["When is the next exam?", "Where is the grade calculator?", "Explain first-pass effect", "Which drugs have a narrow therapeutic index?"].map((x) => `<button data-sugg>${x}</button>`).join("")}</div>` : '<p class="sk-tip small">Tip: <strong>highlight any text</strong> in the guide to Explain it, see its Source slide or textbook page, get quizzed, make a flashcard, or save it to Notes.</p>'}
     <div class="sk-thread"></div><div class="sk-results"></div>`;
   const form = body.querySelector("form");
   body.querySelector("[data-ai]").addEventListener("click", (e) => { e.preventDefault(); aiSettings(); });
   body.querySelector("[data-clear]")?.addEventListener("click", (e) => { e.preventDefault(); chat.history = []; askTab(); });
   body.querySelectorAll("[data-scope]").forEach((b) => b.addEventListener("click", () => { scope = b.dataset.scope; store.set("sk:scope", scope); chat.history = []; askTab(); }));
+  body.querySelectorAll("[data-sugg]").forEach((b) => b.addEventListener("click", () => ask(b.textContent)));
   renderThread();
   form.addEventListener("submit", (e) => { e.preventDefault(); const q = form.q.value.trim(); if (q) ask(q); form.q.value = ""; });
   if (prefill) ask(prefill);
@@ -134,14 +146,24 @@ function renderThread() {
   const t = body.querySelector(".sk-thread");
   if (!t) return;
   t.innerHTML = chat.history.map((m) => m.role === "user" ? `<div class="sk-msg me">${esc(m.label || m.content)}</div>`
-    : `<div class="sk-msg ai">${md(m.content).replace(/\n/g, "<br>")}</div>`).join("") +
+    : `<div class="sk-msg ai">${links(md(m.content)).replace(/\n/g, "<br>")}</div>`).join("") +
     (chat.history.length && !chat.busy ? `<div class="sk-follow">${FOLLOW.map(([l]) => `<button data-f="${l}">${l}</button>`).join("")}</div>` : "");
   t.querySelectorAll("[data-f]").forEach((b) => b.addEventListener("click", () => aiAnswer(FOLLOW.find(([l]) => l === b.dataset.f)[1], b.dataset.f)));
 }
 async function ask(q) {
   const idx = scope === "all" ? await ensureAll() : index;
   const hits = search(q, scope === "all" ? 8 : 6, idx);
-  body.querySelector(".sk-results").innerHTML = `<h4>From your study materials${scope === "all" ? " · all lectures" : ""}</h4>` + (hits.length ? hits.map((h) =>
+  const qt = new Set(terms(q));
+  // site pages and calendar lines, ranked by how many of the question's words they share ("next" = upcoming only)
+  const need = Math.min(2, qt.size), rank = (t) => terms(t).filter((w) => qt.has(w)).length;
+  const pages = GLOBAL ? (kb.pages || []).map((p) => [rank(p.t), p]).filter(([n]) => n >= need).sort((a, b) => b[0] - a[0]).slice(0, 3).map(([, p]) => p) : [];
+  const today = new Date().toISOString().slice(0, 10), next = /\b(next|upcoming|coming|soon)\b/i.test(q);
+  let cal = GLOBAL ? (kb.course || "").split("\n").filter((l) => /^\d{4}-/.test(l) && (!next || l.slice(0, 10) >= today)).map((l) => [rank(l), l]).filter(([n]) => n >= need) : [];
+  const top = cal.reduce((m, [n]) => Math.max(m, n), 0);
+  cal = cal.filter(([n]) => n === top).map(([, l]) => l).slice(0, next ? 1 : 4);
+  body.querySelector(".sk-results").innerHTML = (pages.length ? `<h4>On this site</h4>${pages.map((p) => `<a class="sk-page" href="${esc(ROOT + p.u)}">${esc(p.t)} →</a>`).join("")}` : "")
+    + (cal.length ? `<h4>From the syllabus calendar</h4><ul class="sk-cal">${cal.map((l) => `<li>${esc(l)}</li>`).join("")}</ul>` : "")
+    + `<h4>From your study materials${scope === "all" ? " · all lectures" : ""}</h4>` + (hits.length ? hits.map((h) =>
     `<div class="sk-hit"><div class="small muted">${esc(h.where)}</div><div>${tags(h)}${md(h.text)}${cite(h.src)}</div>
      <a href="${esc(hitLink(h))}" data-go="${esc(h.anchor)}" class="small">${h.lid !== kb.lecture ? `Open in ${esc(h.lid)} →` : "Go to section →"}</a></div>`).join("")
     : `<p class="muted">Nothing matched. Try different words (e.g., a drug name or term) — or it may be <strong>not covered in materials</strong>.</p>`);
@@ -188,6 +210,7 @@ async function aiAnswer(q, label) {
       ...(model === "claude-haiku-5-5" ? {} : { betas: ["server-side-fallback-2026-07-01"], fallbacks: "default" }),
       output_config: { effort: "low" },
       system: [
+        ...(GLOBAL ? [{ type: "text", text: `You are also this study site's guide. When asked where something is, or when a page would help, link it in markdown using these site paths exactly, e.g. [Grade calculator](syllabus/index.html#calc). Use the course calendar for dates and the grading info for grade questions; today is ${new Date().toDateString()}.\nSITE PAGES:\n${(kb.pages || []).map((p) => `- ${p.t}: ${p.u}`).join("\n")}\n\n${kb.course || ""}` }] : []),
         { type: "text", text: "You are Sidekick, a study assistant for a physician assistant student in clinical pharmacology. Answer only from the lecture source below. Cite every fact the way the source does, e.g. (S12), (S12 notes), (p. 17), (SG U1-R3). If the source does not cover something, say \"Not covered in materials\" rather than using outside knowledge. Keep answers short and scannable: a direct answer first, then up to 5 bullets. Use **bold** for the single most testable point. When asked to quiz, ask one PANCE-style question at a time and wait for the answer." },
         { type: "text", text: scope === "all" ? `COURSE SOURCES (every lecture so far):\n\n${source}` : `LECTURE SOURCE (${kb.title}):\n\n${source}`, cache_control: { type: "ephemeral" } },
       ],
@@ -318,12 +341,14 @@ async function claudeJSON(system, user, maxTokens, onProgress) {
   return JSON.parse(m[0]);
 }
 async function podSources(scopeAll) {
+  scopeAll ||= GLOBAL;
   const src = scopeAll ? await loadAllSources() : `=== ${kb.lecture}: ${kb.title} ===\n${await loadSource()}`;
   return [{ type: "text", text: POD_SYS }, { type: "text", text: `SOURCES:\n\n${src}`, cache_control: { type: "ephemeral" } }];
 }
 async function podChoices(scopeAll) {
-  if (!podDrugs) podDrugs = await fetch("../drugs/names.json").then((r) => r.json()).catch(() => []);
-  const lec = scopeAll ? await Promise.all((kb.lectures || []).map((l) => l.id === kb.lecture ? kb : fetch(`../${l.id}/kb.json`).then((r) => r.json()).catch(() => null))) : [kb];
+  scopeAll ||= GLOBAL;
+  if (!podDrugs) podDrugs = await fetch(`${ROOT}drugs/names.json`).then((r) => r.json()).catch(() => []);
+  const lec = scopeAll ? await Promise.all((kb.lectures || []).map((l) => l.id === kb.lecture ? kb : fetch(`${ROOT}${l.id}/kb.json`).then((r) => r.json()).catch(() => null))) : [kb];
   const parts = lec.filter(Boolean).flatMap((k) => k.brief.map((b) => `${k.lecture} · ${b.part.replace(/^Part \d+ · /, "")}`));
   const text = lec.filter(Boolean).map((k) => JSON.stringify(k.chunks)).join(" ").toLowerCase();
   const drugs = podDrugs.filter((d) => [d.name, ...d.aliases].some((n) => text.includes(n.toLowerCase()))).map((d) => d.name);
@@ -340,7 +365,7 @@ async function podTab() {
   if (st.step === "setup") {
     const scopeAll = st.sel?.scopeAll ?? false;
     body.innerHTML = `<div class="pod-hero"><div class="pod-badge">🎧</div><div><h3>Make a study podcast</h3><p class="small muted">Two hosts, built only from your course materials. Pick what to cover — the AI will help you sharpen it before writing the episode.</p></div></div>
-      <div class="sk-row pod-scope"><button class="${scopeAll ? "" : "on"}" data-scope="0">This lecture</button><button class="${scopeAll ? "on" : ""}" data-scope="1">All lectures</button></div>
+      <div class="sk-row pod-scope" ${GLOBAL ? "hidden" : ""}><button class="${scopeAll ? "" : "on"}" data-scope="0">This lecture</button><button class="${scopeAll ? "on" : ""}" data-scope="1">All lectures</button></div>
       <div id="pod-choices"><p class="muted small">Loading topics…</p></div>
       ${saved.length ? `<h4>My episodes</h4><div class="pod-saved">${saved.map((e, i) => `<div class="pod-ep"><button data-open="${i}"><strong>${esc(e.title)}</strong><span>${esc(e.when)} · ~${e.minutes} min</span></button><button class="sk-x" data-del="${i}" aria-label="Delete">✕</button></div>`).join("")}</div>` : ""}`;
     body.querySelectorAll("[data-scope]").forEach((b) => b.onclick = () => { st.sel = { ...(st.sel || {}), scopeAll: b.dataset.scope === "1" }; podTab(); });
@@ -530,6 +555,11 @@ function cardsTab() {
 }
 
 // ---------------------------------------------------------------- Quiz: 10 random questions
+function recordQ(q, ok) {  // misses/done are kept per lecture, whichever page you answer from
+  const lid = q.lid || kb.lecture, id = q.raw || q.id, key = "miss:" + lid, m = new Set(store.get(key, []));
+  ok ? m.delete(id) : m.add(id); store.set(key, [...m]);
+  if (ok) store.set("done:" + lid, [...new Set([...store.get("done:" + lid, []), id])]);
+}
 function quizTab(list) {
   const qs = Array.isArray(list) ? list : shuffle([...kb.quiz]).slice(0, 10);
   let n = 0, score = 0;
@@ -545,13 +575,14 @@ function quizTab(list) {
     body.querySelector("[data-full]").addEventListener("click", (e) => {
       e.preventDefault();
       const key = "miss:" + kb.lecture;
+      if (GLOBAL) { window.dpasQuiz?.setup(kb.quiz, { title: "Quiz · all lectures", missed: kb.quiz.filter((x) => store.get("miss:" + x.lid, []).includes(x.raw)).map((x) => x.id), onAnswer: (x, L, ok) => recordQ(x, ok) }); return; }
       window.dpasQuiz?.setup(kb.quiz, { title: "Quiz", missed: store.get(key, []), onAnswer: (x, L, ok) => { const m = new Set(store.get(key, [])); ok ? m.delete(x.id) : m.add(x.id); store.set(key, [...m]); if (ok) store.set("done:" + kb.lecture, [...new Set([...store.get("done:" + kb.lecture, []), x.id])]); } });
     });
     body.querySelectorAll(".opt").forEach((b) => b.addEventListener("click", () => {
       if (body.querySelector(".opt.right")) return;
       const ok = b.dataset.l === q.answer;
       if (ok) score++;
-      if (q.id) { const key = "miss:" + kb.lecture, m = new Set(store.get(key, [])); ok ? m.delete(q.id) : m.add(q.id); store.set(key, [...m]); if (ok) store.set("done:" + kb.lecture, [...new Set([...store.get("done:" + kb.lecture, []), q.id])]); }
+      if (q.id) recordQ(q, ok);
       body.querySelectorAll(".opt").forEach((o) => { if (o.dataset.l === q.answer) o.classList.add("right"); });
       if (!ok) b.classList.add("wrong");
       const whys = q.whys ? Object.entries(q.whys).filter(([L]) => L !== q.answer).map(([L, w]) => `<li><strong>${L}.</strong> ${md(w)}</li>`).join("") : "";
@@ -626,6 +657,7 @@ function selectionContext() {
 let bar, ctx;
 function hideBar() { bar?.classList.remove("show"); }
 function showBar() {
+  if (GLOBAL) return;
   ctx = selectionContext();
   if (!ctx) { hideBar(); return; }
   if (!bar) {
@@ -853,4 +885,4 @@ async function compareView(pair) {
 }
 
 // ---------------------------------------------------------------- start
-fetch("kb.json").then((r) => r.json()).then((data) => { kb = data; buildIndex(); mount(); store.get(notesKey(), []).forEach(markOnPage); }).catch(() => { /* no Sidekick data on this page */ });
+fetch(GLOBAL ? `${ROOT}sidekick.json` : "kb.json").then((r) => r.json()).then((data) => { kb = data; buildIndex(); mount(); if (!GLOBAL) store.get(notesKey(), []).forEach(markOnPage); }).catch(() => { /* no Sidekick data on this page */ });

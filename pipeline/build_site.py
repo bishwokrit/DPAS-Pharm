@@ -79,7 +79,7 @@ def nav_html(up, active="", nav_links="", subtitle=""):
 def page(title, body, depth=0, nav_links="", sidekick=False, active="", subtitle=""):
     up = "../" * depth
     return f"""<!doctype html>
-<html lang="en" data-root="{up}">
+<html lang="en" data-root="{up}" data-sk="{"lecture" if sidekick else "global"}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -104,7 +104,7 @@ def page(title, body, depth=0, nav_links="", sidekick=False, active="", subtitle
 <p class="foot-fine">Textbook references cite chapters and pages of <em>Katzung's Basic &amp; Clinical Pharmacology</em>, 16th ed. (McGraw Hill), for cross-reference only; content is summarized in the author's own words, no passages are reproduced, and there is no affiliation with the authors or publisher. Slide and page numbers help you find the original material. Trademarks and copyrights belong to their owners. Educational use only; not medical advice.</p>
 </div></footer>
 <div class="progress-bar" aria-hidden="true"></div>
-<script src="{up}assets/site.js"></script><script src="{up}assets/quizmode.js"></script>{f'<script type="module" src="{up}assets/sidekick.js"></script>' if sidekick else ""}
+<script src="{up}assets/site.js"></script><script src="{up}assets/quizmode.js"></script><script type="module" src="{up}assets/sidekick.js"></script>
 </body>
 </html>
 """
@@ -634,6 +634,33 @@ def syllabus_page(syl, sched, built):
 
 
 # ---------------------------------------------------------------- site-wide search index
+def global_kb(syl, sched, built, exams):
+    """Sidekick for every non-lecture page: all lectures merged, plus the site's pages and the course calendar,
+    so students can ask it things instead of searching. Links are relative to the site root."""
+    kbs = {lid: json.loads((DOCS / lid / "kb.json").read_text()) for lid in built}
+    g = {"lecture": "ALL", "title": "All lectures · whole site", "chunks": [], "cards": [], "quiz": [], "brief": [], "summary": [], "faq": [],
+         "lectures": next(iter(kbs.values()))["lectures"] if kbs else [], "source": None, "global": True}
+    for lid, k in kbs.items():
+        g["chunks"] += [{**c, "lid": lid, "where": f"{lid} · {c['where']}"} for c in k["chunks"]]
+        g["cards"] += [{**c, "lid": lid} for c in k["cards"]]
+        g["quiz"] += [{**q, "id": f"{lid}:{q['id']}", "raw": q["id"], "lid": lid,
+                       "link": ({**q["link"], "href": f"{lid}/index.html{q['link']['href']}"} if q.get("link") else None)} for q in k["quiz"]]
+        g["brief"] += [{**b, "part": f"{lid} · {b['part']}"} for b in k["brief"]]
+        g["summary"] += k["summary"][:3]
+        g["faq"] += k["faq"][:4]
+    g["pages"] = [{"t": x["t"], "u": x["u"]} for x in search_index(syl, sched, built, exams) if x.get("g") == "Pages"] + [
+        {"t": "Drug index — every drug, cited, with compare and quiz", "u": "drugs/index.html"},
+        {"t": "Review — Daily 10, retry misses, weakest topics, saved notes", "u": "review/index.html"},
+        {"t": "What you need on the final", "u": "syllabus/index.html#final"}, {"t": "Week-by-week schedule", "u": "syllabus/index.html#schedule"}]
+    cal = [f"{c['date']}: class — {c['topic']}" for c in sched["classes"]] + [f"{d['date']}: {d['kind']} — {d['label']}" + (f" (note: {d['note']})" if d.get("note") else "") for d in sched["due"]]
+    gr = sched["grading"]
+    g["course"] = ("COURSE CALENDAR (from the syllabus):\n" + "\n".join(sorted(cal)) + "\n\nGRADING: " +
+                   "; ".join(f"{i['label']} {i['weight']}% ({i['count']} × {round(i['points_each'], 2)} pts)" for i in gr["items"]) +
+                   f"; bonus: {gr['bonus']['rule']}\nSCALE: " + ", ".join(f"{L} ≥ {p / 10:g}%" for L, p, _ in gr["scale"] if p) +
+                   "\nRULES: " + " ".join(gr["rules"]))
+    return g
+
+
 def search_index(syl, sched, built, exams):
     """Small entries for the ⌘K search: {t: text, g: group, u: url (from site root), s: citation}."""
     out = [{"t": "Home — next exam, lectures, practice exams", "g": "Pages", "u": "index.html"},
@@ -785,6 +812,7 @@ def main(pdf=True):
     shutil.copy(next((ROOT / "inputs" / "syllabus").glob("*.pdf")), DOCS / "syllabus" / "Syllabus_DPAS625_v5.pdf")
     (DOCS / "syllabus" / "index.html").write_text(syllabus_page(syl, sched, built))
     (DOCS / "search.json").write_text(json.dumps(search_index(syl, sched, built, exams), ensure_ascii=False))
+    (DOCS / "sidekick.json").write_text(json.dumps(global_kb(syl, sched, built, exams), ensure_ascii=False))
     (DOCS / "robots.txt").write_text("User-agent: *\nDisallow: /\n")
     (DOCS / "drugs").mkdir(exist_ok=True)
     (DOCS / "drugs" / "index.html").write_text(drugs_page(built, exams))

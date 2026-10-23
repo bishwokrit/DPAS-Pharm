@@ -997,3 +997,10 @@ html[data-paccent="graphite"] { --accent: #8e8e93 !important; --accent-soft: col
 @media (max-width: 960px) { .search-btn { min-width: 0; padding: 0; } }
 @media (max-width: 760px) { .nav-in { display: flex; } }
 @media (max-width: 760px) { .nav-main { flex: 1; min-width: 0; overflow-x: auto; scrollbar-width: none; } .nav-main::-webkit-scrollbar { display: none; } .nav-tools { flex: none; gap: 4px; } }
+
+/* ---------- Sidekick everywhere ---------- */
+.sk-fab { transition: opacity .4s ease, transform .4s cubic-bezier(.2,.8,.2,1); } .sk-fab.later { opacity: 0; transform: translateY(16px); pointer-events: none; }
+.sk-sugg { display: flex; flex-wrap: wrap; gap: 6px; margin: 4px 0 10px; }
+.sk-sugg button { border: 0; background: var(--surface-2); color: var(--text); font: 13px var(--font); padding: 7px 11px; border-radius: 980px; cursor: pointer; transition: background .2s; } .sk-sugg button:hover { background: var(--accent-soft); color: var(--accent); }
+.sk-page { display: block; padding: 10px 12px; margin: 6px 0; border-radius: 12px; background: var(--accent-soft); color: var(--accent); font-weight: 600; font-size: 14px; text-decoration: none; }
+.sk-cal { margin: 4px 0 8px; padding-left: 18px; font-size: 13.5px; } .sk-msg.ai a { font-weight: 600; }
