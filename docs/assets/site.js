@@ -283,6 +283,16 @@
     const done = dl[ymd(now)];
     out.push(card("review/index.html", done ? "✓" : "10", done ? "done" : "questions", "Today", done ? `Daily 10: ${done.score}/${done.of}` : "Daily 10", streak ? `${streak}-day streak — keep it going` : "A quick, weighted daily set", "var(--good)"));
     hu.innerHTML = out.join("");
+
+    // practice follows the calendar: the unit whose exam is next (after the last unit exam: final prep)
+    const unitEx = D.exams.find((e) => e.unit && day(e.date) >= now), cur = unitEx ? String(unitEx.unit) : "final";
+    document.querySelectorAll("#practice .bento[data-unit]").forEach((g) => (g.hidden = g.dataset.unit !== cur));
+    const ps = document.getElementById("pr-sub");
+    if (ps) {
+      const fe = D.exams.find((e) => !e.unit), dd = (e) => { const n = days(e.date); return n === 0 ? "today" : n === 1 ? "tomorrow" : `in ${n} days`; };
+      ps.innerHTML = unitEx ? `<strong>Unit ${unitEx.unit}</strong> · exam ${fmt(unitEx.date)} (${dd(unitEx)}). Earlier units and the final live in <a href="review/index.html?scope=all">Review</a>.`
+        : fe && day(fe.date) >= now ? `<strong>Final prep</strong> · comprehensive final ${fmt(fe.date)} (${dd(fe)}).` : "";
+    }
     hu.querySelectorAll(".appear").forEach((el, i) => { el.style.setProperty("--d", `${0.45 + i * 0.08}s`); requestAnimationFrame(() => el.classList.add("in")); });
   }
 

@@ -13,6 +13,20 @@
   const $ = (id) => document.getElementById(id);
 
   let pool = [], kbs = {}, exams = {};
+  // Scope: "unit" = the unit whose exam is next; "all" = cumulative, every unit so far (final prep).
+  // Practice on the home page is the current unit; this page adds earlier units and the final.
+  const unitOf = Object.fromEntries(CFG.lectures.map((l) => [l.id, l.unit]));
+  const nextUnitExam = (CFG.upcoming || []).find((e) => e.unit && e.date >= today());
+  const cur = nextUnitExam ? nextUnitExam.unit : Math.max(1, ...CFG.lectures.map((l) => l.unit));
+  const finalPeriod = !nextUnitExam;
+  let scope = (() => {
+    const q = new URLSearchParams(location.search).get("scope");
+    if (q === "unit" || q === "all") return q;
+    const saved = store.get("rv:scope", null);  // a choice sticks until the unit changes
+    return saved && saved.unit === cur ? saved.s : finalPeriod ? "all" : "unit";
+  })();
+  const P = () => (scope === "unit" ? pool.filter((q) => q.unit === cur) : pool);
+  const lidIn = (lid) => scope === "all" || unitOf[lid] === cur;
   // One topic list for everything: lecture questions are filed under the practice exams' (finer) topics,
   // so "Distribution" or "Drug development" means the same thing whichever source a question came from.
   const CANON = [[/language/i, "Language & drug names"], [/development|regulation/i, "Drug development & approval"], [/receptor|pharmacodynamic/i, "Receptors & drug targets"],
@@ -29,14 +43,14 @@
       const kb = await fetch(`../${l.id}/kb.json${document.documentElement.dataset.v ? "?v=" + document.documentElement.dataset.v : ""}`).then((r) => r.json()).catch(() => null);
       if (!kb) return;
       kbs[l.id] = kb;
-      kb.quiz.forEach((q) => pool.push({ ...q, id: `${l.id}:${q.id}`, raw: q.id, from: { type: "lec", lid: l.id }, topic: canon(q), label: `${l.id} · ${q.topic}`,
+      kb.quiz.forEach((q) => pool.push({ ...q, id: `${l.id}:${q.id}`, raw: q.id, unit: l.unit, from: { type: "lec", lid: l.id }, topic: canon(q), label: `${l.id} · ${q.topic}`,
         link: q.link ? { href: `../${l.id}/index.html${q.link.href}`, label: `Study this: ${l.id} · ${q.link.label.replace("Study this: ", "")}` } : null }));
     }));
     await Promise.all(CFG.exams.map(async (e) => {
       const qs = await fetch(`../exams/${e.id}/quiz.json${document.documentElement.dataset.v ? "?v=" + document.documentElement.dataset.v : ""}`).then((r) => r.json()).catch(() => null);
       if (!qs) return;
       exams[e.id] = e;
-      qs.forEach((q) => pool.push({ ...q, raw: q.id, from: { type: "exam", slug: e.id }, label: `${e.title} · ${q.topic}`,
+      qs.forEach((q) => pool.push({ ...q, raw: q.id, unit: e.unit, from: { type: "exam", slug: e.id }, label: `${e.title} · ${q.topic}`,
         link: q.link ? { ...q.link, href: q.link.href.replace(/^\.\.\/\.\.\//, "../") } : null }));
     }));
   }
@@ -71,7 +85,7 @@
 
   function topicStats() {
     const t = {};
-    pool.forEach((q) => {
+    P().forEach((q) => {
       const s = status(q);
       if (s === "new") return;
       const r = (t[q.topic] ||= { ok: 0, n: 0, link: q.link });
@@ -79,11 +93,11 @@
     });
     return Object.entries(t).map(([topic, r]) => ({ topic, ...r, pct: Math.round((100 * r.ok) / r.n) })).sort((a, b) => a.pct - b.pct);
   }
-  function weighted(n) {
+  function weighted(n, from = P()) {
     const weak = new Set(topicStats().filter((t) => t.pct < 70).map((t) => t.topic));
     const w = (q) => { const s = status(q); return (s === "missed" ? 6 : s === "new" ? 3 : 1) + (flagged(q) ? 3 : 0) + (weak.has(q.topic) ? 2 : 0); };
     // weighted sampling without replacement
-    const items = pool.map((q) => ({ q, k: Math.pow(Math.random(), 1 / w(q)) }));
+    const items = from.map((q) => ({ q, k: Math.pow(Math.random(), 1 / w(q)) }));
     return items.sort((a, b) => b.k - a.k).slice(0, n).map((x) => x.q);
   }
   const refresh = () => render();
@@ -100,8 +114,18 @@
     }
     return n;
   }
+  // final mock: the same number from every unit so far, weighted toward weak spots within each
+  function finalMock(n) {
+    const units = [...new Set(pool.map((q) => q.unit))].sort();
+    const per = Math.ceil(n / Math.max(1, units.length));
+    return shuffle(units.flatMap((u) => weighted(per, pool.filter((q) => q.unit === u)))).slice(0, n);
+  }
   function startDaily() {
-    window.dpasQuiz.start(weighted(10), opts("Daily 10", {
+    // this-unit Daily 10 still spaces in a few questions from earlier units, so they don't fade before the final
+    const past = pool.filter((q) => q.unit < cur);
+    const mine = weighted(7);  // a brand-new unit with no lectures yet: all ten come from earlier units
+    const qs = scope === "unit" && past.length ? shuffle([...mine, ...weighted(10 - mine.length, past)]) : weighted(10);
+    window.dpasQuiz.start(qs, opts("Daily 10", {
       onFinish: (r) => { const log = store.get("daily:log", {}); log[today()] = { score: r.correct, of: r.total }; store.set("daily:log", log); },
     }));
   }
@@ -110,6 +134,7 @@
   function weakCards() {
     const out = [];
     for (const [lid, kb] of Object.entries(kbs)) {
+      if (!lidIn(lid)) continue;
       const boxes = store.get(`sk:fc:${lid}`, {});
       kb.cards.forEach((c, i) => { if (boxes[i] !== undefined && boxes[i] <= 2) out.push({ ...c, lid, key: i }); });
       store.get(`sk:mycards:${lid}`, []).forEach((c, i) => { const k = "m" + i; if (boxes[k] !== undefined && boxes[k] <= 2) out.push({ ...c, lid, key: k, mine: true }); });
@@ -150,10 +175,14 @@
   // ---- page: 1 practice · 2 progress · 3 saved collections
   let tab = store.get("rv:tab", "misses");
   function render() {
-    const missed = pool.filter((q) => status(q) === "missed"), flags = pool.filter(flagged), cards = weakCards(), topics = topicStats();
-    const notes = Object.keys(kbs).flatMap((lid) => store.get(`sk:notes:${lid}`, []).map((n) => ({ ...n, lid })));
+    const SP = P(), missed = SP.filter((q) => status(q) === "missed"), flags = SP.filter(flagged), cards = weakCards(), topics = topicStats();
+    const notes = Object.keys(kbs).filter(lidIn).flatMap((lid) => store.get(`sk:notes:${lid}`, []).map((n) => ({ ...n, lid })));
+    const uname = `Unit ${cur}`;
+    $("rv-scope").innerHTML = `<button data-s="unit" class="${scope === "unit" ? "on" : ""}">This unit · ${uname}</button><button data-s="all" class="${scope === "all" ? "on" : ""}">Cumulative · final prep</button>`;
+    $("rv-scope").querySelectorAll("[data-s]").forEach((b) => (b.onclick = () => { scope = b.dataset.s; store.set("rv:scope", { s: scope, unit: cur }); render(); }));
+    $("rv-scope-sub").textContent = scope === "unit" ? `${uname}: ${CFG.units?.[cur] || ""}. Your Daily 10 still mixes in a few questions from earlier units.` : "Every unit so far, for spaced review and the comprehensive final.";
     const daily = store.get("daily:log", {})[today()];
-    const answered = pool.filter((q) => status(q) !== "new"), right = answered.filter((q) => ["right", "fixed"].includes(status(q)));
+    const answered = SP.filter((q) => status(q) !== "new"), right = answered.filter((q) => ["right", "fixed"].includes(status(q)));
 
     // countdown to the next exam, computed today (not when the site was built)
     const nxt = (CFG.upcoming || []).find((e) => e.date >= today());
@@ -167,20 +196,28 @@
     $("act").innerHTML =
       tile("daily", window.dpasIcon("sun"), "Daily 10", daily ? `Done today · ${daily.score}/${daily.of}. Go again anytime.` : "10 questions, about 5 minutes, weighted toward your weak spots", daily ? "Again →" : "Start →") +
       tile("misses", window.dpasIcon("retry"), "Retry misses", missed.length ? `${missed.length} question${missed.length === 1 ? "" : "s"} you got wrong` : "Nothing to retry yet", "Start →", !missed.length) +
-      tile("mixed", window.dpasIcon("timer"), "Timed mixed exam", "40 questions at exam pace, every lecture", "Start →") +
+      (scope === "unit" ? tile("mixed", window.dpasIcon("timer"), `Timed ${uname} exam`, `40 questions at exam pace, ${uname} only`, "Start →", !SP.length)
+        : tile("mixed", window.dpasIcon("timer"), "Final mock", "50 questions, timed, balanced across every unit so far", "Start →")) +
       tile("custom", window.dpasIcon("sliders"), "Build your own", "Pick size, topic, or misses only", "Set up →");
     const A = (k) => $("act").querySelector(`[data-a="${k}"]`);
     A("daily").onclick = startDaily;
     A("misses").onclick = () => missed.length && window.dpasQuiz.start(shuffle(missed.slice()), opts("Retry: all misses"));
-    A("mixed").onclick = () => window.dpasQuiz.start(weighted(40), opts("Timed mixed exam", { timed: true, feedback: "end" }));
-    A("custom").onclick = () => window.dpasQuiz.setup(pool, opts("Mixed exam — all lectures", { missed: missed.map((q) => q.id) }));
+    A("mixed").onclick = () => scope === "unit" ? window.dpasQuiz.start(weighted(40), opts(`Timed ${uname} exam`, { timed: true, feedback: "end" }))
+      : window.dpasQuiz.start(finalMock(50), opts("Final mock", { timed: true, feedback: "end" }));
+    A("custom").onclick = () => window.dpasQuiz.setup(SP, opts(scope === "unit" ? `Build your own · ${uname}` : "Build your own · all units", { missed: missed.map((q) => q.id) }));
 
     const pct = answered.length ? Math.round((100 * right.length) / answered.length) : null;
     const stat = (n, l, sub = "") => `<div class="rv-stat"><strong>${n}</strong><span>${l}</span>${sub ? `<i style="width:${sub}%"></i>` : ""}</div>`;
     if (!answered.length) $("stats").innerHTML = '<p class="rv-empty" style="grid-column:1/-1">Nothing tracked yet. Start with the <strong>Daily 10</strong> above. Every answer you give here, in self-tests, or in practice exams shows up as progress.</p>';
-    else $("stats").innerHTML = stat(`${answered.length}<small>/${pool.length}</small>`, "questions answered", (100 * answered.length) / Math.max(1, pool.length)) +
+    else $("stats").innerHTML = stat(`${answered.length}<small>/${SP.length}</small>`, "questions answered", (100 * answered.length) / Math.max(1, pool.length)) +
       stat(pct === null ? "—" : `${pct}%`, "accuracy", pct ?? 0) + stat(missed.length, "to retry") + stat(`${streak()}`, `day streak`);
 
+    const units = [...new Set(pool.map((q) => q.unit))].sort();
+    $("units").innerHTML = scope === "all" && units.length ? `<h3 class="rv-h3">By unit</h3><div class="rv-topics">${units.map((u) => {
+      const qs = pool.filter((q) => q.unit === u), a = qs.filter((q) => status(q) !== "new"), r = a.filter((q) => ["right", "fixed"].includes(status(q)));
+      const pc = a.length ? Math.round((100 * r.length) / a.length) : null;
+      return `<div class="rv-topic"><span class="rv-tn">Unit ${u} · ${esc(CFG.units?.[u] || "")}</span><span class="rv-bar"><i style="width:${pc ?? 0}%;background:${pc === null ? "var(--hair)" : pc >= 80 ? "var(--good)" : pc >= 60 ? "var(--warn)" : "var(--bad)"}"></i></span><span class="rv-tp">${pc === null ? "—" : pc + "%"}</span><span class="rv-go small muted">${a.length}/${qs.length}</span></div>`;
+    }).join("")}</div>` : "";
     $("topics").innerHTML = topics.length ? `<div class="rv-topics">${topics.slice(0, 8).map((t) => `<a class="rv-topic" ${t.link ? `href="${esc(t.link.href)}"` : ""}>
         <span class="rv-tn">${md(t.topic)}</span><span class="rv-bar"><i style="width:${t.pct}%;background:${t.pct >= 80 ? "var(--good)" : t.pct >= 60 ? "var(--warn)" : "var(--bad)"}"></i></span><span class="rv-tp">${t.pct}%</span><span class="rv-go">${t.link ? "Study →" : ""}</span></a>`).join("")}</div>`
       : '<p class="rv-empty">Answer a few self-test or practice-exam questions and your weakest topics will rank here, each linked to the part of the study guide that covers it.</p>';

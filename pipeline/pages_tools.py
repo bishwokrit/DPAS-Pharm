@@ -98,16 +98,18 @@ def search_index(syl, sched, built, exams):
 
 # ---------------------------------------------------------------- exam-week review dashboard
 def review_page(syl, built, exams):
-    cfg = json.dumps({"lectures": [{"id": lid, "title": b["title"]} for lid, b in built.items()],
-                      "exams": [{"id": e["id"], "title": e["title"]} for e in exams],
-                      "upcoming": [{"label": e["label"], "date": e["date"], "time": e["time"]} for e in syl.get("exams", [])]}).replace("</", "<\\/")
+    cfg = json.dumps({"lectures": [{"id": lid, "title": b["title"], "unit": int(b["unit"])} for lid, b in built.items()],
+                      "exams": [{"id": e["id"], "title": e["title"], "unit": int(e.get("unit") or 0)} for e in exams],
+                      "units": syl["units"],
+                      "upcoming": [{"label": e["label"], "date": e["date"], "time": e["time"], "unit": e["unit"]} for e in syl.get("exams", [])]}).replace("</", "<\\/")
     body = f"""<header class="hero wrap rv-hero"><p class="eyebrow">Review</p><h1>Your study hub</h1>
-<p class="lede">Practice that adapts to you. Everything here comes from what you've done on this site: questions you missed, cards you marked, notes you saved.</p>
-<div class="rv-count" id="rv-count" hidden></div></header>
+<p class="lede">Practice that adapts to you: this unit, or everything so far for the final. It all comes from what you've done on this site: questions you missed, cards you marked, notes you saved.</p>
+<div class="rv-count" id="rv-count" hidden></div>
+<div class="rv-scope seg" id="rv-scope" role="group" aria-label="What to review"></div><p class="rv-scope-sub" id="rv-scope-sub"></p></header>
 <section class="section rv-sec" id="practice"><div class="wrap"><p class="kicker">1 · Practice</p><h2>Start a session</h2>
 <div class="rv-acts" id="act"></div></div></section>
 <section class="section rv-sec" id="progress"><div class="wrap"><p class="kicker">2 · Your progress</p><h2>How you're doing</h2>
-<div class="rv-stats" id="stats"></div><h3 class="rv-h3">Weakest topics</h3><div id="topics"></div></div></section>
+<div class="rv-stats" id="stats"></div><div id="units"></div><h3 class="rv-h3">Weakest topics</h3><div id="topics"></div></div></section>
 <section class="section rv-sec" id="saved"><div class="wrap"><p class="kicker">3 · Saved for later</p><h2>Your collections</h2>
 <div class="seg rv-tabs" id="rv-tabs"></div><div class="rv-panel" id="rv-panel"></div></div></section>
 <script type="application/json" id="review-data">{cfg}</script>

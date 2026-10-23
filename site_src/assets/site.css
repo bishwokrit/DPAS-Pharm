@@ -1165,3 +1165,7 @@ figure[data-viz-on] { padding: 22px 24px 18px; border-radius: 22px; }
 .now-fig > a:hover { color: #0F7173; text-decoration: none; }
 @media (max-width: 1080px) { .now-grid { grid-template-columns: 1fr 1fr; } .now-grid > .now-hy { grid-column: 1 / -1; } }
 @media (max-width: 600px) { .now-grid { grid-template-columns: 1fr; } }
+.pr-sub { margin: -6px 0 22px; color: var(--text-2); font-size: 16px; } .pr-sub strong { color: var(--text); }
+#practice .bento[hidden] { display: none; }
+.rv-scope { margin-top: 18px; } .rv-scope button { font-size: 14px; padding: 8px 16px; border-radius: 8px; }
+.rv-scope-sub { margin: 10px 0 0; font-size: 14px; color: var(--text-2); }
