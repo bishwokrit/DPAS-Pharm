@@ -56,7 +56,7 @@
       <div class="gs-chart">
         <div class="gs-sum"><div><div class="gs-big" id="pd-big">—</div><div class="gs-lbl">Projected grade</div></div><div class="gs-pct" id="pd-pct">—</div></div>
         <div class="gs-plot"><div class="gs-grid"><div class="gs-line base" style="bottom:0"><span>50</span></div>${ticks.map(([L, min]) => `<div class="gs-line" style="bottom:${(min / 10 - 50) * 2}%"><span>${L} ${min / 10}</span></div>`).join("")}</div>
-          ${cats.map((it) => `<div class="gs-col" style="--c:var(--c-${it.key})"><div class="gs-bar" data-bar="${it.key}"><span class="gs-val" data-avg="${it.key}"></span></div></div>`).join("")}</div>
+          ${cats.map((it) => `<div class="gs-col" style="--c:var(--c-${it.key})"><span class="gs-val" data-avg="${it.key}"></span><div class="gs-bar" data-bar="${it.key}"></div></div>`).join("")}</div>
         <div class="gs-axis"><span>100</span><span>50</span></div><div class="gs-x">${cats.map((it) => `<span>${SHORT[it.key] || it.label}</span>`).join("")}</div>
         <div class="gs-foot"><span>Ungraded work at</span><div class="seg" id="assume">${ASSUME.map((v) => `<button data-v="${v}">${v}%</button>`).join("")}</div><button class="pc-clear" data-clear>Clear</button></div>
       </div></div>`;
@@ -110,7 +110,7 @@
         const bar = root.querySelector(`[data-bar="${it.key}"]`);
         if (bar) {
           bar.style.height = `${Math.max(2, ((n ? sum / n : assume) - 50) * 2)}%`;  // axis runs 50–100% bar.classList.toggle("est", !n);
-          bar.querySelector(".gs-val").textContent = n ? `${Math.round(sum / n)}` : "";
+          bar.parentElement.querySelector(".gs-val").textContent = n ? `${Math.round(sum / n)}` : "—";
         }
       }
       const bonus = Math.min(D.bonus.max, (S.cp || []).filter(Boolean).length * D.bonus.points_each);

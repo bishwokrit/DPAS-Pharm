@@ -60,10 +60,11 @@
       if (current && y !== undefined) scrollBy(0, current.getBoundingClientRect().top - y);  // keep your place when chrome hides
     };
     set(store.get("focus:v2", false));
-    const toggle = (on) => { store.set("focus:v2", on); set(on); };
+    // cross-fade the whole page when focus turns on/off (where the browser supports it)
+    const toggle = (on) => { store.set("focus:v2", on); document.startViewTransition && !matchMedia("(prefers-reduced-motion: reduce)").matches ? document.startViewTransition(() => set(on)) : set(on); };
     btn.addEventListener("click", () => toggle(!document.body.classList.contains("focus")));
     bar.querySelector(".fbar-x").addEventListener("click", () => toggle(false));
-    addEventListener("keydown", (e) => { if (e.key === "Escape" && document.body.classList.contains("focus") && !document.querySelector(".qm, .sr-wrap:not([hidden]), .sk-panel.open")) toggle(false); });
+    addEventListener("keydown", (e) => { if (e.key === "Escape" && document.body.classList.contains("focus") && !document.querySelector(".qm, .sr-box.open, .sk-panel.open")) toggle(false); });
     addEventListener("scroll", () => { if (document.body.classList.contains("focus")) prog(); }, { passive: true });
     document.querySelector(".subnav-tools")?.append(btn);
   }
@@ -342,7 +343,7 @@
         else if (e.key === "Escape") close();
       });
     }
-    box.classList.add("open");
+    requestAnimationFrame(() => box.classList.add("open"));
     document.documentElement.style.overflow = "hidden";
     input.focus(); input.select();  // focus first so fast typing isn't lost while the index loads
     await load();
