@@ -34,6 +34,20 @@ Lecture folder names (L01, L02, …) come from the syllabus. Run `./run.sh statu
 
 Your files appear in `outputs/L05/`. Open `L05_audit.md` first — it should say **PASS**.
 
+### Full checklist for each new lecture (one AI session is usually enough)
+
+Send everything in **one message** to save credits, e.g. *"New lecture L05 is uploaded: author it, add its textbook pages,
+add its drugs, add 25 practice questions to the unit's exam, rebuild, and check."*
+
+- [ ] Slides in `inputs/lectures/L05/` (the build fingerprints them; originals are never edited)
+- [ ] Study guide authored from the slides + assigned textbook pages (`work/L05/`)
+- [ ] Textbook additions cited by page (`work/L05/textbook_L05.py`)
+- [ ] New drugs added to `work/drugs.py` (one line each, every fact cited)
+- [ ] Practice questions added to the unit bank (`work/exams/U?/`), then `./run.sh exam U?`
+- [ ] `./run.sh L05` → audit says **PASS**
+- [ ] `./run.sh site` then **`./run.sh check`** → "All checks passed"
+- [ ] Spot-check 5 facts against the slides yourself before the exam
+
 ## Commands
 
 | Command | What it does |
@@ -44,6 +58,7 @@ Your files appear in `outputs/L05/`. Open `L05_audit.md` first — it should say
 | `./run.sh setup` | Makes a folder for each lecture from the syllabus |
 | `./run.sh site` | Rebuilds the website (study guides + PDFs + home page) |
 | `./run.sh exam U1` | Rebuilds the Unit 1 practice exam app |
+| `./run.sh check` | Tests the built site before publishing: page errors, broken links, answer balance, textbook numbers vs. cited pages |
 
 ## The website
 

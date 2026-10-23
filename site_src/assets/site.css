@@ -1057,3 +1057,12 @@ select { font: inherit; font-size: 15px; padding: 9px 12px; border-radius: 12px;
 .kbd { font-size: 13px; color: var(--text-2); }
 kbd { font: 12px var(--font); background: var(--surface-2); border: 1px solid var(--hair); border-radius: 6px; padding: 1px 6px; }
 #log li { margin: 6px 0; }
+/* ---------- lecture pages: quieter callouts, matching the newer pages (neutral card, thin colored edge, colored label) ---------- */
+.callout { --cc: var(--accent); background: var(--surface) !important; box-shadow: var(--shadow); border: 0 !important; border-left: 3px solid var(--cc) !important; border-radius: 14px; }
+.callout .label { color: var(--cc) !important; }
+.callout.hy { --cc: var(--warn); } .callout.trap { --cc: var(--bad); } .callout.clin { --cc: var(--good); } .callout.why { --cc: var(--accent); } .callout.mnem { --cc: var(--violet); }
+.callout.disc { --cc: var(--warn); background: color-mix(in srgb, var(--warn) 5%, var(--surface)) !important; }
+.part-sec .card { border-top-width: 2px; }
+/* light mode: the bonus gold and amber tags need more depth on white */
+@media (prefers-color-scheme: light) { :root:not([data-theme="dark"]) { --c-bonus: #c98a00; } }
+:root[data-theme="light"] { --c-bonus: #c98a00; }
