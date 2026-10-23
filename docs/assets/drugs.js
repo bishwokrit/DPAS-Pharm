@@ -113,6 +113,13 @@
       <p class="small muted" style="margin-top:16px">Mechanism, adverse effects, and monitoring fill in as drug-class lectures cover them. Anything else: <strong>not covered in materials</strong>.</p>`, from);
     const s = $("dx-sheet-in");
     window.dpasMolData?.("../").then((M) => { if (M[d.name] && s.querySelector("h2")?.textContent === d.name && !molKill) molKill = window.dpasMol3d($("dx-sheet"), $("dx-sheet"), M[d.name], { size: innerWidth < 700 ? 180 : 260 }); });
+    // Sketch mode only: your one-line memory hook for this drug, editable right here
+    const sk = (() => { try { return JSON.parse(localStorage.getItem("sketch")) === true; } catch { return false; } })();
+    if (sk) {
+      const H = (() => { try { return JSON.parse(localStorage.getItem("sk:hooks")) || {}; } catch { return {}; } })();
+      s.querySelector(".dx-facts").insertAdjacentHTML("afterend", `<div class="dx-hook"><span class="dx-hook-k">Your hook</span><input maxlength="160" placeholder="One line, your own words…" value="${esc(H[d.name] || "")}" aria-label="Your memory hook for ${esc(d.name)}"></div>`);
+      s.querySelector(".dx-hook input").addEventListener("input", (e) => { const h = (() => { try { return JSON.parse(localStorage.getItem("sk:hooks")) || {}; } catch { return {}; } })(); e.target.value.trim() ? (h[d.name] = e.target.value.trim()) : delete h[d.name]; try { localStorage.setItem("sk:hooks", JSON.stringify(h)); } catch { /* */ } });
+    }
     s.querySelector("[data-quiz]").addEventListener("click", () => quizFor(d));
     s.querySelector("[data-vs]").addEventListener("change", (e) => { if (e.target.value) { picked = [d.name, e.target.value]; paintTray(); draw(); compare(); } });
   }
