@@ -975,7 +975,9 @@ body.focus .focus-btn { background: var(--accent-soft) !important; color: var(--
 .set-data { grid-template-columns: 1fr 1fr 1fr; gap: 6px; } .set-data button { border: 0; background: var(--surface-2); color: var(--text); border-radius: 9px; padding: 7px 4px; font: 600 12px var(--font); cursor: pointer; } .set-data [data-reset] { color: var(--bad); }
 .set-foot { font-size: 11.5px; color: var(--text-2); padding: 8px 4px 0; border-top: 1px solid var(--hair); } .set-foot kbd { font: 10.5px var(--font); border: 1px solid var(--hair); border-radius: 4px; padding: 0 4px; }
 /* preferences */
-html[data-ptext="s"] body { zoom: .93; } html[data-ptext="l"] body { zoom: 1.08; } html[data-ptext="xl"] body { zoom: 1.16; }
+/* text size scales the page content only, so fixed panels (Sidekick, settings, sheets, focus bar) keep their positions */
+html[data-ptext="s"] :is(.hero, .section, .first-screen) { zoom: .93; } html[data-ptext="l"] :is(.hero, .section, .first-screen) { zoom: 1.08; } html[data-ptext="xl"] :is(.hero, .section, .first-screen) { zoom: 1.16; }
+html[data-ptext="l"] .sk-body { zoom: 1.06; } html[data-ptext="xl"] .sk-body { zoom: 1.12; }
 html[data-pmotion="off"] *, html[data-pmotion="off"] *::before, html[data-pmotion="off"] *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 html[data-pmotion="off"] .appear { opacity: 1 !important; transform: none !important; }
 html[data-pmotion="off"] { view-transition-name: none; } html[data-pmotion="off"] ::view-transition-group(*) { animation: none !important; }
@@ -1004,3 +1006,5 @@ html[data-paccent="graphite"] { --accent: #8e8e93 !important; --accent-soft: col
 .sk-sugg button { border: 0; background: var(--surface-2); color: var(--text); font: 13px var(--font); padding: 7px 11px; border-radius: 980px; cursor: pointer; transition: background .2s; } .sk-sugg button:hover { background: var(--accent-soft); color: var(--accent); }
 .sk-page { display: block; padding: 10px 12px; margin: 6px 0; border-radius: 12px; background: var(--accent-soft); color: var(--accent); font-weight: 600; font-size: 14px; text-decoration: none; }
 .sk-cal { margin: 4px 0 8px; padding-left: 18px; font-size: 13.5px; } .sk-msg.ai a { font-weight: 600; }
+.sk-fab.busy span { display: inline-block; animation: skspin 1s linear infinite; } @keyframes skspin { to { transform: rotate(360deg); } }
+body:has(.qm) .sk-fab, body:has(.qm) .sk-panel { display: none !important; }

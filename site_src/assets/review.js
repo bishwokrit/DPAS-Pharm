@@ -16,14 +16,14 @@
 
   async function load() {
     await Promise.all(CFG.lectures.map(async (l) => {
-      const kb = await fetch(`../${l.id}/kb.json`).then((r) => r.json()).catch(() => null);
+      const kb = await fetch(`../${l.id}/kb.json${document.documentElement.dataset.v ? "?v=" + document.documentElement.dataset.v : ""}`).then((r) => r.json()).catch(() => null);
       if (!kb) return;
       kbs[l.id] = kb;
       kb.quiz.forEach((q) => pool.push({ ...q, id: `${l.id}:${q.id}`, raw: q.id, from: { type: "lec", lid: l.id }, topic: q.topic, label: `${l.id} · ${q.topic}`,
         link: q.link ? { href: `../${l.id}/index.html${q.link.href}`, label: `Study this: ${l.id} · ${q.link.label.replace("Study this: ", "")}` } : null }));
     }));
     await Promise.all(CFG.exams.map(async (e) => {
-      const qs = await fetch(`../exams/${e.id}/quiz.json`).then((r) => r.json()).catch(() => null);
+      const qs = await fetch(`../exams/${e.id}/quiz.json${document.documentElement.dataset.v ? "?v=" + document.documentElement.dataset.v : ""}`).then((r) => r.json()).catch(() => null);
       if (!qs) return;
       exams[e.id] = e;
       qs.forEach((q) => pool.push({ ...q, raw: q.id, from: { type: "exam", slug: e.id }, label: `${e.title} · ${q.topic}`,

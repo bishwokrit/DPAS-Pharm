@@ -428,9 +428,9 @@ def home_page(syl, built, exams_built):
                 cards.append(f'<div class="card lec soon"><div class="small muted">Session {l["session"]} · {d}</div><h3 style="margin:2px 0">Session {l["session"]}</h3><div class="meta">Available after the lecture</div></div>')
         open_ = state == "now" or any(l["id"] in built for l in lecs)
         sessions = " · ".join(date.fromisoformat(l["date"]).strftime("%b %-d") for l in lecs)
-        rows.append(f'<details class="unit-row {state} appear" style="--d:{.05 * k:.2f}s"{" open" if open_ else ""}>'
+        rows.append(f'<details class="unit-row {state} appear" data-exam="{ex["date"] if ex else ""}" style="--d:{.05 * k:.2f}s"{" open" if state == "now" else ""}>'
                     f'<summary><span class="unit-num">{u}</span><span class="unit-name"><strong>{html.escape(name)}</strong><span class="small muted">Sessions {sessions}</span></span>'
-                    f'{f"<span class=unit-badge>{badge}</span>" if badge else ""}<span class="unit-exam small">{("Exam " + date.fromisoformat(ex["date"]).strftime("%a, %b %-d")) if ex else ""}</span><span class="unit-chev" aria-hidden="true"></span></summary>'
+                    f'<span class="unit-badge"{"" if badge else " hidden"}>{badge}</span><span class="unit-exam small">{("Exam " + date.fromisoformat(ex["date"]).strftime("%a, %b %-d")) if ex else ""}</span><span class="unit-chev" aria-hidden="true"></span></summary>'
                     f'<div class="grid unit-cards">{"".join(cards)}</div></details>')
     study = f'<section class="section" id="study"><div class="wrap"><p class="kicker appear">Study</p><h2 class="appear">Your course, one unit at a time.</h2><p class="appear"><a class="jump" href="drugs/index.html">Open the drug index →</a></p><div class="roadmap">{"".join(rows)}</div></div></section>'
     return page(SITE_NAME, hero + now_section(syl, built, sched) + study + practice)
@@ -634,6 +634,23 @@ def syllabus_page(syl, sched, built):
 
 
 # ---------------------------------------------------------------- site-wide search index
+def stamp_versions():
+    """Cache-busting: every page asks for assets/data with ?v=<content hash>, so a new build is fetched immediately
+    instead of browsers reusing yesterday's copy."""
+    import hashlib
+    h = hashlib.sha1()
+    for f in sorted([*(DOCS / "assets").rglob("*.*"), *DOCS.rglob("*.json")]):
+        h.update(f.read_bytes())
+    v = h.hexdigest()[:10]
+    for page_ in DOCS.rglob("*.html"):
+        t = page_.read_text()
+        t2 = re.sub(r'(assets/[\w\-/]+\.(?:css|js|mjs|svg))(\?v=\w+)?"', rf'\1?v={v}"', t)
+        t2 = re.sub(r'<html lang="en"( data-v="\w+")?', f'<html lang="en" data-v="{v}"', t2, count=1)
+        if t2 != t:
+            page_.write_text(t2)
+    return v
+
+
 def global_kb(syl, sched, built, exams):
     """Sidekick for every non-lecture page: all lectures merged, plus the site's pages and the course calendar,
     so students can ask it things instead of searching. Links are relative to the site root."""
@@ -823,7 +840,7 @@ def main(pdf=True):
     (DOCS / "review" / "index.html").write_text(review_page(syl, built, exams))
     (DOCS / "index.html").write_text(home_page(syl, built, exams))
     print(f"  site: home page ({len(built)} lectures, {len(exams)} practice exams) -> docs/")
-
+    stamp_versions()
 
 if __name__ == "__main__":
     import sys

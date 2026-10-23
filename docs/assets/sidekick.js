@@ -60,7 +60,7 @@ async function ensureAll() {
   if (GLOBAL) return index;
   if (indexAll) return indexAll;
   const others = await Promise.all((kb.lectures || []).filter((l) => l.id !== kb.lecture).map((l) =>
-    fetch(`${ROOT}${l.id}/kb.json`).then((r) => r.json()).then((k) => ({ k, l })).catch(() => null)));
+    fetch(`${ROOT}${l.id}/kb.json${document.documentElement.dataset.v ? "?v=" + document.documentElement.dataset.v : ""}`).then((r) => r.json()).then((k) => ({ k, l })).catch(() => null)));
   const chunks = kb.chunks.map((c) => ({ ...c, lid: kb.lecture }));
   others.filter(Boolean).forEach(({ k }) => k.chunks.forEach((c) => chunks.push({ ...c, lid: k.lecture, where: `${k.lecture} · ${c.where}` })));
   indexAll = makeIndex(chunks);
@@ -68,7 +68,7 @@ async function ensureAll() {
 }
 async function loadAllSources() {
   if (allSources) return allSources;
-  const parts = await Promise.all((kb.lectures || []).map((l) => fetch(`${ROOT}${l.id}/${l.source}`).then((r) => r.text()).then((t) => `=== ${l.id}: ${l.title} ===\n${t}`).catch(() => "")));
+  const parts = await Promise.all((kb.lectures || []).map((l) => fetch(`${ROOT}${l.id}/${l.source}${document.documentElement.dataset.v ? "?v=" + document.documentElement.dataset.v : ""}`).then((r) => r.text()).then((t) => `=== ${l.id}: ${l.title} ===\n${t}`).catch(() => "")));
   return (allSources = parts.filter(Boolean).join("\n\n"));
 }
 const hitLink = (h) => (h.lid && h.lid !== kb.lecture ? `${ROOT}${h.lid}/index.html#${h.anchor}` : `#${h.anchor}`);
@@ -82,11 +82,6 @@ function wireGo(root) {
 const TABS = [["ask", "Ask"], ["notes", "Notes"], ["cards", "Flashcards"], ["quiz", "Quiz"], ["pod", "Podcast"], ["listen", "Listen"], ["map", "Mind map"], ["brief", "Briefing"], ["faq", "FAQ"]]
   .filter(([id]) => !GLOBAL || ["ask", "pod", "cards", "quiz", "brief", "faq"].includes(id));
 function mount() {
-  const fab = document.createElement("button");
-  fab.className = "sk-fab noprint";
-  fab.innerHTML = '<span aria-hidden="true">✦</span> Sidekick';
-  fab.title = "Open Sidekick (press /)";
-  fab.addEventListener("click", open);
   panel = document.createElement("aside");
   panel.className = "sk-panel noprint";
   panel.setAttribute("aria-label", "Sidekick study assistant");
@@ -94,22 +89,10 @@ function mount() {
     <button class="sk-x" aria-label="Close">✕</button></div>
     <div class="sk-tabs" role="tablist">${TABS.map(([id, l]) => `<button role="tab" data-tab="${id}">${l}</button>`).join("")}</div>
     <div class="sk-body"></div>`;
-  document.body.append(fab, panel);
-  const HOME = GLOBAL && ROOT === "";
-  if (HOME) {  // on the home page the button waits until you scroll past the first screen
-    const upd = () => fab.classList.toggle("later", scrollY < innerHeight * 0.6 && !panel.classList.contains("open"));
-    addEventListener("scroll", upd, { passive: true }); upd();
-  }
+  document.body.append(panel);
   body = panel.querySelector(".sk-body");
   panel.querySelector(".sk-x").addEventListener("click", close);
   panel.querySelectorAll("[data-tab]").forEach((b) => b.addEventListener("click", () => show(b.dataset.tab)));
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "/" && !/input|textarea|select/i.test(document.activeElement.tagName)) { e.preventDefault(); open(); }
-    if (e.key === "Escape" && panel.classList.contains("open")) close();
-  });
-  const want = new URLSearchParams(location.search).get("sk");  // e.g. ?sk=listen from the home page
-  if (want && TABS.some(([id]) => id === want)) { tab = want; open(); }
-  else if (store.get("sk:open", false) && !HOME) open();
 }
 function open() { panel.classList.add("open"); document.body.classList.add("sk-on"); store.set("sk:open", true); show(tab); }
 function close() { panel.classList.remove("open"); document.body.classList.remove("sk-on"); store.set("sk:open", false); speechSynthesis?.cancel(); }
@@ -348,7 +331,7 @@ async function podSources(scopeAll) {
 async function podChoices(scopeAll) {
   scopeAll ||= GLOBAL;
   if (!podDrugs) podDrugs = await fetch(`${ROOT}drugs/names.json`).then((r) => r.json()).catch(() => []);
-  const lec = scopeAll ? await Promise.all((kb.lectures || []).map((l) => l.id === kb.lecture ? kb : fetch(`${ROOT}${l.id}/kb.json`).then((r) => r.json()).catch(() => null))) : [kb];
+  const lec = scopeAll ? await Promise.all((kb.lectures || []).map((l) => l.id === kb.lecture ? kb : fetch(`${ROOT}${l.id}/kb.json${document.documentElement.dataset.v ? "?v=" + document.documentElement.dataset.v : ""}`).then((r) => r.json()).catch(() => null))) : [kb];
   const parts = lec.filter(Boolean).flatMap((k) => k.brief.map((b) => `${k.lecture} · ${b.part.replace(/^Part \d+ · /, "")}`));
   const text = lec.filter(Boolean).map((k) => JSON.stringify(k.chunks)).join(" ").toLowerCase();
   const drugs = podDrugs.filter((d) => [d.name, ...d.aliases].some((n) => text.includes(n.toLowerCase()))).map((d) => d.name);
@@ -652,7 +635,7 @@ function selectionContext() {
   const blockText = clone.textContent.replace(/\s+/g, " ").trim();
   let guessed = false;
   if (!src) { const hit = search(text + " " + blockText, 1)[0]; if (hit) { src = hit.src; guessed = true; } }
-  return { text, blockText: blockText.slice(0, 700), src, guessed, anchor: section?.id || "", where: section?.querySelector("h2")?.textContent || kb.title, rect: sel.getRangeAt(0).getBoundingClientRect() };
+  return { text, blockText: blockText.slice(0, 700), src, guessed, anchor: section?.id || "", where: section?.querySelector("h2")?.textContent || kb?.title, rect: sel.getRangeAt(0).getBoundingClientRect() };
 }
 let bar, ctx;
 function hideBar() { bar?.classList.remove("show"); }
@@ -666,7 +649,7 @@ function showBar() {
     bar.innerHTML = [["explain", "✦", "Explain"], ["source", "📍", "Source"], ["quiz", "❓", "Quiz me"], ["compare", "⇄", "Compare"], ["card", "🃏", "Card"], ["save", "🖍", "Save"], ["copy", "⧉", "Copy"]]
       .map(([a, i, l]) => `<button data-act="${a}" title="${l}"><span>${i}</span>${l}</button>`).join("");
     bar.addEventListener("mousedown", (e) => e.preventDefault());  // keep the selection while clicking
-    bar.addEventListener("click", (e) => { const b = e.target.closest("[data-act]"); if (b && ctx) { act(b.dataset.act, ctx); hideBar(); } });
+    bar.addEventListener("click", (e) => { const b = e.target.closest("[data-act]"); if (b && ctx) { const c = ctx; ensureKb().then(() => act(b.dataset.act, c)); hideBar(); } });
     document.body.append(bar);
   }
   const r = ctx.rect, w = bar.offsetWidth || 420;
@@ -777,7 +760,7 @@ function newCard(c) {
 }
 
 // Notes: saved highlights, re-highlighted on the page, with your own comments
-const notesKey = () => `sk:notes:${kb.lecture}`;
+const notesKey = () => `sk:notes:${LID}`;
 function markOnPage(n) {
   const sec = document.getElementById(n.anchor) || document.body;
   const walk = document.createTreeWalker(sec, NodeFilter.SHOW_TEXT);
@@ -854,7 +837,7 @@ document.addEventListener("click", (e) => {
   const text = clone.textContent.replace(/\s+/g, " ").trim().slice(0, 300);
   tip?.classList.remove("show");
   if (!panel.classList.contains("open")) open();
-  show("source", { text, blockText: text, src: c.textContent, where: c.closest("section[id]")?.querySelector("h2")?.textContent || kb.title });
+  show("source", { text, blockText: text, src: c.textContent, where: c.closest("section[id]")?.querySelector("h2")?.textContent || kb?.title });
 });
 
 // Compare: highlight one thing, then another → side by side from every lecture (and a Claude table if AI is on)
@@ -885,4 +868,37 @@ async function compareView(pair) {
 }
 
 // ---------------------------------------------------------------- start
-fetch(GLOBAL ? `${ROOT}sidekick.json` : "kb.json").then((r) => r.json()).then((data) => { kb = data; buildIndex(); mount(); if (!GLOBAL) store.get(notesKey(), []).forEach(markOnPage); }).catch(() => { /* no Sidekick data on this page */ });
+// The button appears right away; the study data (100-200 KB) loads only the first time Sidekick is actually used.
+const LID = GLOBAL ? "ALL" : (location.pathname.match(/\/(L\d+)\//) || [])[1] || "";
+const HOME = GLOBAL && ROOT === "", VER = document.documentElement.dataset.v || "";
+let fab, loading;
+function ensureKb() {
+  if (kb) return Promise.resolve();
+  if (fab) fab.classList.add("busy");
+  return (loading ||= fetch(`${GLOBAL ? `${ROOT}sidekick.json` : "kb.json"}${VER ? `?v=${VER}` : ""}`).then((r) => r.json())
+    .then((data) => { kb = data; buildIndex(); mount(); }).finally(() => fab?.classList.remove("busy")));
+}
+async function start(t) {
+  try { await ensureKb(); } catch { return; }
+  if (t && TABS.some(([id]) => id === t)) tab = t;
+  open();
+}
+fab = document.createElement("button");
+fab.className = "sk-fab noprint";
+fab.innerHTML = '<span aria-hidden="true">✦</span> Sidekick';
+fab.title = "Open Sidekick (press /)";
+fab.addEventListener("click", () => (panel?.classList.contains("open") ? close() : start()));
+document.body.append(fab);
+if (HOME) {  // on the home page the button waits until you scroll past the first screen
+  const upd = () => fab.classList.toggle("later", scrollY < innerHeight * 0.6 && !panel?.classList.contains("open"));
+  addEventListener("scroll", upd, { passive: true }); upd();
+}
+document.addEventListener("keydown", (e) => {
+  if (document.querySelector(".qm")) return;  // never during a full-screen quiz or timed exam
+  if (e.key === "/" && !/input|textarea|select/i.test(document.activeElement.tagName)) { e.preventDefault(); start(); }
+  if (e.key === "Escape" && panel?.classList.contains("open")) close();
+});
+const want = new URLSearchParams(location.search).get("sk");  // e.g. ?sk=listen from the home page
+if (want) start(want);
+else if (store.get("sk:open", false) && !HOME) start();
+if (!GLOBAL && LID) store.get(notesKey(), []).forEach(markOnPage);  // your saved highlights, without loading the study data

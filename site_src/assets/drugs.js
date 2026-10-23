@@ -113,9 +113,9 @@
   async function loadBank() {
     if (bank) return bank;
     bank = [];
-    await Promise.all(CFG.lectures.map((lid) => fetch(`../${lid}/kb.json`).then((r) => r.json()).then((kb) =>
+    await Promise.all(CFG.lectures.map((lid) => fetch(`../${lid}/kb.json${document.documentElement.dataset.v ? "?v=" + document.documentElement.dataset.v : ""}`).then((r) => r.json()).then((kb) =>
       kb.quiz.forEach((x) => bank.push({ ...x, id: `${lid}:${x.id}`, link: x.link ? { ...x.link, href: `../${lid}/index.html${x.link.href}` } : null }))).catch(() => {})));
-    await Promise.all(CFG.exams.map((e) => fetch(`../exams/${e}/quiz.json`).then((r) => r.json()).then((qs) =>
+    await Promise.all(CFG.exams.map((e) => fetch(`../exams/${e}/quiz.json${document.documentElement.dataset.v ? "?v=" + document.documentElement.dataset.v : ""}`).then((r) => r.json()).then((qs) =>
       qs.forEach((x) => bank.push({ ...x, link: x.link ? { ...x.link, href: x.link.href.replace(/^\.\.\/\.\.\//, "../") } : null }))).catch(() => {})));
     return bank;
   }

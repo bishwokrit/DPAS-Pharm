@@ -6,6 +6,19 @@
     set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch { /* private mode: just don't save */ } },
   };
 
+  // ---- home roadmap: which unit is current is decided today, in the browser (not when the site was built)
+  {
+    const d = new Date(), today = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+    const rows = [...document.querySelectorAll(".unit-row[data-exam]")];
+    const cur = rows.find((r) => (r.dataset.exam || "9999") >= today);
+    rows.forEach((r) => {
+      const st = r.dataset.exam && r.dataset.exam < today ? "done" : r === cur ? "now" : "later";
+      r.classList.remove("done", "now", "later"); r.classList.add(st);
+      r.open = st === "now";
+      const b = r.querySelector(".unit-badge"); if (b) { b.textContent = { done: "Done", now: "Current unit", later: "" }[st]; b.hidden = st === "later"; }
+    });
+  }
+
   // ---- settings (gear in the top bar): theme, accent, text size, motion, and hiding clutter. Saved in this browser.
   const root = document.documentElement;
   const applyTheme = (t) => { if (t === "auto") root.removeAttribute("data-theme"); else root.setAttribute("data-theme", t); };
@@ -332,7 +345,7 @@
   const GROUP_RANK = (g) => (g === "Pages" ? 0 : /Objectives|Summary/.test(g) ? 1 : /Part|Sources|Why|Mnemonic/.test(g) ? 2 : /Cram/.test(g) ? 3 : /Self-test|Exam/.test(g) ? 4 : 5);
 
   async function load() {
-    if (!index) index = await fetch(root + "search.json").then((r) => r.json()).catch(() => []);
+    if (!index) index = await fetch(`${root}search.json${document.documentElement.dataset.v ? "?v=" + document.documentElement.dataset.v : ""}`).then((r) => r.json()).catch(() => []);
     index.forEach((e) => (e._n ||= norm(e.t + " " + e.g + " " + (e.s || ""))));
   }
   function run(q) {
