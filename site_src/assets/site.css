@@ -989,3 +989,11 @@ html[data-paccent="teal"] { --accent: #14a3b8 !important; --accent-soft: color-m
 html[data-paccent="graphite"] { --accent: #8e8e93 !important; --accent-soft: color-mix(in srgb, #8e8e93 18%, var(--surface)) !important; }
 /* podcast tweaks */
 .pod-ctrl select { width: auto; flex: none; } .pod-count[hidden] { display: none; }
+/* top bar: three balanced columns so the menu sits at the true center; search reads as a centered pill */
+.nav-in { display: grid; grid-template-columns: 1fr auto 1fr; }
+.nav-in .brand { justify-self: start; } .nav-in .nav-tools { justify-self: end; } .nav-main { flex: none; }
+.search-btn { min-width: 150px; justify-content: center; gap: 8px; padding: 0 16px; }
+.search-btn svg { flex: none; }
+@media (max-width: 960px) { .search-btn { min-width: 0; padding: 0; } }
+@media (max-width: 760px) { .nav-in { display: flex; } }
+@media (max-width: 760px) { .nav-main { flex: 1; min-width: 0; overflow-x: auto; scrollbar-width: none; } .nav-main::-webkit-scrollbar { display: none; } .nav-tools { flex: none; gap: 4px; } }
