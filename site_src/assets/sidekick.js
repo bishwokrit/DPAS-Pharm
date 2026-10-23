@@ -271,7 +271,7 @@ function aiSettings() {
       <li>Don't use this on a shared or public computer. Click "Forget key" when done.</li></ul></div>
     <label class="sk-field">API key<input type="password" name="key" placeholder="sk-ant-…" value="${esc(key)}" autocomplete="off"></label>
     <label class="sk-check"><input type="checkbox" name="sess" ${(() => { try { return sessionStorage.getItem("sk:key") ? "checked" : ""; } catch { return ""; } })()}> Forget my key when I close this tab</label>
-    <label class="sk-field">Model<select name="model">${MODELS.map(([id, l]) => `<option value="${id}" ${id === model ? "selected" : ""}>${l}</option>`).join("")}</select></label>
+    <label class="sk-field">Model<select name="model" aria-label="Model">${MODELS.map(([id, l]) => `<option value="${id}" ${id === model ? "selected" : ""}>${l}</option>`).join("")}</select></label>
     <div class="btns"><button class="btn" data-save>Save</button>${key ? '<button class="btn ghost" data-forget>Forget key</button>' : ""}<button class="btn ghost" data-back>Back</button></div>`;
   body.querySelector("[data-save]").addEventListener("click", () => {
     const k = body.querySelector("[name=key]").value.trim();
@@ -302,8 +302,8 @@ function listenTab() {
   if (!window.speechSynthesis) { body.innerHTML = '<p class="muted">Your browser does not support read-aloud. The script is below.</p>' + lines.map((l) => `<p>${esc(l)}</p>`).join(""); return; }
   body.innerHTML = `<p class="small muted">A spoken walkthrough of the summary and every part's high-yield points (about ${Math.round(lines.join(" ").split(" ").length / 150)} min). Uses your device's voice; nothing leaves your browser.</p>
     <div class="sk-row"><button class="btn" data-play>▶ Play</button><button class="btn ghost" data-stop>■ Stop</button>
-    <select data-rate>${[0.9, 1, 1.15, 1.3, 1.5].map((r) => `<option value="${r}" ${r === store.get("sk:rate", 1.15) ? "selected" : ""}>${r}×</option>`).join("")}</select></div>
-    ${voices.length ? `<select data-voice class="sk-voice">${voices.map((v, i) => `<option value="${i}" ${v.name === store.get("sk:voice", "") ? "selected" : ""}>${esc(v.name)}</option>`).join("")}</select>` : ""}
+    <select data-rate aria-label="Playback speed">${[0.9, 1, 1.15, 1.3, 1.5].map((r) => `<option value="${r}" ${r === store.get("sk:rate", 1.15) ? "selected" : ""}>${r}×</option>`).join("")}</select></div>
+    ${voices.length ? `<select data-voice class="sk-voice" aria-label="Voice">${voices.map((v, i) => `<option value="${i}" ${v.name === store.get("sk:voice", "") ? "selected" : ""}>${esc(v.name)}</option>`).join("")}</select>` : ""}
     <div class="sk-script">${lines.map((l, i) => `<p data-line="${i}">${esc(l)}</p>`).join("")}</div>`;
   let i = 0, playing = false;
   const playBtn = body.querySelector("[data-play]");
@@ -510,7 +510,7 @@ function podPlayer(ep) {
     <div><div class="kicker">Episode</div><h3 class="pod-title">${esc(ep.title)}</h3><div class="small muted">${HOSTS.A} & ${HOSTS.B} · ~${ep.minutes} min · from your course materials</div></div></div>
     <div class="pod-prog"><i id="pod-bar"></i></div>
     <div class="pod-ctrl"><button class="sk-x" data-prev aria-label="Back">⏮</button><button class="pod-play" data-play aria-label="Play">▶</button><button class="sk-x" data-next aria-label="Skip">⏭</button>
-      <select data-rate>${[0.9, 1, 1.1, 1.25, 1.5].map((r) => `<option value="${r}" ${r === store.get("sk:podrate", 1.1) ? "selected" : ""}>${r}×</option>`).join("")}</select></div>
+      <select data-rate aria-label="Playback speed">${[0.9, 1, 1.1, 1.25, 1.5].map((r) => `<option value="${r}" ${r === store.get("sk:podrate", 1.1) ? "selected" : ""}>${r}×</option>`).join("")}</select></div>
     <div class="pod-count" id="pod-count" hidden></div>
     <div class="sk-script pod-script">${lines.map((l, i) => `<p data-line="${i}" class="k-${esc(l.kind)}"><b class="who-${l.who === "B" ? "b" : "a"}">${l.who === "B" ? HOSTS.B : HOSTS.A}</b>${l.kind === "vignette" ? '<span class="pod-tag">Case</span>' : l.kind === "recall" ? '<span class="pod-tag">Recall</span>' : ""} ${esc(l.say)}${l.src ? ` <span class="${l.unverified ? "cite-bad" : "cite"}"${l.unverified ? ' title="Not found in the course materials — double-check"' : ""}>${esc(l.src)}${l.unverified ? " ⚠" : ""}</span>` : ""}</p>`).join("")}</div>
     ${lines.some((l) => l.unverified) ? `<p class="cite-warn">⚠ ${lines.filter((l) => l.unverified).length} line(s) cite something not found in the course materials — treat those points as unverified.</p>` : ""}

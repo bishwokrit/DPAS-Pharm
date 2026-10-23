@@ -2,6 +2,8 @@
   1. every page loads with no JavaScript errors, missing files, or broken links/anchors (headless browser)
   2. practice-exam answer letters are balanced (no guessable pattern)
   3. every number in a textbook-cited fact appears on the page it cites (needs the private textbook PDF)
+  4. Sidekick's AI chat and podcast work end to end against a fake API (no key, no cost)
+  5. accessibility: automated WCAG 2 A/AA audit of every page (light + dark) and the panels people open
 """
 import collections, glob, json, re, subprocess, sys
 from pathlib import Path
@@ -58,6 +60,8 @@ def main():
     ok = answers()
     ok &= textbook()
     ok &= subprocess.run(["node", str(ROOT / "tests" / "pages.mjs")]).returncode == 0
+    ok &= subprocess.run(["node", str(ROOT / "tests" / "ai.mjs")]).returncode == 0
+    ok &= subprocess.run(["node", str(ROOT / "tests" / "a11y.mjs")]).returncode == 0
     print("All checks passed." if ok else "Some checks FAILED — fix before publishing.")
     sys.exit(0 if ok else 1)
 
