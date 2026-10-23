@@ -1008,3 +1008,6 @@ html[data-paccent="graphite"] { --accent: #8e8e93 !important; --accent-soft: col
 .sk-cal { margin: 4px 0 8px; padding-left: 18px; font-size: 13.5px; } .sk-msg.ai a { font-weight: 600; }
 .sk-fab.busy span { display: inline-block; animation: skspin 1s linear infinite; } @keyframes skspin { to { transform: rotate(360deg); } }
 body:has(.qm) .sk-fab, body:has(.qm) .sk-panel { display: none !important; }
+.cite-bad { font-size: .78em; color: var(--warn); border-bottom: 1px dashed var(--warn); white-space: nowrap; cursor: help; }
+.cite-warn { margin-top: 8px; padding: 8px 10px; border-radius: 10px; font-size: 12.5px; background: var(--warn-soft); color: var(--warn); }
+.sk-check { display: flex; gap: 8px; align-items: center; font-size: 13.5px; margin: 8px 0; } .sk-check input { accent-color: var(--accent); }

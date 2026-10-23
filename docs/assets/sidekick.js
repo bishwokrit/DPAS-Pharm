@@ -13,8 +13,28 @@ const store = {
   set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch { /* private mode */ } },
   del(k) { try { localStorage.removeItem(k); } catch { /* ignore */ } },
 };
+// The student's own API key: kept in this browser, or only for this tab if they chose "forget when I close the tab".
+const getKey = () => { try { return sessionStorage.getItem("sk:key") || JSON.parse(localStorage.getItem("sk:key") || '""'); } catch { return ""; } };
+const setKey = (k, sessionOnly) => {
+  try { localStorage.removeItem("sk:key"); sessionStorage.removeItem("sk:key"); if (k) sessionOnly ? sessionStorage.setItem("sk:key", k) : localStorage.setItem("sk:key", JSON.stringify(k)); } catch { /* blocked */ }
+};
 const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 const md = (s) => esc(s).replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+// Citation check: a citation the AI writes must actually appear in the course sources it was given; otherwise it's flagged.
+const CITE_RE = /\b(?:(L\d{2})\s*·?\s*)?(S\d{1,3}(?:\s*\(?notes\)?)?|p\.\s?\d{1,4}|SG\s?U\d+-R\d+)/g;
+function checkCites(text, source) {
+  const norm = (c) => c.replace(/\s+/g, " ").replace(/\(?notes\)?/, "").replace("p.", "p. ").replace(/p\.\s+/, "p. ").trim();
+  const bySection = {};
+  source.split(/^=== (L\d{2})[^\n]*===$/m).forEach((part, i, arr) => { if (i % 2 === 1) bySection[part] = arr[i + 1] || ""; });
+  const bad = new Set();
+  for (const m of text.matchAll(CITE_RE)) {
+    const c = norm(m[2]), hay = (m[1] && bySection[m[1]]) || source;
+    const re = new RegExp(`\\b${c.replace(/[.*+?^${}()|[\]\\]/g, "\\$&").replace(" ", "\\s?")}\\b`);
+    if (!re.test(hay)) bad.add(m[0]);
+  }
+  return [...bad];
+}
+const flagCites = (h, bad) => bad.reduce((acc, b) => acc.split(esc(b)).join(`<span class="cite-bad" title="Not found in the course materials — double-check this">${esc(b)} ⚠</span>`), h);
 // markdown links to pages on this site only (paths like syllabus/index.html#calc); anything else stays plain text
 const links = (h) => h.replace(/\[([^\]]{1,80})\]\(((?:L\d+|syllabus|drugs|review|exams)[\w\-./#]*|index\.html[\w#\-]*)\)/g, (m, t, u) => `<a href="${(document.documentElement.dataset.root || "") + u}">${t} →</a>`);
 const plain = (s) => String(s ?? "").replace(/\*\*/g, "");
@@ -108,7 +128,7 @@ function show(id, arg) {
 const chat = { history: [], busy: false };
 let scope = GLOBAL ? "all" : store.get("sk:scope", "this");
 function askTab(prefill) {
-  const key = store.get("sk:key", "");
+  const key = getKey();
   body.innerHTML = `<form class="sk-ask"><input name="q" placeholder="${GLOBAL ? "Ask anything: a drug, a topic, a due date, where something is…" : "Ask about this lecture…"}" autocomplete="off" value="${esc(prefill || "")}"><button class="btn">Ask</button></form>
     <div class="sk-ai-line small">${key ? `AI chat <strong>on</strong> · ${esc(MODELS.find((m) => m[0] === store.get("sk:model", MODELS[0][0]))?.[1].split(" —")[0])} · <a href="#" data-ai>settings</a>${chat.history.length ? ' · <a href="#" data-clear>new chat</a>' : ""}`
       : `Searching your study materials. <a href="#" data-ai>Turn on AI chat</a> (optional, uses your own Claude API key).`}</div>
@@ -129,7 +149,7 @@ function renderThread() {
   const t = body.querySelector(".sk-thread");
   if (!t) return;
   t.innerHTML = chat.history.map((m) => m.role === "user" ? `<div class="sk-msg me">${esc(m.label || m.content)}</div>`
-    : `<div class="sk-msg ai">${links(md(m.content)).replace(/\n/g, "<br>")}</div>`).join("") +
+    : `<div class="sk-msg ai">${flagCites(links(md(m.content)), m.bad || []).replace(/\n/g, "<br>")}${m.bad?.length ? `<div class="cite-warn">⚠ ${m.bad.length} citation${m.bad.length > 1 ? "s" : ""} couldn't be matched to the course materials. Treat ${m.bad.length > 1 ? "those points" : "that point"} as unverified and check the slide or page.</div>` : ""}</div>`).join("") +
     (chat.history.length && !chat.busy ? `<div class="sk-follow">${FOLLOW.map(([l]) => `<button data-f="${l}">${l}</button>`).join("")}</div>` : "");
   t.querySelectorAll("[data-f]").forEach((b) => b.addEventListener("click", () => aiAnswer(FOLLOW.find(([l]) => l === b.dataset.f)[1], b.dataset.f)));
 }
@@ -151,7 +171,7 @@ async function ask(q) {
      <a href="${esc(hitLink(h))}" data-go="${esc(h.anchor)}" class="small">${h.lid !== kb.lecture ? `Open in ${esc(h.lid)} →` : "Go to section →"}</a></div>`).join("")
     : `<p class="muted">Nothing matched. Try different words (e.g., a drug name or term) — or it may be <strong>not covered in materials</strong>.</p>`);
   wireGo(body);
-  if (store.get("sk:key", "")) aiAnswer(q);
+  if (getKey()) aiAnswer(q);
 }
 async function loadSource() {
   if (!sourceText && kb.source) sourceText = await fetch(kb.source).then((r) => r.text()).catch(() => "");
@@ -182,7 +202,7 @@ async function aiAnswer(q, label) {
   try {
     Anthropic ||= (await import(SDK_URL)).default;
     // Only ever the student's own key from this browser, sent straight to Anthropic — no proxy, no shared key.
-    const key = store.get("sk:key", "");
+    const key = getKey();
     if (!/^sk-ant-/.test(key)) throw new Error("No personal API key saved");
     const client = new Anthropic({ apiKey: key, authToken: null, baseURL: "https://api.anthropic.com", dangerouslyAllowBrowser: true });
     const source = scope === "all" ? await loadAllSources() : await loadSource();
@@ -203,7 +223,7 @@ async function aiAnswer(q, label) {
     const msg = await stream.finalMessage();
     if (msg.stop_reason === "refusal") text = text || "Claude declined to answer this one. Try rephrasing the question.";
     if (msg.stop_reason === "max_tokens") text += "\n\n(Answer cut off — ask me to continue.)";
-    chat.history.push({ role: "assistant", content: text });
+    chat.history.push({ role: "assistant", content: text, bad: checkCites(text, source) });
     chat.busy = false;
     renderThread();
   } catch (err) {
@@ -222,7 +242,7 @@ async function aiAnswer(q, label) {
   }
 }
 function aiSettings() {
-  const key = store.get("sk:key", ""), model = store.get("sk:model", MODELS[0][0]);
+  const key = getKey(), model = store.get("sk:model", MODELS[0][0]);
   body.innerHTML = `<h3>AI chat (optional)</h3>
     <p class="small">Chat with Claude about <strong>this lecture only</strong>. It answers from the same cited source this page is built from, and says "Not covered in materials" otherwise.</p>
     <div class="callout why small"><div class="label">How it works</div><ul>
@@ -231,16 +251,17 @@ function aiSettings() {
       <li>API keys are separate from a Claude.ai subscription. Tip: set a monthly spend limit in the Anthropic Console.</li>
       <li>Don't use this on a shared or public computer. Click "Forget key" when done.</li></ul></div>
     <label class="sk-field">API key<input type="password" name="key" placeholder="sk-ant-…" value="${esc(key)}" autocomplete="off"></label>
+    <label class="sk-check"><input type="checkbox" name="sess" ${(() => { try { return sessionStorage.getItem("sk:key") ? "checked" : ""; } catch { return ""; } })()}> Forget my key when I close this tab</label>
     <label class="sk-field">Model<select name="model">${MODELS.map(([id, l]) => `<option value="${id}" ${id === model ? "selected" : ""}>${l}</option>`).join("")}</select></label>
     <div class="btns"><button class="btn" data-save>Save</button>${key ? '<button class="btn ghost" data-forget>Forget key</button>' : ""}<button class="btn ghost" data-back>Back</button></div>`;
   body.querySelector("[data-save]").addEventListener("click", () => {
     const k = body.querySelector("[name=key]").value.trim();
     if (k && !/^sk-ant-/.test(k)) { alert("That doesn't look like an Anthropic API key (it should start with sk-ant-)."); return; }
-    if (k) store.set("sk:key", k); else store.del("sk:key");
+    setKey(k, body.querySelector("[name=sess]").checked);
     store.set("sk:model", body.querySelector("[name=model]").value);
     askTab();
   });
-  body.querySelector("[data-forget]")?.addEventListener("click", () => { store.del("sk:key"); chat.history = []; askTab(); });
+  body.querySelector("[data-forget]")?.addEventListener("click", () => { setKey(""); chat.history = []; askTab(); });
   body.querySelector("[data-back]").addEventListener("click", () => askTab());
 }
 
@@ -303,16 +324,22 @@ Rules:
 const podState = { step: "setup", sel: null, qs: null, answers: {}, outline: null, ep: null };
 let podDrugs = null, podParts = null;
 
-async function claudeJSON(system, user, maxTokens, onProgress) {
+const S_ = (props, req = Object.keys(props)) => ({ type: "object", properties: props, required: req, additionalProperties: false });
+const POD_SCHEMA = {
+  coach: S_({ note: { type: "string" }, questions: { type: "array", items: S_({ q: { type: "string" }, options: { type: "array", items: { type: "string" } } }) } }),
+  outline: S_({ title: { type: "string" }, segments: { type: "array", items: S_({ title: { type: "string" }, points: { type: "array", items: { type: "string" } }, recall: { type: "integer" } }) } }),
+  episode: S_({ title: { type: "string" }, script: { type: "array", items: S_({ who: { type: "string", enum: ["A", "B"] }, kind: { type: "string", enum: ["talk", "recall", "answer", "vignette"] }, say: { type: "string" }, src: { type: "string" }, pause: { type: "integer" } }) } }),
+};
+async function claudeJSON(system, user, maxTokens, onProgress, schema) {
   Anthropic ||= (await import(SDK_URL)).default;
-  const key = store.get("sk:key", "");
+  const key = getKey();
   if (!/^sk-ant-/.test(key)) throw new Error("No personal API key saved");
   const client = new Anthropic({ apiKey: key, authToken: null, baseURL: "https://api.anthropic.com", dangerouslyAllowBrowser: true });
   const model = store.get("sk:model", MODELS[0][0]);
   const stream = client.beta.messages.stream({
     model, max_tokens: maxTokens,
     ...(model === "claude-haiku-5-5" ? {} : { betas: ["server-side-fallback-2026-07-01"], fallbacks: "default" }),
-    output_config: { effort: "low" },
+    output_config: { effort: "low", ...(schema ? { format: { type: "json_schema", schema } } : {}) },  // structured output: the reply is guaranteed to match the schema
     system, messages: [{ role: "user", content: user }],
   });
   let text = "";
@@ -363,7 +390,7 @@ async function podTab() {
       <div class="pod-opts"><label><input type="checkbox" name="vig" ${prev.vig !== false ? "checked" : ""}> Include a few patient vignettes</label>
       <label><input type="checkbox" name="recall" ${prev.recall !== false ? "checked" : ""}> Pause for active-recall questions</label>
       ${c.misses.length ? `<label><input type="checkbox" name="miss" ${prev.miss !== false ? "checked" : ""}> Weave in what I've missed (${c.misses.length} topic${c.misses.length > 1 ? "s" : ""})</label>` : ""}</div>
-      <button class="btn pod-go" data-plan>Plan my episode →</button>${store.get("sk:key", "") ? "" : '<p class="small muted">Needs your own Anthropic API key — <a href="#" data-keyset>add it in settings</a>. Prefer free? The Listen tab reads this lecture aloud with no key.</p>'}`;
+      <button class="btn pod-go" data-plan>Plan my episode →</button>${getKey() ? "" : '<p class="small muted">Needs your own Anthropic API key — <a href="#" data-keyset>add it in settings</a>. Prefer free? The Listen tab reads this lecture aloud with no key.</p>'}`;
     let minutes = prev.minutes || 10;
     box.querySelectorAll("[data-min]").forEach((b) => b.onclick = () => { minutes = +b.dataset.min; box.querySelectorAll("[data-min]").forEach((x) => x.classList.toggle("on", x === b)); });
     box.querySelectorAll("[data-keyset]").forEach((a) => a.onclick = (e) => { e.preventDefault(); aiSettings(); });
@@ -389,7 +416,7 @@ async function podTab() {
       if (!st.qs) { const r = await claudeJSON(await podSources(sel.scopeAll), `${selText}
 
 Before writing anything, coach the student toward the most useful episode. Ask 2 or 3 short questions that clarify what they need (e.g. depth, which comparisons confuse them, exam vs. first-pass learning, which drug details matter most). Each question gets 2-4 suggested answers grounded in the sources. If they picked something the sources don't cover, one question should point that out and offer covered alternatives.
-Return only JSON: {"note": "one encouraging sentence on their choice", "questions": [{"q": "...", "options": ["...", "..."]}]}`, 1500); if (!r.questions?.length) throw new Error("The AI didn't return questions — try again."); st.qs = r; }
+Return JSON: {"note": "one encouraging sentence on their choice", "questions": [{"q": "...", "options": ["...", "..."]}]}`, 3000, null, POD_SCHEMA.coach); if (!r.questions?.length) throw new Error("The AI didn't return questions — try again."); st.qs = r; }
     } catch (e) { body.querySelector("#pod-q").innerHTML = `<p style="color:var(--bad)">${podErr(e)}</p><button class="btn ghost" data-back>← Back</button>`; podWire(); return; }
     const q = st.qs;
     body.querySelector("#pod-q").innerHTML = `<p>${esc(q.note || "")}</p>${q.questions.map((x, i) => `<div class="pod-qq"><div class="pod-qt">${esc(x.q)}</div><div class="pod-chips">${x.options.map((o) => `<label class="pod-chip"><input type="radio" name="q${i}" value="${esc(o)}"><span>${esc(o)}</span></label>`).join("")}</div>
@@ -410,7 +437,7 @@ Return only JSON: {"note": "one encouraging sentence on their choice", "question
 Student's answers to your coaching questions:
 ${answers || "(none)"}${st.revise ? `\nStudent's change request for the outline: ${st.revise}` : ""}
 
-Propose the episode outline. Return only JSON: {"title": "short episode title", "segments": [{"title": "...", "points": ["high-yield point to cover", "..."], "recall": 1}]} — 3 to 6 segments sized for ${sel.minutes} minutes, an opening hook and a final rapid-fire recall round included.`, 2000);
+Propose the episode outline. Return only JSON: {"title": "short episode title", "segments": [{"title": "...", "points": ["high-yield point to cover", "..."], "recall": 1}]} — 3 to 6 segments sized for ${sel.minutes} minutes, an opening hook and a final rapid-fire recall round included.`, 4000, null, POD_SCHEMA.outline);
     } catch (e) { body.querySelector("#pod-o").innerHTML = `<p style="color:var(--bad)">${podErr(e)}</p><button class="btn ghost" data-back>← Back</button>`; podWire(); return; }
     const o = st.outline;
     body.querySelector("#pod-o").innerHTML = `<h3 class="pod-title">${esc(o.title)}</h3><ol class="pod-outline">${o.segments.map((g) => `<li><strong>${esc(g.title)}</strong><ul>${g.points.map((p) => `<li>${esc(p)}</li>`).join("")}</ul></li>`).join("")}</ol>
@@ -435,9 +462,12 @@ Write the full episode (~${sel.minutes * 150} spoken words). Lines alternate nat
 - "recall": a host poses a question to the LISTENER (end with something like "Pause and answer."), with "pause" seconds (5-10) before the answer.
 - "answer": the reveal right after a recall line.
 - "vignette": a short patient case (age, complaint, drug) that sets up a question.
-End with a rapid-fire recall round and a one-line takeaway.
+Open with one short line noting the episode is built from the course study guides and assigned textbook pages. End with a rapid-fire recall round and a one-line takeaway.
 Return only JSON: {"title": "...", "script": [{"who": "A"|"B", "kind": "talk"|"recall"|"answer"|"vignette", "say": "spoken text", "src": "citation or empty", "pause": 0}]}`,
-        Math.min(16000, 1500 + sel.minutes * 600), (t) => { const n = body.querySelector("#pod-n"); if (n) n.textContent = `${(t.match(/"say":/g) || []).length} lines written…`; });
+        Math.min(16000, 1500 + sel.minutes * 600), (t) => { const n = body.querySelector("#pod-n"); if (n) n.textContent = `${(t.match(/"say":/g) || []).length} lines written…`; }, POD_SCHEMA.episode);
+      // flag any line whose citation isn't in the sources it was written from
+      const srcText = sel.scopeAll || GLOBAL ? await loadAllSources() : await loadSource();
+      ep.script.forEach((l) => { if (l.src && checkCites(l.src, srcText).length) l.unverified = true; });
       ep.minutes = sel.minutes; ep.when = new Date().toLocaleDateString(undefined, { month: "short", day: "numeric" }); ep.outline = st.outline;
       const saved = store.get("sk:pods", []); saved.unshift(ep); store.set("sk:pods", saved.slice(0, 12));
       st.ep = ep; st.step = "play"; podTab();
@@ -463,7 +493,8 @@ function podPlayer(ep) {
     <div class="pod-ctrl"><button class="sk-x" data-prev aria-label="Back">⏮</button><button class="pod-play" data-play aria-label="Play">▶</button><button class="sk-x" data-next aria-label="Skip">⏭</button>
       <select data-rate>${[0.9, 1, 1.1, 1.25, 1.5].map((r) => `<option value="${r}" ${r === store.get("sk:podrate", 1.1) ? "selected" : ""}>${r}×</option>`).join("")}</select></div>
     <div class="pod-count" id="pod-count" hidden></div>
-    <div class="sk-script pod-script">${lines.map((l, i) => `<p data-line="${i}" class="k-${esc(l.kind)}"><b class="who-${l.who === "B" ? "b" : "a"}">${l.who === "B" ? HOSTS.B : HOSTS.A}</b>${l.kind === "vignette" ? '<span class="pod-tag">Case</span>' : l.kind === "recall" ? '<span class="pod-tag">Recall</span>' : ""} ${esc(l.say)}${l.src ? ` <span class="cite">${esc(l.src)}</span>` : ""}</p>`).join("")}</div>
+    <div class="sk-script pod-script">${lines.map((l, i) => `<p data-line="${i}" class="k-${esc(l.kind)}"><b class="who-${l.who === "B" ? "b" : "a"}">${l.who === "B" ? HOSTS.B : HOSTS.A}</b>${l.kind === "vignette" ? '<span class="pod-tag">Case</span>' : l.kind === "recall" ? '<span class="pod-tag">Recall</span>' : ""} ${esc(l.say)}${l.src ? ` <span class="${l.unverified ? "cite-bad" : "cite"}"${l.unverified ? ' title="Not found in the course materials — double-check"' : ""}>${esc(l.src)}${l.unverified ? " ⚠" : ""}</span>` : ""}</p>`).join("")}</div>
+    ${lines.some((l) => l.unverified) ? `<p class="cite-warn">⚠ ${lines.filter((l) => l.unverified).length} line(s) cite something not found in the course materials — treat those points as unverified.</p>` : ""}
     <div class="sk-row"><button class="btn ghost small" data-new>New episode</button><button class="btn ghost small" data-dl>Download transcript</button></div>
     ${window.speechSynthesis ? "" : '<p class="small muted">This browser can\'t read aloud — the transcript is above.</p>'}
     <p class="small muted">Voices come from your device (Apple devices and Chrome have the most natural ones). Nothing is recorded or uploaded.</p>`;
@@ -600,7 +631,7 @@ function briefTab() {
 
 // ---------------------------------------------------------------- FAQ: suggested questions → Ask
 function faqTab() {
-  body.innerHTML = `<p class="small muted">Questions worth being able to answer. Tap one to search your materials${store.get("sk:key", "") ? " and ask Claude" : ""}.</p>` +
+  body.innerHTML = `<p class="small muted">Questions worth being able to answer. Tap one to search your materials${getKey() ? " and ask Claude" : ""}.</p>` +
     kb.faq.map((q, i) => `<button class="sk-faq" data-i="${i}">${esc(q)}</button>`).join("");
   body.querySelectorAll(".sk-faq").forEach((b) => b.addEventListener("click", () => show("ask", kb.faq[+b.dataset.i])));
 }
@@ -683,7 +714,7 @@ function act(a, c) {
     return;
   }
   if (!panel.classList.contains("open")) open();
-  const ai = !!store.get("sk:key", "");
+  const ai = !!getKey();
   const where = `It appears in "${c.where}": "${c.blockText}" (${c.src || "no citation"})`;
   if (a === "explain") {
     if (ai) askAI(`Explain this from the lecture in more depth: why it's true, how it connects to the rest of the lecture, and why it matters clinically. Stay within the source and cite.\n\nHighlighted: "${c.text}"\n${where}`, `Explain ${quote(c)}`);
@@ -857,7 +888,7 @@ async function compareView(pair) {
   const groups = [...new Set([...A, ...B].map(label))];
   const cell = (hs, g) => hs.filter((h) => label(h) === g).slice(0, 2).map((h) => `<div class="cmp-fact">${tags(h)}${md(h.text)}${cite(h.src)}</div>`).join("") || '<span class="muted small">—</span>';
   body.innerHTML = `<h4>Compare</h4><div class="cmp-head"><span>${esc(a.text.slice(0, 60))}</span><span>vs</span><span>${esc(b.text.slice(0, 60))}</span></div>
-    ${store.get("sk:key", "") ? '<button class="btn" data-ai-cmp style="margin:6px 0 12px">✦ Build a comparison table with Claude</button>' : '<p class="small muted">Turn on AI chat in Ask for a ready-made comparison table.</p>'}
+    ${getKey() ? '<button class="btn" data-ai-cmp style="margin:6px 0 12px">✦ Build a comparison table with Claude</button>' : '<p class="small muted">Turn on AI chat in Ask for a ready-made comparison table.</p>'}
     ${both.length ? `<h4>Mentioned together</h4>${both.map((h) => `<div class="sk-hit"><div class="small muted">${esc(h.where)}</div>${tags(h)}${md(h.text)}${cite(h.src)} <a href="${esc(hitLink(h))}" data-go="${esc(h.anchor)}" class="small">Open →</a></div>`).join("")}` : ""}
     <h4>Side by side</h4><div class="cmp-table">${groups.map((g) => `<div class="cmp-row"><div class="cmp-label">${esc(g)}</div><div>${cell(A, g)}</div><div>${cell(B, g)}</div></div>`).join("") || '<p class="muted">Not covered in materials.</p>'}</div>`;
   wireGo(body);
