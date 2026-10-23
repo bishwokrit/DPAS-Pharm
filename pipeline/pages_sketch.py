@@ -13,69 +13,100 @@ ROOT = Path(__file__).resolve().parent.parent
 DOCS = ROOT / "docs"
 TEMPLATE = ROOT / "pipeline" / "templates" / "kahoot_template.xlsx"
 SHORT = json.loads((ROOT / "pipeline" / "kahoot_stems.json").read_text())  # hand-shortened stems (Kahoot caps at 120 chars)
-SET_SIZE = 25  # about a 12-minute game
+DECK_MAX = 300  # questions per lecture deck
 
 
 def _h(s):
     return int(hashlib.sha1(s.encode()).hexdigest(), 16)
 
 
+def _plain(t):
+    return re.sub(r"\s+", " ", t.replace("**", "")).strip()
+
+
+def _secs(stem, texts):
+    calc = bool(re.search(r"\d", stem)) and len(stem) >= 90
+    return 60 if calc else 20 if len(stem) < 80 and max(map(len, texts)) < 40 else 30
+
+
 def kahoot_rows(q):
-    """One exam question as a Kahoot row: stem ≤120, the answer plus 3 of the distractors (≤75 each), shuffled."""
-    stem = SHORT.get(q["id"], q["stem"])
+    """One multiple-choice question as a Kahoot row: stem ≤120, the answer plus 3 distractors (≤75 each), shuffled."""
+    stem = _plain(SHORT.get(q["id"], q["stem"]))
     wrong = sorted((k for k in q["options"] if k != q["answer"]), key=lambda k: _h(q["id"] + k))[:3]
     opts = sorted([q["answer"], *wrong], key=lambda k: _h(q["id"] + "pos" + k))
-    texts = [q["options"][k] for k in opts]
-    if len(stem) > 120 or any(len(t) > 75 for t in texts):
+    texts = [_plain(q["options"][k]) for k in opts]
+    if len(stem) > 120 or any(len(t) > 75 for t in texts) or len(set(texts)) < 4:
         return None
-    calc = bool(re.search(r"\d", stem)) and len(stem) >= 90
-    secs = 60 if calc else 20 if len(stem) < 80 and max(map(len, texts)) < 40 else 30
-    return [stem, *texts, secs, str(opts.index(q["answer"]) + 1)]
+    return [stem, *texts, _secs(stem, texts), str(opts.index(q["answer"]) + 1)]
+
+
+def card_rows(cards, lid):
+    """Flashcards as quick-fire rounds: the card's front, its own answer, and 3 other answers from the same lecture
+    (closest in length, so the right one doesn't stand out)."""
+    ok = [c for c in cards if len(_plain(c["a"])) <= 75 and len(_plain(c["q"])) <= 100]
+    rows = []
+    for c in ok:
+        a = _plain(c["a"])
+        others = sorted({_plain(o["a"]) for o in ok if _plain(o["a"]) != a}, key=lambda t: (abs(len(t) - len(a)), _h(lid + a + t)))[:3]
+        if len(others) < 3:
+            continue
+        opts = sorted([a, *others], key=lambda t: _h(lid + c["q"] + t))
+        stem = f"{_plain(c['q'])}: which is right?"
+        rows.append([stem, *opts, 20 if len(a) < 40 else 30, str(opts.index(a) + 1)])
+    return rows
+
+
+def _write(rows, path):
+    """Fill the Kahoot template (row 8 is its header); skip the write when nothing changed (xlsx stores a save time)."""
+    if path.exists():
+        old = openpyxl.load_workbook(path)["Sheet1"]
+        if [[old[f"{c}{9 + i}"].value for c in "BCDEFGH"] for i in range(len(rows) + 1)] == [*rows, [None] * 7]:
+            return
+    wb = openpyxl.load_workbook(TEMPLATE)
+    ws = wb["Sheet1"]
+    for i in range(9, ws.max_row + 1):
+        for col in "ABCDEFGH":
+            ws[f"{col}{i}"] = None
+    for i, r in enumerate(rows):
+        ws[f"A{9 + i}"] = i + 1
+        for col, v in zip("BCDEFGH", r):
+            ws[f"{col}{9 + i}"] = v
+    wb.save(path)
 
 
 def build_kahoots():
-    """docs/sketch/kahoot/unit<N>_set<k>.xlsx for every unit that has a practice exam. Returns the page's listing."""
+    """docs/sketch/kahoot/unit<N>_<lecture>.xlsx: one deck per lecture (practice-exam questions written for that
+    lecture, its self-test questions that fit Kahoot's limits, then its flashcards), grouped by unit."""
     out_dir = DOCS / "sketch" / "kahoot"
     out_dir.mkdir(parents=True, exist_ok=True)
-    keep = set()
-    units = {}
+    syl = json.loads((ROOT / "work" / "syllabus.json").read_text())
+    exam_qs = []
     for meta in sorted((DOCS / "exams").glob("*/meta.json")):
-        m = json.loads(meta.read_text())
-        units.setdefault(m["unit"], []).extend(json.loads((meta.parent / "quiz.json").read_text()))
-    listing, skipped = [], 0
-    for unit, qs in sorted(units.items()):
-        rows = []
-        for q in sorted(qs, key=lambda q: _h("mix" + q["id"])):  # mix topics and both exams across sets
+        exam_qs += json.loads((meta.parent / "quiz.json").read_text())
+    keep, units, skipped = set(), {}, 0
+    for lec in syl["lectures"]:
+        lid, kbp = lec["id"], DOCS / lec["id"] / "kb.json"
+        if not kbp.exists():
+            continue
+        kb = json.loads(kbp.read_text())
+        mine = [q for q in exam_qs if ((q.get("link") or {}).get("href", "").split("/")[2:3] == [lid]) or q.get("src", "").startswith(lid + " ")]
+        rows, seen = [], set()
+        for q in sorted(mine, key=lambda q: _h("mix" + q["id"])) + [{**q, "id": f"{lid}:{q['id']}"} for q in kb["quiz"]]:
             r = kahoot_rows(q)
-            (rows.append(r) if r else None)
+            if r and r[0] not in seen:
+                rows.append(r); seen.add(r[0])
             skipped += r is None
-        sets = [rows[i:i + SET_SIZE] for i in range(0, len(rows), SET_SIZE)]
-        files = []
-        for k, chunk in enumerate(sets, 1):
-            wb = openpyxl.load_workbook(TEMPLATE)
-            ws = wb["Sheet1"]
-            for i in range(9, ws.max_row + 1):  # row 8 is the header;
-                for col in "BCDEFGH":
-                    ws[f"{col}{i}"] = None
-            for i, r in enumerate(chunk):
-                ws[f"A{9 + i}"] = i + 1
-                for col, v in zip("BCDEFGH", r):
-                    ws[f"{col}{9 + i}"] = v
-            name = f"unit{unit}_set{k}.xlsx"
-            keep.add(name)
-            if (out_dir / name).exists():  # xlsx files carry a save time; only rewrite when the questions changed
-                old = openpyxl.load_workbook(out_dir / name)["Sheet1"]
-                if [[old[f"{c}{9 + i}"].value for c in "BCDEFGH"] for i in range(len(chunk) + 1)] == [*chunk, [None] * 7]:
-                    files.append({"name": name, "n": len(chunk)})
-                    continue
-            wb.save(out_dir / name)
-            files.append({"name": name, "n": len(chunk)})
-        listing.append({"unit": unit, "total": len(rows), "files": files})
+        rows += [r for r in card_rows(kb["cards"], lid) if r[0] not in seen]
+        rows = rows[:DECK_MAX]
+        name = f"unit{lec['unit']}_{lid}.xlsx"
+        keep.add(name)
+        _write(rows, out_dir / name)
+        units.setdefault(lec["unit"], []).append({"lid": lid, "title": kb["title"], "name": name, "n": len(rows)})
     for old in out_dir.glob("*.xlsx"):
         (old.unlink() if old.name not in keep else None)
     if skipped:
-        print(f"  sketch: {skipped} questions skipped (too long for Kahoot; add a short stem in pipeline/kahoot_stems.json)")
-    return listing
+        print(f"  sketch: {skipped} questions too long for Kahoot (add a short stem in pipeline/kahoot_stems.json)")
+    return [{"unit": u, "name": syl["units"].get(str(u), ""), "decks": d, "total": sum(x["n"] for x in d)} for u, d in sorted(units.items())]
 
 
 def sketch_page(page, SITE_NAME):
@@ -83,10 +114,10 @@ def sketch_page(page, SITE_NAME):
     sk_file = ROOT / "work" / "sketchy.json"
     sk = json.loads(sk_file.read_text()) if sk_file.exists() else {"videos": []}
     cards = "".join(
-        f'<div class="sx-unit"><div class="sx-unit-h"><strong>Unit {u["unit"]}</strong><span>{u["total"]} questions · {len(u["files"])} games</span></div>'
+        f'<div class="sx-unit"><div class="sx-unit-h"><strong>Unit {u["unit"]} <span>· {html.escape(u["name"])}</span></strong><span>{u["total"]} questions · {len(u["decks"])} deck{"s" if len(u["decks"]) != 1 else ""}</span></div>'
         f'<div class="sx-files">' + "".join(
-            f'<a class="sx-file" href="kahoot/{f["name"]}" download><span>Set {i}</span><small>{f["n"]} Q · .xlsx</small></a>'
-            for i, f in enumerate(u["files"], 1)) + "</div></div>" for u in kahoots)
+            f'<a class="sx-file" href="kahoot/{d["name"]}" download><span>{d["lid"]}</span><em>{html.escape(d["title"])}</em><small>{d["n"]} questions · .xlsx</small></a>'
+            for d in u["decks"]) + "</div></div>" for u in kahoots)
     vids = sk.get("videos", [])
     if vids:
         sketchy = '<input class="sx-find" id="sx-find" type="search" placeholder="Filter by drug, video or lecture" aria-label="Filter Sketchy videos"><div class="sx-vids" id="sx-vids">' + "".join(
@@ -99,16 +130,16 @@ def sketch_page(page, SITE_NAME):
     else:
         sketchy = '<div class="sx-empty"><strong>Waiting for your Sketchy docs</strong><span>Once they are uploaded, every Sketchy Pharm video is matched to the lectures and drugs it covers, right here.</span></div>'
     body = f"""<header class="hero wrap"><p class="eyebrow">Sketch</p><h1>Sketch mode</h1>
-<p class="lede">Game-night Kahoots for every unit, and Sketchy Pharm matched to the lectures. Only you can see this tab.</p>
+<p class="lede">Sketchy Pharm matched to the lectures, and a Kahoot deck for every lecture. Only you can see this tab.</p>
 <p><button class="btn ghost small" id="sx-lock" type="button">Lock Sketch mode</button></p></header>
-<section class="section" id="kahoot"><div class="wrap"><p class="kicker">1 · Kahoot</p><h2>Play a unit</h2>
-<p class="sx-how">In Kahoot: <b>Create</b> → <b>Kahoot</b> → <b>Add question</b> → <b>Import spreadsheet</b>, then drop in a set. Each set is 25 mixed questions from that unit's practice exams.</p>
+<section class="section" id="sketchy"><div class="wrap"><p class="kicker">1 · Sketchy Pharm</p><h2>Watch the right sketch</h2>{sketchy}</div></section>
+<section class="section" id="kahoot"><div class="wrap"><p class="kicker">2 · Kahoot</p><h2>A deck for every lecture</h2>
+<p class="sx-how">In Kahoot: <b>Create</b> → <b>Kahoot</b> → <b>Add question</b> → <b>Import spreadsheet</b>, then drop in a deck. Each deck holds that lecture's practice-exam and self-test questions, then quick-fire flashcard rounds.</p>
 <div class="sx-units">{cards}</div></div></section>
-<section class="section" id="sketchy"><div class="wrap"><p class="kicker">2 · Sketchy Pharm</p><h2>Watch the right sketch</h2>{sketchy}</div></section>
 <script>if(!(function(){{try{{return JSON.parse(localStorage.getItem("sketch"))}}catch(e){{}}}})())location.replace("../index.html");
-document.getElementById("sx-lock").onclick=function(){{try{{localStorage.removeItem("sketch")}}catch(e){{}}location.href="../index.html"}};
+document.getElementById("sx-lock").onclick=function(){{window.dpasSketchLock?window.dpasSketchLock():(localStorage.removeItem("sketch"),location.href="../index.html")}};
 var f=document.getElementById("sx-find");f&&f.addEventListener("input",function(){{var q=f.value.toLowerCase().trim();document.querySelectorAll(".sx-vid").forEach(function(v){{v.hidden=q&&v.dataset.q.indexOf(q)<0}})}});</script>"""
     out = DOCS / "sketch"
     out.mkdir(exist_ok=True)
     (out / "index.html").write_text(page(f"Sketch · {SITE_NAME}", body, depth=1, active="sketch"))
-    print(f"  sketch: {sum(len(u['files']) for u in kahoots)} Kahoot sets, {len(vids)} Sketchy videos mapped")
+    print(f"  sketch: {sum(len(u['decks']) for u in kahoots)} Kahoot decks ({sum(u['total'] for u in kahoots)} questions), {len(vids)} Sketchy videos mapped")

@@ -506,26 +506,63 @@
   }
   if (on()) addTab(false);
   const sha = async (s) => [...new Uint8Array(await crypto.subtle.digest("SHA-256", new TextEncoder().encode(s)))].map((b) => b.toString(16).padStart(2, "0")).join("");
+  const calmMotion = () => matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const PAL = ["#0F7173", "#E9A23B", "#D1495B", "#2A6F97", "#8fe0d6", "#ffffff"];
+
+  // locking: two dark panels close in from the edges, a seam of light, then the page carries on without the tab
+  function lock() {
+    try { localStorage.removeItem(KEY); } catch { /* blocked */ }
+    const finish = () => { document.querySelectorAll(".nav-sketch").forEach((a) => a.remove()); document.documentElement.classList.remove("sx-on"); };
+    if (calmMotion()) { finish(); if (here) location.href = `${root}index.html`; return; }
+    const d = document.createElement("div");
+    d.className = "sx-doors"; d.setAttribute("aria-live", "polite");
+    d.innerHTML = '<i class="l"></i><i class="r"></i><b class="seam"></b><div class="sx-locked"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="5" y="11" width="14" height="10" rx="2.5"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><span>Sketch mode locked</span></div>';
+    document.body.append(d);
+    requestAnimationFrame(() => d.classList.add("shut"));
+    setTimeout(() => { finish(); document.body.animate([{ transform: "scale(1)" }, { transform: "scale(.992)" }, { transform: "scale(1)" }], { duration: 260, easing: "ease-out" }); }, 640);
+    setTimeout(() => { if (here) location.href = `${root}index.html`; else { d.classList.add("gone"); setTimeout(() => d.remove(), 700); } }, 1700);
+  }
+  window.dpasSketchLock = lock;
+
+  // unlocking: a check draws itself, a ring and a burst of color, then the new tab arrives with a shimmer
+  function reward(g, card) {
+    card.classList.add("ok");
+    card.innerHTML = '<svg class="sx-check" viewBox="0 0 52 52"><circle cx="26" cy="26" r="24"/><path d="M15 27l7 7 15-16"/></svg><strong>You\'re in.</strong><span>Welcome to Sketch mode.</span>';
+    if (!calmMotion()) {
+      const r = card.getBoundingClientRect(), cx = r.left + r.width / 2, cy = r.top + 46;
+      for (let i = 0; i < 28; i++) {
+        const p = document.createElement("i"), a = (i / 28) * Math.PI * 2 + Math.random() * 0.3, dist = 90 + Math.random() * 120, sz = 4 + Math.random() * 5;
+        p.className = "sx-spark"; p.style.cssText = `left:${cx}px;top:${cy}px;width:${sz}px;height:${sz}px;background:${PAL[i % PAL.length]};border-radius:${i % 3 ? "50%" : "2px"}`;
+        g.append(p);
+        p.animate([{ transform: "translate(-50%,-50%) scale(.4)", opacity: 1 }, { transform: `translate(calc(-50% + ${Math.cos(a) * dist}px), calc(-50% + ${Math.sin(a) * dist + 30}px)) scale(1) rotate(${Math.random() * 360}deg)`, opacity: 0 }],
+          { duration: 900 + Math.random() * 500, delay: 260, easing: "cubic-bezier(.15,.7,.3,1)", fill: "forwards" });
+      }
+    }
+    setTimeout(() => { addTab(true); g.classList.add("out"); setTimeout(() => g.remove(), 600); }, calmMotion() ? 600 : 1500);
+  }
+
+  // the gate: the screen cuts to dark and the card slams in (a jump-scare beat, kept minimal)
   function gate() {
     if (document.querySelector(".sx-gate")) return;
     const g = document.createElement("div");
     g.className = "sx-gate"; g.setAttribute("role", "dialog"); g.setAttribute("aria-modal", "true"); g.setAttribute("aria-label", "Sketch mode");
     g.innerHTML = on()
       ? '<form class="sx-card"><strong>Sketch mode is on</strong><span>The Sketch tab is in the top bar.</span><div class="sx-row"><button class="btn small" type="button" data-go>Open Sketch</button><button class="btn ghost small" type="button" data-lock>Lock</button></div></form>'
-      : '<form class="sx-card"><strong>Sketch mode</strong><input type="password" autocomplete="off" placeholder="Password" aria-label="Password"><div class="sx-row"><button class="btn small" type="submit">Unlock</button><button class="btn ghost small" type="button" data-x>Cancel</button></div></form>';
-    document.body.append(g); requestAnimationFrame(() => g.classList.add("on"));
-    const close = () => { g.classList.remove("on"); setTimeout(() => g.remove(), 250); };
+      : '<form class="sx-card"><div class="sx-eyebrow">Restricted</div><strong>Sketch mode</strong><input type="password" autocomplete="off" placeholder="Password" aria-label="Password"><div class="sx-row"><button class="btn small" type="submit">Unlock</button><button class="btn ghost small" type="button" data-x>Cancel</button></div></form>';
+    document.body.append(g);
+    if (calmMotion()) g.classList.add("on", "calm"); else { g.classList.add("on", "slam"); document.body.animate([{ transform: "translate(0,0)" }, { transform: "translate(-5px,3px)" }, { transform: "translate(4px,-3px)" }, { transform: "translate(-2px,1px)" }, { transform: "translate(0,0)" }], { duration: 300, delay: 120 }); }
+    const close = () => { g.classList.add("out"); setTimeout(() => g.remove(), 400); };
     const card = g.querySelector(".sx-card"), input = g.querySelector("input");
-    (input || g.querySelector("button")).focus();
+    setTimeout(() => (input || g.querySelector("button")).focus(), 60);
     g.addEventListener("click", (e) => { if (e.target === g || e.target.closest("[data-x]")) close(); });
     g.addEventListener("keydown", (e) => { if (e.key === "Escape") close(); });
     g.querySelector("[data-go]")?.addEventListener("click", () => (location.href = `${root}sketch/index.html`));
-    g.querySelector("[data-lock]")?.addEventListener("click", () => { try { localStorage.removeItem(KEY); } catch { /* blocked */ } document.querySelectorAll(".nav-sketch").forEach((a) => a.remove()); document.documentElement.classList.remove("sx-on"); close(); if (here) location.href = `${root}index.html`; });
+    g.querySelector("[data-lock]")?.addEventListener("click", () => { g.remove(); lock(); });
     card.addEventListener("submit", async (e) => {
       e.preventDefault();
       if (input && (await sha(input.value.trim().toLowerCase())) === HASH) {
         try { localStorage.setItem(KEY, "true"); } catch { /* blocked */ }
-        addTab(true); close();
+        reward(g, card);
       } else if (input) { card.classList.remove("shake"); void card.offsetWidth; card.classList.add("shake"); input.select(); }
     });
   }
