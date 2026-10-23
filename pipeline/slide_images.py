@@ -53,5 +53,8 @@ def redact(out_dir):
         w, h = im.size
         box = (int(l * w), int(t * h), int(r * w), int(b * h))
         bg = im.getpixel((max(0, box[0] - 8), box[1] + (box[3] - box[1]) // 2))  # the slide background right beside it
+        pts = [(box[0] + (box[2] - box[0]) * i // 6, box[1] + (box[3] - box[1]) // 2) for i in range(1, 6)]
+        if all(sum(abs(x - y) for x, y in zip(im.getpixel(q), bg)) < 24 for q in pts):
+            continue  # already painted over; don't re-save (each JPEG save loses quality)
         ImageDraw.Draw(im).rectangle(box, fill=bg)
         im.save(f, quality=80)
