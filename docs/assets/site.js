@@ -67,7 +67,7 @@
           <div class="set-row"><span>Accent</span><div class="set-sw">${[["blue", "#0a84ff"], ["purple", "#8a5cf6"], ["teal", "#14a3b8"], ["graphite", "#8e8e93"]].map(([v, c]) => `<button data-acc="${v}" style="--sw:${c}" class="${(prefs.accent || "blue") === v ? "on" : ""}" aria-label="${v}"></button>`).join("")}</div></div>
           <div class="set-row"><span>Text size</span>${seg("text", [["s", "A"], ["m", "A"], ["l", "A"], ["xl", "A"]], prefs.text || "m")}</div></div>
         <div class="set-g"><div class="set-l">Comfort</div>${tog("motion", "Animations", prefs.motion !== "off")}${tog("glow", "Background glow", prefs.glow !== "off")}${tog("density", "Compact spacing", prefs.density === "compact")}</div>
-        <div class="set-g"><div class="set-l">Show on pages</div>${tog("sk", "Sidekick button", prefs.sk !== "off")}${tog("cites", "Slide & page citations", prefs.cites !== "off")}${tog("prog", "Reading progress bar", prefs.prog !== "off")}</div>
+        <div class="set-g"><div class="set-l">Show on pages</div>${tog("sk", "Sidekick button", prefs.sk !== "off")}${tog("cites", "Slide & page citations", prefs.cites !== "off")}${tog("prog", "Reading progress bar", prefs.prog !== "off")}${tog("ftimer", "Timer in Focus mode", prefs.ftimer === "on")}</div>
         <div class="set-g set-data"><button data-backup>Back up</button><button data-restore>Restore</button><button data-reset>Reset progress</button></div>
         <div class="set-foot">Saved only in this browser · <kbd>/</kbd> Sidekick · <kbd>Esc</kbd> close</div>`;
       pop.querySelectorAll(".set-seg").forEach((g) => g.querySelectorAll("button").forEach((b) => b.onclick = () => {
@@ -78,7 +78,9 @@
       const OFF = { motion: "off", glow: "off", sk: "off", cites: "off", prog: "off" };
       pop.querySelectorAll("[data-t]").forEach((c) => c.onchange = () => {
         const k = c.dataset.t;
-        if (k === "density") setPref(k, c.checked ? "compact" : "normal", "normal"); else setPref(k, c.checked ? "on" : OFF[k], "on");
+        if (k === "density") setPref(k, c.checked ? "compact" : "normal", "normal");
+        else if (k === "ftimer") setPref(k, c.checked ? "on" : "off", "off");  // off unless turned on
+        else setPref(k, c.checked ? "on" : OFF[k], "on");
       });
       pop.querySelector("[data-backup]").onclick = () => document.querySelector(".site-foot [data-backup]")?.click();
       pop.querySelector("[data-restore]").onclick = () => document.querySelector(".site-foot [data-restore]")?.click();
