@@ -108,7 +108,8 @@ def page(title, body, depth=0, nav_links="", sidekick=False, active="", subtitle
 <p class="foot-fine">Textbook references cite chapters and pages of <em>Katzung's Basic &amp; Clinical Pharmacology</em>, 16th ed. (McGraw Hill), for cross-reference only; content is summarized in the author's own words, no passages are reproduced, and there is no affiliation with the authors or publisher. Slide and page numbers help you find the original material. Trademarks and copyrights belong to their owners. For educational use only. This site is a study aid, not medical advice, and is not a substitute for professional clinical judgment, current prescribing information, or institutional protocols; always verify drug and dosing details against authoritative sources before applying them in patient care.</p>
 </div></footer>
 <div class="progress-bar" aria-hidden="true"></div>
-<script src="{up}assets/site.js"></script><script src="{up}assets/viz.js"></script><script src="{up}assets/quizmode.js"></script><script type="module" src="{up}assets/sidekick.js"></script>
+<script src="{up}assets/vendor/gsap.min.js"></script><script src="{up}assets/vendor/ScrollTrigger.min.js"></script><script src="{up}assets/vendor/lenis.min.js"></script>
+<script src="{up}assets/site.js"></script><script src="{up}assets/motion.js"></script><script src="{up}assets/viz.js"></script><script src="{up}assets/quizmode.js"></script><script type="module" src="{up}assets/sidekick.js"></script>
 </body>
 </html>
 """

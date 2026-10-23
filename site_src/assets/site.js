@@ -231,7 +231,9 @@
     const step = (t) => { const k = Math.min(1, (t - t0) / dur); el.textContent = Math.round(to * (1 - Math.pow(1 - k, 3))); if (k < 1) requestAnimationFrame(step); };
     requestAnimationFrame(step);
   };
-  if ("IntersectionObserver" in window) {
+  const gsapOn = window.gsap && window.ScrollTrigger && !calm && document.documentElement.dataset.pmotion !== "off";  // motion.js takes over
+  if (gsapOn) { /* reveals and count-ups run in motion.js */ }
+  else if ("IntersectionObserver" in window) {
     const ro = new IntersectionObserver((es) => es.forEach((e) => {
       if (!e.isIntersecting) return;
       e.target.classList.add("in");
@@ -493,7 +495,7 @@
 
 // Sketch mode: hidden until Ctrl+Alt+S and the password. The flag lives in this browser only.
 (function () {
-  const KEY = "sketch", HASH = "7eea92cc84ab2d8a545f1034dfbaa131bc74227bc446a8be08aa03aa08dec9da";
+  const KEY = "sketch", HASH = "2a6418844dfee1492a837215a559f0e0257b1ddfc75129686a8f86534c8d6c64";
   const on = () => { try { return JSON.parse(localStorage.getItem(KEY)) === true; } catch { return false; } };
   const root = document.documentElement.dataset.root || "";
   const here = /\/sketch\//.test(location.pathname);

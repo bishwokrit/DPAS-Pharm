@@ -238,5 +238,5 @@
     $("rv-panel").querySelector("[data-drill]")?.addEventListener("click", () => drill(shuffle(cards)));
   }
 
-  load().then(render);
+  load().then(() => (document.readyState === "loading" ? addEventListener("DOMContentLoaded", render) : render()));  // icons come from site.js, which loads after this file
 })();

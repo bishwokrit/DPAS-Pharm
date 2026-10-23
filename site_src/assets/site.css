@@ -1281,3 +1281,38 @@ figure.vz-orig > img { display: block; } figure.vz-orig > .viz { display: none; 
 .sx-win h2.a { color: var(--p0); } .sx-win h2.b { color: #c46f00; } .sx-win .sx-row { justify-content: center; }
 .sx-final { display: flex; justify-content: center; gap: 40px; } .sx-final span { display: grid; font-weight: 600; color: var(--text-2); } .sx-final b { font-size: 44px; color: var(--text); font-variant-numeric: tabular-nums; }
 @media (max-width: 760px) { .sx-sotd { grid-template-columns: 1fr; } .sx-hook { grid-template-columns: 1fr; } .sx-hooks { grid-template-columns: 1fr; } }
+
+/* ---------- motion layer (GSAP + Lenis): polish on top of the existing design ---------- */
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis:not(.lenis-autoToggle).lenis-stopped { overflow: clip; }
+.lenis [data-lenis-prevent] { overscroll-behavior: contain; }
+.lenis.lenis-smooth iframe { pointer-events: none; }
+/* GSAP drives the reveals; the CSS version stays as the fallback */
+.gsap .hero-title .line { animation: none; }
+/* one underline that glides between nav links */
+.nav-main { position: relative; }
+.nav-ink { position: absolute; left: 0; top: 0; height: 2px; width: 0; border-radius: 2px; background: var(--accent); opacity: 0; pointer-events: none; }
+.has-ink .nav-main a[aria-current]::after { display: none; }
+/* a soft light that follows the cursor across cards */
+.tile, .upcard, .dx-tile, .rv-act, .foot-tile, .sx-file, .dotd, .now-fig { position: relative; isolation: isolate; }
+@media (hover: hover) {
+  :is(.tile, .upcard, .dx-tile, .rv-act, .foot-tile, .sx-file, .dotd, .now-fig)::after { content: ""; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; z-index: -1; opacity: 0; transition: opacity .35s ease;
+    background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 50%), color-mix(in srgb, var(--accent) 9%, transparent), transparent 55%); }
+  :is(.tile, .upcard, .dx-tile, .rv-act, .foot-tile, .sx-file, .dotd, .now-fig):hover::after { opacity: 1; }
+}
+/* buttons and cards answer a press */
+.btn, .tile, .upcard, .dx-tile, .rv-act, .sx-file, .seg button, .vz-btn { -webkit-tap-highlight-color: transparent; }
+.btn { transition: transform .18s cubic-bezier(.2,.8,.2,1), filter .2s, background .2s, box-shadow .2s; }
+.btn:active:not(:disabled), .vz-btn:active { transform: scale(.965); }
+.tile:active, .upcard:active, .dx-tile:active, .rv-act:active:not(:disabled), .sx-file:active { transform: scale(.985); }
+/* page to page: a quick crossfade, the top bar holds still */
+@view-transition { navigation: auto; }
+.topbar { view-transition-name: topbar; }
+::view-transition-old(root) { animation: vt-out .22s cubic-bezier(.4,0,1,1) both; }
+::view-transition-new(root) { animation: vt-in .42s cubic-bezier(0,0,.2,1) .04s both; }
+@keyframes vt-out { to { opacity: 0; transform: translateY(-6px); } }
+@keyframes vt-in { from { opacity: 0; transform: translateY(10px); } }
+@media (prefers-reduced-motion: reduce) { @view-transition { navigation: none; } ::view-transition-old(root), ::view-transition-new(root) { animation: none; } }
+html[data-pmotion="off"] ::view-transition-old(root), html[data-pmotion="off"] ::view-transition-new(root) { animation: none; }
+@media print { .nav-ink { display: none; } }
