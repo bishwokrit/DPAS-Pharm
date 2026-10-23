@@ -24,7 +24,8 @@ ROOT = Path(__file__).resolve().parent.parent
 DOCS = ROOT / "docs"
 SRC = ROOT / "site_src"
 STYLE = json.loads((ROOT / "templates" / "deck_style.json").read_text())["themes"]["light"]["section"]
-SITE_NAME = "Clinical Pharmacology"
+SITE_NAME = "PA–S Rx"
+COURSE = "Clinical Pharmacology I"
 # Browser security policy: the pages may load files only from this site, and talk only to this site and
 # Anthropic (the optional AI chat, on the student's own key). No plugins, no form posts, no outside scripts.
 SECURITY_META = ('<meta http-equiv="Content-Security-Policy" content="default-src \'self\'; script-src \'self\' \'unsafe-inline\'; '
@@ -69,7 +70,7 @@ def nav_html(up, active="", nav_links="", subtitle=""):
         f'<a href="{href}"{" aria-current=page" if key == active else ""}><span data-ic="{tab_ic[key]}"></span>{label}</a>' for label, href, key in main) + "</nav>"
     return f"""{tabbar}<header class="topbar">
 <nav class="nav" aria-label="Site"><div class="nav-in">
-  <a class="brand" href="{up}index.html"><img class="brand-logo" src="{up}assets/logo-mark.svg" alt="" width="46" height="30"><span class="brand-name">{SITE_NAME}</span></a>
+  <a class="brand" href="{up}index.html"><img class="brand-logo" src="{up}assets/logo-mark.svg" alt="" width="46" height="30"><span class="brand-name">{SITE_NAME}<span class="brand-sub">{COURSE}</span></span></a>
   <div class="nav-main">{links}</div>
   <div class="nav-tools">
     <button class="search-btn" aria-label="Search" title="Search everything">{SEARCH_ICON}<span>Search</span></button>
@@ -436,7 +437,7 @@ def home_page(syl, built, exams_built):
                     f'<span class="unit-badge"{"" if badge else " hidden"}>{badge}</span><span class="unit-exam small">{("Exam " + date.fromisoformat(ex["date"]).strftime("%a, %b %-d")) if ex else ""}</span><span class="unit-chev" aria-hidden="true"></span></summary>'
                     f'<div class="grid unit-cards">{"".join(cards)}</div></details>')
     study = f'<section class="section" id="study"><div class="wrap"><p class="kicker appear">Study</p><h2 class="appear">Your course, one unit at a time.</h2><p class="appear"><a class="jump" href="drugs/index.html">Open the drug index →</a></p><div class="roadmap">{"".join(rows)}</div></div></section>'
-    return page(SITE_NAME, hero + now_section(syl, built, sched) + study + practice)
+    return page(f"{SITE_NAME} · {COURSE}", hero + now_section(syl, built, sched) + study + practice)
 
 
 
@@ -603,7 +604,7 @@ def syllabus_page(syl, sched, built):
 <h1 class="appear" style="--d:.05s">Clinical<br><span class="accent-text">Pharmacology I</span></h1>
 <p class="lede appear" style="--d:.12s">Fall 2026 · schedule, grading, and a calculator in one place.</p>
 <div class="fact-pills appear" style="--d:.2s">{"".join(f'<div><strong>{a}</strong><span>{b}</span></div>' for a, b in facts)}</div>
-<div class="btns noprint appear" style="--d:.28s"><a class="btn" href="#calc">Grade calculator</a><a class="btn ghost" href="#schedule">Schedule</a><a class="btn ghost" href="Syllabus_DPAS625_v5.pdf">Original PDF</a></div></header>
+<div class="btns noprint appear" style="--d:.28s"><a class="btn" href="#calc">Grade calculator</a><a class="btn ghost" href="#schedule">Schedule</a></div></header>
 <section class="section" id="next"><div class="wrap"><p class="kicker">Coming up</p><h2>What's due next</h2><div class="upnext" id="upnext"></div></div></section>
 <section class="section" id="grading"><div class="wrap"><p class="kicker">Grading</p><h2>Where your 1,000 points come from</h2>
 <p class="muted">Each 1% of the grade is 10 points. Hover a slice or a row.</p>
@@ -633,7 +634,7 @@ def syllabus_page(syl, sched, built):
 <li>Grade concerns go to the course first. AI use: follow each assignment's instructions.</li><li>Class cancellations are announced through official email.</li></ul></div></section>
 <script src="../assets/grades.js"></script>"""
     nav = '<a href="#next">Coming up</a><a href="#grading">Grading</a><a href="#calc">Calculator</a><a href="#schedule">Schedule</a><a href="#units">Units</a><a href="#outcomes">Outcomes</a>'
-    return page("Syllabus · Clinical Pharmacology I", body, depth=1, nav_links=nav, active="syllabus", subtitle="Syllabus")
+    return page(f"Syllabus · {SITE_NAME}", body, depth=1, nav_links=nav, active="syllabus", subtitle="Syllabus")
 
 
 # ---------------------------------------------------------------- site-wide search index
@@ -711,7 +712,7 @@ def search_index(syl, sched, built, exams):
     sys.path.insert(0, str(ROOT / "work"))
     import drugs as DR
     for d in DR.DRUGS:
-        out.append({"t": f"{d['name']} — {d['cls']}", "g": "Drug index", "u": f"drugs/index.html#{slug(d['name'])}"})
+        out.append({"t": (d['name'] if d['cls'].startswith('Not covered') else f"{d['name']} — {d['cls']}"), "g": "Drug index", "u": f"drugs/index.html#{slug(d['name'])}"})
         for f in d["facts"]:
             out.append({"t": f"{d['name']}: {f['text']}", "g": "Drug index", "u": f"drugs/index.html#{slug(d['name'])}", "s": f["src"]})
     for d in sched["due"]:
@@ -739,7 +740,7 @@ def review_page(syl, built, exams):
 <div class="seg rv-tabs" id="rv-tabs"></div><div class="rv-panel" id="rv-panel"></div></div></section>
 <script type="application/json" id="review-data">{cfg}</script>
 <script src="../assets/review.js"></script>"""
-    return page("Review · Clinical Pharmacology", body, depth=1, active="review")
+    return page(f"Review · {SITE_NAME}", body, depth=1, active="review")
 
 
 # ---------------------------------------------------------------- cumulative drug index
@@ -779,7 +780,7 @@ def drugs_page(built, exams):
 <aside class="dx-sheet" id="dx-sheet" aria-label="Drug details" hidden><div class="dx-sheet-in" id="dx-sheet-in"></div></aside><div class="dx-scrim" id="dx-scrim" hidden></div>
 <script type="application/json" id="drug-data">{cfg}</script>
 <script src="../assets/drugs.js"></script>"""
-    return page("Drug index · Clinical Pharmacology", body, depth=1, active="drugs")
+    return page(f"Drug index · {SITE_NAME}", body, depth=1, active="drugs")
 
 # ---------------------------------------------------------------- main
 def main(pdf=True):
@@ -829,7 +830,7 @@ def main(pdf=True):
         exams.append(json.loads(ex_dir.read_text()))
     sched = json.loads((ROOT / "work" / "schedule.json").read_text())
     (DOCS / "syllabus").mkdir(exist_ok=True)
-    shutil.copy(next((ROOT / "inputs" / "syllabus").glob("*.pdf")), DOCS / "syllabus" / "Syllabus_DPAS625_v5.pdf")
+    (DOCS / "syllabus" / "Syllabus_DPAS625_v5.pdf").unlink(missing_ok=True)  # the original PDF lists faculty contact details; not published
     (DOCS / "syllabus" / "index.html").write_text(syllabus_page(syl, sched, built))
     (DOCS / "search.json").write_text(json.dumps(search_index(syl, sched, built, exams), ensure_ascii=False))
     (DOCS / "sidekick.json").write_text(json.dumps(global_kb(syl, sched, built, exams), ensure_ascii=False))

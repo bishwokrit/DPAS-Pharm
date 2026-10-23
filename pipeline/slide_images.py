@@ -15,6 +15,7 @@ def render(lid, out_dir):
     out_dir.mkdir(parents=True, exist_ok=True)
     done = sorted(out_dir.glob("S*.jpg"))
     if done and min(p.stat().st_mtime for p in done) > pptx.stat().st_mtime:
+        redact(out_dir)
         return len(done)
     if not (shutil.which("soffice") and shutil.which("pdftoppm")):
         print("  slide images: skipped (needs LibreOffice and poppler)")
@@ -29,4 +30,28 @@ def render(lid, out_dir):
             old.unlink()
         for img in Path(tmp).glob("s-*.jpg"):
             shutil.move(img, out_dir / f"S{int(img.stem.split('-')[-1])}.jpg")
+    redact(out_dir)
     return len(list(out_dir.glob("S*.jpg")))
+
+
+# Areas painted over in the published slide images (the original .pptx is never touched): the presenter's name line
+# on each title slide. Box = fraction of width/height (left, top, right, bottom).
+REDACT = {"S1.jpg": (0.05, 0.755, 0.62, 0.815)}
+
+
+def redact(out_dir):
+    try:
+        from PIL import Image, ImageDraw
+    except ImportError:
+        print("  slide images: Pillow missing, title-slide name not redacted")
+        return
+    for name, (l, t, r, b) in REDACT.items():
+        f = out_dir / name
+        if not f.exists():
+            continue
+        im = Image.open(f).convert("RGB")
+        w, h = im.size
+        box = (int(l * w), int(t * h), int(r * w), int(b * h))
+        bg = im.getpixel((max(0, box[0] - 8), box[1] + (box[3] - box[1]) // 2))  # the slide background right beside it
+        ImageDraw.Draw(im).rectangle(box, fill=bg)
+        im.save(f, quality=80)

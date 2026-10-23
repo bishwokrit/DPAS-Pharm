@@ -17,7 +17,7 @@
       (!qq || (d.name + " " + d.cls + " " + d.aliases.join(" ") + " " + d.tags.join(" ") + " " + d.facts.map((f) => f.text).join(" ")).toLowerCase().includes(qq)));
     $("dx-grid").innerHTML = list.map((d, i) => `<button class="dx-tile appear in" style="--d:${Math.min(i, 12) * 0.025}s" data-name="${esc(d.name)}" id="${slug(d.name)}">
       <span class="dx-pick ${picked.includes(d.name) ? "on" : ""}" data-pick title="Add to compare">${picked.includes(d.name) ? "✓" : "+"}</span>
-      <span class="dx-name">${esc(d.name)}</span><span class="dx-cls">${esc(d.cls === "Not covered in materials" ? "Class not covered in materials" : d.cls)}</span>
+      <span class="dx-unit">Unit ${d.unit}</span><span class="dx-name">${esc(d.name)}</span><span class="dx-cls">${d.cls === "Not covered in materials" ? "" : esc(d.cls)}</span>
       <span class="dx-tags-mini">${d.tags.slice(0, 3).map((t) => `<i>${esc(t)}</i>`).join("")}</span>
       <span class="dx-meta">${d.facts.length} fact${d.facts.length === 1 ? "" : "s"} · ${d.n_mentions} mention${d.n_mentions === 1 ? "" : "s"} in lectures</span></button>`).join("");
     $("dx-empty").hidden = list.length > 0;
@@ -52,7 +52,7 @@
     if (!a || !b) return;
     const tags = [...new Set([...a.tags, ...b.tags])].sort((x, y) => (b.tags.includes(y) && a.tags.includes(y)) - (b.tags.includes(x) && a.tags.includes(x)));
     const mark = (d, t) => d.tags.includes(t) ? '<span class="dx-yes">●</span>' : '<span class="dx-no">—</span>';
-    const col = (d) => `<div class="dx-cc"><div class="dx-cc-h"><h3>${esc(d.name)}</h3><div class="small muted">${esc(d.cls)}${cite(d.cls_src)}</div></div>
+    const col = (d) => `<div class="dx-cc"><div class="dx-cc-h"><h3>${esc(d.name)}</h3><div class="small muted">${d.cls === "Not covered in materials" ? "Class: later unit" : esc(d.cls) + cite(d.cls_src)}</div></div>
       <ul>${d.facts.map((f) => `<li>${tb(f)}${md(f.text)}${cite(f.src)}</li>`).join("")}</ul></div>`;
     sheet(`<div class="dx-sh-top"><div><div class="kicker">Compare</div><h2>${esc(a.name)} <span class="dx-vs">vs</span> ${esc(b.name)}</h2></div><button class="sk-x" data-close aria-label="Close">✕</button></div>
       <table class="dx-matrix"><thead><tr><th></th><th>${esc(a.name)}</th><th>${esc(b.name)}</th></tr></thead><tbody>
@@ -97,7 +97,7 @@
     if (!d) return;
     history.replaceState(null, "", "#" + slug(d.name));
     sheet(`<div class="dx-sh-top"><div><div class="kicker">Unit ${d.unit}</div><h2>${esc(d.name)}</h2>
-      <div class="muted">${esc(d.cls)}${cite(d.cls_src)}</div></div><button class="sk-x" data-close aria-label="Close">✕</button></div>
+      ${d.cls === "Not covered in materials" ? '<div class="muted small">Drug class: covered in a later unit</div>' : `<div class="muted">${esc(d.cls)}${cite(d.cls_src)}</div>`}</div><button class="sk-x" data-close aria-label="Close">✕</button></div>
       <div class="dx-tags-mini" style="margin:12px 0 4px">${d.tags.map((t) => `<i>${esc(t)}</i>`).join("")}</div>
       <div class="dx-acts"><button class="btn small" data-quiz>Quiz me on ${esc(d.name)}</button><select data-vs><option value="">Compare with…</option>${DR.filter((x) => x.name !== d.name).map((x) => `<option>${esc(x.name)}</option>`).join("")}</select></div>
       <h4>Key facts</h4><ul class="dx-facts">${d.facts.map((f) => `<li>${tb(f)}${md(f.text)}${cite(f.src)}</li>`).join("")}</ul>
