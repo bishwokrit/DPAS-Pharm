@@ -21,6 +21,50 @@ def icon(name):
     return f'<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">{ICONS[name]}</svg>'
 
 
+def final_tile(up):
+    return (f'<a class="tile appear" href="{up}review/index.html?scope=all"><span class="tile-ic">{icon("review")}</span><div><div class="tile-k">Cumulative</div>'
+            '<h3>Final prep</h3><p>Every unit so far: by-unit scores, your misses, and a timed final mock.</p></div><span class="tile-go">Open →</span></a>')
+
+
+def unit_tiles(u, syl, built, exams_built, up="", full=False):
+    """A unit's practice. Home (full=False): its review + the main practice exam. Practice page (full=True):
+    every practice exam, every lecture self-test, and the cumulative card."""
+    lecs = [(lid, b) for lid, b in built.items() if str(b["unit"]) == u]
+    exs = [e for e in exams_built if str(e.get("unit")) == u]
+    tiles = []
+    if lecs or exs:
+        tiles.append(f'<a class="tile appear" href="{up}review/index.html?scope=unit"><span class="tile-ic">{icon("review")}</span><div><div class="tile-k">Unit {u} · everything in one place</div>'
+                     f'<h3>Unit {u} review</h3><p>Daily 10, your misses, and a timed mix, from Unit {u} only.</p></div><span class="tile-go">Open →</span></a>')
+    for i, ex in enumerate(exs if full else exs[:1]):
+        timed = f' · {ex["minutes"]} min' if ex.get("minutes") else ""
+        tiles.append(f'<a class="tile appear" style="--d:{.06 * (i + 1):.2f}s" href="{up}exams/{ex["id"]}/index.html" data-progress="exam" data-slug="{ex["id"]}" data-total="{ex["count"]}">'
+                     f'<span class="tile-ic">{icon("timer" if ex.get("minutes") else "exam")}</span><div><div class="tile-k">Practice exam · {ex["count"]} Q{timed}</div>'
+                     f'<h3>{html.escape(ex["title"].split(" (")[0])}</h3><p>Study or timed mode, a debrief at the end, and a log of what you miss.</p><div class="progress"></div></div><span class="tile-go">Start →</span></a>')
+    if full:
+        for i, (lid, b) in enumerate(lecs):
+            tiles.append(f'<a class="tile appear" style="--d:{.06 * (len(exs) + i + 1):.2f}s" href="{up}{lid}/index.html?quiz=1"><span class="tile-ic">{icon("check")}</span><div><div class="tile-k">{lid} self-test · {b["qs"]} Q</div>'
+                         f'<h3>{html.escape(b["title"])}</h3><p>One question at a time, with the why behind every answer.</p></div><span class="tile-go">Start →</span></a>')
+    if not tiles:
+        tiles.append(f'<div class="tile appear"><span class="tile-ic">{icon("calendar")}</span><div><div class="tile-k">Unit {u} · {html.escape(syl["units"][u])}</div>'
+                     f'<h3>Practice opens as lectures are posted</h3><p>Questions appear after each class. Meanwhile, keep earlier units fresh in Review.</p></div></div>')
+        tiles.append(final_tile(up))
+    return tiles
+
+
+def practice_page(syl, built, exams_built):
+    """Every unit's practice in one place: the current unit first (set in the browser), then earlier units, then the final."""
+    upnext = json.dumps({"exams": syl.get("exams", [])}).replace("</", "<\\/")
+    units = [u for u in syl["units"] if any(str(b["unit"]) == u for b in built.values()) or any(str(e.get("unit")) == u for e in exams_built)]
+    secs = "".join(f'<section class="section pr-unit" data-unit="{u}"><div class="wrap"><p class="kicker">Unit {u}<span class="pr-now" hidden> · current</span></p><h2>{html.escape(syl["units"][u])}</h2>'
+                   f'<div class="bento">{"".join(unit_tiles(u, syl, built, exams_built, up="../", full=True))}</div></div></section>' for u in units)
+    body = f"""<header class="hero wrap"><p class="eyebrow appear">Practice</p><h1 class="appear" style="--d:.05s">Test yourself. Then test yourself again.</h1>
+<p class="lede appear" style="--d:.12s">Every practice exam and lecture self-test, by unit, with the current unit first. For spaced review across units and final prep, open <a href="../review/index.html?scope=all">Review</a>.</p></header>
+<div id="pr-units">{secs}</div>
+<section class="section"><div class="wrap"><p class="kicker">Cumulative</p><h2>Final prep</h2><div class="bento bento-2">{final_tile("../")}</div></div></section>
+<script type="application/json" id="practice-data">{upnext}</script>"""
+    return page(f"Practice · {SITE_NAME}", body, depth=1, active="practice")
+
+
 def home_page(syl, built, exams_built):
     sched = json.loads((ROOT / "work" / "schedule.json").read_text())
     n_q = sum(b["qs"] for b in built.values()) + sum(e["count"] for e in exams_built)
@@ -44,33 +88,15 @@ def home_page(syl, built, exams_built):
 </div></div>
 <a class="scroll-cue" href="#practice" aria-label="Scroll to practice"><span></span></a>
 </section>"""
-    # practice follows the calendar: one bento per unit, and the browser shows the unit whose exam is next
-    # (Unit 1 until its exam, then Unit 2, ...). Earlier units and the final live in Review.
-    def unit_tiles(u):
-        lecs = [(lid, b) for lid, b in built.items() if str(b["unit"]) == u]
-        exs = [e for e in exams_built if str(e.get("unit")) == u]
-        tiles = []
-        if lecs or exs:
-            tiles.append(f'<a class="tile tile-wide appear" href="review/index.html?scope=unit"><span class="tile-ic">{icon("review")}</span><div><div class="tile-k">Unit {u} · everything in one place</div>'
-                         f'<h3>Unit {u} review</h3><p>Daily 10, your misses, and a timed mix, from Unit {u} only.</p></div><span class="tile-go">Open →</span></a>')
-        for i, ex in enumerate(exs):
-            timed = f' · {ex["minutes"]} min' if ex.get("minutes") else ""
-            tiles.append(f'<a class="tile appear" style="--d:{.06 * (i + 1):.2f}s" href="exams/{ex["id"]}/index.html" data-progress="exam" data-slug="{ex["id"]}" data-total="{ex["count"]}">'
-                         f'<span class="tile-ic">{icon("timer" if ex.get("minutes") else "exam")}</span><div><div class="tile-k">Practice exam · {ex["count"]} Q{timed}</div>'
-                         f'<h3>{html.escape(ex["title"].split(" (")[0])}</h3><p>Study or timed mode, a debrief at the end, and a log of what you miss.</p><div class="progress"></div></div><span class="tile-go">Start →</span></a>')
-        for i, (lid, b) in enumerate(lecs):
-            tiles.append(f'<a class="tile appear" style="--d:{.06 * (len(exs) + i + 1):.2f}s" href="{lid}/index.html?quiz=1"><span class="tile-ic">{icon("check")}</span><div><div class="tile-k">{lid} self-test · {b["qs"]} Q</div>'
-                         f'<h3>{html.escape(b["title"])}</h3><p>One question at a time, with the why behind every answer.</p></div><span class="tile-go">Start →</span></a>')
-        if not tiles:
-            tiles.append(f'<div class="tile tile-wide appear"><span class="tile-ic">{icon("calendar")}</span><div><div class="tile-k">Unit {u} · {html.escape(syl["units"][u])}</div>'
-                         f'<h3>Practice opens as lectures are posted</h3><p>Questions for Unit {u} appear here after each class. Meanwhile, keep earlier units fresh in Review.</p></div></div>')
-        later = "earlier units" if int(u) > 1 else "the whole course"
-        tiles.append(f'<a class="tile tile-wide appear" href="review/index.html?scope=all"><span class="tile-ic">{icon("review")}</span><div><div class="tile-k">Cumulative</div>'
-                     f'<h3>Review {later} &amp; prep for the final</h3><p>Spaced review across every unit so far, by-unit scores, and a timed final mock.</p></div><span class="tile-go">Open →</span></a>')
-        return tiles
-    groups = "".join(f'<div class="bento" data-unit="{u}" hidden>{"".join(unit_tiles(u))}</div>' for u in syl["units"])
-    groups += (f'<div class="bento" data-unit="final" hidden><a class="tile tile-wide appear" href="review/index.html?scope=all"><span class="tile-ic">{icon("review")}</span><div><div class="tile-k">Comprehensive final</div>'
-               '<h3>Final prep</h3><p>Every unit together: by-unit scores, your misses, and a timed final mock.</p></div><span class="tile-go">Open →</span></a></div>')
+    # practice follows the calendar: the browser shows the unit whose exam is next (Unit 1 until its exam, then
+    # Unit 2, ...). The home page keeps it to two cards; everything else lives on the Practice page.
+    groups = ""
+    for u in syl["units"]:
+        tiles, n_all = unit_tiles(u, syl, built, exams_built), len(unit_tiles(u, syl, built, exams_built, full=True))
+        more = n_all - len(tiles)
+        groups += (f'<div class="bento bento-2" data-unit="{u}" hidden>{"".join(tiles)}</div>'
+                   f'<p class="pr-more" data-unit="{u}" hidden><a href="practice/index.html">{f"{more} more for Unit {u}, plus cumulative and final prep" if more > 0 else "Cumulative and final prep"} →</a></p>')
+    groups += (f'<div class="bento bento-2" data-unit="final" hidden>{final_tile("")}</div>')
     practice = (f'<section class="section" id="practice"><div class="wrap"><p class="kicker appear">Practice</p><h2 class="appear">Test yourself. Then test yourself again.</h2>'
                 f'<p class="pr-sub appear" id="pr-sub"></p><div class="dotd appear" id="dotd" hidden></div>{groups}</div></section>')
     # course roadmap: one compact row per unit; the current unit opens with its lecture cards

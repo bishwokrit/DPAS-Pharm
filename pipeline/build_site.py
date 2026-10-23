@@ -60,7 +60,7 @@ SEARCH_ICON = ('<svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="tru
 def nav_html(up, active="", nav_links="", subtitle=""):
     """Two-level bar: a calm global nav (4 destinations + search + theme), and — only when a page has
     sections — a slim local bar under it with that page's own links."""
-    main = [("Study", f"{up}index.html#study", "study"), ("Practice", f"{up}index.html#practice", "practice"),
+    main = [("Study", f"{up}index.html#study", "study"), ("Practice", f"{up}practice/index.html", "practice"),
             ("Drugs", f"{up}drugs/index.html", "drugs"), ("Review", f"{up}review/index.html", "review"), ("Syllabus", f"{up}syllabus/index.html", "syllabus")]
     links = "".join(f'<a href="{href}"{" aria-current=page" if key == active else ""}>{label}</a>' for label, href, key in main)
     sub = (f'<div class="subnav"><div class="subnav-in"><span class="subnav-title">{html.escape(subtitle)}</span>'
@@ -73,7 +73,7 @@ def nav_html(up, active="", nav_links="", subtitle=""):
   <a class="brand" href="{up}index.html"><img class="brand-logo" src="{up}assets/logo-mark.svg" alt="" width="46" height="30"><span class="brand-name">{SITE_NAME}<span class="brand-sub">{COURSE}</span></span></a>
   <div class="nav-main">{links}</div>
   <div class="nav-tools">
-    <button class="search-btn" aria-label="Search" title="Search everything">{SEARCH_ICON}<span>Search</span></button>
+    <button class="search-btn" aria-label="Search" title="Search everything">{SEARCH_ICON}<span>Search</span><kbd class="kbd-k">Ctrl K</kbd></button>
     <button class="set-btn" aria-label="Settings" title="Settings" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15.2a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4z"/><path d="M19.4 13.5a7.6 7.6 0 0 0 0-3l2-1.6-2-3.4-2.4 1a7.6 7.6 0 0 0-2.6-1.5L14 2.4h-4l-.4 2.6A7.6 7.6 0 0 0 7 6.5l-2.4-1-2 3.4 2 1.6a7.6 7.6 0 0 0 0 3l-2 1.6 2 3.4 2.4-1a7.6 7.6 0 0 0 2.6 1.5l.4 2.6h4l.4-2.6a7.6 7.6 0 0 0 2.6-1.5l2.4 1 2-3.4z"/></svg></button>
   </div>
 </div></nav>{sub}
@@ -412,7 +412,7 @@ def knowledge_base(c, slides, n_img=0):
 
 # ---------------------------------------------------------------- main
 def main(pdf=True):
-    from pages_course import home_page, syllabus_page, icon  # noqa: F401 (split out to keep this file readable)
+    from pages_course import home_page, syllabus_page, practice_page, icon  # noqa: F401 (split out to keep this file readable)
     from pages_tools import search_index, global_kb, stamp_versions, review_page, drug_data, drugs_page, dotd_data
     syl = json.loads((ROOT / "work" / "syllabus.json").read_text())
     DOCS.mkdir(exist_ok=True)
@@ -481,6 +481,8 @@ def main(pdf=True):
     (DOCS / "review").mkdir(exist_ok=True)
     (DOCS / "review" / "index.html").write_text(review_page(syl, built, exams))
     (DOCS / "index.html").write_text(home_page(syl, built, exams))
+    (DOCS / "practice").mkdir(exist_ok=True)
+    (DOCS / "practice" / "index.html").write_text(practice_page(syl, built, exams))
     print(f"  site: home page ({len(built)} lectures, {len(exams)} practice exams) -> docs/")
     from pages_sketch import sketch_page
     sketch_page(page, SITE_NAME)

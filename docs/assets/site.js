@@ -11,6 +11,8 @@
   window.dpasIcon = (n, s = 20) => `<svg viewBox="0 0 24 24" width="${s}" height="${s}" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICON[n] || ""}</svg>`;
 
   document.querySelectorAll("[data-ic]").forEach((el) => (el.innerHTML = window.dpasIcon(el.dataset.ic, 22)));
+  // search shortcut hint matches the keyboard: ⌘K on Apple devices, Ctrl K elsewhere
+  if (/Mac|iPhone|iPad/.test(navigator.platform || navigator.userAgent)) document.querySelectorAll(".kbd-k").forEach((k) => (k.textContent = "⌘K"));
 
   // ---- one-time tips: a short welcome on the first visit, and a backup reminder once there's progress worth keeping
   const tip = (key, html, delay) => {
@@ -288,7 +290,7 @@
 
     // practice follows the calendar: the unit whose exam is next (after the last unit exam: final prep)
     const unitEx = D.exams.find((e) => e.unit && day(e.date) >= now), cur = unitEx ? String(unitEx.unit) : "final";
-    document.querySelectorAll("#practice .bento[data-unit]").forEach((g) => (g.hidden = g.dataset.unit !== cur));
+    document.querySelectorAll("#practice [data-unit]").forEach((g) => (g.hidden = g.dataset.unit !== cur));
     const ps = document.getElementById("pr-sub");
     if (ps) {
       const fe = D.exams.find((e) => !e.unit), dd = (e) => { const n = days(e.date); return n === 0 ? "today" : n === 1 ? "tomorrow" : `in ${n} days`; };
@@ -296,6 +298,17 @@
         : fe && day(fe.date) >= now ? `<strong>Final prep</strong> · comprehensive final ${fmt(fe.date)} (${dd(fe)}).` : "";
     }
     hu.querySelectorAll(".appear").forEach((el, i) => { el.style.setProperty("--d", `${0.45 + i * 0.08}s`); requestAnimationFrame(() => el.classList.add("in")); });
+  }
+
+  // practice page: the unit whose exam is next goes first and is marked current
+  const pd = document.getElementById("practice-data"), pu = document.getElementById("pr-units");
+  if (pd && pu) {
+    const t = new Date(); t.setHours(0, 0, 0, 0);
+    const ex = JSON.parse(pd.textContent).exams.find((e) => e.unit && new Date(e.date + "T00:00") >= t);
+    const sec = ex && pu.querySelector(`[data-unit="${ex.unit}"]`);
+    if (sec) { pu.prepend(sec); sec.querySelector(".pr-now").hidden = false; }
+    // earlier units after the current one, newest first
+    [...pu.children].slice(1).sort((a, b) => b.dataset.unit - a.dataset.unit).forEach((s) => pu.append(s));
   }
 
   // cram sheet: hide answers for active recall; tap a cell to peek
