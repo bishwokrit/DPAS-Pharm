@@ -429,7 +429,7 @@ def app_html(meta, data):
 <script>{APP_JS.replace("__DATA__", json.dumps(data, ensure_ascii=False).replace("</", "<\\/"))}</script>"""
     return f"""<!doctype html>
 <html lang="en" data-root="{up}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex">{SECURITY_META}
-<title>{html.escape(meta['short'])}</title><link rel="stylesheet" href="{up}assets/site.css"><link rel="icon" type="image/svg+xml" href="{up}assets/logo-mark.svg"><script>document.documentElement.classList.add("js")</script></head>
+<title>{html.escape(meta['short'])}</title><link rel="stylesheet" href="{up}assets/site.css"><link rel="icon" type="image/svg+xml" href="{up}assets/logo-mark.svg"><script>(function(d){{d.classList.add("js");try{{var t=JSON.parse(localStorage.getItem("theme")||'"auto"');if(t!=="auto")d.setAttribute("data-theme",t);var p=JSON.parse(localStorage.getItem("prefs")||"{{}}");for(var k in p)d.setAttribute("data-p"+k,p[k])}}catch(e){{}}}})(document.documentElement)</script></head>
 <body>{nav_html(up, "practice")}
 {body}
 <footer class="wrap narrow">Progress and your wrong-answer log are saved in this browser.</footer>

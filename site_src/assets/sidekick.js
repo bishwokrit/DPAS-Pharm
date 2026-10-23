@@ -74,7 +74,7 @@ function wireGo(root) {
 }
 
 // ---------------------------------------------------------------- panel shell
-const TABS = [["ask", "Ask"], ["notes", "Notes"], ["cards", "Flashcards"], ["quiz", "Quiz"], ["listen", "Listen"], ["map", "Mind map"], ["brief", "Briefing"], ["faq", "FAQ"]];
+const TABS = [["ask", "Ask"], ["notes", "Notes"], ["cards", "Flashcards"], ["quiz", "Quiz"], ["pod", "Podcast"], ["listen", "Listen"], ["map", "Mind map"], ["brief", "Briefing"], ["faq", "FAQ"]];
 function mount() {
   const fab = document.createElement("button");
   fab.className = "sk-fab noprint";
@@ -105,8 +105,8 @@ function close() { panel.classList.remove("open"); document.body.classList.remov
 function show(id, arg) {
   tab = id; store.set("sk:tab", id);
   panel.querySelectorAll("[data-tab]").forEach((b) => b.setAttribute("aria-selected", b.dataset.tab === id));
-  if (id !== "listen") speechSynthesis?.cancel();
-  ({ ask: askTab, listen: listenTab, cards: cardsTab, quiz: quizTab, map: mapTab, brief: briefTab, faq: faqTab, notes: notesTab, source: sourceView, explain: explainFree, card: newCard, compare: compareView })[id](arg);
+  if (id !== "listen" && id !== "pod") speechSynthesis?.cancel();
+  ({ ask: askTab, pod: podTab, listen: listenTab, cards: cardsTab, quiz: quizTab, map: mapTab, brief: briefTab, faq: faqTab, notes: notesTab, source: sourceView, explain: explainFree, card: newCard, compare: compareView })[id](arg);
   body.scrollTop = 0;
 }
 
@@ -281,6 +281,223 @@ function listenTab() {
   body.querySelector("[data-rate]").addEventListener("change", (e) => store.set("sk:rate", +e.target.value));
   body.querySelector("[data-voice]")?.addEventListener("change", (e) => store.set("sk:voice", voices[+e.target.value].name));
   body.querySelectorAll("[data-line]").forEach((p) => p.addEventListener("click", () => { speechSynthesis.cancel(); i = +p.dataset.line; playing = true; playBtn.textContent = "❚❚ Pause"; say(); }));
+}
+
+// ---------------------------------------------------------------- Podcast: plan with the AI, then a two-host episode read aloud
+// 1 pick topics/drugs  2 the AI asks a few coaching questions  3 approve an outline  4 the AI writes the episode from the
+// course sources only (study guides, which carry the slide and textbook-cited facts)  5 play it with recall pauses.
+const HOSTS = { A: "Maya", B: "Dev" };
+const POD_SYS = `You produce study podcasts for physician assistant (PA) students in clinical pharmacology.
+Rules:
+- Use ONLY facts in the SOURCES below (the course's study guides; facts marked TB come from the assigned Katzung textbook pages). No outside knowledge, no internet facts. If something requested isn't covered, say so plainly in the episode ("that isn't covered in our materials yet").
+- Audience: PA students preparing for course exams and the PANCE. Prioritize high-yield, testable points, common traps, and clinical reasoning.
+- Teach for retention: frequent active-recall questions (pose the question, the listener gets a pause, then the answer), brief recaps, contrasts between look-alike concepts, and an occasional short patient vignette.
+- Two hosts: ${HOSTS.A} (lead host, asks sharp questions) and ${HOSTS.B} (clinician-educator, explains). Warm, natural, concise, never fluffy. No sound effects, no music cues.
+- Every factual line carries its citation in a separate "src" field (e.g. "L01 S26", "p. 72", "SG U1-R7"), never spoken aloud.`;
+const podState = { step: "setup", sel: null, qs: null, answers: {}, outline: null, ep: null };
+let podDrugs = null, podParts = null;
+
+async function claudeJSON(system, user, maxTokens, onProgress) {
+  Anthropic ||= (await import(SDK_URL)).default;
+  const key = store.get("sk:key", "");
+  if (!/^sk-ant-/.test(key)) throw new Error("No personal API key saved");
+  const client = new Anthropic({ apiKey: key, authToken: null, baseURL: "https://api.anthropic.com", dangerouslyAllowBrowser: true });
+  const model = store.get("sk:model", MODELS[0][0]);
+  const stream = client.beta.messages.stream({
+    model, max_tokens: maxTokens,
+    ...(model === "claude-haiku-5-5" ? {} : { betas: ["server-side-fallback-2026-07-01"], fallbacks: "default" }),
+    output_config: { effort: "low" },
+    system, messages: [{ role: "user", content: user }],
+  });
+  let text = "";
+  stream.on("text", (d) => { text += d; onProgress?.(text); });
+  const msg = await stream.finalMessage();
+  if (msg.stop_reason === "refusal") throw new Error("Claude declined this request — try different topics.");
+  const m = text.match(/\{[\s\S]*\}/);
+  if (!m) throw new Error(msg.stop_reason === "max_tokens" ? "The episode ran too long — pick a shorter length." : "Couldn't read the AI's reply — try again.");
+  return JSON.parse(m[0]);
+}
+async function podSources(scopeAll) {
+  const src = scopeAll ? await loadAllSources() : `=== ${kb.lecture}: ${kb.title} ===\n${await loadSource()}`;
+  return [{ type: "text", text: POD_SYS }, { type: "text", text: `SOURCES:\n\n${src}`, cache_control: { type: "ephemeral" } }];
+}
+async function podChoices(scopeAll) {
+  if (!podDrugs) podDrugs = await fetch("../drugs/names.json").then((r) => r.json()).catch(() => []);
+  const lec = scopeAll ? await Promise.all((kb.lectures || []).map((l) => l.id === kb.lecture ? kb : fetch(`../${l.id}/kb.json`).then((r) => r.json()).catch(() => null))) : [kb];
+  const parts = lec.filter(Boolean).flatMap((k) => k.brief.map((b) => `${k.lecture} · ${b.part.replace(/^Part \d+ · /, "")}`));
+  const text = lec.filter(Boolean).map((k) => JSON.stringify(k.chunks)).join(" ").toLowerCase();
+  const drugs = podDrugs.filter((d) => [d.name, ...d.aliases].some((n) => text.includes(n.toLowerCase()))).map((d) => d.name);
+  const misses = lec.filter(Boolean).flatMap((k) => { const m = store.get(`miss:${k.lecture}`, []); return k.quiz.filter((q) => m.includes(q.id)).map((q) => q.topic); });
+  return { parts, drugs, misses: [...new Set(misses)] };
+}
+const chipsHTML = (name, list, on = []) => `<div class="pod-chips">${list.map((v) => `<label class="pod-chip"><input type="checkbox" name="${name}" value="${esc(v)}" ${on.includes(v) ? "checked" : ""}><span>${esc(v)}</span></label>`).join("")}</div>`;
+const podErr = (e) => /No personal API key/.test(e?.message) ? 'The podcast writer uses your own Anthropic API key. <a href="#" data-keyset>Add it in settings</a>.' : esc(e?.message || e);
+
+async function podTab() {
+  const st = podState;
+  if (st.step === "play" && st.ep) return podPlayer(st.ep);
+  const saved = store.get(`sk:pods`, []);
+  if (st.step === "setup") {
+    const scopeAll = st.sel?.scopeAll ?? false;
+    body.innerHTML = `<div class="pod-hero"><div class="pod-badge">🎧</div><div><h3>Make a study podcast</h3><p class="small muted">Two hosts, built only from your course materials. Pick what to cover — the AI will help you sharpen it before writing the episode.</p></div></div>
+      <div class="sk-row pod-scope"><button class="${scopeAll ? "" : "on"}" data-scope="0">This lecture</button><button class="${scopeAll ? "on" : ""}" data-scope="1">All lectures</button></div>
+      <div id="pod-choices"><p class="muted small">Loading topics…</p></div>
+      ${saved.length ? `<h4>My episodes</h4><div class="pod-saved">${saved.map((e, i) => `<div class="pod-ep"><button data-open="${i}"><strong>${esc(e.title)}</strong><span>${esc(e.when)} · ~${e.minutes} min</span></button><button class="sk-x" data-del="${i}" aria-label="Delete">✕</button></div>`).join("")}</div>` : ""}`;
+    body.querySelectorAll("[data-scope]").forEach((b) => b.onclick = () => { st.sel = { ...(st.sel || {}), scopeAll: b.dataset.scope === "1" }; podTab(); });
+    body.querySelectorAll("[data-open]").forEach((b) => b.onclick = () => { st.ep = saved[+b.dataset.open]; st.step = "play"; podTab(); });
+    body.querySelectorAll("[data-del]").forEach((b) => b.onclick = () => { if (confirm("Delete this episode?")) { saved.splice(+b.dataset.del, 1); store.set("sk:pods", saved); podTab(); } });
+    const c = await podChoices(scopeAll), prev = st.sel || {};
+    const box = body.querySelector("#pod-choices"); if (!box) return;
+    box.innerHTML = `<h4>Topics</h4>${chipsHTML("part", c.parts, prev.parts || [])}
+      ${c.drugs.length ? `<h4>Drugs</h4>${chipsHTML("drug", c.drugs, prev.drugs || [])}` : ""}
+      <h4>Anything specific?</h4><textarea class="pod-ta" name="extra" rows="2" placeholder="e.g. I keep mixing up potency and efficacy">${esc(prev.extra || "")}</textarea>
+      <h4>Length</h4><div class="seg pod-len">${[5, 10, 15].map((m) => `<button data-min="${m}" class="${(prev.minutes || 10) === m ? "on" : ""}">${m} min</button>`).join("")}</div>
+      <div class="pod-opts"><label><input type="checkbox" name="vig" ${prev.vig !== false ? "checked" : ""}> Include a few patient vignettes</label>
+      <label><input type="checkbox" name="recall" ${prev.recall !== false ? "checked" : ""}> Pause for active-recall questions</label>
+      ${c.misses.length ? `<label><input type="checkbox" name="miss" ${prev.miss !== false ? "checked" : ""}> Weave in what I've missed (${c.misses.length} topic${c.misses.length > 1 ? "s" : ""})</label>` : ""}</div>
+      <button class="btn pod-go" data-plan>Plan my episode →</button>${store.get("sk:key", "") ? "" : '<p class="small muted">Needs your own Anthropic API key — <a href="#" data-keyset>add it in settings</a>. Prefer free? The Listen tab reads this lecture aloud with no key.</p>'}`;
+    let minutes = prev.minutes || 10;
+    box.querySelectorAll("[data-min]").forEach((b) => b.onclick = () => { minutes = +b.dataset.min; box.querySelectorAll("[data-min]").forEach((x) => x.classList.toggle("on", x === b)); });
+    box.querySelectorAll("[data-keyset]").forEach((a) => a.onclick = (e) => { e.preventDefault(); aiSettings(); });
+    box.querySelector("[data-plan]").onclick = () => {
+      const vals = (n) => [...box.querySelectorAll(`[name=${n}]:checked`)].map((x) => x.value);
+      st.sel = { scopeAll, parts: vals("part"), drugs: vals("drug"), extra: box.querySelector("[name=extra]").value.trim(), minutes,
+        vig: box.querySelector("[name=vig]").checked, recall: box.querySelector("[name=recall]").checked, miss: box.querySelector("[name=miss]")?.checked ?? false, misses: c.misses };
+      if (!st.sel.parts.length && !st.sel.drugs.length && !st.sel.extra) { alert("Pick at least one topic or drug, or describe what you want."); return; }
+      st.step = "coach"; st.qs = null; st.answers = {}; podTab();
+    };
+    return;
+  }
+  const sel = st.sel, selText = `Requested podcast:
+- Topics: ${sel.parts.join("; ") || "(none picked)"}
+- Drugs: ${sel.drugs.join(", ") || "(none picked)"}
+- Student's note: ${sel.extra || "(none)"}
+- Length: about ${sel.minutes} minutes (~${sel.minutes * 150} spoken words)
+- Vignettes: ${sel.vig ? "yes, a few short ones" : "no"}; active-recall pauses: ${sel.recall ? "yes, often" : "only a couple"}
+- Topics this student has missed in self-tests: ${sel.miss && sel.misses.length ? sel.misses.join("; ") : "(not used)"}`;
+  if (st.step === "coach") {
+    body.innerHTML = `<div class="pod-steps"><span class="done">Topics</span><span class="on">Focus</span><span>Outline</span><span>Episode</span></div><div id="pod-q"><p class="muted">Thinking about what would help most…</p></div>`;
+    try {
+      if (!st.qs) { const r = await claudeJSON(await podSources(sel.scopeAll), `${selText}
+
+Before writing anything, coach the student toward the most useful episode. Ask 2 or 3 short questions that clarify what they need (e.g. depth, which comparisons confuse them, exam vs. first-pass learning, which drug details matter most). Each question gets 2-4 suggested answers grounded in the sources. If they picked something the sources don't cover, one question should point that out and offer covered alternatives.
+Return only JSON: {"note": "one encouraging sentence on their choice", "questions": [{"q": "...", "options": ["...", "..."]}]}`, 1500); if (!r.questions?.length) throw new Error("The AI didn't return questions — try again."); st.qs = r; }
+    } catch (e) { body.querySelector("#pod-q").innerHTML = `<p style="color:var(--bad)">${podErr(e)}</p><button class="btn ghost" data-back>← Back</button>`; podWire(); return; }
+    const q = st.qs;
+    body.querySelector("#pod-q").innerHTML = `<p>${esc(q.note || "")}</p>${q.questions.map((x, i) => `<div class="pod-qq"><div class="pod-qt">${esc(x.q)}</div><div class="pod-chips">${x.options.map((o) => `<label class="pod-chip"><input type="radio" name="q${i}" value="${esc(o)}"><span>${esc(o)}</span></label>`).join("")}</div>
+      <input class="pod-other" name="o${i}" placeholder="Or in your own words…"></div>`).join("")}
+      <div class="sk-row"><button class="btn ghost" data-back>← Topics</button><button class="btn" data-outline>Build the outline →</button></div>`;
+    podWire();
+    body.querySelector("[data-outline]").onclick = () => {
+      st.answers = Object.fromEntries(q.questions.map((x, i) => [x.q, body.querySelector(`[name=o${i}]`).value.trim() || body.querySelector(`[name=q${i}]:checked`)?.value || "no preference"]));
+      st.step = "outline"; st.outline = null; podTab();
+    };
+    return;
+  }
+  const answers = Object.entries(st.answers).map(([q, a]) => `- ${q} → ${a}`).join("\n");
+  if (st.step === "outline") {
+    body.innerHTML = `<div class="pod-steps"><span class="done">Topics</span><span class="done">Focus</span><span class="on">Outline</span><span>Episode</span></div><div id="pod-o"><p class="muted">Drafting an outline…</p></div>`;
+    try {
+      st.outline ||= await claudeJSON(await podSources(sel.scopeAll), `${selText}
+Student's answers to your coaching questions:
+${answers || "(none)"}${st.revise ? `\nStudent's change request for the outline: ${st.revise}` : ""}
+
+Propose the episode outline. Return only JSON: {"title": "short episode title", "segments": [{"title": "...", "points": ["high-yield point to cover", "..."], "recall": 1}]} — 3 to 6 segments sized for ${sel.minutes} minutes, an opening hook and a final rapid-fire recall round included.`, 2000);
+    } catch (e) { body.querySelector("#pod-o").innerHTML = `<p style="color:var(--bad)">${podErr(e)}</p><button class="btn ghost" data-back>← Back</button>`; podWire(); return; }
+    const o = st.outline;
+    body.querySelector("#pod-o").innerHTML = `<h3 class="pod-title">${esc(o.title)}</h3><ol class="pod-outline">${o.segments.map((g) => `<li><strong>${esc(g.title)}</strong><ul>${g.points.map((p) => `<li>${esc(p)}</li>`).join("")}</ul></li>`).join("")}</ol>
+      <textarea class="pod-ta" name="rev" rows="2" placeholder="Want changes? e.g. more on CYP inducers, drop the history"></textarea>
+      <div class="sk-row"><button class="btn ghost" data-revise>Revise</button><button class="btn" data-write>Create the episode →</button></div>`;
+    podWire();
+    body.querySelector("[data-revise]").onclick = () => { st.revise = body.querySelector("[name=rev]").value.trim(); if (st.revise) { st.outline = null; podTab(); } };
+    body.querySelector("[data-write]").onclick = () => { st.step = "write"; podTab(); };
+    return;
+  }
+  if (st.step === "write") {
+    body.innerHTML = `<div class="pod-steps"><span class="done">Topics</span><span class="done">Focus</span><span class="done">Outline</span><span class="on">Episode</span></div>
+      <div class="pod-writing"><div class="pod-wave"><i></i><i></i><i></i><i></i><i></i></div><p>Writing your episode from the course materials…</p><p class="small muted" id="pod-n">0 words</p></div>`;
+    try {
+      const ep = await claudeJSON(await podSources(sel.scopeAll), `${selText}
+Coaching answers:
+${answers || "(none)"}
+Approved outline: ${JSON.stringify(st.outline)}
+
+Write the full episode (~${sel.minutes * 150} spoken words). Lines alternate naturally between the hosts. Kinds:
+- "talk": normal dialogue.
+- "recall": a host poses a question to the LISTENER (end with something like "Pause and answer."), with "pause" seconds (5-10) before the answer.
+- "answer": the reveal right after a recall line.
+- "vignette": a short patient case (age, complaint, drug) that sets up a question.
+End with a rapid-fire recall round and a one-line takeaway.
+Return only JSON: {"title": "...", "script": [{"who": "A"|"B", "kind": "talk"|"recall"|"answer"|"vignette", "say": "spoken text", "src": "citation or empty", "pause": 0}]}`,
+        Math.min(16000, 1500 + sel.minutes * 600), (t) => { const n = body.querySelector("#pod-n"); if (n) n.textContent = `${(t.match(/"say":/g) || []).length} lines written…`; });
+      ep.minutes = sel.minutes; ep.when = new Date().toLocaleDateString(undefined, { month: "short", day: "numeric" }); ep.outline = st.outline;
+      const saved = store.get("sk:pods", []); saved.unshift(ep); store.set("sk:pods", saved.slice(0, 12));
+      st.ep = ep; st.step = "play"; podTab();
+    } catch (e) { body.querySelector(".pod-writing").innerHTML = `<p style="color:var(--bad)">${podErr(e)}</p><button class="btn ghost" data-back>← Back to outline</button>`; podWire("outline"); }
+  }
+}
+function podWire(back) {
+  body.querySelectorAll("[data-back]").forEach((b) => b.onclick = () => { podState.step = back || (podState.step === "outline" ? "coach" : "setup"); podTab(); });
+  body.querySelectorAll("[data-keyset]").forEach((a) => a.onclick = (e) => { e.preventDefault(); aiSettings(); });
+}
+
+function podPlayer(ep) {
+  const lines = ep.script || [];
+  const all = speechSynthesis?.getVoices().filter((v) => v.lang.startsWith("en")) || [];
+  // two distinct voices for the hosts (prefer higher-quality local voices)
+  const rank = (v) => (/(premium|enhanced|natural|neural|siri)/i.test(v.name) ? 0 : 1) + (v.localService ? 0 : 0.5);
+  const sorted = all.slice().sort((a, b) => rank(a) - rank(b));
+  const vA = sorted.find((v) => /samantha|ava|allison|susan|zira|female|aria|jenny|libby|sonia/i.test(v.name)) || sorted[0];
+  const vB = sorted.find((v) => v !== vA && /daniel|alex|tom|fred|david|guy|ryan|male|aaron|evan|nathan/i.test(v.name)) || sorted.find((v) => v !== vA) || vA;
+  body.innerHTML = `<div class="pod-player"><div class="pod-art"><div class="pod-wave"><i></i><i></i><i></i><i></i><i></i></div></div>
+    <div><div class="kicker">Episode</div><h3 class="pod-title">${esc(ep.title)}</h3><div class="small muted">${HOSTS.A} & ${HOSTS.B} · ~${ep.minutes} min · from your course materials</div></div></div>
+    <div class="pod-prog"><i id="pod-bar"></i></div>
+    <div class="pod-ctrl"><button class="sk-x" data-prev aria-label="Back">⏮</button><button class="pod-play" data-play aria-label="Play">▶</button><button class="sk-x" data-next aria-label="Skip">⏭</button>
+      <select data-rate>${[0.9, 1, 1.1, 1.25, 1.5].map((r) => `<option value="${r}" ${r === store.get("sk:podrate", 1.1) ? "selected" : ""}>${r}×</option>`).join("")}</select></div>
+    <div class="pod-count" id="pod-count" hidden></div>
+    <div class="sk-script pod-script">${lines.map((l, i) => `<p data-line="${i}" class="k-${esc(l.kind)}"><b class="who-${l.who === "B" ? "b" : "a"}">${l.who === "B" ? HOSTS.B : HOSTS.A}</b>${l.kind === "vignette" ? '<span class="pod-tag">Case</span>' : l.kind === "recall" ? '<span class="pod-tag">Recall</span>' : ""} ${esc(l.say)}${l.src ? ` <span class="cite">${esc(l.src)}</span>` : ""}</p>`).join("")}</div>
+    <div class="sk-row"><button class="btn ghost small" data-new>New episode</button><button class="btn ghost small" data-dl>Download transcript</button></div>
+    ${window.speechSynthesis ? "" : '<p class="small muted">This browser can\'t read aloud — the transcript is above.</p>'}
+    <p class="small muted">Voices come from your device (Apple devices and Chrome have the most natural ones). Nothing is recorded or uploaded.</p>`;
+  let i = 0, playing = false, timer = 0;
+  const btn = body.querySelector("[data-play]"), bar = body.querySelector("#pod-bar"), cnt = body.querySelector("#pod-count");
+  const mark = () => { body.querySelectorAll("[data-line]").forEach((p) => p.classList.toggle("now", +p.dataset.line === i)); body.querySelector(`[data-line="${i}"]`)?.scrollIntoView({ block: "center", behavior: "smooth" }); bar.style.width = `${(100 * i) / Math.max(1, lines.length)}%`; };
+  const stop = () => { playing = false; clearInterval(timer); cnt.hidden = true; speechSynthesis?.cancel(); btn.textContent = "▶"; };
+  const next = () => { if (!playing) return; i++; say(); };
+  function say() {
+    clearInterval(timer); cnt.hidden = true;
+    if (i >= lines.length) { stop(); i = 0; bar.style.width = "100%"; return; }
+    mark();
+    const l = lines[i], u = new SpeechSynthesisUtterance(plain(l.say));
+    u.voice = l.who === "B" ? vB : vA; if (vA === vB) u.pitch = l.who === "B" ? 0.85 : 1.1;
+    u.rate = +body.querySelector("[data-rate]").value;
+    u.onend = () => {
+      if (!playing) return;
+      if (l.kind === "recall" && lines[i + 1]) {  // think-time before the answer
+        let n = Math.max(3, Math.min(15, +l.pause || 6));
+        cnt.hidden = false; cnt.innerHTML = `<span>Your turn — answer out loud</span><strong>${n}</strong><button class="btn ghost small" data-reveal>Reveal now</button>`;
+        cnt.querySelector("[data-reveal]").onclick = () => { clearInterval(timer); next(); };
+        timer = setInterval(() => { n--; cnt.querySelector("strong").textContent = n; if (n <= 0) { clearInterval(timer); next(); } }, 1000);
+      } else next();
+    };
+    speechSynthesis.speak(u);
+  }
+  btn.onclick = () => {
+    if (!window.speechSynthesis) return;
+    if (playing) { stop(); return; }
+    playing = true; btn.textContent = "❚❚"; say();
+  };
+  body.querySelector("[data-prev]").onclick = () => { speechSynthesis.cancel(); i = Math.max(0, i - 1); if (playing) say(); else mark(); };
+  body.querySelector("[data-next]").onclick = () => { speechSynthesis.cancel(); i = Math.min(lines.length - 1, i + 1); if (playing) say(); else mark(); };
+  body.querySelector("[data-rate]").onchange = (e) => store.set("sk:podrate", +e.target.value);
+  body.querySelectorAll("[data-line]").forEach((p) => p.onclick = () => { speechSynthesis.cancel(); i = +p.dataset.line; playing = true; btn.textContent = "❚❚"; say(); });
+  body.querySelector("[data-new]").onclick = () => { stop(); podState.step = "setup"; podState.ep = null; podTab(); };
+  body.querySelector("[data-dl]").onclick = () => {
+    const txt = `${ep.title}\n\n` + lines.map((l) => `${l.who === "B" ? HOSTS.B : HOSTS.A}: ${l.say}${l.src ? ` [${l.src}]` : ""}`).join("\n\n");
+    const a = Object.assign(document.createElement("a"), { href: URL.createObjectURL(new Blob([txt], { type: "text/plain" })), download: `${ep.title.replace(/[^\w ]+/g, "").slice(0, 60) || "episode"}.txt` });
+    document.body.append(a); a.click(); a.remove();
+  };
+  mark();
 }
 
 // ---------------------------------------------------------------- Flashcards: Leitner boxes (spaced repetition)

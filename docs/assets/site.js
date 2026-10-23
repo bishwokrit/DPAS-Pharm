@@ -6,22 +6,53 @@
     set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch { /* private mode: just don't save */ } },
   };
 
-  // theme: auto (follow device) -> light -> dark
+  // ---- settings (gear in the top bar): theme, accent, text size, motion, and hiding clutter. Saved in this browser.
   const root = document.documentElement;
   const applyTheme = (t) => { if (t === "auto") root.removeAttribute("data-theme"); else root.setAttribute("data-theme", t); };
   let theme = store.get("theme", "auto");
   applyTheme(theme);
-  document.querySelectorAll(".theme-btn").forEach((b) => {
-    const svg = {
-      auto: '<svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 1.5a6.5 6.5 0 0 1 0 13z" fill="currentColor"/></svg>',
-      light: '<svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="3.2" fill="currentColor"/><g stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M8 1v1.6M8 13.4V15M1 8h1.6M13.4 8H15M3 3l1.1 1.1M11.9 11.9 13 13M3 13l1.1-1.1M11.9 4.1 13 3"/></g></svg>',
-      dark: '<svg viewBox="0 0 16 16"><path d="M13.5 10.2A6 6 0 0 1 5.8 2.5a6 6 0 1 0 7.7 7.7z" fill="currentColor"/></svg>',
+  const prefs = store.get("prefs", {});
+  const setPref = (k, v, def) => { if (v === def) delete prefs[k]; else prefs[k] = v; store.set("prefs", prefs); if (v === def) root.removeAttribute("data-p" + k); else root.setAttribute("data-p" + k, v); };
+  const gear = document.querySelector(".set-btn");
+  if (gear) {
+    const pop = document.createElement("div");
+    pop.className = "set-pop"; pop.setAttribute("role", "dialog"); pop.setAttribute("aria-label", "Settings");
+    const seg = (k, opts, cur) => `<div class="seg set-seg" data-k="${k}">${opts.map(([v, l]) => `<button data-v="${v}" class="${v === cur ? "on" : ""}">${l}</button>`).join("")}</div>`;
+    const tog = (k, label, on) => `<label class="set-tog"><span>${label}</span><input type="checkbox" data-t="${k}" ${on ? "checked" : ""}><i></i></label>`;
+    const draw = () => {
+      pop.innerHTML = `<div class="set-h">Settings</div>
+        <div class="set-g"><div class="set-l">Appearance</div>${seg("theme", [["auto", "Auto"], ["light", "Light"], ["dark", "Dark"]], theme)}
+          <div class="set-row"><span>Accent</span><div class="set-sw">${[["blue", "#0a84ff"], ["purple", "#8a5cf6"], ["teal", "#14a3b8"], ["graphite", "#8e8e93"]].map(([v, c]) => `<button data-acc="${v}" style="--sw:${c}" class="${(prefs.accent || "blue") === v ? "on" : ""}" aria-label="${v}"></button>`).join("")}</div></div>
+          <div class="set-row"><span>Text size</span>${seg("text", [["s", "A"], ["m", "A"], ["l", "A"], ["xl", "A"]], prefs.text || "m")}</div></div>
+        <div class="set-g"><div class="set-l">Comfort</div>${tog("motion", "Animations", prefs.motion !== "off")}${tog("glow", "Background glow", prefs.glow !== "off")}${tog("density", "Compact spacing", prefs.density === "compact")}</div>
+        <div class="set-g"><div class="set-l">Show on pages</div>${tog("sk", "Sidekick button", prefs.sk !== "off")}${tog("cites", "Slide & page citations", prefs.cites !== "off")}${tog("prog", "Reading progress bar", prefs.prog !== "off")}</div>
+        <div class="set-g set-data"><button data-backup>Back up</button><button data-restore>Restore</button><button data-reset>Reset progress</button></div>
+        <div class="set-foot">Saved only in this browser · <kbd>/</kbd> Sidekick · <kbd>Esc</kbd> close</div>`;
+      pop.querySelectorAll(".set-seg").forEach((g) => g.querySelectorAll("button").forEach((b) => b.onclick = () => {
+        if (g.dataset.k === "theme") { theme = b.dataset.v; store.set("theme", theme); applyTheme(theme); } else setPref(g.dataset.k, b.dataset.v, "m");
+        draw();
+      }));
+      pop.querySelectorAll("[data-acc]").forEach((b) => b.onclick = () => { setPref("accent", b.dataset.acc, "blue"); draw(); });
+      const OFF = { motion: "off", glow: "off", sk: "off", cites: "off", prog: "off" };
+      pop.querySelectorAll("[data-t]").forEach((c) => c.onchange = () => {
+        const k = c.dataset.t;
+        if (k === "density") setPref(k, c.checked ? "compact" : "normal", "normal"); else setPref(k, c.checked ? "on" : OFF[k], "on");
+      });
+      pop.querySelector("[data-backup]").onclick = () => document.querySelector(".site-foot [data-backup]")?.click();
+      pop.querySelector("[data-restore]").onclick = () => document.querySelector(".site-foot [data-restore]")?.click();
+      pop.querySelector("[data-reset]").onclick = () => {
+        if (!confirm("Erase all your saved progress on this device (scores, misses, flashcards, notes, grades)? Settings and your AI key stay. Back up first if you might want it.")) return;
+        try { Object.keys(localStorage).filter((k) => !["theme", "prefs", "sk:key", "sk:model"].includes(k)).forEach((k) => localStorage.removeItem(k)); } catch { /* blocked */ }
+        location.reload();
+      };
     };
-    const icon = () => (b.innerHTML = svg[theme]);
-    icon();
-    b.title = "Theme: follow device / light / dark";
-    b.addEventListener("click", () => { theme = theme === "auto" ? "light" : theme === "light" ? "dark" : "auto"; store.set("theme", theme); applyTheme(theme); icon(); });
-  });
+    document.body.append(pop);
+    pop.addEventListener("click", (e) => e.stopPropagation());  // clicks inside redraw the panel; don't treat them as "outside"
+    const openPop = (on) => { if (on) draw(); pop.classList.toggle("open", on); gear.setAttribute("aria-expanded", on); };
+    gear.addEventListener("click", (e) => { e.stopPropagation(); openPop(!pop.classList.contains("open")); });
+    document.addEventListener("click", (e) => { if (pop.classList.contains("open") && !pop.contains(e.target)) openPop(false); });
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape" && pop.classList.contains("open")) { openPop(false); gear.focus(); } });
+  }
 
   // reading progress bar
   const bar = document.querySelector(".progress-bar");

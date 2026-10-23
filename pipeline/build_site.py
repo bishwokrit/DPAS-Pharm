@@ -69,8 +69,8 @@ def nav_html(up, active="", nav_links="", subtitle=""):
   <a class="brand" href="{up}index.html"><img class="brand-logo" src="{up}assets/logo-mark.svg" alt="" width="46" height="30"><span class="brand-name">{SITE_NAME}</span></a>
   <div class="nav-main">{links}</div>
   <div class="nav-tools">
-    <button class="search-btn" aria-label="Search (Ctrl+K)" title="Search everything (⌘K / Ctrl+K)">{SEARCH_ICON}<span>Search</span><kbd>⌘K</kbd></button>
-    <button class="theme-btn" aria-label="Change theme"></button>
+    <button class="search-btn" aria-label="Search" title="Search everything">{SEARCH_ICON}<span>Search</span></button>
+    <button class="set-btn" aria-label="Settings" title="Settings" aria-expanded="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 15.2a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4z"/><path d="M19.4 13.5a7.6 7.6 0 0 0 0-3l2-1.6-2-3.4-2.4 1a7.6 7.6 0 0 0-2.6-1.5L14 2.4h-4l-.4 2.6A7.6 7.6 0 0 0 7 6.5l-2.4-1-2 3.4 2 1.6a7.6 7.6 0 0 0 0 3l-2 1.6 2 3.4 2.4-1a7.6 7.6 0 0 0 2.6 1.5l.4 2.6h4l.4-2.6a7.6 7.6 0 0 0 2.6-1.5l2.4 1 2-3.4z"/></svg></button>
   </div>
 </div></nav>{sub}
 </header>"""
@@ -88,7 +88,7 @@ def page(title, body, depth=0, nav_links="", sidekick=False, active="", subtitle
 <title>{html.escape(title)}</title>
 <link rel="stylesheet" href="{up}assets/site.css">
 <link rel="icon" type="image/svg+xml" href="{up}assets/logo-mark.svg">
-<script>document.documentElement.classList.add("js")</script>
+<script>(function(d){{d.classList.add("js");try{{var t=JSON.parse(localStorage.getItem("theme")||'"auto"');if(t!=="auto")d.setAttribute("data-theme",t);var p=JSON.parse(localStorage.getItem("prefs")||"{{}}");for(var k in p)d.setAttribute("data-p"+k,p[k])}}catch(e){{}}}})(document.documentElement)</script>
 </head>
 <body>
 {nav_html(up, active, nav_links, subtitle)}
@@ -788,6 +788,9 @@ def main(pdf=True):
     (DOCS / "robots.txt").write_text("User-agent: *\nDisallow: /\n")
     (DOCS / "drugs").mkdir(exist_ok=True)
     (DOCS / "drugs" / "index.html").write_text(drugs_page(built, exams))
+    sys.path.insert(0, str(ROOT / "work"))
+    import drugs as _DR  # names only, for Sidekick's podcast topic picker
+    (DOCS / "drugs" / "names.json").write_text(json.dumps([{"name": d["name"], "aliases": d["aliases"], "cls": d["cls"]} for d in _DR.DRUGS], ensure_ascii=False))
     (DOCS / "review").mkdir(exist_ok=True)
     (DOCS / "review" / "index.html").write_text(review_page(syl, built, exams))
     (DOCS / "index.html").write_text(home_page(syl, built, exams))
