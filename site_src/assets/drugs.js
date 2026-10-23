@@ -23,7 +23,7 @@
     $("dx-empty").hidden = list.length > 0;
     $("dx-grid").querySelectorAll(".dx-tile").forEach((b) => b.addEventListener("click", (e) => {
       if (e.target.closest("[data-pick]")) { togglePick(b.dataset.name); return; }
-      open(b.dataset.name);
+      open(b.dataset.name, b);
     }));
   }
   $("dx-q").addEventListener("input", (e) => { q = e.target.value; draw(); });
@@ -31,25 +31,55 @@
     tag = b.dataset.tag; document.querySelectorAll("#dx-tags [data-tag]").forEach((x) => x.classList.toggle("on", x === b)); draw();
   }));
 
-  // ---- compare (pick two)
+  // ---- compare (pick two): a floating tray shows your picks
+  const tray = document.createElement("div");
+  tray.className = "dx-tray"; document.body.append(tray);
+  function paintTray() {
+    tray.classList.toggle("on", picked.length > 0);
+    tray.innerHTML = `<span class="dx-tray-l">Compare</span>${picked.map((n) => `<span class="dx-chip">${esc(n)}<button data-un="${esc(n)}" aria-label="Remove">×</button></span>`).join("")}
+      ${picked.length < 2 ? '<span class="dx-tray-hint">Pick one more</span>' : ""}<button class="btn small" data-go ${picked.length < 2 ? "disabled" : ""}>Compare →</button>`;
+    tray.querySelectorAll("[data-un]").forEach((x) => x.onclick = () => togglePick(x.dataset.un));
+    tray.querySelector("[data-go]").onclick = () => compare();
+  }
   function togglePick(name) {
     picked = picked.includes(name) ? picked.filter((n) => n !== name) : [...picked, name].slice(-2);
     const b = $("dx-cmp"); b.disabled = picked.length < 2; b.textContent = `Compare (${picked.length}/2)`;
-    draw();
+    paintTray(); draw();
   }
-  $("dx-cmp").addEventListener("click", () => {
+  $("dx-cmp").addEventListener("click", () => compare());
+  function compare() {
     const [a, b] = picked.map((n) => DR.find((d) => d.name === n));
-    const col = (d) => `<div><h3>${esc(d.name)}</h3><div class="small muted">${esc(d.cls)}${cite(d.cls_src)}</div><div class="dx-tags-mini" style="margin:8px 0">${d.tags.map((t) => `<i>${esc(t)}</i>`).join("")}</div>
+    if (!a || !b) return;
+    const tags = [...new Set([...a.tags, ...b.tags])].sort((x, y) => (b.tags.includes(y) && a.tags.includes(y)) - (b.tags.includes(x) && a.tags.includes(x)));
+    const mark = (d, t) => d.tags.includes(t) ? '<span class="dx-yes">●</span>' : '<span class="dx-no">—</span>';
+    const col = (d) => `<div class="dx-cc"><div class="dx-cc-h"><h3>${esc(d.name)}</h3><div class="small muted">${esc(d.cls)}${cite(d.cls_src)}</div></div>
       <ul>${d.facts.map((f) => `<li>${tb(f)}${md(f.text)}${cite(f.src)}</li>`).join("")}</ul></div>`;
-    const shared = a.tags.filter((t) => b.tags.includes(t));
-    sheet(`<div class="dx-sh-top"><div><div class="kicker">Compare</div><h2>${esc(a.name)} vs ${esc(b.name)}</h2>${shared.length ? `<p class="small muted">In common: ${shared.map(esc).join(", ")}</p>` : ""}</div><button class="sk-x" data-close>✕</button></div>
-      <div class="dx-cmp-grid">${col(a)}${col(b)}</div>`);
-  });
+    sheet(`<div class="dx-sh-top"><div><div class="kicker">Compare</div><h2>${esc(a.name)} <span class="dx-vs">vs</span> ${esc(b.name)}</h2></div><button class="sk-x" data-close aria-label="Close">✕</button></div>
+      <table class="dx-matrix"><thead><tr><th></th><th>${esc(a.name)}</th><th>${esc(b.name)}</th></tr></thead><tbody>
+        ${tags.map((t) => `<tr class="${a.tags.includes(t) && b.tags.includes(t) ? "both" : ""}"><td>${esc(t)}</td><td>${mark(a, t)}</td><td>${mark(b, t)}</td></tr>`).join("")}
+        <tr><td>Lecture mentions</td><td>${a.n_mentions}</td><td>${b.n_mentions}</td></tr></tbody></table>
+      <div class="dx-acts"><button class="btn small" data-qboth>Quiz me on both</button></div>
+      <h4>Key facts</h4><div class="dx-cmp-grid">${col(a)}${col(b)}</div>`);
+    $("dx-sheet-in").querySelector("[data-qboth]").onclick = () => quizFor({ name: `${a.name} + ${b.name}`, pattern: `${a.pattern}|${b.pattern}` });
+  }
 
   // ---- detail sheet
-  function sheet(htmlStr) {
-    $("dx-sheet-in").innerHTML = htmlStr; $("dx-sheet").hidden = false; $("dx-scrim").hidden = false;
-    requestAnimationFrame(() => { $("dx-sheet").classList.add("open"); $("dx-scrim").classList.add("open"); });
+  const calm = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  function sheet(htmlStr, from) {
+    const sh = $("dx-sheet"), wasOpen = sh.classList.contains("open");
+    $("dx-sheet-in").innerHTML = htmlStr; sh.hidden = false; $("dx-scrim").hidden = false; sh.scrollTop = 0;
+    if (from && !calm && !wasOpen && sh.animate) {
+      // the card flips over and grows into the side panel
+      sh.style.transition = "none"; sh.classList.add("open");
+      const a = from.getBoundingClientRect(), z = sh.getBoundingClientRect();
+      const dx = a.left + a.width / 2 - (z.left + z.width / 2), dy = a.top + a.height / 2 - (z.top + z.height / 2);
+      sh.animate([
+        { transform: `perspective(1400px) translate(${dx}px, ${dy}px) scale(${a.width / z.width}, ${a.height / z.height}) rotateY(-100deg)`, opacity: 0, borderRadius: "18px" },
+        { transform: `perspective(1400px) translate(${dx * 0.35}px, ${dy * 0.35}px) scale(${0.6 + 0.4 * a.width / z.width}, ${0.75 + 0.25 * a.height / z.height}) rotateY(-40deg)`, opacity: 1, offset: 0.45 },
+        { transform: "none", opacity: 1, borderRadius: "0px" }], { duration: 620, easing: "cubic-bezier(.2,.8,.2,1)" }).onfinish = () => (sh.style.transition = "");
+      from.animate([{ transform: "perspective(900px) rotateY(0)" }, { transform: "perspective(900px) rotateY(90deg)", opacity: 0, offset: 0.5 }, { transform: "perspective(900px) rotateY(0)", opacity: 1 }], { duration: 700, easing: "ease-in-out" });
+      $("dx-scrim").classList.add("open");
+    } else requestAnimationFrame(() => { sh.classList.add("open"); $("dx-scrim").classList.add("open"); });
     document.documentElement.style.overflow = "hidden";
     $("dx-sheet-in").querySelectorAll("[data-close]").forEach((x) => x.addEventListener("click", close));
   }
@@ -62,7 +92,7 @@
   $("dx-scrim").addEventListener("click", close);
   document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !$("dx-sheet").hidden) close(); });
 
-  function open(name) {
+  function open(name, from) {
     const d = DR.find((x) => x.name === name);
     if (!d) return;
     history.replaceState(null, "", "#" + slug(d.name));
@@ -72,10 +102,10 @@
       <div class="dx-acts"><button class="btn small" data-quiz>Quiz me on ${esc(d.name)}</button><select data-vs><option value="">Compare with…</option>${DR.filter((x) => x.name !== d.name).map((x) => `<option>${esc(x.name)}</option>`).join("")}</select></div>
       <h4>Key facts</h4><ul class="dx-facts">${d.facts.map((f) => `<li>${tb(f)}${md(f.text)}${cite(f.src)}</li>`).join("")}</ul>
       <h4>In your lectures (${d.n_mentions})</h4>${d.mentions.length ? `<ul class="dx-ment">${d.mentions.map((m) => `<li><span class="small muted">${esc(m.lid)} · ${esc(m.where)}</span><div>${m.tb ? '<span class="tag tb">TB</span>' : ""}${md(m.text)}${cite(m.src)}</div><a class="jump" href="${esc(m.href)}">Open →</a></li>`).join("")}</ul>` : '<p class="muted small">Only in the assigned reading so far.</p>'}
-      <p class="small muted" style="margin-top:16px">Mechanism, adverse effects, and monitoring fill in as drug-class lectures cover them. Anything else: <strong>not covered in materials</strong>.</p>`);
+      <p class="small muted" style="margin-top:16px">Mechanism, adverse effects, and monitoring fill in as drug-class lectures cover them. Anything else: <strong>not covered in materials</strong>.</p>`, from);
     const s = $("dx-sheet-in");
     s.querySelector("[data-quiz]").addEventListener("click", () => quizFor(d));
-    s.querySelector("[data-vs]").addEventListener("change", (e) => { if (e.target.value) { picked = [d.name, e.target.value]; $("dx-cmp").disabled = false; $("dx-cmp").click(); } });
+    s.querySelector("[data-vs]").addEventListener("change", (e) => { if (e.target.value) { picked = [d.name, e.target.value]; paintTray(); draw(); compare(); } });
   }
 
   // ---- quiz: every self-test and exam question that mentions this drug
@@ -125,7 +155,7 @@
     drawCard();
   });
 
-  draw();
+  draw(); paintTray();
   const want = location.hash.slice(1), hit = DR.find((d) => slug(d.name) === want);
   if (hit) open(hit.name);
   addEventListener("hashchange", () => { const d = DR.find((x) => slug(x.name) === location.hash.slice(1)); if (d) open(d.name); });  // site search jumps here

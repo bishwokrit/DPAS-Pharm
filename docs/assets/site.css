@@ -729,8 +729,8 @@ body.focus .focus-btn { background: var(--accent-soft) !important; color: var(--
 @property --lc { syntax: "<color>"; inherits: true; initial-value: #0a84ff; }
 .fs { position: relative; overflow: hidden; padding: 24px 26px 20px; --lc: var(--accent); transition: --lc .5s ease; }
 .fs::before { content: ""; position: absolute; inset: -40% -10% auto auto; width: 70%; height: 160%; pointer-events: none;
-  background: radial-gradient(closest-side, color-mix(in srgb, var(--lc) 22%, transparent), transparent); transition: opacity .5s; }
-.fs[data-l="F"]::before { opacity: .9; } .fs[data-l="C"]::before { opacity: .7; }
+  background: radial-gradient(closest-side, color-mix(in srgb, var(--lc) 10%, transparent), transparent); transition: opacity .5s; }
+.fs[data-l="F"]::before { opacity: .8; } .fs[data-l="C"]::before { opacity: .7; }
 .fs > * { position: relative; }
 .fs-verdict { margin-top: 4px; font-size: 13px; font-weight: 600; color: var(--lc); }
 #fn-score { transition: color .5s; } .fs[data-l="F"] #fn-score { color: var(--bad); }
@@ -850,3 +850,62 @@ body.focus .focus-btn { background: var(--accent-soft) !important; color: var(--
 @keyframes vt-out { to { opacity: 0; } }
 @keyframes vt-in { from { opacity: 0; transform: translateY(6px); } }
 @media (prefers-reduced-motion: reduce) { ::view-transition-old(root), ::view-transition-new(root) { animation: none; } }
+
+/* ---------- review: practice · progress · saved ---------- */
+.rv-hero .lede { max-width: 640px; }
+.rv-count { display: inline-flex; align-items: center; gap: 8px; margin-top: 18px; padding: 8px 14px; border-radius: 980px; background: var(--surface); box-shadow: var(--shadow); font-size: 14px; color: var(--text-2); }
+.rv-count strong { color: var(--text); font-weight: 600; }
+.rv-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--c-exam); box-shadow: 0 0 0 4px color-mix(in srgb, var(--c-exam) 25%, transparent); }
+.rv-sec h2 { margin-bottom: 18px; }
+.rv-acts { display: grid; grid-template-columns: 1.3fr 1fr 1fr 1fr; gap: 12px; }
+@media (max-width: 960px) { .rv-acts { grid-template-columns: 1fr 1fr; } } @media (max-width: 560px) { .rv-acts { grid-template-columns: 1fr; } }
+.rv-act { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; text-align: left; padding: 18px; border: 0; border-radius: 18px; background: var(--surface); box-shadow: var(--shadow); color: var(--text); font: inherit; cursor: pointer; transition: transform .25s cubic-bezier(.2,.8,.2,1), box-shadow .25s; }
+.rv-act:hover:not(:disabled) { transform: translateY(-3px); box-shadow: var(--shadow), 0 0 0 1px var(--accent); }
+.rv-act:disabled { opacity: .5; cursor: default; }
+.rv-act.main { background: linear-gradient(135deg, color-mix(in srgb, var(--accent) 22%, var(--surface)), var(--surface)); }
+.rv-ic { width: 36px; height: 36px; border-radius: 11px; display: grid; place-items: center; font-size: 17px; color: #fff; background: linear-gradient(135deg, var(--p0), var(--p2)); }
+.rv-t strong { display: block; font-size: 16px; margin-bottom: 3px; } .rv-t span { font-size: 13px; color: var(--text-2); line-height: 1.45; }
+.rv-cta { margin-top: auto; font-size: 13.5px; font-weight: 600; color: var(--accent); }
+.rv-stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+@media (max-width: 700px) { .rv-stats { grid-template-columns: 1fr 1fr; } }
+.rv-stat { position: relative; overflow: hidden; padding: 16px 18px; border-radius: 16px; background: var(--surface); box-shadow: var(--shadow); }
+.rv-stat strong { display: block; font-size: 28px; font-weight: 650; letter-spacing: -.02em; font-variant-numeric: tabular-nums; } .rv-stat strong small { font-size: 15px; color: var(--text-2); font-weight: 500; }
+.rv-stat span { font-size: 13px; color: var(--text-2); }
+.rv-stat i { position: absolute; left: 0; bottom: 0; height: 3px; background: var(--accent); transition: width .8s cubic-bezier(.2,.8,.2,1); }
+.rv-h3 { margin: 28px 0 10px; font-size: 16px; }
+.rv-topics { display: grid; gap: 6px; }
+.rv-topic { display: grid; grid-template-columns: minmax(0, 1.4fr) 1fr 44px 64px; gap: 14px; align-items: center; padding: 11px 16px; border-radius: 12px; background: var(--surface); color: var(--text); text-decoration: none; transition: background .2s; }
+.rv-topic[href]:hover { background: var(--surface-2); }
+.rv-tn { font-size: 14px; } .rv-bar { height: 6px; border-radius: 3px; background: var(--surface-2); overflow: hidden; } .rv-bar i { display: block; height: 100%; border-radius: 3px; }
+.rv-tp { font-size: 13px; font-weight: 600; text-align: right; font-variant-numeric: tabular-nums; } .rv-go { font-size: 13px; color: var(--accent); text-align: right; }
+@media (max-width: 600px) { .rv-topic { grid-template-columns: 1fr 44px; } .rv-bar { grid-column: 1 / -1; grid-row: 2; } .rv-go { display: none; } }
+.rv-empty { color: var(--text-2); font-size: 14.5px; max-width: 620px; margin: 0; padding: 18px 20px; border-radius: 14px; background: var(--surface); border: 1px dashed var(--hair); }
+.rv-tabs { margin-bottom: 14px; } .rv-tabs button { padding: 7px 14px; font-size: 13px; } .rv-tabs b { margin-left: 4px; font-weight: 700; color: var(--accent); }
+.rv-panel { animation: vt-in .3s cubic-bezier(.2,.8,.2,1); }
+
+/* ---------- drugs: compare tray + comparison sheet ---------- */
+.dx-sheet { transform-origin: center; backface-visibility: hidden; }
+.dx-tray { position: fixed; z-index: 50; left: 50%; bottom: 20px; transform: translate(-50%, 140%); display: flex; align-items: center; gap: 8px; padding: 8px 8px 8px 16px; max-width: calc(100vw - 24px); flex-wrap: wrap;
+  border-radius: 980px; background: color-mix(in srgb, var(--surface) 88%, transparent); backdrop-filter: saturate(1.6) blur(18px); -webkit-backdrop-filter: saturate(1.6) blur(18px);
+  box-shadow: 0 0 0 1px var(--hair), 0 14px 40px rgba(0,0,0,.3); transition: transform .45s cubic-bezier(.2,.8,.2,1); }
+.dx-tray.on { transform: translate(-50%, 0); }
+.dx-tray-l { font-size: 12px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--text-2); }
+.dx-tray-hint { font-size: 13px; color: var(--text-2); }
+.dx-chip { display: inline-flex; align-items: center; gap: 4px; padding: 5px 6px 5px 12px; border-radius: 980px; background: var(--accent-soft); color: var(--accent); font-size: 13.5px; font-weight: 600; animation: vt-in .3s ease; }
+.dx-chip button { border: 0; background: none; color: inherit; font-size: 16px; line-height: 1; cursor: pointer; padding: 0 4px; opacity: .7; } .dx-chip button:hover { opacity: 1; }
+.dx-vs { font-weight: 500; color: var(--text-2); font-size: .7em; margin: 0 4px; }
+.dx-matrix { width: 100%; border-collapse: collapse; margin: 18px 0 6px; font-size: 14px; background: var(--surface); border-radius: 14px; overflow: hidden; box-shadow: var(--shadow); }
+.dx-matrix th { background: none; text-align: center; font-size: 12.5px; font-weight: 600; color: var(--text-2); padding: 12px 10px; border-bottom: 1px solid var(--hair); }
+.dx-matrix th:first-child, .dx-matrix td:first-child { text-align: left; padding-left: 16px; }
+.dx-matrix td { padding: 10px; border-top: 1px solid var(--hair); text-align: center; font-variant-numeric: tabular-nums; }
+.dx-matrix tr.both td:first-child { font-weight: 600; } .dx-matrix tr.both { background: color-mix(in srgb, var(--accent) 7%, transparent); }
+.dx-yes { color: var(--accent); font-size: 12px; } .dx-no { color: var(--text-2); opacity: .5; }
+.dx-cc { background: var(--surface); border-radius: 16px; padding: 16px; box-shadow: var(--shadow); }
+.dx-cc-h { padding-bottom: 10px; margin-bottom: 4px; border-bottom: 1px solid var(--hair); } .dx-cc-h h3 { margin: 0 0 2px; font-size: 17px; }
+.dx-cc ul { padding-left: 18px; font-size: 14px; margin: 8px 0 0; } .dx-cc li { margin: 7px 0; }
+
+.fs-ambient { --lc: var(--accent); position: fixed; inset: 0; z-index: 40; pointer-events: none; opacity: 0; transition: opacity .9s ease, --lc .5s ease;
+  background: radial-gradient(38vmax 30vmax at 0 0, color-mix(in srgb, var(--lc) 16%, transparent), transparent 70%), radial-gradient(38vmax 30vmax at 100% 0, color-mix(in srgb, var(--lc) 16%, transparent), transparent 70%),
+    radial-gradient(38vmax 30vmax at 0 100%, color-mix(in srgb, var(--lc) 16%, transparent), transparent 70%), radial-gradient(38vmax 30vmax at 100% 100%, color-mix(in srgb, var(--lc) 16%, transparent), transparent 70%); }
+.fs-ambient.on { opacity: 1; transition: opacity .35s ease, --lc .5s ease; }
+@media (prefers-reduced-motion: reduce) { .fs-ambient { display: none; } }

@@ -82,7 +82,11 @@
     });
     root.querySelectorAll("#assume button").forEach((b) => b.addEventListener("click", () => { S.assume = +b.dataset.v; saveAll(S); calc(); }));
     const fin = froot?.querySelector("#fn-in");
-    if (fin) { fin.value = S.fxTry ?? 85; fin.addEventListener("input", () => { S.fxTry = +fin.value; saveAll(S); calc(); }); }
+    // while you drag, the page corners glow faintly in the grade's color
+    const amb = document.createElement("div"); amb.className = "fs-ambient"; amb.setAttribute("aria-hidden", "true"); document.body.append(amb);
+    let ambT = 0;
+    const glow = () => { amb.style.setProperty("--lc", froot.querySelector(".fs")?.style.getPropertyValue("--lc") || "var(--accent)"); amb.classList.add("on"); clearTimeout(ambT); ambT = setTimeout(() => amb.classList.remove("on"), 1100); };
+    if (fin) { fin.value = S.fxTry ?? 85; fin.addEventListener("input", () => { S.fxTry = +fin.value; saveAll(S); calc(); glow(); }); fin.addEventListener("pointerdown", glow); }
     root.querySelector("[data-clear]").addEventListener("click", () => {
       if (!confirm("Clear all scores?")) return;
       S = { assume: S.assume, fxTry: S.fxTry }; saveAll(S);

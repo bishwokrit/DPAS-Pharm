@@ -677,24 +677,18 @@ def search_index(syl, sched, built, exams):
 
 # ---------------------------------------------------------------- exam-week review dashboard
 def review_page(syl, built, exams):
-    today = date.today().isoformat()
-    nxt = next((e for e in syl.get("exams", []) if e["date"] >= today), None)
-    when = ""
-    if nxt:
-        days = (date.fromisoformat(nxt["date"]) - date.today()).days
-        when = f'{html.escape(nxt["label"])} {"is today" if days == 0 else f"in {days} day" + ("s" if days != 1 else "")} · {date.fromisoformat(nxt["date"]).strftime("%a, %b %-d")} · {html.escape(nxt["time"])}'
     cfg = json.dumps({"lectures": [{"id": lid, "title": b["title"]} for lid, b in built.items()],
-                      "exams": [{"id": e["id"], "title": e["title"]} for e in exams]}).replace("</", "<\\/")
-    body = f"""<header class="hero wrap"><p class="eyebrow">Exam week</p><h1>Review</h1>
-<p class="lede">{when or "Everything you've missed, flagged, and saved — in one place."}</p><p class="small muted" id="counts"></p></header>
-<section class="section" style="border-top:0;padding-top:0"><div class="wrap"><div class="acts" id="act"></div></div></section>
-<section class="section" id="weak"><div class="wrap"><h2>Weakest topics</h2><p class="muted">From every question you've answered — self-tests, Sidekick quizzes, and practice exams.</p><div id="topics"></div></div></section>
-<section class="section"><div class="wrap"><div class="grid two">
-<div class="card"><h3>Missed questions</h3><div id="misses"></div></div>
-<div class="card"><h3>Flagged exam questions</h3><div id="flags"></div></div>
-<div class="card"><h3>Weak flashcards</h3><div id="cards"></div></div>
-<div class="card"><h3>My notes</h3><div id="notes"></div></div>
-</div></div></section>
+                      "exams": [{"id": e["id"], "title": e["title"]} for e in exams],
+                      "upcoming": [{"label": e["label"], "date": e["date"], "time": e["time"]} for e in syl.get("exams", [])]}).replace("</", "<\\/")
+    body = f"""<header class="hero wrap rv-hero"><p class="eyebrow">Review</p><h1>Your study hub</h1>
+<p class="lede">Practice that adapts to you. Everything here comes from what you've done on this site: questions you missed, cards you marked, notes you saved.</p>
+<div class="rv-count" id="rv-count" hidden></div></header>
+<section class="section rv-sec" id="practice"><div class="wrap"><p class="kicker">1 · Practice</p><h2>Start a session</h2>
+<div class="rv-acts" id="act"></div></div></section>
+<section class="section rv-sec" id="progress"><div class="wrap"><p class="kicker">2 · Your progress</p><h2>How you're doing</h2>
+<div class="rv-stats" id="stats"></div><h3 class="rv-h3">Weakest topics</h3><div id="topics"></div></div></section>
+<section class="section rv-sec" id="saved"><div class="wrap"><p class="kicker">3 · Saved for later</p><h2>Your collections</h2>
+<div class="seg rv-tabs" id="rv-tabs"></div><div class="rv-panel" id="rv-panel"></div></div></section>
 <script type="application/json" id="review-data">{cfg}</script>
 <script src="../assets/review.js"></script>"""
     return page("Review · Clinical Pharmacology", body, depth=1, active="review")

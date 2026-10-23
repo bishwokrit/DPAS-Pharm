@@ -137,32 +137,57 @@
     draw();
   }
 
-  // ---- page
+  // ---- page: 1 practice · 2 progress · 3 saved collections
+  let tab = store.get("rv:tab", "misses");
   function render() {
     const missed = pool.filter((q) => status(q) === "missed"), flags = pool.filter(flagged), cards = weakCards(), topics = topicStats();
     const notes = Object.keys(kbs).flatMap((lid) => store.get(`sk:notes:${lid}`, []).map((n) => ({ ...n, lid })));
     const daily = store.get("daily:log", {})[today()];
-    $("act").innerHTML = `
-      <button class="card act" data-daily><div class="act-ic">☀︎</div><div><strong>Daily 10</strong><span>${daily ? `Done today: ${daily.score}/${daily.of} · ` : ""}${streak()}-day streak · weighted to your weak spots</span></div></button>
-      <button class="card act" data-misses ${missed.length ? "" : "disabled"}><div class="act-ic">↺</div><div><strong>Retry my misses</strong><span>${missed.length} question${missed.length === 1 ? "" : "s"} across all lectures and exams</span></div></button>
-      <button class="card act" data-mixed><div class="act-ic">⏱</div><div><strong>Weak-spot mixed exam</strong><span>40 questions, timed at PANCE pace, from every lecture and exam</span></div></button>
-      <button class="card act" data-custom><div class="act-ic">⚙︎</div><div><strong>Custom mixed exam</strong><span>Pick the size, a topic, or misses only — study or timed</span></div></button>`;
-    $("act").querySelector("[data-daily]").onclick = startDaily;
-    $("act").querySelector("[data-misses]").onclick = () => missed.length && window.dpasQuiz.start(shuffle(missed.slice()), opts("Retry: all misses"));
-    $("act").querySelector("[data-mixed]").onclick = () => window.dpasQuiz.start(weighted(40), opts("Weak-spot mixed exam", { timed: true, feedback: "end" }));
-    $("act").querySelector("[data-custom]").onclick = () => window.dpasQuiz.setup(pool, opts("Mixed exam — all lectures", { missed: missed.map((q) => q.id) }));
+    const answered = pool.filter((q) => status(q) !== "new"), right = answered.filter((q) => ["right", "fixed"].includes(status(q)));
 
-    $("topics").innerHTML = topics.length ? `<div class="table-wrap" style="margin:0;box-shadow:none"><table><tbody>${topics.map((t) => `<tr><td>${md(t.topic)}</td><td class="nowrap">${t.ok}/${t.n}</td>
-      <td style="width:40%"><div class="qm-meter"><div style="width:${t.pct}%;background:${t.pct >= 80 ? "var(--good)" : t.pct >= 60 ? "var(--warn)" : "var(--bad)"}"></div></div></td>
-      <td>${t.link ? `<a href="${esc(t.link.href)}">Study →</a>` : ""}</td></tr>`).join("")}</tbody></table></div>` : '<p class="muted">Answer some self-test or exam questions and your weakest topics show up here.</p>';
+    // countdown to the next exam, computed today (not when the site was built)
+    const nxt = (CFG.upcoming || []).find((e) => e.date >= today());
+    if (nxt) {
+      const days = Math.round((new Date(nxt.date + "T00:00") - new Date(today() + "T00:00")) / 864e5);
+      $("rv-count").hidden = false;
+      $("rv-count").innerHTML = `<span class="rv-dot"></span><strong>${esc(nxt.label)}</strong> ${days === 0 ? "is today" : `in ${days} day${days === 1 ? "" : "s"}`} · ${new Date(nxt.date + "T00:00").toLocaleDateString(undefined, { weekday: "short", month: "short", day: "numeric" })}`;
+    }
 
-    const list = (qs, empty) => qs.length ? `<ul class="rv-list">${qs.slice(0, 40).map((q) => `<li><span class="small muted">${esc(q.label)}</span><div>${md(q.stem.length > 140 ? q.stem.slice(0, 138) + "…" : q.stem)}</div>${q.link ? `<a class="jump" href="${esc(q.link.href)}">${esc(q.link.label)}</a>` : ""}</li>`).join("")}</ul>` : `<p class="muted">${empty}</p>`;
-    $("misses").innerHTML = list(missed, "No misses right now. Nice.");
-    $("flags").innerHTML = list(flags, "Nothing flagged. Press F on any exam question to flag it.");
-    $("cards").innerHTML = cards.length ? `<p>${cards.length} card${cards.length === 1 ? "" : "s"} still in the New/Learning boxes.</p><button class="btn" data-drill>Drill weak cards →</button>` : '<p class="muted">No weak cards yet. Study flashcards in Sidekick; cards you mark "Again" collect here.</p>';
-    $("cards").querySelector("[data-drill]")?.addEventListener("click", () => drill(shuffle(cards)));
-    $("notes").innerHTML = notes.length ? `<ul class="rv-list">${notes.map((n) => `<li><span class="small muted">${esc(n.lid)} · ${esc(n.where)}</span><div><mark class="hl">${esc(n.text)}</mark>${n.src ? ` <span class="cite">${esc(n.src)}</span>` : ""}</div>${n.note ? `<div class="small">↳ ${esc(n.note)}</div>` : ""}<a class="jump" href="../${esc(n.lid)}/index.html#${esc(n.anchor)}">Open →</a></li>`).join("")}</ul>` : '<p class="muted">Highlight text in any study guide and tap 🖍 Save — your notes collect here.</p>';
-    $("counts").textContent = `${pool.length} questions from ${Object.keys(kbs).length} lecture${Object.keys(kbs).length === 1 ? "" : "s"} and ${Object.keys(exams).length} practice exam${Object.keys(exams).length === 1 ? "" : "s"}`;
+    const tile = (k, ic, title, sub, cta, off) => `<button class="rv-act${k === "daily" ? " main" : ""}" data-a="${k}" ${off ? "disabled" : ""}><span class="rv-ic">${ic}</span><span class="rv-t"><strong>${title}</strong><span>${sub}</span></span><span class="rv-cta">${cta}</span></button>`;
+    $("act").innerHTML =
+      tile("daily", "☀︎", "Daily 10", daily ? `Done today · ${daily.score}/${daily.of}. Go again anytime.` : "10 questions, about 5 minutes, weighted toward your weak spots", daily ? "Again →" : "Start →") +
+      tile("misses", "↺", "Retry misses", missed.length ? `${missed.length} question${missed.length === 1 ? "" : "s"} you got wrong` : "Nothing to retry yet", "Start →", !missed.length) +
+      tile("mixed", "⏱", "Timed mixed exam", "40 questions at exam pace, every lecture", "Start →") +
+      tile("custom", "⚙︎", "Build your own", "Pick size, topic, or misses only", "Set up →");
+    const A = (k) => $("act").querySelector(`[data-a="${k}"]`);
+    A("daily").onclick = startDaily;
+    A("misses").onclick = () => missed.length && window.dpasQuiz.start(shuffle(missed.slice()), opts("Retry: all misses"));
+    A("mixed").onclick = () => window.dpasQuiz.start(weighted(40), opts("Timed mixed exam", { timed: true, feedback: "end" }));
+    A("custom").onclick = () => window.dpasQuiz.setup(pool, opts("Mixed exam — all lectures", { missed: missed.map((q) => q.id) }));
+
+    const pct = answered.length ? Math.round((100 * right.length) / answered.length) : null;
+    const stat = (n, l, sub = "") => `<div class="rv-stat"><strong>${n}</strong><span>${l}</span>${sub ? `<i style="width:${sub}%"></i>` : ""}</div>`;
+    $("stats").innerHTML = stat(`${answered.length}<small>/${pool.length}</small>`, "questions answered", (100 * answered.length) / Math.max(1, pool.length)) +
+      stat(pct === null ? "—" : `${pct}%`, "accuracy", pct ?? 0) + stat(missed.length, "to retry") + stat(`${streak()}`, `day streak`);
+
+    $("topics").innerHTML = topics.length ? `<div class="rv-topics">${topics.slice(0, 8).map((t) => `<a class="rv-topic" ${t.link ? `href="${esc(t.link.href)}"` : ""}>
+        <span class="rv-tn">${md(t.topic)}</span><span class="rv-bar"><i style="width:${t.pct}%;background:${t.pct >= 80 ? "var(--good)" : t.pct >= 60 ? "var(--warn)" : "var(--bad)"}"></i></span><span class="rv-tp">${t.pct}%</span><span class="rv-go">${t.link ? "Study →" : ""}</span></a>`).join("")}</div>`
+      : '<p class="rv-empty">Answer a few self-test or practice-exam questions and your weakest topics will rank here, each linked to the part of the study guide that covers it.</p>';
+
+    const list = (qs) => `<ul class="rv-list">${qs.slice(0, 40).map((q) => `<li><span class="small muted">${esc(q.label)}</span><div>${md(q.stem.length > 140 ? q.stem.slice(0, 138) + "…" : q.stem)}</div>${q.link ? `<a class="jump" href="${esc(q.link.href)}">${esc(q.link.label)}</a>` : ""}</li>`).join("")}</ul>`;
+    const T = {
+      misses: ["Missed", missed.length, () => missed.length ? `<button class="btn small" data-go="misses">Retry all ${missed.length} →</button>${list(missed)}` : "Questions you get wrong in self-tests, Sidekick quizzes, or practice exams land here until you get them right."],
+      flags: ["Flagged", flags.length, () => flags.length ? list(flags) : "Press F on any practice-exam question to flag it for later. Flagged questions collect here."],
+      cards: ["Flashcards", cards.length, () => cards.length ? `<p>${cards.length} card${cards.length === 1 ? "" : "s"} you marked "Again" or haven't learned yet.</p><button class="btn small" data-drill>Drill them →</button>` : `Study flashcards in Sidekick (the ✦ button on any lecture page). Cards you mark "Again" collect here.`],
+      notes: ["Notes", notes.length, () => notes.length ? `<ul class="rv-list">${notes.map((n) => `<li><span class="small muted">${esc(n.lid)} · ${esc(n.where)}</span><div><mark class="hl">${esc(n.text)}</mark>${n.src ? ` <span class="cite">${esc(n.src)}</span>` : ""}</div></li>`).join("")}</ul>` : "Highlight any text in a study guide and tap Save. Your highlights collect here."],
+    };
+    if (!T[tab]) tab = "misses";
+    $("rv-tabs").innerHTML = Object.entries(T).map(([k, [l, n]]) => `<button data-t="${k}" class="${k === tab ? "on" : ""}">${l}${n ? ` <b>${n}</b>` : ""}</button>`).join("");
+    const body = T[tab][2]();
+    $("rv-panel").innerHTML = body.startsWith("<") ? body : `<p class="rv-empty">${body}</p>`;
+    $("rv-tabs").querySelectorAll("[data-t]").forEach((b) => b.onclick = () => { tab = b.dataset.t; store.set("rv:tab", tab); render(); });
+    $("rv-panel").querySelector("[data-go]")?.addEventListener("click", () => A("misses").click());
+    $("rv-panel").querySelector("[data-drill]")?.addEventListener("click", () => drill(shuffle(cards)));
   }
 
   load().then(render);
