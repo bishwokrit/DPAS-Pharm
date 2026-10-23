@@ -213,7 +213,7 @@
     el.innerHTML = `<div class="qm-scroll"><div class="qm-card">
       <h2>${esc(base.title || "Focus quiz")}</h2><p class="muted">Full screen, one question at a time. Works with a keyboard or a Bluetooth remote ring.</p>
       <label class="qm-field">Questions<select name="n">${[10, 20, 40, all.length].filter((v, i, a) => v <= all.length && a.indexOf(v) === i).map((v) => `<option value="${v}">${v === all.length ? `All ${v}` : v}</option>`).join("")}</select></label>
-      ${topics.length > 1 ? `<label class="qm-field">Topic<select name="topic"><option value="">All topics (mixed)</option>${topics.map((t) => `<option>${esc(t)}</option>`).join("")}</select></label>` : ""}
+      ${topics.length > 1 ? `<div class="qm-field"><span>Topics <small class="muted">pick one or more · none = all</small></span><div class="qm-topics">${topics.map((t) => `<label class="qm-topic"><input type="checkbox" name="topic" value="${esc(t)}"><span>${esc(t)} <small>${all.filter((q) => q.topic === t).length}</small></span></label>`).join("")}</div><div class="small muted" data-avail></div></div>` : ""}
       ${base.missed?.length ? `<label class="qm-check"><input type="checkbox" name="missed"> Only questions I've missed (${base.missed.length})</label>` : ""}
       <div class="qm-modes">
         <label><input type="radio" name="mode" value="study" ${base.minutes ? "" : "checked"}><span><strong>Study</strong>Explanation after every question</span></label>
@@ -225,10 +225,19 @@
     document.body.append(el);
     const val = (n) => el.querySelector(`[name=${n}]`);
     el.querySelector("[data-cancel]").addEventListener("click", () => el.remove());
+    // chosen topics (any combination) and the "only missed" filter, with a live count of what's available
+    const pick = (qs) => {
+      const chosen = [...el.querySelectorAll("[name=topic]:checked")].map((c) => c.value);
+      if (chosen.length) qs = qs.filter((q) => chosen.includes(q.topic));
+      if (val("missed")?.checked) qs = qs.filter((q) => base.missed.includes(q.id));
+      return qs;
+    };
+    const avail = () => { const a = el.querySelector("[data-avail]"); if (a) { const n = pick(all).length; a.textContent = `${n} question${n === 1 ? "" : "s"} match`; } };
+    el.querySelectorAll("[name=topic], [name=missed]").forEach((c) => c.addEventListener("change", avail)); avail();
     el.querySelector("[data-go]").addEventListener("click", () => {
       let qs = all.slice();
-      if (val("topic")?.value) qs = qs.filter((q) => q.topic === val("topic").value);
-      if (val("missed")?.checked) qs = qs.filter((q) => base.missed.includes(q.id));
+      qs = pick(qs);
+      if (!qs.length) { el.querySelector("[data-avail]").textContent = "No questions match — pick other topics or untick “only missed”."; return; }
       if (base.shuffle !== false) for (let i = qs.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [qs[i], qs[j]] = [qs[j], qs[i]]; }
       qs = qs.slice(0, +val("n").value);
       const mode = el.querySelector("[name=mode]:checked").value, timed = mode !== "study";

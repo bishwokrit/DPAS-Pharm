@@ -13,13 +13,23 @@
   const $ = (id) => document.getElementById(id);
 
   let pool = [], kbs = {}, exams = {};
+  // One topic list for everything: lecture questions are filed under the practice exams' (finer) topics,
+  // so "Distribution" or "Drug development" means the same thing whichever source a question came from.
+  const CANON = [[/language/i, "Language & drug names"], [/development|regulation/i, "Drug development & approval"], [/receptor|pharmacodynamic/i, "Receptors & drug targets"],
+    [/dose-?response/i, "Dose-response & therapeutic index"], [/metabolism|cyp/i, "Metabolism & CYP450"], [/excretion|renal/i, "Excretion & renal dosing"],
+    [/half-life|pk calc|steady state|clearance/i, "Half-life, steady state & clearance"], [/pharmacogenom|decision|putting it all/i, "Pharmacogenomics & decisions"]];
+  const canon = (q) => {
+    const t = q.topic || "";
+    if (/absorption|distribution|adme/i.test(t)) return /distribut|\bvd\b|volume of distribution|protein[- ]bound|barrier|albumin/i.test(q.stem + " " + Object.values(q.options || {}).join(" ")) ? "Distribution" : "Absorption & routes";
+    return (CANON.find(([re]) => re.test(t)) || [, t])[1];
+  };
 
   async function load() {
     await Promise.all(CFG.lectures.map(async (l) => {
       const kb = await fetch(`../${l.id}/kb.json${document.documentElement.dataset.v ? "?v=" + document.documentElement.dataset.v : ""}`).then((r) => r.json()).catch(() => null);
       if (!kb) return;
       kbs[l.id] = kb;
-      kb.quiz.forEach((q) => pool.push({ ...q, id: `${l.id}:${q.id}`, raw: q.id, from: { type: "lec", lid: l.id }, topic: q.topic, label: `${l.id} · ${q.topic}`,
+      kb.quiz.forEach((q) => pool.push({ ...q, id: `${l.id}:${q.id}`, raw: q.id, from: { type: "lec", lid: l.id }, topic: canon(q), label: `${l.id} · ${q.topic}`,
         link: q.link ? { href: `../${l.id}/index.html${q.link.href}`, label: `Study this: ${l.id} · ${q.link.label.replace("Study this: ", "")}` } : null }));
     }));
     await Promise.all(CFG.exams.map(async (e) => {

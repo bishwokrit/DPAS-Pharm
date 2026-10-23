@@ -54,7 +54,7 @@
     const mark = (d, t) => d.tags.includes(t) ? '<span class="dx-yes">●</span>' : '<span class="dx-no">—</span>';
     const col = (d) => `<div class="dx-cc"><div class="dx-cc-h"><h3>${esc(d.name)}</h3><div class="small muted">${d.cls === "Not covered in materials" ? "Class: later unit" : esc(d.cls) + cite(d.cls_src)}</div></div>
       <ul>${d.facts.map((f) => `<li>${tb(f)}${md(f.text)}${cite(f.src)}</li>`).join("")}</ul></div>`;
-    sheet(`<div class="dx-sh-top"><div><div class="kicker">Compare</div><h2>${esc(a.name)} <span class="dx-vs">vs</span> ${esc(b.name)}</h2></div><button class="sk-x" data-close aria-label="Close">✕</button></div>
+    sheet(`<div class="dx-sh-top"><div><div class="kicker">Compare</div><h2>${esc(a.name)} <span class="dx-vs">vs</span> ${esc(b.name)}</h2></div><span class="dx-ctl"><button class="sk-x" data-expand aria-label="Expand to full screen" title="Full screen">⤢</button><button class="sk-x" data-close aria-label="Close">✕</button></span></div>
       <table class="dx-matrix"><thead><tr><th></th><th>${esc(a.name)}</th><th>${esc(b.name)}</th></tr></thead><tbody>
         ${tags.map((t) => `<tr class="${a.tags.includes(t) && b.tags.includes(t) ? "both" : ""}"><td>${esc(t)}</td><td>${mark(a, t)}</td><td>${mark(b, t)}</td></tr>`).join("")}
         <tr><td>Lecture mentions</td><td>${a.n_mentions}</td><td>${b.n_mentions}</td></tr></tbody></table>
@@ -82,6 +82,11 @@
     } else requestAnimationFrame(() => { sh.classList.add("open"); $("dx-scrim").classList.add("open"); });
     document.documentElement.style.overflow = "hidden";
     $("dx-sheet-in").querySelectorAll("[data-close]").forEach((x) => x.addEventListener("click", close));
+    // expand: the panel fills the screen (remembered); tap again to go back to the side panel
+    const full = (on) => { sh.classList.toggle("full", on); try { localStorage.setItem("dx:full", on ? "1" : ""); } catch { /* */ }
+      $("dx-sheet-in").querySelectorAll("[data-expand]").forEach((x) => { x.textContent = on ? "⤡" : "⤢"; x.title = on ? "Back to side panel" : "Full screen"; x.setAttribute("aria-label", x.title); }); };
+    $("dx-sheet-in").querySelectorAll("[data-expand]").forEach((x) => x.addEventListener("click", () => full(!sh.classList.contains("full"))));
+    full((() => { try { return !!localStorage.getItem("dx:full"); } catch { return false; } })());
   }
   function close() {
     $("dx-sheet").classList.remove("open"); $("dx-scrim").classList.remove("open");
@@ -97,7 +102,7 @@
     if (!d) return;
     history.replaceState(null, "", "#" + slug(d.name));
     sheet(`<div class="dx-sh-top"><div><div class="kicker">Unit ${d.unit}</div><h2>${esc(d.name)}</h2>
-      ${d.cls === "Not covered in materials" ? '<div class="muted small">Drug class: covered in a later unit</div>' : `<div class="muted">${esc(d.cls)}${cite(d.cls_src)}</div>`}</div><button class="sk-x" data-close aria-label="Close">✕</button></div>
+      ${d.cls === "Not covered in materials" ? '<div class="muted small">Drug class: covered in a later unit</div>' : `<div class="muted">${esc(d.cls)}${cite(d.cls_src)}</div>`}</div><span class="dx-ctl"><button class="sk-x" data-expand aria-label="Expand to full screen" title="Full screen">⤢</button><button class="sk-x" data-close aria-label="Close">✕</button></span></div>
       <div class="dx-tags-mini" style="margin:12px 0 4px">${d.tags.map((t) => `<i>${esc(t)}</i>`).join("")}</div>
       <div class="dx-acts"><button class="btn small" data-quiz>Quiz me on ${esc(d.name)}</button><select data-vs aria-label="Compare with another drug"><option value="">Compare with…</option>${DR.filter((x) => x.name !== d.name).map((x) => `<option>${esc(x.name)}</option>`).join("")}</select></div>
       <h4>Key facts</h4><ul class="dx-facts">${d.facts.map((f) => `<li>${tb(f)}${md(f.text)}${cite(f.src)}</li>`).join("")}</ul>

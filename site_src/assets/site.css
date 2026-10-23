@@ -1035,3 +1035,15 @@ kbd { font: 12px var(--font); background: var(--surface-2); border: 1px solid va
 figure figcaption .cite { color: #5f6270; }
 .gs-line.base span { top: -7px; opacity: 1; }
 .sk-ai-line a, .sk-body p a, .tipcard a { text-decoration: underline; text-underline-offset: 2px; }
+.qm-topics { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.qm-topic { cursor: pointer; } .qm-topic input { position: absolute; opacity: 0; }
+.qm-topic span { display: inline-block; padding: 7px 12px; border-radius: 980px; font-size: 13px; background: var(--surface-2); color: var(--text); transition: background .2s, color .2s; }
+.qm-topic small { color: var(--text-2); margin-left: 4px; }
+.qm-topic input:checked + span { background: var(--accent-fill, var(--accent)); color: #fff; } .qm-topic input:checked + span small { color: rgba(255,255,255,.8); }
+.qm-topic input:focus-visible + span { outline: 2px solid var(--accent); outline-offset: 2px; }
+.dx-ctl { display: flex; gap: 6px; flex: none; }
+.dx-sheet { transition: transform .32s cubic-bezier(.2,.8,.2,1), width .38s cubic-bezier(.2,.8,.2,1), border-radius .3s; }
+.dx-sheet.full { width: 100vw; }
+.dx-sheet.full .dx-sheet-in { max-width: 920px; margin: 0 auto; padding-top: 40px; }
+.dx-sheet.full .dx-cmp-grid { gap: 28px; }
+@media (max-width: 700px) { .dx-sheet.full { height: 100vh; border-radius: 0; } }
