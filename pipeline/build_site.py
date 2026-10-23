@@ -541,22 +541,38 @@ def syllabus_page(syl, sched, built):
         monday = date.fromordinal(d.toordinal() - d.weekday())
         weeks.setdefault(monday, []).append(it)
     kind_label = {"class": "Class", "exam": "Exam", "final": "Final", "quiz": "Quiz", "db": "Discussion", "case": "Case", "checkpoint": "Bonus"}
+    def tag(it):  # short name for a deadline chip
+        n = re.search(r"\d+", it["label"].split(" · ")[0])
+        n = n.group(0) if n else ""
+        return {"exam": f"Exam {n}", "final": "Final", "quiz": f"Quiz {n}", "db": f"DB {n}", "case": f"Case {n}", "checkpoint": f"CP {n}"}[it["kind"]]
     wk_html = []
-    for monday, its in weeks.items():
-        rows = []
+    for wn, (monday, its) in enumerate(weeks.items(), 1):
+        friday = date.fromordinal(monday.toordinal() + 4)
+        due = [it for it in its if it["kind"] != "class"]
+        chips_ = "".join(f'<span class="wk-tag k-{it["kind"]}" data-kind="{it["kind"]}">{tag(it)}</span>' for it in due)
+        days = {}
         for it in its:
-            label = html.escape(it["label"])
-            if it["kind"] == "class" and it.get("lec") in built:
-                label = f'<a href="../{it["lec"]}/index.html">{label}</a>'
-            title, _, detail = it["label"].partition(" · ") if it["kind"] != "class" else (it["label"], "", "")
-            if it["kind"] != "class":
-                label = f'<strong>{html.escape(title)}</strong>' + (f' <span class="muted">· {html.escape(detail)}</span>' if detail else "")
-            note = f'<div class="sch-note">⚠ {html.escape(it["note"])}</div>' if it.get("note") else ""
-            rows.append(f'<li class="sch-item k-{it["kind"]}" data-kind="{it["kind"]}" data-date="{it["date"]}">'
-                        f'<span class="sch-date">{date.fromisoformat(it["date"]).strftime("%a")}<b>{date.fromisoformat(it["date"]).strftime("%-d")}</b></span>'
-                        f'<span class="sch-kind">{kind_label[it["kind"]]}</span><span class="sch-label">{label}{note}</span></li>')
-        wk_html.append(f'<div class="sch-week" data-week="{monday.isoformat()}" data-end="{date.fromordinal(monday.toordinal() + 6).isoformat()}">'
-                       f'<div class="sch-wk-head">Week of {monday.strftime("%b %-d")}</div><ul>{"".join(rows)}</ul></div>')
+            days.setdefault(it["date"], []).append(it)
+        rows = []
+        for d, day in days.items():
+            dd = date.fromisoformat(d)
+            lines = []
+            for it in day:
+                if it["kind"] == "class":
+                    t = html.escape(it["label"])
+                    if it.get("lec") in built:
+                        t = f'<a href="../{it["lec"]}/index.html">{t}</a>'
+                    lines.append(f'<div class="wk-class" data-kind="class">{t}</div>')
+                else:
+                    title, _, detail = it["label"].partition(" · ")
+                    note = f'<div class="wk-note">{html.escape(it["note"])}</div>' if it.get("note") else ""
+                    lines.append(f'<div class="wk-due k-{it["kind"]}" data-kind="{it["kind"]}"><i></i><div><strong>{html.escape(title)}</strong>'
+                                 + (f'<span>{html.escape(detail)}</span>' if detail else "") + f'{note}</div></div>')
+            rows.append(f'<div class="wk-day" data-date="{d}"><div class="wk-d"><small>{dd.strftime("%a")}</small>{dd.strftime("%-d")}</div><div class="wk-items">{"".join(lines)}</div></div>')
+        span = f'{monday.strftime("%b %-d")} – {friday.strftime("%b %-d") if friday.month != monday.month else friday.strftime("%-d")}'
+        wk_html.append(f'<details class="wk sch-week" data-week="{monday.isoformat()}" data-end="{date.fromordinal(monday.toordinal() + 6).isoformat()}">'
+                       f'<summary><span class="wk-when"><b>{span}</b><span>{f"{len(due)} due" if due else "Classes only"}</span></span><span class="wk-tags">{chips_}</span><span class="wk-chev" aria-hidden="true"></span></summary>'
+                       f'<div class="wk-body">{"".join(rows)}</div></details>')
     chips = "".join(f'<button class="sch-chip{" on" if k == "all" else ""}" data-filter="{k}">{lbl}</button>'
                     for k, lbl in [("all", "All"), ("exam", "Exams"), ("quiz", "Quizzes"), ("db", "Discussions"), ("case", "Cases"), ("checkpoint", "Bonus"), ("class", "Classes")])
     legend = "".join(f'<li data-key="{it["key"]}" style="--c:var(--c-{it["key"]})"><span class="lg-dot"></span><span class="lg-name">{html.escape(it["label"])}</span>'
@@ -599,8 +615,8 @@ def syllabus_page(syl, sched, built):
 <section class="section" id="final"><div class="wrap"><p class="kicker">The final</p><h2>What you need on the final</h2>
 <div id="finalapp"></div></div></section>
 <section class="section" id="schedule"><div class="wrap"><p class="kicker">Schedule</p><h2>Week by week</h2><p class="muted">From the course syllabus; subject to revision. Any material covered in lecture or assigned as reading is testable.</p>
-<div class="sch-chips noprint">{chips}</div><details class="sch-past noprint" id="sch-past" hidden><summary>Show past weeks</summary><div id="sch-past-list"></div></details>
-<div class="sch-list" id="sch-list">{"".join(wk_html)}
+<div class="sch-chips noprint">{chips}</div>
+<div class="wk-list" id="sch-list">{"".join(wk_html)}</div>
 <p class="small muted">DB = discussion board · PTX = pharmacotherapy · Bonus = optional checkpoint quiz (Brightspace, 2 attempts).</p></div></section>
 <section class="section" id="units"><div class="wrap"><p class="kicker">Units</p><h2>Readings &amp; objectives</h2><div class="grid two">{"".join(units)}</div></div></section>
 <section class="section" id="outcomes"><div class="wrap narrow"><p class="kicker">Outcomes</p><h2>Course goal &amp; outcomes</h2>

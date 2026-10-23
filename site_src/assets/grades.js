@@ -153,26 +153,22 @@
     }).join("") : '<p class="muted">Nothing left — the course is done.</p>';
   }
 
-  // ---------------------------------------------------------------- schedule: today marker, past weeks folded, filters
+  // ---------------------------------------------------------------- schedule: one card per week; this week opens, past weeks dim; filters
   const list = document.getElementById("sch-list");
   if (list) {
-    const past = [...list.querySelectorAll(".sch-week")].filter((w) => w.dataset.end < iso);
-    if (past.length) {
-      const box = document.getElementById("sch-past");
-      box.hidden = false;
-      box.querySelector("summary").textContent = `Show ${past.length} past week${past.length > 1 ? "s" : ""}`;
-      past.forEach((w) => document.getElementById("sch-past-list").append(w));
-    }
-    document.querySelectorAll(".sch-item").forEach((li) => {
-      if (li.dataset.date < iso) li.classList.add("past");
-      if (li.dataset.date === iso) li.classList.add("today");
+    const weeks = [...list.querySelectorAll(".wk")];
+    weeks.forEach((w) => {
+      if (w.dataset.end < iso) w.classList.add("past");
+      if (w.dataset.week <= iso && iso <= w.dataset.end) { w.classList.add("this-week"); w.open = true; }
     });
-    document.querySelectorAll(".sch-week").forEach((w) => { if (w.dataset.week <= iso && iso <= w.dataset.end) w.classList.add("this-week"); });
-    document.querySelectorAll(".sch-chip").forEach((b) => b.addEventListener("click", () => {
-      document.querySelectorAll(".sch-chip").forEach((x) => x.classList.toggle("on", x === b));
-      const f = b.dataset.filter;
-      document.querySelectorAll(".sch-item").forEach((li) => li.classList.toggle("hide", f !== "all" && !(li.dataset.kind === f || (f === "exam" && li.dataset.kind === "final"))));
-      document.querySelectorAll(".sch-week").forEach((w) => w.classList.toggle("hide", !w.querySelector(".sch-item:not(.hide)")));
+    if (!list.querySelector(".wk[open]")) (weeks.find((w) => w.dataset.week > iso) || weeks[0])?.setAttribute("open", "");
+    list.querySelectorAll(".wk-day").forEach((d) => { if (d.dataset.date < iso) d.classList.add("past"); if (d.dataset.date === iso) d.classList.add("today"); });
+    document.querySelectorAll(".sch-chip[data-filter]").forEach((b) => b.addEventListener("click", () => {
+      document.querySelectorAll(".sch-chip[data-filter]").forEach((x) => x.classList.toggle("on", x === b));
+      const f = b.dataset.filter, ok = (k) => f === "all" || k === f || (f === "exam" && k === "final");
+      list.querySelectorAll("[data-kind]").forEach((el) => el.classList.toggle("hide", !ok(el.dataset.kind)));
+      list.querySelectorAll(".wk-day").forEach((d) => d.classList.toggle("hide", !d.querySelector(".wk-items > :not(.hide)")));
+      weeks.forEach((w) => w.classList.toggle("hide", f !== "all" && !w.querySelector(".wk-day:not(.hide)")));
     }));
   }
 })();
