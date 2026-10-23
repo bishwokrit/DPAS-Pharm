@@ -1066,3 +1066,4 @@ kbd { font: 12px var(--font); background: var(--surface-2); border: 1px solid va
 /* light mode: the bonus gold and amber tags need more depth on white */
 @media (prefers-color-scheme: light) { :root:not([data-theme="dark"]) { --c-bonus: #c98a00; } }
 :root[data-theme="light"] { --c-bonus: #c98a00; }
+.tip-btns { display: flex; gap: 8px; flex-wrap: wrap; }

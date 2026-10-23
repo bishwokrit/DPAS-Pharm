@@ -15,12 +15,16 @@
   // ---- one-time tips: a short welcome on the first visit, and a backup reminder once there's progress worth keeping
   const tip = (key, html, delay) => {
     if (store.get(key, false)) return;
+    try { if (sessionStorage.getItem(key)) return; } catch { /* blocked */ }
     setTimeout(() => {
       if (document.querySelector(".tipcard")) return;
       const t = document.createElement("div");
-      t.className = "tipcard"; t.setAttribute("role", "dialog"); t.innerHTML = html + '<button class="btn small" data-ok>Got it</button>';
+      t.className = "tipcard"; t.setAttribute("role", "dialog"); t.innerHTML = html + '<div class="tip-btns"><button class="btn small" data-ok>Got it</button><button class="btn ghost small" data-never>Don\'t remind me again</button></div>';
       document.body.append(t); requestAnimationFrame(() => t.classList.add("on"));
-      t.querySelector("[data-ok]").onclick = () => { store.set(key, true); t.classList.remove("on"); setTimeout(() => t.remove(), 300); };
+      const hide = () => { t.classList.remove("on"); setTimeout(() => t.remove(), 300); };
+      // "Got it" hides it for this visit; "Don't remind me again" hides it for good on this device
+      t.querySelector("[data-ok]").onclick = () => { try { sessionStorage.setItem(key, "1"); } catch { /* blocked */ } hide(); };
+      t.querySelector("[data-never]").onclick = () => { store.set(key, true); hide(); };
       t.querySelector("[data-open-set]")?.addEventListener("click", () => { document.querySelector(".set-btn")?.click(); });
     }, delay);
   };
@@ -28,7 +32,8 @@
     <li><b>Focus</b> on lecture pages hides everything but what you're reading.</li><li>Your progress saves <b>on this device</b>. Theme, text size and more are under the gear.</li></ul>`, 1800);
   let progress = 0;
   try { progress = Object.keys(localStorage).filter((k) => /^(miss:|done:|exam:|grades:|sk:fc:|sk:notes:|check:)/.test(k)).length; } catch { /* blocked */ }
-  if (progress >= 3 && store.get("tip:welcome", false)) tip("tip:backup", `<strong>Studying on more than one device?</strong><p>Progress stays in this browser. <a href="#" data-open-set>Back it up</a> to move it or keep it safe.</p>`, 2500);
+  let welcomed = store.get("tip:welcome", false); try { welcomed ||= !!sessionStorage.getItem("tip:welcome"); } catch { /* blocked */ }
+  if (progress >= 3 && welcomed) tip("tip:backup", `<strong>Studying on more than one device?</strong><p>Progress stays in this browser. <a href="#" data-open-set>Back it up</a> to move it or keep it safe.</p>`, 2500);
 
   // ---- home roadmap: which unit is current is decided today, in the browser (not when the site was built)
   {
