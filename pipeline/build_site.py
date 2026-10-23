@@ -478,6 +478,8 @@ def main(pdf=True):
     (DOCS / "review" / "index.html").write_text(review_page(syl, built, exams))
     (DOCS / "index.html").write_text(home_page(syl, built, exams))
     print(f"  site: home page ({len(built)} lectures, {len(exams)} practice exams) -> docs/")
+    from pages_sketch import sketch_page
+    sketch_page(page, SITE_NAME)
     stamp_versions()
 
 if __name__ == "__main__":

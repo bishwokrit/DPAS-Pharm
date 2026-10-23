@@ -480,3 +480,45 @@
   try { pending = sessionStorage.getItem("find"); sessionStorage.removeItem("find"); } catch { /* ignore */ }
   if (pending) addEventListener("load", () => highlight(pending, location.hash.slice(1)));
 })();
+
+// Sketch mode: hidden until Ctrl+Alt+S and the password. The flag lives in this browser only.
+(function () {
+  const KEY = "sketch", HASH = "7eea92cc84ab2d8a545f1034dfbaa131bc74227bc446a8be08aa03aa08dec9da";
+  const on = () => { try { return JSON.parse(localStorage.getItem(KEY)) === true; } catch { return false; } };
+  const root = document.documentElement.dataset.root || "";
+  const here = /\/sketch\//.test(location.pathname);
+  function addTab(fresh) {
+    if (document.querySelector(".nav-sketch")) return;
+    document.documentElement.classList.add("sx-on");
+    const href = `${root}sketch/index.html`, cur = here ? ' aria-current="page"' : "";
+    document.querySelector(".nav-main")?.insertAdjacentHTML("beforeend", `<a class="nav-sketch${fresh ? " new" : ""}" href="${href}"${cur}>Sketch</a>`);
+    document.querySelector(".tabbar")?.insertAdjacentHTML("beforeend", `<a class="nav-sketch" href="${href}"${cur}><span>${window.dpasIcon("highlight", 22)}</span>Sketch</a>`);
+  }
+  if (on()) addTab(false);
+  const sha = async (s) => [...new Uint8Array(await crypto.subtle.digest("SHA-256", new TextEncoder().encode(s)))].map((b) => b.toString(16).padStart(2, "0")).join("");
+  function gate() {
+    if (document.querySelector(".sx-gate")) return;
+    const g = document.createElement("div");
+    g.className = "sx-gate"; g.setAttribute("role", "dialog"); g.setAttribute("aria-modal", "true"); g.setAttribute("aria-label", "Sketch mode");
+    g.innerHTML = on()
+      ? '<form class="sx-card"><strong>Sketch mode is on</strong><span>The Sketch tab is in the top bar.</span><div class="sx-row"><button class="btn small" type="button" data-go>Open Sketch</button><button class="btn ghost small" type="button" data-lock>Lock</button></div></form>'
+      : '<form class="sx-card"><strong>Sketch mode</strong><input type="password" autocomplete="off" placeholder="Password" aria-label="Password"><div class="sx-row"><button class="btn small" type="submit">Unlock</button><button class="btn ghost small" type="button" data-x>Cancel</button></div></form>';
+    document.body.append(g); requestAnimationFrame(() => g.classList.add("on"));
+    const close = () => { g.classList.remove("on"); setTimeout(() => g.remove(), 250); };
+    const card = g.querySelector(".sx-card"), input = g.querySelector("input");
+    (input || g.querySelector("button")).focus();
+    g.addEventListener("click", (e) => { if (e.target === g || e.target.closest("[data-x]")) close(); });
+    g.addEventListener("keydown", (e) => { if (e.key === "Escape") close(); });
+    g.querySelector("[data-go]")?.addEventListener("click", () => (location.href = `${root}sketch/index.html`));
+    g.querySelector("[data-lock]")?.addEventListener("click", () => { try { localStorage.removeItem(KEY); } catch { /* blocked */ } document.querySelectorAll(".nav-sketch").forEach((a) => a.remove()); document.documentElement.classList.remove("sx-on"); close(); if (here) location.href = `${root}index.html`; });
+    card.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      if (input && (await sha(input.value.trim().toLowerCase())) === HASH) {
+        try { localStorage.setItem(KEY, "true"); } catch { /* blocked */ }
+        addTab(true); close();
+      } else if (input) { card.classList.remove("shake"); void card.offsetWidth; card.classList.add("shake"); input.select(); }
+    });
+  }
+  // e.code, not e.key: on a Mac, Option+S types "ß"
+  document.addEventListener("keydown", (e) => { if (e.ctrlKey && e.altKey && e.code === "KeyS") { e.preventDefault(); gate(); } });
+})();
