@@ -54,7 +54,7 @@ def home_page(syl, built, exams_built):
     wide = " tile-wide" if (2 + len(exams_built) + 1) % 3 == 2 else ""  # fill the grid's last row
     tiles.append(f'<a class="tile{wide} appear" style="--d:{.08 * (len(exams_built) + 1):.2f}s" href="syllabus/index.html"><span class="tile-ic">{icon("calendar")}</span><div><div class="tile-k">Course</div>'
                  '<h3>Syllabus &amp; grade calculator</h3><p>What\'s due next, the full schedule, and "what do I need on the final?"</p></div><span class="tile-go">Open →</span></a>')
-    practice = f'<section class="section" id="practice"><div class="wrap"><p class="kicker appear">Practice</p><h2 class="appear">Test yourself. Then test yourself again.</h2><div class="bento">{"".join(tiles)}</div></div></section>'
+    practice = f'<section class="section" id="practice"><div class="wrap"><p class="kicker appear">Practice</p><h2 class="appear">Test yourself. Then test yourself again.</h2><div class="dotd appear" id="dotd" hidden></div><div class="bento">{"".join(tiles)}</div></div></section>'
     # course roadmap: one compact row per unit; the current unit opens with its lecture cards
     today = date.today().isoformat()
     exam_of = {str(e["unit"]): e for e in syl.get("exams", [])}
@@ -82,7 +82,8 @@ def home_page(syl, built, exams_built):
                     f'<span class="unit-badge"{"" if badge else " hidden"}>{badge}</span><span class="unit-exam small">{("Exam " + date.fromisoformat(ex["date"]).strftime("%a, %b %-d")) if ex else ""}</span><span class="unit-chev" aria-hidden="true"></span></summary>'
                     f'<div class="grid unit-cards">{"".join(cards)}</div></details>')
     study = f'<section class="section" id="study"><div class="wrap"><p class="kicker appear">Study</p><h2 class="appear">Your course, one unit at a time.</h2><p class="appear"><a class="jump" href="drugs/index.html">Open the drug index →</a></p><div class="roadmap">{"".join(rows)}</div></div></section>'
-    return page(f"{SITE_NAME} · {COURSE}", hero + now_section(syl, built, sched) + study + practice)
+    return page(f"{SITE_NAME} · {COURSE}", hero + now_section(syl, built, sched) + study + practice
+                + '<script src="assets/mol3d.js"></script><script src="assets/dotd.js"></script>')
 
 
 

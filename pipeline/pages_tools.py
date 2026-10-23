@@ -154,6 +154,72 @@ def drugs_page(built, exams):
 </div></section>
 <aside class="dx-sheet" id="dx-sheet" aria-label="Drug details" hidden><div class="dx-sheet-in" id="dx-sheet-in"></div></aside><div class="dx-scrim" id="dx-scrim" hidden></div>
 <script type="application/json" id="drug-data">{cfg}</script>
-<script src="../assets/drugs.js"></script>"""
+<script src="../assets/mol3d.js"></script><script src="../assets/drugs.js"></script>"""
     return page(f"Drug index · {SITE_NAME}", body, depth=1, active="drugs")
 
+
+
+# ---------------------------------------------------------------- drug of the day
+def dotd_data(built, exams, data):
+    """docs/drugs/dotd.json: for every drug already taught in a lecture, a short study card and 5 questions —
+    real self-test/exam questions that mention it first, then "which drug?" and "which class?" items built from
+    its own cited facts. The page picks one drug per day from the ones taught by that date."""
+    import hashlib
+    h = lambda s: int(hashlib.sha1(s.encode()).hexdigest(), 16)  # noqa: E731 (stable shuffles, same every build)
+    bank = []
+    for lid in built:
+        for x in json.loads((DOCS / lid / "kb.json").read_text())["quiz"]:
+            bank.append({**x, "id": f"{lid}:{x['id']}", "lid": lid, "raw": x["id"], "link": {**x["link"], "href": f"{lid}/index.html{x['link']['href']}"} if x.get("link") else None})
+    for e in exams:
+        for x in json.loads((DOCS / "exams" / e["id"] / "quiz.json").read_text()):
+            bank.append({**x, "link": {**x["link"], "href": x["link"]["href"].replace("../../", "")} if x.get("link") else None})
+    pool = [d for d in data if d["mentions"]]
+    generic = re.compile(r"first-pass|renal|CYP|P-glycoprotein|protein-bound|narrow|therapeutic index|prodrug|subcutaneous|inhal|sublingual|\bVd\b|half-life|generic name|the lecture", re.I)
+    out = []
+    for d in pool:
+        pat = re.compile(r"\b(" + d["pattern"] + r")\b", re.I)
+        # real questions: the drug in the stem or the right answer beats a passing mention in a wrong option
+        real = [x for x in bank if pat.search(x["stem"] + " " + " ".join(x["options"].values()) + " " + (x.get("why") or ""))]
+        real.sort(key=lambda x: (not pat.search(x["stem"] + " " + x["options"][x["answer"]]), h(d["name"] + x["id"])))
+        made = []
+        others = [o for o in pool if o["name"] != d["name"]]
+        for i, f in enumerate(d["facts"]):
+            text = pat.sub("_____", f["text"].replace("**", ""))
+            if len(text) < 40 or "_____" in text[:1] or generic.search(f["text"]):
+                continue
+            # distractors: drugs that share none of its tags (so the fact can't also be true of them) and aren't named in it
+            safe = [o for o in others if not set(o["tags"]) & set(d["tags"]) and not re.search(r"\b(" + o["pattern"] + r")\b", f["text"], re.I)] or others
+            opts = sorted([d["name"], *sorted((o["name"] for o in safe), key=lambda n: h(d["name"] + n + str(i)))[:3]], key=lambda n: h(n + f["text"]))
+            made.append({"id": f"dotd:{slug(d['name'])}:f{i}", "stem": f"Which drug fits this fact? “{text}”", "options": dict(zip("ABCD", opts)),
+                         "answer": "ABCD"[opts.index(d["name"])], "why": f"{d['name']}: {f['text'].replace('**', '')}", "src": f["src"], "topic": "Drug of the day"})
+        if d["cls"] != "Not covered in materials":
+            classes = sorted({o["cls"] for o in others if o["cls"] not in ("Not covered in materials", d["cls"])}, key=lambda c: h(d["name"] + c))[:3]
+            if len(classes) == 3:
+                opts = sorted([d["cls"], *classes], key=lambda c: h(c + d["name"]))
+                made.append({"id": f"dotd:{slug(d['name'])}:cls", "stem": f"Which class does {d['name']} belong to?", "options": dict(zip("ABCD", opts)),
+                             "answer": "ABCD"[opts.index(d["cls"])], "why": f"{d['name']} is a {d['cls']}.", "src": d.get("cls_src", ""), "topic": "Drug of the day"})
+        # "which statement is true of it?": its own fact against other drugs' facts that name no drug and share no tag
+        foreign = [(o, f) for o in others if not set(o["tags"]) & set(d["tags"]) for f in o["facts"]
+                   if not re.search(r"\b(" + "|".join(x["pattern"] for x in data) + r")\b", f["text"], re.I) and len(f["text"]) < 160 and not generic.search(f["text"])]
+        for i, f in enumerate(d["facts"]):
+            if len(made) >= 4 or len(foreign) < 3 or len(f["text"]) > 160:
+                break
+            wrong, seen = [], {f["text"][:22].lower()}
+            for of in sorted(foreign, key=lambda of: h(d["name"] + of[1]["text"] + str(i))):  # no near-duplicate options
+                if of[1]["text"][:22].lower() not in seen and len(wrong) < 3:
+                    wrong.append(of); seen.add(of[1]["text"][:22].lower())
+            if len(wrong) < 3:
+                break
+            texts = [f["text"].replace("**", ""), *(of[1]["text"].replace("**", "") for of in wrong)]
+            opts = sorted(texts, key=lambda t: h(t + d["name"]))
+            made.append({"id": f"dotd:{slug(d['name'])}:t{i}", "stem": f"Which statement about {d['name']} is true, per the course?", "options": dict(zip("ABCD", opts)),
+                         "answer": "ABCD"[opts.index(texts[0])], "why": f"{d['name']}: {texts[0]}", "src": f["src"], "topic": "Drug of the day",
+                         "whys": {"ABCD"[opts.index(of[1]["text"].replace("**", ""))]: f"That describes {of[0]['name']}." for of in wrong}})
+        on_topic = [x for x in real if pat.search(x["stem"] + " " + x["options"][x["answer"]])]
+        qs = (on_topic[:5] + made + [x for x in real if x not in on_topic])[:5]
+        if len(qs) < 3:
+            continue
+        taught = min(built[m["lid"]]["date"] for m in d["mentions"])
+        out.append({"name": d["name"], "cls": d["cls"], "unit": d["unit"], "taught": taught, "facts": d["facts"][:4], "qs": qs,
+                    "lectures": [{"text": m["text"], "src": m["src"], "where": f'{m["lid"]} · {m["where"]}'} for m in d["mentions"][:2]]})
+    return out

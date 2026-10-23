@@ -412,7 +412,7 @@ def knowledge_base(c, slides, n_img=0):
 # ---------------------------------------------------------------- main
 def main(pdf=True):
     from pages_course import home_page, syllabus_page, icon  # noqa: F401 (split out to keep this file readable)
-    from pages_tools import search_index, global_kb, stamp_versions, review_page, drug_data, drugs_page
+    from pages_tools import search_index, global_kb, stamp_versions, review_page, drug_data, drugs_page, dotd_data
     syl = json.loads((ROOT / "work" / "syllabus.json").read_text())
     DOCS.mkdir(exist_ok=True)
     shutil.copytree(SRC / "assets", DOCS / "assets", dirs_exist_ok=True)
@@ -471,6 +471,8 @@ def main(pdf=True):
     (DOCS / "robots.txt").write_text("User-agent: *\nDisallow: /\n")
     (DOCS / "drugs").mkdir(exist_ok=True)
     (DOCS / "drugs" / "index.html").write_text(drugs_page(built, exams))
+    (DOCS / "drugs" / "dotd.json").write_text(json.dumps(dotd_data(built, exams, drug_data(built)), ensure_ascii=False))
+    shutil.copy(ROOT / "work" / "mol3d.json", DOCS / "drugs" / "mol3d.json")
     sys.path.insert(0, str(ROOT / "work"))
     import drugs as _DR  # names only, for Sidekick's podcast topic picker
     (DOCS / "drugs" / "names.json").write_text(json.dumps([{"name": d["name"], "aliases": d["aliases"], "cls": d["cls"]} for d in _DR.DRUGS], ensure_ascii=False))

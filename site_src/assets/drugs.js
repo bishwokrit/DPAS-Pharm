@@ -65,7 +65,9 @@
 
   // ---- detail sheet
   const calm = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  let molKill = null;  // the drug's structure, faint in the panel's top-right corner
   function sheet(htmlStr, from) {
+    molKill?.(); molKill = null;
     const sh = $("dx-sheet"), wasOpen = sh.classList.contains("open");
     $("dx-sheet-in").innerHTML = htmlStr; sh.hidden = false; $("dx-scrim").hidden = false; sh.scrollTop = 0;
     if (from && !calm && !wasOpen && sh.animate) {
@@ -89,6 +91,7 @@
     full((() => { try { return !!localStorage.getItem("dx:full"); } catch { return false; } })());
   }
   function close() {
+    molKill?.(); molKill = null;
     $("dx-sheet").classList.remove("open"); $("dx-scrim").classList.remove("open");
     setTimeout(() => { $("dx-sheet").hidden = true; $("dx-scrim").hidden = true; }, 280);
     document.documentElement.style.overflow = "";
@@ -109,6 +112,7 @@
       <h4>In your lectures (${d.n_mentions})</h4>${d.mentions.length ? `<ul class="dx-ment">${d.mentions.map((m) => `<li><span class="small muted">${esc(m.lid)} · ${esc(m.where)}</span><div>${m.tb ? '<span class="tag tb">TB</span>' : ""}${md(m.text)}${cite(m.src)}</div><a class="jump" href="${esc(m.href)}">Open →</a></li>`).join("")}</ul>` : '<p class="muted small">Only in the assigned reading so far.</p>'}
       <p class="small muted" style="margin-top:16px">Mechanism, adverse effects, and monitoring fill in as drug-class lectures cover them. Anything else: <strong>not covered in materials</strong>.</p>`, from);
     const s = $("dx-sheet-in");
+    window.dpasMolData?.("../").then((M) => { if (M[d.name] && s.querySelector("h2")?.textContent === d.name && !molKill) molKill = window.dpasMol3d($("dx-sheet"), $("dx-sheet"), M[d.name], { size: innerWidth < 700 ? 180 : 260 }); });
     s.querySelector("[data-quiz]").addEventListener("click", () => quizFor(d));
     s.querySelector("[data-vs]").addEventListener("change", (e) => { if (e.target.value) { picked = [d.name, e.target.value]; paintTray(); draw(); compare(); } });
   }

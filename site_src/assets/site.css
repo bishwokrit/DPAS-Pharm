@@ -1081,3 +1081,31 @@ figure figcaption .cite { color: #5f6270; }
 .sx-chips { display: flex; flex-wrap: wrap; gap: 6px; } .sx-chips a { font-size: 12.5px; padding: 3px 9px; border-radius: 99px; background: var(--accent-soft); }
 @media (prefers-reduced-motion: reduce) { .sx-card.shake, .nav-sketch.new { animation: none; } }
 @media (max-width: 1400px) { html.sx-on .brand-sub { display: none; } }
+
+/* ---------- drug structure constellation (decorative) ---------- */
+.mol3d-wrap { position: sticky; top: 0; height: 0; z-index: 0; pointer-events: none; --recede: 1; }
+.mol3d { position: absolute; top: -6px; right: -4px; width: 260px; height: 260px; opacity: 0; transform: translateY(8px) scale(.97);
+  transition: opacity 1.4s ease .35s, transform 1.6s cubic-bezier(.2,.8,.2,1) .35s;
+  /* dissolve at the edges so it reads as part of the panel, not a picture placed on it */
+  -webkit-mask-image: radial-gradient(closest-side, #000 55%, transparent); mask-image: radial-gradient(closest-side, #000 55%, transparent); }
+.mol3d-wrap.on .mol3d { opacity: calc(.6 * var(--recede)); transform: none; }
+.mol3d-wrap.settled .mol3d { transition: opacity .5s ease; }
+.dx-sheet-in { position: relative; z-index: 1; }
+@media (max-width: 700px) { .mol3d { width: 180px; height: 180px; top: 34px; } .mol3d-wrap.on .mol3d { opacity: calc(.45 * var(--recede)); } }
+html[data-pglow="off"] .mol3d-wrap { display: none; }
+@media (prefers-reduced-motion: reduce) { .mol3d { transition: none; transform: none; } }
+
+/* ---------- Drug of the day ---------- */
+.dotd { position: relative; overflow: hidden; margin: 0 0 16px; padding: 26px 28px; border-radius: 22px; background: var(--surface); box-shadow: var(--shadow); min-height: 190px; }
+.dotd[hidden] { display: none; }
+.dotd-sky { position: absolute; top: 0; right: 0; width: 240px; height: 100%; pointer-events: none; }
+.dotd-sky .mol3d-wrap { position: absolute; top: -10px; right: 10px; height: auto; }
+.dotd-sky .mol3d { position: static; width: 220px; height: 220px; }
+.dotd-body { position: relative; z-index: 1; display: grid; gap: 6px; justify-items: start; max-width: 560px; }
+.dotd-name { margin: 2px 0 0; font-size: clamp(28px, 4vw, 40px); letter-spacing: -.02em; line-height: 1.05; }
+.dotd-cls { margin: 0; color: var(--text-2); }
+.dotd-meta { margin: 6px 0 8px; font-size: 14px; color: var(--text-2); } .dotd-meta strong { color: var(--text); }
+.dotd-study h2 { font-size: 38px; margin: 10px 0 2px; letter-spacing: -.02em; }
+.dotd-study ul { margin: 18px 0 24px; padding-left: 20px; } .dotd-study li { margin: 10px 0; line-height: 1.5; }
+@media (max-width: 700px) { .dotd { padding: 22px; } .dotd-sky { width: 170px; opacity: .5; } .dotd-sky .mol3d { width: 170px; height: 170px; } }
+.dotd-study .dotd-lec { margin-top: 8px; color: var(--text-2); }
