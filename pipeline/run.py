@@ -6,6 +6,7 @@
   ./run.sh all           build every lecture that has its slides + content, then the website
   ./run.sh site          rebuild the website (study guides, PDFs, home page) into docs/
   ./run.sh exam U1       rebuild a practice exam (bank in work/exams/U1/)
+  ./run.sh check         test the built site before publishing (pages, links, answer balance, textbook facts)
 """
 import json
 import re
@@ -166,6 +167,9 @@ if __name__ == "__main__":
             print(f"  {k}: {v}")
         import build_site
         build_site.main()
+    elif arg == "check":
+        import check
+        check.main()
     elif arg == "site":
         import build_site
         build_site.main()
