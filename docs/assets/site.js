@@ -509,18 +509,18 @@
   const calmMotion = () => matchMedia("(prefers-reduced-motion: reduce)").matches;
   const PAL = ["#0F7173", "#E9A23B", "#D1495B", "#2A6F97", "#8fe0d6", "#ffffff"];
 
-  // locking: two dark panels close in from the edges, a seam of light, then the page carries on without the tab
+  // locking: the page dims behind frosted glass, two hairlines meet in the middle, the lock's shackle closes
   function lock() {
     try { localStorage.removeItem(KEY); } catch { /* blocked */ }
     const finish = () => { document.querySelectorAll(".nav-sketch").forEach((a) => a.remove()); document.documentElement.classList.remove("sx-on"); };
     if (calmMotion()) { finish(); if (here) location.href = `${root}index.html`; return; }
     const d = document.createElement("div");
     d.className = "sx-doors"; d.setAttribute("aria-live", "polite");
-    d.innerHTML = '<i class="l"></i><i class="r"></i><b class="seam"></b><div class="sx-locked"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="5" y="11" width="14" height="10" rx="2.5"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><span>Sketch mode locked</span></div>';
+    d.innerHTML = '<i class="l"></i><i class="r"></i><div class="sx-locked"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="5" y="11" width="14" height="10" rx="2.5"/><path class="shackle" d="M8 11V7.5a4 4 0 0 1 8 0V11"/></svg><span>Sketch mode locked</span></div>';
     document.body.append(d);
     requestAnimationFrame(() => d.classList.add("shut"));
-    setTimeout(() => { finish(); document.body.animate([{ transform: "scale(1)" }, { transform: "scale(.992)" }, { transform: "scale(1)" }], { duration: 260, easing: "ease-out" }); }, 640);
-    setTimeout(() => { if (here) location.href = `${root}index.html`; else { d.classList.add("gone"); setTimeout(() => d.remove(), 700); } }, 1700);
+    setTimeout(finish, 700);
+    setTimeout(() => { if (here) location.href = `${root}index.html`; else { d.classList.add("gone"); setTimeout(() => d.remove(), 600); } }, 1800);
   }
   window.dpasSketchLock = lock;
 
