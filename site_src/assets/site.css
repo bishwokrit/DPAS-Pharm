@@ -729,7 +729,7 @@ body.focus .focus-btn { background: var(--accent-soft) !important; color: var(--
 @property --lc { syntax: "<color>"; inherits: true; initial-value: #0a84ff; }
 .fs { position: relative; overflow: hidden; padding: 24px 26px 20px; --lc: var(--accent); transition: --lc .5s ease; }
 .fs::before { content: ""; position: absolute; inset: -40% -10% auto auto; width: 70%; height: 160%; pointer-events: none;
-  background: radial-gradient(closest-side, color-mix(in srgb, var(--lc) 10%, transparent), transparent); transition: opacity .5s; }
+  background: radial-gradient(closest-side, color-mix(in srgb, var(--lc) 6%, transparent), transparent); transition: opacity .5s; }
 .fs[data-l="F"]::before { opacity: .8; } .fs[data-l="C"]::before { opacity: .7; }
 .fs > * { position: relative; }
 .fs-verdict { margin-top: 4px; font-size: 13px; font-weight: 600; color: var(--lc); }
@@ -745,7 +745,7 @@ body.focus .focus-btn { background: var(--accent-soft) !important; color: var(--
 .fs-track { position: relative; height: 28px; margin: 26px 0 0; }
 .fs-track::before { content: ""; position: absolute; left: 0; right: 0; top: 11px; height: 6px; border-radius: 3px; background: var(--surface-2); }
 .fs-fill { position: absolute; left: 0; top: 11px; height: 6px; border-radius: 3px; overflow: hidden;
-  background: linear-gradient(90deg, var(--bad), color-mix(in srgb, var(--bad) 30%, var(--lc)) 55%, var(--lc)); box-shadow: 0 0 14px color-mix(in srgb, var(--lc) 45%, transparent); }
+  background: linear-gradient(90deg, var(--bad), color-mix(in srgb, var(--bad) 30%, var(--lc)) 55%, var(--lc)); box-shadow: 0 0 8px color-mix(in srgb, var(--lc) 25%, transparent); }
 .fs[data-l="F"] .fs-fill { background: var(--bad); box-shadow: 0 0 10px color-mix(in srgb, var(--bad) 40%, transparent); }
 .fs[data-l="A"] .fs-fill::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, transparent, rgba(255,255,255,.55), transparent); width: 40%; animation: fs-shine 2.2s ease-in-out infinite; }
 @keyframes fs-shine { from { transform: translateX(-120%); } to { transform: translateX(320%); } }
@@ -754,7 +754,7 @@ body.focus .focus-btn { background: var(--accent-soft) !important; color: var(--
 #fn-in { position: absolute; inset: 0; width: 100%; margin: 0; background: transparent; -webkit-appearance: none; appearance: none; cursor: pointer; }
 #fn-in::-webkit-slider-runnable-track { height: 28px; background: transparent; }
 #fn-in::-webkit-slider-thumb { -webkit-appearance: none; width: 26px; height: 26px; margin-top: 1px; border-radius: 50%; background: #fff; box-shadow: 0 0 0 4px color-mix(in srgb, var(--lc) 35%, transparent), 0 3px 10px rgba(0,0,0,.25); transition: transform .15s, box-shadow .3s; }
-.fs[data-l="A"] #fn-in::-webkit-slider-thumb { box-shadow: 0 0 0 7px color-mix(in srgb, var(--lc) 30%, transparent), 0 0 24px color-mix(in srgb, var(--lc) 60%, transparent); }
+.fs[data-l="A"] #fn-in::-webkit-slider-thumb { box-shadow: 0 0 0 5px color-mix(in srgb, var(--lc) 22%, transparent), 0 3px 10px rgba(0,0,0,.25); }
 #fn-in:active::-webkit-slider-thumb { transform: scale(1.1); }
 #fn-in::-moz-range-thumb { width: 26px; height: 26px; border: 0; border-radius: 50%; background: #fff; box-shadow: 0 1px 2px rgba(0,0,0,.2), 0 3px 10px rgba(0,0,0,.25); }
 #fn-in::-moz-range-track { background: transparent; } #fn-in:disabled { cursor: default; }
@@ -905,8 +905,11 @@ body.focus .focus-btn { background: var(--accent-soft) !important; color: var(--
 .dx-cc ul { padding-left: 18px; font-size: 14px; margin: 8px 0 0; } .dx-cc li { margin: 7px 0; }
 
 .fs-ambient { --lc: var(--accent); position: fixed; inset: 0; z-index: 40; pointer-events: none; opacity: 0; transition: opacity .9s ease, --lc .5s ease;
-  background: radial-gradient(38vmax 30vmax at 0 0, color-mix(in srgb, var(--lc) 16%, transparent), transparent 70%), radial-gradient(38vmax 30vmax at 100% 0, color-mix(in srgb, var(--lc) 16%, transparent), transparent 70%),
-    radial-gradient(38vmax 30vmax at 0 100%, color-mix(in srgb, var(--lc) 16%, transparent), transparent 70%), radial-gradient(38vmax 30vmax at 100% 100%, color-mix(in srgb, var(--lc) 16%, transparent), transparent 70%); }
-.fs-ambient.on { opacity: 1; transition: opacity .35s ease, --lc .5s ease; }
+  background: radial-gradient(38vmax 30vmax at 0 0, color-mix(in srgb, var(--lc) 5%, transparent), transparent 70%), radial-gradient(38vmax 30vmax at 100% 0, color-mix(in srgb, var(--lc) 5%, transparent), transparent 70%),
+    radial-gradient(38vmax 30vmax at 0 100%, color-mix(in srgb, var(--lc) 5%, transparent), transparent 70%), radial-gradient(38vmax 30vmax at 100% 100%, color-mix(in srgb, var(--lc) 5%, transparent), transparent 70%); }
+.fs-ambient.on { opacity: .8; transition: opacity .35s ease, --lc .5s ease; }
 @media (prefers-reduced-motion: reduce) { .fs-ambient { display: none; } }
 .foot-bk { display: block; margin-top: 6px; } .foot-bk button { border: 0; background: none; padding: 0; font: 600 12.5px var(--font); color: var(--accent); cursor: pointer; } .foot-bk button:hover { text-decoration: underline; }
+.brand-logo { display: block; height: 30px; width: auto; margin: -2px 2px -2px -6px; transition: transform .4s cubic-bezier(.2,.8,.2,1); }
+.brand:hover .brand-logo { transform: rotate(-6deg) scale(1.06); }
+.foot-logo { display: block; height: 58px; width: auto; margin: -8px 0 -8px -8px; }
