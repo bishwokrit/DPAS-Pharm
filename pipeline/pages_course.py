@@ -101,7 +101,9 @@ def now_section(syl, built, sched):
             due_html += f'<li><span class="small muted">{date.fromisoformat(ex["date"]).strftime("%a %b %-d")}</span> <strong>{html.escape(ex["label"])}</strong></li>'
         chips = "".join(f'<a class="topic-chip" href="{lid}/index.html#{a}"><span>{i}</span>{html.escape(n)}</a>' for i, n, a in b["parts"])
         hy = "".join(f'<li><a href="{lid}/index.html#{a}">{md(t)}</a></li>' for i, a, t in b["hy"][:4])
-        fig = (f'<a class="now-fig" href="{lid}/index.html"><img src="{b["figure"]}" alt="{html.escape(b["figure_title"])}" loading="lazy"><span>{md(b["figure_title"])}</span></a>' if b["figure"] else "")
+        key = re.sub(r"_1$", "", b["figure"].rsplit("/", 1)[-1].rsplit(".", 1)[0]) if b["figure"] else ""
+        fig = (f'<figure class="now-fig" data-viz="{key}"><img src="{b["figure"]}" alt="{html.escape(b["figure_title"])}" loading="lazy">'
+               f'<a href="{b["figure_href"]}">{md(b["figure_title"])} →</a></figure>' if b["figure"] else "")
         panels.append(f"""<article class="now-panel" data-date="{b['date']}" hidden>
 <div class="now-head"><div><p class="kicker" data-now-kicker>Current lecture</p>
 <h2>{html.escape(b['title'])}</h2>

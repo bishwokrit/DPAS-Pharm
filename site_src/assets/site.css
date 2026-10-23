@@ -1109,3 +1109,40 @@ html[data-pglow="off"] .mol3d-wrap { display: none; }
 .dotd-study ul { margin: 18px 0 24px; padding-left: 20px; } .dotd-study li { margin: 10px 0; line-height: 1.5; }
 @media (max-width: 700px) { .dotd { padding: 22px; } .dotd-sky { width: 170px; opacity: .5; } .dotd-sky .mol3d { width: 170px; height: 170px; } }
 .dotd-study .dotd-lec { margin-top: 8px; color: var(--text-2); }
+
+/* ---------- hands-on figures ---------- */
+.viz { position: relative; color: #1d2a30; }
+.viz svg { display: block; width: 100%; height: auto; touch-action: none; cursor: grab; user-select: none; -webkit-user-select: none; }
+.viz svg:active { cursor: grabbing; }
+.vz-hint { font-size: 12px; font-weight: 600; letter-spacing: .02em; color: #0F7173; margin: 0 0 6px; display: flex; align-items: center; gap: 6px; }
+.vz-hint::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: #0F7173; box-shadow: 0 0 0 4px rgba(15,113,115,.15); animation: vz-pulse 2.4s ease-in-out infinite; }
+@keyframes vz-pulse { 50% { box-shadow: 0 0 0 7px rgba(15,113,115,0); } }
+.vz-ax text, .vz-ax-t { font: 500 11.5px var(--font); fill: #5b6670; }
+.vz-lab { font-weight: 600 !important; fill: #123C44 !important; font-size: 12.5px !important; }
+.vz-tag { font: 700 12.5px var(--font); paint-order: stroke; stroke: #fff; stroke-width: 4px; stroke-linejoin: round; }
+.vz-ctl { display: flex; flex-wrap: wrap; gap: 10px 22px; align-items: center; margin: 10px 0 4px; }
+.viz .seg { background: #eceff1; flex-wrap: wrap; } .viz .seg button { color: #5b6670; font-size: 12.5px; padding: 6px 11px; } .viz .seg button.on { background: #fff; color: #123C44; box-shadow: 0 1px 3px rgba(0,0,0,.18); }
+.vz-r { display: flex; align-items: center; gap: 10px; font-size: 13px; color: #3a3a3c; font-weight: 600; flex: 1 1 220px; }
+.vz-r input { flex: 1; accent-color: #0F7173; min-width: 90px; }
+.vz-r output { min-width: 64px; font-variant-numeric: tabular-nums; font-weight: 600; color: #123C44; }
+.vz-read { margin: 8px 0 0; font-size: 14.5px; line-height: 1.5; color: #2c3a40; min-height: 3em; }
+.vz-read b { color: #123C44; }
+.vz-swap { border: 0; background: none; padding: 6px 0 0; font: 600 12.5px var(--font); color: #0b5e60; cursor: pointer; }
+.vz-swap:hover { text-decoration: underline; }
+figure[data-viz-on] > img { display: none; }
+figure.vz-orig > img { display: block; } figure.vz-orig > .viz { display: none; }
+.now-fig { margin: 0; padding: 14px 14px 12px; gap: 4px; }
+.now-fig > a { font-size: 13.5px; padding: 6px 2px 0; color: #0b5e60; }
+.now-fig .vz-r { flex-basis: 100%; }
+@media print { .viz, .vz-swap { display: none !important; } figure[data-viz-on] > img { display: block !important; } }
+.vz-static svg { cursor: default; touch-action: auto; }
+/* home: the hands-on figure gets its own full-width row so it's big enough to use */
+.now-grid { grid-template-columns: 1.4fr 1fr; }
+.now-grid > .now-fig { grid-column: 1 / -1; order: 3; }
+.now-fig .viz svg { max-height: 380px; }
+@media (max-width: 960px) { .now-grid .now-hy { grid-column: auto; } }
+@media (max-width: 600px) {
+  .vz-ax text, .vz-ax-t { font-size: 19px; } .vz-lab { font-size: 19px !important; } .vz-tag { font-size: 20px; stroke-width: 6px; }
+  .vz-hint { font-size: 12.5px; }
+}
+@media (max-width: 600px) { .now-grid { grid-template-columns: 1fr; } }

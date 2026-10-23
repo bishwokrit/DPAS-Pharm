@@ -108,7 +108,7 @@ def page(title, body, depth=0, nav_links="", sidekick=False, active="", subtitle
 <p class="foot-fine">Textbook references cite chapters and pages of <em>Katzung's Basic &amp; Clinical Pharmacology</em>, 16th ed. (McGraw Hill), for cross-reference only; content is summarized in the author's own words, no passages are reproduced, and there is no affiliation with the authors or publisher. Slide and page numbers help you find the original material. Trademarks and copyrights belong to their owners. For educational use only. This site is a study aid, not medical advice, and is not a substitute for professional clinical judgment, current prescribing information, or institutional protocols; always verify drug and dosing details against authoritative sources before applying them in patient care.</p>
 </div></footer>
 <div class="progress-bar" aria-hidden="true"></div>
-<script src="{up}assets/site.js"></script><script src="{up}assets/quizmode.js"></script><script type="module" src="{up}assets/sidekick.js"></script>
+<script src="{up}assets/site.js"></script><script src="{up}assets/viz.js"></script><script src="{up}assets/quizmode.js"></script><script type="module" src="{up}assets/sidekick.js"></script>
 </body>
 </html>
 """
@@ -216,7 +216,7 @@ def part_html(c, cl, n, lec_dir, pending):
     for fig in cl.get("figures", []):
         shutil.copy(ROOT / "work" / c["lecture"]["id"] / "figures" / fig["image"], lec_dir / fig["image"])
         w, h = Image.open(lec_dir / fig["image"]).size  # fixed size so lazy images don't shift links mid-scroll
-        out.append(f'<figure><img src="{fig["image"]}" width="{w}" height="{h}" style="height:auto" alt="{html.escape(fig.get("title", ""))}" loading="lazy">'
+        out.append(f'<figure data-viz="{re.sub(r"_1$", "", fig["image"].rsplit(".", 1)[0])}"><img src="{fig["image"]}" width="{w}" height="{h}" style="height:auto" alt="{html.escape(fig.get("title", ""))}" loading="lazy">'
                    f'<figcaption>{"<span class=\"tag tb\">TB</span>" if fig.get("tb") else ""}<strong>{md(fig.get("title", ""))}.</strong> {md(fig["caption"])}{cite(fig.get("src", ""))}</figcaption></figure>')
     for i, t in enumerate(cl.get("comparisons", [])):
         out.append(table_html(t, i))
@@ -457,7 +457,8 @@ def main(pdf=True):
                       "parts": [(i, cl["name"], slug(cl["name"])) for i, cl in enumerate(c["classes"], 1)],
                       "hy": [(i, slug(cl["name"]), cl["high_yield"][0]["text"]) for i, cl in enumerate(c["classes"], 1) if cl.get("high_yield")],
                       "figure": next((f"{lid}/{fig['image']}" for cl in c["classes"] for fig in cl.get("figures", []) if not fig.get("tb")), ""),
-                      "figure_title": next((fig.get("title", "") for cl in c["classes"] for fig in cl.get("figures", []) if not fig.get("tb")), "")}
+                      "figure_title": next((fig.get("title", "") for cl in c["classes"] for fig in cl.get("figures", []) if not fig.get("tb")), ""),
+                      "figure_href": next((f"{lid}/index.html#{slug(cl['name'])}" for cl in c["classes"] for fig in cl.get("figures", []) if not fig.get("tb")), f"{lid}/index.html")}
         print(f"  site: {lid} study guide" + (" + PDF" if pdf else ""))
     exams = []
     for ex_dir in sorted((DOCS / "exams").glob("*/meta.json")) if (DOCS / "exams").exists() else []:
