@@ -1,12 +1,18 @@
 // Hands-on figures: each lecture diagram (by its image name) gets an interactive twin you can drag and adjust.
 // Same illustrative models and values as the original figures; the original stays one tap away and in print/PDF.
 (function () {
-  const C = { teal: "#0F7173", coral: "#D1495B", amber: "#E9A23B", blue: "#2A6F97", deep: "#123C44", sage: "#6B9080", grid: "#ececf0", ink: "#86868b" };
+  // colors come from the site's palette (CSS variables), re-read on every draw so light/dark mode just works
+  const C = { teal: "#0a84ff", coral: "#ff375f", amber: "#ff9f0a", blue: "#af52de", deep: "#1d1d1f", sage: "#34c759", grid: "#ececf0", ink: "#86868b", bg: "#fff" };
+  function palette(el) {
+    const cs = getComputedStyle(el), v = (n, d) => cs.getPropertyValue(n).trim() || d;
+    Object.assign(C, { teal: v("--vz-1", C.teal), coral: v("--vz-2", C.coral), amber: v("--vz-3", C.amber), blue: v("--vz-4", C.blue), sage: v("--vz-5", C.sage),
+      deep: v("--vz-text", C.deep), grid: v("--vz-grid", C.grid), ink: v("--vz-ink", C.ink), bg: v("--vz-bg", C.bg) });
+  }
   const W = 640, H = 330, L = 46, R = 620, T = 34, B = 290;  // plot box inside the viewBox
   // shared defs: a soft shadow for handles, an arrowhead, and a fading fill for each series color
-  const DEFS = `<defs><filter id="vzSh" x="-50%" y="-50%" width="200%" height="200%"><feDropShadow dx="0" dy="1.5" stdDeviation="2" flood-color="#000" flood-opacity=".22"/></filter>
-    <marker id="vzA" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto"><path d="M1,1L9,5L1,9" fill="none" stroke="#86868b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></marker>
-    ${["teal", "coral", "amber", "blue"].map((k) => `<linearGradient id="vzF-${k}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${C[k]}" stop-opacity=".16"/><stop offset="1" stop-color="${C[k]}" stop-opacity="0"/></linearGradient>`).join("")}</defs>`;
+  const DEFS = () => `<defs><filter id="vzSh" x="-50%" y="-50%" width="200%" height="200%"><feDropShadow dx="0" dy="1.5" stdDeviation="2" flood-color="#000" flood-opacity=".22"/></filter>
+    <marker id="vzA" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto"><path d="M1,1L9,5L1,9" fill="none" stroke="${C.ink}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></marker>
+    ${["teal", "coral", "amber", "blue"].map((k) => `<linearGradient id="vzF-${k}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${C[k]}" stop-opacity=".22"/><stop offset="1" stop-color="${C[k]}" stop-opacity="0"/></linearGradient>`).join("")}</defs>`;
   const sx = (v, a, b) => L + ((v - a) / (b - a)) * (R - L), sy = (v, a, b) => B - ((v - a) / (b - a)) * (B - T);
   const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
   const f1 = (v) => (Math.abs(v) >= 100 ? Math.round(v) : Math.abs(v) >= 10 ? Math.round(v * 10) / 10 : Math.round(v * 100) / 100).toLocaleString();
@@ -15,14 +21,29 @@
   // quiet axes: hairline grid, no y-axis line, gray tick labels, the unit written once at top-left
   const axes = (xl, yl, xt, yt) => `<g class="vz-ax">${yt.map(([v, y]) => `<line x1="${L}" x2="${R}" y1="${y}" y2="${y}" stroke="${C.grid}"/><text class="vz-tk" x="${L - 8}" y="${y + 4}" text-anchor="end">${v}</text>`).join("")}
     ${xt.map(([v, x]) => `<text class="vz-tk" x="${x}" y="${B + 19}" text-anchor="middle">${v}</text>`).join("")}
-    <line x1="${L}" x2="${R}" y1="${B}" y2="${B}" stroke="#d2d2d7"/>
+    <line x1="${L}" x2="${R}" y1="${B}" y2="${B}" stroke="${C.ink}" stroke-opacity=".45"/>
     ${xl ? `<text x="${R}" y="${H - 2}" text-anchor="end" class="vz-lab">${xl}</text>` : ""}${yl ? `<text x="${L - 8}" y="${T - 16}" text-anchor="start" class="vz-lab">${yl}</text>` : ""}</g>`;
-  const dot = (x, y, col, r = 7) => `<circle cx="${x}" cy="${y}" r="${r + 9}" fill="${col}" opacity=".12"/><circle cx="${x}" cy="${y}" r="${r}" fill="#fff" stroke="${col}" stroke-width="3" filter="url(#vzSh)"/>`;
+  const dot = (x, y, col, r = 7) => `<circle cx="${x}" cy="${y}" r="${r + 9}" fill="${col}" opacity=".12"/><circle cx="${x}" cy="${y}" r="${r}" fill="${C.bg}" stroke="${col}" stroke-width="3" filter="url(#vzSh)" class="vz-dot"/>`;
   const bar = (x, y, w, h, col, r = 8) => (h <= 0 ? "" : `<path d="M${x},${y + h}V${y + Math.min(r, h)}Q${x},${y} ${x + r},${y}H${x + w - r}Q${x + w},${y} ${x + w},${y + Math.min(r, h)}V${y + h}Z" fill="${col}"/>`);  // rounded top only
   const area = (d, col) => `<path d="${d}L${R},${B}L${L},${B}Z" fill="url(#vzF-${col})"/>`;  // soft fill under a curve that spans the plot
   const tag = (x, y, txt, col, anchor = "middle") => `<text x="${x}" y="${y}" text-anchor="${anchor}" class="vz-tag" fill="${col}">${txt}</text>`;
   const logTicks = (a, b) => { const t = []; for (let e = Math.ceil(a); e <= b; e++) t.push([10 ** e >= 1 ? 10 ** e : 10 ** e, sx(e, a, b)]); return t.map(([v, x]) => [v >= 1 ? v : v.toFixed(-Math.log10(v)), x]); };
   const hill = (d, ec, emax) => (emax * d) / (d + ec);
+
+  // morph the live SVG toward new markup: same elements, new attributes (CSS transitions do the in-between)
+  const NS = "http://www.w3.org/2000/svg";
+  function morph(a, b) {
+    if (a.nodeName !== b.nodeName || a.childElementCount !== b.childElementCount) { a.replaceWith(b.cloneNode(true)); return; }
+    for (const { name } of [...a.attributes]) if (!b.hasAttribute(name)) a.removeAttribute(name);
+    for (const { name, value } of [...b.attributes]) if (a.getAttribute(name) !== value) a.setAttribute(name, value);
+    if (!b.childElementCount) { if (a.textContent !== b.textContent) a.textContent = b.textContent; return; }
+    [...a.children].forEach((c, i) => morph(c, b.children[i]));
+  }
+  function patch(svg, markup) {
+    const t = document.createElementNS(NS, "svg"); t.innerHTML = markup;
+    if (svg.childElementCount !== t.childElementCount || [...svg.children].some((c, i) => c.nodeName !== t.children[i].nodeName)) { svg.innerHTML = markup; return; }
+    [...svg.children].forEach((c, i) => morph(c, t.children[i]));
+  }
 
   // ---- widget shell: svg + controls + one plain-English readout; drag on the svg moves the main handle
   function shell(host, spec) {
@@ -42,7 +63,8 @@
         const o = i.parentElement.querySelector("output"); if (o) o.textContent = (spec.fmt?.[i.name] || f1)(+S[i.name], S);
       });
       el.querySelectorAll(".seg[data-k] button").forEach((b) => { const on = String(S[b.parentElement.dataset.k]) === b.dataset.v; b.classList.toggle("on", on); b.setAttribute("aria-pressed", on); });
-      const out = spec.draw(S); svg.innerHTML = DEFS + out.svg; read.innerHTML = out.read;
+      palette(el);
+      const out = spec.draw(S); patch(svg, DEFS() + out.svg); read.innerHTML = out.read;
     };
     // after 30 s without a touch, glide back to the original figure's values (or right away with Reset)
     let idle = 0, held = false, anim = 0;
@@ -54,24 +76,28 @@
       const step = (now) => {
         const t = Math.min(1, (now - t0) / 900), e = ease(t);
         Object.keys(D).forEach((k) => { if (typeof D[k] === "number") S[k] = from[k] + (D[k] - from[k]) * e; });
-        sync();
-        if (t < 1) anim = requestAnimationFrame(step); else el.classList.remove("dirty");
+        el.classList.add("live"); sync();
+        if (t < 1) anim = requestAnimationFrame(step); else { el.classList.remove("dirty", "live"); }
       };
       anim = requestAnimationFrame(step);
     }
     el.querySelector(".vz-reset").onclick = reset;
-    el.addEventListener("input", (e) => { if (e.target.name) { S[e.target.name] = +e.target.value; touch(); sync(); } });
+    let liveT = 0;
+    const live = () => { el.classList.add("live"); clearTimeout(liveT); liveT = setTimeout(() => el.classList.remove("live"), 180); };
+    el.addEventListener("input", (e) => { if (e.target.name) { S[e.target.name] = +e.target.value; live(); touch(); sync(); } });
     el.addEventListener("click", (e) => { const b = e.target.closest(".seg[data-k] button"); if (b) { const v = b.dataset.v; S[b.parentElement.dataset.k] = isNaN(+v) ? v : +v; spec.onSeg?.(S, b.parentElement.dataset.k); touch(); sync(); } });
     if (!spec.drag) el.classList.add("vz-static");
     if (spec.drag) {
       let on = false;
-      const move = (e) => { const r = svg.getBoundingClientRect(); spec.drag(S, ((e.clientX - r.left) / r.width) * W, ((e.clientY - r.top) / r.height) * (spec.h || H), on === "start"); on = true; touch(); sync(); };
+      const move = (e) => { live(); const r = svg.getBoundingClientRect(); spec.drag(S, ((e.clientX - r.left) / r.width) * W, ((e.clientY - r.top) / r.height) * (spec.h || H), on === "start"); on = true; touch(); sync(); };
       svg.addEventListener("pointerdown", (e) => { on = "start"; held = true; svg.setPointerCapture(e.pointerId); move(e); });
       svg.addEventListener("pointermove", (e) => { if (on) move(e); });
       const up = () => { on = false; held = false; };
       svg.addEventListener("pointerup", up); svg.addEventListener("pointercancel", up);
     }
-    sync();
+    el.classList.add("intro"); sync(); setTimeout(() => el.classList.remove("intro"), 1600);
+    matchMedia("(prefers-color-scheme: dark)").addEventListener?.("change", () => sync());
+    new MutationObserver(() => sync()).observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme", "data-paccent"] });
     return { el, S, ctl };
   }
   const range = (name, label, min, max, step) => `<label class="vz-r"><span>${label}</span><output></output><input type="range" name="${name}" min="${min}" max="${max}" step="${step}"></label>`;
@@ -98,7 +124,7 @@
         svg: axes(log ? "Dose (mg, log scale)" : "Dose (mg, linear scale)", "Response (% of max)", xt, yTicks) +
           `<line x1="${L}" x2="${R}" y1="${yP(S.emax)}" y2="${yP(S.emax)}" stroke="${C.coral}" stroke-dasharray="5 5"/>${tag(R - 4, yP(S.emax) - 6, "Emax (ceiling)", C.coral, "end")}
           <path d="M${L},${yP(S.emax / 2)}H${X(ec)}V${B}" fill="none" stroke="${C.blue}" stroke-dasharray="4 4"/>${tag(X(ec) + 6, B - 8, "EC₅₀", C.blue, "start")}
-          ${area(curve, "teal")}<path d="${curve}" fill="none" stroke="${C.teal}" stroke-width="3" stroke-linecap="round"/>${dot(X(clamp(S.d, a, b)), yP(e), C.teal)}`,
+          ${area(curve, "teal")}<path d="${curve}" fill="none" stroke="${C.teal}" stroke-width="3" stroke-linecap="round" class="vz-line" pathLength="1"/>${dot(X(clamp(S.d, a, b)), yP(e), C.teal)}`,
         read: `At <b>${f1(S.d)} mg</b> the response is <b>${pct((100 * e) / S.emax)} of this drug's maximum</b>. ${S.d > 10 * ec ? "You're on the plateau: more drug adds almost nothing (ceiling effect)." : S.d < ec / 10 ? "Below the steep part: little effect yet." : "This is the steep middle, where small dose changes matter most."}${log ? "" : " On a linear axis the same curve looks hyperbolic; the log axis is what makes it an S."}`,
       };
     },
@@ -118,8 +144,8 @@
       return {
         svg: axes("Agonist dose (log scale)", "Response (% of max)", logTicks(LA, LB), yTicks) +
           `<path d="${base}" fill="none" stroke="${C.teal}" stroke-width="3" opacity=".35"/>${tag(lx(0.02), yP(hill(0.02, 1, 100)) - 40, "Agonist alone", C.teal, "start")}
-          <path d="${cur}" fill="none" stroke="${C.coral}" stroke-width="3" stroke-linecap="round"/>${dot(lx(S.d), yP(e), C.coral)}
-          ${comp ? "" : `<line x1="${L}" x2="${R}" y1="${yP(emax)}" y2="${yP(emax)}" stroke="${C.coral}" stroke-dasharray="5 5"/>${tag(R - 4, yP(emax) - 6, `new ceiling ${pct(emax)}`, C.coral, "end")}`}`,
+          <path d="${cur}" fill="none" stroke="${C.coral}" stroke-width="3" stroke-linecap="round" class="vz-line" pathLength="1"/>${dot(lx(S.d), yP(e), C.coral)}
+          <g opacity="${comp ? 0 : 1}"><line x1="${L}" x2="${R}" y1="${yP(emax)}" y2="${yP(emax)}" stroke="${C.coral}" stroke-dasharray="5 5"/>${tag(R - 4, yP(emax) - 6, `new ceiling ${pct(emax)}`, C.coral, "end")}</g>`,
         read: !S.b ? "No antagonist: the agonist alone. Add some with the slider." : comp
           ? `Competitive: the curve <b>shifts right</b> (you need more agonist for the same effect), but <b>Emax is unchanged</b>. At an agonist dose of ${f1(S.d)} the response is ${pct(e)}. Drag far right: enough agonist still reaches the full 100%, it <b>surmounts</b> the block.`
           : `Noncompetitive/irreversible: the <b>maximum drops to ${pct(emax)}</b>. At an agonist dose of ${f1(S.d)} the response is ${pct(e)}. Drag far right: no amount of agonist gets back above ${pct(emax)}, it is <b>insurmountable</b>.`,
@@ -139,9 +165,9 @@
       const eff = S.emax >= 99.5 ? "same efficacy (both reach 100%)" : `<b>Drug A is more efficacious</b> (higher Emax: ${pct(100)} vs ${pct(S.emax)})`;
       return {
         svg: axes("Dose (mg, log scale)", "Response (% of max)", logTicks(LA, LB), yTicks) +
-          `<path d="${A}" fill="none" stroke="${C.teal}" stroke-width="3" stroke-linecap="round"/><path d="${Bp}" fill="none" stroke="${C.amber}" stroke-width="3" stroke-linecap="round" stroke-dasharray="8 5"/>
+          `<path d="${A}" fill="none" stroke="${C.teal}" stroke-width="3" stroke-linecap="round" class="vz-line" pathLength="1"/><path d="${Bp}" fill="none" stroke="${C.amber}" stroke-width="3" stroke-linecap="round" class="vz-dash" stroke-dasharray="8 5"/>
           ${dot(lx(1), yP(50), C.teal, 5)}${dot(lx(ecB), yP(S.emax / 2), C.amber, 5)}
-          ${tag(L + 10, T + 14, "— Drug A (EC₅₀ 1 mg, Emax 100%)", C.teal, "start")}${tag(L + 10, T + 34, "- - Drug B", "#b9781c", "start")}`,
+          ${tag(L + 10, T + 14, "— Drug A (EC₅₀ 1 mg, Emax 100%)", C.teal, "start")}${tag(L + 10, T + 34, "- - Drug B", C.amber, "start")}`,
         read: `${pot}; ${eff}. Remember: <b>efficacy usually matters more clinically</b> than potency; a less potent drug just needs a bigger dose.`,
       };
     },
@@ -162,7 +188,7 @@
       return {
         svg: axes("Dose (mg, log scale)", "% of people", logTicks(LA, LB), yTicks) +
           `<rect x="${sx(S.ed, LA, LB)}" y="${T}" width="${Math.max(0, gap)}" height="${B - T}" fill="${narrow ? C.coral : C.sage}" opacity=".13"/>
-          <path d="${eff}" fill="none" stroke="${C.teal}" stroke-width="3" stroke-linecap="round"/><path d="${tox}" fill="none" stroke="${C.coral}" stroke-width="3" stroke-linecap="round"/>
+          <path d="${eff}" fill="none" stroke="${C.teal}" stroke-width="3" stroke-linecap="round" class="vz-line" pathLength="1"/><path d="${tox}" fill="none" stroke="${C.coral}" stroke-width="3" stroke-linecap="round" class="vz-line" pathLength="1"/>
           ${tag(sx(S.ed, LA, LB) - 10, yP(50), "therapeutic (ED₅₀)", C.teal, "end")}${tag(sx(S.td, LA, LB) + 10, yP(50) + 16, "toxic (TD₅₀)", C.coral, "start")}
           <line x1="${sx(S.d, LA, LB)}" x2="${sx(S.d, LA, LB)}" y1="${T}" y2="${B}" stroke="${C.deep}" stroke-dasharray="3 4"/>
           ${dot(sx(S.d, LA, LB), yP(q(S.d, S.ed)), C.teal, 5)}${dot(sx(S.d, LA, LB), yP(q(S.d, S.td)), C.coral, 5)}`,
@@ -202,7 +228,7 @@
         <line x1="${L}" x2="${R}" y1="${y(100)}" y2="${y(100)}" stroke="${C.ink}" stroke-dasharray="2 4"/>` +
         v.map((p, i) => { const cx = L + 70 + i * 135; return `${bar(cx - 46, y(p), 92, B - y(p), cols[i])}${tag(cx, y(p) - 8, pct(p), C.deep)}<text x="${cx}" y="${B + 19}" text-anchor="middle" class="vz-tk">${names[i]}</text>`; }).join("");
     }
-    function paint() { w.el.querySelector("svg").innerHTML = DEFS + bars(shown); }
+    function paint() { w.el.querySelector("svg").innerHTML = DEFS() + bars(shown); }
     return w;
   };
 
@@ -218,7 +244,7 @@
       const marks = [1, 2, 3, 4, 5].map((k) => `<circle cx="${sx(k, 0, 6)}" cy="${sy(100 * 0.5 ** k, 0, 110)}" r="3.5" fill="${C.teal}"/>${tag(sx(k, 0, 6) + 4, sy(100 * 0.5 ** k, 0, 110) - 9, f1(100 * 0.5 ** k) + "%", C.ink, "start")}`).join("");
       return {
         svg: axes("Time (half-lives)", "Concentration (% of start)", [0, 1, 2, 3, 4, 5, 6].map((v) => [v, sx(v, 0, 6)]), [0, 25, 50, 75, 100].map((v) => [v, sy(v, 0, 110)])) +
-          `${area(curve, "teal")}<path d="${curve}" fill="none" stroke="${C.teal}" stroke-width="3" stroke-linecap="round"/>${marks}${dot(sx(S.n, 0, 6), sy(c, 0, 110), C.teal)}`,
+          `${area(curve, "teal")}<path d="${curve}" fill="none" stroke="${C.teal}" stroke-width="3" stroke-linecap="round" class="vz-line" pathLength="1"/>${marks}${dot(sx(S.n, 0, 6), sy(c, 0, 110), C.teal)}`,
         read: `After <b>${f1(S.n)} half-lives</b> (${f1(S.n * S.th)} h if t½ = ${S.th} h): <b>${f1(c)}% remains</b>, ${f1(100 - c)}% eliminated. Each half-life removes half of what's left, so after ~5 half-lives about 97% is gone.`,
       };
     },
@@ -240,7 +266,7 @@
       return {
         svg: axes("Time (half-lives)", "Concentration (relative)", Array.from({ length: 10 }, (_, i) => [i, sx(i, 0, 9)]), Array.from({ length: top / 50 + 1 }, (_, i) => [i * 50, Y(i * 50)])) +
           `<line x1="${L}" x2="${R}" y1="${Y(avgSS)}" y2="${Y(avgSS)}" stroke="${C.ink}" stroke-dasharray="2 4"/>${tag(R - 4, Y(avgSS) - 6, "average at steady state", C.ink, "end")}
-          <path d="${line(0)}" fill="none" stroke="${C.teal}" stroke-width="3" opacity="${S.load ? 0.35 : 1}"/>${S.load ? `<path d="${line(1)}" fill="none" stroke="${C.amber}" stroke-width="3" stroke-linecap="round" stroke-dasharray="9 5"/>` : ""}
+          <path d="${line(0)}" fill="none" stroke="${C.teal}" stroke-width="3" opacity="${S.load ? 0.35 : 1}"/>${`<path opacity="${S.load ? 1 : 0}" d="${line(1)}" fill="none" stroke="${C.amber}" stroke-width="3" stroke-linecap="round" class="vz-dash" stroke-dasharray="9 5"/>`}
           <line x1="${sx(S.t, 0, 9)}" x2="${sx(S.t, 0, 9)}" y1="${T}" y2="${B}" stroke="${C.deep}" stroke-dasharray="3 4"/>${dot(sx(S.t, 0, 9), Y(conc(S.t, S.load)), S.load ? C.amber : C.teal, 6)}`,
         read: S.load
           ? `With a <b>loading dose</b> the level starts at the target right away. Without one (faint line), at ${f1(S.t)} half-lives you'd be at <b>${pct(100 * frac)}</b> of steady state.`
@@ -261,7 +287,7 @@
       const steps = [1, 2, 3, 4, 5].map((k) => `<line x1="${sx(k, 0, 6)}" x2="${sx(k, 0, 6)}" y1="${B}" y2="${sy(v(k), 0, 110)}" stroke="${C.grid}"/>${tag(sx(k, 0, 6), sy(v(k), 0, 110) + (fill ? -10 : -10), f1(v(k)) + "%", C.ink)}`).join("");
       return {
         svg: axes("Time (half-lives)", fill ? "% of steady state" : "% of drug remaining", [0, 1, 2, 3, 4, 5, 6].map((t) => [t, sx(t, 0, 6)]), [0, 25, 50, 75, 100].map((t) => [t, sy(t, 0, 110)])) +
-          steps + `${area(path((t) => [sx(t, 0, 6), sy(v(t), 0, 110)], 0, 6), fill ? "teal" : "coral")}<path d="${path((t) => [sx(t, 0, 6), sy(v(t), 0, 110)], 0, 6)}" fill="none" stroke="${fill ? C.teal : C.coral}" stroke-width="3" stroke-linecap="round"/>${dot(sx(S.n, 0, 6), sy(c, 0, 110), fill ? C.teal : C.coral)}`,
+          steps + `${area(path((t) => [sx(t, 0, 6), sy(v(t), 0, 110)], 0, 6), fill ? "teal" : "coral")}<path d="${path((t) => [sx(t, 0, 6), sy(v(t), 0, 110)], 0, 6)}" fill="none" stroke="${fill ? C.teal : C.coral}" stroke-width="3" stroke-linecap="round" class="vz-line" pathLength="1"/>${dot(sx(S.n, 0, 6), sy(c, 0, 110), fill ? C.teal : C.coral)}`,
         read: fill ? `After <b>${f1(S.n)} half-lives</b> of regular dosing you're at <b>${f1(c)}%</b> of steady state. Each half-life closes half the remaining gap: 50 → 75 → 87.5 → 93.75 → ~97%.`
           : `<b>${f1(S.n)} half-lives</b> after the last dose, <b>${f1(c)}%</b> remains. Same math in reverse: after ~5 half-lives about 97% is gone.`,
       };
@@ -285,8 +311,8 @@
           box(175, 0, 140, "Gut → portal vein", "absorption", C.amber, oral) + box(175, 100, 140, "Liver (1st pass)", `${pct(lost)} metabolized`, C.coral, oral) +
           box(380, 40, 160, "Systemic blood", `${pct(F)} reaches it`, C.teal) +
           box(330, 200, 92, "Tissues", "distribution", C.blue) + box(430, 200, 92, "Liver", "metabolism", C.coral) + box(530, 200, 92, "Kidney", "excretion", C.sage) +
-          (oral ? arrow(130, 60, 172, 36, 5, C.amber) + arrow(245, 58, 245, 97, 5, C.amber) + arrow(315, 125, 377, 84, Math.max(1.5, 5 * F / 100), C.teal)
-                : arrow(130, 69, 377, 69, 5, C.teal)) +
+          `<g opacity="${oral ? 1 : 0}">${arrow(130, 60, 172, 36, 5, C.amber) + arrow(245, 58, 245, 97, 5, C.amber) + arrow(315, 125, 377, 84, Math.max(1.5, 5 * F / 100), C.teal)}</g>` +
+          `<g opacity="${oral ? 0 : 1}">${arrow(130, 69, 377, 69, 5, C.teal)}</g>` +
           arrow(420, 98, 380, 197, 3, C.blue) + arrow(460, 98, 476, 197, 3, C.coral) + arrow(500, 98, 572, 197, 3, C.sage),
         read: S.route === "iv" ? "IV goes straight into systemic blood: <b>bioavailability 100%</b>, no first pass."
           : S.route === "sl" ? "Sublingual drug enters systemic veins directly, <b>bypassing the portal vein and liver</b>: no first-pass loss."
