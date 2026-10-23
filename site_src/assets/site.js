@@ -30,6 +30,32 @@
     addEventListener("scroll", upd, { passive: true }); upd();
   }
 
+  // ask the browser to keep this site's saved progress (not clear it to free space)
+  navigator.storage?.persist?.().catch(() => {});
+
+  // back up / restore: a private file of your progress that you keep (the AI key is never included)
+  document.querySelector("[data-backup]")?.addEventListener("click", () => {
+    const data = {};
+    try { for (let i = 0; i < localStorage.length; i++) { const k = localStorage.key(i); if (k !== "sk:key") data[k] = localStorage.getItem(k); } } catch { /* storage blocked */ }
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(new Blob([JSON.stringify({ app: "clinical-pharmacology", saved: new Date().toISOString(), data }, null, 1)], { type: "application/json" }));
+    a.download = `my-study-progress-${new Date().toISOString().slice(0, 10)}.json`;
+    document.body.append(a); a.click(); a.remove();
+  });
+  document.querySelector("[data-restore]")?.addEventListener("click", () => {
+    const inp = Object.assign(document.createElement("input"), { type: "file", accept: "application/json,.json" });
+    inp.onchange = async () => {
+      try {
+        const f = JSON.parse(await inp.files[0].text());
+        if (f.app !== "clinical-pharmacology" || typeof f.data !== "object") throw 0;
+        if (!confirm(`Restore progress saved ${new Date(f.saved).toLocaleString()}? This replaces what's saved in this browser.`)) return;
+        Object.entries(f.data).forEach(([k, v]) => { if (k !== "sk:key" && typeof v === "string") localStorage.setItem(k, v); });
+        location.reload();
+      } catch { alert("That file isn't a progress backup from this site."); }
+    };
+    inp.click();
+  });
+
   // focus mode: hides navigation, sidebars, and decoration; only the section you're reading stays lit.
   // A slim bar shows where you are, a session timer, and an exit. Esc leaves.
   const sections = document.querySelectorAll(".section");
