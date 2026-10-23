@@ -1335,3 +1335,18 @@ html[data-pmotion="off"] ::view-transition-old(root), html[data-pmotion="off"] :
 .pr-more { margin: 14px 2px 0; font-size: 15px; } .pr-more[hidden] { display: none; }
 .pr-more a { font-weight: 500; }
 .pr-now { color: var(--good); }
+/* diagrams: what it teaches (the point), what each color means (legend), and guided steps (Try it) */
+.vz-point { margin: 2px 0 10px; font-size: 15.5px; line-height: 1.45; color: var(--text); font-weight: 500; letter-spacing: -.01em; max-width: 68ch; }
+.vz-legend { display: flex; flex-wrap: wrap; gap: 6px 16px; margin: 0 0 4px; font-size: 12.5px; color: var(--text-2); }
+.vz-legend span { display: inline-flex; align-items: center; gap: 7px; }
+.vz-legend i { width: 16px; height: 3px; border-radius: 3px; background: var(--c); }
+.vz-legend i.dash { background: repeating-linear-gradient(90deg, var(--c) 0 4px, transparent 4px 7px); }
+.vz-steps { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 12px 0 0; }
+.vz-try { font: 600 11px var(--font); letter-spacing: .06em; text-transform: uppercase; color: var(--text-2); margin-right: 2px; }
+.vz-steps button { display: inline-flex; align-items: center; gap: 8px; border: 0; cursor: pointer; font: 500 13px var(--font); color: var(--text); background: var(--surface-2); padding: 6px 12px 6px 6px; border-radius: 99px; transition: background .25s, color .25s, box-shadow .25s, transform .2s cubic-bezier(.2,.8,.2,1); }
+.vz-steps button b { display: grid; place-items: center; width: 20px; height: 20px; border-radius: 50%; font-size: 11px; background: color-mix(in srgb, var(--text) 10%, transparent); transition: background .25s, color .25s; }
+.vz-steps button:hover { background: color-mix(in srgb, var(--accent) 10%, var(--surface-2)); }
+.vz-steps button:active { transform: scale(.97); }
+.vz-steps button.on { background: var(--accent-soft); color: var(--accent); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--accent) 35%, transparent); }
+.vz-steps button.on b { background: var(--accent-fill); color: #fff; }
+@container (max-width: 560px) { .vz-point { font-size: 14px; } .vz-legend { font-size: 12px; } .vz-steps button { font-size: 12.5px; } }

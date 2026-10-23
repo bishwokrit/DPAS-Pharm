@@ -45,13 +45,18 @@
     [...svg.children].forEach((c, i) => morph(c, t.children[i]));
   }
 
+  const LEG = { teal: "--vz-1", coral: "--vz-2", amber: "--vz-3", blue: "--vz-4", sage: "--vz-5", ink: "--vz-ink" };
+
   // ---- widget shell: svg + controls + one plain-English readout; drag on the svg moves the main handle
   function shell(host, spec) {
     const el = document.createElement("div");
     el.className = "viz";
     el.innerHTML = `<div class="vz-top"><span class="vz-pill">Interactive</span><span class="vz-hint">${spec.hint || "Drag the chart or use the controls"}</span>
       <button type="button" class="vz-btn vz-reset" title="Back to the original figure's values">Reset</button><button type="button" class="vz-btn vz-swap">Original</button></div>
+      ${spec.point ? `<p class="vz-point">${spec.point}</p>` : ""}
+      ${spec.legend ? `<div class="vz-legend">${spec.legend.map(([k, t, dash]) => `<span><i class="${dash ? "dash" : ""}" style="--c:var(${LEG[k]})"></i>${t}</span>`).join("")}</div>` : ""}
       <svg viewBox="0 0 ${W} ${spec.h || H}" role="img" aria-label="${spec.label}"></svg>
+      ${spec.steps ? `<div class="vz-steps"><span class="vz-try">Try it</span>${spec.steps.map((st, i) => `<button type="button" data-step="${i}"><b>${i + 1}</b>${st.label}</button>`).join("")}</div>` : ""}
       <div class="vz-ctl">${spec.controls}</div><p class="vz-read" aria-live="polite"></p>`;
     host.prepend(el);
     const svg = el.querySelector("svg"), read = el.querySelector(".vz-read");
@@ -69,22 +74,27 @@
     // after 30 s without a touch, glide back to the original figure's values (or right away with Reset)
     let idle = 0, held = false, anim = 0;
     const touch = () => { cancelAnimationFrame(anim); el.classList.add("dirty"); clearTimeout(idle); idle = setTimeout(() => (held ? touch() : reset()), 30000); };
-    function reset() {
-      clearTimeout(idle); cancelAnimationFrame(anim);
+    // glide every number to a target state (switches flip at the start); Reset and the "Try it" steps share it
+    function glide(target, done) {
+      cancelAnimationFrame(anim);
       const from = { ...S }, t0 = performance.now(), ease = (t) => (t < 0.5 ? 4 * t * t * t : 1 - (-2 * t + 2) ** 3 / 2);
-      Object.keys(D).forEach((k) => { if (typeof D[k] !== "number") S[k] = D[k]; });
+      Object.keys(target).forEach((k) => { if (typeof target[k] !== "number") S[k] = target[k]; });
       const step = (now) => {
         const t = Math.min(1, (now - t0) / 900), e = ease(t);
-        Object.keys(D).forEach((k) => { if (typeof D[k] === "number") S[k] = from[k] + (D[k] - from[k]) * e; });
+        Object.keys(target).forEach((k) => { if (typeof target[k] === "number") S[k] = from[k] + (target[k] - from[k]) * e; });
         el.classList.add("live"); sync();
-        if (t < 1) anim = requestAnimationFrame(step); else { el.classList.remove("dirty", "live"); }
+        if (t < 1) anim = requestAnimationFrame(step); else { el.classList.remove("live"); done?.(); }
       };
       anim = requestAnimationFrame(step);
     }
+    const stepBtns = [...el.querySelectorAll("[data-step]")];
+    const mark = (i) => stepBtns.forEach((b, k) => b.classList.toggle("on", k === i));
+    function reset() { clearTimeout(idle); mark(-1); glide(D, () => el.classList.remove("dirty")); }
     el.querySelector(".vz-reset").onclick = reset;
+    stepBtns.forEach((b) => (b.onclick = () => { const i = +b.dataset.step; mark(i); touch(); glide({ ...D, ...spec.steps[i].state }); }));
     let liveT = 0;
     const live = () => { el.classList.add("live"); clearTimeout(liveT); liveT = setTimeout(() => el.classList.remove("live"), 180); };
-    el.addEventListener("input", (e) => { if (e.target.name) { S[e.target.name] = +e.target.value; live(); touch(); sync(); } });
+    el.addEventListener("input", (e) => { if (e.target.name) { S[e.target.name] = +e.target.value; mark(-1); live(); touch(); sync(); } });
     el.addEventListener("click", (e) => { const b = e.target.closest(".seg[data-k] button"); if (b) { const v = b.dataset.v; S[b.parentElement.dataset.k] = isNaN(+v) ? v : +v; spec.onSeg?.(S, b.parentElement.dataset.k); touch(); sync(); } });
     if (!spec.drag) el.classList.add("vz-static");
     if (spec.drag) {
@@ -111,6 +121,9 @@
   // Figure 2 · the dose-response curve
   V.S31 = (host) => shell(host, {
     label: "Interactive dose-response curve", hint: "Drag along the curve to change the dose",
+    point: "Effect climbs steeply through the middle, then flattens: past the ceiling, more drug adds side effects, not benefit.",
+    legend: [["teal", "Response"], ["coral", "Emax: the ceiling", 1], ["blue", "EC₅₀: half of Emax", 1]],
+    steps: [{ label: "Low dose", state: { d: 0.08 } }, { label: "At EC₅₀", state: { d: 1 } }, { label: "On the plateau", state: { d: 300 } }, { label: "Same curve, linear axis", state: { scale: "lin", d: 6 } }],
     state: { d: 3, ec: 0, emax: 100, scale: "log" },
     controls: seg("scale", [["log", "Log dose (sigmoid)"], ["lin", "Linear dose"]]) + range("ec", "EC₅₀", -1, 2, 0.05) + range("emax", "Emax", 20, 100, 1),
     fmt: { ec: (v) => f1(10 ** v) + " mg", emax: pct },
@@ -133,6 +146,9 @@
   // Figure 1 · agonist with a competitive or noncompetitive antagonist
   V.S23 = (host) => shell(host, {
     label: "Interactive agonist and antagonist curves", hint: "Add antagonist, then drag to raise the agonist dose",
+    point: "A competitive antagonist can be outcompeted (curve shifts right, same ceiling). A noncompetitive or irreversible one lowers the ceiling.",
+    legend: [["teal", "Agonist alone"], ["coral", "Agonist + antagonist"]],
+    steps: [{ label: "Add a competitive antagonist", state: { kind: "comp", b: 4, d: 1 } }, { label: "Flood with agonist", state: { kind: "comp", b: 4, d: 800 } }, { label: "Make it irreversible", state: { kind: "non", b: 4, d: 800 } }],
     state: { kind: "comp", b: 4, d: 30 },
     controls: seg("kind", [["comp", "Competitive"], ["non", "Noncompetitive / irreversible"]]) + range("b", "Antagonist", 0, 20, 0.5),
     fmt: { b: (v) => (v ? `${f1(v)}×` : "none") },
@@ -156,6 +172,9 @@
   // Figure 3 · potency vs efficacy
   V.S35 = (host) => shell(host, {
     label: "Interactive potency versus efficacy", hint: "Change Drug B and compare it with Drug A",
+    point: "Potency is how much drug you need (EC₅₀). Efficacy is how high the effect can go (Emax). Efficacy usually matters more.",
+    legend: [["teal", "Drug A"], ["amber", "Drug B", 1]],
+    steps: [{ label: "Less potent, same efficacy", state: { ec: 1, emax: 100 } }, { label: "More potent, less efficacious", state: { ec: -0.7, emax: 55 } }, { label: "Identical drugs", state: { ec: 0, emax: 100 } }],
     state: { ec: 1, emax: 100 },
     controls: range("ec", "Drug B EC₅₀", -1, 2, 0.05) + range("emax", "Drug B Emax", 20, 100, 1),
     fmt: { ec: (v) => f1(10 ** v) + " mg", emax: pct },
@@ -175,7 +194,10 @@
 
   // Quantal curves: % of people responding vs % with toxicity (therapeutic index)
   const quantal = (host, label) => shell(host, {
-    label, hint: "Drag to set a dose; slide ED₅₀ and TD₅₀ apart or together",
+    label,
+    point: "TI = TD₅₀ ÷ ED₅₀. The closer the two curves, the less room there is between helping and harming.",
+    legend: [["teal", "Therapeutic effect (% of people)"], ["coral", "Toxicity (% of people)"], ["sage", "Therapeutic window"]],
+    steps: [{ label: "Wide index", state: { ed: 0, td: 1.6, d: 0.6 } }, { label: "Narrow index (warfarin, lithium, digoxin)", state: { ed: 0, td: 0.35, d: 0.2 } }, { label: "Dose too high", state: { ed: 0, td: 1.6, d: 1.9 } }], hint: "Drag to set a dose; slide ED₅₀ and TD₅₀ apart or together",
     state: { ed: 0, td: 1.6, d: 0.6 },
     controls: range("ed", "ED₅₀", -1, 1.5, 0.05) + range("td", "TD₅₀", -0.5, 2.5, 0.05),
     fmt: { ed: (v) => f1(10 ** v) + " mg", td: (v) => f1(10 ** v) + " mg" },
@@ -187,7 +209,7 @@
       const gap = sx(S.td, LA, LB) - sx(S.ed, LA, LB), narrow = ti < 3;
       return {
         svg: axes("Dose (mg, log scale)", "% of people", logTicks(LA, LB), yTicks) +
-          `<rect x="${sx(S.ed, LA, LB)}" y="${T}" width="${Math.max(0, gap)}" height="${B - T}" fill="${narrow ? C.coral : C.sage}" opacity=".13"/>
+          `<rect x="${sx(S.ed, LA, LB)}" y="${T}" width="${Math.max(0, gap)}" height="${B - T}" fill="${C.sage}" opacity="${narrow ? 0.2 : 0.13}"/>
           <path d="${eff}" fill="none" stroke="${C.teal}" stroke-width="3" stroke-linecap="round" class="vz-line" pathLength="1"/><path d="${tox}" fill="none" stroke="${C.coral}" stroke-width="3" stroke-linecap="round" class="vz-line" pathLength="1"/>
           ${tag(sx(S.ed, LA, LB) - 10, yP(50), "therapeutic (ED₅₀)", C.teal, "end")}${tag(sx(S.td, LA, LB) + 10, yP(50) + 16, "toxic (TD₅₀)", C.coral, "start")}
           <line x1="${sx(S.d, LA, LB)}" x2="${sx(S.d, LA, LB)}" y1="${T}" y2="${B}" stroke="${C.deep}" stroke-dasharray="3 4"/>
@@ -201,9 +223,12 @@
 
   // Figure 6 · CYP450 inhibition vs induction (the bar chart)
   V.S7 = (host) => {
-    let shown = [100, 100, 100], raf = 0;
+    let shown = [100, 100, 100], raf = 0, modeNow = "both";
     const w = shell(host, {
       label: "Interactive CYP450 inhibitor and inducer bar chart", hint: "Pick an interaction and set its strength",
+      point: "Inhibitors slow metabolism, so levels rise toward toxicity. Inducers speed it up, so levels fall toward therapeutic failure.",
+      legend: [["teal", "Normal"], ["coral", "+ Inhibitor"], ["blue", "+ Inducer"], ["sage", "Therapeutic window (illustrative)"]],
+      steps: [{ label: "Add an inhibitor", state: { mode: "inh", s: 1 } }, { label: "A weak inhibitor", state: { mode: "inh", s: 0.3 } }, { label: "Add an inducer", state: { mode: "ind", s: 1 } }, { label: "Compare both", state: { mode: "both", s: 1 } }],
       state: { mode: "both", s: 1 },
       controls: seg("mode", [["both", "Compare all"], ["inh", "+ Inhibitor"], ["ind", "+ Inducer"]]) + range("s", "Strength", 0, 1, 0.01),
       fmt: { s: (v) => (v < 0.34 ? "weak" : v < 0.67 ? "moderate" : "strong") },
@@ -214,6 +239,7 @@
         const step = () => { shown = shown.map((v, i) => v + (want[i] - v) * 0.2); if (shown.some((v, i) => Math.abs(v - want[i]) > 0.3)) { raf = requestAnimationFrame(step); paint(); } else { shown = want; paint(); } };
         raf = requestAnimationFrame(step);
         const lvl = S.mode === "ind" ? ind : S.mode === "inh" ? inh : null;
+        modeNow = S.mode;
         return { svg: bars(shown), read: S.mode === "both"
           ? `Same substrate drug, same dose. An <b>inhibitor raises</b> its level to <b>${pct(inh)}</b> of baseline (toxicity risk); an <b>inducer lowers</b> it to <b>${pct(ind)}</b> (risk of losing effect).`
           : S.mode === "inh" ? `Inhibitor: metabolism slows, so the substrate builds up to <b>${pct(lvl)}</b>${lvl > 160 ? ", above the window: <b>toxicity risk</b>, consider a lower dose" : ", still inside the window"}.`
@@ -226,7 +252,7 @@
         `<rect x="${L}" y="${y(160)}" width="${R - L}" height="${y(60) - y(160)}" fill="${C.sage}" opacity=".1"/>${tag(R - 4, y(132), "therapeutic", C.sage, "end")}${tag(R - 4, y(132) + 15, "window", C.sage, "end")}
         ${tag(R - 4, y(160) - 6, "toxicity risk ↑", C.coral, "end")}${tag(R - 4, y(60) + 16, "too low ↓", C.blue, "end")}
         <line x1="${L}" x2="${R}" y1="${y(100)}" y2="${y(100)}" stroke="${C.ink}" stroke-dasharray="2 4"/>` +
-        v.map((p, i) => { const cx = L + 70 + i * 135; return `${bar(cx - 46, y(p), 92, B - y(p), cols[i])}${tag(cx, y(p) - 8, pct(p), C.deep)}<text x="${cx}" y="${B + 19}" text-anchor="middle" class="vz-tk">${names[i]}</text>`; }).join("");
+        v.map((p, i) => { const cx = L + 70 + i * 135; return `<g opacity="${(modeNow === "inh" && i === 2) || (modeNow === "ind" && i === 1) ? 0.25 : 1}">${bar(cx - 46, y(p), 92, B - y(p), cols[i])}</g>${tag(cx, y(p) - 8, pct(p), C.deep)}<text x="${cx}" y="${B + 19}" text-anchor="middle" class="vz-tk">${names[i]}</text>`; }).join("");
     }
     function paint() { w.el.querySelector("svg").innerHTML = DEFS() + bars(shown); }
     return w;
@@ -235,6 +261,9 @@
   // Figure 7 · exponential decay over half-lives
   V.S20 = (host) => shell(host, {
     label: "Interactive half-life decay", hint: "Drag through time",
+    point: "Each half-life removes half of what's left, so about 97% is gone after five.",
+    legend: [["teal", "Plasma concentration"]],
+    steps: [{ label: "1 half-life", state: { n: 1 } }, { label: "3 half-lives", state: { n: 3 } }, { label: "5 half-lives ≈ 97% gone", state: { n: 5 } }],
     state: { n: 2, th: 6 },
     controls: range("n", "Time", 0, 6, 0.05) + range("th", "Half-life", 1, 48, 1),
     fmt: { n: (v) => `${f1(v)} half-lives`, th: (v) => `${v} h` },
@@ -253,6 +282,9 @@
   // Figure 8 · steady state with and without a loading dose
   V.S24 = (host) => shell(host, {
     label: "Interactive steady state and loading dose", hint: "Drag through time; toggle the loading dose",
+    point: "Steady state takes about 4–5 half-lives no matter the dose. A loading dose gets you to the target from the first dose.",
+    legend: [["teal", "Maintenance doses only"], ["amber", "Loading dose + maintenance", 1], ["ink", "Average at steady state", 1]],
+    steps: [{ label: "Maintenance only", state: { load: 0, t: 2 } }, { label: "Reach steady state", state: { load: 0, t: 5 } }, { label: "Add a loading dose", state: { load: 1, t: 1 } }, { label: "Dose less often", state: { load: 0, tau: 2, t: 7 } }],
     state: { load: 1, tau: 1, t: 4 },
     controls: seg("load", [[1, "With loading dose"], [0, "Maintenance only"]]) + range("tau", "Dose every", 0.5, 2, 0.25) + range("t", "Time", 0, 9, 0.05),
     fmt: { tau: (v) => `${f1(v)} × t½`, t: (v) => `${f1(v)} t½` },
@@ -278,6 +310,9 @@
   // Textbook concept · five to fill, five to empty
   V.TB_fill_empty = (host) => shell(host, {
     label: "Interactive five to fill, five to empty", hint: "Drag or slide through the half-lives",
+    point: "Same math both ways: about 4–5 half-lives to reach steady state, and about 4–5 to clear the drug.",
+    legend: [["teal", "Filling: regular dosing"], ["coral", "Emptying: after the last dose"]],
+    steps: [{ label: "Start dosing: 1 t½", state: { mode: "fill", n: 1 } }, { label: "Steady state at ~5 t½", state: { mode: "fill", n: 5 } }, { label: "Stop dosing: 5 t½", state: { mode: "empty", n: 5 } }],
     state: { n: 3, mode: "fill" },
     controls: seg("mode", [["fill", "Start dosing (fill)"], ["empty", "Stop dosing (empty)"]]) + range("n", "Half-lives", 0, 6, 0.05),
     fmt: { n: f1 },
@@ -297,6 +332,8 @@
   // Figure 5 · ADME: where an oral dose goes vs an IV dose
   V.S46 = (host) => shell(host, {
     label: "Interactive ADME pathway", h: 266, hint: "Switch the route and change first-pass loss",
+    point: "Swallowed drugs pass the liver before reaching the body (first pass). IV and sublingual skip it, which is why their doses differ.",
+    steps: [{ label: "IV: all of it arrives", state: { route: "iv" } }, { label: "Oral, large first pass", state: { route: "oral", fp: 80 } }, { label: "Sublingual skips the liver", state: { route: "sl" } }],
     state: { route: "oral", fp: 50 },
     controls: seg("route", [["iv", "IV"], ["oral", "Oral"], ["sl", "Sublingual"]]) + range("fp", "First-pass loss", 0, 90, 1),
     fmt: { fp: pct },
