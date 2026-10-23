@@ -52,7 +52,7 @@
     if (!a || !b) return;
     const tags = [...new Set([...a.tags, ...b.tags])].sort((x, y) => (b.tags.includes(y) && a.tags.includes(y)) - (b.tags.includes(x) && a.tags.includes(x)));
     const mark = (d, t) => d.tags.includes(t) ? '<span class="dx-yes">●</span>' : '<span class="dx-no">—</span>';
-    const col = (d) => `<div class="dx-cc"><div class="dx-cc-h"><h3>${esc(d.name)}</h3><div class="small muted">${d.cls === "Not covered in materials" ? "Class: later unit" : esc(d.cls) + cite(d.cls_src)}</div></div>
+    const col = (d) => `<div class="dx-cc"><div class="dx-cc-h"><h3>${esc(d.name)} <a class="dx-utd-s" href="${esc(d.utd)}" target="_blank" rel="noopener noreferrer">UpToDate ↗</a></h3><div class="small muted">${d.cls === "Not covered in materials" ? "Class: later unit" : esc(d.cls) + cite(d.cls_src)}</div></div>
       <ul>${d.facts.map((f) => `<li>${tb(f)}${md(f.text)}${cite(f.src)}</li>`).join("")}</ul></div>`;
     sheet(`<div class="dx-sh-top"><div><div class="kicker">Compare</div><h2>${esc(a.name)} <span class="dx-vs">vs</span> ${esc(b.name)}</h2></div><span class="dx-ctl"><button class="sk-x" data-expand aria-label="Expand to full screen" title="Full screen">⤢</button><button class="sk-x" data-close aria-label="Close">✕</button></span></div>
       <table class="dx-matrix"><thead><tr><th></th><th>${esc(a.name)}</th><th>${esc(b.name)}</th></tr></thead><tbody>
@@ -104,7 +104,7 @@
     sheet(`<div class="dx-sh-top"><div><div class="kicker">Unit ${d.unit}</div><h2>${esc(d.name)}</h2>
       ${d.cls === "Not covered in materials" ? '<div class="muted small">Drug class: covered in a later unit</div>' : `<div class="muted">${esc(d.cls)}${cite(d.cls_src)}</div>`}</div><span class="dx-ctl"><button class="sk-x" data-expand aria-label="Expand to full screen" title="Full screen">⤢</button><button class="sk-x" data-close aria-label="Close">✕</button></span></div>
       <div class="dx-tags-mini" style="margin:12px 0 4px">${d.tags.map((t) => `<i>${esc(t)}</i>`).join("")}</div>
-      <div class="dx-acts"><button class="btn small" data-quiz>Quiz me on ${esc(d.name)}</button><select data-vs aria-label="Compare with another drug"><option value="">Compare with…</option>${DR.filter((x) => x.name !== d.name).map((x) => `<option>${esc(x.name)}</option>`).join("")}</select></div>
+      <div class="dx-acts"><button class="btn small" data-quiz>Quiz me on ${esc(d.name)}</button><a class="btn ghost small dx-utd" href="${esc(d.utd)}" target="_blank" rel="noopener noreferrer" title="Opens UpToDate in a new tab (needs your school or personal subscription)">UpToDate ↗</a><select data-vs aria-label="Compare with another drug"><option value="">Compare with…</option>${DR.filter((x) => x.name !== d.name).map((x) => `<option>${esc(x.name)}</option>`).join("")}</select></div>
       <h4>Key facts</h4><ul class="dx-facts">${d.facts.map((f) => `<li>${tb(f)}${md(f.text)}${cite(f.src)}</li>`).join("")}</ul>
       <h4>In your lectures (${d.n_mentions})</h4>${d.mentions.length ? `<ul class="dx-ment">${d.mentions.map((m) => `<li><span class="small muted">${esc(m.lid)} · ${esc(m.where)}</span><div>${m.tb ? '<span class="tag tb">TB</span>' : ""}${md(m.text)}${cite(m.src)}</div><a class="jump" href="${esc(m.href)}">Open →</a></li>`).join("")}</ul>` : '<p class="muted small">Only in the assigned reading so far.</p>'}
       <p class="small muted" style="margin-top:16px">Mechanism, adverse effects, and monitoring fill in as drug-class lectures cover them. Anything else: <strong>not covered in materials</strong>.</p>`, from);

@@ -1049,3 +1049,5 @@ figure figcaption .cite { color: #5f6270; }
 @media (max-width: 700px) { .dx-sheet.full { height: 100vh; border-radius: 0; } }
 /* focus-mode session timer: hidden unless turned on in Settings */
 .fbar-time { display: none; } html[data-pftimer="on"] .fbar-time { display: inline; }
+.dx-utd-s { font-size: 12px; font-weight: 600; margin-left: 6px; color: var(--accent); }
+.dx-sheet .dx-acts { flex-wrap: wrap; }

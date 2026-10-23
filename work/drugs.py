@@ -5,8 +5,9 @@ Add new drugs as each unit is taught (Unit 2+ drug-class lectures add mechanism,
 """
 
 
-def D(name, cls, tags, facts, aliases=(), unit=1):
-    return {"name": name, "cls": cls, "tags": list(tags), "aliases": list(aliases), "unit": unit,
+def D(name, cls, tags, facts, aliases=(), unit=1, utd=None):
+    # utd: optional exact UpToDate link; otherwise the site links an UpToDate search for the drug's name
+    return {"name": name, "cls": cls, "tags": list(tags), "aliases": list(aliases), "unit": unit, **({"utd": utd} if utd else {}),
             "facts": [{"text": t, "src": s, "tb": tb} for t, s, tb in facts]}
 
 

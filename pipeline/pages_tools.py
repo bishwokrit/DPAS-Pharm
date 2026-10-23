@@ -4,6 +4,7 @@ import json
 import re
 from datetime import date
 import sys
+from urllib.parse import quote
 
 from build_site import DOCS, ROOT, SITE_NAME, COURSE, md, cite, slug, page, nav_html, SEARCH_ICON  # shared helpers
 
@@ -131,7 +132,10 @@ def drug_data(built):
                 if pat.search(ch["text"]) and key not in seen:
                     seen.add(key)
                     mentions.append({"lid": lid, "where": ch["where"], "text": ch["text"], "src": ch["src"], "tb": ch.get("tb", False), "href": f"../{lid}/index.html#{ch['anchor']}"})
-        out.append({**d, "mentions": mentions[:12], "n_mentions": len(mentions), "pattern": "|".join(re.escape(n) for n in names)})
+        # UpToDate: a search link built from the name, so every drug (including ones added later) gets one automatically;
+        # set "utd" on an entry in work/drugs.py to point at a specific monograph instead.
+        utd = d.get("utd") or "https://www.uptodate.com/contents/search?search=" + quote(d["name"]) + "&searchType=PLAIN_TEXT"
+        out.append({**d, "utd": utd, "mentions": mentions[:12], "n_mentions": len(mentions), "pattern": "|".join(re.escape(n) for n in names)})
     return out
 
 

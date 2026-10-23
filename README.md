@@ -42,7 +42,7 @@ add its drugs, add 25 practice questions to the unit's exam, rebuild, and check.
 - [ ] Slides in `inputs/lectures/L05/` (the build fingerprints them; originals are never edited)
 - [ ] Study guide authored from the slides + assigned textbook pages (`work/L05/`)
 - [ ] Textbook additions cited by page (`work/L05/textbook_L05.py`)
-- [ ] New drugs added to `work/drugs.py` (one line each, every fact cited)
+- [ ] New drugs added to `work/drugs.py` (one line each, every fact cited; the UpToDate link is added automatically)
 - [ ] Practice questions added to the unit bank (`work/exams/U?/`), then `./run.sh exam U?`
 - [ ] `./run.sh L05` → audit says **PASS**
 - [ ] `./run.sh site` then **`./run.sh check`** → "All checks passed"
