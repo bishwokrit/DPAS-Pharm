@@ -6,6 +6,30 @@
     set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch { /* private mode: just don't save */ } },
   };
 
+  // one drawn icon set for every script (no emoji): window.dpasIcon(name)
+  const ICON = {"sun": "<circle cx=\"12\" cy=\"12\" r=\"4\"/><path d=\"M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4\"/>", "retry": "<path d=\"M3 12a9 9 0 1 0 3-6.7\"/><path d=\"M3 4v5h5\"/>", "timer": "<circle cx=\"12\" cy=\"13\" r=\"8\"/><path d=\"M12 9v4l2.5 2.5M9 2h6\"/>", "sliders": "<path d=\"M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12M20 18h0\"/><circle cx=\"16\" cy=\"6\" r=\"2\"/><circle cx=\"10\" cy=\"12\" r=\"2\"/><circle cx=\"18\" cy=\"18\" r=\"2\"/>", "headphones": "<path d=\"M4 15v-3a8 8 0 0 1 16 0v3\"/><rect x=\"3\" y=\"14\" width=\"5\" height=\"7\" rx=\"2\"/><rect x=\"16\" y=\"14\" width=\"5\" height=\"7\" rx=\"2\"/>", "sparkle": "<path d=\"M12 3l1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z\"/><path d=\"M19 15l.7 2 2 .7-2 .7-.7 2-.7-2-2-.7 2-.7z\"/>", "pin": "<path d=\"M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z\"/><circle cx=\"12\" cy=\"9.5\" r=\"2.5\"/>", "help": "<circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6V14M12 17.5v.01\"/>", "compare": "<path d=\"M7 4v16M17 4v16M3 8h8M13 16h8\"/>", "card": "<rect x=\"3\" y=\"5\" width=\"18\" height=\"14\" rx=\"2.5\"/><path d=\"M7 10h10M7 14h6\"/>", "highlight": "<path d=\"M15 4l5 5-9 9H6v-5z\"/><path d=\"M4 21h16\"/>", "copy": "<rect x=\"8\" y=\"8\" width=\"12\" height=\"12\" rx=\"2\"/><path d=\"M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2\"/>", "book": "<path d=\"M4 5a2 2 0 0 1 2-2h13v16H6a2 2 0 0 0-2 2z\"/><path d=\"M4 21V5M8 7h7\"/>", "check": "<rect x=\"3\" y=\"3\" width=\"18\" height=\"18\" rx=\"4\"/><path d=\"M8 12l3 3 5-6\"/>", "pill": "<rect x=\"2.5\" y=\"8\" width=\"19\" height=\"8\" rx=\"4\" transform=\"rotate(-35 12 12)\"/><path d=\"M9.5 8.5l5 7\"/>", "chart": "<path d=\"M4 20V10M10 20V4M16 20v-7M22 20H2\"/>", "calendar": "<rect x=\"3\" y=\"5\" width=\"18\" height=\"16\" rx=\"2.5\"/><path d=\"M3 10h18M8 3v4M16 3v4\"/>"};
+  window.dpasIcon = (n, s = 20) => `<svg viewBox="0 0 24 24" width="${s}" height="${s}" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${ICON[n] || ""}</svg>`;
+
+  document.querySelectorAll("[data-ic]").forEach((el) => (el.innerHTML = window.dpasIcon(el.dataset.ic, 22)));
+
+  // ---- one-time tips: a short welcome on the first visit, and a backup reminder once there's progress worth keeping
+  const tip = (key, html, delay) => {
+    if (store.get(key, false)) return;
+    setTimeout(() => {
+      if (document.querySelector(".tipcard")) return;
+      const t = document.createElement("div");
+      t.className = "tipcard"; t.setAttribute("role", "dialog"); t.innerHTML = html + '<button class="btn small" data-ok>Got it</button>';
+      document.body.append(t); requestAnimationFrame(() => t.classList.add("on"));
+      t.querySelector("[data-ok]").onclick = () => { store.set(key, true); t.classList.remove("on"); setTimeout(() => t.remove(), 300); };
+      t.querySelector("[data-open-set]")?.addEventListener("click", () => { document.querySelector(".set-btn")?.click(); });
+    }, delay);
+  };
+  tip("tip:welcome", `<strong>Welcome</strong><ul><li><b>Sidekick</b> (bottom right, or press <kbd>/</kbd>) answers questions from the course materials.</li>
+    <li><b>Focus</b> on lecture pages hides everything but what you're reading.</li><li>Your progress saves <b>on this device</b>. Theme, text size and more are under the gear.</li></ul>`, 1800);
+  let progress = 0;
+  try { progress = Object.keys(localStorage).filter((k) => /^(miss:|done:|exam:|grades:|sk:fc:|sk:notes:|check:)/.test(k)).length; } catch { /* blocked */ }
+  if (progress >= 3 && store.get("tip:welcome", false)) tip("tip:backup", `<strong>Studying on more than one device?</strong><p>Progress stays in this browser. <a href="#" data-open-set>Back it up</a> to move it or keep it safe.</p>`, 2500);
+
   // ---- home roadmap: which unit is current is decided today, in the browser (not when the site was built)
   {
     const d = new Date(), today = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;

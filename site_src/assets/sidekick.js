@@ -105,20 +105,33 @@ function mount() {
   panel = document.createElement("aside");
   panel.className = "sk-panel noprint";
   panel.setAttribute("aria-label", "Sidekick study assistant");
-  panel.innerHTML = `<div class="sk-head"><div><div class="sk-title">✦ Sidekick</div><div class="small muted">${esc(kb.title)}</div></div>
+  panel.innerHTML = `<div class="sk-head"><div><div class="sk-title">${window.dpasIcon?.("sparkle", 17) || ""} Sidekick</div><div class="small muted">${esc(kb.title)}</div></div>
     <button class="sk-x" aria-label="Close">✕</button></div>
-    <div class="sk-tabs" role="tablist">${TABS.map(([id, l]) => `<button role="tab" data-tab="${id}">${l}</button>`).join("")}</div>
+    <div class="sk-tabs" role="tablist">${GROUPS.map(([g, l, ids]) => `<button role="tab" data-group="${g}" data-tab="${ids[0]}">${l}</button>`).join("")}</div>
+    <div class="sk-sub" hidden></div>
     <div class="sk-body"></div>`;
   document.body.append(panel);
   body = panel.querySelector(".sk-body");
   panel.querySelector(".sk-x").addEventListener("click", close);
   panel.querySelectorAll("[data-tab]").forEach((b) => b.addEventListener("click", () => show(b.dataset.tab)));
 }
+// four groups instead of nine tabs: Ask · Practice · Listen · More
+const NAMES = Object.fromEntries(TABS);
+const GROUPS = [["ask", "Ask", ["ask"]], ["practice", "Practice", ["quiz", "cards"]], ["listen", "Listen", ["pod", "listen"]], ["more", "More", ["brief", "notes", "map", "faq"]]]
+  .map(([g, l, ids]) => [g, l, ids.filter((id) => NAMES[id])]).filter(([, , ids]) => ids.length);
+const groupOf = (id) => GROUPS.find(([, , ids]) => ids.includes(id));
 function open() { panel.classList.add("open"); document.body.classList.add("sk-on"); store.set("sk:open", true); show(tab); }
 function close() { panel.classList.remove("open"); document.body.classList.remove("sk-on"); store.set("sk:open", false); speechSynthesis?.cancel(); }
 function show(id, arg) {
   tab = id; store.set("sk:tab", id);
-  panel.querySelectorAll("[data-tab]").forEach((b) => b.setAttribute("aria-selected", b.dataset.tab === id));
+  const grp = groupOf(id);
+  if (grp) {
+    panel.querySelectorAll(".sk-tabs [data-group]").forEach((b) => b.setAttribute("aria-selected", b.dataset.group === grp[0]));
+    const sub = panel.querySelector(".sk-sub");
+    sub.hidden = grp[2].length < 2;
+    sub.innerHTML = grp[2].map((t) => `<button data-tab="${t}" class="${t === id ? "on" : ""}">${NAMES[t]}</button>`).join("");
+    sub.querySelectorAll("[data-tab]").forEach((b) => b.addEventListener("click", () => show(b.dataset.tab)));
+  }
   if (id !== "listen" && id !== "pod") speechSynthesis?.cancel();
   ({ ask: askTab, pod: podTab, listen: listenTab, cards: cardsTab, quiz: quizTab, map: mapTab, brief: briefTab, faq: faqTab, notes: notesTab, source: sourceView, explain: explainFree, card: newCard, compare: compareView })[id](arg);
   body.scrollTop = 0;
@@ -164,12 +177,18 @@ async function ask(q) {
   let cal = GLOBAL ? (kb.course || "").split("\n").filter((l) => /^\d{4}-/.test(l) && (!next || l.slice(0, 10) >= today)).map((l) => [rank(l), l]).filter(([n]) => n >= need) : [];
   const top = cal.reduce((m, [n]) => Math.max(m, n), 0);
   cal = cal.filter(([n]) => n === top).map(([, l]) => l).slice(0, next ? 1 : 4);
-  body.querySelector(".sk-results").innerHTML = (pages.length ? `<h4>On this site</h4>${pages.map((p) => `<a class="sk-page" href="${esc(ROOT + p.u)}">${esc(p.t)} →</a>`).join("")}` : "")
+  // one best answer up top, chosen by what kind of question it is
+  const when = /\b(when|date|due|deadline|what day)\b/i.test(q), where = /\b(where|find|open|page|link|calculator)\b/i.test(q);
+  const fmt = (l) => { const [d, ...r] = l.split(": "); return `<strong>${new Date(d + "T00:00").toLocaleDateString(undefined, { weekday: "short", month: "short", day: "numeric" })}</strong> · ${esc(r.join(": "))}`; };
+  const best = when && cal[0] ? `<div class="sk-best"><div class="small muted">From the syllabus</div><div>${fmt(cal[0])}</div></div>`
+    : where && pages[0] ? `<a class="sk-best" href="${esc(ROOT + pages[0].u)}"><div class="small muted">On this site</div><div><strong>${esc(pages[0].t)}</strong> →</div></a>`
+    : hits[0] ? `<div class="sk-best"><div class="small muted">${esc(hits[0].where)}</div><div>${tags(hits[0])}${md(hits[0].text)}${cite(hits[0].src)}</div><a href="${esc(hitLink(hits[0]))}" data-go="${esc(hits[0].anchor)}" class="small">Open →</a></div>` : "";
+  body.querySelector(".sk-results").innerHTML = best + `<details class="sk-more"${best ? "" : " open"}><summary>More matches</summary>` + (pages.length ? `<h4>On this site</h4>${pages.map((p) => `<a class="sk-page" href="${esc(ROOT + p.u)}">${esc(p.t)} →</a>`).join("")}` : "")
     + (cal.length ? `<h4>From the syllabus calendar</h4><ul class="sk-cal">${cal.map((l) => `<li>${esc(l)}</li>`).join("")}</ul>` : "")
     + `<h4>From your study materials${scope === "all" ? " · all lectures" : ""}</h4>` + (hits.length ? hits.map((h) =>
     `<div class="sk-hit"><div class="small muted">${esc(h.where)}</div><div>${tags(h)}${md(h.text)}${cite(h.src)}</div>
      <a href="${esc(hitLink(h))}" data-go="${esc(h.anchor)}" class="small">${h.lid !== kb.lecture ? `Open in ${esc(h.lid)} →` : "Go to section →"}</a></div>`).join("")
-    : `<p class="muted">Nothing matched. Try different words (e.g., a drug name or term) — or it may be <strong>not covered in materials</strong>.</p>`);
+    : `<p class="muted">Nothing matched. Try different words (e.g., a drug name or term) — or it may be <strong>not covered in materials</strong>.</p>`) + "</details>";
   wireGo(body);
   if (getKey()) aiAnswer(q);
 }
@@ -374,7 +393,7 @@ async function podTab() {
   const saved = store.get(`sk:pods`, []);
   if (st.step === "setup") {
     const scopeAll = st.sel?.scopeAll ?? false;
-    body.innerHTML = `<div class="pod-hero"><div class="pod-badge">🎧</div><div><h3>Make a study podcast</h3><p class="small muted">Two hosts, built only from your course materials. Pick what to cover — the AI will help you sharpen it before writing the episode.</p></div></div>
+    body.innerHTML = `<div class="pod-hero"><div class="pod-badge">${window.dpasIcon?.("headphones", 24) || ""}</div><div><h3>Make a study podcast</h3><p class="small muted">Two hosts, built only from your course materials. Pick what to cover — the AI will help you sharpen it before writing the episode.</p></div></div>
       <div class="sk-row pod-scope" ${GLOBAL ? "hidden" : ""}><button class="${scopeAll ? "" : "on"}" data-scope="0">This lecture</button><button class="${scopeAll ? "on" : ""}" data-scope="1">All lectures</button></div>
       <div id="pod-choices"><p class="muted small">Loading topics…</p></div>
       ${saved.length ? `<h4>My episodes</h4><div class="pod-saved">${saved.map((e, i) => `<div class="pod-ep"><button data-open="${i}"><strong>${esc(e.title)}</strong><span>${esc(e.when)} · ~${e.minutes} min</span></button><button class="sk-x" data-del="${i}" aria-label="Delete">✕</button></div>`).join("")}</div>` : ""}`;
@@ -677,8 +696,8 @@ function showBar() {
   if (!bar) {
     bar = document.createElement("div");
     bar.className = "sk-sel noprint";
-    bar.innerHTML = [["explain", "✦", "Explain"], ["source", "📍", "Source"], ["quiz", "❓", "Quiz me"], ["compare", "⇄", "Compare"], ["card", "🃏", "Card"], ["save", "🖍", "Save"], ["copy", "⧉", "Copy"]]
-      .map(([a, i, l]) => `<button data-act="${a}" title="${l}"><span>${i}</span>${l}</button>`).join("");
+    bar.innerHTML = [["explain", "sparkle", "Explain"], ["source", "pin", "Source"], ["quiz", "help", "Quiz me"], ["compare", "compare", "Compare"], ["card", "card", "Card"], ["save", "highlight", "Save"], ["copy", "copy", "Copy"]]
+      .map(([a, i, l]) => `<button data-act="${a}" title="${l}"><span>${window.dpasIcon?.(i, 15) || ""}</span>${l}</button>`).join("");
     bar.addEventListener("mousedown", (e) => e.preventDefault());  // keep the selection while clicking
     bar.addEventListener("click", (e) => { const b = e.target.closest("[data-act]"); if (b && ctx) { const c = ctx; ensureKb().then(() => act(b.dataset.act, c)); hideBar(); } });
     document.body.append(bar);
@@ -737,7 +756,7 @@ function explainFree(c) {
   const related = search(c.text + " " + c.blockText, 7).filter((h) => !c.blockText.includes(plain(h.text).slice(0, 40))).slice(0, 5);
   body.innerHTML = `<h4>You highlighted</h4><blockquote class="sk-quote">${esc(c.text)}</blockquote>
     <h4>In context</h4><div class="sk-hit"><div class="small muted">${esc(c.where)}</div>${esc(c.blockText)}${cite(c.src)}</div>
-    <div class="sk-row"><button class="btn ghost" data-src>📍 See the source</button></div>
+    <div class="sk-row"><button class="btn ghost" data-src>See the source →</button></div>
     <h4>Related in this lecture</h4>${related.map((h) => `<div class="sk-hit"><div class="small muted">${esc(h.where)}</div><div>${tags(h)}${md(h.text)}${cite(h.src)}</div><a href="#${esc(h.anchor)}" data-go="${esc(h.anchor)}" class="small">Go to section →</a></div>`).join("") || '<p class="muted">Nothing closely related.</p>'}
     <p class="small muted">Want a real explanation in your own words? <a href="#" data-ai>Turn on AI chat</a>.</p>`;
   body.querySelector("[data-src]").addEventListener("click", () => show("source", c));
@@ -818,7 +837,7 @@ function saveNote(c) {
 }
 function notesTab() {
   const notes = store.get(notesKey(), []);
-  if (!notes.length) { body.innerHTML = '<p class="muted">No notes yet. Highlight text in the guide and tap <strong>🖍 Save</strong>. Your highlights stay on the page and collect here.</p>'; return; }
+  if (!notes.length) { body.innerHTML = '<p class="muted">No notes yet. Highlight text in the guide and tap <strong>Save</strong>. Your highlights stay on the page and collect here.</p>'; return; }
   body.innerHTML = `<div class="sk-row"><button class="btn ghost" data-export>Copy all as text</button></div>` + notes.map((n) =>
     `<div class="sk-note" data-id="${n.id}"><div class="small muted">${esc(n.where)}</div><mark class="hl">${esc(n.text)}</mark>${cite(n.src)}
      <textarea rows="2" placeholder="Add your own note…">${esc(n.note)}</textarea>
@@ -916,7 +935,7 @@ async function start(t) {
 }
 fab = document.createElement("button");
 fab.className = "sk-fab noprint";
-fab.innerHTML = '<span aria-hidden="true">✦</span> Sidekick';
+fab.innerHTML = `<span aria-hidden="true">${window.dpasIcon?.("sparkle", 17) || "✦"}</span> Sidekick`;
 fab.title = "Open Sidekick (press /)";
 fab.addEventListener("click", () => (panel?.classList.contains("open") ? close() : start()));
 document.body.append(fab);

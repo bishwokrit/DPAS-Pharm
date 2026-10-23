@@ -64,7 +64,10 @@ def nav_html(up, active="", nav_links="", subtitle=""):
     links = "".join(f'<a href="{href}"{" aria-current=page" if key == active else ""}>{label}</a>' for label, href, key in main)
     sub = (f'<div class="subnav"><div class="subnav-in"><span class="subnav-title">{html.escape(subtitle)}</span>'
            f'<div class="nav-links">{nav_links}</div><span class="subnav-tools"></span></div></div>') if nav_links else ""
-    return f"""<header class="topbar">
+    tab_ic = {"study": "book", "practice": "check", "drugs": "pill", "review": "chart", "syllabus": "calendar"}
+    tabbar = '<nav class="tabbar" aria-label="Sections">' + "".join(
+        f'<a href="{href}"{" aria-current=page" if key == active else ""}><span data-ic="{tab_ic[key]}"></span>{label}</a>' for label, href, key in main) + "</nav>"
+    return f"""{tabbar}<header class="topbar">
 <nav class="nav" aria-label="Site"><div class="nav-in">
   <a class="brand" href="{up}index.html"><img class="brand-logo" src="{up}assets/logo-mark.svg" alt="" width="46" height="30"><span class="brand-name">{SITE_NAME}</span></a>
   <div class="nav-main">{links}</div>

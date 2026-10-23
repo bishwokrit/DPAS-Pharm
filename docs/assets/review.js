@@ -155,10 +155,10 @@
 
     const tile = (k, ic, title, sub, cta, off) => `<button class="rv-act${k === "daily" ? " main" : ""}" data-a="${k}" ${off ? "disabled" : ""}><span class="rv-ic">${ic}</span><span class="rv-t"><strong>${title}</strong><span>${sub}</span></span><span class="rv-cta">${cta}</span></button>`;
     $("act").innerHTML =
-      tile("daily", "☀︎", "Daily 10", daily ? `Done today · ${daily.score}/${daily.of}. Go again anytime.` : "10 questions, about 5 minutes, weighted toward your weak spots", daily ? "Again →" : "Start →") +
-      tile("misses", "↺", "Retry misses", missed.length ? `${missed.length} question${missed.length === 1 ? "" : "s"} you got wrong` : "Nothing to retry yet", "Start →", !missed.length) +
-      tile("mixed", "⏱", "Timed mixed exam", "40 questions at exam pace, every lecture", "Start →") +
-      tile("custom", "⚙︎", "Build your own", "Pick size, topic, or misses only", "Set up →");
+      tile("daily", window.dpasIcon("sun"), "Daily 10", daily ? `Done today · ${daily.score}/${daily.of}. Go again anytime.` : "10 questions, about 5 minutes, weighted toward your weak spots", daily ? "Again →" : "Start →") +
+      tile("misses", window.dpasIcon("retry"), "Retry misses", missed.length ? `${missed.length} question${missed.length === 1 ? "" : "s"} you got wrong` : "Nothing to retry yet", "Start →", !missed.length) +
+      tile("mixed", window.dpasIcon("timer"), "Timed mixed exam", "40 questions at exam pace, every lecture", "Start →") +
+      tile("custom", window.dpasIcon("sliders"), "Build your own", "Pick size, topic, or misses only", "Set up →");
     const A = (k) => $("act").querySelector(`[data-a="${k}"]`);
     A("daily").onclick = startDaily;
     A("misses").onclick = () => missed.length && window.dpasQuiz.start(shuffle(missed.slice()), opts("Retry: all misses"));
@@ -167,7 +167,8 @@
 
     const pct = answered.length ? Math.round((100 * right.length) / answered.length) : null;
     const stat = (n, l, sub = "") => `<div class="rv-stat"><strong>${n}</strong><span>${l}</span>${sub ? `<i style="width:${sub}%"></i>` : ""}</div>`;
-    $("stats").innerHTML = stat(`${answered.length}<small>/${pool.length}</small>`, "questions answered", (100 * answered.length) / Math.max(1, pool.length)) +
+    if (!answered.length) $("stats").innerHTML = '<p class="rv-empty" style="grid-column:1/-1">Nothing tracked yet. Start with the <strong>Daily 10</strong> above. Every answer you give here, in self-tests, or in practice exams shows up as progress.</p>';
+    else $("stats").innerHTML = stat(`${answered.length}<small>/${pool.length}</small>`, "questions answered", (100 * answered.length) / Math.max(1, pool.length)) +
       stat(pct === null ? "—" : `${pct}%`, "accuracy", pct ?? 0) + stat(missed.length, "to retry") + stat(`${streak()}`, `day streak`);
 
     $("topics").innerHTML = topics.length ? `<div class="rv-topics">${topics.slice(0, 8).map((t) => `<a class="rv-topic" ${t.link ? `href="${esc(t.link.href)}"` : ""}>

@@ -54,15 +54,16 @@
         <div class="gs-sec" style="--c:var(--c-bonus)"><div class="gs-h"><span class="gs-dot"></span>Bonus checkpoints<span id="bonus-pts">+0</span></div>
           <div class="gs-in gs-cp" style="--n:${D.bonus.count}">${Array.from({ length: D.bonus.count }, (_, i) => `<label title="Checkpoint ${i + 1}: ≥90%"><input type="checkbox" data-cp="${i}"><i>${i + 1}</i></label>`).join("")}</div></div></div>
       <div class="gs-chart">
-        <div class="gs-sum"><div><div class="gs-big" id="pd-big">—</div><div class="gs-lbl">Projected grade</div></div><div class="gs-pct" id="pd-pct">—</div></div>
+        <div class="gs-sum"><div><div class="gs-big" id="pd-big" aria-live="polite">—</div><div class="gs-lbl">Projected grade</div></div><div class="gs-pct" id="pd-pct">—</div></div>
         <div class="gs-plot"><div class="gs-grid"><div class="gs-line base" style="bottom:0"><span>50</span></div>${ticks.map(([L, min]) => `<div class="gs-line" style="bottom:${(min / 10 - 50) * 2}%"><span>${L} ${min / 10}</span></div>`).join("")}</div>
           ${cats.map((it) => `<div class="gs-col" style="--c:var(--c-${it.key})"><span class="gs-val" data-avg="${it.key}"></span><div class="gs-bar" data-bar="${it.key}"></div></div>`).join("")}</div>
         <div class="gs-axis"><span>100</span><span>50</span></div><div class="gs-x">${cats.map((it) => `<span>${SHORT[it.key] || it.label}</span>`).join("")}</div>
+        <p class="gs-hint" id="gs-hint">Enter your first score on the left. Until then, the faded bars show the "ungraded work" setting below.</p>
         <div class="gs-foot"><span>Ungraded work at</span><div class="seg" id="assume">${ASSUME.map((v) => `<button data-v="${v}">${v}%</button>`).join("")}</div><button class="pc-clear" data-clear>Clear</button></div>
       </div></div>`;
     if (froot) froot.innerHTML = `<div class="fs">
       <div class="fs-top"><div><div class="fs-lbl">Final exam score</div><div class="fs-num" id="fn-score">—</div></div>
-        <div class="fs-right"><div class="fs-lbl">Course grade</div><div class="fs-num"><span id="fn-letter">—</span><small id="fn-total"></small></div><div class="fs-verdict" id="fn-verdict"></div></div></div>
+        <div class="fs-right"><div class="fs-lbl">Course grade</div><div class="fs-num"><span id="fn-letter" aria-live="polite">—</span><small id="fn-total"></small></div><div class="fs-verdict" id="fn-verdict"></div></div></div>
       <div class="fs-track"><div class="fs-fill" id="fn-fill"></div><div class="fs-marks" id="fn-marks"></div><input type="range" min="0" max="100" step="1" id="fn-in" aria-label="Final exam score"></div>
       <div class="fs-need" id="fn-need"></div>
       <div class="fs-bottom"><span>Drag to try a score. At least 75% is required to pass.</span><label>Actual score <input type="number" inputmode="decimal" min="0" max="100" step="0.1" placeholder="—" aria-label="Final exam percent" data-k="final" data-i="0"></label></div></div>`;
@@ -117,6 +118,7 @@
           bar.parentElement.querySelector(".gs-val").textContent = n ? `${Math.round(sum / n)}` : "—";
         }
       }
+      root.querySelector("#gs-hint").hidden = D.items.some((it) => (S[it.key] || []).some((v) => v !== null && v !== undefined && v !== ""));
       const bonus = Math.min(D.bonus.max, (S.cp || []).filter(Boolean).length * D.bonus.points_each);
       root.querySelector("#bonus-pts").textContent = `+${+bonus.toFixed(2)}`;
       const total = (f) => Math.min(1000, projNoFinal + (f / 100) * final.points_each + bonus);
