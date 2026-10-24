@@ -75,6 +75,7 @@ LINES = [
     {"t": "Your patients will never ask what you got on the pharm final. They'll just quietly hope it was good."},
     {"t": "Flashcards tonight, or \"let me look that up\" in front of your attending later. Choose wisely", "by": "Ray Rayamajhi", "show": True},
     {"t": "Study like your future patient's potassium depends on it. One day, it will", "by": "Ray Rayamajhi", "show": True},
+    {"t": "ChatGPT won't be in the room. Nobody wants to hear \"hold on, let me ask Chat\" while the patient needs meds now", "by": "Ray Rayamajhi", "show": True},
 ]
 
 
