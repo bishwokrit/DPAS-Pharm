@@ -25,40 +25,42 @@ dpas-pharm/
 
 Lecture folder names (L01, L02, …) come from the syllabus. Run `./run.sh status` to see them.
 
-## Adding a new lecture (3 steps)
+## Adding a new lecture (2 steps)
 
 1. Drop the lecture's `.pptx` into `inputs/lectures/<ID>/`.
-2. Tell Claude: **"author L05"** (use the lecture's ID). Claude reads the slides and textbook
-   pages and organizes the content following `templates/AUTHORING_GUIDE.md`.
-3. Run: `./run.sh L05`
+2. Tell Claude: **"New lecture L05 is uploaded."**
 
-Your files appear in `outputs/L05/`. Open `L05_audit.md` first — it should say **PASS**.
+That's it. Claude runs `./run.sh new L05`, which pulls out every slide and the assigned textbook pages and writes
+a checklist (`work/L05/AUTHOR_BRIEF.md`). Claude writes the guide from it, adds the drugs and practice
+questions, and runs `./run.sh new L05` again. That builds the deck, guide (web + PDF), interactive figures,
+flashcards, Anki, Kahoot, search and practice exam, then checks everything and prints a report card:
 
-### Full checklist for each new lecture (one AI session is usually enough)
+```
+L05 report card
+  PASS  Every slide and assigned-reading section taught (audit)
+  PASS  Lecture standard (teaser, drugs, figures, textbook)
+  PASS  Website checks (pages, links, a11y, phone, data)
+Ready to publish.
+```
 
-Send everything in **one message** to save credits, e.g. *"New lecture L05 is uploaded: author it, add its textbook pages,
-add its drugs, add 25 practice questions to the unit's exam, rebuild, and check."*
+A FAIL line means something would fall short of the standard (a slide or reading section not taught, a figure
+without an interactive version, a drug missing from the index, a broken page…). It is never published that way.
+The rules every lecture is held to are in `CLAUDE.md` and `templates/AUTHORING_GUIDE.md`.
 
-- [ ] Slides in `inputs/lectures/L05/` (the build fingerprints them; originals are never edited)
-- [ ] Study guide authored from the slides + assigned textbook pages (`work/L05/`)
-- [ ] Textbook additions cited by page (`work/L05/textbook_L05.py`)
-- [ ] New drugs added to `work/drugs.py` (one line each, every fact cited; the UpToDate link is added automatically)
-- [ ] Practice questions added to the unit bank (`work/exams/U?/`), then `./run.sh exam U?`
-- [ ] `./run.sh L05` → audit says **PASS**
-- [ ] `./run.sh site` then **`./run.sh check`** → "All checks passed"
-- [ ] Spot-check 5 facts against the slides yourself before the exam
+Still worth doing yourself: spot-check 5 facts against the slides before the exam.
 
 ## Commands
 
 | Command | What it does |
 |---|---|
 | `./run.sh status` | Shows every lecture and what's done |
-| `./run.sh L05` | Builds one lecture (deck + NotebookLM + audit) |
+| `./run.sh new L05` | A new lecture start to finish, with every check and a PASS/FAIL report card |
+| `./run.sh L05` | Builds one lecture only (deck + NotebookLM + audit) |
 | `./run.sh all` | Rebuilds every lecture that's ready |
 | `./run.sh setup` | Makes a folder for each lecture from the syllabus |
 | `./run.sh site` | Rebuilds the website (study guides + PDFs + home page) |
 | `./run.sh exam U1` | Rebuilds the Unit 1 practice exam app |
-| `./run.sh check` | Tests the built site before publishing: page errors, broken links, answer balance, textbook numbers vs. cited pages |
+| `./run.sh check` | Tests the built site before publishing: every page on desktop and phone, light and dark; broken links; accessibility; answer balance; textbook numbers vs. cited pages; data consistency |
 
 ## The website
 
@@ -87,7 +89,7 @@ session ends with a debrief: score, time, weakest topics with "Study →" links,
 suggestions. Remote rings and keyboards: ↑/↓ choose · Enter lock in · → next · ← back · F flag ·
 Esc exit (rings that act as a mouse wheel also work).
 
-**Review page** (`Review` in the top bar) for exam week: Daily 10 (a 10-question set each day,
+**Prepare** (`Prepare` in the top bar, with the Anki builder inside) and **Insight** (what is fading, mistake patterns, coverage, streak) for exam week: Daily 10 (a 10-question set each day,
 weighted toward what you've missed or haven't seen, with a streak), every missed and flagged question
 from all lectures and exams in one list, weakest topics with "Study →" links, a weak-flashcard drill,
 all your saved notes, and mixed exams across every lecture (a 40-question timed weak-spot exam, or

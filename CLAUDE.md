@@ -1,0 +1,44 @@
+# PA–S Rx — rules for every session
+
+The owner is not a programmer: explain in plain language, keep replies short, and do the work end to end.
+
+## When a new lecture is uploaded ("author L05", "new lecture is up")
+1. `./run.sh new L05` — extracts the slides and assigned reading and writes `work/L05/AUTHOR_BRIEF.md`
+   (every slide, every reading section, every figure, and the standard). Read it first.
+2. Write `work/L05/author_L05.py`, `guide_L05.py`, `textbook_L05.py` following `templates/AUTHORING_GUIDE.md`
+   (copy the shape of the L02 files; Units 2–6 use the `drug_class` template). Run `python3 work/L05/author_L05.py`.
+3. Add every drug the lecture names to `work/drugs.py`. Add the unit's practice questions to `work/exams/U?/`
+   (a new unit also needs an entry in `EXAMS` in `pipeline/build_exam.py`).
+4. `./run.sh new L05` again until the report card is all PASS. Then commit and push (trailer below).
+
+Never weaken a gate to make it pass. Fix the content. `audit_skip` / `READING_SKIP` only with a true reason
+(teaching instruction, taught in another session).
+
+## The standard
+- **Sources only:** slides (with notes), the assigned textbook pages, the syllabus, the course study guide. No internet facts.
+  Everything is cited (`S12`, `S12 (notes)`, `p. 245`, `SG U1-R3`). Textbook-only facts are tagged TB.
+- **Nothing missed:** every slide line and every assigned-reading section is taught (the audit enforces both).
+- **Same academic level, easier to learn:** a student with only the guide, or only the deck, can answer any exam question.
+  Make it easier through order, short bullets, discriminator tables, flows, why-hooks and interactive figures, never by dropping depth.
+- Textbook facts are `("text", "p. N")` with ’ for apostrophes so `./run.sh check` can verify every number on its page.
+- Questions: ~50/50 vignette/mechanism, 5 balanced options, every slide quick-check rebuilt.
+- Every figure has a caption and an interactive version (`"viz": {"type": …}`; types listed in the brief).
+- Design: Apple-like, minimal, sleek, professional, smooth motion, never cartoonish. Diagrams rich but readable.
+  Interactive figures use the site palette, reset after 30 s idle, and have Try-it steps.
+
+## Never
+- Commit the textbook PDF, extracted textbook text, or raw Sketchy material (they live in the private `dpas-textbook` repo).
+- Edit the original course files in `inputs/` (they are fingerprinted).
+- Put school, course-director or instructor names on the site.
+- Use the owner's API key: AI chat runs on each student's own key, in their browser.
+- Put model names in commits.
+
+## Commands
+`./run.sh status` · `./run.sh new L05` · `./run.sh L05` (lecture only) · `./run.sh site` · `./run.sh exam U1` · `./run.sh check`
+(`check` takes a few minutes: run it in the background).
+
+## Commit trailer
+```
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+Claude-Session: <this session's link>
+```

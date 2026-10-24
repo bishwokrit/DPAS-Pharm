@@ -82,9 +82,21 @@ Never skip anything that contains a fact.
 - Build from an authoring script (`work/<LEC>/author_<LEC>.py`) that writes content.json — easier to fix.
 - Keep option lengths balanced: the audit flags a correct answer >30% longer than every distractor.
 
+## Assigned reading (gated)
+The syllabus makes the assigned pages testable, so every section heading on those pages must be taught.
+`work/<LEC>/AUTHOR_BRIEF.md` lists them; the audit fails on any that the guide doesn't cover.
+A section that belongs to another session goes in `READING_SKIP` in `textbook_<LEC>.py`:
+`{"heading": "DOSAGE REGIMEN", "reason": "Taught in L02 (PK Calculations)"}`.
+
+## Figures (gated)
+Every figure needs a `caption` and an interactive twin. Either a dedicated diagram exists in
+`site_src/assets/viz.js`, or give the figure `"viz": {"type": "dose-response"}` (types are listed in the brief;
+`"bars"` takes your own numbers: `{"type": "bars", "title": …, "unit": "%", "bars": [{"label", "value", "note"}]}`).
+
 ## After writing
-Run `./run.sh <LEC>`. Read `outputs/<LEC>/<LEC>_audit.md`. Fix every "Missing" item in
-content.json and re-run until it says PASS. Check "cited to a different slide" items too.
+Run `./run.sh new <LEC>`. It builds the deck, NotebookLM pack, audit, standard checks, practice exam,
+website and site checks, and ends with a PASS/FAIL report card. Read `outputs/<LEC>/<LEC>_audit.md`
+for anything missing; fix the content and re-run until every line says PASS.
 
 ## Home-page teaser (every lecture)
 In `work/<ID>/guide_<ID>.py`, set `TEASER` to two professional sentences: sentence 1 names what that

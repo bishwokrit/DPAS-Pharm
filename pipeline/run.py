@@ -2,6 +2,8 @@
 
   ./run.sh status        what's ready, what's missing
   ./run.sh setup         make a folder per lecture from the syllabus
+  ./run.sh new L03       a new lecture, start to finish: extract → author brief (or, once authored: deck, audit,
+                         standard checks, practice exam, website, site checks) → one PASS/FAIL report
   ./run.sh L01           build one lecture
   ./run.sh all           build every lecture that has its slides + content, then the website
   ./run.sh site          rebuild the website (study guides, PDFs, home page) into docs/
@@ -87,7 +89,9 @@ def build(lid):
 
     cj = work / "content.json"
     if not cj.exists():
-        print(f"  slides extracted. Next step: ask Claude \"author {lid}\" to organize the content.")
+        import brief
+        b = brief.main(lec, work)
+        print(f"  slides extracted; checklist written to {b.relative_to(ROOT)}.\n  Next step: ask Claude \"author {lid}\".")
         return "needs authoring"
     c = C.load(cj)
     if (work / "textbook.json").exists() and c.get("textbook_status") != "included":
@@ -108,6 +112,37 @@ def build(lid):
     notebooklm.main(work / "content.resolved.json", nlm, CFG["notebooklm_max_words_per_source"])
     code = audit.main(lid, work, out, deck, nlm, CFG["audit_match_threshold"], lec.get("study_guide", []))
     return "built ✅" if code == 0 else "built — audit found gaps"
+
+
+def new(lid):
+    """Everything for one lecture, with every quality gate, ending in a plain PASS/FAIL report card."""
+    lec = lecture(lid)
+    lid = lec["id"]
+    gates = {}
+    r = build(lid)
+    if r in ("no slides", "needs authoring", "content errors"):
+        return r
+    gates["Every slide and assigned-reading section taught (audit)"] = r == "built ✅"
+    import standards
+    bad = standards.check(lec)
+    for b in bad:
+        print("  ✗ " + b)
+    gates["Lecture standard (teaser, drugs, figures, textbook)"] = not bad
+    import build_exam
+    for eid, meta in build_exam.EXAMS.items():
+        if lid in meta["lectures"] and (ROOT / "work" / "exams" / eid).exists():
+            build_exam.main(eid)
+    import build_site
+    build_site.main()
+    gates["Website checks (pages, links, a11y, phone, data)"] = subprocess.run([sys.executable, str(ROOT / "pipeline" / "check.py")]).returncode == 0
+    print(f"\n{lid} report card")
+    for k, ok in gates.items():
+        print(f"  {'PASS' if ok else 'FAIL'}  {k}")
+    if r != "built ✅":
+        print(f"  → open outputs/{lid}/{lid}_audit.md for what is missing")
+    ok = all(gates.values())
+    print(f"\n{'Ready to publish.' if ok else 'Not ready — fix the FAIL lines, then run ./run.sh new ' + lid + ' again.'}")
+    return "ready ✅" if ok else "gaps"
 
 
 def status():
@@ -167,6 +202,10 @@ if __name__ == "__main__":
             print(f"  {k}: {v}")
         import build_site
         build_site.main()
+    elif arg == "new":
+        if len(sys.argv) < 3:
+            sys.exit("Which lecture? e.g. ./run.sh new L03")
+        sys.exit(0 if new(sys.argv[2]) == "ready ✅" else 1)
     elif arg == "check":
         import check
         check.main()
