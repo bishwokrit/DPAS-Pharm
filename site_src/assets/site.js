@@ -586,7 +586,7 @@
           { duration: 900 + Math.random() * 500, delay: 260, easing: "cubic-bezier(.15,.7,.3,1)", fill: "forwards" });
       }
     }
-    setTimeout(() => { addTab(true); g.classList.add("out"); setTimeout(() => g.remove(), 600); }, calmMotion() ? 600 : 1500);
+    setTimeout(() => { addTab(true); g.classList.add("out"); setTimeout(() => g.remove(), 320); }, calmMotion() ? 600 : 1500);
   }
 
   // the gate: the screen cuts to dark and the card slams in (a jump-scare beat, kept minimal)
@@ -598,10 +598,12 @@
       ? '<form class="sx-card"><strong>Sketch mode is on</strong><span>The Sketch tab is in the top bar.</span><div class="sx-row"><button class="btn small" type="button" data-go>Open Sketch</button><button class="btn ghost small" type="button" data-lock>Lock</button></div></form>'
       : '<form class="sx-card"><div class="sx-eyebrow">Restricted</div><strong>Sketch mode</strong><input type="password" autocomplete="off" placeholder="Password" aria-label="Password"><div class="sx-row"><button class="btn small" type="submit">Unlock</button><button class="btn ghost small" type="button" data-x>Cancel</button></div></form>';
     document.body.append(g);
-    if (calmMotion()) g.classList.add("on", "calm"); else { g.classList.add("on", "slam"); document.body.animate([{ transform: "translate(0,0)" }, { transform: "translate(-5px,3px)" }, { transform: "translate(4px,-3px)" }, { transform: "translate(-2px,1px)" }, { transform: "translate(0,0)" }], { duration: 300, delay: 120 }); }
-    const close = () => { g.classList.add("out"); setTimeout(() => g.remove(), 400); };
+    // only opacity and transform animate (GPU-composited): no page shake, no animated blur, so it never stutters
+    g.classList.add("on", calmMotion() ? "calm" : "slam");
+    const close = () => { g.classList.add("out"); setTimeout(() => g.remove(), 320); };
     const card = g.querySelector(".sx-card"), input = g.querySelector("input");
-    setTimeout(() => (input || g.querySelector("button")).focus(), 60);
+    // focus after the card lands: opening the phone keyboard mid-animation forces a relayout and a dropped frame
+    setTimeout(() => (input || g.querySelector("button")).focus({ preventScroll: true }), calmMotion() ? 0 : 380);
     g.addEventListener("click", (e) => { if (e.target === g || e.target.closest("[data-x]")) close(); });
     g.addEventListener("keydown", (e) => { if (e.key === "Escape") close(); });
     g.querySelector("[data-go]")?.addEventListener("click", () => (location.href = `${root}sketch/index.html`));
