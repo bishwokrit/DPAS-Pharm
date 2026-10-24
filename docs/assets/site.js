@@ -300,6 +300,16 @@
     hu.querySelectorAll(".appear").forEach((el, i) => { el.style.setProperty("--d", `${0.45 + i * 0.08}s`); requestAnimationFrame(() => el.classList.add("in")); });
   }
 
+  // Prepare page: a different line under the headline each visit
+  const pl = document.getElementById("pr-lines"), pq = document.getElementById("pr-quote");
+  if (pl && pq) {
+    const L = JSON.parse(pl.textContent), q = L[Math.floor(Math.random() * L.length)];
+    pq.querySelector(".pr-t").textContent = q.t;
+    pq.querySelector(".pr-by").textContent = q.by ? `— ${q.by}` : "";
+    pq.classList.toggle("has-by", !!q.by);
+    pq.addEventListener("click", () => pq.classList.toggle("show-by"));  // phones: tap to see who said it
+  }
+
   // practice page: the unit whose exam is next goes first and is marked current
   const pd = document.getElementById("practice-data"), pu = document.getElementById("pr-units");
   if (pd && pu) {

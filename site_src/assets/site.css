@@ -1450,3 +1450,9 @@ html[data-pmotion="off"] ::view-transition-old(root), html[data-pmotion="off"] :
 .ak-pill::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--text-2); }
 .ak-pill.t-cloze::before { background: var(--p0); } .ak-pill.t-mcq::before { background: var(--p2); } .ak-pill.t-reversed::before { background: var(--p1); } .ak-pill.t-typein::before { background: var(--p3); }
 .tabbar:has(> a:nth-child(7)) a { font-size: 10.5px; letter-spacing: -.01em; }
+.pr-quote { max-width: 760px; text-wrap: balance; }
+/* the author stays out of sight until you hover or tap the line */
+.pr-quote .pr-by { display: block; font-size: 14px; font-weight: 500; color: var(--text-2); margin-top: 6px; opacity: 0; transform: translateY(-4px); transition: opacity .35s ease, transform .35s cubic-bezier(.2,.8,.2,1); }
+.pr-quote.has-by { cursor: default; }
+.pr-quote.has-by:hover .pr-by, .pr-quote.has-by:focus-visible .pr-by, .pr-quote.show-by .pr-by { opacity: 1; transform: none; }
+.pr-quote:focus-visible { outline: none; }

@@ -52,6 +52,27 @@ def unit_tiles(u, syl, built, exams_built, up="", full=False):
     return tiles
 
 
+# Prepare page: one line under the headline, a different one each visit (effort over talent, reps, perseverance).
+# Lines from real people keep their author out of sight: it appears only on hover or tap.
+LINES = [
+    {"t": "Hard work beats talent when talent doesn't work hard. The CYP450 table doesn't care who's gifted.", "by": "Tim Notke"},
+    {"t": "Success is the sum of small efforts, repeated day in and day out. So is steady state.", "by": "Robert Collier"},
+    {"t": "We are what we repeatedly do. Excellence, then, is not an act, but a habit. Ten questions a day is a habit.", "by": "Will Durant"},
+    {"t": "The expert in anything was once a beginner. Every prescriber once mixed up potency and efficacy.", "by": "Helen Hayes"},
+    {"t": "Don't watch the clock; do what it does. Keep going. Half-lives don't pause either.", "by": "Sam Levenson"},
+    {"t": "Practice isn't the thing you do once you're good. It's the thing you do that makes you good.", "by": "Malcolm Gladwell"},
+    {"t": "Energy and persistence conquer all things. Including renal dosing.", "by": "Benjamin Franklin"},
+    {"t": "Diligence is the mother of good luck. Nobody gets lucky on a pharm final.", "by": "Benjamin Franklin"},
+    {"t": "It always seems impossible until it's done. Unit 1 did too, a week ago.", "by": "Nelson Mandela"},
+    {"t": "A river cuts through rock not because of its power, but because of its persistence. Keep dosing.", "by": "Jim Watkins"},
+    {"t": "Fall seven times, stand up eight. Every missed question shows you exactly where to aim next.", "by": "Japanese proverb"},
+    {"t": "Talent doesn't titrate the dose. Practice does. Every question you answer today is one less guess at the bedside."},
+    {"t": "Five half-lives to steady state. A few weeks of daily reps to mastery. Both reward the ones who keep dosing."},
+    {"t": "Luck can't explain a 90 on pharm. Spaced, stubborn practice can."},
+    {"t": "Talent sets the starting dose. Effort sets the ceiling."},
+]
+
+
 def practice_page(syl, built, exams_built):
     """Every unit's practice in one place: the current unit first (set in the browser), then earlier units, then the final."""
     upnext = json.dumps({"exams": syl.get("exams", [])}).replace("</", "<\\/")
@@ -64,7 +85,8 @@ def practice_page(syl, built, exams_built):
              f'<a class="tile appear" style="--d:.06s" href="../review/index.html">{ic("review")}<div><div class="tile-k">5 minutes a day</div><h3>Daily 10</h3>'
              '<p>Ten questions weighted toward what you missed, with a streak. Lives in Progress with your scores.</p></div><span class="tile-go">Start →</span></a>')
     body = f"""<header class="hero wrap"><p class="eyebrow appear">Prepare</p><h1 class="appear" style="--d:.05s">Pull it out of memory. That's how it sticks.</h1>
-<p class="lede appear" style="--d:.12s">Every way to test yourself in one place: today's drug, flashcards for Anki, lecture self-tests and practice exams by unit, and final prep. Your scores and misses live in <a href="../review/index.html">Progress</a>.</p>
+<p class="lede appear pr-quote" id="pr-quote" style="--d:.12s" tabindex="0"><span class="pr-t">{html.escape(LINES[0]["t"])}</span><span class="pr-by">{html.escape(LINES[0].get("by", ""))}</span></p>
+<script type="application/json" id="pr-lines">{json.dumps(LINES, ensure_ascii=False)}</script>
 <nav class="sx-jump appear" style="--d:.18s"><a href="#today">Today</a><a href="#tools">Anki &amp; Daily 10</a><a href="#pr-units">By unit</a><a href="#final">Final prep</a></nav></header>
 <section class="section" id="today"><div class="wrap"><p class="kicker">Today</p><h2>Drug of the day</h2><div class="dotd appear" id="dotd" hidden></div></div></section>
 <section class="section" id="tools"><div class="wrap"><p class="kicker">Tools</p><h2>Cards and quick sets</h2><div class="bento bento-2">{tools}</div></div></section>
