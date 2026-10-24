@@ -89,7 +89,7 @@
       st.chosen[x.id] = L;
       st.secs[x.id] = (st.secs[x.id] || 0) + (Date.now() - st.qStart) / 1000;
       st.qStart = Date.now();
-      if (feedback === "each") opts.onAnswer?.(x, L, L === x.answer, st.secs[x.id]);  // timed mode reports at the end (answers can change)
+      if (feedback === "each") { opts.onAnswer?.(x, L, L === x.answer, st.secs[x.id]); window.dpasLog?.(x, L === x.answer, st.secs[x.id]); }  // timed mode reports at the end (answers can change)
       st.hi = Object.keys(x.options).indexOf(L);
       if (feedback === "end" && st.i < questions.length - 1) { move(1); return; }
       draw();
@@ -110,7 +110,7 @@
         st.done = true;
         st.time = Math.min(elapsed(), total || Infinity);
         clearInterval(timer);
-        if (feedback === "end") questions.forEach((x) => { if (answered(x)) opts.onAnswer?.(x, st.chosen[x.id], st.chosen[x.id] === x.answer, st.secs[x.id] || 0); });
+        if (feedback === "end") questions.forEach((x) => { if (answered(x)) { opts.onAnswer?.(x, st.chosen[x.id], st.chosen[x.id] === x.answer, st.secs[x.id] || 0); window.dpasLog?.(x, st.chosen[x.id] === x.answer, st.secs[x.id] || 0); } });
         opts.onFinish?.(result());
       }
       debrief(timeUp);

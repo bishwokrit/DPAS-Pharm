@@ -615,7 +615,7 @@ function quizTab(list) {
       if (body.querySelector(".opt.right")) return;
       const ok = b.dataset.l === q.answer;
       if (ok) score++;
-      if (q.id) recordQ(q, ok);
+      if (q.id) { recordQ(q, ok); window.dpasLog?.({ ...q, lid: q.lid || kb.lecture }, ok, null); }
       body.querySelectorAll(".opt").forEach((o) => { if (o.dataset.l === q.answer) o.classList.add("right"); });
       if (!ok) b.classList.add("wrong");
       const whys = q.whys ? Object.entries(q.whys).filter(([L]) => L !== q.answer).map(([L, w]) => `<li><strong>${L}.</strong> ${md(w)}</li>`).join("") : "";

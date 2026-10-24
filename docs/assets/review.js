@@ -104,8 +104,9 @@
   const opts = (title, extra = {}) => ({ title, onAnswer: (q, L, ok) => record(q, L, ok), onExit: refresh, ...extra });
 
   // ---- Daily 10 with a streak
-  function streak() {
-    const done = store.get("daily:log", {});
+  function streak() {  // any day you answered something counts (Daily 10, self-tests, exams, quizzes)
+    const done = { ...store.get("daily:log", {}) };
+    store.get("act:log", []).forEach((e) => { const d = new Date(e.t); done[`${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`] = 1; });
     let n = 0;
     for (let d = new Date(); ; d.setDate(d.getDate() - 1)) {
       const key = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
@@ -236,7 +237,147 @@
     $("rv-tabs").querySelectorAll("[data-t]").forEach((b) => b.onclick = () => { tab = b.dataset.t; store.set("rv:tab", tab); render(); });
     $("rv-panel").querySelector("[data-go]")?.addEventListener("click", () => A("misses").click());
     $("rv-panel").querySelector("[data-drill]")?.addEventListener("click", () => drill(shuffle(cards)));
+    insight();
   }
+
+  // ================================================================ Insight: fading, streak, coverage, patterns
+  // All from this browser's own activity log (act:log: every answer, with its time) plus the saved statuses.
+  const DAY = 864e5;
+  const ymd = (t) => { const d = new Date(t); return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`; };
+  const keyOf = (q) => String(q.stem || "").replace(/<[^>]+>|\*\*/g, "").slice(0, 90);
+  let byKey = null;
+  const poolByKey = () => (byKey ||= new Map(pool.map((q) => [keyOf(q), q])));
+  const LOGS = () => store.get("act:log", []);
+  const inScope = (q) => scope === "all" || q.unit === cur;
+  const ago = (d) => (d < 1 / 24 ? "just now" : d < 1 ? `${Math.round(d * 24)} h ago` : `${Math.round(d)} day${Math.round(d) === 1 ? "" : "s"} ago`);
+  const lvlColor = (v) => (v >= 70 ? "var(--good)" : v >= 40 ? "var(--warn)" : "var(--bad)");
+  const quiz = (qs, title) => qs.length && window.dpasQuiz.start(shuffle(qs.slice()).slice(0, 15), opts(title));
+
+  // ---- What's fading: each topic's "level" decays with time since practice; each day you get it right makes it decay slower
+  function fading() {
+    const ev = {}, now = Date.now();
+    LOGS().forEach((e) => { const q = poolByKey().get(e.k); if (q && inScope(q)) (ev[q.topic] ||= []).push(e); });
+    const rows = Object.entries(ev).map(([topic, es]) => {
+      es.sort((a, b) => a.t - b.t);
+      const last = es[es.length - 1].t, days = new Set(es.filter((e) => e.ok).map((e) => ymd(e.t))).size;
+      const recent = es.slice(-10), acc = recent.filter((e) => e.ok).length / recent.length;
+      const stability = 1.2 * 2 ** Math.min(days, 6), dt = (now - last) / DAY;   // in days: 1.2, 2.4, 4.8 … with each good day
+      return { topic, level: Math.round(100 * Math.exp(-dt / stability) * (0.35 + 0.65 * acc)), dt, n: es.length, link: P().find((q) => q.topic === topic)?.link };
+    }).sort((a, b) => a.level - b.level);
+    const untouched = [...new Set(P().map((q) => q.topic))].filter((t) => !ev[t]);
+    const low = rows.filter((r) => r.level < 60);
+    if (!rows.length) {
+      $("fade").innerHTML = `<p class="rv-empty">No levels yet. Answer questions anywhere on the site (self-tests, practice exams, the Daily 10) and each topic's level shows up here, then starts to fade from the moment you stop.</p>`;
+      return;
+    }
+    $("fade").innerHTML = `<div class="rv-fade-top"><div><strong>${low.length ? `${low.length} topic${low.length === 1 ? " is" : "s are"} fading` : "Everything you've studied is holding"}</strong>
+        <span>${low.length ? "A short refresh now saves a full relearn later." : "Come back tomorrow; levels drop overnight."}${untouched.length ? ` ${untouched.length} topic${untouched.length === 1 ? "" : "s"} not started yet.` : ""}</span></div>
+        ${low.length ? `<button class="btn" data-refresh>Refresh fading topics →</button>` : ""}</div>
+      <div class="rv-fades">${rows.map((r) => `<a class="rv-fd" ${r.link ? `href="${esc(r.link.href)}"` : ""}><span class="rv-fd-n">${md(r.topic)}</span>
+        <span class="rv-fd-bar"><i style="--w:${r.level}%;background:${lvlColor(r.level)}"></i></span><span class="rv-fd-v" style="color:${lvlColor(r.level)}">${r.level}</span>
+        <span class="rv-fd-m">${ago(r.dt)} · ${r.n} answered</span></a>`).join("")}</div>`;
+    $("fade").querySelector("[data-refresh]")?.addEventListener("click", () => {
+      const topics = new Set(low.map((r) => r.topic));
+      window.dpasQuiz.start(weighted(10, P().filter((q) => topics.has(q.topic))), opts("Refresh: fading topics"));
+    });
+  }
+
+  // ---- Streak calendar + weekly trend
+  function streakView() {
+    const L = LOGS(), daily = store.get("daily:log", {}), per = {};
+    L.forEach((e) => { const k = ymd(e.t); (per[k] ||= { n: 0, ok: 0 }); per[k].n++; per[k].ok += e.ok; });
+    Object.entries(daily).forEach(([k, v]) => { if (!per[k]) per[k] = { n: v.of || 10, ok: v.score || 0 }; });
+    const today0 = new Date(); today0.setHours(0, 0, 0, 0);
+    let cur = 0; for (let d = new Date(today0); ; d.setDate(d.getDate() - 1)) { if (per[ymd(d)]) cur++; else if (ymd(d) !== ymd(today0)) break; if (cur > 999) break; }
+    let best = 0, run = 0; const days = Object.keys(per).sort();
+    days.forEach((k, i) => { run = i && (new Date(k + "T00:00") - new Date(days[i - 1] + "T00:00")) / DAY === 1 ? run + 1 : 1; best = Math.max(best, run); });
+    // 18 weeks of days, Sunday-first columns
+    const start = new Date(today0); start.setDate(start.getDate() - start.getDay() - 7 * 17);
+    const cells = [], months = [];
+    for (let w = 0; w < 18; w++) {
+      for (let r = 0; r < 7; r++) {
+        const d = new Date(start); d.setDate(start.getDate() + w * 7 + r);
+        const k = ymd(d), n = per[k]?.n || 0, future = d > today0;
+        const lv = n === 0 ? 0 : n < 5 ? 1 : n < 15 ? 2 : n < 30 ? 3 : 4;
+        cells.push(`<i class="l${lv}${future ? " fut" : ""}${k === ymd(today0) ? " now" : ""}" style="grid-column:${w + 1};grid-row:${r + 1}" title="${d.toLocaleDateString(undefined, { month: "short", day: "numeric" })}: ${n ? `${n} answered${per[k].n ? `, ${Math.round((100 * per[k].ok) / per[k].n)}% right` : ""}` : "no study"}"></i>`);
+        if (r === 0 && d.getDate() <= 7) months.push(`<span style="grid-column:${w + 1}">${d.toLocaleDateString(undefined, { month: "short" })}</span>`);
+      }
+    }
+    // last 8 weeks: questions (bars) and accuracy (line)
+    const weeks = Array.from({ length: 8 }, (_, i) => { const s0 = new Date(today0); s0.setDate(s0.getDate() - s0.getDay() - 7 * (7 - i)); return { s0, n: 0, ok: 0 }; });
+    L.forEach((e) => { const w = weeks.findLast((x) => e.t >= x.s0.getTime()); if (w && e.t < w.s0.getTime() + 7 * DAY) { w.n++; w.ok += e.ok; } });
+    const maxN = Math.max(10, ...weeks.map((w) => w.n)), W = 320, H = 110, bw = W / 8;
+    const pts = weeks.map((w, i) => (w.n ? `${i * bw + bw / 2},${H - 18 - ((w.ok / w.n) * (H - 36))}` : null)).filter(Boolean);
+    const chart = `<svg viewBox="0 0 ${W} ${H}" class="rv-trend" role="img" aria-label="Questions answered and accuracy, last 8 weeks">
+      ${weeks.map((w, i) => { const h = (w.n / maxN) * (H - 36); return `<rect x="${i * bw + 7}" y="${H - 18 - h}" width="${bw - 14}" height="${Math.max(h, 1.5)}" rx="4" class="rv-tb${i === 7 ? " now" : ""}"/><text x="${i * bw + bw / 2}" y="${H - 4}" text-anchor="middle">${w.s0.toLocaleDateString(undefined, { month: "numeric", day: "numeric" })}</text>`; }).join("")}
+      ${pts.length > 1 ? `<polyline points="${pts.join(" ")}" class="rv-tl"/>` : ""}${pts.map((p) => `<circle cx="${p.split(",")[0]}" cy="${p.split(",")[1]}" r="3" class="rv-td"/>`).join("")}</svg>`;
+    const thisWeek = weeks[7];
+    $("streak").innerHTML = `<div class="rv-streak"><div class="rv-cal-box"><div class="rv-cal-h"><strong>${cur}</strong><span>day streak</span><em>Best ${best} · ${Object.keys(per).length} study days</em></div>
+        <div class="rv-cal-m">${months.join("")}</div><div class="rv-cal">${cells.join("")}</div>
+        <div class="rv-cal-k">Less <i class="l0"></i><i class="l1"></i><i class="l2"></i><i class="l3"></i><i class="l4"></i> More</div></div>
+      <div class="rv-trend-box"><div class="rv-cal-h"><strong>${thisWeek.n}</strong><span>this week</span><em>${thisWeek.n ? `${Math.round((100 * thisWeek.ok) / thisWeek.n)}% right` : "Nothing yet this week"}</em></div>${chart}
+        <div class="rv-cal-k"><i class="kb"></i> questions <i class="kl"></i> % right</div></div></div>`;
+  }
+
+  // ---- Coverage map: lecture × part, shaded by how much you've answered and how well
+  const partOf = (q) => {
+    const L = CFG.lectures.find((l) => l.id === (q.from.type === "lec" ? q.from.lid : (q.link?.href.match(/(L\d+)\//) || [])[1]));
+    const anchor = (q.link?.href.split("#")[1] || "");
+    const p = L?.parts?.find((x) => x.anchor === anchor);
+    return L && p ? `${L.id}:${p.n}` : null;
+  };
+  function coverage() {
+    const lecs = CFG.lectures.filter((l) => scope === "all" || l.unit === cur), by = {};
+    pool.forEach((q) => { const k = partOf(q); if (k) (by[k] ||= []).push(q); });
+    if (!lecs.length) { $("cover").innerHTML = '<p class="rv-empty">No lectures in this unit yet.</p>'; return; }
+    const untouched = [];
+    $("cover").innerHTML = `<div class="rv-cov">${lecs.map((l) => `<div class="rv-cov-row"><div class="rv-cov-l"><strong>${l.id}</strong><span>${esc(l.title.replace(/^.*—\s*/, ""))}</span></div><div class="rv-cov-cells">${(l.parts || []).map((p) => {
+      const qs = by[`${l.id}:${p.n}`] || [], ans = qs.filter((q) => status(q) !== "new"), ok = ans.filter((q) => ["right", "fixed"].includes(status(q)));
+      const share = qs.length ? ans.length / qs.length : 0, acc = ans.length ? ok.length / ans.length : 0;
+      const st = !qs.length ? "none" : !ans.length ? "new" : share >= 0.6 && acc >= 0.8 ? "hi" : acc >= 0.6 ? "mid" : "lo";
+      if (qs.length && share < 0.25) untouched.push(...qs);
+      return `<button class="rv-cell s-${st}" data-cov="${l.id}:${p.n}" ${qs.length ? "" : "disabled"} title="${esc(p.name)}"><b>Part ${p.n}</b><span>${esc(p.name)}</span>
+        <small>${!qs.length ? "No questions yet" : `${ans.length}/${qs.length} answered${ans.length ? ` · ${Math.round(acc * 100)}%` : ""}`}</small><i style="--w:${Math.round(share * 100)}%"></i></button>`;
+    }).join("")}</div></div>`).join("")}</div>
+      <div class="rv-cov-k"><span><i class="s-new"></i>Not started</span><span><i class="s-lo"></i>Below 60%</span><span><i class="s-mid"></i>60–79%</span><span><i class="s-hi"></i>Mastered</span>
+      ${untouched.length ? `<button class="btn small" data-untouched>Practice my untouched parts →</button>` : ""}</div>`;
+    $("cover").querySelectorAll("[data-cov]").forEach((b) => b.addEventListener("click", () => {
+      const l = CFG.lectures.find((x) => x.id === b.dataset.cov.split(":")[0]), p = l.parts.find((x) => x.n === +b.dataset.cov.split(":")[1]);
+      quiz(by[b.dataset.cov] || [], `${l.id} · Part ${p.n}: ${p.name}`);
+    }));
+    $("cover").querySelector("[data-untouched]")?.addEventListener("click", () => quiz(untouched, "Untouched parts"));
+  }
+
+  // ---- Mistake patterns
+  const PAIRS = [["Potency vs efficacy", /potenc/i, /efficac/i], ["Agonist vs antagonist", /(^|[^n])agonist/i, /antagonist/i], ["Competitive vs noncompetitive", /\bcompetitive/i, /noncompetitive|irreversible/i],
+    ["CYP inhibitor vs inducer", /inhibit/i, /induc/i], ["Pharmacokinetics vs pharmacodynamics", /pharmacokinetic|\bPK\b/, /pharmacodynamic|\bPD\b/], ["Half-life vs clearance", /half-life|t½/i, /clearance/i],
+    ["ED₅₀, TD₅₀ and the therapeutic index", /ED₅₀|ED50|effective dose/i, /TD₅₀|TD50|toxic dose|therapeutic index/i], ["Phase I vs Phase II metabolism", /phase I\b/i, /phase II\b/i],
+    ["Generic vs brand name", /generic/i, /brand/i], ["Efficacy vs effectiveness", /efficacy/i, /effectiveness/i], ["Absorption vs distribution", /absor/i, /distribut/i]];
+  function patterns() {
+    const SP = P(), text = (q) => `${q.stem} ${Object.values(q.options || {}).join(" ")} ${q.why || ""}`;
+    const missedQs = SP.filter((q) => status(q) === "missed" || status(q) === "fixed");
+    const mix = PAIRS.map(([name, a, b]) => { const all = SP.filter((q) => a.test(text(q)) && b.test(text(q))); const miss = all.filter((q) => missedQs.includes(q)); return { name, all, miss }; })
+      .filter((r) => r.miss.length).sort((x, y) => y.miss.length - x.miss.length || y.miss.length / y.all.length - x.miss.length / x.all.length).slice(0, 4);
+    const kinds = { vignette: ["Patient cases", 0, 0], other: ["Straight recall", 0, 0] };
+    SP.forEach((q) => { const s = status(q); if (s === "new") return; const k = q.kind === "vignette" ? "vignette" : "other"; kinds[k][2]++; if (s === "right" || s === "fixed") kinds[k][1]++; });
+    const wrong = LOGS().filter((e) => !e.ok && e.s != null && poolByKey().get(e.k) && inScope(poolByKey().get(e.k)));
+    const fast = wrong.filter((e) => e.s < 20).length, slow = wrong.filter((e) => e.s > 75).length, mid = wrong.length - fast - slow;
+    const kc = Object.values(kinds).filter((k) => k[2] >= 3);
+    const kp = (k) => Math.round((100 * k[1]) / k[2]);
+    const styleMsg = kc.length === 2 ? (Math.abs(kp(kinds.vignette) - kp(kinds.other)) < 10 ? "About even. Cases aren't the problem."
+      : kp(kinds.vignette) < kp(kinds.other) ? "Cases cost you more than facts. Practice reading the stem for the one detail that matters (the drug, the lab, the patient)." : "Facts cost you more than cases. Your reasoning is solid; the cram sheet will close the gap.") : "Needs a few more answers of each style.";
+    const speedMsg = wrong.length < 5 ? "Needs a few more timed misses to call it." : fast / wrong.length >= 0.4 ? "Most misses come in under 20 seconds: that's rushing. Read the last line of the stem first, then every option."
+      : slow / wrong.length >= 0.4 ? "Most misses take over a minute: that's a gap, not carelessness. Study the topic, then retry." : "A mix of quick and slow misses. Nothing systematic.";
+    if (!missedQs.length && !wrong.length) { $("pat").innerHTML = '<p class="rv-empty">No misses to learn from yet. Patterns appear once you\'ve gotten a few questions wrong, which is the point of practicing.</p>'; return; }
+    $("pat").innerHTML = `<div class="rv-pats">
+      <div class="rv-pat"><div class="rv-pat-k">Mix-ups you repeat</div>${mix.length ? mix.map((r, i) => `<div class="rv-mix"><div><strong>${esc(r.name)}</strong><span>missed ${r.miss.length} of ${r.all.length} questions that involve both</span></div><button class="btn ghost small" data-mix="${i}">Drill →</button></div>`).join("")
+        : '<p class="rv-pat-msg">No repeated mix-ups so far.</p>'}</div>
+      <div class="rv-pat"><div class="rv-pat-k">Question style</div>${Object.values(kinds).map((k) => `<div class="rv-pbar"><span>${k[0]}</span><b><i style="--w:${k[2] ? kp(k) : 0}%;background:${k[2] ? lvlColor(kp(k)) : "var(--hair)"}"></i></b><em>${k[2] ? kp(k) + "%" : "—"}</em></div>`).join("")}<p class="rv-pat-msg">${styleMsg}</p></div>
+      <div class="rv-pat"><div class="rv-pat-k">Rushing or gaps</div>${wrong.length ? `<div class="rv-split"><i style="flex:${fast};background:var(--warn)"></i><i style="flex:${mid};background:var(--hair)"></i><i style="flex:${slow};background:var(--bad)"></i></div>
+        <div class="rv-split-k"><span>Under 20 s · ${fast}</span><span>Over 75 s · ${slow}</span></div>` : ""}<p class="rv-pat-msg">${speedMsg}</p></div></div>`;
+    $("pat").querySelectorAll("[data-mix]").forEach((b) => b.addEventListener("click", () => quiz(mix[+b.dataset.mix].all, `Mix-up: ${mix[+b.dataset.mix].name}`)));
+  }
+  function insight() { byKey = null; fading(); streakView(); coverage(); patterns(); }
 
   load().then(() => (document.readyState === "loading" ? addEventListener("DOMContentLoaded", render) : render()));  // icons come from site.js, which loads after this file
 })();

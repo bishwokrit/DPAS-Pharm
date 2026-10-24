@@ -100,19 +100,26 @@ def search_index(syl, sched, built, exams):
 
 # ---------------------------------------------------------------- exam-week review dashboard
 def review_page(syl, built, exams):
-    cfg = json.dumps({"lectures": [{"id": lid, "title": b["title"], "unit": int(b["unit"])} for lid, b in built.items()],
+    cfg = json.dumps({"lectures": [{"id": lid, "title": b["title"], "unit": int(b["unit"]), "parts": [{"n": i, "name": n, "anchor": an} for i, n, an in b["parts"]]} for lid, b in built.items()],
                       "exams": [{"id": e["id"], "title": e["title"], "unit": int(e.get("unit") or 0)} for e in exams],
                       "units": syl["units"],
                       "upcoming": [{"label": e["label"], "date": e["date"], "time": e["time"], "unit": e["unit"]} for e in syl.get("exams", [])]}).replace("</", "<\\/")
-    body = f"""<header class="hero wrap rv-hero"><p class="eyebrow">Insight</p><h1>Check the level. Then adjust the dose.</h1>
-<p class="lede">Practice that adapts to you. Like a drug level that tells you how to titrate, every answer you give shows what you've absorbed and what's wearing off, so your next session targets exactly that: this unit, or everything so far for the final.</p>
+    body = f"""<header class="hero wrap rv-hero"><p class="eyebrow">Insight</p><h1>Read the levels. Skip the guesswork.</h1>
+<p class="lede">Practice that adapts to you. Every answer is a reading, and your next session is dosed to match: this unit, or everything so far for the final.</p>
 <div class="rv-count" id="rv-count" hidden></div>
 <div class="rv-scope seg" id="rv-scope" role="group" aria-label="What to review"></div><p class="rv-scope-sub" id="rv-scope-sub"></p></header>
+<nav class="sx-jump rv-jump"><a href="#practice">Study now</a><a href="#fading">What's fading</a><a href="#progress">How you're doing</a><a href="#coverage">Coverage</a><a href="#patterns">Mistake patterns</a><a href="#saved">Saved</a></nav>
 <section class="section rv-sec" id="practice"><div class="wrap"><p class="kicker">1 · Study now</p><h2>Start a session</h2>
 <div class="rv-acts" id="act"></div></div></section>
-<section class="section rv-sec" id="progress"><div class="wrap"><p class="kicker">2 · Your progress</p><h2>How you're doing</h2>
-<div class="rv-stats" id="stats"></div><div id="units"></div><h3 class="rv-h3">Weakest topics</h3><div id="topics"></div></div></section>
-<section class="section rv-sec" id="saved"><div class="wrap"><p class="kicker">3 · Saved for later</p><h2>Your collections</h2>
+<section class="section rv-sec" id="fading"><div class="wrap"><p class="kicker">2 · What's fading</p><h2>Catch it before it's gone</h2>
+<p class="rv-intro">Memory decays like a drug level: fast at first, then slower each time you top it up. Each topic's level drops with time since you last practiced it and rises with every correct answer.</p><div id="fade"></div></div></section>
+<section class="section rv-sec" id="progress"><div class="wrap"><p class="kicker">3 · Your progress</p><h2>How you're doing</h2>
+<div class="rv-stats" id="stats"></div><div id="streak"></div><div id="units"></div>
+<h3 class="rv-h3" id="coverage">Coverage map</h3><p class="rv-intro">Every part of every lecture, shaded by how much of it you've answered and how well. Tap a part to practice it.</p><div id="cover"></div>
+<h3 class="rv-h3">Weakest topics</h3><div id="topics"></div></div></section>
+<section class="section rv-sec" id="patterns"><div class="wrap"><p class="kicker">4 · Mistake patterns</p><h2>How you miss, not just what</h2>
+<p class="rv-intro">The mix-ups you repeat, the question styles that trip you, and whether misses come from rushing or from gaps.</p><div id="pat"></div></div></section>
+<section class="section rv-sec" id="saved"><div class="wrap"><p class="kicker">5 · Saved for later</p><h2>Your collections</h2>
 <div class="seg rv-tabs" id="rv-tabs"></div><div class="rv-panel" id="rv-panel"></div></div></section>
 <script type="application/json" id="review-data">{cfg}</script>
 <script src="../assets/review.js"></script>"""

@@ -68,6 +68,7 @@ function answer(L) {
   const q = byId[view[pos]];
   if (S.answers[q.id]) return;
   S.answers[q.id] = L;
+  window.dpasLog?.(q, L === q.answer, null);
   if (L !== q.answer) { log.push({ id: q.id, topic: q.topic, chose: L, at: new Date().toISOString() }); store.set(LOG, log); }
   save(); render(); renderScorecard();
 }
