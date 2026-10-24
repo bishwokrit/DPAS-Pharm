@@ -60,7 +60,7 @@ ADD = {
         "how": [
             ("First-pass loss can happen in the **gut wall** (e.g., intestinal CYP3A4) as well as the liver; grapefruit juice inhibits gut-wall metabolism and P-glycoprotein, raising absorption of some drugs.", "p. 48"),
             ("**P-glycoprotein (MDR1)** pumps drugs out of cells in brain, testes, and gut; inhibiting it raises digoxin blood levels.", "p. 9"),
-            ("Ion trapping: weak acids are excreted faster in **alkaline** urine; weak bases faster in **acidic** urine.", "p. 10; p. 11"),
+            ("**Ion trapping:** weak acids are excreted faster in **alkaline** urine; weak bases faster in **acidic** urine.", "p. 10; p. 11"),
         ],
         "clinical": [
             ("Aspirin overdose: sodium bicarbonate alkalinizes blood and urine, reducing aspirin entry into tissues and speeding its renal excretion.", "p. 20"),
@@ -174,77 +174,49 @@ DEEPER = {
 # covers the testable reading. Summarized in our own words, cited to printed pages; merged into the lists above.
 _READ = {
     "The Language of Pharmacology": {
-        "definitions": [
-            ("**Xenobiotic:** a chemical the body does not make itself. **Toxins** are poisons of biologic origin (plants, animals), unlike inorganic poisons such as lead and arsenic.", "p. 3"),
-        ],
         "how": [
-            ("**The physical nature of drugs:** to reach and bind its receptor a drug needs the right size, charge, shape and atomic makeup.", "p. 3"),
-            ("Most drugs have a molecular weight between about 100 and 1000: below ~100 a molecule is too simple to fit only one receptor; above ~1000 it cannot diffuse readily between body compartments.", "p. 4"),
-            ("Very large protein drugs must be given straight into the compartment where they act, e.g., alteplase (MW 59,050) by IV or intra-arterial infusion.", "p. 4"),
-            ("Drugs bind receptors by three kinds of bonds: **covalent** (very strong, often irreversible), **electrostatic** (the most common: ionic, hydrogen, van der Waals) and **hydrophobic** (weak; lipid-soluble drugs).", "p. 4"),
-            ("**Chirality:** more than half of useful drugs exist as mirror-image enantiomers; one is usually much more potent, and enzymes may metabolize the two at different rates.", "p. 4; p. 5"),
-            ("**Rational drug design** predicts a drug’s structure from the 3-D structure of its receptor; most older drugs came from random screening or from modifying known drugs.", "p. 5"),
+            ("Drugs bind receptors by **covalent** bonds (strong, often irreversible), **electrostatic** bonds (most common) or **hydrophobic** bonds (weak).", "p. 4"),
+            ("**Chirality:** over half of drugs are mirror-image pairs (enantiomers); one is usually much more potent, yet most are sold as 50:50 mixtures.", "p. 4; p. 5"),
         ],
         "clinical": [
-            ("Weak-bonding drugs are usually **more selective** than covalent ones because weak bonds need a precise fit. Aspirin’s covalent bond to platelet cyclooxygenase lasts days, until new platelets are made.", "p. 4"),
-            ("Fewer than half of chiral drugs are sold as the pure active isomer, so most patients receive doses in which 50% is less active or inactive.", "p. 5"),
+            ("Weak bonds need a precise fit, so they are **more selective**. Aspirin’s covalent bond to platelet cyclooxygenase lasts until new platelets are made.", "p. 4"),
         ],
     },
     "Drug Development & Regulation": {
         "definitions": [
-            ("**Single-blind:** subjects do not know whether they receive drug or placebo. **Double-blind:** neither subjects nor evaluators know; a third party holds the code. **Crossover:** each subject receives test drug, placebo and standard treatment in varied order.", "p. 14; p. 15"),
-            ("**Institutional review board (IRB):** the committee at each trial site that must approve the scientific and ethical plan; participants must give informed consent.", "p. 17"),
+            ("**Double-blind:** neither subjects nor evaluators know who gets drug or placebo. **Crossover:** each subject gets every treatment in turn.", "p. 14; p. 15"),
+            ("**IRB:** the committee at each trial site that approves the ethics of the study; participants give informed consent.", "p. 17"),
         ],
         "how": [
-            ("**Drug screening** profiles a candidate’s activity and selectivity at molecular, cellular, organ and whole-animal levels, including early CYP450 studies to predict metabolism problems. The best candidate is the **lead compound**.", "p. 13"),
-            ("Every trial has to control three confounders: the disease’s variable natural history, other diseases and risk factors (including other drugs and foods), and subject or observer bias.", "p. 14"),
-            ("Strength of evidence rises from case reports (cannot prove cause and effect) to cohort and case-control studies (add weight, still cannot prove causation) to large **randomized controlled trials**, the gold standard, because randomization spreads known and unknown confounders evenly.", "p. 15"),
-            ("Preclinical testing cannot catch everything: rare adverse effects are unlikely to appear, and animal results do not predict every human toxicity.", "p. 14"),
+            ("Strength of evidence: case reports < cohort and case-control studies < **randomized controlled trials** (the gold standard: randomization balances confounders).", "p. 15"),
         ],
         "clinical": [
-            ("Unpublished negative trials (missing data) make new drugs look better than they are.", "p. 15"),
-            ("Dietary supplements and botanicals are regulated as food under DSHEA (1994), not reviewed as drugs, although their chemicals differ from manufactured drugs mainly in having more impurities.", "p. 3; p. 16"),
-            ("Conflicts of interest the textbook flags: industry fees funding FDA review, advisers with company grants, trials that compare a new drug only to placebo, free samples that later cost patients more, and pay-to-delay deals that hold back generics.", "p. 18"),
+            ("Dietary supplements are regulated as food under DSHEA (1994), so they get no full FDA drug review.", "p. 3; p. 16"),
         ],
     },
     "Pharmacodynamics: Targets & Receptors": {
         "definitions": [
-            ("**Orphan receptors:** receptors whose natural ligand is still unknown, and so possible targets for future drugs.", "p. 22"),
-            ("**Kd:** the free-drug concentration that gives half-maximal binding; a low Kd means high affinity. EC₅₀ and Kd can match but need not (spare receptors make EC₅₀ lower).", "p. 23"),
-            ("**Coupling:** the chain of steps that turns receptor occupancy into a response.", "p. 23"),
+            ("**Kd:** the drug concentration that fills half the receptors; a low Kd means high affinity.", "p. 23"),
         ],
         "how": [
-            ("Drug targets beyond signaling receptors: **enzymes** (methotrexate on dihydrofolate reductase, statins on HMG-CoA reductase), **transport proteins** (digitalis on Na⁺/K⁺-ATPase, antidepressants on serotonin and norepinephrine transporters, cocaine on the dopamine transporter) and **structural proteins** (colchicine on tubulin).", "p. 22"),
-            ("**Intracellular receptors** (corticosteroids, sex steroids, vitamin D, thyroid hormone) change gene transcription, so effects begin only after 30 minutes to several hours and outlast the drug by hours or days.", "p. 28"),
-            ("**Receptor tyrosine kinases** (insulin, EGF, PDGF): ligand binding makes two receptors pair up (dimerize) and phosphorylate tyrosines on themselves and on downstream proteins.", "p. 28"),
-            ("**Cytokine receptors** (growth hormone, erythropoietin, interferons) borrow a separate tyrosine kinase, **JAK**, which activates **STAT** proteins that carry the signal into the nucleus.", "p. 29; p. 30"),
-            ("**Ligand-gated ion channels** (nicotinic acetylcholine, GABA, glutamate, serotonin) act within milliseconds; **voltage-gated channels** are targets too: verapamil blocks calcium channels, local anesthetics block sodium channels.", "p. 30; p. 31"),
-            ("**G protein–coupled receptors** (seven-transmembrane, the largest family): the agonist makes the G protein swap GDP for GTP, the G protein changes an effector enzyme or channel, and the effector changes a second messenger.", "p. 31; p. 32"),
-            ("**cAMP** acts through cAMP-dependent protein kinase and is broken down by phosphodiesterases; **cGMP** relaxes vascular smooth muscle and is raised by atrial natriuretic peptide and by nitric oxide (the route of nitroglycerin and nitroprusside).", "p. 34; p. 35"),
-            ("Continued agonist exposure **desensitizes** G protein receptors: a receptor kinase phosphorylates the receptor and β-arrestin binds it; endocytosis of receptors can lead to downregulation.", "p. 34"),
+            ("Targets beyond receptors: **enzymes** (statins on HMG-CoA reductase), **transporters** (digitalis on Na⁺/K⁺-ATPase; antidepressants) and **structural proteins** (colchicine on tubulin).", "p. 22"),
+            ("Five signaling mechanisms carry a drug’s message into the cell: intracellular receptor, receptor tyrosine kinase, cytokine receptor (JAK-STAT), ion channel and G protein (compared in the table).", "p. 28-32"),
         ],
         "clinical": [
-            ("Glucocorticoids will not relieve an acute asthma attack within minutes, because gene-acting drugs need time to make new proteins.", "p. 28"),
-            ("Tyrosine kinase signaling is blocked in cancer by antibodies on the outside of the receptor (trastuzumab, cetuximab) or small molecules inside the cell (gefitinib, erlotinib).", "p. 29"),
-            ("Phosphodiesterase inhibitors prolong second messengers: milrinone (cardiac PDE3, cAMP) and sildenafil (cGMP).", "p. 34; p. 35"),
+            ("Glucocorticoids will not stop an acute asthma attack within minutes: gene-acting drugs need hours to make new proteins.", "p. 28"),
+            ("Phosphodiesterase inhibitors prolong second messengers: milrinone (cAMP) and sildenafil (cGMP).", "p. 34; p. 35"),
         ],
     },
     "Pharmacokinetics: ADME — Absorption & Distribution": {
         "definitions": [
             ("**pKa:** the pH at which a drug is half ionized and half nonionized.", "p. 10"),
-            ("**Fick’s law:** passive flux rises with the concentration gradient, membrane area and permeability, and falls as the membrane gets thicker.", "p. 9"),
         ],
         "how": [
-            ("Four ways drugs cross barriers: **aqueous diffusion** through pores (protein-bound drug cannot pass), **lipid diffusion** (the main limiting step, set by the lipid:aqueous partition coefficient), **special carriers** (selective, saturable, inhibitable) and **endocytosis** (vitamin B₁₂ with intrinsic factor, iron with transferrin).", "p. 8; p. 9"),
-            ("Charged (ionized) molecules attract water and cross lipid membranes poorly, and most drugs are weak acids or weak bases.", "p. 9"),
-            ("**Henderson-Hasselbalch:** a weak acid is mostly nonionized and lipid-soluble when the pH is below its pKa; a weak base is mostly nonionized when the pH is above its pKa.", "p. 10"),
-        ],
-        "clinical": [
-            ("**Ion trapping:** weak acids are excreted faster in alkaline urine and weak bases faster in acidic urine, which is how urine pH is used to speed elimination after an overdose.", "p. 10; p. 11"),
-            ("Transporters that matter: MDR1 (P-glycoprotein) pumps drugs out of cells, and inhibiting it raises digoxin levels; norepinephrine and serotonin transporters are targets of antidepressants and cocaine; VMAT is the target of reserpine.", "p. 9"),
+            ("Drugs cross membranes by **lipid diffusion** (the main route), aqueous pores, **carriers** (saturable) or endocytosis (vitamin B₁₂, iron).", "p. 8; p. 9"),
+            ("Only the **nonionized** form crosses lipid membranes: a weak acid is mostly nonionized when pH < pKa, a weak base when pH > pKa (Henderson-Hasselbalch).", "p. 9; p. 10"),
         ],
         "examples": [
-            ("Weak acids: aspirin (pKa 3.5), warfarin (5.0), phenytoin (8.3). Weak bases: morphine (7.9), albuterol (9.3), propranolol (9.4).", "p. 10"),
+            ("Weak acids: aspirin (pKa 3.5), warfarin (5.0). Weak bases: morphine (7.9), propranolol (9.4).", "p. 10"),
         ],
     },
 }
@@ -264,32 +236,27 @@ COMPARISONS.setdefault("Pharmacodynamics: Targets & Receptors", []).extend([
      "columns": ["G protein", "Receptors for", "Effect"],
      "rows": [["Gs", "β-adrenergic amines, histamine, glucagon", "↑ adenylyl cyclase → ↑ cAMP"],
               ["Gi", "α₂-adrenergic amines, muscarinic ACh, opioids", "↓ cAMP; opens cardiac K⁺ channels → ↓ heart rate"],
-              ["Gq", "Muscarinic ACh, serotonin (5-HT₂)", "↑ phospholipase C → IP₃, DAG, ↑ cytoplasmic Ca²⁺"],
-              ["Gt", "Light (rhodopsin)", "↑ cGMP phosphodiesterase → ↓ cGMP (vision)"]]},
+              ["Gq", "Muscarinic ACh, serotonin (5-HT₂)", "↑ phospholipase C → IP₃, DAG, ↑ cytoplasmic Ca²⁺"]]},
 ])
 COMPARISONS.setdefault("Drug Development & Regulation", []).append(
     {"title": "Major US drug laws (textbook Table 1–6)", "tb": True, "src": "p. 16",
      "columns": ["Law", "What it did"],
-     "rows": [["Pure Food and Drug Act (1906)", "Banned mislabeled and adulterated drugs"],
-              ["Food, Drug, and Cosmetic Act (1938)", "New drugs must be safe (not yet proven effective); followed sulfanilamide deaths"],
+     "rows": [["Food, Drug, and Cosmetic Act (1938)", "New drugs must be safe (not yet proven effective); followed sulfanilamide deaths"],
               ["Durham-Humphrey Act (1952)", "FDA decides which drugs need a prescription"],
               ["Kefauver-Harris Amendments (1962)", "Proof of efficacy as well as safety; adverse-reaction reporting (after thalidomide)"],
               ["Comprehensive Drug Abuse Prevention and Control Act (1970)", "Drug schedules and controls for habit-forming drugs"],
               ["Orphan Drug Amendment (1983)", "Incentives for diseases with fewer than 200,000 US patients"],
               ["Drug Price Competition and Patent Restoration Act (1984)", "Abbreviated applications for generics; bioequivalence data required"],
               ["Dietary Supplement Health and Education Act (1994)", "Supplements treated as food; no full FDA drug review"],
-              ["FDA Amendments Act (2007)", "Post-approval studies and active safety surveillance"],
               ["Biologics Price Competition and Innovation Act (2009)", "Abbreviated pathway for biosimilars"]]})
 
 CRAM += [
-    ("Most drugs’ molecular weight", "~100–1000", "p. 4"),
     ("Weak bonds vs covalent", "Weak = more selective; covalent = long-lasting (aspirin)", "p. 4"),
     ("pKa", "pH where ionized = nonionized", "p. 10"),
     ("Ion trapping", "Acids leave faster in alkaline urine; bases in acidic urine", "p. 10"),
     ("Intracellular receptors", "Steroids, thyroid, vitamin D; lag 30 min–hours, effect persists", "p. 28"),
     ("Gs / Gi / Gq", "↑ cAMP / ↓ cAMP / ↑ IP₃, DAG, Ca²⁺", "p. 32"),
     ("Gold-standard trial", "Randomized controlled trial", "p. 15"),
-    ("Orphan receptor", "Natural ligand unknown", "p. 22"),
 ]
 
 QUESTIONS += [
@@ -327,7 +294,7 @@ QUESTIONS += [
      ],
      "src": "p. 32; p. 35"},
 ]
-DEEPER.setdefault("The Language of Pharmacology", (1, 3, 5, "Drug size, bonds, chirality, and rational drug design"))
+DEEPER.setdefault("The Language of Pharmacology", (1, 3, 5, "Drug size, bonds, chirality, and how new drugs are designed"))
 
 # Reading headings taught in another lecture (same chapter split across sessions); the reading-coverage gate accepts these.
 READING_SKIP = [
@@ -335,4 +302,8 @@ READING_SKIP = [
     {"heading": "THE TARGET CONCENTRATION APPROACH TO DESIGNING A RATIONAL DOSAGE REGIMEN", "reason": "Taught in L02 (PK Calculations)"},
     {"heading": "DOSAGE REGIMEN", "reason": "Taught in L02 (PK Calculations)"},
     {"heading": "Initial Predictions of Volume of Distribution & Clearance", "reason": "Taught in L02 (PK Calculations)"},
+    # beyond PA-level scope: chemistry and drug-industry detail with no clinical decision attached (Go deeper links to the pages)
+    {"heading": "The Physical Nature of Drugs", "reason": "Beyond PA scope: molecular size and shape (the bonds and chirality that matter are taught)"},
+    {"heading": "Rational Drug Design", "reason": "Beyond PA scope: how chemists design molecules"},
+    {"heading": "Conflicts of Interest", "reason": "Beyond PA scope: drug-industry policy"},
 ]

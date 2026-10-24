@@ -44,10 +44,12 @@ def main(lec, work):
          "- **Sources:** slides (with speaker notes), the assigned textbook pages, the syllabus and the course study guide only. "
          "No internet facts. Every fact cited (`S12`, `S12 (notes)`, `p. 245`, `SG U1-R3`).",
          "- **Everything taught:** every slide line and every assigned-reading section below lands in the guide (the audit fails otherwise). "
-         "A section that belongs to another session goes in `READING_SKIP` with the reason.",
-         "- **Same level, easier to learn:** keep the textbook’s depth; make it easier with order (big idea → mechanism → "
-         "clinical use → traps), short bullets (≤25 words), comparison tables on discriminators, flows, and why-hooks. "
-         "A student using only the guide or only the deck should be able to answer any exam question on this lecture.",
+         "A section taught in another session, or beyond PA scope, goes in `READING_SKIP` with the reason.",
+         "- **PA-student depth, no more, no less:** what a PA needs to prescribe safely and pass the exam. Skip chemistry, "
+         "molecular-biology and industry detail with no prescribing decision attached. PA students are short on time: lean, never dense.",
+         "- **Easier to learn:** order (big idea → mechanism → clinical use → traps), one idea per bullet (≤25 words), "
+         "discriminator tables, flows, why-hooks. A student with only the guide or only the deck can answer any exam question.",
+         "- **Length gates:** textbook-only bullets ≤30% of the guide; bullets ≤40 words; deck ≤2.25× the lecture’s slides.",
          f"- **Template:** `{kind}` for every class/topic"
          + (" (overview, prototype, moa, indications, adverse — boxed warnings first, contra, interactions, pk, monitoring, pearls)."
             if kind == "drug_class" else " (definitions, how, clinical, examples, traps)."),

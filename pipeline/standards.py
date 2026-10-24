@@ -1,6 +1,8 @@
 """Lecture-level standard checks that the coverage audit doesn't do: home teaser, drug index, interactive figures,
-textbook folded in, figure captions. Returns a list of problems (empty = meets the standard)."""
+textbook folded in, figure captions, and a length budget (PA students are short on time: PA-level depth, no more).
+Returns a list of problems (empty = meets the standard)."""
 import importlib.util
+import glob
 import json
 import re
 import sys
@@ -44,8 +46,28 @@ def check(lec):
     if any(cl.get("template") == "drug_class" for cl in c["classes"]):
         names = " ".join(d["name"].lower() + " " + " ".join(a.lower() for a in d["aliases"]) for d in DR.DRUGS)
         for cl in c["classes"]:
-            for f in cl.get("prototype", [])[:1]:
+            for f in cl["sections"].get("prototype", [])[:1]:
                 first = re.split(r"[\s(,:;—–-]+", re.sub(r"\*", "", f["text"]).strip())[0].lower()
                 if first and len(first) > 3 and first not in names:
                     bad.append(f"{cl['name']}: prototype \"{first}\" is not in work/drugs.py")
+    # length budget: the deck may not grow past ~2x the lecture, the textbook may not outweigh the slides, bullets stay short
+    facts = [x for cl in c["classes"] for v in cl["sections"].values() for x in v]
+    tb = sum(bool(x.get("tb")) for x in facts)
+    if facts and tb / len(facts) > MAX_TB_SHARE:
+        bad.append(f"textbook facts are {tb / len(facts):.0%} of the guide (limit {MAX_TB_SHARE:.0%}): keep only what a PA needs, merge repeats")
+    for x in facts:
+        if len(x["text"].replace("**", "").split()) > MAX_WORDS:
+            bad.append(f"bullet over {MAX_WORDS} words ({x['src']}): split or tighten it — {x['text'][:60]}…")
+    deck = glob.glob(str(ROOT / "outputs" / lid / "*_study_deck.pptx"))
+    n_lec = len(json.loads((work / "slides.json").read_text()))
+    if deck:
+        from pptx import Presentation
+        n = len(Presentation(deck[0]).slides)
+        if n > MAX_DECK_RATIO * n_lec:
+            bad.append(f"deck has {n} slides for a {n_lec}-slide lecture (limit {int(MAX_DECK_RATIO * n_lec)}): cut beyond-PA detail and repeats")
     return bad
+
+
+MAX_TB_SHARE = 0.30   # textbook-only bullets as a share of all guide bullets
+MAX_WORDS = 40        # words per bullet
+MAX_DECK_RATIO = 2.25 # deck slides per lecture slide (deck includes tables, figures and quick-check Q/A slides)

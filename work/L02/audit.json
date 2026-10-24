@@ -95,10 +95,16 @@
   "mechanism": 12
  },
  "thin_objectives": [
-  "IO1.3: Explain how patient-specific factors, including age, pregnancy, renal and hepatic function, and pharmacogenetic variation, may affect medication response. — 4 class(es), 115 facts (Age and pregnancy are only named in the prescribing checklist)",
+  "IO1.3: Explain how patient-specific factors, including age, pregnancy, renal and hepatic function, and pharmacogenetic variation, may affect medication response. — 4 class(es), 110 facts (Age and pregnancy are only named in the prescribing checklist)",
   "IO1.5: Interpret common components of medication orders and prescriptions, including drug name, dose, route, frequency, and duration. — 2 class(es), 41 facts (Only dose, route, interval, and monitoring (checklist, renal dosing); no prescription-reading content)"
  ],
- "textbook_unused": 1278,
+ "textbook_unused": 1289,
  "reading_missing": [],
- "reading_skipped": []
+ "reading_skipped": [
+  {
+   "page": "87",
+   "heading": "ORGANIC CATION TRANSPORTER 1 (OCT1, SLC22A1)",
+   "reason": "Beyond PA scope: transporter genetics with no routine prescribing change"
+  }
+ ]
 }

@@ -82,11 +82,20 @@ Never skip anything that contains a fact.
 - Build from an authoring script (`work/<LEC>/author_<LEC>.py`) that writes content.json — easier to fix.
 - Keep option lengths balanced: the audit flags a correct answer >30% longer than every distractor.
 
+## Depth and length (gated)
+PA-student depth: no more, no less. PA students are short on time, so the guide is lean, never dense.
+- Teach what a PA needs to prescribe safely and answer exam/PANCE questions. Leave out chemistry, molecular-biology and
+  drug-industry detail with no prescribing decision attached.
+- Textbook additions only where they sharpen what the slides teach or are likely to be tested; merge repeats.
+- Gates (`pipeline/standards.py`): textbook-only bullets ≤30% of all bullets, bullets ≤40 words, deck ≤2.25× the lecture's
+  slides. The deck shows every lecture quick check plus one new question per part; all questions stay on the site.
+
 ## Assigned reading (gated)
 The syllabus makes the assigned pages testable, so every section heading on those pages must be taught.
 `work/<LEC>/AUTHOR_BRIEF.md` lists them; the audit fails on any that the guide doesn't cover.
-A section that belongs to another session goes in `READING_SKIP` in `textbook_<LEC>.py`:
-`{"heading": "DOSAGE REGIMEN", "reason": "Taught in L02 (PK Calculations)"}`.
+A section that belongs to another session, or is beyond PA scope, goes in `READING_SKIP` in `textbook_<LEC>.py`:
+`{"heading": "DOSAGE REGIMEN", "reason": "Taught in L02 (PK Calculations)"}`,
+`{"heading": "Rational Drug Design", "reason": "Beyond PA scope: how chemists design molecules"}`.
 
 ## Figures (gated)
 Every figure needs a `caption` and an interactive twin. Either a dedicated diagram exists in

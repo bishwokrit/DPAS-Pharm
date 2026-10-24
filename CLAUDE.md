@@ -12,14 +12,21 @@ The owner is not a programmer: explain in plain language, keep replies short, an
 4. `./run.sh new L05` again until the report card is all PASS. Then commit and push (trailer below).
 
 Never weaken a gate to make it pass. Fix the content. `audit_skip` / `READING_SKIP` only with a true reason
-(teaching instruction, taught in another session).
+(teaching instruction, taught in another session, or beyond PA scope — say why).
 
 ## The standard
 - **Sources only:** slides (with notes), the assigned textbook pages, the syllabus, the course study guide. No internet facts.
   Everything is cited (`S12`, `S12 (notes)`, `p. 245`, `SG U1-R3`). Textbook-only facts are tagged TB.
 - **Nothing missed:** every slide line and every assigned-reading section is taught (the audit enforces both).
-- **Same academic level, easier to learn:** a student with only the guide, or only the deck, can answer any exam question.
-  Make it easier through order, short bullets, discriminator tables, flows, why-hooks and interactive figures, never by dropping depth.
+- **PA-student depth: no more, no less.** PA students are short on time. Teach what a PA needs to prescribe safely and pass
+  the exam/PANCE: mechanism → clinical use → adverse effects → interactions → monitoring → traps. Leave out chemistry,
+  molecular-biology and drug-industry detail with no prescribing decision attached (skip that reading section as
+  "Beyond PA scope"; the guide's Go deeper link opens the pages). Never drop anything the slides teach.
+- **Lean, not dense:** one idea per bullet (≤25 words, gate at 40), merge repeats, prefer one table over five bullets.
+  Gates: textbook-only bullets ≤30% of the guide; deck ≤2.25× the lecture's slide count (the deck carries the lecture
+  quick checks plus one question per part; the full question set lives on the site).
+- **Easier to learn:** a student with only the guide, or only the deck, can answer any exam question on the lecture.
+  Make it easier through order, short bullets, discriminator tables, flows, why-hooks and interactive figures.
 - Textbook facts are `("text", "p. N")` with ’ for apostrophes so `./run.sh check` can verify every number on its page.
 - Questions: ~50/50 vignette/mechanism, 5 balanced options, every slide quick-check rebuilt.
 - Every figure has a caption and an interactive version (`"viz": {"type": …}`; types listed in the brief).

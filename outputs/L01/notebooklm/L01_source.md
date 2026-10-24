@@ -40,7 +40,6 @@ Learning objectives covered: SO1, IO1.1, IO1.4, IO1.5
 - **Brand (trade) name:** the manufacturer's marketed name; the same generic drug may have several brand names, and brand names change between countries. (S7)
 - [TB] **Prodrug:** an inactive precursor converted to the active drug in the body (usually by metabolism). (p. 8)
 - [TB] **Poisons** are drugs with almost exclusively harmful effects — but "the dose makes the poison" (Paracelsus): any substance can harm at the wrong dose. (p. 3)
-- [TB] **Xenobiotic:** a chemical the body does not make itself. **Toxins** are poisons of biologic origin (plants, animals), unlike inorganic poisons such as lead and arsenic. (p. 3)
 
 ### The Language of Pharmacology — How it works
 - Pharmacokinetics = what the body does to the drug — ADME. (S6; SG U1-R1)
@@ -48,12 +47,8 @@ Learning objectives covered: SO1, IO1.1, IO1.4, IO1.5
 - Pharmacogenomics = how genetic variation shapes individual drug response. (S6)
 - Clinical Pharmacology / Toxicology = applying PK/PD to real patients, and the study of poisoning. (S6)
 - This map covers the whole lecture: PK and PD are the two biggest buckets, and nearly everything else (toxicology, pharmacogenomics, therapeutics) sits on top of them. (S6 (notes))
-- [TB] **The physical nature of drugs:** to reach and bind its receptor a drug needs the right size, charge, shape and atomic makeup. (p. 3)
-- [TB] Most drugs have a molecular weight between about 100 and 1000: below ~100 a molecule is too simple to fit only one receptor; above ~1000 it cannot diffuse readily between body compartments. (p. 4)
-- [TB] Very large protein drugs must be given straight into the compartment where they act, e.g., alteplase (MW 59,050) by IV or intra-arterial infusion. (p. 4)
-- [TB] Drugs bind receptors by three kinds of bonds: **covalent** (very strong, often irreversible), **electrostatic** (the most common: ionic, hydrogen, van der Waals) and **hydrophobic** (weak; lipid-soluble drugs). (p. 4)
-- [TB] **Chirality:** more than half of useful drugs exist as mirror-image enantiomers; one is usually much more potent, and enzymes may metabolize the two at different rates. (p. 4; p. 5)
-- [TB] **Rational drug design** predicts a drug’s structure from the 3-D structure of its receptor; most older drugs came from random screening or from modifying known drugs. (p. 5)
+- [TB] Drugs bind receptors by **covalent** bonds (strong, often irreversible), **electrostatic** bonds (most common) or **hydrophobic** bonds (weak). (p. 4)
+- [TB] **Chirality:** over half of drugs are mirror-image pairs (enantiomers); one is usually much more potent, yet most are sold as 50:50 mixtures. (p. 4; p. 5)
 
 ### The Language of Pharmacology — Clinical relevance
 - **PA students should learn and prescribe by generic name — it is unambiguous, international, and avoids confusing a patient's multiple brand-name products for different drugs.** (S7; SG U1-R2)
@@ -62,8 +57,7 @@ Learning objectives covered: SO1, IO1.1, IO1.4, IO1.5
 - If a patient says they take "Tylenol" and separately "acetaminophen," check for accidental double-dosing — this previews the acetaminophen toxicity discussion. (S7 (notes))
 - Precise vocabulary (generic names, therapeutic vs. adverse effects) protects patients. (S56)
 - [TB] More than half of prescriptions in the USA are for generic drugs. (p. 18)
-- [TB] Weak-bonding drugs are usually **more selective** than covalent ones because weak bonds need a precise fit. Aspirin’s covalent bond to platelet cyclooxygenase lasts days, until new platelets are made. (p. 4)
-- [TB] Fewer than half of chiral drugs are sold as the pure active isomer, so most patients receive doses in which 50% is less active or inactive. (p. 5)
+- [TB] Weak bonds need a precise fit, so they are **more selective**. Aspirin’s covalent bond to platelet cyclooxygenase lasts until new platelets are made. (p. 4)
 
 ### The Language of Pharmacology — Drugs named as examples
 - Acetaminophen (generic) is sold as Tylenol and under many store brands. (S7)
@@ -108,8 +102,8 @@ Learning objectives covered: SO2, IO1.4
 - [SG] Drug interactions can also reduce real-world effectiveness below trial efficacy. (SG U1-R4)
 - **Benefit vs. risk:** the central question regulators and prescribers must weigh for every approval and every prescription. (S14)
 - **Adverse-event reporting:** ongoing, voluntary and mandatory reporting systems (e.g., FDA MedWatch) that catch safety signals after approval. (S14)
-- [TB] **Single-blind:** subjects do not know whether they receive drug or placebo. **Double-blind:** neither subjects nor evaluators know; a third party holds the code. **Crossover:** each subject receives test drug, placebo and standard treatment in varied order. (p. 14; p. 15)
-- [TB] **Institutional review board (IRB):** the committee at each trial site that must approve the scientific and ethical plan; participants must give informed consent. (p. 17)
+- [TB] **Double-blind:** neither subjects nor evaluators know who gets drug or placebo. **Crossover:** each subject gets every treatment in turn. (p. 14; p. 15)
+- [TB] **IRB:** the committee at each trial site that approves the ethics of the study; participants give informed consent. (p. 17)
 
 ### Drug Development & Regulation — How it works
 - Where new drugs come from — Natural products: plants, fungi, microbes, marine organisms. (S11)
@@ -128,10 +122,7 @@ Learning objectives covered: SO2, IO1.4
 - [TB] Less than one-third of drugs studied in humans survive clinical trials and reach the market. (p. 14)
 - [TB] To see one case of a toxicity occurring 1 in 10,000, several hundred thousand patients may need exposure — so rare effects usually surface only in Phase IV, which has **no fixed duration**. (p. 18)
 - [TB] Marketing requires a **New Drug Application (NDA)** after Phase III; human testing starts only after an **IND** (Investigational New Drug) application. (p. 12; p. 17)
-- [TB] **Drug screening** profiles a candidate’s activity and selectivity at molecular, cellular, organ and whole-animal levels, including early CYP450 studies to predict metabolism problems. The best candidate is the **lead compound**. (p. 13)
-- [TB] Every trial has to control three confounders: the disease’s variable natural history, other diseases and risk factors (including other drugs and foods), and subject or observer bias. (p. 14)
-- [TB] Strength of evidence rises from case reports (cannot prove cause and effect) to cohort and case-control studies (add weight, still cannot prove causation) to large **randomized controlled trials**, the gold standard, because randomization spreads known and unknown confounders evenly. (p. 15)
-- [TB] Preclinical testing cannot catch everything: rare adverse effects are unlikely to appear, and animal results do not predict every human toxicity. (p. 14)
+- [TB] Strength of evidence: case reports < cohort and case-control studies < **randomized controlled trials** (the gold standard: randomization balances confounders). (p. 15)
 
 ### Drug Development & Regulation — Clinical relevance
 - Postmarketing surveillance (Phase IV) is where rare adverse effects are often first detected — trial populations are too small and too short in duration to catch 1-in-10,000 events. (S12 (notes))
@@ -141,9 +132,7 @@ Learning objectives covered: SO2, IO1.4
 - [TB] A patent lasts 20 years; after it expires, generics are approved through an **abbreviated new drug application (ANDA)** that requires bioequivalence data. (p. 16; p. 18)
 - [TB] Placebo responses can occur in as many as 30–40% of subjects — the reason controlled, blinded trials are needed. (p. 14)
 - [TB] Adverse events that are both **serious and unexpected** must be reported to the FDA within 15 days; clinicians can report through MedWatch. (p. 18; p. 19)
-- [TB] Unpublished negative trials (missing data) make new drugs look better than they are. (p. 15)
-- [TB] Dietary supplements and botanicals are regulated as food under DSHEA (1994), not reviewed as drugs, although their chemicals differ from manufactured drugs mainly in having more impurities. (p. 3; p. 16)
-- [TB] Conflicts of interest the textbook flags: industry fees funding FDA review, advisers with company grants, trials that compare a new drug only to placebo, free samples that later cost patients more, and pay-to-delay deals that hold back generics. (p. 18)
+- [TB] Dietary supplements are regulated as food under DSHEA (1994), so they get no full FDA drug review. (p. 3; p. 16)
 
 ### Drug Development & Regulation — Drugs named as examples
 - FDA MedWatch — an adverse-event reporting system. (S14)
@@ -182,7 +171,6 @@ Learning objectives covered: SO2, IO1.4
 ### Comparison: Major US drug laws (textbook Table 1–6) ([TB] p. 16)
 | Law | What it did |
 |---|---|
-| Pure Food and Drug Act (1906) | Banned mislabeled and adulterated drugs |
 | Food, Drug, and Cosmetic Act (1938) | New drugs must be safe (not yet proven effective); followed sulfanilamide deaths |
 | Durham-Humphrey Act (1952) | FDA decides which drugs need a prescription |
 | Kefauver-Harris Amendments (1962) | Proof of efficacy as well as safety; adverse-reaction reporting (after thalidomide) |
@@ -190,7 +178,6 @@ Learning objectives covered: SO2, IO1.4
 | Orphan Drug Amendment (1983) | Incentives for diseases with fewer than 200,000 US patients |
 | Drug Price Competition and Patent Restoration Act (1984) | Abbreviated applications for generics; bioequivalence data required |
 | Dietary Supplement Health and Education Act (1994) | Supplements treated as food; no full FDA drug review |
-| FDA Amendments Act (2007) | Post-approval studies and active safety surveillance |
 | Biologics Price Competition and Innovation Act (2009) | Abbreviated pathway for biosimilars |
 
 ### Drug Development & Regulation — Memory hooks
@@ -218,9 +205,7 @@ Learning objectives covered: SO3, IO1.1
 - Competitive antagonist — reversibly competes with agonist at the same site; overcome by more agonist. (S22; SG U1-M)
 - Noncompetitive antagonist — binds elsewhere or irreversibly reduces the maximal effect. (S22; SG U1-M)
 - Irreversible antagonist — permanently inactivates the receptor until new receptor is synthesized. (S22; SG U1-M)
-- [TB] **Orphan receptors:** receptors whose natural ligand is still unknown, and so possible targets for future drugs. (p. 22)
-- [TB] **Kd:** the free-drug concentration that gives half-maximal binding; a low Kd means high affinity. EC₅₀ and Kd can match but need not (spare receptors make EC₅₀ lower). (p. 23)
-- [TB] **Coupling:** the chain of steps that turns receptor occupancy into a response. (p. 23)
+- [TB] **Kd:** the drug concentration that fills half the receptors; a low Kd means high affinity. (p. 23)
 
 ### Pharmacodynamics: Targets & Receptors — How it works
 - The pathway: drug → target → signal transduction → response. Every pharmacodynamics topic for the rest of the course maps onto this chain. (S19 (notes))
@@ -238,14 +223,8 @@ Learning objectives covered: SO3, IO1.1
 - [TB] A partial agonist's lower maximal effect is **not** due to lower affinity — it can occupy all receptors and still produce less response. (p. 26)
 - [TB] **Allosteric modulators** bind a different site from the agonist (e.g., benzodiazepines enhance GABA's effect). (p. 25)
 - [TB] Agonist-induced **desensitization** (tachyphylaxis) and downregulation reduce response with continued exposure. (p. 39)
-- [TB] Drug targets beyond signaling receptors: **enzymes** (methotrexate on dihydrofolate reductase, statins on HMG-CoA reductase), **transport proteins** (digitalis on Na⁺/K⁺-ATPase, antidepressants on serotonin and norepinephrine transporters, cocaine on the dopamine transporter) and **structural proteins** (colchicine on tubulin). (p. 22)
-- [TB] **Intracellular receptors** (corticosteroids, sex steroids, vitamin D, thyroid hormone) change gene transcription, so effects begin only after 30 minutes to several hours and outlast the drug by hours or days. (p. 28)
-- [TB] **Receptor tyrosine kinases** (insulin, EGF, PDGF): ligand binding makes two receptors pair up (dimerize) and phosphorylate tyrosines on themselves and on downstream proteins. (p. 28)
-- [TB] **Cytokine receptors** (growth hormone, erythropoietin, interferons) borrow a separate tyrosine kinase, **JAK**, which activates **STAT** proteins that carry the signal into the nucleus. (p. 29; p. 30)
-- [TB] **Ligand-gated ion channels** (nicotinic acetylcholine, GABA, glutamate, serotonin) act within milliseconds; **voltage-gated channels** are targets too: verapamil blocks calcium channels, local anesthetics block sodium channels. (p. 30; p. 31)
-- [TB] **G protein–coupled receptors** (seven-transmembrane, the largest family): the agonist makes the G protein swap GDP for GTP, the G protein changes an effector enzyme or channel, and the effector changes a second messenger. (p. 31; p. 32)
-- [TB] **cAMP** acts through cAMP-dependent protein kinase and is broken down by phosphodiesterases; **cGMP** relaxes vascular smooth muscle and is raised by atrial natriuretic peptide and by nitric oxide (the route of nitroglycerin and nitroprusside). (p. 34; p. 35)
-- [TB] Continued agonist exposure **desensitizes** G protein receptors: a receptor kinase phosphorylates the receptor and β-arrestin binds it; endocytosis of receptors can lead to downregulation. (p. 34)
+- [TB] Targets beyond receptors: **enzymes** (statins on HMG-CoA reductase), **transporters** (digitalis on Na⁺/K⁺-ATPase; antidepressants) and **structural proteins** (colchicine on tubulin). (p. 22)
+- [TB] Five signaling mechanisms carry a drug’s message into the cell: intracellular receptor, receptor tyrosine kinase, cytokine receptor (JAK-STAT), ion channel and G protein (compared in the table). (p. 28-32)
 
 ### Pharmacodynamics: Targets & Receptors — Clinical relevance
 - Albuterol is a selective β2-adrenergic receptor agonist. (S26)
@@ -255,9 +234,8 @@ Learning objectives covered: SO3, IO1.1
 - Albuterol bridges introductory pharmacodynamics into the pulmonary pharmacology seen later in the curriculum. (S26 (notes))
 - [TB] Competitive antagonism is surmountable in real life: exercise or stress raises catecholamines enough to overcome a fixed propranolol dose. (p. 25)
 - [TB] Propranolol markedly slows the heart rate in pheochromocytoma (high catecholamines) but not the resting rate of a trained marathon runner. (p. 39)
-- [TB] Glucocorticoids will not relieve an acute asthma attack within minutes, because gene-acting drugs need time to make new proteins. (p. 28)
-- [TB] Tyrosine kinase signaling is blocked in cancer by antibodies on the outside of the receptor (trastuzumab, cetuximab) or small molecules inside the cell (gefitinib, erlotinib). (p. 29)
-- [TB] Phosphodiesterase inhibitors prolong second messengers: milrinone (cardiac PDE3, cAMP) and sildenafil (cGMP). (p. 34; p. 35)
+- [TB] Glucocorticoids will not stop an acute asthma attack within minutes: gene-acting drugs need hours to make new proteins. (p. 28)
+- [TB] Phosphodiesterase inhibitors prolong second messengers: milrinone (cAMP) and sildenafil (cGMP). (p. 34; p. 35)
 
 ### Pharmacodynamics: Targets & Receptors — Drugs named as examples
 - Albuterol — selective β2-adrenergic agonist (example of agonism). (S26)
@@ -307,7 +285,6 @@ Learning objectives covered: SO3, IO1.1
 | Gs | β-adrenergic amines, histamine, glucagon | ↑ adenylyl cyclase → ↑ cAMP |
 | Gi | α₂-adrenergic amines, muscarinic ACh, opioids | ↓ cAMP; opens cardiac K⁺ channels → ↓ heart rate |
 | Gq | Muscarinic ACh, serotonin (5-HT₂) | ↑ phospholipase C → IP₃, DAG, ↑ cytoplasmic Ca²⁺ |
-| Gt | Light (rhodopsin) | ↑ cGMP phosphodiesterase → ↓ cGMP (vision) |
 
 ### Pharmacodynamics: Targets & Receptors — Memory hooks
 - Why it happens: Why can more agonist overcome a competitive antagonist? Both compete **reversibly for the same site** — flood the site with agonist and it wins, so the curve shifts right but the same Emax is still reached. (S22; S25)
@@ -420,7 +397,6 @@ Learning objectives covered: SO5, IO1.2, IO1.3, IO1.5
 - First-pass effect: the liver metabolizes (can inactivate a large fraction of) an orally absorbed drug before it reaches systemic circulation. (S51; S51 (notes); SG U1-R9)
 - **Volume of distribution (Vd):** a calculated value relating total drug in the body to plasma concentration — a high Vd suggests extensive tissue distribution. (S52)
 - [TB] **pKa:** the pH at which a drug is half ionized and half nonionized. (p. 10)
-- [TB] **Fick’s law:** passive flux rises with the concentration gradient, membrane area and permeability, and falls as the membrane gets thicker. (p. 9)
 
 ### Pharmacokinetics: ADME — Absorption & Distribution — How it works
 - ADME is the organizing skeleton for the rest of the lecture — each remaining pharmacokinetics section is one ADME letter in depth. (S45 (notes))
@@ -438,10 +414,9 @@ Learning objectives covered: SO5, IO1.2, IO1.3, IO1.5
 - Efflux transporters (like P-glycoprotein) can actively pump some drugs back out of the CNS. (S53)
 - [TB] First-pass loss can happen in the **gut wall** (e.g., intestinal CYP3A4) as well as the liver; grapefruit juice inhibits gut-wall metabolism and P-glycoprotein, raising absorption of some drugs. (p. 48)
 - [TB] **P-glycoprotein (MDR1)** pumps drugs out of cells in brain, testes, and gut; inhibiting it raises digoxin blood levels. (p. 9)
-- [TB] Ion trapping: weak acids are excreted faster in **alkaline** urine; weak bases faster in **acidic** urine. (p. 10; p. 11)
-- [TB] Four ways drugs cross barriers: **aqueous diffusion** through pores (protein-bound drug cannot pass), **lipid diffusion** (the main limiting step, set by the lipid:aqueous partition coefficient), **special carriers** (selective, saturable, inhibitable) and **endocytosis** (vitamin B₁₂ with intrinsic factor, iron with transferrin). (p. 8; p. 9)
-- [TB] Charged (ionized) molecules attract water and cross lipid membranes poorly, and most drugs are weak acids or weak bases. (p. 9)
-- [TB] **Henderson-Hasselbalch:** a weak acid is mostly nonionized and lipid-soluble when the pH is below its pKa; a weak base is mostly nonionized when the pH is above its pKa. (p. 10)
+- [TB] **Ion trapping:** weak acids are excreted faster in **alkaline** urine; weak bases faster in **acidic** urine. (p. 10; p. 11)
+- [TB] Drugs cross membranes by **lipid diffusion** (the main route), aqueous pores, **carriers** (saturable) or endocytosis (vitamin B₁₂, iron). (p. 8; p. 9)
+- [TB] Only the **nonionized** form crosses lipid membranes: a weak acid is mostly nonionized when pH < pKa, a weak base when pH > pKa (Henderson-Hasselbalch). (p. 9; p. 10)
 
 ### Pharmacokinetics: ADME — Absorption & Distribution — Clinical relevance
 - Routes that bypass first-pass metabolism: essentially everything except oral — IV, sublingual, inhaled, transdermal, topical, SC, IM. (S49 (notes))
@@ -449,15 +424,13 @@ Learning objectives covered: SO5, IO1.2, IO1.3, IO1.5
 - Because the liver can inactivate a large fraction of drug first, some drugs are given sublingually or transdermally instead of orally. (S51 (notes))
 - A highly polar antibiotic would generally not cross the BBB well — unless the meninges are inflamed, as in meningitis. (S53 (notes))
 - [TB] Aspirin overdose: sodium bicarbonate alkalinizes blood and urine, reducing aspirin entry into tissues and speeding its renal excretion. (p. 20)
-- [TB] **Ion trapping:** weak acids are excreted faster in alkaline urine and weak bases faster in acidic urine, which is how urine pH is used to speed elimination after an overdose. (p. 10; p. 11)
-- [TB] Transporters that matter: MDR1 (P-glycoprotein) pumps drugs out of cells, and inhibiting it raises digoxin levels; norepinephrine and serotonin transporters are targets of antidepressants and cocaine; VMAT is the target of reserpine. (p. 9)
 
 ### Pharmacokinetics: ADME — Absorption & Distribution — Drugs named as examples
 - Large first-pass effect: nitroglycerin, propranolol, morphine — all require higher oral doses (or a non-oral route) to achieve the same systemic exposure as IV. (S51; SG U1-R9)
 - Very high Vd: digoxin — mostly sequestered in tissue, not floating around in plasma. (S52 (notes))
 - Subcutaneous route is common for insulin and heparin. (S49)
 - P-glycoprotein — an efflux transporter at the BBB. (S53)
-- [TB] Weak acids: aspirin (pKa 3.5), warfarin (5.0), phenytoin (8.3). Weak bases: morphine (7.9), albuterol (9.3), propranolol (9.4). (p. 10)
+- [TB] Weak acids: aspirin (pKa 3.5), warfarin (5.0). Weak bases: morphine (7.9), propranolol (9.4). (p. 10)
 
 ### Pharmacokinetics: ADME — Absorption & Distribution — Exam traps
 - IV = 100% bioavailable with no absorption phase; oral is less than 100%. (S49; S50)

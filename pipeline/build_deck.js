@@ -429,8 +429,16 @@ async function highYieldSlides(c) {
   }
 }
 
+// The deck stays lean: every lecture quick check, plus one new question per part (a vignette when there is one).
+// The full question set lives in the web guide's self-test and the practice exams.
+function deckQuestions(c) {
+  const qs = c.questions || [];
+  const extra = qs.filter((q) => !q.from_slides).sort((a, b) => (b.kind === "vignette") - (a.kind === "vignette"))[0];
+  return qs.filter((q) => q.from_slides || q === extra);
+}
+
 async function questionSlides(c) {
-  for (const q of c.questions || []) {
+  for (const q of deckQuestions(c)) {
     const kind = q.kind === "vignette" ? "Clinical vignette" : "Mechanism";
     const full = W - 2 * MX;
     // --- question ---
