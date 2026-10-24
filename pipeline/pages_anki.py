@@ -176,10 +176,10 @@ def anki_page(built, exams):
     out = DOCS / "anki"
     out.mkdir(exist_ok=True)
     (out / "data.json").write_text(json.dumps(data, ensure_ascii=False))
-    body = f"""<header class="hero wrap ak-hero"><p class="eyebrow appear"><a href="../practice/index.html">Recall</a> · Anki</p><h1 class="appear" style="--d:.05s">Your deck, built from the course.</h1>
+    body = f"""<header class="hero wrap ak-hero"><p class="eyebrow appear"><a href="../practice/index.html">Prepare</a> · Anki</p><h1 class="appear" style="--d:.05s">Your deck, built from the course.</h1>
 <p class="lede appear" style="--d:.12s">Pick the lectures, how deep to go and the kinds of cards you like. Every card cites its slide or textbook page, and the deck downloads ready to import into Anki.</p></header>
 <section class="section ak-sec"><div class="wrap ak-wrap"><div id="ak-app" class="ak-app"><p class="muted">Loading {len(data["items"]):,} card-ready items…</p></div></div></section>
 <div id="ak-print" class="ak-print" aria-hidden="true"></div>
 <script src="../assets/vendor/sql-wasm.js"></script><script src="../assets/anki.js"></script>"""
-    (out / "index.html").write_text(page(f"Anki · Recall · {SITE_NAME}", body, depth=1, active="practice"))
+    (out / "index.html").write_text(page(f"Anki · Prepare · {SITE_NAME}", body, depth=1, active="practice"))
     print(f"  anki: {len(data['items'])} card-ready items from {len(data['lectures'])} lectures")

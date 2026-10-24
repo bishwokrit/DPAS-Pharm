@@ -44,7 +44,7 @@ def global_kb(syl, sched, built, exams):
     g["pages"] = [{"t": x["t"], "u": x["u"]} for x in search_index(syl, sched, built, exams) if x.get("g") == "Pages"] + [
         {"t": "Drug index — every drug, cited, with compare and quiz", "u": "drugs/index.html"},
         {"t": "Progress — Daily 10, retry misses, weakest topics, saved notes", "u": "review/index.html"},
-        {"t": "Recall — practice exams, self-tests, Drug of the Day, Anki decks and final prep", "u": "practice/index.html"},
+        {"t": "Prepare — practice exams, self-tests, Drug of the Day, Anki decks and final prep", "u": "practice/index.html"},
         {"t": "Anki — build flashcard decks from any lecture, drug or question", "u": "anki/index.html"},
         {"t": "What you need on the final", "u": "syllabus/index.html#final"}, {"t": "Week-by-week schedule", "u": "syllabus/index.html#schedule"}]
     cal = [f"{c['date']}: class — {c['topic']}" for c in sched["classes"]] + [f"{d['date']}: {d['kind']} — {d['label']}" + (f" (note: {d['note']})" if d.get("note") else "") for d in sched["due"]]
