@@ -47,7 +47,7 @@ def unit_tiles(u, syl, built, exams_built, up="", full=False):
                          f'<h3>{html.escape(b["title"])}</h3><p>One question at a time, with the why behind every answer.</p></div><span class="tile-go">Start →</span></a>')
     if not tiles:
         tiles.append(f'<div class="tile appear"><span class="tile-ic">{icon("calendar")}</span><div><div class="tile-k">Unit {u} · {html.escape(syl["units"][u])}</div>'
-                     f'<h3>Practice opens as lectures are posted</h3><p>Questions appear after each class. Meanwhile, keep earlier units fresh in Progress.</p></div></div>')
+                     f'<h3>Practice opens as lectures are posted</h3><p>Questions appear after each class. Meanwhile, keep earlier units fresh in Insight.</p></div></div>')
         tiles.append(final_tile(up))
     return tiles
 
@@ -83,7 +83,7 @@ def practice_page(syl, built, exams_built):
     tools = (f'<a class="tile appear" href="../anki/index.html">{ic("card")}<div><div class="tile-k">Deck builder</div><h3>Anki cards</h3>'
              '<p>Any lecture, any depth: cloze, basic, reversed, type-in or multiple choice. Downloads ready for Anki.</p></div><span class="tile-go">Build a deck →</span></a>'
              f'<a class="tile appear" style="--d:.06s" href="../review/index.html">{ic("review")}<div><div class="tile-k">5 minutes a day</div><h3>Daily 10</h3>'
-             '<p>Ten questions weighted toward what you missed, with a streak. Lives in Progress with your scores.</p></div><span class="tile-go">Start →</span></a>')
+             '<p>Ten questions weighted toward what you missed, with a streak. Lives in Insight with your scores.</p></div><span class="tile-go">Start →</span></a>')
     body = f"""<header class="hero wrap"><p class="eyebrow appear">Prepare</p><h1 class="appear" style="--d:.05s">Pull it out of memory. That's how it sticks.</h1>
 <p class="lede appear pr-quote" id="pr-quote" style="--d:.12s" tabindex="0"><span class="pr-t">{html.escape(LINES[0]["t"])}</span><span class="pr-by">{html.escape(LINES[0].get("by", ""))}</span></p>
 <script type="application/json" id="pr-lines">{json.dumps(LINES, ensure_ascii=False)}</script>
