@@ -1204,13 +1204,11 @@ figure.vz-orig > img { display: block; } figure.vz-orig > .viz { display: none; 
 @media print { .viz, .vz-back { display: none !important; } figure[data-viz-on] > img { display: block !important; } figure[data-viz-on] { background: #fff; } }
 
 /* home: the lecture's figure sits between High-yield and Your progress */
-.now-grid { grid-template-columns: 1fr 1.5fr .85fr; }
+
 .now-fig { margin: 0; padding: 18px 18px 14px; gap: 2px; border-radius: 22px; }
 .now-fig { background: var(--surface); color: var(--text); }
 .now-fig > a { font-size: 13px; padding: 10px 2px 0; color: var(--text-2); }
 .now-fig > a:hover { color: var(--accent); text-decoration: none; }
-@media (max-width: 1080px) { .now-grid { grid-template-columns: 1fr 1fr; } .now-grid > .now-hy { grid-column: 1 / -1; } }
-@media (max-width: 600px) { .now-grid { grid-template-columns: 1fr; } }
 .pr-sub { margin: -6px 0 22px; color: var(--text-2); font-size: 16px; } .pr-sub strong { color: var(--text); }
 #practice .bento[hidden] { display: none; }
 .rv-scope { margin-top: 18px; } .rv-scope button { font-size: 14px; padding: 8px 16px; border-radius: 8px; }
@@ -1350,3 +1348,23 @@ html[data-pmotion="off"] ::view-transition-old(root), html[data-pmotion="off"] :
 .vz-steps button.on { background: var(--accent-soft); color: var(--accent); box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--accent) 35%, transparent); }
 .vz-steps button.on b { background: var(--accent-fill); color: #fff; }
 @container (max-width: 560px) { .vz-point { font-size: 14px; } .vz-legend { font-size: 12px; } .vz-steps button { font-size: 12.5px; } }
+
+/* this week's lecture: two even columns. Notes stacked on the left, the hands-on figure tall on the right; edges line up */
+.now-head { align-items: center; padding-bottom: 4px; }
+.topic-chips { margin: 18px 0 20px; }
+.now-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); grid-template-areas: "hy fig" "side fig"; grid-template-rows: auto 1fr; align-items: stretch; gap: 16px; }
+.now-grid > .now-hy { grid-area: hy; grid-column: auto; } .now-grid > .now-fig { grid-area: fig; } .now-grid > .now-side { grid-area: side; }
+.now-grid > .card { margin: 0; padding: 22px 24px; border-radius: 22px; }
+.now-hy h3, .now-side h3 { font-size: 13px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--text-2); margin: 0 0 10px; }
+.now-hy ul { margin: 0; padding-left: 18px; } .now-hy li { margin: 0 0 10px; font-size: 15px; line-height: 1.45; } .now-hy li:last-child { margin-bottom: 0; }
+.now-side { display: flex; flex-direction: column; }
+.now-side h3 + .progress, .now-side .now-empty { margin-top: 0; }
+.now-side h3:not(:first-child) { margin-top: 18px !important; padding-top: 16px; border-top: 1px solid var(--hair); }
+.now-due li { display: grid; grid-template-columns: 92px 1fr; gap: 10px; margin: 0 0 8px; font-size: 14.5px; line-height: 1.35; }
+.now-side .links { margin-top: auto; padding-top: 16px; }
+.now-fig { padding: 20px 22px 16px; border-radius: 22px; }
+@media (max-width: 1080px) { .now-grid { grid-template-columns: 1fr 1fr; grid-template-areas: "hy side" "fig fig"; grid-template-rows: auto auto; } }
+@media (max-width: 640px) { .now-grid { grid-template-columns: 1fr; grid-template-areas: "hy" "fig" "side"; } }
+.now-panel .topic-chips { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 8px; }
+.now-panel .topic-chip { min-width: 0; }
+@media (max-width: 640px) { .now-panel .topic-chips { grid-template-columns: 1fr; } }

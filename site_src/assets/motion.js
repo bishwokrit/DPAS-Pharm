@@ -48,11 +48,6 @@
     gsap.fromTo(els, { opacity: 0, y: 26, scale: 0.985, transition: "none" }, { opacity: 1, y: 0, scale: 1, duration: 0.95, ease: "expo.out", stagger: 0.07, clearProps: "transform,opacity,transition" });
   };
   ST.batch(".appear", { start: "top 94%", onEnter: reveal, interval: 0.08, batchMax: 8 });
-  // study guides: figures, tables and callouts settle in as you reach them (quick, so reading is never held up)
-  gsap.utils.toArray(".section figure, .section .callout").forEach((el) => {
-    if (el.closest(".appear")) return;
-    gsap.from(el, { opacity: 0, y: 18, duration: 0.7, ease: "power3.out", clearProps: "transform,opacity,transition", transition: "none", scrollTrigger: { trigger: el, start: "top 92%", once: true } });
-  });
   // things that appear later (cards drawn by scripts, unhidden sections) still get revealed and measured
   const refresh = (() => { let t = 0; return () => { clearTimeout(t); t = setTimeout(() => { ST.refresh(); document.querySelectorAll(".appear:not(.in)").forEach((e) => { const r = e.getBoundingClientRect(); if (r.top < innerHeight * 0.94 && r.bottom > 0 && e.offsetParent) reveal([e]); }); }, 120); }; })();
   new ResizeObserver(refresh).observe(document.body);
