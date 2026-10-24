@@ -71,7 +71,7 @@ LINES = [
     {"t": "Luck can't explain a 90 on pharm. Spaced, stubborn practice can."},
     {"t": "Talent sets the starting dose. Effort sets the ceiling."},
     {"t": "Lock in and become the licensed kind of drug dealer, or wash out of PA school and settle for the other kind", "by": "Ray Rayamajhi", "show": True},  # the site's author: always credited
-    {"t": "Nobody wants the PA who mixes up 3 units and 3 mL of insulin. Study now; your future patients are counting on it", "by": "Ray Rayamajhi", "show": True},
+    {"t": "Nobody wants the PA who mixes up 3 units and 3 mL of insulin. The prep you put in now is the insurance your future patients never have to claim", "by": "Ray Rayamajhi", "show": True},
     {"t": "Your patients will never ask what you got on the pharm final. They'll just quietly hope it was good."},
     {"t": "Flashcards tonight, or \"let me look that up\" in front of your attending later. Choose wisely", "by": "Ray Rayamajhi", "show": True},
     {"t": "Study like your future patient's potassium depends on it. One day, it will", "by": "Ray Rayamajhi", "show": True},
