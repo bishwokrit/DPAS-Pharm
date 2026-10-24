@@ -70,6 +70,7 @@ LINES = [
     {"t": "Five half-lives to steady state. A few weeks of daily reps to mastery. Both reward the ones who keep dosing."},
     {"t": "Luck can't explain a 90 on pharm. Spaced, stubborn practice can."},
     {"t": "Talent sets the starting dose. Effort sets the ceiling."},
+    {"t": "Lock in and become the licensed kind of drug dealer, or wash out of PA school and settle for the other kind.", "by": "Ray Rayamajhi"},
 ]
 
 
