@@ -95,7 +95,7 @@ def build_kahoots():
             r = kahoot_rows(q)
             if r and r[0] not in seen:
                 rows.append(r); seen.add(r[0])
-            skipped += r is None
+            skipped += r is None and "Figure" not in q["stem"]  # figure questions need the picture, so never fit Kahoot
         rows += [r for r in card_rows(kb["cards"], lid) if r[0] not in seen]
         rows = rows[:DECK_MAX]
         all_rows[lid] = rows
@@ -111,7 +111,7 @@ def build_kahoots():
         (out_dir / "template.xlsx").write_bytes(TEMPLATE.read_bytes())
     (out_dir / "rows.json").write_text(json.dumps(all_rows, ensure_ascii=False))
     if skipped:
-        print(f"  sketch: {skipped} questions too long for Kahoot (add a short stem in pipeline/kahoot_stems.json)")
+        print(f"  sketch: {skipped} questions too long for Kahoot (fine to leave; to include one, add a short stem in pipeline/kahoot_stems.json)")
     return [{"unit": u, "name": syl["units"].get(str(u), ""), "decks": d, "total": sum(x["n"] for x in d)} for u, d in sorted(units.items())]
 
 

@@ -49,6 +49,14 @@ def fact(f):
     return f"<li>{tags}{md(f['text'])}{cite(f.get('src', ''))}</li>"
 
 
+def viz_attrs(fig):
+    """data-viz picks the figure's interactive version: a reusable type named in its "viz" field, or one built for that image."""
+    v = fig.get("viz") or {}
+    key = v.get("type") or re.sub(r"_1$", "", fig["image"].rsplit(".", 1)[0])
+    cfg = {k: x for k, x in v.items() if k != "type"}
+    return f'data-viz="{key}"' + (f" data-viz-cfg='{html.escape(json.dumps(cfg, ensure_ascii=False), quote=False)}'" if cfg else "")
+
+
 def slug(text):
     return re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")
 
@@ -218,7 +226,7 @@ def part_html(c, cl, n, lec_dir, pending):
     for fig in cl.get("figures", []):
         shutil.copy(ROOT / "work" / c["lecture"]["id"] / "figures" / fig["image"], lec_dir / fig["image"])
         w, h = Image.open(lec_dir / fig["image"]).size  # fixed size so lazy images don't shift links mid-scroll
-        out.append(f'<figure data-viz="{re.sub(r"_1$", "", fig["image"].rsplit(".", 1)[0])}"><img src="{fig["image"]}" width="{w}" height="{h}" style="height:auto" alt="{html.escape(fig.get("title", ""))}" loading="lazy">'
+        out.append(f'<figure {viz_attrs(fig)}><img src="{fig["image"]}" width="{w}" height="{h}" style="height:auto" alt="{html.escape(fig.get("title", ""))}" loading="lazy">'
                    f'<figcaption>{"<span class=\"tag tb\">TB</span>" if fig.get("tb") else ""}<strong>{md(fig.get("title", ""))}.</strong> {md(fig["caption"])}{cite(fig.get("src", ""))}</figcaption></figure>')
     for i, t in enumerate(cl.get("comparisons", [])):
         out.append(table_html(t, i))
@@ -460,6 +468,7 @@ def main(pdf=True):
                       "hy": [(i, slug(cl["name"]), cl["high_yield"][0]["text"]) for i, cl in enumerate(c["classes"], 1) if cl.get("high_yield")],
                       "figure": next((f"{lid}/{fig['image']}" for cl in c["classes"] for fig in cl.get("figures", []) if not fig.get("tb")), ""),
                       "figure_title": next((fig.get("title", "") for cl in c["classes"] for fig in cl.get("figures", []) if not fig.get("tb")), ""),
+                      "figure_viz": next((viz_attrs(fig) for cl in c["classes"] for fig in cl.get("figures", []) if not fig.get("tb")), ""),
                       "figure_href": next((f"{lid}/index.html#{slug(cl['name'])}" for cl in c["classes"] for fig in cl.get("figures", []) if not fig.get("tb")), f"{lid}/index.html")}
         print(f"  site: {lid} study guide" + (" + PDF" if pdf else ""))
     exams = []

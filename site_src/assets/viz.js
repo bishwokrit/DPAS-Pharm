@@ -358,12 +358,37 @@
     },
   });
 
+  // ---- reusable types: a new lecture's figure names one of these in its "viz" field and gets the same hands-on version
+  Object.assign(V, { "dose-response": V.S31, antagonist: V.S23, "potency-efficacy": V.S35, "therapeutic-index": V.S39, "cyp-interaction": V.S7,
+    "half-life": V.S20, "steady-state": V.S24, "fill-empty": V.TB_fill_empty, adme: V.S46 });
+  // generic comparison bars: {"type": "bars", "unit": "%", "point": "...", "ref": 100, "bars": [{"label", "value", "note"}], "steps": [{"label", "pick": index}]}
+  V.bars = (host, cfg = {}) => {
+    const bars = cfg.bars || [], max = Math.max(1, ...bars.map((b) => b.value), cfg.ref || 0) * 1.15, cols = [C.teal, C.coral, C.blue, C.amber, C.sage];
+    const step = (R - L) / Math.max(1, bars.length), bw = Math.min(110, step * 0.62);
+    return shell(host, {
+      label: `Interactive ${cfg.title || "comparison"}`, hint: "Tap a bar to see what it means", point: cfg.point, steps: (cfg.steps || []).map((st) => ({ label: st.label, state: { sel: st.pick } })),
+      state: { sel: -1 },
+      controls: `<div class="seg" data-k="sel">${bars.map((b, i) => `<button type="button" data-v="${i}">${b.label}</button>`).join("")}</div>`,
+      drag: (S, x) => { S.sel = clamp(Math.floor((x - L) / step), 0, bars.length - 1); },
+      draw(S) {
+        const y = (v) => sy(v, 0, max), sel = Math.round(S.sel);
+        const ticks = [0, 0.25, 0.5, 0.75, 1].map((f) => { const v = +(max * f / 1.15).toPrecision(2); return [v + (cfg.unit === "%" ? "%" : ""), y(v)]; });
+        return {
+          svg: axes("", cfg.yLabel || "", [], ticks) + (cfg.ref != null ? `<line x1="${L}" x2="${R}" y1="${y(cfg.ref)}" y2="${y(cfg.ref)}" stroke="${C.ink}" stroke-dasharray="2 4"/>` : "") +
+            bars.map((b, i) => { const cx = L + step * (i + 0.5); return `<g opacity="${sel < 0 || sel === i ? 1 : 0.35}">${bar(cx - bw / 2, y(b.value), bw, B - y(b.value), cols[i % cols.length])}${tag(cx, y(b.value) - 8, `${f1(b.value)}${cfg.unit || ""}`, C.deep)}</g><text x="${cx}" y="${B + 19}" text-anchor="middle" class="vz-tk">${b.label}</text>`; }).join(""),
+          read: sel >= 0 && bars[sel] ? `<b>${bars[sel].label}: ${f1(bars[sel].value)}${cfg.unit || ""}.</b> ${bars[sel].note || ""}` : (cfg.read || "Tap a bar, or use the buttons, to see what each value means."),
+        };
+      },
+    });
+  };
+
   // ---- enhance every figure that has an interactive twin; the original image stays one tap away
   function enhance(fig) {
     const key = fig.dataset.viz, make = V[key];
     if (!make || fig.dataset.vizOn) return;
     fig.dataset.vizOn = 1;
-    make(fig);
+    let cfg = {}; try { cfg = JSON.parse(fig.dataset.vizCfg || "{}"); } catch { /* bad config: defaults */ }
+    make(fig, cfg);
     const t = fig.querySelector(".vz-swap");
     t.onclick = () => { const o = fig.classList.toggle("vz-orig"); t.textContent = o ? "Interactive" : "Original"; };
     // with the original showing, the header stays so you can switch back

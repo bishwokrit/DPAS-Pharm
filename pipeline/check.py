@@ -62,6 +62,8 @@ def main():
     ok &= subprocess.run(["node", str(ROOT / "tests" / "pages.mjs")]).returncode == 0
     ok &= subprocess.run(["node", str(ROOT / "tests" / "ai.mjs")]).returncode == 0
     ok &= subprocess.run(["node", str(ROOT / "tests" / "a11y.mjs")]).returncode == 0
+    ok &= subprocess.run([sys.executable, str(ROOT / "tests" / "data_qc.py")]).returncode == 0
+    ok &= subprocess.run(["node", str(ROOT / "tests" / "qc.mjs")]).returncode == 0
     print("All checks passed." if ok else "Some checks FAILED — fix before publishing.")
     sys.exit(0 if ok else 1)
 
