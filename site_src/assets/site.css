@@ -384,7 +384,11 @@ mark.hl { background: color-mix(in srgb, var(--tb) 45%, transparent); color: inh
 .qm-nav { border: 0; min-width: 64px; height: 48px; border-radius: 14px; background: var(--surface-2); color: var(--text); font: 700 18px var(--font); cursor: pointer; padding: 0 18px; }
 .qm-nav.primary { background: var(--accent-fill, var(--accent)); color: #fff; } .qm-nav[disabled] { opacity: .35; cursor: default; }
 .qm-debrief h3 { margin-top: 30px; }
-.qm-tip { margin: 16px 0 0; padding: 12px 14px; border-radius: 14px; background: var(--surface-2); font-size: 13px; color: var(--text-2); } .qm-tip strong { color: var(--text); margin-right: 6px; }
+.qm-toast { position: absolute; left: 50%; bottom: 84px; z-index: 2; width: max-content; max-width: min(620px, calc(100vw - 32px)); padding: 9px 16px; border-radius: 18px; background: var(--surface); border: 1px solid var(--hair); color: var(--text-2); font-size: 13px; text-align: center; pointer-events: none;
+  opacity: 0; transform: translate(-50%, 8px); transition: opacity .5s ease, transform .5s cubic-bezier(.2,.8,.2,1); box-shadow: 0 6px 24px rgba(0,0,0,.12); }
+.qm-toast.fixed { position: fixed; z-index: 92; }
+.qm-toast.in { opacity: 1; transform: translate(-50%, 0); } .qm-toast strong { color: var(--text); margin-right: 6px; }
+@media (prefers-reduced-motion: reduce) { .qm-toast { transition: opacity .3s; transform: translate(-50%, 0); } }
 .qm-big { display: flex; gap: 22px; align-items: center; flex-wrap: wrap; }
 .qm-ring { --p: 0; width: 110px; height: 110px; border-radius: 50%; display: grid; place-items: center; background: conic-gradient(var(--accent) calc(var(--p) * 1%), var(--surface-2) 0); }
 .qm-ring span { width: 86px; height: 86px; border-radius: 50%; background: var(--bg); display: grid; place-items: center; font: 750 24px var(--font); }
@@ -1289,6 +1293,26 @@ figure.vz-orig > img { display: block; } figure.vz-orig > .viz { display: none; 
 .sx-score { flex-wrap: wrap; justify-content: center; } .sx-score span { display: inline-flex; align-items: center; gap: 6px; }
 .sx-clock { min-width: 38px; text-align: right; font: 700 16px var(--font); font-variant-numeric: tabular-nums; color: var(--text-2); } .sx-clock.warn { color: var(--bad); }
 .sx-opt.hi { box-shadow: inset 0 0 0 2px var(--accent); background: var(--accent-soft); }
+.sx-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.sx-chip { border: 0; font: inherit; font-size: 14px; padding: 8px 14px; border-radius: 99px; background: var(--surface-2); color: var(--text); cursor: pointer; transition: background .2s, color .2s; }
+.sx-chip small { color: var(--text-2); margin-left: 4px; } .sx-chip.on { background: var(--accent-fill, var(--accent)); color: #fff; } .sx-chip.on small { color: rgba(255,255,255,.85); }
+/* Jeopardy board: calm tiles, values in the accent, a staggered rise when the board appears (transform/opacity only) */
+.sx-jeo .qm-top { flex-wrap: wrap; row-gap: 8px; } .sx-jeo .sx-score { flex: 1; justify-content: center; gap: 8px 18px; }
+.sx-jeo .sx-score span:not(.ctrl) { opacity: .7; }
+.sx-jeo-turn { display: flex; align-items: center; gap: 8px; justify-content: center; color: var(--text-2); margin: 0 0 14px; }
+.sx-board { display: grid; grid-template-columns: repeat(var(--cols), minmax(0, 1fr)); gap: 8px; max-width: 1100px; margin: 0 auto; }
+.sx-cat { display: grid; place-items: center; text-align: center; min-height: 64px; padding: 8px; border-radius: 14px; font-size: 13px; font-weight: 700; line-height: 1.25; color: var(--text); background: var(--surface-2); overflow-wrap: anywhere; }
+.sx-tile { border: 0; min-height: 76px; border-radius: 14px; background: var(--surface); box-shadow: inset 0 0 0 1px var(--hair); color: var(--accent); font: 750 clamp(18px, 2.6vw, 30px) var(--font); font-variant-numeric: tabular-nums;
+  cursor: pointer; animation: sx-rise .45s cubic-bezier(.2,.8,.2,1) var(--d) both; transition: transform .2s cubic-bezier(.2,.8,.2,1), background .2s, box-shadow .2s; }
+@media (hover: hover) { .sx-tile:hover:not(:disabled) { transform: translateY(-2px); background: var(--accent-soft); } }
+.sx-tile.hi { box-shadow: inset 0 0 0 2px var(--accent); background: var(--accent-soft); }
+.sx-tile.done { background: transparent; box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--hair) 50%, transparent); cursor: default; }
+.sx-dd { text-align: center; padding-top: 8vh; } .sx-dd h2 { font-size: clamp(30px, 5vw, 48px); letter-spacing: -.02em; margin: 6px 0 20px; animation: sx-rise .5s cubic-bezier(.2,.8,.2,1) both; }
+.sx-wager { display: grid; gap: 8px; justify-items: center; font-weight: 600; color: var(--text-2); margin-bottom: 18px; }
+.sx-wager input { font: 700 28px var(--font); width: 180px; text-align: center; padding: 10px; border-radius: 14px; border: 1px solid var(--hair); background: var(--surface-2); color: var(--text); }
+.sx-dd .sx-row { justify-content: center; }
+.sx-jeo-res { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; font-weight: 700; font-size: 18px; margin: 18px 0 0; }
+@media (max-width: 760px) { .sx-board { gap: 5px; } .sx-cat { font-size: 11px; min-height: 56px; padding: 6px 4px; border-radius: 10px; } .sx-tile { min-height: 56px; border-radius: 10px; font-size: 17px; } .sx-jeo .qm-scroll { padding: 14px 10px 24px; } }
 .sx-crown { display: inline-block; width: .32em; height: .32em; border-radius: 50%; margin-right: .3em; vertical-align: .12em; }
 .sx-final span i { margin: 0 auto 4px; }
 .sx-opts { display: grid; gap: 10px; margin-top: 18px; }

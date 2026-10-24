@@ -27,6 +27,13 @@
     el.requestFullscreen?.().catch(() => {});
     let timer = null;
     if (opts.timed) timer = setInterval(tick, 1000);
+    // a quiet note for a few seconds at the start: remote rings work here
+    const tip = document.createElement("div");
+    tip.className = "qm-toast"; tip.setAttribute("role", "status");
+    tip.innerHTML = "<strong>Pro tip</strong> Anki remote compatible: up/down to choose, click to lock in, next to move on.";
+    tip.dataset.live = "1";  // lives inside el (full screen shows only el); draw() re-adds it after each redraw
+    setTimeout(() => tip.classList.add("in"), 600);
+    setTimeout(() => { tip.classList.remove("in"); setTimeout(() => { delete tip.dataset.live; tip.remove(); }, 500); }, 5600);
 
     function elapsed() { return (Date.now() - st.t0) / 1000; }
     function tick() {
@@ -73,6 +80,7 @@
       el.querySelector("[data-next]").addEventListener("click", () => move(1));
       el.querySelectorAll("[data-jump]").forEach((a) => a.addEventListener("click", () => exit(true)));
       el.querySelector(".qm-opt.hi")?.scrollIntoView({ block: "nearest" });
+      if (tip.dataset.live) el.append(tip);  // the redraw replaced it; keep the start-up tip on screen
     }
     function explain(x, ch) {
       const ok = ch === x.answer;
@@ -221,7 +229,7 @@
         <label><input type="radio" name="mode" value="timed"><span><strong>Timed (PANCE pace)</strong>1 min per question, results at the end</span></label>
       </div>
       <div class="btns"><button class="btn" data-go>Start</button><button class="btn ghost" data-cancel>Cancel</button></div>
-      <p class="qm-tip"><strong>Pro tip</strong> Quiz and exam modes work with an Anki remote (Bluetooth page-turner ring): up/down choose · click lock in · next/back move. Keys: ↑ ↓ · Enter · → ← · A–E · F flag · Esc exit.</p></div></div>`;
+      <p class="small muted">Keys: ↑ ↓ choose · Enter lock in · → next · ← back · A–E · F flag · Esc exit.</p></div></div>`;
     document.body.append(el);
     const val = (n) => el.querySelector(`[name=${n}]`);
     el.querySelector("[data-cancel]").addEventListener("click", () => el.remove());

@@ -43,6 +43,18 @@
     return out;
   })());
 
+  // the same quiet start-up note as quiz and exam mode: remote rings work in the games too
+  function remoteTip(o) {
+    const t = document.createElement("div");
+    t.className = "qm-toast fixed"; t.setAttribute("role", "status");
+    t.innerHTML = "<strong>Pro tip</strong> Anki remote compatible: up/down to choose, click to lock in, next to move on.";
+    document.body.append(t);
+    setTimeout(() => t.classList.add("in"), 600);
+    setTimeout(() => { t.classList.remove("in"); setTimeout(() => t.remove(), 500); }, 5600);
+    const gone = new MutationObserver(() => { if (!o.isConnected) { t.remove(); gone.disconnect(); } });
+    gone.observe(document.body, { childList: true });
+  }
+
   const vidChip = (x) => `<span class="sx-vchip${watched()[x.title] ? " on" : ""}">${esc(x.title)}</span>`;
 
   // ---------------------------------------------------------------- 1 · sketch of the day
@@ -273,8 +285,7 @@
           <label><input type="checkbox" data-chk="why" ${cfg.why ? "checked" : ""}> Show the explanation after each question</label>
         </div>
         <div class="sx-row sx-go"><button class="btn" data-go ${n ? "" : "disabled"}>Start · ${Math.min(cfg.n, n)} question${Math.min(cfg.n, n) === 1 ? "" : "s"}</button><span class="sx-muted small">${n ? `${n} match these settings` : "No questions match — widen the lectures or settings"}</span></div>
-        ${rec().length ? `<p class="sx-muted small">Last game: ${esc(rec()[0].text)}</p>` : ""}
-        <p class="sx-tip"><strong>Pro tip</strong> An Anki remote works here and in every quiz and exam: up/down to choose, click to lock in, next to move on. Keys too: A–E, Enter.</p></div>`;
+        ${rec().length ? `<p class="sx-muted small">Last game: ${esc(rec()[0].text)}</p>` : ""}</div>`;
       const names = () => { cfg.names = [...host.querySelectorAll(".sx-names input")].map((i, k) => i.value.trim() || `Player ${k + 1}`); store.set("sk:h2h:names", cfg.names); save(); };
       host.querySelectorAll(".sx-names input").forEach((i) => (i.onchange = names));
       host.querySelector("[data-add]")?.addEventListener("click", () => { names(); cfg.names.push(`Player ${cfg.names.length + 1}`); save(); paint(); });
@@ -293,7 +304,7 @@
     function play(qs) {
       const P = cfg.names.length, names = cfg.names.slice();
       const o = document.createElement("div"); o.className = "qm sx-h2h"; o.setAttribute("role", "dialog"); o.setAttribute("aria-label", "Head-to-head");
-      document.body.append(o); document.documentElement.style.overflow = "hidden";
+      document.body.append(o); document.documentElement.style.overflow = "hidden"; remoteTip(o);
       let i = 0, turn = 0, picks = [], score = Array(P).fill(0), hi = 0, revealed = false, tick = null, left = 0, remote = false;  // remote: show the cursor only once keys/a ring are used
       const stop = () => { clearInterval(tick); tick = null; };
       const end = () => { stop(); document.removeEventListener("keydown", key, true); o.removeEventListener("wheel", wheel); o.remove(); document.documentElement.style.overflow = ""; };
@@ -365,6 +376,238 @@
         o.querySelector("[data-again]").onclick = async () => { end(); play(shuffle(pool(await bank())).slice(0, cfg.n)); };
       }
       draw();
+    }
+  })();
+
+  // ---------------------------------------------------------------- 7 · Jeopardy (one screen, teams take turns picking clues from the board)
+  // Customizable: teams, lectures, categories, board size, point scale, daily doubles, steals, timer, penalties, Final Jeopardy.
+  // Remote rings and keyboards: arrows move on the board, Enter opens a clue; in a clue up/down choose, Enter locks in.
+  (function jeopardy() {
+    const host = $("jeo-app");
+    if (!host) return;
+    const COLORS = ["var(--p0)", "var(--p3)", "var(--p1)", "var(--p4)"];
+    const lecs = CFG.lectures.slice().sort((x, y) => x.unit - y.unit || x.id.localeCompare(y.id));
+    const units = [...new Set(lecs.map((l) => l.unit))];
+    const DEF = { teams: ["Team 1", "Team 2"], lecs: lecs.filter((l) => l.unit === curUnit).map((l) => l.id), cats: [], ncat: 5, rows: 5, scale: 200,
+      source: "all", dd: 1, steal: true, minus: true, timer: 0, final: true, why: true };
+    const cfg = { ...DEF, ...store.get("sk:jeo:cfg", {}) };
+    cfg.lecs = cfg.lecs.filter((id) => lecs.some((l) => l.id === id)); if (!cfg.lecs.length) cfg.lecs = lecs.map((l) => l.id);
+    const save = () => store.set("sk:jeo:cfg", cfg);
+    const words = (t) => new Set(String(t || "").toLowerCase().match(/[a-z]{4,}/g) || []);
+    const seg = (name, opts) => `<div class="seg" role="group" aria-label="${name}">${opts.map(([v, t]) => `<button type="button" data-set="${name}" data-v="${v}" class="${String(cfg[name]) === String(v) ? "on" : ""}">${t}</button>`).join("")}</div>`;
+    const dot = (k) => `<i class="sx-dotp" style="background:${COLORS[k]}"></i>`;
+
+    // categories: practice-exam topics (short names); a lecture self-test topic joins the exam topic it shares most words with
+    function categories(all) {
+      const qs = all.filter((x) => cfg.lecs.includes(x.lid) && x.stem.length < 320 && (cfg.source === "all" || (cfg.source === "exam") === !!x.exam));
+      const examTopics = [...new Set(all.filter((x) => x.exam).map((x) => x.topic))];
+      const canon = (t) => { if (examTopics.includes(t)) return t; const w = words(t); let best = t, n = 0;
+        examTopics.forEach((e) => { const k = [...words(e)].filter((x) => w.has(x)).length; if (k > n) { n = k; best = e; } }); return best; };
+      const by = {};
+      qs.forEach((x) => (by[canon(x.topic)] ||= []).push(x));
+      return Object.entries(by).filter(([, list]) => list.length >= cfg.rows).sort((a, b) => a[0].localeCompare(b[0]));
+    }
+
+    async function paint() {
+      const all = await bank(), cats = categories(all), names = cats.map(([t]) => t);
+      cfg.cats = cfg.cats.filter((t) => names.includes(t));
+      const chosen = cfg.cats.length ? cfg.cats : null, ready = (chosen || names).length >= 2;
+      host.innerHTML = `<div class="sx-panel sx-h2h-set">
+        <div class="sx-k">Teams</div>
+        <div class="sx-names">${cfg.teams.map((nm, k) => `<label>${dot(k)}<input value="${esc(nm)}" maxlength="20" aria-label="Team ${k + 1} name">${k ? `<button type="button" class="sx-rm" data-rm="${k}" aria-label="Remove team ${k + 1}">✕</button>` : ""}</label>`).join("")}
+          ${cfg.teams.length < 4 ? `<button type="button" class="btn ghost small" data-add>+ Team</button>` : ""}</div>
+        <div class="sx-k">Lectures</div>
+        <div class="sx-pick">${units.map((u) => `<div><button type="button" class="sx-unitall" data-unit="${u}">Unit ${u}</button>${lecs.filter((l) => l.unit === u).map((l) => `<button type="button" class="sx-lec${cfg.lecs.includes(l.id) ? " on" : ""}" data-l="${l.id}"><span class="sx-tick"></span><span><strong>${l.id}</strong><small>${esc(l.title)}</small></span></button>`).join("")}</div>`).join("")}</div>
+        <div class="sx-k">Categories <small class="sx-muted">none picked = ${cfg.ncat} at random</small></div>
+        <div class="sx-chips">${cats.map(([t, list]) => `<button type="button" class="sx-chip${cfg.cats.includes(t) ? " on" : ""}" data-cat="${esc(t)}">${esc(t)} <small>${list.length}</small></button>`).join("") || `<span class="sx-muted small">No category has ${cfg.rows} questions with these lectures — add lectures or use fewer rows.</span>`}</div>
+        <div class="sx-grid">
+          ${chosen ? "" : `<div><div class="sx-k">Categories on the board</div>${seg("ncat", [[3, "3"], [4, "4"], [5, "5"], [6, "6"]])}</div>`}
+          <div><div class="sx-k">Clues per category</div>${seg("rows", [[3, "3"], [4, "4"], [5, "5"]])}</div>
+          <div><div class="sx-k">Points</div>${seg("scale", [[100, "100s"], [200, "200s"], [1, "1–5"]])}</div>
+          <div><div class="sx-k">From</div>${seg("source", [["all", "All"], ["self", "Self-tests"], ["exam", "Exams"]])}</div>
+          <div><div class="sx-k">Daily Doubles</div>${seg("dd", [[0, "None"], [1, "1"], [2, "2"]])}</div>
+          <div><div class="sx-k">Clue timer</div>${seg("timer", [[0, "Off"], [15, "15 s"], [30, "30 s"], [60, "60 s"]])}</div>
+        </div>
+        <div class="sx-checks">
+          <label><input type="checkbox" data-chk="steal" ${cfg.steal ? "checked" : ""}> Other teams can steal a missed clue</label>
+          <label><input type="checkbox" data-chk="minus" ${cfg.minus ? "checked" : ""}> Wrong answers lose the clue’s points</label>
+          <label><input type="checkbox" data-chk="final" ${cfg.final ? "checked" : ""}> Final Jeopardy (secret wagers)</label>
+          <label><input type="checkbox" data-chk="why" ${cfg.why ? "checked" : ""}> Show the explanation after each clue</label>
+        </div>
+        <div class="sx-row sx-go"><button class="btn" data-go ${ready ? "" : "disabled"}>Start Jeopardy</button><span class="sx-muted small">${ready ? `${chosen ? chosen.length : Math.min(cfg.ncat, names.length)} categories × ${cfg.rows} clues` : "Pick lectures with at least 2 categories"}</span></div></div>`;
+      const teams = () => { cfg.teams = [...host.querySelectorAll(".sx-names input")].map((i, k) => i.value.trim() || `Team ${k + 1}`); save(); };
+      host.querySelectorAll(".sx-names input").forEach((i) => (i.onchange = teams));
+      host.querySelector("[data-add]")?.addEventListener("click", () => { teams(); cfg.teams.push(`Team ${cfg.teams.length + 1}`); save(); paint(); });
+      host.querySelectorAll("[data-rm]").forEach((b) => (b.onclick = () => { teams(); cfg.teams.splice(+b.dataset.rm, 1); save(); paint(); }));
+      host.querySelectorAll("[data-l]").forEach((b) => (b.onclick = () => { const id = b.dataset.l; cfg.lecs = cfg.lecs.includes(id) ? cfg.lecs.filter((x) => x !== id) : [...cfg.lecs, id]; save(); paint(); }));
+      host.querySelectorAll("[data-unit]").forEach((b) => (b.onclick = () => {
+        const ids = lecs.filter((l) => l.unit === +b.dataset.unit).map((l) => l.id), allOn = ids.every((id) => cfg.lecs.includes(id));
+        cfg.lecs = allOn ? cfg.lecs.filter((x) => !ids.includes(x)) : [...new Set([...cfg.lecs, ...ids])]; save(); paint();
+      }));
+      host.querySelectorAll("[data-cat]").forEach((b) => (b.onclick = () => { const t = b.dataset.cat; cfg.cats = cfg.cats.includes(t) ? cfg.cats.filter((x) => x !== t) : [...cfg.cats, t].slice(-6); save(); paint(); }));
+      host.querySelectorAll("[data-set]").forEach((b) => (b.onclick = () => { const k = b.dataset.set; cfg[k] = typeof DEF[k] === "number" ? +b.dataset.v : b.dataset.v; save(); paint(); }));
+      host.querySelectorAll("[data-chk]").forEach((c) => (c.onchange = () => { cfg[c.dataset.chk] = c.checked; save(); }));
+      host.querySelector("[data-go]").onclick = () => {
+        teams();
+        const pickCats = (chosen ? cats.filter(([t]) => chosen.includes(t)) : shuffle(cats.slice()).slice(0, cfg.ncat)).sort((a, b) => a[0].localeCompare(b[0]));
+        const used = new Set();
+        const board = pickCats.map(([t, list]) => ({ title: t, clues: shuffle(list.slice()).filter((x) => !used.has(x.id) && used.add(x.id)).slice(0, cfg.rows).map((q, r) => ({ q, value: cfg.scale === 1 ? r + 1 : cfg.scale * (r + 1), done: false })) }));
+        const rest = shuffle(cats.flatMap(([, l]) => l).filter((x) => !used.has(x.id)));
+        play(board, rest[0] || null);
+      };
+    }
+    paint();
+
+    function play(board, finalQ) {
+      const T = cfg.teams.slice(), score = Array(T.length).fill(0), rows = cfg.rows;
+      const cells = board.flatMap((c, ci) => c.clues.map((cl, r) => ({ ci, r, cl })));
+      shuffle(cells.filter((x) => x.r >= 1)).slice(0, cfg.dd).forEach((x) => (x.cl.dd = true));  // never on the cheapest row
+      let ctrl = 0, cur = 0, tick = null, remote = false;
+      const o = document.createElement("div"); o.className = "qm sx-jeo"; o.setAttribute("role", "dialog"); o.setAttribute("aria-label", "Jeopardy");
+      document.body.append(o); document.documentElement.style.overflow = "hidden"; remoteTip(o);
+      const stop = () => { clearInterval(tick); tick = null; };
+      const end = () => { stop(); document.removeEventListener("keydown", key, true); o.remove(); document.documentElement.style.overflow = ""; };
+      const scores = () => `<div class="sx-score">${T.map((nm, k) => `<span class="${k === ctrl ? "ctrl" : ""}">${dot(k)}${esc(nm)} <b>${score[k]}</b></span>`).join("")}</div>`;
+      let mode = "board", clue = null;
+
+      function showBoard() {
+        mode = "board"; stop();
+        if (cells.every((x) => x.cl.done)) return cfg.final && finalQ && T.length ? finalRound() : win();
+        if (cells[cur]?.cl.done) cur = cells.findIndex((x) => !x.cl.done);
+        o.innerHTML = `<div class="qm-top"><button class="qm-x" data-x aria-label="Close">✕</button>${scores()}<span></span></div>
+          <div class="qm-scroll"><p class="sx-jeo-turn">${dot(ctrl)}<span><strong>${esc(T[ctrl])}</strong>, pick a clue</span></p>
+          <div class="sx-board" style="--cols:${board.length}">${board.map((c) => `<div class="sx-cat">${esc(c.title)}</div>`).join("")}
+          ${Array.from({ length: rows }, (_, r) => board.map((c, ci) => { const k = cells.findIndex((x) => x.ci === ci && x.r === r), cl = c.clues[r];
+            return `<button class="sx-tile${cl.done ? " done" : ""}${remote && k === cur ? " hi" : ""}" data-c="${k}" ${cl.done ? "disabled" : ""} style="--d:${(r * board.length + ci) * 18}ms">${cl.done ? "" : cl.value}</button>`; }).join("")).join("")}</div></div>`;
+        o.querySelector("[data-x]").onclick = end;
+        o.querySelectorAll("[data-c]").forEach((b) => (b.onclick = () => openClue(+b.dataset.c)));
+      }
+
+      // a clue: the team in control answers (a Daily Double asks for a wager first); misses can pass to the next team
+      function openClue(k) {
+        cur = k; const { cl, ci } = cells[k];
+        clue = { cl, cat: board[ci].title, tried: [], team: ctrl, wager: cl.value, hi: 0 };
+        if (cl.dd) return wagerScreen(`Daily Double · ${esc(T[ctrl])}`, Math.max(score[ctrl], cfg.scale === 1 ? rows : cfg.scale * rows), (w) => { clue.wager = w; ask(); });
+        ask();
+      }
+      function wagerScreen(title, max, done) {
+        mode = "wager"; stop();
+        o.innerHTML = `<div class="qm-top"><button class="qm-x" data-x aria-label="Close">✕</button>${scores()}<span></span></div>
+          <div class="qm-scroll"><div class="qm-card sx-dd"><div class="sx-k">${esc(clue?.cat || "Final Jeopardy")}</div><h2>${title}</h2>
+          <label class="sx-wager">Wager (0–${max})<input type="number" min="0" max="${max}" value="${Math.min(max, cfg.scale === 1 ? 2 : cfg.scale * 2)}" inputmode="numeric"></label>
+          <div class="sx-row"><button class="btn" data-ok>Lock wager</button></div></div></div>`;
+        o.querySelector("[data-x]").onclick = end;
+        const inp = o.querySelector("input"); setTimeout(() => inp.focus({ preventScroll: true }), 50);
+        const ok = () => done(Math.max(0, Math.min(max, Math.round(+inp.value || 0))));
+        o.querySelector("[data-ok]").onclick = ok; inp.onkeydown = (e) => { if (e.key === "Enter") { e.preventDefault(); ok(); } };
+      }
+      function ask(result) {
+        mode = result ? "result" : "clue"; stop();
+        const x = clue.cl.q, L = Object.keys(x.options);
+        o.innerHTML = `<div class="qm-top"><button class="qm-x" data-x aria-label="Close">✕</button>${scores()}<span class="sx-clock" data-clock></span></div>
+          <div class="qm-scroll"><div class="qm-card"><div class="sx-k">${esc(clue.cat)} · ${clue.cl.dd ? `Daily Double · ${clue.wager}` : clue.cl.value}</div>
+          ${result ? "" : `<div class="sx-turn">${dot(clue.team)}${esc(T[clue.team])}${clue.tried.length ? " · steal" : ""}</div>`}
+          <div class="qm-stem">${md(x.stem)}</div><div class="sx-opts">${L.map((k, j) => {
+            const tried = clue.tried.find((t) => t.k === k);
+            return `<button class="sx-opt${result && k === x.answer ? " right" : ""}${tried ? " wrong" : ""}${!result && remote && j === clue.hi ? " hi" : ""}" data-k="${k}" ${result || tried ? "disabled" : ""}><b>${k}</b><span>${md(x.options[k])}</span>${tried ? dot(tried.team) : ""}${result && result.team >= 0 && k === x.answer ? dot(result.team) : ""}</button>`;
+          }).join("")}</div>
+          ${result ? `<p class="sx-jeo-res">${result.team >= 0 ? `${dot(result.team)}${esc(T[result.team])} +${result.pts}` : "Nobody got it."}</p>${cfg.why ? `<p class="sx-why">${md(x.why || "")}</p>` : ""}<div class="sx-row"><button class="btn" data-next>Back to the board →</button></div>`
+            : `<div class="sx-row"><button class="btn ghost small" data-pass>${cfg.steal && !clue.cl.dd && clue.tried.length + 1 < T.length ? "Pass to the next team" : "Pass"}</button></div>`}</div></div>`;
+        o.querySelector("[data-x]").onclick = end;
+        if (result) { o.querySelector("[data-next]").onclick = () => { clue.cl.done = true; showBoard(); }; return; }
+        o.querySelectorAll("[data-k]:not([disabled])").forEach((b) => (b.onclick = () => answer(b.dataset.k)));
+        o.querySelector("[data-pass]").onclick = () => answer(null);
+        if (cfg.timer) { let left = cfg.timer; const c = o.querySelector("[data-clock]"); c.textContent = `${left}s`;
+          tick = setInterval(() => { left--; c.textContent = `${left}s`; c.classList.toggle("warn", left <= 5); if (left <= 0) answer(null); }, 1000); }
+      }
+      function answer(k) {
+        stop();
+        const x = clue.cl.q, pts = clue.cl.dd ? clue.wager : clue.cl.value, team = clue.team;
+        if (k === x.answer) { score[team] += pts; ctrl = team; return ask({ team, pts }); }
+        if (k && cfg.minus) score[team] -= pts;
+        clue.tried.push({ k, team });  // a pass counts as a try, so a steal never comes back around
+        // steal: the next team that hasn't tried yet (not on a Daily Double)
+        const order = T.map((_, i) => (team + 1 + i) % T.length).filter((t) => t !== clue.team && !clue.tried.some((x) => x.team === t) && t !== ctrl);
+        if (cfg.steal && !clue.cl.dd && order.length) { clue.team = order[0]; clue.hi = 0; return ask(); }
+        ask({ team: -1, pts: 0 });
+      }
+
+      function finalRound() {
+        mode = "final"; stop();
+        const wagers = [], picks = [];
+        const x = finalQ, L = Object.keys(x.options), cat = x.topic || "Pharmacology";
+        const nextWager = (t) => {
+          if (t >= T.length) return pickTurn(0);
+          clue = { cat };
+          wagerScreen(`Final Jeopardy · ${esc(T[t])}`, Math.max(0, score[t]), (w) => { wagers[t] = w; nextWager(t + 1); });
+          o.querySelector(".sx-dd .sx-k").insertAdjacentHTML("afterend", `<p class="sx-muted small">Category: ${esc(cat)}. Other teams look away.</p>`);
+        };
+        const pickTurn = (t) => {
+          if (t >= T.length) return reveal();
+          mode = "final"; let hi = 0;
+          o.innerHTML = `<div class="qm-top"><button class="qm-x" data-x aria-label="Close">✕</button>${scores()}<span></span></div>
+            <div class="qm-scroll"><div class="qm-card"><div class="sx-k">Final Jeopardy · ${esc(cat)}</div><div class="sx-turn">${dot(t)}${esc(T[t])} · others look away</div>
+            <div class="qm-stem">${md(x.stem)}</div><div class="sx-opts">${L.map((k) => `<button class="sx-opt" data-k="${k}"><b>${k}</b><span>${md(x.options[k])}</span></button>`).join("")}</div></div></div>`;
+          o.querySelector("[data-x]").onclick = end;
+          o.querySelectorAll("[data-k]").forEach((b) => (b.onclick = () => { picks[t] = b.dataset.k; pickTurn(t + 1); }));
+          finalPick = { L, set: (k) => { picks[t] = k; pickTurn(t + 1); }, hi };
+        };
+        const reveal = () => {
+          finalPick = null;
+          T.forEach((_, t) => (score[t] += picks[t] === x.answer ? wagers[t] : -wagers[t]));
+          o.innerHTML = `<div class="qm-top"><button class="qm-x" data-x aria-label="Close">✕</button>${scores()}<span></span></div>
+            <div class="qm-scroll"><div class="qm-card"><div class="sx-k">Final Jeopardy · ${esc(cat)}</div><div class="qm-stem">${md(x.stem)}</div>
+            <div class="sx-opts">${L.map((k) => `<button class="sx-opt${k === x.answer ? " right" : ""}${k !== x.answer && picks.includes(k) ? " wrong" : ""}" disabled><b>${k}</b><span>${md(x.options[k])}</span>${T.map((_, t) => (picks[t] === k ? dot(t) : "")).join("")}</button>`).join("")}</div>
+            <p class="sx-jeo-res">${T.map((nm, t) => `${dot(t)}${esc(nm)} ${picks[t] === x.answer ? "+" : "−"}${wagers[t]}`).join(" · ")}</p>${cfg.why ? `<p class="sx-why">${md(x.why || "")}</p>` : ""}
+            <div class="sx-row"><button class="btn" data-next>See the winner →</button></div></div></div>`;
+          o.querySelector("[data-x]").onclick = end; o.querySelector("[data-next]").onclick = win;
+        };
+        nextWager(0);
+      }
+      let finalPick = null;
+
+      function win() {
+        mode = "end"; stop();
+        const best = Math.max(...score), lead = T.map((_, k) => k).filter((k) => score[k] === best), order = T.map((_, k) => k).sort((a, b) => score[b] - score[a]);
+        store.set("sk:jeo:log", [{ text: lead.length > 1 ? `${lead.map((k) => T[k]).join(" and ")} tied at ${best}` : `${T[lead[0]]} won with ${best}`, date: today }, ...store.get("sk:jeo:log", [])].slice(0, 20));
+        o.innerHTML = `<div class="qm-scroll"><div class="qm-card sx-win"><div class="sx-k">Jeopardy · ${board.length} categories</div><h2>${lead.length > 1 ? "It's a tie." : `<i class="sx-crown" style="background:${COLORS[lead[0]]}"></i>${esc(T[lead[0]])} wins.`}</h2>
+          <div class="sx-final">${order.map((k) => `<span>${dot(k)}${esc(T[k])}<b>${score[k]}</b></span>`).join("")}</div>
+          <div class="sx-row"><button class="btn" data-again>New board</button><button class="btn ghost" data-x>Done</button></div></div></div>`;
+        o.querySelector("[data-x]").onclick = end;
+        o.querySelector("[data-again]").onclick = () => { end(); host.querySelector("[data-go]")?.click(); };
+      }
+
+      function key(e) {
+        if (e.metaKey || e.ctrlKey || e.altKey || !o.isConnected) return;
+        if (e.target.tagName === "INPUT") return;
+        const k = e.key, up = k.toUpperCase(), cols = board.length;
+        let ok = true;
+        if (k === "Escape") { end(); return; }
+        if (mode === "board") {
+          const move = (d) => { remote = true; let n = cur; for (let s = 0; s < cells.length; s++) { n = (n + d + cells.length) % cells.length; if (!cells[n].cl.done) break; } cur = n; showBoard(); };
+          // cells are column-major; arrows move like a grid
+          const at = (ci, r) => cells.findIndex((x) => x.ci === ci && x.r === r), c0 = cells[cur];
+          if (k === "ArrowRight") move(rows); else if (k === "ArrowLeft") move(-rows);
+          else if (k === "ArrowDown" || k === "PageDown") { if (c0.r + 1 < rows && !cells[at(c0.ci, c0.r + 1)].cl.done) { remote = true; cur = at(c0.ci, c0.r + 1); showBoard(); } else move(1); }
+          else if (k === "ArrowUp" || k === "PageUp") { if (c0.r > 0 && !cells[at(c0.ci, c0.r - 1)].cl.done) { remote = true; cur = at(c0.ci, c0.r - 1); showBoard(); } else move(-1); }
+          else if (k === "Enter" || k === " ") openClue(cur);
+          else ok = false;
+          void cols;
+        } else if (mode === "clue") {
+          const L = Object.keys(clue.cl.q.options).filter((x) => !clue.tried.some((t) => t.k === x)), all = Object.keys(clue.cl.q.options);
+          const step = (d) => { remote = true; let h = clue.hi; do { h = (h + d + all.length) % all.length; } while (!L.includes(all[h])); clue.hi = h; o.querySelectorAll("[data-k]").forEach((b, j) => b.classList.toggle("hi", j === h)); };
+          if (k === "ArrowDown" || k === "PageDown") step(1); else if (k === "ArrowUp" || k === "PageUp") step(-1);
+          else if (k === "Enter" || k === " ") { if (L.includes(all[clue.hi])) answer(all[clue.hi]); }
+          else if (L.includes(up) && up.length === 1) answer(up);
+          else if ("12345".includes(k) && k.length === 1 && L.includes(all[+k - 1])) answer(all[+k - 1]);
+          else ok = false;
+        } else if (mode === "result" || mode === "end") { if (["Enter", " ", "ArrowRight", "PageDown"].includes(k)) o.querySelector("[data-next], [data-again]")?.click(); else ok = false; }
+        else if (mode === "final" && finalPick) { if (finalPick.L.includes(up) && up.length === 1) finalPick.set(up); else if ("12345".includes(k) && k.length === 1 && finalPick.L[+k - 1]) finalPick.set(finalPick.L[+k - 1]); else ok = false; }
+        else ok = false;
+        if (ok) { e.preventDefault(); e.stopPropagation(); }
+      }
+      document.addEventListener("keydown", key, true);
+      showBoard();
     }
   })();
 })();
