@@ -175,7 +175,12 @@ def main(lec, work_dir, out_dir, deck_path, nlm_dir, threshold, guide_ids=()):
     missing, uncited, skipped, tb_unused = [], [], [], []
     units = source_units(slides, textbook, guide)
     skips = c.get("audit_skip", [])
+    # policy: faculty names, degrees and titles on the title slide are never published
+    ident = re.compile(r"Ph\.?D|M\.?S\.|M\.?D\b|Pharm\.?D|PA-C|Course Director|Professor|Instructor|@", re.I)
     for u in units:
+        if u["kind"] == "slide" and u["ref"] == "S1" and ident.search(u["text"]):
+            skipped.append({**u, "reason": "faculty identifier (site policy: no school or instructor identifiers)"})
+            continue
         sk = next((k for k in skips if k["ref"] == u["ref"] and norm(u["text"]).startswith(norm(k["starts_with"]))), None)
         if sk:
             skipped.append({**u, "reason": sk["reason"]})
@@ -222,10 +227,25 @@ def main(lec, work_dir, out_dir, deck_path, nlm_dir, threshold, guide_ids=()):
         if not cls or n < 4 or o.get("thin_note"):
             thin.append(f"{o['id']}: {o['text']} — {len(cls)} class(es), {n} facts" + (f" ({o['thin_note']})" if o.get("thin_note") else ""))
 
-    passed = not (missing or not_in_deck or not_in_nlm or layout)
+    # assigned reading is testable: every textbook section heading must be taught (or skipped with a reason)
+    reading_missing, reading_skipped = [], []
+    if textbook:
+        import importlib.util
+        from reading_cov import uncovered
+        skips_r = []
+        tb_mod = work / f"textbook_{lec}.py"
+        if tb_mod.exists():
+            spec = importlib.util.spec_from_file_location(f"tb_{lec}", tb_mod)
+            mod = importlib.util.module_from_spec(spec)
+            spec.loader.exec_module(mod)
+            skips_r = getattr(mod, "READING_SKIP", [])
+        reading_missing, reading_skipped = uncovered(textbook, " ".join(i["text"] for i in items), skips_r)
+
+    passed = not (missing or not_in_deck or not_in_nlm or layout or reading_missing or q_issues)
     result = {"lecture": lec, "passed": passed, "units_checked": len(units), "missing": missing, "uncited": uncited,
               "emphasis_not_bold": emph_missing, "skipped": skipped, "not_in_deck": not_in_deck, "not_in_notebooklm": not_in_nlm,
-              "layout_problems": layout, "question_issues": q_issues, "question_stats": q_stats, "thin_objectives": thin, "textbook_unused": len(tb_unused)}
+              "layout_problems": layout, "question_issues": q_issues, "question_stats": q_stats, "thin_objectives": thin, "textbook_unused": len(tb_unused),
+              "reading_missing": reading_missing, "reading_skipped": reading_skipped}
     (work / "audit.json").write_text(json.dumps(result, indent=1, ensure_ascii=False))
 
     def lst(rows, fmt):
@@ -249,6 +269,10 @@ Checked {len(units)} source lines ({len(slides)} slides; {len(guide)} study-guid
 ## Left out on purpose (no study content)
 {lst(skipped, lambda u: f"- {u['ref']}: {u['text'][:110]} — _{u['reason']}_")}
 
+## Assigned-reading sections not taught in the guide
+{lst(reading_missing, lambda h: f"- p. {h['page']}: {h['heading']}")}
+{lst(reading_skipped, lambda h: f"- (skipped) p. {h['page']}: {h['heading']} — _{h['reason']}_") if reading_skipped else ''}
+
 ## Emphasized on slides but not bold in deck
 {lst(emph_missing, lambda e: f"- {e['ref']}: \"{e['text']}\" ({', '.join(e['marks'])})")}
 
@@ -268,7 +292,8 @@ Checked {len(units)} source lines ({len(slides)} slides; {len(guide)} study-guid
 """
     (out / f"{lec}_audit.md").write_text(report)
     print(f"  audit: {'PASS' if passed else 'NEEDS FIXES'} — {len(missing)} missing, {len(uncited)} citation checks, "
-          f"{len(emph_missing)} emphasis, {len(not_in_deck)} not in deck, {len(layout)} layout, {len(q_issues)} question notes")
+          f"{len(emph_missing)} emphasis, {len(not_in_deck)} not in deck, {len(layout)} layout, {len(q_issues)} question notes, "
+          f"{len(reading_missing)} reading sections untaught")
     return 0 if passed else 2
 
 

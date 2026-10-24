@@ -32,6 +32,8 @@ Learning objectives covered: SO1, IO1.2, IO1.4
 - Phase II — Conjugation: glucuronidation, sulfation, acetylation, methylation, glutathione conjugation. (S5)
 - **Enzyme inhibition:** a drug slows a CYP enzyme, raising the blood level of any drug that CYP normally clears. (S6; SG U1-R10)
 - **Enzyme induction:** a drug increases CYP enzyme production, lowering the blood level (and effect) of drugs that CYP clears. (S6; SG U1-R10)
+- [TB] **Microsomal mixed-function oxidase system:** the Phase I machinery in the smooth endoplasmic reticulum; needs cytochrome P450, NADPH-P450 reductase, NADPH and molecular oxygen. (p. 59)
+- [TB] **Cytochrome P450** is named for the 450-nm light absorption of its carbon-monoxide complex. It has very low substrate specificity: high lipid solubility is the one thing its substrates share. (p. 59; p. 60)
 
 ### Drug Metabolism & CYP450 Interactions — How it works
 - Why metabolize? To inactivate an active drug, making it easier to excrete. (S4)
@@ -44,6 +46,10 @@ Learning objectives covered: SO1, IO1.2, IO1.4
 - Inhibition slows clearance (substrate level rises); induction speeds clearance (substrate level falls). (S6; SG U1-R10)
 - [TB] CYP3A4 alone metabolizes over 50% of the prescription drugs metabolized by the liver. (p. 60)
 - [TB] Acetaminophen is mostly conjugated (glucuronide/sulfate); in overdose glutathione is depleted and the toxic metabolite (NAPQI) injures the liver — **N-acetylcysteine** given within 8–16 hours protects against fulminant hepatotoxicity. (p. 66)
+- [TB] Share of liver P450: CYP3A4 about 30%, CYP2C9 about 20%, CYP1A2 about 15%, CYP2E1 about 10%, CYP2D6 about 5%. CYP3A4 handles over 50% of liver-metabolized prescription drugs. (p. 60)
+- [TB] Inducers act through receptors that switch on CYP genes: **AhR** (tobacco smoke, charcoal-broiled meat, cruciferous vegetables, omeprazole → CYP1A) and **PXR** (rifampin, St. John’s wort, dexamethasone, phenobarbital → CYP3A). (p. 60)
+- [TB] **Commensal gut microbiota** metabolize drugs too: they reduce digoxin, so antibiotics such as erythromycin or tetracycline can double digoxin levels; bacterial β-glucuronidases free glucuronidated drugs for reabsorption (enterohepatic recycling). (p. 71)
+- [TB] An inducer can speed up its own metabolism, producing **pharmacokinetic tolerance**: the same dose works less over time. (p. 72)
 
 ### Drug Metabolism & CYP450 Interactions — Clinical relevance
 - CYP450 interactions are one of the highest-yield concepts in all of pharmacology — nearly every major drug class has at least one clinically important CYP interaction. (S6 (notes))
@@ -53,12 +59,18 @@ Learning objectives covered: SO1, IO1.2, IO1.4
 - Enzyme induction speeds substrate clearance, lowering its level and effect — the opposite of inhibition. (S48)
 - [TB] Liver disease (e.g., cirrhosis, hepatitis) slows metabolism of some drugs enough that ordinary doses can cause coma. (p. 73)
 - [TB] Severe ADRs contribute to about 100,000 US deaths a year and about 7% of hospital admissions. (p. 71)
+- [TB] Smoking induces CYP1A enzymes and can change the metabolism of other drugs. (p. 60)
+- [TB] **Diet and environmental factors** change drug metabolism: charcoal-broiled food and cruciferous vegetables induce CYP1A, grapefruit juice inhibits CYP3A, smokers and pesticide-exposed workers clear some drugs faster, which complicates dosing of narrow-TI drugs. (p. 71)
+- [TB] Stopping an inducer is as risky as starting one: when a sedative inducer is stopped, warfarin metabolism slows, levels rise and bleeding can follow. (p. 72)
+- [TB] Pharmacogenomic testing is still rarely used, although severe ADRs cause about 100,000 US deaths a year and about 7% of hospital admissions. (p. 71)
 
 ### Drug Metabolism & CYP450 Interactions — Drugs named as examples
 - NAPQI (from acetaminophen) is the textbook example of a toxic metabolite produced by normal Phase I metabolism — previewing the acetaminophen toxicity lecture. (S4 (notes))
 - CYP3A4 — the enzyme in the lecture's inhibitor/substrate example. (S6)
 - [TB] **Inducers:** rifampin, carbamazepine, phenytoin, barbiturates, St. John's wort; **inhibitors:** ketoconazole, clarithromycin/erythromycin, ritonavir, grapefruit juice. (p. 63; p. 64)
 - [TB] St. John's wort induces CYP3A4 and speeds metabolism of oral contraceptives, warfarin, cyclosporine, and others. (p. 72)
+- [TB] CYP3A4 inhibitors (ketoconazole, erythromycin, grapefruit juice) with terfenadine caused fatal torsades de pointes, and terfenadine was withdrawn. (p. 72)
+- [TB] Allopurinol inhibits xanthine oxidase, so the mercaptopurine dose must be reduced when both are given. (p. 72)
 
 ### Drug Metabolism & CYP450 Interactions — Exam traps
 - Inhibitor → substrate level UP (toxicity); inducer → substrate level DOWN (therapeutic failure). Don't swap them. (S7 (notes); S9)
@@ -84,6 +96,13 @@ Learning objectives covered: SO1, IO1.2, IO1.4
 | Substrate drug's blood level | **Rises** (Figure 6: 240%) | **Falls** (Figure 6: 42%) |
 | Clinical risk | **Toxicity** | **Therapeutic failure** |
 | Worst case | Narrow-TI substrate | Not covered in materials |
+
+### Comparison: How inducers switch on CYP enzymes (textbook Ch. 4) ([TB] p. 60)
+| Receptor | Inducers | Enzyme induced |
+|---|---|---|
+| AhR | Tobacco smoke, charcoal-broiled meat, cruciferous vegetables, omeprazole | CYP1A |
+| PXR | Rifampin, St. John’s wort (hyperforin), dexamethasone, phenobarbital | CYP3A |
+| CAR | Phenobarbital-class inducers | CYP2B6, CYP2C9 |
 
 ### Drug Metabolism & CYP450 Interactions — Memory hooks
 - Why it happens: Why does an inhibitor cause toxicity? The CYP enzyme that normally clears the substrate is slowed, so the substrate can no longer be cleared normally and accumulates. (S6; S9)
@@ -166,6 +185,9 @@ Learning objectives covered: SO3, IO1.1, IO1.3
 - **Clearance = the volume of plasma from which drug is completely removed per unit time.** (S27)
 - [TB] **t½ = 0.7 × Vd / CL** — half-life rises when Vd rises or clearance falls. (p. 56)
 - [TB] **Loading dose = Vd × target concentration** (e.g., theophylline: 35 L × 10 mg/L = 350 mg for a 70-kg adult). (p. 52)
+- [TB] **Extraction ratio (ER):** hepatic clearance divided by hepatic blood flow (about 90 L/h). Oral bioavailability ≈ fraction absorbed × (1 − ER); morphine’s ER of 0.67 predicts about 33% oral bioavailability. (p. 49)
+- [TB] **Target concentration approach** (the rational way to design a dosage regimen): pick the concentration that gives the desired effect, then individualize the dose from the patient’s clearance and volume of distribution. (p. 51)
+- [TB] **Zero-order absorption** runs at a constant rate (gastric emptying, controlled-release forms); **first-order** absorption is proportional to the amount left, nearly complete after four absorption half-lives. (p. 49)
 
 ### PK Calculations: Half-Life, Steady State & Clearance — How it works
 - PK calculations = the math PAs actually use at the bedside. (S18)
@@ -182,6 +204,9 @@ Learning objectives covered: SO3, IO1.1, IO1.3
 - [TB] During regular dosing: 50% of steady state after 1 half-life, 75% after 2, and over 90% after 4 — the textbook's "four half-lives" rule of thumb. (p. 47)
 - [TB] If the dosing interval is shorter than four half-lives, accumulation will be detectable. (p. 48)
 - [TB] **Capacity-limited (saturable) elimination:** clearance falls as concentration rises — important for phenytoin, ethanol, and aspirin. (p. 47)
+- [TB] **Maintenance dosing rate = clearance × target concentration** (divide by F for oral). The average steady-state level depends only on clearance; the dosing interval changes only the peaks and troughs. (p. 51)
+- [TB] Effects do not always follow plasma levels: enalapril (half-life about 4 hours) still works once daily because its peak is far above its C₅₀; delays come from distribution, slow receptor release (digoxin) or slow turnover of a body substance (warfarin and clotting factors). (p. 50)
+- [TB] Half-life can change without clearance changing: diazepam’s half-life lengthens with age because its volume of distribution grows, not because metabolism slows. (p. 54)
 
 ### PK Calculations: Half-Life, Steady State & Clearance — Clinical relevance
 - Case: significant CKD + a medication primarily eliminated unchanged by the kidney. **What happens to the drug's concentration and half-life, and would you adjust the dose, the dosing interval, or both?** (S28)
@@ -189,9 +214,16 @@ Learning objectives covered: SO3, IO1.1, IO1.3
 - The logic chain: clearance ↓ → half-life ↑ → time to steady state ↑ → accumulation risk ↑ if the regimen is not adjusted. (S28 (notes))
 - Reduced renal clearance raises both drug concentration and half-life. (S48)
 - A loading dose reaches the therapeutic target immediately instead of waiting ~4–5 half-lives; it does not change the maintenance dose or remove the need for monitoring. (S26)
+- [TB] Highly extracted drugs (morphine, isoniazid, propranolol, lidocaine, verapamil) vary widely in bioavailability between patients, and much more drug gets through in cirrhosis with portosystemic shunting. Lidocaine is never given orally because of toxic metabolites. (p. 49)
+- [TB] **Schedule-dependent effects:** the same average level can carry different toxicity; gentamicin is more nephrotoxic as a constant infusion than as intermittent doses, because high peaks saturate its uptake into the renal cortex. (p. 50)
+- [TB] Give IV loading doses slowly (over an hour, not seconds): a fast bolus can overshoot into toxicity before the drug distributes, e.g., phenytoin. (p. 52)
+- [TB] Timing drug levels: digoxin at least 6 hours after the dose, lithium just before the next dose; for steady-state estimates sample mid-interval after at least three half-lives. (p. 55)
+- [TB] In obesity, dose drugs that stay out of fat (gentamicin, digoxin) on fat-free mass; edema and ascites enlarge gentamicin’s volume of distribution. (p. 53; p. 55)
+- [TB] Changes in plasma protein binding rarely matter clinically: the body simply eliminates the extra unbound drug. (p. 55)
 
 ### PK Calculations: Half-Life, Steady State & Clearance — Drugs named as examples
 - Not covered in materials — this section uses illustrative drugs ("a drug with a half-life of 6 hours"). (S19)
+- [TB] Theophylline worked example: clearance 2.8 L/h × target 10 mg/L = 28 mg/h IV; loading dose = 35 L × 10 mg/L = 350 mg. (p. 52)
 
 ### PK Calculations: Half-Life, Steady State & Clearance — Exam traps
 - After 3 half-lives, 12.5% REMAINS (87.5% eliminated) — read whether the question asks remaining or eliminated. (S19; S22)
@@ -225,6 +257,13 @@ Learning objectives covered: SO3, IO1.1, IO1.3
 | Based on | **Vd** | **Clearance** |
 | On Figure 8 | Starts at target immediately | Sawtooth climb over ~4–5 half-lives |
 
+### Comparison: Dosing from the target concentration (textbook Ch. 3) ([TB] p. 51; p. 52)
+| Goal | Formula | Depends on |
+|---|---|---|
+| Keep the level steady | Maintenance dosing rate = CL × target concentration (÷ F if oral) | Clearance |
+| Reach the target now | Loading dose = Vd × target concentration | Volume of distribution |
+| Match the peak at steady state | Loading dose = maintenance dose × accumulation factor | Dosing interval and half-life |
+
 ### PK Calculations: Half-Life, Steady State & Clearance — Memory hooks
 - Why it happens: Why does CKD prolong half-life? Half-life depends on clearance (with Vd) — less renal clearance means the concentration takes longer to fall by 50%, so the drug accumulates. (S19; S27; S28 (notes))
 - Why it happens: Why does a loading dose skip the wait? It is a larger first dose that reaches the therapeutic concentration right away instead of building up over ~4–5 half-lives. (S23; S26)
@@ -244,6 +283,8 @@ Learning objectives covered: SO4, IO1.3, IO1.4
 ### Pharmacogenomics — Key definitions
 - **Pharmacogenomics studies how genetic variation changes an individual's response to a drug.** (S32)
 - Why the same dose does not work the same way in everyone. (S31)
+- [TB] **Allele:** one of the alternative forms of a gene at the same locus. **Haplotype:** a series of alleles inherited together on one chromosome. **Nonsynonymous SNP:** a single-base change that alters an amino acid. (p. 78)
+- [TB] **PM, IM, EM, UM:** poor, intermediate, extensive (normal) and ultrarapid metabolizer. (p. 78)
 
 ### Pharmacogenomics — How it works
 - Genetic variation can alter drug metabolism (e.g., CYP enzyme activity). (S32)
@@ -256,6 +297,9 @@ Learning objectives covered: SO4, IO1.3, IO1.4
 - [TB] Clopidogrel: about 85% of a dose is inactivated by esterases; CYP2C19 activates the rest. CYP2C19 poor/intermediate metabolizers → prasugrel or ticagrelor. (p. 81; p. 82)
 - [TB] TPMT intermediate activity: start thiopurines at 30–70% of the target dose; deficient: use a drastically reduced dose or an alternative. (p. 83)
 - [TB] Warfarin dose varies up to 20-fold between patients; CYP2C9 and VKORC1 genotypes explain much of it. (p. 90)
+- [TB] **G6PD deficiency** (X-linked, more than 400 million people): G6PD is the red cell’s only source of NADPH, so deficient cells hemolyze under oxidative stress such as infection, fava beans or certain drugs. (p. 86)
+- [TB] NUDT15 variants, as well as TPMT, cause thiopurine intolerance. (p. 86)
+- [TB] **OCT1 (organic cation transporter 1)** moves basic drugs such as morphine, tramadol, sumatriptan and ondansetron into the liver; people with two reduced-function alleles have about twofold higher levels. (p. 87)
 
 ### Pharmacogenomics — Clinical relevance
 - CYP2D6 variation alters metabolism of many antidepressants and opioids (e.g., codeine activation). (S33; SG U1-R12)
@@ -269,6 +313,8 @@ Learning objectives covered: SO4, IO1.3, IO1.4
 - [TB] CYP2D6 metabolizes up to one-quarter of clinically used drugs (β blockers, antidepressants, antipsychotics, opioids). (p. 78)
 - [TB] CYP2D6 ultrarapid metabolizers: up to one-third of Ethiopians and Saudi Arabians; CYP2C19 poor metabolizers: 3–5% of Caucasians, 18–23% of Japanese. (p. 67)
 - [TB] **HLA-B*57:01** → abacavir hypersensitivity; **G6PD deficiency** → rasburicase contraindicated; slow NAT2 acetylators (~50% in the USA) → isoniazid toxicity. (p. 70; p. 83; p. 88)
+- [TB] **SLCO1B1 (OATP1B1)** reduced-function variants raise simvastatin exposure (221% higher AUC in homozygotes) and myopathy risk; CPIC advises a lower dose or another statin. (p. 87)
+- [TB] **ABCG2 (BCRP)** variant, common in East Asians (allele frequency about 30%), raises rosuvastatin levels; the label suggests half the dose. (p. 87)
 
 ### Pharmacogenomics — Exam traps
 - HLA-B*5801 before allopurinol = severe hypersensitivity risk — not absorption, not taste, and not irrelevant to drug selection. (S35-36)

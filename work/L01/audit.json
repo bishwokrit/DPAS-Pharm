@@ -1,15 +1,8 @@
 {
  "lecture": "L01",
- "passed": false,
+ "passed": true,
  "units_checked": 1875,
- "missing": [
-  {
-   "ref": "S1",
-   "text": "Diane S. Allen-Gipson, Ph.D., M.S., Course Director",
-   "kind": "slide",
-   "score": 0.0
-  }
- ],
+ "missing": [],
  "uncited": [
   {
    "ref": "S1",
@@ -24,6 +17,12 @@
  ],
  "emphasis_not_bold": [],
  "skipped": [
+  {
+   "ref": "S1",
+   "text": "Diane S. Allen-Gipson, Ph.D., M.S., Course Director",
+   "kind": "slide",
+   "reason": "faculty identifier (site policy: no school or instructor identifiers)"
+  },
   {
    "ref": "S3",
    "text": "Point students to the required and recommended texts for Unit 1 before diving into content.",
@@ -90,23 +89,36 @@
  "layout_problems": [],
  "question_issues": [],
  "question_stats": {
-  "count": 22,
+  "count": 25,
   "letters": {
-   "A": 4,
-   "B": 4,
+   "A": 5,
+   "B": 5,
    "C": 5,
    "D": 5,
-   "E": 4
+   "E": 5
   },
-  "vignette": 10,
-  "mechanism": 12
+  "vignette": 11,
+  "mechanism": 14
  },
  "thin_objectives": [
-  "IO1.1: Define and describe fundamental pharmacologic concepts, including pharmacokinetics, pharmacodynamics, drug-receptor interactions, dose-response relationships, therapeutic index, half-life, and steady state. — 3 class(es), 91 facts (Half-life and steady state are taught in Session 2 (L02))",
-  "IO1.2: Describe the processes of drug absorption, distribution, metabolism, and excretion and factors that influence these processes. — 1 class(es), 36 facts (This session: absorption + distribution; metabolism + excretion detail in Session 2 (L02))",
-  "IO1.3: Explain how patient-specific factors, including age, pregnancy, renal and hepatic function, and pharmacogenetic variation, may affect medication response. — 1 class(es), 36 facts (Barely covered this session; pharmacogenomics and renal dosing in Session 2 (L02))",
-  "IO1.4: Identify common types and mechanisms of adverse drug reactions, drug-drug interactions, and drug-disease interactions. — 2 class(es), 61 facts (Only ADR definition + adverse-event reporting this session; drug interactions in Session 2 (L02))",
-  "IO1.5: Interpret common components of medication orders and prescriptions, including drug name, dose, route, frequency, and duration. — 2 class(es), 62 facts (Only drug names (generic vs brand) and routes this session)"
+  "IO1.1: Define and describe fundamental pharmacologic concepts, including pharmacokinetics, pharmacodynamics, drug-receptor interactions, dose-response relationships, therapeutic index, half-life, and steady state. — 3 class(es), 114 facts (Half-life and steady state are taught in Session 2 (L02))",
+  "IO1.2: Describe the processes of drug absorption, distribution, metabolism, and excretion and factors that influence these processes. — 1 class(es), 44 facts (This session: absorption + distribution; metabolism + excretion detail in Session 2 (L02))",
+  "IO1.3: Explain how patient-specific factors, including age, pregnancy, renal and hepatic function, and pharmacogenetic variation, may affect medication response. — 1 class(es), 44 facts (Barely covered this session; pharmacogenomics and renal dosing in Session 2 (L02))",
+  "IO1.4: Identify common types and mechanisms of adverse drug reactions, drug-drug interactions, and drug-disease interactions. — 2 class(es), 79 facts (Only ADR definition + adverse-event reporting this session; drug interactions in Session 2 (L02))",
+  "IO1.5: Interpret common components of medication orders and prescriptions, including drug name, dose, route, frequency, and duration. — 2 class(es), 79 facts (Only drug names (generic vs brand) and routes this session)"
  ],
- "textbook_unused": 1607
+ "textbook_unused": 1578,
+ "reading_missing": [],
+ "reading_skipped": [
+  {
+   "page": "51",
+   "heading": "APPROACH TO DESIGNING A RATIONAL DOSAGE REGIMEN",
+   "reason": "Ch. 3 dosing is taught in L02 (PK Calculations)"
+  },
+  {
+   "page": "51",
+   "heading": "DOSAGE REGIMEN",
+   "reason": "Taught in L02 (PK Calculations)"
+  }
+ ]
 }

@@ -107,6 +107,16 @@
      {
       "text": "**Enzyme induction:** a drug increases CYP enzyme production, lowering the blood level (and effect) of drugs that CYP clears.",
       "src": "S6; SG U1-R10"
+     },
+     {
+      "text": "**Microsomal mixed-function oxidase system:** the Phase I machinery in the smooth endoplasmic reticulum; needs cytochrome P450, NADPH-P450 reductase, NADPH and molecular oxygen.",
+      "src": "p. 59",
+      "tb": true
+     },
+     {
+      "text": "**Cytochrome P450** is named for the 450-nm light absorption of its carbon-monoxide complex. It has very low substrate specificity: high lipid solubility is the one thing its substrates share.",
+      "src": "p. 59; p. 60",
+      "tb": true
      }
     ],
     "how": [
@@ -151,6 +161,26 @@
       "text": "Acetaminophen is mostly conjugated (glucuronide/sulfate); in overdose glutathione is depleted and the toxic metabolite (NAPQI) injures the liver — **N-acetylcysteine** given within 8–16 hours protects against fulminant hepatotoxicity.",
       "src": "p. 66",
       "tb": true
+     },
+     {
+      "text": "Share of liver P450: CYP3A4 about 30%, CYP2C9 about 20%, CYP1A2 about 15%, CYP2E1 about 10%, CYP2D6 about 5%. CYP3A4 handles over 50% of liver-metabolized prescription drugs.",
+      "src": "p. 60",
+      "tb": true
+     },
+     {
+      "text": "Inducers act through receptors that switch on CYP genes: **AhR** (tobacco smoke, charcoal-broiled meat, cruciferous vegetables, omeprazole → CYP1A) and **PXR** (rifampin, St. John’s wort, dexamethasone, phenobarbital → CYP3A).",
+      "src": "p. 60",
+      "tb": true
+     },
+     {
+      "text": "**Commensal gut microbiota** metabolize drugs too: they reduce digoxin, so antibiotics such as erythromycin or tetracycline can double digoxin levels; bacterial β-glucuronidases free glucuronidated drugs for reabsorption (enterohepatic recycling).",
+      "src": "p. 71",
+      "tb": true
+     },
+     {
+      "text": "An inducer can speed up its own metabolism, producing **pharmacokinetic tolerance**: the same dose works less over time.",
+      "src": "p. 72",
+      "tb": true
      }
     ],
     "clinical": [
@@ -183,6 +213,26 @@
       "text": "Severe ADRs contribute to about 100,000 US deaths a year and about 7% of hospital admissions.",
       "src": "p. 71",
       "tb": true
+     },
+     {
+      "text": "Smoking induces CYP1A enzymes and can change the metabolism of other drugs.",
+      "src": "p. 60",
+      "tb": true
+     },
+     {
+      "text": "**Diet and environmental factors** change drug metabolism: charcoal-broiled food and cruciferous vegetables induce CYP1A, grapefruit juice inhibits CYP3A, smokers and pesticide-exposed workers clear some drugs faster, which complicates dosing of narrow-TI drugs.",
+      "src": "p. 71",
+      "tb": true
+     },
+     {
+      "text": "Stopping an inducer is as risky as starting one: when a sedative inducer is stopped, warfarin metabolism slows, levels rise and bleeding can follow.",
+      "src": "p. 72",
+      "tb": true
+     },
+     {
+      "text": "Pharmacogenomic testing is still rarely used, although severe ADRs cause about 100,000 US deaths a year and about 7% of hospital admissions.",
+      "src": "p. 71",
+      "tb": true
      }
     ],
     "examples": [
@@ -201,6 +251,16 @@
      },
      {
       "text": "St. John's wort induces CYP3A4 and speeds metabolism of oral contraceptives, warfarin, cyclosporine, and others.",
+      "src": "p. 72",
+      "tb": true
+     },
+     {
+      "text": "CYP3A4 inhibitors (ketoconazole, erythromycin, grapefruit juice) with terfenadine caused fatal torsades de pointes, and terfenadine was withdrawn.",
+      "src": "p. 72",
+      "tb": true
+     },
+     {
+      "text": "Allopurinol inhibits xanthine oxidase, so the mercaptopurine dose must be reduced when both are given.",
       "src": "p. 72",
       "tb": true
      }
@@ -295,6 +355,33 @@
       ]
      ],
      "src": "S6; S7 (notes); S8-9; S11"
+    },
+    {
+     "title": "How inducers switch on CYP enzymes (textbook Ch. 4)",
+     "tb": true,
+     "src": "p. 60",
+     "columns": [
+      "Receptor",
+      "Inducers",
+      "Enzyme induced"
+     ],
+     "rows": [
+      [
+       "AhR",
+       "Tobacco smoke, charcoal-broiled meat, cruciferous vegetables, omeprazole",
+       "CYP1A"
+      ],
+      [
+       "PXR",
+       "Rifampin, St. John’s wort (hyperforin), dexamethasone, phenobarbital",
+       "CYP3A"
+      ],
+      [
+       "CAR",
+       "Phenobarbital-class inducers",
+       "CYP2B6, CYP2C9"
+      ]
+     ]
     }
    ],
    "hooks": [
@@ -465,6 +552,32 @@
       }
      ],
      "src": "p. 66",
+     "tb": true
+    },
+    {
+     "kind": "vignette",
+     "stem": "A heavy smoker on a CYP1A2-metabolized drug quits smoking abruptly. What should the PA anticipate?",
+     "correct": "Drug levels may rise as CYP1A induction fades",
+     "why_correct": "Tobacco smoke induces CYP1A through AhR; when the inducer stops, metabolism slows and levels can rise (p. 60; p. 72).",
+     "distractors": [
+      {
+       "text": "Drug levels will fall because metabolism speeds up",
+       "why": "Quitting removes induction, so metabolism slows (p. 60)."
+      },
+      {
+       "text": "No change, since smoking affects only the lungs",
+       "why": "Smoke chemicals induce liver CYP1A enzymes (p. 60)."
+      },
+      {
+       "text": "Renal clearance will double right away",
+       "why": "The effect is on hepatic metabolism, not renal clearance (p. 60)."
+      },
+      {
+       "text": "The drug becomes a prodrug that needs activation",
+       "why": "Quitting does not change how the drug is activated (p. 60)."
+      }
+     ],
+     "src": "p. 60; p. 72",
      "tb": true
     }
    ],
@@ -845,6 +958,21 @@
       "text": "**Loading dose = Vd × target concentration** (e.g., theophylline: 35 L × 10 mg/L = 350 mg for a 70-kg adult).",
       "src": "p. 52",
       "tb": true
+     },
+     {
+      "text": "**Extraction ratio (ER):** hepatic clearance divided by hepatic blood flow (about 90 L/h). Oral bioavailability ≈ fraction absorbed × (1 − ER); morphine’s ER of 0.67 predicts about 33% oral bioavailability.",
+      "src": "p. 49",
+      "tb": true
+     },
+     {
+      "text": "**Target concentration approach** (the rational way to design a dosage regimen): pick the concentration that gives the desired effect, then individualize the dose from the patient’s clearance and volume of distribution.",
+      "src": "p. 51",
+      "tb": true
+     },
+     {
+      "text": "**Zero-order absorption** runs at a constant rate (gastric emptying, controlled-release forms); **first-order** absorption is proportional to the amount left, nearly complete after four absorption half-lives.",
+      "src": "p. 49",
+      "tb": true
      }
     ],
     "how": [
@@ -906,6 +1034,21 @@
       "text": "**Capacity-limited (saturable) elimination:** clearance falls as concentration rises — important for phenytoin, ethanol, and aspirin.",
       "src": "p. 47",
       "tb": true
+     },
+     {
+      "text": "**Maintenance dosing rate = clearance × target concentration** (divide by F for oral). The average steady-state level depends only on clearance; the dosing interval changes only the peaks and troughs.",
+      "src": "p. 51",
+      "tb": true
+     },
+     {
+      "text": "Effects do not always follow plasma levels: enalapril (half-life about 4 hours) still works once daily because its peak is far above its C₅₀; delays come from distribution, slow receptor release (digoxin) or slow turnover of a body substance (warfarin and clotting factors).",
+      "src": "p. 50",
+      "tb": true
+     },
+     {
+      "text": "Half-life can change without clearance changing: diazepam’s half-life lengthens with age because its volume of distribution grows, not because metabolism slows.",
+      "src": "p. 54",
+      "tb": true
      }
     ],
     "clinical": [
@@ -928,12 +1071,47 @@
      {
       "text": "A loading dose reaches the therapeutic target immediately instead of waiting ~4–5 half-lives; it does not change the maintenance dose or remove the need for monitoring.",
       "src": "S26"
+     },
+     {
+      "text": "Highly extracted drugs (morphine, isoniazid, propranolol, lidocaine, verapamil) vary widely in bioavailability between patients, and much more drug gets through in cirrhosis with portosystemic shunting. Lidocaine is never given orally because of toxic metabolites.",
+      "src": "p. 49",
+      "tb": true
+     },
+     {
+      "text": "**Schedule-dependent effects:** the same average level can carry different toxicity; gentamicin is more nephrotoxic as a constant infusion than as intermittent doses, because high peaks saturate its uptake into the renal cortex.",
+      "src": "p. 50",
+      "tb": true
+     },
+     {
+      "text": "Give IV loading doses slowly (over an hour, not seconds): a fast bolus can overshoot into toxicity before the drug distributes, e.g., phenytoin.",
+      "src": "p. 52",
+      "tb": true
+     },
+     {
+      "text": "Timing drug levels: digoxin at least 6 hours after the dose, lithium just before the next dose; for steady-state estimates sample mid-interval after at least three half-lives.",
+      "src": "p. 55",
+      "tb": true
+     },
+     {
+      "text": "In obesity, dose drugs that stay out of fat (gentamicin, digoxin) on fat-free mass; edema and ascites enlarge gentamicin’s volume of distribution.",
+      "src": "p. 53; p. 55",
+      "tb": true
+     },
+     {
+      "text": "Changes in plasma protein binding rarely matter clinically: the body simply eliminates the extra unbound drug.",
+      "src": "p. 55",
+      "tb": true
      }
     ],
     "examples": [
      {
       "text": "Not covered in materials — this section uses illustrative drugs (\"a drug with a half-life of 6 hours\").",
       "src": "S19"
+     },
+     {
+      "text": "Theophylline worked example: clearance 2.8 L/h × target 10 mg/L = 28 mg/h IV; loading dose = 35 L × 10 mg/L = 350 mg.",
+      "src": "p. 52",
+      "tb": true
      }
     ],
     "traps": [
@@ -1055,6 +1233,33 @@
       ]
      ],
      "src": "S23; S23 (notes); S24 (notes)"
+    },
+    {
+     "title": "Dosing from the target concentration (textbook Ch. 3)",
+     "tb": true,
+     "src": "p. 51; p. 52",
+     "columns": [
+      "Goal",
+      "Formula",
+      "Depends on"
+     ],
+     "rows": [
+      [
+       "Keep the level steady",
+       "Maintenance dosing rate = CL × target concentration (÷ F if oral)",
+       "Clearance"
+      ],
+      [
+       "Reach the target now",
+       "Loading dose = Vd × target concentration",
+       "Volume of distribution"
+      ],
+      [
+       "Match the peak at steady state",
+       "Loading dose = maintenance dose × accumulation factor",
+       "Dosing interval and half-life"
+      ]
+     ]
     }
    ],
    "hooks": [
@@ -1281,6 +1486,32 @@
       }
      ],
      "src": "S23 (notes)"
+    },
+    {
+     "kind": "vignette",
+     "stem": "A drug is given every 8 hours instead of every 24 hours, keeping the same total daily dose. What happens to its average steady-state concentration?",
+     "correct": "It stays the same; only peaks and troughs change",
+     "why_correct": "The average steady-state level depends only on dosing rate and clearance; the interval changes only the swings (p. 51).",
+     "distractors": [
+      {
+       "text": "It triples because doses come more often",
+       "why": "Total dose per day is unchanged, so the average is unchanged (p. 51)."
+      },
+      {
+       "text": "It falls because each dose is smaller",
+       "why": "Smaller, more frequent doses narrow the swings, not the average (p. 51)."
+      },
+      {
+       "text": "It doubles because half-life gets longer",
+       "why": "Dosing interval does not change half-life (p. 51)."
+      },
+      {
+       "text": "It depends on Vd, which now changes",
+       "why": "Vd sets the loading dose, not the average level (p. 51; p. 52)."
+      }
+     ],
+     "src": "p. 51",
+     "tb": true
     }
    ],
    "flows": [
@@ -1331,6 +1562,16 @@
      {
       "text": "Why the same dose does not work the same way in everyone.",
       "src": "S31"
+     },
+     {
+      "text": "**Allele:** one of the alternative forms of a gene at the same locus. **Haplotype:** a series of alleles inherited together on one chromosome. **Nonsynonymous SNP:** a single-base change that alters an amino acid.",
+      "src": "p. 78",
+      "tb": true
+     },
+     {
+      "text": "**PM, IM, EM, UM:** poor, intermediate, extensive (normal) and ultrarapid metabolizer.",
+      "src": "p. 78",
+      "tb": true
      }
     ],
     "how": [
@@ -1377,6 +1618,21 @@
       "text": "Warfarin dose varies up to 20-fold between patients; CYP2C9 and VKORC1 genotypes explain much of it.",
       "src": "p. 90",
       "tb": true
+     },
+     {
+      "text": "**G6PD deficiency** (X-linked, more than 400 million people): G6PD is the red cell’s only source of NADPH, so deficient cells hemolyze under oxidative stress such as infection, fava beans or certain drugs.",
+      "src": "p. 86",
+      "tb": true
+     },
+     {
+      "text": "NUDT15 variants, as well as TPMT, cause thiopurine intolerance.",
+      "src": "p. 86",
+      "tb": true
+     },
+     {
+      "text": "**OCT1 (organic cation transporter 1)** moves basic drugs such as morphine, tramadol, sumatriptan and ondansetron into the liver; people with two reduced-function alleles have about twofold higher levels.",
+      "src": "p. 87",
+      "tb": true
      }
     ],
     "clinical": [
@@ -1419,6 +1675,16 @@
      {
       "text": "**HLA-B*57:01** → abacavir hypersensitivity; **G6PD deficiency** → rasburicase contraindicated; slow NAT2 acetylators (~50% in the USA) → isoniazid toxicity.",
       "src": "p. 70; p. 83; p. 88",
+      "tb": true
+     },
+     {
+      "text": "**SLCO1B1 (OATP1B1)** reduced-function variants raise simvastatin exposure (221% higher AUC in homozygotes) and myopathy risk; CPIC advises a lower dose or another statin.",
+      "src": "p. 87",
+      "tb": true
+     },
+     {
+      "text": "**ABCG2 (BCRP)** variant, common in East Asians (allele frequency about 30%), raises rosuvastatin levels; the label suggests half the dose.",
+      "src": "p. 87",
       "tb": true
      }
     ],
@@ -2309,6 +2575,48 @@
     "prompt": "HLA-B*57:01",
     "answer": "Abacavir hypersensitivity",
     "src": "p. 88",
+    "tb": true
+   },
+   {
+    "prompt": "Extraction ratio",
+    "answer": "Hepatic CL ÷ hepatic blood flow; F ≈ f × (1 − ER)",
+    "src": "p. 49",
+    "tb": true
+   },
+   {
+    "prompt": "Maintenance dosing rate",
+    "answer": "CL × target concentration (÷ F orally)",
+    "src": "p. 51",
+    "tb": true
+   },
+   {
+    "prompt": "Average steady-state level",
+    "answer": "Set by clearance alone",
+    "src": "p. 51",
+    "tb": true
+   },
+   {
+    "prompt": "CYP450 machinery",
+    "answer": "P450 + reductase + NADPH + O₂ (smooth ER)",
+    "src": "p. 59",
+    "tb": true
+   },
+   {
+    "prompt": "Smoking",
+    "answer": "Induces CYP1A (AhR)",
+    "src": "p. 60",
+    "tb": true
+   },
+   {
+    "prompt": "Digoxin level timing",
+    "answer": "At least 6 h after the dose",
+    "src": "p. 55",
+    "tb": true
+   },
+   {
+    "prompt": "SLCO1B1 variant",
+    "answer": "Simvastatin myopathy: lower dose or another statin",
+    "src": "p. 87",
     "tb": true
    }
   ],

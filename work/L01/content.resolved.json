@@ -145,6 +145,11 @@
       "text": "**Poisons** are drugs with almost exclusively harmful effects — but \"the dose makes the poison\" (Paracelsus): any substance can harm at the wrong dose.",
       "src": "p. 3",
       "tb": true
+     },
+     {
+      "text": "**Xenobiotic:** a chemical the body does not make itself. **Toxins** are poisons of biologic origin (plants, animals), unlike inorganic poisons such as lead and arsenic.",
+      "src": "p. 3",
+      "tb": true
      }
     ],
     "how": [
@@ -167,6 +172,36 @@
      {
       "text": "This map covers the whole lecture: PK and PD are the two biggest buckets, and nearly everything else (toxicology, pharmacogenomics, therapeutics) sits on top of them.",
       "src": "S6 (notes)"
+     },
+     {
+      "text": "**The physical nature of drugs:** to reach and bind its receptor a drug needs the right size, charge, shape and atomic makeup.",
+      "src": "p. 3",
+      "tb": true
+     },
+     {
+      "text": "Most drugs have a molecular weight between about 100 and 1000: below ~100 a molecule is too simple to fit only one receptor; above ~1000 it cannot diffuse readily between body compartments.",
+      "src": "p. 4",
+      "tb": true
+     },
+     {
+      "text": "Very large protein drugs must be given straight into the compartment where they act, e.g., alteplase (MW 59,050) by IV or intra-arterial infusion.",
+      "src": "p. 4",
+      "tb": true
+     },
+     {
+      "text": "Drugs bind receptors by three kinds of bonds: **covalent** (very strong, often irreversible), **electrostatic** (the most common: ionic, hydrogen, van der Waals) and **hydrophobic** (weak; lipid-soluble drugs).",
+      "src": "p. 4",
+      "tb": true
+     },
+     {
+      "text": "**Chirality:** more than half of useful drugs exist as mirror-image enantiomers; one is usually much more potent, and enzymes may metabolize the two at different rates.",
+      "src": "p. 4; p. 5",
+      "tb": true
+     },
+     {
+      "text": "**Rational drug design** predicts a drug’s structure from the 3-D structure of its receptor; most older drugs came from random screening or from modifying known drugs.",
+      "src": "p. 5",
+      "tb": true
      }
     ],
     "clinical": [
@@ -193,6 +228,16 @@
      {
       "text": "More than half of prescriptions in the USA are for generic drugs.",
       "src": "p. 18",
+      "tb": true
+     },
+     {
+      "text": "Weak-bonding drugs are usually **more selective** than covalent ones because weak bonds need a precise fit. Aspirin’s covalent bond to platelet cyclooxygenase lasts days, until new platelets are made.",
+      "src": "p. 4",
+      "tb": true
+     },
+     {
+      "text": "Fewer than half of chiral drugs are sold as the pure active isomer, so most patients receive doses in which 50% is less active or inactive.",
+      "src": "p. 5",
       "tb": true
      }
     ],
@@ -347,27 +392,27 @@
      "src": "S7; S8-9",
      "from_slides": "S8-9",
      "number": 1,
-     "answer": "A",
+     "answer": "D",
      "options": {
       "A": {
-       "text": "Brand names can obscure a shared generic ingredient, risking unintentional double-dosing",
-       "why": "Different brand-name products (Tylenol, many combination cold/flu products) can share the same active generic ingredient; prescribing and counseling by generic name avoids hiding duplicate therapy (S9).",
-       "correct": true
-      },
-      "B": {
        "text": "Pharmacologic effect and therapeutic effect are simply two words for one thing",
        "why": "They are not synonyms — a pharmacologic effect may not be therapeutic (S5 notes); it also doesn't explain this case.",
        "correct": false
       },
-      "C": {
+      "B": {
        "text": "Brand names are identical worldwide, so the two products must contain different drugs",
        "why": "Brand names change between countries, and one generic drug may have several brand names (S7).",
        "correct": false
       },
-      "D": {
+      "C": {
        "text": "Chemical names are standardized internationally, so this mix-up could not happen",
        "why": "Chemical names describe exact molecular structure and are rarely used clinically (S7); they do not prevent brand-name confusion.",
        "correct": false
+      },
+      "D": {
+       "text": "Brand names can obscure a shared generic ingredient, risking unintentional double-dosing",
+       "why": "Different brand-name products (Tylenol, many combination cold/flu products) can share the same active generic ingredient; prescribing and counseling by generic name avoids hiding duplicate therapy (S9).",
+       "correct": true
       },
       "E": {
        "text": "Generic names vary by manufacturer, which caused the confusion here",
@@ -401,7 +446,7 @@
      ],
      "src": "S5",
      "number": 2,
-     "answer": "C",
+     "answer": "B",
      "options": {
       "A": {
        "text": "Toxicity, because any harmful drug response counts as toxicity",
@@ -409,14 +454,14 @@
        "correct": false
       },
       "B": {
-       "text": "A therapeutic effect, because the drug was taken exactly as prescribed",
-       "why": "A therapeutic effect is the intended, beneficial effect (S5); this response was unintended and harmful.",
-       "correct": false
-      },
-      "C": {
        "text": "An adverse drug reaction, because it occurred at a normal therapeutic dose",
        "why": "An ADR is an unintended and harmful response occurring at normal therapeutic doses (S5).",
        "correct": true
+      },
+      "C": {
+       "text": "A therapeutic effect, because the drug was taken exactly as prescribed",
+       "why": "A therapeutic effect is the intended, beneficial effect (S5); this response was unintended and harmful.",
+       "correct": false
       },
       "D": {
        "text": "A pharmacologic effect only, because it was a measurable biological change",
@@ -485,7 +530,13 @@
      }
     }
    ],
-   "flows": []
+   "flows": [],
+   "deeper": {
+    "chapter": 1,
+    "first": 3,
+    "last": 5,
+    "why": "Drug size, bonds, chirality, and rational drug design"
+   }
   },
   {
    "name": "Drug Development & Regulation",
@@ -516,6 +567,16 @@
      {
       "text": "**Adverse-event reporting:** ongoing, voluntary and mandatory reporting systems (e.g., FDA MedWatch) that catch safety signals after approval.",
       "src": "S14"
+     },
+     {
+      "text": "**Single-blind:** subjects do not know whether they receive drug or placebo. **Double-blind:** neither subjects nor evaluators know; a third party holds the code. **Crossover:** each subject receives test drug, placebo and standard treatment in varied order.",
+      "src": "p. 14; p. 15",
+      "tb": true
+     },
+     {
+      "text": "**Institutional review board (IRB):** the committee at each trial site that must approve the scientific and ethical plan; participants must give informed consent.",
+      "src": "p. 17",
+      "tb": true
      }
     ],
     "how": [
@@ -587,6 +648,26 @@
       "text": "Marketing requires a **New Drug Application (NDA)** after Phase III; human testing starts only after an **IND** (Investigational New Drug) application.",
       "src": "p. 12; p. 17",
       "tb": true
+     },
+     {
+      "text": "**Drug screening** profiles a candidate’s activity and selectivity at molecular, cellular, organ and whole-animal levels, including early CYP450 studies to predict metabolism problems. The best candidate is the **lead compound**.",
+      "src": "p. 13",
+      "tb": true
+     },
+     {
+      "text": "Every trial has to control three confounders: the disease’s variable natural history, other diseases and risk factors (including other drugs and foods), and subject or observer bias.",
+      "src": "p. 14",
+      "tb": true
+     },
+     {
+      "text": "Strength of evidence rises from case reports (cannot prove cause and effect) to cohort and case-control studies (add weight, still cannot prove causation) to large **randomized controlled trials**, the gold standard, because randomization spreads known and unknown confounders evenly.",
+      "src": "p. 15",
+      "tb": true
+     },
+     {
+      "text": "Preclinical testing cannot catch everything: rare adverse effects are unlikely to appear, and animal results do not predict every human toxicity.",
+      "src": "p. 14",
+      "tb": true
      }
     ],
     "clinical": [
@@ -619,6 +700,21 @@
      {
       "text": "Adverse events that are both **serious and unexpected** must be reported to the FDA within 15 days; clinicians can report through MedWatch.",
       "src": "p. 18; p. 19",
+      "tb": true
+     },
+     {
+      "text": "Unpublished negative trials (missing data) make new drugs look better than they are.",
+      "src": "p. 15",
+      "tb": true
+     },
+     {
+      "text": "Dietary supplements and botanicals are regulated as food under DSHEA (1994), not reviewed as drugs, although their chemicals differ from manufactured drugs mainly in having more impurities.",
+      "src": "p. 3; p. 16",
+      "tb": true
+     },
+     {
+      "text": "Conflicts of interest the textbook flags: industry fees funding FDA review, advisers with company grants, trials that compare a new drug only to placebo, free samples that later cost patients more, and pay-to-delay deals that hold back generics.",
+      "src": "p. 18",
       "tb": true
      }
     ],
@@ -719,6 +815,57 @@
       ]
      ],
      "src": "S14; S14 (notes); SG U1-R4"
+    },
+    {
+     "title": "Major US drug laws (textbook Table 1–6)",
+     "tb": true,
+     "src": "p. 16",
+     "columns": [
+      "Law",
+      "What it did"
+     ],
+     "rows": [
+      [
+       "Pure Food and Drug Act (1906)",
+       "Banned mislabeled and adulterated drugs"
+      ],
+      [
+       "Food, Drug, and Cosmetic Act (1938)",
+       "New drugs must be safe (not yet proven effective); followed sulfanilamide deaths"
+      ],
+      [
+       "Durham-Humphrey Act (1952)",
+       "FDA decides which drugs need a prescription"
+      ],
+      [
+       "Kefauver-Harris Amendments (1962)",
+       "Proof of efficacy as well as safety; adverse-reaction reporting (after thalidomide)"
+      ],
+      [
+       "Comprehensive Drug Abuse Prevention and Control Act (1970)",
+       "Drug schedules and controls for habit-forming drugs"
+      ],
+      [
+       "Orphan Drug Amendment (1983)",
+       "Incentives for diseases with fewer than 200,000 US patients"
+      ],
+      [
+       "Drug Price Competition and Patent Restoration Act (1984)",
+       "Abbreviated applications for generics; bioequivalence data required"
+      ],
+      [
+       "Dietary Supplement Health and Education Act (1994)",
+       "Supplements treated as food; no full FDA drug review"
+      ],
+      [
+       "FDA Amendments Act (2007)",
+       "Post-approval studies and active safety surveillance"
+      ],
+      [
+       "Biologics Price Competition and Innovation Act (2009)",
+       "Abbreviated pathway for biosimilars"
+      ]
+     ]
     }
    ],
    "hooks": [
@@ -783,7 +930,7 @@
      "src": "S13; S16-17",
      "from_slides": "S16-17",
      "number": 4,
-     "answer": "D",
+     "answer": "B",
      "options": {
       "A": {
        "text": "Phase I",
@@ -791,19 +938,19 @@
        "correct": false
       },
       "B": {
+       "text": "Phase III",
+       "why": "Phase III trials enroll hundreds to thousands of patients, often at multiple sites, to confirm efficacy and monitor safety at scale before approval (S17).",
+       "correct": true
+      },
+      "C": {
        "text": "Phase II",
        "why": "Phase II is preliminary efficacy in a few hundred patients (S17).",
        "correct": false
       },
-      "C": {
+      "D": {
        "text": "FDA review",
        "why": "FDA review comes after clinical trials are complete, before approval (S12).",
        "correct": false
-      },
-      "D": {
-       "text": "Phase III",
-       "why": "Phase III trials enroll hundreds to thousands of patients, often at multiple sites, to confirm efficacy and monitor safety at scale before approval (S17).",
-       "correct": true
       },
       "E": {
        "text": "Phase IV",
@@ -837,7 +984,7 @@
      ],
      "src": "S14; S14 (notes)",
      "number": 5,
-     "answer": "B",
+     "answer": "E",
      "options": {
       "A": {
        "text": "A narrow therapeutic index that appeared after approval",
@@ -845,24 +992,24 @@
        "correct": false
       },
       "B": {
-       "text": "Real-world effectiveness falling below the drug's trial efficacy",
-       "why": "Efficacy is performance under ideal trial conditions; effectiveness is performance in everyday practice with real-world adherence and comorbidities (S14).",
-       "correct": true
-      },
-      "C": {
        "text": "Lower potency than was measured during trial dose-finding",
        "why": "Potency is the dose needed for an effect and matters for dosing, not for whether patients improve (S34).",
        "correct": false
       },
-      "D": {
+      "C": {
        "text": "Extensive first-pass metabolism in the clinic's patients",
        "why": "First-pass effect lowers oral bioavailability (S50-51); it doesn't explain adherence- and comorbidity-driven differences.",
        "correct": false
       },
-      "E": {
+      "D": {
        "text": "Competitive antagonism of the drug by the comorbid conditions",
        "why": "Competitive antagonism is a drug competing at the same receptor site (S22), not a disease effect.",
        "correct": false
+      },
+      "E": {
+       "text": "Real-world effectiveness falling below the drug's trial efficacy",
+       "why": "Efficacy is performance under ideal trial conditions; effectiveness is performance in everyday practice with real-world adherence and comorbidities (S14).",
+       "correct": true
       }
      }
     },
@@ -891,7 +1038,7 @@
      ],
      "src": "S12 (notes); S13; S14",
      "number": 6,
-     "answer": "C",
+     "answer": "D",
      "options": {
       "A": {
        "text": "Adverse-event reporting systems accept only voluntary reports",
@@ -904,14 +1051,14 @@
        "correct": false
       },
       "C": {
-       "text": "Trial populations were too small and too short to detect so rare an event",
-       "why": "Rare adverse effects are often first detected in Phase IV because trial populations are too small and too short in duration to catch 1-in-10,000 events (S12 notes).",
-       "correct": true
-      },
-      "D": {
        "text": "Phase I trials enrolled patients who already had the target condition",
        "why": "Phase I uses a small group of healthy volunteers (S13).",
        "correct": false
+      },
+      "D": {
+       "text": "Trial populations were too small and too short to detect so rare an event",
+       "why": "Rare adverse effects are often first detected in Phase IV because trial populations are too small and too short in duration to catch 1-in-10,000 events (S12 notes).",
+       "correct": true
       },
       "E": {
        "text": "Phase III trials are not designed to monitor adverse effects",
@@ -946,17 +1093,17 @@
      "src": "p. 17",
      "tb": true,
      "number": 7,
-     "answer": "B",
+     "answer": "A",
      "options": {
       "A": {
-       "text": "Phase IV",
-       "why": "Phase IV is postmarketing surveillance after approval (p. 17).",
-       "correct": false
-      },
-      "B": {
        "text": "Phase II",
        "why": "Phase II has the highest failure rate; only about 25% of drugs move on to Phase III (p. 17).",
        "correct": true
+      },
+      "B": {
+       "text": "Phase IV",
+       "why": "Phase IV is postmarketing surveillance after approval (p. 17).",
+       "correct": false
       },
       "C": {
        "text": "FDA review",
@@ -1069,6 +1216,21 @@
      {
       "text": "Irreversible antagonist — permanently inactivates the receptor until new receptor is synthesized.",
       "src": "S22; SG U1-M"
+     },
+     {
+      "text": "**Orphan receptors:** receptors whose natural ligand is still unknown, and so possible targets for future drugs.",
+      "src": "p. 22",
+      "tb": true
+     },
+     {
+      "text": "**Kd:** the free-drug concentration that gives half-maximal binding; a low Kd means high affinity. EC₅₀ and Kd can match but need not (spare receptors make EC₅₀ lower).",
+      "src": "p. 23",
+      "tb": true
+     },
+     {
+      "text": "**Coupling:** the chain of steps that turns receptor occupancy into a response.",
+      "src": "p. 23",
+      "tb": true
      }
     ],
     "how": [
@@ -1136,6 +1298,46 @@
       "text": "Agonist-induced **desensitization** (tachyphylaxis) and downregulation reduce response with continued exposure.",
       "src": "p. 39",
       "tb": true
+     },
+     {
+      "text": "Drug targets beyond signaling receptors: **enzymes** (methotrexate on dihydrofolate reductase, statins on HMG-CoA reductase), **transport proteins** (digitalis on Na⁺/K⁺-ATPase, antidepressants on serotonin and norepinephrine transporters, cocaine on the dopamine transporter) and **structural proteins** (colchicine on tubulin).",
+      "src": "p. 22",
+      "tb": true
+     },
+     {
+      "text": "**Intracellular receptors** (corticosteroids, sex steroids, vitamin D, thyroid hormone) change gene transcription, so effects begin only after 30 minutes to several hours and outlast the drug by hours or days.",
+      "src": "p. 28",
+      "tb": true
+     },
+     {
+      "text": "**Receptor tyrosine kinases** (insulin, EGF, PDGF): ligand binding makes two receptors pair up (dimerize) and phosphorylate tyrosines on themselves and on downstream proteins.",
+      "src": "p. 28",
+      "tb": true
+     },
+     {
+      "text": "**Cytokine receptors** (growth hormone, erythropoietin, interferons) borrow a separate tyrosine kinase, **JAK**, which activates **STAT** proteins that carry the signal into the nucleus.",
+      "src": "p. 29; p. 30",
+      "tb": true
+     },
+     {
+      "text": "**Ligand-gated ion channels** (nicotinic acetylcholine, GABA, glutamate, serotonin) act within milliseconds; **voltage-gated channels** are targets too: verapamil blocks calcium channels, local anesthetics block sodium channels.",
+      "src": "p. 30; p. 31",
+      "tb": true
+     },
+     {
+      "text": "**G protein–coupled receptors** (seven-transmembrane, the largest family): the agonist makes the G protein swap GDP for GTP, the G protein changes an effector enzyme or channel, and the effector changes a second messenger.",
+      "src": "p. 31; p. 32",
+      "tb": true
+     },
+     {
+      "text": "**cAMP** acts through cAMP-dependent protein kinase and is broken down by phosphodiesterases; **cGMP** relaxes vascular smooth muscle and is raised by atrial natriuretic peptide and by nitric oxide (the route of nitroglycerin and nitroprusside).",
+      "src": "p. 34; p. 35",
+      "tb": true
+     },
+     {
+      "text": "Continued agonist exposure **desensitizes** G protein receptors: a receptor kinase phosphorylates the receptor and β-arrestin binds it; endocytosis of receptors can lead to downregulation.",
+      "src": "p. 34",
+      "tb": true
      }
     ],
     "clinical": [
@@ -1167,6 +1369,21 @@
      {
       "text": "Propranolol markedly slows the heart rate in pheochromocytoma (high catecholamines) but not the resting rate of a trained marathon runner.",
       "src": "p. 39",
+      "tb": true
+     },
+     {
+      "text": "Glucocorticoids will not relieve an acute asthma attack within minutes, because gene-acting drugs need time to make new proteins.",
+      "src": "p. 28",
+      "tb": true
+     },
+     {
+      "text": "Tyrosine kinase signaling is blocked in cancer by antibodies on the outside of the receptor (trastuzumab, cetuximab) or small molecules inside the cell (gefitinib, erlotinib).",
+      "src": "p. 29",
+      "tb": true
+     },
+     {
+      "text": "Phosphodiesterase inhibitors prolong second messengers: milrinone (cardiac PDE3, cAMP) and sildenafil (cGMP).",
+      "src": "p. 34; p. 35",
       "tb": true
      }
     ],
@@ -1298,6 +1515,81 @@
       ]
      ],
      "src": "S20; S20 (notes)"
+    },
+    {
+     "title": "Five ways a signal crosses the membrane (textbook Ch. 2)",
+     "tb": true,
+     "src": "p. 28-32",
+     "columns": [
+      "Mechanism",
+      "Examples",
+      "How it signals",
+      "Clinical point"
+     ],
+     "rows": [
+      [
+       "Intracellular receptor",
+       "Corticosteroids, sex steroids, vitamin D, thyroid hormone",
+       "Lipid-soluble ligand enters the cell; receptor changes gene transcription",
+       "Effects lag 30 min to hours and persist after the drug is gone"
+      ],
+      [
+       "Receptor tyrosine kinase",
+       "Insulin, EGF, PDGF",
+       "Receptors dimerize and phosphorylate tyrosines",
+       "Blocked in cancer (trastuzumab, gefitinib)"
+      ],
+      [
+       "Cytokine receptor",
+       "Growth hormone, erythropoietin, interferons",
+       "Separate JAK kinase activates STATs, which enter the nucleus",
+       "Same pattern as tyrosine kinases, kinase is a separate protein"
+      ],
+      [
+       "Ion channel",
+       "Nicotinic ACh, GABA, glutamate; voltage-gated Ca²⁺ and Na⁺ channels",
+       "Opens or blocks ion flow, changing membrane potential",
+       "Fastest signal (milliseconds); verapamil, local anesthetics"
+      ],
+      [
+       "G protein–coupled receptor",
+       "β and α adrenoceptors, muscarinic ACh, opioids",
+       "G protein (GTP) changes an effector, which changes a second messenger",
+       "Largest family; desensitizes with continued agonist"
+      ]
+     ]
+    },
+    {
+     "title": "G proteins and their second messengers (textbook Table 2–1)",
+     "tb": true,
+     "src": "p. 32",
+     "columns": [
+      "G protein",
+      "Receptors for",
+      "Effect"
+     ],
+     "rows": [
+      [
+       "Gs",
+       "β-adrenergic amines, histamine, glucagon",
+       "↑ adenylyl cyclase → ↑ cAMP"
+      ],
+      [
+       "Gi",
+       "α₂-adrenergic amines, muscarinic ACh, opioids",
+       "↓ cAMP; opens cardiac K⁺ channels → ↓ heart rate"
+      ],
+      [
+       "Gq",
+       "Muscarinic ACh, serotonin (5-HT₂)",
+       "↑ phospholipase C → IP₃, DAG, ↑ cytoplasmic Ca²⁺"
+      ],
+      [
+       "Gt",
+       "Light (rhodopsin)",
+       "↑ cGMP phosphodiesterase → ↓ cGMP (vision)"
+      ]
+     ]
     }
    ],
    "hooks": [
@@ -1366,7 +1658,7 @@
      "src": "S23; S24-25",
      "from_slides": "S24-25",
      "number": 8,
-     "answer": "D",
+     "answer": "C",
      "options": {
       "A": {
        "text": "The competitive antagonist increases the agonist's potency at every dose given",
@@ -1379,14 +1671,14 @@
        "correct": false
       },
       "C": {
-       "text": "The competitive antagonist has no measurable effect on the agonist's curve",
-       "why": "The curve is clearly shifted right (S24-25).",
-       "correct": false
-      },
-      "D": {
        "text": "More agonist is needed to reach the same effect, but the same maximal effect is still achievable",
        "why": "A rightward shift with an unchanged plateau is the signature of competitive antagonism: potency falls, but because the antagonism is surmountable, enough agonist can still reach the original Emax (S25).",
        "correct": true
+      },
+      "D": {
+       "text": "The competitive antagonist has no measurable effect on the agonist's curve",
+       "why": "The curve is clearly shifted right (S24-25).",
+       "correct": false
       },
       "E": {
        "text": "The competitive antagonist lowers the agonist's efficacy, so its Emax falls",
@@ -1421,7 +1713,7 @@
      "src": "S22; S27-28",
      "from_slides": "S27-28",
      "number": 9,
-     "answer": "E",
+     "answer": "D",
      "options": {
       "A": {
        "text": "Irreversible antagonist",
@@ -1439,14 +1731,14 @@
        "correct": false
       },
       "D": {
-       "text": "Partial agonist",
-       "why": "A partial agonist produces submaximal activation, not activity below baseline (S22).",
-       "correct": false
-      },
-      "E": {
        "text": "Inverse agonist",
        "why": "An inverse agonist actively reduces constitutive (baseline) receptor activity below normal (S28).",
        "correct": true
+      },
+      "E": {
+       "text": "Partial agonist",
+       "why": "A partial agonist produces submaximal activation, not activity below baseline (S22).",
+       "correct": false
       }
      }
     },
@@ -1475,7 +1767,7 @@
      ],
      "src": "S26",
      "number": 10,
-     "answer": "D",
+     "answer": "C",
      "options": {
       "A": {
        "text": "β2 receptor blockade → falling intracellular cAMP → smooth muscle relaxation",
@@ -1488,14 +1780,14 @@
        "correct": false
       },
       "C": {
-       "text": "Ion channel opening → rising intracellular cAMP → smooth muscle contraction",
-       "why": "Albuterol acts on the β2 receptor, and the result is relaxation, not contraction (S26).",
-       "correct": false
-      },
-      "D": {
        "text": "β2 receptor activation → rising intracellular cAMP → smooth muscle relaxation",
        "why": "Albuterol is a selective β2 agonist: binding activates β2 → increases cAMP → relaxes bronchial smooth muscle → bronchodilation (S26).",
        "correct": true
+      },
+      "D": {
+       "text": "Ion channel opening → rising intracellular cAMP → smooth muscle contraction",
+       "why": "Albuterol acts on the β2 receptor, and the result is relaxation, not contraction (S26).",
+       "correct": false
       },
       "E": {
        "text": "Inverse agonism at β2 → lowered baseline activity → smooth muscle relaxation",
@@ -1529,7 +1821,7 @@
      ],
      "src": "S22; S22 (notes)",
      "number": 11,
-     "answer": "B",
+     "answer": "D",
      "options": {
       "A": {
        "text": "Noncompetitive antagonist",
@@ -1537,19 +1829,19 @@
        "correct": false
       },
       "B": {
-       "text": "Competitive antagonist",
-       "why": "A competitive antagonist reversibly competes at the same site and is overcome by more agonist — same Emax, curve shifted right (S22, S22 notes).",
-       "correct": true
-      },
-      "C": {
        "text": "Inverse agonist",
        "why": "An inverse agonist lowers baseline activity; the scenario describes surmountable blockade (S22, S28).",
        "correct": false
       },
-      "D": {
+      "C": {
        "text": "Irreversible antagonist",
        "why": "Irreversible antagonists permanently inactivate receptors until new ones are synthesized, lowering Emax (S22, S22 notes).",
        "correct": false
+      },
+      "D": {
+       "text": "Competitive antagonist",
+       "why": "A competitive antagonist reversibly competes at the same site and is overcome by more agonist — same Emax, curve shifted right (S22, S22 notes).",
+       "correct": true
       },
       "E": {
        "text": "Partial agonist",
@@ -1584,7 +1876,7 @@
      "src": "p. 25-27",
      "tb": true,
      "number": 12,
-     "answer": "E",
+     "answer": "B",
      "options": {
       "A": {
        "text": "It activates opposing receptors, producing a physiologic counter-effect instead",
@@ -1592,24 +1884,134 @@
        "correct": false
       },
       "B": {
+       "text": "It binds receptors irreversibly; effect lasts until new receptors are made",
+       "why": "An irreversible antagonist's duration depends on receptor turnover, and high agonist levels cannot overcome it (p. 25).",
+       "correct": true
+      },
+      "C": {
        "text": "It is a partial agonist that caps the maximal catecholamine response",
        "why": "Partial agonists produce a submaximal response; phenoxybenzamine is an irreversible antagonist (p. 25; p. 26).",
        "correct": false
       },
-      "C": {
+      "D": {
        "text": "It neutralizes catecholamines chemically in plasma before they reach receptors",
        "why": "That is chemical antagonism, like protamine–heparin (p. 26).",
        "correct": false
       },
-      "D": {
+      "E": {
        "text": "It competes reversibly, so high catecholamine levels easily displace it",
        "why": "That describes competitive antagonism, which surges CAN overcome (p. 25).",
        "correct": false
+      }
+     }
+    },
+    {
+     "kind": "mechanism",
+     "stem": "A patient asks why an inhaled bronchodilator works in minutes but an oral corticosteroid takes hours. What best explains the corticosteroid’s delay?",
+     "correct": "It acts on an intracellular receptor that changes gene transcription",
+     "why_correct": "Gene-acting drugs need time to make new proteins, so effects lag 30 minutes to several hours (p. 28).",
+     "distractors": [
+      {
+       "text": "It acts on a ligand-gated ion channel",
+       "why": "Ion channels respond within milliseconds (p. 31)."
+      },
+      {
+       "text": "It must first be activated by CYP2D6",
+       "why": "Prodrug activation is not the reason for this lag (p. 28)."
+      },
+      {
+       "text": "It binds a G protein–coupled receptor that raises cAMP",
+       "why": "That is how a β₂ agonist bronchodilator works, quickly (p. 31; p. 32)."
+      },
+      {
+       "text": "It is a partial agonist with low efficacy",
+       "why": "Efficacy does not explain timing (p. 28)."
+      }
+     ],
+     "src": "p. 28",
+     "tb": true,
+     "number": 13,
+     "answer": "A",
+     "options": {
+      "A": {
+       "text": "It acts on an intracellular receptor that changes gene transcription",
+       "why": "Gene-acting drugs need time to make new proteins, so effects lag 30 minutes to several hours (p. 28).",
+       "correct": true
+      },
+      "B": {
+       "text": "It is a partial agonist with low efficacy",
+       "why": "Efficacy does not explain timing (p. 28).",
+       "correct": false
+      },
+      "C": {
+       "text": "It acts on a ligand-gated ion channel",
+       "why": "Ion channels respond within milliseconds (p. 31).",
+       "correct": false
+      },
+      "D": {
+       "text": "It must first be activated by CYP2D6",
+       "why": "Prodrug activation is not the reason for this lag (p. 28).",
+       "correct": false
       },
       "E": {
-       "text": "It binds receptors irreversibly; effect lasts until new receptors are made",
-       "why": "An irreversible antagonist's duration depends on receptor turnover, and high agonist levels cannot overcome it (p. 25).",
+       "text": "It binds a G protein–coupled receptor that raises cAMP",
+       "why": "That is how a β₂ agonist bronchodilator works, quickly (p. 31; p. 32).",
+       "correct": false
+      }
+     }
+    },
+    {
+     "kind": "mechanism",
+     "stem": "A drug activates a receptor coupled to Gq. Which change follows inside the cell?",
+     "correct": "Phospholipase C makes IP₃ and DAG; calcium rises",
+     "why_correct": "Gq stimulates phospholipase C, producing IP₃ (calcium release) and DAG (protein kinase C) (p. 32; p. 35).",
+     "distractors": [
+      {
+       "text": "Adenylyl cyclase is stimulated, so cAMP rises",
+       "why": "That is Gs (p. 32)."
+      },
+      {
+       "text": "Adenylyl cyclase is inhibited, so cAMP falls",
+       "why": "That is Gi (p. 32)."
+      },
+      {
+       "text": "A JAK kinase activates STAT transcription proteins",
+       "why": "That is a cytokine receptor, not a G protein (p. 29)."
+      },
+      {
+       "text": "Phosphodiesterase breaks down cGMP in the cell",
+       "why": "That is Gt in the retina (p. 32)."
+      }
+     ],
+     "src": "p. 32; p. 35",
+     "tb": true,
+     "number": 14,
+     "answer": "B",
+     "options": {
+      "A": {
+       "text": "Adenylyl cyclase is stimulated, so cAMP rises",
+       "why": "That is Gs (p. 32).",
+       "correct": false
+      },
+      "B": {
+       "text": "Phospholipase C makes IP₃ and DAG; calcium rises",
+       "why": "Gq stimulates phospholipase C, producing IP₃ (calcium release) and DAG (protein kinase C) (p. 32; p. 35).",
        "correct": true
+      },
+      "C": {
+       "text": "Phosphodiesterase breaks down cGMP in the cell",
+       "why": "That is Gt in the retina (p. 32).",
+       "correct": false
+      },
+      "D": {
+       "text": "A JAK kinase activates STAT transcription proteins",
+       "why": "That is a cytokine receptor, not a G protein (p. 29).",
+       "correct": false
+      },
+      "E": {
+       "text": "Adenylyl cyclase is inhibited, so cAMP falls",
+       "why": "That is Gi (p. 32).",
+       "correct": false
       }
      }
     }
@@ -1980,7 +2382,7 @@
      ],
      "src": "S31; S32-33",
      "from_slides": "S32-33",
-     "number": 13,
+     "number": 15,
      "answer": "A",
      "options": {
       "A": {
@@ -1994,13 +2396,13 @@
        "correct": false
       },
       "C": {
-       "text": "The dose at which the drug first becomes toxic",
-       "why": "EC₅₀ is a measure of potency, not toxicity (S33).",
+       "text": "The point at which the drug has no effect at all",
+       "why": "EC₅₀ is halfway to Emax, not zero effect (S33).",
        "correct": false
       },
       "D": {
-       "text": "The point at which the drug has no effect at all",
-       "why": "EC₅₀ is halfway to Emax, not zero effect (S33).",
+       "text": "The dose at which the drug first becomes toxic",
+       "why": "EC₅₀ is a measure of potency, not toxicity (S33).",
        "correct": false
       },
       "E": {
@@ -2035,8 +2437,8 @@
      ],
      "src": "S35; S36-37",
      "from_slides": "S36-37",
-     "number": 14,
-     "answer": "D",
+     "number": 16,
+     "answer": "C",
      "options": {
       "A": {
        "text": "Drug A is more efficacious than Drug B at every dose",
@@ -2044,23 +2446,23 @@
        "correct": false
       },
       "B": {
-       "text": "Drug A has a wider therapeutic index than Drug B",
-       "why": "TI compares TD₅₀ with ED₅₀ (S38); the figure shows only effect curves.",
+       "text": "Drug A and Drug B have different Emax values here",
+       "why": "Both curves reach the same plateau, so Emax is the same (S37).",
        "correct": false
       },
       "C": {
-       "text": "Drug B is more potent than Drug A in this panel",
-       "why": "The curve farther LEFT (Drug A) is more potent (S37).",
-       "correct": false
-      },
-      "D": {
        "text": "Drug A is more potent than Drug B, and both have equal efficacy",
        "why": "A curve farther left reaches the same effect at a lower dose (greater potency); the same plateau height means identical Emax (S37).",
        "correct": true
       },
+      "D": {
+       "text": "Drug A has a wider therapeutic index than Drug B",
+       "why": "TI compares TD₅₀ with ED₅₀ (S38); the figure shows only effect curves.",
+       "correct": false
+      },
       "E": {
-       "text": "Drug A and Drug B have different Emax values here",
-       "why": "Both curves reach the same plateau, so Emax is the same (S37).",
+       "text": "Drug B is more potent than Drug A in this panel",
+       "why": "The curve farther LEFT (Drug A) is more potent (S37).",
        "correct": false
       }
      }
@@ -2090,12 +2492,12 @@
      ],
      "src": "S39; S40-41",
      "from_slides": "S40-41",
-     "number": 15,
-     "answer": "C",
+     "number": 17,
+     "answer": "E",
      "options": {
       "A": {
-       "text": "The narrow-TI drug must have lower efficacy (Emax) overall",
-       "why": "TI compares toxic vs. effective doses; it says nothing about Emax (S30, S38).",
+       "text": "The narrow-TI drug is safer because it requires a lower dose",
+       "why": "A narrow TI means a SMALLER safety margin, not a safer drug (S38, S41).",
        "correct": false
       },
       "B": {
@@ -2104,19 +2506,19 @@
        "correct": false
       },
       "C": {
-       "text": "Smaller effective-to-toxic margin, so closer monitoring is needed",
-       "why": "The ED₅₀–TD₅₀ gap is the therapeutic index; a narrow gap means a small dosing error can move a patient from effective to toxic, so these drugs need blood-level monitoring (S41).",
-       "correct": true
-      },
-      "D": {
-       "text": "The narrow-TI drug is safer because it requires a lower dose",
-       "why": "A narrow TI means a SMALLER safety margin, not a safer drug (S38, S41).",
-       "correct": false
-      },
-      "E": {
        "text": "Therapeutic index has no real bearing on dosing safety",
        "why": "TI is exactly the margin between effective and toxic dosing (S38).",
        "correct": false
+      },
+      "D": {
+       "text": "The narrow-TI drug must have lower efficacy (Emax) overall",
+       "why": "TI compares toxic vs. effective doses; it says nothing about Emax (S30, S38).",
+       "correct": false
+      },
+      "E": {
+       "text": "Smaller effective-to-toxic margin, so closer monitoring is needed",
+       "why": "The ED₅₀–TD₅₀ gap is the therapeutic index; a narrow gap means a small dosing error can move a patient from effective to toxic, so these drugs need blood-level monitoring (S41).",
+       "correct": true
       }
      }
     },
@@ -2145,32 +2547,32 @@
      ],
      "src": "S42-43; SG U1-R6",
      "from_slides": "S42-43",
-     "number": 16,
-     "answer": "B",
+     "number": 18,
+     "answer": "A",
      "options": {
       "A": {
-       "text": "Drug X is more efficacious than Drug Y",
-       "why": "Both reach the same Emax, so efficacy is equal (S43).",
-       "correct": false
-      },
-      "B": {
        "text": "Drug X is more potent than Drug Y",
        "why": "Needing a lower dose for the same effect is greater potency; since both reach the same Emax, efficacy is equal (S43).",
        "correct": true
       },
-      "C": {
-       "text": "Drug X has a narrower therapeutic index",
-       "why": "Nothing about toxic doses is given; TI = TD₅₀ ÷ ED₅₀ (S38).",
-       "correct": false
-      },
-      "D": {
+      "B": {
        "text": "Drug Y is more potent than Drug X",
        "why": "The drug needing the LOWER dose (X) is more potent (S30).",
        "correct": false
       },
-      "E": {
+      "C": {
        "text": "Drug X and Drug Y have different Emax values",
        "why": "The stem states both reach the same Emax (S43).",
+       "correct": false
+      },
+      "D": {
+       "text": "Drug X has a narrower therapeutic index",
+       "why": "Nothing about toxic doses is given; TI = TD₅₀ ÷ ED₅₀ (S38).",
+       "correct": false
+      },
+      "E": {
+       "text": "Drug X is more efficacious than Drug Y",
+       "why": "Both reach the same Emax, so efficacy is equal (S43).",
        "correct": false
       }
      }
@@ -2199,8 +2601,8 @@
       }
      ],
      "src": "S38; S38 (notes)",
-     "number": 17,
-     "answer": "C",
+     "number": 19,
+     "answer": "D",
      "options": {
       "A": {
        "text": "Lithium is more potent, so it can be dosed without monitoring levels",
@@ -2208,23 +2610,23 @@
        "correct": false
       },
       "B": {
-       "text": "Lithium has a large safety margin, so dosing errors are well tolerated",
-       "why": "That describes a WIDE TI (S38).",
-       "correct": false
-      },
-      "C": {
-       "text": "Effective and toxic doses are close, so dose carefully and monitor blood levels",
-       "why": "A narrow TI means effective and toxic doses are close together — requiring careful dosing and often blood-level monitoring; lithium is a classic narrow-TI drug (S38).",
-       "correct": true
-      },
-      "D": {
        "text": "Lithium has a higher Emax, so lower doses than usual are always enough",
        "why": "TI is about toxic vs. effective doses, not Emax (S30, S38).",
        "correct": false
       },
-      "E": {
+      "C": {
        "text": "Lithium is 100% bioavailable, so blood levels never need to be checked",
        "why": "Bioavailability is a different concept (S50); narrow-TI drugs need monitoring (S38).",
+       "correct": false
+      },
+      "D": {
+       "text": "Effective and toxic doses are close, so dose carefully and monitor blood levels",
+       "why": "A narrow TI means effective and toxic doses are close together — requiring careful dosing and often blood-level monitoring; lithium is a classic narrow-TI drug (S38).",
+       "correct": true
+      },
+      "E": {
+       "text": "Lithium has a large safety margin, so dosing errors are well tolerated",
+       "why": "That describes a WIDE TI (S38).",
        "correct": false
       }
      }
@@ -2253,32 +2655,32 @@
       }
      ],
      "src": "S30; S34; S34 (notes)",
-     "number": 18,
-     "answer": "D",
+     "number": 20,
+     "answer": "A",
      "options": {
       "A": {
-       "text": "Drug B has greater potency because its maximal effect is much higher",
-       "why": "Higher Emax = more efficacious, not more potent (S34).",
-       "correct": false
-      },
-      "B": {
-       "text": "Both drugs have equal efficacy because both relieve the same symptom",
-       "why": "Drug B reaches a higher maximal effect, so its efficacy is greater (S30).",
-       "correct": false
-      },
-      "C": {
-       "text": "Drug A has greater efficacy because it needs a much smaller dose",
-       "why": "A smaller dose means greater POTENCY; efficacy is the maximum effect (S30).",
-       "correct": false
-      },
-      "D": {
        "text": "Drug B has greater efficacy, which matters more clinically than Drug A's potency",
        "why": "Efficacy (Emax) clinically matters much more than potency — a highly potent drug with low efficacy may be clinically useless (S34).",
        "correct": true
       },
-      "E": {
+      "B": {
        "text": "Drug A should be chosen because greater potency means it works better",
        "why": "Potency alone never tells you whether a drug works better (S34 notes).",
+       "correct": false
+      },
+      "C": {
+       "text": "Both drugs have equal efficacy because both relieve the same symptom",
+       "why": "Drug B reaches a higher maximal effect, so its efficacy is greater (S30).",
+       "correct": false
+      },
+      "D": {
+       "text": "Drug A has greater efficacy because it needs a much smaller dose",
+       "why": "A smaller dose means greater POTENCY; efficacy is the maximum effect (S30).",
+       "correct": false
+      },
+      "E": {
+       "text": "Drug B has greater potency because its maximal effect is much higher",
+       "why": "Higher Emax = more efficacious, not more potent (S34).",
        "correct": false
       }
      }
@@ -2342,6 +2744,16 @@
      {
       "text": "**Volume of distribution (Vd):** a calculated value relating total drug in the body to plasma concentration — a high Vd suggests extensive tissue distribution.",
       "src": "S52"
+     },
+     {
+      "text": "**pKa:** the pH at which a drug is half ionized and half nonionized.",
+      "src": "p. 10",
+      "tb": true
+     },
+     {
+      "text": "**Fick’s law:** passive flux rises with the concentration gradient, membrane area and permeability, and falls as the membrane gets thicker.",
+      "src": "p. 9",
+      "tb": true
      }
     ],
     "how": [
@@ -2411,6 +2823,21 @@
       "text": "Ion trapping: weak acids are excreted faster in **alkaline** urine; weak bases faster in **acidic** urine.",
       "src": "p. 10; p. 11",
       "tb": true
+     },
+     {
+      "text": "Four ways drugs cross barriers: **aqueous diffusion** through pores (protein-bound drug cannot pass), **lipid diffusion** (the main limiting step, set by the lipid:aqueous partition coefficient), **special carriers** (selective, saturable, inhibitable) and **endocytosis** (vitamin B₁₂ with intrinsic factor, iron with transferrin).",
+      "src": "p. 8; p. 9",
+      "tb": true
+     },
+     {
+      "text": "Charged (ionized) molecules attract water and cross lipid membranes poorly, and most drugs are weak acids or weak bases.",
+      "src": "p. 9",
+      "tb": true
+     },
+     {
+      "text": "**Henderson-Hasselbalch:** a weak acid is mostly nonionized and lipid-soluble when the pH is below its pKa; a weak base is mostly nonionized when the pH is above its pKa.",
+      "src": "p. 10",
+      "tb": true
      }
     ],
     "clinical": [
@@ -2434,6 +2861,16 @@
       "text": "Aspirin overdose: sodium bicarbonate alkalinizes blood and urine, reducing aspirin entry into tissues and speeding its renal excretion.",
       "src": "p. 20",
       "tb": true
+     },
+     {
+      "text": "**Ion trapping:** weak acids are excreted faster in alkaline urine and weak bases faster in acidic urine, which is how urine pH is used to speed elimination after an overdose.",
+      "src": "p. 10; p. 11",
+      "tb": true
+     },
+     {
+      "text": "Transporters that matter: MDR1 (P-glycoprotein) pumps drugs out of cells, and inhibiting it raises digoxin levels; norepinephrine and serotonin transporters are targets of antidepressants and cocaine; VMAT is the target of reserpine.",
+      "src": "p. 9",
+      "tb": true
      }
     ],
     "examples": [
@@ -2452,6 +2889,11 @@
      {
       "text": "P-glycoprotein — an efflux transporter at the BBB.",
       "src": "S53"
+     },
+     {
+      "text": "Weak acids: aspirin (pKa 3.5), warfarin (5.0), phenytoin (8.3). Weak bases: morphine (7.9), albuterol (9.3), propranolol (9.4).",
+      "src": "p. 10",
+      "tb": true
      }
     ],
     "traps": [
@@ -2682,33 +3124,33 @@
      ],
      "src": "S46; S47-48",
      "from_slides": "S47-48",
-     "number": 19,
-     "answer": "A",
+     "number": 21,
+     "answer": "E",
      "options": {
       "A": {
-       "text": "Metabolism and excretion — how the drug is transformed and cleared",
-       "why": "The M arrow (liver, biotransformation) and E arrow (kidney, elimination) are the back half of ADME — how the body gets rid of the drug (S48).",
-       "correct": true
-      },
-      "B": {
-       "text": "Absorption and distribution — how the drug arrives and spreads",
-       "why": "Absorption and distribution govern how the drug arrives and spreads, not how it leaves (S48).",
-       "correct": false
-      },
-      "C": {
        "text": "Only the excretion step — removal of the drug via the kidney",
        "why": "The figure shows TWO arrows: M (liver) and E (kidney) (S47-48).",
        "correct": false
       },
-      "D": {
+      "B": {
        "text": "Absorption only — movement from the dose site into the blood",
        "why": "Absorption is how the dose enters the bloodstream (S45), before the central compartment.",
        "correct": false
       },
-      "E": {
+      "C": {
        "text": "Distribution only — how the drug moves out into the tissues",
        "why": "Distribution is the arrow to the peripheral compartment, not to the liver/kidney (S46).",
        "correct": false
+      },
+      "D": {
+       "text": "Absorption and distribution — how the drug arrives and spreads",
+       "why": "Absorption and distribution govern how the drug arrives and spreads, not how it leaves (S48).",
+       "correct": false
+      },
+      "E": {
+       "text": "Metabolism and excretion — how the drug is transformed and cleared",
+       "why": "The M arrow (liver, biotransformation) and E arrow (kidney, elimination) are the back half of ADME — how the body gets rid of the drug (S48).",
+       "correct": true
       }
      }
     },
@@ -2737,17 +3179,17 @@
      ],
      "src": "S54-55",
      "from_slides": "S54-55",
-     "number": 20,
+     "number": 22,
      "answer": "C",
      "options": {
       "A": {
-       "text": "Oral, empty stomach",
-       "why": "Oral drugs are absorbed into the portal circulation and pass through the liver first (S55).",
+       "text": "Every route equally",
+       "why": "Essentially every route except oral bypasses first-pass metabolism (S49 notes).",
        "correct": false
       },
       "B": {
-       "text": "Every route equally",
-       "why": "Essentially every route except oral bypasses first-pass metabolism (S49 notes).",
+       "text": "Oral, taken with food",
+       "why": "Food doesn't change the oral route's path through the portal vein and liver (S55).",
        "correct": false
       },
       "C": {
@@ -2756,8 +3198,8 @@
        "correct": true
       },
       "D": {
-       "text": "Oral, taken with food",
-       "why": "Food doesn't change the oral route's path through the portal vein and liver (S55).",
+       "text": "Oral, empty stomach",
+       "why": "Oral drugs are absorbed into the portal circulation and pass through the liver first (S55).",
        "correct": false
       },
       "E": {
@@ -2791,33 +3233,33 @@
       }
      ],
      "src": "S50; S51",
-     "number": 21,
-     "answer": "E",
+     "number": 23,
+     "answer": "B",
      "options": {
       "A": {
-       "text": "Oral propranolol cannot cross the blood-brain barrier, so more must be given",
-       "why": "BBB crossing relates to CNS entry (S53), not systemic exposure after an oral dose.",
-       "correct": false
-      },
-      "B": {
        "text": "Propranolol has a narrow therapeutic index, so oral doses must be higher",
        "why": "Narrow TI calls for careful dosing and monitoring (S38); propranolol is named for first-pass, not narrow TI (S51).",
        "correct": false
       },
-      "C": {
-       "text": "The IV form was less than 100% bioavailable, so less drug reached the blood",
-       "why": "IV has 100% bioavailability by definition (S50).",
-       "correct": false
+      "B": {
+       "text": "Extensive first-pass hepatic metabolism lowers the drug's oral bioavailability",
+       "why": "Propranolol has a large first-pass effect; oral doses pass GI → portal → liver before systemic circulation, so higher oral doses are needed to match IV exposure (S51, S50).",
+       "correct": true
       },
-      "D": {
+      "C": {
        "text": "Propranolol is highly protein-bound, so the oral form is inactive in plasma",
        "why": "Protein binding affects free drug in plasma regardless of route (S52); the IV-to-oral gap is the first-pass effect (S51).",
        "correct": false
       },
+      "D": {
+       "text": "The IV form was less than 100% bioavailable, so less drug reached the blood",
+       "why": "IV has 100% bioavailability by definition (S50).",
+       "correct": false
+      },
       "E": {
-       "text": "Extensive first-pass hepatic metabolism lowers the drug's oral bioavailability",
-       "why": "Propranolol has a large first-pass effect; oral doses pass GI → portal → liver before systemic circulation, so higher oral doses are needed to match IV exposure (S51, S50).",
-       "correct": true
+       "text": "Oral propranolol cannot cross the blood-brain barrier, so more must be given",
+       "why": "BBB crossing relates to CNS entry (S53), not systemic exposure after an oral dose.",
+       "correct": false
       }
      }
     },
@@ -2845,23 +3287,23 @@
       }
      ],
      "src": "S53; S53 (notes)",
-     "number": 22,
-     "answer": "A",
+     "number": 24,
+     "answer": "C",
      "options": {
       "A": {
-       "text": "Polar drugs usually cross poorly, but inflamed meninges allow better entry",
-       "why": "A highly polar antibiotic generally would not cross the BBB well — unless the meninges are inflamed, as in meningitis (S53 notes).",
-       "correct": true
-      },
-      "B": {
        "text": "Polar drugs never reach the CNS, even when the meninges are inflamed",
        "why": "Inflamed meninges (meningitis) are the stated exception (S53 notes).",
        "correct": false
       },
-      "C": {
+      "B": {
        "text": "Polar drugs cross easily because P-glycoprotein pumps them into the CNS",
        "why": "Efflux transporters like P-glycoprotein pump some drugs back OUT of the CNS (S53).",
        "correct": false
+      },
+      "C": {
+       "text": "Polar drugs usually cross poorly, but inflamed meninges allow better entry",
+       "why": "A highly polar antibiotic generally would not cross the BBB well — unless the meninges are inflamed, as in meningitis (S53 notes).",
+       "correct": true
       },
       "D": {
        "text": "Polar drugs cross easily because tight junctions favor polar molecules",
@@ -2872,6 +3314,61 @@
        "text": "Polar drugs cross well because the brain is a poorly perfused tissue",
        "why": "The brain is highly perfused (S52), and perfusion does not overcome the BBB for polar drugs (S53).",
        "correct": false
+      }
+     }
+    },
+    {
+     "kind": "vignette",
+     "stem": "A patient overdoses on a weak-acid drug. To speed its renal excretion, what should be done to the urine?",
+     "correct": "Make the urine more alkaline",
+     "why_correct": "In alkaline urine a weak acid is mostly ionized, so it cannot diffuse back across the tubule and is trapped in the urine (p. 10).",
+     "distractors": [
+      {
+       "text": "Make the urine more acidic",
+       "why": "Acidic urine keeps a weak acid nonionized and lipid-soluble, so more is reabsorbed (p. 10)."
+      },
+      {
+       "text": "Keep urine pH unchanged and give more fluids only",
+       "why": "Fluids alone do not trap the drug; ionization is the lever (p. 10)."
+      },
+      {
+       "text": "Raise plasma protein binding",
+       "why": "Protein binding does not trap drug in the urine (p. 8; p. 10)."
+      },
+      {
+       "text": "Slow glomerular filtration",
+       "why": "Less filtration would slow excretion, not speed it (p. 10)."
+      }
+     ],
+     "src": "p. 10",
+     "tb": true,
+     "number": 25,
+     "answer": "E",
+     "options": {
+      "A": {
+       "text": "Make the urine more acidic",
+       "why": "Acidic urine keeps a weak acid nonionized and lipid-soluble, so more is reabsorbed (p. 10).",
+       "correct": false
+      },
+      "B": {
+       "text": "Slow glomerular filtration",
+       "why": "Less filtration would slow excretion, not speed it (p. 10).",
+       "correct": false
+      },
+      "C": {
+       "text": "Keep urine pH unchanged and give more fluids only",
+       "why": "Fluids alone do not trap the drug; ionization is the lever (p. 10).",
+       "correct": false
+      },
+      "D": {
+       "text": "Raise plasma protein binding",
+       "why": "Protein binding does not trap drug in the urine (p. 8; p. 10).",
+       "correct": false
+      },
+      "E": {
+       "text": "Make the urine more alkaline",
+       "why": "In alkaline urine a weak acid is mostly ionized, so it cannot diffuse back across the tubule and is trapped in the urine (p. 10).",
+       "correct": true
       }
      }
     }
@@ -3300,6 +3797,54 @@
     "prompt": "Aspirin overdose",
     "answer": "Sodium bicarbonate → alkaline urine → faster excretion",
     "src": "p. 20",
+    "tb": true
+   },
+   {
+    "prompt": "Most drugs’ molecular weight",
+    "answer": "~100–1000",
+    "src": "p. 4",
+    "tb": true
+   },
+   {
+    "prompt": "Weak bonds vs covalent",
+    "answer": "Weak = more selective; covalent = long-lasting (aspirin)",
+    "src": "p. 4",
+    "tb": true
+   },
+   {
+    "prompt": "pKa",
+    "answer": "pH where ionized = nonionized",
+    "src": "p. 10",
+    "tb": true
+   },
+   {
+    "prompt": "Ion trapping",
+    "answer": "Acids leave faster in alkaline urine; bases in acidic urine",
+    "src": "p. 10",
+    "tb": true
+   },
+   {
+    "prompt": "Intracellular receptors",
+    "answer": "Steroids, thyroid, vitamin D; lag 30 min–hours, effect persists",
+    "src": "p. 28",
+    "tb": true
+   },
+   {
+    "prompt": "Gs / Gi / Gq",
+    "answer": "↑ cAMP / ↓ cAMP / ↑ IP₃, DAG, Ca²⁺",
+    "src": "p. 32",
+    "tb": true
+   },
+   {
+    "prompt": "Gold-standard trial",
+    "answer": "Randomized controlled trial",
+    "src": "p. 15",
+    "tb": true
+   },
+   {
+    "prompt": "Orphan receptor",
+    "answer": "Natural ligand unknown",
+    "src": "p. 22",
     "tb": true
    }
   ],

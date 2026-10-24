@@ -1,15 +1,8 @@
 {
  "lecture": "L02",
- "passed": false,
+ "passed": true,
  "units_checked": 1508,
- "missing": [
-  {
-   "ref": "S1",
-   "text": "Diane S. Allen-Gipson, Ph.D., M.S., Course Director",
-   "kind": "slide",
-   "score": 0.0
-  }
- ],
+ "missing": [],
  "uncited": [
   {
    "ref": "S1",
@@ -55,6 +48,12 @@
  "emphasis_not_bold": [],
  "skipped": [
   {
+   "ref": "S1",
+   "text": "Diane S. Allen-Gipson, Ph.D., M.S., Course Director",
+   "kind": "slide",
+   "reason": "faculty identifier (site policy: no school or instructor identifiers)"
+  },
+  {
    "ref": "S7",
    "text": "This is the graphical version of the previous slide — point out how far inhibition pushes the level above 100% (toxicity risk) versus how far induction pushes it below 100% (therapeutic failure risk).",
    "kind": "speaker note",
@@ -84,20 +83,22 @@
  "layout_problems": [],
  "question_issues": [],
  "question_stats": {
-  "count": 26,
+  "count": 28,
   "letters": {
    "A": 6,
    "B": 5,
    "C": 5,
-   "D": 5,
-   "E": 5
+   "D": 6,
+   "E": 6
   },
-  "vignette": 14,
+  "vignette": 16,
   "mechanism": 12
  },
  "thin_objectives": [
-  "IO1.3: Explain how patient-specific factors, including age, pregnancy, renal and hepatic function, and pharmacogenetic variation, may affect medication response. — 4 class(es), 95 facts (Age and pregnancy are only named in the prescribing checklist)",
+  "IO1.3: Explain how patient-specific factors, including age, pregnancy, renal and hepatic function, and pharmacogenetic variation, may affect medication response. — 4 class(es), 115 facts (Age and pregnancy are only named in the prescribing checklist)",
   "IO1.5: Interpret common components of medication orders and prescriptions, including drug name, dose, route, frequency, and duration. — 2 class(es), 41 facts (Only dose, route, interval, and monitoring (checklist, renal dosing); no prescription-reading content)"
  ],
- "textbook_unused": 1292
+ "textbook_unused": 1278,
+ "reading_missing": [],
+ "reading_skipped": []
 }

@@ -28,6 +28,10 @@ ADD = {
         ],
     },
     "Pharmacogenomics": {
+        "definitions": [
+            ("**Allele:** one of the alternative forms of a gene at the same locus. **Haplotype:** a series of alleles inherited together on one chromosome. **Nonsynonymous SNP:** a single-base change that alters an amino acid.", "p. 78"),
+            ("**PM, IM, EM, UM:** poor, intermediate, extensive (normal) and ultrarapid metabolizer.", "p. 78"),
+        ],
         "how": [
             ("Codeine is converted to morphine (200× more potent) by CYP2D6; CPIC recommends an alternative analgesic for CYP2D6 poor **and** ultrarapid metabolizers.", "p. 81; p. 83"),
             ("Clopidogrel: about 85% of a dose is inactivated by esterases; CYP2C19 activates the rest. CYP2C19 poor/intermediate metabolizers → prasugrel or ticagrelor.", "p. 81; p. 82"),
@@ -110,3 +114,116 @@ DEEPER = {
     "PK Calculations: Half-Life, Steady State & Clearance": (3, 46, 52, "Worked dosing math: steady state, loading and maintenance doses"),
     "Pharmacogenomics": (5, 78, 83, "CPIC dosing tables for CYP2D6, CYP2C19, and TPMT"),
 }
+
+
+# ---- Assigned-reading coverage (QC pass): major sections of Ch. 3–5 the slides did not teach, summarized in our own words
+# and cited to printed pages, so the guide alone covers the testable reading. Merged into the lists above.
+_READ = {
+    "Drug Metabolism & CYP450 Interactions": {
+        "definitions": [
+            ("**Microsomal mixed-function oxidase system:** the Phase I machinery in the smooth endoplasmic reticulum; needs cytochrome P450, NADPH-P450 reductase, NADPH and molecular oxygen.", "p. 59"),
+            ("**Cytochrome P450** is named for the 450-nm light absorption of its carbon-monoxide complex. It has very low substrate specificity: high lipid solubility is the one thing its substrates share.", "p. 59; p. 60"),
+        ],
+        "how": [
+            ("Share of liver P450: CYP3A4 about 30%, CYP2C9 about 20%, CYP1A2 about 15%, CYP2E1 about 10%, CYP2D6 about 5%. CYP3A4 handles over 50% of liver-metabolized prescription drugs.", "p. 60"),
+            ("Inducers act through receptors that switch on CYP genes: **AhR** (tobacco smoke, charcoal-broiled meat, cruciferous vegetables, omeprazole → CYP1A) and **PXR** (rifampin, St. John’s wort, dexamethasone, phenobarbital → CYP3A).", "p. 60"),
+            ("**Commensal gut microbiota** metabolize drugs too: they reduce digoxin, so antibiotics such as erythromycin or tetracycline can double digoxin levels; bacterial β-glucuronidases free glucuronidated drugs for reabsorption (enterohepatic recycling).", "p. 71"),
+            ("An inducer can speed up its own metabolism, producing **pharmacokinetic tolerance**: the same dose works less over time.", "p. 72"),
+        ],
+        "clinical": [
+            ("Smoking induces CYP1A enzymes and can change the metabolism of other drugs.", "p. 60"),
+            ("**Diet and environmental factors** change drug metabolism: charcoal-broiled food and cruciferous vegetables induce CYP1A, grapefruit juice inhibits CYP3A, smokers and pesticide-exposed workers clear some drugs faster, which complicates dosing of narrow-TI drugs.", "p. 71"),
+            ("Stopping an inducer is as risky as starting one: when a sedative inducer is stopped, warfarin metabolism slows, levels rise and bleeding can follow.", "p. 72"),
+            ("Pharmacogenomic testing is still rarely used, although severe ADRs cause about 100,000 US deaths a year and about 7% of hospital admissions.", "p. 71"),
+        ],
+        "examples": [
+            ("CYP3A4 inhibitors (ketoconazole, erythromycin, grapefruit juice) with terfenadine caused fatal torsades de pointes, and terfenadine was withdrawn.", "p. 72"),
+            ("Allopurinol inhibits xanthine oxidase, so the mercaptopurine dose must be reduced when both are given.", "p. 72"),
+        ],
+    },
+    "PK Calculations: Half-Life, Steady State & Clearance": {
+        "definitions": [
+            ("**Extraction ratio (ER):** hepatic clearance divided by hepatic blood flow (about 90 L/h). Oral bioavailability ≈ fraction absorbed × (1 − ER); morphine’s ER of 0.67 predicts about 33% oral bioavailability.", "p. 49"),
+            ("**Target concentration approach** (the rational way to design a dosage regimen): pick the concentration that gives the desired effect, then individualize the dose from the patient’s clearance and volume of distribution.", "p. 51"),
+            ("**Zero-order absorption** runs at a constant rate (gastric emptying, controlled-release forms); **first-order** absorption is proportional to the amount left, nearly complete after four absorption half-lives.", "p. 49"),
+        ],
+        "how": [
+            ("**Maintenance dosing rate = clearance × target concentration** (divide by F for oral). The average steady-state level depends only on clearance; the dosing interval changes only the peaks and troughs.", "p. 51"),
+            ("Effects do not always follow plasma levels: enalapril (half-life about 4 hours) still works once daily because its peak is far above its C₅₀; delays come from distribution, slow receptor release (digoxin) or slow turnover of a body substance (warfarin and clotting factors).", "p. 50"),
+            ("Half-life can change without clearance changing: diazepam’s half-life lengthens with age because its volume of distribution grows, not because metabolism slows.", "p. 54"),
+        ],
+        "clinical": [
+            ("Highly extracted drugs (morphine, isoniazid, propranolol, lidocaine, verapamil) vary widely in bioavailability between patients, and much more drug gets through in cirrhosis with portosystemic shunting. Lidocaine is never given orally because of toxic metabolites.", "p. 49"),
+            ("**Schedule-dependent effects:** the same average level can carry different toxicity; gentamicin is more nephrotoxic as a constant infusion than as intermittent doses, because high peaks saturate its uptake into the renal cortex.", "p. 50"),
+            ("Give IV loading doses slowly (over an hour, not seconds): a fast bolus can overshoot into toxicity before the drug distributes, e.g., phenytoin.", "p. 52"),
+            ("Timing drug levels: digoxin at least 6 hours after the dose, lithium just before the next dose; for steady-state estimates sample mid-interval after at least three half-lives.", "p. 55"),
+            ("In obesity, dose drugs that stay out of fat (gentamicin, digoxin) on fat-free mass; edema and ascites enlarge gentamicin’s volume of distribution.", "p. 53; p. 55"),
+            ("Changes in plasma protein binding rarely matter clinically: the body simply eliminates the extra unbound drug.", "p. 55"),
+        ],
+        "examples": [
+            ("Theophylline worked example: clearance 2.8 L/h × target 10 mg/L = 28 mg/h IV; loading dose = 35 L × 10 mg/L = 350 mg.", "p. 52"),
+        ],
+    },
+    "Pharmacogenomics": {
+        "how": [
+            ("**G6PD deficiency** (X-linked, more than 400 million people): G6PD is the red cell’s only source of NADPH, so deficient cells hemolyze under oxidative stress such as infection, fava beans or certain drugs.", "p. 86"),
+            ("NUDT15 variants, as well as TPMT, cause thiopurine intolerance.", "p. 86"),
+            ("**OCT1 (organic cation transporter 1)** moves basic drugs such as morphine, tramadol, sumatriptan and ondansetron into the liver; people with two reduced-function alleles have about twofold higher levels.", "p. 87"),
+        ],
+        "examples": [
+            ("**SLCO1B1 (OATP1B1)** reduced-function variants raise simvastatin exposure (221% higher AUC in homozygotes) and myopathy risk; CPIC advises a lower dose or another statin.", "p. 87"),
+            ("**ABCG2 (BCRP)** variant, common in East Asians (allele frequency about 30%), raises rosuvastatin levels; the label suggests half the dose.", "p. 87"),
+        ],
+    },
+}
+for _n, _secs in _READ.items():
+    for _k, _v in _secs.items():
+        ADD.setdefault(_n, {}).setdefault(_k, []).extend(_v)
+
+COMPARISONS.setdefault("PK Calculations: Half-Life, Steady State & Clearance", []).append(
+    {"title": "Dosing from the target concentration (textbook Ch. 3)", "tb": True, "src": "p. 51; p. 52",
+     "columns": ["Goal", "Formula", "Depends on"],
+     "rows": [["Keep the level steady", "Maintenance dosing rate = CL × target concentration (÷ F if oral)", "Clearance"],
+              ["Reach the target now", "Loading dose = Vd × target concentration", "Volume of distribution"],
+              ["Match the peak at steady state", "Loading dose = maintenance dose × accumulation factor", "Dosing interval and half-life"]]})
+COMPARISONS.setdefault("Drug Metabolism & CYP450 Interactions", []).append(
+    {"title": "How inducers switch on CYP enzymes (textbook Ch. 4)", "tb": True, "src": "p. 60",
+     "columns": ["Receptor", "Inducers", "Enzyme induced"],
+     "rows": [["AhR", "Tobacco smoke, charcoal-broiled meat, cruciferous vegetables, omeprazole", "CYP1A"],
+              ["PXR", "Rifampin, St. John’s wort (hyperforin), dexamethasone, phenobarbital", "CYP3A"],
+              ["CAR", "Phenobarbital-class inducers", "CYP2B6, CYP2C9"]]})
+
+CRAM += [
+    ("Extraction ratio", "Hepatic CL ÷ hepatic blood flow; F ≈ f × (1 − ER)", "p. 49"),
+    ("Maintenance dosing rate", "CL × target concentration (÷ F orally)", "p. 51"),
+    ("Average steady-state level", "Set by clearance alone", "p. 51"),
+    ("CYP450 machinery", "P450 + reductase + NADPH + O₂ (smooth ER)", "p. 59"),
+    ("Smoking", "Induces CYP1A (AhR)", "p. 60"),
+    ("Digoxin level timing", "At least 6 h after the dose", "p. 55"),
+    ("SLCO1B1 variant", "Simvastatin myopathy: lower dose or another statin", "p. 87"),
+]
+
+QUESTIONS += [
+    {"topic": "PK Calculations: Half-Life, Steady State & Clearance", "kind": "vignette",
+     "stem": "A drug is given every 8 hours instead of every 24 hours, keeping the same total daily dose. What happens to its average steady-state concentration?",
+     "correct": "It stays the same; only peaks and troughs change",
+     "why_correct": "The average steady-state level depends only on dosing rate and clearance; the interval changes only the swings (p. 51).",
+     "distractors": [
+         ("It triples because doses come more often", "Total dose per day is unchanged, so the average is unchanged (p. 51)."),
+         ("It falls because each dose is smaller", "Smaller, more frequent doses narrow the swings, not the average (p. 51)."),
+         ("It doubles because half-life gets longer", "Dosing interval does not change half-life (p. 51)."),
+         ("It depends on Vd, which now changes", "Vd sets the loading dose, not the average level (p. 51; p. 52)."),
+     ],
+     "src": "p. 51"},
+    {"topic": "Drug Metabolism & CYP450 Interactions", "kind": "vignette",
+     "stem": "A heavy smoker on a CYP1A2-metabolized drug quits smoking abruptly. What should the PA anticipate?",
+     "correct": "Drug levels may rise as CYP1A induction fades",
+     "why_correct": "Tobacco smoke induces CYP1A through AhR; when the inducer stops, metabolism slows and levels can rise (p. 60; p. 72).",
+     "distractors": [
+         ("Drug levels will fall because metabolism speeds up", "Quitting removes induction, so metabolism slows (p. 60)."),
+         ("No change, since smoking affects only the lungs", "Smoke chemicals induce liver CYP1A enzymes (p. 60)."),
+         ("Renal clearance will double right away", "The effect is on hepatic metabolism, not renal clearance (p. 60)."),
+         ("The drug becomes a prodrug that needs activation", "Quitting does not change how the drug is activated (p. 60)."),
+     ],
+     "src": "p. 60; p. 72"},
+]

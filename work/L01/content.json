@@ -145,6 +145,11 @@
       "text": "**Poisons** are drugs with almost exclusively harmful effects — but \"the dose makes the poison\" (Paracelsus): any substance can harm at the wrong dose.",
       "src": "p. 3",
       "tb": true
+     },
+     {
+      "text": "**Xenobiotic:** a chemical the body does not make itself. **Toxins** are poisons of biologic origin (plants, animals), unlike inorganic poisons such as lead and arsenic.",
+      "src": "p. 3",
+      "tb": true
      }
     ],
     "how": [
@@ -167,6 +172,36 @@
      {
       "text": "This map covers the whole lecture: PK and PD are the two biggest buckets, and nearly everything else (toxicology, pharmacogenomics, therapeutics) sits on top of them.",
       "src": "S6 (notes)"
+     },
+     {
+      "text": "**The physical nature of drugs:** to reach and bind its receptor a drug needs the right size, charge, shape and atomic makeup.",
+      "src": "p. 3",
+      "tb": true
+     },
+     {
+      "text": "Most drugs have a molecular weight between about 100 and 1000: below ~100 a molecule is too simple to fit only one receptor; above ~1000 it cannot diffuse readily between body compartments.",
+      "src": "p. 4",
+      "tb": true
+     },
+     {
+      "text": "Very large protein drugs must be given straight into the compartment where they act, e.g., alteplase (MW 59,050) by IV or intra-arterial infusion.",
+      "src": "p. 4",
+      "tb": true
+     },
+     {
+      "text": "Drugs bind receptors by three kinds of bonds: **covalent** (very strong, often irreversible), **electrostatic** (the most common: ionic, hydrogen, van der Waals) and **hydrophobic** (weak; lipid-soluble drugs).",
+      "src": "p. 4",
+      "tb": true
+     },
+     {
+      "text": "**Chirality:** more than half of useful drugs exist as mirror-image enantiomers; one is usually much more potent, and enzymes may metabolize the two at different rates.",
+      "src": "p. 4; p. 5",
+      "tb": true
+     },
+     {
+      "text": "**Rational drug design** predicts a drug’s structure from the 3-D structure of its receptor; most older drugs came from random screening or from modifying known drugs.",
+      "src": "p. 5",
+      "tb": true
      }
     ],
     "clinical": [
@@ -193,6 +228,16 @@
      {
       "text": "More than half of prescriptions in the USA are for generic drugs.",
       "src": "p. 18",
+      "tb": true
+     },
+     {
+      "text": "Weak-bonding drugs are usually **more selective** than covalent ones because weak bonds need a precise fit. Aspirin’s covalent bond to platelet cyclooxygenase lasts days, until new platelets are made.",
+      "src": "p. 4",
+      "tb": true
+     },
+     {
+      "text": "Fewer than half of chiral drugs are sold as the pure active isomer, so most patients receive doses in which 50% is less active or inactive.",
+      "src": "p. 5",
       "tb": true
      }
     ],
@@ -398,7 +443,13 @@
      "src": "S6"
     }
    ],
-   "flows": []
+   "flows": [],
+   "deeper": {
+    "chapter": 1,
+    "first": 3,
+    "last": 5,
+    "why": "Drug size, bonds, chirality, and rational drug design"
+   }
   },
   {
    "name": "Drug Development & Regulation",
@@ -429,6 +480,16 @@
      {
       "text": "**Adverse-event reporting:** ongoing, voluntary and mandatory reporting systems (e.g., FDA MedWatch) that catch safety signals after approval.",
       "src": "S14"
+     },
+     {
+      "text": "**Single-blind:** subjects do not know whether they receive drug or placebo. **Double-blind:** neither subjects nor evaluators know; a third party holds the code. **Crossover:** each subject receives test drug, placebo and standard treatment in varied order.",
+      "src": "p. 14; p. 15",
+      "tb": true
+     },
+     {
+      "text": "**Institutional review board (IRB):** the committee at each trial site that must approve the scientific and ethical plan; participants must give informed consent.",
+      "src": "p. 17",
+      "tb": true
      }
     ],
     "how": [
@@ -500,6 +561,26 @@
       "text": "Marketing requires a **New Drug Application (NDA)** after Phase III; human testing starts only after an **IND** (Investigational New Drug) application.",
       "src": "p. 12; p. 17",
       "tb": true
+     },
+     {
+      "text": "**Drug screening** profiles a candidate’s activity and selectivity at molecular, cellular, organ and whole-animal levels, including early CYP450 studies to predict metabolism problems. The best candidate is the **lead compound**.",
+      "src": "p. 13",
+      "tb": true
+     },
+     {
+      "text": "Every trial has to control three confounders: the disease’s variable natural history, other diseases and risk factors (including other drugs and foods), and subject or observer bias.",
+      "src": "p. 14",
+      "tb": true
+     },
+     {
+      "text": "Strength of evidence rises from case reports (cannot prove cause and effect) to cohort and case-control studies (add weight, still cannot prove causation) to large **randomized controlled trials**, the gold standard, because randomization spreads known and unknown confounders evenly.",
+      "src": "p. 15",
+      "tb": true
+     },
+     {
+      "text": "Preclinical testing cannot catch everything: rare adverse effects are unlikely to appear, and animal results do not predict every human toxicity.",
+      "src": "p. 14",
+      "tb": true
      }
     ],
     "clinical": [
@@ -532,6 +613,21 @@
      {
       "text": "Adverse events that are both **serious and unexpected** must be reported to the FDA within 15 days; clinicians can report through MedWatch.",
       "src": "p. 18; p. 19",
+      "tb": true
+     },
+     {
+      "text": "Unpublished negative trials (missing data) make new drugs look better than they are.",
+      "src": "p. 15",
+      "tb": true
+     },
+     {
+      "text": "Dietary supplements and botanicals are regulated as food under DSHEA (1994), not reviewed as drugs, although their chemicals differ from manufactured drugs mainly in having more impurities.",
+      "src": "p. 3; p. 16",
+      "tb": true
+     },
+     {
+      "text": "Conflicts of interest the textbook flags: industry fees funding FDA review, advisers with company grants, trials that compare a new drug only to placebo, free samples that later cost patients more, and pay-to-delay deals that hold back generics.",
+      "src": "p. 18",
       "tb": true
      }
     ],
@@ -632,6 +728,57 @@
       ]
      ],
      "src": "S14; S14 (notes); SG U1-R4"
+    },
+    {
+     "title": "Major US drug laws (textbook Table 1–6)",
+     "tb": true,
+     "src": "p. 16",
+     "columns": [
+      "Law",
+      "What it did"
+     ],
+     "rows": [
+      [
+       "Pure Food and Drug Act (1906)",
+       "Banned mislabeled and adulterated drugs"
+      ],
+      [
+       "Food, Drug, and Cosmetic Act (1938)",
+       "New drugs must be safe (not yet proven effective); followed sulfanilamide deaths"
+      ],
+      [
+       "Durham-Humphrey Act (1952)",
+       "FDA decides which drugs need a prescription"
+      ],
+      [
+       "Kefauver-Harris Amendments (1962)",
+       "Proof of efficacy as well as safety; adverse-reaction reporting (after thalidomide)"
+      ],
+      [
+       "Comprehensive Drug Abuse Prevention and Control Act (1970)",
+       "Drug schedules and controls for habit-forming drugs"
+      ],
+      [
+       "Orphan Drug Amendment (1983)",
+       "Incentives for diseases with fewer than 200,000 US patients"
+      ],
+      [
+       "Drug Price Competition and Patent Restoration Act (1984)",
+       "Abbreviated applications for generics; bioequivalence data required"
+      ],
+      [
+       "Dietary Supplement Health and Education Act (1994)",
+       "Supplements treated as food; no full FDA drug review"
+      ],
+      [
+       "FDA Amendments Act (2007)",
+       "Post-approval studies and active safety surveillance"
+      ],
+      [
+       "Biologics Price Competition and Innovation Act (2009)",
+       "Abbreviated pathway for biosimilars"
+      ]
+     ]
     }
    ],
    "hooks": [
@@ -866,6 +1013,21 @@
      {
       "text": "Irreversible antagonist — permanently inactivates the receptor until new receptor is synthesized.",
       "src": "S22; SG U1-M"
+     },
+     {
+      "text": "**Orphan receptors:** receptors whose natural ligand is still unknown, and so possible targets for future drugs.",
+      "src": "p. 22",
+      "tb": true
+     },
+     {
+      "text": "**Kd:** the free-drug concentration that gives half-maximal binding; a low Kd means high affinity. EC₅₀ and Kd can match but need not (spare receptors make EC₅₀ lower).",
+      "src": "p. 23",
+      "tb": true
+     },
+     {
+      "text": "**Coupling:** the chain of steps that turns receptor occupancy into a response.",
+      "src": "p. 23",
+      "tb": true
      }
     ],
     "how": [
@@ -933,6 +1095,46 @@
       "text": "Agonist-induced **desensitization** (tachyphylaxis) and downregulation reduce response with continued exposure.",
       "src": "p. 39",
       "tb": true
+     },
+     {
+      "text": "Drug targets beyond signaling receptors: **enzymes** (methotrexate on dihydrofolate reductase, statins on HMG-CoA reductase), **transport proteins** (digitalis on Na⁺/K⁺-ATPase, antidepressants on serotonin and norepinephrine transporters, cocaine on the dopamine transporter) and **structural proteins** (colchicine on tubulin).",
+      "src": "p. 22",
+      "tb": true
+     },
+     {
+      "text": "**Intracellular receptors** (corticosteroids, sex steroids, vitamin D, thyroid hormone) change gene transcription, so effects begin only after 30 minutes to several hours and outlast the drug by hours or days.",
+      "src": "p. 28",
+      "tb": true
+     },
+     {
+      "text": "**Receptor tyrosine kinases** (insulin, EGF, PDGF): ligand binding makes two receptors pair up (dimerize) and phosphorylate tyrosines on themselves and on downstream proteins.",
+      "src": "p. 28",
+      "tb": true
+     },
+     {
+      "text": "**Cytokine receptors** (growth hormone, erythropoietin, interferons) borrow a separate tyrosine kinase, **JAK**, which activates **STAT** proteins that carry the signal into the nucleus.",
+      "src": "p. 29; p. 30",
+      "tb": true
+     },
+     {
+      "text": "**Ligand-gated ion channels** (nicotinic acetylcholine, GABA, glutamate, serotonin) act within milliseconds; **voltage-gated channels** are targets too: verapamil blocks calcium channels, local anesthetics block sodium channels.",
+      "src": "p. 30; p. 31",
+      "tb": true
+     },
+     {
+      "text": "**G protein–coupled receptors** (seven-transmembrane, the largest family): the agonist makes the G protein swap GDP for GTP, the G protein changes an effector enzyme or channel, and the effector changes a second messenger.",
+      "src": "p. 31; p. 32",
+      "tb": true
+     },
+     {
+      "text": "**cAMP** acts through cAMP-dependent protein kinase and is broken down by phosphodiesterases; **cGMP** relaxes vascular smooth muscle and is raised by atrial natriuretic peptide and by nitric oxide (the route of nitroglycerin and nitroprusside).",
+      "src": "p. 34; p. 35",
+      "tb": true
+     },
+     {
+      "text": "Continued agonist exposure **desensitizes** G protein receptors: a receptor kinase phosphorylates the receptor and β-arrestin binds it; endocytosis of receptors can lead to downregulation.",
+      "src": "p. 34",
+      "tb": true
      }
     ],
     "clinical": [
@@ -964,6 +1166,21 @@
      {
       "text": "Propranolol markedly slows the heart rate in pheochromocytoma (high catecholamines) but not the resting rate of a trained marathon runner.",
       "src": "p. 39",
+      "tb": true
+     },
+     {
+      "text": "Glucocorticoids will not relieve an acute asthma attack within minutes, because gene-acting drugs need time to make new proteins.",
+      "src": "p. 28",
+      "tb": true
+     },
+     {
+      "text": "Tyrosine kinase signaling is blocked in cancer by antibodies on the outside of the receptor (trastuzumab, cetuximab) or small molecules inside the cell (gefitinib, erlotinib).",
+      "src": "p. 29",
+      "tb": true
+     },
+     {
+      "text": "Phosphodiesterase inhibitors prolong second messengers: milrinone (cardiac PDE3, cAMP) and sildenafil (cGMP).",
+      "src": "p. 34; p. 35",
       "tb": true
      }
     ],
@@ -1095,6 +1312,81 @@
       ]
      ],
      "src": "S20; S20 (notes)"
+    },
+    {
+     "title": "Five ways a signal crosses the membrane (textbook Ch. 2)",
+     "tb": true,
+     "src": "p. 28-32",
+     "columns": [
+      "Mechanism",
+      "Examples",
+      "How it signals",
+      "Clinical point"
+     ],
+     "rows": [
+      [
+       "Intracellular receptor",
+       "Corticosteroids, sex steroids, vitamin D, thyroid hormone",
+       "Lipid-soluble ligand enters the cell; receptor changes gene transcription",
+       "Effects lag 30 min to hours and persist after the drug is gone"
+      ],
+      [
+       "Receptor tyrosine kinase",
+       "Insulin, EGF, PDGF",
+       "Receptors dimerize and phosphorylate tyrosines",
+       "Blocked in cancer (trastuzumab, gefitinib)"
+      ],
+      [
+       "Cytokine receptor",
+       "Growth hormone, erythropoietin, interferons",
+       "Separate JAK kinase activates STATs, which enter the nucleus",
+       "Same pattern as tyrosine kinases, kinase is a separate protein"
+      ],
+      [
+       "Ion channel",
+       "Nicotinic ACh, GABA, glutamate; voltage-gated Ca²⁺ and Na⁺ channels",
+       "Opens or blocks ion flow, changing membrane potential",
+       "Fastest signal (milliseconds); verapamil, local anesthetics"
+      ],
+      [
+       "G protein–coupled receptor",
+       "β and α adrenoceptors, muscarinic ACh, opioids",
+       "G protein (GTP) changes an effector, which changes a second messenger",
+       "Largest family; desensitizes with continued agonist"
+      ]
+     ]
+    },
+    {
+     "title": "G proteins and their second messengers (textbook Table 2–1)",
+     "tb": true,
+     "src": "p. 32",
+     "columns": [
+      "G protein",
+      "Receptors for",
+      "Effect"
+     ],
+     "rows": [
+      [
+       "Gs",
+       "β-adrenergic amines, histamine, glucagon",
+       "↑ adenylyl cyclase → ↑ cAMP"
+      ],
+      [
+       "Gi",
+       "α₂-adrenergic amines, muscarinic ACh, opioids",
+       "↓ cAMP; opens cardiac K⁺ channels → ↓ heart rate"
+      ],
+      [
+       "Gq",
+       "Muscarinic ACh, serotonin (5-HT₂)",
+       "↑ phospholipase C → IP₃, DAG, ↑ cytoplasmic Ca²⁺"
+      ],
+      [
+       "Gt",
+       "Light (rhodopsin)",
+       "↑ cGMP phosphodiesterase → ↓ cGMP (vision)"
+      ]
+     ]
     }
    ],
    "hooks": [
@@ -1263,6 +1555,58 @@
       }
      ],
      "src": "p. 25-27",
+     "tb": true
+    },
+    {
+     "kind": "mechanism",
+     "stem": "A patient asks why an inhaled bronchodilator works in minutes but an oral corticosteroid takes hours. What best explains the corticosteroid’s delay?",
+     "correct": "It acts on an intracellular receptor that changes gene transcription",
+     "why_correct": "Gene-acting drugs need time to make new proteins, so effects lag 30 minutes to several hours (p. 28).",
+     "distractors": [
+      {
+       "text": "It acts on a ligand-gated ion channel",
+       "why": "Ion channels respond within milliseconds (p. 31)."
+      },
+      {
+       "text": "It must first be activated by CYP2D6",
+       "why": "Prodrug activation is not the reason for this lag (p. 28)."
+      },
+      {
+       "text": "It binds a G protein–coupled receptor that raises cAMP",
+       "why": "That is how a β₂ agonist bronchodilator works, quickly (p. 31; p. 32)."
+      },
+      {
+       "text": "It is a partial agonist with low efficacy",
+       "why": "Efficacy does not explain timing (p. 28)."
+      }
+     ],
+     "src": "p. 28",
+     "tb": true
+    },
+    {
+     "kind": "mechanism",
+     "stem": "A drug activates a receptor coupled to Gq. Which change follows inside the cell?",
+     "correct": "Phospholipase C makes IP₃ and DAG; calcium rises",
+     "why_correct": "Gq stimulates phospholipase C, producing IP₃ (calcium release) and DAG (protein kinase C) (p. 32; p. 35).",
+     "distractors": [
+      {
+       "text": "Adenylyl cyclase is stimulated, so cAMP rises",
+       "why": "That is Gs (p. 32)."
+      },
+      {
+       "text": "Adenylyl cyclase is inhibited, so cAMP falls",
+       "why": "That is Gi (p. 32)."
+      },
+      {
+       "text": "A JAK kinase activates STAT transcription proteins",
+       "why": "That is a cytokine receptor, not a G protein (p. 29)."
+      },
+      {
+       "text": "Phosphodiesterase breaks down cGMP in the cell",
+       "why": "That is Gt in the retina (p. 32)."
+      }
+     ],
+     "src": "p. 32; p. 35",
      "tb": true
     }
    ],
@@ -1820,6 +2164,16 @@
      {
       "text": "**Volume of distribution (Vd):** a calculated value relating total drug in the body to plasma concentration — a high Vd suggests extensive tissue distribution.",
       "src": "S52"
+     },
+     {
+      "text": "**pKa:** the pH at which a drug is half ionized and half nonionized.",
+      "src": "p. 10",
+      "tb": true
+     },
+     {
+      "text": "**Fick’s law:** passive flux rises with the concentration gradient, membrane area and permeability, and falls as the membrane gets thicker.",
+      "src": "p. 9",
+      "tb": true
      }
     ],
     "how": [
@@ -1889,6 +2243,21 @@
       "text": "Ion trapping: weak acids are excreted faster in **alkaline** urine; weak bases faster in **acidic** urine.",
       "src": "p. 10; p. 11",
       "tb": true
+     },
+     {
+      "text": "Four ways drugs cross barriers: **aqueous diffusion** through pores (protein-bound drug cannot pass), **lipid diffusion** (the main limiting step, set by the lipid:aqueous partition coefficient), **special carriers** (selective, saturable, inhibitable) and **endocytosis** (vitamin B₁₂ with intrinsic factor, iron with transferrin).",
+      "src": "p. 8; p. 9",
+      "tb": true
+     },
+     {
+      "text": "Charged (ionized) molecules attract water and cross lipid membranes poorly, and most drugs are weak acids or weak bases.",
+      "src": "p. 9",
+      "tb": true
+     },
+     {
+      "text": "**Henderson-Hasselbalch:** a weak acid is mostly nonionized and lipid-soluble when the pH is below its pKa; a weak base is mostly nonionized when the pH is above its pKa.",
+      "src": "p. 10",
+      "tb": true
      }
     ],
     "clinical": [
@@ -1912,6 +2281,16 @@
       "text": "Aspirin overdose: sodium bicarbonate alkalinizes blood and urine, reducing aspirin entry into tissues and speeding its renal excretion.",
       "src": "p. 20",
       "tb": true
+     },
+     {
+      "text": "**Ion trapping:** weak acids are excreted faster in alkaline urine and weak bases faster in acidic urine, which is how urine pH is used to speed elimination after an overdose.",
+      "src": "p. 10; p. 11",
+      "tb": true
+     },
+     {
+      "text": "Transporters that matter: MDR1 (P-glycoprotein) pumps drugs out of cells, and inhibiting it raises digoxin levels; norepinephrine and serotonin transporters are targets of antidepressants and cocaine; VMAT is the target of reserpine.",
+      "src": "p. 9",
+      "tb": true
      }
     ],
     "examples": [
@@ -1930,6 +2309,11 @@
      {
       "text": "P-glycoprotein — an efflux transporter at the BBB.",
       "src": "S53"
+     },
+     {
+      "text": "Weak acids: aspirin (pKa 3.5), warfarin (5.0), phenytoin (8.3). Weak bases: morphine (7.9), albuterol (9.3), propranolol (9.4).",
+      "src": "p. 10",
+      "tb": true
      }
     ],
     "traps": [
@@ -2236,6 +2620,32 @@
       }
      ],
      "src": "S53; S53 (notes)"
+    },
+    {
+     "kind": "vignette",
+     "stem": "A patient overdoses on a weak-acid drug. To speed its renal excretion, what should be done to the urine?",
+     "correct": "Make the urine more alkaline",
+     "why_correct": "In alkaline urine a weak acid is mostly ionized, so it cannot diffuse back across the tubule and is trapped in the urine (p. 10).",
+     "distractors": [
+      {
+       "text": "Make the urine more acidic",
+       "why": "Acidic urine keeps a weak acid nonionized and lipid-soluble, so more is reabsorbed (p. 10)."
+      },
+      {
+       "text": "Keep urine pH unchanged and give more fluids only",
+       "why": "Fluids alone do not trap the drug; ionization is the lever (p. 10)."
+      },
+      {
+       "text": "Raise plasma protein binding",
+       "why": "Protein binding does not trap drug in the urine (p. 8; p. 10)."
+      },
+      {
+       "text": "Slow glomerular filtration",
+       "why": "Less filtration would slow excretion, not speed it (p. 10)."
+      }
+     ],
+     "src": "p. 10",
+     "tb": true
     }
    ],
    "flows": [
@@ -2662,6 +3072,54 @@
     "prompt": "Aspirin overdose",
     "answer": "Sodium bicarbonate → alkaline urine → faster excretion",
     "src": "p. 20",
+    "tb": true
+   },
+   {
+    "prompt": "Most drugs’ molecular weight",
+    "answer": "~100–1000",
+    "src": "p. 4",
+    "tb": true
+   },
+   {
+    "prompt": "Weak bonds vs covalent",
+    "answer": "Weak = more selective; covalent = long-lasting (aspirin)",
+    "src": "p. 4",
+    "tb": true
+   },
+   {
+    "prompt": "pKa",
+    "answer": "pH where ionized = nonionized",
+    "src": "p. 10",
+    "tb": true
+   },
+   {
+    "prompt": "Ion trapping",
+    "answer": "Acids leave faster in alkaline urine; bases in acidic urine",
+    "src": "p. 10",
+    "tb": true
+   },
+   {
+    "prompt": "Intracellular receptors",
+    "answer": "Steroids, thyroid, vitamin D; lag 30 min–hours, effect persists",
+    "src": "p. 28",
+    "tb": true
+   },
+   {
+    "prompt": "Gs / Gi / Gq",
+    "answer": "↑ cAMP / ↓ cAMP / ↑ IP₃, DAG, Ca²⁺",
+    "src": "p. 32",
+    "tb": true
+   },
+   {
+    "prompt": "Gold-standard trial",
+    "answer": "Randomized controlled trial",
+    "src": "p. 15",
+    "tb": true
+   },
+   {
+    "prompt": "Orphan receptor",
+    "answer": "Natural ligand unknown",
+    "src": "p. 22",
     "tb": true
    }
   ],
