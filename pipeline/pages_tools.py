@@ -106,7 +106,7 @@ def review_page(syl, built, exams):
 <p class="lede">Practice that adapts to you: this unit, or everything so far for the final. It all comes from what you've done on this site: questions you missed, cards you marked, notes you saved.</p>
 <div class="rv-count" id="rv-count" hidden></div>
 <div class="rv-scope seg" id="rv-scope" role="group" aria-label="What to review"></div><p class="rv-scope-sub" id="rv-scope-sub"></p></header>
-<section class="section rv-sec" id="practice"><div class="wrap"><p class="kicker">1 · Practice</p><h2>Start a session</h2>
+<section class="section rv-sec" id="practice"><div class="wrap"><p class="kicker">1 · Study now</p><h2>Start a session</h2>
 <div class="rv-acts" id="act"></div></div></section>
 <section class="section rv-sec" id="progress"><div class="wrap"><p class="kicker">2 · Your progress</p><h2>How you're doing</h2>
 <div class="rv-stats" id="stats"></div><div id="units"></div><h3 class="rv-h3">Weakest topics</h3><div id="topics"></div></div></section>

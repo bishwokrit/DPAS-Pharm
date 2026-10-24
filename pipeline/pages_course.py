@@ -67,8 +67,6 @@ def practice_page(syl, built, exams_built):
 
 def home_page(syl, built, exams_built):
     sched = json.loads((ROOT / "work" / "schedule.json").read_text())
-    n_q = sum(b["qs"] for b in built.values()) + sum(e["count"] for e in exams_built)
-    n_cards = sum(b["cards"] for b in built.values())
     teasers = [{"date": l["date"], "text": built[l["id"]]["teaser"]} for l in syl["lectures"] if l["id"] in built and built[l["id"]].get("teaser")]
     upnext = json.dumps({"exams": syl.get("exams", []), "due": sched["due"]}).replace("</", "<\\/")
     hero = f"""<section class="first-screen">
@@ -80,13 +78,7 @@ def home_page(syl, built, exams_built):
 </header>
 <div class="wrap"><div class="up3" id="home-up"></div>
 <script type="application/json" id="home-data">{upnext}</script></div>
-<div class="wrap stats appear" style="--d:.55s" aria-label="At a glance"><div class="stats-in">
-  <div><strong data-count="{len(built)}">{len(built)}</strong><span>lectures ready</span></div>
-  <div><strong data-count="{n_q}">{n_q}</strong><span>practice questions</span></div>
-  <div><strong data-count="{n_cards}">{n_cards}</strong><span>flashcards</span></div>
-  <div><strong>100%</strong><span>facts cited to a source</span></div>
-</div></div>
-<a class="scroll-cue" href="#practice" aria-label="Scroll to practice"><span></span></a>
+<a class="scroll-cue" href="#now" aria-label="Scroll to this week's lecture"><span></span></a>
 </section>"""
     # practice follows the calendar: the browser shows the unit whose exam is next (Unit 1 until its exam, then
     # Unit 2, ...). The home page keeps it to two cards; everything else lives on the Practice page.
@@ -125,7 +117,7 @@ def home_page(syl, built, exams_built):
                     f'<summary><span class="unit-num">{u}</span><span class="unit-name"><strong>{html.escape(name)}</strong><span class="small muted">Sessions {sessions}</span></span>'
                     f'<span class="unit-badge"{"" if badge else " hidden"}>{badge}</span><span class="unit-exam small">{("Exam " + date.fromisoformat(ex["date"]).strftime("%a, %b %-d")) if ex else ""}</span><span class="unit-chev" aria-hidden="true"></span></summary>'
                     f'<div class="grid unit-cards">{"".join(cards)}</div></details>')
-    study = f'<section class="section" id="study"><div class="wrap"><p class="kicker appear">Study</p><h2 class="appear">Your course, one unit at a time.</h2><p class="appear"><a class="jump" href="drugs/index.html">Open the drug index →</a></p><div class="roadmap">{"".join(rows)}</div></div></section>'
+    study = f'<section class="section" id="study"><div class="wrap"><p class="kicker appear">Study</p><h2 class="appear">Your course, one unit at a time.</h2><div class="roadmap">{"".join(rows)}</div></div></section>'
     return page(f"{SITE_NAME} · {COURSE}", hero + now_section(syl, built, sched) + study + practice
                 + '<script src="assets/mol3d.js"></script><script src="assets/dotd.js"></script>')
 
@@ -159,8 +151,7 @@ def now_section(syl, built, sched):
   {fig}
   <div class="card now-side" data-progress="lecture" data-lid="{lid}" data-objs="{b['objs']}" data-cards="{b['cards']}" data-qs="{b['qs']}">
     <h3>Your progress</h3><div class="progress"></div><p class="small muted now-empty">Start the self-test or flashcards and your progress shows here.</p>
-    <h3 style="margin-top:14px">Coming up</h3><ul class="now-due">{due_html or '<li class="muted small">Nothing due this week.</li>'}</ul>
-    <div class="links"><a href="{b['pdf']}">PDF</a><a href="{b['deck']}">Slide deck</a></div>
+    <h3>Take it with you</h3><div class="links"><a href="{b['pdf']}">Study guide PDF</a><a href="{b['deck']}">Slide deck</a><a href="{lid}/index.html#cram">Cram sheet</a></div>
   </div>
 </div>
 </article>""")
@@ -249,6 +240,10 @@ def syllabus_page(syl, sched, built):
 <div class="fact-pills appear" style="--d:.2s">{"".join(f'<div><strong>{a}</strong><span>{b}</span></div>' for a, b in facts)}</div>
 <div class="btns noprint appear" style="--d:.28s"><a class="btn" href="#calc">Grade calculator</a><a class="btn ghost" href="#schedule">Schedule</a></div></header>
 <section class="section" id="next"><div class="wrap"><p class="kicker">Coming up</p><h2>What's due next</h2><div class="upnext" id="upnext"></div></div></section>
+<section class="section" id="schedule"><div class="wrap"><p class="kicker">Schedule</p><h2>Week by week</h2><p class="muted">From the course syllabus; subject to revision. Any material covered in lecture or assigned as reading is testable.</p>
+<div class="sch-chips noprint">{chips}</div>
+<div class="wk-list" id="sch-list">{"".join(wk_html)}</div>
+<p class="small muted">DB = discussion board · PTX = pharmacotherapy · Bonus = optional checkpoint quiz (Brightspace, 2 attempts).</p></div></section>
 <section class="section" id="grading"><div class="wrap"><p class="kicker">Grading</p><h2>Where your 1,000 points come from</h2>
 <p class="muted">Each 1% of the grade is 10 points. Hover a slice or a row.</p>
 <div class="grade-split"><div class="donut-wrap"><svg class="donut" viewBox="0 0 200 200" id="donut" aria-label="Grade weights"></svg>
@@ -262,10 +257,6 @@ def syllabus_page(syl, sched, built):
 <script type="application/json" id="grade-data">{data}</script></div></section>
 <section class="section" id="final"><div class="wrap"><p class="kicker">The final</p><h2>What you need on the final</h2>
 <div id="finalapp"></div></div></section>
-<section class="section" id="schedule"><div class="wrap"><p class="kicker">Schedule</p><h2>Week by week</h2><p class="muted">From the course syllabus; subject to revision. Any material covered in lecture or assigned as reading is testable.</p>
-<div class="sch-chips noprint">{chips}</div>
-<div class="wk-list" id="sch-list">{"".join(wk_html)}</div>
-<p class="small muted">DB = discussion board · PTX = pharmacotherapy · Bonus = optional checkpoint quiz (Brightspace, 2 attempts).</p></div></section>
 <section class="section" id="units"><div class="wrap"><p class="kicker">Units</p><h2>Readings &amp; objectives</h2><div class="grid two">{"".join(units)}</div></div></section>
 <section class="section" id="outcomes"><div class="wrap narrow"><p class="kicker">Outcomes</p><h2>Course goal &amp; outcomes</h2>
 <p>By the end of this course, students will integrate foundational pharmacologic principles with therapeutic reasoning to select, evaluate, and communicate safe, effective, evidence-based pharmacotherapy for common conditions encountered in clinical practice.</p>
@@ -276,7 +267,7 @@ def syllabus_page(syl, sched, built):
 <li>Religious observances: notify the course in the first week.</li><li>Accommodations: contact your disability services office first, then share your letter with the course.</li>
 <li>Grade concerns go to the course first. AI use: follow each assignment's instructions.</li><li>Class cancellations are announced through official email.</li></ul></div></section>
 <script src="../assets/grades.js"></script>"""
-    nav = '<a href="#next">Coming up</a><a href="#grading">Grading</a><a href="#calc">Calculator</a><a href="#schedule">Schedule</a><a href="#units">Units</a><a href="#outcomes">Outcomes</a>'
+    nav = '<a href="#next">Coming up</a><a href="#schedule">Schedule</a><a href="#grading">Grading</a><a href="#calc">Calculator</a><a href="#units">Units</a><a href="#outcomes">Outcomes</a>'
     return page(f"Syllabus · {SITE_NAME}", body, depth=1, nav_links=nav, active="syllabus", subtitle="Syllabus")
 
 
