@@ -1368,3 +1368,12 @@ html[data-pmotion="off"] ::view-transition-old(root), html[data-pmotion="off"] :
 .now-panel .topic-chips { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 8px; }
 .now-panel .topic-chip { min-width: 0; }
 @media (max-width: 640px) { .now-panel .topic-chips { grid-template-columns: 1fr; } }
+/* Sketch mode on: an unlocked padlock beside settings; tap it to lock */
+.sx-lockbtn { border: 0; background: transparent; color: var(--text-2); width: 32px; height: 32px; border-radius: 50%; cursor: pointer; display: grid; place-items: center; padding: 0; flex: none; transition: color .2s, background .2s, opacity .3s, transform .3s cubic-bezier(.2,.8,.2,1); }
+.sx-lockbtn svg { width: 18px; height: 18px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.sx-lockbtn:hover { color: var(--text); background: var(--surface-2); }
+.sx-lockbtn:hover .shackle { transform: translateY(1px); }
+.sx-lockbtn .shackle { transition: transform .25s cubic-bezier(.2,.8,.2,1); }
+.sx-lockbtn.new { animation: sx-in .9s cubic-bezier(.2,.8,.2,1); }
+.sx-lockbtn.bye { opacity: 0; transform: scale(.6); }
+@media (prefers-reduced-motion: reduce) { .sx-lockbtn.new { animation: none; } }

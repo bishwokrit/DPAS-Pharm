@@ -518,6 +518,15 @@
     const href = `${root}sketch/index.html`, cur = here ? ' aria-current="page"' : "";
     document.querySelector(".nav-main")?.insertAdjacentHTML("beforeend", `<a class="nav-sketch${fresh ? " new" : ""}" href="${href}"${cur}>Sketch</a>`);
     document.querySelector(".tabbar")?.insertAdjacentHTML("beforeend", `<a class="nav-sketch" href="${href}"${cur}><span>${window.dpasIcon("highlight", 22)}</span>Sketch</a>`);
+    // a lock button beside settings, only while Sketch mode is on
+    const tools = document.querySelector(".nav-tools"), gear = tools?.querySelector(".set-btn");
+    if (tools && !tools.querySelector(".sx-lockbtn")) {
+      const b = document.createElement("button");
+      b.type = "button"; b.className = "sx-lockbtn" + (fresh ? " new" : ""); b.title = "Lock Sketch mode"; b.setAttribute("aria-label", "Lock Sketch mode");
+      b.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2.5"/><path class="shackle" d="M8 11V7.5a4 4 0 0 1 7.6-1.7"/></svg>';
+      b.onclick = () => { b.disabled = true; lock(); };
+      gear ? tools.insertBefore(b, gear) : tools.append(b);
+    }
   }
   if (on()) addTab(false);
   const sha = async (s) => [...new Uint8Array(await crypto.subtle.digest("SHA-256", new TextEncoder().encode(s)))].map((b) => b.toString(16).padStart(2, "0")).join("");
@@ -528,14 +537,18 @@
   function lock() {
     try { localStorage.removeItem(KEY); } catch { /* blocked */ }
     const finish = () => { document.querySelectorAll(".nav-sketch").forEach((a) => a.remove()); document.documentElement.classList.remove("sx-on"); };
-    if (calmMotion()) { finish(); if (here) location.href = `${root}index.html`; return; }
+    if (calmMotion()) { finish(); document.querySelector(".sx-lockbtn")?.remove(); if (here) location.href = `${root}index.html`; return; }
     const d = document.createElement("div");
     d.className = "sx-doors"; d.setAttribute("aria-live", "polite");
     d.innerHTML = '<i class="l"></i><i class="r"></i><div class="sx-locked"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><rect x="5" y="11" width="14" height="10" rx="2.5"/><path class="shackle" d="M8 11V7.5a4 4 0 0 1 8 0V11"/></svg><span>Sketch mode locked</span></div>';
     document.body.append(d);
     requestAnimationFrame(() => d.classList.add("shut"));
     setTimeout(finish, 700);
-    setTimeout(() => { if (here) location.href = `${root}index.html`; else { d.classList.add("gone"); setTimeout(() => d.remove(), 600); } }, 1800);
+    setTimeout(() => {
+      if (here) { location.href = `${root}index.html`; return; }
+      d.classList.add("gone"); setTimeout(() => d.remove(), 600);
+      const b = document.querySelector(".sx-lockbtn"); if (b) { b.classList.add("bye"); setTimeout(() => b.remove(), 350); }
+    }, 1800);
   }
   window.dpasSketchLock = lock;
 
