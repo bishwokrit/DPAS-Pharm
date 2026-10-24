@@ -60,9 +60,9 @@ SEARCH_ICON = ('<svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="tru
 def nav_html(up, active="", nav_links="", subtitle=""):
     """Two-level bar: a calm global nav (4 destinations + search + theme), and — only when a page has
     sections — a slim local bar under it with that page's own links."""
-    # Study (learn) · Drugs (reference) · Exams (fixed tests) · Anki (cards to take away) · Progress (adaptive, yours) · Syllabus
-    main = [("Study", f"{up}index.html#study", "study"), ("Drugs", f"{up}drugs/index.html", "drugs"), ("Exams", f"{up}practice/index.html", "practice"),
-            ("Anki", f"{up}anki/index.html", "anki"), ("Progress", f"{up}review/index.html", "review"), ("Syllabus", f"{up}syllabus/index.html", "syllabus")]
+    # Study (learn) · Drugs (reference) · Recall (every way to test yourself, Anki included) · Progress (adaptive, yours) · Syllabus
+    main = [("Study", f"{up}index.html#study", "study"), ("Drugs", f"{up}drugs/index.html", "drugs"), ("Recall", f"{up}practice/index.html", "practice"),
+            ("Progress", f"{up}review/index.html", "review"), ("Syllabus", f"{up}syllabus/index.html", "syllabus")]
     links = "".join(f'<a href="{href}"{" aria-current=page" if key == active else ""}>{label}</a>' for label, href, key in main)
     sub = (f'<div class="subnav"><div class="subnav-in"><span class="subnav-title">{html.escape(subtitle)}</span>'
            f'<div class="nav-links">{nav_links}</div><span class="subnav-tools"></span></div></div>') if nav_links else ""

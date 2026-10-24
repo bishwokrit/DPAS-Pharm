@@ -9,6 +9,7 @@ from build_site import DOCS, ROOT, SITE_NAME, COURSE, md, cite, slug, page, nav_
 
 # ---------------------------------------------------------------- home
 ICONS = {  # simple line icons (inherit currentColor)
+    "card": '<rect x="3" y="5" width="18" height="14" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M7 10h10M7 14h6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>',
     "check": '<rect x="3.5" y="3.5" width="17" height="17" rx="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 12l3 3 5-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>',
     "review": '<path d="M4 12a8 8 0 1 0 2.3-5.6M4 4v4h4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>',
     "exam": '<rect x="5" y="3" width="14" height="18" rx="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M9 8h6M9 12h6M9 16h3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>',
@@ -57,12 +58,21 @@ def practice_page(syl, built, exams_built):
     units = [u for u in syl["units"] if any(str(b["unit"]) == u for b in built.values()) or any(str(e.get("unit")) == u for e in exams_built)]
     secs = "".join(f'<section class="section pr-unit" data-unit="{u}"><div class="wrap"><p class="kicker">Unit {u}<span class="pr-now" hidden> · current</span></p><h2>{html.escape(syl["units"][u])}</h2>'
                    f'<div class="bento">{"".join(unit_tiles(u, syl, built, exams_built, up="../", full=True))}</div></div></section>' for u in units)
-    body = f"""<header class="hero wrap"><p class="eyebrow appear">Exams</p><h1 class="appear" style="--d:.05s">Test yourself. Then test yourself again.</h1>
-<p class="lede appear" style="--d:.12s">Every practice exam and lecture self-test, by unit, with the current unit first. Your scores, misses and the adaptive Daily 10 live in <a href="../review/index.html">Progress</a>.</p></header>
+    ic = lambda n: f'<span class="tile-ic">{icon(n)}</span>'
+    tools = (f'<a class="tile appear" href="../anki/index.html">{ic("card")}<div><div class="tile-k">Deck builder</div><h3>Anki cards</h3>'
+             '<p>Any lecture, any depth: cloze, basic, reversed, type-in or multiple choice. Downloads ready for Anki.</p></div><span class="tile-go">Build a deck →</span></a>'
+             f'<a class="tile appear" style="--d:.06s" href="../review/index.html">{ic("review")}<div><div class="tile-k">5 minutes a day</div><h3>Daily 10</h3>'
+             '<p>Ten questions weighted toward what you missed, with a streak. Lives in Progress with your scores.</p></div><span class="tile-go">Start →</span></a>')
+    body = f"""<header class="hero wrap"><p class="eyebrow appear">Recall</p><h1 class="appear" style="--d:.05s">Pull it out of memory. That's how it sticks.</h1>
+<p class="lede appear" style="--d:.12s">Every way to test yourself in one place: today's drug, flashcards for Anki, lecture self-tests and practice exams by unit, and final prep. Your scores and misses live in <a href="../review/index.html">Progress</a>.</p>
+<nav class="sx-jump appear" style="--d:.18s"><a href="#today">Today</a><a href="#tools">Anki &amp; Daily 10</a><a href="#pr-units">By unit</a><a href="#final">Final prep</a></nav></header>
+<section class="section" id="today"><div class="wrap"><p class="kicker">Today</p><h2>Drug of the day</h2><div class="dotd appear" id="dotd" hidden></div></div></section>
+<section class="section" id="tools"><div class="wrap"><p class="kicker">Tools</p><h2>Cards and quick sets</h2><div class="bento bento-2">{tools}</div></div></section>
 <div id="pr-units">{secs}</div>
-<section class="section"><div class="wrap"><p class="kicker">Cumulative</p><h2>Final prep</h2><div class="bento bento-2">{final_tile("../")}</div></div></section>
-<script type="application/json" id="practice-data">{upnext}</script>"""
-    return page(f"Exams · {SITE_NAME}", body, depth=1, active="practice")
+<section class="section" id="final"><div class="wrap"><p class="kicker">Cumulative</p><h2>Final prep</h2><div class="bento bento-2">{final_tile("../")}</div></div></section>
+<script type="application/json" id="practice-data">{upnext}</script>
+<script src="../assets/mol3d.js"></script><script src="../assets/dotd.js"></script>"""
+    return page(f"Recall · {SITE_NAME}", body, depth=1, active="practice")
 
 
 def home_page(syl, built, exams_built):
@@ -87,9 +97,9 @@ def home_page(syl, built, exams_built):
         tiles, n_all = unit_tiles(u, syl, built, exams_built), len(unit_tiles(u, syl, built, exams_built, full=True))
         more = n_all - len(tiles)
         groups += (f'<div class="bento bento-2" data-unit="{u}" hidden>{"".join(tiles)}</div>'
-                   f'<p class="pr-more" data-unit="{u}" hidden><a href="practice/index.html">{f"{more} more for Unit {u}, plus cumulative and final prep" if more > 0 else "Cumulative and final prep"} →</a></p>')
+                   f'<p class="pr-more" data-unit="{u}" hidden><a href="practice/index.html">{f"{more} more for Unit {u}, Anki decks and final prep" if more > 0 else "Anki decks and final prep"} →</a></p>')
     groups += (f'<div class="bento bento-2" data-unit="final" hidden>{final_tile("")}</div>')
-    practice = (f'<section class="section" id="practice"><div class="wrap"><p class="kicker appear">Exams</p><h2 class="appear">Test yourself. Then test yourself again.</h2>'
+    practice = (f'<section class="section" id="practice"><div class="wrap"><p class="kicker appear">Recall</p><h2 class="appear">Test yourself. Then test yourself again.</h2>'
                 f'<p class="pr-sub appear" id="pr-sub"></p><div class="dotd appear" id="dotd" hidden></div>{groups}</div></section>')
     # course roadmap: one compact row per unit; the current unit opens with its lecture cards
     today = date.today().isoformat()
