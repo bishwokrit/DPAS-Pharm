@@ -316,6 +316,7 @@
     pq.querySelector(".pr-t").textContent = q.t;
     pq.querySelector(".pr-by").textContent = q.by ? `— ${q.by}` : "";
     pq.classList.toggle("has-by", !!q.by);
+    pq.classList.toggle("show-by", !!q.show);
     pq.addEventListener("click", () => pq.classList.toggle("show-by"));  // phones: tap to see who said it
   }
 
