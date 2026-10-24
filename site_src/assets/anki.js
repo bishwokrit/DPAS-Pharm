@@ -173,6 +173,7 @@
         : S.format === "csv" ? "<p>Columns: Front, Back, Tags. Cloze cards show the blanks as […] on the front and the full sentence on the back.</p>"
         : S.format === "quizlet" ? "<p>Quizlet: <b>Create → Import</b>, paste the file's contents, choose <b>Tab</b> between term and definition and <b>New line</b> between cards.</p>" : "<p>Prints front and back side by side. Fold the page down the middle and quiz yourself.</p>"}</details>
     </div>
+    <div class="ak-mbar"><span><strong>${B.cards.toLocaleString()}</strong> cards · ${FORMATS.find((f) => f[0] === S.format)[1]}</span><button class="btn small" data-go2 ${B.notes.length ? "" : "disabled"}>${S.format === "print" ? "Print" : "Download"}</button></div>
     <div class="ak-prev"><div class="ak-ph"><strong>Preview</strong><span>${B.notes.length ? `${Math.min(B.notes.length, preview + 1)} of ${B.notes.length} · tap to flip` : ""}</span>
       <span class="ak-nav"><button data-pv="-1" aria-label="Previous card" ${preview <= 0 ? "disabled" : ""}>‹</button><button data-pv="1" aria-label="Next card" ${preview >= B.notes.length - 1 ? "disabled" : ""}>›</button></span></div>
       ${B.notes.length ? cardHTML(B.notes[Math.min(preview, B.notes.length - 1)]) : '<div class="ak-card empty">Your cards appear here.</div>'}</div></aside>`;
@@ -214,6 +215,7 @@
     q.addEventListener("input", () => { clearTimeout(qt); qt = setTimeout(() => { S.q = q.value; preview = 0; draw(); const g = app.querySelector("#ak-q"); g.focus(); g.setSelectionRange(g.value.length, g.value.length); }, 220); });
     const dk = app.querySelector("#ak-deck"); dk.addEventListener("change", () => { S.deck = dk.value; save(); draw(); });
     app.querySelector("[data-go]")?.addEventListener("click", (e) => { e.stopPropagation(); exportDeck(build()); });
+    app.querySelector("[data-go2]")?.addEventListener("click", (e) => { e.stopPropagation(); exportDeck(build()); });
   }
 
   // ---------------------------------------------------------------- exports

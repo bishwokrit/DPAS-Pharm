@@ -1512,3 +1512,100 @@ html[data-pmotion="off"] ::view-transition-old(root), html[data-pmotion="off"] :
 .jumpbar { display: flex; flex-wrap: wrap; gap: 8px; margin: 20px 0 0; }
 .jumpbar a { padding: 7px 14px; border-radius: 99px; font-size: 13.5px; font-weight: 550; color: var(--text); background: var(--surface); box-shadow: var(--shadow); white-space: nowrap; transition: transform .2s cubic-bezier(.2,.8,.2,1), color .2s; }
 .jumpbar a:hover { text-decoration: none; color: var(--accent); transform: translateY(-1px); }
+
+/* ================================================================ phones: same design, made for one hand ================================================================ */
+.ak-mbar { display: none; }
+@media (max-width: 760px) {
+  /* rhythm: tighter sections, calmer headline sizes */
+  .wrap { padding-left: 20px; padding-right: 20px; }
+  .hero { padding-top: 34px; padding-bottom: 22px; }
+  h1 { font-size: clamp(32px, 9vw, 40px); letter-spacing: -.03em; }
+  h2 { font-size: clamp(25px, 7vw, 30px); margin-bottom: 14px; }
+  .section { padding: 36px 0; }
+  .lede { font-size: 17px; line-height: 1.45; }
+  .first-screen { min-height: 0 !important; padding-bottom: 8px; } .scroll-cue { display: none; }
+
+  /* top bar: solid enough to read through, a touch shorter */
+  .nav { background: color-mix(in srgb, var(--bg) 93%, transparent); } .nav-in { height: 48px; }
+  .brand-logo { height: 26px; }
+
+  /* bottom tab bar: frosted, with a soft pill behind the current tab */
+  .tabbar { padding: 6px 6px calc(4px + env(safe-area-inset-bottom)); background: color-mix(in srgb, var(--bg) 82%, transparent); backdrop-filter: saturate(1.8) blur(24px); -webkit-backdrop-filter: saturate(1.8) blur(24px); }
+  .tabbar a { position: relative; gap: 3px; font-size: 10.5px; font-weight: 600; padding: 5px 0 3px; border-radius: 12px; transition: color .2s; }
+  .tabbar a span { display: grid; place-items: center; width: 46px; height: 28px; border-radius: 14px; transition: background .25s; }
+  .tabbar a span svg { width: 21px; height: 21px; }
+  .tabbar a[aria-current] span { background: var(--accent-soft); }
+  .tabbar a:active span { transform: scale(.92); }
+  body { padding-bottom: calc(70px + env(safe-area-inset-bottom)); }
+
+  /* Sidekick: a small round button that tucks away while you read */
+  .sk-fab { right: 16px !important; bottom: calc(80px + env(safe-area-inset-bottom)) !important; width: 52px; height: 52px; padding: 0 !important; display: grid; place-items: center; transition: transform .35s cubic-bezier(.2,.8,.2,1), opacity .3s !important; }
+  .sk-fab .sk-fab-l { display: none; } .sk-fab span svg { width: 22px; height: 22px; }
+  .sk-fab.tuck { transform: translateY(140px); opacity: 0; pointer-events: none; }
+
+  /* one-line, swipeable chip rows instead of walls of wrapped chips */
+  .topic-chips, .dx-tags, .jumpbar, .sx-jump, .now-acts, .sch-filters, .ak-quick { flex-wrap: nowrap !important; overflow-x: auto; scrollbar-width: none; scroll-snap-type: x proximity; margin-left: -20px; margin-right: -20px; padding-left: 20px; padding-right: 20px; padding-bottom: 6px;
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 16px, #000 calc(100% - 24px), transparent); mask-image: linear-gradient(90deg, transparent, #000 16px, #000 calc(100% - 24px), transparent); }
+  .topic-chips::-webkit-scrollbar, .dx-tags::-webkit-scrollbar, .jumpbar::-webkit-scrollbar, .now-acts::-webkit-scrollbar { display: none; }
+  .now-panel .topic-chips { display: flex !important; grid-template-columns: none; }
+  .topic-chip, .dx-tags > *, .jumpbar a, .now-acts .btn { flex: none; scroll-snap-align: start; white-space: nowrap; }
+  .now-acts .btn { padding: 10px 16px; font-size: 14.5px; }
+
+  /* home: the three "today" cards become a swipeable row */
+  .up3 { display: flex !important; overflow-x: auto; scroll-snap-type: x mandatory; gap: 10px; margin-left: -20px; margin-right: -20px; padding: 4px 20px 10px; scrollbar-width: none; }
+  .up3::-webkit-scrollbar { display: none; }
+  .upcard { flex: 0 0 82%; scroll-snap-align: start; padding: 16px; }
+
+  /* cards that link somewhere read as tidy rows: icon, title and a line of context, chevron */
+  .bento, .bento.bento-2 { grid-template-columns: 1fr !important; gap: 10px; }
+  .bento .tile { display: grid; grid-template-columns: 40px 1fr 14px; align-items: center; gap: 4px 14px; min-height: 0; padding: 16px; border-radius: 18px; }
+  .bento .tile > .tile-ic { width: 40px; height: 40px; border-radius: 11px; grid-row: span 1; }
+  .bento .tile > div { min-width: 0; } .bento .tile h3 { font-size: 16.5px; margin: 1px 0 2px; } .bento .tile .tile-k { font-size: 11.5px; }
+  .bento .tile p { font-size: 13.5px; margin: 0; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .bento .tile .tile-go { font-size: 0; margin: 0; width: 9px; height: 9px; border: solid var(--text-2); border-width: 2px 2px 0 0; transform: rotate(45deg); justify-self: end; }
+  .bento .tile .progress { margin-top: 6px; }
+  .rv-acts { grid-template-columns: 1fr !important; gap: 10px; }
+  .rv-act { display: grid !important; grid-template-columns: 40px 1fr auto; align-items: center; gap: 4px 14px; padding: 14px 16px; }
+  .rv-act .rv-t span { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .rv-stats { grid-template-columns: 1fr 1fr !important; }
+
+  /* drugs: tighter tiles; the compare bar sits above the tab bar and stays fully out of sight until you pick */
+  .dx-grid { gap: 10px !important; } .dx-tile { padding: 14px 16px 12px; min-height: 0 !important; }
+  .dx-tray { bottom: calc(82px + env(safe-area-inset-bottom)) !important; transform: translate(-50%, calc(100% + 140px)); visibility: hidden; transition: transform .4s cubic-bezier(.2,.8,.2,1), visibility 0s .4s; }
+  .dx-tray.on { visibility: visible; transform: translate(-50%, 0); transition: transform .4s cubic-bezier(.2,.8,.2,1); }
+
+  /* tables scroll inside themselves; the page never scrolls sideways */
+  main table, .section table, .wrap table { display: block; max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  html, body { overflow-x: clip; }
+
+  /* footer: lighter and shorter */
+  .site-foot { margin-top: 24px; padding: 30px 0 20px; }
+  .foot-pledge { font-size: 13.5px; }
+  .foot-tiles { grid-template-columns: 1fr; gap: 0; margin: 18px 0; border-radius: 18px; overflow: hidden; box-shadow: var(--shadow); }
+  .foot-tile { box-shadow: none; border-radius: 0; padding: 14px 16px; border-top: 1px solid var(--hair); } .foot-tile:first-child { border-top: 0; }
+  .foot-fine { font-size: 11px; }
+
+  /* Anki: settings scroll; the count and download stay pinned above the tab bar */
+  .ak-mbar { display: flex; position: fixed; z-index: 44; left: 12px; right: 12px; bottom: calc(76px + env(safe-area-inset-bottom)); align-items: center; justify-content: space-between; gap: 12px; padding: 10px 10px 10px 16px; border-radius: 18px;
+    background: color-mix(in srgb, var(--surface) 90%, transparent); backdrop-filter: saturate(1.8) blur(20px); -webkit-backdrop-filter: saturate(1.8) blur(20px); box-shadow: 0 0 0 1px var(--hair), 0 10px 30px rgba(0,0,0,.18); font-size: 14px; color: var(--text-2); }
+  .ak-mbar strong { color: var(--text); font-size: 16px; }
+  .ak-app { padding-bottom: 70px; } .ak-sh { flex-wrap: wrap; }
+  body:has(.ak-mbar) .sk-fab { bottom: calc(146px + env(safe-area-inset-bottom)) !important; }
+
+  /* Insight + Prepare */
+  .rv-fd { padding: 12px 14px; } .rv-cal-h strong { font-size: 26px; }
+  .dotd { padding: 20px; } .dotd-name { font-size: 30px; }
+}
+@media (max-width: 760px) {
+  .up3, .topic-chips, .dx-tags, .jumpbar, .now-acts { scroll-padding-inline: 20px; }
+  .dx-cls:empty { display: none; } .dx-name { margin-bottom: 6px; }
+}
+@media (max-width: 760px) {
+  /* objectives: one card per objective instead of three cramped columns */
+  #objectives table { display: block; overflow: visible; } #objectives thead { display: none; }
+  #objectives tbody { display: grid; gap: 10px; }
+  #objectives tr { display: grid; grid-template-columns: auto 1fr; gap: 4px 12px; padding: 14px 16px; border-radius: 16px; background: var(--surface); box-shadow: var(--shadow); }
+  #objectives td { display: block; padding: 0 !important; border: 0 !important; }
+  #objectives td:first-child { font-weight: 700; color: var(--accent); font-size: 13px; padding-top: 2px !important; }
+  #objectives td:nth-child(3) { grid-column: 2; font-size: 13px; }
+}

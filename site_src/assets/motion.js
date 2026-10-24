@@ -31,7 +31,7 @@
   if (lines.length) {
     gsap.fromTo(lines, { opacity: 0, y: 34, filter: "blur(10px)" }, { opacity: 1, y: 0, filter: "blur(0px)", duration: 1.15, ease: "expo.out", stagger: 0.12, delay: 0.05, clearProps: "filter" });
     const hero = document.querySelector(".first-screen .hero, .hero");
-    if (hero) gsap.to(hero, { y: -36, opacity: 0.55, ease: "none", scrollTrigger: { trigger: hero, start: "top top+=60", end: "bottom top", scrub: true } });
+    if (hero && !matchMedia("(max-width: 760px)").matches) gsap.to(hero, { y: -36, opacity: 0.55, ease: "none", scrollTrigger: { trigger: hero, start: "top top+=60", end: "bottom top", scrub: true } });
   }
 
   // ---- scroll reveals: whatever enters together rises together, in a short stagger
@@ -51,6 +51,9 @@
   // things that appear later (cards drawn by scripts, unhidden sections) still get revealed and measured
   const refresh = (() => { let t = 0; return () => { clearTimeout(t); t = setTimeout(() => { ST.refresh(); document.querySelectorAll(".appear:not(.in)").forEach((e) => { const r = e.getBoundingClientRect(); if (r.top < innerHeight * 0.94 && r.bottom > 0 && e.offsetParent) reveal([e]); }); }, 120); }; })();
   new ResizeObserver(refresh).observe(document.body);
+  // safety net: anything already on screen gets revealed even if a fast jump skipped its trigger
+  let sweep = 0;
+  addEventListener("scroll", () => { if (sweep) return; sweep = setTimeout(() => { sweep = 0; const els = [...document.querySelectorAll(".appear:not(.in)")].filter((e) => { const r = e.getBoundingClientRect(); return e.offsetParent && r.top < innerHeight && r.bottom > -innerHeight * 3; }); if (els.length) reveal(els); }, 250); }, { passive: true });
   addEventListener("load", refresh);
 
   // ---- nav: one underline that glides to the link you point at, and back to the current page

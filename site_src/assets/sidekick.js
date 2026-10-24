@@ -935,10 +935,16 @@ async function start(t) {
 }
 fab = document.createElement("button");
 fab.className = "sk-fab noprint";
-fab.innerHTML = `<span aria-hidden="true">${window.dpasIcon?.("sparkle", 17) || "✦"}</span> Sidekick`;
+fab.innerHTML = `<span aria-hidden="true">${window.dpasIcon?.("sparkle", 17) || "✦"}</span><b class="sk-fab-l"> Sidekick</b>`;
+fab.setAttribute("aria-label", "Sidekick");
 fab.title = "Open Sidekick (press /)";
 fab.addEventListener("click", () => (panel?.classList.contains("open") ? close() : start()));
 document.body.append(fab);
+// phones: the button tucks away while you scroll down to read and comes back when you scroll up
+if (matchMedia("(max-width: 760px)").matches) {
+  let lastY = scrollY;
+  addEventListener("scroll", () => { const y = scrollY; if (Math.abs(y - lastY) > 6) { fab.classList.toggle("tuck", y > lastY && y > 200); lastY = y; } }, { passive: true });
+}
 if (HOME) {  // on the home page the button waits until you scroll past the first screen
   const upd = () => fab.classList.toggle("later", scrollY < innerHeight * 0.6 && !panel?.classList.contains("open"));
   addEventListener("scroll", upd, { passive: true }); upd();
