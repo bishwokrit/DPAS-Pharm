@@ -88,7 +88,7 @@ def practice_page(syl, built, exams_built):
     body = f"""<header class="hero wrap"><p class="eyebrow appear">Prepare</p><h1 class="appear" style="--d:.05s">Pull it out of memory. That's how it sticks.</h1>
 <p class="lede appear pr-quote" id="pr-quote" style="--d:.12s" tabindex="0"><span class="pr-t">{html.escape(LINES[0]["t"])}</span><span class="pr-by">{html.escape(LINES[0].get("by", ""))}</span></p>
 <script type="application/json" id="pr-lines">{json.dumps(LINES, ensure_ascii=False)}</script>
-<nav class="sx-jump appear" style="--d:.18s"><a href="#today">Today</a><a href="#tools">Anki &amp; Daily 10</a><a href="#pr-units">By unit</a><a href="#final">Final prep</a></nav></header>
+<nav class="jumpbar appear" style="--d:.18s"><a href="#today">Today</a><a href="#tools">Tools</a><a href="#pr-units">By unit</a><a href="#final">Final prep</a></nav></header>
 <section class="section" id="today"><div class="wrap"><p class="kicker">Today</p><h2>Drug of the day</h2><div class="dotd appear" id="dotd" hidden></div></div></section>
 <section class="section" id="tools"><div class="wrap"><p class="kicker">Tools</p><h2>Cards and quick sets</h2><div class="bento bento-2">{tools}</div></div></section>
 <div id="pr-units">{secs}</div>
