@@ -43,7 +43,9 @@ def global_kb(syl, sched, built, exams):
         g["faq"] += k["faq"][:4]
     g["pages"] = [{"t": x["t"], "u": x["u"]} for x in search_index(syl, sched, built, exams) if x.get("g") == "Pages"] + [
         {"t": "Drug index — every drug, cited, with compare and quiz", "u": "drugs/index.html"},
-        {"t": "Review — Daily 10, retry misses, weakest topics, saved notes", "u": "review/index.html"},
+        {"t": "Progress — Daily 10, retry misses, weakest topics, saved notes", "u": "review/index.html"},
+        {"t": "Exams — every practice exam and lecture self-test, by unit", "u": "practice/index.html"},
+        {"t": "Anki — build flashcard decks from any lecture, drug or question", "u": "anki/index.html"},
         {"t": "What you need on the final", "u": "syllabus/index.html#final"}, {"t": "Week-by-week schedule", "u": "syllabus/index.html#schedule"}]
     cal = [f"{c['date']}: class — {c['topic']}" for c in sched["classes"]] + [f"{d['date']}: {d['kind']} — {d['label']}" + (f" (note: {d['note']})" if d.get("note") else "") for d in sched["due"]]
     gr = sched["grading"]
@@ -102,7 +104,7 @@ def review_page(syl, built, exams):
                       "exams": [{"id": e["id"], "title": e["title"], "unit": int(e.get("unit") or 0)} for e in exams],
                       "units": syl["units"],
                       "upcoming": [{"label": e["label"], "date": e["date"], "time": e["time"], "unit": e["unit"]} for e in syl.get("exams", [])]}).replace("</", "<\\/")
-    body = f"""<header class="hero wrap rv-hero"><p class="eyebrow">Review</p><h1>Your study hub</h1>
+    body = f"""<header class="hero wrap rv-hero"><p class="eyebrow">Progress</p><h1>Your study hub</h1>
 <p class="lede">Practice that adapts to you: this unit, or everything so far for the final. It all comes from what you've done on this site: questions you missed, cards you marked, notes you saved.</p>
 <div class="rv-count" id="rv-count" hidden></div>
 <div class="rv-scope seg" id="rv-scope" role="group" aria-label="What to review"></div><p class="rv-scope-sub" id="rv-scope-sub"></p></header>
@@ -114,7 +116,7 @@ def review_page(syl, built, exams):
 <div class="seg rv-tabs" id="rv-tabs"></div><div class="rv-panel" id="rv-panel"></div></div></section>
 <script type="application/json" id="review-data">{cfg}</script>
 <script src="../assets/review.js"></script>"""
-    return page(f"Review · {SITE_NAME}", body, depth=1, active="review")
+    return page(f"Progress · {SITE_NAME}", body, depth=1, active="review")
 
 
 # ---------------------------------------------------------------- cumulative drug index

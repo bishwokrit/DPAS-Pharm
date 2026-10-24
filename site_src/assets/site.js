@@ -294,7 +294,7 @@
     const ps = document.getElementById("pr-sub");
     if (ps) {
       const fe = D.exams.find((e) => !e.unit), dd = (e) => { const n = days(e.date); return n === 0 ? "today" : n === 1 ? "tomorrow" : `in ${n} days`; };
-      ps.innerHTML = unitEx ? `This unit's practice. Earlier units and the final live in <a href="review/index.html?scope=all">Review</a>.`
+      ps.innerHTML = unitEx ? `This unit's practice. Earlier units and the final live in <a href="review/index.html?scope=all">Progress</a>.`
         : fe && day(fe.date) >= now ? `<strong>Final prep</strong> · comprehensive final ${fmt(fe.date)} (${dd(fe)}).` : "";
     }
     hu.querySelectorAll(".appear").forEach((el, i) => { el.style.setProperty("--d", `${0.45 + i * 0.08}s`); requestAnimationFrame(() => el.classList.add("in")); });

@@ -104,7 +104,7 @@
     host.innerHTML = `<div class="sx-panel sx-play${eve ? " eve" : ""}"><div class="sx-k">${eve ? "Exam eve" : "Before your next exam"}${ex ? ` · ${esc(ex.label)} ${daysTo(ex.date) === 0 ? "today" : daysTo(ex.date) === 1 ? "tomorrow" : "in " + daysTo(ex.date) + " days"}` : ""}</div>
       <h3>${eve ? "Tonight's playlist" : "Your playlist"}</h3>
       ${ranked.length ? `<ol class="sx-pl">${ranked.map(({ x, s }) => `<li><strong>${esc(x.title)}</strong><small>${s >= 1 ? `${Math.floor(s)} missed question${Math.floor(s) === 1 ? "" : "s"} on ${esc((x.drugs || []).filter((n) => score[n]).join(", "))}` : "not watched yet"}</small></li>`).join("")}</ol>`
-        : '<p class="sx-muted">Answer questions in Review or the practice exams, and the sketches for the drugs you miss most line up here, worst first.</p>'}</div>`;
+        : '<p class="sx-muted">Answer questions in Progress or the practice exams, and the sketches for the drugs you miss most line up here, worst first.</p>'}</div>`;
   }
   tracker(); playlist();
 

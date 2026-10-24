@@ -28,7 +28,7 @@ SITE_NAME = "PA–S Rx"
 COURSE = "Clinical Pharmacology I"
 # Browser security policy: the pages may load files only from this site, and talk only to this site and
 # Anthropic (the optional AI chat, on the student's own key). No plugins, no form posts, no outside scripts.
-SECURITY_META = ('<meta http-equiv="Content-Security-Policy" content="default-src \'self\'; script-src \'self\' \'unsafe-inline\'; '
+SECURITY_META = ('<meta http-equiv="Content-Security-Policy" content="default-src \'self\'; script-src \'self\' \'unsafe-inline\' \'wasm-unsafe-eval\'; '
                  'style-src \'self\' \'unsafe-inline\'; img-src \'self\' data: blob:; font-src \'self\' data:; '
                  'connect-src \'self\' https://api.anthropic.com; media-src \'self\' blob:; object-src \'none\'; base-uri \'none\'; form-action \'none\'">'
                  '<meta name="referrer" content="no-referrer">')
@@ -60,12 +60,13 @@ SEARCH_ICON = ('<svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="tru
 def nav_html(up, active="", nav_links="", subtitle=""):
     """Two-level bar: a calm global nav (4 destinations + search + theme), and — only when a page has
     sections — a slim local bar under it with that page's own links."""
-    main = [("Study", f"{up}index.html#study", "study"), ("Practice", f"{up}practice/index.html", "practice"),
-            ("Drugs", f"{up}drugs/index.html", "drugs"), ("Review", f"{up}review/index.html", "review"), ("Syllabus", f"{up}syllabus/index.html", "syllabus")]
+    # Study (learn) · Drugs (reference) · Exams (fixed tests) · Anki (cards to take away) · Progress (adaptive, yours) · Syllabus
+    main = [("Study", f"{up}index.html#study", "study"), ("Drugs", f"{up}drugs/index.html", "drugs"), ("Exams", f"{up}practice/index.html", "practice"),
+            ("Anki", f"{up}anki/index.html", "anki"), ("Progress", f"{up}review/index.html", "review"), ("Syllabus", f"{up}syllabus/index.html", "syllabus")]
     links = "".join(f'<a href="{href}"{" aria-current=page" if key == active else ""}>{label}</a>' for label, href, key in main)
     sub = (f'<div class="subnav"><div class="subnav-in"><span class="subnav-title">{html.escape(subtitle)}</span>'
            f'<div class="nav-links">{nav_links}</div><span class="subnav-tools"></span></div></div>') if nav_links else ""
-    tab_ic = {"study": "book", "practice": "check", "drugs": "pill", "review": "chart", "syllabus": "calendar"}
+    tab_ic = {"study": "book", "practice": "check", "drugs": "pill", "anki": "card", "review": "chart", "syllabus": "calendar"}
     tabbar = '<nav class="tabbar" aria-label="Sections">' + "".join(
         f'<a href="{href}"{" aria-current=page" if key == active else ""}><span data-ic="{tab_ic[key]}"></span>{label}</a>' for label, href, key in main) + "</nav>"
     return f"""{tabbar}<header class="topbar">
@@ -481,6 +482,8 @@ def main(pdf=True):
     (DOCS / "review").mkdir(exist_ok=True)
     (DOCS / "review" / "index.html").write_text(review_page(syl, built, exams))
     (DOCS / "index.html").write_text(home_page(syl, built, exams))
+    from pages_anki import anki_page
+    anki_page(built, exams)
     (DOCS / "practice").mkdir(exist_ok=True)
     (DOCS / "practice" / "index.html").write_text(practice_page(syl, built, exams))
     print(f"  site: home page ({len(built)} lectures, {len(exams)} practice exams) -> docs/")

@@ -46,7 +46,7 @@ def unit_tiles(u, syl, built, exams_built, up="", full=False):
                          f'<h3>{html.escape(b["title"])}</h3><p>One question at a time, with the why behind every answer.</p></div><span class="tile-go">Start →</span></a>')
     if not tiles:
         tiles.append(f'<div class="tile appear"><span class="tile-ic">{icon("calendar")}</span><div><div class="tile-k">Unit {u} · {html.escape(syl["units"][u])}</div>'
-                     f'<h3>Practice opens as lectures are posted</h3><p>Questions appear after each class. Meanwhile, keep earlier units fresh in Review.</p></div></div>')
+                     f'<h3>Practice opens as lectures are posted</h3><p>Questions appear after each class. Meanwhile, keep earlier units fresh in Progress.</p></div></div>')
         tiles.append(final_tile(up))
     return tiles
 
@@ -57,12 +57,12 @@ def practice_page(syl, built, exams_built):
     units = [u for u in syl["units"] if any(str(b["unit"]) == u for b in built.values()) or any(str(e.get("unit")) == u for e in exams_built)]
     secs = "".join(f'<section class="section pr-unit" data-unit="{u}"><div class="wrap"><p class="kicker">Unit {u}<span class="pr-now" hidden> · current</span></p><h2>{html.escape(syl["units"][u])}</h2>'
                    f'<div class="bento">{"".join(unit_tiles(u, syl, built, exams_built, up="../", full=True))}</div></div></section>' for u in units)
-    body = f"""<header class="hero wrap"><p class="eyebrow appear">Practice</p><h1 class="appear" style="--d:.05s">Test yourself. Then test yourself again.</h1>
-<p class="lede appear" style="--d:.12s">Every practice exam and lecture self-test, by unit, with the current unit first. For spaced review across units and final prep, open <a href="../review/index.html?scope=all">Review</a>.</p></header>
+    body = f"""<header class="hero wrap"><p class="eyebrow appear">Exams</p><h1 class="appear" style="--d:.05s">Test yourself. Then test yourself again.</h1>
+<p class="lede appear" style="--d:.12s">Every practice exam and lecture self-test, by unit, with the current unit first. Your scores, misses and the adaptive Daily 10 live in <a href="../review/index.html">Progress</a>.</p></header>
 <div id="pr-units">{secs}</div>
 <section class="section"><div class="wrap"><p class="kicker">Cumulative</p><h2>Final prep</h2><div class="bento bento-2">{final_tile("../")}</div></div></section>
 <script type="application/json" id="practice-data">{upnext}</script>"""
-    return page(f"Practice · {SITE_NAME}", body, depth=1, active="practice")
+    return page(f"Exams · {SITE_NAME}", body, depth=1, active="practice")
 
 
 def home_page(syl, built, exams_built):
@@ -89,7 +89,7 @@ def home_page(syl, built, exams_built):
         groups += (f'<div class="bento bento-2" data-unit="{u}" hidden>{"".join(tiles)}</div>'
                    f'<p class="pr-more" data-unit="{u}" hidden><a href="practice/index.html">{f"{more} more for Unit {u}, plus cumulative and final prep" if more > 0 else "Cumulative and final prep"} →</a></p>')
     groups += (f'<div class="bento bento-2" data-unit="final" hidden>{final_tile("")}</div>')
-    practice = (f'<section class="section" id="practice"><div class="wrap"><p class="kicker appear">Practice</p><h2 class="appear">Test yourself. Then test yourself again.</h2>'
+    practice = (f'<section class="section" id="practice"><div class="wrap"><p class="kicker appear">Exams</p><h2 class="appear">Test yourself. Then test yourself again.</h2>'
                 f'<p class="pr-sub appear" id="pr-sub"></p><div class="dotd appear" id="dotd" hidden></div>{groups}</div></section>')
     # course roadmap: one compact row per unit; the current unit opens with its lecture cards
     today = date.today().isoformat()

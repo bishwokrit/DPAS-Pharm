@@ -54,7 +54,7 @@
         end();
         window.dpasQuiz?.start(qs, {
           title: `Drug of the day · ${d.name}`,
-          // misses on lecture questions show up in Review like any other
+          // misses on lecture questions show up in Progress like any other
           onAnswer: (q, L, ok) => { if (!q.lid) return; const m = new Set(store.get(`miss:${q.lid}`, [])); ok ? m.delete(q.raw) : m.add(q.raw); store.set(`miss:${q.lid}`, [...m]); },
           onFinish: (r) => {
             if (again) return;  // the first run of the day is the one that counts
