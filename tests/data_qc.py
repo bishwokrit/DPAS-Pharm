@@ -82,6 +82,22 @@ for e in json.loads((DOCS / "search.json").read_text()):
     if (err := resolve(e["u"], DOCS / "index.html")):
         bad(f"search: {err}")
 
+# 2b. every practice-exam answer is taught in its lectures' guides (safety net: catches a missing topic, not a missing nuance)
+sys.path.insert(0, str(ROOT / "pipeline"))
+from audit import toks  # noqa: E402
+sys.path.insert(0, str(ROOT / "pipeline"))
+import build_exam  # noqa: E402
+for eid, meta in build_exam.EXAMS.items():
+    qf = DOCS / "exams" / meta["slug"] / "quiz.json"
+    have = [l for l in meta["lectures"] if (ROOT / "work" / l / "content.resolved.json").exists()]
+    if not qf.exists() or not have:
+        continue
+    taught = toks(" ".join((ROOT / "work" / l / "content.resolved.json").read_text() for l in have))
+    for q in json.loads(qf.read_text()):
+        t = toks(q["options"][q["answer"]] + " " + q.get("why", ""))
+        if t and len(t - taught) / len(t) > 0.3:
+            bad(f"{q['id']}: the answer is not taught in the guide ({', '.join(sorted(t - taught)[:6])})")
+
 # 3. generated data agrees with the drug list and the lectures
 names = {d["name"] for d in DR.DRUGS}
 for d in json.loads((DOCS / "drugs" / "dotd.json").read_text()):

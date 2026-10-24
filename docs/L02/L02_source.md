@@ -211,6 +211,7 @@ Learning objectives covered: SO3, IO1.1, IO1.3
 - [TB] Give IV loading doses slowly (over an hour): a fast bolus can overshoot into toxicity, e.g., phenytoin. (p. 52)
 - [TB] Timing drug levels: digoxin at least 6 hours after the dose; lithium just before the next dose. (p. 55)
 - [TB] In obesity, dose drugs that stay out of fat (gentamicin, digoxin) on fat-free mass. (p. 53; p. 55)
+- [TB] Displacing a drug from plasma proteins raises free drug only briefly; the body eliminates the extra, so binding changes rarely matter clinically. (p. 55)
 
 ### PK Calculations: Half-Life, Steady State & Clearance — Drugs named as examples
 - Not covered in materials — this section uses illustrative drugs ("a drug with a half-life of 6 hours"). (S19)

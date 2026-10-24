@@ -95,10 +95,10 @@
   "mechanism": 12
  },
  "thin_objectives": [
-  "IO1.3: Explain how patient-specific factors, including age, pregnancy, renal and hepatic function, and pharmacogenetic variation, may affect medication response. — 4 class(es), 110 facts (Age and pregnancy are only named in the prescribing checklist)",
+  "IO1.3: Explain how patient-specific factors, including age, pregnancy, renal and hepatic function, and pharmacogenetic variation, may affect medication response. — 4 class(es), 111 facts (Age and pregnancy are only named in the prescribing checklist)",
   "IO1.5: Interpret common components of medication orders and prescriptions, including drug name, dose, route, frequency, and duration. — 2 class(es), 41 facts (Only dose, route, interval, and monitoring (checklist, renal dosing); no prescription-reading content)"
  ],
- "textbook_unused": 1289,
+ "textbook_unused": 1288,
  "reading_missing": [],
  "reading_skipped": [
   {

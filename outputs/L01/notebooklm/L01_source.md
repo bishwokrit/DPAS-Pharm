@@ -472,6 +472,14 @@ Learning objectives covered: SO5, IO1.2, IO1.3, IO1.5
 | Inhalation | 5 to <100 | Often very rapid onset |
 | Transdermal | 80 to ≤100 | Usually very slow absorption; prolonged duration |
 
+### Comparison: What a drug’s Vd tells you about where it goes (textbook Table 3–2) ([TB] p. 43; p. 44; p. 46)
+| Vd (L/kg) | Where the drug is | Example |
+|---|---|---|
+| 0.04 (about 2.8 L in 70 kg) | Stays in the plasma (minimum possible Vd) | Large proteins such as antibodies |
+| 0.2 | Extracellular water | Gentamicin |
+| 0.6 | Total body water | Ethanol |
+| Far above body size | Sequestered in tissue | Digoxin |
+
 ### Pharmacokinetics: ADME — Absorption & Distribution — Memory hooks
 - Why it happens: Why is IV bioavailability 100%? The whole dose enters the bloodstream directly — there is no absorption step and no trip through the liver first. (S50; S49)
 - Why it happens: Why does sublingual skip first-pass? It drains into systemic veins, not the portal vein — so the drug reaches the body before the liver can inactivate it. (S55; S51)

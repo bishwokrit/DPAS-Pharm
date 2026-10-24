@@ -21,7 +21,9 @@ Never weaken a gate to make it pass. Fix the content. `audit_skip` / `READING_SK
 - **PA-student depth: no more, no less.** PA students are short on time. Teach what a PA needs to prescribe safely and pass
   the exam/PANCE: mechanism → clinical use → adverse effects → interactions → monitoring → traps. Leave out chemistry,
   molecular-biology and drug-industry detail with no prescribing decision attached (skip that reading section as
-  "Beyond PA scope"; the guide's Go deeper link opens the pages). Never drop anything the slides teach.
+  "Beyond PA scope"; the guide's Go deeper link opens the pages). Never drop anything the slides teach, and never cut a
+  fact that a practice-exam question tests (grep the exam banks for it first; `./run.sh check` also flags exam answers the
+  guide doesn't teach).
 - **Lean, not dense:** one idea per bullet (≤25 words, gate at 40), merge repeats, prefer one table over five bullets.
   Gates: textbook-only bullets ≤30% of the guide; deck ≤2.25× the lecture's slide count (the deck carries the lecture
   quick checks plus one question per part; the full question set lives on the site).

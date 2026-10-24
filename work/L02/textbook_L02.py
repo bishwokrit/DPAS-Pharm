@@ -150,6 +150,7 @@ _READ = {
             ("Give IV loading doses slowly (over an hour): a fast bolus can overshoot into toxicity, e.g., phenytoin.", "p. 52"),
             ("Timing drug levels: digoxin at least 6 hours after the dose; lithium just before the next dose.", "p. 55"),
             ("In obesity, dose drugs that stay out of fat (gentamicin, digoxin) on fat-free mass.", "p. 53; p. 55"),
+            ("Displacing a drug from plasma proteins raises free drug only briefly; the body eliminates the extra, so binding changes rarely matter clinically.", "p. 55"),
         ],
     },
     "Pharmacogenomics": {

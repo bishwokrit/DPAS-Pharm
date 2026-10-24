@@ -224,6 +224,13 @@ for _n, _secs in _READ.items():
     for _k, _v in _secs.items():
         ADD.setdefault(_n, {}).setdefault(_k, []).extend(_v)
 
+COMPARISONS.setdefault("Pharmacokinetics: ADME — Absorption & Distribution", []).append(
+    {"title": "What a drug’s Vd tells you about where it goes (textbook Table 3–2)", "tb": True, "src": "p. 43; p. 44; p. 46",
+     "columns": ["Vd (L/kg)", "Where the drug is", "Example"],
+     "rows": [["0.04 (about 2.8 L in 70 kg)", "Stays in the plasma (minimum possible Vd)", "Large proteins such as antibodies"],
+              ["0.2", "Extracellular water", "Gentamicin"],
+              ["0.6", "Total body water", "Ethanol"],
+              ["Far above body size", "Sequestered in tissue", "Digoxin"]]})
 COMPARISONS.setdefault("Pharmacodynamics: Targets & Receptors", []).extend([
     {"title": "Five ways a signal crosses the membrane (textbook Ch. 2)", "tb": True, "src": "p. 28-32",
      "columns": ["Mechanism", "Examples", "How it signals", "Clinical point"],

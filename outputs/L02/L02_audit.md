@@ -2,7 +2,7 @@
 
 **Result: PASS ✅ nothing missing**
 
-Checked 1508 source lines (49 slides; 4 study-guide items; 51 textbook pages read; 10 textbook sentences used, the rest left out as not needed for this lecture (info only).)
+Checked 1508 source lines (49 slides; 4 study-guide items; 51 textbook pages read; 11 textbook sentences used, the rest left out as not needed for this lecture (info only).)
 
 ## Missing from the study materials
 - None ✅
@@ -43,5 +43,5 @@ Checked 1508 source lines (49 slides; 4 study-guide items; 51 textbook pages rea
 - None ✅
 
 ## Objectives with thin coverage
-- ⚠ IO1.3: Explain how patient-specific factors, including age, pregnancy, renal and hepatic function, and pharmacogenetic variation, may affect medication response. — 4 class(es), 110 facts (Age and pregnancy are only named in the prescribing checklist)
+- ⚠ IO1.3: Explain how patient-specific factors, including age, pregnancy, renal and hepatic function, and pharmacogenetic variation, may affect medication response. — 4 class(es), 111 facts (Age and pregnancy are only named in the prescribing checklist)
 - ⚠ IO1.5: Interpret common components of medication orders and prescriptions, including drug name, dose, route, frequency, and duration. — 2 class(es), 41 facts (Only dose, route, interval, and monitoring (checklist, renal dosing); no prescription-reading content)
