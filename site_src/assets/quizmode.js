@@ -221,7 +221,7 @@
         <label><input type="radio" name="mode" value="timed"><span><strong>Timed (PANCE pace)</strong>1 min per question, results at the end</span></label>
       </div>
       <div class="btns"><button class="btn" data-go>Start</button><button class="btn ghost" data-cancel>Cancel</button></div>
-      <p class="small muted">Remote / keys: ↑ ↓ choose · Enter lock in · → next · ← back · F flag · Esc exit. A–E also work.</p></div></div>`;
+      <p class="qm-tip"><strong>Pro tip</strong> Quiz and exam modes work with an Anki remote (Bluetooth page-turner ring): up/down choose · click lock in · next/back move. Keys: ↑ ↓ · Enter · → ← · A–E · F flag · Esc exit.</p></div></div>`;
     document.body.append(el);
     const val = (n) => el.querySelector(`[name=${n}]`);
     el.querySelector("[data-cancel]").addEventListener("click", () => el.remove());

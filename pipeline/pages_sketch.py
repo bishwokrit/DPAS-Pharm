@@ -152,7 +152,7 @@ def sketch_page(page, SITE_NAME):
 <section class="section sx-sec" id="kahoot"><div class="wrap"><p class="kicker">5 · Kahoot</p><h2>A deck for every lecture</h2>
 <p class="sx-how">In Kahoot: <b>Create</b> → <b>Kahoot</b> → <b>Add question</b> → <b>Import spreadsheet</b>, then drop in a deck. Each deck holds that lecture's practice-exam and self-test questions, then quick-fire flashcard rounds.</p>
 <div class="sx-units">{cards}</div><h3 class="sx-h3">Game-night builder</h3><div id="kahoot-app"></div></div></section>
-{sec("h2h", 6, "Head-to-head", "Two players, one screen, ten questions")}
+{sec("h2h", 6, "Head-to-head", "2–4 players, one screen, your rules")}
 <script type="application/json" id="sketch-data">{cfg_json}</script>
 <script>if(!(function(){{try{{return JSON.parse(localStorage.getItem("sketch"))}}catch(e){{}}}})())location.replace("../index.html");
 document.getElementById("sx-lock").onclick=function(){{window.dpasSketchLock?window.dpasSketchLock():(localStorage.removeItem("sketch"),location.href="../index.html")}};</script>
