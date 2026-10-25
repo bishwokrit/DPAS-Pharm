@@ -622,7 +622,7 @@ body.focus .focus-btn { background: var(--accent-soft) !important; color: var(--
 .fact-pills { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
 .fact-pills div { background: var(--surface); box-shadow: var(--shadow); border-radius: 14px; padding: 10px 16px; display: flex; align-items: baseline; gap: 8px; }
 .fact-pills strong { font-size: 20px; letter-spacing: -.02em; } .fact-pills span { font-size: 13.5px; color: var(--text-2); }
-#upnext.upnext { grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); }
+#upnext.upnext { grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); }
 .up { display: flex; flex-direction: column; align-items: flex-start; gap: 10px; border-left: 0; border-top: 4px solid var(--kc, var(--accent)); }
 .up .up-days { display: flex; align-items: baseline; gap: 6px; text-align: left; min-width: 0; }
 .up .up-days strong { font-size: 34px; } .up-title { font-weight: 650; margin: 2px 0; }
@@ -1665,4 +1665,37 @@ html[data-pmotion="off"] ::view-transition-old(root), html[data-pmotion="off"] :
   #objectives td { display: block; padding: 0 !important; border: 0 !important; }
   #objectives td:first-child { font-weight: 700; color: var(--accent); font-size: 13px; padding-top: 2px !important; }
   #objectives td:nth-child(3) { grid-column: 2; font-size: 13px; }
+}
+
+/* ---------- fluid page width: the layout scales with the screen ----------
+   Phones keep the mobile layer above. From tablets up, the page uses nearly the whole window with gutters that grow
+   with it (22px on a small laptop, up to 64px on a large monitor), capped at 1600px (growing to 1920px on very large monitors) so lines and cards stay comfortable on any screen.
+   Grids pick up extra columns on their own (auto-fill); long paragraphs keep a comfortable reading length. */
+:root { --page-max: clamp(1600px, 75vw, 1920px); --gutter: clamp(22px, 3.4vw, 64px); }
+@media screen and (min-width: 761px) {
+  .wrap, .nav-in, .subnav-in { max-width: var(--page-max); padding-left: var(--gutter); padding-right: var(--gutter); }
+  .wrap.narrow { max-width: min(var(--page-max), 1180px); }
+  body.sk-on .nav-in { max-width: var(--page-max); }
+  /* prose stays readable on wide screens: paragraphs and lists that sit straight in a section, not cards or tables */
+  .section .wrap > p, .section .wrap > ul, .section .wrap > ol, .hero > p:not(.eyebrow):not(.kicker) { max-width: 82ch; }
+  .qm-top, .qm-dots, .qm-bottom { max-width: min(1100px, 100%); }
+  .qm-card { max-width: min(1000px, 100%); }
+}
+/* big monitors: roomier card columns, so the wider page doesn't fill with narrow slivers */
+@media screen and (min-width: 1680px) {
+  .grid { grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); }
+  .grid.two { grid-template-columns: repeat(auto-fit, minmax(440px, 1fr)); }
+}
+/* wide screens: full-width callouts (About, discrepancies) flow their bullets into columns instead of very long lines */
+@media screen and (min-width: 1400px) { .callout ul { columns: 2 520px; column-gap: 44px; } .callout ul li { break-inside: avoid; } }
+/* wide screens: objectives become a two-column grid of cards (same cards as the phone layout), and captions stay readable */
+@media screen and (min-width: 1400px) {
+  #objectives .table-wrap { overflow: visible; }
+  #objectives table { display: block; } #objectives thead { display: none; }
+  #objectives tbody { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+  #objectives tr { display: grid; grid-template-columns: auto 1fr; gap: 6px 14px; align-content: start; padding: 16px 18px; border-radius: 16px; background: var(--surface); box-shadow: var(--shadow); }
+  #objectives td { display: block; padding: 0 !important; border: 0 !important; }
+  #objectives td:first-child { font-weight: 700; color: var(--accent); font-size: 13px; padding-top: 3px !important; }
+  #objectives td:nth-child(3) { grid-column: 2; font-size: 13px; }
+  figcaption { max-width: 110ch; }
 }
