@@ -1728,3 +1728,5 @@ html[data-pmotion="off"] ::view-transition-old(root), html[data-pmotion="off"] :
 @media screen and (min-width: 1200px) { .foot-fine { columns: 2; column-gap: 48px; } }
 @media (max-width: 1100px) { .foot-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } .foot-grid .foot-top { grid-column: 1 / -1; flex-direction: row; align-items: center; justify-content: space-between; flex-wrap: wrap; padding: 0 0 6px; } .foot-grid .foot-pledge { max-width: 640px; } }
 @media (max-width: 760px) { .foot-grid { grid-template-columns: 1fr; } .foot-grid .foot-top { flex-direction: column; align-items: flex-start; } }
+/* home first screen: sit the title in the upper third (optical center), not the dead middle; space scales with window height */
+@media screen and (min-width: 761px) { .first-screen { justify-content: flex-start; padding-top: clamp(40px, 12vh, 140px); } }
