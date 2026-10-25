@@ -26,7 +26,7 @@ Checked 1508 source lines (49 slides; 4 study-guide items; 51 textbook pages rea
 
 ## Assigned-reading sections not taught in the guide
 - None ✅
-- (skipped) p. 87: ORGANIC CATION TRANSPORTER 1 (OCT1, SLC22A1) — _Beyond PA scope: transporter genetics with no routine prescribing change_
+- (skipped) p. 90: EPIGENOMICS — _Beyond PA scope: the textbook calls it an active research area, with no prescribing decision yet_
 
 ## Emphasized on slides but not bold in deck
 - None ✅

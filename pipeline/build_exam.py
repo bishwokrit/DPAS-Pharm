@@ -21,7 +21,11 @@ EXAMS = {"U1": {"slug": "unit1", "title": "Unit 1 Practice Exam — Introduction
                 "about": "Built only from the Unit 1 slides and study guide."},
          "U1B": {"slug": "unit1b", "title": "Unit 1 Practice Exam B — Exam Conditions",
                  "short": "Unit 1 Practice Exam B (50 Q · 60 min)", "lectures": ["L01", "L02"], "seed": 1030, "unit": 1, "minutes": 60,
-                 "about": "50 new questions at real exam length — slides, study guide, and the assigned Katzung chapters (textbook questions are cited by page). Best taken timed: 60 minutes."}}
+                 "about": "50 new questions at real exam length — slides, study guide, and the assigned Katzung chapters (textbook questions are cited by page). Best taken timed: 60 minutes."},
+         # Unit 2: the bank goes in work/exams/U2/bank_*.py once L03 and L04 are authored; ./run.sh new L03 builds it when it exists
+         "U2": {"slug": "unit2", "title": "Unit 2 Practice Exam — Musculoskeletal",
+                "short": "Unit 2 Practice Exam", "lectures": ["L03", "L04"], "seed": 1027, "unit": 2,
+                "about": "Built only from the Unit 2 slides, study guide, and assigned Katzung chapters."}}
 
 
 def load_bank(exam_id):

@@ -100,6 +100,10 @@ def build(lid):
     if errs:
         print("  content.json problems:\n   - " + "\n   - ".join(errs))
         return "content errors"
+    missing = [f["image"] for cl in c["classes"] for f in cl.get("figures", []) if not (work / "figures" / f["image"]).exists()]
+    if missing:  # a figure must exist as a picture for the deck and PDF (textbook-concept figures: work/make_tb_figures.py)
+        print("  figures listed but not found in work/" + lid + "/figures/: " + ", ".join(missing))
+        return "content errors"
     C.resolve(c)
     (work / "content.resolved.json").write_text(json.dumps(c, indent=1, ensure_ascii=False))
 

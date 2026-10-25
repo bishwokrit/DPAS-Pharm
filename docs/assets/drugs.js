@@ -55,12 +55,17 @@
     const col = (d) => `<div class="dx-cc"><div class="dx-cc-h"><h3>${esc(d.name)} <a class="dx-utd-s" href="${esc(d.utd)}" target="_blank" rel="noopener noreferrer">UpToDate ↗</a></h3><div class="small muted">${d.cls === "Not covered in materials" ? "Class: later unit" : esc(d.cls) + cite(d.cls_src)}</div></div>
       <ul>${d.facts.map((f) => `<li>${tb(f)}${md(f.text)}${cite(f.src)}</li>`).join("")}</ul></div>`;
     sheet(`<div class="dx-sh-top"><div><div class="kicker">Compare</div><h2>${esc(a.name)} <span class="dx-vs">vs</span> ${esc(b.name)}</h2></div><span class="dx-ctl"><button class="sk-x" data-expand aria-label="Expand to full screen" title="Full screen">⤢</button><button class="sk-x" data-close aria-label="Close">✕</button></span></div>
+      <div class="dx-swap">${[a, b].map((d, i) => `<label><span class="small muted">${i ? "Against" : "Drug"}</span><select data-swap="${i}" aria-label="${i ? "Second" : "First"} drug in the comparison">${DR.filter((x) => x.name !== (i ? a : b).name).map((x) => `<option ${x.name === d.name ? "selected" : ""}>${esc(x.name)}</option>`).join("")}</select></label>`).join('<span class="dx-vs">vs</span>')}</div>
       <table class="dx-matrix"><thead><tr><th></th><th>${esc(a.name)}</th><th>${esc(b.name)}</th></tr></thead><tbody>
         ${tags.map((t) => `<tr class="${a.tags.includes(t) && b.tags.includes(t) ? "both" : ""}"><td>${esc(t)}</td><td>${mark(a, t)}</td><td>${mark(b, t)}</td></tr>`).join("")}
         <tr><td>Lecture mentions</td><td>${a.n_mentions}</td><td>${b.n_mentions}</td></tr></tbody></table>
       <div class="dx-acts"><button class="btn small" data-qboth>Quiz me on both</button></div>
       <h4>Key facts</h4><div class="dx-cmp-grid">${col(a)}${col(b)}</div>`);
     $("dx-sheet-in").querySelector("[data-qboth]").onclick = () => quizFor({ name: `${a.name} + ${b.name}`, pattern: `${a.pattern}|${b.pattern}` });
+    // swap either drug in place: no need to close the comparison and start over
+    $("dx-sheet-in").querySelectorAll("[data-swap]").forEach((sel) => sel.addEventListener("change", () => {
+      picked[+sel.dataset.swap] = sel.value; paintTray(); draw(); compare();
+    }));
   }
 
   // ---- detail sheet

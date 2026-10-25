@@ -64,7 +64,13 @@ def main(lec, work):
          f"## Slides ({len(slides)}) — every one must be covered", *[f"- [ ] S{s['slide']}: {s.get('title') or _first(s.get('items', []))}" for s in slides], ""]
     if tb:
         hs = reading_cov.headings(tb)
-        L += [f"## Assigned reading — pages {tb[0]['page']}–{tb[-1]['page']} ({len(hs)} sections to teach)",
+        chs = {}
+        for pg in tb:
+            chs.setdefault(pg.get("chapter", "?"), []).append(pg["page"])
+        span = "; ".join(f"Ch. {c}, pp. {v[0]}–{v[-1]}" for c, v in chs.items())
+        L += [f"## Assigned reading — {span} ({len(hs)} sections to teach)",
+              "If this session covers only part of the reading (the unit is split across two sessions), put the other session’s "
+              "sections in `READING_SKIP` with “Taught in L0x”, and teach them there.",
               *[f"- [ ] p. {h['page']}: {h['heading']}" for h in hs], ""]
     else:
         L += ["## Assigned reading", "- Textbook pages not extracted (no readings in the syllabus, or the private textbook repo is missing).", ""]

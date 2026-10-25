@@ -29,8 +29,6 @@ Checked 1875 source lines (57 slides; 10 study-guide items; 56 textbook pages re
 - (skipped) p. 3: The Physical Nature of Drugs — _Beyond PA scope: molecular size and shape (the bonds and chirality that matter are taught)_
 - (skipped) p. 5: Rational Drug Design — _Beyond PA scope: how chemists design molecules_
 - (skipped) p. 18: Conflicts of Interest — _Beyond PA scope: drug-industry policy_
-- (skipped) p. 51: APPROACH TO DESIGNING A RATIONAL DOSAGE REGIMEN — _Ch. 3 dosing is taught in L02 (PK Calculations)_
-- (skipped) p. 51: DOSAGE REGIMEN — _Taught in L02 (PK Calculations)_
 
 ## Emphasized on slides but not bold in deck
 - None ✅

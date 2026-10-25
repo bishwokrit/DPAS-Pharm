@@ -931,7 +931,7 @@ body.focus .focus-btn { background: var(--accent-soft) !important; color: var(--
 .set-tog i { position: relative; width: 36px; height: 22px; border-radius: 11px; background: var(--surface-2); box-shadow: inset 0 0 0 1px var(--hair); transition: background .2s; flex: none; }
 .set-tog i::after { content: ""; position: absolute; top: 2px; left: 2px; width: 18px; height: 18px; border-radius: 50%; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.3); transition: transform .25s cubic-bezier(.2,.8,.2,1); }
 .set-tog input:checked + i { background: var(--good); } .set-tog input:checked + i::after { transform: translateX(14px); } .set-tog input:focus-visible + i { outline: 2px solid var(--accent); outline-offset: 2px; }
-.set-data { grid-template-columns: 1fr 1fr 1fr; gap: 6px; } .set-data button { border: 0; background: var(--surface-2); color: var(--text); border-radius: 9px; padding: 7px 4px; font: 600 12px var(--font); cursor: pointer; } .set-data [data-reset] { color: var(--bad); }
+.set-data { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px; } .set-bk { font-size: 11.5px; color: var(--text-2); margin-top: 6px; } .set-data button { border: 0; background: var(--surface-2); color: var(--text); border-radius: 9px; padding: 7px 4px; font: 600 12px var(--font); cursor: pointer; } .set-data [data-reset] { color: var(--bad); }
 .set-foot { font-size: 12px; color: var(--text-2); padding: 8px 4px 0; border-top: 1px solid var(--hair); } .set-foot kbd { font: 12px var(--font); border: 1px solid var(--hair); border-radius: 4px; padding: 0 4px; }
 /* preferences */
 /* text size scales the page content only, so fixed panels (Sidekick, settings, sheets, focus bar) keep their positions */
@@ -1047,6 +1047,16 @@ figure figcaption .cite { color: #5f6270; }
 .qm-topic input:checked + span { background: var(--accent-fill, var(--accent)); color: #fff; } .qm-topic input:checked + span small { color: rgba(255,255,255,.8); }
 .qm-topic input:focus-visible + span { outline: 2px solid var(--accent); outline-offset: 2px; }
 .dx-ctl { display: flex; gap: 6px; flex: none; }
+.dx-swap { display: flex; align-items: flex-end; gap: 10px; flex-wrap: wrap; margin: 14px 0 6px; }
+.dx-swap label { display: grid; gap: 4px; flex: 1 1 160px; }
+.dx-swap select { font: inherit; font-size: 15px; font-weight: 600; padding: 9px 12px; border-radius: 12px; border: 1px solid var(--hair); background: var(--surface-2); color: var(--text); }
+.dx-swap .dx-vs { padding-bottom: 10px; }
+@media (max-width: 700px) { .dx-swap .dx-vs { display: none; } }
+/* full screen: the controls sit in the screen's top-right corner (not at the edge of the centered text), frosted so they
+   stay readable where they overlap the faint structure a little */
+.dx-sheet.full .dx-ctl { position: fixed; top: 16px; right: 20px; z-index: 3; }
+.dx-sheet.full .dx-ctl .sk-x { width: 36px; height: 36px; background: color-mix(in srgb, var(--surface-2) 82%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); box-shadow: 0 2px 10px rgba(0,0,0,.08); }
+@media (max-width: 700px) { .dx-sheet.full .dx-ctl { top: 12px; right: 12px; } }
 .dx-sheet { transition: transform .32s cubic-bezier(.2,.8,.2,1), width .38s cubic-bezier(.2,.8,.2,1), border-radius .3s; }
 .dx-sheet.full { width: 100vw; }
 .dx-sheet.full .dx-sheet-in { max-width: 920px; margin: 0 auto; padding-top: 40px; }

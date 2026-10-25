@@ -217,4 +217,5 @@ QUESTIONS += [
 # Reading headings left out on purpose: beyond PA-level scope (no prescribing decision attached; the Go deeper link opens the pages)
 READING_SKIP = [
     {"heading": "ORGANIC CATION TRANSPORTER 1 (OCT1, SLC22A1)", "reason": "Beyond PA scope: transporter genetics with no routine prescribing change"},
+    {"heading": "EPIGENOMICS", "reason": "Beyond PA scope: the textbook calls it an active research area, with no prescribing decision yet"},
 ]

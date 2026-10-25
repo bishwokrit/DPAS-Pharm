@@ -63,11 +63,13 @@ def check(lec):
     if deck:
         from pptx import Presentation
         n = len(Presentation(deck[0]).slides)
-        if n > MAX_DECK_RATIO * n_lec:
-            bad.append(f"deck has {n} slides for a {n_lec}-slide lecture (limit {int(MAX_DECK_RATIO * n_lec)}): cut beyond-PA detail and repeats")
+        limit = int(MAX_DECK_RATIO * n_lec) + DECK_FIXED
+        if n > limit:
+            bad.append(f"deck has {n} slides for a {n_lec}-slide lecture (limit {limit}): cut beyond-PA detail and repeats")
     return bad
 
 
 MAX_TB_SHARE = 0.30   # textbook-only bullets as a share of all guide bullets
 MAX_WORDS = 40        # words per bullet
 MAX_DECK_RATIO = 2.25 # deck slides per lecture slide (deck includes tables, figures and quick-check Q/A slides)
+DECK_FIXED = 8        # title, objectives, about, roadmap and part dividers every deck has, however short the lecture

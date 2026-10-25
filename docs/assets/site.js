@@ -44,7 +44,13 @@
   let progress = 0;
   try { progress = Object.keys(localStorage).filter((k) => /^(miss:|done:|exam:|grades:|sk:fc:|sk:notes:|check:)/.test(k)).length; } catch { /* blocked */ }
   let welcomed = store.get("tip:welcome", false); try { welcomed ||= !!sessionStorage.getItem("tip:welcome"); } catch { /* blocked */ }
-  if (progress >= 3 && welcomed) tip("tip:backup", `<strong>Studying on more than one device?</strong><p>Progress stays in this browser. <a href="#" data-open-set>Back it up</a> to move it or keep it safe.</p>`, 2500);
+  // backup reminder: once there's progress, and again every 14 days since the last backup ("Don't remind me again" ends it)
+  const lastBk = store.get("bk:last", null), bkAge = lastBk ? Math.floor((Date.now() - lastBk) / 864e5) : null;
+  if (progress >= 3 && welcomed && (bkAge === null || bkAge >= 14)) {
+    tip("tip:backup", bkAge === null
+      ? `<strong>Studying on more than one device?</strong><p>Progress stays in this browser. <a href="#" data-open-set>Back it up</a> to move it or keep it safe.</p>`
+      : `<strong>Time for a backup</strong><p>Your last one was ${bkAge} days ago. <a href="#" data-open-set>Back up now</a>: one small file, kept by you.</p>`, 2500);
+  }
 
   // ---- home roadmap: which unit is current is decided today, in the browser (not when the site was built)
   {
@@ -79,7 +85,8 @@
           <div class="set-row"><span>Text size</span>${seg("text", [["s", "A"], ["m", "A"], ["l", "A"], ["xl", "A"]], prefs.text || "m")}</div></div>
         <div class="set-g"><div class="set-l">Comfort</div>${tog("motion", "Animations", prefs.motion !== "off")}${tog("glow", "Background glow", prefs.glow !== "off")}${tog("density", "Compact spacing", prefs.density === "compact")}</div>
         <div class="set-g"><div class="set-l">Show on pages</div>${tog("sk", "Sidekick button", prefs.sk !== "off")}${tog("cites", "Slide & page citations", prefs.cites !== "off")}${tog("prog", "Reading progress bar", prefs.prog !== "off")}${tog("ftimer", "Timer in Focus mode", prefs.ftimer === "on")}</div>
-        <div class="set-g set-data"><button data-backup>Back up</button><button data-restore>Restore</button><button data-reset>Reset progress</button></div>
+        <div class="set-g"><div class="set-l">Your progress</div><div class="set-data"><button data-backup>Back up</button><button data-restore>Restore</button><button data-reset>Reset progress</button></div>
+          <div class="set-bk">${(() => { const t = store.get("bk:last", null); if (!t) return "Not backed up yet on this device"; const d = Math.floor((Date.now() - t) / 864e5); return `Last backup: ${d === 0 ? "today" : d === 1 ? "yesterday" : d + " days ago"}`; })()}</div></div>
         <div class="set-foot">Saved only in this browser · <kbd>/</kbd> Sidekick · <kbd>Esc</kbd> close</div>`;
       pop.querySelectorAll(".set-seg").forEach((g) => g.querySelectorAll("button").forEach((b) => b.onclick = () => {
         if (g.dataset.k === "theme") { theme = b.dataset.v; store.set("theme", theme); applyTheme(theme); } else setPref(g.dataset.k, b.dataset.v, "m");
@@ -93,7 +100,7 @@
         else if (k === "ftimer") setPref(k, c.checked ? "on" : "off", "off");  // off unless turned on
         else setPref(k, c.checked ? "on" : OFF[k], "on");
       });
-      pop.querySelector("[data-backup]").onclick = () => document.querySelector(".site-foot [data-backup]")?.click();
+      pop.querySelector("[data-backup]").onclick = () => { document.querySelector(".site-foot [data-backup]")?.click(); setTimeout(draw, 50); };
       pop.querySelector("[data-restore]").onclick = () => document.querySelector(".site-foot [data-restore]")?.click();
       pop.querySelector("[data-reset]").onclick = () => {
         if (!confirm("Erase all your saved progress on this device (scores, misses, flashcards, notes, grades)? Settings and your AI key stay. Back up first if you might want it.")) return;
@@ -119,10 +126,13 @@
   // ask the browser to keep this site's saved progress (not clear it to free space)
   navigator.storage?.persist?.().catch(() => {});
 
-  // back up / restore: a private file of your progress that you keep (the AI key is never included)
+  // back up / restore: a private file of your progress that you keep (the AI key is never included).
+  // Only this site's keys: other sites on the same github.io address share this browser storage.
+  const OURS = /^(act:|ak:|bk:|check:|daily:|done:|dotd|dx:|exam:|focus:|grades:|miss:|prefs$|rv:|sk:|sketch$|theme$|tip:)/;
   document.querySelector("[data-backup]")?.addEventListener("click", () => {
     const data = {};
-    try { for (let i = 0; i < localStorage.length; i++) { const k = localStorage.key(i); if (k !== "sk:key") data[k] = localStorage.getItem(k); } } catch { /* storage blocked */ }
+    try { for (let i = 0; i < localStorage.length; i++) { const k = localStorage.key(i); if (k !== "sk:key" && OURS.test(k)) data[k] = localStorage.getItem(k); } } catch { /* storage blocked */ }
+    store.set("bk:last", Date.now());
     const a = document.createElement("a");
     a.href = URL.createObjectURL(new Blob([JSON.stringify({ app: "clinical-pharmacology", saved: new Date().toISOString(), data }, null, 1)], { type: "application/json" }));
     a.download = `my-study-progress-${new Date().toISOString().slice(0, 10)}.json`;
@@ -134,8 +144,8 @@
       try {
         const f = JSON.parse(await inp.files[0].text());
         if (f.app !== "clinical-pharmacology" || typeof f.data !== "object") throw 0;
-        if (!confirm(`Restore progress saved ${new Date(f.saved).toLocaleString()}? This replaces what's saved in this browser.`)) return;
-        Object.entries(f.data).forEach(([k, v]) => { if (k !== "sk:key" && typeof v === "string") localStorage.setItem(k, v); });
+        if (!confirm(`Restore progress saved ${new Date(f.saved).toLocaleString()}? Anything in the backup replaces the same item in this browser.`)) return;
+        Object.entries(f.data).forEach(([k, v]) => { if (k !== "sk:key" && OURS.test(k) && typeof v === "string") localStorage.setItem(k, v); });
         location.reload();
       } catch { alert("That file isn't a progress backup from this site."); }
     };

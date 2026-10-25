@@ -4,17 +4,34 @@ import re
 
 from audit import toks
 
-NOISE = re.compile(r"^Term Definition$|Approach and Goals|Adverse Effect$|Katzung|Vanderah|PhD|\bMD\b|Figure|FIGURE|TABLE|Table|CHAPTER|SECTION|Basic Principles|Case Study|REFERENCES|SUMMARY")
+NOISE = re.compile(r"^Term Definition$|Approach and Goals|Adverse Effect$|Katzung|Vanderah|PhD|\bMD\b|Figure|FIGURE|TABLE|Table|CHAPTER|SECTION|Basic Principles|"
+                   r"Case Study|CASE STUDY|REFERENCES|SUMMARY|PREPARATIONS|\bGeneric\b|Neutra-")
 
 
 def headings(textbook):
     """Section headings from the extracted page text: short title-like lines (OCR fragments and labels filtered out)."""
     out, seen = [], set()
     for p in textbook:
-        lines = [l.strip() for l in p["text"].split("\n")]
+        raw = p["text"].split("\n")
+        lines = [re.sub(r"^[■•▪]\s*", "", l.strip()) for l in raw]
+        # rejoin a capitals heading that wraps over several lines ("OF PHARMACOKINETICS &" / "PHARMACODYNAMICS TO DOSE" /
+        # "INDIVIDUALIZATION"): a wrapped line ends in a space or a joining word, and the next line is capitals too
+        for j in range(len(lines) - 1):
+            if lines[j].isupper() and lines[j + 1].isupper() and (raw[j].endswith(" ") or re.search(r"(&|\b(AND|OF|TO|THE|FOR|IN))$", lines[j])):
+                lines[j], lines[j + 1] = "", lines[j] + " " + lines[j + 1]
         for i, s in enumerate(lines):
             words = s.split()
-            if not (2 <= len(words) <= 8) or s.endswith((".", ",", ";", ":")) or NOISE.search(s):
+            if s.endswith((".", ",", ";", ":")) or NOISE.search(s) or s.count("(") != s.count(")"):
+                continue  # sentences, labels, and fragments of a wrapped heading
+            if len(words) == 1:
+                # a one-word ALL-CAPS heading is usually a drug section (COLCHICINE, ALLOPURINOL): keep it if prose follows
+                if not (s.isupper() and len(s) >= 5 and s.isalpha()):
+                    continue
+                nxt = next((l for l in lines[i + 1:] if l), "")
+                if len(nxt) >= 35 and nxt.count(" ") >= 5 and s.lower() not in seen:
+                    seen.add(s.lower()); out.append({"page": p["page"], "heading": s})
+                continue
+            if not (2 <= len(words) <= 8):
                 continue
             if not re.match(r"^[A-Z][A-Za-z0-9 ,&\-–'’()/]+$", s):
                 continue
@@ -39,7 +56,9 @@ def headings(textbook):
                 continue
             seen.add(key)
             out.append({"page": p["page"], "heading": s})
-    return out
+    # drop a heading that is only the tail of a longer heading on the same page (a wrapped line seen twice)
+    return [h for h in out if not any(o is not h and o["page"] == h["page"] and len(o["heading"]) > len(h["heading"])
+                                      and o["heading"].lower().endswith(h["heading"].lower()) for o in out)]
 
 
 def uncovered(textbook, content_text, skips=()):
