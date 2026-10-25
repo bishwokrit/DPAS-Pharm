@@ -49,6 +49,24 @@ def fact(f):
     return f"<li>{tags}{md(f['text'])}{cite(f.get('src', ''))}</li>"
 
 
+def _count_pages(pdf):
+    """Pages in the study-guide PDF (0 if it isn't built), for the home page's download rows."""
+    try:
+        from pypdf import PdfReader
+        return len(PdfReader(str(pdf)).pages)
+    except Exception:
+        return 0
+
+
+def _count_slides(lec_dir, files):
+    try:
+        from pptx import Presentation
+        name = next((n for l, n in files if l.startswith("Slide")), "")
+        return len(Presentation(str(lec_dir / name)).slides) if name else 0
+    except Exception:
+        return 0
+
+
 def viz_attrs(fig):
     """data-viz picks the figure's interactive version: a reusable type named in its "viz" field, or one built for that image."""
     v = fig.get("viz") or {}
@@ -107,9 +125,9 @@ def page(title, body, depth=0, nav_links="", sidekick=False, active="", subtitle
 {nav_html(up, active, nav_links, subtitle)}
 {body}
 <footer class="site-foot"><div class="wrap">
+<div class="foot-grid">
 <div class="foot-top appear"><div class="foot-brand"><img class="foot-logo" src="{up}assets/logo.svg" alt="" width="60" height="40"><div><strong>{SITE_NAME}</strong><span>Study smarter. Remember longer.</span></div></div>
 <p class="foot-pledge">Two ways to study. Ten hours with the slides and the textbook, or a fraction of that here. Same destination; <strong>you choose the route.</strong> Built to optimize your study time, so you have more of it for life. Your course materials are still the official version: confirm the details there, and you'll find we were right.</p></div>
-<div class="foot-tiles">
 <div class="foot-tile appear" style="--d:.05s"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v5c0 4.5-3 8.3-7 10-4-1.7-7-5.5-7-10V6z"/></svg><div><strong>Independent</strong><span>Student-made. Not affiliated with or endorsed by any school, program, instructor, hospital, or publisher.</span></div></div>
 <div class="foot-tile appear" style="--d:.12s"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg><div><strong>Private</strong><span>Progress stays in your browser. Optional AI chat goes straight to Anthropic on your own key.</span><span class="foot-bk"><button type="button" data-backup>Back up my progress</button> · <button type="button" data-restore>Restore</button></span></div></div>
 <div class="foot-tile appear" style="--d:.19s"><svg viewBox="0 0 24 24"><path d="M6 4h12v17l-6-4-6 4z"/></svg><div><strong>Cited</strong><span><b>S12</b> slide · <b>p. 17</b> textbook page · <b>SG</b> study guide · <b>TB</b> textbook only</span></div></div>
@@ -463,6 +481,7 @@ def main(pdf=True):
                       "links": [("Study guide", f"{lid}/index.html"), ("PDF", f"{lid}/{pdf_name}"), ("Deck", f"{lid}/" + next((n for l, n in files if l.startswith("Slide")), ""))],
                       "date": lec["date"], "unit": lec["unit"], "session": lec["session"], "pdf": f"{lid}/{pdf_name}",
                       "deck": f"{lid}/" + next((n for l, n in files if l.startswith("Slide")), ""),
+                      "pdf_pages": _count_pages(lec_dir / pdf_name), "deck_slides": _count_slides(lec_dir, files),
                       "readings": ", ".join(r["chapter"] for r in lec.get("readings", [])),
                       "parts": [(i, cl["name"], slug(cl["name"])) for i, cl in enumerate(c["classes"], 1)],
                       "hy": [(i, slug(cl["name"]), cl["high_yield"][0]["text"]) for i, cl in enumerate(c["classes"], 1) if cl.get("high_yield")],

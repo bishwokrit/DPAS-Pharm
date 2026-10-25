@@ -142,18 +142,18 @@ def sketch_page(page, SITE_NAME):
     cfg_json = json.dumps(cfg, ensure_ascii=False).replace("</", "<\\/")
     sec = lambda i, k, kick, h, inner="": f'<section class="section sx-sec" id="{i}"><div class="wrap"><p class="kicker">{k} · {kick}</p><h2>{h}</h2>{inner}<div id="{i}-app"></div></div></section>'
     body = f"""<header class="hero wrap"><p class="eyebrow">Sketch</p><h1>Sketch mode</h1>
-<p class="lede">Sketchy Pharm matched to the lectures, your own memory hooks, Kahoot decks and games. Only you can see this tab.</p>
-<nav class="sx-jump"><a href="#sotd">Today</a><a href="#sketchy">Sketchy</a><a href="#recall">Recall</a><a href="#hooks">Hooks</a><a href="#kahoot">Kahoot</a><a href="#h2h">Head-to-head</a><a href="#jeo">Jeopardy</a></nav>
+<p class="lede">The sketchy stuff: decks and games built from your lectures, plus the sketches that make drugs stick.</p>
+<nav class="sx-jump"><a href="#sotd">Today</a><a href="#h2h">Head-to-head</a><a href="#kahoot">Kahoot</a><a href="#jeo">Jeopardy</a><a href="#sketchy">Sketchy</a><a href="#recall">Recall</a><a href="#hooks">Hooks</a></nav>
 <p><button class="btn ghost small" id="sx-lock" type="button">Lock Sketch mode</button></p></header>
 {sec("sotd", 1, "Sketch of the day", "One drug, its sketch, three questions")}
-{sec("sketchy", 2, "Sketchy Pharm", "Watch the right sketch", f'<div id="playlist-app"></div>{sketchy}')}
-{sec("recall", 3, "Recall drill", "Say it before you see it")}
-{sec("hooks", 4, "Memory hooks", "Your words, on every drug sheet")}
-<section class="section sx-sec" id="kahoot"><div class="wrap"><p class="kicker">5 · Kahoot</p><h2>A deck for every lecture</h2>
+{sec("h2h", 2, "Head-to-head", "2–4 players, one screen, your rules")}
+<section class="section sx-sec" id="kahoot"><div class="wrap"><p class="kicker">3 · Kahoot</p><h2>A deck for every lecture</h2>
 <p class="sx-how">In Kahoot: <b>Create</b> → <b>Kahoot</b> → <b>Add question</b> → <b>Import spreadsheet</b>, then drop in a deck. Each deck holds that lecture's practice-exam and self-test questions, then quick-fire flashcard rounds.</p>
 <div class="sx-units">{cards}</div><h3 class="sx-h3">Game-night builder</h3><div id="kahoot-app"></div></div></section>
-{sec("h2h", 6, "Head-to-head", "2–4 players, one screen, your rules")}
-{sec("jeo", 7, "Jeopardy", "Your board, your categories, your rules")}
+{sec("jeo", 4, "Jeopardy", "Your board, your categories, your rules")}
+{sec("sketchy", 5, "Sketchy Pharm", "Watch the right sketch", f'<div id="playlist-app"></div>{sketchy}')}
+{sec("recall", 6, "Recall drill", "Say it before you see it")}
+{sec("hooks", 7, "Memory hooks", "Your words, on every drug sheet")}
 <script type="application/json" id="sketch-data">{cfg_json}</script>
 <script>if(!(function(){{try{{return JSON.parse(localStorage.getItem("sketch"))}}catch(e){{}}}})())location.replace("../index.html");
 document.getElementById("sx-lock").onclick=function(){{window.dpasSketchLock?window.dpasSketchLock():(localStorage.removeItem("sketch"),location.href="../index.html")}};</script>

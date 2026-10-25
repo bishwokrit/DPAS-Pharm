@@ -188,8 +188,15 @@ def now_section(syl, built, sched):
   <div class="card now-hy"><h3>High-yield from this lecture</h3><ul>{hy}</ul></div>
   {fig}
   <div class="card now-side" data-progress="lecture" data-lid="{lid}" data-objs="{b['objs']}" data-cards="{b['cards']}" data-qs="{b['qs']}">
-    <h3>Your progress</h3><div class="progress"></div><p class="small muted now-empty">Start the self-test or flashcards and your progress shows here.</p>
-    <h3>Take it with you</h3><div class="links"><a href="{b['pdf']}">Study guide PDF</a><a href="{b['deck']}">Slide deck</a><a href="{lid}/index.html#cram">Cram sheet</a></div>
+    <h3>Your progress</h3>
+    <div class="pmeters">{"".join(f'<div class="pm" data-pm="{k}"><div class="pm-h"><span>{t}</span><b data-n>0 / {n}</b></div><div class="pm-bar"><i></i></div></div>' for k, t, n in (("objs", "Objectives checked off", len(b['objs'].split(','))), ("cards", "Flashcards you know", b['cards']), ("qs", "Self-test answered right", b['qs'])))}</div>
+    <a class="btn small now-next" data-next href="{lid}/index.html?quiz=1">Start the self-test →</a>
+    <h3>Take it with you</h3>
+    <div class="takeaway">
+      <a class="tk" href="{b['pdf']}"><span class="tk-ic" data-ic="book"></span><span class="tk-t"><strong>Study guide</strong><small>PDF{f" · {b['pdf_pages']} pages" if b.get('pdf_pages') else ""} · print or annotate</small></span><span class="tk-go" aria-hidden="true">›</span></a>
+      <a class="tk" href="{b['deck']}" download><span class="tk-ic" data-ic="card"></span><span class="tk-t"><strong>Slide deck</strong><small>PowerPoint{f" · {b['deck_slides']} slides" if b.get('deck_slides') else ""} · study offline</small></span><span class="tk-go" aria-hidden="true">›</span></a>
+      <a class="tk" href="{lid}/index.html#cram"><span class="tk-ic" data-ic="check"></span><span class="tk-t"><strong>Cram sheet</strong><small>{b['cards']} rows · the last look before the exam</small></span><span class="tk-go" aria-hidden="true">›</span></a>
+    </div>
   </div>
 </div>
 </article>""")

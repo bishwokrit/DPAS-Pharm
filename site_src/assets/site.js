@@ -273,7 +273,6 @@
     cur.hidden = false;
     const k = cur.querySelector("[data-now-kicker]");
     if (k) k.textContent = d === 0 ? "Today's lecture" : d < 0 ? "Next lecture" : d <= 6 ? "This week's lecture" : "Latest lecture";
-    if (cur.querySelector(".progress")?.innerHTML.trim()) cur.querySelector(".now-empty")?.remove();
   }
 
   // home teaser: the most recent lecture's two-sentence pitch (switches on each class day, no rebuild needed)
@@ -415,7 +414,20 @@
     const objs = d.objs.split(","), checked = objs.filter((o) => store.get("check:" + lid + ":" + o, false)).length;
     const boxes = store.get("sk:fc:" + lid, {}), mine = store.get("sk:mycards:" + lid, []).length;
     const strong = Object.values(boxes).filter((b) => b >= 4).length;
-    const done = store.get("done:" + lid, []).length;
+    const done = store.get("done:" + lid, []).length, misses = store.get("miss:" + lid, []).length;
+    // home "current lecture" card: three slim meters, always shown, and one next step that follows your progress
+    if (card.querySelector(".pmeters")) {
+      const set = (k, n, of) => { const m = card.querySelector(`[data-pm="${k}"]`); if (!m) return;
+        m.querySelector("[data-n]").textContent = `${Math.min(n, of)} / ${of}`; m.querySelector("i").style.setProperty("--p", of ? Math.min(1, n / of) : 0); m.classList.toggle("zero", !n); };
+      set("objs", checked, objs.length); set("cards", strong, +d.cards + mine); set("qs", done, +d.qs);
+      const nx = card.querySelector("[data-next]"), go = (t, h) => { nx.textContent = t + " →"; nx.href = `${lid}/index.html${h}`; };
+      if (!done && !misses) go("Start the self-test", "?quiz=1");
+      else if (misses) go(`Retry your ${misses} miss${misses === 1 ? "" : "es"}`, "?quiz=1");
+      else if (strong < (+d.cards + mine) / 2) go("Drill the flashcards", "?sk=cards");
+      else if (checked < objs.length) go("Check off your objectives", "#checklist");
+      else go("Take a focus quiz", "?quiz=1");
+      return;
+    }
     if (checked + strong + done === 0) return;
     out.innerHTML = ring(checked, objs.length, "objectives") + ring(strong, +d.cards + mine, "flashcards strong") + ring(done, +d.qs, "questions right");
   });
