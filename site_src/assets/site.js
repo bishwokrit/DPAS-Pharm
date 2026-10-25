@@ -128,7 +128,7 @@
 
   // back up / restore: a private file of your progress that you keep (the AI key is never included).
   // Only this site's keys: other sites on the same github.io address share this browser storage.
-  const OURS = /^(act:|ak:|bk:|check:|daily:|done:|dotd|dx:|exam:|focus:|grades:|miss:|prefs$|rv:|sk:|sketch$|theme$|tip:)/;
+  const OURS = /^(act:|ak:|bk:|check:|daily:|done:|dotd|dx:|exam:|focus:|grades:|miss:|prefs$|quizprep:|rv:|sk:|sketch$|theme$|tip:)/;
   document.querySelector("[data-backup]")?.addEventListener("click", () => {
     const data = {};
     try { for (let i = 0; i < localStorage.length; i++) { const k = localStorage.key(i); if (k !== "sk:key" && OURS.test(k)) data[k] = localStorage.getItem(k); } } catch { /* storage blocked */ }

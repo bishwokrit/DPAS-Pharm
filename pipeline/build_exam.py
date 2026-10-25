@@ -126,7 +126,6 @@ def assign_letters(order, rng):
         # extras: the remainder letters each topic needs, chosen so overall counts are equal
         need = Counter({L: n // 5 for L in LETTERS})
         bags = {}
-        extras_left = Counter()
         for t, pos in topics.items():
             bags[t] = [L for L in LETTERS for _ in range(len(pos) // 5)]
             need.subtract(Counter(bags[t]))
@@ -309,7 +308,7 @@ def main(exam_id):
     sgc = Counter(s for q in order for s in q["sg"])
     lines.append("\n**Study-guide items tested:** " + " · ".join(f"{k}: {sgc[k]}" for k in sorted(sgc)))
     c = Counter(letters)
-    lines.append(f"\n## Answer-letter audit\n- Overall: " + " · ".join(f"{L} {c[L]}" for L in LETTERS))
+    lines.append("\n## Answer-letter audit\n- Overall: " + " · ".join(f"{L} {c[L]}" for L in LETTERS))
     for b in range(0, len(order), 50):
         cb = Counter(letters[b:b + 50])
         lines.append(f"- Questions {b + 1}–{min(b + 50, len(order))}: " + " · ".join(f"{L} {cb[L]}" for L in LETTERS))
@@ -321,7 +320,7 @@ def main(exam_id):
     lines.append("\n## Option-length audit (can length give the answer away?)")
     lines.append("- Correct answer's length rank among its 5 options (1 = shortest, 5 = longest): " + " · ".join(f"rank {r}: {ranks[r]}" for r in range(1, 6)))
     lines.append("- Word-count spread within a question (longest − shortest option): " + " · ".join(f"{k} words: {spreads[k]}" for k in sorted(spreads)))
-    runs, mx, cur = [], 1, 1
+    mx, cur = 1, 1
     for a, b in zip(order, order[1:]):
         cur = cur + 1 if a["topic"] == b["topic"] else 1
         mx = max(mx, cur)

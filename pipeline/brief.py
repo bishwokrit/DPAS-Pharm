@@ -1,8 +1,7 @@
-"""work/<ID>/AUTHOR_BRIEF.md — the checklist Claude authors a new lecture from. It lists every slide, every assigned-reading
+"""work/<ID>/AUTHOR_BRIEF.md — the checklist a new lecture is written from. It lists every slide, every assigned-reading
 section and every saved figure, so nothing can be missed, and restates the standard every lecture is held to.
 The audit and ./run.sh new <ID> then check the finished content against the same list."""
 import json
-import re
 from pathlib import Path
 
 import reading_cov

@@ -612,8 +612,6 @@ body.focus .focus-btn { background: var(--accent-soft) !important; color: var(--
 .now-fig > span { font-size: 13.5px; padding: 0 16px 14px; }
 .now-side h3 { font-size: 15px; margin-bottom: 8px; }
 .now-due { list-style: none; padding: 0; margin: 0; } .now-due li { margin: 6px 0; font-size: 14.5px; }
-.now-side .links { margin-top: 14px; display: flex; gap: 14px; font-size: 14.5px; }
-.now-side .progress { flex-direction: column; gap: 8px; }
 
 /* ================= syllabus page ================= */
 
@@ -1415,10 +1413,8 @@ html[data-pmotion="off"] ::view-transition-old(root), html[data-pmotion="off"] :
 .now-hy h3, .now-side h3 { font-size: 13px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--text-2); margin: 0 0 10px; }
 .now-hy ul { margin: 0; padding-left: 18px; } .now-hy li { margin: 0 0 10px; font-size: 15px; line-height: 1.45; } .now-hy li:last-child { margin-bottom: 0; }
 .now-side { display: flex; flex-direction: column; }
-.now-side h3 + .progress, .now-side .now-empty { margin-top: 0; }
 .now-side h3:not(:first-child) { margin-top: 18px !important; padding-top: 16px; border-top: 1px solid var(--hair); }
 .now-due li { display: grid; grid-template-columns: 92px 1fr; gap: 10px; margin: 0 0 8px; font-size: 14.5px; line-height: 1.35; }
-.now-side .links { margin-top: auto; padding-top: 16px; }
 .now-fig { padding: 20px 22px 16px; border-radius: 22px; }
 @media (max-width: 1080px) { .now-grid { grid-template-columns: 1fr 1fr; grid-template-areas: "hy side" "fig fig"; grid-template-rows: auto auto; } }
 @media (max-width: 640px) { .now-grid { grid-template-columns: 1fr; grid-template-areas: "hy" "fig" "side"; } }
@@ -1434,7 +1430,6 @@ html[data-pmotion="off"] ::view-transition-old(root), html[data-pmotion="off"] :
 .sx-lockbtn.new { animation: sx-in .9s cubic-bezier(.2,.8,.2,1); }
 .sx-lockbtn.bye { opacity: 0; transform: scale(.6); }
 @media (prefers-reduced-motion: reduce) { .sx-lockbtn.new { animation: none; } }
-.now-side .links { margin-top: 0; padding-top: 0; flex-wrap: wrap; gap: 8px 16px; }
 
 /* ---------- Anki generator ---------- */
 .ak-sec { padding-top: 8px; } .ak-wrap { max-width: 1180px; }
@@ -1730,3 +1725,33 @@ html[data-pmotion="off"] ::view-transition-old(root), html[data-pmotion="off"] :
 @media (max-width: 760px) { .foot-grid { grid-template-columns: 1fr; } .foot-grid .foot-top { flex-direction: column; align-items: flex-start; } }
 /* home first screen: sit the title in the upper third (optical center), not the dead middle; space scales with window height */
 @media screen and (min-width: 761px) { .first-screen { justify-content: flex-start; padding-top: clamp(40px, 12vh, 140px); } }
+/* Prepare · quiz prep: the next quiz (countdown + format) and a same-format rehearsal */
+.qp { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: 16px; align-items: stretch; }
+.qp .card { margin: 0; display: flex; flex-direction: column; }
+.qp-next { flex-direction: row !important; gap: 22px; align-items: center; }
+.qp-when { display: grid; justify-items: center; min-width: 74px; padding: 14px 10px; border-radius: 18px; background: var(--accent-soft); color: var(--accent); }
+.qp-when strong { font-size: 40px; line-height: 1; letter-spacing: -.03em; font-variant-numeric: tabular-nums; } .qp-when span { font-size: 12.5px; font-weight: 600; }
+.qp h3 { margin: 4px 0 4px; font-size: 22px; letter-spacing: -.01em; } .qp p { margin: 0; }
+.qp-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; } .qp-chips span { font-size: 12.5px; font-weight: 600; padding: 5px 11px; border-radius: 99px; background: var(--surface-2); color: var(--text); }
+.qp-row { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-top: auto; padding-top: 16px; }
+.qp-spark { display: flex; align-items: flex-end; gap: 4px; height: 34px; margin-top: 14px; }
+.qp-spark i { width: 14px; height: calc(var(--h) * 100%); border-radius: 4px 4px 2px 2px; background: color-mix(in srgb, var(--accent) 70%, transparent); }
+@media (max-width: 860px) { .qp { grid-template-columns: 1fr; } }
+/* syllabus week-by-week: on wider screens an open week reads like a calendar, one column per day, instead of thin rows */
+@media screen and (min-width: 900px) {
+  .wk-body { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 0; padding: 0; }
+  .wk-day { grid-template-columns: 1fr; gap: 10px; align-content: start; padding: 16px 18px 18px; border-bottom: 0; border-left: 1px solid var(--hair); }
+  .wk-day:first-child { border-left: 0; }
+  .wk-day .wk-d { display: flex; align-items: baseline; gap: 8px; } .wk-day .wk-d small { display: inline; order: 2; }
+  .wk-due { flex-wrap: wrap; } .wk-due span { margin-left: 18px; flex-basis: 100%; }
+  .wk-day.today { background: color-mix(in srgb, var(--accent) 5%, transparent); }
+}
+/* home: the three "up next" cards line up whatever their text length — top-aligned, equal height, numbers in a soft badge
+   (same language as Quiz prep) — and the first screen ends closer to its content so the next section is in reach */
+.up3 { align-items: stretch; }
+.upcard { align-items: flex-start; }
+.up-num { display: grid; place-content: center; justify-items: center; min-width: 74px; padding: 0 8px; height: 68px; border-radius: 16px; background: var(--accent-soft); flex: none; }
+.up-num strong { font-size: 30px; } .up-num span { font-size: 11.5px; font-weight: 600; color: var(--accent); }
+.upcard > div:last-child { padding-top: 4px; min-width: 0; }
+@media screen and (min-width: 761px) { .first-screen { min-height: min(calc(100svh - 53px), 800px); } }
+@media (max-width: 760px) { .up-num { min-width: 52px; height: 52px; border-radius: 13px; } .up-num strong { font-size: 22px; } }

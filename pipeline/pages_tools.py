@@ -6,7 +6,7 @@ from datetime import date
 import sys
 from urllib.parse import quote
 
-from build_site import DOCS, ROOT, SITE_NAME, COURSE, md, cite, slug, page, nav_html, SEARCH_ICON  # shared helpers
+from build_site import DOCS, ROOT, SITE_NAME, slug, page, SEARCH_ICON  # shared helpers
 
 
 # ---------------------------------------------------------------- site-wide search index

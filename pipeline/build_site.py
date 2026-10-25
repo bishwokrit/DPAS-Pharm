@@ -12,7 +12,6 @@ import re
 import shutil
 import subprocess
 import sys
-from datetime import date
 from pathlib import Path
 
 import lecture_checks
@@ -342,9 +341,9 @@ def guide_page(lec, c, slides, lec_dir, files):
         body.append(part_html(c, cl, i, lec_dir, pending))
     # cram sheet
     cram = g.get("cram", [])
-    body.append(f'<section class="section part-start" id="cram"><div class="wrap"><h2>Cram sheet</h2><p class="muted">Every term, mechanism, drug, and number. '
-                f'Hide the answers and quiz yourself; tap a blurred answer to peek.</p><button class="btn ghost noprint" data-cram-toggle="cram-t" style="margin-bottom:14px">Hide answers (quiz yourself)</button>'
-                f'<div class="table-wrap"><table class="cram" id="cram-t"><thead><tr><th>Prompt</th><th>Answer</th></tr></thead><tbody>' +
+    body.append('<section class="section part-start" id="cram"><div class="wrap"><h2>Cram sheet</h2><p class="muted">Every term, mechanism, drug, and number. '
+                'Hide the answers and quiz yourself; tap a blurred answer to peek.</p><button class="btn ghost noprint" data-cram-toggle="cram-t" style="margin-bottom:14px">Hide answers (quiz yourself)</button>'
+                '<div class="table-wrap"><table class="cram" id="cram-t"><thead><tr><th>Prompt</th><th>Answer</th></tr></thead><tbody>' +
                 "".join(f"<tr><td>{md(r['prompt'])}</td><td>{md(r['answer'])}{cite(r['src'])}</td></tr>" for r in cram) + "</tbody></table></div></div></section>")
     # self-test
     items = quiz_items(c, slides)
@@ -439,7 +438,7 @@ def knowledge_base(c, slides, n_img=0):
 
 # ---------------------------------------------------------------- main
 def main(pdf=True):
-    from pages_course import home_page, syllabus_page, practice_page, icon  # noqa: F401 (split out to keep this file readable)
+    from pages_course import home_page, syllabus_page, practice_page  # split out to keep this file readable
     from pages_tools import search_index, global_kb, stamp_versions, review_page, drug_data, drugs_page, dotd_data
     syl = json.loads((ROOT / "work" / "syllabus.json").read_text())
     DOCS.mkdir(exist_ok=True)
@@ -520,5 +519,4 @@ def main(pdf=True):
     stamp_versions()
 
 if __name__ == "__main__":
-    import sys
     main(pdf="--no-pdf" not in sys.argv)

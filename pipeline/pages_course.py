@@ -4,7 +4,7 @@ import json
 import re
 from datetime import date
 
-from build_site import DOCS, ROOT, SITE_NAME, COURSE, md, cite, slug, page, nav_html, SEARCH_ICON  # shared helpers
+from build_site import ROOT, SITE_NAME, COURSE, md, page  # shared helpers
 
 
 # ---------------------------------------------------------------- home
@@ -82,6 +82,15 @@ LINES = [
 def practice_page(syl, built, exams_built):
     """Every unit's practice in one place: the current unit first (set in the browser), then earlier units, then the final."""
     upnext = json.dumps({"exams": syl.get("exams", [])}).replace("</", "<\\/")
+    # quiz prep: each in-class quiz (date, unit, format from the syllabus) and the question sources for its unit
+    sched = json.loads((ROOT / "work" / "schedule.json").read_text())
+    fmt = next((r for r in sched["grading"].get("rules", []) if "quiz" in r.lower()), "")
+    quizzes = [{"date": d["date"], "label": d["label"].split(" · ")[0], "time": (d["label"].split(" · ") + [""])[1],
+                "unit": int(re.search(r"Unit (\d+)", d["label"]).group(1))} for d in sched["due"] if d["kind"] == "quiz" and re.search(r"Unit \d+", d["label"])]
+    qp = {"quizzes": quizzes, "format": fmt,
+          "lectures": [{"id": lid, "unit": b["unit"]} for lid, b in built.items()],
+          "exams": [{"slug": e["id"], "unit": e.get("unit")} for e in exams_built]}
+    qp_json = json.dumps(qp, ensure_ascii=False).replace("</", "<\\/")
     units = [u for u in syl["units"] if any(str(b["unit"]) == u for b in built.values()) or any(str(e.get("unit")) == u for e in exams_built)]
     secs = "".join(f'<section class="section pr-unit" data-unit="{u}"><div class="wrap"><p class="kicker">Unit {u}<span class="pr-now" hidden> · current</span></p><h2>{html.escape(syl["units"][u])}</h2>'
                    f'<div class="bento">{"".join(unit_tiles(u, syl, built, exams_built, up="../", full=True))}</div></div></section>' for u in units)
@@ -93,13 +102,15 @@ def practice_page(syl, built, exams_built):
     body = f"""<header class="hero wrap"><p class="eyebrow appear">Prepare</p><h1 class="appear" style="--d:.05s">Pull it out of memory. That's how it sticks.</h1>
 <p class="lede appear pr-quote" id="pr-quote" style="--d:.12s" tabindex="0"><span class="pr-t">{html.escape(LINES[0]["t"])}</span><span class="pr-by">{html.escape(LINES[0].get("by", ""))}</span></p>
 <script type="application/json" id="pr-lines">{json.dumps(LINES, ensure_ascii=False)}</script>
-<nav class="jumpbar appear" style="--d:.18s"><a href="#today">Today</a><a href="#tools">Tools</a><a href="#pr-units">By unit</a><a href="#final">Final prep</a></nav></header>
+<nav class="jumpbar appear" style="--d:.18s"><a href="#today">Today</a><a href="#quiz">Quiz prep</a><a href="#tools">Tools</a><a href="#pr-units">By unit</a><a href="#final">Final prep</a></nav></header>
 <section class="section" id="today"><div class="wrap"><p class="kicker">Today</p><h2>Drug of the day</h2><div class="dotd appear" id="dotd" hidden></div></div></section>
+<section class="section" id="quiz"><div class="wrap"><p class="kicker">Quiz prep</p><h2>Rehearse the in-class quiz</h2><div id="qp-app"></div></div></section>
+<script type="application/json" id="qp-data">{qp_json}</script>
 <section class="section" id="tools"><div class="wrap"><p class="kicker">Tools</p><h2>Cards and quick sets</h2><div class="bento bento-2">{tools}</div></div></section>
 <div id="pr-units">{secs}</div>
 <section class="section" id="final"><div class="wrap"><p class="kicker">Cumulative</p><h2>Final prep</h2><div class="bento bento-2">{final_tile("../")}</div></div></section>
 <script type="application/json" id="practice-data">{upnext}</script>
-<script src="../assets/mol3d.js"></script><script src="../assets/dotd.js"></script>"""
+<script src="../assets/mol3d.js"></script><script src="../assets/dotd.js"></script><script src="../assets/quizprep.js"></script>"""
     return page(f"Prepare · {SITE_NAME}", body, depth=1, active="practice")
 
 

@@ -9,7 +9,7 @@ The owner is not a programmer: explain in plain language, keep replies short, an
    (copy the shape of the L02 files; Units 2–6 use the `drug_class` template). Run `python3 work/L05/author_L05.py`.
 3. Add every drug the lecture names to `work/drugs.py`. Add the unit's practice questions to `work/exams/U?/`
    (a new unit also needs an entry in `EXAMS` in `pipeline/build_exam.py`).
-4. `./run.sh new L05` again until the report card is all PASS. Then commit and push (trailer below).
+4. `./run.sh new L05` again until the report card is all PASS. Then commit and push (see Commits below).
 
 Never weaken a gate to make it pass. Fix the content. `audit_skip` / `READING_SKIP` only with a true reason
 (teaching instruction, taught in another session, or beyond PA scope — say why).
@@ -46,8 +46,6 @@ Never weaken a gate to make it pass. Fix the content. `audit_skip` / `READING_SK
 `./run.sh status` · `./run.sh new L05` · `./run.sh L05` (lecture only) · `./run.sh site` · `./run.sh exam U1` · `./run.sh check`
 (`check` takes a few minutes: run it in the background).
 
-## Commit trailer
-```
-Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
-Claude-Session: <this session's link>
-```
+## Commits
+Every commit is authored by the owner: `bishwokrit <bishwokrit@gmail.com>` (set in this repo's git config).
+No `Co-Authored-By` or session-link lines in commit messages.

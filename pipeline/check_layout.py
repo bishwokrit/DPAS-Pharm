@@ -8,7 +8,6 @@ from functools import lru_cache
 
 from PIL import ImageFont
 from pptx import Presentation
-from pptx.util import Emu
 
 NS = "{http://schemas.openxmlformats.org/drawingml/2006/main}"
 FONT = {False: "/usr/share/fonts/truetype/crosextra/Carlito-Regular.ttf",
