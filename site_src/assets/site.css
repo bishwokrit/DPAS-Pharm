@@ -1755,3 +1755,6 @@ html[data-pmotion="off"] ::view-transition-old(root), html[data-pmotion="off"] :
 .upcard > div:last-child { padding-top: 4px; min-width: 0; }
 @media screen and (min-width: 761px) { .first-screen { min-height: min(calc(100svh - 53px), 800px); } }
 @media (max-width: 760px) { .up-num { min-width: 52px; height: 52px; border-radius: 13px; } .up-num strong { font-size: 22px; } }
+
+/* same-day deadlines: the count switches to hours, then minutes, and takes the warning tint */
+.up.soon .up-days strong { color: var(--warn); }

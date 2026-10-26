@@ -13,11 +13,11 @@
   };
   const iso = (d) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
   const today = iso(new Date());
-  const days = (s) => Math.round((new Date(s + "T00:00") - new Date(today + "T00:00")) / 864e5);
   const when = (s) => new Date(s + "T00:00").toLocaleDateString(undefined, { weekday: "short", month: "short", day: "numeric" });
   const N = 10, MIN = 10;  // the syllabus format: 10 questions, 10 minutes
 
-  const quiz = D.quizzes.find((q) => q.date >= today) || D.quizzes[D.quizzes.length - 1];
+  const T = window.dpasDue;
+  const quiz = D.quizzes.find((q) => T.upcoming(q.date, q.time)) || D.quizzes[D.quizzes.length - 1];
   if (!quiz) return;
   const lecs = D.lectures.filter((l) => l.unit === quiz.unit), exams = D.exams.filter((e) => e.unit === quiz.unit);
   const logKey = `quizprep:${quiz.unit}`;
@@ -46,12 +46,12 @@
   }
 
   function paint() {
-    const d = days(quiz.date), log = store.get(logKey, []);
-    const status = d > 1 ? `in ${d} days` : d === 1 ? "tomorrow" : d === 0 ? "today" : "done";
+    const l = T.left(quiz.date, quiz.time), log = store.get(logKey, []);
+    const status = l.past ? "done" : l.text;
     const best = log.length ? Math.max(...log.map((r) => r.correct)) : null;
     host.innerHTML = `<div class="qp">
       <div class="qp-next card">
-        <div class="qp-when"><strong>${d >= 0 ? d : "✓"}</strong><span>${d >= 0 ? (d === 1 ? "day" : "days") : "past"}</span></div>
+        <div class="qp-when"><strong>${l.n}</strong><span>${l.unit}</span></div>
         <div class="qp-info"><div class="tile-k">Next in-class quiz · ${esc(status)}</div><h3>${esc(quiz.label)}</h3>
           <p class="muted">${esc(when(quiz.date))}${quiz.time ? " · " + esc(quiz.time) : ""}</p>
           <div class="qp-chips"><span>${N} questions</span><span>${MIN} minutes</span><span>Lockdown Browser</span></div></div>
@@ -74,4 +74,6 @@
     };
   }
   paint();
+  // keep a same-day countdown live (hours, then minutes); skip while a rehearsal is open
+  setInterval(() => { if (!document.hidden && !document.querySelector(".qm") && T.left(quiz.date, quiz.time).soon) paint(); }, 30000);
 })();

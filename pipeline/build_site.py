@@ -118,6 +118,7 @@ def page(title, body, depth=0, nav_links="", sidekick=False, active="", subtitle
 <title>{html.escape(title)}</title>
 <link rel="stylesheet" href="{up}assets/site.css">
 <link rel="icon" type="image/svg+xml" href="{up}assets/logo-mark.svg">
+<script src="{up}assets/due.js"></script>
 <script>(function(d){{d.classList.add("js");try{{var t=JSON.parse(localStorage.getItem("theme")||'"auto"');if(t!=="auto")d.setAttribute("data-theme",t);var p=JSON.parse(localStorage.getItem("prefs")||"{{}}");for(var k in p)d.setAttribute("data-p"+k,p[k])}}catch(e){{}}}})(document.documentElement)</script>
 </head>
 <body>

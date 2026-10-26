@@ -186,11 +186,11 @@
     const answered = SP.filter((q) => status(q) !== "new"), right = answered.filter((q) => ["right", "fixed"].includes(status(q)));
 
     // countdown to the next exam, computed today (not when the site was built)
-    const nxt = (CFG.upcoming || []).find((e) => e.date >= today());
+    const nxt = (CFG.upcoming || []).find((e) => window.dpasDue.upcoming(e.date, e.time));
     if (nxt) {
-      const days = Math.round((new Date(nxt.date + "T00:00") - new Date(today() + "T00:00")) / 864e5);
+      const l = window.dpasDue.left(nxt.date, nxt.time);
       $("rv-count").hidden = false;
-      $("rv-count").innerHTML = `<span class="rv-dot"></span><strong>${esc(nxt.label)}</strong> ${days === 0 ? "is today" : `in ${days} day${days === 1 ? "" : "s"}`} · ${new Date(nxt.date + "T00:00").toLocaleDateString(undefined, { weekday: "short", month: "short", day: "numeric" })}`;
+      $("rv-count").innerHTML = `<span class="rv-dot"></span><strong>${esc(nxt.label)}</strong> ${l.text} · ${new Date(nxt.date + "T00:00").toLocaleDateString(undefined, { weekday: "short", month: "short", day: "numeric" })}${nxt.time ? " · " + esc(nxt.time) : ""}`;
     }
 
     const tile = (k, ic, title, sub, cta, off) => `<button class="rv-act${k === "daily" ? " main" : ""}" data-a="${k}" ${off ? "disabled" : ""}><span class="rv-ic">${ic}</span><span class="rv-t"><strong>${title}</strong><span>${sub}</span></span><span class="rv-cta">${cta}</span></button>`;

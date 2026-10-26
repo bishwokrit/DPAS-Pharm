@@ -289,8 +289,7 @@
     const D = JSON.parse(hd.textContent), now = new Date(); now.setHours(0, 0, 0, 0);
     const day = (s) => new Date(s + "T00:00"), days = (s) => Math.round((day(s) - now) / 864e5);
     const fmt = (s) => day(s).toLocaleDateString(undefined, { weekday: "short", month: "short", day: "numeric" });
-    const ex = D.exams.find((e) => day(e.date) >= now);
-    const due = D.due.find((d) => day(d.date) >= now && !["exam", "final"].includes(d.kind));
+    const T = window.dpasDue, ahead = (date, text) => T.upcoming(date, text);
     const dl = store.get("daily:log", {});
     const ymd = (d) => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
     let streak = 0;
@@ -299,12 +298,20 @@
     while (dl[ymd(d)] && streak < 366) { streak++; d.setDate(d.getDate() - 1); }
     const num = (n, unit) => `<div class="up-num"><strong>${n}</strong><span>${unit}</span></div>`;
     const card = (href, n, unit, k, t, sub, kc) => `<a class="upcard appear" href="${href}" style="--kc:${kc}">${num(n, unit)}<div><div class="up-k">${k}</div><div class="up-t">${t}</div><div class="up-s">${sub}</div></div></a>`;
-    const out = [];
-    if (ex) { const d = days(ex.date); out.push(card("syllabus/index.html#schedule", d === 0 ? "Today" : d, d === 0 ? "" : d === 1 ? "day" : "days", "Next exam", ex.label, `${fmt(ex.date)} · ${ex.time}`, "var(--bad)")); }
-    if (due) { const d = days(due.date); out.push(card("syllabus/index.html#schedule", d === 0 ? "Today" : d, d === 0 ? "" : d === 1 ? "day" : "days", "Next deadline", due.label.split(" · ")[0], fmt(due.date), "var(--warn)")); }
-    const done = dl[ymd(now)];
-    out.push(card("review/index.html", done ? "✓" : "10", done ? "done" : "questions", "Today", done ? `Daily 10: ${done.score}/${done.of}` : "Daily 10", streak ? `${streak}-day streak — keep it going` : "A quick, weighted daily set", "var(--good)"));
-    hu.innerHTML = out.join("");
+    // redrawn every 30 s so a same-day countdown (hours, then minutes) stays live
+    const paintUp = (first) => {
+      const ex = D.exams.find((e) => ahead(e.date, e.time));
+      const due = D.due.find((d) => ahead(d.date, d.label) && !["exam", "final"].includes(d.kind));
+      const out = [];
+      if (ex) { const l = T.left(ex.date, ex.time); out.push(card("syllabus/index.html#schedule", l.n, l.unit, "Next exam", ex.label, `${fmt(ex.date)} · ${ex.time}`, "var(--bad)")); }
+      if (due) { const l = T.left(due.date, due.label), tm = due.label.split(" · ")[1]; out.push(card("syllabus/index.html#schedule", l.n, l.unit, "Next deadline", due.label.split(" · ")[0], `${fmt(due.date)} · ${/\d:\d{2}/.test(tm || "") ? tm : T.timeOf(due.label)}`, "var(--warn)")); }
+      const done = dl[ymd(now)];
+      out.push(card("review/index.html", done ? "✓" : "10", done ? "done" : "questions", "Today", done ? `Daily 10: ${done.score}/${done.of}` : "Daily 10", streak ? `${streak}-day streak — keep it going` : "A quick, weighted daily set", "var(--good)"));
+      hu.innerHTML = out.join("");
+      if (!first) hu.querySelectorAll(".appear").forEach((el) => el.classList.add("in"));
+    };
+    paintUp(true);
+    setInterval(() => { if (!document.hidden) paintUp(false); }, 30000);
 
     // practice follows the calendar: the unit whose exam is next (after the last unit exam: final prep)
     const unitEx = D.exams.find((e) => e.unit && day(e.date) >= now), cur = unitEx ? String(unitEx.unit) : "final";

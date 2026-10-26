@@ -163,12 +163,17 @@
   const iso = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, "0")}-${String(today.getDate()).padStart(2, "0")}`;
   const up = document.getElementById("upnext");
   if (up) {
-    const next = D.due.filter((d) => new Date(d.date + "T00:00") >= today).slice(0, 5);
-    up.innerHTML = next.length ? next.map((d, i) => {
-      const days = Math.round((new Date(d.date + "T00:00") - today) / 864e5), [t, ...rest] = d.label.split(" · ");
-      return `<div class="card up k-${d.kind} appear in" style="--d:${i * 0.06}s"><div class="up-days"><strong>${days === 0 ? "Today" : days === 1 ? "1" : days}</strong><span>${days === 0 ? "" : days === 1 ? "day" : "days"}</span></div>
-        <div><div class="small muted">${new Date(d.date + "T00:00").toLocaleDateString(undefined, { weekday: "short", month: "short", day: "numeric" })}</div><div class="up-title">${t}</div>${rest.length ? `<div class="small muted">${rest.join(" · ")}</div>` : ""}</div></div>`;
-    }).join("") : '<p class="muted">Nothing left — the course is done.</p>';
+    // redrawn every 30 s so a same-day countdown (hours, then minutes) stays live
+    const T = window.dpasDue, paintUp = () => {
+      const next = D.due.filter((d) => T.upcoming(d.date, d.label)).slice(0, 5);
+      up.innerHTML = next.length ? next.map((d, i) => {
+        const l = T.left(d.date, d.label), [t, ...rest] = d.label.split(" · "), tm = T.timeOf(d.label);
+        return `<div class="card up k-${d.kind} appear in${l.soon ? " soon" : ""}" style="--d:${i * 0.06}s"><div class="up-days"><strong>${l.n}</strong><span>${l.unit}</span></div>
+          <div><div class="small muted">${new Date(d.date + "T00:00").toLocaleDateString(undefined, { weekday: "short", month: "short", day: "numeric" })}${tm ? " · " + tm : ""}</div><div class="up-title">${t}</div>${rest.length ? `<div class="small muted">${rest.join(" · ")}</div>` : ""}</div></div>`;
+      }).join("") : '<p class="muted">Nothing left — the course is done.</p>';
+    };
+    paintUp();
+    setInterval(() => { if (!document.hidden) paintUp(); }, 30000);
   }
 
   // ---------------------------------------------------------------- schedule: one card per week; this week opens, past weeks dim; filters
