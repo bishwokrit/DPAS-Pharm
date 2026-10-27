@@ -232,7 +232,7 @@
        {
         "id": "out",
         "label": "Pain, inflammation,\nfever",
-        "x": 434,
+        "x": 454,
         "y": 170,
         "w": 190,
         "col": "coral"
@@ -948,39 +948,57 @@
       "title": "GI vs. cardiovascular risk",
       "yLabel": "Illustrative relative risk",
       "point": "No NSAID is risk-free: celecoxib swaps GI risk for cardiovascular risk.",
+      "legend": [
+       [
+        "teal",
+        "GI ulcer / bleeding risk"
+       ],
+       [
+        "coral",
+        "Cardiovascular event risk"
+       ]
+      ],
       "bars": [
        {
         "label": "Nonselective · GI",
         "value": 75,
+        "col": "teal",
         "note": "Blocking COX-1 removes gastric mucosal protection: highest GI ulcer and bleeding risk."
        },
        {
         "label": "Nonselective · CV",
         "value": 35,
+        "col": "coral",
         "note": "Cardiovascular risk is present but lower than celecoxib’s in this illustration."
        },
        {
         "label": "Celecoxib · GI",
         "value": 30,
+        "col": "teal",
         "note": "COX-1 is spared, so GI ulcer and bleeding risk is lower."
        },
        {
         "label": "Celecoxib · CV",
         "value": 65,
+        "col": "coral",
         "note": "COX-2 selectivity is associated with more cardiovascular events: the key trade-off."
        }
       ],
       "steps": [
        {
-        "label": "Nonselective GI risk",
+        "label": "Nonselective NSAID · GI risk",
         "pick": 0
        },
        {
-        "label": "Celecoxib GI risk",
+        "label": "Nonselective NSAID · CV risk",
+        "pick": 1
+       },
+       {
+        "label": "Celecoxib · GI risk",
         "pick": 2
        },
        {
-        "label": "Celecoxib CV risk",
+        "label": "Celecoxib · CV risk",
         "pick": 3
        }
       ]

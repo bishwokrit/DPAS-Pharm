@@ -12,6 +12,7 @@
   // shared defs: a soft shadow for handles, an arrowhead, and a fading fill for each series color
   const DEFS = () => `<defs><filter id="vzSh" x="-50%" y="-50%" width="200%" height="200%"><feDropShadow dx="0" dy="1.5" stdDeviation="2" flood-color="#000" flood-opacity=".22"/></filter>
     <marker id="vzA" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto"><path d="M1,1L9,5L1,9" fill="none" stroke="${C.ink}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></marker>
+    <linearGradient id="vzSheen" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity=".16"/><stop offset=".55" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".08"/></linearGradient>
     ${["teal", "coral", "amber", "blue"].map((k) => `<linearGradient id="vzF-${k}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${C[k]}" stop-opacity=".22"/><stop offset="1" stop-color="${C[k]}" stop-opacity="0"/></linearGradient>`).join("")}</defs>`;
   const sx = (v, a, b) => L + ((v - a) / (b - a)) * (R - L), sy = (v, a, b) => B - ((v - a) / (b - a)) * (B - T);
   const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
@@ -24,7 +25,13 @@
     <line x1="${L}" x2="${R}" y1="${B}" y2="${B}" stroke="${C.ink}" stroke-opacity=".45"/>
     ${xl ? `<text x="${R}" y="${H - 2}" text-anchor="end" class="vz-lab">${xl}</text>` : ""}${yl ? `<text x="${L - 8}" y="${T - 16}" text-anchor="start" class="vz-lab">${yl}</text>` : ""}</g>`;
   const dot = (x, y, col, r = 7) => `<circle cx="${x}" cy="${y}" r="${r + 9}" fill="${col}" opacity=".12"/><circle cx="${x}" cy="${y}" r="${r}" fill="${C.bg}" stroke="${col}" stroke-width="3" filter="url(#vzSh)" class="vz-dot"/>`;
-  const bar = (x, y, w, h, col, r = 8) => (h <= 0 ? "" : `<path d="M${x},${y + h}V${y + Math.min(r, h)}Q${x},${y} ${x + r},${y}H${x + w - r}Q${x + w},${y} ${x + w},${y + Math.min(r, h)}V${y + h}Z" fill="${col}"/>`);  // rounded top only
+  // a slim extruded column: front face (with a soft sheen), a lit top face and a shaded side face; depth scales with width
+  const bar = (x, y, w, h, col) => {
+    if (h <= 0) return "";
+    const d = Math.min(10, w * 0.11), e = d * 0.62, side = `M${x + w},${y}L${x + w + d},${y - e}V${y + h - e}L${x + w},${y + h}Z`, top = `M${x},${y}L${x + d},${y - e}H${x + w + d}L${x + w},${y}Z`;
+    return `<path d="${side}" fill="${col}"/><path d="${side}" fill="#000" opacity=".26"/><path d="${top}" fill="${col}"/><path d="${top}" fill="#fff" opacity=".38"/>` +
+      `<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${col}"/><rect x="${x}" y="${y}" width="${w}" height="${h}" fill="url(#vzSheen)"/>`;
+  };
   const area = (d, col) => `<path d="${d}L${R},${B}L${L},${B}Z" fill="url(#vzF-${col})"/>`;  // soft fill under a curve that spans the plot
   const tag = (x, y, txt, col, anchor = "middle") => `<text x="${x}" y="${y}" text-anchor="${anchor}" class="vz-tag" fill="${col}">${txt}</text>`;
   const logTicks = (a, b) => { const t = []; for (let e = Math.ceil(a); e <= b; e++) t.push([10 ** e >= 1 ? 10 ** e : 10 ** e, sx(e, a, b)]); return t.map(([v, x]) => [v >= 1 ? v : v.toFixed(-Math.log10(v)), x]); };
@@ -104,6 +111,16 @@
       svg.addEventListener("pointermove", (e) => { if (on) move(e); });
       const up = () => { on = false; held = false; };
       svg.addEventListener("pointerup", up); svg.addEventListener("pointercancel", up);
+    }
+    if (matchMedia("(hover: hover) and (prefers-reduced-motion: no-preference)").matches) {
+      const flat = () => svg.style.setProperty("--tilt", "rotateX(0deg) rotateY(0deg)");
+      el.addEventListener("pointermove", (e) => {
+        if (held) return flat();
+        const r = svg.getBoundingClientRect(), dx = (e.clientX - r.left) / r.width - 0.5, dy = (e.clientY - r.top) / r.height - 0.5;
+        if (Math.abs(dx) > 0.6 || Math.abs(dy) > 0.6) return flat();
+        svg.style.setProperty("--tilt", `rotateX(${(-dy * 4).toFixed(2)}deg) rotateY(${(dx * 5).toFixed(2)}deg)`);
+      });
+      el.addEventListener("pointerleave", flat); svg.addEventListener("pointerdown", flat);
     }
     el.classList.add("intro"); sync(); setTimeout(() => el.classList.remove("intro"), 1600);
     matchMedia("(prefers-color-scheme: dark)").addEventListener?.("change", () => sync());
@@ -252,7 +269,7 @@
         `<rect x="${L}" y="${y(160)}" width="${R - L}" height="${y(60) - y(160)}" fill="${C.sage}" opacity=".1"/>${tag(R - 4, y(132), "therapeutic", C.sage, "end")}${tag(R - 4, y(132) + 15, "window", C.sage, "end")}
         ${tag(R - 4, y(160) - 6, "toxicity risk ↑", C.coral, "end")}${tag(R - 4, y(60) + 16, "too low ↓", C.blue, "end")}
         <line x1="${L}" x2="${R}" y1="${y(100)}" y2="${y(100)}" stroke="${C.ink}" stroke-dasharray="2 4"/>` +
-        v.map((p, i) => { const cx = L + 70 + i * 135; return `<g opacity="${(modeNow === "inh" && i === 2) || (modeNow === "ind" && i === 1) ? 0.25 : 1}">${bar(cx - 46, y(p), 92, B - y(p), cols[i])}</g>${tag(cx, y(p) - 8, pct(p), C.deep)}<text x="${cx}" y="${B + 19}" text-anchor="middle" class="vz-tk">${names[i]}</text>`; }).join("");
+        v.map((p, i) => { const cx = L + 70 + i * 135; return `<g opacity="${(modeNow === "inh" && i === 2) || (modeNow === "ind" && i === 1) ? 0.25 : 1}">${bar(cx - 46, y(p), 92, B - y(p), cols[i])}</g>${tag(cx, y(p) - 14, pct(p), C.deep)}<text x="${cx}" y="${B + 19}" text-anchor="middle" class="vz-tk">${names[i]}</text>`; }).join("");
     }
     function paint() { w.el.querySelector("svg").innerHTML = DEFS() + bars(shown); }
     return w;
@@ -363,19 +380,24 @@
     "half-life": V.S20, "steady-state": V.S24, "fill-empty": V.TB_fill_empty, adme: V.S46 });
   // generic comparison bars: {"type": "bars", "unit": "%", "point": "...", "ref": 100, "bars": [{"label", "value", "note"}], "steps": [{"label", "pick": index}]}
   V.bars = (host, cfg = {}) => {
-    const bars = cfg.bars || [], max = Math.max(1, ...bars.map((b) => b.value), cfg.ref || 0) * 1.15, cols = [C.teal, C.coral, C.blue, C.amber, C.sage];
+    const bars = cfg.bars || [], top = Math.max(1, ...bars.map((b) => b.value), cfg.ref || 0);
+    // round ticks (0, 20, 40…): step from 1/2/2.5/5 × 10^k, axis a little above the tallest bar
+    const mag = 10 ** Math.floor(Math.log10(top / 4)), tick = [1, 2, 2.5, 5, 10].map((m) => m * mag).find((t) => top / t <= 4.5);
+    const max = Math.ceil((top * 1.08) / tick) * tick, cols = [C.teal, C.coral, C.blue, C.amber, C.sage];
+    const colOf = (b, i) => (b.col && C[b.col]) || cols[i % cols.length];
+    const allSteps = (cfg.steps || []).length >= bars.length;
     const step = (R - L) / Math.max(1, bars.length), bw = Math.min(110, step * 0.62);
     return shell(host, {
       label: `Interactive ${cfg.title || "comparison"}`, hint: "Tap a bar to see what it means", point: cfg.point, steps: (cfg.steps || []).map((st) => ({ label: st.label, state: { sel: st.pick } })),
-      state: { sel: -1 },
-      controls: `<div class="seg" data-k="sel">${bars.map((b, i) => `<button type="button" data-v="${i}">${b.label}</button>`).join("")}</div>`,
+      legend: cfg.legend, state: { sel: -1 },
+      controls: allSteps ? "" : `<div class="seg" data-k="sel">${bars.map((b, i) => `<button type="button" data-v="${i}">${b.label}</button>`).join("")}</div>`,
       drag: (S, x) => { S.sel = clamp(Math.floor((x - L) / step), 0, bars.length - 1); },
       draw(S) {
         const y = (v) => sy(v, 0, max), sel = Math.round(S.sel);
-        const ticks = [0, 0.25, 0.5, 0.75, 1].map((f) => { const v = +(max * f / 1.15).toPrecision(2); return [v + (cfg.unit === "%" ? "%" : ""), y(v)]; });
+        const ticks = Array.from({ length: Math.round(max / tick) + 1 }, (_, k) => k * tick).map((v) => [f1(v) + (cfg.unit === "%" ? "%" : ""), y(v)]);
         return {
           svg: axes("", cfg.yLabel || "", [], ticks) + (cfg.ref != null ? `<line x1="${L}" x2="${R}" y1="${y(cfg.ref)}" y2="${y(cfg.ref)}" stroke="${C.ink}" stroke-dasharray="2 4"/>` : "") +
-            bars.map((b, i) => { const cx = L + step * (i + 0.5); return `<g opacity="${sel < 0 || sel === i ? 1 : 0.35}">${bar(cx - bw / 2, y(b.value), bw, B - y(b.value), cols[i % cols.length])}${tag(cx, y(b.value) - 8, `${f1(b.value)}${cfg.unit || ""}`, C.deep)}</g><text x="${cx}" y="${B + 19}" text-anchor="middle" class="vz-tk">${b.label}</text>`; }).join(""),
+            bars.map((b, i) => { const cx = L + step * (i + 0.5); return `<g opacity="${sel < 0 || sel === i ? 1 : 0.35}">${bar(cx - bw / 2, y(b.value), bw, B - y(b.value), colOf(b, i))}${tag(cx, y(b.value) - 14, `${f1(b.value)}${cfg.unit || ""}`, C.deep)}</g><text x="${cx}" y="${B + 19}" text-anchor="middle" class="vz-tk">${(step < 170 ? b.label.split(" · ") : [b.label]).map((t, k) => `<tspan x="${cx}" dy="${k ? 1.15 : 0}em">${t}</tspan>`).join("")}</text>`; }).join(""),
           read: sel >= 0 && bars[sel] ? `<b>${bars[sel].label}: ${f1(bars[sel].value)}${cfg.unit || ""}.</b> ${bars[sel].note || ""}` : (cfg.read || "Tap a bar, or use the buttons, to see what each value means."),
         };
       },
@@ -386,16 +408,30 @@
   // {"type": "pathway", "h": 300, "nodes": [{id, label ("\n" breaks), x, y, w, col}], "edges": [["a", "b"]],
   //  "drugs": [{label, at: "a>b" (an arrow) or "a" (a box), off: [ids dimmed], less: [ids partly dimmed], note}], "point", "read"}
   V.pathway = (host, cfg = {}) => {
-    const N = cfg.nodes || [], E = cfg.edges || [], Dg = cfg.drugs || [], h = cfg.h || 300, NH = 58;
-    const by = Object.fromEntries(N.map((n) => [n.id, { w: 130, col: "teal", ...n }]));
+    const N = cfg.nodes || [], E = cfg.edges || [], Dg = cfg.drugs || [];
+    // narrow cards (phones, the home column) re-stack the boxes top to bottom by step, so labels can be large
+    const narrow = (host.clientWidth || 640) < 560, NH = narrow ? 82 : 58, R0 = narrow ? 17 : 13;
+    let h = cfg.h || 300, by = Object.fromEntries(N.map((n) => [n.id, { w: 130, col: "teal", ...n }]));
+    if (narrow) {
+      const rank = Object.fromEntries(N.map((n) => [n.id, 0]));
+      for (let k = 0; k < N.length; k++) E.forEach(([a, b]) => (rank[b] = Math.max(rank[b], rank[a] + 1)));
+      const rows = [];
+      N.forEach((n) => (rows[rank[n.id]] ||= []).push(n.id));
+      const GAP = 44, PAD = 14;
+      rows.forEach((ids, r) => {
+        const w = (W - 2 * PAD - (ids.length - 1) * 24) / ids.length;
+        ids.forEach((id, j) => Object.assign(by[id], { x: PAD + j * (w + 24), y: PAD + r * (NH + GAP), w }));
+      });
+      h = 2 * PAD + rows.length * (NH + GAP) - GAP;
+    }
     const ctr = (n) => [n.x + n.w / 2, n.y + NH / 2];
     // where the line from a box's center toward (tx, ty) leaves the box
     const rim = (n, tx, ty) => { const [cx, cy] = ctr(n), dx = tx - cx, dy = ty - cy, t = Math.min(dx ? (n.w / 2 + 4) / Math.abs(dx) : 1e9, dy ? (NH / 2 + 4) / Math.abs(dy) : 1e9); return [cx + dx * t, cy + dy * t]; };
-    const cross = (x, y) => `<circle cx="${x}" cy="${y}" r="13" fill="${C.coral}" filter="url(#vzSh)"/><path d="M${x - 5},${y - 5}L${x + 5},${y + 5}M${x + 5},${y - 5}L${x - 5},${y + 5}" stroke="${C.bg}" stroke-width="2.6" stroke-linecap="round"/>`;
+    const cross = (x, y) => { const k = R0 * 0.38; return `<circle cx="${x}" cy="${y}" r="${R0}" fill="${C.coral}" filter="url(#vzSh)"/><path d="M${x - k},${y - k}L${x + k},${y + k}M${x + k},${y - k}L${x - k},${y + k}" stroke="${C.bg}" stroke-width="${R0 / 5}" stroke-linecap="round"/>`; };
     return shell(host, {
       label: `Interactive ${cfg.title || "pathway"}`, hint: "Pick a drug to see where it acts", point: cfg.point, h,
       steps: Dg.map((d, i) => ({ label: d.label, state: { sel: i } })), state: { sel: -1 },
-      controls: `<div class="seg" data-k="sel"><button type="button" data-v="-1">No drug</button>${Dg.map((d, i) => `<button type="button" data-v="${i}">${d.label}</button>`).join("")}</div>`,
+      controls: "",
       draw(S) {
         const d = Dg[Math.round(S.sel)], off = new Set(d?.off || []), less = new Set(d?.less || []);
         const op = (id) => (off.has(id) ? 0.22 : less.has(id) ? 0.55 : 1);
@@ -405,9 +441,11 @@
         }).join("");
         const boxes = N.map((n0) => {
           const n = by[n0.id], ls = String(n.label).split("\n"), [cx, cy] = ctr(n);
-          return `<g opacity="${op(n.id)}"><rect x="${n.x}" y="${n.y}" width="${n.w}" height="${NH}" rx="13" fill="${C[n.col] || C.teal}" fill-opacity=".16" stroke="${C[n.col] || C.teal}" stroke-width="1.6"/>
-            <text x="${cx}" y="${cy}" text-anchor="middle" class="vz-node" fill="${C.deep}">${ls.map((l, i) => `<tspan x="${cx}" dy="${i ? 1.2 : 0.35 - (ls.length - 1) * 0.6}em">${l}</tspan>`).join("")}</text></g>` +
-            (d?.at === n.id ? cross(n.x + n.w - 4, n.y + 4) : "");
+          const col = C[n.col] || C.teal, sunk = off.has(n.id) ? 4 : 0;
+          return `<g opacity="${op(n.id)}"><rect x="${n.x}" y="${n.y + 5}" width="${n.w}" height="${NH}" rx="13" fill="${col}" opacity="${sunk ? 0 : 0.32}"/>
+            <rect x="${n.x}" y="${n.y + sunk}" width="${n.w}" height="${NH}" rx="13" fill="${C.bg}"/><rect x="${n.x}" y="${n.y + sunk}" width="${n.w}" height="${NH}" rx="13" fill="${col}" fill-opacity=".14" stroke="${col}" stroke-width="1.6"/>
+            <text x="${cx}" y="${cy + sunk}" text-anchor="middle" class="vz-node${narrow ? " vz-node-lg" : ""}" fill="${C.deep}">${ls.map((l, i) => `<tspan x="${cx}" dy="${i ? 1.2 : 0.35 - (ls.length - 1) * 0.6}em">${l}</tspan>`).join("")}</text></g>` +
+            (d?.at === n.id ? cross(n.x + n.w - 6, n.y + 6) : "");
         }).join("");
         return { svg: lines + boxes, read: d ? `<b>${d.label}.</b> ${d.note || ""}` : (cfg.read || "Pick a drug to see where it interrupts the pathway.") };
       },

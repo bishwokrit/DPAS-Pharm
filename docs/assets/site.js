@@ -283,6 +283,23 @@
     if (pick) tp.textContent = pick.text;
   }
 
+  // home: a lecture with several hands-on figures shows one at a time; the dots switch, and after 2 minutes without
+  // a touch it moves on to the next one (paused while the tab is hidden)
+  document.querySelectorAll(".now-figs").forEach((box) => {
+    const figs = [...box.querySelectorAll(":scope > .now-fig")], dots = [...box.querySelectorAll(".now-dots button")];
+    const wait = (+box.dataset.rotate || 120) * 1000;
+    let cur = 0, idle = 0;
+    const show = (i) => {
+      cur = (i + figs.length) % figs.length;
+      figs.forEach((f, k) => { f.hidden = k !== cur; f.classList.toggle("fig-in", k === cur); });
+      dots.forEach((d, k) => d.setAttribute("aria-selected", k === cur ? "true" : "false"));
+    };
+    const arm = () => { clearTimeout(idle); idle = setTimeout(() => { if (document.hidden) return arm(); show(cur + 1); arm(); }, wait); };
+    dots.forEach((d, k) => d.addEventListener("click", () => { show(k); arm(); }));
+    ["pointerdown", "pointermove", "keydown", "input", "wheel", "focusin"].forEach((ev) => box.addEventListener(ev, arm, { passive: true }));
+    arm();
+  });
+
   // home: "coming up" cards, computed in the browser so they stay current without a rebuild
   const hd = document.getElementById("home-data"), hu = document.getElementById("home-up");
   if (hd && hu) {

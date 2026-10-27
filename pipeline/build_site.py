@@ -488,6 +488,8 @@ def main(pdf=True):
                       "figure": next((f"{lid}/{fig['image']}" for cl in c["classes"] for fig in cl.get("figures", []) if not fig.get("tb")), ""),
                       "figure_title": next((fig.get("title", "") for cl in c["classes"] for fig in cl.get("figures", []) if not fig.get("tb")), ""),
                       "figure_viz": next((viz_attrs(fig) for cl in c["classes"] for fig in cl.get("figures", []) if not fig.get("tb")), ""),
+                      "figures": [{"img": f"{lid}/{fig['image']}", "title": fig.get("title", ""), "viz": viz_attrs(fig), "href": f"{lid}/index.html#{slug(cl['name'])}"}
+                                  for cl in c["classes"] for fig in cl.get("figures", []) if not fig.get("tb")],
                       "figure_href": next((f"{lid}/index.html#{slug(cl['name'])}" for cl in c["classes"] for fig in cl.get("figures", []) if not fig.get("tb")), f"{lid}/index.html")}
         print(f"  site: {lid} study guide" + (" + PDF" if pdf else ""))
     exams = []

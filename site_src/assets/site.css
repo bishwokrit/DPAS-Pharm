@@ -1212,7 +1212,7 @@ figure.vz-orig { background: #fff; } figure.vz-orig figcaption { color: #3a3a3c;
 figure[data-viz-on] > img { display: none; }
 figure.vz-orig > img { display: block; } figure.vz-orig > .viz { display: none; } figure.vz-orig > .vz-back { display: flex; }
 @container (max-width: 560px) {
-  .vz-tk, .vz-ax-t { font-size: 19px; } .vz-lab { font-size: 19px; } .vz-tag { font-size: 20px; stroke-width: 6px; }
+  .vz-tk, .vz-ax-t { font-size: 22px; } .vz-lab { font-size: 21px; } .vz-tag { font-size: 23px; stroke-width: 6px; }
   .vz-hint { display: none; } .vz-top { justify-content: flex-end; } .vz-pill { margin-right: auto; }
   .vz-ctl { gap: 12px; } .vz-ctl > .vz-r { flex-basis: 100%; max-width: none; } .viz .seg button { padding: 6px 10px; font-size: 12.5px; }
   .vz-read { font-size: 14px; }
@@ -1760,3 +1760,45 @@ html[data-pmotion="off"] ::view-transition-old(root), html[data-pmotion="off"] :
 
 /* same-day deadlines: the count switches to hours, then minutes, and takes the warning tint */
 .up.soon .up-days strong { color: var(--warn); }
+
+/* hands-on figures on wide pages: the figure on the left, its story on the right (point, steps, controls, readout),
+   so the card is balanced and fits on one screen. Narrow cards (phone, home column) keep the stacked layout. */
+figure[data-viz-on] { container: vzfig / inline-size; }
+.vz-ctl:empty { display: none; }
+@container vzfig (min-width: 900px) {
+  .viz { display: grid; grid-template-columns: minmax(0, 1.75fr) minmax(250px, 1fr); grid-template-rows: auto auto auto auto auto 1fr; column-gap: 40px; align-items: start; }
+  .viz > .vz-top { grid-column: 1 / -1; margin-bottom: 14px; }
+  .viz > svg { grid-column: 1; grid-row: 2 / -1; align-self: center; max-height: 62vh; }
+  .viz > .vz-point, .viz > .vz-legend, .viz > .vz-steps, .viz > .vz-ctl, .viz > .vz-read { grid-column: 2; }
+  .viz > .vz-point { margin: 0 0 14px; font-size: 16.5px; line-height: 1.45; }
+  .viz > .vz-legend { flex-direction: column; gap: 8px; margin: 0 0 6px; font-size: 13px; }
+  .viz > .vz-steps { flex-direction: column; align-items: stretch; gap: 8px; margin: 12px 0 0; padding-top: 16px; border-top: 1px solid var(--hair); }
+  .viz > .vz-steps .vz-try { margin: 0 0 2px; }
+  .viz > .vz-steps button { justify-content: flex-start; padding: 8px 14px 8px 8px; font-size: 13.5px; text-align: left; }
+  .viz > .vz-ctl { flex-direction: column; align-items: stretch; gap: 14px; margin: 16px 0 0; }
+  .viz > .vz-ctl > .seg { margin-right: 0; align-self: flex-start; }
+  .viz > .vz-ctl > .vz-r { flex-basis: auto; max-width: none; }
+  .viz > .vz-read { margin: 16px 0 0; font-size: 14.5px; min-height: 4.6em; }
+  .vz-hint { flex: 1; }
+}
+
+/* depth, kept quiet: a slight perspective tilt toward the pointer, a soft lift under curves and handles */
+.viz svg { transform: perspective(1400px) var(--tilt, rotateX(0deg) rotateY(0deg)); transition: transform .6s cubic-bezier(.2,.8,.2,1); will-change: transform; }
+.viz svg .vz-line { filter: drop-shadow(0 6px 7px rgba(0, 0, 0, .13)); }
+:root[data-theme="dark"] .viz svg .vz-line { filter: drop-shadow(0 6px 9px rgba(0, 0, 0, .45)); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .viz svg .vz-line { filter: drop-shadow(0 6px 9px rgba(0, 0, 0, .45)); } }
+@media (prefers-reduced-motion: reduce) { .viz svg { transform: none; transition: none; } }
+
+/* home: a lecture's figures share one card; dots switch them, and they rotate after 2 minutes without a touch */
+.now-grid > .now-figs { grid-area: fig; display: flex; flex-direction: column; min-width: 0; }
+.now-figs > .now-fig { flex: 1; }
+.now-figs > .now-fig[hidden] { display: none; }
+.now-figs > .now-fig.fig-in { animation: fig-in .6s cubic-bezier(.2,.8,.2,1) both; }
+@keyframes fig-in { from { opacity: 0; transform: translateY(8px) scale(.99); } }
+.now-dots { display: flex; justify-content: center; gap: 8px; padding: 12px 0 2px; }
+.now-dots button { width: 7px; height: 7px; padding: 0; border: 0; border-radius: 99px; background: color-mix(in srgb, var(--text) 22%, transparent); cursor: pointer; transition: width .35s cubic-bezier(.2,.8,.2,1), background .35s; }
+.now-dots button[aria-selected="true"] { width: 22px; background: var(--accent); }
+.now-dots button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) { .now-figs > .now-fig.fig-in { animation: none; } }
+.viz svg .vz-node-lg { font-size: 28px; letter-spacing: -.015em; }
+.now-figs > .now-fig { justify-content: center; }

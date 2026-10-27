@@ -186,9 +186,14 @@ def now_section(syl, built, sched):
             due_html += f'<li><span class="small muted">{date.fromisoformat(ex["date"]).strftime("%a %b %-d")}</span> <strong>{html.escape(ex["label"])}</strong></li>'
         chips = "".join(f'<a class="topic-chip" href="{lid}/index.html#{a}"><span>{i}</span>{html.escape(n)}</a>' for i, n, a in b["parts"])
         hy = "".join(f'<li><a href="{lid}/index.html#{a}">{md(t)}</a></li>' for i, a, t in b["hy"][:4])
-        key = re.sub(r"_1$", "", b["figure"].rsplit("/", 1)[-1].rsplit(".", 1)[0]) if b["figure"] else ""
-        fig = (f'<figure class="now-fig" {b.get("figure_viz") or f'data-viz="{key}"'}><img src="{b["figure"]}" alt="{html.escape(b["figure_title"])}" loading="lazy">'
-               f'<a href="{b["figure_href"]}">{md(b["figure_title"])} →</a></figure>' if b["figure"] else "")
+        # every hands-on figure of the lecture, one at a time; site.js rotates them after 2 minutes without a touch
+        figs = b.get("figures") or ([{"img": b["figure"], "title": b["figure_title"], "viz": b.get("figure_viz") or f'data-viz="{re.sub(r"_1$", "", b["figure"].rsplit("/", 1)[-1].rsplit(".", 1)[0])}"', "href": b["figure_href"]}] if b["figure"] else [])
+        fig = "".join(f'<figure class="now-fig" {f["viz"]}{" hidden" if i else ""}><img src="{f["img"]}" alt="{html.escape(f["title"])}" loading="lazy">'
+                      f'<a href="{f["href"]}">{md(f["title"])} →</a></figure>' for i, f in enumerate(figs))
+        if len(figs) > 1:
+            fig = (f'<div class="now-figs" data-rotate="120">{fig}<div class="now-dots" role="tablist" aria-label="Figures from this lecture">'
+                   + "".join(f'<button type="button" role="tab" aria-label="{html.escape(re.sub(r"[*_]", "", f["title"]))}"{" aria-selected=\"true\"" if not i else ""}></button>' for i, f in enumerate(figs))
+                   + '</div></div>')
         panels.append(f"""<article class="now-panel" data-date="{b['date']}" hidden>
 <div class="now-head"><div><p class="kicker" data-now-kicker>Current lecture</p>
 <h2>{html.escape(b['title'])}</h2>
