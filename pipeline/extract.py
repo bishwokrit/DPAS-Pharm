@@ -5,6 +5,7 @@ Emphasis = bold, underline, highlight, or a text color different from the deck's
 Headings (big title text, small ALL-CAPS labels, white text on colored boxes) are not emphasis.
 """
 import json
+import re
 import sys
 from collections import Counter
 from pathlib import Path
@@ -127,6 +128,24 @@ def extract(pptx_path, out_dir=None):
         if slide.has_notes_slide:
             rec["notes"] = slide.notes_slide.notes_text_frame.text.strip()
         slides.append(rec)
+    return clean(slides)
+
+
+def clean(slides):
+    """Drop slide furniture that carries no teaching: a running footer repeated on most slides, the printed page number,
+    and leading dash bullet glyphs ("–   text")."""
+    from collections import Counter
+    seen = Counter(it["text"] for s in slides for it in {i["text"]: i for i in s["items"]}.values() if not it["heading"])
+    footer = {t for t, n in seen.items() if n >= max(4, 0.4 * len(slides)) and len(t.split()) >= 3}
+    dash = re.compile(r"^[–—-]\s+")
+    for s in slides:
+        keep = []
+        for it in s["items"]:
+            if it["text"] in footer or (not it["heading"] and it["text"] == str(s["slide"])):
+                continue
+            it["text"], it["md"] = dash.sub("", it["text"]), dash.sub("", it["md"])
+            keep.append(it)
+        s["items"] = keep
     return slides
 
 
@@ -155,6 +174,8 @@ def to_markdown(slides, name):
 def main(pptx_path, out_dir):
     out_dir = Path(out_dir)
     out_dir.mkdir(parents=True, exist_ok=True)
+    for old in (out_dir / "figures").glob("S*_*.*") if (out_dir / "figures").exists() else []:
+        old.unlink()  # a re-uploaded deck renumbers its slides: don't keep the previous version's pictures
     slides = extract(pptx_path, out_dir)
     (out_dir / "slides.json").write_text(json.dumps(slides, indent=1, ensure_ascii=False))
     (out_dir / "slides.md").write_text(to_markdown(slides, Path(pptx_path).name))

@@ -482,6 +482,71 @@
     });
   };
 
+  // Rumack-Matthew nomogram (illustrative schematic, single acute ingestion): drag the level to a time and concentration.
+  // Treatment line: 150 mcg/mL at 4 h, halving every 4 h to 4.7 at 24 h. {"type": "nomogram", "point", "steps": [{label, t, c}]}
+  V.nomogram = (host, cfg = {}) => {
+    const T0 = 0, T1 = 32, LO = Math.log10(3), HI = Math.log10(300);
+    const X = (t) => sx(t, T0, T1), Y = (c) => sy(Math.log10(clamp(c, 3, 300)), LO, HI);
+    const line = (t) => 150 * 2 ** (-(t - 4) / 4);
+    return shell(host, {
+      label: "Interactive Rumack-Matthew nomogram", hint: "Drag the point to a time and level", point: cfg.point,
+      legend: [["coral", "Above the line: give NAC"], ["sage", "Below the line: toxicity unlikely"], ["ink", "Treatment line (illustrative)"]],
+      steps: (cfg.steps || []).map((st) => ({ label: st.label, state: { t: st.t, c: Math.log10(st.c) } })),
+      state: { t: 8, c: Math.log10(120) },
+      controls: range("t", "Hours since a single acute ingestion", 1, 32, 0.25) + range("c", "Acetaminophen level", LO, HI, 0.01),
+      fmt: { t: (v) => `${f1(v)} h`, c: (v) => `${f1(10 ** v)} mcg/mL` },
+      drag: (S, x, y) => { S.t = clamp(T0 + ((x - L) / (R - L)) * (T1 - T0), 1, 32); S.c = clamp(LO + ((B - y) / (B - T)) * (HI - LO), LO, HI); },
+      draw(S) {
+        const c = 10 ** S.c, t = S.t, on = t >= 4 && t <= 24, lv = on ? line(t) : null;
+        const lp = path((u) => [X(u), Y(line(u))], 4, 24, 40);
+        const above = `${lp}L${X(24)},${T}L${X(4)},${T}Z`, below = `${lp}L${X(24)},${B}L${X(4)},${B}Z`;
+        const yt = [3, 5, 10, 20, 50, 100, 150, 300].map((v) => [v, Y(v)]), xt = [0, 4, 8, 12, 16, 20, 24, 28, 32].map((v) => [v, X(v)]);
+        const zone = !on ? C.ink : c >= lv ? C.coral : C.sage;
+        const read = t < 4 ? `<b>Too early.</b> Levels drawn before 4 hours can't be plotted: draw the level at 4 hours or later.`
+          : t > 24 ? `<b>Beyond 24 hours the nomogram is not used.</b> 4.7 mcg/mL is only where the line ends, not a safe cutoff: get AST/ALT; a detectable level or raised AST/ALT guides NAC, per protocol or poison control.`
+          : c >= lv ? `<b>Above the treatment line</b> (the line is ${f1(lv)} mcg/mL at ${f1(t)} h): <b>give NAC</b>.`
+          : `<b>Below the line</b> (${f1(lv)} mcg/mL at ${f1(t)} h): toxicity unlikely, for a single acute ingestion with a known time.`;
+        return {
+          svg: axes("Hours after single acute ingestion", "Acetaminophen (mcg/mL, log)", xt, yt) +
+            `<path d="${above}" fill="${C.coral}" opacity=".10"/><path d="${below}" fill="${C.sage}" opacity=".12"/>
+            <rect x="${X(24)}" y="${T}" width="${X(32) - X(24)}" height="${B - T}" fill="${C.ink}" opacity=".08"/><rect x="${X(0)}" y="${T}" width="${X(4) - X(0)}" height="${B - T}" fill="${C.ink}" opacity=".08"/>
+            ${tag(X(28), T + 18, "not used > 24 h", C.ink)}${tag(X(2), T + 18, "< 4 h", C.ink)}
+            <path d="${lp}" fill="none" stroke="${C.deep}" stroke-width="2.6" stroke-linecap="round" class="vz-line" pathLength="1"/>
+            ${[[4, 150], [8, 75], [12, 37.5], [16, 18.75], [20, 9.4], [24, 4.7]].map(([u, v]) => `<circle cx="${X(u)}" cy="${Y(v)}" r="3.2" fill="${C.deep}"/>`).join("")}
+            <line x1="${X(t)}" x2="${X(t)}" y1="${Y(c)}" y2="${B}" stroke="${zone}" stroke-dasharray="3 4" opacity=".7"/>${dot(X(t), Y(c), zone)}`,
+          read,
+        };
+      },
+    });
+  };
+
+  // fast symptom relief (NSAIDs) vs slow structural protection (DMARDs) over time: a schematic, not data
+  V.onset = (host, cfg = {}) => {
+    const relief = (t) => 1 - Math.exp(-t / 0.3), prot = (t) => 0.18 + 0.55 * (1 - Math.exp(-t / 3.6));
+    const X = (t) => sx(t, 0, 12), Y = (v) => sy(v, 0, 1.1);
+    return shell(host, {
+      label: "Interactive NSAID vs DMARD timeline", hint: "Drag along the timeline", point: cfg.point,
+      legend: [["teal", "Symptom relief (NSAIDs)"], ["sage", "Joint damage slowed (DMARDs)"]],
+      steps: (cfg.steps || []).map((st) => ({ label: st.label, state: { t: st.t } })), state: { t: 0.5 },
+      controls: range("t", "Time on treatment (weeks to months)", 0, 12, 0.05), fmt: { t: (v) => f1(v) },
+      drag: (S, x) => { S.t = clamp(((x - L) / (R - L)) * 12, 0, 12); },
+      draw(S) {
+        const a = path((u) => [X(u), Y(relief(u))], 0, 12), b = path((u) => [X(u), Y(prot(u))], 0, 12), t = S.t;
+        const read = t < 1.5 ? `<b>Early:</b> NSAID relief of pain and swelling comes within days; the DMARD is barely working yet — don't judge it at the first visit.`
+          : t < 6 ? `<b>Weeks in:</b> symptom relief has long plateaued, while the DMARD's protection is still building.`
+          : `<b>Months in:</b> the DMARD now slows cartilage and bone destruction — something the NSAID never does. Relief now with NSAIDs, protection later with DMARDs.`;
+        return {
+          svg: axes("Time on treatment (weeks to months)", "Effect (schematic)", [0, 2, 4, 6, 8, 10, 12].map((v) => [v, X(v)]), []) +
+            `<path d="${a}" fill="none" stroke="${C.teal}" stroke-width="3" stroke-linecap="round" class="vz-line" pathLength="1"/>
+            <path d="${b}" fill="none" stroke="${C.sage}" stroke-width="3" stroke-linecap="round" class="vz-line" pathLength="1"/>
+            <line x1="${X(t)}" x2="${X(t)}" y1="${T}" y2="${B}" stroke="${C.ink}" stroke-dasharray="3 4" opacity=".6"/>
+            ${dot(X(t), Y(relief(t)), C.teal, 6)}${dot(X(t), Y(prot(t)), C.sage, 6)}`,
+          read,
+        };
+      },
+    });
+  };
+
   // ---- enhance every figure that has an interactive twin; the original image stays one tap away
   function enhance(fig) {
     const key = fig.dataset.viz, make = V[key];

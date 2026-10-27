@@ -2,27 +2,65 @@
 
 **Result: PASS ✅ nothing missing**
 
-Checked 2473 source lines (32 slides; 8 study-guide items; 69 textbook pages read; 52 textbook sentences used, the rest left out as not needed for this lecture (info only).)
+Checked 2743 source lines (62 slides; 8 study-guide items; 69 textbook pages read; 52 textbook sentences used, the rest left out as not needed for this lecture (info only).)
 
 ## Missing from the study materials
 - None ✅
 
 ## Covered but cited to a different slide/page (check citation)
-- S20: High-Yield Drug Interactions
+- S16: A small fraction goes through CYP2E1 to NAPQI, which glutathione neutralizes at normal doses."
+- S17: Once glutathione is depleted, NAPQI injures hepatocytes.
+- S18: The nomogram predicts hepatotoxicity risk after a single acute ingestion; if time of ingestion is unknown or ingestion is chronic, do not rely on it.
+- S25: Effect: reduced prostaglandins give analgesia, antipyresis and anti-inflammation.
+- S27: Stomach mucosal protection ↓
+- S27: COX-1 keeps protective prostaglandins; COX-2 is induced by inflammation.
+- S27: Say: "COX-1 is the housekeeper: stomach lining, platelets, kidney.
+- S30: ↓ Fewer inflammatory prostaglandins → less pain and inflammation
+- S33: These risk values are illustrative, not clinical data.
+- S34: Say: "Lose prostaglandins and you lose mucosal protection, renal afferent dilation and normal platelet function."
+- S35: Say: "Lose prostaglandins and you lose mucosal protection, renal afferent dilation and normal platelet function."
+
+Know: GI (ulcer, bleeding), renal (AKI, fluid
+- S36: High-Yield Drug Interactions
+- S36: Know (interactions): NSAID plus anticoagulant means more bleeding.
+- S44: Acetaminophen is reasonable first-line for mild pain.
+- S44: Topical NSAIDs give effective relief with lower systemic exposure.
+- S44: Add activity modification, physical therapy and weight management.
+- S46: Say: "A DMARD changes the course of RA.
+- S57: Counsel patients to report fevers early.
 
 ## Left out on purpose (no study content)
 - S1: Diane S. Allen-Gipson, Ph.D., M.S., Course Director — _faculty identifier (site policy: no school or instructor identifiers)_
+- S1: Say: "Today's question is simple: how do we treat musculoskeletal pain safely? — _presenter script; the session question is in About this lecture_
 - S3: Point students to the required and recommended texts for Unit 2 before diving into content. — _teaching instruction; the readings are listed under About this lecture_
-- S7: This single arrow chain is the conceptual spine for the acetaminophen, NSAID, and corticosteroid sections that — _teaching instruction; the cascade is taught in the guide and Figure 1_
-- S7: The next slide builds this out further with the specific drug classes that intervene at each step. — _teaching instruction (pointer to the next slide)_
-- S8: This figure adds the drug layer on top of the previous flow slide: name the specific drug classes (corticoster — _teaching instruction; Figure 1 caption covers the content_
-- S8: NSAIDs/COX-2 inhibitors) and exactly where each one interrupts the cascade. — _teaching instruction; Figure 1 caption covers the content_
-- S18: This is the graphical version of the trade-off just described in the celecoxib bullet slide — use it to reinfo — _teaching instruction; Figure 2 caption covers the content_
-- S21: Excellent exam-style vignette — ask students to name all three risk factors independently before revealing the — _teaching instruction; the case is rebuilt as a practice question_
-- S28: The next slide shows these same four drug classes as a mechanism diagram. — _teaching instruction (pointer to Figure 3)_
-- S29: This is the visual counterpart to the fourCard slide just shown — have students match each generic drug name t — _teaching instruction; Figure 3 caption covers the content_
-- S31: Close Session 1 by previewing Session 2 explicitly — students should leave knowing pain, acetaminophen, NSAIDs — _teaching instruction; the recap is covered across the guide_
-- S32: This slide documents AI-tool use for original figure generation per university citation requirements. — _administrative note on AI-tool citation_
+- S3: One sentence only. — _teaching instruction_
+- S8: This single arrow chain is the conceptual spine for the acetaminophen, NSAID, and corticosteroid sections that — _teaching instruction; the cascade is taught in the guide and Figure 1_
+- S8: The next slide builds this out further with the specific drug classes that intervene at each step. — _teaching instruction (pointer to the next slide)_
+- S9: This figure adds the drug layer on top of the previous flow slide: name the specific drug classes (corticoster — _teaching instruction; Figure 1 caption covers the content_
+- S9: NSAIDs/COX-2 inhibitors) and exactly where each one interrupts the cascade. — _teaching instruction; Figure 1 caption covers the content_
+- S10: Quick check: give 30 seconds, take a show of hands, then reveal. — _teaching instruction (quick-check timing)_
+- S12: Quick check: give 30 seconds, take a show of hands, then reveal. — _teaching instruction (quick-check timing)_
+- S13: Say: "That's the pathway. — _presenter transition_
+- S13: Now the simplest drug on it: acetaminophen." — _presenter transition_
+- S20: Hidden overdose case (slides 18-19): see the Ask on the previous slide. — _presenter cross-reference_
+- S21: Quick check: give 30 seconds, take a show of hands, then reveal. — _teaching instruction (quick-check timing)_
+- S30: Use the diagram to show that selectivity separates the GI benefit from the cardiovascular trade-off. — _teaching instruction_
+- S30: Link back to the nonselective NSAID comparison on the previous slide. — _teaching instruction_
+- S31: This is the graphical version of the trade-off just described in the celecoxib bullet slide — use it to reinfo — _teaching instruction; Figure 2 caption covers the content_
+- S32: Quick check: give 30 seconds, take a show of hands, then reveal. — _teaching instruction (quick-check timing)_
+- S37: Excellent exam-style vignette — ask students to name all three risk factors independently before revealing the — _teaching instruction; the case is rebuilt as a practice question_
+- S38: Quick check: give 30 seconds, take a show of hands, then reveal. — _teaching instruction (quick-check timing)_
+- S39: Say: "Now the same drugs in the setting of arthritis." — _presenter transition_
+- S46: Contrast the fast, symptomatic effect of NSAIDs with the slow, structure-modifying effect of DMARDs. — _teaching instruction; the contrast is taught from S46_
+- S50: Walk through the diagram left to right: folate is reduced to THF through DHF, and methotrexate blocks the DHFR — _teaching instruction; the folate pathway is taught from S50_
+- S50: Emphasize the weekly-dosing safety point. — _teaching instruction_
+- S51: The next slide shows these same four drug classes as a mechanism diagram. — _teaching instruction (pointer to Figure 3)_
+- S53: This is the visual counterpart to the fourCard slide just shown — have students match each generic drug name t — _teaching instruction; Figure 3 caption covers the content_
+- S54: Quick check: give 30 seconds, take a show of hands, then reveal. — _teaching instruction (quick-check timing)_
+- S58: Quick check: give 30 seconds, take a show of hands, then reveal. — _teaching instruction (quick-check timing)_
+- S61: Close Session 1 by previewing Session 2 explicitly — students should leave knowing pain, acetaminophen, NSAIDs — _teaching instruction; the recap is covered across the guide_
+- S61: Recap: walk the five points. — _teaching instruction_
+- S62: This slide documents AI-tool use for original figure generation per university citation requirements. — _administrative note on AI-tool citation_
 
 ## Assigned-reading sections not taught in the guide
 - None ✅
@@ -86,7 +124,17 @@ Checked 2473 source lines (32 slides; 8 study-guide items; 69 textbook pages rea
 - (skipped) p. 831: CALCIUM — _Taught in L04 (Session 2: bone pharmacology, Ch. 42)_
 
 ## Emphasized on slides but not bold in deck
-- S26: "Methotrexate — the anchor drug for most RA regimens (next slide)" (bold)
+- S3: "accessmedicine.mhmedical.com/book.aspx?bookid=3382" (underline, color)
+- S7: "Injury releases mediators:" (bold)
+- S7: "Where drugs act:" (bold)
+- S25: "Adverse effects:" (bold)
+- S30: "GI benefit:" (bold)
+- S42: "Key RA cytokines:" (bold)
+- S44: "Oral or topical NSAIDs:" (bold)
+- S44: "Intra-articular steroid:" (bold)
+- S47: "Methotrexate — the anchor drug for most RA regimens (next slide)" (bold)
+- S50: "Low-dose RA effect:" (bold)
+- S52: "IL-6 blockers:" (bold)
 
 ## Facts that did not reach the deck / NotebookLM
 - None ✅
@@ -96,7 +144,7 @@ Checked 2473 source lines (32 slides; 8 study-guide items; 69 textbook pages rea
 - None ✅
 
 ## Practice questions
-23 questions · 12 vignette / 11 mechanism · answer letters {'A': 5, 'B': 4, 'C': 5, 'D': 4, 'E': 5}
+25 questions · 13 vignette / 12 mechanism · answer letters {'A': 5, 'B': 5, 'C': 5, 'D': 5, 'E': 5}
 - None ✅
 
 ## Objectives with thin coverage

@@ -1,19 +1,175 @@
 {
  "lecture": "L03",
  "passed": true,
- "units_checked": 2473,
+ "units_checked": 2743,
  "missing": [],
  "uncited": [
   {
-   "ref": "S20",
+   "ref": "S16",
+   "text": "A small fraction goes through CYP2E1 to NAPQI, which glutathione neutralizes at normal doses.\"",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S17",
+   "text": "Once glutathione is depleted, NAPQI injures hepatocytes.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S18",
+   "text": "The nomogram predicts hepatotoxicity risk after a single acute ingestion; if time of ingestion is unknown or ingestion is chronic, do not rely on it.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S25",
+   "text": "Effect: reduced prostaglandins give analgesia, antipyresis and anti-inflammation.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S27",
+   "text": "Stomach mucosal protection ↓",
+   "kind": "slide table"
+  },
+  {
+   "ref": "S27",
+   "text": "COX-1 keeps protective prostaglandins; COX-2 is induced by inflammation.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S27",
+   "text": "Say: \"COX-1 is the housekeeper: stomach lining, platelets, kidney.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S30",
+   "text": "↓ Fewer inflammatory prostaglandins → less pain and inflammation",
+   "kind": "slide"
+  },
+  {
+   "ref": "S33",
+   "text": "These risk values are illustrative, not clinical data.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S34",
+   "text": "Say: \"Lose prostaglandins and you lose mucosal protection, renal afferent dilation and normal platelet function.\"",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S35",
+   "text": "Say: \"Lose prostaglandins and you lose mucosal protection, renal afferent dilation and normal platelet function.\"\n\nKnow: GI (ulcer, bleeding), renal (AKI, fluid retention), cardiovascular (hypertension, events).",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S36",
    "text": "High-Yield Drug Interactions",
    "kind": "slide"
+  },
+  {
+   "ref": "S36",
+   "text": "Know (interactions): NSAID plus anticoagulant means more bleeding.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S44",
+   "text": "Acetaminophen is reasonable first-line for mild pain.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S44",
+   "text": "Topical NSAIDs give effective relief with lower systemic exposure.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S44",
+   "text": "Add activity modification, physical therapy and weight management.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S46",
+   "text": "Say: \"A DMARD changes the course of RA.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S57",
+   "text": "Counsel patients to report fevers early.",
+   "kind": "speaker note"
   }
  ],
  "emphasis_not_bold": [
   {
-   "ref": "S26",
+   "ref": "S3",
+   "text": "accessmedicine.mhmedical.com/book.aspx?bookid=3382",
+   "marks": [
+    "underline",
+    "color"
+   ]
+  },
+  {
+   "ref": "S7",
+   "text": "Injury releases mediators:",
+   "marks": [
+    "bold"
+   ]
+  },
+  {
+   "ref": "S7",
+   "text": "Where drugs act:",
+   "marks": [
+    "bold"
+   ]
+  },
+  {
+   "ref": "S25",
+   "text": "Adverse effects:",
+   "marks": [
+    "bold"
+   ]
+  },
+  {
+   "ref": "S30",
+   "text": "GI benefit:",
+   "marks": [
+    "bold"
+   ]
+  },
+  {
+   "ref": "S42",
+   "text": "Key RA cytokines:",
+   "marks": [
+    "bold"
+   ]
+  },
+  {
+   "ref": "S44",
+   "text": "Oral or topical NSAIDs:",
+   "marks": [
+    "bold"
+   ]
+  },
+  {
+   "ref": "S44",
+   "text": "Intra-articular steroid:",
+   "marks": [
+    "bold"
+   ]
+  },
+  {
+   "ref": "S47",
    "text": "Methotrexate — the anchor drug for most RA regimens (next slide)",
+   "marks": [
+    "bold"
+   ]
+  },
+  {
+   "ref": "S50",
+   "text": "Low-dose RA effect:",
+   "marks": [
+    "bold"
+   ]
+  },
+  {
+   "ref": "S52",
+   "text": "IL-6 blockers:",
    "marks": [
     "bold"
    ]
@@ -27,67 +183,181 @@
    "reason": "faculty identifier (site policy: no school or instructor identifiers)"
   },
   {
+   "ref": "S1",
+   "text": "Say: \"Today's question is simple: how do we treat musculoskeletal pain safely?",
+   "kind": "speaker note",
+   "reason": "presenter script; the session question is in About this lecture"
+  },
+  {
    "ref": "S3",
    "text": "Point students to the required and recommended texts for Unit 2 before diving into content.",
    "kind": "speaker note",
    "reason": "teaching instruction; the readings are listed under About this lecture"
   },
   {
-   "ref": "S7",
+   "ref": "S3",
+   "text": "One sentence only.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S8",
    "text": "This single arrow chain is the conceptual spine for the acetaminophen, NSAID, and corticosteroid sections that follow.",
    "kind": "speaker note",
    "reason": "teaching instruction; the cascade is taught in the guide and Figure 1"
   },
   {
-   "ref": "S7",
+   "ref": "S8",
    "text": "The next slide builds this out further with the specific drug classes that intervene at each step.",
    "kind": "speaker note",
    "reason": "teaching instruction (pointer to the next slide)"
   },
   {
-   "ref": "S8",
+   "ref": "S9",
    "text": "This figure adds the drug layer on top of the previous flow slide: name the specific drug classes (corticosteroids vs.",
    "kind": "speaker note",
    "reason": "teaching instruction; Figure 1 caption covers the content"
   },
   {
-   "ref": "S8",
+   "ref": "S9",
    "text": "NSAIDs/COX-2 inhibitors) and exactly where each one interrupts the cascade.",
    "kind": "speaker note",
    "reason": "teaching instruction; Figure 1 caption covers the content"
   },
   {
-   "ref": "S18",
+   "ref": "S10",
+   "text": "Quick check: give 30 seconds, take a show of hands, then reveal.",
+   "kind": "speaker note",
+   "reason": "teaching instruction (quick-check timing)"
+  },
+  {
+   "ref": "S12",
+   "text": "Quick check: give 30 seconds, take a show of hands, then reveal.",
+   "kind": "speaker note",
+   "reason": "teaching instruction (quick-check timing)"
+  },
+  {
+   "ref": "S13",
+   "text": "Say: \"That's the pathway.",
+   "kind": "speaker note",
+   "reason": "presenter transition"
+  },
+  {
+   "ref": "S13",
+   "text": "Now the simplest drug on it: acetaminophen.\"",
+   "kind": "speaker note",
+   "reason": "presenter transition"
+  },
+  {
+   "ref": "S20",
+   "text": "Hidden overdose case (slides 18-19): see the Ask on the previous slide.",
+   "kind": "speaker note",
+   "reason": "presenter cross-reference"
+  },
+  {
+   "ref": "S21",
+   "text": "Quick check: give 30 seconds, take a show of hands, then reveal.",
+   "kind": "speaker note",
+   "reason": "teaching instruction (quick-check timing)"
+  },
+  {
+   "ref": "S30",
+   "text": "Use the diagram to show that selectivity separates the GI benefit from the cardiovascular trade-off.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S30",
+   "text": "Link back to the nonselective NSAID comparison on the previous slide.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S31",
    "text": "This is the graphical version of the trade-off just described in the celecoxib bullet slide — use it to reinforce that there is no risk-free NSAID choice, only a different risk profile.",
    "kind": "speaker note",
    "reason": "teaching instruction; Figure 2 caption covers the content"
   },
   {
-   "ref": "S21",
+   "ref": "S32",
+   "text": "Quick check: give 30 seconds, take a show of hands, then reveal.",
+   "kind": "speaker note",
+   "reason": "teaching instruction (quick-check timing)"
+  },
+  {
+   "ref": "S37",
    "text": "Excellent exam-style vignette — ask students to name all three risk factors independently before revealing the answer.",
    "kind": "speaker note",
    "reason": "teaching instruction; the case is rebuilt as a practice question"
   },
   {
-   "ref": "S28",
+   "ref": "S38",
+   "text": "Quick check: give 30 seconds, take a show of hands, then reveal.",
+   "kind": "speaker note",
+   "reason": "teaching instruction (quick-check timing)"
+  },
+  {
+   "ref": "S39",
+   "text": "Say: \"Now the same drugs in the setting of arthritis.\"",
+   "kind": "speaker note",
+   "reason": "presenter transition"
+  },
+  {
+   "ref": "S46",
+   "text": "Contrast the fast, symptomatic effect of NSAIDs with the slow, structure-modifying effect of DMARDs.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; the contrast is taught from S46"
+  },
+  {
+   "ref": "S50",
+   "text": "Walk through the diagram left to right: folate is reduced to THF through DHF, and methotrexate blocks the DHFR step.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; the folate pathway is taught from S50"
+  },
+  {
+   "ref": "S50",
+   "text": "Emphasize the weekly-dosing safety point.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S51",
    "text": "The next slide shows these same four drug classes as a mechanism diagram.",
    "kind": "speaker note",
    "reason": "teaching instruction (pointer to Figure 3)"
   },
   {
-   "ref": "S29",
+   "ref": "S53",
    "text": "This is the visual counterpart to the fourCard slide just shown — have students match each generic drug name to its box on this diagram before you reveal the answer.",
    "kind": "speaker note",
    "reason": "teaching instruction; Figure 3 caption covers the content"
   },
   {
-   "ref": "S31",
+   "ref": "S54",
+   "text": "Quick check: give 30 seconds, take a show of hands, then reveal.",
+   "kind": "speaker note",
+   "reason": "teaching instruction (quick-check timing)"
+  },
+  {
+   "ref": "S58",
+   "text": "Quick check: give 30 seconds, take a show of hands, then reveal.",
+   "kind": "speaker note",
+   "reason": "teaching instruction (quick-check timing)"
+  },
+  {
+   "ref": "S61",
    "text": "Close Session 1 by previewing Session 2 explicitly — students should leave knowing pain, acetaminophen, NSAIDs, and DMARDs are complete, and that gout, muscle relaxants, and bone pharmacology pick up first next time.",
    "kind": "speaker note",
    "reason": "teaching instruction; the recap is covered across the guide"
   },
   {
-   "ref": "S32",
+   "ref": "S61",
+   "text": "Recap: walk the five points.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S62",
    "text": "This slide documents AI-tool use for original figure generation per university citation requirements.",
    "kind": "speaker note",
    "reason": "administrative note on AI-tool citation"
@@ -98,16 +368,16 @@
  "layout_problems": [],
  "question_issues": [],
  "question_stats": {
-  "count": 23,
+  "count": 25,
   "letters": {
    "A": 5,
-   "B": 4,
+   "B": 5,
    "C": 5,
-   "D": 4,
+   "D": 5,
    "E": 5
   },
-  "vignette": 12,
-  "mechanism": 11
+  "vignette": 13,
+  "mechanism": 12
  },
  "thin_objectives": [
   "SO6: Preview: gout, skeletal muscle relaxants, and bone pharmacology continue in Session 2 (Thursday, October 29). — 0 class(es), 0 facts (Preview only — taught in Session 2 (L04))"

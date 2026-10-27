@@ -93,7 +93,8 @@ def source_units(slides, textbook, guide):
         divider = any(it["text"].strip().upper() == "SECTION" for it in s["items"])
         for it in s["items"]:
             label = it["text"].strip() == s.get("title", "").strip() or it["text"].isupper() or len(toks(it["text"])) < 4
-            if divider or (it.get("heading") and label):
+            kicker = it["text"].isupper() and len(it["text"].split()) <= 4  # "MECHANISM & DEPTH", "CLINICAL CASE"
+            if divider or kicker or (it.get("heading") and label):
                 continue  # slide titles, ALL-CAPS labels, short tags, and divider taglines carry no facts
             units.append({"ref": ref, "text": it["text"], "kind": "slide"})
         for t in s["tables"]:
@@ -207,7 +208,7 @@ def main(lec, work_dir, out_dir, deck_path, nlm_dir, threshold, guide_ids=()):
         for it in s["items"]:
             for e in it["emphasis"]:
                 strong = {"bold", "underline", "highlight"} & set(e["marks"])
-                label = norm(e["text"]) in ("why", "section", "askyourself", "clinicalpearl")
+                label = norm(e["text"]) in ("why", "section", "askyourself", "clinicalpearl") or (e["text"].isupper() and len(e["text"].split()) <= 4)
                 if strong and not label and len(norm(e["text"])) >= 3 and norm(e["text"]) not in bold_text:
                     emph_missing.append({"ref": f"S{s['slide']}", "text": e["text"], "marks": e["marks"]})
 

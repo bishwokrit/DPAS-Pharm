@@ -131,13 +131,14 @@ ADD = {
 CONFLICTS = {
     "Conventional DMARDs & Methotrexate": [
         {"topic": "How methotrexate works at RA doses",
-         "slides": {"text": "Inhibits dihydrofolate reductase, reducing immune cell proliferation at low RA doses.", "src": "S27; SG U2-M"},
+         "slides": {"text": "Inhibits dihydrofolate reductase, reducing immune cell proliferation at low RA doses; the depth slide adds that the low-dose RA effect is likely anti-inflammatory via adenosine release, not cytotoxicity.", "src": "S49; S50; SG U2-M"},
          "textbook": {"text": "Low-dose methotrexate mainly inhibits AICAR transformylase and thymidylate synthetase, raising extracellular AMP that suppresses inflammation; its dihydrofolate reductase effect is relatively minor at rheumatic doses.", "src": "p. 688"}},
     ],
 }
 
 DISCREPANCIES = [
-    ("**Methotrexate mechanism:** the slides and study guide say dihydrofolate reductase inhibition; the textbook says that effect is relatively minor at RA doses and credits AICAR transformylase. Answer course exams with the slide/study-guide version.", "S27; SG U2-M; p. 688"),
+    ("**Methotrexate mechanism:** the slides and study guide name dihydrofolate reductase as the target (the depth slide adds a likely adenosine-mediated anti-inflammatory effect at low dose); the textbook says the DHFR effect is relatively minor at RA doses and credits AICAR transformylase, which raises extracellular AMP. Both agree the low-dose effect is anti-inflammatory rather than cytotoxic. Answer course exams with the slide/study-guide version (DHFR).", "S49; S50; SG U2-M; p. 688"),
+    ("**Vaccines before DMARDs — two slides differ:** S56 says update vaccines, especially live vaccines, before starting; S57 says update non-live vaccines. Read together: bring all vaccines up to date before therapy, because live vaccines should not be given once immunosuppression has started (textbook: avoid live vaccines up to 3 months after stopping abatacept).", "S56; S57; S57 (notes); p. 682"),
 ]
 
 CRAM = [
@@ -158,17 +159,17 @@ QUESTIONS = [
          stem="A patient takes low-dose aspirin for cardioprotection and starts regular ibuprofen for back pain. What is the textbook concern?",
          correct="Ibuprofen blocks aspirin’s irreversible platelet inhibition",
          why_correct="Concomitant ibuprofen antagonizes aspirin’s irreversible platelet inhibition, limiting its cardioprotective effect (p. 680).",
-         distractors=[("Ibuprofen converts aspirin to the toxic metabolite NAPQI", "NAPQI comes from acetaminophen (S11)."),
+         distractors=[("Ibuprofen converts aspirin to the toxic metabolite NAPQI", "NAPQI comes from acetaminophen (S19)."),
                       ("Aspirin makes ibuprofen COX-2 selective, raising CV risk", "Aspirin does not change ibuprofen’s selectivity (p. 680)."),
-                      ("Both drugs together protect the kidney from injury", "NSAIDs reduce renal perfusion; they don’t protect the kidney (S19)."),
+                      ("Both drugs together protect the kidney from injury", "NSAIDs reduce renal perfusion; they don’t protect the kidney (S34)."),
                       ("Ibuprofen speeds aspirin’s renal excretion fivefold", "Not the textbook’s interaction (p. 680).")],
          src="p. 680"),
     dict(topic="Biologic DMARDs & Immunosuppression Safety", kind="vignette",
          stem="A patient with RA and high cardiovascular risk is being considered for tofacitinib. Which boxed warning applies to all JAK inhibitors?",
          correct="Venous thromboembolism, major cardiovascular events, and cancer",
          why_correct="All JAK inhibitors carry an FDA boxed warning for VTE (DVT, PE), MACE, and cancer (p. 686).",
-         distractors=[("Fatal hepatotoxicity from NAPQI accumulating in the liver", "NAPQI is acetaminophen toxicity (S11)."),
-                      ("Teratogenicity that requires strict weekly-only dosing", "Weekly dosing is a methotrexate rule (S27)."),
+         distractors=[("Fatal hepatotoxicity from NAPQI accumulating in the liver", "NAPQI is acetaminophen toxicity (S19)."),
+                      ("Teratogenicity that requires strict weekly-only dosing", "Weekly dosing is a methotrexate rule (S49)."),
                       ("Lymphoma only, exactly the same as the TNF inhibitors", "The TNF inhibitor warning is malignancy; JAK inhibitors add VTE and MACE (p. 686; p. 692)."),
                       ("Retinopathy that requires annual eye examinations", "Retinal screening applies to hydroxychloroquine (p. 684).")],
          src="p. 686"),
@@ -179,7 +180,7 @@ QUESTIONS = [
          distractors=[("Mycophenolate mofetil", "Mycophenolate’s issues are GI, liver, cytopenias, and infection (p. 689)."),
                       ("Leflunomide", "Leflunomide’s issues are diarrhea and liver tests (p. 688)."),
                       ("Sulfasalazine", "Sulfasalazine’s issues are GI, rash, and cytopenias (p. 690)."),
-                      ("Methotrexate", "Methotrexate monitoring targets liver, marrow, and lung (S27).")],
+                      ("Methotrexate", "Methotrexate monitoring targets liver, marrow, and lung (S49).")],
          src="p. 684"),
 ]
 
@@ -214,7 +215,7 @@ COMPARISONS = {
                   ["Cyclophosphamide", "Cross-links DNA", "Lupus nephritis, CNS lupus, vasculitis", "Cytopenias, infection, sterility, bladder and skin cancer"],
                   ["Apremilast", "PDE4 inhibitor (↑ cAMP)", "Plaque psoriasis, PsA, Behçet oral ulcers", "Diarrhea, nausea, weight loss, mood changes; CYP3A4"],
                   ["Mesalamine", "Topical colonic 5-aminosalicylate", "Ulcerative colitis", "Diarrhea, headache; renal impairment (monitor)"]],
-         "src": "S26; S27; p. 682; p. 683; p. 684; p. 687; p. 688; p. 689; p. 690"},
+         "src": "S47; S49; p. 682; p. 683; p. 684; p. 687; p. 688; p. 689; p. 690"},
     ],
     "Biologic DMARDs & Immunosuppression Safety": [
         {"title": "Biologic and targeted DMARDs in the reading (textbook)", "columns": ["Drug(s)", "Target", "Main uses", "Watch for"],
@@ -229,7 +230,7 @@ COMPARISONS = {
                   ["Guselkumab, risankizumab", "IL-23 (p19)", "Plaque psoriasis, PsA", "URIs; TB screen"],
                   ["Belimumab", "BLyS (B-cell survival)", "SLE, lupus nephritis", "Infection; depression and suicide reported"],
                   ["Anifrolumab", "Type 1 interferon receptor", "Nonrenal SLE", "URIs, bronchitis, infusion reactions"]],
-         "src": "S28; p. 682; p. 683; p. 684; p. 685; p. 686; p. 689; p. 690; p. 692; p. 693"},
+         "src": "S51; p. 682; p. 683; p. 684; p. 685; p. 686; p. 689; p. 690; p. 692; p. 693"},
     ],
 }
 

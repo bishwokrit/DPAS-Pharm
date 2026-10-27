@@ -61,7 +61,7 @@
   "tables": [],
   "images": 1,
   "figures": [],
-  "notes": ""
+  "notes": "Opening. Say: \"Today's question is simple: how do we treat musculoskeletal pain safely? We'll follow one pathway, arachidonic acid, and see where each drug class steps in.\""
  },
  {
   "slide": 2,
@@ -135,7 +135,7 @@
   "tables": [],
   "images": 1,
   "figures": [],
-  "notes": "Orient students to the arc of this session: musculoskeletal pain pathways, acetaminophen, NSAIDs, and osteoarthritis/rheumatoid arthritis pharmacotherapy including DMARDs. Tell them this is the first of two sessions on Musculoskeletal Pharmacology — Session 2 picks up with gout, skeletal muscle relaxants, and bone pharmacology on Oct 29."
+  "notes": "Orient students to the arc of this session: musculoskeletal pain pathways, acetaminophen, NSAIDs, and osteoarthritis/rheumatoid arthritis pharmacotherapy including DMARDs. Tell them this is the first of two sessions on Musculoskeletal Pharmacology — Session 2 picks up with gout, skeletal muscle relaxants, and bone pharmacology on Oct 29.\n\nObjectives. Read them aloud, then say: \"By the end you should be able to choose between acetaminophen, an NSAID, and a DMARD, and defend the choice.\""
  },
  {
   "slide": 3,
@@ -200,8 +200,16 @@
    {
     "text": "AccessMedicine: accessmedicine.mhmedical.com/book.aspx?bookid=3382",
     "level": 0,
-    "emphasis": [],
-    "md": "AccessMedicine: accessmedicine.mhmedical.com/book.aspx?bookid=3382",
+    "emphasis": [
+     {
+      "text": "accessmedicine.mhmedical.com/book.aspx?bookid=3382",
+      "marks": [
+       "underline",
+       "color"
+      ]
+     }
+    ],
+    "md": "AccessMedicine: **accessmedicine.mhmedical.com/book.aspx?bookid=3382**",
     "heading": false,
     "size": 14.0
    },
@@ -249,7 +257,7 @@
   "tables": [],
   "images": 1,
   "figures": [],
-  "notes": "Point students to the required and recommended texts for Unit 2 before diving into content. Katzung’s Chapters 27, 36, and 42 are the required reading for this unit; Pharmacotherapy Principles and Practice is recommended as additional support, not a substitute."
+  "notes": "Point students to the required and recommended texts for Unit 2 before diving into content. Katzung’s Chapters 27, 36, and 42 are the required reading for this unit; Pharmacotherapy Principles and Practice is recommended as additional support, not a substitute.\n\nReadings: Katzung 16th ed.; the Unit 2 chapters. One sentence only."
  },
  {
   "slide": 4,
@@ -396,7 +404,7 @@
   "tables": [],
   "images": 1,
   "figures": [],
-  "notes": "Most musculoskeletal pain in this lecture is a mix of nociceptive and inflammatory — pure neuropathic pain is more the territory of a separate pharmacology unit."
+  "notes": "Most musculoskeletal pain in this lecture is a mix of nociceptive and inflammatory — pure neuropathic pain is more the territory of a separate pharmacology unit.\n\nSay: \"Pain is classified by mechanism (nociceptive, inflammatory, neuropathic) and by time (acute vs. chronic).\""
  },
  {
   "slide": 6,
@@ -443,15 +451,15 @@
    },
    {
     "text": "Prostaglandins",
-    "level": 1,
+    "level": 0,
     "emphasis": [],
     "md": "Prostaglandins",
     "heading": false,
-    "size": 14.0
+    "size": 16.0
    },
    {
     "text": "Bradykinin",
-    "level": 1,
+    "level": 0,
     "emphasis": [],
     "md": "Bradykinin",
     "heading": false,
@@ -459,7 +467,7 @@
    },
    {
     "text": "Histamine",
-    "level": 1,
+    "level": 0,
     "emphasis": [],
     "md": "Histamine",
     "heading": false,
@@ -467,7 +475,7 @@
    },
    {
     "text": "Cytokines (e.g., TNF-α, IL-1, IL-6)",
-    "level": 1,
+    "level": 0,
     "emphasis": [],
     "md": "Cytokines (e.g., TNF-α, IL-1, IL-6)",
     "heading": false,
@@ -477,10 +485,91 @@
   "tables": [],
   "images": 1,
   "figures": [],
-  "notes": "This mediator list is the roadmap for the whole lecture — NSAIDs target prostaglandins, biologic DMARDs target specific cytokines."
+  "notes": "This mediator list is the roadmap for the whole lecture — NSAIDs target prostaglandins, biologic DMARDs target specific cytokines.\n\nSay: \"Injury releases prostaglandins, bradykinin, histamine and cytokines. These lower the nociceptor threshold, so normally harmless stimuli hurt.\""
  },
  {
   "slide": 7,
+  "title": "Inflammatory Mediators Sensitize Nociceptors",
+  "items": [
+   {
+    "text": "MECHANISM & DEPTH",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "MECHANISM & DEPTH",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**MECHANISM & DEPTH**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Inflammatory Mediators Sensitize Nociceptors",
+    "level": 0,
+    "emphasis": [],
+    "md": "Inflammatory Mediators Sensitize Nociceptors",
+    "heading": true,
+    "size": 27.5
+   },
+   {
+    "text": "Injury releases mediators: PGE2, bradykinin, histamine, and cytokines.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Injury releases mediators:",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Injury releases mediators:**  PGE2, bradykinin, histamine, and cytokines.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Nociceptor sensitization: mediators lower the pain threshold.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Nociceptor sensitization:",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Nociceptor sensitization:**  mediators lower the pain threshold.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Where drugs act: NSAIDs block COX; corticosteroids block PLA2 upstream.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Where drugs act:",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Where drugs act:**  NSAIDs block COX; corticosteroids block PLA2 upstream.",
+    "heading": false,
+    "size": 16.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [
+   "S7_1.jpg"
+  ],
+  "notes": "Say: \"Injury releases prostaglandins, bradykinin, histamine and cytokines. These lower the nociceptor threshold, so normally harmless stimuli hurt.\"\n\nKnow: Prostaglandins sensitize nociceptors, so they are the main NSAID target.\n\nKnow: Bradykinin, histamine and cytokines are not blocked by NSAIDs."
+ },
+ {
+  "slide": 8,
   "title": "Therapeutic Targets in the Pain Pathway",
   "items": [
    {
@@ -574,10 +663,10 @@
   "tables": [],
   "images": 1,
   "figures": [],
-  "notes": "This single arrow chain is the conceptual spine for the acetaminophen, NSAID, and corticosteroid sections that follow. The next slide builds this out further with the specific drug classes that intervene at each step."
+  "notes": "This single arrow chain is the conceptual spine for the acetaminophen, NSAID, and corticosteroid sections that follow. The next slide builds this out further with the specific drug classes that intervene at each step.\n\nSay: \"Corticosteroids block phospholipase A2 upstream. NSAIDs block COX one step later.\""
  },
  {
-  "slide": 8,
+  "slide": 9,
   "title": "The Arachidonic Acid Pathway: Where Analgesics Act",
   "items": [
    {
@@ -615,12 +704,356 @@
   "tables": [],
   "images": 2,
   "figures": [
-   "S8_1.png"
+   "S9_1.jpg"
   ],
-  "notes": "This figure adds the drug layer on top of the previous flow slide: name the specific drug classes (corticosteroids vs. NSAIDs/COX-2 inhibitors) and exactly where each one interrupts the cascade."
+  "notes": "This figure adds the drug layer on top of the previous flow slide: name the specific drug classes (corticosteroids vs. NSAIDs/COX-2 inhibitors) and exactly where each one interrupts the cascade.\n\nFigure 1: Corticosteroids block phospholipase A2 upstream. NSAIDs block COX one step later."
  },
  {
-  "slide": 9,
+  "slide": 10,
+  "title": "Quick Check",
+  "items": [
+   {
+    "text": "QUICK CHECK · FIGURE 1",
+    "level": 0,
+    "emphasis": [],
+    "md": "QUICK CHECK · FIGURE 1",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Quick Check",
+    "level": 0,
+    "emphasis": [],
+    "md": "Quick Check",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "In Figure 1, corticosteroids are shown blocking the pathway at the \"Membrane Phospholipids → Arachidonic Acid\" step, while NSAIDs act one step later. What does this positioning explain?",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "In Figure 1, corticosteroids are shown blocking the pathway at the \"Membrane Phospholipids → Arachidonic Acid\" step, while NSAIDs act one step later. What does this positioning explain?",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**In Figure 1, corticosteroids are shown blocking the pathway at the \"Membrane Phospholipids → Arachidonic Acid\" step, while NSAIDs act one step later. What does this positioning explain?**",
+    "heading": false,
+    "size": 18.5
+   },
+   {
+    "text": "Corticosteroids act upstream of NSAIDs, which is why they can suppress a broader range of inflammatory mediators, not just prostaglandins",
+    "level": 0,
+    "emphasis": [],
+    "md": "Corticosteroids act upstream of NSAIDs, which is why they can suppress a broader range of inflammatory mediators, not just prostaglandins",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "A",
+    "level": 0,
+    "emphasis": [],
+    "md": "A",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "B",
+    "level": 0,
+    "emphasis": [],
+    "md": "B",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Corticosteroids and NSAIDs block the exact same enzyme",
+    "level": 0,
+    "emphasis": [],
+    "md": "Corticosteroids and NSAIDs block the exact same enzyme",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "C",
+    "level": 0,
+    "emphasis": [],
+    "md": "C",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "NSAIDs act upstream of corticosteroids",
+    "level": 0,
+    "emphasis": [],
+    "md": "NSAIDs act upstream of corticosteroids",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "D",
+    "level": 0,
+    "emphasis": [],
+    "md": "D",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Neither drug class affects the arachidonic acid pathway",
+    "level": 0,
+    "emphasis": [],
+    "md": "Neither drug class affects the arachidonic acid pathway",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Quick check: give 30 seconds, take a show of hands, then reveal."
+ },
+ {
+  "slide": 11,
+  "title": "Answer",
+  "items": [
+   {
+    "text": "ANSWER · FIGURE 1",
+    "level": 0,
+    "emphasis": [],
+    "md": "ANSWER · FIGURE 1",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Answer",
+    "level": 0,
+    "emphasis": [],
+    "md": "Answer",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "A",
+    "level": 0,
+    "emphasis": [],
+    "md": "A",
+    "heading": true,
+    "size": 26.0
+   },
+   {
+    "text": "Corticosteroids act upstream of NSAIDs, broadly suppressing inflammatory mediator production.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Corticosteroids act upstream of NSAIDs, broadly suppressing inflammatory mediator production.",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Corticosteroids act upstream of NSAIDs, broadly suppressing inflammatory mediator production.**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Why:  By inhibiting phospholipase A₂, corticosteroids block the release of arachidonic acid itself — upstream of COX — which is why they suppress a broader range of inflammatory mediators (not just prostaglandins) than NSAIDs, which act only at the COX step.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Why:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Why:** By inhibiting phospholipase A₂, corticosteroids block the release of arachidonic acid itself — upstream of COX — which is why they suppress a broader range of inflammatory mediators (not just prostaglandins) than NSAIDs, which act only at the COX step.",
+    "heading": false,
+    "size": 15.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Answer: corticosteroids act upstream of NSAIDs."
+ },
+ {
+  "slide": 12,
+  "title": "Quick Check",
+  "items": [
+   {
+    "text": "QUICK CHECK · UNDERSTANDING MUSCULOSKELETAL PAIN",
+    "level": 0,
+    "emphasis": [],
+    "md": "QUICK CHECK · UNDERSTANDING MUSCULOSKELETAL PAIN",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Quick Check",
+    "level": 0,
+    "emphasis": [],
+    "md": "Quick Check",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Which mediator is the primary target of NSAID therapy within the inflammatory pain pathway?",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Which mediator is the primary target of NSAID therapy within the inflammatory pain pathway?",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Which mediator is the primary target of NSAID therapy within the inflammatory pain pathway?**",
+    "heading": false,
+    "size": 18.5
+   },
+   {
+    "text": "A",
+    "level": 0,
+    "emphasis": [],
+    "md": "A",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Prostaglandins",
+    "level": 0,
+    "emphasis": [],
+    "md": "Prostaglandins",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "B",
+    "level": 0,
+    "emphasis": [],
+    "md": "B",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Histamine",
+    "level": 0,
+    "emphasis": [],
+    "md": "Histamine",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "C",
+    "level": 0,
+    "emphasis": [],
+    "md": "C",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Bradykinin",
+    "level": 0,
+    "emphasis": [],
+    "md": "Bradykinin",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "D",
+    "level": 0,
+    "emphasis": [],
+    "md": "D",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Cytokines broadly (e.g., all of TNF-α, IL-1, IL-6)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Cytokines broadly (e.g., all of TNF-α, IL-1, IL-6)",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Quick check: give 30 seconds, take a show of hands, then reveal."
+ },
+ {
+  "slide": 13,
+  "title": "Answer",
+  "items": [
+   {
+    "text": "ANSWER · UNDERSTANDING MUSCULOSKELETAL PAIN",
+    "level": 0,
+    "emphasis": [],
+    "md": "ANSWER · UNDERSTANDING MUSCULOSKELETAL PAIN",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Answer",
+    "level": 0,
+    "emphasis": [],
+    "md": "Answer",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "A",
+    "level": 0,
+    "emphasis": [],
+    "md": "A",
+    "heading": true,
+    "size": 26.0
+   },
+   {
+    "text": "Prostaglandins.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Prostaglandins.",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Prostaglandins.**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Why:  NSAIDs inhibit COX enzymes, directly reducing prostaglandin synthesis. Histamine, bradykinin, and cytokines are important inflammatory mediators too, but they are not the primary target of NSAID mechanism.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Why:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Why:** NSAIDs inhibit COX enzymes, directly reducing prostaglandin synthesis. Histamine, bradykinin, and cytokines are important inflammatory mediators too, but they are not the primary target of NSAID mechanism.",
+    "heading": false,
+    "size": 15.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Answer: prostaglandins are the NSAID target.\n\nSay: \"That's the pathway. Now the simplest drug on it: acetaminophen.\""
+ },
+ {
+  "slide": 14,
   "title": "02",
   "items": [
    {
@@ -677,7 +1110,7 @@
   "notes": ""
  },
  {
-  "slide": 10,
+  "slide": 15,
   "title": "Acetaminophen",
   "items": [
    {
@@ -748,10 +1181,487 @@
   "tables": [],
   "images": 1,
   "figures": [],
-  "notes": "This is the single most important distinction students need: acetaminophen treats pain and fever well, but it is not an anti-inflammatory drug the way NSAIDs are."
+  "notes": "This is the single most important distinction students need: acetaminophen treats pain and fever well, but it is not an anti-inflammatory drug the way NSAIDs are.\n\nSay: \"Acetaminophen is mainly central, with analgesic and antipyretic effects and minimal peripheral anti-inflammatory action.\"\n\nKnow: It is not an anti-inflammatory drug."
  },
  {
-  "slide": 11,
+  "slide": 16,
+  "title": "Acetaminophen: Safe vs. Toxic Metabolism",
+  "items": [
+   {
+    "text": "MECHANISM & DEPTH",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "MECHANISM & DEPTH",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**MECHANISM & DEPTH**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Acetaminophen: Safe vs. Toxic Metabolism",
+    "level": 0,
+    "emphasis": [],
+    "md": "Acetaminophen: Safe vs. Toxic Metabolism",
+    "heading": true,
+    "size": 27.5
+   },
+   {
+    "text": "Mechanism: analgesia and antipyresis are mainly central via reduced CNS prostaglandin synthesis; peripheral anti-inflammatory action is minimal.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Mechanism:",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Mechanism:**  analgesia and antipyresis are mainly central via reduced CNS prostaglandin synthesis; peripheral anti-inflammatory action is minimal.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Major route: glucuronidation and sulfation handle about 90% of the dose, giving safe urinary excretion.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Major route:",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Major route:**  glucuronidation and sulfation handle about 90% of the dose, giving safe urinary excretion.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Minor route: CYP2E1 converts a small fraction to NAPQI (N-acetyl-p-benzoquinone-imine), normally neutralized by glutathione.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Minor route:",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Minor route:**  CYP2E1 converts a small fraction to NAPQI (N-acetyl-p-benzoquinone-imine), normally neutralized by glutathione.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Oral acetaminophen → Liver",
+    "level": 0,
+    "emphasis": [],
+    "md": "Oral acetaminophen → Liver",
+    "heading": true,
+    "size": 18.0
+   },
+   {
+    "text": "Major route (~90%)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Major route (~90%)",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Minor route (~5–10%)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Minor route (~5–10%)",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "↓",
+    "level": 0,
+    "emphasis": [],
+    "md": "↓",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "↓",
+    "level": 0,
+    "emphasis": [],
+    "md": "↓",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Glucuronidation and sulfation",
+    "level": 0,
+    "emphasis": [],
+    "md": "Glucuronidation and sulfation",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "CYP2E1 oxidation",
+    "level": 0,
+    "emphasis": [],
+    "md": "CYP2E1 oxidation",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "↓",
+    "level": 0,
+    "emphasis": [],
+    "md": "↓",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "↓",
+    "level": 0,
+    "emphasis": [],
+    "md": "↓",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Safe urinary excretion",
+    "level": 0,
+    "emphasis": [],
+    "md": "Safe urinary excretion",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "NAPQI (toxic metabolite)",
+    "level": 0,
+    "emphasis": [],
+    "md": "NAPQI (toxic metabolite)",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "↓",
+    "level": 0,
+    "emphasis": [],
+    "md": "↓",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "GSH conjugation → safe excretion (at therapeutic doses)",
+    "level": 0,
+    "emphasis": [],
+    "md": "GSH conjugation → safe excretion (at therapeutic doses)",
+    "heading": true,
+    "size": 16.0
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": "Explain the major safe route first, then the minor CYP2E1 route, where NAPQI is normally neutralized by glutathione conjugation at therapeutic doses.\n\nSay: \"About 90% goes down the safe route of glucuronidation and sulfation. A small fraction goes through CYP2E1 to NAPQI, which glutathione neutralizes at normal doses.\""
+ },
+ {
+  "slide": 17,
+  "title": "Acetaminophen Overdose and NAC Rescue",
+  "items": [
+   {
+    "text": "MECHANISM & DEPTH",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "MECHANISM & DEPTH",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**MECHANISM & DEPTH**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Acetaminophen Overdose and NAC Rescue",
+    "level": 0,
+    "emphasis": [],
+    "md": "Acetaminophen Overdose and NAC Rescue",
+    "heading": true,
+    "size": 27.5
+   },
+   {
+    "text": "Overdose: glutathione is exhausted, so NAPQI injures hepatocytes.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Overdose:",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Overdose:**  glutathione is exhausted, so NAPQI injures hepatocytes.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Antidote: NAC replenishes glutathione; give early for best effect.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Antidote:",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Antidote:**  NAC replenishes glutathione; give early for best effect.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Pearl: chronic alcohol use and fasting lower GSH and raise risk; both also induce CYP2E1.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Pearl:",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Pearl:**  chronic alcohol use and fasting lower GSH and raise risk; both also induce CYP2E1.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Monitoring: plot the acetaminophen level on the Rumack-Matthew nomogram for acute single ingestion; check AST/ALT.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Monitoring:",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Monitoring:**  plot the acetaminophen level on the Rumack-Matthew nomogram for acute single ingestion; check AST/ALT.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Overdose: saturated glucuronidation/sulfation",
+    "level": 0,
+    "emphasis": [],
+    "md": "Overdose: saturated glucuronidation/sulfation",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "↓",
+    "level": 0,
+    "emphasis": [],
+    "md": "↓",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "More drug shunted to CYP2E1",
+    "level": 0,
+    "emphasis": [],
+    "md": "More drug shunted to CYP2E1",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "↓",
+    "level": 0,
+    "emphasis": [],
+    "md": "↓",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "More NAPQI; glutathione (GSH) depleted",
+    "level": 0,
+    "emphasis": [],
+    "md": "More NAPQI; glutathione (GSH) depleted",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "N-acetylcysteine (NAC) replenishes GSH",
+    "level": 0,
+    "emphasis": [],
+    "md": "N-acetylcysteine (NAC) replenishes GSH",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "←",
+    "level": 0,
+    "emphasis": [],
+    "md": "←",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "↓",
+    "level": 0,
+    "emphasis": [],
+    "md": "↓",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "NAPQI binds hepatocyte proteins",
+    "level": 0,
+    "emphasis": [],
+    "md": "NAPQI binds hepatocyte proteins",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "↓",
+    "level": 0,
+    "emphasis": [],
+    "md": "↓",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Centrilobular liver necrosis",
+    "level": 0,
+    "emphasis": [],
+    "md": "Centrilobular liver necrosis",
+    "heading": true,
+    "size": 16.0
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": "Overdose saturates glucuronidation and sulfation, shunting more drug to CYP2E1 and producing more NAPQI. Once glutathione is depleted, NAPQI injures hepatocytes. Give N-acetylcysteine early.\n\nSay: \"In overdose the safe route saturates, more drug goes to CYP2E1, glutathione runs out, and NAPQI injures hepatocytes.\"\n\nKnow: The antidote is N-acetylcysteine (NAC), given early.\n\nKnow: Chronic alcohol use and fasting raise the risk.\n\nKnow: Use the Rumack-Matthew nomogram for acute single ingestions, and check AST/ALT."
+ },
+ {
+  "slide": 18,
+  "title": "Rumack-Matthew Nomogram: Assessing Toxicity",
+  "items": [
+   {
+    "text": "MECHANISM & DEPTH",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "MECHANISM & DEPTH",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**MECHANISM & DEPTH**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Rumack-Matthew Nomogram: Assessing Toxicity",
+    "level": 0,
+    "emphasis": [],
+    "md": "Rumack-Matthew Nomogram: Assessing Toxicity",
+    "heading": true,
+    "size": 27.5
+   },
+   {
+    "text": "Illustrative schematic, single acute ingestion.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Illustrative schematic, single acute ingestion.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "How to use: draw a level at 4 hours or later after a single acute ingestion and plot it against time since ingestion.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "How to use:",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**How to use:**  draw a level at 4 hours or later after a single acute ingestion and plot it against time since ingestion.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Above the treatment line: give NAC.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Above the treatment line:",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Above the treatment line:**  give NAC.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Below the line: toxicity unlikely.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Below the line:",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Below the line:**  toxicity unlikely.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Limits: not valid before 4 hours, for unknown ingestion time, staggered or repeated supratherapeutic ingestion, or chronic use; treat these using clinical judgment, AST/ALT and poison control.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Limits:",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Limits:**  not valid before 4 hours, for unknown ingestion time, staggered or repeated supratherapeutic ingestion, or chronic use; treat these using clinical judgment, AST/ALT and poison control.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Example: 8 h, 120 mcg/mL is above the line, so start NAC.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Example: 8 h, 120 mcg/mL is above the line, so start NAC.",
+    "heading": false,
+    "size": 16.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [
+   "S18_1.jpg"
+  ],
+  "notes": "The nomogram predicts hepatotoxicity risk after a single acute ingestion; if time of ingestion is unknown or ingestion is chronic, do not rely on it. Start NAC without waiting if presentation is late or the level is unavailable and ingestion is significant.\n\nAfter 24 hours the nomogram is not used: 4.7 mcg/mL is only where the treatment line ends, not a safe cutoff. Get AST/ALT; a detectable level or elevated AST/ALT guides NAC, per protocol or poison control."
+ },
+ {
+  "slide": 19,
   "title": "Acetaminophen Toxicity",
   "items": [
    {
@@ -845,10 +1755,10 @@
   "tables": [],
   "images": 1,
   "figures": [],
-  "notes": "NAPQI = N-acetyl-p-benzoquinone imine. Tie this directly back to the \"toxic metabolite\" bullet from Lecture 1’s drug metabolism section."
+  "notes": "NAPQI = N-acetyl-p-benzoquinone imine. Tie this directly back to the \"toxic metabolite\" bullet from Lecture 1’s drug metabolism section.\n\nAsk: \"What is the danger of a cold-and-flu product on top of regular acetaminophen?\" Look for: unintentional double dosing from combination products."
  },
  {
-  "slide": 12,
+  "slide": 20,
   "title": "The Hidden Acetaminophen Overdose",
   "items": [
    {
@@ -924,10 +1834,182 @@
   "tables": [],
   "images": 1,
   "figures": [],
-  "notes": "Good moment to reinforce generic-name awareness from Lecture 1 — patients often do not realize a product contains acetaminophen unless they check the label."
+  "notes": "Good moment to reinforce generic-name awareness from Lecture 1 — patients often do not realize a product contains acetaminophen unless they check the label.\n\nHidden overdose case (slides 18-19): see the Ask on the previous slide."
  },
  {
-  "slide": 13,
+  "slide": 21,
+  "title": "Quick Check",
+  "items": [
+   {
+    "text": "QUICK CHECK · ACETAMINOPHEN",
+    "level": 0,
+    "emphasis": [],
+    "md": "QUICK CHECK · ACETAMINOPHEN",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Quick Check",
+    "level": 0,
+    "emphasis": [],
+    "md": "Quick Check",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "In acetaminophen overdose, hepatotoxicity results primarily from which mechanism?",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "In acetaminophen overdose, hepatotoxicity results primarily from which mechanism?",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**In acetaminophen overdose, hepatotoxicity results primarily from which mechanism?**",
+    "heading": false,
+    "size": 18.5
+   },
+   {
+    "text": "A",
+    "level": 0,
+    "emphasis": [],
+    "md": "A",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Direct COX inhibition in the liver",
+    "level": 0,
+    "emphasis": [],
+    "md": "Direct COX inhibition in the liver",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "B",
+    "level": 0,
+    "emphasis": [],
+    "md": "B",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Excess Phase II glucuronidation",
+    "level": 0,
+    "emphasis": [],
+    "md": "Excess Phase II glucuronidation",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "C",
+    "level": 0,
+    "emphasis": [],
+    "md": "C",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Accumulation of NAPQI after glutathione stores are depleted",
+    "level": 0,
+    "emphasis": [],
+    "md": "Accumulation of NAPQI after glutathione stores are depleted",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "D",
+    "level": 0,
+    "emphasis": [],
+    "md": "D",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Renal crystal formation",
+    "level": 0,
+    "emphasis": [],
+    "md": "Renal crystal formation",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Quick check: give 30 seconds, take a show of hands, then reveal."
+ },
+ {
+  "slide": 22,
+  "title": "Answer",
+  "items": [
+   {
+    "text": "ANSWER · ACETAMINOPHEN",
+    "level": 0,
+    "emphasis": [],
+    "md": "ANSWER · ACETAMINOPHEN",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Answer",
+    "level": 0,
+    "emphasis": [],
+    "md": "Answer",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "C",
+    "level": 0,
+    "emphasis": [],
+    "md": "C",
+    "heading": true,
+    "size": 26.0
+   },
+   {
+    "text": "Accumulation of NAPQI after glutathione stores are depleted.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Accumulation of NAPQI after glutathione stores are depleted.",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Accumulation of NAPQI after glutathione stores are depleted.**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Why:  NAPQI, normally detoxified by conjugation with glutathione, accumulates once glutathione stores are exhausted in overdose, causing hepatocyte injury — which is why N-acetylcysteine (a glutathione precursor) is the antidote.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Why:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Why:** NAPQI, normally detoxified by conjugation with glutathione, accumulates once glutathione stores are exhausted in overdose, causing hepatocyte injury — which is why N-acetylcysteine (a glutathione precursor) is the antidote.",
+    "heading": false,
+    "size": 15.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Answer: NAPQI accumulation after glutathione depletion.\n\nSay: \"Acetaminophen leaves inflammation alone. NSAIDs go after it directly.\""
+ },
+ {
+  "slide": 23,
   "title": "03",
   "items": [
    {
@@ -984,7 +2066,7 @@
   "notes": ""
  },
  {
-  "slide": 14,
+  "slide": 24,
   "title": "How NSAIDs Work",
   "items": [
    {
@@ -1055,10 +2137,185 @@
   "tables": [],
   "images": 1,
   "figures": [],
-  "notes": ""
+  "notes": "Say: \"NSAIDs inhibit COX, so less arachidonic acid becomes prostaglandins and thromboxane. That gives less pain, inflammation and fever.\""
  },
  {
-  "slide": 15,
+  "slide": 25,
+  "title": "NSAIDs Block COX and Prostaglandin Synthesis",
+  "items": [
+   {
+    "text": "MECHANISM & DEPTH",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "MECHANISM & DEPTH",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**MECHANISM & DEPTH**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "NSAIDs Block COX and Prostaglandin Synthesis",
+    "level": 0,
+    "emphasis": [],
+    "md": "NSAIDs Block COX and Prostaglandin Synthesis",
+    "heading": true,
+    "size": 27.5
+   },
+   {
+    "text": "Pathway: arachidonic acid is converted by COX to prostaglandins and thromboxane A2.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Pathway:",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Pathway:**  arachidonic acid is converted by COX to prostaglandins and thromboxane A2.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Effect: reduced prostaglandins give analgesia, antipyresis and anti-inflammation.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Effect:",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Effect:**  reduced prostaglandins give analgesia, antipyresis and anti-inflammation.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Adverse effects: GI injury, platelet inhibition and renal effects.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Adverse effects:",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Adverse effects:**  GI injury, platelet inhibition and renal effects.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Membrane phospholipids",
+    "level": 0,
+    "emphasis": [],
+    "md": "Membrane phospholipids",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "↓",
+    "level": 0,
+    "emphasis": [],
+    "md": "↓",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Arachidonic acid",
+    "level": 0,
+    "emphasis": [],
+    "md": "Arachidonic acid",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "↓",
+    "level": 0,
+    "emphasis": [],
+    "md": "↓",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "COX-1 / COX-2",
+    "level": 0,
+    "emphasis": [],
+    "md": "COX-1 / COX-2",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "↓",
+    "level": 0,
+    "emphasis": [],
+    "md": "↓",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Prostaglandins and TXA2",
+    "level": 0,
+    "emphasis": [],
+    "md": "Prostaglandins and TXA2",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "↓",
+    "level": 0,
+    "emphasis": [],
+    "md": "↓",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "NSAIDs block COX",
+    "level": 0,
+    "emphasis": [],
+    "md": "NSAIDs block COX",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "↓",
+    "level": 0,
+    "emphasis": [],
+    "md": "↓",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Less prostaglandin: pain and fever fall",
+    "level": 0,
+    "emphasis": [],
+    "md": "Less prostaglandin: pain and fever fall",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Less TXA2: bleeding risk",
+    "level": 0,
+    "emphasis": [],
+    "md": "Less TXA2: bleeding risk",
+    "heading": true,
+    "size": 16.0
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": "Explain the COX step first; every NSAID shares this mechanism, and the side effects follow from losing protective prostaglandins.\n\nSay: \"NSAIDs inhibit COX, so less arachidonic acid becomes prostaglandins and thromboxane. That gives less pain, inflammation and fever.\""
+ },
+ {
+  "slide": 26,
   "title": "COX-1 vs. COX-2",
   "items": [
    {
@@ -1145,10 +2402,155 @@
   "tables": [],
   "images": 1,
   "figures": [],
-  "notes": "Stress this is a simplified teaching model, not an absolute separation — COX-1 and COX-2 functions overlap, and COX-2 is also constitutively expressed in the kidney and elsewhere."
+  "notes": "Stress this is a simplified teaching model, not an absolute separation — COX-1 and COX-2 functions overlap, and COX-2 is also constitutively expressed in the kidney and elsewhere.\n\nSay: \"COX-1 is the housekeeper: stomach lining, platelets, kidney. COX-2 is induced at sites of inflammation.\""
  },
  {
-  "slide": 16,
+  "slide": 27,
+  "title": "COX-1 vs. COX-2: Constitutive vs. Inducible",
+  "items": [
+   {
+    "text": "MECHANISM & DEPTH",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "MECHANISM & DEPTH",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**MECHANISM & DEPTH**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "COX-1 vs. COX-2: Constitutive vs. Inducible",
+    "level": 0,
+    "emphasis": [],
+    "md": "COX-1 vs. COX-2: Constitutive vs. Inducible",
+    "heading": true,
+    "size": 27.5
+   },
+   {
+    "text": "COX-1: constitutive; gastric mucosa, platelets, kidney.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "COX-1:",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**COX-1:**  constitutive; gastric mucosa, platelets, kidney.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "COX-2: inducible in inflamed tissue; pain, swelling, fever.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "COX-2:",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**COX-2:**  inducible in inflamed tissue; pain, swelling, fever.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Nonselective NSAIDs block both, so GI injury is common.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Nonselective NSAIDs",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Nonselective NSAIDs**  block both, so GI injury is common.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Celecoxib spares COX-1 at therapeutic doses.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Celecoxib",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Celecoxib**  spares COX-1 at therapeutic doses.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Arachidonic acid",
+    "level": 0,
+    "emphasis": [],
+    "md": "Arachidonic acid",
+    "heading": true,
+    "size": 18.0
+   },
+   {
+    "text": "Nonselective NSAIDs block both COX-1 and COX-2 → GI and renal risk",
+    "level": 0,
+    "emphasis": [],
+    "md": "Nonselective NSAIDs block both COX-1 and COX-2 → GI and renal risk",
+    "heading": true,
+    "size": 18.0
+   }
+  ],
+  "tables": [
+   [
+    [
+     "↓"
+    ],
+    [
+     "COX-1 (constitutive)"
+    ],
+    [
+     "Stomach mucosal protection"
+    ],
+    [
+     "Platelet TXA2 (clotting)"
+    ],
+    [
+     "Renal blood flow"
+    ]
+   ],
+   [
+    [
+     "↓"
+    ],
+    [
+     "COX-2 (inducible, at inflamed tissue)"
+    ],
+    [
+     "Inflammation"
+    ],
+    [
+     "Pain"
+    ],
+    [
+     "Fever"
+    ]
+   ]
+  ],
+  "images": 0,
+  "figures": [],
+  "notes": "COX-1 keeps protective prostaglandins; COX-2 is induced by inflammation. Selectivity trades anti-inflammatory benefit against GI and platelet protection.\n\nSay: \"COX-1 is the housekeeper: stomach lining, platelets, kidney. COX-2 is induced at sites of inflammation.\"\n\nKnow: Nonselective NSAIDs block both, which is why GI injury is common."
+ },
+ {
+  "slide": 28,
   "title": "Nonselective NSAIDs",
   "items": [
    {
@@ -1233,10 +2635,10 @@
   "tables": [],
   "images": 1,
   "figures": [],
-  "notes": ""
+  "notes": "Nonselective NSAIDs: ibuprofen (first-line), naproxen (longer half-life), diclofenac, indomethacin (more GI/CNS effects), ketorolac (short-term only, significant GI/renal risk)."
  },
  {
-  "slide": 17,
+  "slide": 29,
   "title": "COX-2 Selective Inhibition: Celecoxib",
   "items": [
    {
@@ -1305,10 +2707,168 @@
   "tables": [],
   "images": 1,
   "figures": [],
-  "notes": "This is a classic \"trade one risk for another\" teaching point — better GI profile, but not a free lunch cardiovascularly or renally."
+  "notes": "This is a classic \"trade one risk for another\" teaching point — better GI profile, but not a free lunch cardiovascularly or renally.\n\nSay: \"Celecoxib spares COX-1, so the GI risk is lower. The trade-off is lower PGI2 without a matching drop in TXA2, which raises cardiovascular risk. The kidney is still affected.\""
  },
  {
-  "slide": 18,
+  "slide": 30,
+  "title": "Celecoxib: Sparing COX-1 While Blocking COX-2",
+  "items": [
+   {
+    "text": "MECHANISM & DEPTH",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "MECHANISM & DEPTH",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**MECHANISM & DEPTH**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Celecoxib: Sparing COX-1 While Blocking COX-2",
+    "level": 0,
+    "emphasis": [],
+    "md": "Celecoxib: Sparing COX-1 While Blocking COX-2",
+    "heading": true,
+    "size": 27.5
+   },
+   {
+    "text": "Mechanism: selectively inhibits inducible COX-2, the main source of inflammatory prostaglandins.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Mechanism:",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Mechanism:**  selectively inhibits inducible COX-2, the main source of inflammatory prostaglandins.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "GI benefit: COX-1 in gastric mucosa is largely spared, lowering ulcer and bleeding risk.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "GI benefit:",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**GI benefit:**  COX-1 in gastric mucosa is largely spared, lowering ulcer and bleeding risk.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Trade-off: suppressed PGI2 without matched TXA2 loss raises cardiovascular event risk.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Trade-off:",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Trade-off:**  suppressed PGI2 without matched TXA2 loss raises cardiovascular event risk.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Renal: kidney prostaglandins are still affected; renal risk is not eliminated.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Renal:",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Renal:**  kidney prostaglandins are still affected; renal risk is not eliminated.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Arachidonic acid",
+    "level": 0,
+    "emphasis": [],
+    "md": "Arachidonic acid",
+    "heading": true,
+    "size": 22.0
+   },
+   {
+    "text": "COX-2",
+    "level": 0,
+    "emphasis": [],
+    "md": "COX-2",
+    "heading": true,
+    "size": 20.0
+   },
+   {
+    "text": "COX-1",
+    "level": 0,
+    "emphasis": [],
+    "md": "COX-1",
+    "heading": true,
+    "size": 20.0
+   },
+   {
+    "text": "Blocked by celecoxib",
+    "level": 0,
+    "emphasis": [],
+    "md": "Blocked by celecoxib",
+    "heading": true,
+    "size": 18.0
+   },
+   {
+    "text": "Spared by celecoxib",
+    "level": 0,
+    "emphasis": [],
+    "md": "Spared by celecoxib",
+    "heading": true,
+    "size": 18.0
+   },
+   {
+    "text": "↓ Fewer inflammatory prostaglandins → less pain and inflammation",
+    "level": 0,
+    "emphasis": [],
+    "md": "↓ Fewer inflammatory prostaglandins → less pain and inflammation",
+    "heading": true,
+    "size": 18.0
+   },
+   {
+    "text": "↓ Stomach and platelet protection continues",
+    "level": 0,
+    "emphasis": [],
+    "md": "↓ Stomach and platelet protection continues",
+    "heading": true,
+    "size": 18.0
+   },
+   {
+    "text": "↓ PGI₂ falls, TXA₂ preserved → cardiovascular risk",
+    "level": 0,
+    "emphasis": [],
+    "md": "↓ PGI₂ falls, TXA₂ preserved → cardiovascular risk",
+    "heading": true,
+    "size": 18.0
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": "Use the diagram to show that selectivity separates the GI benefit from the cardiovascular trade-off. Link back to the nonselective NSAID comparison on the previous slide.\n\nSay: \"Celecoxib spares COX-1, so the GI risk is lower. The trade-off is lower PGI2 without a matching drop in TXA2, which raises cardiovascular risk. The kidney is still affected.\""
+ },
+ {
+  "slide": 31,
   "title": "Nonselective NSAIDs vs. COX-2 Selective Inhibition",
   "items": [
    {
@@ -1346,12 +2906,184 @@
   "tables": [],
   "images": 2,
   "figures": [
-   "S18_1.png"
+   "S31_1.jpg"
   ],
-  "notes": "This is the graphical version of the trade-off just described in the celecoxib bullet slide — use it to reinforce that there is no risk-free NSAID choice, only a different risk profile."
+  "notes": "This is the graphical version of the trade-off just described in the celecoxib bullet slide — use it to reinforce that there is no risk-free NSAID choice, only a different risk profile.\n\nFigure 2 and trade-off summary: lower GI risk, some increase in cardiovascular risk. These risk values are illustrative, not clinical data."
  },
  {
-  "slide": 19,
+  "slide": 32,
+  "title": "Quick Check",
+  "items": [
+   {
+    "text": "QUICK CHECK · FIGURE 2",
+    "level": 0,
+    "emphasis": [],
+    "md": "QUICK CHECK · FIGURE 2",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Quick Check",
+    "level": 0,
+    "emphasis": [],
+    "md": "Quick Check",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Based on Figure 2, a patient with a history of GI ulcer but no cardiovascular disease is switched from ibuprofen to celecoxib. What is the most likely net effect on this patient’s risk profile?",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Based on Figure 2, a patient with a history of GI ulcer but no cardiovascular disease is switched from ibuprofen to celecoxib. What is the most likely net effect on this patient’s risk profile?",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Based on Figure 2, a patient with a history of GI ulcer but no cardiovascular disease is switched from ibuprofen to celecoxib. What is the most likely net effect on this patient’s risk profile?**",
+    "heading": false,
+    "size": 18.5
+   },
+   {
+    "text": "A",
+    "level": 0,
+    "emphasis": [],
+    "md": "A",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Lower GI risk, with some increase in cardiovascular risk",
+    "level": 0,
+    "emphasis": [],
+    "md": "Lower GI risk, with some increase in cardiovascular risk",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "B",
+    "level": 0,
+    "emphasis": [],
+    "md": "B",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Both GI and cardiovascular risk decrease",
+    "level": 0,
+    "emphasis": [],
+    "md": "Both GI and cardiovascular risk decrease",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "No change in either risk, since all NSAIDs carry identical risk profiles",
+    "level": 0,
+    "emphasis": [],
+    "md": "No change in either risk, since all NSAIDs carry identical risk profiles",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "C",
+    "level": 0,
+    "emphasis": [],
+    "md": "C",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Both GI and cardiovascular risk increase",
+    "level": 0,
+    "emphasis": [],
+    "md": "Both GI and cardiovascular risk increase",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "D",
+    "level": 0,
+    "emphasis": [],
+    "md": "D",
+    "heading": true,
+    "size": 16.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Quick check: give 30 seconds, take a show of hands, then reveal."
+ },
+ {
+  "slide": 33,
+  "title": "Answer",
+  "items": [
+   {
+    "text": "ANSWER · FIGURE 2",
+    "level": 0,
+    "emphasis": [],
+    "md": "ANSWER · FIGURE 2",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Answer",
+    "level": 0,
+    "emphasis": [],
+    "md": "Answer",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "A",
+    "level": 0,
+    "emphasis": [],
+    "md": "A",
+    "heading": true,
+    "size": 26.0
+   },
+   {
+    "text": "Lower GI risk, with some increase in cardiovascular risk.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Lower GI risk, with some increase in cardiovascular risk.",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Lower GI risk, with some increase in cardiovascular risk.**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Why:  Figure 2 shows celecoxib’s illustrative GI-risk bar is lower than the nonselective NSAID bar, while its cardiovascular-risk bar is higher — exactly the trade-off described in the celecoxib bullet slide. For this GI-ulcer-history patient without cardiovascular disease, that trade may be favorable, but the increased cardiovascular risk should still be discussed.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Why:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Why:** Figure 2 shows celecoxib’s illustrative GI-risk bar is lower than the nonselective NSAID bar, while its cardiovascular-risk bar is higher — exactly the trade-off described in the celecoxib bullet slide. For this GI-ulcer-history patient without cardiovascular disease, that trade may be favorable, but the increased cardiovascular risk should still be discussed.",
+    "heading": false,
+    "size": 15.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Answer: lower GI risk, with some increase in cardiovascular risk. These risk values are illustrative, not clinical data."
+ },
+ {
+  "slide": 34,
   "title": "NSAID Adverse Effects",
   "items": [
    {
@@ -1393,10 +3125,91 @@
   ],
   "images": 1,
   "figures": [],
-  "notes": "These three systems (GI, renal, CV) are the organizing framework for every NSAID contraindication and interaction discussion that follows. Table 1."
+  "notes": "These three systems (GI, renal, CV) are the organizing framework for every NSAID contraindication and interaction discussion that follows. Table 1.\n\nSay: \"Lose prostaglandins and you lose mucosal protection, renal afferent dilation and normal platelet function.\""
  },
  {
-  "slide": 20,
+  "slide": 35,
+  "title": "NSAIDs: Prostaglandin Loss and Organ Effects",
+  "items": [
+   {
+    "text": "MECHANISM & DEPTH",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "MECHANISM & DEPTH",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**MECHANISM & DEPTH**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "NSAIDs: Prostaglandin Loss and Organ Effects",
+    "level": 0,
+    "emphasis": [],
+    "md": "NSAIDs: Prostaglandin Loss and Organ Effects",
+    "heading": true,
+    "size": 27.5
+   },
+   {
+    "text": "GI: less prostaglandin-driven mucus and bicarbonate leaves the mucosa open to injury.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "GI:",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**GI:**  less prostaglandin-driven mucus and bicarbonate leaves the mucosa open to injury.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Kidney: reduced afferent arteriolar dilation lowers renal blood flow.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Kidney:",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Kidney:**  reduced afferent arteriolar dilation lowers renal blood flow.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Platelets: reduced TXA2 impairs aggregation, increasing bleeding risk.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Platelets:",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Platelets:**  reduced TXA2 impairs aggregation, increasing bleeding risk.",
+    "heading": false,
+    "size": 16.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [
+   "S35_1.jpg"
+  ],
+  "notes": "Say: \"Lose prostaglandins and you lose mucosal protection, renal afferent dilation and normal platelet function.\"\n\nKnow: GI (ulcer, bleeding), renal (AKI, fluid retention), cardiovascular (hypertension, events)."
+ },
+ {
+  "slide": 36,
   "title": "NSAID Contraindications & Interactions",
   "items": [
    {
@@ -1507,10 +3320,10 @@
   "tables": [],
   "images": 1,
   "figures": [],
-  "notes": "The \"triple whammy\" (NSAID + ACEi/ARB + diuretic) is a very high-yield acute kidney injury pattern to flag explicitly."
+  "notes": "The \"triple whammy\" (NSAID + ACEi/ARB + diuretic) is a very high-yield acute kidney injury pattern to flag explicitly.\n\nAvoid or use caution with active GI bleeding or ulcer history, CKD, heart failure, anticoagulants, and late pregnancy.\n\nKnow (interactions): NSAID plus anticoagulant means more bleeding. NSAID plus ACE inhibitor/ARB plus diuretic is the \"triple whammy\" for AKI. NSAID plus corticosteroid means more GI ulcer risk."
  },
  {
-  "slide": 21,
+  "slide": 37,
   "title": "Is an NSAID the Right First Choice?",
   "items": [
    {
@@ -1586,10 +3399,182 @@
   "tables": [],
   "images": 1,
   "figures": [],
-  "notes": "Excellent exam-style vignette — ask students to name all three risk factors independently before revealing the answer."
+  "notes": "Excellent exam-style vignette — ask students to name all three risk factors independently before revealing the answer.\n\nAsk: \"72 years old, CKD, hypertension, on an anticoagulant. Is an NSAID a good first choice?\""
  },
  {
-  "slide": 22,
+  "slide": 38,
+  "title": "Quick Check",
+  "items": [
+   {
+    "text": "QUICK CHECK · NSAIDS",
+    "level": 0,
+    "emphasis": [],
+    "md": "QUICK CHECK · NSAIDS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Quick Check",
+    "level": 0,
+    "emphasis": [],
+    "md": "Quick Check",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "A patient with CKD, hypertension, and anticoagulant use needs analgesia for osteoarthritis. Which class carries the highest combined renal and bleeding risk for this patient?",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "A patient with CKD, hypertension, and anticoagulant use needs analgesia for osteoarthritis. Which class carries the highest combined renal and bleeding risk for this patient?",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**A patient with CKD, hypertension, and anticoagulant use needs analgesia for osteoarthritis. Which class carries the highest combined renal and bleeding risk for this patient?**",
+    "heading": false,
+    "size": 18.5
+   },
+   {
+    "text": "A",
+    "level": 0,
+    "emphasis": [],
+    "md": "A",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Acetaminophen",
+    "level": 0,
+    "emphasis": [],
+    "md": "Acetaminophen",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "B",
+    "level": 0,
+    "emphasis": [],
+    "md": "B",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Oral NSAIDs",
+    "level": 0,
+    "emphasis": [],
+    "md": "Oral NSAIDs",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "C",
+    "level": 0,
+    "emphasis": [],
+    "md": "C",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Topical capsaicin",
+    "level": 0,
+    "emphasis": [],
+    "md": "Topical capsaicin",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "D",
+    "level": 0,
+    "emphasis": [],
+    "md": "D",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Physical therapy alone",
+    "level": 0,
+    "emphasis": [],
+    "md": "Physical therapy alone",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Quick check: give 30 seconds, take a show of hands, then reveal."
+ },
+ {
+  "slide": 39,
+  "title": "Answer",
+  "items": [
+   {
+    "text": "ANSWER · NSAIDS",
+    "level": 0,
+    "emphasis": [],
+    "md": "ANSWER · NSAIDS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Answer",
+    "level": 0,
+    "emphasis": [],
+    "md": "Answer",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "B",
+    "level": 0,
+    "emphasis": [],
+    "md": "B",
+    "heading": true,
+    "size": 26.0
+   },
+   {
+    "text": "Oral NSAIDs.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Oral NSAIDs.",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Oral NSAIDs.**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Why:  This patient has multiple NSAID red flags at once: CKD (renal risk), anticoagulant use (bleeding risk), and hypertension (cardiovascular risk) — oral NSAIDs carry the highest combined risk here.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Why:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Why:** This patient has multiple NSAID red flags at once: CKD (renal risk), anticoagulant use (bleeding risk), and hypertension (cardiovascular risk) — oral NSAIDs carry the highest combined risk here.",
+    "heading": false,
+    "size": 15.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Answer: no. Oral NSAIDs carry the highest combined risk. Acetaminophen or a non-NSAID approach is generally safer.\n\nSay: \"Now the same drugs in the setting of arthritis.\""
+ },
+ {
+  "slide": 40,
   "title": "04",
   "items": [
    {
@@ -1646,7 +3631,7 @@
   "notes": ""
  },
  {
-  "slide": 23,
+  "slide": 41,
   "title": "Osteoarthritis vs. Rheumatoid Arthritis",
   "items": [
    {
@@ -1733,10 +3718,91 @@
   "tables": [],
   "images": 1,
   "figures": [],
-  "notes": "This distinction is the hinge the whole rest of the section turns on: OA is managed primarily with analgesics/NSAIDs, while RA requires disease-modifying therapy."
+  "notes": "This distinction is the hinge the whole rest of the section turns on: OA is managed primarily with analgesics/NSAIDs, while RA requires disease-modifying therapy.\n\nSay: \"OA is degenerative and mechanical, with cartilage wear and bone remodeling. RA is autoimmune, with synovitis, pannus, and TNF-alpha and IL-6 driving erosion.\""
  },
  {
-  "slide": 24,
+  "slide": 42,
+  "title": "Osteoarthritis vs. Rheumatoid Arthritis: Pathophysiology",
+  "items": [
+   {
+    "text": "MECHANISM & DEPTH",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "MECHANISM & DEPTH",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**MECHANISM & DEPTH**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Osteoarthritis vs. Rheumatoid Arthritis: Pathophysiology",
+    "level": 0,
+    "emphasis": [],
+    "md": "Osteoarthritis vs. Rheumatoid Arthritis: Pathophysiology",
+    "heading": true,
+    "size": 27.5
+   },
+   {
+    "text": "OA: mechanical wear degrades cartilage; bone remodels with osteophytes.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "OA:",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**OA:**  mechanical wear degrades cartilage; bone remodels with osteophytes.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "RA: autoimmune synovitis forms a pannus that erodes cartilage and bone.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "RA:",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**RA:**  autoimmune synovitis forms a pannus that erodes cartilage and bone.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Key RA cytokines: TNF-α and IL-6 drive inflammation and joint damage.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Key RA cytokines:",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Key RA cytokines:**  TNF-α and IL-6 drive inflammation and joint damage.",
+    "heading": false,
+    "size": 16.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [
+   "S42_1.jpg"
+  ],
+  "notes": "Say: \"OA is degenerative and mechanical, with cartilage wear and bone remodeling. RA is autoimmune, with synovitis, pannus, and TNF-alpha and IL-6 driving erosion.\""
+ },
+ {
+  "slide": 43,
   "title": "Pharmacologic Treatment of Osteoarthritis",
   "items": [
    {
@@ -1799,10 +3865,91 @@
   "tables": [],
   "images": 1,
   "figures": [],
-  "notes": ""
+  "notes": "Acetaminophen is reasonable first-line for mild pain. Topical NSAIDs give effective relief with lower systemic exposure. Intra-articular corticosteroids give short-term relief for flares. Add activity modification, physical therapy and weight management."
  },
  {
-  "slide": 25,
+  "slide": 44,
+  "title": "Where Each Analgesic Acts in Osteoarthritis",
+  "items": [
+   {
+    "text": "MECHANISM & DEPTH",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "MECHANISM & DEPTH",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**MECHANISM & DEPTH**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Where Each Analgesic Acts in Osteoarthritis",
+    "level": 0,
+    "emphasis": [],
+    "md": "Where Each Analgesic Acts in Osteoarthritis",
+    "heading": true,
+    "size": 27.5
+   },
+   {
+    "text": "Acetaminophen: acts centrally; little anti-inflammatory effect in the joint.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Acetaminophen:",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Acetaminophen:**  acts centrally; little anti-inflammatory effect in the joint.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Oral or topical NSAIDs: block COX in joint tissue, lowering prostaglandins.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Oral or topical NSAIDs:",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Oral or topical NSAIDs:**  block COX in joint tissue, lowering prostaglandins.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Intra-articular steroid: calms local inflammation for a short, fast flare relief.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Intra-articular steroid:",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Intra-articular steroid:**  calms local inflammation for a short, fast flare relief.",
+    "heading": false,
+    "size": 16.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [
+   "S44_1.jpg"
+  ],
+  "notes": "Match each option to its site: acetaminophen centrally, NSAIDs in synovium and cartilage, corticosteroids inside the joint. Choice depends on which tissue drives the pain.\n\nAcetaminophen is reasonable first-line for mild pain. Topical NSAIDs give effective relief with lower systemic exposure. Intra-articular corticosteroids give short-term relief for flares. Add activity modification, physical therapy and weight management."
+ },
+ {
+  "slide": 45,
   "title": "What Makes a Drug \"Disease-Modifying\"?",
   "items": [
    {
@@ -1857,10 +4004,106 @@
   "tables": [],
   "images": 1,
   "figures": [],
-  "notes": "Contrast explicitly with NSAIDs: an NSAID can make a patient feel better without changing the underlying disease trajectory — a DMARD is meant to change the trajectory itself."
+  "notes": "Contrast explicitly with NSAIDs: an NSAID can make a patient feel better without changing the underlying disease trajectory — a DMARD is meant to change the trajectory itself.\n\nSay: \"A DMARD changes the course of RA. An NSAID only masks symptoms.\""
  },
  {
-  "slide": 26,
+  "slide": 46,
+  "title": "Symptom Relief vs Slowing Joint Destruction",
+  "items": [
+   {
+    "text": "MECHANISM & DEPTH",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "MECHANISM & DEPTH",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**MECHANISM & DEPTH**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Symptom Relief vs Slowing Joint Destruction",
+    "level": 0,
+    "emphasis": [],
+    "md": "Symptom Relief vs Slowing Joint Destruction",
+    "heading": true,
+    "size": 27.5
+   },
+   {
+    "text": "NSAIDs: relieve pain and swelling within days, but do not alter joint damage.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "NSAIDs:",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**NSAIDs:**  relieve pain and swelling within days, but do not alter joint damage.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "DMARDs: take weeks to months to act, then slow cartilage and bone destruction.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "DMARDs:",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**DMARDs:**  take weeks to months to act, then slow cartilage and bone destruction.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Timing: judge a DMARD over months, not after the first visit.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Timing:",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Timing:**  judge a DMARD over months, not after the first visit.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Goal: relief now with NSAIDs, protection later with DMARDs.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Goal:",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Goal:**  relief now with NSAIDs, protection later with DMARDs.",
+    "heading": false,
+    "size": 16.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [
+   "S46_1.jpg"
+  ],
+  "notes": "Contrast the fast, symptomatic effect of NSAIDs with the slow, structure-modifying effect of DMARDs. Set expectations that DMARD benefit builds over months.\n\nSay: \"A DMARD changes the course of RA. An NSAID only masks symptoms.\"\n\nKnow: DMARDs take weeks to months to work. Judge them over months, not at the first visit. The curve is a schematic, not data."
+ },
+ {
+  "slide": 47,
   "title": "Conventional (Non-Biologic) DMARDs",
   "items": [
    {
@@ -1922,10 +4165,132 @@
   "tables": [],
   "images": 1,
   "figures": [],
-  "notes": ""
+  "notes": "Methotrexate (anchor drug, blocks DHFR), hydroxychloroquine (milder disease), sulfasalazine, leflunomide (blocks DHODH, pyrimidine synthesis)."
  },
  {
-  "slide": 27,
+  "slide": 48,
+  "title": "Conventional DMARDs: Where Each Drug Acts",
+  "items": [
+   {
+    "text": "MECHANISM & DEPTH",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "MECHANISM & DEPTH",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**MECHANISM & DEPTH**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Conventional DMARDs: Where Each Drug Acts",
+    "level": 0,
+    "emphasis": [],
+    "md": "Conventional DMARDs: Where Each Drug Acts",
+    "heading": true,
+    "size": 27.5
+   },
+   {
+    "text": "Methotrexate: blocks DHFR and folate metabolism.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Methotrexate:",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Methotrexate:**  blocks DHFR and folate metabolism.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Hydroxychloroquine: alters lysosomal and TLR signaling.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Hydroxychloroquine:",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Hydroxychloroquine:**  alters lysosomal and TLR signaling.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Sulfasalazine: reduces cytokine and prostaglandin production.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Sulfasalazine:",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Sulfasalazine:**  reduces cytokine and prostaglandin production.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Leflunomide: inhibits DHODH, blocking pyrimidine synthesis.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Leflunomide:",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Leflunomide:**  inhibits DHODH, blocking pyrimidine synthesis.",
+    "heading": false,
+    "size": 16.0
+   }
+  ],
+  "tables": [
+   [
+    [
+     "Drug",
+     "Target / action",
+     "Effect"
+    ],
+    [
+     "Methotrexate",
+     "Inhibits DHFR; disrupts folate metabolism",
+     "Slower immune-cell growth"
+    ],
+    [
+     "Hydroxychloroquine",
+     "Alters lysosomal and TLR signaling",
+     "Less antigen signaling"
+    ],
+    [
+     "Sulfasalazine",
+     "Reduces cytokine and prostaglandin production",
+     "Less inflammation"
+    ],
+    [
+     "Leflunomide",
+     "Inhibits DHODH; limits pyrimidine synthesis",
+     "Slower T-cell growth"
+    ]
+   ]
+  ],
+  "images": 0,
+  "figures": [],
+  "notes": "These drugs act inside cells or on broad immune pathways, with a slower onset than biologics.\n\nMethotrexate (anchor drug, blocks DHFR), hydroxychloroquine (milder disease), sulfasalazine, leflunomide (blocks DHODH, pyrimidine synthesis)."
+ },
+ {
+  "slide": 49,
   "title": "Methotrexate",
   "items": [
    {
@@ -2010,10 +4375,152 @@
   "tables": [],
   "images": 1,
   "figures": [],
-  "notes": "Methotrexate’s weekly dosing is one of the highest-yield patient-safety teaching points in all of rheumatology pharmacology — emphasize it strongly."
+  "notes": "Methotrexate’s weekly dosing is one of the highest-yield patient-safety teaching points in all of rheumatology pharmacology — emphasize it strongly.\n\nKnow: methotrexate is dosed WEEKLY, not daily. Daily dosing has caused fatal toxicity."
  },
  {
-  "slide": 28,
+  "slide": 50,
+  "title": "Methotrexate: Folate Pathway and Low-Dose Action",
+  "items": [
+   {
+    "text": "MECHANISM & DEPTH",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "MECHANISM & DEPTH",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**MECHANISM & DEPTH**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Methotrexate: Folate Pathway and Low-Dose Action",
+    "level": 0,
+    "emphasis": [],
+    "md": "Methotrexate: Folate Pathway and Low-Dose Action",
+    "heading": true,
+    "size": 27.5
+   },
+   {
+    "text": "Target: inhibits dihydrofolate reductase (DHFR), blocking folate-dependent purine and thymidylate synthesis.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Target:",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Target:**  inhibits dihydrofolate reductase (DHFR), blocking folate-dependent purine and thymidylate synthesis.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Low-dose RA effect: likely anti-inflammatory via adenosine release, not cytotoxicity.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Low-dose RA effect:",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Low-dose RA effect:**  likely anti-inflammatory via adenosine release, not cytotoxicity.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Pearl: weekly dosing only; daily dosing has caused fatal toxicity.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Pearl:",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Pearl:**  weekly dosing only; daily dosing has caused fatal toxicity.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Toxicity: folic acid co-therapy reduces liver, marrow, lung and GI effects.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Toxicity:",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Toxicity:**  folic acid co-therapy reduces liver, marrow, lung and GI effects.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Dihydrofolate (DHF) ↓",
+    "level": 0,
+    "emphasis": [],
+    "md": "Dihydrofolate (DHF) ↓",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "DHFR enzyme ↓",
+    "level": 0,
+    "emphasis": [],
+    "md": "DHFR enzyme ↓",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "THF for DNA synthesis",
+    "level": 0,
+    "emphasis": [],
+    "md": "THF for DNA synthesis",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Methotrexate blocks DHFR ↓",
+    "level": 0,
+    "emphasis": [],
+    "md": "Methotrexate blocks DHFR ↓",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Low dose: anti-inflammatory ↓",
+    "level": 0,
+    "emphasis": [],
+    "md": "Low dose: anti-inflammatory ↓",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Weekly dosing only",
+    "level": 0,
+    "emphasis": [],
+    "md": "Weekly dosing only",
+    "heading": true,
+    "size": 16.0
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": "Walk through the diagram left to right: folate is reduced to THF through DHF, and methotrexate blocks the DHFR step. Emphasize the weekly-dosing safety point.\n\nGive folic acid to reduce liver, marrow, lung and GI toxicity. Contraindicated in pregnancy (teratogenic)."
+ },
+ {
+  "slide": 51,
   "title": "Biologic DMARDs",
   "items": [
    {
@@ -2132,10 +4639,123 @@
   "tables": [],
   "images": 1,
   "figures": [],
-  "notes": "Each biologic class corresponds to a different cytokine or cell type in the inflammatory cascade shown earlier in the lecture — tie this back to the mediator list from Section 1. The next slide shows these same four drug classes as a mechanism diagram."
+  "notes": "Each biologic class corresponds to a different cytokine or cell type in the inflammatory cascade shown earlier in the lecture — tie this back to the mediator list from Section 1. The next slide shows these same four drug classes as a mechanism diagram.\n\nSay: \"Four classes by target.\" TNF inhibitors (infliximab, adalimumab, etanercept), IL-6 blockers (tocilizumab), abatacept (CTLA-4-Ig, blocks CD28 costimulation), rituximab (anti-CD20, depletes B cells)."
  },
  {
-  "slide": 29,
+  "slide": 52,
+  "title": "Biologic DMARDs: Mechanism by Target",
+  "items": [
+   {
+    "text": "MECHANISM & DEPTH",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "MECHANISM & DEPTH",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**MECHANISM & DEPTH**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Biologic DMARDs: Mechanism by Target",
+    "level": 0,
+    "emphasis": [],
+    "md": "Biologic DMARDs: Mechanism by Target",
+    "heading": true,
+    "size": 27.5
+   },
+   {
+    "text": "TNF inhibitors: antibodies and etanercept, a receptor fusion, neutralize soluble and membrane TNF-α. First-line biologic; watch for reactivation of latent TB.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "TNF inhibitors:",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**TNF inhibitors:**  antibodies and etanercept, a receptor fusion, neutralize soluble and membrane TNF-α. First-line biologic; watch for reactivation of latent TB.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "IL-6 blockers: tocilizumab blocks both membrane and soluble IL-6 receptor, and works as monotherapy. Can raise lipids and liver enzymes.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "IL-6 blockers:",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**IL-6 blockers:**  tocilizumab blocks both membrane and soluble IL-6 receptor, and works as monotherapy. Can raise lipids and liver enzymes.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Abatacept: selective costimulation modulator that acts early, at T-cell activation. Generally a lower infection signal.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Abatacept:",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Abatacept:**  selective costimulation modulator that acts early, at T-cell activation. Generally a lower infection signal.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Rituximab: anti-CD20 depletes B cells for months. Used after TNF-inhibitor failure; check hepatitis B before starting.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Rituximab:",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Rituximab:**  anti-CD20 depletes B cells for months. Used after TNF-inhibitor failure; check hepatitis B before starting.",
+    "heading": false,
+    "size": 16.0
+   }
+  ],
+  "tables": [
+   [
+    [
+     "TNF inhibitors\nInfliximab, adalimumab, etanercept",
+     "Bind soluble or membrane TNF-α, preventing TNFR activation."
+    ],
+    [
+     "IL-6 inhibitor\nTocilizumab",
+     "Blocks the IL-6 receptor, reducing inflammatory signaling."
+    ],
+    [
+     "Abatacept\nCTLA-4-Ig",
+     "Binds CD80/86; blocks CD28 costimulation of T cells."
+    ],
+    [
+     "Rituximab\nAnti-CD20",
+     "Binds CD20 and depletes B cells."
+    ]
+   ]
+  ],
+  "images": 0,
+  "figures": [],
+  "notes": "Each biologic intercepts a different step of the immune cascade; match the target to the drug class.\n\nSay: \"Four classes by target.\" TNF inhibitors (infliximab, adalimumab, etanercept), IL-6 blockers (tocilizumab), abatacept (CTLA-4-Ig, blocks CD28 costimulation), rituximab (anti-CD20, depletes B cells)."
+ },
+ {
+  "slide": 53,
   "title": "Biologic DMARDs: Where Each Class Intercepts the Immune Cascade",
   "items": [
    {
@@ -2173,12 +4793,184 @@
   "tables": [],
   "images": 2,
   "figures": [
-   "S29_1.png"
+   "S53_1.jpg"
   ],
-  "notes": "This is the visual counterpart to the fourCard slide just shown — have students match each generic drug name to its box on this diagram before you reveal the answer."
+  "notes": "This is the visual counterpart to the fourCard slide just shown — have students match each generic drug name to its box on this diagram before you reveal the answer.\n\nFigure 3: walk the cascade from T-cell activation to cytokines to synovial damage. Abatacept acts earliest."
  },
  {
-  "slide": 30,
+  "slide": 54,
+  "title": "Quick Check",
+  "items": [
+   {
+    "text": "QUICK CHECK · FIGURE 3",
+    "level": 0,
+    "emphasis": [],
+    "md": "QUICK CHECK · FIGURE 3",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Quick Check",
+    "level": 0,
+    "emphasis": [],
+    "md": "Quick Check",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "In Figure 3, which biologic DMARD acts earliest in the cascade shown, before cytokines like TNF-α and IL-6 are even released?",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "In Figure 3, which biologic DMARD acts earliest in the cascade shown, before cytokines like TNF-α and IL-6 are even released?",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**In Figure 3, which biologic DMARD acts earliest in the cascade shown, before cytokines like TNF-α and IL-6 are even released?**",
+    "heading": false,
+    "size": 18.5
+   },
+   {
+    "text": "A",
+    "level": 0,
+    "emphasis": [],
+    "md": "A",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Adalimumab",
+    "level": 0,
+    "emphasis": [],
+    "md": "Adalimumab",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "B",
+    "level": 0,
+    "emphasis": [],
+    "md": "B",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Tocilizumab",
+    "level": 0,
+    "emphasis": [],
+    "md": "Tocilizumab",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "C",
+    "level": 0,
+    "emphasis": [],
+    "md": "C",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Abatacept",
+    "level": 0,
+    "emphasis": [],
+    "md": "Abatacept",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "D",
+    "level": 0,
+    "emphasis": [],
+    "md": "D",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Rituximab",
+    "level": 0,
+    "emphasis": [],
+    "md": "Rituximab",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Quick check: give 30 seconds, take a show of hands, then reveal."
+ },
+ {
+  "slide": 55,
+  "title": "Answer",
+  "items": [
+   {
+    "text": "ANSWER · FIGURE 3",
+    "level": 0,
+    "emphasis": [],
+    "md": "ANSWER · FIGURE 3",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Answer",
+    "level": 0,
+    "emphasis": [],
+    "md": "Answer",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "C",
+    "level": 0,
+    "emphasis": [],
+    "md": "C",
+    "heading": true,
+    "size": 26.0
+   },
+   {
+    "text": "Abatacept.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Abatacept.",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Abatacept.**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Why:  Abatacept blocks T-cell costimulation — the step furthest upstream in the diagram, occurring before activated T cells drive cytokine release (blocked downstream by adalimumab/tocilizumab) or B-cell activity (blocked by rituximab).",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Why:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Why:** Abatacept blocks T-cell costimulation — the step furthest upstream in the diagram, occurring before activated T cells drive cytokine release (blocked downstream by adalimumab/tocilizumab) or B-cell activity (blocked by rituximab).",
+    "heading": false,
+    "size": 15.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Answer: abatacept acts earliest."
+ },
+ {
+  "slide": 56,
   "title": "DMARD Safety: Immunosuppression",
   "items": [
    {
@@ -2249,10 +5041,370 @@
   "tables": [],
   "images": 1,
   "figures": [],
-  "notes": ""
+  "notes": "Say: \"The theme is immunosuppression, so infection risk.\""
  },
  {
-  "slide": 31,
+  "slide": 57,
+  "title": "Immune Suppression Raises Infection Risk",
+  "items": [
+   {
+    "text": "MECHANISM & DEPTH",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "MECHANISM & DEPTH",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**MECHANISM & DEPTH**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Immune Suppression Raises Infection Risk",
+    "level": 0,
+    "emphasis": [],
+    "md": "Immune Suppression Raises Infection Risk",
+    "heading": true,
+    "size": 27.5
+   },
+   {
+    "text": "Risk: suppressed immunity lets latent TB and opportunistic infections emerge.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Risk:",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Risk:**  suppressed immunity lets latent TB and opportunistic infections emerge.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Screen first: TB test and hepatitis B and C serology before starting.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Screen first:",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Screen first:**  TB test and hepatitis B and C serology before starting.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Vaccines: update non-live vaccines before treatment.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Vaccines:",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Vaccines:**  update non-live vaccines before treatment.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Monitor: CBC and liver and kidney labs every 1–3 months.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Monitor:",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Monitor:**  CBC and liver and kidney labs every 1–3 months.",
+    "heading": false,
+    "size": 16.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [
+   "S57_1.jpg"
+  ],
+  "notes": "Screen for TB and hepatitis B and C before starting; update non-live vaccines; monitor blood counts and organ function regularly, and act early on fever or infection signs.\n\nSay: \"The theme is immunosuppression, so infection risk.\"\n\nKnow: Screen for TB and hepatitis B/C before biologics. Update vaccines first, especially live vaccines. Monitor CBC and liver and kidney tests. Counsel patients to report fevers early."
+ },
+ {
+  "slide": 58,
+  "title": "Quick Check",
+  "items": [
+   {
+    "text": "QUICK CHECK · OSTEOARTHRITIS & RHEUMATOID ARTHRITIS",
+    "level": 0,
+    "emphasis": [],
+    "md": "QUICK CHECK · OSTEOARTHRITIS & RHEUMATOID ARTHRITIS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Quick Check",
+    "level": 0,
+    "emphasis": [],
+    "md": "Quick Check",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Which feature distinguishes a DMARD from an NSAID in the management of rheumatoid arthritis?",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Which feature distinguishes a DMARD from an NSAID in the management of rheumatoid arthritis?",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Which feature distinguishes a DMARD from an NSAID in the management of rheumatoid arthritis?**",
+    "heading": false,
+    "size": 18.5
+   },
+   {
+    "text": "A",
+    "level": 0,
+    "emphasis": [],
+    "md": "A",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "DMARDs provide faster pain relief than NSAIDs",
+    "level": 0,
+    "emphasis": [],
+    "md": "DMARDs provide faster pain relief than NSAIDs",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "B",
+    "level": 0,
+    "emphasis": [],
+    "md": "B",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "NSAIDs suppress the immune system more potently than DMARDs",
+    "level": 0,
+    "emphasis": [],
+    "md": "NSAIDs suppress the immune system more potently than DMARDs",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "DMARDs modify the underlying disease process rather than only masking symptoms",
+    "level": 0,
+    "emphasis": [],
+    "md": "DMARDs modify the underlying disease process rather than only masking symptoms",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "C",
+    "level": 0,
+    "emphasis": [],
+    "md": "C",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "DMARDs are only available as biologic agents",
+    "level": 0,
+    "emphasis": [],
+    "md": "DMARDs are only available as biologic agents",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "D",
+    "level": 0,
+    "emphasis": [],
+    "md": "D",
+    "heading": true,
+    "size": 16.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Quick check: give 30 seconds, take a show of hands, then reveal."
+ },
+ {
+  "slide": 59,
+  "title": "Answer",
+  "items": [
+   {
+    "text": "ANSWER · OSTEOARTHRITIS & RHEUMATOID ARTHRITIS",
+    "level": 0,
+    "emphasis": [],
+    "md": "ANSWER · OSTEOARTHRITIS & RHEUMATOID ARTHRITIS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Answer",
+    "level": 0,
+    "emphasis": [],
+    "md": "Answer",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "D",
+    "level": 0,
+    "emphasis": [],
+    "md": "D",
+    "heading": true,
+    "size": 26.0
+   },
+   {
+    "text": "DMARDs modify the underlying disease process rather than only masking symptoms.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "DMARDs modify the underlying disease process rather than only masking symptoms.",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**DMARDs modify the underlying disease process rather than only masking symptoms.**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Why:  An NSAID can make a patient feel better without changing RA’s disease trajectory; a DMARD (conventional or biologic) is intended to slow or halt joint destruction and systemic inflammation itself.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Why:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Why:** An NSAID can make a patient feel better without changing RA’s disease trajectory; a DMARD (conventional or biologic) is intended to slow or halt joint destruction and systemic inflammation itself.",
+    "heading": false,
+    "size": 15.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Answer: a DMARD modifies the disease process, while an NSAID only masks symptoms."
+ },
+ {
+  "slide": 60,
+  "title": "Drug Names Reveal the Class: Read the Stem",
+  "items": [
+   {
+    "text": "MECHANISM & DEPTH",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "MECHANISM & DEPTH",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**MECHANISM & DEPTH**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Drug Names Reveal the Class: Read the Stem",
+    "level": 0,
+    "emphasis": [],
+    "md": "Drug Names Reveal the Class: Read the Stem",
+    "heading": true,
+    "size": 27.5
+   }
+  ],
+  "tables": [
+   [
+    [
+     "Stem",
+     "Meaning",
+     "Example"
+    ],
+    [
+     "-mab",
+     "Monoclonal antibody",
+     "Rituximab (anti-CD20)"
+    ],
+    [
+     "-zumab",
+     "Humanized antibody",
+     "Tocilizumab (IL-6R)"
+    ],
+    [
+     "-ximab",
+     "Chimeric antibody",
+     "Infliximab (TNF-α)"
+    ],
+    [
+     "-umab",
+     "Fully human antibody",
+     "Adalimumab (TNF-α)"
+    ],
+    [
+     "-cept",
+     "Receptor fusion protein",
+     "Etanercept, abatacept"
+    ],
+    [
+     "-nib / -tinib",
+     "Kinase inhibitor",
+     "Tofacitinib (JAK)"
+    ],
+    [
+     "-coxib",
+     "Selective COX-2 inhibitor",
+     "Celecoxib"
+    ],
+    [
+     "-profen",
+     "Propionic-acid NSAID",
+     "Ibuprofen, naproxen"
+    ],
+    [
+     "-fenac",
+     "Acetic-acid NSAID",
+     "Diclofenac"
+    ],
+    [
+     "-oxicam",
+     "Oxicam NSAID",
+     "Meloxicam"
+    ]
+   ]
+  ],
+  "images": 0,
+  "figures": [],
+  "notes": "Teach students to read the stem first: it reveals mechanism class before the drug is recalled.\n\nSay: \"Read the stem and you know the class.\" -mab is a monoclonal antibody. -zumab is humanized, -ximab chimeric, -umab fully human. -cept is a receptor fusion protein. -nib/-tinib is a kinase inhibitor (for example tofacitinib, JAK). -coxib is COX-2 selective. -profen, -fenac and -oxicam are NSAID subclasses."
+ },
+ {
+  "slide": 61,
   "title": "Session 1 Recap — To Be Continued",
   "items": [
    {
@@ -2272,14 +5424,6 @@
     "size": 28.0
    },
    {
-    "text": "Musculoskeletal pain is driven by inflammatory mediators (prostaglandins, bradykinin, histamine, cytokines) — NSAIDs and corticosteroids intervene at different points along this cascade.",
-    "level": 0,
-    "emphasis": [],
-    "md": "Musculoskeletal pain is driven by inflammatory mediators (prostaglandins, bradykinin, histamine, cytokines) — NSAIDs and corticosteroids intervene at different points along this cascade.",
-    "heading": true,
-    "size": 16.5
-   },
-   {
     "text": "1",
     "level": 0,
     "emphasis": [],
@@ -2288,10 +5432,10 @@
     "size": 20.0
    },
    {
-    "text": "Acetaminophen treats pain and fever but is not a reliable anti-inflammatory agent; its overdose toxicity is mediated by NAPQI accumulation.",
+    "text": "Musculoskeletal pain is driven by inflammatory mediators (prostaglandins, bradykinin, histamine, cytokines) — NSAIDs and corticosteroids intervene at different points along this cascade.",
     "level": 0,
     "emphasis": [],
-    "md": "Acetaminophen treats pain and fever but is not a reliable anti-inflammatory agent; its overdose toxicity is mediated by NAPQI accumulation.",
+    "md": "Musculoskeletal pain is driven by inflammatory mediators (prostaglandins, bradykinin, histamine, cytokines) — NSAIDs and corticosteroids intervene at different points along this cascade.",
     "heading": true,
     "size": 16.5
    },
@@ -2304,10 +5448,10 @@
     "size": 20.0
    },
    {
-    "text": "NSAIDs are effective but carry real GI, renal, and cardiovascular risk; celecoxib trades GI risk for cardiovascular risk.",
+    "text": "Acetaminophen treats pain and fever but is not a reliable anti-inflammatory agent; its overdose toxicity is mediated by NAPQI accumulation.",
     "level": 0,
     "emphasis": [],
-    "md": "NSAIDs are effective but carry real GI, renal, and cardiovascular risk; celecoxib trades GI risk for cardiovascular risk.",
+    "md": "Acetaminophen treats pain and fever but is not a reliable anti-inflammatory agent; its overdose toxicity is mediated by NAPQI accumulation.",
     "heading": true,
     "size": 16.5
    },
@@ -2320,10 +5464,10 @@
     "size": 20.0
    },
    {
-    "text": "DMARDs (conventional and biologic — methotrexate, adalimumab, etanercept, infliximab, tocilizumab, rituximab, abatacept) modify RA’s disease course rather than only masking symptoms.",
+    "text": "NSAIDs are effective but carry real GI, renal, and cardiovascular risk; celecoxib trades GI risk for cardiovascular risk.",
     "level": 0,
     "emphasis": [],
-    "md": "DMARDs (conventional and biologic — methotrexate, adalimumab, etanercept, infliximab, tocilizumab, rituximab, abatacept) modify RA’s disease course rather than only masking symptoms.",
+    "md": "NSAIDs are effective but carry real GI, renal, and cardiovascular risk; celecoxib trades GI risk for cardiovascular risk.",
     "heading": true,
     "size": 16.5
    },
@@ -2336,10 +5480,10 @@
     "size": 20.0
    },
    {
-    "text": "Session 2 (Thursday, October 29) continues with gout, skeletal muscle relaxants, bone pharmacology, and the cumulative Lecture Recall Quiz.",
+    "text": "DMARDs (conventional and biologic — methotrexate, adalimumab, etanercept, infliximab, tocilizumab, rituximab, abatacept) modify RA’s disease course rather than only masking symptoms.",
     "level": 0,
     "emphasis": [],
-    "md": "Session 2 (Thursday, October 29) continues with gout, skeletal muscle relaxants, bone pharmacology, and the cumulative Lecture Recall Quiz.",
+    "md": "DMARDs (conventional and biologic — methotrexate, adalimumab, etanercept, infliximab, tocilizumab, rituximab, abatacept) modify RA’s disease course rather than only masking symptoms.",
     "heading": true,
     "size": 16.5
    },
@@ -2350,15 +5494,23 @@
     "md": "5",
     "heading": true,
     "size": 20.0
+   },
+   {
+    "text": "Session 2 (Thursday, October 29) continues with gout, skeletal muscle relaxants, bone pharmacology, and the cumulative Lecture Recall Quiz.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Session 2 (Thursday, October 29) continues with gout, skeletal muscle relaxants, bone pharmacology, and the cumulative Lecture Recall Quiz.",
+    "heading": true,
+    "size": 16.5
    }
   ],
   "tables": [],
   "images": 0,
   "figures": [],
-  "notes": "Close Session 1 by previewing Session 2 explicitly — students should leave knowing pain, acetaminophen, NSAIDs, and DMARDs are complete, and that gout, muscle relaxants, and bone pharmacology pick up first next time."
+  "notes": "Close Session 1 by previewing Session 2 explicitly — students should leave knowing pain, acetaminophen, NSAIDs, and DMARDs are complete, and that gout, muscle relaxants, and bone pharmacology pick up first next time.\n\nRecap: walk the five points.\n\nSay: \"Next time, Thursday October 29: gout, muscle relaxants, bone pharmacology, and the cumulative recall quiz.\"\n\nFive points to repeat if time runs short:\n\n1. Prostaglandins drive inflammatory pain, and COX makes them.\n\n2. Acetaminophen is central, with no real anti-inflammatory effect. Overdose means NAPQI, and the antidote is NAC.\n\n3. COX-1 protects the stomach, platelets and kidney. Nonselective NSAIDs block both isoforms.\n\n4. Celecoxib cuts GI risk but raises cardiovascular risk, and does not spare the kidney.\n\n5. DMARDs change disease. Methotrexate is weekly, and screen for TB and hepatitis before biologics."
  },
  {
-  "slide": 32,
+  "slide": 62,
   "title": "Image Attribution",
   "items": [
    {
@@ -2378,7 +5530,7 @@
     "size": 28.0
    },
    {
-    "text": "●  Original figures in this deck: Figures 1–3 (The Arachidonic Acid Pathway: Where Analgesics Act; Nonselective NSAIDs vs. COX-2 Selective Inhibition; Biologic DMARDs: Where Each Class Intercepts the Immune Cascade) were generated by the course director using the AI tool Claude to illustrate standard, non-copyrighted pharmacologic concepts. They are original diagrams, not reproduced from Katzung’s Basic and Clinical Pharmacology or any other copyrighted source.",
+    "text": "●  Original figures in this deck: Figures 1–3 (The Arachidonic Acid Pathway: Where Analgesics Act; Nonselective NSAIDs vs. COX-2 Selective Inhibition; Biologic DMARDs: Where Each Class Intercepts the Immune Cascade) were generated by the course director using the AI tool Claude to illustrate standard, non-copyrighted pharmacologic concepts. The mechanism diagrams added for acetaminophen (including the Rumack-Matthew nomogram schematic), methotrexate and celecoxib, and the NSAID, COX-1 vs. COX-2, conventional DMARD, biologic DMARD and drug-name nomenclature diagrams, are also original illustrative diagrams, created with AI assistance for this course. Companion diagrams for inflammatory mediators, NSAID adverse effects, osteoarthritis vs. rheumatoid arthritis, osteoarthritis pharmacotherapy, disease-modifying drug concepts and DMARD immunosuppression are original illustrative diagrams created with AI assistance for this course as well. They are original diagrams, not reproduced from Katzung’s Basic and Clinical Pharmacology or any other copyrighted source.",
     "level": 0,
     "emphasis": [
      {
@@ -2389,7 +5541,7 @@
       ]
      }
     ],
-    "md": "**●  Original figures in this deck:** Figures 1–3 (The Arachidonic Acid Pathway: Where Analgesics Act; Nonselective NSAIDs vs. COX-2 Selective Inhibition; Biologic DMARDs: Where Each Class Intercepts the Immune Cascade) were generated by the course director using the AI tool Claude to illustrate standard, non-copyrighted pharmacologic concepts. They are original diagrams, not reproduced from Katzung’s Basic and Clinical Pharmacology or any other copyrighted source.",
+    "md": "**●  Original figures in this deck:** Figures 1–3 (The Arachidonic Acid Pathway: Where Analgesics Act; Nonselective NSAIDs vs. COX-2 Selective Inhibition; Biologic DMARDs: Where Each Class Intercepts the Immune Cascade) were generated by the course director using the AI tool Claude to illustrate standard, non-copyrighted pharmacologic concepts. The mechanism diagrams added for acetaminophen (including the Rumack-Matthew nomogram schematic), methotrexate and celecoxib, and the NSAID, COX-1 vs. COX-2, conventional DMARD, biologic DMARD and drug-name nomenclature diagrams, are also original illustrative diagrams, created with AI assistance for this course. Companion diagrams for inflammatory mediators, NSAID adverse effects, osteoarthritis vs. rheumatoid arthritis, osteoarthritis pharmacotherapy, disease-modifying drug concepts and DMARD immunosuppression are original illustrative diagrams created with AI assistance for this course as well. They are original diagrams, not reproduced from Katzung’s Basic and Clinical Pharmacology or any other copyrighted source.",
     "heading": false,
     "size": 16.0
    },
