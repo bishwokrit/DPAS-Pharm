@@ -12,7 +12,9 @@
   // shared defs: a soft shadow for handles, an arrowhead, and a fading fill for each series color
   const DEFS = () => `<defs><filter id="vzSh" x="-50%" y="-50%" width="200%" height="200%"><feDropShadow dx="0" dy="1.5" stdDeviation="2" flood-color="#000" flood-opacity=".22"/></filter>
     <marker id="vzA" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="9" markerHeight="9" markerUnits="userSpaceOnUse" orient="auto"><path d="M1,1L9,5L1,9" fill="none" stroke="${C.ink}" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></marker>
-    <linearGradient id="vzSheen" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity=".16"/><stop offset=".55" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".08"/></linearGradient>
+    <linearGradient id="vzGloss" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".30"/><stop offset=".45" stop-color="#fff" stop-opacity=".06"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+    <filter id="vzBarSh" x="-20%" y="-10%" width="140%" height="130%"><feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000" flood-opacity=".12"/></filter>
+    <filter id="vzSoft" x="-20%" y="-30%" width="140%" height="170%"><feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#000" flood-opacity=".09"/></filter>
     ${["teal", "coral", "amber", "blue"].map((k) => `<linearGradient id="vzF-${k}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${C[k]}" stop-opacity=".22"/><stop offset="1" stop-color="${C[k]}" stop-opacity="0"/></linearGradient>`).join("")}</defs>`;
   const sx = (v, a, b) => L + ((v - a) / (b - a)) * (R - L), sy = (v, a, b) => B - ((v - a) / (b - a)) * (B - T);
   const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
@@ -25,12 +27,11 @@
     <line x1="${L}" x2="${R}" y1="${B}" y2="${B}" stroke="${C.ink}" stroke-opacity=".45"/>
     ${xl ? `<text x="${R}" y="${H - 2}" text-anchor="end" class="vz-lab">${xl}</text>` : ""}${yl ? `<text x="${L - 8}" y="${T - 16}" text-anchor="start" class="vz-lab">${yl}</text>` : ""}</g>`;
   const dot = (x, y, col, r = 7) => `<circle cx="${x}" cy="${y}" r="${r + 9}" fill="${col}" opacity=".12"/><circle cx="${x}" cy="${y}" r="${r}" fill="${C.bg}" stroke="${col}" stroke-width="3" filter="url(#vzSh)" class="vz-dot"/>`;
-  // a slim extruded column: front face (with a soft sheen), a lit top face and a shaded side face; depth scales with width
+  // a rounded column with a soft top-lit sheen and a quiet shadow under it
   const bar = (x, y, w, h, col) => {
     if (h <= 0) return "";
-    const d = Math.min(10, w * 0.11), e = d * 0.62, side = `M${x + w},${y}L${x + w + d},${y - e}V${y + h - e}L${x + w},${y + h}Z`, top = `M${x},${y}L${x + d},${y - e}H${x + w + d}L${x + w},${y}Z`;
-    return `<path d="${side}" fill="${col}"/><path d="${side}" fill="#000" opacity=".26"/><path d="${top}" fill="${col}"/><path d="${top}" fill="#fff" opacity=".38"/>` +
-      `<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${col}"/><rect x="${x}" y="${y}" width="${w}" height="${h}" fill="url(#vzSheen)"/>`;
+    const r = Math.min(10, w * 0.14, h), d = `M${x},${y + h}V${y + r}Q${x},${y} ${x + r},${y}H${x + w - r}Q${x + w},${y} ${x + w},${y + r}V${y + h}Z`;
+    return `<path d="${d}" fill="${col}" filter="url(#vzBarSh)"/><path d="${d}" fill="url(#vzGloss)"/>`;
   };
   const area = (d, col) => `<path d="${d}L${R},${B}L${L},${B}Z" fill="url(#vzF-${col})"/>`;  // soft fill under a curve that spans the plot
   const tag = (x, y, txt, col, anchor = "middle") => `<text x="${x}" y="${y}" text-anchor="${anchor}" class="vz-tag" fill="${col}">${txt}</text>`;
@@ -118,7 +119,7 @@
         if (held) return flat();
         const r = svg.getBoundingClientRect(), dx = (e.clientX - r.left) / r.width - 0.5, dy = (e.clientY - r.top) / r.height - 0.5;
         if (Math.abs(dx) > 0.6 || Math.abs(dy) > 0.6) return flat();
-        svg.style.setProperty("--tilt", `rotateX(${(-dy * 4).toFixed(2)}deg) rotateY(${(dx * 5).toFixed(2)}deg)`);
+        svg.style.setProperty("--tilt", `rotateX(${(-dy * 2).toFixed(2)}deg) rotateY(${(dx * 2.5).toFixed(2)}deg)`);
       });
       el.addEventListener("pointerleave", flat); svg.addEventListener("pointerdown", flat);
     }
@@ -269,7 +270,7 @@
         `<rect x="${L}" y="${y(160)}" width="${R - L}" height="${y(60) - y(160)}" fill="${C.sage}" opacity=".1"/>${tag(R - 4, y(132), "therapeutic", C.sage, "end")}${tag(R - 4, y(132) + 15, "window", C.sage, "end")}
         ${tag(R - 4, y(160) - 6, "toxicity risk ↑", C.coral, "end")}${tag(R - 4, y(60) + 16, "too low ↓", C.blue, "end")}
         <line x1="${L}" x2="${R}" y1="${y(100)}" y2="${y(100)}" stroke="${C.ink}" stroke-dasharray="2 4"/>` +
-        v.map((p, i) => { const cx = L + 70 + i * 135; return `<g opacity="${(modeNow === "inh" && i === 2) || (modeNow === "ind" && i === 1) ? 0.25 : 1}">${bar(cx - 46, y(p), 92, B - y(p), cols[i])}</g>${tag(cx, y(p) - 14, pct(p), C.deep)}<text x="${cx}" y="${B + 19}" text-anchor="middle" class="vz-tk">${names[i]}</text>`; }).join("");
+        v.map((p, i) => { const cx = L + 70 + i * 135; return `<g opacity="${(modeNow === "inh" && i === 2) || (modeNow === "ind" && i === 1) ? 0.25 : 1}">${bar(cx - 46, y(p), 92, B - y(p), cols[i])}</g>${tag(cx, y(p) - 9, pct(p), C.deep)}<text x="${cx}" y="${B + 19}" text-anchor="middle" class="vz-tk">${names[i]}</text>`; }).join("");
     }
     function paint() { w.el.querySelector("svg").innerHTML = DEFS() + bars(shown); }
     return w;
@@ -397,7 +398,7 @@
         const ticks = Array.from({ length: Math.round(max / tick) + 1 }, (_, k) => k * tick).map((v) => [f1(v) + (cfg.unit === "%" ? "%" : ""), y(v)]);
         return {
           svg: axes("", cfg.yLabel || "", [], ticks) + (cfg.ref != null ? `<line x1="${L}" x2="${R}" y1="${y(cfg.ref)}" y2="${y(cfg.ref)}" stroke="${C.ink}" stroke-dasharray="2 4"/>` : "") +
-            bars.map((b, i) => { const cx = L + step * (i + 0.5); return `<g opacity="${sel < 0 || sel === i ? 1 : 0.35}">${bar(cx - bw / 2, y(b.value), bw, B - y(b.value), colOf(b, i))}${tag(cx, y(b.value) - 14, `${f1(b.value)}${cfg.unit || ""}`, C.deep)}</g><text x="${cx}" y="${B + 19}" text-anchor="middle" class="vz-tk">${(step < 170 ? b.label.split(" · ") : [b.label]).map((t, k) => `<tspan x="${cx}" dy="${k ? 1.15 : 0}em">${t}</tspan>`).join("")}</text>`; }).join(""),
+            bars.map((b, i) => { const cx = L + step * (i + 0.5); return `<g opacity="${sel < 0 || sel === i ? 1 : 0.35}">${bar(cx - bw / 2, y(b.value), bw, B - y(b.value), colOf(b, i))}${tag(cx, y(b.value) - 9, `${f1(b.value)}${cfg.unit || ""}`, C.deep)}</g><text x="${cx}" y="${B + 19}" text-anchor="middle" class="vz-tk">${(step < 170 ? b.label.split(" · ") : [b.label]).map((t, k) => `<tspan x="${cx}" dy="${k ? 1.15 : 0}em">${t}</tspan>`).join("")}</text>`; }).join(""),
           read: sel >= 0 && bars[sel] ? `<b>${bars[sel].label}: ${f1(bars[sel].value)}${cfg.unit || ""}.</b> ${bars[sel].note || ""}` : (cfg.read || "Tap a bar, or use the buttons, to see what each value means."),
         };
       },
@@ -417,35 +418,59 @@
       for (let k = 0; k < N.length; k++) E.forEach(([a, b]) => (rank[b] = Math.max(rank[b], rank[a] + 1)));
       const rows = [];
       N.forEach((n) => (rows[rank[n.id]] ||= []).push(n.id));
-      const GAP = 44, PAD = 14;
+      const GAP = 74, PAD = 14;
       rows.forEach((ids, r) => {
         const w = (W - 2 * PAD - (ids.length - 1) * 24) / ids.length;
         ids.forEach((id, j) => Object.assign(by[id], { x: PAD + j * (w + 24), y: PAD + r * (NH + GAP), w }));
       });
       h = 2 * PAD + rows.length * (NH + GAP) - GAP;
     }
-    const ctr = (n) => [n.x + n.w / 2, n.y + NH / 2];
-    // where the line from a box's center toward (tx, ty) leaves the box
-    const rim = (n, tx, ty) => { const [cx, cy] = ctr(n), dx = tx - cx, dy = ty - cy, t = Math.min(dx ? (n.w / 2 + 4) / Math.abs(dx) : 1e9, dy ? (NH / 2 + 4) / Math.abs(dy) : 1e9); return [cx + dx * t, cy + dy * t]; };
-    const cross = (x, y) => { const k = R0 * 0.38; return `<circle cx="${x}" cy="${y}" r="${R0}" fill="${C.coral}" filter="url(#vzSh)"/><path d="M${x - k},${y - k}L${x + k},${y + k}M${x + k},${y - k}L${x - k},${y + k}" stroke="${C.bg}" stroke-width="${R0 / 5}" stroke-linecap="round"/>`; };
+    const ctr = (n) => [n.x + n.w / 2, n.y + NH / 2], gs = narrow ? 1.6 : 1;
+    // small line-art glyphs, drawn in the node's color: what kind of thing each step is
+    const GLYPH = {
+      cell: (x, y, c) => `<circle cx="${x}" cy="${y}" r="${11 * gs}" fill="${c}" fill-opacity=".18" stroke="${c}" stroke-width="${1.5 * gs}"/><circle cx="${x + 3 * gs}" cy="${y - 2 * gs}" r="${4 * gs}" fill="${c}" fill-opacity=".7"/>`,
+      membrane: (x, y, c) => [-8, -4, 0, 4, 8].map((k) => `<circle cx="${x + k * gs}" cy="${y - 6 * gs}" r="${2.1 * gs}" fill="${c}"/><circle cx="${x + k * gs}" cy="${y + 6 * gs}" r="${2.1 * gs}" fill="${c}"/><path d="M${x + k * gs},${y - 4 * gs}v${2.6 * gs}M${x + k * gs},${y + 4 * gs}v${-2.6 * gs}" stroke="${c}" stroke-width="${1.1 * gs}" stroke-linecap="round"/>`).join(""),
+      enzyme: (x, y, c) => { const r = 11 * gs; return `<path d="M${x},${y}L${x + r * 0.87},${y - r * 0.5}A${r},${r} 0 1 0 ${x + r * 0.87},${y + r * 0.5}Z" fill="${c}" fill-opacity=".22" stroke="${c}" stroke-width="${1.5 * gs}" stroke-linejoin="round"/>`; },
+      molecule: (x, y, c) => `<path d="M${x - 7 * gs},${y + 4 * gs}L${x},${y - 5 * gs}L${x + 7 * gs},${y + 4 * gs}" fill="none" stroke="${c}" stroke-width="${1.3 * gs}"/>` + [[-7, 4], [0, -5], [7, 4]].map(([a, b2]) => `<circle cx="${x + a * gs}" cy="${y + b2 * gs}" r="${3.2 * gs}" fill="${C.bg}" stroke="${c}" stroke-width="${1.5 * gs}"/>`).join(""),
+      signal: (x, y, c) => [[-6, -5, 2.6], [5, -6, 2], [7, 4, 2.8], [-4, 6, 2.2], [0, 0, 3]].map(([a, b2, r]) => `<circle cx="${x + a * gs}" cy="${y + b2 * gs}" r="${r * gs}" fill="${c}" fill-opacity=".75"/>`).join(""),
+      effect: (x, y, c) => `<circle cx="${x}" cy="${y}" r="${12 * gs}" fill="${c}" fill-opacity=".10"/><circle cx="${x}" cy="${y}" r="${8 * gs}" fill="${c}" fill-opacity=".2"/><circle cx="${x}" cy="${y}" r="${4.2 * gs}" fill="${c}"/>`,
+    };
+    // connectors leave from the facing side and bend smoothly when boxes don't line up
+    const link = (A, B2) => {
+      const [ax, ay] = ctr(A), [bx, by2] = ctr(B2), g = 7;
+      if (Math.abs(by2 - ay) < NH) {  // same row: across; different rows: down
+        const s1 = Math.sign(bx - ax), x1 = ax + s1 * (A.w / 2 + g), x2 = bx - s1 * (B2.w / 2 + g), m = (x1 + x2) / 2;
+        return [`M${x1},${ay}C${m},${ay} ${m},${by2} ${x2},${by2}`, [x1, ay], [m, ay], [m, by2], [x2, by2]];
+      }
+      const s1 = Math.sign(by2 - ay), y1 = ay + s1 * (NH / 2 + g), y2 = by2 - s1 * (NH / 2 + g), m = (y1 + y2) / 2;
+      return [`M${ax},${y1}C${ax},${m} ${bx},${m} ${bx},${y2}`, [ax, y1], [ax, m], [bx, m], [bx, y2]];
+    };
+    const mid = (p0, p1, p2, p3) => [(p0[0] + 3 * p1[0] + 3 * p2[0] + p3[0]) / 8, (p0[1] + 3 * p1[1] + 3 * p2[1] + p3[1]) / 8];
+    const cross = (x, y) => { const k = R0 * 0.36; return `<circle cx="${x}" cy="${y}" r="${R0}" fill="${C.coral}" filter="url(#vzSh)"/><path d="M${x - k},${y - k}L${x + k},${y + k}M${x + k},${y - k}L${x - k},${y + k}" stroke="${C.bg}" stroke-width="${R0 / 5}" stroke-linecap="round"/>`; };
     return shell(host, {
       label: `Interactive ${cfg.title || "pathway"}`, hint: "Pick a drug to see where it acts", point: cfg.point, h,
       steps: Dg.map((d, i) => ({ label: d.label, state: { sel: i } })), state: { sel: -1 },
       controls: "",
       draw(S) {
         const d = Dg[Math.round(S.sel)], off = new Set(d?.off || []), less = new Set(d?.less || []);
-        const op = (id) => (off.has(id) ? 0.22 : less.has(id) ? 0.55 : 1);
-        const lines = E.map(([a, b]) => {
-          const A = by[a], B2 = by[b], [x1, y1] = rim(A, ...ctr(B2)), [x2, y2] = rim(B2, ...ctr(A)), cut = d?.at === `${a}>${b}`;
-          return `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${C.ink}" stroke-width="2.4" marker-end="url(#vzA)" opacity="${cut || off.has(b) ? 0.3 : 0.9}" stroke-dasharray="${cut ? "4 5" : "none"}"/>` + (cut ? cross((x1 + x2) / 2, (y1 + y2) / 2) : "");
+        const op = (id) => (off.has(id) ? 0.28 : less.has(id) ? 0.6 : 1);
+        const lines = E.map(([a, b], i) => {
+          const A = by[a], B2 = by[b], [path, ...pts] = link(A, B2), cut = d?.at === `${a}>${b}`, quiet = cut || off.has(a) || off.has(b);
+          const col = C[A.col] || C.teal, [mx, my] = mid(...pts);
+          // molecules drifting along the arrow: they stop where a drug cuts the pathway
+          const flow = [0, 1, 2].map((k) => `<circle r="${(narrow ? 4.2 : 2.8)}" fill="${col}"><animateMotion dur="2.7s" begin="${(-k * 0.9 - i * 0.37).toFixed(2)}s" repeatCount="indefinite" path="${path}"/></circle>`).join("");
+          return `<path d="${path}" fill="none" stroke="${C.ink}" stroke-width="${narrow ? 2.6 : 1.9}" stroke-linecap="round" marker-end="url(#vzA)" opacity="${quiet ? 0.28 : 0.55}" stroke-dasharray="${cut ? "3 6" : "none"}"/>` +
+            `<g class="vz-flow" opacity="${quiet ? 0 : 0.85}">${flow}</g>` + (cut ? cross(mx, my) : "");
         }).join("");
         const boxes = N.map((n0) => {
-          const n = by[n0.id], ls = String(n.label).split("\n"), [cx, cy] = ctr(n);
-          const col = C[n.col] || C.teal, sunk = off.has(n.id) ? 4 : 0;
-          return `<g opacity="${op(n.id)}"><rect x="${n.x}" y="${n.y + 5}" width="${n.w}" height="${NH}" rx="13" fill="${col}" opacity="${sunk ? 0 : 0.32}"/>
-            <rect x="${n.x}" y="${n.y + sunk}" width="${n.w}" height="${NH}" rx="13" fill="${C.bg}"/><rect x="${n.x}" y="${n.y + sunk}" width="${n.w}" height="${NH}" rx="13" fill="${col}" fill-opacity=".14" stroke="${col}" stroke-width="1.6"/>
-            <text x="${cx}" y="${cy + sunk}" text-anchor="middle" class="vz-node${narrow ? " vz-node-lg" : ""}" fill="${C.deep}">${ls.map((l, i) => `<tspan x="${cx}" dy="${i ? 1.2 : 0.35 - (ls.length - 1) * 0.6}em">${l}</tspan>`).join("")}</text></g>` +
-            (d?.at === n.id ? cross(n.x + n.w - 6, n.y + 6) : "");
+          const n = by[n0.id], ls = String(n.label).split("\n"), col = C[n.col] || C.teal, rx = NH / 2;
+          const gw = n.glyph && GLYPH[n.glyph] ? 30 * gs : 0, tx = n.x + gw + (n.w - gw) / 2 + (gw ? 2 * gs : 0), cy = n.y + NH / 2;
+          return `<g opacity="${op(n.id)}"><rect x="${n.x}" y="${n.y}" width="${n.w}" height="${NH}" rx="${rx}" fill="${C.bg}" filter="url(#vzSoft)"/>
+            <rect x="${n.x}" y="${n.y}" width="${n.w}" height="${NH}" rx="${rx}" fill="${col}" fill-opacity=".12" stroke="${col}" stroke-opacity=".38" stroke-width="1"/>
+            <rect x="${n.x + 1}" y="${n.y + 1}" width="${n.w - 2}" height="${NH / 2}" rx="${rx - 1}" fill="url(#vzGloss)" opacity=".7"/>
+            ${gw ? GLYPH[n.glyph](n.x + 12 * gs + 11 * gs, cy, col) : ""}
+            <text x="${tx}" y="${cy}" text-anchor="middle" class="vz-node${narrow ? " vz-node-lg" : ""}" fill="${C.deep}">${ls.map((l, i) => `<tspan x="${tx}" dy="${i ? 1.2 : 0.35 - (ls.length - 1) * 0.6}em">${l}</tspan>`).join("")}</text></g>` +
+            (d?.at === n.id ? cross(n.x + n.w - rx * 0.35, n.y + 4) : "");
         }).join("");
         return { svg: lines + boxes, read: d ? `<b>${d.label}.</b> ${d.note || ""}` : (cfg.read || "Pick a drug to see where it interrupts the pathway.") };
       },

@@ -200,41 +200,46 @@
        {
         "id": "pl",
         "label": "Membrane\nphospholipids",
-        "x": 4,
+        "glyph": "membrane",
+        "x": 10,
         "y": 30,
-        "w": 146,
+        "w": 172,
         "col": "ink"
        },
        {
         "id": "aa",
         "label": "Arachidonic\nacid",
-        "x": 172,
+        "glyph": "molecule",
+        "x": 236,
         "y": 30,
-        "w": 120,
+        "w": 168,
         "col": "teal"
        },
        {
         "id": "cox",
         "label": "COX-1 / COX-2",
-        "x": 314,
+        "glyph": "enzyme",
+        "x": 462,
         "y": 30,
-        "w": 138,
+        "w": 168,
         "col": "blue"
        },
        {
         "id": "pg",
         "label": "Prostaglandins",
-        "x": 474,
-        "y": 30,
-        "w": 150,
+        "glyph": "molecule",
+        "x": 462,
+        "y": 170,
+        "w": 168,
         "col": "amber"
        },
        {
         "id": "out",
         "label": "Pain, inflammation,\nfever",
-        "x": 454,
+        "glyph": "effect",
+        "x": 176,
         "y": 170,
-        "w": 190,
+        "w": 224,
         "col": "coral"
        }
       ],
@@ -2016,6 +2021,7 @@
        {
         "id": "t",
         "label": "T-cell\nactivation",
+        "glyph": "cell",
         "x": 4,
         "y": 30,
         "w": 140,
@@ -2024,6 +2030,7 @@
        {
         "id": "cyt",
         "label": "Cytokine release\n(TNF-α, IL-6)",
+        "glyph": "signal",
         "x": 214,
         "y": 30,
         "w": 212,
@@ -2032,6 +2039,7 @@
        {
         "id": "b",
         "label": "B cells",
+        "glyph": "cell",
         "x": 496,
         "y": 30,
         "w": 128,
@@ -2040,6 +2048,7 @@
        {
         "id": "syn",
         "label": "Synovial inflammation\n& joint destruction",
+        "glyph": "effect",
         "x": 184,
         "y": 170,
         "w": 272,

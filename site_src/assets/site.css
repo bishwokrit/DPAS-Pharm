@@ -1802,3 +1802,4 @@ figure[data-viz-on] { container: vzfig / inline-size; }
 @media (prefers-reduced-motion: reduce) { .now-figs > .now-fig.fig-in { animation: none; } }
 .viz svg .vz-node-lg { font-size: 28px; letter-spacing: -.015em; }
 .now-figs > .now-fig { justify-content: center; }
+@media (prefers-reduced-motion: reduce) { .viz svg .vz-flow { display: none; } }
