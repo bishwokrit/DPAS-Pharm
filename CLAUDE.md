@@ -37,6 +37,8 @@ Never weaken a gate to make it pass. Fix the content. `audit_skip` / `READING_SK
 
 ## Never
 - Commit the textbook PDF, extracted textbook text, or raw Sketchy material (they live in the private `dpas-textbook` repo).
+- Publish the instructor's real quizzes or checkpoints. They live in `dpas-textbook/quizzes/` (private) with `STYLE.md`,
+  which describes how she writes questions; use it to shape our own quiz-prep questions, never copy them onto the site.
 - Edit the original course files in `inputs/` (they are fingerprinted).
 - Put school, course-director or instructor names on the site.
 - Use the owner's API key: AI chat runs on each student's own key, in their browser.
