@@ -155,16 +155,9 @@
     "U2-R5",
     "U2-R6",
     "U2-R7",
-    "U2-R8",
-    "U2-R9",
-    "U2-R10",
-    "U2-R11",
-    "U2-R12",
-    "U2-R13",
-    "U2-M",
-    "U2-S"
+    "U2-R8"
    ],
-   "study_guide_note": "Unit items not yet split between the two sessions; split when authoring."
+   "study_guide_note": "Unit 2 split by topic: Session 1 (pain, acetaminophen, NSAIDs, DMARDs) = U2-R1–R8; U2-M and U2-S span both sessions and are assigned to L04 (methotrexate and abatacept rows of U2-M and the NSAID part of U2-S are also taught in L03)."
   },
   {
    "id": "L04",
@@ -210,14 +203,6 @@
     }
    ],
    "study_guide": [
-    "U2-R1",
-    "U2-R2",
-    "U2-R3",
-    "U2-R4",
-    "U2-R5",
-    "U2-R6",
-    "U2-R7",
-    "U2-R8",
     "U2-R9",
     "U2-R10",
     "U2-R11",
@@ -226,7 +211,7 @@
     "U2-M",
     "U2-S"
    ],
-   "study_guide_note": "Unit items not yet split between the two sessions; split when authoring."
+   "study_guide_note": "Unit 2 split by topic: Session 2 (gout, muscle relaxants, bone) = U2-R9–R13, plus U2-M and U2-S, which span both sessions."
   },
   {
    "id": "L05",

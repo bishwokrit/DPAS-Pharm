@@ -382,6 +382,38 @@
     });
   };
 
+  // generic mechanism pathway: boxes joined by arrows; pick a drug to see where it cuts in and what goes quiet downstream.
+  // {"type": "pathway", "h": 300, "nodes": [{id, label ("\n" breaks), x, y, w, col}], "edges": [["a", "b"]],
+  //  "drugs": [{label, at: "a>b" (an arrow) or "a" (a box), off: [ids dimmed], less: [ids partly dimmed], note}], "point", "read"}
+  V.pathway = (host, cfg = {}) => {
+    const N = cfg.nodes || [], E = cfg.edges || [], Dg = cfg.drugs || [], h = cfg.h || 300, NH = 58;
+    const by = Object.fromEntries(N.map((n) => [n.id, { w: 130, col: "teal", ...n }]));
+    const ctr = (n) => [n.x + n.w / 2, n.y + NH / 2];
+    // where the line from a box's center toward (tx, ty) leaves the box
+    const rim = (n, tx, ty) => { const [cx, cy] = ctr(n), dx = tx - cx, dy = ty - cy, t = Math.min(dx ? (n.w / 2 + 4) / Math.abs(dx) : 1e9, dy ? (NH / 2 + 4) / Math.abs(dy) : 1e9); return [cx + dx * t, cy + dy * t]; };
+    const cross = (x, y) => `<circle cx="${x}" cy="${y}" r="13" fill="${C.coral}" filter="url(#vzSh)"/><path d="M${x - 5},${y - 5}L${x + 5},${y + 5}M${x + 5},${y - 5}L${x - 5},${y + 5}" stroke="${C.bg}" stroke-width="2.6" stroke-linecap="round"/>`;
+    return shell(host, {
+      label: `Interactive ${cfg.title || "pathway"}`, hint: "Pick a drug to see where it acts", point: cfg.point, h,
+      steps: Dg.map((d, i) => ({ label: d.label, state: { sel: i } })), state: { sel: -1 },
+      controls: `<div class="seg" data-k="sel"><button type="button" data-v="-1">No drug</button>${Dg.map((d, i) => `<button type="button" data-v="${i}">${d.label}</button>`).join("")}</div>`,
+      draw(S) {
+        const d = Dg[Math.round(S.sel)], off = new Set(d?.off || []), less = new Set(d?.less || []);
+        const op = (id) => (off.has(id) ? 0.22 : less.has(id) ? 0.55 : 1);
+        const lines = E.map(([a, b]) => {
+          const A = by[a], B2 = by[b], [x1, y1] = rim(A, ...ctr(B2)), [x2, y2] = rim(B2, ...ctr(A)), cut = d?.at === `${a}>${b}`;
+          return `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${C.ink}" stroke-width="2.4" marker-end="url(#vzA)" opacity="${cut || off.has(b) ? 0.3 : 0.9}" stroke-dasharray="${cut ? "4 5" : "none"}"/>` + (cut ? cross((x1 + x2) / 2, (y1 + y2) / 2) : "");
+        }).join("");
+        const boxes = N.map((n0) => {
+          const n = by[n0.id], ls = String(n.label).split("\n"), [cx, cy] = ctr(n);
+          return `<g opacity="${op(n.id)}"><rect x="${n.x}" y="${n.y}" width="${n.w}" height="${NH}" rx="13" fill="${C[n.col] || C.teal}" fill-opacity=".16" stroke="${C[n.col] || C.teal}" stroke-width="1.6"/>
+            <text x="${cx}" y="${cy}" text-anchor="middle" class="vz-node" fill="${C.deep}">${ls.map((l, i) => `<tspan x="${cx}" dy="${i ? 1.2 : 0.35 - (ls.length - 1) * 0.6}em">${l}</tspan>`).join("")}</text></g>` +
+            (d?.at === n.id ? cross(n.x + n.w - 4, n.y + 4) : "");
+        }).join("");
+        return { svg: lines + boxes, read: d ? `<b>${d.label}.</b> ${d.note || ""}` : (cfg.read || "Pick a drug to see where it interrupts the pathway.") };
+      },
+    });
+  };
+
   // ---- enhance every figure that has an interactive twin; the original image stays one tap away
   function enhance(fig) {
     const key = fig.dataset.viz, make = V[key];

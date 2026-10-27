@@ -22,10 +22,10 @@ EXAMS = {"U1": {"slug": "unit1", "title": "Unit 1 Practice Exam — Introduction
          "U1B": {"slug": "unit1b", "title": "Unit 1 Practice Exam B — Exam Conditions",
                  "short": "Unit 1 Practice Exam B (50 Q · 60 min)", "lectures": ["L01", "L02"], "seed": 1030, "unit": 1, "minutes": 60,
                  "about": "50 new questions at real exam length — slides, study guide, and the assigned Katzung chapters (textbook questions are cited by page). Best taken timed: 60 minutes."},
-         # Unit 2: the bank goes in work/exams/U2/bank_*.py once L03 and L04 are authored; ./run.sh new L03 builds it when it exists
+         # Unit 2: bank_a.py = Session 1 (L03); bank_b.py adds Session 2 (L04: gout, muscle relaxants, bone)
          "U2": {"slug": "unit2", "title": "Unit 2 Practice Exam — Musculoskeletal",
                 "short": "Unit 2 Practice Exam", "lectures": ["L03", "L04"], "seed": 1027, "unit": 2,
-                "about": "Built only from the Unit 2 slides, study guide, and assigned Katzung chapters."}}
+                "about": "Built only from the Unit 2 slides, study guide, and assigned Katzung chapters (textbook questions are cited by page). Session 1 questions now: pain, acetaminophen, NSAIDs, OA/RA, and DMARDs; Session 2 (gout, muscle relaxants, bone) is added after Thursday’s lecture."}}
 
 
 def load_bank(exam_id):
@@ -186,7 +186,10 @@ DRUG_SUFFIX = re.compile(r"\b[a-z]+(?:ol|ine|in|ide|pril|sartan|statin|mab|cilli
 def source_text(lectures):
     parts = []
     for lid in lectures:
-        for s in json.loads((ROOT / "work" / lid / "slides.json").read_text()):
+        sj = ROOT / "work" / lid / "slides.json"
+        if not sj.exists():
+            continue  # a unit's second lecture may not be uploaded yet
+        for s in json.loads(sj.read_text()):
             parts += [it["text"] for it in s["items"]] + [s.get("notes", "")] + [" ".join(map(str, r)) for t in s["tables"] for r in t]
     for lid in lectures:
         tb = ROOT / "work" / lid / "textbook.json"

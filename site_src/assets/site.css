@@ -1187,6 +1187,8 @@ figure.vz-orig { background: #fff; } figure.vz-orig figcaption { color: #3a3a3c;
 @keyframes vz-pop { from { opacity: 0; transform: scale(.4); } }
 .vz-tk, .vz-ax-t { font: 500 11.5px var(--font); fill: var(--text-2); }
 .vz-lab { font: 600 11.5px var(--font); fill: var(--text-2); letter-spacing: .01em; }
+.vz-node { font: 600 13px var(--font); letter-spacing: -.005em; }
+@container (max-width: 560px) { .vz-node { font-size: 19px; letter-spacing: -.015em; } }
 .vz-tag { font: 600 12.5px var(--font); paint-order: stroke; stroke: var(--surface); stroke-width: 4px; stroke-linejoin: round; }
 .vz-ctl { display: flex; flex-wrap: wrap; gap: 14px 32px; align-items: flex-end; margin: 16px 0 0; }
 .vz-ctl > .seg { flex: 0 0 auto; margin-right: calc(100% - 1px); }

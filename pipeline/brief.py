@@ -18,6 +18,7 @@ VIZ_TYPES = {
     "fill-empty": "time to fill and time to empty are the same",
     "adme": "absorption → distribution → metabolism → excretion map",
     "bars": "any bar chart; give {title, unit, bars:[{label, value, note}], steps:[{label, pick}]}",
+    "pathway": "mechanism flow (boxes + arrows) where each drug cuts in; give {title, h, nodes:[{id, label, x, y, w, col}], edges:[[a, b]], drugs:[{label, at, off, less, note}]}",
 }
 
 

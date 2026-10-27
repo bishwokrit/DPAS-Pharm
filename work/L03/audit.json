@@ -1,0 +1,409 @@
+{
+ "lecture": "L03",
+ "passed": true,
+ "units_checked": 2473,
+ "missing": [],
+ "uncited": [
+  {
+   "ref": "S20",
+   "text": "High-Yield Drug Interactions",
+   "kind": "slide"
+  }
+ ],
+ "emphasis_not_bold": [
+  {
+   "ref": "S26",
+   "text": "Methotrexate — the anchor drug for most RA regimens (next slide)",
+   "marks": [
+    "bold"
+   ]
+  }
+ ],
+ "skipped": [
+  {
+   "ref": "S1",
+   "text": "Diane S. Allen-Gipson, Ph.D., M.S., Course Director",
+   "kind": "slide",
+   "reason": "faculty identifier (site policy: no school or instructor identifiers)"
+  },
+  {
+   "ref": "S3",
+   "text": "Point students to the required and recommended texts for Unit 2 before diving into content.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; the readings are listed under About this lecture"
+  },
+  {
+   "ref": "S7",
+   "text": "This single arrow chain is the conceptual spine for the acetaminophen, NSAID, and corticosteroid sections that follow.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; the cascade is taught in the guide and Figure 1"
+  },
+  {
+   "ref": "S7",
+   "text": "The next slide builds this out further with the specific drug classes that intervene at each step.",
+   "kind": "speaker note",
+   "reason": "teaching instruction (pointer to the next slide)"
+  },
+  {
+   "ref": "S8",
+   "text": "This figure adds the drug layer on top of the previous flow slide: name the specific drug classes (corticosteroids vs.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; Figure 1 caption covers the content"
+  },
+  {
+   "ref": "S8",
+   "text": "NSAIDs/COX-2 inhibitors) and exactly where each one interrupts the cascade.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; Figure 1 caption covers the content"
+  },
+  {
+   "ref": "S18",
+   "text": "This is the graphical version of the trade-off just described in the celecoxib bullet slide — use it to reinforce that there is no risk-free NSAID choice, only a different risk profile.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; Figure 2 caption covers the content"
+  },
+  {
+   "ref": "S21",
+   "text": "Excellent exam-style vignette — ask students to name all three risk factors independently before revealing the answer.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; the case is rebuilt as a practice question"
+  },
+  {
+   "ref": "S28",
+   "text": "The next slide shows these same four drug classes as a mechanism diagram.",
+   "kind": "speaker note",
+   "reason": "teaching instruction (pointer to Figure 3)"
+  },
+  {
+   "ref": "S29",
+   "text": "This is the visual counterpart to the fourCard slide just shown — have students match each generic drug name to its box on this diagram before you reveal the answer.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; Figure 3 caption covers the content"
+  },
+  {
+   "ref": "S31",
+   "text": "Close Session 1 by previewing Session 2 explicitly — students should leave knowing pain, acetaminophen, NSAIDs, and DMARDs are complete, and that gout, muscle relaxants, and bone pharmacology pick up first next time.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; the recap is covered across the guide"
+  },
+  {
+   "ref": "S32",
+   "text": "This slide documents AI-tool use for original figure generation per university citation requirements.",
+   "kind": "speaker note",
+   "reason": "administrative note on AI-tool citation"
+  }
+ ],
+ "not_in_deck": [],
+ "not_in_notebooklm": [],
+ "layout_problems": [],
+ "question_issues": [],
+ "question_stats": {
+  "count": 23,
+  "letters": {
+   "A": 5,
+   "B": 4,
+   "C": 5,
+   "D": 4,
+   "E": 5
+  },
+  "vignette": 12,
+  "mechanism": 11
+ },
+ "thin_objectives": [
+  "SO6: Preview: gout, skeletal muscle relaxants, and bone pharmacology continue in Session 2 (Thursday, October 29). — 0 class(es), 0 facts (Preview only — taught in Session 2 (L04))"
+ ],
+ "textbook_unused": 2264,
+ "reading_missing": [],
+ "reading_skipped": [
+  {
+   "page": "499",
+   "heading": "Normal Neuromuscular Function",
+   "reason": "Taught in L04 (Session 2: skeletal muscle relaxants, Ch. 27)"
+  },
+  {
+   "page": "501",
+   "heading": "Blocking Drugs",
+   "reason": "Taught in L04 (Session 2: skeletal muscle relaxants, Ch. 27)"
+  },
+  {
+   "page": "503",
+   "heading": "Mechanism of Action",
+   "reason": "Taught in L04 (Session 2: skeletal muscle relaxants, Ch. 27)"
+  },
+  {
+   "page": "504",
+   "heading": "Skeletal Muscle Paralysis",
+   "reason": "Taught in L04 (Session 2: skeletal muscle relaxants, Ch. 27)"
+  },
+  {
+   "page": "507",
+   "heading": "Cardiovascular Effects",
+   "reason": "Taught in L04 (Session 2: skeletal muscle relaxants, Ch. 27)"
+  },
+  {
+   "page": "509",
+   "heading": "Neuromuscular Response",
+   "reason": "Taught in L04 (Session 2: skeletal muscle relaxants, Ch. 27)"
+  },
+  {
+   "page": "509",
+   "heading": "Neuromuscular Blockade",
+   "reason": "Taught in L04 (Session 2: skeletal muscle relaxants, Ch. 27)"
+  },
+  {
+   "page": "510",
+   "heading": "SPASMOLYTIC & ANTISPASMODIC DRUGS",
+   "reason": "Taught in L04 (Session 2: skeletal muscle relaxants, Ch. 27)"
+  },
+  {
+   "page": "512",
+   "heading": "TIZANIDINE",
+   "reason": "Taught in L04 (Session 2: skeletal muscle relaxants, Ch. 27)"
+  },
+  {
+   "page": "512",
+   "heading": "OTHER CENTRALLY ACTING SPASMOLYTIC DRUGS",
+   "reason": "Taught in L04 (Session 2: skeletal muscle relaxants, Ch. 27)"
+  },
+  {
+   "page": "513",
+   "heading": "BOTULINUM TOXIN",
+   "reason": "Taught in L04 (Session 2: skeletal muscle relaxants, Ch. 27)"
+  },
+  {
+   "page": "513",
+   "heading": "DANTROLENE",
+   "reason": "Taught in L04 (Session 2: skeletal muscle relaxants, Ch. 27)"
+  },
+  {
+   "page": "515",
+   "heading": "Gabarone, Gralise, Neurontin",
+   "reason": "Taught in L04 (Session 2: skeletal muscle relaxants, Ch. 27)"
+  },
+  {
+   "page": "515",
+   "heading": "Neuromuscular Blockers",
+   "reason": "Taught in L04 (Session 2: skeletal muscle relaxants, Ch. 27)"
+  },
+  {
+   "page": "695",
+   "heading": "ALLOPURINOL",
+   "reason": "Taught in L04 (Session 2: gout, end of Ch. 36)"
+  },
+  {
+   "page": "696",
+   "heading": "COLCHICINE",
+   "reason": "Taught in L04 (Session 2: gout, end of Ch. 36)"
+  },
+  {
+   "page": "697",
+   "heading": "FEBUXOSTAT",
+   "reason": "Taught in L04 (Session 2: gout, end of Ch. 36)"
+  },
+  {
+   "page": "697",
+   "heading": "PEGLOTICASE",
+   "reason": "Taught in L04 (Session 2: gout, end of Ch. 36)"
+  },
+  {
+   "page": "698",
+   "heading": "PROBENECID AND LESINURAD",
+   "reason": "Taught in L04 (Session 2: gout, end of Ch. 36)"
+  },
+  {
+   "page": "698",
+   "heading": "GLUCOCORTICOIDS IN GOUT",
+   "reason": "Taught in L04 (Session 2: gout, end of Ch. 36)"
+  },
+  {
+   "page": "698",
+   "heading": "INTERLEUKIN-1 INHIBITORS IN GOUT",
+   "reason": "Taught in L04 (Session 2: gout, end of Ch. 36)"
+  },
+  {
+   "page": "699",
+   "heading": "Disease-Modifying Antirheumatic Drugs & Glucocorticoids",
+   "reason": "Reference-list heading (citations only, no teaching content)"
+  },
+  {
+   "page": "811",
+   "heading": "BASIC PHARMACOLOGY",
+   "reason": "Taught in L04 (Session 2: bone pharmacology, Ch. 42)"
+  },
+  {
+   "page": "813",
+   "heading": "PRINCIPAL HORMONAL REGULATORS OF BONE MINERAL HOMEOSTASIS PARATHYROID HORMONE",
+   "reason": "Taught in L04 (Session 2: bone pharmacology, Ch. 42)"
+  },
+  {
+   "page": "816",
+   "heading": "FIBROBLAST GROWTH FACTOR 23",
+   "reason": "Taught in L04 (Session 2: bone pharmacology, Ch. 42)"
+  },
+  {
+   "page": "817",
+   "heading": "SECONDARY HORMONAL REGULATORS OF BONE MINERAL HOMEOSTASIS",
+   "reason": "Taught in L04 (Session 2: bone pharmacology, Ch. 42)"
+  },
+  {
+   "page": "817",
+   "heading": "CALCITONIN",
+   "reason": "Taught in L04 (Session 2: bone pharmacology, Ch. 42)"
+  },
+  {
+   "page": "818",
+   "heading": "GLUCOCORTICOIDS",
+   "reason": "Taught in L04 (Session 2: bone pharmacology, Ch. 42)"
+  },
+  {
+   "page": "818",
+   "heading": "ESTROGENS",
+   "reason": "Taught in L04 (Session 2: bone pharmacology, Ch. 42)"
+  },
+  {
+   "page": "818",
+   "heading": "Therapies for Osteoporosis",
+   "reason": "Taught in L04 (Session 2: bone pharmacology, Ch. 42)"
+  },
+  {
+   "page": "819",
+   "heading": "NONHORMONAL AGENTS AFFECTING BONE MINERAL HOMEOSTASIS BISPHOSPHONATES",
+   "reason": "Taught in L04 (Session 2: bone pharmacology, Ch. 42)"
+  },
+  {
+   "page": "820",
+   "heading": "DENOSUMAB",
+   "reason": "Taught in L04 (Session 2: bone pharmacology, Ch. 42)"
+  },
+  {
+   "page": "820",
+   "heading": "SCLEROSTIN ANTIBODIES",
+   "reason": "Taught in L04 (Session 2: bone pharmacology, Ch. 42)"
+  },
+  {
+   "page": "820",
+   "heading": "CALCIMIMETICS",
+   "reason": "Taught in L04 (Session 2: bone pharmacology, Ch. 42)"
+  },
+  {
+   "page": "821",
+   "heading": "THIAZIDE DIURETICS",
+   "reason": "Taught in L04 (Session 2: bone pharmacology, Ch. 42)"
+  },
+  {
+   "page": "821",
+   "heading": "FLUORIDE",
+   "reason": "Taught in L04 (Session 2: bone pharmacology, Ch. 42)"
+  },
+  {
+   "page": "821",
+   "heading": "STRONTIUM RANELATE",
+   "reason": "Taught in L04 (Session 2: bone pharmacology, Ch. 42)"
+  },
+  {
+   "page": "821",
+   "heading": "CLINICAL PHARMACOLOGY",
+   "reason": "Taught in L04 (Session 2: bone pharmacology, Ch. 42)"
+  },
+  {
+   "page": "822",
+   "heading": "ABNORMAL SERUM CALCIUM & PHOSPHATE LEVELS HYPERCALCEMIA",
+   "reason": "Taught in L04 (Session 2: bone pharmacology, Ch. 42)"
+  },
+  {
+   "page": "822",
+   "heading": "Saline Diuresis",
+   "reason": "Taught in L04 (Session 2: bone pharmacology, Ch. 42)"
+  },
+  {
+   "page": "822",
+   "heading": "Gallium Nitrate",
+   "reason": "Taught in L04 (Session 2: bone pharmacology, Ch. 42)"
+  },
+  {
+   "page": "823",
+   "heading": "HYPOCALCEMIA",
+   "reason": "Taught in L04 (Session 2: bone pharmacology, Ch. 42)"
+  },
+  {
+   "page": "823",
+   "heading": "HYPERPHOSPHATEMIA",
+   "reason": "Taught in L04 (Session 2: bone pharmacology, Ch. 42)"
+  },
+  {
+   "page": "824",
+   "heading": "HYPOPHOSPHATEMIA",
+   "reason": "Taught in L04 (Session 2: bone pharmacology, Ch. 42)"
+  },
+  {
+   "page": "824",
+   "heading": "SPECIFIC DISORDERS INVOLVING BONE MINERAL–REGULATING HORMONES PRIMARY HYPERPARATHYROIDISM",
+   "reason": "Taught in L04 (Session 2: bone pharmacology, Ch. 42)"
+  },
+  {
+   "page": "824",
+   "heading": "HYPOPARATHYROIDISM",
+   "reason": "Taught in L04 (Session 2: bone pharmacology, Ch. 42)"
+  },
+  {
+   "page": "825",
+   "heading": "NUTRITIONAL VITAMIN D DEFICIENCY OR INSUFFICIENCY",
+   "reason": "Taught in L04 (Session 2: bone pharmacology, Ch. 42)"
+  },
+  {
+   "page": "825",
+   "heading": "CHRONIC KIDNEY DISEASE",
+   "reason": "Taught in L04 (Session 2: bone pharmacology, Ch. 42)"
+  },
+  {
+   "page": "826",
+   "heading": "Vitamin D Preparations",
+   "reason": "Taught in L04 (Session 2: bone pharmacology, Ch. 42)"
+  },
+  {
+   "page": "826",
+   "heading": "INTESTINAL OSTEODYSTROPHY",
+   "reason": "Taught in L04 (Session 2: bone pharmacology, Ch. 42)"
+  },
+  {
+   "page": "826",
+   "heading": "OSTEOPOROSIS",
+   "reason": "Taught in L04 (Session 2: bone pharmacology, Ch. 42)"
+  },
+  {
+   "page": "828",
+   "heading": "IDIOPATHIC INFANTILE HYPERCALCEMIA",
+   "reason": "Taught in L04 (Session 2: bone pharmacology, Ch. 42)"
+  },
+  {
+   "page": "828",
+   "heading": "NEPHROTIC SYNDROME",
+   "reason": "Taught in L04 (Session 2: bone pharmacology, Ch. 42)"
+  },
+  {
+   "page": "829",
+   "heading": "IDIOPATHIC HYPERCALCIURIA",
+   "reason": "Taught in L04 (Session 2: bone pharmacology, Ch. 42)"
+  },
+  {
+   "page": "829",
+   "heading": "OTHER DISORDERS OF BONE MINERAL HOMEOSTASIS PAGET DISEASE OF BONE",
+   "reason": "Taught in L04 (Session 2: bone pharmacology, Ch. 42)"
+  },
+  {
+   "page": "829",
+   "heading": "ENTERIC OXALURIA",
+   "reason": "Taught in L04 (Session 2: bone pharmacology, Ch. 42)"
+  },
+  {
+   "page": "830",
+   "heading": "SCLEROSTIN ANTIBODY",
+   "reason": "Taught in L04 (Session 2: bone pharmacology, Ch. 42)"
+  },
+  {
+   "page": "831",
+   "heading": "CALCIUM",
+   "reason": "Taught in L04 (Session 2: bone pharmacology, Ch. 42)"
+  }
+ ]
+}
