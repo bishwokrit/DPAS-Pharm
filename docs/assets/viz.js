@@ -53,6 +53,11 @@
     [...svg.children].forEach((c, i) => morph(c, t.children[i]));
   }
 
+  // each figure keeps its own gradient/filter/marker ids: with shared ids a hidden figure (home carousel) would own
+  // the definitions and the visible one would draw without them
+  let UID = 0;
+  const scope = (svg, markup) => { svg.dataset.uid ||= String(++UID); return markup.replace(/(id="|url\(#)vz/g, `$1v${svg.dataset.uid}z`); };
+
   const LEG = { teal: "--vz-1", coral: "--vz-2", amber: "--vz-3", blue: "--vz-4", sage: "--vz-5", ink: "--vz-ink" };
 
   // ---- widget shell: svg + controls + one plain-English readout; drag on the svg moves the main handle
@@ -77,7 +82,7 @@
       });
       el.querySelectorAll(".seg[data-k] button").forEach((b) => { const on = String(S[b.parentElement.dataset.k]) === b.dataset.v; b.classList.toggle("on", on); b.setAttribute("aria-pressed", on); });
       palette(el);
-      const out = spec.draw(S); patch(svg, DEFS() + out.svg); read.innerHTML = out.read;
+      const out = spec.draw(S); patch(svg, scope(svg, DEFS() + out.svg)); read.innerHTML = out.read;
     };
     // after 30 s without a touch, glide back to the original figure's values (or right away with Reset)
     let idle = 0, held = false, anim = 0;
@@ -272,7 +277,7 @@
         <line x1="${L}" x2="${R}" y1="${y(100)}" y2="${y(100)}" stroke="${C.ink}" stroke-dasharray="2 4"/>` +
         v.map((p, i) => { const cx = L + 70 + i * 135; return `<g opacity="${(modeNow === "inh" && i === 2) || (modeNow === "ind" && i === 1) ? 0.25 : 1}">${bar(cx - 46, y(p), 92, B - y(p), cols[i])}</g>${tag(cx, y(p) - 9, pct(p), C.deep)}<text x="${cx}" y="${B + 19}" text-anchor="middle" class="vz-tk">${names[i]}</text>`; }).join("");
     }
-    function paint() { w.el.querySelector("svg").innerHTML = DEFS() + bars(shown); }
+    function paint() { const svg = w.el.querySelector("svg"); svg.innerHTML = scope(svg, DEFS() + bars(shown)); }
     return w;
   };
 
