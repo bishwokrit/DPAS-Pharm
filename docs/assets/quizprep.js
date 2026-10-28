@@ -1,6 +1,6 @@
 // Quiz prep (Prepare page): the next in-class quiz, and a rehearsal in the same format as the real one
-// (10 questions, 10 minutes, results at the end), drawn from that unit's self-tests and practice exams and weighted
-// toward what you've missed or haven't seen. Rehearsal scores stay in this browser.
+// (10 questions, 4 options, 10 minutes, results at the end), drawn from that unit's self-tests and practice exams: mostly the
+// lectures' quick checks and study-guide points, then what you've missed or haven't seen. Rehearsal scores stay in this browser.
 (function () {
   const host = document.getElementById("qp-app"), dataEl = document.getElementById("qp-data");
   if (!host || !dataEl) return;
@@ -34,15 +34,27 @@
     }));
     return out;
   }
-  // missed first, then never seen, then the rest; shuffled within each group so every rehearsal differs
+  // Built like the in-class quizzes: mostly the lecture's own quick checks, then study-guide points, then your misses and
+  // what you haven't seen. Within each group: missed first, then never seen; shuffled so every rehearsal differs.
+  const shuffle = (a) => a.sort(() => Math.random() - 0.5);
   function pick(all) {
     const key = (q) => String(q.stem).replace(/<[^>]+>|\*\*/g, "").slice(0, 90);  // how the site's answer log names a question
-    const seen = new Set(store.get("act:log", []).map((a) => a.k)), shuffle = (a) => a.sort(() => Math.random() - 0.5);
-    const missed = all.filter((q) => q.lid && store.get(`miss:${q.lid}`, []).includes(q.raw));
-    const fresh = all.filter((q) => !missed.includes(q) && !seen.has(key(q)));
-    const rest = all.filter((q) => !missed.includes(q) && !fresh.includes(q));
-    const qs = [...shuffle(missed).slice(0, 4), ...shuffle(fresh), ...shuffle(rest)];
-    return [...new Map(qs.map((q) => [q.stem, q])).values()].slice(0, N);
+    const seen = new Set(store.get("act:log", []).map((a) => a.k));
+    const missed = (q) => q.lid && store.get(`miss:${q.lid}`, []).includes(q.raw);
+    const order = (qs) => [...shuffle(qs.filter(missed)), ...shuffle(qs.filter((q) => !missed(q) && !seen.has(key(q)))), ...shuffle(qs.filter((q) => !missed(q) && seen.has(key(q))))];
+    const check = all.filter((q) => /^c\d/.test(q.raw || "")), sg = all.filter((q) => !check.includes(q) && /\bSG\b/.test(q.src || ""));
+    const other = all.filter((q) => !check.includes(q) && !sg.includes(q));
+    const qs = [...order(check).slice(0, 6), ...order(sg).slice(0, 3), ...order(other), ...order(check).slice(6), ...order(sg).slice(3)];
+    return shuffle([...new Map(qs.map((q) => [q.stem, q])).values()].slice(0, N)).map(four);
+  }
+  // the in-class format has 4 options: keep the answer and three of the wrong ones, re-lettered A–D
+  function four(q) {
+    const ks = Object.keys(q.options || {});
+    if (ks.length <= 4) return q;
+    const wrong = shuffle(ks.filter((k) => k !== q.answer)).slice(0, 3), keep = ks.filter((k) => k === q.answer || wrong.includes(k));
+    const to = Object.fromEntries(keep.map((k, i) => [k, "ABCD"[i]]));
+    const re = (o) => o && Object.fromEntries(Object.entries(o).filter(([k]) => to[k]).map(([k, v]) => [to[k], v]));
+    return { ...q, options: re(q.options), answer: to[q.answer], whys: re(q.whys) };
   }
 
   function paint() {
@@ -58,7 +70,7 @@
       </div>
       <div class="qp-go card">
         <div class="tile-k">Rehearsal</div><h3>Same format, from Unit ${quiz.unit}</h3>
-        <p class="muted">${N} questions in ${MIN} minutes, results at the end. Leans toward questions you've missed or haven't seen yet.</p>
+        <p class="muted">${N} questions, 4 options each, ${MIN} minutes, results at the end. Built like the in-class quizzes: mostly the lectures' own quick checks and study-guide points, then what you've missed or haven't seen.</p>
         <div class="qp-row"><button class="btn" data-go ${lecs.length || exams.length ? "" : "disabled"}>Start a rehearsal →</button>
           ${log.length ? `<span class="small muted">Last: <b>${log[0].correct}/${log[0].total}</b> · best ${best}/${N} · ${log.length} done</span>` : `<span class="small muted">${lecs.length || exams.length ? "Takes ten minutes." : "Questions appear once this unit's lectures are up."}</span>`}</div>
         ${log.length > 1 ? `<div class="qp-spark" aria-label="Your recent rehearsal scores">${log.slice(0, 8).reverse().map((r) => `<i style="--h:${Math.max(0.08, r.correct / r.total)}" title="${r.correct}/${r.total} · ${esc(r.date)}"></i>`).join("")}</div>` : ""}

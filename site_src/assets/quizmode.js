@@ -71,7 +71,7 @@
           ${show ? explain(x, ch) : ""}
         </div></div>
         <div class="qm-bottom"><button class="qm-nav" data-prev ${st.i === 0 ? "disabled" : ""}>←</button>
-          <div class="qm-hint">${show || (ch && feedback === "end") ? "<kbd>Enter</kbd> / <kbd>→</kbd> next" : "<kbd>↑</kbd><kbd>↓</kbd> choose · <kbd>Enter</kbd> lock in · or <kbd>A</kbd>–<kbd>E</kbd>"}</div>
+          <div class="qm-hint">${show || (ch && feedback === "end") ? "<kbd>Enter</kbd> / <kbd>→</kbd> next" : `<kbd>↑</kbd><kbd>↓</kbd> choose · <kbd>Enter</kbd> lock in · or <kbd>A</kbd>–<kbd>${letters[letters.length - 1]}</kbd>`}</div>
           <button class="qm-nav primary" data-next>${st.i === questions.length - 1 ? (st.done ? "Debrief" : "Finish") : "→"}</button></div>`;
       el.querySelectorAll("[data-l]").forEach((b) => b.addEventListener("click", () => pick(b.dataset.l)));
       el.querySelector("[data-exit]").addEventListener("click", exit);
