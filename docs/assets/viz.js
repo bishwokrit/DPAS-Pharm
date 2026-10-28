@@ -559,6 +559,46 @@
     // with the original showing, the header stays so you can switch back
     fig.querySelector(".viz").after(Object.assign(document.createElement("div"), { className: "vz-back" }));
     fig.querySelector(".vz-back").append(Object.assign(document.createElement("button"), { type: "button", className: "vz-btn", textContent: "Back to interactive", onclick: () => t.click() }));
+    pager(fig);
+  }
+
+  // ---- lecture pages: move between a page's hands-on figures. Swipe right-to-left (or a two-finger trackpad swipe) for
+  // the next one, left-to-right for the previous; the "‹ 2 / 10 ›" control does the same. The home carousel has its own.
+  const pageFigs = () => [...document.querySelectorAll("figure[data-viz]")].filter((f) => !f.closest(".now-figs"));
+  function go(fig, d) {
+    const all = pageFigs(), next = all[(all.indexOf(fig) + d + all.length) % all.length];
+    if (!next || next === fig) return;
+    const pad = (parseFloat(getComputedStyle(document.documentElement).scrollPaddingTop) || 72) + 14;  // clear the sticky bars
+    const top = next.getBoundingClientRect().top + scrollY - Math.max(pad, (innerHeight - next.offsetHeight + pad) / 2);
+    window.dpasLenis?.scrollTo ? window.dpasLenis.scrollTo(top, { duration: 0.9 }) : scrollTo({ top, behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+    next.classList.remove("vz-arrive"); void next.offsetWidth; next.classList.add("vz-arrive");
+    setTimeout(() => next.classList.remove("vz-arrive"), 1400);
+  }
+  function pager(fig) {
+    if (fig.closest(".now-figs")) return;
+    const all = pageFigs();
+    if (all.length < 2) return;
+    const i = all.indexOf(fig), nav = document.createElement("div");
+    nav.className = "vz-pager";
+    nav.innerHTML = `<button type="button" class="vz-btn" aria-label="Previous figure">‹</button><span>${i + 1} / ${all.length}</span><button type="button" class="vz-btn" aria-label="Next figure">›</button>`;
+    const [prev, next] = nav.querySelectorAll("button");
+    prev.onclick = () => go(fig, -1); next.onclick = () => go(fig, 1);
+    fig.querySelector(".vz-top")?.insertBefore(nav, fig.querySelector(".vz-reset"));
+    const grabs = (t) => t.closest("input, .vz-ctl, button") || (t.closest(".viz svg") && !t.closest(".vz-static"));
+    let sx = null, sy = 0, st = 0;
+    fig.addEventListener("pointerdown", (e) => { if (e.pointerType === "mouse" || grabs(e.target)) { sx = null; return; } sx = e.clientX; sy = e.clientY; st = Date.now(); }, { passive: true });
+    fig.addEventListener("pointerup", (e) => {
+      if (sx === null) return;
+      const dx = e.clientX - sx, dy = e.clientY - sy; sx = null;
+      if (Math.abs(dx) > 45 && Math.abs(dx) > 1.6 * Math.abs(dy) && Date.now() - st < 800) go(fig, dx < 0 ? 1 : -1);
+    });
+    fig.addEventListener("pointercancel", () => (sx = null));
+    let wx = 0, wlock = 0;
+    fig.addEventListener("wheel", (e) => {
+      if (Math.abs(e.deltaX) <= Math.abs(e.deltaY) || Date.now() < wlock) return;
+      wx += e.deltaX;
+      if (Math.abs(wx) > 80) { const d = wx > 0 ? 1 : -1; wx = 0; wlock = Date.now() + 900; go(fig, d); }
+    }, { passive: true });
   }
   const io = "IntersectionObserver" in window ? new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { io.unobserve(e.target); enhance(e.target); } }), { rootMargin: "300px" }) : null;
   document.querySelectorAll("[data-viz]").forEach((f) => (io ? io.observe(f) : enhance(f)));

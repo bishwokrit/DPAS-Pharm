@@ -1808,3 +1808,13 @@ figure[data-viz-on] { container: vzfig / inline-size; }
 .viz svg .vz-node-lg { font-size: 28px; letter-spacing: -.015em; }
 .now-figs > .now-fig { justify-content: center; }
 @media (prefers-reduced-motion: reduce) { .viz svg .vz-flow { display: none; } }
+
+/* lecture pages: "‹ 2 / 10 ›" between a page's hands-on figures (swipe does the same); the figure you land on glows once */
+.vz-pager { display: inline-flex; align-items: center; gap: 2px; margin-left: auto; font: 500 12.5px var(--font); color: var(--text-2); font-variant-numeric: tabular-nums; }
+.vz-pager .vz-btn { width: 28px; height: 28px; padding: 0; display: grid; place-items: center; font-size: 16px; line-height: 1; }
+.vz-pager span { min-width: 44px; text-align: center; }
+.vz-top:has(.vz-pager) .vz-hint { flex: 0 1 auto; }
+figure[data-viz-on] { touch-action: pan-y; }
+figure.vz-arrive { animation: vz-arrive 1.3s cubic-bezier(.2,.8,.2,1); }
+@keyframes vz-arrive { 0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 0%, transparent), var(--shadow); } 30% { box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 35%, transparent), var(--shadow); } 100% { box-shadow: 0 0 0 0 transparent, var(--shadow); } }
+@media (prefers-reduced-motion: reduce) { figure.vz-arrive { animation: none; } }
