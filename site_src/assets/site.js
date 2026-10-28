@@ -289,13 +289,36 @@
     const figs = [...box.querySelectorAll(":scope > .now-fig")], dots = [...box.querySelectorAll(".now-dots button")];
     const wait = (+box.dataset.rotate || 120) * 1000;
     let cur = 0, idle = 0;
-    const show = (i) => {
+    const show = (i, dir = 1) => {
       cur = (i + figs.length) % figs.length;
-      figs.forEach((f, k) => { f.hidden = k !== cur; f.classList.toggle("fig-in", k === cur); });
+      figs.forEach((f, k) => { f.hidden = k !== cur; f.classList.remove("fig-in", "fig-in-r", "fig-in-l"); });
+      void figs[cur].offsetWidth;  // restart the entrance animation
+      figs[cur].classList.add(dir < 0 ? "fig-in-l" : "fig-in-r");
       dots.forEach((d, k) => d.setAttribute("aria-selected", k === cur ? "true" : "false"));
     };
     const arm = () => { clearTimeout(idle); idle = setTimeout(() => { if (document.hidden) return arm(); show(cur + 1); arm(); }, wait); };
-    dots.forEach((d, k) => d.addEventListener("click", () => { show(k); arm(); }));
+    dots.forEach((d, k) => d.addEventListener("click", () => { show(k, k < cur ? -1 : 1); arm(); }));
+    // swipe right-to-left for the next figure, left-to-right for the previous one (a drag that starts on a draggable
+    // chart or a slider still belongs to the chart); a two-finger trackpad swipe does the same on a laptop
+    const grabs = (t) => t.closest("input, .vz-ctl, button") || (t.closest(".viz svg") && !t.closest(".vz-static"));
+    let sx = null, sy = 0, st = 0;
+    box.addEventListener("pointerdown", (e) => { if (e.pointerType === "mouse" || grabs(e.target)) { sx = null; return; } sx = e.clientX; sy = e.clientY; st = Date.now(); }, { passive: true });
+    box.addEventListener("pointerup", (e) => {
+      if (sx === null) return;
+      const dx = e.clientX - sx, dy = e.clientY - sy; sx = null;
+      if (Math.abs(dx) > 45 && Math.abs(dx) > 1.6 * Math.abs(dy) && Date.now() - st < 800) { show(cur + (dx < 0 ? 1 : -1), dx < 0 ? 1 : -1); arm(); }
+    });
+    box.addEventListener("pointercancel", () => (sx = null));
+    let wx = 0, wlock = 0;
+    box.addEventListener("wheel", (e) => {
+      if (Math.abs(e.deltaX) <= Math.abs(e.deltaY) || Date.now() < wlock) return;
+      wx += e.deltaX;
+      if (Math.abs(wx) > 80) { const d = wx > 0 ? 1 : -1; wx = 0; wlock = Date.now() + 700; show(cur + d, d); arm(); }
+    }, { passive: true });
+    box.addEventListener("keydown", (e) => {
+      if (e.target.closest("input")) return;
+      if (e.key === "ArrowRight" || e.key === "ArrowLeft") { const d = e.key === "ArrowRight" ? 1 : -1; show(cur + d, d); arm(); }
+    });
     ["pointerdown", "pointermove", "keydown", "input", "wheel", "focusin"].forEach((ev) => box.addEventListener(ev, arm, { passive: true }));
     arm();
   });

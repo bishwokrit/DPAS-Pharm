@@ -1795,11 +1795,16 @@ figure[data-viz-on] { container: vzfig / inline-size; }
 .now-figs > .now-fig[hidden] { display: none; }
 .now-figs > .now-fig.fig-in { animation: fig-in .6s cubic-bezier(.2,.8,.2,1) both; }
 @keyframes fig-in { from { opacity: 0; transform: translateY(8px) scale(.99); } }
+.now-figs > .now-fig { touch-action: pan-y; }  /* vertical scrolling stays native; horizontal swipes switch figures */
+.now-figs > .now-fig.fig-in-r { animation: fig-in-r .5s cubic-bezier(.2,.8,.2,1) both; }
+.now-figs > .now-fig.fig-in-l { animation: fig-in-l .5s cubic-bezier(.2,.8,.2,1) both; }
+@keyframes fig-in-r { from { opacity: 0; transform: translateX(28px); } }
+@keyframes fig-in-l { from { opacity: 0; transform: translateX(-28px); } }
 .now-dots { display: flex; justify-content: center; gap: 8px; padding: 12px 0 2px; }
 .now-dots button { width: 7px; height: 7px; padding: 0; border: 0; border-radius: 99px; background: color-mix(in srgb, var(--text) 22%, transparent); cursor: pointer; transition: width .35s cubic-bezier(.2,.8,.2,1), background .35s; }
 .now-dots button[aria-selected="true"] { width: 22px; background: var(--accent); }
 .now-dots button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
-@media (prefers-reduced-motion: reduce) { .now-figs > .now-fig.fig-in { animation: none; } }
+@media (prefers-reduced-motion: reduce) { .now-figs > .now-fig.fig-in, .now-figs > .now-fig.fig-in-r, .now-figs > .now-fig.fig-in-l { animation: none; } }
 .viz svg .vz-node-lg { font-size: 28px; letter-spacing: -.015em; }
 .now-figs > .now-fig { justify-content: center; }
 @media (prefers-reduced-motion: reduce) { .viz svg .vz-flow { display: none; } }

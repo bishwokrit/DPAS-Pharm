@@ -113,7 +113,7 @@
     if (spec.drag) {
       let on = false;
       const move = (e) => { live(); const r = svg.getBoundingClientRect(); spec.drag(S, ((e.clientX - r.left) / r.width) * W, ((e.clientY - r.top) / r.height) * (spec.h || H), on === "start"); on = true; touch(); sync(); };
-      svg.addEventListener("pointerdown", (e) => { on = "start"; held = true; svg.setPointerCapture(e.pointerId); move(e); });
+      svg.addEventListener("pointerdown", (e) => { on = "start"; held = true; try { svg.setPointerCapture(e.pointerId); } catch { /* pointer already gone */ } move(e); });
       svg.addEventListener("pointermove", (e) => { if (on) move(e); });
       const up = () => { on = false; held = false; };
       svg.addEventListener("pointerup", up); svg.addEventListener("pointercancel", up);

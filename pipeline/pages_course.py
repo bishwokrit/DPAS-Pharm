@@ -191,7 +191,7 @@ def now_section(syl, built, sched):
         fig = "".join(f'<figure class="now-fig" {f["viz"]}{" hidden" if i else ""}><img src="{f["img"]}" alt="{html.escape(f["title"])}" loading="lazy">'
                       f'<a href="{f["href"]}">{md(f["title"])} →</a></figure>' for i, f in enumerate(figs))
         if len(figs) > 1:
-            fig = (f'<div class="now-figs" data-rotate="120">{fig}<div class="now-dots" role="tablist" aria-label="Figures from this lecture">'
+            fig = (f'<div class="now-figs" data-rotate="120" tabindex="0" aria-roledescription="carousel">{fig}<div class="now-dots" role="tablist" aria-label="Figures from this lecture: swipe or use the arrow keys to switch">'
                    + "".join(f'<button type="button" role="tab" aria-label="{html.escape(re.sub(r"[*_]", "", f["title"]))}"{" aria-selected=\"true\"" if not i else ""}></button>' for i, f in enumerate(figs))
                    + '</div></div>')
         panels.append(f"""<article class="now-panel" data-date="{b['date']}" hidden>
