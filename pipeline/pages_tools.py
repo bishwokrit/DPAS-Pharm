@@ -159,7 +159,9 @@ def drugs_page(built, exams):
 <p class="lede appear" style="--d:.12s">{len(data)} drugs from the lectures and assigned reading so far — each fact cited, every mention linked back to its lecture. It grows with every unit.</p></header>
 <section class="section" style="border-top:0;padding-top:0"><div class="wrap">
 <div class="dx-bar"><div class="dx-search">{SEARCH_ICON}<input id="dx-q" type="search" placeholder="Search drugs, classes, or facts…" autocomplete="off"></div>
-<div class="dx-tools"><button class="btn ghost small" id="dx-drill">Drill drug flashcards</button><button class="btn ghost small" id="dx-cmp" disabled>Compare (0/2)</button></div></div>
+<div class="dx-tools"><label class="dx-sort"><span>Sort</span><select id="dx-sort" aria-label="Sort drugs">
+<option value="az">A–Z</option><option value="za">Z–A</option><option value="class">Drug class</option><option value="unit">Unit (course order)</option>
+<option value="mentions">Most mentioned in lectures</option><option value="complete">Most complete card</option></select></label><button class="btn ghost small" id="dx-drill">Drill drug flashcards</button><button class="btn ghost small" id="dx-cmp" disabled>Compare (0/2)</button></div></div>
 <div class="dx-tags" id="dx-tags"><button class="sch-chip on" data-tag="">All</button>{"".join(f'<button class="sch-chip" data-tag="{html.escape(t)}">{html.escape(t)}</button>' for t in tags)}</div>
 <div class="dx-grid" id="dx-grid"></div><p class="muted" id="dx-empty" hidden>No drugs match. It may be <strong>not covered in materials</strong> yet.</p>
 </div></section>

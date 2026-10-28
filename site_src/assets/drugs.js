@@ -24,16 +24,52 @@
       ${SECS.map(([k, label]) => `<div class="dx-row"><dt>${label}</dt><dd>${lis(secFacts(d, k))}</dd></div>`).join("")}
     </dl>`;
 
+  // ---- sorting: A–Z, Z–A, by drug class (grouped), by unit (grouped), most mentioned, most complete card; remembered per browser
+  const sto = { get: (k, d) => { try { return localStorage.getItem(k) ?? d; } catch { return d; } }, set: (k, v) => { try { localStorage.setItem(k, v); } catch { /* */ } } };
+  let sort = sto.get("dx:sort", "az");
+  // a short family name for grouping (the full class stays on each card)
+  const family = (d) => {
+    const c = d.cls;
+    if (c === "Not covered in materials") return "Class taught in a later unit";
+    if (/Biologic DMARD/.test(c)) return "Biologic DMARDs";
+    if (/DMARD/.test(c)) return "Conventional & targeted DMARDs";
+    if (/NSAID/.test(c) && !/not an NSAID/.test(c)) return "NSAIDs";
+    if (/analgesic|opioid|antipyretic/i.test(c)) return "Analgesics & opioids";
+    if (/CYP|inducer|inhibitor/.test(c)) return "CYP inducers & inhibitors";
+    if (/Anticoagulant|Antiplatelet|reversal/i.test(c)) return "Anticoagulants, antiplatelets & reversal";
+    if (/agonist|antagonist/i.test(c)) return "Receptor agonists & antagonists";
+    if (/Antidote/.test(c)) return "Antidotes";
+    return c;
+  };
+  const filled = (d) => SECS.filter(([k]) => secFacts(d, k).length).length + (d.cls === "Not covered in materials" ? 0 : 1);
+  const byName = (a, b) => a.name.localeCompare(b.name);
+  const SORTS = {
+    az: [byName, null], za: [(a, b) => b.name.localeCompare(a.name), null],
+    class: [(a, b) => (family(a) === "Class taught in a later unit") - (family(b) === "Class taught in a later unit") || family(a).localeCompare(family(b)) || byName(a, b), family],
+    unit: [(a, b) => a.unit - b.unit || byName(a, b), (d) => `Unit ${d.unit}`],
+    mentions: [(a, b) => b.n_mentions - a.n_mentions || byName(a, b), null],
+    complete: [(a, b) => filled(b) - filled(a) || byName(a, b), null],
+  };
+  if (!SORTS[sort]) sort = "az";
+  $("dx-sort").value = sort;
+  $("dx-sort").addEventListener("change", (e) => { sort = e.target.value; sto.set("dx:sort", sort); draw(); });
+
   // ---- grid
   function draw() {
     const qq = q.toLowerCase();
+    const [cmp, group] = SORTS[sort];
     const list = DR.filter((d) => (!tag || d.tags.includes(tag)) &&
-      (!qq || (d.name + " " + d.cls + " " + d.aliases.join(" ") + " " + d.tags.join(" ") + " " + d.facts.map((f) => f.text).join(" ")).toLowerCase().includes(qq)));
-    $("dx-grid").innerHTML = list.map((d, i) => `<button class="dx-tile appear in" style="--d:${Math.min(i, 12) * 0.025}s" data-name="${esc(d.name)}" id="${slug(d.name)}">
+      (!qq || (d.name + " " + d.cls + " " + d.aliases.join(" ") + " " + d.tags.join(" ") + " " + d.facts.map((f) => f.text).join(" ")).toLowerCase().includes(qq))).sort(cmp);
+    let last = null;
+    $("dx-grid").innerHTML = list.map((d, i) => {
+      const g = group ? group(d) : null, head = g && g !== last ? `<h3 class="dx-group">${esc(g)} <span>${list.filter((x) => group(x) === g).length}</span></h3>` : "";
+      last = g;
+      return head + `<button class="dx-tile appear in" style="--d:${Math.min(i, 12) * 0.025}s" data-name="${esc(d.name)}" id="${slug(d.name)}">
       <span class="dx-pick ${picked.includes(d.name) ? "on" : ""}" data-pick title="Add to compare">${picked.includes(d.name) ? "✓" : "+"}</span>
       <span class="dx-unit">Unit ${d.unit}</span><span class="dx-name">${esc(d.name)}</span><span class="dx-cls">${d.cls === "Not covered in materials" ? "" : esc(d.cls)}</span>
       <span class="dx-tags-mini">${d.tags.slice(0, 3).map((t) => `<i>${esc(t)}</i>`).join("")}</span>
-      <span class="dx-meta">${SECS.filter(([k]) => secFacts(d, k).length).length + (d.cls === "Not covered in materials" ? 0 : 1)} of 8 fields · ${d.n_mentions} mention${d.n_mentions === 1 ? "" : "s"} in lectures</span></button>`).join("");
+      <span class="dx-meta">${filled(d)} of 8 fields · ${d.n_mentions} mention${d.n_mentions === 1 ? "" : "s"} in lectures</span></button>`;
+    }).join("");
     $("dx-empty").hidden = list.length > 0;
     $("dx-grid").querySelectorAll(".dx-tile").forEach((b) => b.addEventListener("click", (e) => {
       if (e.target.closest("[data-pick]")) { togglePick(b.dataset.name); return; }

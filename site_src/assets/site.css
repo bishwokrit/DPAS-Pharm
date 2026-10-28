@@ -1835,3 +1835,10 @@ figure.vz-arrive { animation: vz-arrive 1.3s cubic-bezier(.2,.8,.2,1); }
   .dx-row { grid-template-columns: 1fr; gap: 4px; padding: 11px 0; }
   .dx-cmp-row { grid-template-columns: 1fr 1fr; gap: 8px 14px; } .dx-cmp-k { grid-column: 1 / -1; } .dx-cmp-head > div:first-child { display: none; }
 }
+
+/* drug index sort menu and group headings (sort by class or unit) */
+.dx-sort { display: inline-flex; align-items: center; gap: 8px; font: 500 13px var(--font); color: var(--text-2); }
+.dx-sort select { font: 500 13.5px var(--font); color: var(--text); background: var(--surface); border: 1px solid var(--hair); border-radius: 10px; padding: 7px 28px 7px 11px; cursor: pointer; }
+.dx-group { grid-column: 1 / -1; margin: 18px 0 2px; font: 650 13px var(--font); letter-spacing: .04em; text-transform: uppercase; color: var(--text-2); display: flex; align-items: baseline; gap: 8px; }
+.dx-group:first-child { margin-top: 0; } .dx-group span { font-weight: 500; color: var(--text-2); opacity: .7; }
+@media (max-width: 640px) { .dx-tools { flex-wrap: wrap; } .dx-sort { flex: 1 1 100%; } .dx-sort select { flex: 1; } }
