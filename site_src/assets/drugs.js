@@ -26,7 +26,13 @@
 
   // ---- sorting: A–Z, Z–A, by drug class (grouped), by unit (grouped), most mentioned, most complete card; remembered per browser
   const sto = { get: (k, d) => { try { return localStorage.getItem(k) ?? d; } catch { return d; } }, set: (k, v) => { try { localStorage.setItem(k, v); } catch { /* */ } } };
-  let sort = sto.get("dx:sort", "az");
+  let sort = sto.get("dx:sort2", "unit");  // unit order is the default
+  // textbook-only drugs: every fact comes from the assigned reading, none from a slide or the study guide
+  const tbOnly = (d) => d.facts.length > 0 && d.facts.every((f) => f.tb);
+  let showTb = sto.get("dx:tbonly", "1") === "1";
+  $("dx-tbonly").checked = showTb;
+  $("dx-tbn").textContent = `(${DR.filter(tbOnly).length})`;
+  $("dx-tbonly").addEventListener("change", (e) => { showTb = e.target.checked; sto.set("dx:tbonly", showTb ? "1" : "0"); draw(); });
   // a short family name for grouping (the full class stays on each card)
   const family = (d) => {
     const c = d.cls;
@@ -50,15 +56,15 @@
     mentions: [(a, b) => b.n_mentions - a.n_mentions || byName(a, b), null],
     complete: [(a, b) => filled(b) - filled(a) || byName(a, b), null],
   };
-  if (!SORTS[sort]) sort = "az";
+  if (!SORTS[sort]) sort = "unit";
   $("dx-sort").value = sort;
-  $("dx-sort").addEventListener("change", (e) => { sort = e.target.value; sto.set("dx:sort", sort); draw(); });
+  $("dx-sort").addEventListener("change", (e) => { sort = e.target.value; sto.set("dx:sort2", sort); draw(); });
 
   // ---- grid
   function draw() {
     const qq = q.toLowerCase();
     const [cmp, group] = SORTS[sort];
-    const list = DR.filter((d) => (!tag || d.tags.includes(tag)) &&
+    const list = DR.filter((d) => (showTb || !tbOnly(d)) && (!tag || d.tags.includes(tag)) &&
       (!qq || (d.name + " " + d.cls + " " + d.aliases.join(" ") + " " + d.tags.join(" ") + " " + d.facts.map((f) => f.text).join(" ")).toLowerCase().includes(qq))).sort(cmp);
     let last = null;
     $("dx-grid").innerHTML = list.map((d, i) => {
@@ -66,7 +72,7 @@
       last = g;
       return head + `<button class="dx-tile appear in" style="--d:${Math.min(i, 12) * 0.025}s" data-name="${esc(d.name)}" id="${slug(d.name)}">
       <span class="dx-pick ${picked.includes(d.name) ? "on" : ""}" data-pick title="Add to compare">${picked.includes(d.name) ? "✓" : "+"}</span>
-      <span class="dx-unit">Unit ${d.unit}</span><span class="dx-name">${esc(d.name)}</span><span class="dx-cls">${d.cls === "Not covered in materials" ? "" : esc(d.cls)}</span>
+      <span class="dx-unit">Unit ${d.unit}${tbOnly(d) ? ' <span class="tag tb" title="Textbook-only drug: from the assigned reading, not the slides">TB</span>' : ""}</span><span class="dx-name">${esc(d.name)}</span><span class="dx-cls">${d.cls === "Not covered in materials" ? "" : esc(d.cls)}</span>
       <span class="dx-tags-mini">${d.tags.slice(0, 3).map((t) => `<i>${esc(t)}</i>`).join("")}</span>
       <span class="dx-meta">${filled(d)} of 8 fields · ${d.n_mentions} mention${d.n_mentions === 1 ? "" : "s"} in lectures</span></button>`;
     }).join("");
@@ -77,8 +83,19 @@
     }));
   }
   $("dx-q").addEventListener("input", (e) => { q = e.target.value; draw(); });
+  // tag filters live in a panel that opens from the Filter button; the active filter shows as a removable pill
+  const panel = (open) => { $("dx-tags-wrap").classList.toggle("open", open); $("dx-filter").setAttribute("aria-expanded", open); $("dx-filter").classList.toggle("on", open); };
+  $("dx-filter").addEventListener("click", () => panel(!$("dx-tags-wrap").classList.contains("open")));
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape" && $("dx-tags-wrap").classList.contains("open") && $("dx-sheet").hidden) panel(false); });
+  const setTag = (t) => {
+    tag = t;
+    document.querySelectorAll("#dx-tags [data-tag]").forEach((x) => x.classList.toggle("on", x.dataset.tag === t));
+    $("dx-active").innerHTML = t ? `<button class="dx-pill" title="Clear filter" aria-label="Clear filter ${esc(t)}">${esc(t)}<span aria-hidden="true">×</span></button>` : "";
+    $("dx-active").querySelector("button")?.addEventListener("click", () => setTag(""));
+    draw();
+  };
   document.querySelectorAll("#dx-tags [data-tag]").forEach((b) => b.addEventListener("click", () => {
-    tag = b.dataset.tag; document.querySelectorAll("#dx-tags [data-tag]").forEach((x) => x.classList.toggle("on", x === b)); draw();
+    setTag(b.dataset.tag); if (b.dataset.tag) setTimeout(() => panel(false), 220);
   }));
 
   // ---- compare (pick two): a floating tray shows your picks

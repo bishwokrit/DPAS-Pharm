@@ -1842,3 +1842,21 @@ figure.vz-arrive { animation: vz-arrive 1.3s cubic-bezier(.2,.8,.2,1); }
 .dx-group { grid-column: 1 / -1; margin: 18px 0 2px; font: 650 13px var(--font); letter-spacing: .04em; text-transform: uppercase; color: var(--text-2); display: flex; align-items: baseline; gap: 8px; }
 .dx-group:first-child { margin-top: 0; } .dx-group span { font-weight: 500; color: var(--text-2); opacity: .7; }
 @media (max-width: 640px) { .dx-tools { flex-wrap: wrap; } .dx-sort { flex: 1 1 100%; } .dx-sort select { flex: 1; } }
+
+/* drug index filters: tucked into a panel that slides open from the Filter button; the chosen filter shows as a pill */
+.dx-tags-wrap { display: grid; grid-template-rows: 0fr; opacity: 0; transition: grid-template-rows .45s cubic-bezier(.2,.8,.2,1), opacity .3s ease; }
+.dx-tags-wrap.open { grid-template-rows: 1fr; opacity: 1; }
+.dx-tags-in { overflow: hidden; min-height: 0; }
+.dx-tags-wrap:not(.open) .dx-tags { visibility: hidden; transition: visibility 0s .45s; }
+.dx-tags-wrap .dx-tags { margin: 14px 0 6px; }
+.dx-tags-wrap + .dx-grid { margin-top: 20px; }
+.dx-filter { display: inline-flex; align-items: center; gap: 7px; }
+.dx-filter.on { background: var(--accent-soft); color: var(--accent); }
+.dx-pill { display: inline-flex; align-items: center; gap: 6px; border: 0; cursor: pointer; font: 600 13px var(--font); color: var(--accent); background: var(--accent-soft); padding: 7px 10px 7px 13px; border-radius: 99px; animation: fig-in .35s cubic-bezier(.2,.8,.2,1); }
+.dx-pill span { font-size: 15px; line-height: 1; opacity: .75; } .dx-pill:hover span { opacity: 1; }
+#dx-active:empty { display: none; }
+@media (prefers-reduced-motion: reduce) { .dx-tags-wrap { transition: none; } }
+.dx-check { display: inline-flex; align-items: center; gap: 7px; margin: 0 10px 0 4px; font: 500 13px var(--font); color: var(--text-2); cursor: pointer; user-select: none; white-space: nowrap; }
+.dx-check input { width: 16px; height: 16px; margin: 0; accent-color: var(--accent); cursor: pointer; }
+.dx-check em { font-style: normal; opacity: .7; }
+.dx-unit .tag.tb { margin-left: 4px; vertical-align: 1px; }

@@ -159,10 +159,10 @@ def drugs_page(built, exams):
 <p class="lede appear" style="--d:.12s">{len(data)} drugs from the lectures and assigned reading so far — each fact cited, every mention linked back to its lecture. It grows with every unit.</p></header>
 <section class="section" style="border-top:0;padding-top:0"><div class="wrap">
 <div class="dx-bar"><div class="dx-search">{SEARCH_ICON}<input id="dx-q" type="search" placeholder="Search drugs, classes, or facts…" autocomplete="off"></div>
-<div class="dx-tools"><label class="dx-sort"><span>Sort</span><select id="dx-sort" aria-label="Sort drugs">
-<option value="az">A–Z</option><option value="za">Z–A</option><option value="class">Drug class</option><option value="unit">Unit (course order)</option>
+<div class="dx-tools"><button class="btn ghost small dx-filter" id="dx-filter" aria-expanded="false" aria-controls="dx-tags-wrap"><svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M4 6h16M7 12h10M10 18h4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Filter</button><span id="dx-active"></span><label class="dx-check" title="Drugs that appear only in the assigned textbook reading, not on the lecture slides"><input type="checkbox" id="dx-tbonly" checked><span>Textbook-only drugs <em id="dx-tbn"></em></span></label><label class="dx-sort"><span>Sort</span><select id="dx-sort" aria-label="Sort drugs">
+<option value="unit">Unit (course order)</option><option value="az">A–Z</option><option value="za">Z–A</option><option value="class">Drug class</option>
 <option value="mentions">Most mentioned in lectures</option><option value="complete">Most complete card</option></select></label><button class="btn ghost small" id="dx-drill">Drill drug flashcards</button><button class="btn ghost small" id="dx-cmp" disabled>Compare (0/2)</button></div></div>
-<div class="dx-tags" id="dx-tags"><button class="sch-chip on" data-tag="">All</button>{"".join(f'<button class="sch-chip" data-tag="{html.escape(t)}">{html.escape(t)}</button>' for t in tags)}</div>
+<div class="dx-tags-wrap" id="dx-tags-wrap"><div class="dx-tags-in"><div class="dx-tags" id="dx-tags"><button class="sch-chip on" data-tag="">All</button>{"".join(f'<button class="sch-chip" data-tag="{html.escape(t)}">{html.escape(t)}</button>' for t in tags)}</div></div></div>
 <div class="dx-grid" id="dx-grid"></div><p class="muted" id="dx-empty" hidden>No drugs match. It may be <strong>not covered in materials</strong> yet.</p>
 </div></section>
 <aside class="dx-sheet" id="dx-sheet" aria-label="Drug details" hidden><div class="dx-sheet-in" id="dx-sheet-in"></div></aside><div class="dx-scrim" id="dx-scrim" hidden></div>
