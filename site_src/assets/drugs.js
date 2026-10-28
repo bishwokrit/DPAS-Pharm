@@ -1,4 +1,5 @@
-// Drug index: search + tag filters, a detail sheet per drug (cited facts, every lecture mention,
+// Drug index: search + tag filters, a detail sheet per drug (the drug card — name, class, mechanism, indications,
+// contraindications, adverse effects, interactions, patient factors, extra — plus every lecture mention,
 // a quiz built from questions that mention it), side-by-side compare, and a drug flashcard drill.
 (function () {
   const CFG = JSON.parse(document.getElementById("drug-data").textContent), DR = CFG.drugs;
@@ -9,6 +10,19 @@
   const tb = (f) => (f.tb ? '<span class="tag tb">TB</span>' : "");
   const $ = (id) => document.getElementById(id);
   let tag = "", q = "", picked = [];
+  // every card has the same fields, in this order (work/drugs.py SECTIONS)
+  const SECS = [["moa", "Mechanism of action"], ["ind", "Indications"], ["contra", "Contraindications"], ["ae", "Adverse effects"],
+    ["ix", "Clinically significant interactions"], ["pt", "Distinguishing characteristics / patient-specific factors"], ["extra", "Extra information"]];
+  const NONE = '<p class="dx-none">Not covered in the lectures or assigned reading yet.</p>';
+  const clsLine = (d) => (d.cls === "Not covered in materials" ? '<span class="muted">Not covered yet — taught in a later unit</span>' : `${esc(d.cls)}${cite(d.cls_src)}`);
+  const secFacts = (d, k) => d.facts.filter((f) => (f.sec || "extra") === k);
+  const lis = (fs) => (fs.length ? `<ul>${fs.map((f) => `<li>${tb(f)}${md(f.text)}${cite(f.src)}</li>`).join("")}</ul>` : NONE);
+  // the drug card: generic name (and brand names) · class · then each field
+  const card = (d) => `<dl class="dx-card">
+      <div class="dx-row"><dt>Generic name</dt><dd><strong>${esc(d.name)}</strong>${d.aliases.filter((a) => /^[A-Z]/.test(a) && a !== d.name && !/^NAPQI$/.test(a)).length ? ` <span class="muted">(${d.aliases.filter((a) => /^[A-Z]/.test(a) && !/^NAPQI$/.test(a)).map(esc).join(", ")})</span>` : ""}</dd></div>
+      <div class="dx-row"><dt>Drug class</dt><dd>${clsLine(d)}</dd></div>
+      ${SECS.map(([k, label]) => `<div class="dx-row"><dt>${label}</dt><dd>${lis(secFacts(d, k))}</dd></div>`).join("")}
+    </dl>`;
 
   // ---- grid
   function draw() {
@@ -19,7 +33,7 @@
       <span class="dx-pick ${picked.includes(d.name) ? "on" : ""}" data-pick title="Add to compare">${picked.includes(d.name) ? "✓" : "+"}</span>
       <span class="dx-unit">Unit ${d.unit}</span><span class="dx-name">${esc(d.name)}</span><span class="dx-cls">${d.cls === "Not covered in materials" ? "" : esc(d.cls)}</span>
       <span class="dx-tags-mini">${d.tags.slice(0, 3).map((t) => `<i>${esc(t)}</i>`).join("")}</span>
-      <span class="dx-meta">${d.facts.length} fact${d.facts.length === 1 ? "" : "s"} · ${d.n_mentions} mention${d.n_mentions === 1 ? "" : "s"} in lectures</span></button>`).join("");
+      <span class="dx-meta">${SECS.filter(([k]) => secFacts(d, k).length).length + (d.cls === "Not covered in materials" ? 0 : 1)} of 8 fields · ${d.n_mentions} mention${d.n_mentions === 1 ? "" : "s"} in lectures</span></button>`).join("");
     $("dx-empty").hidden = list.length > 0;
     $("dx-grid").querySelectorAll(".dx-tile").forEach((b) => b.addEventListener("click", (e) => {
       if (e.target.closest("[data-pick]")) { togglePick(b.dataset.name); return; }
@@ -52,15 +66,16 @@
     if (!a || !b) return;
     const tags = [...new Set([...a.tags, ...b.tags])].sort((x, y) => (b.tags.includes(y) && a.tags.includes(y)) - (b.tags.includes(x) && a.tags.includes(x)));
     const mark = (d, t) => d.tags.includes(t) ? '<span class="dx-yes">●</span>' : '<span class="dx-no">—</span>';
-    const col = (d) => `<div class="dx-cc"><div class="dx-cc-h"><h3>${esc(d.name)} <a class="dx-utd-s" href="${esc(d.utd)}" target="_blank" rel="noopener noreferrer">UpToDate ↗</a></h3><div class="small muted">${d.cls === "Not covered in materials" ? "Class: later unit" : esc(d.cls) + cite(d.cls_src)}</div></div>
-      <ul>${d.facts.map((f) => `<li>${tb(f)}${md(f.text)}${cite(f.src)}</li>`).join("")}</ul></div>`;
+    // field by field, side by side: the same row for both drugs
+    const fieldRows = [["Drug class", (d) => clsLine(d)], ...SECS.map(([k, label]) => [label, (d) => lis(secFacts(d, k))])]
+      .map(([label, f]) => `<div class="dx-cmp-row"><div class="dx-cmp-k">${label}</div><div class="dx-cmp-v">${f(a)}</div><div class="dx-cmp-v">${f(b)}</div></div>`).join("");
     sheet(`<div class="dx-sh-top"><div><div class="kicker">Compare</div><h2>${esc(a.name)} <span class="dx-vs">vs</span> ${esc(b.name)}</h2></div><span class="dx-ctl"><button class="sk-x" data-expand aria-label="Expand to full screen" title="Full screen">⤢</button><button class="sk-x" data-close aria-label="Close">✕</button></span></div>
       <div class="dx-swap">${[a, b].map((d, i) => `<label><span class="small muted">${i ? "Against" : "Drug"}</span><select data-swap="${i}" aria-label="${i ? "Second" : "First"} drug in the comparison">${DR.filter((x) => x.name !== (i ? a : b).name).map((x) => `<option ${x.name === d.name ? "selected" : ""}>${esc(x.name)}</option>`).join("")}</select></label>`).join('<span class="dx-vs">vs</span>')}</div>
       <table class="dx-matrix"><thead><tr><th></th><th>${esc(a.name)}</th><th>${esc(b.name)}</th></tr></thead><tbody>
         ${tags.map((t) => `<tr class="${a.tags.includes(t) && b.tags.includes(t) ? "both" : ""}"><td>${esc(t)}</td><td>${mark(a, t)}</td><td>${mark(b, t)}</td></tr>`).join("")}
         <tr><td>Lecture mentions</td><td>${a.n_mentions}</td><td>${b.n_mentions}</td></tr></tbody></table>
       <div class="dx-acts"><button class="btn small" data-qboth>Quiz me on both</button></div>
-      <h4>Key facts</h4><div class="dx-cmp-grid">${col(a)}${col(b)}</div>`);
+      <h4>Field by field</h4><div class="dx-cmp-fields"><div class="dx-cmp-row dx-cmp-head"><div></div><div>${esc(a.name)} <a class="dx-utd-s" href="${esc(a.utd)}" target="_blank" rel="noopener noreferrer">UpToDate ↗</a></div><div>${esc(b.name)} <a class="dx-utd-s" href="${esc(b.utd)}" target="_blank" rel="noopener noreferrer">UpToDate ↗</a></div></div>${fieldRows}</div>`);
     $("dx-sheet-in").querySelector("[data-qboth]").onclick = () => quizFor({ name: `${a.name} + ${b.name}`, pattern: `${a.pattern}|${b.pattern}` });
     // swap either drug in place: no need to close the comparison and start over
     $("dx-sheet-in").querySelectorAll("[data-swap]").forEach((sel) => sel.addEventListener("change", () => {
@@ -113,9 +128,9 @@
       ${d.cls === "Not covered in materials" ? '<div class="muted small">Drug class: covered in a later unit</div>' : `<div class="muted">${esc(d.cls)}${cite(d.cls_src)}</div>`}</div><span class="dx-ctl"><button class="sk-x" data-expand aria-label="Expand to full screen" title="Full screen">⤢</button><button class="sk-x" data-close aria-label="Close">✕</button></span></div>
       <div class="dx-tags-mini" style="margin:12px 0 4px">${d.tags.map((t) => `<i>${esc(t)}</i>`).join("")}</div>
       <div class="dx-acts"><button class="btn small" data-quiz>Quiz me on ${esc(d.name)}</button><a class="btn ghost small dx-utd" href="${esc(d.utd)}" target="_blank" rel="noopener noreferrer" title="Opens UpToDate in a new tab (needs your school or personal subscription)">UpToDate ↗</a><select data-vs aria-label="Compare with another drug"><option value="">Compare with…</option>${DR.filter((x) => x.name !== d.name).map((x) => `<option>${esc(x.name)}</option>`).join("")}</select></div>
-      <h4>Key facts</h4><ul class="dx-facts">${d.facts.map((f) => `<li>${tb(f)}${md(f.text)}${cite(f.src)}</li>`).join("")}</ul>
+      <h4>Drug card</h4><div class="dx-facts">${card(d)}</div>
       <h4>In your lectures (${d.n_mentions})</h4>${d.mentions.length ? `<ul class="dx-ment">${d.mentions.map((m) => `<li><span class="small muted">${esc(m.lid)} · ${esc(m.where)}</span><div>${m.tb ? '<span class="tag tb">TB</span>' : ""}${md(m.text)}${cite(m.src)}</div><a class="jump" href="${esc(m.href)}">Open →</a></li>`).join("")}</ul>` : '<p class="muted small">Only in the assigned reading so far.</p>'}
-      <p class="small muted" style="margin-top:16px">Mechanism, adverse effects, and monitoring fill in as drug-class lectures cover them. Anything else: <strong>not covered in materials</strong>.</p>`, from);
+      <p class="small muted" style="margin-top:16px">Every field comes from the lecture slides or the assigned textbook pages (<span class="tag tb">TB</span> = textbook only). Fields fill in as later units teach the drug.</p>`, from);
     const s = $("dx-sheet-in");
     window.dpasMolData?.("../").then((M) => { if (M[d.name] && s.querySelector("h2")?.textContent === d.name && !molKill) molKill = window.dpasMol3d($("dx-sheet"), $("dx-sheet"), M[d.name], { size: innerWidth < 700 ? 180 : 260 }); });
     // Sketch mode only: your one-line memory hook for this drug, editable right here
@@ -160,7 +175,7 @@
       const d = cards[i];
       el.innerHTML = `<div class="qm-top"><button class="qm-x" data-x>✕</button><div class="qm-count">${i + 1} <span>/ ${cards.length}</span></div><div class="qm-title">Drug flashcards${tag ? " · " + esc(tag) : ""}</div><span></span></div>
         <div class="qm-scroll"><div class="qm-card"><div class="sk-card" style="min-height:300px"><div class="sk-face"><div class="small muted">What does the course teach about…</div><div class="sk-q" style="font-size:30px">${esc(d.name)}</div><div class="small muted">Tap, Enter, or ↓ to flip</div></div>
-        <div class="sk-face back" style="justify-content:flex-start;overflow:auto"><div class="small muted">${esc(d.cls)}</div><ul style="margin:6px 0 0;padding-left:18px">${d.facts.slice(0, 4).map((f) => `<li style="margin:6px 0">${md(f.text)}${cite(f.src)}</li>`).join("")}</ul></div></div>
+        <div class="sk-face back" style="justify-content:flex-start;overflow:auto"><div class="small muted">${d.cls === "Not covered in materials" ? "Class: later unit" : esc(d.cls)}</div><ul style="margin:6px 0 0;padding-left:18px">${["moa", "ind", "ae", "ix", "pt", "contra", "extra"].flatMap((k) => secFacts(d, k).slice(0, 1).map((f) => [k, f])).slice(0, 4).map(([k, f]) => `<li style="margin:6px 0"><span class="small muted">${SECS.find((x) => x[0] === k)[1]}:</span> ${md(f.text)}${cite(f.src)}</li>`).join("")}</ul></div></div>
         <div class="sk-row" style="justify-content:center;margin-top:18px"><button class="btn ghost" data-prev>← Back</button><button class="btn" data-next>Next →</button></div></div></div>`;
       el.querySelector("[data-x]").onclick = end;
       const c = el.querySelector(".sk-card"); c.onclick = () => c.classList.toggle("flipped");

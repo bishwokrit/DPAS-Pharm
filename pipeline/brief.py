@@ -58,7 +58,8 @@ def main(lec, work):
          "- **Textbook facts** in `textbook_<ID>.py` as `(\"text\", \"p. N\")`; write apostrophes as ’ so `./run.sh check` can verify the numbers on that page.",
          "- **Questions:** ~50/50 vignette and mechanism; 5 options, all similar in length; rebuild every quick-check slide question (`from_slides`).",
          "- **Figures:** each saved figure gets a caption and an interactive version (`\"viz\": {\"type\": …}`, list below).",
-         "- **Drugs:** every drug named gets an entry (or new facts) in `work/drugs.py`, citing `" + lid + " S#` or `p. N`.",
+         "- **Drugs:** every drug named gets a card (or new facts) in `work/drugs.py`, citing `" + lid + " S#` or `p. N`, filled field by field: "
+         "class, mechanism, indications, contraindications, adverse effects, interactions, distinguishing / patient-specific factors, extra.",
          "- **Home teaser:** `TEASER` in `guide_<ID>.py` — two calm sentences, no hype.",
          "- **No school, course-director or instructor names** anywhere (slide 1 credits are skipped on purpose).",
          "- **Original files are never edited** (they are fingerprinted; the build stops if one changes).", "",

@@ -7,7 +7,8 @@ The owner is not a programmer: explain in plain language, keep replies short, an
    (every slide, every reading section, every figure, and the standard). Read it first.
 2. Write `work/L05/author_L05.py`, `guide_L05.py`, `textbook_L05.py` following `templates/AUTHORING_GUIDE.md`
    (copy the shape of the L02 files; Units 2–6 use the `drug_class` template). Run `python3 work/L05/author_L05.py`.
-3. Add every drug the lecture names to `work/drugs.py`. Add the unit's practice questions to `work/exams/U?/`
+3. Add every drug the lecture names to `work/drugs.py` as a full card (class, mechanism, indications, contraindications, adverse
+   effects, interactions, distinguishing / patient-specific factors, extra — from the slides and assigned pages). Add the unit's practice questions to `work/exams/U?/`
    (a new unit also needs an entry in `EXAMS` in `pipeline/build_exam.py`).
 4. `./run.sh new L05` again until the report card is all PASS. Then commit and push (see Commits below).
 
