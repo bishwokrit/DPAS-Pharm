@@ -1,0 +1,5498 @@
+[
+ {
+  "slide": 1,
+  "title": "Musculoskeletal Pharmacology",
+  "items": [
+   {
+    "text": "PA PHARMACOLOGY COURSE · LECTURE 2 · SESSION 2 OF 2",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "PA PHARMACOLOGY COURSE · LECTURE 2 · SESSION 2 OF 2",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**PA PHARMACOLOGY COURSE · LECTURE 2 · SESSION 2 OF 2**",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Musculoskeletal Pharmacology",
+    "level": 0,
+    "emphasis": [],
+    "md": "Musculoskeletal Pharmacology",
+    "heading": true,
+    "size": 40.0
+   },
+   {
+    "text": "Session 2: Gout, Skeletal Muscle Relaxants, and Bone Pharmacology  |  Thursday, October 29",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Session 2: Gout, Skeletal Muscle Relaxants, and Bone Pharmacology  |  Thursday, October 29",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Session 2: Gout, Skeletal Muscle Relaxants, and Bone Pharmacology  |  Thursday, October 29**",
+    "heading": false,
+    "size": 19.0
+   },
+   {
+    "text": "Diane S. Allen-Gipson, Ph.D., M.S., Course Director",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Diane S. Allen-Gipson, Ph.D., M.S., Course Director",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Diane S. Allen-Gipson, Ph.D., M.S., Course Director**",
+    "heading": false,
+    "size": 14.5
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 2,
+  "title": "Learning Objectives — Session 2",
+  "items": [
+   {
+    "text": "BY THE END OF THIS LECTURE",
+    "level": 0,
+    "emphasis": [],
+    "md": "BY THE END OF THIS LECTURE",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Learning Objectives — Session 2",
+    "level": 0,
+    "emphasis": [],
+    "md": "Learning Objectives — Session 2",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Recap: Session 1 covered musculoskeletal pain pathways, acetaminophen, NSAIDs, and osteoarthritis/rheumatoid arthritis pharmacotherapy including DMARDs.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Recap: Session 1 covered musculoskeletal pain pathways, acetaminophen, NSAIDs, and osteoarthritis/rheumatoid arthritis pharmacotherapy including DMARDs.",
+    "heading": false,
+    "size": 15.5
+   },
+   {
+    "text": "Explain the pharmacologic treatment of acute and chronic gout, including representative generic agents.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Explain the pharmacologic treatment of acute and chronic gout, including representative generic agents.",
+    "heading": false,
+    "size": 15.5
+   },
+   {
+    "text": "Classify skeletal muscle relaxants by mechanism and clinical use, including representative generic agents.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Classify skeletal muscle relaxants by mechanism and clinical use, including representative generic agents.",
+    "heading": false,
+    "size": 15.5
+   },
+   {
+    "text": "Explain the pharmacologic management of osteoporosis, including representative generic agents.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Explain the pharmacologic management of osteoporosis, including representative generic agents.",
+    "heading": false,
+    "size": 15.5
+   },
+   {
+    "text": "Identify key contraindications, adverse effects, and drug interactions throughout.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Identify key contraindications, adverse effects, and drug interactions throughout.",
+    "heading": false,
+    "size": 15.5
+   },
+   {
+    "text": "Apply the full musculoskeletal pharmacology toolkit to integrated clinical scenarios.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Apply the full musculoskeletal pharmacology toolkit to integrated clinical scenarios.",
+    "heading": false,
+    "size": 15.5
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Briefly recap Session 1 (Oct 27) before diving in: musculoskeletal pain, acetaminophen, NSAIDs, and OA/RA pharmacotherapy including DMARDs. Today picks up with gout (Section 5) and runs through bone pharmacology, integration, and the cumulative recall quiz."
+ },
+ {
+  "slide": 3,
+  "title": "05",
+  "items": [
+   {
+    "text": "SECTION",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "SECTION",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**SECTION**",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "05",
+    "level": 0,
+    "emphasis": [],
+    "md": "05",
+    "heading": true,
+    "size": 68.0
+   },
+   {
+    "text": "Gout",
+    "level": 0,
+    "emphasis": [],
+    "md": "Gout",
+    "heading": true,
+    "size": 32.0
+   },
+   {
+    "text": "A crystal-driven inflammatory arthritis with two very different treatment phases.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "A crystal-driven inflammatory arthritis with two very different treatment phases.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**A crystal-driven inflammatory arthritis with two very different treatment phases.**",
+    "heading": false,
+    "size": 15.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 4,
+  "title": "How Gout Develops",
+  "items": [
+   {
+    "text": "PATHOPHYSIOLOGY",
+    "level": 0,
+    "emphasis": [],
+    "md": "PATHOPHYSIOLOGY",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "How Gout Develops",
+    "level": 0,
+    "emphasis": [],
+    "md": "How Gout Develops",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Purine",
+    "level": 0,
+    "emphasis": [],
+    "md": "Purine",
+    "heading": true,
+    "size": 13.0
+   },
+   {
+    "text": "Metabolism",
+    "level": 0,
+    "emphasis": [],
+    "md": "Metabolism",
+    "heading": true,
+    "size": 13.0
+   },
+   {
+    "text": "Uric Acid",
+    "level": 0,
+    "emphasis": [],
+    "md": "Uric Acid",
+    "heading": true,
+    "size": 13.0
+   },
+   {
+    "text": "Monosodium",
+    "level": 0,
+    "emphasis": [],
+    "md": "Monosodium",
+    "heading": true,
+    "size": 13.0
+   },
+   {
+    "text": "Urate Crystals",
+    "level": 0,
+    "emphasis": [],
+    "md": "Urate Crystals",
+    "heading": true,
+    "size": 13.0
+   },
+   {
+    "text": "Joint",
+    "level": 0,
+    "emphasis": [],
+    "md": "Joint",
+    "heading": true,
+    "size": 13.0
+   },
+   {
+    "text": "Inflammation",
+    "level": 0,
+    "emphasis": [],
+    "md": "Inflammation",
+    "heading": true,
+    "size": 13.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Everything downstream — colchicine, allopurinol, febuxostat, probenecid — targets a specific point along this chain. The next slide builds this out with the specific drugs and their targets."
+ },
+ {
+  "slide": 5,
+  "title": "Uric Acid Crystals Trigger the Inflammatory Response",
+  "items": [
+   {
+    "text": "MECHANISM & DEPTH",
+    "level": 0,
+    "emphasis": [],
+    "md": "MECHANISM & DEPTH",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Uric Acid Crystals Trigger the Inflammatory Response",
+    "level": 0,
+    "emphasis": [],
+    "md": "Uric Acid Crystals Trigger the Inflammatory Response",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Purine breakdown",
+    "level": 0,
+    "emphasis": [],
+    "md": "Purine breakdown",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Diet rich in purines and fructose raises urate production",
+    "level": 0,
+    "emphasis": [],
+    "md": "Diet rich in purines and fructose raises urate production",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Alcohol, especially beer, raises uric acid and reduces renal excretion",
+    "level": 0,
+    "emphasis": [],
+    "md": "Alcohol, especially beer, raises uric acid and reduces renal excretion",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Diuretics, especially thiazides and loop agents, reduce renal urate clearance",
+    "level": 0,
+    "emphasis": [],
+    "md": "Diuretics, especially thiazides and loop agents, reduce renal urate clearance",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Chronic kidney disease lowers urate excretion and sustains hyperuricemia",
+    "level": 0,
+    "emphasis": [],
+    "md": "Chronic kidney disease lowers urate excretion and sustains hyperuricemia",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Hypoxanthine",
+    "level": 0,
+    "emphasis": [],
+    "md": "Hypoxanthine",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Xanthine",
+    "level": 0,
+    "emphasis": [],
+    "md": "Xanthine",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Uric acid (via xanthine oxidase)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Uric acid (via xanthine oxidase)",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Hyperuricemia",
+    "level": 0,
+    "emphasis": [],
+    "md": "Hyperuricemia",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Monosodium urate crystals in joint",
+    "level": 0,
+    "emphasis": [],
+    "md": "Monosodium urate crystals in joint",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Neutrophil/macrophage activation (NLRP3, IL-1β)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Neutrophil/macrophage activation (NLRP3, IL-1β)",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Acute flare",
+    "level": 0,
+    "emphasis": [],
+    "md": "Acute flare",
+    "heading": true,
+    "size": 16.0
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": "Walk the chain left to right, then top to bottom: each step sets up the next, and the flare is the end of the cascade."
+ },
+ {
+  "slide": 6,
+  "title": "Gout: From Purine Metabolism to Joint Inflammation",
+  "items": [
+   {
+    "text": "ORIGINAL ILLUSTRATION · FIGURE 4",
+    "level": 0,
+    "emphasis": [],
+    "md": "ORIGINAL ILLUSTRATION · FIGURE 4",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Gout: From Purine Metabolism to Joint Inflammation",
+    "level": 0,
+    "emphasis": [],
+    "md": "Gout: From Purine Metabolism to Joint Inflammation",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Figure 4. Original illustrative diagram (not from Katzung): allopurinol and febuxostat reduce uric acid production; probenecid increases renal excretion; colchicine, NSAIDs, and corticosteroids reduce joint inflammation.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Figure 4. Original illustrative diagram (not from Katzung): allopurinol and febuxostat reduce uric acid production; probenecid increases renal excretion; colchicine, NSAIDs, and corticosteroids reduce joint inflammation.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Figure 4. Original illustrative diagram (not from Katzung): allopurinol and febuxostat reduce uric acid production; probenecid increases renal excretion; colchicine, NSAIDs, and corticosteroids reduce joint inflammation.**",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 2,
+  "figures": [
+   "S6_1.jpg"
+  ],
+  "notes": "Walk the full chain and have students sort the drugs into two buckets: \"lowers uric acid\" (allopurinol, febuxostat, probenecid) vs. \"treats the acute flare\" (colchicine, NSAIDs, corticosteroids) — this is the same acute-vs-chronic distinction the next slide makes explicit."
+ },
+ {
+  "slide": 7,
+  "title": "Acute Gout vs. Chronic Urate-Lowering Therapy",
+  "items": [
+   {
+    "text": "TWO DIFFERENT GOALS",
+    "level": 0,
+    "emphasis": [],
+    "md": "TWO DIFFERENT GOALS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Acute Gout vs. Chronic Urate-Lowering Therapy",
+    "level": 0,
+    "emphasis": [],
+    "md": "Acute Gout vs. Chronic Urate-Lowering Therapy",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Acute Flare",
+    "level": 0,
+    "emphasis": [],
+    "md": "Acute Flare",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Chronic Management",
+    "level": 0,
+    "emphasis": [],
+    "md": "Chronic Management",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Goal: control pain and inflammation now",
+    "level": 0,
+    "emphasis": [],
+    "md": "Goal: control pain and inflammation now",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Agents: colchicine, NSAIDs, corticosteroids",
+    "level": 0,
+    "emphasis": [],
+    "md": "Agents: colchicine, NSAIDs, corticosteroids",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Do NOT start urate-lowering therapy during an acute flare",
+    "level": 0,
+    "emphasis": [],
+    "md": "Do NOT start urate-lowering therapy during an acute flare",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Goal: lower serum uric acid to prevent future flares",
+    "level": 0,
+    "emphasis": [],
+    "md": "Goal: lower serum uric acid to prevent future flares",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Agents: allopurinol, febuxostat (↓ production); probenecid (↑ excretion)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Agents: allopurinol, febuxostat (↓ production); probenecid (↑ excretion)",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Started/adjusted only once the acute flare has resolved",
+    "level": 0,
+    "emphasis": [],
+    "md": "Started/adjusted only once the acute flare has resolved",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "9",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "9",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**9**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "This acute-vs-chronic distinction is one of the single most testable concepts in gout pharmacology — starting or changing a urate-lowering drug during an acute flare can actually prolong it."
+ },
+ {
+  "slide": 8,
+  "title": "Colchicine",
+  "items": [
+   {
+    "text": "ACUTE TREATMENT",
+    "level": 0,
+    "emphasis": [],
+    "md": "ACUTE TREATMENT",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Colchicine",
+    "level": 0,
+    "emphasis": [],
+    "md": "Colchicine",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Mechanism: disrupts microtubule formation in neutrophils.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Mechanism: disrupts microtubule formation in neutrophils.",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Mechanism: disrupts microtubule formation in neutrophils.**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Effect: reduces neutrophil migration and activation, lowering inflammation at the crystal site.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Effect: reduces neutrophil migration and activation, lowering inflammation at the crystal site.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Most effective when started early in a flare.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Most effective when started early in a flare.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Narrow therapeutic window — GI adverse effects are common and dose-limiting.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Narrow therapeutic window — GI adverse effects are common and dose-limiting.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Narrow therapeutic window — GI adverse effects are common and dose-limiting.**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "10",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "10",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**10**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 9,
+  "title": "Colchicine: Blocking Neutrophil Response",
+  "items": [
+   {
+    "text": "MECHANISM & DEPTH",
+    "level": 0,
+    "emphasis": [],
+    "md": "MECHANISM & DEPTH",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Colchicine: Blocking Neutrophil Response",
+    "level": 0,
+    "emphasis": [],
+    "md": "Colchicine: Blocking Neutrophil Response",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Colchicine binds tubulin",
+    "level": 0,
+    "emphasis": [],
+    "md": "Colchicine binds tubulin",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Best started within 24 hours of flare onset",
+    "level": 0,
+    "emphasis": [],
+    "md": "Best started within 24 hours of flare onset",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "GI diarrhea is the dose-limiting effect",
+    "level": 0,
+    "emphasis": [],
+    "md": "GI diarrhea is the dose-limiting effect",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Adjust the dose for renal or hepatic impairment",
+    "level": 0,
+    "emphasis": [],
+    "md": "Adjust the dose for renal or hepatic impairment",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "CYP3A4 and P-gp inhibitors (clarithromycin, cyclosporine, strong CYP3A4 inhibitors) raise toxicity",
+    "level": 0,
+    "emphasis": [],
+    "md": "CYP3A4 and P-gp inhibitors (clarithromycin, cyclosporine, strong CYP3A4 inhibitors) raise toxicity",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Blocks microtubule polymerization",
+    "level": 0,
+    "emphasis": [],
+    "md": "Blocks microtubule polymerization",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Reduced neutrophil migration and NLRP3 activation",
+    "level": 0,
+    "emphasis": [],
+    "md": "Reduced neutrophil migration and NLRP3 activation",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Less inflammation at the crystal site",
+    "level": 0,
+    "emphasis": [],
+    "md": "Less inflammation at the crystal site",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "11",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "11",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**11**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": "Colchicine works on the cell's cytoskeleton, so its effect builds in the early hours of a flare."
+ },
+ {
+  "slide": 10,
+  "title": "Allopurinol vs. Febuxostat",
+  "items": [
+   {
+    "text": "URATE-LOWERING THERAPY",
+    "level": 0,
+    "emphasis": [],
+    "md": "URATE-LOWERING THERAPY",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Allopurinol vs. Febuxostat",
+    "level": 0,
+    "emphasis": [],
+    "md": "Allopurinol vs. Febuxostat",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Allopurinol",
+    "level": 0,
+    "emphasis": [],
+    "md": "Allopurinol",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Febuxostat",
+    "level": 0,
+    "emphasis": [],
+    "md": "Febuxostat",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Xanthine oxidase inhibitor → ↓ uric acid production",
+    "level": 0,
+    "emphasis": [],
+    "md": "Xanthine oxidase inhibitor → ↓ uric acid production",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "First-line for most patients",
+    "level": 0,
+    "emphasis": [],
+    "md": "First-line for most patients",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "HLA-B*5801 allele raises risk of severe hypersensitivity reaction",
+    "level": 0,
+    "emphasis": [],
+    "md": "HLA-B*5801 allele raises risk of severe hypersensitivity reaction",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Also a xanthine oxidase inhibitor, different chemical structure",
+    "level": 0,
+    "emphasis": [],
+    "md": "Also a xanthine oxidase inhibitor, different chemical structure",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Alternative when allopurinol is not tolerated or contraindicated",
+    "level": 0,
+    "emphasis": [],
+    "md": "Alternative when allopurinol is not tolerated or contraindicated",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Carries its own cardiovascular safety considerations",
+    "level": 0,
+    "emphasis": [],
+    "md": "Carries its own cardiovascular safety considerations",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "12",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "12",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**12**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "HLA-B*5801 is a direct callback to the pharmacogenomics section from Lecture 1 — ask students to make that connection themselves before you state it."
+ },
+ {
+  "slide": 11,
+  "title": "Xanthine Oxidase Inhibitors: Where They Act",
+  "items": [
+   {
+    "text": "MECHANISM & DEPTH",
+    "level": 0,
+    "emphasis": [],
+    "md": "MECHANISM & DEPTH",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Xanthine Oxidase Inhibitors: Where They Act",
+    "level": 0,
+    "emphasis": [],
+    "md": "Xanthine Oxidase Inhibitors: Where They Act",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Start low and titrate upward toward a serum urate target",
+    "level": 0,
+    "emphasis": [],
+    "md": "Start low and titrate upward toward a serum urate target",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Do not start during an acute flare; give colchicine or an NSAID prophylaxis for 3–6 months",
+    "level": 0,
+    "emphasis": [],
+    "md": "Do not start during an acute flare; give colchicine or an NSAID prophylaxis for 3–6 months",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Febuxostat carries a boxed warning for cardiovascular death",
+    "level": 0,
+    "emphasis": [],
+    "md": "Febuxostat carries a boxed warning for cardiovascular death",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Allopurinol: HLA-B*58:01 raises severe cutaneous reaction risk; reduce dose in renal impairment and with azathioprine or mercaptopurine",
+    "level": 0,
+    "emphasis": [],
+    "md": "Allopurinol: HLA-B*58:01 raises severe cutaneous reaction risk; reduce dose in renal impairment and with azathioprine or mercaptopurine",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Hypoxanthine",
+    "level": 0,
+    "emphasis": [],
+    "md": "Hypoxanthine",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Xanthine",
+    "level": 0,
+    "emphasis": [],
+    "md": "Xanthine",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Uric acid",
+    "level": 0,
+    "emphasis": [],
+    "md": "Uric acid",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Allopurinol (via oxypurinol) and febuxostat block xanthine oxidase",
+    "level": 0,
+    "emphasis": [],
+    "md": "Allopurinol (via oxypurinol) and febuxostat block xanthine oxidase",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "13",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "13",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**13**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": "Both drugs sit on the same enzyme; the choice turns on safety profile and tolerability."
+ },
+ {
+  "slide": 12,
+  "title": "Other Urate-Lowering & Refractory Gout Agents",
+  "items": [
+   {
+    "text": "OTHER OPTIONS",
+    "level": 0,
+    "emphasis": [],
+    "md": "OTHER OPTIONS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Other Urate-Lowering & Refractory Gout Agents",
+    "level": 0,
+    "emphasis": [],
+    "md": "Other Urate-Lowering & Refractory Gout Agents",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Probenecid — mechanism: inhibits renal tubular reabsorption of uric acid, increasing its excretion.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Probenecid — mechanism: inhibits renal tubular reabsorption of uric acid, increasing its excretion.",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Probenecid — mechanism: inhibits renal tubular reabsorption of uric acid, increasing its excretion.**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "A uricosuric agent, not a xanthine oxidase inhibitor — a different strategy than allopurinol/febuxostat.",
+    "level": 0,
+    "emphasis": [],
+    "md": "A uricosuric agent, not a xanthine oxidase inhibitor — a different strategy than allopurinol/febuxostat.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Avoid in patients with a history of uric acid kidney stones or significant renal impairment.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Avoid in patients with a history of uric acid kidney stones or significant renal impairment.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Avoid in patients with a history of uric acid kidney stones or significant renal impairment.**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Pegloticase — a recombinant uricase enzyme for severe, refractory gout not controlled by other agents.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Pegloticase — a recombinant uricase enzyme for severe, refractory gout not controlled by other agents.",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Pegloticase — a recombinant uricase enzyme for severe, refractory gout not controlled by other agents.**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Given by IV infusion; converts uric acid to a more water-soluble, easily excreted compound.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Given by IV infusion; converts uric acid to a more water-soluble, easily excreted compound.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Reserved for refractory cases given its cost, infusion-reaction risk, and need for specialty administration.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Reserved for refractory cases given its cost, infusion-reaction risk, and need for specialty administration.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Reserved for refractory cases given its cost, infusion-reaction risk, and need for specialty administration.**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "14",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "14",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**14**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Probenecid and pegloticase round out the gout toolkit beyond allopurinol/febuxostat — probenecid is an older, second-line oral option, while pegloticase is reserved for the most difficult, refractory cases."
+ },
+ {
+  "slide": 13,
+  "title": "Uricosurics and Uricases",
+  "items": [
+   {
+    "text": "MECHANISM & DEPTH",
+    "level": 0,
+    "emphasis": [],
+    "md": "MECHANISM & DEPTH",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Uricosurics and Uricases",
+    "level": 0,
+    "emphasis": [],
+    "md": "Uricosurics and Uricases",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Needs adequate hydration; avoid in patients with uric acid kidney stones",
+    "level": 0,
+    "emphasis": [],
+    "md": "Needs adequate hydration; avoid in patients with uric acid kidney stones",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Pegloticase and rasburicase are contraindicated in G6PD deficiency (hemolysis risk)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Pegloticase and rasburicase are contraindicated in G6PD deficiency (hemolysis risk)",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Infusion reactions are common; anti-drug antibodies can reduce response",
+    "level": 0,
+    "emphasis": [],
+    "md": "Infusion reactions are common; anti-drug antibodies can reduce response",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Probenecid is second-line; uricases are reserved for refractory gout",
+    "level": 0,
+    "emphasis": [],
+    "md": "Probenecid is second-line; uricases are reserved for refractory gout",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Probenecid",
+    "level": 0,
+    "emphasis": [],
+    "md": "Probenecid",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Blocks URAT1 transporter in renal tubule",
+    "level": 0,
+    "emphasis": [],
+    "md": "Blocks URAT1 transporter in renal tubule",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Renal reabsorption falls, excretion rises",
+    "level": 0,
+    "emphasis": [],
+    "md": "Renal reabsorption falls, excretion rises",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Pegloticase or rasburicase",
+    "level": 0,
+    "emphasis": [],
+    "md": "Pegloticase or rasburicase",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Uricase converts uric acid to allantoin",
+    "level": 0,
+    "emphasis": [],
+    "md": "Uricase converts uric acid to allantoin",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Allantoin is soluble and excreted",
+    "level": 0,
+    "emphasis": [],
+    "md": "Allantoin is soluble and excreted",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "15",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "15",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**15**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": "Uricosurics block reabsorption; uricases remove uric acid enzymatically, which is why they suit refractory disease."
+ },
+ {
+  "slide": 14,
+  "title": "Acute Treatment or Urate-Lowering Therapy?",
+  "items": [
+   {
+    "text": "CLINICAL CASE",
+    "level": 0,
+    "emphasis": [],
+    "md": "CLINICAL CASE",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Acute Treatment or Urate-Lowering Therapy?",
+    "level": 0,
+    "emphasis": [],
+    "md": "Acute Treatment or Urate-Lowering Therapy?",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "A patient presents with sudden, severe pain, redness, and swelling of the first metatarsophalangeal joint, consistent with an acute gout flare.",
+    "level": 0,
+    "emphasis": [],
+    "md": "A patient presents with sudden, severe pain, redness, and swelling of the first metatarsophalangeal joint, consistent with an acute gout flare.",
+    "heading": false,
+    "size": 17.0
+   },
+   {
+    "text": "Ask yourself:  Is this the moment to start acute treatment, chronic urate-lowering therapy, or both?",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Ask yourself:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     },
+     {
+      "text": "Is this the moment to start acute treatment, chronic urate-lowering therapy, or both?",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Ask yourself:** **Is this the moment to start acute treatment, chronic urate-lowering therapy, or both?**",
+    "heading": false,
+    "size": 18.0
+   },
+   {
+    "text": "Clinical pearl:  Treat the acute flare first (colchicine, NSAID, or corticosteroid); urate-lowering therapy is deferred until the flare resolves, then used for long-term prevention.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Clinical pearl:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     },
+     {
+      "text": "Treat the acute flare first (colchicine, NSAID, or corticosteroid); urate-lowering therapy is deferred until the flare resolves, then used for long-term prevention.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Clinical pearl:** **Treat the acute flare first (colchicine, NSAID, or corticosteroid); urate-lowering therapy is deferred until the flare resolves, then used for long-term prevention.**",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "16",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "16",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**16**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "This question tests exactly the acute-vs-chronic distinction from two slides ago — a great checkpoint for whether the concept landed."
+ },
+ {
+  "slide": 15,
+  "title": "Drug Names Reveal the Class: Gout",
+  "items": [
+   {
+    "text": "MECHANISM & DEPTH",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "MECHANISM & DEPTH",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**MECHANISM & DEPTH**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Drug Names Reveal the Class: Gout",
+    "level": 0,
+    "emphasis": [],
+    "md": "Drug Names Reveal the Class: Gout",
+    "heading": true,
+    "size": 27.5
+   },
+   {
+    "text": "Suffixes often reveal the mechanism before you recall the drug",
+    "level": 0,
+    "emphasis": [],
+    "md": "Suffixes often reveal the mechanism before you recall the drug",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "-ostat marks xanthine oxidase inhibitors; allopurinol is the exception",
+    "level": 0,
+    "emphasis": [],
+    "md": "-ostat marks xanthine oxidase inhibitors; allopurinol is the exception",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "-ase names enzymes, so pegloticase and rasburicase are uricases",
+    "level": 0,
+    "emphasis": [],
+    "md": "-ase names enzymes, so pegloticase and rasburicase are uricases",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "-sone and -olone mark corticosteroids used to treat flares",
+    "level": 0,
+    "emphasis": [],
+    "md": "-sone and -olone mark corticosteroids used to treat flares",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "19",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "19",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**19**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [
+   [
+    [
+     "Name pattern",
+     "Drug class",
+     "Examples"
+    ],
+    [
+     "-ostat",
+     "Xanthine oxidase inhibitor",
+     "Allopurinol (exception), febuxostat"
+    ],
+    [
+     "-ase",
+     "Enzyme (uricase)",
+     "Pegloticase, rasburicase"
+    ],
+    [
+     "colchicine",
+     "Plant-derived alkaloid, no stem",
+     "Colchicine"
+    ],
+    [
+     "probenecid, lesinurad-type",
+     "Uricosurics",
+     "Probenecid"
+    ],
+    [
+     "-profen",
+     "Propionic-acid NSAIDs",
+     "Ibuprofen, naproxen"
+    ],
+    [
+     "-sone, -olone",
+     "Corticosteroids",
+     "Prednisone, methylprednisolone"
+    ]
+   ]
+  ],
+  "images": 0,
+  "figures": [],
+  "notes": "Use the suffixes as memory hooks, then confirm each class before prescribing."
+ },
+ {
+  "slide": 16,
+  "title": "06",
+  "items": [
+   {
+    "text": "SECTION",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "SECTION",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**SECTION**",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "06",
+    "level": 0,
+    "emphasis": [],
+    "md": "06",
+    "heading": true,
+    "size": 68.0
+   },
+   {
+    "text": "Skeletal Muscle Relaxants",
+    "level": 0,
+    "emphasis": [],
+    "md": "Skeletal Muscle Relaxants",
+    "heading": true,
+    "size": 32.0
+   },
+   {
+    "text": "Different mechanisms for spasm, spasticity, and rigidity.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Different mechanisms for spasm, spasticity, and rigidity.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Different mechanisms for spasm, spasticity, and rigidity.**",
+    "heading": false,
+    "size": 15.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 17,
+  "title": "Spasm vs. Spasticity vs. Rigidity",
+  "items": [
+   {
+    "text": "NOT THE SAME THING",
+    "level": 0,
+    "emphasis": [],
+    "md": "NOT THE SAME THING",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Spasm vs. Spasticity vs. Rigidity",
+    "level": 0,
+    "emphasis": [],
+    "md": "Spasm vs. Spasticity vs. Rigidity",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Muscle Spasm",
+    "level": 0,
+    "emphasis": [],
+    "md": "Muscle Spasm",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Spasticity & Rigidity",
+    "level": 0,
+    "emphasis": [],
+    "md": "Spasticity & Rigidity",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Sudden, involuntary contraction",
+    "level": 0,
+    "emphasis": [],
+    "md": "Sudden, involuntary contraction",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Often from acute musculoskeletal injury",
+    "level": 0,
+    "emphasis": [],
+    "md": "Often from acute musculoskeletal injury",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Typically treated with centrally-acting relaxants",
+    "level": 0,
+    "emphasis": [],
+    "md": "Typically treated with centrally-acting relaxants",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Spasticity: velocity-dependent increased tone from upper motor neuron injury",
+    "level": 0,
+    "emphasis": [],
+    "md": "Spasticity: velocity-dependent increased tone from upper motor neuron injury",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Rigidity: constant increased tone, independent of velocity",
+    "level": 0,
+    "emphasis": [],
+    "md": "Rigidity: constant increased tone, independent of velocity",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Often require distinct pharmacologic approaches",
+    "level": 0,
+    "emphasis": [],
+    "md": "Often require distinct pharmacologic approaches",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "21",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "21",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**21**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 18,
+  "title": "Where Muscle Tone Is Controlled",
+  "items": [
+   {
+    "text": "MECHANISM & DEPTH",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "MECHANISM & DEPTH",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**MECHANISM & DEPTH**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Where Muscle Tone Is Controlled",
+    "level": 0,
+    "emphasis": [],
+    "md": "Where Muscle Tone Is Controlled",
+    "heading": true,
+    "size": 30.0
+   },
+   {
+    "text": "Baclofen and tizanidine act on spinal interneurons and afferents",
+    "level": 0,
+    "emphasis": [],
+    "md": "Baclofen and tizanidine act on spinal interneurons and afferents",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Cyclobenzaprine acts in the brainstem",
+    "level": 0,
+    "emphasis": [],
+    "md": "Cyclobenzaprine acts in the brainstem",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Botulinum toxin blocks ACh release at the junction",
+    "level": 0,
+    "emphasis": [],
+    "md": "Botulinum toxin blocks ACh release at the junction",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Dantrolene acts inside the fiber on RyR1",
+    "level": 0,
+    "emphasis": [],
+    "md": "Dantrolene acts inside the fiber on RyR1",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Upper motor neurons: descending inhibitory pathways",
+    "level": 0,
+    "emphasis": [],
+    "md": "Upper motor neurons: descending inhibitory pathways",
+    "heading": true,
+    "size": 15.0
+   },
+   {
+    "text": "▼",
+    "level": 0,
+    "emphasis": [],
+    "md": "▼",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Spinal interneurons (GABA, glycine, alpha-2)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Spinal interneurons (GABA, glycine, alpha-2)",
+    "heading": true,
+    "size": 15.0
+   },
+   {
+    "text": "▼",
+    "level": 0,
+    "emphasis": [],
+    "md": "▼",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Alpha motor neuron",
+    "level": 0,
+    "emphasis": [],
+    "md": "Alpha motor neuron",
+    "heading": true,
+    "size": 15.0
+   },
+   {
+    "text": "▼",
+    "level": 0,
+    "emphasis": [],
+    "md": "▼",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Neuromuscular junction (ACh release)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Neuromuscular junction (ACh release)",
+    "heading": true,
+    "size": 15.0
+   },
+   {
+    "text": "▼",
+    "level": 0,
+    "emphasis": [],
+    "md": "▼",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Muscle fiber contraction (SR Ca²⁺ release)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Muscle fiber contraction (SR Ca²⁺ release)",
+    "heading": true,
+    "size": 15.0
+   },
+   {
+    "text": "22",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "22",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**22**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 19,
+  "title": "Centrally vs. Peripherally Acting Agents",
+  "items": [
+   {
+    "text": "CLASSIFICATION",
+    "level": 0,
+    "emphasis": [],
+    "md": "CLASSIFICATION",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Centrally vs. Peripherally Acting Agents",
+    "level": 0,
+    "emphasis": [],
+    "md": "Centrally vs. Peripherally Acting Agents",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Centrally Acting",
+    "level": 0,
+    "emphasis": [],
+    "md": "Centrally Acting",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Peripherally / Locally Acting",
+    "level": 0,
+    "emphasis": [],
+    "md": "Peripherally / Locally Acting",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Cyclobenzaprine, tizanidine, baclofen — first-line agents",
+    "level": 0,
+    "emphasis": [],
+    "md": "Cyclobenzaprine, tizanidine, baclofen — first-line agents",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Carisoprodol, methocarbamol, metaxalone, chlorzoxazone — other options",
+    "level": 0,
+    "emphasis": [],
+    "md": "Carisoprodol, methocarbamol, metaxalone, chlorzoxazone — other options",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Act within the CNS to reduce muscle tone",
+    "level": 0,
+    "emphasis": [],
+    "md": "Act within the CNS to reduce muscle tone",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Dantrolene — acts directly on skeletal muscle itself",
+    "level": 0,
+    "emphasis": [],
+    "md": "Dantrolene — acts directly on skeletal muscle itself",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Botulinum toxin — acts at the neuromuscular junction",
+    "level": 0,
+    "emphasis": [],
+    "md": "Botulinum toxin — acts at the neuromuscular junction",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Useful when a central mechanism is not desired (or not safe)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Useful when a central mechanism is not desired (or not safe)",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "23",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "23",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**23**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 20,
+  "title": "Skeletal Muscle Relaxants: Central vs. Peripheral Site of Action",
+  "items": [
+   {
+    "text": "ORIGINAL ILLUSTRATION · FIGURE 5",
+    "level": 0,
+    "emphasis": [],
+    "md": "ORIGINAL ILLUSTRATION · FIGURE 5",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Skeletal Muscle Relaxants: Central vs. Peripheral Site of Action",
+    "level": 0,
+    "emphasis": [],
+    "md": "Skeletal Muscle Relaxants: Central vs. Peripheral Site of Action",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Figure 5. Original illustrative diagram (not from Katzung): cyclobenzaprine, tizanidine, and baclofen act within the CNS to reduce excitatory output to motor neurons, while dantrolene acts directly on the skeletal muscle fiber itself.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Figure 5. Original illustrative diagram (not from Katzung): cyclobenzaprine, tizanidine, and baclofen act within the CNS to reduce excitatory output to motor neurons, while dantrolene acts directly on the skeletal muscle fiber itself.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Figure 5. Original illustrative diagram (not from Katzung): cyclobenzaprine, tizanidine, and baclofen act within the CNS to reduce excitatory output to motor neurons, while dantrolene acts directly on the skeletal muscle fiber itself.**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "24",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "24",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**24**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [],
+  "images": 2,
+  "figures": [
+   "S20_1.jpg"
+  ],
+  "notes": "This is the single highest-yield distinction in this section: \"where does the drug act\" sorts every agent into one of two buckets, and dantrolene is the only one in the peripheral bucket."
+ },
+ {
+  "slide": 21,
+  "title": "Baclofen",
+  "items": [
+   {
+    "text": "CENTRALLY ACTING",
+    "level": 0,
+    "emphasis": [],
+    "md": "CENTRALLY ACTING",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Baclofen",
+    "level": 0,
+    "emphasis": [],
+    "md": "Baclofen",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Mechanism: GABA-B receptor agonist in the spinal cord.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Mechanism: GABA-B receptor agonist in the spinal cord.",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Mechanism: GABA-B receptor agonist in the spinal cord.**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Clinical use: spasticity, particularly from spinal cord injury or multiple sclerosis.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Clinical use: spasticity, particularly from spinal cord injury or multiple sclerosis.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Major concern: CNS depression — sedation, additive risk with other CNS depressants.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Major concern: CNS depression — sedation, additive risk with other CNS depressants.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Major concern: CNS depression — sedation, additive risk with other CNS depressants.**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Abrupt discontinuation (especially intrathecal) can cause a dangerous withdrawal syndrome.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Abrupt discontinuation (especially intrathecal) can cause a dangerous withdrawal syndrome.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "27",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "27",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**27**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 22,
+  "title": "Baclofen: GABA-B Agonism in the Spinal Cord",
+  "items": [
+   {
+    "text": "MECHANISM & DEPTH",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "MECHANISM & DEPTH",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**MECHANISM & DEPTH**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Baclofen: GABA-B Agonism in the Spinal Cord",
+    "level": 0,
+    "emphasis": [],
+    "md": "Baclofen: GABA-B Agonism in the Spinal Cord",
+    "heading": true,
+    "size": 30.0
+   },
+   {
+    "text": "Baclofen binds GABA-B receptors",
+    "level": 0,
+    "emphasis": [],
+    "md": "Baclofen binds GABA-B receptors",
+    "heading": true,
+    "size": 14.0
+   },
+   {
+    "text": "Abrupt withdrawal (especially intrathecal) can cause seizures, hyperthermia, rebound spasticity",
+    "level": 0,
+    "emphasis": [],
+    "md": "Abrupt withdrawal (especially intrathecal) can cause seizures, hyperthermia, rebound spasticity",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Sedation and weakness",
+    "level": 0,
+    "emphasis": [],
+    "md": "Sedation and weakness",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Renal dose adjustment",
+    "level": 0,
+    "emphasis": [],
+    "md": "Renal dose adjustment",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Intrathecal option for severe spasticity",
+    "level": 0,
+    "emphasis": [],
+    "md": "Intrathecal option for severe spasticity",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "▼",
+    "level": 0,
+    "emphasis": [],
+    "md": "▼",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Opens K⁺ channels, closes Ca²⁺ channels: presynaptic inhibition",
+    "level": 0,
+    "emphasis": [],
+    "md": "Opens K⁺ channels, closes Ca²⁺ channels: presynaptic inhibition",
+    "heading": true,
+    "size": 14.0
+   },
+   {
+    "text": "▼",
+    "level": 0,
+    "emphasis": [],
+    "md": "▼",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Less excitatory neurotransmitter release",
+    "level": 0,
+    "emphasis": [],
+    "md": "Less excitatory neurotransmitter release",
+    "heading": true,
+    "size": 14.0
+   },
+   {
+    "text": "▼",
+    "level": 0,
+    "emphasis": [],
+    "md": "▼",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Lower motor neuron firing: reduced spasticity",
+    "level": 0,
+    "emphasis": [],
+    "md": "Lower motor neuron firing: reduced spasticity",
+    "heading": true,
+    "size": 14.0
+   },
+   {
+    "text": "28",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "28",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**28**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 23,
+  "title": "Tizanidine",
+  "items": [
+   {
+    "text": "CENTRALLY ACTING",
+    "level": 0,
+    "emphasis": [],
+    "md": "CENTRALLY ACTING",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Tizanidine",
+    "level": 0,
+    "emphasis": [],
+    "md": "Tizanidine",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Mechanism: central α2-adrenergic agonist.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Mechanism: central α2-adrenergic agonist.",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Mechanism: central α2-adrenergic agonist.**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Reduces excitatory input to motor neurons, lowering muscle tone.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Reduces excitatory input to motor neurons, lowering muscle tone.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Adverse effects: sedation, hypotension, dry mouth, hepatotoxicity.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Adverse effects: sedation, hypotension, dry mouth, hepatotoxicity.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Adverse effects: sedation, hypotension, dry mouth, hepatotoxicity.**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Requires liver function monitoring with regular use.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Requires liver function monitoring with regular use.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "29",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "29",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**29**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 24,
+  "title": "Tizanidine: Central Alpha-2 Agonism",
+  "items": [
+   {
+    "text": "MECHANISM & DEPTH",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "MECHANISM & DEPTH",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**MECHANISM & DEPTH**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Tizanidine: Central Alpha-2 Agonism",
+    "level": 0,
+    "emphasis": [],
+    "md": "Tizanidine: Central Alpha-2 Agonism",
+    "heading": true,
+    "size": 30.0
+   },
+   {
+    "text": "Hypotension and bradycardia; sedation and dry mouth",
+    "level": 0,
+    "emphasis": [],
+    "md": "Hypotension and bradycardia; sedation and dry mouth",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Monitor liver enzymes (LFTs) for hepatotoxicity",
+    "level": 0,
+    "emphasis": [],
+    "md": "Monitor liver enzymes (LFTs) for hepatotoxicity",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "CYP1A2 interactions: ciprofloxacin and fluvoxamine strongly raise levels (contraindicated)",
+    "level": 0,
+    "emphasis": [],
+    "md": "CYP1A2 interactions: ciprofloxacin and fluvoxamine strongly raise levels (contraindicated)",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Additive effect with antihypertensives",
+    "level": 0,
+    "emphasis": [],
+    "md": "Additive effect with antihypertensives",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Tizanidine activates alpha-2 receptors",
+    "level": 0,
+    "emphasis": [],
+    "md": "Tizanidine activates alpha-2 receptors",
+    "heading": true,
+    "size": 14.0
+   },
+   {
+    "text": "▼",
+    "level": 0,
+    "emphasis": [],
+    "md": "▼",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Reduced presynaptic release of excitatory amino acids",
+    "level": 0,
+    "emphasis": [],
+    "md": "Reduced presynaptic release of excitatory amino acids",
+    "heading": true,
+    "size": 14.0
+   },
+   {
+    "text": "▼",
+    "level": 0,
+    "emphasis": [],
+    "md": "▼",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Lower motor neuron activity",
+    "level": 0,
+    "emphasis": [],
+    "md": "Lower motor neuron activity",
+    "heading": true,
+    "size": 14.0
+   },
+   {
+    "text": "▼",
+    "level": 0,
+    "emphasis": [],
+    "md": "▼",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Reduced muscle tone",
+    "level": 0,
+    "emphasis": [],
+    "md": "Reduced muscle tone",
+    "heading": true,
+    "size": 14.0
+   },
+   {
+    "text": "30",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "30",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**30**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 25,
+  "title": "Cyclobenzaprine",
+  "items": [
+   {
+    "text": "CENTRALLY ACTING",
+    "level": 0,
+    "emphasis": [],
+    "md": "CENTRALLY ACTING",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Cyclobenzaprine",
+    "level": 0,
+    "emphasis": [],
+    "md": "Cyclobenzaprine",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Structurally related to tricyclic antidepressants.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Structurally related to tricyclic antidepressants.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Primary use: short-term treatment of acute, localized muscle spasm.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Primary use: short-term treatment of acute, localized muscle spasm.",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Primary use: short-term treatment of acute, localized muscle spasm.**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Prominent sedation — commonly dosed at night.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Prominent sedation — commonly dosed at night.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Anticholinergic effects: dry mouth, blurred vision, urinary retention — use caution in older adults.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Anticholinergic effects: dry mouth, blurred vision, urinary retention — use caution in older adults.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Anticholinergic effects: dry mouth, blurred vision, urinary retention — use caution in older adults.**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "31",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "31",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**31**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 26,
+  "title": "Cyclobenzaprine: Brainstem Action and Anticholinergic Effects",
+  "items": [
+   {
+    "text": "MECHANISM & DEPTH",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "MECHANISM & DEPTH",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**MECHANISM & DEPTH**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Cyclobenzaprine: Brainstem Action and Anticholinergic Effects",
+    "level": 0,
+    "emphasis": [],
+    "md": "Cyclobenzaprine: Brainstem Action and Anticholinergic Effects",
+    "heading": true,
+    "size": 30.0
+   },
+   {
+    "text": "Anticholinergic effects: dry mouth, urinary retention, confusion (Beers list in older adults)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Anticholinergic effects: dry mouth, urinary retention, confusion (Beers list in older adults)",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Sedation",
+    "level": 0,
+    "emphasis": [],
+    "md": "Sedation",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Serotonin syndrome risk with SSRIs, SNRIs, tramadol; MAOIs contraindicated",
+    "level": 0,
+    "emphasis": [],
+    "md": "Serotonin syndrome risk with SSRIs, SNRIs, tramadol; MAOIs contraindicated",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Short-term use only, 2–3 weeks",
+    "level": 0,
+    "emphasis": [],
+    "md": "Short-term use only, 2–3 weeks",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Acts in the brainstem",
+    "level": 0,
+    "emphasis": [],
+    "md": "Acts in the brainstem",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "▼",
+    "level": 0,
+    "emphasis": [],
+    "md": "▼",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Antagonizes 5-HT2 and descending serotonergic and noradrenergic pathways",
+    "level": 0,
+    "emphasis": [],
+    "md": "Antagonizes 5-HT2 and descending serotonergic and noradrenergic pathways",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "▼",
+    "level": 0,
+    "emphasis": [],
+    "md": "▼",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Reduced tonic somatic motor activity",
+    "level": 0,
+    "emphasis": [],
+    "md": "Reduced tonic somatic motor activity",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "▼",
+    "level": 0,
+    "emphasis": [],
+    "md": "▼",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Muscle relaxation",
+    "level": 0,
+    "emphasis": [],
+    "md": "Muscle relaxation",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "32",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "32",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**32**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 27,
+  "title": "Other Centrally-Acting Relaxants & Botulinum Toxin",
+  "items": [
+   {
+    "text": "OTHER AGENTS",
+    "level": 0,
+    "emphasis": [],
+    "md": "OTHER AGENTS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Other Centrally-Acting Relaxants & Botulinum Toxin",
+    "level": 0,
+    "emphasis": [],
+    "md": "Other Centrally-Acting Relaxants & Botulinum Toxin",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Carisoprodol — metabolized to meprobamate; Schedule IV controlled substance with dependence/misuse potential.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Carisoprodol — metabolized to meprobamate; Schedule IV controlled substance with dependence/misuse potential.",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Carisoprodol — metabolized to meprobamate; Schedule IV controlled substance with dependence/misuse potential.**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Methocarbamol — centrally-acting; generally less sedating than cyclobenzaprine.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Methocarbamol — centrally-acting; generally less sedating than cyclobenzaprine.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Metaxalone — centrally-acting; relatively favorable sedation profile among this group.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Metaxalone — centrally-acting; relatively favorable sedation profile among this group.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Chlorzoxazone — centrally-acting; carries a rare but notable risk of hepatotoxicity.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Chlorzoxazone — centrally-acting; carries a rare but notable risk of hepatotoxicity.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Botulinum toxin — blocks presynaptic acetylcholine release at the neuromuscular junction.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Botulinum toxin — blocks presynaptic acetylcholine release at the neuromuscular junction.",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Botulinum toxin — blocks presynaptic acetylcholine release at the neuromuscular junction.**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Used for focal spasticity or dystonia; effect is local and temporary, requiring repeat injections.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Used for focal spasticity or dystonia; effect is local and temporary, requiring repeat injections.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "33",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "33",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**33**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "These agents round out the \"centrally-acting\" category beyond the three first-line drugs, and botulinum toxin introduces a third mechanism entirely — neuromuscular junction blockade — distinct from both the CNS-acting and dantrolene’s sarcoplasmic-reticulum mechanisms."
+ },
+ {
+  "slide": 28,
+  "title": "Dantrolene",
+  "items": [
+   {
+    "text": "PERIPHERALLY ACTING",
+    "level": 0,
+    "emphasis": [],
+    "md": "PERIPHERALLY ACTING",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Dantrolene",
+    "level": 0,
+    "emphasis": [],
+    "md": "Dantrolene",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Mechanism: decreases calcium release from the skeletal muscle sarcoplasmic reticulum.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Mechanism: decreases calcium release from the skeletal muscle sarcoplasmic reticulum.",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Mechanism: decreases calcium release from the skeletal muscle sarcoplasmic reticulum.**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Acts directly on the muscle fiber, not the CNS — distinct from every centrally-acting agent in this section.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Acts directly on the muscle fiber, not the CNS — distinct from every centrally-acting agent in this section.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Clinical use #1: malignant hyperthermia (a true emergency indication).",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Clinical use #1: malignant hyperthermia (a true emergency indication).",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Clinical use #1: malignant hyperthermia (a true emergency indication).**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Clinical use #2: chronic spasticity, when central agents are not appropriate.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Clinical use #2: chronic spasticity, when central agents are not appropriate.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "34",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "34",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**34**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Dantrolene’s role in malignant hyperthermia is a must-know, high-stakes fact — a perioperative emergency where this drug is literally life-saving."
+ },
+ {
+  "slide": 29,
+  "title": "Dantrolene: Blocking Calcium Release at the Muscle",
+  "items": [
+   {
+    "text": "MECHANISM & DEPTH",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "MECHANISM & DEPTH",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**MECHANISM & DEPTH**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Dantrolene: Blocking Calcium Release at the Muscle",
+    "level": 0,
+    "emphasis": [],
+    "md": "Dantrolene: Blocking Calcium Release at the Muscle",
+    "heading": true,
+    "size": 30.0
+   },
+   {
+    "text": "Malignant hyperthermia (triggered by volatile anesthetics and succinylcholine) is the key indication",
+    "level": 0,
+    "emphasis": [],
+    "md": "Malignant hyperthermia (triggered by volatile anesthetics and succinylcholine) is the key indication",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Hepatotoxicity",
+    "level": 0,
+    "emphasis": [],
+    "md": "Hepatotoxicity",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Generalized weakness",
+    "level": 0,
+    "emphasis": [],
+    "md": "Generalized weakness",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "IV formulation for acute crisis; also used for neuroleptic malignant syndrome",
+    "level": 0,
+    "emphasis": [],
+    "md": "IV formulation for acute crisis; also used for neuroleptic malignant syndrome",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Nerve impulse: action potential, DHPR activated",
+    "level": 0,
+    "emphasis": [],
+    "md": "Nerve impulse: action potential, DHPR activated",
+    "heading": true,
+    "size": 14.0
+   },
+   {
+    "text": "▼",
+    "level": 0,
+    "emphasis": [],
+    "md": "▼",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "RyR1 opens: Ca²⁺ released from sarcoplasmic reticulum",
+    "level": 0,
+    "emphasis": [],
+    "md": "RyR1 opens: Ca²⁺ released from sarcoplasmic reticulum",
+    "heading": true,
+    "size": 14.0
+   },
+   {
+    "text": "▼",
+    "level": 0,
+    "emphasis": [],
+    "md": "▼",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Contraction",
+    "level": 0,
+    "emphasis": [],
+    "md": "Contraction",
+    "heading": true,
+    "size": 14.0
+   },
+   {
+    "text": "▼",
+    "level": 0,
+    "emphasis": [],
+    "md": "▼",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Dantrolene blocks RyR1 → less Ca²⁺ released",
+    "level": 0,
+    "emphasis": [],
+    "md": "Dantrolene blocks RyR1 → less Ca²⁺ released",
+    "heading": true,
+    "size": 14.0
+   },
+   {
+    "text": "▼",
+    "level": 0,
+    "emphasis": [],
+    "md": "▼",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Relaxation",
+    "level": 0,
+    "emphasis": [],
+    "md": "Relaxation",
+    "heading": true,
+    "size": 14.0
+   },
+   {
+    "text": "35",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "35",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**35**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 30,
+  "title": "Drug Names Reveal the Class: Muscle Relaxants",
+  "items": [
+   {
+    "text": "NAMING CLUES",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "NAMING CLUES",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**NAMING CLUES**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Drug Names Reveal the Class: Muscle Relaxants",
+    "level": 0,
+    "emphasis": [],
+    "md": "Drug Names Reveal the Class: Muscle Relaxants",
+    "heading": true,
+    "size": 30.0
+   },
+   {
+    "text": "38",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "38",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**38**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [
+   [
+    [
+     "Name clue",
+     "Class",
+     "Examples"
+    ],
+    [
+     "-curonium / -curium",
+     "Nondepolarizing neuromuscular blockers",
+     "Vecuronium, atracurium, cisatracurium"
+    ],
+    [
+     "succinylcholine (-choline)",
+     "Depolarizing neuromuscular blocker",
+     "Succinylcholine"
+    ],
+    [
+     "-azepam",
+     "Benzodiazepine (GABA-A)",
+     "Diazepam"
+    ],
+    [
+     "cyclo- (tricyclic ring)",
+     "Tricyclic-like central relaxant",
+     "Cyclobenzaprine"
+    ],
+    [
+     "-idine (imidazoline)",
+     "Central alpha-2 agonist",
+     "Tizanidine"
+    ],
+    [
+     "No shared stem",
+     "GABA-B agonist (GABA analog)",
+     "Baclofen"
+    ],
+    [
+     "-trolene (hydantoin derivative)",
+     "Blocks RyR1 in the muscle fiber",
+     "Dantrolene"
+    ],
+    [
+     "-toxin",
+     "Blocks presynaptic ACh release",
+     "Botulinum toxin"
+    ]
+   ]
+  ],
+  "images": 0,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 31,
+  "title": "07",
+  "items": [
+   {
+    "text": "SECTION",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "SECTION",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**SECTION**",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "07",
+    "level": 0,
+    "emphasis": [],
+    "md": "07",
+    "heading": true,
+    "size": 68.0
+   },
+   {
+    "text": "Bone Pharmacology",
+    "level": 0,
+    "emphasis": [],
+    "md": "Bone Pharmacology",
+    "heading": true,
+    "size": 32.0
+   },
+   {
+    "text": "Balancing bone formation and bone resorption.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Balancing bone formation and bone resorption.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Balancing bone formation and bone resorption.**",
+    "heading": false,
+    "size": 15.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 32,
+  "title": "Bone Remodeling",
+  "items": [
+   {
+    "text": "THE BASICS",
+    "level": 0,
+    "emphasis": [],
+    "md": "THE BASICS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Bone Remodeling",
+    "level": 0,
+    "emphasis": [],
+    "md": "Bone Remodeling",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Osteoblasts",
+    "level": 0,
+    "emphasis": [],
+    "md": "Osteoblasts",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Osteoclasts",
+    "level": 0,
+    "emphasis": [],
+    "md": "Osteoclasts",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Build new bone matrix",
+    "level": 0,
+    "emphasis": [],
+    "md": "Build new bone matrix",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Activity promoted by several osteoporosis therapies",
+    "level": 0,
+    "emphasis": [],
+    "md": "Activity promoted by several osteoporosis therapies",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Resorb (break down) existing bone",
+    "level": 0,
+    "emphasis": [],
+    "md": "Resorb (break down) existing bone",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Activity suppressed by most osteoporosis therapies",
+    "level": 0,
+    "emphasis": [],
+    "md": "Activity suppressed by most osteoporosis therapies",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "40",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "40",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**40**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Nearly every osteoporosis drug on the following slides works by shifting this balance one way or the other — either slowing osteoclasts or stimulating osteoblasts."
+ },
+ {
+  "slide": 33,
+  "title": "RANKL/OPG Controls Osteoclast Activity",
+  "items": [
+   {
+    "text": "MECHANISM & DEPTH",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "MECHANISM & DEPTH",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**MECHANISM & DEPTH**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "RANKL/OPG Controls Osteoclast Activity",
+    "level": 0,
+    "emphasis": [],
+    "md": "RANKL/OPG Controls Osteoclast Activity",
+    "heading": true,
+    "size": 30.0
+   },
+   {
+    "text": "OPG is a decoy receptor that blocks RANKL",
+    "level": 0,
+    "emphasis": [],
+    "md": "OPG is a decoy receptor that blocks RANKL",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "PTH: intermittent dosing favors formation; continuous exposure raises RANKL and resorption",
+    "level": 0,
+    "emphasis": [],
+    "md": "PTH: intermittent dosing favors formation; continuous exposure raises RANKL and resorption",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Estrogen increases OPG; denosumab mimics OPG",
+    "level": 0,
+    "emphasis": [],
+    "md": "Estrogen increases OPG; denosumab mimics OPG",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Sclerostin inhibits Wnt signaling in osteoblasts",
+    "level": 0,
+    "emphasis": [],
+    "md": "Sclerostin inhibits Wnt signaling in osteoblasts",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Osteoblast or stromal cell expresses RANKL",
+    "level": 0,
+    "emphasis": [],
+    "md": "Osteoblast or stromal cell expresses RANKL",
+    "heading": true,
+    "size": 14.0
+   },
+   {
+    "text": "▼",
+    "level": 0,
+    "emphasis": [],
+    "md": "▼",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "RANKL binds RANK on osteoclast precursors",
+    "level": 0,
+    "emphasis": [],
+    "md": "RANKL binds RANK on osteoclast precursors",
+    "heading": true,
+    "size": 14.0
+   },
+   {
+    "text": "▼",
+    "level": 0,
+    "emphasis": [],
+    "md": "▼",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Osteoclast differentiation and activation",
+    "level": 0,
+    "emphasis": [],
+    "md": "Osteoclast differentiation and activation",
+    "heading": true,
+    "size": 14.0
+   },
+   {
+    "text": "▼",
+    "level": 0,
+    "emphasis": [],
+    "md": "▼",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Bone resorption releases calcium",
+    "level": 0,
+    "emphasis": [],
+    "md": "Bone resorption releases calcium",
+    "heading": true,
+    "size": 14.0
+   },
+   {
+    "text": "41",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "41",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**41**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 34,
+  "title": "Calcium Homeostasis",
+  "items": [
+   {
+    "text": "REGULATION",
+    "level": 0,
+    "emphasis": [],
+    "md": "REGULATION",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Calcium Homeostasis",
+    "level": 0,
+    "emphasis": [],
+    "md": "Calcium Homeostasis",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Parathyroid Hormone (PTH)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Parathyroid Hormone (PTH)",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Vitamin D",
+    "level": 0,
+    "emphasis": [],
+    "md": "Vitamin D",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Raises serum calcium; mobilizes bone calcium when levels drop",
+    "level": 0,
+    "emphasis": [],
+    "md": "Raises serum calcium; mobilizes bone calcium when levels drop",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "Increases intestinal calcium absorption",
+    "level": 0,
+    "emphasis": [],
+    "md": "Increases intestinal calcium absorption",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "Calcium",
+    "level": 0,
+    "emphasis": [],
+    "md": "Calcium",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Calcitonin",
+    "level": 0,
+    "emphasis": [],
+    "md": "Calcitonin",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "The substrate being regulated — intake, bone storage, excretion",
+    "level": 0,
+    "emphasis": [],
+    "md": "The substrate being regulated — intake, bone storage, excretion",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "Lowers serum calcium; opposes PTH",
+    "level": 0,
+    "emphasis": [],
+    "md": "Lowers serum calcium; opposes PTH",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "42",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "42",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**42**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 35,
+  "title": "Calcium Homeostasis: The PTH Feedback Loop",
+  "items": [
+   {
+    "text": "ORIGINAL ILLUSTRATION · FIGURE 6",
+    "level": 0,
+    "emphasis": [],
+    "md": "ORIGINAL ILLUSTRATION · FIGURE 6",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Calcium Homeostasis: The PTH Feedback Loop",
+    "level": 0,
+    "emphasis": [],
+    "md": "Calcium Homeostasis: The PTH Feedback Loop",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Figure 6. Original illustrative diagram (not from Katzung): falling serum calcium triggers PTH release, which raises calcium via bone resorption, renal reabsorption, and vitamin D-mediated intestinal absorption; calcitonin opposes this loop.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Figure 6. Original illustrative diagram (not from Katzung): falling serum calcium triggers PTH release, which raises calcium via bone resorption, renal reabsorption, and vitamin D-mediated intestinal absorption; calcitonin opposes this loop.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Figure 6. Original illustrative diagram (not from Katzung): falling serum calcium triggers PTH release, which raises calcium via bone resorption, renal reabsorption, and vitamin D-mediated intestinal absorption; calcitonin opposes this loop.**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "43",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "43",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**43**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [],
+  "images": 2,
+  "figures": [
+   "S35_1.jpg"
+  ],
+  "notes": "Trace the three PTH arrows (bone, kidney, intestine) with your finger as you narrate — this negative feedback loop is the physiologic backdrop for every osteoporosis drug that follows."
+ },
+ {
+  "slide": 36,
+  "title": "Osteoporosis Risk Factors",
+  "items": [
+   {
+    "text": "RISK ASSESSMENT",
+    "level": 0,
+    "emphasis": [],
+    "md": "RISK ASSESSMENT",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Osteoporosis Risk Factors",
+    "level": 0,
+    "emphasis": [],
+    "md": "Osteoporosis Risk Factors",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Aging",
+    "level": 0,
+    "emphasis": [],
+    "md": "Aging",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Estrogen deficiency (e.g., postmenopausal status)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Estrogen deficiency (e.g., postmenopausal status)",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Chronic glucocorticoid use",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Chronic glucocorticoid use",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Chronic glucocorticoid use**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Low calcium or vitamin D intake",
+    "level": 0,
+    "emphasis": [],
+    "md": "Low calcium or vitamin D intake",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Low physical activity",
+    "level": 0,
+    "emphasis": [],
+    "md": "Low physical activity",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "46",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "46",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**46**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Glucocorticoid-induced osteoporosis is especially high-yield since it directly connects to the corticosteroid use already discussed for OA/RA in Session 1."
+ },
+ {
+  "slide": 37,
+  "title": "Bisphosphonates",
+  "items": [
+   {
+    "text": "FIRST-LINE THERAPY",
+    "level": 0,
+    "emphasis": [],
+    "md": "FIRST-LINE THERAPY",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Bisphosphonates",
+    "level": 0,
+    "emphasis": [],
+    "md": "Bisphosphonates",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Mechanism: inhibit osteoclast-mediated bone resorption.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Mechanism: inhibit osteoclast-mediated bone resorption.",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Mechanism: inhibit osteoclast-mediated bone resorption.**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Alendronate, risedronate — oral, typically weekly dosing",
+    "level": 0,
+    "emphasis": [],
+    "md": "Alendronate, risedronate — oral, typically weekly dosing",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Ibandronate — oral, monthly dosing",
+    "level": 0,
+    "emphasis": [],
+    "md": "Ibandronate — oral, monthly dosing",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Zoledronic acid — intravenous, as infrequently as once yearly",
+    "level": 0,
+    "emphasis": [],
+    "md": "Zoledronic acid — intravenous, as infrequently as once yearly",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "First-line for most patients with osteoporosis.",
+    "level": 0,
+    "emphasis": [],
+    "md": "First-line for most patients with osteoporosis.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "47",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "47",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**47**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 38,
+  "title": "Bisphosphonates: Osteoclast Apoptosis",
+  "items": [
+   {
+    "text": "MECHANISM & DEPTH",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "MECHANISM & DEPTH",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**MECHANISM & DEPTH**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Bisphosphonates: Osteoclast Apoptosis",
+    "level": 0,
+    "emphasis": [],
+    "md": "Bisphosphonates: Osteoclast Apoptosis",
+    "heading": true,
+    "size": 30.0
+   },
+   {
+    "text": "Long skeletal half-life: effect persists after stopping",
+    "level": 0,
+    "emphasis": [],
+    "md": "Long skeletal half-life: effect persists after stopping",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Ensure calcium and vitamin D repletion before starting",
+    "level": 0,
+    "emphasis": [],
+    "md": "Ensure calcium and vitamin D repletion before starting",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Contraindicated with severe renal impairment (CrCl below 30-35 mL/min)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Contraindicated with severe renal impairment (CrCl below 30-35 mL/min)",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Osteonecrosis of the jaw and atypical femur fracture with long-term use; consider a drug holiday after 3-5 years of oral therapy",
+    "level": 0,
+    "emphasis": [],
+    "md": "Osteonecrosis of the jaw and atypical femur fracture with long-term use; consider a drug holiday after 3-5 years of oral therapy",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Drug binds hydroxyapatite at resorption sites",
+    "level": 0,
+    "emphasis": [],
+    "md": "Drug binds hydroxyapatite at resorption sites",
+    "heading": true,
+    "size": 14.0
+   },
+   {
+    "text": "▼",
+    "level": 0,
+    "emphasis": [],
+    "md": "▼",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Osteoclast takes it up during resorption",
+    "level": 0,
+    "emphasis": [],
+    "md": "Osteoclast takes it up during resorption",
+    "heading": true,
+    "size": 14.0
+   },
+   {
+    "text": "▼",
+    "level": 0,
+    "emphasis": [],
+    "md": "▼",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Nitrogen-containing bisphosphonates inhibit FPP synthase (mevalonate pathway)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Nitrogen-containing bisphosphonates inhibit FPP synthase (mevalonate pathway)",
+    "heading": true,
+    "size": 14.0
+   },
+   {
+    "text": "▼",
+    "level": 0,
+    "emphasis": [],
+    "md": "▼",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Loss of prenylation of small GTPases",
+    "level": 0,
+    "emphasis": [],
+    "md": "Loss of prenylation of small GTPases",
+    "heading": true,
+    "size": 14.0
+   },
+   {
+    "text": "▼",
+    "level": 0,
+    "emphasis": [],
+    "md": "▼",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Osteoclast apoptosis, so less resorption",
+    "level": 0,
+    "emphasis": [],
+    "md": "Osteoclast apoptosis, so less resorption",
+    "heading": true,
+    "size": 14.0
+   },
+   {
+    "text": "48",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "48",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**48**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 39,
+  "title": "Bisphosphonate Dosing Frequency",
+  "items": [
+   {
+    "text": "ORIGINAL ILLUSTRATION · FIGURE 7",
+    "level": 0,
+    "emphasis": [],
+    "md": "ORIGINAL ILLUSTRATION · FIGURE 7",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Bisphosphonate Dosing Frequency",
+    "level": 0,
+    "emphasis": [],
+    "md": "Bisphosphonate Dosing Frequency",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Figure 7. Original illustrative comparison (illustrative dosing-frequency values, not from Katzung): oral bisphosphonates range from weekly to monthly dosing, while IV zoledronic acid is given as infrequently as once yearly.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Figure 7. Original illustrative comparison (illustrative dosing-frequency values, not from Katzung): oral bisphosphonates range from weekly to monthly dosing, while IV zoledronic acid is given as infrequently as once yearly.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Figure 7. Original illustrative comparison (illustrative dosing-frequency values, not from Katzung): oral bisphosphonates range from weekly to monthly dosing, while IV zoledronic acid is given as infrequently as once yearly.**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "49",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "49",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**49**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [],
+  "images": 2,
+  "figures": [
+   "S39_1.jpg"
+  ],
+  "notes": "Use this to set up the adherence discussion on the next slide — dosing frequency is a major real-world driver of which bisphosphonate a patient actually takes consistently."
+ },
+ {
+  "slide": 40,
+  "title": "Bisphosphonate Administration & Adverse Effects",
+  "items": [
+   {
+    "text": "SAFE USE",
+    "level": 0,
+    "emphasis": [],
+    "md": "SAFE USE",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Bisphosphonate Administration & Adverse Effects",
+    "level": 0,
+    "emphasis": [],
+    "md": "Bisphosphonate Administration & Adverse Effects",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Patient Counseling (Oral)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Patient Counseling (Oral)",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Adverse Effects",
+    "level": 0,
+    "emphasis": [],
+    "md": "Adverse Effects",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Take with a full glass of water, first thing in the morning",
+    "level": 0,
+    "emphasis": [],
+    "md": "Take with a full glass of water, first thing in the morning",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Remain upright (sitting or standing) for the specified period after dosing",
+    "level": 0,
+    "emphasis": [],
+    "md": "Remain upright (sitting or standing) for the specified period after dosing",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Take on an empty stomach, well before food",
+    "level": 0,
+    "emphasis": [],
+    "md": "Take on an empty stomach, well before food",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Esophageal irritation",
+    "level": 0,
+    "emphasis": [],
+    "md": "Esophageal irritation",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Hypocalcemia",
+    "level": 0,
+    "emphasis": [],
+    "md": "Hypocalcemia",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Osteonecrosis of the jaw (rare)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Osteonecrosis of the jaw (rare)",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Atypical femoral fractures (rare, with long-term use)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Atypical femoral fractures (rare, with long-term use)",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "52",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "52",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**52**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "The \"remain upright\" counseling point is extremely high-yield for both exams and real-world safety — esophageal injury is largely preventable with correct administration."
+ },
+ {
+  "slide": 41,
+  "title": "Why Oral Bisphosphonates Need Strict Administration Rules",
+  "items": [
+   {
+    "text": "MECHANISM & DEPTH",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "MECHANISM & DEPTH",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**MECHANISM & DEPTH**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Why Oral Bisphosphonates Need Strict Administration Rules",
+    "level": 0,
+    "emphasis": [],
+    "md": "Why Oral Bisphosphonates Need Strict Administration Rules",
+    "heading": true,
+    "size": 30.0
+   },
+   {
+    "text": "Avoid in esophageal stricture, achalasia, or inability to sit upright",
+    "level": 0,
+    "emphasis": [],
+    "md": "Avoid in esophageal stricture, achalasia, or inability to sit upright",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "IV zoledronic acid: acute-phase reaction (flu-like), mitigated with acetaminophen",
+    "level": 0,
+    "emphasis": [],
+    "md": "IV zoledronic acid: acute-phase reaction (flu-like), mitigated with acetaminophen",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Hypocalcemia risk; correct calcium and vitamin D first",
+    "level": 0,
+    "emphasis": [],
+    "md": "Hypocalcemia risk; correct calcium and vitamin D first",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Poor oral absorption (under 1%)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Poor oral absorption (under 1%)",
+    "heading": true,
+    "size": 14.0
+   },
+   {
+    "text": "▼",
+    "level": 0,
+    "emphasis": [],
+    "md": "▼",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Food, calcium, coffee and antacids reduce it further",
+    "level": 0,
+    "emphasis": [],
+    "md": "Food, calcium, coffee and antacids reduce it further",
+    "heading": true,
+    "size": 14.0
+   },
+   {
+    "text": "▼",
+    "level": 0,
+    "emphasis": [],
+    "md": "▼",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Take fasting with plain water; stay upright 30 minutes",
+    "level": 0,
+    "emphasis": [],
+    "md": "Take fasting with plain water; stay upright 30 minutes",
+    "heading": true,
+    "size": 14.0
+   },
+   {
+    "text": "▼",
+    "level": 0,
+    "emphasis": [],
+    "md": "▼",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Lowers esophageal irritation risk",
+    "level": 0,
+    "emphasis": [],
+    "md": "Lowers esophageal irritation risk",
+    "heading": true,
+    "size": 14.0
+   },
+   {
+    "text": "53",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "53",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**53**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 42,
+  "title": "Other Osteoporosis Therapies",
+  "items": [
+   {
+    "text": "BEYOND BISPHOSPHONATES",
+    "level": 0,
+    "emphasis": [],
+    "md": "BEYOND BISPHOSPHONATES",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Other Osteoporosis Therapies",
+    "level": 0,
+    "emphasis": [],
+    "md": "Other Osteoporosis Therapies",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Denosumab",
+    "level": 0,
+    "emphasis": [],
+    "md": "Denosumab",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Teriparatide / Abaloparatide",
+    "level": 0,
+    "emphasis": [],
+    "md": "Teriparatide / Abaloparatide",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Monoclonal antibody; blocks osteoclast formation (RANKL inhibitor)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Monoclonal antibody; blocks osteoclast formation (RANKL inhibitor)",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "PTH-analog \"anabolic\" agents that stimulate new bone formation",
+    "level": 0,
+    "emphasis": [],
+    "md": "PTH-analog \"anabolic\" agents that stimulate new bone formation",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "Romosozumab",
+    "level": 0,
+    "emphasis": [],
+    "md": "Romosozumab",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "SERMs",
+    "level": 0,
+    "emphasis": [],
+    "md": "SERMs",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Monoclonal antibody that both builds bone and limits resorption",
+    "level": 0,
+    "emphasis": [],
+    "md": "Monoclonal antibody that both builds bone and limits resorption",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "Selective estrogen receptor modulators — estrogen-like effect on bone",
+    "level": 0,
+    "emphasis": [],
+    "md": "Selective estrogen receptor modulators — estrogen-like effect on bone",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "Example: raloxifene — also reduces breast cancer risk",
+    "level": 0,
+    "emphasis": [],
+    "md": "Example: raloxifene — also reduces breast cancer risk",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "54",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "54",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**54**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Teriparatide/abaloparatide/romosozumab are the \"anabolic\" exception to the rule that most osteoporosis drugs just slow resorption — they actively build new bone. The next slide shows all of these (plus bisphosphonates) together on one balance diagram."
+ },
+ {
+  "slide": 43,
+  "title": "Anabolic vs Antiresorptive Mechanisms",
+  "items": [
+   {
+    "text": "MECHANISM & DEPTH",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "MECHANISM & DEPTH",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**MECHANISM & DEPTH**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Anabolic vs Antiresorptive Mechanisms",
+    "level": 0,
+    "emphasis": [],
+    "md": "Anabolic vs Antiresorptive Mechanisms",
+    "heading": true,
+    "size": 30.0
+   },
+   {
+    "text": "Teriparatide is limited to 2 years lifetime, then follow with an antiresorptive",
+    "level": 0,
+    "emphasis": [],
+    "md": "Teriparatide is limited to 2 years lifetime, then follow with an antiresorptive",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Denosumab discontinuation causes rebound vertebral fractures; transition to a bisphosphonate",
+    "level": 0,
+    "emphasis": [],
+    "md": "Denosumab discontinuation causes rebound vertebral fractures; transition to a bisphosphonate",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Raloxifene raises VTE risk and may reduce breast cancer risk; hot flashes",
+    "level": 0,
+    "emphasis": [],
+    "md": "Raloxifene raises VTE risk and may reduce breast cancer risk; hot flashes",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Romosozumab carries a boxed warning for MI, stroke, and CV death",
+    "level": 0,
+    "emphasis": [],
+    "md": "Romosozumab carries a boxed warning for MI, stroke, and CV death",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Antiresorptive: denosumab (RANKL antibody), raloxifene (SERM), calcitonin",
+    "level": 0,
+    "emphasis": [],
+    "md": "Antiresorptive: denosumab (RANKL antibody), raloxifene (SERM), calcitonin",
+    "heading": true,
+    "size": 14.0
+   },
+   {
+    "text": "Anabolic: teriparatide (PTH 1-34, daily injection) and abaloparatide",
+    "level": 0,
+    "emphasis": [],
+    "md": "Anabolic: teriparatide (PTH 1-34, daily injection) and abaloparatide",
+    "heading": true,
+    "size": 14.0
+   },
+   {
+    "text": "▼",
+    "level": 0,
+    "emphasis": [],
+    "md": "▼",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "▼",
+    "level": 0,
+    "emphasis": [],
+    "md": "▼",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Stimulate osteoblasts; romosozumab (sclerostin antibody)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Stimulate osteoblasts; romosozumab (sclerostin antibody)",
+    "heading": true,
+    "size": 14.0
+   },
+   {
+    "text": "Less osteoclast activity",
+    "level": 0,
+    "emphasis": [],
+    "md": "Less osteoclast activity",
+    "heading": true,
+    "size": 14.0
+   },
+   {
+    "text": "▼",
+    "level": 0,
+    "emphasis": [],
+    "md": "▼",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "▼",
+    "level": 0,
+    "emphasis": [],
+    "md": "▼",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Increases formation, decreases resorption",
+    "level": 0,
+    "emphasis": [],
+    "md": "Increases formation, decreases resorption",
+    "heading": true,
+    "size": 14.0
+   },
+   {
+    "text": "BMD up, fracture risk down",
+    "level": 0,
+    "emphasis": [],
+    "md": "BMD up, fracture risk down",
+    "heading": true,
+    "size": 14.0
+   },
+   {
+    "text": "55",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "55",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**55**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 44,
+  "title": "How Osteoporosis Drugs Shift the Remodeling Balance",
+  "items": [
+   {
+    "text": "ORIGINAL ILLUSTRATION · FIGURE 8",
+    "level": 0,
+    "emphasis": [],
+    "md": "ORIGINAL ILLUSTRATION · FIGURE 8",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "How Osteoporosis Drugs Shift the Remodeling Balance",
+    "level": 0,
+    "emphasis": [],
+    "md": "How Osteoporosis Drugs Shift the Remodeling Balance",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Figure 8. Original illustrative diagram (not from Katzung): bisphosphonates, denosumab, raloxifene (SERM), and calcitonin inhibit bone resorption; teriparatide, abaloparatide, and romosozumab stimulate bone formation.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Figure 8. Original illustrative diagram (not from Katzung): bisphosphonates, denosumab, raloxifene (SERM), and calcitonin inhibit bone resorption; teriparatide, abaloparatide, and romosozumab stimulate bone formation.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Figure 8. Original illustrative diagram (not from Katzung): bisphosphonates, denosumab, raloxifene (SERM), and calcitonin inhibit bone resorption; teriparatide, abaloparatide, and romosozumab stimulate bone formation.**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "56",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "56",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**56**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [],
+  "images": 2,
+  "figures": [
+   "S44_1.jpg"
+  ],
+  "notes": "This is the capstone bone-pharmacology figure — every drug from the last three slides lands on one side of this seesaw or the other. Ask students to sort each named drug into \"inhibits resorption\" vs. \"stimulates formation\" before revealing the diagram’s labels."
+ },
+ {
+  "slide": 45,
+  "title": "Choosing an Osteoporosis Therapy",
+  "items": [
+   {
+    "text": "INDIVIDUALIZING THERAPY",
+    "level": 0,
+    "emphasis": [],
+    "md": "INDIVIDUALIZING THERAPY",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Choosing an Osteoporosis Therapy",
+    "level": 0,
+    "emphasis": [],
+    "md": "Choosing an Osteoporosis Therapy",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Fracture risk — higher-risk patients may need an anabolic agent first",
+    "level": 0,
+    "emphasis": [],
+    "md": "Fracture risk — higher-risk patients may need an anabolic agent first",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Renal function — some bisphosphonates are avoided in significant renal impairment",
+    "level": 0,
+    "emphasis": [],
+    "md": "Renal function — some bisphosphonates are avoided in significant renal impairment",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Previous fracture history",
+    "level": 0,
+    "emphasis": [],
+    "md": "Previous fracture history",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Glucocorticoid exposure",
+    "level": 0,
+    "emphasis": [],
+    "md": "Glucocorticoid exposure",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Adherence — weekly oral vs. yearly IV vs. injectable options",
+    "level": 0,
+    "emphasis": [],
+    "md": "Adherence — weekly oral vs. yearly IV vs. injectable options",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Route of administration preference",
+    "level": 0,
+    "emphasis": [],
+    "md": "Route of administration preference",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "59",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "59",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**59**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "This checklist is a direct echo of the clinical decision-making framework from Lecture 1 — point that out explicitly."
+ },
+ {
+  "slide": 46,
+  "title": "Drug Names Reveal the Class: Bone",
+  "items": [
+   {
+    "text": "NAMING CLUES",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "NAMING CLUES",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**NAMING CLUES**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Drug Names Reveal the Class: Bone",
+    "level": 0,
+    "emphasis": [],
+    "md": "Drug Names Reveal the Class: Bone",
+    "heading": true,
+    "size": 30.0
+   },
+   {
+    "text": "62",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "62",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**62**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [
+   [
+    [
+     "Name clue",
+     "Class",
+     "Examples"
+    ],
+    [
+     "-dronate",
+     "Bisphosphonates (inhibit osteoclast resorption)",
+     "Alendronate, risedronate, ibandronate; zoledronic acid (zoledronate)"
+    ],
+    [
+     "-sumab",
+     "Monoclonal antibodies (-mab) targeting bone",
+     "Denosumab (RANKL), romosozumab (sclerostin)"
+    ],
+    [
+     "-fene",
+     "Selective estrogen receptor modulator (SERM)",
+     "Raloxifene"
+    ],
+    [
+     "-tide (peptide)",
+     "PTH analogs (anabolic)",
+     "Teriparatide, abaloparatide"
+    ],
+    [
+     "No shared stem",
+     "Calcitonin (hormone)",
+     "Calcitonin"
+    ]
+   ]
+  ],
+  "images": 0,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 47,
+  "title": "08",
+  "items": [
+   {
+    "text": "SECTION",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "SECTION",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**SECTION**",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "08",
+    "level": 0,
+    "emphasis": [],
+    "md": "08",
+    "heading": true,
+    "size": 68.0
+   },
+   {
+    "text": "Putting It All Together",
+    "level": 0,
+    "emphasis": [],
+    "md": "Putting It All Together",
+    "heading": true,
+    "size": 32.0
+   },
+   {
+    "text": "Applying the whole musculoskeletal pharmacology toolkit.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Applying the whole musculoskeletal pharmacology toolkit.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Applying the whole musculoskeletal pharmacology toolkit.**",
+    "heading": false,
+    "size": 15.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 48,
+  "title": "Which Drug Would You Choose?",
+  "items": [
+   {
+    "text": "APPLY IT",
+    "level": 0,
+    "emphasis": [],
+    "md": "APPLY IT",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Which Drug Would You Choose?",
+    "level": 0,
+    "emphasis": [],
+    "md": "Which Drug Would You Choose?",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Patient A",
+    "level": 0,
+    "emphasis": [],
+    "md": "Patient A",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Patient B",
+    "level": 0,
+    "emphasis": [],
+    "md": "Patient B",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Acute gout flare, first presentation",
+    "level": 0,
+    "emphasis": [],
+    "md": "Acute gout flare, first presentation",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "Chronic rheumatoid arthritis, inadequately controlled",
+    "level": 0,
+    "emphasis": [],
+    "md": "Chronic rheumatoid arthritis, inadequately controlled",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "Patient C",
+    "level": 0,
+    "emphasis": [],
+    "md": "Patient C",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Patient D",
+    "level": 0,
+    "emphasis": [],
+    "md": "Patient D",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Osteoarthritis + chronic kidney disease",
+    "level": 0,
+    "emphasis": [],
+    "md": "Osteoarthritis + chronic kidney disease",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "Postmenopausal osteoporosis, high fracture risk",
+    "level": 0,
+    "emphasis": [],
+    "md": "Postmenopausal osteoporosis, high fracture risk",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "64",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "64",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**64**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Have students work in pairs: for each patient, name a first-line drug class AND the single biggest safety concern to check before prescribing it."
+ },
+ {
+  "slide": 49,
+  "title": "Key Takeaways",
+  "items": [
+   {
+    "text": "BIG PICTURE",
+    "level": 0,
+    "emphasis": [],
+    "md": "BIG PICTURE",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Key Takeaways",
+    "level": 0,
+    "emphasis": [],
+    "md": "Key Takeaways",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "1",
+    "level": 0,
+    "emphasis": [],
+    "md": "1",
+    "heading": true,
+    "size": 20.0
+   },
+   {
+    "text": "Pain and inflammation are related but distinct — treat them accordingly.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Pain and inflammation are related but distinct — treat them accordingly.",
+    "heading": true,
+    "size": 16.5
+   },
+   {
+    "text": "2",
+    "level": 0,
+    "emphasis": [],
+    "md": "2",
+    "heading": true,
+    "size": 20.0
+   },
+   {
+    "text": "NSAIDs are effective for pain and inflammation, but carry real GI, renal, and cardiovascular risk.",
+    "level": 0,
+    "emphasis": [],
+    "md": "NSAIDs are effective for pain and inflammation, but carry real GI, renal, and cardiovascular risk.",
+    "heading": true,
+    "size": 16.5
+   },
+   {
+    "text": "3",
+    "level": 0,
+    "emphasis": [],
+    "md": "3",
+    "heading": true,
+    "size": 20.0
+   },
+   {
+    "text": "DMARDs modify the underlying disease process in RA — they do more than mask symptoms.",
+    "level": 0,
+    "emphasis": [],
+    "md": "DMARDs modify the underlying disease process in RA — they do more than mask symptoms.",
+    "heading": true,
+    "size": 16.5
+   },
+   {
+    "text": "4",
+    "level": 0,
+    "emphasis": [],
+    "md": "4",
+    "heading": true,
+    "size": 20.0
+   },
+   {
+    "text": "Acute gout treatment and chronic urate-lowering therapy are different goals, started at different times.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Acute gout treatment and chronic urate-lowering therapy are different goals, started at different times.",
+    "heading": true,
+    "size": 16.5
+   },
+   {
+    "text": "5",
+    "level": 0,
+    "emphasis": [],
+    "md": "5",
+    "heading": true,
+    "size": 20.0
+   },
+   {
+    "text": "Bone pharmacology is fundamentally about the balance between osteoblast and osteoclast activity.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Bone pharmacology is fundamentally about the balance between osteoblast and osteoclast activity.",
+    "heading": true,
+    "size": 16.5
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": "Close by connecting back to Lecture 1: every mechanism in this lecture (COX inhibition, CYP interactions, renal dosing, pharmacogenomics) was really just Lecture 1’s toolkit applied to one organ system."
+ },
+ {
+  "slide": 50,
+  "title": "09",
+  "items": [
+   {
+    "text": "SECTION",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "SECTION",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**SECTION**",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "09",
+    "level": 0,
+    "emphasis": [],
+    "md": "09",
+    "heading": true,
+    "size": 68.0
+   },
+   {
+    "text": "Lecture Recall Quiz",
+    "level": 0,
+    "emphasis": [],
+    "md": "Lecture Recall Quiz",
+    "heading": true,
+    "size": 32.0
+   },
+   {
+    "text": "A cumulative self-test — use this to review before exams.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "A cumulative self-test — use this to review before exams.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**A cumulative self-test — use this to review before exams.**",
+    "heading": false,
+    "size": 15.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 51,
+  "title": "Lecture Recall Quiz (1 of 2)",
+  "items": [
+   {
+    "text": "LECTURE RECALL QUIZ",
+    "level": 0,
+    "emphasis": [],
+    "md": "LECTURE RECALL QUIZ",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Lecture Recall Quiz (1 of 2)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Lecture Recall Quiz (1 of 2)",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "1.  Why is acetaminophen not a reliable first-line choice for an inflammatory joint flare, despite being a good analgesic/antipyretic?",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "1.  Why is acetaminophen not a reliable first-line choice for an inflammatory joint flare, despite being a good analgesic/antipyretic?",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**1.  Why is acetaminophen not a reliable first-line choice for an inflammatory joint flare, despite being a good analgesic/antipyretic?**",
+    "heading": false,
+    "size": 14.5
+   },
+   {
+    "text": "A.  It strongly inhibits COX-2 only",
+    "level": 0,
+    "emphasis": [],
+    "md": "A.  It strongly inhibits COX-2 only",
+    "heading": false,
+    "size": 12.5
+   },
+   {
+    "text": "B.  It has minimal peripheral anti-inflammatory effect",
+    "level": 0,
+    "emphasis": [],
+    "md": "B.  It has minimal peripheral anti-inflammatory effect",
+    "heading": false,
+    "size": 12.5
+   },
+   {
+    "text": "C.  It is contraindicated in all patients with joint pain",
+    "level": 0,
+    "emphasis": [],
+    "md": "C.  It is contraindicated in all patients with joint pain",
+    "heading": false,
+    "size": 12.5
+   },
+   {
+    "text": "D.  It is a DMARD and too strong for mild flares",
+    "level": 0,
+    "emphasis": [],
+    "md": "D.  It is a DMARD and too strong for mild flares",
+    "heading": false,
+    "size": 12.5
+   },
+   {
+    "text": "2.  A 70-year-old with CKD and heart failure needs osteoarthritis pain control. Considering systemic risk, which is generally the safest starting point?",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "2.  A 70-year-old with CKD and heart failure needs osteoarthritis pain control. Considering systemic risk, which is generally the safest starting point?",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**2.  A 70-year-old with CKD and heart failure needs osteoarthritis pain control. Considering systemic risk, which is generally the safest starting point?**",
+    "heading": false,
+    "size": 14.5
+   },
+   {
+    "text": "A.  Oral ibuprofen",
+    "level": 0,
+    "emphasis": [],
+    "md": "A.  Oral ibuprofen",
+    "heading": false,
+    "size": 12.5
+   },
+   {
+    "text": "B.  Oral celecoxib",
+    "level": 0,
+    "emphasis": [],
+    "md": "B.  Oral celecoxib",
+    "heading": false,
+    "size": 12.5
+   },
+   {
+    "text": "C.  Acetaminophen or a topical NSAID",
+    "level": 0,
+    "emphasis": [],
+    "md": "C.  Acetaminophen or a topical NSAID",
+    "heading": false,
+    "size": 12.5
+   },
+   {
+    "text": "D.  Ketorolac",
+    "level": 0,
+    "emphasis": [],
+    "md": "D.  Ketorolac",
+    "heading": false,
+    "size": 12.5
+   },
+   {
+    "text": "3.  Which pairing correctly matches a drug with its primary mechanism?",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "3.  Which pairing correctly matches a drug with its primary mechanism?",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**3.  Which pairing correctly matches a drug with its primary mechanism?**",
+    "heading": false,
+    "size": 14.5
+   },
+   {
+    "text": "A.  Allopurinol — microtubule disruption",
+    "level": 0,
+    "emphasis": [],
+    "md": "A.  Allopurinol — microtubule disruption",
+    "heading": false,
+    "size": 12.5
+   },
+   {
+    "text": "B.  Colchicine — xanthine oxidase inhibition",
+    "level": 0,
+    "emphasis": [],
+    "md": "B.  Colchicine — xanthine oxidase inhibition",
+    "heading": false,
+    "size": 12.5
+   },
+   {
+    "text": "C.  Baclofen — calcium channel blockade in skeletal muscle",
+    "level": 0,
+    "emphasis": [],
+    "md": "C.  Baclofen — calcium channel blockade in skeletal muscle",
+    "heading": false,
+    "size": 12.5
+   },
+   {
+    "text": "D.  Methotrexate — dihydrofolate reductase inhibition",
+    "level": 0,
+    "emphasis": [],
+    "md": "D.  Methotrexate — dihydrofolate reductase inhibition",
+    "heading": false,
+    "size": 12.5
+   },
+   {
+    "text": "69",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "69",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**69**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 52,
+  "title": "Lecture Recall Quiz (2 of 2)",
+  "items": [
+   {
+    "text": "LECTURE RECALL QUIZ",
+    "level": 0,
+    "emphasis": [],
+    "md": "LECTURE RECALL QUIZ",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Lecture Recall Quiz (2 of 2)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Lecture Recall Quiz (2 of 2)",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "4.  A patient on a biologic DMARD develops a fever. What is the most important immediate concern?",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "4.  A patient on a biologic DMARD develops a fever. What is the most important immediate concern?",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**4.  A patient on a biologic DMARD develops a fever. What is the most important immediate concern?**",
+    "heading": false,
+    "size": 14.5
+   },
+   {
+    "text": "A.  Infection, given the drug’s immunosuppressive effect",
+    "level": 0,
+    "emphasis": [],
+    "md": "A.  Infection, given the drug’s immunosuppressive effect",
+    "heading": false,
+    "size": 12.5
+   },
+   {
+    "text": "B.  A drug allergy only",
+    "level": 0,
+    "emphasis": [],
+    "md": "B.  A drug allergy only",
+    "heading": false,
+    "size": 12.5
+   },
+   {
+    "text": "C.  Osteonecrosis of the jaw",
+    "level": 0,
+    "emphasis": [],
+    "md": "C.  Osteonecrosis of the jaw",
+    "heading": false,
+    "size": 12.5
+   },
+   {
+    "text": "D.  Hepatotoxicity from Phase II metabolism",
+    "level": 0,
+    "emphasis": [],
+    "md": "D.  Hepatotoxicity from Phase II metabolism",
+    "heading": false,
+    "size": 12.5
+   },
+   {
+    "text": "5.  Which statement about gout pharmacology is correct?",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "5.  Which statement about gout pharmacology is correct?",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**5.  Which statement about gout pharmacology is correct?**",
+    "heading": false,
+    "size": 14.5
+   },
+   {
+    "text": "A.  Colchicine lowers uric acid production",
+    "level": 0,
+    "emphasis": [],
+    "md": "A.  Colchicine lowers uric acid production",
+    "heading": false,
+    "size": 12.5
+   },
+   {
+    "text": "B.  Acute flares should always be treated with urate-lowering therapy first",
+    "level": 0,
+    "emphasis": [],
+    "md": "B.  Acute flares should always be treated with urate-lowering therapy first",
+    "heading": false,
+    "size": 12.5
+   },
+   {
+    "text": "C.  Probenecid lowers uric acid by inhibiting renal tubular reabsorption of urate",
+    "level": 0,
+    "emphasis": [],
+    "md": "C.  Probenecid lowers uric acid by inhibiting renal tubular reabsorption of urate",
+    "heading": false,
+    "size": 12.5
+   },
+   {
+    "text": "D.  Febuxostat and probenecid are both xanthine oxidase inhibitors",
+    "level": 0,
+    "emphasis": [],
+    "md": "D.  Febuxostat and probenecid are both xanthine oxidase inhibitors",
+    "heading": false,
+    "size": 12.5
+   },
+   {
+    "text": "6.  A patient with glucocorticoid-induced osteoporosis risk should be counseled that the risk is primarily related to which mechanism?",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "6.  A patient with glucocorticoid-induced osteoporosis risk should be counseled that the risk is primarily related to which mechanism?",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**6.  A patient with glucocorticoid-induced osteoporosis risk should be counseled that the risk is primarily related to which mechanism?**",
+    "heading": false,
+    "size": 14.5
+   },
+   {
+    "text": "A.  Increased osteoclast-mediated resorption and decreased bone formation",
+    "level": 0,
+    "emphasis": [],
+    "md": "A.  Increased osteoclast-mediated resorption and decreased bone formation",
+    "heading": false,
+    "size": 12.5
+   },
+   {
+    "text": "B.  Increased osteoblast activity",
+    "level": 0,
+    "emphasis": [],
+    "md": "B.  Increased osteoblast activity",
+    "heading": false,
+    "size": 12.5
+   },
+   {
+    "text": "C.  Excess vitamin D",
+    "level": 0,
+    "emphasis": [],
+    "md": "C.  Excess vitamin D",
+    "heading": false,
+    "size": 12.5
+   },
+   {
+    "text": "D.  Increased calcitonin secretion",
+    "level": 0,
+    "emphasis": [],
+    "md": "D.  Increased calcitonin secretion",
+    "heading": false,
+    "size": 12.5
+   },
+   {
+    "text": "70",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "70",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**70**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 53,
+  "title": "Lecture Recall Quiz — Answer Key",
+  "items": [
+   {
+    "text": "ANSWER KEY",
+    "level": 0,
+    "emphasis": [],
+    "md": "ANSWER KEY",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Lecture Recall Quiz — Answer Key",
+    "level": 0,
+    "emphasis": [],
+    "md": "Lecture Recall Quiz — Answer Key",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "1.  B — Acetaminophen has minimal peripheral anti-inflammatory effect, unlike NSAIDs — it treats pain and fever, not inflammation itself.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "1.  B —",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     },
+     {
+      "text": "Acetaminophen has minimal peripheral anti-inflammatory effect, unlike NSAIDs — it treats pain and fever, not inflammation itself.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**1.  B —** **Acetaminophen has minimal peripheral anti-inflammatory effect, unlike NSAIDs — it treats pain and fever, not inflammation itself.**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "2.  C — Acetaminophen or a topical NSAID avoids the systemic renal/CV risk of oral NSAIDs in a patient with CKD and heart failure.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "2.  C —",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     },
+     {
+      "text": "Acetaminophen or a topical NSAID avoids the systemic renal/CV risk of oral NSAIDs in a patient with CKD and heart failure.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**2.  C —** **Acetaminophen or a topical NSAID avoids the systemic renal/CV risk of oral NSAIDs in a patient with CKD and heart failure.**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "3.  D — Methotrexate inhibits dihydrofolate reductase. Allopurinol inhibits xanthine oxidase; colchicine disrupts microtubules; baclofen is a GABA-B agonist.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "3.  D —",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     },
+     {
+      "text": "Methotrexate inhibits dihydrofolate reductase. Allopurinol inhibits xanthine oxidase; colchicine disrupts microtubules; baclofen is a GABA-B agonist.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**3.  D —** **Methotrexate inhibits dihydrofolate reductase. Allopurinol inhibits xanthine oxidase; colchicine disrupts microtubules; baclofen is a GABA-B agonist.**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "4.  A — Immunosuppression is the shared major risk across all DMARDs — a fever must be treated as a possible infection until proven otherwise.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "4.  A —",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     },
+     {
+      "text": "Immunosuppression is the shared major risk across all DMARDs — a fever must be treated as a possible infection until proven otherwise.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**4.  A —** **Immunosuppression is the shared major risk across all DMARDs — a fever must be treated as a possible infection until proven otherwise.**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "5.  C — Probenecid is a uricosuric agent that inhibits renal tubular reabsorption of uric acid, increasing its excretion. Colchicine does not lower uric acid; febuxostat (not probenecid) is a xanthine oxidase inhibitor; and urate-lowering therapy is deferred during an acute flare.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "5.  C —",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     },
+     {
+      "text": "Probenecid is a uricosuric agent that inhibits renal tubular reabsorption of uric acid, increasing its excretion. Colchicine does not lower uric acid; febuxostat (not probenecid) is a xanthine oxidase inhibitor; and urate-lowering therapy is deferred during an acute flare.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**5.  C —** **Probenecid is a uricosuric agent that inhibits renal tubular reabsorption of uric acid, increasing its excretion. Colchicine does not lower uric acid; febuxostat (not probenecid) is a xanthine oxidase inhibitor; and urate-lowering therapy is deferred during an acute flare.**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "6.  A — Glucocorticoids increase osteoclast-mediated bone resorption and suppress osteoblast-driven bone formation — shifting the remodeling balance toward bone loss.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "6.  A —",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     },
+     {
+      "text": "Glucocorticoids increase osteoclast-mediated bone resorption and suppress osteoblast-driven bone formation — shifting the remodeling balance toward bone loss.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**6.  A —** **Glucocorticoids increase osteoclast-mediated bone resorption and suppress osteoblast-driven bone formation — shifting the remodeling balance toward bone loss.**",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": "Encourage students to revisit this quiz on their own before the exam — it is designed as a standalone recall resource, separate from the in-lecture quick checks."
+ },
+ {
+  "slide": 54,
+  "title": "Image Attribution",
+  "items": [
+   {
+    "text": "APPENDIX",
+    "level": 0,
+    "emphasis": [],
+    "md": "APPENDIX",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Image Attribution",
+    "level": 0,
+    "emphasis": [],
+    "md": "Image Attribution",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "●  Original figures in this deck: Figures 4–8 (Gout: From Purine Metabolism to Joint Inflammation; Skeletal Muscle Relaxants: Central vs. Peripheral Site of Action; Calcium Homeostasis: The PTH Feedback Loop; Bisphosphonate Dosing Frequency; How Osteoporosis Drugs Shift the Remodeling Balance) were generated by the course director using the AI tool Claude to illustrate standard, non-copyrighted pharmacologic concepts. They are original diagrams, not reproduced from Katzung’s Basic and Clinical Pharmacology or any other copyrighted source.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "●  Original figures in this deck:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**●  Original figures in this deck:** Figures 4–8 (Gout: From Purine Metabolism to Joint Inflammation; Skeletal Muscle Relaxants: Central vs. Peripheral Site of Action; Calcium Homeostasis: The PTH Feedback Loop; Bisphosphonate Dosing Frequency; How Osteoporosis Drugs Shift the Remodeling Balance) were generated by the course director using the AI tool Claude to illustrate standard, non-copyrighted pharmacologic concepts. They are original diagrams, not reproduced from Katzung’s Basic and Clinical Pharmacology or any other copyrighted source.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "●  Reference: Anthropic. (2026). Claude (Sonnet 5) [Large language model]. https://claude.ai",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "●  Reference:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**●  Reference:** Anthropic. (2026). Claude (Sonnet 5) [Large language model]. https://claude.ai",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "72",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "72",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**72**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "This slide documents AI-tool use for original figure generation per university citation requirements. It covers every original diagram in this deck (Figures 4–8); none are reproduced from any textbook."
+ }
+]

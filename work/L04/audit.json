@@ -1,0 +1,313 @@
+{
+ "lecture": "L04",
+ "passed": true,
+ "units_checked": 2628,
+ "missing": [],
+ "uncited": [
+  {
+   "ref": "SG:U2-M",
+   "text": "For each drug, write its primary mechanism of action.",
+   "kind": "study guide"
+  }
+ ],
+ "emphasis_not_bold": [],
+ "skipped": [
+  {
+   "ref": "S1",
+   "text": "Diane S. Allen-Gipson, Ph.D., M.S., Course Director",
+   "kind": "slide",
+   "reason": "faculty identifier (site policy: no school or instructor identifiers)"
+  },
+  {
+   "ref": "S2",
+   "text": "Briefly recap Session 1 (Oct 27) before diving in: musculoskeletal pain, acetaminophen, NSAIDs, and OA/RA pharmacotherapy including DMARDs.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; the recap is in About this lecture"
+  },
+  {
+   "ref": "S4",
+   "text": "The next slide builds this out with the specific drugs and their targets.",
+   "kind": "speaker note",
+   "reason": "teaching instruction (pointer to the next slide)"
+  },
+  {
+   "ref": "S5",
+   "text": "Walk the chain left to right, then top to bottom: each step sets up the next, and the flare is the end of the cascade.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; the chain is taught from S5"
+  },
+  {
+   "ref": "S14",
+   "text": "This question tests exactly the acute-vs-chronic distinction from two slides ago — a great checkpoint for whether the concept landed.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; the case is rebuilt as a practice question"
+  },
+  {
+   "ref": "S35",
+   "text": "Trace the three PTH arrows (bone, kidney, intestine) with your finger as you narrate — this negative feedback loop is the physiologic backdrop for every osteoporosis drug that follows.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; Figure 6 caption covers the loop"
+  },
+  {
+   "ref": "S42",
+   "text": "The next slide shows all of these (plus bisphosphonates) together on one balance diagram.",
+   "kind": "speaker note",
+   "reason": "teaching instruction (pointer to Figure 8)"
+  },
+  {
+   "ref": "S44",
+   "text": "Ask students to sort each named drug into \"inhibits resorption\" vs.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; the sort is the Figure 8 interactive"
+  },
+  {
+   "ref": "S44",
+   "text": "\"stimulates formation\" before revealing the diagram’s labels.",
+   "kind": "speaker note",
+   "reason": "teaching instruction (second half of the sorting prompt)"
+  },
+  {
+   "ref": "S53",
+   "text": "Encourage students to revisit this quiz on their own before the exam — it is designed as a standalone recall resource, separate from the in-lecture quick checks.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S54",
+   "text": "This slide documents AI-tool use for original figure generation per university citation requirements.",
+   "kind": "speaker note",
+   "reason": "administrative note on AI-tool citation"
+  }
+ ],
+ "not_in_deck": [],
+ "not_in_notebooklm": [],
+ "layout_problems": [],
+ "question_issues": [],
+ "question_stats": {
+  "count": 28,
+  "letters": {
+   "A": 5,
+   "B": 6,
+   "C": 6,
+   "D": 6,
+   "E": 5
+  },
+  "vignette": 17,
+  "mechanism": 11
+ },
+ "thin_objectives": [],
+ "textbook_unused": 2253,
+ "reading_missing": [],
+ "reading_skipped": [
+  {
+   "page": "515",
+   "heading": "Gabarone, Gralise, Neurontin",
+   "reason": "Preparations list (brand names only, no teaching content)"
+  },
+  {
+   "page": "675",
+   "heading": "THE IMMUNE RESPONSE",
+   "reason": "Taught in L03 (Session 1: NSAIDs, DMARDs, and other analgesics, Ch. 36)"
+  },
+  {
+   "page": "675",
+   "heading": "THERAPEUTIC STRATEGIES",
+   "reason": "Taught in L03 (Session 1: NSAIDs, DMARDs, and other analgesics, Ch. 36)"
+  },
+  {
+   "page": "675",
+   "heading": "Chemistry & Pharmacokinetics",
+   "reason": "Taught in L03 (Session 1: NSAIDs, DMARDs, and other analgesics, Ch. 36)"
+  },
+  {
+   "page": "677",
+   "heading": "ASPIRIN",
+   "reason": "Taught in L03 (Session 1: NSAIDs, DMARDs, and other analgesics, Ch. 36)"
+  },
+  {
+   "page": "677",
+   "heading": "NONACETYLATED SALICYLATES",
+   "reason": "Taught in L03 (Session 1: NSAIDs, DMARDs, and other analgesics, Ch. 36)"
+  },
+  {
+   "page": "677",
+   "heading": "COX-2 SELECTIVE INHIBITORS",
+   "reason": "Taught in L03 (Session 1: NSAIDs, DMARDs, and other analgesics, Ch. 36)"
+  },
+  {
+   "page": "681",
+   "heading": "Other NSAIDs",
+   "reason": "Taught in L03 (Session 1: NSAIDs, DMARDs, and other analgesics, Ch. 36)"
+  },
+  {
+   "page": "681",
+   "heading": "CHOICE OF NSAID",
+   "reason": "Taught in L03 (Session 1: NSAIDs, DMARDs, and other analgesics, Ch. 36)"
+  },
+  {
+   "page": "681",
+   "heading": "DISEASE-MODIFYING ANTIRHEUMATIC DRUGS",
+   "reason": "Taught in L03 (Session 1: NSAIDs, DMARDs, and other analgesics, Ch. 36)"
+  },
+  {
+   "page": "681",
+   "heading": "ABATACEPT",
+   "reason": "Taught in L03 (Session 1: NSAIDs, DMARDs, and other analgesics, Ch. 36)"
+  },
+  {
+   "page": "682",
+   "heading": "ANIFROLUMAB",
+   "reason": "Taught in L03 (Session 1: NSAIDs, DMARDs, and other analgesics, Ch. 36)"
+  },
+  {
+   "page": "682",
+   "heading": "APREMILAST",
+   "reason": "Taught in L03 (Session 1: NSAIDs, DMARDs, and other analgesics, Ch. 36)"
+  },
+  {
+   "page": "682",
+   "heading": "AZATHIOPRINE",
+   "reason": "Taught in L03 (Session 1: NSAIDs, DMARDs, and other analgesics, Ch. 36)"
+  },
+  {
+   "page": "683",
+   "heading": "BARICITINIB",
+   "reason": "Taught in L03 (Session 1: NSAIDs, DMARDs, and other analgesics, Ch. 36)"
+  },
+  {
+   "page": "683",
+   "heading": "BELIMUMAB",
+   "reason": "Taught in L03 (Session 1: NSAIDs, DMARDs, and other analgesics, Ch. 36)"
+  },
+  {
+   "page": "683",
+   "heading": "RISANKIZUMAB",
+   "reason": "Taught in L03 (Session 1: NSAIDs, DMARDs, and other analgesics, Ch. 36)"
+  },
+  {
+   "page": "684",
+   "heading": "CHLOROQUINE AND HYDROXYCHLOROQUINE",
+   "reason": "Taught in L03 (Session 1: NSAIDs, DMARDs, and other analgesics, Ch. 36)"
+  },
+  {
+   "page": "684",
+   "heading": "INTERLEUKIN-1 INHIBITORS",
+   "reason": "Taught in L03 (Session 1: NSAIDs, DMARDs, and other analgesics, Ch. 36)"
+  },
+  {
+   "page": "685",
+   "heading": "GUSELKUMAB",
+   "reason": "Taught in L03 (Session 1: NSAIDs, DMARDs, and other analgesics, Ch. 36)"
+  },
+  {
+   "page": "686",
+   "heading": "IXEKIZUMAB",
+   "reason": "Taught in L03 (Session 1: NSAIDs, DMARDs, and other analgesics, Ch. 36)"
+  },
+  {
+   "page": "686",
+   "heading": "JANUS KINASE INHIBITORS",
+   "reason": "Taught in L03 (Session 1: NSAIDs, DMARDs, and other analgesics, Ch. 36)"
+  },
+  {
+   "page": "687",
+   "heading": "LEFLUNOMIDE",
+   "reason": "Taught in L03 (Session 1: NSAIDs, DMARDs, and other analgesics, Ch. 36)"
+  },
+  {
+   "page": "688",
+   "heading": "MESALAMINE",
+   "reason": "Taught in L03 (Session 1: NSAIDs, DMARDs, and other analgesics, Ch. 36)"
+  },
+  {
+   "page": "688",
+   "heading": "Baricitinib Tofacitinib Upadacitinib",
+   "reason": "Taught in L03 (Session 1: NSAIDs, DMARDs, and other analgesics, Ch. 36)"
+  },
+  {
+   "page": "689",
+   "heading": "MYCOPHENOLATE MOFETIL",
+   "reason": "Taught in L03 (Session 1: NSAIDs, DMARDs, and other analgesics, Ch. 36)"
+  },
+  {
+   "page": "689",
+   "heading": "SARILUMAB",
+   "reason": "Taught in L03 (Session 1: NSAIDs, DMARDs, and other analgesics, Ch. 36)"
+  },
+  {
+   "page": "690",
+   "heading": "SECUKINUMAB",
+   "reason": "Taught in L03 (Session 1: NSAIDs, DMARDs, and other analgesics, Ch. 36)"
+  },
+  {
+   "page": "690",
+   "heading": "SULFASALAZINE",
+   "reason": "Taught in L03 (Session 1: NSAIDs, DMARDs, and other analgesics, Ch. 36)"
+  },
+  {
+   "page": "692",
+   "heading": "TOCILIZUMAB",
+   "reason": "Taught in L03 (Session 1: NSAIDs, DMARDs, and other analgesics, Ch. 36)"
+  },
+  {
+   "page": "693",
+   "heading": "USTEKINUMAB",
+   "reason": "Taught in L03 (Session 1: NSAIDs, DMARDs, and other analgesics, Ch. 36)"
+  },
+  {
+   "page": "693",
+   "heading": "BIOSIMILARS",
+   "reason": "Taught in L03 (Session 1: NSAIDs, DMARDs, and other analgesics, Ch. 36)"
+  },
+  {
+   "page": "693",
+   "heading": "GLUCOCORTICOID DRUGS (LIMITED TO RHEUMATIC DISEASES)",
+   "reason": "Taught in L03 (Session 1: NSAIDs, DMARDs, and other analgesics, Ch. 36)"
+  },
+  {
+   "page": "694",
+   "heading": "OTHER ANALGESICS",
+   "reason": "Taught in L03 (Session 1: NSAIDs, DMARDs, and other analgesics, Ch. 36)"
+  },
+  {
+   "page": "694",
+   "heading": "ACETAMINOPHEN",
+   "reason": "Taught in L03 (Session 1: NSAIDs, DMARDs, and other analgesics, Ch. 36)"
+  },
+  {
+   "page": "694",
+   "heading": "KETOROLAC",
+   "reason": "Taught in L03 (Session 1: NSAIDs, DMARDs, and other analgesics, Ch. 36)"
+  },
+  {
+   "page": "694",
+   "heading": "TRAMADOL",
+   "reason": "Taught in L03 (Session 1: NSAIDs, DMARDs, and other analgesics, Ch. 36)"
+  },
+  {
+   "page": "699",
+   "heading": "Disease-Modifying Antirheumatic Drugs & Glucocorticoids",
+   "reason": "Reference-list heading (citations only, no teaching content)"
+  },
+  {
+   "page": "811",
+   "heading": "BASIC PHARMACOLOGY",
+   "reason": "Chapter part label; its content is taught under the subheadings"
+  },
+  {
+   "page": "821",
+   "heading": "CLINICAL PHARMACOLOGY",
+   "reason": "Chapter part label; its content is taught under the subheadings"
+  },
+  {
+   "page": "828",
+   "heading": "IDIOPATHIC INFANTILE HYPERCALCEMIA",
+   "reason": "Beyond PA scope for this lecture (rare CYP24A1 genetic disorder; no prescribing decision beyond avoiding vitamin D)"
+  },
+  {
+   "page": "828",
+   "heading": "NEPHROTIC SYNDROME",
+   "reason": "Beyond PA scope for this lecture (vitamin D loss in nephrotic syndrome; the textbook notes no trials to guide therapy)"
+  }
+ ]
+}

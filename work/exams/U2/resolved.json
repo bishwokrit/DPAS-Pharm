@@ -1,5 +1,70 @@
 [
  {
+  "topic": "Bone & osteoporosis",
+  "objectives": [
+   "IO2.4"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A 68-year-old woman with prior vertebral fractures and very high fracture risk is choosing therapy. What does the lecture suggest first?",
+  "correct": "An anabolic agent such as teriparatide",
+  "distractors": [
+   {
+    "text": "Calcium and vitamin D alone",
+    "why": "Supportive, but not enough at very high risk."
+   },
+   {
+    "text": "Calcitonin nasal spray",
+    "why": "Calcitonin is a weaker antiresorptive."
+   },
+   {
+    "text": "A drug holiday from all therapy",
+    "why": "Holidays apply after years of bisphosphonate."
+   },
+   {
+    "text": "Raloxifene for hip protection",
+    "why": "Raloxifene protects the spine, not the hip (textbook)."
+   }
+  ],
+  "why_correct": "Higher-risk patients may need an anabolic agent first (then an antiresorptive); fracture history, renal function, and route also guide choice.",
+  "takeaway": "Very high fracture risk → anabolic first, antiresorptive after.",
+  "discriminator": "Anabolic: teriparatide, abaloparatide, romosozumab. Antiresorptive: bisphosphonates, denosumab, SERMs, calcitonin.",
+  "src": "L04 S45; S42-43",
+  "id": "U2-047",
+  "answer": "A",
+  "options": {
+   "A": {
+    "text": "An anabolic agent such as teriparatide",
+    "why": "Higher-risk patients may need an anabolic agent first (then an antiresorptive); fracture history, renal function, and route also guide choice.",
+    "correct": true
+   },
+   "B": {
+    "text": "Calcium and vitamin D alone",
+    "why": "Supportive, but not enough at very high risk.",
+    "correct": false
+   },
+   "C": {
+    "text": "A drug holiday from all therapy",
+    "why": "Holidays apply after years of bisphosphonate.",
+    "correct": false
+   },
+   "D": {
+    "text": "Raloxifene for hip protection",
+    "why": "Raloxifene protects the spine, not the hip (textbook).",
+    "correct": false
+   },
+   "E": {
+    "text": "Calcitonin nasal spray",
+    "why": "Calcitonin is a weaker antiresorptive.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L04/index.html#bone-pharmacology-osteoporosis",
+   "label": "Study this: L04 · Part 3 →"
+  }
+ },
+ {
   "topic": "NSAIDs",
   "objectives": [
    "IO2.2",
@@ -32,7 +97,7 @@
   "discriminator": "Short-term ketorolac vs. maintenance NSAIDs such as ibuprofen or naproxen.",
   "src": "L03 S28; p. 694",
   "id": "U2-013",
-  "answer": "C",
+  "answer": "E",
   "options": {
    "A": {
     "text": "Start therapy with an oral dose",
@@ -40,24 +105,24 @@
     "correct": false
    },
    "B": {
-    "text": "Maximum daily dose is 240 mg",
-    "why": "The maximum is 120 mg/day.",
+    "text": "Safe long-term in renal impairment",
+    "why": "Doses are halved in renal impairment and use is short-term.",
     "correct": false
    },
    "C": {
-    "text": "Use no longer than 5 days",
-    "why": "Ketorolac is for short-term use only (slides); the textbook adds a 120 mg/day maximum, halved doses in older, light, or renally impaired patients, and no more than 5 days.",
-    "correct": true
-   },
-   "D": {
     "text": "Double the dose in patients over 65",
     "why": "Doses are halved in patients over 65.",
     "correct": false
    },
-   "E": {
-    "text": "Safe long-term in renal impairment",
-    "why": "Doses are halved in renal impairment and use is short-term.",
+   "D": {
+    "text": "Maximum daily dose is 240 mg",
+    "why": "The maximum is 120 mg/day.",
     "correct": false
+   },
+   "E": {
+    "text": "Use no longer than 5 days",
+    "why": "Ketorolac is for short-term use only (slides); the textbook adds a 120 mg/day maximum, halved doses in older, light, or renally impaired patients, and no more than 5 days.",
+    "correct": true
    }
   },
   "link": {
@@ -66,71 +131,263 @@
   }
  },
  {
-  "topic": "Biologic DMARDs",
+  "topic": "Gout",
   "objectives": [
-   "IO2.2",
-   "IO2.5"
+   "IO2.2"
   ],
-  "sg": [
-   "U2-R8"
-  ],
+  "sg": [],
   "kind": "vignette",
-  "stem": "A patient from a region with high tuberculosis rates is about to start adalimumab. Which step matters most before the first dose?",
-  "correct": "Screen for latent tuberculosis and hepatitis B/C",
+  "stem": "A transplant patient taking azathioprine develops gout and needs allopurinol. What must happen?",
+  "correct": "Reduce the azathioprine dose substantially",
   "distractors": [
    {
-    "text": "Check a uric acid level",
-    "why": "Not a biologic safety step."
+    "text": "Double the azathioprine dose",
+    "why": "Allopurinol raises azathioprine levels, not lowers them."
    },
    {
-    "text": "Start folate supplementation",
-    "why": "Folate accompanies methotrexate."
+    "text": "No change; there is no interaction",
+    "why": "Xanthine oxidase also clears azathioprine."
    },
    {
-    "text": "Review labels for hidden acetaminophen",
-    "why": "Acetaminophen safety counseling."
+    "text": "Switch the allopurinol to colchicine",
+    "why": "Colchicine doesn’t lower uric acid."
    },
    {
-    "text": "Obtain a baseline eye examination",
-    "why": "Eye exams apply to hydroxychloroquine (textbook)."
+    "text": "Stop azathioprine for one week",
+    "why": "The fix is a dose reduction (textbook: by 75%)."
    }
   ],
-  "why_correct": "Immunosuppression is the shared DMARD risk; baseline TB and hepatitis B/C screening comes before biologics (TNF inhibitors can reactivate TB and hepatitis B).",
-  "takeaway": "Biologic start: TB + hepatitis screen, vaccines first.",
-  "discriminator": "Shared DMARD risk = infection.",
-  "src": "L03 S56; SG U2-R8; p. 692",
-  "id": "U2-024",
-  "answer": "A",
+  "why_correct": "Allopurinol blocks xanthine oxidase, which clears azathioprine and mercaptopurine — reduce their dose (textbook: by 75%).",
+  "takeaway": "Allopurinol + azathioprine/mercaptopurine → cut the thiopurine dose.",
+  "discriminator": "Colchicine’s interaction is CYP3A4/P-gp; allopurinol’s is the thiopurines.",
+  "src": "L04 S11; p. 696",
+  "id": "U2-035",
+  "answer": "E",
   "options": {
    "A": {
-    "text": "Screen for latent tuberculosis and hepatitis B/C",
-    "why": "Immunosuppression is the shared DMARD risk; baseline TB and hepatitis B/C screening comes before biologics (TNF inhibitors can reactivate TB and hepatitis B).",
-    "correct": true
+    "text": "Double the azathioprine dose",
+    "why": "Allopurinol raises azathioprine levels, not lowers them.",
+    "correct": false
    },
    "B": {
-    "text": "Obtain a baseline eye examination",
-    "why": "Eye exams apply to hydroxychloroquine (textbook).",
+    "text": "Switch the allopurinol to colchicine",
+    "why": "Colchicine doesn’t lower uric acid.",
     "correct": false
    },
    "C": {
-    "text": "Review labels for hidden acetaminophen",
-    "why": "Acetaminophen safety counseling.",
+    "text": "Stop azathioprine for one week",
+    "why": "The fix is a dose reduction (textbook: by 75%).",
     "correct": false
    },
    "D": {
-    "text": "Check a uric acid level",
-    "why": "Not a biologic safety step.",
+    "text": "No change; there is no interaction",
+    "why": "Xanthine oxidase also clears azathioprine.",
     "correct": false
    },
    "E": {
-    "text": "Start folate supplementation",
-    "why": "Folate accompanies methotrexate.",
+    "text": "Reduce the azathioprine dose substantially",
+    "why": "Allopurinol blocks xanthine oxidase, which clears azathioprine and mercaptopurine — reduce their dose (textbook: by 75%).",
+    "correct": true
+   }
+  },
+  "link": {
+   "href": "../../L04/index.html#gout-acute-flares-urate-lowering-therapy",
+   "label": "Study this: L04 · Part 1 →"
+  }
+ },
+ {
+  "topic": "Muscle relaxants",
+  "objectives": [
+   "IO2.2"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A patient taking sertraline is prescribed cyclobenzaprine for a back strain. What interaction should the PA flag?",
+  "correct": "Serotonin syndrome",
+  "distractors": [
+   {
+    "text": "Malignant hyperthermia",
+    "why": "Triggered by volatile anesthetics and succinylcholine."
+   },
+   {
+    "text": "Rebound spasticity",
+    "why": "A baclofen withdrawal effect."
+   },
+   {
+    "text": "Hemolytic anemia",
+    "why": "A G6PD/uricase concern."
+   },
+   {
+    "text": "Acute kidney injury",
+    "why": "An NSAID ‘triple whammy’ concern."
+   }
+  ],
+  "why_correct": "Cyclobenzaprine carries serotonin syndrome risk with SSRIs, SNRIs, and tramadol; MAOIs are contraindicated.",
+  "takeaway": "Cyclobenzaprine + SSRI/SNRI/tramadol → serotonin syndrome.",
+  "discriminator": "Tizanidine’s interaction is CYP1A2; cyclobenzaprine’s is serotonergic.",
+  "src": "L04 S26",
+  "id": "U2-042",
+  "answer": "B",
+  "options": {
+   "A": {
+    "text": "Rebound spasticity",
+    "why": "A baclofen withdrawal effect.",
+    "correct": false
+   },
+   "B": {
+    "text": "Serotonin syndrome",
+    "why": "Cyclobenzaprine carries serotonin syndrome risk with SSRIs, SNRIs, and tramadol; MAOIs are contraindicated.",
+    "correct": true
+   },
+   "C": {
+    "text": "Acute kidney injury",
+    "why": "An NSAID ‘triple whammy’ concern.",
+    "correct": false
+   },
+   "D": {
+    "text": "Hemolytic anemia",
+    "why": "A G6PD/uricase concern.",
+    "correct": false
+   },
+   "E": {
+    "text": "Malignant hyperthermia",
+    "why": "Triggered by volatile anesthetics and succinylcholine.",
     "correct": false
    }
   },
   "link": {
-   "href": "../../L03/index.html#osteoarthritis-rheumatoid-arthritis-dmards",
-   "label": "Study this: L03 · Part 4 →"
+   "href": "../../L04/index.html#skeletal-muscle-relaxants",
+   "label": "Study this: L04 · Part 2 →"
+  }
+ },
+ {
+  "topic": "Gout",
+  "objectives": [
+   "IO2.2"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A patient with gout and a history of uric acid kidney stones needs urate-lowering therapy. Which drug should be avoided?",
+  "correct": "Probenecid",
+  "distractors": [
+   {
+    "text": "Allopurinol",
+    "why": "Allopurinol lowers production and is first-line."
+   },
+   {
+    "text": "Febuxostat",
+    "why": "Febuxostat lowers production; its concern is CV."
+   },
+   {
+    "text": "Colchicine",
+    "why": "Colchicine is a flare/prophylaxis drug, not the stone concern."
+   },
+   {
+    "text": "Prednisone",
+    "why": "Prednisone treats flares; it does not raise urinary urate."
+   }
+  ],
+  "why_correct": "Probenecid raises urinary uric acid, so avoid it with uric acid kidney stones or significant renal impairment.",
+  "takeaway": "Uricosurics load the urine with urate: no stones, hydrate well.",
+  "discriminator": "Probenecid: kidney stones and renal impairment are the stop signs.",
+  "src": "L04 S12-13",
+  "id": "U2-033",
+  "answer": "A",
+  "options": {
+   "A": {
+    "text": "Probenecid",
+    "why": "Probenecid raises urinary uric acid, so avoid it with uric acid kidney stones or significant renal impairment.",
+    "correct": true
+   },
+   "B": {
+    "text": "Febuxostat",
+    "why": "Febuxostat lowers production; its concern is CV.",
+    "correct": false
+   },
+   "C": {
+    "text": "Allopurinol",
+    "why": "Allopurinol lowers production and is first-line.",
+    "correct": false
+   },
+   "D": {
+    "text": "Prednisone",
+    "why": "Prednisone treats flares; it does not raise urinary urate.",
+    "correct": false
+   },
+   "E": {
+    "text": "Colchicine",
+    "why": "Colchicine is a flare/prophylaxis drug, not the stone concern.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L04/index.html#gout-acute-flares-urate-lowering-therapy",
+   "label": "Study this: L04 · Part 1 →"
+  }
+ },
+ {
+  "topic": "Bone & osteoporosis",
+  "objectives": [
+   "IO2.1"
+  ],
+  "sg": [],
+  "kind": "mechanism",
+  "stem": "Which effect explains glucocorticoid-induced osteoporosis?",
+  "correct": "↑ Osteoclast resorption and ↓ osteoblast formation",
+  "distractors": [
+   {
+    "text": "↑ Osteoblast formation and ↓ resorption",
+    "why": "Reversed."
+   },
+   {
+    "text": "Excess calcitonin from the thyroid",
+    "why": "Not the mechanism taught."
+   },
+   {
+    "text": "Excess vitamin D from the kidney",
+    "why": "Glucocorticoids oppose vitamin D–driven absorption (textbook)."
+   },
+   {
+    "text": "RANKL blockade inside the bone",
+    "why": "RANKL blockade is denosumab."
+   }
+  ],
+  "why_correct": "Glucocorticoids increase osteoclast-mediated resorption and suppress osteoblast-driven formation, tipping the balance to bone loss.",
+  "takeaway": "Chronic steroids: build less, break more.",
+  "discriminator": "Steroid-induced osteoporosis is the Session 1 corticosteroid link.",
+  "src": "L04 S36; S53",
+  "id": "U2-050",
+  "answer": "D",
+  "options": {
+   "A": {
+    "text": "Excess vitamin D from the kidney",
+    "why": "Glucocorticoids oppose vitamin D–driven absorption (textbook).",
+    "correct": false
+   },
+   "B": {
+    "text": "↑ Osteoblast formation and ↓ resorption",
+    "why": "Reversed.",
+    "correct": false
+   },
+   "C": {
+    "text": "Excess calcitonin from the thyroid",
+    "why": "Not the mechanism taught.",
+    "correct": false
+   },
+   "D": {
+    "text": "↑ Osteoclast resorption and ↓ osteoblast formation",
+    "why": "Glucocorticoids increase osteoclast-mediated resorption and suppress osteoblast-driven formation, tipping the balance to bone loss.",
+    "correct": true
+   },
+   "E": {
+    "text": "RANKL blockade inside the bone",
+    "why": "RANKL blockade is denosumab.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L04/index.html#putting-it-all-together-musculoskeletal-toolkit",
+   "label": "Study this: L04 · Part 4 →"
   }
  },
  {
@@ -168,16 +425,16 @@
   "discriminator": "Nonselective NSAIDs lower TXA2 too (bleeding risk); celecoxib does not.",
   "src": "L03 S29-30; SG U2-R5",
   "id": "U2-028",
-  "answer": "D",
+  "answer": "A",
   "options": {
    "A": {
-    "text": "It raises renal blood flow excessively",
-    "why": "NSAIDs lower renal blood flow; the kidney is still affected.",
-    "correct": false
+    "text": "PGI2 falls while platelet TXA2 is preserved",
+    "why": "Celecoxib blocks COX-2, lowering prostacyclin (PGI2) without a matching drop in platelet thromboxane (TXA2, made by spared COX-1) — the balance tips toward clotting.",
+    "correct": true
    },
    "B": {
-    "text": "TXA2 falls while PGI2 is preserved",
-    "why": "Reversed: COX-1 (platelet TXA2) is spared.",
+    "text": "It raises renal blood flow excessively",
+    "why": "NSAIDs lower renal blood flow; the kidney is still affected.",
     "correct": false
    },
    "C": {
@@ -186,13 +443,13 @@
     "correct": false
    },
    "D": {
-    "text": "PGI2 falls while platelet TXA2 is preserved",
-    "why": "Celecoxib blocks COX-2, lowering prostacyclin (PGI2) without a matching drop in platelet thromboxane (TXA2, made by spared COX-1) — the balance tips toward clotting.",
-    "correct": true
-   },
-   "E": {
     "text": "It blocks COX-1 more than COX-2",
     "why": "Celecoxib selectively blocks COX-2.",
+    "correct": false
+   },
+   "E": {
+    "text": "TXA2 falls while PGI2 is preserved",
+    "why": "Reversed: COX-1 (platelet TXA2) is spared.",
     "correct": false
    }
   },
@@ -204,68 +461,266 @@
  {
   "topic": "Biologic DMARDs",
   "objectives": [
-   "IO2.1"
+   "IO2.2",
+   "IO2.5"
   ],
   "sg": [
    "U2-R8"
   ],
-  "kind": "mechanism",
-  "stem": "Which drug is a TNF inhibitor?",
-  "correct": "Etanercept",
+  "kind": "vignette",
+  "stem": "A patient from a region with high tuberculosis rates is about to start adalimumab. Which step matters most before the first dose?",
+  "correct": "Screen for latent tuberculosis and hepatitis B/C",
   "distractors": [
    {
-    "text": "Tocilizumab",
-    "why": "An IL-6 inhibitor."
+    "text": "Check a uric acid level",
+    "why": "Not a biologic safety step."
    },
    {
-    "text": "Rituximab",
-    "why": "B-cell targeted therapy."
+    "text": "Start folate supplementation",
+    "why": "Folate accompanies methotrexate."
    },
    {
-    "text": "Abatacept",
-    "why": "A T-cell costimulation modulator."
+    "text": "Review labels for hidden acetaminophen",
+    "why": "Acetaminophen safety counseling."
    },
    {
-    "text": "Leflunomide",
-    "why": "A conventional DMARD."
+    "text": "Obtain a baseline eye examination",
+    "why": "Eye exams apply to hydroxychloroquine (textbook)."
    }
   ],
-  "why_correct": "Adalimumab, etanercept, and infliximab are the lecture's TNF inhibitors.",
-  "takeaway": "TNF: adalimumab, etanercept, infliximab.",
-  "discriminator": "TNF · IL-6 (tocilizumab) · B cell (rituximab) · T-cell costimulation (abatacept).",
-  "src": "L03 S51; SG U2-R8",
-  "id": "U2-021",
+  "why_correct": "Immunosuppression is the shared DMARD risk; baseline TB and hepatitis B/C screening comes before biologics (TNF inhibitors can reactivate TB and hepatitis B).",
+  "takeaway": "Biologic start: TB + hepatitis screen, vaccines first.",
+  "discriminator": "Shared DMARD risk = infection.",
+  "src": "L03 S56; SG U2-R8; p. 692",
+  "id": "U2-024",
   "answer": "C",
   "options": {
    "A": {
-    "text": "Abatacept",
-    "why": "A T-cell costimulation modulator.",
+    "text": "Review labels for hidden acetaminophen",
+    "why": "Acetaminophen safety counseling.",
     "correct": false
    },
    "B": {
-    "text": "Leflunomide",
-    "why": "A conventional DMARD.",
+    "text": "Check a uric acid level",
+    "why": "Not a biologic safety step.",
     "correct": false
    },
    "C": {
-    "text": "Etanercept",
-    "why": "Adalimumab, etanercept, and infliximab are the lecture's TNF inhibitors.",
+    "text": "Screen for latent tuberculosis and hepatitis B/C",
+    "why": "Immunosuppression is the shared DMARD risk; baseline TB and hepatitis B/C screening comes before biologics (TNF inhibitors can reactivate TB and hepatitis B).",
     "correct": true
    },
    "D": {
-    "text": "Tocilizumab",
-    "why": "An IL-6 inhibitor.",
+    "text": "Obtain a baseline eye examination",
+    "why": "Eye exams apply to hydroxychloroquine (textbook).",
     "correct": false
    },
    "E": {
-    "text": "Rituximab",
-    "why": "B-cell targeted therapy.",
+    "text": "Start folate supplementation",
+    "why": "Folate accompanies methotrexate.",
     "correct": false
    }
   },
   "link": {
    "href": "../../L03/index.html#osteoarthritis-rheumatoid-arthritis-dmards",
    "label": "Study this: L03 · Part 4 →"
+  }
+ },
+ {
+  "topic": "Muscle relaxants",
+  "objectives": [
+   "IO2.1"
+  ],
+  "sg": [
+   "U2-M"
+  ],
+  "kind": "mechanism",
+  "stem": "Which mechanism belongs to baclofen?",
+  "correct": "GABA-B agonism in the spinal cord",
+  "distractors": [
+   {
+    "text": "Central alpha-2 adrenergic agonism",
+    "why": "That is tizanidine."
+   },
+   {
+    "text": "RyR1 blockade in skeletal muscle",
+    "why": "That is dantrolene."
+   },
+   {
+    "text": "5-HT2 antagonism in the brainstem",
+    "why": "That is cyclobenzaprine."
+   },
+   {
+    "text": "GABA-A facilitation by benzodiazepines",
+    "why": "That is diazepam."
+   }
+  ],
+  "why_correct": "Baclofen activates GABA-B receptors, causing presynaptic inhibition and less excitatory transmitter release.",
+  "takeaway": "Baclofen = GABA-B (B for Baclofen).",
+  "discriminator": "GABA-B = baclofen; GABA-A = benzodiazepines.",
+  "src": "L04 S21-22; SG U2-M",
+  "id": "U2-040",
+  "answer": "A",
+  "options": {
+   "A": {
+    "text": "GABA-B agonism in the spinal cord",
+    "why": "Baclofen activates GABA-B receptors, causing presynaptic inhibition and less excitatory transmitter release.",
+    "correct": true
+   },
+   "B": {
+    "text": "GABA-A facilitation by benzodiazepines",
+    "why": "That is diazepam.",
+    "correct": false
+   },
+   "C": {
+    "text": "Central alpha-2 adrenergic agonism",
+    "why": "That is tizanidine.",
+    "correct": false
+   },
+   "D": {
+    "text": "5-HT2 antagonism in the brainstem",
+    "why": "That is cyclobenzaprine.",
+    "correct": false
+   },
+   "E": {
+    "text": "RyR1 blockade in skeletal muscle",
+    "why": "That is dantrolene.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L04/index.html#skeletal-muscle-relaxants",
+   "label": "Study this: L04 · Part 2 →"
+  }
+ },
+ {
+  "topic": "Gout",
+  "objectives": [
+   "IO2.1"
+  ],
+  "sg": [],
+  "kind": "mechanism",
+  "stem": "In a gout flare, what activates the inflammatory response once urate crystals form in the joint?",
+  "correct": "Neutrophils and macrophages via NLRP3 and IL-1β",
+  "distractors": [
+   {
+    "text": "Osteoclasts via RANKL signaling",
+    "why": "RANKL drives bone resorption, not crystal inflammation."
+   },
+   {
+    "text": "Platelets via thromboxane A₂",
+    "why": "Not the gout cascade taught."
+   },
+   {
+    "text": "T cells via CD28 costimulation",
+    "why": "Costimulation is abatacept’s target in RA."
+   },
+   {
+    "text": "B cells via CD20 signaling",
+    "why": "CD20 is rituximab’s target in RA."
+   }
+  ],
+  "why_correct": "Monosodium urate crystals activate neutrophils and macrophages through NLRP3 and IL-1β, producing the acute flare.",
+  "takeaway": "Crystals → NLRP3/IL-1β → neutrophils → flare.",
+  "discriminator": "Colchicine blocks the neutrophil step; ULT removes the crystals over time.",
+  "src": "L04 S5",
+  "id": "U2-037",
+  "answer": "D",
+  "options": {
+   "A": {
+    "text": "T cells via CD28 costimulation",
+    "why": "Costimulation is abatacept’s target in RA.",
+    "correct": false
+   },
+   "B": {
+    "text": "B cells via CD20 signaling",
+    "why": "CD20 is rituximab’s target in RA.",
+    "correct": false
+   },
+   "C": {
+    "text": "Osteoclasts via RANKL signaling",
+    "why": "RANKL drives bone resorption, not crystal inflammation.",
+    "correct": false
+   },
+   "D": {
+    "text": "Neutrophils and macrophages via NLRP3 and IL-1β",
+    "why": "Monosodium urate crystals activate neutrophils and macrophages through NLRP3 and IL-1β, producing the acute flare.",
+    "correct": true
+   },
+   "E": {
+    "text": "Platelets via thromboxane A₂",
+    "why": "Not the gout cascade taught.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L04/index.html#gout-acute-flares-urate-lowering-therapy",
+   "label": "Study this: L04 · Part 1 →"
+  }
+ },
+ {
+  "topic": "Bone & osteoporosis",
+  "objectives": [
+   "IO2.5"
+  ],
+  "sg": [],
+  "kind": "mechanism",
+  "stem": "Which osteoporosis drug is limited to 2 years of lifetime use and should be followed by an antiresorptive?",
+  "correct": "Teriparatide",
+  "distractors": [
+   {
+    "text": "Alendronate",
+    "why": "Bisphosphonates get a drug holiday after 3–5 years."
+   },
+   {
+    "text": "Denosumab",
+    "why": "Denosumab must not simply be stopped."
+   },
+   {
+    "text": "Raloxifene",
+    "why": "No 2-year limit is taught."
+   },
+   {
+    "text": "Zoledronic acid",
+    "why": "Given yearly IV; no 2-year cap taught."
+   }
+  ],
+  "why_correct": "Teriparatide is limited to 2 years lifetime, then followed by an antiresorptive to keep the bone gained.",
+  "takeaway": "Build (teriparatide 2 years), then keep (antiresorptive).",
+  "discriminator": "Teriparatide = time limit; denosumab = no abrupt stop; romosozumab = CV boxed warning.",
+  "src": "L04 S43",
+  "id": "U2-048",
+  "answer": "E",
+  "options": {
+   "A": {
+    "text": "Zoledronic acid",
+    "why": "Given yearly IV; no 2-year cap taught.",
+    "correct": false
+   },
+   "B": {
+    "text": "Raloxifene",
+    "why": "No 2-year limit is taught.",
+    "correct": false
+   },
+   "C": {
+    "text": "Denosumab",
+    "why": "Denosumab must not simply be stopped.",
+    "correct": false
+   },
+   "D": {
+    "text": "Alendronate",
+    "why": "Bisphosphonates get a drug holiday after 3–5 years.",
+    "correct": false
+   },
+   "E": {
+    "text": "Teriparatide",
+    "why": "Teriparatide is limited to 2 years lifetime, then followed by an antiresorptive to keep the bone gained.",
+    "correct": true
+   }
+  },
+  "link": {
+   "href": "../../L04/index.html#bone-pharmacology-osteoporosis",
+   "label": "Study this: L04 · Part 3 →"
   }
  },
  {
@@ -300,12 +755,12 @@
   "discriminator": "Ibuprofen first-line · naproxen twice daily · diclofenac topical · indomethacin potent · ketorolac short-term.",
   "src": "L03 S28; S43",
   "id": "U2-012",
-  "answer": "A",
+  "answer": "D",
   "options": {
    "A": {
-    "text": "Diclofenac",
-    "why": "Diclofenac is available in oral and topical formulations; topical NSAIDs give local relief with much lower systemic exposure.",
-    "correct": true
+    "text": "Celecoxib",
+    "why": "Noted for COX-2 selectivity.",
+    "correct": false
    },
    "B": {
     "text": "Indomethacin",
@@ -318,13 +773,13 @@
     "correct": false
    },
    "D": {
-    "text": "Naproxen",
-    "why": "Noted for its longer half-life and twice-daily dosing.",
-    "correct": false
+    "text": "Diclofenac",
+    "why": "Diclofenac is available in oral and topical formulations; topical NSAIDs give local relief with much lower systemic exposure.",
+    "correct": true
    },
    "E": {
-    "text": "Celecoxib",
-    "why": "Noted for COX-2 selectivity.",
+    "text": "Naproxen",
+    "why": "Noted for its longer half-life and twice-daily dosing.",
     "correct": false
    }
   },
@@ -334,68 +789,203 @@
   }
  },
  {
-  "topic": "Biologic DMARDs",
+  "topic": "Bone & osteoporosis",
+  "objectives": [
+   "IO2.6",
+   "IO2.5"
+  ],
+  "sg": [
+   "U2-R13"
+  ],
+  "kind": "vignette",
+  "stem": "A patient starting weekly risedronate asks how to take it. Which instruction is correct?",
+  "correct": "Fasting, full glass of water, upright 30 minutes",
+  "distractors": [
+   {
+    "text": "With breakfast and a calcium tablet",
+    "why": "Food and calcium cut absorption."
+   },
+   {
+    "text": "At bedtime, then lie down to rest",
+    "why": "Lying down raises esophageal risk."
+   },
+   {
+    "text": "With coffee to help it absorb",
+    "why": "Coffee reduces absorption."
+   },
+   {
+    "text": "With an antacid to protect the stomach",
+    "why": "Antacids reduce absorption."
+   }
+  ],
+  "why_correct": "Take it first thing in the morning, fasting, with a full glass of plain water, and stay upright for 30 minutes to limit esophageal irritation.",
+  "takeaway": "Oral bisphosphonates: empty stomach, full glass of water, upright.",
+  "discriminator": "Absorption is under 1% — anything else in the stomach cuts it further.",
+  "src": "L04 S40-41; SG U2-R13",
+  "id": "U2-044",
+  "answer": "C",
+  "options": {
+   "A": {
+    "text": "With an antacid to protect the stomach",
+    "why": "Antacids reduce absorption.",
+    "correct": false
+   },
+   "B": {
+    "text": "At bedtime, then lie down to rest",
+    "why": "Lying down raises esophageal risk.",
+    "correct": false
+   },
+   "C": {
+    "text": "Fasting, full glass of water, upright 30 minutes",
+    "why": "Take it first thing in the morning, fasting, with a full glass of plain water, and stay upright for 30 minutes to limit esophageal irritation.",
+    "correct": true
+   },
+   "D": {
+    "text": "With breakfast and a calcium tablet",
+    "why": "Food and calcium cut absorption.",
+    "correct": false
+   },
+   "E": {
+    "text": "With coffee to help it absorb",
+    "why": "Coffee reduces absorption.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L04/index.html#bone-pharmacology-osteoporosis",
+   "label": "Study this: L04 · Part 3 →"
+  }
+ },
+ {
+  "topic": "Muscle relaxants",
   "objectives": [
    "IO2.2"
   ],
   "sg": [],
   "kind": "vignette",
-  "stem": "A patient with RA on adalimumab has a family history of lymphoma and asks about cancer risk. Which statement matches the textbook?",
-  "correct": "TNF inhibitors carry a boxed malignancy warning",
+  "stem": "A patient on tizanidine reports dizziness on standing and has new elevated liver enzymes. Which pair of effects is typical of tizanidine?",
+  "correct": "Hypotension and hepatotoxicity",
   "distractors": [
    {
-    "text": "TNF inhibitors lower lymphoma risk to zero",
-    "why": "The FDA boxed warning concerns malignancy, especially lymphoma."
+    "text": "Anticholinergic retention and confusion",
+    "why": "Typical of cyclobenzaprine."
    },
    {
-    "text": "Only methotrexate carries a malignancy warning",
-    "why": "The boxed malignancy warning is on all anti-TNF agents."
+    "text": "Hemolysis and infusion reactions",
+    "why": "Typical of pegloticase."
    },
    {
-    "text": "Cancer risk applies only to JAK inhibitors",
-    "why": "JAK inhibitors share a cancer warning, but TNF inhibitors have one too."
+    "text": "Esophagitis and hypocalcemia",
+    "why": "Typical of oral bisphosphonates."
    },
    {
-    "text": "Boxed warnings apply only to IV biologics",
-    "why": "The warning covers all anti-TNF agents."
+    "text": "Hyperkalemia and fasciculations",
+    "why": "Typical of succinylcholine."
    }
   ],
-  "why_correct": "The FDA placed a boxed warning on all anti-TNF agents about possible malignancy, especially lymphoma; periodic skin exams are advised.",
-  "takeaway": "TNF inhibitors: infection (TB, hepatitis B) + boxed malignancy warning.",
-  "discriminator": "TNF boxed = malignancy; JAK boxed = VTE, MACE, cancer.",
-  "src": "p. 692",
-  "id": "U2-025",
-  "answer": "E",
+  "why_correct": "Tizanidine causes sedation, hypotension/bradycardia, dry mouth, and hepatotoxicity — monitor LFTs.",
+  "takeaway": "Tizanidine: low BP, sleepy, dry, check LFTs.",
+  "discriminator": "Tizanidine = α2 effects + liver; cyclobenzaprine = anticholinergic.",
+  "src": "L04 S23-24",
+  "id": "U2-041",
+  "answer": "D",
   "options": {
    "A": {
-    "text": "Boxed warnings apply only to IV biologics",
-    "why": "The warning covers all anti-TNF agents.",
+    "text": "Anticholinergic retention and confusion",
+    "why": "Typical of cyclobenzaprine.",
     "correct": false
    },
    "B": {
-    "text": "TNF inhibitors lower lymphoma risk to zero",
-    "why": "The FDA boxed warning concerns malignancy, especially lymphoma.",
+    "text": "Hyperkalemia and fasciculations",
+    "why": "Typical of succinylcholine.",
     "correct": false
    },
    "C": {
-    "text": "Only methotrexate carries a malignancy warning",
-    "why": "The boxed malignancy warning is on all anti-TNF agents.",
+    "text": "Hemolysis and infusion reactions",
+    "why": "Typical of pegloticase.",
     "correct": false
    },
    "D": {
-    "text": "Cancer risk applies only to JAK inhibitors",
-    "why": "JAK inhibitors share a cancer warning, but TNF inhibitors have one too.",
-    "correct": false
+    "text": "Hypotension and hepatotoxicity",
+    "why": "Tizanidine causes sedation, hypotension/bradycardia, dry mouth, and hepatotoxicity — monitor LFTs.",
+    "correct": true
    },
    "E": {
-    "text": "TNF inhibitors carry a boxed malignancy warning",
-    "why": "The FDA placed a boxed warning on all anti-TNF agents about possible malignancy, especially lymphoma; periodic skin exams are advised.",
-    "correct": true
+    "text": "Esophagitis and hypocalcemia",
+    "why": "Typical of oral bisphosphonates.",
+    "correct": false
    }
   },
   "link": {
-   "href": "../../L03/index.html#osteoarthritis-rheumatoid-arthritis-dmards",
-   "label": "Study this: L03 · Part 4 →"
+   "href": "../../L04/index.html#skeletal-muscle-relaxants",
+   "label": "Study this: L04 · Part 2 →"
+  }
+ },
+ {
+  "topic": "Gout",
+  "objectives": [
+   "IO2.4"
+  ],
+  "sg": [
+   "U2-S"
+  ],
+  "kind": "vignette",
+  "stem": "A 72-year-old with CKD, hypertension, and anticoagulation has an acute gout flare. Which option is often preferred?",
+  "correct": "A short corticosteroid course",
+  "distractors": [
+   {
+    "text": "Full-dose oral naproxen",
+    "why": "Oral NSAIDs are relatively contraindicated with CKD, anticoagulation, and hypertension."
+   },
+   {
+    "text": "Starting allopurinol today",
+    "why": "ULT is deferred until the flare resolves."
+   },
+   {
+    "text": "Probenecid to clear uric acid",
+    "why": "Probenecid is avoided in renal impairment."
+   },
+   {
+    "text": "Full-dose colchicine, unadjusted",
+    "why": "Colchicine needs renal dose adjustment."
+   }
+  ],
+  "why_correct": "With these risk factors an oral NSAID is relatively contraindicated; a short corticosteroid course (oral or intra-articular) is often preferred.",
+  "takeaway": "Stacked NSAID red flags in a flare → steroid; adjust colchicine; defer ULT.",
+  "discriminator": "OA pain in this patient: acetaminophen/topical NSAID; gout flare: short steroid course.",
+  "src": "SG U2-S; L04 S7; S9",
+  "id": "U2-036",
+  "answer": "A",
+  "options": {
+   "A": {
+    "text": "A short corticosteroid course",
+    "why": "With these risk factors an oral NSAID is relatively contraindicated; a short corticosteroid course (oral or intra-articular) is often preferred.",
+    "correct": true
+   },
+   "B": {
+    "text": "Full-dose oral naproxen",
+    "why": "Oral NSAIDs are relatively contraindicated with CKD, anticoagulation, and hypertension.",
+    "correct": false
+   },
+   "C": {
+    "text": "Probenecid to clear uric acid",
+    "why": "Probenecid is avoided in renal impairment.",
+    "correct": false
+   },
+   "D": {
+    "text": "Starting allopurinol today",
+    "why": "ULT is deferred until the flare resolves.",
+    "correct": false
+   },
+   "E": {
+    "text": "Full-dose colchicine, unadjusted",
+    "why": "Colchicine needs renal dose adjustment.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L03/index.html#musculoskeletal-pain-the-inflammatory-cascade",
+   "label": "Study this: L03 · Part 1 →"
   }
  },
  {
@@ -432,22 +1022,22 @@
   "discriminator": "Ask: does the drug change the disease, or only the symptoms?",
   "src": "L03 S45; S45 (notes); SG U2-R6",
   "id": "U2-020",
-  "answer": "A",
+  "answer": "C",
   "options": {
    "A": {
-    "text": "It slows or halts joint destruction",
-    "why": "A DMARD is intended to alter the course of RA — slowing or halting joint destruction and systemic inflammation — rather than only masking symptoms.",
-    "correct": true
-   },
-   "B": {
     "text": "It selectively blocks the COX-2 isoform",
     "why": "That is celecoxib, an NSAID.",
     "correct": false
    },
-   "C": {
+   "B": {
     "text": "It relieves pain faster than NSAIDs",
     "why": "Analgesia alone does not make a drug disease-modifying.",
     "correct": false
+   },
+   "C": {
+    "text": "It slows or halts joint destruction",
+    "why": "A DMARD is intended to alter the course of RA — slowing or halting joint destruction and systemic inflammation — rather than only masking symptoms.",
+    "correct": true
    },
    "D": {
     "text": "It is given only as an injection",
@@ -503,8 +1093,8 @@
   "answer": "C",
   "options": {
    "A": {
-    "text": "Leucovorin",
-    "why": "Leucovorin offsets methotrexate toxicity (textbook).",
+    "text": "Omeprazole",
+    "why": "Not an antidote; used with NSAIDs for GI protection (textbook).",
     "correct": false
    },
    "B": {
@@ -518,85 +1108,19 @@
     "correct": true
    },
    "D": {
-    "text": "Folic acid",
-    "why": "Folate reduces methotrexate toxicity.",
+    "text": "Leucovorin",
+    "why": "Leucovorin offsets methotrexate toxicity (textbook).",
     "correct": false
    },
    "E": {
-    "text": "Omeprazole",
-    "why": "Not an antidote; used with NSAIDs for GI protection (textbook).",
+    "text": "Folic acid",
+    "why": "Folate reduces methotrexate toxicity.",
     "correct": false
    }
   },
   "link": {
    "href": "../../L03/index.html#acetaminophen",
    "label": "Study this: L03 · Part 2 →"
-  }
- },
- {
-  "topic": "OA vs. RA",
-  "objectives": [
-   "IO2.4",
-   "IO2.6"
-  ],
-  "sg": [],
-  "kind": "mechanism",
-  "stem": "Which non-drug approaches does the lecture include in osteoarthritis management?",
-  "correct": "Activity modification, physical therapy, weight management",
-  "distractors": [
-   {
-    "text": "Live vaccines, TB screening, folate",
-    "why": "These are DMARD safety steps."
-   },
-   {
-    "text": "Glutathione replenishment, label review",
-    "why": "These relate to acetaminophen."
-   },
-   {
-    "text": "Nerve ablation, spinal cord stimulation",
-    "why": "Not taught."
-   },
-   {
-    "text": "Fasting, high-protein diet, bed rest",
-    "why": "Not taught."
-   }
-  ],
-  "why_correct": "OA management includes activity modification, physical therapy, and weight management alongside drugs.",
-  "takeaway": "OA = pain control and function, drug and non-drug.",
-  "discriminator": "OA goals vs. RA goals.",
-  "src": "L03 S43",
-  "id": "U2-016",
-  "answer": "D",
-  "options": {
-   "A": {
-    "text": "Fasting, high-protein diet, bed rest",
-    "why": "Not taught.",
-    "correct": false
-   },
-   "B": {
-    "text": "Glutathione replenishment, label review",
-    "why": "These relate to acetaminophen.",
-    "correct": false
-   },
-   "C": {
-    "text": "Live vaccines, TB screening, folate",
-    "why": "These are DMARD safety steps.",
-    "correct": false
-   },
-   "D": {
-    "text": "Activity modification, physical therapy, weight management",
-    "why": "OA management includes activity modification, physical therapy, and weight management alongside drugs.",
-    "correct": true
-   },
-   "E": {
-    "text": "Nerve ablation, spinal cord stimulation",
-    "why": "Not taught.",
-    "correct": false
-   }
-  },
-  "link": {
-   "href": "../../L03/index.html#osteoarthritis-rheumatoid-arthritis-dmards",
-   "label": "Study this: L03 · Part 4 →"
   }
  },
  {
@@ -632,7 +1156,7 @@
   "discriminator": "Methotrexate is the DMARD contraindicated in pregnancy; NSAIDs are cautioned in late pregnancy.",
   "src": "L03 S36",
   "id": "U2-011",
-  "answer": "E",
+  "answer": "B",
   "options": {
    "A": {
     "text": "Use ketorolac daily as a long-term option",
@@ -640,24 +1164,24 @@
     "correct": false
    },
    "B": {
-    "text": "Use it freely — NSAIDs are safest in late pregnancy",
-    "why": "Late pregnancy is on the caution/avoid list.",
-    "correct": false
+    "text": "Avoid it — late pregnancy is an NSAID caution",
+    "why": "The lecture lists late pregnancy among the conditions to use NSAIDs with caution or avoid.",
+    "correct": true
    },
    "C": {
-    "text": "Use celecoxib instead — COX-2 drugs are exempt",
-    "why": "No such exemption is taught.",
-    "correct": false
-   },
-   "D": {
     "text": "Add folate to make naproxen safe",
     "why": "Folate is co-prescribed with methotrexate.",
     "correct": false
    },
+   "D": {
+    "text": "Use it freely — NSAIDs are safest in late pregnancy",
+    "why": "Late pregnancy is on the caution/avoid list.",
+    "correct": false
+   },
    "E": {
-    "text": "Avoid it — late pregnancy is an NSAID caution",
-    "why": "The lecture lists late pregnancy among the conditions to use NSAIDs with caution or avoid.",
-    "correct": true
+    "text": "Use celecoxib instead — COX-2 drugs are exempt",
+    "why": "No such exemption is taught.",
+    "correct": false
    }
   },
   "link": {
@@ -668,67 +1192,136 @@
  {
   "topic": "Biologic DMARDs",
   "objectives": [
-   "IO2.5",
-   "IO2.6"
+   "IO2.1"
   ],
-  "sg": [],
-  "kind": "vignette",
-  "stem": "A patient will start infliximab next month and is due for a live vaccine. When should the vaccine be given?",
-  "correct": "Before infliximab is started",
+  "sg": [
+   "U2-R8"
+  ],
+  "kind": "mechanism",
+  "stem": "Which drug is a TNF inhibitor?",
+  "correct": "Etanercept",
   "distractors": [
    {
-    "text": "Any time, since biologics don't affect immunity",
-    "why": "Biologics are immunosuppressive."
+    "text": "Tocilizumab",
+    "why": "An IL-6 inhibitor."
    },
    {
-    "text": "One week after the first infusion",
-    "why": "Live vaccines should be updated before therapy."
+    "text": "Rituximab",
+    "why": "B-cell targeted therapy."
    },
    {
-    "text": "Only if a fever develops on therapy",
-    "why": "Fever on therapy needs prompt evaluation for infection, not vaccination."
+    "text": "Abatacept",
+    "why": "A T-cell costimulation modulator."
    },
    {
-    "text": "Never — vaccines are banned for life",
-    "why": "Vaccines are updated before starting, not banned."
+    "text": "Leflunomide",
+    "why": "A conventional DMARD."
    }
   ],
-  "why_correct": "Update vaccines — especially live vaccines — before starting DMARD therapy, because these drugs suppress the immune response.",
-  "takeaway": "Vaccinate first, then immunosuppress.",
-  "discriminator": "Before a biologic: screen (TB, hepatitis B/C) and vaccinate.",
-  "src": "L03 S56",
-  "id": "U2-023",
+  "why_correct": "Adalimumab, etanercept, and infliximab are the lecture's TNF inhibitors.",
+  "takeaway": "TNF: adalimumab, etanercept, infliximab.",
+  "discriminator": "TNF · IL-6 (tocilizumab) · B cell (rituximab) · T-cell costimulation (abatacept).",
+  "src": "L03 S51; SG U2-R8",
+  "id": "U2-021",
   "answer": "D",
   "options": {
    "A": {
-    "text": "One week after the first infusion",
-    "why": "Live vaccines should be updated before therapy.",
+    "text": "Abatacept",
+    "why": "A T-cell costimulation modulator.",
     "correct": false
    },
    "B": {
-    "text": "Never — vaccines are banned for life",
-    "why": "Vaccines are updated before starting, not banned.",
+    "text": "Leflunomide",
+    "why": "A conventional DMARD.",
     "correct": false
    },
    "C": {
-    "text": "Only if a fever develops on therapy",
-    "why": "Fever on therapy needs prompt evaluation for infection, not vaccination.",
+    "text": "Tocilizumab",
+    "why": "An IL-6 inhibitor.",
     "correct": false
    },
    "D": {
-    "text": "Before infliximab is started",
-    "why": "Update vaccines — especially live vaccines — before starting DMARD therapy, because these drugs suppress the immune response.",
+    "text": "Etanercept",
+    "why": "Adalimumab, etanercept, and infliximab are the lecture's TNF inhibitors.",
     "correct": true
    },
    "E": {
-    "text": "Any time, since biologics don't affect immunity",
-    "why": "Biologics are immunosuppressive.",
+    "text": "Rituximab",
+    "why": "B-cell targeted therapy.",
     "correct": false
    }
   },
   "link": {
    "href": "../../L03/index.html#osteoarthritis-rheumatoid-arthritis-dmards",
    "label": "Study this: L03 · Part 4 →"
+  }
+ },
+ {
+  "topic": "NSAIDs",
+  "objectives": [
+   "IO2.1",
+   "IO2.3"
+  ],
+  "sg": [
+   "U2-R4"
+  ],
+  "kind": "mechanism",
+  "stem": "Which statement correctly describes COX-1?",
+  "correct": "Housekeeping enzyme protecting stomach and renal flow",
+  "distractors": [
+   {
+    "text": "Inducible enzyme found mainly at inflamed sites",
+    "why": "That describes COX-2."
+   },
+   {
+    "text": "Main source of inflammatory prostaglandins",
+    "why": "That is COX-2."
+   },
+   {
+    "text": "Target of celecoxib's selective inhibition",
+    "why": "Celecoxib selectively inhibits COX-2."
+   },
+   {
+    "text": "Enzyme that converts acetaminophen to NAPQI",
+    "why": "Not taught as a COX function."
+   }
+  ],
+  "why_correct": "COX-1 is the housekeeping enzyme that maintains gastric mucosal protection and normal renal blood flow; inhibiting it contributes to GI and renal adverse effects.",
+  "takeaway": "COX-1 = housekeeping (GI, kidney). COX-2 = inflammation.",
+  "discriminator": "Selective COX-2 inhibition spares COX-1, so GI toxicity is lower.",
+  "src": "L03 S26; SG U2-R4",
+  "id": "U2-007",
+  "answer": "C",
+  "options": {
+   "A": {
+    "text": "Target of celecoxib's selective inhibition",
+    "why": "Celecoxib selectively inhibits COX-2.",
+    "correct": false
+   },
+   "B": {
+    "text": "Inducible enzyme found mainly at inflamed sites",
+    "why": "That describes COX-2.",
+    "correct": false
+   },
+   "C": {
+    "text": "Housekeeping enzyme protecting stomach and renal flow",
+    "why": "COX-1 is the housekeeping enzyme that maintains gastric mucosal protection and normal renal blood flow; inhibiting it contributes to GI and renal adverse effects.",
+    "correct": true
+   },
+   "D": {
+    "text": "Main source of inflammatory prostaglandins",
+    "why": "That is COX-2.",
+    "correct": false
+   },
+   "E": {
+    "text": "Enzyme that converts acetaminophen to NAPQI",
+    "why": "Not taught as a COX function.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L03/index.html#nsaids-cox-2-selective-inhibition",
+   "label": "Study this: L03 · Part 3 →"
   }
  },
  {
@@ -773,29 +1366,96 @@
     "correct": true
    },
    "B": {
-    "text": "Injury → glutathione loss → NAPQI build-up → pain",
-    "why": "That chain is acetaminophen overdose.",
-    "correct": false
-   },
-   "C": {
-    "text": "Injury → nerve transection → cortical atrophy → pain",
-    "why": "Nerve injury is neuropathic pain, not the lecture's inflammatory cascade.",
-    "correct": false
-   },
-   "D": {
     "text": "Injury → T-cell depletion → B-cell surge → pain",
     "why": "Not the taught pain pathway.",
     "correct": false
    },
-   "E": {
+   "C": {
     "text": "Injury → COX-1 induction → gastric protection → pain",
     "why": "COX-1 is housekeeping; COX-2 is the inducible inflammatory isoform.",
+    "correct": false
+   },
+   "D": {
+    "text": "Injury → nerve transection → cortical atrophy → pain",
+    "why": "Nerve injury is neuropathic pain, not the lecture's inflammatory cascade.",
+    "correct": false
+   },
+   "E": {
+    "text": "Injury → glutathione loss → NAPQI build-up → pain",
+    "why": "That chain is acetaminophen overdose.",
     "correct": false
    }
   },
   "link": {
    "href": "../../L03/index.html#musculoskeletal-pain-the-inflammatory-cascade",
    "label": "Study this: L03 · Part 1 →"
+  }
+ },
+ {
+  "topic": "Bone & osteoporosis",
+  "objectives": [
+   "IO2.1"
+  ],
+  "sg": [
+   "U2-M"
+  ],
+  "kind": "mechanism",
+  "stem": "Which drug blocks osteoclast formation by inhibiting RANKL?",
+  "correct": "Denosumab",
+  "distractors": [
+   {
+    "text": "Teriparatide",
+    "why": "Teriparatide is an anabolic PTH analog."
+   },
+   {
+    "text": "Romosozumab",
+    "why": "Romosozumab targets sclerostin."
+   },
+   {
+    "text": "Raloxifene",
+    "why": "Raloxifene is a SERM."
+   },
+   {
+    "text": "Alendronate",
+    "why": "Alendronate causes osteoclast apoptosis via FPP synthase."
+   }
+  ],
+  "why_correct": "Denosumab is a monoclonal antibody against RANKL that blocks osteoclast formation (it mimics OPG).",
+  "takeaway": "Denosumab = RANKL; romosozumab = sclerostin.",
+  "discriminator": "Both are -sumab bone antibodies; know the target.",
+  "src": "L04 S33; S42-43; SG U2-M",
+  "id": "U2-046",
+  "answer": "D",
+  "options": {
+   "A": {
+    "text": "Alendronate",
+    "why": "Alendronate causes osteoclast apoptosis via FPP synthase.",
+    "correct": false
+   },
+   "B": {
+    "text": "Romosozumab",
+    "why": "Romosozumab targets sclerostin.",
+    "correct": false
+   },
+   "C": {
+    "text": "Teriparatide",
+    "why": "Teriparatide is an anabolic PTH analog.",
+    "correct": false
+   },
+   "D": {
+    "text": "Denosumab",
+    "why": "Denosumab is a monoclonal antibody against RANKL that blocks osteoclast formation (it mimics OPG).",
+    "correct": true
+   },
+   "E": {
+    "text": "Raloxifene",
+    "why": "Raloxifene is a SERM.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L04/index.html#bone-pharmacology-osteoporosis",
+   "label": "Study this: L04 · Part 3 →"
   }
  },
  {
@@ -845,24 +1505,884 @@
     "correct": true
    },
    "C": {
+    "text": "Repeat the level before 4 hours have passed",
+    "why": "Levels before 4 hours can't be plotted; this one is at 8 hours.",
+    "correct": false
+   },
+   "D": {
     "text": "Ignore the level and treat with an NSAID",
     "why": "NSAIDs don't treat acetaminophen toxicity.",
     "correct": false
    },
-   "D": {
+   "E": {
     "text": "Discharge: levels fall below 150 by 8 hours",
     "why": "At 8 hours the treatment line is 75 mcg/mL; 120 is above it.",
-    "correct": false
-   },
-   "E": {
-    "text": "Repeat the level before 4 hours have passed",
-    "why": "Levels before 4 hours can't be plotted; this one is at 8 hours.",
     "correct": false
    }
   },
   "link": {
    "href": "../../L03/index.html#acetaminophen",
    "label": "Study this: L03 · Part 2 →"
+  }
+ },
+ {
+  "topic": "Muscle relaxants",
+  "objectives": [
+   "IO2.2",
+   "IO2.4"
+  ],
+  "sg": [
+   "U2-R11"
+  ],
+  "kind": "vignette",
+  "stem": "In the OR, after sevoflurane and succinylcholine, a patient’s end-tidal CO₂ and temperature climb with jaw rigidity. Which drug is given IV now?",
+  "correct": "Dantrolene",
+  "distractors": [
+   {
+    "text": "Baclofen",
+    "why": "Baclofen treats chronic spasticity."
+   },
+   {
+    "text": "Cyclobenzaprine",
+    "why": "Cyclobenzaprine treats acute local spasm."
+   },
+   {
+    "text": "Tizanidine",
+    "why": "Tizanidine is an oral central agent."
+   },
+   {
+    "text": "Neostigmine",
+    "why": "Neostigmine reverses nondepolarizing blockers."
+   }
+  ],
+  "why_correct": "Malignant hyperthermia (volatile anesthetics, succinylcholine) is treated with IV dantrolene, which blocks RyR1 calcium release.",
+  "takeaway": "MH → IV dantrolene, now.",
+  "discriminator": "Dantrolene also treats neuroleptic malignant syndrome; MH triggers are volatile anesthetics and succinylcholine.",
+  "src": "L04 S28-29; SG U2-R11",
+  "id": "U2-039",
+  "answer": "C",
+  "options": {
+   "A": {
+    "text": "Tizanidine",
+    "why": "Tizanidine is an oral central agent.",
+    "correct": false
+   },
+   "B": {
+    "text": "Baclofen",
+    "why": "Baclofen treats chronic spasticity.",
+    "correct": false
+   },
+   "C": {
+    "text": "Dantrolene",
+    "why": "Malignant hyperthermia (volatile anesthetics, succinylcholine) is treated with IV dantrolene, which blocks RyR1 calcium release.",
+    "correct": true
+   },
+   "D": {
+    "text": "Cyclobenzaprine",
+    "why": "Cyclobenzaprine treats acute local spasm.",
+    "correct": false
+   },
+   "E": {
+    "text": "Neostigmine",
+    "why": "Neostigmine reverses nondepolarizing blockers.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L04/index.html#skeletal-muscle-relaxants",
+   "label": "Study this: L04 · Part 2 →"
+  }
+ },
+ {
+  "topic": "NSAIDs",
+  "objectives": [
+   "IO2.2",
+   "IO2.4"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A patient with heart failure on furosemide develops worsening edema after starting high-dose ibuprofen. What best explains this?",
+  "correct": "NSAIDs cause fluid retention and blunt diuretics",
+  "distractors": [
+   {
+    "text": "Ibuprofen is a CYP inducer lowering furosemide",
+    "why": "Not the taught mechanism; NSAIDs reduce diuretic effect directly."
+   },
+   {
+    "text": "Ibuprofen is COX-2 selective and hurts the heart",
+    "why": "Ibuprofen is nonselective."
+   },
+   {
+    "text": "The edema is NAPQI-induced liver failure",
+    "why": "NAPQI comes from acetaminophen."
+   },
+   {
+    "text": "Furosemide blocks ibuprofen's COX inhibition",
+    "why": "The interaction runs the other way."
+   }
+  ],
+  "why_correct": "NSAIDs cause renal fluid retention and, with diuretics, reduce the diuretic effect and raise renal risk; heart failure is a caution for NSAID use.",
+  "takeaway": "NSAID + diuretic → less diuresis, more renal risk.",
+  "discriminator": "NSAID + anticoagulant = bleeding; + ACEi/ARB (+ diuretic) = AKI; + steroid = ulcer.",
+  "src": "L03 S34; S36",
+  "id": "U2-009",
+  "answer": "B",
+  "options": {
+   "A": {
+    "text": "The edema is NAPQI-induced liver failure",
+    "why": "NAPQI comes from acetaminophen.",
+    "correct": false
+   },
+   "B": {
+    "text": "NSAIDs cause fluid retention and blunt diuretics",
+    "why": "NSAIDs cause renal fluid retention and, with diuretics, reduce the diuretic effect and raise renal risk; heart failure is a caution for NSAID use.",
+    "correct": true
+   },
+   "C": {
+    "text": "Ibuprofen is COX-2 selective and hurts the heart",
+    "why": "Ibuprofen is nonselective.",
+    "correct": false
+   },
+   "D": {
+    "text": "Furosemide blocks ibuprofen's COX inhibition",
+    "why": "The interaction runs the other way.",
+    "correct": false
+   },
+   "E": {
+    "text": "Ibuprofen is a CYP inducer lowering furosemide",
+    "why": "Not the taught mechanism; NSAIDs reduce diuretic effect directly.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L03/index.html#nsaids-cox-2-selective-inhibition",
+   "label": "Study this: L03 · Part 3 →"
+  }
+ },
+ {
+  "topic": "Acetaminophen",
+  "objectives": [
+   "IO2.2",
+   "IO2.4"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A patient with chronic alcohol use who has barely eaten for days takes acetaminophen at the upper end of normal dosing. Why is their liver risk higher?",
+  "correct": "Lower glutathione plus induced CYP2E1 makes more NAPQI",
+  "distractors": [
+   {
+    "text": "Alcohol blocks COX in the liver, adding NSAID toxicity",
+    "why": "The taught mechanism is glutathione and CYP2E1, not COX."
+   },
+   {
+    "text": "Fasting speeds renal excretion of the parent drug",
+    "why": "Fasting lowers glutathione; it doesn't explain liver risk via kidneys."
+   },
+   {
+    "text": "Alcohol converts acetaminophen into an NSAID",
+    "why": "Not taught; acetaminophen is not an NSAID."
+   },
+   {
+    "text": "Fasting saturates TXA2, causing hepatic bleeding",
+    "why": "TXA2 relates to NSAIDs and platelets."
+   }
+  ],
+  "why_correct": "Chronic alcohol use and fasting lower glutathione (GSH) and both induce CYP2E1, so more drug becomes NAPQI and less can be neutralized.",
+  "takeaway": "Alcohol + fasting: ↓ GSH, ↑ CYP2E1 → more NAPQI.",
+  "discriminator": "Safe route (~90%) = glucuronidation/sulfation; risky route (~5–10%) = CYP2E1 → NAPQI.",
+  "src": "L03 S16-17",
+  "id": "U2-027",
+  "answer": "E",
+  "options": {
+   "A": {
+    "text": "Alcohol blocks COX in the liver, adding NSAID toxicity",
+    "why": "The taught mechanism is glutathione and CYP2E1, not COX.",
+    "correct": false
+   },
+   "B": {
+    "text": "Fasting saturates TXA2, causing hepatic bleeding",
+    "why": "TXA2 relates to NSAIDs and platelets.",
+    "correct": false
+   },
+   "C": {
+    "text": "Alcohol converts acetaminophen into an NSAID",
+    "why": "Not taught; acetaminophen is not an NSAID.",
+    "correct": false
+   },
+   "D": {
+    "text": "Fasting speeds renal excretion of the parent drug",
+    "why": "Fasting lowers glutathione; it doesn't explain liver risk via kidneys.",
+    "correct": false
+   },
+   "E": {
+    "text": "Lower glutathione plus induced CYP2E1 makes more NAPQI",
+    "why": "Chronic alcohol use and fasting lower glutathione (GSH) and both induce CYP2E1, so more drug becomes NAPQI and less can be neutralized.",
+    "correct": true
+   }
+  },
+  "link": {
+   "href": "../../L03/index.html#acetaminophen",
+   "label": "Study this: L03 · Part 2 →"
+  }
+ },
+ {
+  "topic": "OA vs. RA",
+  "objectives": [
+   "IO2.4",
+   "IO2.6"
+  ],
+  "sg": [],
+  "kind": "mechanism",
+  "stem": "Which non-drug approaches does the lecture include in osteoarthritis management?",
+  "correct": "Activity modification, physical therapy, weight management",
+  "distractors": [
+   {
+    "text": "Live vaccines, TB screening, folate",
+    "why": "These are DMARD safety steps."
+   },
+   {
+    "text": "Glutathione replenishment, label review",
+    "why": "These relate to acetaminophen."
+   },
+   {
+    "text": "Nerve ablation, spinal cord stimulation",
+    "why": "Not taught."
+   },
+   {
+    "text": "Fasting, high-protein diet, bed rest",
+    "why": "Not taught."
+   }
+  ],
+  "why_correct": "OA management includes activity modification, physical therapy, and weight management alongside drugs.",
+  "takeaway": "OA = pain control and function, drug and non-drug.",
+  "discriminator": "OA goals vs. RA goals.",
+  "src": "L03 S43",
+  "id": "U2-016",
+  "answer": "A",
+  "options": {
+   "A": {
+    "text": "Activity modification, physical therapy, weight management",
+    "why": "OA management includes activity modification, physical therapy, and weight management alongside drugs.",
+    "correct": true
+   },
+   "B": {
+    "text": "Live vaccines, TB screening, folate",
+    "why": "These are DMARD safety steps.",
+    "correct": false
+   },
+   "C": {
+    "text": "Nerve ablation, spinal cord stimulation",
+    "why": "Not taught.",
+    "correct": false
+   },
+   "D": {
+    "text": "Fasting, high-protein diet, bed rest",
+    "why": "Not taught.",
+    "correct": false
+   },
+   "E": {
+    "text": "Glutathione replenishment, label review",
+    "why": "These relate to acetaminophen.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L03/index.html#osteoarthritis-rheumatoid-arthritis-dmards",
+   "label": "Study this: L03 · Part 4 →"
+  }
+ },
+ {
+  "topic": "Biologic DMARDs",
+  "objectives": [
+   "IO2.2"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A patient with RA on adalimumab has a family history of lymphoma and asks about cancer risk. Which statement matches the textbook?",
+  "correct": "TNF inhibitors carry a boxed malignancy warning",
+  "distractors": [
+   {
+    "text": "TNF inhibitors lower lymphoma risk to zero",
+    "why": "The FDA boxed warning concerns malignancy, especially lymphoma."
+   },
+   {
+    "text": "Only methotrexate carries a malignancy warning",
+    "why": "The boxed malignancy warning is on all anti-TNF agents."
+   },
+   {
+    "text": "Cancer risk applies only to JAK inhibitors",
+    "why": "JAK inhibitors share a cancer warning, but TNF inhibitors have one too."
+   },
+   {
+    "text": "Boxed warnings apply only to IV biologics",
+    "why": "The warning covers all anti-TNF agents."
+   }
+  ],
+  "why_correct": "The FDA placed a boxed warning on all anti-TNF agents about possible malignancy, especially lymphoma; periodic skin exams are advised.",
+  "takeaway": "TNF inhibitors: infection (TB, hepatitis B) + boxed malignancy warning.",
+  "discriminator": "TNF boxed = malignancy; JAK boxed = VTE, MACE, cancer.",
+  "src": "p. 692",
+  "id": "U2-025",
+  "answer": "B",
+  "options": {
+   "A": {
+    "text": "Cancer risk applies only to JAK inhibitors",
+    "why": "JAK inhibitors share a cancer warning, but TNF inhibitors have one too.",
+    "correct": false
+   },
+   "B": {
+    "text": "TNF inhibitors carry a boxed malignancy warning",
+    "why": "The FDA placed a boxed warning on all anti-TNF agents about possible malignancy, especially lymphoma; periodic skin exams are advised.",
+    "correct": true
+   },
+   "C": {
+    "text": "Boxed warnings apply only to IV biologics",
+    "why": "The warning covers all anti-TNF agents.",
+    "correct": false
+   },
+   "D": {
+    "text": "Only methotrexate carries a malignancy warning",
+    "why": "The boxed malignancy warning is on all anti-TNF agents.",
+    "correct": false
+   },
+   "E": {
+    "text": "TNF inhibitors lower lymphoma risk to zero",
+    "why": "The FDA boxed warning concerns malignancy, especially lymphoma.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L03/index.html#osteoarthritis-rheumatoid-arthritis-dmards",
+   "label": "Study this: L03 · Part 4 →"
+  }
+ },
+ {
+  "topic": "OA vs. RA",
+  "objectives": [
+   "IO2.4"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A 70-year-old with knee OA has a flare limited to one knee despite acetaminophen and topical diclofenac. Which option does the lecture list for short-term relief?",
+  "correct": "Intra-articular corticosteroid injection",
+  "distractors": [
+   {
+    "text": "Weekly oral methotrexate",
+    "why": "Methotrexate is a DMARD for RA."
+   },
+   {
+    "text": "Infliximab infusion",
+    "why": "Biologics treat RA, not degenerative OA."
+   },
+   {
+    "text": "Daily ketorolac for a month",
+    "why": "Ketorolac is short-term only."
+   },
+   {
+    "text": "High-dose hydroxychloroquine",
+    "why": "Hydroxychloroquine is a DMARD for milder RA."
+   }
+  ],
+  "why_correct": "Intra-articular corticosteroid injections give short-term relief for flares in a single joint.",
+  "takeaway": "OA ladder: acetaminophen → oral/topical NSAIDs → intra-articular steroid for a single-joint flare.",
+  "discriminator": "OA tools are analgesic; RA tools are disease-modifying.",
+  "src": "L03 S43",
+  "id": "U2-015",
+  "answer": "C",
+  "options": {
+   "A": {
+    "text": "Daily ketorolac for a month",
+    "why": "Ketorolac is short-term only.",
+    "correct": false
+   },
+   "B": {
+    "text": "High-dose hydroxychloroquine",
+    "why": "Hydroxychloroquine is a DMARD for milder RA.",
+    "correct": false
+   },
+   "C": {
+    "text": "Intra-articular corticosteroid injection",
+    "why": "Intra-articular corticosteroid injections give short-term relief for flares in a single joint.",
+    "correct": true
+   },
+   "D": {
+    "text": "Weekly oral methotrexate",
+    "why": "Methotrexate is a DMARD for RA.",
+    "correct": false
+   },
+   "E": {
+    "text": "Infliximab infusion",
+    "why": "Biologics treat RA, not degenerative OA.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L03/index.html#osteoarthritis-rheumatoid-arthritis-dmards",
+   "label": "Study this: L03 · Part 4 →"
+  }
+ },
+ {
+  "topic": "Bone & osteoporosis",
+  "objectives": [
+   "IO2.2"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A woman with a past DVT asks about raloxifene for osteoporosis. What is the key concern?",
+  "correct": "It raises venous thromboembolism risk",
+  "distractors": [
+   {
+    "text": "It causes osteonecrosis of the jaw",
+    "why": "A rare bisphosphonate/denosumab effect."
+   },
+   {
+    "text": "It must be taken upright with water",
+    "why": "That is the oral bisphosphonate rule."
+   },
+   {
+    "text": "It causes rebound vertebral fractures",
+    "why": "That follows stopping denosumab."
+   },
+   {
+    "text": "It carries a boxed MI and stroke warning",
+    "why": "That is romosozumab."
+   }
+  ],
+  "why_correct": "Raloxifene raises VTE risk (and causes hot flashes), though it may reduce breast cancer risk.",
+  "takeaway": "Raloxifene: clots up, breast cancer risk down.",
+  "discriminator": "SERM = VTE; romosozumab = MI/stroke.",
+  "src": "L04 S43",
+  "id": "U2-049",
+  "answer": "E",
+  "options": {
+   "A": {
+    "text": "It causes rebound vertebral fractures",
+    "why": "That follows stopping denosumab.",
+    "correct": false
+   },
+   "B": {
+    "text": "It causes osteonecrosis of the jaw",
+    "why": "A rare bisphosphonate/denosumab effect.",
+    "correct": false
+   },
+   "C": {
+    "text": "It carries a boxed MI and stroke warning",
+    "why": "That is romosozumab.",
+    "correct": false
+   },
+   "D": {
+    "text": "It must be taken upright with water",
+    "why": "That is the oral bisphosphonate rule.",
+    "correct": false
+   },
+   "E": {
+    "text": "It raises venous thromboembolism risk",
+    "why": "Raloxifene raises VTE risk (and causes hot flashes), though it may reduce breast cancer risk.",
+    "correct": true
+   }
+  },
+  "link": {
+   "href": "../../L04/index.html#bone-pharmacology-osteoporosis",
+   "label": "Study this: L04 · Part 3 →"
+  }
+ },
+ {
+  "topic": "Pain & inflammation",
+  "objectives": [
+   "IO2.1",
+   "IO2.3"
+  ],
+  "sg": [
+   "U2-R2"
+  ],
+  "kind": "mechanism",
+  "stem": "Why do corticosteroids suppress a broader range of inflammatory mediators than NSAIDs?",
+  "correct": "They block phospholipase A₂, upstream of COX",
+  "distractors": [
+   {
+    "text": "They block COX-2 more strongly than any NSAID",
+    "why": "Corticosteroids act upstream at phospholipase A₂, not at COX."
+   },
+   {
+    "text": "They deplete B cells that release prostaglandins",
+    "why": "B-cell depletion is rituximab."
+   },
+   {
+    "text": "They neutralize TNF-α outside the cell",
+    "why": "That is the TNF-inhibitor mechanism."
+   },
+   {
+    "text": "They act centrally on the hypothalamus",
+    "why": "That is acetaminophen's antipyretic site."
+   }
+  ],
+  "why_correct": "Corticosteroids block phospholipase A₂, preventing arachidonic acid release, so a broad range of mediators falls; NSAIDs act only at COX.",
+  "takeaway": "Upstream block (phospholipase A₂) = broad effect; COX block = prostaglandins only.",
+  "discriminator": "Corticosteroid → phospholipase A₂; NSAID/coxib → COX.",
+  "src": "L03 S9; SG U2-R2",
+  "id": "U2-003",
+  "answer": "C",
+  "options": {
+   "A": {
+    "text": "They block COX-2 more strongly than any NSAID",
+    "why": "Corticosteroids act upstream at phospholipase A₂, not at COX.",
+    "correct": false
+   },
+   "B": {
+    "text": "They deplete B cells that release prostaglandins",
+    "why": "B-cell depletion is rituximab.",
+    "correct": false
+   },
+   "C": {
+    "text": "They block phospholipase A₂, upstream of COX",
+    "why": "Corticosteroids block phospholipase A₂, preventing arachidonic acid release, so a broad range of mediators falls; NSAIDs act only at COX.",
+    "correct": true
+   },
+   "D": {
+    "text": "They act centrally on the hypothalamus",
+    "why": "That is acetaminophen's antipyretic site.",
+    "correct": false
+   },
+   "E": {
+    "text": "They neutralize TNF-α outside the cell",
+    "why": "That is the TNF-inhibitor mechanism.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L03/index.html#musculoskeletal-pain-the-inflammatory-cascade",
+   "label": "Study this: L03 · Part 1 →"
+  }
+ },
+ {
+  "topic": "Gout",
+  "objectives": [
+   "IO2.1"
+  ],
+  "sg": [
+   "U2-R9"
+  ],
+  "kind": "mechanism",
+  "stem": "Which drug lowers serum uric acid by increasing its renal excretion?",
+  "correct": "Probenecid",
+  "distractors": [
+   {
+    "text": "Allopurinol",
+    "why": "Allopurinol inhibits xanthine oxidase, lowering production."
+   },
+   {
+    "text": "Febuxostat",
+    "why": "Febuxostat also inhibits xanthine oxidase."
+   },
+   {
+    "text": "Colchicine",
+    "why": "Colchicine calms inflammation; it does not lower uric acid."
+   },
+   {
+    "text": "Pegloticase",
+    "why": "Pegloticase breaks uric acid down to allantoin."
+   }
+  ],
+  "why_correct": "Probenecid is a uricosuric: it blocks URAT1-mediated tubular reabsorption, so excretion rises.",
+  "takeaway": "Make less (xanthine oxidase inhibitors), pee more (probenecid), break it down (uricase).",
+  "discriminator": "Uricosuric = ↑ excretion; xanthine oxidase inhibitor = ↓ production.",
+  "src": "L04 S12-13; SG U2-R9",
+  "id": "U2-031",
+  "answer": "C",
+  "options": {
+   "A": {
+    "text": "Colchicine",
+    "why": "Colchicine calms inflammation; it does not lower uric acid.",
+    "correct": false
+   },
+   "B": {
+    "text": "Febuxostat",
+    "why": "Febuxostat also inhibits xanthine oxidase.",
+    "correct": false
+   },
+   "C": {
+    "text": "Probenecid",
+    "why": "Probenecid is a uricosuric: it blocks URAT1-mediated tubular reabsorption, so excretion rises.",
+    "correct": true
+   },
+   "D": {
+    "text": "Pegloticase",
+    "why": "Pegloticase breaks uric acid down to allantoin.",
+    "correct": false
+   },
+   "E": {
+    "text": "Allopurinol",
+    "why": "Allopurinol inhibits xanthine oxidase, lowering production.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L04/index.html#gout-acute-flares-urate-lowering-therapy",
+   "label": "Study this: L04 · Part 1 →"
+  }
+ },
+ {
+  "topic": "Acetaminophen",
+  "objectives": [
+   "IO2.1",
+   "IO2.3"
+  ],
+  "sg": [],
+  "kind": "mechanism",
+  "stem": "Which effect is acetaminophen least reliable for?",
+  "correct": "Reducing peripheral inflammation",
+  "distractors": [
+   {
+    "text": "Relieving mild-to-moderate pain",
+    "why": "Acetaminophen is an effective analgesic."
+   },
+   {
+    "text": "Lowering fever",
+    "why": "It is antipyretic via the hypothalamic temperature center."
+   },
+   {
+    "text": "First-line mild osteoarthritis pain",
+    "why": "It is a reasonable first-line for mild OA pain."
+   },
+   {
+    "text": "Pain in a patient with CKD",
+    "why": "It is generally safer than an NSAID with kidney disease."
+   }
+  ],
+  "why_correct": "Acetaminophen relieves pain and fever centrally, but its peripheral anti-inflammatory effect is minimal.",
+  "takeaway": "Pain + fever: yes. Inflammation: no.",
+  "discriminator": "Need an anti-inflammatory → NSAID; need analgesia with NSAID red flags → acetaminophen.",
+  "src": "L03 S15; S43",
+  "id": "U2-006",
+  "answer": "D",
+  "options": {
+   "A": {
+    "text": "Pain in a patient with CKD",
+    "why": "It is generally safer than an NSAID with kidney disease.",
+    "correct": false
+   },
+   "B": {
+    "text": "First-line mild osteoarthritis pain",
+    "why": "It is a reasonable first-line for mild OA pain.",
+    "correct": false
+   },
+   "C": {
+    "text": "Lowering fever",
+    "why": "It is antipyretic via the hypothalamic temperature center.",
+    "correct": false
+   },
+   "D": {
+    "text": "Reducing peripheral inflammation",
+    "why": "Acetaminophen relieves pain and fever centrally, but its peripheral anti-inflammatory effect is minimal.",
+    "correct": true
+   },
+   "E": {
+    "text": "Relieving mild-to-moderate pain",
+    "why": "Acetaminophen is an effective analgesic.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L03/index.html#acetaminophen",
+   "label": "Study this: L03 · Part 2 →"
+  }
+ },
+ {
+  "topic": "NSAIDs",
+  "objectives": [
+   "IO2.2"
+  ],
+  "sg": [],
+  "kind": "mechanism",
+  "stem": "Which drug pairing does the lecture flag for a higher GI ulcer risk?",
+  "correct": "NSAID plus a corticosteroid",
+  "distractors": [
+   {
+    "text": "NSAID plus an anticoagulant",
+    "why": "That pairing raises bleeding risk."
+   },
+   {
+    "text": "NSAID plus an ACE inhibitor",
+    "why": "That pairing raises AKI risk."
+   },
+   {
+    "text": "NSAID plus a diuretic",
+    "why": "That pairing reduces diuretic effect and raises renal risk."
+   },
+   {
+    "text": "Acetaminophen plus N-acetylcysteine",
+    "why": "That is overdose treatment."
+   }
+  ],
+  "why_correct": "NSAIDs combined with corticosteroids raise GI ulcer risk.",
+  "takeaway": "Steroid + NSAID = ulcer.",
+  "discriminator": "Match each NSAID interaction to its organ: blood, kidney, kidney, stomach.",
+  "src": "L03 S36",
+  "id": "U2-010",
+  "answer": "D",
+  "options": {
+   "A": {
+    "text": "NSAID plus a diuretic",
+    "why": "That pairing reduces diuretic effect and raises renal risk.",
+    "correct": false
+   },
+   "B": {
+    "text": "NSAID plus an ACE inhibitor",
+    "why": "That pairing raises AKI risk.",
+    "correct": false
+   },
+   "C": {
+    "text": "NSAID plus an anticoagulant",
+    "why": "That pairing raises bleeding risk.",
+    "correct": false
+   },
+   "D": {
+    "text": "NSAID plus a corticosteroid",
+    "why": "NSAIDs combined with corticosteroids raise GI ulcer risk.",
+    "correct": true
+   },
+   "E": {
+    "text": "Acetaminophen plus N-acetylcysteine",
+    "why": "That is overdose treatment.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L03/index.html#nsaids-cox-2-selective-inhibition",
+   "label": "Study this: L03 · Part 3 →"
+  }
+ },
+ {
+  "topic": "Muscle relaxants",
+  "objectives": [
+   "IO2.1"
+  ],
+  "sg": [
+   "U2-R11"
+  ],
+  "kind": "mechanism",
+  "stem": "What distinguishes dantrolene from cyclobenzaprine, tizanidine, and baclofen?",
+  "correct": "It acts on the muscle fiber, not the CNS",
+  "distractors": [
+   {
+    "text": "It acts on GABA-B receptors in the cord",
+    "why": "That is baclofen."
+   },
+   {
+    "text": "It is a central alpha-2 agonist",
+    "why": "That is tizanidine."
+   },
+   {
+    "text": "It acts in the brainstem on 5-HT2",
+    "why": "That is cyclobenzaprine."
+   },
+   {
+    "text": "It blocks ACh release at the junction",
+    "why": "That is botulinum toxin."
+   }
+  ],
+  "why_correct": "Dantrolene decreases calcium release from the sarcoplasmic reticulum (RyR1) inside the muscle fiber; the others act in the CNS.",
+  "takeaway": "Dantrolene = the only muscle-side relaxant.",
+  "discriminator": "Central: baclofen, tizanidine, cyclobenzaprine. Peripheral: dantrolene (muscle), botulinum (junction).",
+  "src": "L04 S19-20; S28; SG U2-R11",
+  "id": "U2-038",
+  "answer": "E",
+  "options": {
+   "A": {
+    "text": "It acts on GABA-B receptors in the cord",
+    "why": "That is baclofen.",
+    "correct": false
+   },
+   "B": {
+    "text": "It is a central alpha-2 agonist",
+    "why": "That is tizanidine.",
+    "correct": false
+   },
+   "C": {
+    "text": "It blocks ACh release at the junction",
+    "why": "That is botulinum toxin.",
+    "correct": false
+   },
+   "D": {
+    "text": "It acts in the brainstem on 5-HT2",
+    "why": "That is cyclobenzaprine.",
+    "correct": false
+   },
+   "E": {
+    "text": "It acts on the muscle fiber, not the CNS",
+    "why": "Dantrolene decreases calcium release from the sarcoplasmic reticulum (RyR1) inside the muscle fiber; the others act in the CNS.",
+    "correct": true
+   }
+  },
+  "link": {
+   "href": "../../L04/index.html#skeletal-muscle-relaxants",
+   "label": "Study this: L04 · Part 2 →"
+  }
+ },
+ {
+  "topic": "OA vs. RA",
+  "objectives": [
+   "IO2.1",
+   "IO2.3"
+  ],
+  "sg": [],
+  "kind": "mechanism",
+  "stem": "Which sequence describes joint destruction in rheumatoid arthritis, as opposed to osteoarthritis?",
+  "correct": "Synovitis forms a pannus; TNF-α and IL-6 drive erosion",
+  "distractors": [
+   {
+    "text": "Mechanical wear degrades cartilage; osteophytes form",
+    "why": "That is the osteoarthritis sequence."
+   },
+   {
+    "text": "Uric acid crystals deposit and trigger a flare",
+    "why": "Gout is taught in Session 2, not RA."
+   },
+   {
+    "text": "NAPQI binds proteins in the synovial lining",
+    "why": "NAPQI is acetaminophen's toxic metabolite."
+   },
+   {
+    "text": "Prostaglandin loss thins the gastric mucosa",
+    "why": "That describes NSAID GI injury."
+   }
+  ],
+  "why_correct": "RA is autoimmune: immune activation causes synovitis with pannus formation that erodes cartilage and bone, with TNF-α and IL-6 driving inflammation and damage — the cytokines biologics target.",
+  "takeaway": "OA = mechanical wear → cartilage loss → osteophytes. RA = immune synovitis → pannus → TNF-α/IL-6 erosion.",
+  "discriminator": "The RA cytokines (TNF-α, IL-6) are exactly what TNF inhibitors and tocilizumab block.",
+  "src": "L03 S41-42",
+  "id": "U2-030",
+  "answer": "D",
+  "options": {
+   "A": {
+    "text": "NAPQI binds proteins in the synovial lining",
+    "why": "NAPQI is acetaminophen's toxic metabolite.",
+    "correct": false
+   },
+   "B": {
+    "text": "Uric acid crystals deposit and trigger a flare",
+    "why": "Gout is taught in Session 2, not RA.",
+    "correct": false
+   },
+   "C": {
+    "text": "Prostaglandin loss thins the gastric mucosa",
+    "why": "That describes NSAID GI injury.",
+    "correct": false
+   },
+   "D": {
+    "text": "Synovitis forms a pannus; TNF-α and IL-6 drive erosion",
+    "why": "RA is autoimmune: immune activation causes synovitis with pannus formation that erodes cartilage and bone, with TNF-α and IL-6 driving inflammation and damage — the cytokines biologics target.",
+    "correct": true
+   },
+   "E": {
+    "text": "Mechanical wear degrades cartilage; osteophytes form",
+    "why": "That is the osteoarthritis sequence.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L03/index.html#osteoarthritis-rheumatoid-arthritis-dmards",
+   "label": "Study this: L03 · Part 4 →"
   }
  },
  {
@@ -911,8 +2431,8 @@
     "correct": true
    },
    "C": {
-    "text": "Rituximab",
-    "why": "A biologic, not a conventional DMARD.",
+    "text": "Celecoxib",
+    "why": "An NSAID, not a DMARD.",
     "correct": false
    },
    "D": {
@@ -921,8 +2441,8 @@
     "correct": false
    },
    "E": {
-    "text": "Celecoxib",
-    "why": "An NSAID, not a DMARD.",
+    "text": "Rituximab",
+    "why": "A biologic, not a conventional DMARD.",
     "correct": false
    }
   },
@@ -932,329 +2452,130 @@
   }
  },
  {
-  "topic": "Acetaminophen",
+  "topic": "Gout",
   "objectives": [
-   "IO2.2",
    "IO2.4"
-  ],
-  "sg": [],
-  "kind": "vignette",
-  "stem": "A patient with chronic alcohol use who has barely eaten for days takes acetaminophen at the upper end of normal dosing. Why is their liver risk higher?",
-  "correct": "Lower glutathione plus induced CYP2E1 makes more NAPQI",
-  "distractors": [
-   {
-    "text": "Alcohol blocks COX in the liver, adding NSAID toxicity",
-    "why": "The taught mechanism is glutathione and CYP2E1, not COX."
-   },
-   {
-    "text": "Fasting speeds renal excretion of the parent drug",
-    "why": "Fasting lowers glutathione; it doesn't explain liver risk via kidneys."
-   },
-   {
-    "text": "Alcohol converts acetaminophen into an NSAID",
-    "why": "Not taught; acetaminophen is not an NSAID."
-   },
-   {
-    "text": "Fasting saturates TXA2, causing hepatic bleeding",
-    "why": "TXA2 relates to NSAIDs and platelets."
-   }
-  ],
-  "why_correct": "Chronic alcohol use and fasting lower glutathione (GSH) and both induce CYP2E1, so more drug becomes NAPQI and less can be neutralized.",
-  "takeaway": "Alcohol + fasting: ↓ GSH, ↑ CYP2E1 → more NAPQI.",
-  "discriminator": "Safe route (~90%) = glucuronidation/sulfation; risky route (~5–10%) = CYP2E1 → NAPQI.",
-  "src": "L03 S16-17",
-  "id": "U2-027",
-  "answer": "A",
-  "options": {
-   "A": {
-    "text": "Lower glutathione plus induced CYP2E1 makes more NAPQI",
-    "why": "Chronic alcohol use and fasting lower glutathione (GSH) and both induce CYP2E1, so more drug becomes NAPQI and less can be neutralized.",
-    "correct": true
-   },
-   "B": {
-    "text": "Fasting speeds renal excretion of the parent drug",
-    "why": "Fasting lowers glutathione; it doesn't explain liver risk via kidneys.",
-    "correct": false
-   },
-   "C": {
-    "text": "Alcohol blocks COX in the liver, adding NSAID toxicity",
-    "why": "The taught mechanism is glutathione and CYP2E1, not COX.",
-    "correct": false
-   },
-   "D": {
-    "text": "Fasting saturates TXA2, causing hepatic bleeding",
-    "why": "TXA2 relates to NSAIDs and platelets.",
-    "correct": false
-   },
-   "E": {
-    "text": "Alcohol converts acetaminophen into an NSAID",
-    "why": "Not taught; acetaminophen is not an NSAID.",
-    "correct": false
-   }
-  },
-  "link": {
-   "href": "../../L03/index.html#acetaminophen",
-   "label": "Study this: L03 · Part 2 →"
-  }
- },
- {
-  "topic": "NSAIDs",
-  "objectives": [
-   "IO2.1",
-   "IO2.3"
   ],
   "sg": [
-   "U2-R4"
+   "U2-R10"
   ],
-  "kind": "mechanism",
-  "stem": "Which statement correctly describes COX-1?",
-  "correct": "Housekeeping enzyme protecting stomach and renal flow",
-  "distractors": [
-   {
-    "text": "Inducible enzyme found mainly at inflamed sites",
-    "why": "That describes COX-2."
-   },
-   {
-    "text": "Main source of inflammatory prostaglandins",
-    "why": "That is COX-2."
-   },
-   {
-    "text": "Target of celecoxib's selective inhibition",
-    "why": "Celecoxib selectively inhibits COX-2."
-   },
-   {
-    "text": "Enzyme that converts acetaminophen to NAPQI",
-    "why": "Not taught as a COX function."
-   }
-  ],
-  "why_correct": "COX-1 is the housekeeping enzyme that maintains gastric mucosal protection and normal renal blood flow; inhibiting it contributes to GI and renal adverse effects.",
-  "takeaway": "COX-1 = housekeeping (GI, kidney). COX-2 = inflammation.",
-  "discriminator": "Selective COX-2 inhibition spares COX-1, so GI toxicity is lower.",
-  "src": "L03 S26; SG U2-R4",
-  "id": "U2-007",
-  "answer": "E",
-  "options": {
-   "A": {
-    "text": "Main source of inflammatory prostaglandins",
-    "why": "That is COX-2.",
-    "correct": false
-   },
-   "B": {
-    "text": "Target of celecoxib's selective inhibition",
-    "why": "Celecoxib selectively inhibits COX-2.",
-    "correct": false
-   },
-   "C": {
-    "text": "Enzyme that converts acetaminophen to NAPQI",
-    "why": "Not taught as a COX function.",
-    "correct": false
-   },
-   "D": {
-    "text": "Inducible enzyme found mainly at inflamed sites",
-    "why": "That describes COX-2.",
-    "correct": false
-   },
-   "E": {
-    "text": "Housekeeping enzyme protecting stomach and renal flow",
-    "why": "COX-1 is the housekeeping enzyme that maintains gastric mucosal protection and normal renal blood flow; inhibiting it contributes to GI and renal adverse effects.",
-    "correct": true
-   }
-  },
-  "link": {
-   "href": "../../L03/index.html#nsaids-cox-2-selective-inhibition",
-   "label": "Study this: L03 · Part 3 →"
-  }
- },
- {
-  "topic": "OA vs. RA",
-  "objectives": [
-   "IO2.4"
-  ],
-  "sg": [],
   "kind": "vignette",
-  "stem": "A 70-year-old with knee OA has a flare limited to one knee despite acetaminophen and topical diclofenac. Which option does the lecture list for short-term relief?",
-  "correct": "Intra-articular corticosteroid injection",
+  "stem": "A patient’s first gout flare settled two weeks ago; uric acid remains high and flares are recurring. What is the best next step?",
+  "correct": "Start allopurinol low with colchicine prophylaxis",
   "distractors": [
    {
-    "text": "Weekly oral methotrexate",
-    "why": "Methotrexate is a DMARD for RA."
+    "text": "Start allopurinol at full dose with no prophylaxis",
+    "why": "Start low and cover with colchicine or an NSAID for 3–6 months."
    },
    {
-    "text": "Infliximab infusion",
-    "why": "Biologics treat RA, not degenerative OA."
+    "text": "Give colchicine only until the next flare",
+    "why": "Recurrent flares with high urate need urate-lowering therapy."
    },
    {
-    "text": "Daily ketorolac for a month",
-    "why": "Ketorolac is short-term only."
+    "text": "Start pegloticase as first-line therapy",
+    "why": "Pegloticase is reserved for refractory gout."
    },
    {
-    "text": "High-dose hydroxychloroquine",
-    "why": "Hydroxychloroquine is a DMARD for milder RA."
+    "text": "Wait for the next flare before deciding",
+    "why": "The flare has resolved — now is the time to start ULT."
    }
   ],
-  "why_correct": "Intra-articular corticosteroid injections give short-term relief for flares in a single joint.",
-  "takeaway": "OA ladder: acetaminophen → oral/topical NSAIDs → intra-articular steroid for a single-joint flare.",
-  "discriminator": "OA tools are analgesic; RA tools are disease-modifying.",
-  "src": "L03 S43",
-  "id": "U2-015",
+  "why_correct": "Once the flare resolves, start a xanthine oxidase inhibitor low, titrate to a urate target, and give colchicine or an NSAID prophylaxis for 3–6 months.",
+  "takeaway": "ULT starts after the flare, low and slow, with prophylaxis.",
+  "discriminator": "During a flare: treat the flare. After it: start ULT.",
+  "src": "L04 S7; S11; SG U2-R10",
+  "id": "U2-032",
   "answer": "C",
   "options": {
    "A": {
-    "text": "High-dose hydroxychloroquine",
-    "why": "Hydroxychloroquine is a DMARD for milder RA.",
+    "text": "Give colchicine only until the next flare",
+    "why": "Recurrent flares with high urate need urate-lowering therapy.",
     "correct": false
    },
    "B": {
-    "text": "Daily ketorolac for a month",
-    "why": "Ketorolac is short-term only.",
+    "text": "Wait for the next flare before deciding",
+    "why": "The flare has resolved — now is the time to start ULT.",
     "correct": false
    },
    "C": {
-    "text": "Intra-articular corticosteroid injection",
-    "why": "Intra-articular corticosteroid injections give short-term relief for flares in a single joint.",
+    "text": "Start allopurinol low with colchicine prophylaxis",
+    "why": "Once the flare resolves, start a xanthine oxidase inhibitor low, titrate to a urate target, and give colchicine or an NSAID prophylaxis for 3–6 months.",
     "correct": true
    },
    "D": {
-    "text": "Infliximab infusion",
-    "why": "Biologics treat RA, not degenerative OA.",
+    "text": "Start pegloticase as first-line therapy",
+    "why": "Pegloticase is reserved for refractory gout.",
     "correct": false
    },
    "E": {
-    "text": "Weekly oral methotrexate",
-    "why": "Methotrexate is a DMARD for RA.",
+    "text": "Start allopurinol at full dose with no prophylaxis",
+    "why": "Start low and cover with colchicine or an NSAID for 3–6 months.",
     "correct": false
    }
   },
   "link": {
-   "href": "../../L03/index.html#osteoarthritis-rheumatoid-arthritis-dmards",
-   "label": "Study this: L03 · Part 4 →"
-  }
- },
- {
-  "topic": "NSAIDs",
-  "objectives": [
-   "IO2.2",
-   "IO2.4"
-  ],
-  "sg": [],
-  "kind": "vignette",
-  "stem": "A patient with heart failure on furosemide develops worsening edema after starting high-dose ibuprofen. What best explains this?",
-  "correct": "NSAIDs cause fluid retention and blunt diuretics",
-  "distractors": [
-   {
-    "text": "Ibuprofen is a CYP inducer lowering furosemide",
-    "why": "Not the taught mechanism; NSAIDs reduce diuretic effect directly."
-   },
-   {
-    "text": "Ibuprofen is COX-2 selective and hurts the heart",
-    "why": "Ibuprofen is nonselective."
-   },
-   {
-    "text": "The edema is NAPQI-induced liver failure",
-    "why": "NAPQI comes from acetaminophen."
-   },
-   {
-    "text": "Furosemide blocks ibuprofen's COX inhibition",
-    "why": "The interaction runs the other way."
-   }
-  ],
-  "why_correct": "NSAIDs cause renal fluid retention and, with diuretics, reduce the diuretic effect and raise renal risk; heart failure is a caution for NSAID use.",
-  "takeaway": "NSAID + diuretic → less diuresis, more renal risk.",
-  "discriminator": "NSAID + anticoagulant = bleeding; + ACEi/ARB (+ diuretic) = AKI; + steroid = ulcer.",
-  "src": "L03 S34; S36",
-  "id": "U2-009",
-  "answer": "D",
-  "options": {
-   "A": {
-    "text": "Ibuprofen is COX-2 selective and hurts the heart",
-    "why": "Ibuprofen is nonselective.",
-    "correct": false
-   },
-   "B": {
-    "text": "Furosemide blocks ibuprofen's COX inhibition",
-    "why": "The interaction runs the other way.",
-    "correct": false
-   },
-   "C": {
-    "text": "The edema is NAPQI-induced liver failure",
-    "why": "NAPQI comes from acetaminophen.",
-    "correct": false
-   },
-   "D": {
-    "text": "NSAIDs cause fluid retention and blunt diuretics",
-    "why": "NSAIDs cause renal fluid retention and, with diuretics, reduce the diuretic effect and raise renal risk; heart failure is a caution for NSAID use.",
-    "correct": true
-   },
-   "E": {
-    "text": "Ibuprofen is a CYP inducer lowering furosemide",
-    "why": "Not the taught mechanism; NSAIDs reduce diuretic effect directly.",
-    "correct": false
-   }
-  },
-  "link": {
-   "href": "../../L03/index.html#nsaids-cox-2-selective-inhibition",
-   "label": "Study this: L03 · Part 3 →"
+   "href": "../../L04/index.html#gout-acute-flares-urate-lowering-therapy",
+   "label": "Study this: L04 · Part 1 →"
   }
  },
  {
   "topic": "Biologic DMARDs",
   "objectives": [
-   "IO2.1"
+   "IO2.5",
+   "IO2.6"
   ],
-  "sg": [
-   "U2-R8"
-  ],
-  "kind": "mechanism",
-  "stem": "A prescription reads infliximab. What does the stem “-ximab” tell you?",
-  "correct": "A chimeric monoclonal antibody",
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A patient will start infliximab next month and is due for a live vaccine. When should the vaccine be given?",
+  "correct": "Before infliximab is started",
   "distractors": [
    {
-    "text": "A fully human monoclonal antibody",
-    "why": "Fully human antibodies end in -umab (adalimumab)."
+    "text": "Any time, since biologics don't affect immunity",
+    "why": "Biologics are immunosuppressive."
    },
    {
-    "text": "A humanized monoclonal antibody",
-    "why": "Humanized antibodies end in -zumab (tocilizumab)."
+    "text": "One week after the first infusion",
+    "why": "Live vaccines should be updated before therapy."
    },
    {
-    "text": "A receptor fusion protein",
-    "why": "Fusion proteins end in -cept (etanercept, abatacept)."
+    "text": "Only if a fever develops on therapy",
+    "why": "Fever on therapy needs prompt evaluation for infection, not vaccination."
    },
    {
-    "text": "A kinase inhibitor",
-    "why": "Kinase inhibitors end in -nib/-tinib (tofacitinib)."
+    "text": "Never — vaccines are banned for life",
+    "why": "Vaccines are updated before starting, not banned."
    }
   ],
-  "why_correct": "-ximab marks a chimeric antibody; infliximab is a chimeric anti-TNF-α antibody.",
-  "takeaway": "-zumab humanized · -ximab chimeric · -umab fully human · -cept fusion · -tinib kinase.",
-  "discriminator": "Read the stem first: it reveals the class before you recall the drug.",
-  "src": "L03 S60",
-  "id": "U2-029",
-  "answer": "C",
+  "why_correct": "Update vaccines — especially live vaccines — before starting DMARD therapy, because these drugs suppress the immune response.",
+  "takeaway": "Vaccinate first, then immunosuppress.",
+  "discriminator": "Before a biologic: screen (TB, hepatitis B/C) and vaccinate.",
+  "src": "L03 S56",
+  "id": "U2-023",
+  "answer": "A",
   "options": {
    "A": {
-    "text": "A kinase inhibitor",
-    "why": "Kinase inhibitors end in -nib/-tinib (tofacitinib).",
-    "correct": false
+    "text": "Before infliximab is started",
+    "why": "Update vaccines — especially live vaccines — before starting DMARD therapy, because these drugs suppress the immune response.",
+    "correct": true
    },
    "B": {
-    "text": "A receptor fusion protein",
-    "why": "Fusion proteins end in -cept (etanercept, abatacept).",
+    "text": "Only if a fever develops on therapy",
+    "why": "Fever on therapy needs prompt evaluation for infection, not vaccination.",
     "correct": false
    },
    "C": {
-    "text": "A chimeric monoclonal antibody",
-    "why": "-ximab marks a chimeric antibody; infliximab is a chimeric anti-TNF-α antibody.",
-    "correct": true
+    "text": "Never — vaccines are banned for life",
+    "why": "Vaccines are updated before starting, not banned.",
+    "correct": false
    },
    "D": {
-    "text": "A humanized monoclonal antibody",
-    "why": "Humanized antibodies end in -zumab (tocilizumab).",
+    "text": "Any time, since biologics don't affect immunity",
+    "why": "Biologics are immunosuppressive.",
     "correct": false
    },
    "E": {
-    "text": "A fully human monoclonal antibody",
-    "why": "Fully human antibodies end in -umab (adalimumab).",
+    "text": "One week after the first infusion",
+    "why": "Live vaccines should be updated before therapy.",
     "correct": false
    }
   },
@@ -1266,64 +2587,61 @@
  {
   "topic": "Pain & inflammation",
   "objectives": [
-   "IO2.1",
-   "IO2.3"
+   "IO2.1"
   ],
-  "sg": [
-   "U2-R2"
-  ],
-  "kind": "mechanism",
-  "stem": "Why do corticosteroids suppress a broader range of inflammatory mediators than NSAIDs?",
-  "correct": "They block phospholipase A₂, upstream of COX",
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A runner sprained an ankle yesterday; the pain is sharp and clearly tied to the injury. How is this pain best classified by time course?",
+  "correct": "Acute pain",
   "distractors": [
    {
-    "text": "They block COX-2 more strongly than any NSAID",
-    "why": "Corticosteroids act upstream at phospholipase A₂, not at COX."
+    "text": "Chronic pain",
+    "why": "Chronic pain persists beyond expected healing time, often more than 3 months."
    },
    {
-    "text": "They deplete B cells that release prostaglandins",
-    "why": "B-cell depletion is rituximab."
+    "text": "Neuropathic pain",
+    "why": "Neuropathic is a mechanism (nerve injury), not a time course."
    },
    {
-    "text": "They neutralize TNF-α outside the cell",
-    "why": "That is the TNF-inhibitor mechanism."
+    "text": "Referred pain",
+    "why": "Not one of the lecture's categories."
    },
    {
-    "text": "They act centrally on the hypothalamus",
-    "why": "That is acetaminophen's antipyretic site."
+    "text": "Phantom pain",
+    "why": "Not one of the lecture's categories."
    }
   ],
-  "why_correct": "Corticosteroids block phospholipase A₂, preventing arachidonic acid release, so a broad range of mediators falls; NSAIDs act only at COX.",
-  "takeaway": "Upstream block (phospholipase A₂) = broad effect; COX block = prostaglandins only.",
-  "discriminator": "Corticosteroid → phospholipase A₂; NSAID/coxib → COX.",
-  "src": "L03 S9; SG U2-R2",
-  "id": "U2-003",
-  "answer": "B",
+  "why_correct": "Acute pain has recent onset and is often tied to an identifiable injury or flare.",
+  "takeaway": "Acute = recent and tied to an injury; chronic = beyond healing time, often > 3 months.",
+  "discriminator": "Time course (acute vs. chronic) and mechanism (nociceptive, inflammatory, neuropathic) are two separate axes.",
+  "src": "L03 S5",
+  "id": "U2-002",
+  "answer": "E",
   "options": {
    "A": {
-    "text": "They act centrally on the hypothalamus",
-    "why": "That is acetaminophen's antipyretic site.",
+    "text": "Referred pain",
+    "why": "Not one of the lecture's categories.",
     "correct": false
    },
    "B": {
-    "text": "They block phospholipase A₂, upstream of COX",
-    "why": "Corticosteroids block phospholipase A₂, preventing arachidonic acid release, so a broad range of mediators falls; NSAIDs act only at COX.",
-    "correct": true
+    "text": "Phantom pain",
+    "why": "Not one of the lecture's categories.",
+    "correct": false
    },
    "C": {
-    "text": "They deplete B cells that release prostaglandins",
-    "why": "B-cell depletion is rituximab.",
+    "text": "Neuropathic pain",
+    "why": "Neuropathic is a mechanism (nerve injury), not a time course.",
     "correct": false
    },
    "D": {
-    "text": "They block COX-2 more strongly than any NSAID",
-    "why": "Corticosteroids act upstream at phospholipase A₂, not at COX.",
+    "text": "Chronic pain",
+    "why": "Chronic pain persists beyond expected healing time, often more than 3 months.",
     "correct": false
    },
    "E": {
-    "text": "They neutralize TNF-α outside the cell",
-    "why": "That is the TNF-inhibitor mechanism.",
-    "correct": false
+    "text": "Acute pain",
+    "why": "Acute pain has recent onset and is often tied to an identifiable injury or flare.",
+    "correct": true
    }
   },
   "link": {
@@ -1332,63 +2650,199 @@
   }
  },
  {
-  "topic": "NSAIDs",
+  "topic": "Bone & osteoporosis",
   "objectives": [
-   "IO2.2"
+   "IO2.1"
   ],
-  "sg": [],
+  "sg": [
+   "U2-R12"
+  ],
   "kind": "mechanism",
-  "stem": "Which drug pairing does the lecture flag for a higher GI ulcer risk?",
-  "correct": "NSAID plus a corticosteroid",
+  "stem": "Falling serum calcium triggers PTH release. Which set lists PTH’s three ways of raising calcium?",
+  "correct": "Bone resorption, renal reabsorption, vitamin D gut absorption",
   "distractors": [
    {
-    "text": "NSAID plus an anticoagulant",
-    "why": "That pairing raises bleeding risk."
+    "text": "Bone formation, renal excretion, gut secretion",
+    "why": "These would lower calcium."
    },
    {
-    "text": "NSAID plus an ACE inhibitor",
-    "why": "That pairing raises AKI risk."
+    "text": "Calcitonin release, bone resorption, sweating",
+    "why": "Calcitonin opposes PTH."
    },
    {
-    "text": "NSAID plus a diuretic",
-    "why": "That pairing reduces diuretic effect and raises renal risk."
+    "text": "Renal excretion, osteoblast growth, insulin release",
+    "why": "Not the PTH loop."
    },
    {
-    "text": "Acetaminophen plus N-acetylcysteine",
-    "why": "That is overdose treatment."
+    "text": "Gut secretion, bone formation, vitamin D breakdown",
+    "why": "Not the PTH loop."
    }
   ],
-  "why_correct": "NSAIDs combined with corticosteroids raise GI ulcer risk.",
-  "takeaway": "Steroid + NSAID = ulcer.",
-  "discriminator": "Match each NSAID interaction to its organ: blood, kidney, kidney, stomach.",
-  "src": "L03 S36",
-  "id": "U2-010",
+  "why_correct": "PTH raises calcium via bone resorption, renal reabsorption, and (via vitamin D activation) intestinal absorption.",
+  "takeaway": "PTH pulls from three: bone, kidney, gut.",
+  "discriminator": "PTH raises calcium; calcitonin lowers it.",
+  "src": "L04 S35; SG U2-R12",
+  "id": "U2-045",
   "answer": "B",
   "options": {
    "A": {
-    "text": "Acetaminophen plus N-acetylcysteine",
-    "why": "That is overdose treatment.",
+    "text": "Calcitonin release, bone resorption, sweating",
+    "why": "Calcitonin opposes PTH.",
     "correct": false
    },
    "B": {
-    "text": "NSAID plus a corticosteroid",
-    "why": "NSAIDs combined with corticosteroids raise GI ulcer risk.",
+    "text": "Bone resorption, renal reabsorption, vitamin D gut absorption",
+    "why": "PTH raises calcium via bone resorption, renal reabsorption, and (via vitamin D activation) intestinal absorption.",
     "correct": true
    },
    "C": {
-    "text": "NSAID plus an ACE inhibitor",
-    "why": "That pairing raises AKI risk.",
+    "text": "Renal excretion, osteoblast growth, insulin release",
+    "why": "Not the PTH loop.",
     "correct": false
    },
    "D": {
-    "text": "NSAID plus an anticoagulant",
-    "why": "That pairing raises bleeding risk.",
+    "text": "Bone formation, renal excretion, gut secretion",
+    "why": "These would lower calcium.",
     "correct": false
    },
    "E": {
-    "text": "NSAID plus a diuretic",
-    "why": "That pairing reduces diuretic effect and raises renal risk.",
+    "text": "Gut secretion, bone formation, vitamin D breakdown",
+    "why": "Not the PTH loop.",
     "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L04/index.html#bone-pharmacology-osteoporosis",
+   "label": "Study this: L04 · Part 3 →"
+  }
+ },
+ {
+  "topic": "OA vs. RA",
+  "objectives": [
+   "IO2.3",
+   "IO2.4"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A 45-year-old has symmetric hand-joint swelling, morning stiffness, and a positive rheumatoid factor. Why are NSAIDs alone not enough?",
+  "correct": "RA needs disease-modifying therapy, not pain relief alone",
+  "distractors": [
+   {
+    "text": "NSAIDs have no analgesic effect in any arthritis",
+    "why": "NSAIDs relieve symptoms; they just don't change the disease course."
+   },
+   {
+    "text": "RA is degenerative, so only steroid injections work",
+    "why": "RA is autoimmune; OA is degenerative."
+   },
+   {
+    "text": "NSAIDs are contraindicated in everyone with RA",
+    "why": "Not taught; the issue is that they don't modify the disease."
+   },
+   {
+    "text": "RA pain is neuropathic and needs nerve blockers",
+    "why": "RA is an autoimmune inflammatory disease."
+   }
+  ],
+  "why_correct": "RA is an autoimmune, systemic inflammatory disease whose goal is to suppress disease activity; NSAIDs ease symptoms without altering the disease course.",
+  "takeaway": "OA → pain control and function; RA → suppress disease activity with DMARDs.",
+  "discriminator": "Degenerative (OA) vs. immune-mediated (RA).",
+  "src": "L03 S41; S41 (notes); S45 (notes); p. 676; p. 701",
+  "id": "U2-014",
+  "answer": "B",
+  "options": {
+   "A": {
+    "text": "RA is degenerative, so only steroid injections work",
+    "why": "RA is autoimmune; OA is degenerative.",
+    "correct": false
+   },
+   "B": {
+    "text": "RA needs disease-modifying therapy, not pain relief alone",
+    "why": "RA is an autoimmune, systemic inflammatory disease whose goal is to suppress disease activity; NSAIDs ease symptoms without altering the disease course.",
+    "correct": true
+   },
+   "C": {
+    "text": "NSAIDs are contraindicated in everyone with RA",
+    "why": "Not taught; the issue is that they don't modify the disease.",
+    "correct": false
+   },
+   "D": {
+    "text": "RA pain is neuropathic and needs nerve blockers",
+    "why": "RA is an autoimmune inflammatory disease.",
+    "correct": false
+   },
+   "E": {
+    "text": "NSAIDs have no analgesic effect in any arthritis",
+    "why": "NSAIDs relieve symptoms; they just don't change the disease course.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L03/index.html#osteoarthritis-rheumatoid-arthritis-dmards",
+   "label": "Study this: L03 · Part 4 →"
+  }
+ },
+ {
+  "topic": "NSAIDs",
+  "objectives": [
+   "IO2.2",
+   "IO2.4"
+  ],
+  "sg": [
+   "U2-R5"
+  ],
+  "kind": "vignette",
+  "stem": "A 58-year-old with a prior bleeding ulcer and a recent myocardial infarction needs an anti-inflammatory. Why is celecoxib not a simple solution?",
+  "correct": "It lowers GI risk but raises cardiovascular risk",
+  "distractors": [
+   {
+    "text": "It raises GI risk but lowers cardiovascular risk",
+    "why": "Reversed: celecoxib lowers GI risk and raises CV risk."
+   },
+   {
+    "text": "It protects the kidney but harms the liver",
+    "why": "Renal risk is similar to nonselective NSAIDs."
+   },
+   {
+    "text": "It is an antidote, not an anti-inflammatory",
+    "why": "Celecoxib is a COX-2 selective NSAID."
+   },
+   {
+    "text": "It has no effect on inflammatory prostaglandins",
+    "why": "It blocks COX-2, the main source of them."
+   }
+  ],
+  "why_correct": "COX-2 selectivity gives a lower ulcer/bleeding risk but is associated with more cardiovascular events; renal risk is unchanged.",
+  "takeaway": "Celecoxib: GI ↓, CV ↑, kidney =.",
+  "discriminator": "There is no risk-free NSAID — only a different risk profile.",
+  "src": "L03 S29-31; SG U2-R5",
+  "id": "U2-008",
+  "answer": "E",
+  "options": {
+   "A": {
+    "text": "It raises GI risk but lowers cardiovascular risk",
+    "why": "Reversed: celecoxib lowers GI risk and raises CV risk.",
+    "correct": false
+   },
+   "B": {
+    "text": "It has no effect on inflammatory prostaglandins",
+    "why": "It blocks COX-2, the main source of them.",
+    "correct": false
+   },
+   "C": {
+    "text": "It protects the kidney but harms the liver",
+    "why": "Renal risk is similar to nonselective NSAIDs.",
+    "correct": false
+   },
+   "D": {
+    "text": "It is an antidote, not an anti-inflammatory",
+    "why": "Celecoxib is a COX-2 selective NSAID.",
+    "correct": false
+   },
+   "E": {
+    "text": "It lowers GI risk but raises cardiovascular risk",
+    "why": "COX-2 selectivity gives a lower ulcer/bleeding risk but is associated with more cardiovascular events; renal risk is unchanged.",
+    "correct": true
    }
   },
   "link": {
@@ -1434,23 +2888,23 @@
   "answer": "E",
   "options": {
    "A": {
-    "text": "It should be twice daily for steady levels",
-    "why": "Methotrexate for RA is weekly.",
+    "text": "It needs N-acetylcysteine with each dose",
+    "why": "Folate, not N-acetylcysteine, is co-prescribed.",
     "correct": false
    },
    "B": {
-    "text": "Nothing — daily dosing is standard for RA",
-    "why": "Daily dosing is the dangerous error.",
-    "correct": false
-   },
-   "C": {
     "text": "It should be IV only in RA",
     "why": "The dosing error is frequency, not route.",
     "correct": false
    },
+   "C": {
+    "text": "It should be twice daily for steady levels",
+    "why": "Methotrexate for RA is weekly.",
+    "correct": false
+   },
    "D": {
-    "text": "It needs N-acetylcysteine with each dose",
-    "why": "Folate, not N-acetylcysteine, is co-prescribed.",
+    "text": "Nothing — daily dosing is standard for RA",
+    "why": "Daily dosing is the dangerous error.",
     "correct": false
    },
    "E": {
@@ -1465,63 +2919,130 @@
   }
  },
  {
-  "topic": "OA vs. RA",
+  "topic": "Gout",
   "objectives": [
-   "IO2.1",
+   "IO2.2",
    "IO2.3"
   ],
   "sg": [],
   "kind": "mechanism",
-  "stem": "Which sequence describes joint destruction in rheumatoid arthritis, as opposed to osteoarthritis?",
-  "correct": "Synovitis forms a pannus; TNF-α and IL-6 drive erosion",
+  "stem": "Which urate-lowering drug carries a boxed warning for cardiovascular death?",
+  "correct": "Febuxostat",
   "distractors": [
    {
-    "text": "Mechanical wear degrades cartilage; osteophytes form",
-    "why": "That is the osteoarthritis sequence."
+    "text": "Allopurinol",
+    "why": "Allopurinol’s concern is HLA-B*58:01 hypersensitivity."
    },
    {
-    "text": "Uric acid crystals deposit and trigger a flare",
-    "why": "Gout is taught in Session 2, not RA."
+    "text": "Probenecid",
+    "why": "Probenecid’s concern is kidney stones."
    },
    {
-    "text": "NAPQI binds proteins in the synovial lining",
-    "why": "NAPQI is acetaminophen's toxic metabolite."
+    "text": "Pegloticase",
+    "why": "Pegloticase’s concerns are G6PD and infusion reactions."
    },
    {
-    "text": "Prostaglandin loss thins the gastric mucosa",
-    "why": "That describes NSAID GI injury."
+    "text": "Rasburicase",
+    "why": "Rasburicase’s concern is G6PD deficiency."
    }
   ],
-  "why_correct": "RA is autoimmune: immune activation causes synovitis with pannus formation that erodes cartilage and bone, with TNF-α and IL-6 driving inflammation and damage — the cytokines biologics target.",
-  "takeaway": "OA = mechanical wear → cartilage loss → osteophytes. RA = immune synovitis → pannus → TNF-α/IL-6 erosion.",
-  "discriminator": "The RA cytokines (TNF-α, IL-6) are exactly what TNF inhibitors and tocilizumab block.",
-  "src": "L03 S41-42",
-  "id": "U2-030",
-  "answer": "A",
+  "why_correct": "Febuxostat carries a boxed warning for cardiovascular death (the textbook notes later data were reassuring; answer with the slides).",
+  "takeaway": "Allopurinol = HLA-B*58:01; febuxostat = CV boxed warning.",
+  "discriminator": "Both are xanthine oxidase inhibitors — the choice turns on safety profile.",
+  "src": "L04 S10-11; p. 697",
+  "id": "U2-034",
+  "answer": "B",
   "options": {
    "A": {
-    "text": "Synovitis forms a pannus; TNF-α and IL-6 drive erosion",
-    "why": "RA is autoimmune: immune activation causes synovitis with pannus formation that erodes cartilage and bone, with TNF-α and IL-6 driving inflammation and damage — the cytokines biologics target.",
-    "correct": true
-   },
-   "B": {
-    "text": "Prostaglandin loss thins the gastric mucosa",
-    "why": "That describes NSAID GI injury.",
+    "text": "Probenecid",
+    "why": "Probenecid’s concern is kidney stones.",
     "correct": false
    },
+   "B": {
+    "text": "Febuxostat",
+    "why": "Febuxostat carries a boxed warning for cardiovascular death (the textbook notes later data were reassuring; answer with the slides).",
+    "correct": true
+   },
    "C": {
-    "text": "Mechanical wear degrades cartilage; osteophytes form",
-    "why": "That is the osteoarthritis sequence.",
+    "text": "Allopurinol",
+    "why": "Allopurinol’s concern is HLA-B*58:01 hypersensitivity.",
     "correct": false
    },
    "D": {
-    "text": "NAPQI binds proteins in the synovial lining",
-    "why": "NAPQI is acetaminophen's toxic metabolite.",
+    "text": "Pegloticase",
+    "why": "Pegloticase’s concerns are G6PD and infusion reactions.",
     "correct": false
    },
    "E": {
-    "text": "Uric acid crystals deposit and trigger a flare",
-    "why": "Gout is taught in Session 2, not RA.",
+    "text": "Rasburicase",
+    "why": "Rasburicase’s concern is G6PD deficiency.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L04/index.html#gout-acute-flares-urate-lowering-therapy",
+   "label": "Study this: L04 · Part 1 →"
+  }
+ },
+ {
+  "topic": "Biologic DMARDs",
+  "objectives": [
+   "IO2.1"
+  ],
+  "sg": [
+   "U2-R8"
+  ],
+  "kind": "mechanism",
+  "stem": "A prescription reads infliximab. What does the stem “-ximab” tell you?",
+  "correct": "A chimeric monoclonal antibody",
+  "distractors": [
+   {
+    "text": "A fully human monoclonal antibody",
+    "why": "Fully human antibodies end in -umab (adalimumab)."
+   },
+   {
+    "text": "A humanized monoclonal antibody",
+    "why": "Humanized antibodies end in -zumab (tocilizumab)."
+   },
+   {
+    "text": "A receptor fusion protein",
+    "why": "Fusion proteins end in -cept (etanercept, abatacept)."
+   },
+   {
+    "text": "A kinase inhibitor",
+    "why": "Kinase inhibitors end in -nib/-tinib (tofacitinib)."
+   }
+  ],
+  "why_correct": "-ximab marks a chimeric antibody; infliximab is a chimeric anti-TNF-α antibody.",
+  "takeaway": "-zumab humanized · -ximab chimeric · -umab fully human · -cept fusion · -tinib kinase.",
+  "discriminator": "Read the stem first: it reveals the class before you recall the drug.",
+  "src": "L03 S60",
+  "id": "U2-029",
+  "answer": "D",
+  "options": {
+   "A": {
+    "text": "A receptor fusion protein",
+    "why": "Fusion proteins end in -cept (etanercept, abatacept).",
+    "correct": false
+   },
+   "B": {
+    "text": "A humanized monoclonal antibody",
+    "why": "Humanized antibodies end in -zumab (tocilizumab).",
+    "correct": false
+   },
+   "C": {
+    "text": "A fully human monoclonal antibody",
+    "why": "Fully human antibodies end in -umab (adalimumab).",
+    "correct": false
+   },
+   "D": {
+    "text": "A chimeric monoclonal antibody",
+    "why": "-ximab marks a chimeric antibody; infliximab is a chimeric anti-TNF-α antibody.",
+    "correct": true
+   },
+   "E": {
+    "text": "A kinase inhibitor",
+    "why": "Kinase inhibitors end in -nib/-tinib (tofacitinib).",
     "correct": false
    }
   },
@@ -1565,105 +3086,37 @@
   "discriminator": "NSAIDs: gut, kidney, heart. Methotrexate: liver, marrow, lung.",
   "src": "L03 S49; SG U2-R7",
   "id": "U2-018",
-  "answer": "C",
+  "answer": "A",
   "options": {
    "A": {
-    "text": "Retinopathy, cardiomyopathy, myopathy",
-    "why": "Those are antimalarial (hydroxychloroquine) toxicities in the textbook.",
-    "correct": false
-   },
-   "B": {
-    "text": "GI bleeding, AKI, cardiovascular events",
-    "why": "That is the NSAID triad.",
-    "correct": false
-   },
-   "C": {
     "text": "Hepatotoxicity, marrow suppression, pulmonary toxicity",
     "why": "Methotrexate's key adverse effects are hepatotoxicity, bone marrow suppression, and pulmonary toxicity; folate reduces toxicity.",
     "correct": true
    },
+   "B": {
+    "text": "Hypersensitivity, lymphoma, heart failure",
+    "why": "TNF-inhibitor themes, not methotrexate's taught list.",
+    "correct": false
+   },
+   "C": {
+    "text": "Retinopathy, cardiomyopathy, myopathy",
+    "why": "Those are antimalarial (hydroxychloroquine) toxicities in the textbook.",
+    "correct": false
+   },
    "D": {
-    "text": "Tinnitus, aseptic meningitis, rash",
-    "why": "Textbook NSAID effects.",
+    "text": "GI bleeding, AKI, cardiovascular events",
+    "why": "That is the NSAID triad.",
     "correct": false
    },
    "E": {
-    "text": "Hypersensitivity, lymphoma, heart failure",
-    "why": "TNF-inhibitor themes, not methotrexate's taught list.",
+    "text": "Tinnitus, aseptic meningitis, rash",
+    "why": "Textbook NSAID effects.",
     "correct": false
    }
   },
   "link": {
    "href": "../../L03/index.html#osteoarthritis-rheumatoid-arthritis-dmards",
    "label": "Study this: L03 · Part 4 →"
-  }
- },
- {
-  "topic": "NSAIDs",
-  "objectives": [
-   "IO2.2",
-   "IO2.4"
-  ],
-  "sg": [
-   "U2-R5"
-  ],
-  "kind": "vignette",
-  "stem": "A 58-year-old with a prior bleeding ulcer and a recent myocardial infarction needs an anti-inflammatory. Why is celecoxib not a simple solution?",
-  "correct": "It lowers GI risk but raises cardiovascular risk",
-  "distractors": [
-   {
-    "text": "It raises GI risk but lowers cardiovascular risk",
-    "why": "Reversed: celecoxib lowers GI risk and raises CV risk."
-   },
-   {
-    "text": "It protects the kidney but harms the liver",
-    "why": "Renal risk is similar to nonselective NSAIDs."
-   },
-   {
-    "text": "It is an antidote, not an anti-inflammatory",
-    "why": "Celecoxib is a COX-2 selective NSAID."
-   },
-   {
-    "text": "It has no effect on inflammatory prostaglandins",
-    "why": "It blocks COX-2, the main source of them."
-   }
-  ],
-  "why_correct": "COX-2 selectivity gives a lower ulcer/bleeding risk but is associated with more cardiovascular events; renal risk is unchanged.",
-  "takeaway": "Celecoxib: GI ↓, CV ↑, kidney =.",
-  "discriminator": "There is no risk-free NSAID — only a different risk profile.",
-  "src": "L03 S29-31; SG U2-R5",
-  "id": "U2-008",
-  "answer": "B",
-  "options": {
-   "A": {
-    "text": "It is an antidote, not an anti-inflammatory",
-    "why": "Celecoxib is a COX-2 selective NSAID.",
-    "correct": false
-   },
-   "B": {
-    "text": "It lowers GI risk but raises cardiovascular risk",
-    "why": "COX-2 selectivity gives a lower ulcer/bleeding risk but is associated with more cardiovascular events; renal risk is unchanged.",
-    "correct": true
-   },
-   "C": {
-    "text": "It raises GI risk but lowers cardiovascular risk",
-    "why": "Reversed: celecoxib lowers GI risk and raises CV risk.",
-    "correct": false
-   },
-   "D": {
-    "text": "It has no effect on inflammatory prostaglandins",
-    "why": "It blocks COX-2, the main source of them.",
-    "correct": false
-   },
-   "E": {
-    "text": "It protects the kidney but harms the liver",
-    "why": "Renal risk is similar to nonselective NSAIDs.",
-    "correct": false
-   }
-  },
-  "link": {
-   "href": "../../L03/index.html#nsaids-cox-2-selective-inhibition",
-   "label": "Study this: L03 · Part 3 →"
   }
  },
  {
@@ -1700,32 +3153,32 @@
   "discriminator": "Each biologic class hits a different cell or cytokine in the cascade.",
   "src": "L03 S51; S53; SG U2-R8",
   "id": "U2-022",
-  "answer": "B",
+  "answer": "E",
   "options": {
    "A": {
-    "text": "Blocking TNF-α signaling",
-    "why": "That is adalimumab, etanercept, infliximab.",
-    "correct": false
-   },
-   "B": {
-    "text": "Depleting or modulating B lymphocytes",
-    "why": "Rituximab is B-cell targeted therapy: it depletes or modulates B lymphocytes.",
-    "correct": true
-   },
-   "C": {
-    "text": "Blocking T-cell costimulation",
-    "why": "That is abatacept.",
-    "correct": false
-   },
-   "D": {
     "text": "Inhibiting dihydrofolate reductase",
     "why": "That is methotrexate.",
     "correct": false
    },
-   "E": {
+   "B": {
+    "text": "Blocking TNF-α signaling",
+    "why": "That is adalimumab, etanercept, infliximab.",
+    "correct": false
+   },
+   "C": {
     "text": "Blocking IL-6 receptor signaling",
     "why": "That is tocilizumab.",
     "correct": false
+   },
+   "D": {
+    "text": "Blocking T-cell costimulation",
+    "why": "That is abatacept.",
+    "correct": false
+   },
+   "E": {
+    "text": "Depleting or modulating B lymphocytes",
+    "why": "Rituximab is B-cell targeted therapy: it depletes or modulates B lymphocytes.",
+    "correct": true
    }
   },
   "link": {
@@ -1734,200 +3187,68 @@
   }
  },
  {
-  "topic": "Pain & inflammation",
+  "topic": "Muscle relaxants",
   "objectives": [
-   "IO2.1"
-  ],
-  "sg": [],
-  "kind": "vignette",
-  "stem": "A runner sprained an ankle yesterday; the pain is sharp and clearly tied to the injury. How is this pain best classified by time course?",
-  "correct": "Acute pain",
-  "distractors": [
-   {
-    "text": "Chronic pain",
-    "why": "Chronic pain persists beyond expected healing time, often more than 3 months."
-   },
-   {
-    "text": "Neuropathic pain",
-    "why": "Neuropathic is a mechanism (nerve injury), not a time course."
-   },
-   {
-    "text": "Referred pain",
-    "why": "Not one of the lecture's categories."
-   },
-   {
-    "text": "Phantom pain",
-    "why": "Not one of the lecture's categories."
-   }
-  ],
-  "why_correct": "Acute pain has recent onset and is often tied to an identifiable injury or flare.",
-  "takeaway": "Acute = recent and tied to an injury; chronic = beyond healing time, often > 3 months.",
-  "discriminator": "Time course (acute vs. chronic) and mechanism (nociceptive, inflammatory, neuropathic) are two separate axes.",
-  "src": "L03 S5",
-  "id": "U2-002",
-  "answer": "D",
-  "options": {
-   "A": {
-    "text": "Referred pain",
-    "why": "Not one of the lecture's categories.",
-    "correct": false
-   },
-   "B": {
-    "text": "Neuropathic pain",
-    "why": "Neuropathic is a mechanism (nerve injury), not a time course.",
-    "correct": false
-   },
-   "C": {
-    "text": "Phantom pain",
-    "why": "Not one of the lecture's categories.",
-    "correct": false
-   },
-   "D": {
-    "text": "Acute pain",
-    "why": "Acute pain has recent onset and is often tied to an identifiable injury or flare.",
-    "correct": true
-   },
-   "E": {
-    "text": "Chronic pain",
-    "why": "Chronic pain persists beyond expected healing time, often more than 3 months.",
-    "correct": false
-   }
-  },
-  "link": {
-   "href": "../../L03/index.html#musculoskeletal-pain-the-inflammatory-cascade",
-   "label": "Study this: L03 · Part 1 →"
-  }
- },
- {
-  "topic": "Acetaminophen",
-  "objectives": [
-   "IO2.1",
    "IO2.3"
   ],
   "sg": [],
   "kind": "mechanism",
-  "stem": "Which effect is acetaminophen least reliable for?",
-  "correct": "Reducing peripheral inflammation",
+  "stem": "Which statement correctly distinguishes spasticity from rigidity?",
+  "correct": "Spasticity is velocity-dependent; rigidity is not",
   "distractors": [
    {
-    "text": "Relieving mild-to-moderate pain",
-    "why": "Acetaminophen is an effective analgesic."
+    "text": "Rigidity is velocity-dependent; spasticity is not",
+    "why": "Reversed."
    },
    {
-    "text": "Lowering fever",
-    "why": "It is antipyretic via the hypothalamic temperature center."
+    "text": "Both follow acute muscle injury",
+    "why": "Spasm follows injury; spasticity is upper motor neuron."
    },
    {
-    "text": "First-line mild osteoarthritis pain",
-    "why": "It is a reasonable first-line for mild OA pain."
+    "text": "Spasticity is a sudden involuntary contraction",
+    "why": "That describes muscle spasm."
    },
    {
-    "text": "Pain in a patient with CKD",
-    "why": "It is generally safer than an NSAID with kidney disease."
+    "text": "Both respond to the same drugs",
+    "why": "They often need distinct approaches."
    }
   ],
-  "why_correct": "Acetaminophen relieves pain and fever centrally, but its peripheral anti-inflammatory effect is minimal.",
-  "takeaway": "Pain + fever: yes. Inflammation: no.",
-  "discriminator": "Need an anti-inflammatory → NSAID; need analgesia with NSAID red flags → acetaminophen.",
-  "src": "L03 S15; S43",
-  "id": "U2-006",
-  "answer": "E",
+  "why_correct": "Spasticity is velocity-dependent increased tone from upper motor neuron injury; rigidity is constant tone, independent of velocity.",
+  "takeaway": "Spasticity speeds up with speed; rigidity doesn’t care.",
+  "discriminator": "Spasm = sudden contraction after injury; spasticity = UMN; rigidity = constant.",
+  "src": "L04 S17",
+  "id": "U2-043",
+  "answer": "B",
   "options": {
    "A": {
-    "text": "Pain in a patient with CKD",
-    "why": "It is generally safer than an NSAID with kidney disease.",
+    "text": "Spasticity is a sudden involuntary contraction",
+    "why": "That describes muscle spasm.",
     "correct": false
    },
    "B": {
-    "text": "Relieving mild-to-moderate pain",
-    "why": "Acetaminophen is an effective analgesic.",
-    "correct": false
+    "text": "Spasticity is velocity-dependent; rigidity is not",
+    "why": "Spasticity is velocity-dependent increased tone from upper motor neuron injury; rigidity is constant tone, independent of velocity.",
+    "correct": true
    },
    "C": {
-    "text": "First-line mild osteoarthritis pain",
-    "why": "It is a reasonable first-line for mild OA pain.",
+    "text": "Both respond to the same drugs",
+    "why": "They often need distinct approaches.",
     "correct": false
    },
    "D": {
-    "text": "Lowering fever",
-    "why": "It is antipyretic via the hypothalamic temperature center.",
+    "text": "Both follow acute muscle injury",
+    "why": "Spasm follows injury; spasticity is upper motor neuron.",
     "correct": false
    },
    "E": {
-    "text": "Reducing peripheral inflammation",
-    "why": "Acetaminophen relieves pain and fever centrally, but its peripheral anti-inflammatory effect is minimal.",
-    "correct": true
+    "text": "Rigidity is velocity-dependent; spasticity is not",
+    "why": "Reversed.",
+    "correct": false
    }
   },
   "link": {
-   "href": "../../L03/index.html#acetaminophen",
-   "label": "Study this: L03 · Part 2 →"
-  }
- },
- {
-  "topic": "OA vs. RA",
-  "objectives": [
-   "IO2.3",
-   "IO2.4"
-  ],
-  "sg": [],
-  "kind": "vignette",
-  "stem": "A 45-year-old has symmetric hand-joint swelling, morning stiffness, and a positive rheumatoid factor. Why are NSAIDs alone not enough?",
-  "correct": "RA needs disease-modifying therapy, not pain relief alone",
-  "distractors": [
-   {
-    "text": "NSAIDs have no analgesic effect in any arthritis",
-    "why": "NSAIDs relieve symptoms; they just don't change the disease course."
-   },
-   {
-    "text": "RA is degenerative, so only steroid injections work",
-    "why": "RA is autoimmune; OA is degenerative."
-   },
-   {
-    "text": "NSAIDs are contraindicated in everyone with RA",
-    "why": "Not taught; the issue is that they don't modify the disease."
-   },
-   {
-    "text": "RA pain is neuropathic and needs nerve blockers",
-    "why": "RA is an autoimmune inflammatory disease."
-   }
-  ],
-  "why_correct": "RA is an autoimmune, systemic inflammatory disease whose goal is to suppress disease activity; NSAIDs ease symptoms without altering the disease course.",
-  "takeaway": "OA → pain control and function; RA → suppress disease activity with DMARDs.",
-  "discriminator": "Degenerative (OA) vs. immune-mediated (RA).",
-  "src": "L03 S41; S41 (notes); S45 (notes); p. 676; p. 701",
-  "id": "U2-014",
-  "answer": "E",
-  "options": {
-   "A": {
-    "text": "NSAIDs have no analgesic effect in any arthritis",
-    "why": "NSAIDs relieve symptoms; they just don't change the disease course.",
-    "correct": false
-   },
-   "B": {
-    "text": "NSAIDs are contraindicated in everyone with RA",
-    "why": "Not taught; the issue is that they don't modify the disease.",
-    "correct": false
-   },
-   "C": {
-    "text": "RA is degenerative, so only steroid injections work",
-    "why": "RA is autoimmune; OA is degenerative.",
-    "correct": false
-   },
-   "D": {
-    "text": "RA pain is neuropathic and needs nerve blockers",
-    "why": "RA is an autoimmune inflammatory disease.",
-    "correct": false
-   },
-   "E": {
-    "text": "RA needs disease-modifying therapy, not pain relief alone",
-    "why": "RA is an autoimmune, systemic inflammatory disease whose goal is to suppress disease activity; NSAIDs ease symptoms without altering the disease course.",
-    "correct": true
-   }
-  },
-  "link": {
-   "href": "../../L03/index.html#osteoarthritis-rheumatoid-arthritis-dmards",
-   "label": "Study this: L03 · Part 4 →"
+   "href": "../../L04/index.html#skeletal-muscle-relaxants",
+   "label": "Study this: L04 · Part 2 →"
   }
  },
  {
@@ -1963,27 +3284,27 @@
   "discriminator": "Hidden duplication (same ingredient, two products) vs. drug interaction (two different drugs).",
   "src": "L03 S20; S20 (notes)",
   "id": "U2-005",
-  "answer": "D",
+  "answer": "A",
   "options": {
    "A": {
-    "text": "Check a creatinine for NSAID renal injury",
-    "why": "None of the products described is an NSAID.",
-    "correct": false
+    "text": "Review every product label for hidden acetaminophen",
+    "why": "Many combination cold, flu, and sleep products contain acetaminophen; unintentional double-dosing is a leading cause of acetaminophen liver injury, so ask about all sources.",
+    "correct": true
    },
    "B": {
-    "text": "Add N-acetylcysteine as routine prevention",
-    "why": "N-acetylcysteine is the overdose antidote, not routine prophylaxis.",
-    "correct": false
-   },
-   "C": {
     "text": "Switch the back-pain drug to celecoxib at once",
     "why": "The problem is a hidden second source of acetaminophen, not the choice of analgesic.",
     "correct": false
    },
+   "C": {
+    "text": "Add N-acetylcysteine as routine prevention",
+    "why": "N-acetylcysteine is the overdose antidote, not routine prophylaxis.",
+    "correct": false
+   },
    "D": {
-    "text": "Review every product label for hidden acetaminophen",
-    "why": "Many combination cold, flu, and sleep products contain acetaminophen; unintentional double-dosing is a leading cause of acetaminophen liver injury, so ask about all sources.",
-    "correct": true
+    "text": "Check a creatinine for NSAID renal injury",
+    "why": "None of the products described is an NSAID.",
+    "correct": false
    },
    "E": {
     "text": "Reassure that OTC products are always safe",

@@ -1,0 +1,203 @@
+# Authoring brief — L04: Unit 2: Musculoskeletal — Session 2 (2026-10-29)
+
+Tell Claude: **"author L04"**. Claude writes `work/L04/author_L04.py`, `guide_L04.py` and `textbook_L04.py` (copy the shape of the L02 files), adds the lecture's drugs to `work/drugs.py`, then runs `./run.sh new L04` until every gate says PASS.
+
+## The standard (every lecture, no exceptions)
+- **Sources:** slides (with speaker notes), the assigned textbook pages, the syllabus and the course study guide only. No internet facts. Every fact cited (`S12`, `S12 (notes)`, `p. 245`, `SG U1-R3`).
+- **Everything taught:** every slide line and every assigned-reading section below lands in the guide (the audit fails otherwise). A section taught in another session, or beyond PA scope, goes in `READING_SKIP` with the reason.
+- **PA-student depth, no more, no less:** what a PA needs to prescribe safely and pass the exam. Skip chemistry, molecular-biology and industry detail with no prescribing decision attached. PA students are short on time: lean, never dense.
+- **Easier to learn:** order (big idea → mechanism → clinical use → traps), one idea per bullet (≤25 words), discriminator tables, flows, why-hooks. A student with only the guide or only the deck can answer any exam question.
+- **Length gates:** textbook-only bullets ≤30% of the guide; bullets ≤40 words; deck ≤2.25× the lecture’s slides.
+- **Template:** `drug_class` for every class/topic (overview, prototype, moa, indications, adverse — boxed warnings first, contra, interactions, pk, monitoring, pearls).
+- **Textbook facts** in `textbook_<ID>.py` as `("text", "p. N")`; write apostrophes as ’ so `./run.sh check` can verify the numbers on that page.
+- **Questions:** ~50/50 vignette and mechanism; 5 options, all similar in length; rebuild every quick-check slide question (`from_slides`).
+- **Figures:** each saved figure gets a caption and an interactive version (`"viz": {"type": …}`, list below).
+- **Drugs:** every drug named gets a card (or new facts) in `work/drugs.py`, citing `L04 S#` or `p. N`, filled field by field: class, mechanism, indications, contraindications, adverse effects, interactions, distinguishing / patient-specific factors, extra.
+- **Home teaser:** `TEASER` in `guide_<ID>.py` — two calm sentences, no hype.
+- **No school, course-director or instructor names** anywhere (slide 1 credits are skipped on purpose).
+- **Original files are never edited** (they are fingerprinted; the build stops if one changes).
+
+## Objectives to cover
+- IO2.1: Identify major pharmacologic classes used in the management of musculoskeletal conditions and describe their mechanisms of action.
+- IO2.2: Describe the indications, contraindications, adverse effects, and clinically significant interactions associated with medications used to treat musculoskeletal conditions.
+- IO2.3: Compare pharmacologic agents within and across therapeutic classes to distinguish clinically relevant differences in efficacy, safety, and use.
+- IO2.4: Select appropriate pharmacologic therapy for common musculoskeletal conditions based on clinical presentation and patient-specific factors.
+- IO2.5: Identify appropriate dosing, administration, and monitoring considerations for medications used in musculoskeletal conditions.
+- IO2.6: Explain important medication-use and safety information to patients receiving pharmacotherapy for musculoskeletal.
+
+## Slides (54) — every one must be covered
+- [ ] S1: Musculoskeletal Pharmacology
+- [ ] S2: Learning Objectives — Session 2
+- [ ] S3: 05
+- [ ] S4: How Gout Develops
+- [ ] S5: Uric Acid Crystals Trigger the Inflammatory Response
+- [ ] S6: Gout: From Purine Metabolism to Joint Inflammation
+- [ ] S7: Acute Gout vs. Chronic Urate-Lowering Therapy
+- [ ] S8: Colchicine
+- [ ] S9: Colchicine: Blocking Neutrophil Response
+- [ ] S10: Allopurinol vs. Febuxostat
+- [ ] S11: Xanthine Oxidase Inhibitors: Where They Act
+- [ ] S12: Other Urate-Lowering & Refractory Gout Agents
+- [ ] S13: Uricosurics and Uricases
+- [ ] S14: Acute Treatment or Urate-Lowering Therapy?
+- [ ] S15: Drug Names Reveal the Class: Gout
+- [ ] S16: 06
+- [ ] S17: Spasm vs. Spasticity vs. Rigidity
+- [ ] S18: Where Muscle Tone Is Controlled
+- [ ] S19: Centrally vs. Peripherally Acting Agents
+- [ ] S20: Skeletal Muscle Relaxants: Central vs. Peripheral Site of Action
+- [ ] S21: Baclofen
+- [ ] S22: Baclofen: GABA-B Agonism in the Spinal Cord
+- [ ] S23: Tizanidine
+- [ ] S24: Tizanidine: Central Alpha-2 Agonism
+- [ ] S25: Cyclobenzaprine
+- [ ] S26: Cyclobenzaprine: Brainstem Action and Anticholinergic Effects
+- [ ] S27: Other Centrally-Acting Relaxants & Botulinum Toxin
+- [ ] S28: Dantrolene
+- [ ] S29: Dantrolene: Blocking Calcium Release at the Muscle
+- [ ] S30: Drug Names Reveal the Class: Muscle Relaxants
+- [ ] S31: 07
+- [ ] S32: Bone Remodeling
+- [ ] S33: RANKL/OPG Controls Osteoclast Activity
+- [ ] S34: Calcium Homeostasis
+- [ ] S35: Calcium Homeostasis: The PTH Feedback Loop
+- [ ] S36: Osteoporosis Risk Factors
+- [ ] S37: Bisphosphonates
+- [ ] S38: Bisphosphonates: Osteoclast Apoptosis
+- [ ] S39: Bisphosphonate Dosing Frequency
+- [ ] S40: Bisphosphonate Administration & Adverse Effects
+- [ ] S41: Why Oral Bisphosphonates Need Strict Administration Rules
+- [ ] S42: Other Osteoporosis Therapies
+- [ ] S43: Anabolic vs Antiresorptive Mechanisms
+- [ ] S44: How Osteoporosis Drugs Shift the Remodeling Balance
+- [ ] S45: Choosing an Osteoporosis Therapy
+- [ ] S46: Drug Names Reveal the Class: Bone
+- [ ] S47: 08
+- [ ] S48: Which Drug Would You Choose?
+- [ ] S49: Key Takeaways
+- [ ] S50: 09
+- [ ] S51: Lecture Recall Quiz (1 of 2)
+- [ ] S52: Lecture Recall Quiz (2 of 2)
+- [ ] S53: Lecture Recall Quiz — Answer Key
+- [ ] S54: Image Attribution
+
+## Assigned reading — Ch. 27, pp. 499–516; Ch. 36, pp. 674–702; Ch. 42, pp. 811–832 (94 sections to teach)
+If this session covers only part of the reading (the unit is split across two sessions), put the other session’s sections in `READING_SKIP` with “Taught in L0x”, and teach them there.
+- [ ] p. 499: Normal Neuromuscular Function
+- [ ] p. 501: Blocking Drugs
+- [ ] p. 503: Mechanism of Action
+- [ ] p. 504: Skeletal Muscle Paralysis
+- [ ] p. 507: Cardiovascular Effects
+- [ ] p. 509: Neuromuscular Response
+- [ ] p. 509: Neuromuscular Blockade
+- [ ] p. 510: SPASMOLYTIC & ANTISPASMODIC DRUGS
+- [ ] p. 512: TIZANIDINE
+- [ ] p. 512: OTHER CENTRALLY ACTING SPASMOLYTIC DRUGS
+- [ ] p. 513: BOTULINUM TOXIN
+- [ ] p. 513: DANTROLENE
+- [ ] p. 515: Gabarone, Gralise, Neurontin
+- [ ] p. 515: Neuromuscular Blockers
+- [ ] p. 675: THE IMMUNE RESPONSE
+- [ ] p. 675: THERAPEUTIC STRATEGIES
+- [ ] p. 675: Chemistry & Pharmacokinetics
+- [ ] p. 677: ASPIRIN
+- [ ] p. 677: NONACETYLATED SALICYLATES
+- [ ] p. 677: COX-2 SELECTIVE INHIBITORS
+- [ ] p. 681: Other NSAIDs
+- [ ] p. 681: CHOICE OF NSAID
+- [ ] p. 681: DISEASE-MODIFYING ANTIRHEUMATIC DRUGS
+- [ ] p. 681: ABATACEPT
+- [ ] p. 682: ANIFROLUMAB
+- [ ] p. 682: APREMILAST
+- [ ] p. 682: AZATHIOPRINE
+- [ ] p. 683: BARICITINIB
+- [ ] p. 683: BELIMUMAB
+- [ ] p. 683: RISANKIZUMAB
+- [ ] p. 684: CHLOROQUINE AND HYDROXYCHLOROQUINE
+- [ ] p. 684: INTERLEUKIN-1 INHIBITORS
+- [ ] p. 685: GUSELKUMAB
+- [ ] p. 686: IXEKIZUMAB
+- [ ] p. 686: JANUS KINASE INHIBITORS
+- [ ] p. 687: LEFLUNOMIDE
+- [ ] p. 688: MESALAMINE
+- [ ] p. 688: Baricitinib Tofacitinib Upadacitinib
+- [ ] p. 689: MYCOPHENOLATE MOFETIL
+- [ ] p. 689: SARILUMAB
+- [ ] p. 690: SECUKINUMAB
+- [ ] p. 690: SULFASALAZINE
+- [ ] p. 692: TOCILIZUMAB
+- [ ] p. 693: USTEKINUMAB
+- [ ] p. 693: BIOSIMILARS
+- [ ] p. 693: GLUCOCORTICOID DRUGS (LIMITED TO RHEUMATIC DISEASES)
+- [ ] p. 694: OTHER ANALGESICS
+- [ ] p. 694: ACETAMINOPHEN
+- [ ] p. 694: KETOROLAC
+- [ ] p. 694: TRAMADOL
+- [ ] p. 695: ALLOPURINOL
+- [ ] p. 696: COLCHICINE
+- [ ] p. 697: FEBUXOSTAT
+- [ ] p. 697: PEGLOTICASE
+- [ ] p. 698: PROBENECID AND LESINURAD
+- [ ] p. 698: GLUCOCORTICOIDS IN GOUT
+- [ ] p. 698: INTERLEUKIN-1 INHIBITORS IN GOUT
+- [ ] p. 699: Disease-Modifying Antirheumatic Drugs & Glucocorticoids
+- [ ] p. 811: BASIC PHARMACOLOGY
+- [ ] p. 813: PRINCIPAL HORMONAL REGULATORS OF BONE MINERAL HOMEOSTASIS PARATHYROID HORMONE
+- [ ] p. 816: FIBROBLAST GROWTH FACTOR 23
+- [ ] p. 817: SECONDARY HORMONAL REGULATORS OF BONE MINERAL HOMEOSTASIS
+- [ ] p. 817: CALCITONIN
+- [ ] p. 818: GLUCOCORTICOIDS
+- [ ] p. 818: ESTROGENS
+- [ ] p. 818: Therapies for Osteoporosis
+- [ ] p. 819: NONHORMONAL AGENTS AFFECTING BONE MINERAL HOMEOSTASIS BISPHOSPHONATES
+- [ ] p. 820: DENOSUMAB
+- [ ] p. 820: SCLEROSTIN ANTIBODIES
+- [ ] p. 820: CALCIMIMETICS
+- [ ] p. 821: THIAZIDE DIURETICS
+- [ ] p. 821: FLUORIDE
+- [ ] p. 821: STRONTIUM RANELATE
+- [ ] p. 821: CLINICAL PHARMACOLOGY
+- [ ] p. 822: ABNORMAL SERUM CALCIUM & PHOSPHATE LEVELS HYPERCALCEMIA
+- [ ] p. 822: Saline Diuresis
+- [ ] p. 822: Gallium Nitrate
+- [ ] p. 823: HYPOCALCEMIA
+- [ ] p. 823: HYPERPHOSPHATEMIA
+- [ ] p. 824: HYPOPHOSPHATEMIA
+- [ ] p. 824: SPECIFIC DISORDERS INVOLVING BONE MINERAL–REGULATING HORMONES PRIMARY HYPERPARATHYROIDISM
+- [ ] p. 824: HYPOPARATHYROIDISM
+- [ ] p. 825: NUTRITIONAL VITAMIN D DEFICIENCY OR INSUFFICIENCY
+- [ ] p. 825: CHRONIC KIDNEY DISEASE
+- [ ] p. 826: Vitamin D Preparations
+- [ ] p. 826: INTESTINAL OSTEODYSTROPHY
+- [ ] p. 826: OSTEOPOROSIS
+- [ ] p. 828: IDIOPATHIC INFANTILE HYPERCALCEMIA
+- [ ] p. 828: NEPHROTIC SYNDROME
+- [ ] p. 829: IDIOPATHIC HYPERCALCIURIA
+- [ ] p. 829: OTHER DISORDERS OF BONE MINERAL HOMEOSTASIS PAGET DISEASE OF BONE
+- [ ] p. 829: ENTERIC OXALURIA
+- [ ] p. 830: SCLEROSTIN ANTIBODY
+- [ ] p. 831: CALCIUM
+
+## Figures saved from the slides
+- [ ] `S20_1.jpg` — caption + viz type
+- [ ] `S35_1.jpg` — caption + viz type
+- [ ] `S39_1.jpg` — caption + viz type
+- [ ] `S44_1.jpg` — caption + viz type
+- [ ] `S6_1.jpg` — caption + viz type
+
+## Interactive figure types (`"viz": {"type": "…"}` on a figure)
+- `dose-response` — graded dose-response curve (EC50, Emax)
+- `antagonist` — agonist curve shifted by a competitive vs noncompetitive antagonist
+- `potency-efficacy` — two drugs compared on potency and efficacy
+- `therapeutic-index` — ED50 vs TD50, narrow vs wide window
+- `cyp-interaction` — substrate level with an inhibitor vs an inducer
+- `half-life` — exponential decay over half-lives
+- `steady-state` — accumulation to steady state, with/without loading dose
+- `fill-empty` — time to fill and time to empty are the same
+- `adme` — absorption → distribution → metabolism → excretion map
+- `bars` — any bar chart; give {title, unit, bars:[{label, value, note}], steps:[{label, pick}]}
+- `nomogram` — Rumack-Matthew nomogram: drag a level to a time; give {point, steps:[{label, t, c}]}
+- `onset` — fast symptom relief vs slow disease modification over time (schematic); give {point, steps:[{label, t}]}
+- `pathway` — mechanism flow (boxes + arrows) where each drug cuts in; give {title, h, nodes:[{id, label, x, y, w, col}], edges:[[a, b]], drugs:[{label, at, off, less, note}]}
+
+If none fits, ask for a new dedicated diagram in `site_src/assets/viz.js` (same palette, reset after 30 s idle, Try-it steps).

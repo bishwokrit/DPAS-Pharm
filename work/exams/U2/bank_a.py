@@ -1,5 +1,5 @@
 """Unit 2 practice exam — Session 1 questions (L03: pain, acetaminophen, NSAIDs, OA/RA, DMARDs).
-Session 2 (L04: gout, muscle relaxants, bone) adds bank_b.py after that lecture.
+Session 2 (L04: gout, muscle relaxants, bone) is in bank_b.py.
 
 Q(topic, objectives, study_guide_items, kind, stem, correct, [(distractor, why_wrong) x4],
   why_correct, takeaway, discriminator, source)
