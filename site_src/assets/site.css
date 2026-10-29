@@ -1860,3 +1860,6 @@ figure.vz-arrive { animation: vz-arrive 1.3s cubic-bezier(.2,.8,.2,1); }
 .dx-check input { width: 16px; height: 16px; margin: 0; accent-color: var(--accent); cursor: pointer; }
 .dx-check em { font-style: normal; opacity: .7; }
 .dx-unit .tag.tb { margin-left: 4px; vertical-align: 1px; }
+.dx-opts { display: flex; flex-wrap: wrap; gap: 8px 22px; padding: 14px 0 2px; }
+.dx-opts .dx-check { margin: 0; }
+#dx-active { display: inline-flex; flex-wrap: wrap; gap: 6px; }

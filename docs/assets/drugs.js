@@ -21,6 +21,7 @@
   const card = (d) => `<dl class="dx-card">
       <div class="dx-row"><dt>Generic name</dt><dd><strong>${esc(d.name)}</strong>${d.aliases.filter((a) => /^[A-Z]/.test(a) && a !== d.name && !/^NAPQI$/.test(a)).length ? ` <span class="muted">(${d.aliases.filter((a) => /^[A-Z]/.test(a) && !/^NAPQI$/.test(a)).map(esc).join(", ")})</span>` : ""}</dd></div>
       <div class="dx-row"><dt>Drug class</dt><dd>${clsLine(d)}</dd></div>
+      ${(d.sg || []).length ? `<div class="dx-row"><dt>In the study guide</dt><dd>${d.sg.map((k) => `<span class="cite">SG ${esc(k)}</span>`).join(" ")}</dd></div>` : ""}
       ${SECS.map(([k, label]) => `<div class="dx-row"><dt>${label}</dt><dd>${lis(secFacts(d, k))}</dd></div>`).join("")}
     </dl>`;
 
@@ -32,6 +33,12 @@
   let showTb = sto.get("dx:tbonly", "1") === "1";
   $("dx-tbonly").checked = showTb;
   $("dx-tbn").textContent = `(${DR.filter(tbOnly).length})`;
+  // study-guide drugs: named in the course's cumulative study guide & worksheet
+  const inSg = (d) => (d.sg || []).length > 0;
+  let sgOnly = sto.get("dx:sgonly", "0") === "1";
+  $("dx-sgonly").checked = sgOnly;
+  $("dx-sgn").textContent = `(${DR.filter(inSg).length})`;
+  $("dx-sgonly").addEventListener("change", (e) => { sgOnly = e.target.checked; sto.set("dx:sgonly", sgOnly ? "1" : "0"); draw(); });
   $("dx-tbonly").addEventListener("change", (e) => { showTb = e.target.checked; sto.set("dx:tbonly", showTb ? "1" : "0"); draw(); });
   // a short family name for grouping (the full class stays on each card)
   const family = (d) => {
@@ -62,9 +69,10 @@
 
   // ---- grid
   function draw() {
+    pills();
     const qq = q.toLowerCase();
     const [cmp, group] = SORTS[sort];
-    const list = DR.filter((d) => (showTb || !tbOnly(d)) && (!tag || d.tags.includes(tag)) &&
+    const list = DR.filter((d) => (showTb || !tbOnly(d)) && (!sgOnly || inSg(d)) && (!tag || d.tags.includes(tag)) &&
       (!qq || (d.name + " " + d.cls + " " + d.aliases.join(" ") + " " + d.tags.join(" ") + " " + d.facts.map((f) => f.text).join(" ")).toLowerCase().includes(qq))).sort(cmp);
     let last = null;
     $("dx-grid").innerHTML = list.map((d, i) => {
@@ -90,10 +98,17 @@
   const setTag = (t) => {
     tag = t;
     document.querySelectorAll("#dx-tags [data-tag]").forEach((x) => x.classList.toggle("on", x.dataset.tag === t));
-    $("dx-active").innerHTML = t ? `<button class="dx-pill" title="Clear filter" aria-label="Clear filter ${esc(t)}">${esc(t)}<span aria-hidden="true">×</span></button>` : "";
-    $("dx-active").querySelector("button")?.addEventListener("click", () => setTag(""));
     draw();
   };
+  // the active filters as removable pills next to the Filter button (tag, study-guide only, textbook-only hidden)
+  function pills() {
+    const P = [];
+    if (tag) P.push([tag, "Clear filter", () => setTag("")]);
+    if (sgOnly) P.push(["Study guide only", "Show all drugs", () => { $("dx-sgonly").click(); }]);
+    if (!showTb) P.push(["No textbook-only", "Show textbook-only drugs", () => { $("dx-tbonly").click(); }]);
+    $("dx-active").innerHTML = P.map(([t, h]) => `<button class="dx-pill" title="${esc(h)}" aria-label="${esc(h)}">${esc(t)}<span aria-hidden="true">×</span></button>`).join("");
+    $("dx-active").querySelectorAll("button").forEach((b, i) => b.addEventListener("click", P[i][2]));
+  }
   document.querySelectorAll("#dx-tags [data-tag]").forEach((b) => b.addEventListener("click", () => {
     setTag(b.dataset.tag); if (b.dataset.tag) setTimeout(() => panel(false), 220);
   }));
