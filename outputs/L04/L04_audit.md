@@ -2,7 +2,7 @@
 
 **Result: PASS ✅ nothing missing**
 
-Checked 2628 source lines (54 slides; 7 study-guide items; 69 textbook pages read; 63 textbook sentences used, the rest left out as not needed for this lecture (info only).)
+Checked 2676 source lines (72 slides; 7 study-guide items; 69 textbook pages read; 63 textbook sentences used, the rest left out as not needed for this lecture (info only).)
 
 ## Missing from the study materials
 - None ✅
@@ -15,13 +15,13 @@ Checked 2628 source lines (54 slides; 7 study-guide items; 69 textbook pages rea
 - S2: Briefly recap Session 1 (Oct 27) before diving in: musculoskeletal pain, acetaminophen, NSAIDs, and OA/RA phar — _teaching instruction; the recap is in About this lecture_
 - S4: The next slide builds this out with the specific drugs and their targets. — _teaching instruction (pointer to the next slide)_
 - S5: Walk the chain left to right, then top to bottom: each step sets up the next, and the flare is the end of the  — _teaching instruction; the chain is taught from S5_
-- S14: This question tests exactly the acute-vs-chronic distinction from two slides ago — a great checkpoint for whet — _teaching instruction; the case is rebuilt as a practice question_
-- S35: Trace the three PTH arrows (bone, kidney, intestine) with your finger as you narrate — this negative feedback  — _teaching instruction; Figure 6 caption covers the loop_
-- S42: The next slide shows all of these (plus bisphosphonates) together on one balance diagram. — _teaching instruction (pointer to Figure 8)_
-- S44: Ask students to sort each named drug into "inhibits resorption" vs. — _teaching instruction; the sort is the Figure 8 interactive_
-- S44: "stimulates formation" before revealing the diagram’s labels. — _teaching instruction (second half of the sorting prompt)_
-- S53: Encourage students to revisit this quiz on their own before the exam — it is designed as a standalone recall r — _teaching instruction_
-- S54: This slide documents AI-tool use for original figure generation per university citation requirements. — _administrative note on AI-tool citation_
+- S16: This question tests exactly the acute-vs-chronic distinction from two slides ago — a great checkpoint for whet — _teaching instruction; the case is rebuilt as a practice question_
+- S43: Trace the three PTH arrows (bone, kidney, intestine) with your finger as you narrate — this negative feedback  — _teaching instruction; Figure 6 caption covers the loop_
+- S54: The next slide shows all of these (plus bisphosphonates) together on one balance diagram. — _teaching instruction (pointer to Figure 8)_
+- S56: Ask students to sort each named drug into "inhibits resorption" vs. — _teaching instruction; the sort is the Figure 8 interactive_
+- S56: "stimulates formation" before revealing the diagram’s labels. — _teaching instruction (second half of the sorting prompt)_
+- S71: Encourage students to revisit this quiz on their own before the exam — it is designed as a standalone recall r — _teaching instruction_
+- S72: This slide documents AI-tool use for original figure generation per university citation requirements. — _administrative note on AI-tool citation_
 
 ## Assigned-reading sections not taught in the guide
 - None ✅
@@ -79,7 +79,7 @@ Checked 2628 source lines (54 slides; 7 study-guide items; 69 textbook pages rea
 - None ✅
 
 ## Practice questions
-28 questions · 17 vignette / 11 mechanism · answer letters {'A': 5, 'B': 6, 'C': 6, 'D': 6, 'E': 5}
+35 questions · 20 vignette / 15 mechanism · answer letters {'A': 7, 'B': 7, 'C': 7, 'D': 7, 'E': 7}
 - None ✅
 
 ## Objectives with thin coverage

@@ -1,7 +1,7 @@
 {
  "lecture": "L04",
  "passed": true,
- "units_checked": 2628,
+ "units_checked": 2676,
  "missing": [],
  "uncited": [
   {
@@ -37,43 +37,43 @@
    "reason": "teaching instruction; the chain is taught from S5"
   },
   {
-   "ref": "S14",
+   "ref": "S16",
    "text": "This question tests exactly the acute-vs-chronic distinction from two slides ago — a great checkpoint for whether the concept landed.",
    "kind": "speaker note",
    "reason": "teaching instruction; the case is rebuilt as a practice question"
   },
   {
-   "ref": "S35",
+   "ref": "S43",
    "text": "Trace the three PTH arrows (bone, kidney, intestine) with your finger as you narrate — this negative feedback loop is the physiologic backdrop for every osteoporosis drug that follows.",
    "kind": "speaker note",
    "reason": "teaching instruction; Figure 6 caption covers the loop"
   },
   {
-   "ref": "S42",
+   "ref": "S54",
    "text": "The next slide shows all of these (plus bisphosphonates) together on one balance diagram.",
    "kind": "speaker note",
    "reason": "teaching instruction (pointer to Figure 8)"
   },
   {
-   "ref": "S44",
+   "ref": "S56",
    "text": "Ask students to sort each named drug into \"inhibits resorption\" vs.",
    "kind": "speaker note",
    "reason": "teaching instruction; the sort is the Figure 8 interactive"
   },
   {
-   "ref": "S44",
+   "ref": "S56",
    "text": "\"stimulates formation\" before revealing the diagram’s labels.",
    "kind": "speaker note",
    "reason": "teaching instruction (second half of the sorting prompt)"
   },
   {
-   "ref": "S53",
+   "ref": "S71",
    "text": "Encourage students to revisit this quiz on their own before the exam — it is designed as a standalone recall resource, separate from the in-lecture quick checks.",
    "kind": "speaker note",
    "reason": "teaching instruction"
   },
   {
-   "ref": "S54",
+   "ref": "S72",
    "text": "This slide documents AI-tool use for original figure generation per university citation requirements.",
    "kind": "speaker note",
    "reason": "administrative note on AI-tool citation"
@@ -84,16 +84,16 @@
  "layout_problems": [],
  "question_issues": [],
  "question_stats": {
-  "count": 28,
+  "count": 35,
   "letters": {
-   "A": 5,
-   "B": 6,
-   "C": 6,
-   "D": 6,
-   "E": 5
+   "A": 7,
+   "B": 7,
+   "C": 7,
+   "D": 7,
+   "E": 7
   },
-  "vignette": 17,
-  "mechanism": 11
+  "vignette": 20,
+  "mechanism": 15
  },
  "thin_objectives": [],
  "textbook_unused": 2253,

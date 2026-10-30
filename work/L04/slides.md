@@ -1,4 +1,4 @@
-# Extracted slides: Student_version_Lecture_2_Session_2_Musculoskeletal_Pharmacology_Oct_29.pptx
+# Extracted slides: Lecture_2_Session_2_Musculoskeletal-Pharmacology_Final_Class_version_Oct_29.pptx
 
 Bold = emphasized on the slide (bold/underline/highlight/colored text).
 
@@ -75,7 +75,31 @@ _[figure(s) saved: S6_1.jpg]_
 
 > Speaker notes: Walk the full chain and have students sort the drugs into two buckets: "lowers uric acid" (allopurinol, febuxostat, probenecid) vs. "treats the acute flare" (colchicine, NSAIDs, corticosteroids) — this is the same acute-vs-chronic distinction the next slide makes explicit.
 
-## Slide 7: Acute Gout vs. Chronic Urate-Lowering Therapy
+## Slide 7: Quick Check
+- [heading] QUICK CHECK · FIGURE 4
+- [heading] Quick Check
+- **In Figure 4, probenecid and allopurinol both lower serum uric acid, but through different mechanisms. What is the key difference?**
+- [heading] A
+- Probenecid increases renal excretion of uric acid; allopurinol decreases uric acid production
+- [heading] B
+- Both drugs block xanthine oxidase
+- Probenecid decreases uric acid production; allopurinol increases renal excretion
+- [heading] C
+- [heading] D
+- Neither drug affects serum uric acid levels
+
+_[1 small image(s)/icons]_
+
+## Slide 8: Answer
+- [heading] ANSWER · FIGURE 4
+- [heading] Answer
+- [heading] A
+- **Probenecid increases renal excretion of uric acid; allopurinol decreases uric acid production.**
+- **Why:** Figure 4 shows allopurinol (and febuxostat) acting as xanthine oxidase inhibitors that reduce uric acid production, while probenecid acts at the kidney to increase renal excretion of uric acid that has already been produced — two different strategies for the same goal of lowering serum uric acid.
+
+_[1 small image(s)/icons]_
+
+## Slide 9: Acute Gout vs. Chronic Urate-Lowering Therapy
 - [heading] TWO DIFFERENT GOALS
 - [heading] Acute Gout vs. Chronic Urate-Lowering Therapy
 - [heading] Acute Flare
@@ -86,24 +110,22 @@ _[figure(s) saved: S6_1.jpg]_
 - Goal: lower serum uric acid to prevent future flares
 - Agents: allopurinol, febuxostat (↓ production); probenecid (↑ excretion)
 - Started/adjusted only once the acute flare has resolved
-- **9**
 
 _[1 small image(s)/icons]_
 
 > Speaker notes: This acute-vs-chronic distinction is one of the single most testable concepts in gout pharmacology — starting or changing a urate-lowering drug during an acute flare can actually prolong it.
 
-## Slide 8: Colchicine
+## Slide 10: Colchicine
 - [heading] ACUTE TREATMENT
 - [heading] Colchicine
 - **Mechanism: disrupts microtubule formation in neutrophils.**
 - Effect: reduces neutrophil migration and activation, lowering inflammation at the crystal site.
 - Most effective when started early in a flare.
 - **Narrow therapeutic window — GI adverse effects are common and dose-limiting.**
-- **10**
 
 _[1 small image(s)/icons]_
 
-## Slide 9: Colchicine: Blocking Neutrophil Response
+## Slide 11: Colchicine: Blocking Neutrophil Response
 - [heading] MECHANISM & DEPTH
 - [heading] Colchicine: Blocking Neutrophil Response
 - [heading] Colchicine binds tubulin
@@ -114,11 +136,10 @@ _[1 small image(s)/icons]_
 - [heading] Blocks microtubule polymerization
 - [heading] Reduced neutrophil migration and NLRP3 activation
 - [heading] Less inflammation at the crystal site
-- **11**
 
 > Speaker notes: Colchicine works on the cell's cytoskeleton, so its effect builds in the early hours of a flare.
 
-## Slide 10: Allopurinol vs. Febuxostat
+## Slide 12: Allopurinol vs. Febuxostat
 - [heading] URATE-LOWERING THERAPY
 - [heading] Allopurinol vs. Febuxostat
 - [heading] Allopurinol
@@ -129,13 +150,12 @@ _[1 small image(s)/icons]_
 - Also a xanthine oxidase inhibitor, different chemical structure
 - Alternative when allopurinol is not tolerated or contraindicated
 - Carries its own cardiovascular safety considerations
-- **12**
 
 _[1 small image(s)/icons]_
 
 > Speaker notes: HLA-B*5801 is a direct callback to the pharmacogenomics section from Lecture 1 — ask students to make that connection themselves before you state it.
 
-## Slide 11: Xanthine Oxidase Inhibitors: Where They Act
+## Slide 13: Xanthine Oxidase Inhibitors: Where They Act
 - [heading] MECHANISM & DEPTH
 - [heading] Xanthine Oxidase Inhibitors: Where They Act
 - Start low and titrate upward toward a serum urate target
@@ -146,11 +166,10 @@ _[1 small image(s)/icons]_
 - [heading] Xanthine
 - [heading] Uric acid
 - [heading] Allopurinol (via oxypurinol) and febuxostat block xanthine oxidase
-- **13**
 
 > Speaker notes: Both drugs sit on the same enzyme; the choice turns on safety profile and tolerability.
 
-## Slide 12: Other Urate-Lowering & Refractory Gout Agents
+## Slide 14: Other Urate-Lowering & Refractory Gout Agents
 - [heading] OTHER OPTIONS
 - [heading] Other Urate-Lowering & Refractory Gout Agents
 - **Probenecid — mechanism: inhibits renal tubular reabsorption of uric acid, increasing its excretion.**
@@ -159,13 +178,12 @@ _[1 small image(s)/icons]_
 - **Pegloticase — a recombinant uricase enzyme for severe, refractory gout not controlled by other agents.**
 - Given by IV infusion; converts uric acid to a more water-soluble, easily excreted compound.
 - **Reserved for refractory cases given its cost, infusion-reaction risk, and need for specialty administration.**
-- **14**
 
 _[1 small image(s)/icons]_
 
 > Speaker notes: Probenecid and pegloticase round out the gout toolkit beyond allopurinol/febuxostat — probenecid is an older, second-line oral option, while pegloticase is reserved for the most difficult, refractory cases.
 
-## Slide 13: Uricosurics and Uricases
+## Slide 15: Uricosurics and Uricases
 - [heading] MECHANISM & DEPTH
 - [heading] Uricosurics and Uricases
 - Needs adequate hydration; avoid in patients with uric acid kidney stones
@@ -178,30 +196,51 @@ _[1 small image(s)/icons]_
 - [heading] Pegloticase or rasburicase
 - [heading] Uricase converts uric acid to allantoin
 - [heading] Allantoin is soluble and excreted
-- **15**
 
 > Speaker notes: Uricosurics block reabsorption; uricases remove uric acid enzymatically, which is why they suit refractory disease.
 
-## Slide 14: Acute Treatment or Urate-Lowering Therapy?
+## Slide 16: Acute Treatment or Urate-Lowering Therapy?
 - [heading] CLINICAL CASE
 - [heading] Acute Treatment or Urate-Lowering Therapy?
 - A patient presents with sudden, severe pain, redness, and swelling of the first metatarsophalangeal joint, consistent with an acute gout flare.
 - **Ask yourself:** **Is this the moment to start acute treatment, chronic urate-lowering therapy, or both?**
 - **Clinical pearl:** **Treat the acute flare first (colchicine, NSAID, or corticosteroid); urate-lowering therapy is deferred until the flare resolves, then used for long-term prevention.**
-- **16**
 
 _[1 small image(s)/icons]_
 
 > Speaker notes: This question tests exactly the acute-vs-chronic distinction from two slides ago — a great checkpoint for whether the concept landed.
 
-## Slide 15: Drug Names Reveal the Class: Gout
+## Slide 17: Quick Check
+- [heading] QUICK CHECK · GOUT
+- [heading] Quick Check
+- **A patient presents with an acute gout flare. Which action is most appropriate at this visit?**
+- [heading] A
+- Treat the acute flare (colchicine, NSAID, or corticosteroid) and defer urate-lowering therapy
+- [heading] B
+- Start allopurinol immediately to lower uric acid
+- [heading] C
+- Start febuxostat and allopurinol together
+- [heading] D
+- No treatment is needed until uric acid is measured
+
+_[1 small image(s)/icons]_
+
+## Slide 18: Answer
+- [heading] ANSWER · GOUT
+- [heading] Answer
+- [heading] A
+- **Treat the acute flare and defer urate-lowering therapy.**
+- **Why:** Starting or changing urate-lowering therapy during an acute flare can worsen or prolong it. Treat the flare first; urate-lowering therapy is started or adjusted only once it resolves.
+
+_[1 small image(s)/icons]_
+
+## Slide 19: Drug Names Reveal the Class: Gout
 - **MECHANISM & DEPTH**
 - [heading] Drug Names Reveal the Class: Gout
 - Suffixes often reveal the mechanism before you recall the drug
 - -ostat marks xanthine oxidase inhibitors; allopurinol is the exception
 - -ase names enzymes, so pegloticase and rasburicase are uricases
 - -sone and -olone mark corticosteroids used to treat flares
-- **19**
 
 | Name pattern | Drug class | Examples |
 |---|---|---|
@@ -214,7 +253,7 @@ _[1 small image(s)/icons]_
 
 > Speaker notes: Use the suffixes as memory hooks, then confirm each class before prescribing.
 
-## Slide 16: 06
+## Slide 20: 06
 - **SECTION**
 - [heading] 06
 - [heading] Skeletal Muscle Relaxants
@@ -222,7 +261,7 @@ _[1 small image(s)/icons]_
 
 _[1 small image(s)/icons]_
 
-## Slide 17: Spasm vs. Spasticity vs. Rigidity
+## Slide 21: Spasm vs. Spasticity vs. Rigidity
 - [heading] NOT THE SAME THING
 - [heading] Spasm vs. Spasticity vs. Rigidity
 - [heading] Muscle Spasm
@@ -233,11 +272,10 @@ _[1 small image(s)/icons]_
 - Spasticity: velocity-dependent increased tone from upper motor neuron injury
 - Rigidity: constant increased tone, independent of velocity
 - Often require distinct pharmacologic approaches
-- **21**
 
 _[1 small image(s)/icons]_
 
-## Slide 18: Where Muscle Tone Is Controlled
+## Slide 22: Where Muscle Tone Is Controlled
 - **MECHANISM & DEPTH**
 - [heading] Where Muscle Tone Is Controlled
 - Baclofen and tizanidine act on spinal interneurons and afferents
@@ -253,9 +291,8 @@ _[1 small image(s)/icons]_
 - [heading] Neuromuscular junction (ACh release)
 - ▼
 - [heading] Muscle fiber contraction (SR Ca²⁺ release)
-- **22**
 
-## Slide 19: Centrally vs. Peripherally Acting Agents
+## Slide 23: Centrally vs. Peripherally Acting Agents
 - [heading] CLASSIFICATION
 - [heading] Centrally vs. Peripherally Acting Agents
 - [heading] Centrally Acting
@@ -266,32 +303,53 @@ _[1 small image(s)/icons]_
 - Dantrolene — acts directly on skeletal muscle itself
 - Botulinum toxin — acts at the neuromuscular junction
 - Useful when a central mechanism is not desired (or not safe)
-- **23**
 
 _[1 small image(s)/icons]_
 
-## Slide 20: Skeletal Muscle Relaxants: Central vs. Peripheral Site of Action
+## Slide 24: Skeletal Muscle Relaxants: Central vs. Peripheral Site of Action
 - [heading] ORIGINAL ILLUSTRATION · FIGURE 5
 - [heading] Skeletal Muscle Relaxants: Central vs. Peripheral Site of Action
 - **Figure 5. Original illustrative diagram (not from Katzung): cyclobenzaprine, tizanidine, and baclofen act within the CNS to reduce excitatory output to motor neurons, while dantrolene acts directly on the skeletal muscle fiber itself.**
-- **24**
 
-_[figure(s) saved: S20_1.jpg]_
+_[figure(s) saved: S24_1.jpg]_
 
 > Speaker notes: This is the single highest-yield distinction in this section: "where does the drug act" sorts every agent into one of two buckets, and dantrolene is the only one in the peripheral bucket.
 
-## Slide 21: Baclofen
+## Slide 25: Quick Check
+- [heading] QUICK CHECK · FIGURE 5
+- [heading] Quick Check
+- **In Figure 5, which agent is the odd one out, acting directly on the skeletal muscle fiber rather than within the central nervous system?**
+- [heading] A
+- Cyclobenzaprine
+- [heading] B
+- Tizanidine
+- [heading] C
+- Baclofen
+- [heading] D
+- Dantrolene
+
+_[1 small image(s)/icons]_
+
+## Slide 26: Answer
+- [heading] ANSWER · FIGURE 5
+- [heading] Answer
+- [heading] D
+- **Dantrolene.**
+- **Why:** Dantrolene decreases calcium release from the skeletal muscle sarcoplasmic reticulum, acting directly on the muscle fiber — unlike cyclobenzaprine, tizanidine, and baclofen, which all act within the CNS to reduce excitatory output to motor neurons.
+
+_[1 small image(s)/icons]_
+
+## Slide 27: Baclofen
 - [heading] CENTRALLY ACTING
 - [heading] Baclofen
 - **Mechanism: GABA-B receptor agonist in the spinal cord.**
 - Clinical use: spasticity, particularly from spinal cord injury or multiple sclerosis.
 - **Major concern: CNS depression — sedation, additive risk with other CNS depressants.**
 - Abrupt discontinuation (especially intrathecal) can cause a dangerous withdrawal syndrome.
-- **27**
 
 _[1 small image(s)/icons]_
 
-## Slide 22: Baclofen: GABA-B Agonism in the Spinal Cord
+## Slide 28: Baclofen: GABA-B Agonism in the Spinal Cord
 - **MECHANISM & DEPTH**
 - [heading] Baclofen: GABA-B Agonism in the Spinal Cord
 - [heading] Baclofen binds GABA-B receptors
@@ -305,20 +363,18 @@ _[1 small image(s)/icons]_
 - [heading] Less excitatory neurotransmitter release
 - ▼
 - [heading] Lower motor neuron firing: reduced spasticity
-- **28**
 
-## Slide 23: Tizanidine
+## Slide 29: Tizanidine
 - [heading] CENTRALLY ACTING
 - [heading] Tizanidine
 - **Mechanism: central α2-adrenergic agonist.**
 - Reduces excitatory input to motor neurons, lowering muscle tone.
 - **Adverse effects: sedation, hypotension, dry mouth, hepatotoxicity.**
 - Requires liver function monitoring with regular use.
-- **29**
 
 _[1 small image(s)/icons]_
 
-## Slide 24: Tizanidine: Central Alpha-2 Agonism
+## Slide 30: Tizanidine: Central Alpha-2 Agonism
 - **MECHANISM & DEPTH**
 - [heading] Tizanidine: Central Alpha-2 Agonism
 - Hypotension and bradycardia; sedation and dry mouth
@@ -332,20 +388,18 @@ _[1 small image(s)/icons]_
 - [heading] Lower motor neuron activity
 - ▼
 - [heading] Reduced muscle tone
-- **30**
 
-## Slide 25: Cyclobenzaprine
+## Slide 31: Cyclobenzaprine
 - [heading] CENTRALLY ACTING
 - [heading] Cyclobenzaprine
 - Structurally related to tricyclic antidepressants.
 - **Primary use: short-term treatment of acute, localized muscle spasm.**
 - Prominent sedation — commonly dosed at night.
 - **Anticholinergic effects: dry mouth, blurred vision, urinary retention — use caution in older adults.**
-- **31**
 
 _[1 small image(s)/icons]_
 
-## Slide 26: Cyclobenzaprine: Brainstem Action and Anticholinergic Effects
+## Slide 32: Cyclobenzaprine: Brainstem Action and Anticholinergic Effects
 - **MECHANISM & DEPTH**
 - [heading] Cyclobenzaprine: Brainstem Action and Anticholinergic Effects
 - Anticholinergic effects: dry mouth, urinary retention, confusion (Beers list in older adults)
@@ -359,9 +413,8 @@ _[1 small image(s)/icons]_
 - [heading] Reduced tonic somatic motor activity
 - ▼
 - [heading] Muscle relaxation
-- **32**
 
-## Slide 27: Other Centrally-Acting Relaxants & Botulinum Toxin
+## Slide 33: Other Centrally-Acting Relaxants & Botulinum Toxin
 - [heading] OTHER AGENTS
 - [heading] Other Centrally-Acting Relaxants & Botulinum Toxin
 - **Carisoprodol — metabolized to meprobamate; Schedule IV controlled substance with dependence/misuse potential.**
@@ -370,26 +423,24 @@ _[1 small image(s)/icons]_
 - Chlorzoxazone — centrally-acting; carries a rare but notable risk of hepatotoxicity.
 - **Botulinum toxin — blocks presynaptic acetylcholine release at the neuromuscular junction.**
 - Used for focal spasticity or dystonia; effect is local and temporary, requiring repeat injections.
-- **33**
 
 _[1 small image(s)/icons]_
 
 > Speaker notes: These agents round out the "centrally-acting" category beyond the three first-line drugs, and botulinum toxin introduces a third mechanism entirely — neuromuscular junction blockade — distinct from both the CNS-acting and dantrolene’s sarcoplasmic-reticulum mechanisms.
 
-## Slide 28: Dantrolene
+## Slide 34: Dantrolene
 - [heading] PERIPHERALLY ACTING
 - [heading] Dantrolene
 - **Mechanism: decreases calcium release from the skeletal muscle sarcoplasmic reticulum.**
 - Acts directly on the muscle fiber, not the CNS — distinct from every centrally-acting agent in this section.
 - **Clinical use #1: malignant hyperthermia (a true emergency indication).**
 - Clinical use #2: chronic spasticity, when central agents are not appropriate.
-- **34**
 
 _[1 small image(s)/icons]_
 
 > Speaker notes: Dantrolene’s role in malignant hyperthermia is a must-know, high-stakes fact — a perioperative emergency where this drug is literally life-saving.
 
-## Slide 29: Dantrolene: Blocking Calcium Release at the Muscle
+## Slide 35: Dantrolene: Blocking Calcium Release at the Muscle
 - **MECHANISM & DEPTH**
 - [heading] Dantrolene: Blocking Calcium Release at the Muscle
 - Malignant hyperthermia (triggered by volatile anesthetics and succinylcholine) is the key indication
@@ -405,12 +456,34 @@ _[1 small image(s)/icons]_
 - [heading] Dantrolene blocks RyR1 → less Ca²⁺ released
 - ▼
 - [heading] Relaxation
-- **35**
 
-## Slide 30: Drug Names Reveal the Class: Muscle Relaxants
+## Slide 36: Quick Check
+- [heading] QUICK CHECK · SKELETAL MUSCLE RELAXANTS
+- [heading] Quick Check
+- **Which skeletal muscle relaxant acts directly on skeletal muscle itself (not the CNS), making it the agent of choice in malignant hyperthermia?**
+- [heading] A
+- Baclofen
+- [heading] B
+- Dantrolene
+- [heading] C
+- Tizanidine
+- [heading] D
+- Cyclobenzaprine
+
+_[1 small image(s)/icons]_
+
+## Slide 37: Answer
+- [heading] ANSWER · SKELETAL MUSCLE RELAXANTS
+- [heading] Answer
+- [heading] B
+- **Dantrolene.**
+- **Why:** Dantrolene’s peripheral mechanism — decreasing calcium release from the skeletal muscle sarcoplasmic reticulum — is unique among these agents and is exactly why it is the emergency treatment for malignant hyperthermia.
+
+_[1 small image(s)/icons]_
+
+## Slide 38: Drug Names Reveal the Class: Muscle Relaxants
 - **NAMING CLUES**
 - [heading] Drug Names Reveal the Class: Muscle Relaxants
-- **38**
 
 | Name clue | Class | Examples |
 |---|---|---|
@@ -423,7 +496,7 @@ _[1 small image(s)/icons]_
 | -trolene (hydantoin derivative) | Blocks RyR1 in the muscle fiber | Dantrolene |
 | -toxin | Blocks presynaptic ACh release | Botulinum toxin |
 
-## Slide 31: 07
+## Slide 39: 07
 - **SECTION**
 - [heading] 07
 - [heading] Bone Pharmacology
@@ -431,7 +504,7 @@ _[1 small image(s)/icons]_
 
 _[1 small image(s)/icons]_
 
-## Slide 32: Bone Remodeling
+## Slide 40: Bone Remodeling
 - [heading] THE BASICS
 - [heading] Bone Remodeling
 - [heading] Osteoblasts
@@ -440,13 +513,12 @@ _[1 small image(s)/icons]_
 - Activity promoted by several osteoporosis therapies
 - Resorb (break down) existing bone
 - Activity suppressed by most osteoporosis therapies
-- **40**
 
 _[1 small image(s)/icons]_
 
 > Speaker notes: Nearly every osteoporosis drug on the following slides works by shifting this balance one way or the other — either slowing osteoclasts or stimulating osteoblasts.
 
-## Slide 33: RANKL/OPG Controls Osteoclast Activity
+## Slide 41: RANKL/OPG Controls Osteoclast Activity
 - **MECHANISM & DEPTH**
 - [heading] RANKL/OPG Controls Osteoclast Activity
 - OPG is a decoy receptor that blocks RANKL
@@ -460,9 +532,8 @@ _[1 small image(s)/icons]_
 - [heading] Osteoclast differentiation and activation
 - ▼
 - [heading] Bone resorption releases calcium
-- **41**
 
-## Slide 34: Calcium Homeostasis
+## Slide 42: Calcium Homeostasis
 - [heading] REGULATION
 - [heading] Calcium Homeostasis
 - [heading] Parathyroid Hormone (PTH)
@@ -473,21 +544,43 @@ _[1 small image(s)/icons]_
 - [heading] Calcitonin
 - The substrate being regulated — intake, bone storage, excretion
 - Lowers serum calcium; opposes PTH
-- **42**
 
 _[1 small image(s)/icons]_
 
-## Slide 35: Calcium Homeostasis: The PTH Feedback Loop
+## Slide 43: Calcium Homeostasis: The PTH Feedback Loop
 - [heading] ORIGINAL ILLUSTRATION · FIGURE 6
 - [heading] Calcium Homeostasis: The PTH Feedback Loop
 - **Figure 6. Original illustrative diagram (not from Katzung): falling serum calcium triggers PTH release, which raises calcium via bone resorption, renal reabsorption, and vitamin D-mediated intestinal absorption; calcitonin opposes this loop.**
-- **43**
 
-_[figure(s) saved: S35_1.jpg]_
+_[figure(s) saved: S43_1.jpg]_
 
 > Speaker notes: Trace the three PTH arrows (bone, kidney, intestine) with your finger as you narrate — this negative feedback loop is the physiologic backdrop for every osteoporosis drug that follows.
 
-## Slide 36: Osteoporosis Risk Factors
+## Slide 44: Quick Check
+- [heading] QUICK CHECK · FIGURE 6
+- [heading] Quick Check
+- **In Figure 6, PTH release raises serum calcium through three parallel actions. Which organ system is NOT one of the three direct targets of PTH shown in the diagram?**
+- [heading] A
+- Bone
+- [heading] B
+- Kidney
+- [heading] C
+- Intestine (directly)
+- [heading] D
+- Lung
+
+_[1 small image(s)/icons]_
+
+## Slide 45: Answer
+- [heading] ANSWER · FIGURE 6
+- [heading] Answer
+- [heading] D
+- **Lung.**
+- **Why:** PTH acts directly on bone (↑ osteoclast resorption) and kidney (↑ calcium reabsorption, activates vitamin D); its effect on the intestine is indirect, mediated through activated vitamin D. The lung is not part of this feedback loop at all.
+
+_[1 small image(s)/icons]_
+
+## Slide 46: Osteoporosis Risk Factors
 - [heading] RISK ASSESSMENT
 - [heading] Osteoporosis Risk Factors
 - Aging
@@ -495,13 +588,12 @@ _[figure(s) saved: S35_1.jpg]_
 - **Chronic glucocorticoid use**
 - Low calcium or vitamin D intake
 - Low physical activity
-- **46**
 
 _[1 small image(s)/icons]_
 
 > Speaker notes: Glucocorticoid-induced osteoporosis is especially high-yield since it directly connects to the corticosteroid use already discussed for OA/RA in Session 1.
 
-## Slide 37: Bisphosphonates
+## Slide 47: Bisphosphonates
 - [heading] FIRST-LINE THERAPY
 - [heading] Bisphosphonates
 - **Mechanism: inhibit osteoclast-mediated bone resorption.**
@@ -509,11 +601,10 @@ _[1 small image(s)/icons]_
 - Ibandronate — oral, monthly dosing
 - Zoledronic acid — intravenous, as infrequently as once yearly
 - First-line for most patients with osteoporosis.
-- **47**
 
 _[1 small image(s)/icons]_
 
-## Slide 38: Bisphosphonates: Osteoclast Apoptosis
+## Slide 48: Bisphosphonates: Osteoclast Apoptosis
 - **MECHANISM & DEPTH**
 - [heading] Bisphosphonates: Osteoclast Apoptosis
 - Long skeletal half-life: effect persists after stopping
@@ -529,19 +620,41 @@ _[1 small image(s)/icons]_
 - [heading] Loss of prenylation of small GTPases
 - ▼
 - [heading] Osteoclast apoptosis, so less resorption
-- **48**
 
-## Slide 39: Bisphosphonate Dosing Frequency
+## Slide 49: Bisphosphonate Dosing Frequency
 - [heading] ORIGINAL ILLUSTRATION · FIGURE 7
 - [heading] Bisphosphonate Dosing Frequency
 - **Figure 7. Original illustrative comparison (illustrative dosing-frequency values, not from Katzung): oral bisphosphonates range from weekly to monthly dosing, while IV zoledronic acid is given as infrequently as once yearly.**
-- **49**
 
-_[figure(s) saved: S39_1.jpg]_
+_[figure(s) saved: S49_1.jpg]_
 
 > Speaker notes: Use this to set up the adherence discussion on the next slide — dosing frequency is a major real-world driver of which bisphosphonate a patient actually takes consistently.
 
-## Slide 40: Bisphosphonate Administration & Adverse Effects
+## Slide 50: Quick Check
+- [heading] QUICK CHECK · FIGURE 7
+- [heading] Quick Check
+- **Based on Figure 7, which bisphosphonate requires the fewest doses per year, and by what route is it given?**
+- [heading] A
+- Alendronate/risedronate, given orally
+- [heading] B
+- Ibandronate, given orally
+- All bisphosphonates require the same number of annual doses
+- [heading] C
+- Zoledronic acid, given intravenously
+- [heading] D
+
+_[1 small image(s)/icons]_
+
+## Slide 51: Answer
+- [heading] ANSWER · FIGURE 7
+- [heading] Answer
+- [heading] C
+- **Zoledronic acid, given intravenously.**
+- **Why:** Figure 7 shows zoledronic acid dosed as infrequently as once yearly by IV infusion, versus weekly oral dosing for alendronate/risedronate and monthly oral dosing for ibandronate — an important consideration for patients with adherence challenges.
+
+_[1 small image(s)/icons]_
+
+## Slide 52: Bisphosphonate Administration & Adverse Effects
 - [heading] SAFE USE
 - [heading] Bisphosphonate Administration & Adverse Effects
 - [heading] Patient Counseling (Oral)
@@ -553,13 +666,12 @@ _[figure(s) saved: S39_1.jpg]_
 - Hypocalcemia
 - Osteonecrosis of the jaw (rare)
 - Atypical femoral fractures (rare, with long-term use)
-- **52**
 
 _[1 small image(s)/icons]_
 
 > Speaker notes: The "remain upright" counseling point is extremely high-yield for both exams and real-world safety — esophageal injury is largely preventable with correct administration.
 
-## Slide 41: Why Oral Bisphosphonates Need Strict Administration Rules
+## Slide 53: Why Oral Bisphosphonates Need Strict Administration Rules
 - **MECHANISM & DEPTH**
 - [heading] Why Oral Bisphosphonates Need Strict Administration Rules
 - Avoid in esophageal stricture, achalasia, or inability to sit upright
@@ -572,9 +684,8 @@ _[1 small image(s)/icons]_
 - [heading] Take fasting with plain water; stay upright 30 minutes
 - ▼
 - [heading] Lowers esophageal irritation risk
-- **53**
 
-## Slide 42: Other Osteoporosis Therapies
+## Slide 54: Other Osteoporosis Therapies
 - [heading] BEYOND BISPHOSPHONATES
 - [heading] Other Osteoporosis Therapies
 - [heading] Denosumab
@@ -586,13 +697,12 @@ _[1 small image(s)/icons]_
 - Monoclonal antibody that both builds bone and limits resorption
 - Selective estrogen receptor modulators — estrogen-like effect on bone
 - Example: raloxifene — also reduces breast cancer risk
-- **54**
 
 _[1 small image(s)/icons]_
 
 > Speaker notes: Teriparatide/abaloparatide/romosozumab are the "anabolic" exception to the rule that most osteoporosis drugs just slow resorption — they actively build new bone. The next slide shows all of these (plus bisphosphonates) together on one balance diagram.
 
-## Slide 43: Anabolic vs Antiresorptive Mechanisms
+## Slide 55: Anabolic vs Antiresorptive Mechanisms
 - **MECHANISM & DEPTH**
 - [heading] Anabolic vs Antiresorptive Mechanisms
 - Teriparatide is limited to 2 years lifetime, then follow with an antiresorptive
@@ -609,19 +719,41 @@ _[1 small image(s)/icons]_
 - ▼
 - [heading] Increases formation, decreases resorption
 - [heading] BMD up, fracture risk down
-- **55**
 
-## Slide 44: How Osteoporosis Drugs Shift the Remodeling Balance
+## Slide 56: How Osteoporosis Drugs Shift the Remodeling Balance
 - [heading] ORIGINAL ILLUSTRATION · FIGURE 8
 - [heading] How Osteoporosis Drugs Shift the Remodeling Balance
 - **Figure 8. Original illustrative diagram (not from Katzung): bisphosphonates, denosumab, raloxifene (SERM), and calcitonin inhibit bone resorption; teriparatide, abaloparatide, and romosozumab stimulate bone formation.**
-- **56**
 
-_[figure(s) saved: S44_1.jpg]_
+_[figure(s) saved: S56_1.jpg]_
 
 > Speaker notes: This is the capstone bone-pharmacology figure — every drug from the last three slides lands on one side of this seesaw or the other. Ask students to sort each named drug into "inhibits resorption" vs. "stimulates formation" before revealing the diagram’s labels.
 
-## Slide 45: Choosing an Osteoporosis Therapy
+## Slide 57: Quick Check
+- [heading] QUICK CHECK · FIGURE 8
+- [heading] Quick Check
+- **In Figure 8, teriparatide and romosozumab sit on the "bone formation" side of the balance, while alendronate and raloxifene sit on the "bone resorption" side. What does this grouping represent?**
+- [heading] A
+- Teriparatide and romosozumab stimulate osteoblast activity, while alendronate and raloxifene inhibit osteoclast activity
+- [heading] B
+- All four drugs work through the identical mechanism
+- Teriparatide and romosozumab inhibit osteoclasts, while alendronate and raloxifene stimulate osteoblasts
+- [heading] C
+- [heading] D
+- This grouping reflects route of administration, not mechanism
+
+_[1 small image(s)/icons]_
+
+## Slide 58: Answer
+- [heading] ANSWER · FIGURE 8
+- [heading] Answer
+- [heading] A
+- **Teriparatide and romosozumab stimulate osteoblast activity, while alendronate and raloxifene inhibit osteoclast activity.**
+- **Why:** The "anabolic" agents (teriparatide, abaloparatide, romosozumab) sit on the bone-formation side because they stimulate osteoblasts, while bisphosphonates (alendronate), denosumab, SERMs (raloxifene), and calcitonin sit on the bone-resorption side because they inhibit osteoclasts — two different strategies for shifting the same remodeling balance.
+
+_[1 small image(s)/icons]_
+
+## Slide 59: Choosing an Osteoporosis Therapy
 - [heading] INDIVIDUALIZING THERAPY
 - [heading] Choosing an Osteoporosis Therapy
 - Fracture risk — higher-risk patients may need an anabolic agent first
@@ -630,16 +762,38 @@ _[figure(s) saved: S44_1.jpg]_
 - Glucocorticoid exposure
 - Adherence — weekly oral vs. yearly IV vs. injectable options
 - Route of administration preference
-- **59**
 
 _[1 small image(s)/icons]_
 
 > Speaker notes: This checklist is a direct echo of the clinical decision-making framework from Lecture 1 — point that out explicitly.
 
-## Slide 46: Drug Names Reveal the Class: Bone
+## Slide 60: Quick Check
+- [heading] QUICK CHECK · BONE PHARMACOLOGY
+- [heading] Quick Check
+- **A patient is counseled to take their oral bisphosphonate with a full glass of water and remain upright for a specified period. What complication is this counseling primarily meant to prevent?**
+- [heading] A
+- Hypocalcemia
+- [heading] B
+- Atypical femoral fracture
+- [heading] C
+- Esophageal irritation or injury
+- [heading] D
+- Osteonecrosis of the jaw
+
+_[1 small image(s)/icons]_
+
+## Slide 61: Answer
+- [heading] ANSWER · BONE PHARMACOLOGY
+- [heading] Answer
+- [heading] C
+- **Esophageal irritation or injury.**
+- **Why:** Taking the tablet with a full glass of water and staying upright reduces the time the pill is in contact with the esophageal mucosa, lowering the risk of esophageal irritation or injury.
+
+_[1 small image(s)/icons]_
+
+## Slide 62: Drug Names Reveal the Class: Bone
 - **NAMING CLUES**
 - [heading] Drug Names Reveal the Class: Bone
-- **62**
 
 | Name clue | Class | Examples |
 |---|---|---|
@@ -649,7 +803,7 @@ _[1 small image(s)/icons]_
 | -tide (peptide) | PTH analogs (anabolic) | Teriparatide, abaloparatide |
 | No shared stem | Calcitonin (hormone) | Calcitonin |
 
-## Slide 47: 08
+## Slide 63: 08
 - **SECTION**
 - [heading] 08
 - [heading] Putting It All Together
@@ -657,7 +811,7 @@ _[1 small image(s)/icons]_
 
 _[1 small image(s)/icons]_
 
-## Slide 48: Which Drug Would You Choose?
+## Slide 64: Which Drug Would You Choose?
 - [heading] APPLY IT
 - [heading] Which Drug Would You Choose?
 - [heading] Patient A
@@ -668,13 +822,36 @@ _[1 small image(s)/icons]_
 - [heading] Patient D
 - Osteoarthritis + chronic kidney disease
 - Postmenopausal osteoporosis, high fracture risk
-- **64**
 
 _[1 small image(s)/icons]_
 
 > Speaker notes: Have students work in pairs: for each patient, name a first-line drug class AND the single biggest safety concern to check before prescribing it.
 
-## Slide 49: Key Takeaways
+## Slide 65: Quick Check
+- [heading] QUICK CHECK · PUTTING IT ALL TOGETHER
+- [heading] Quick Check
+- **A patient with osteoporosis has significant difficulty swallowing pills. Which administration route among osteoporosis therapies would best fit this patient?**
+- [heading] A
+- Weekly oral alendronate
+- [heading] B
+- Daily oral risedronate
+- [heading] C
+- There is no alternative to oral bisphosphonates
+- [heading] D
+- Yearly IV zoledronic acid or a subcutaneous injectable agent
+
+_[1 small image(s)/icons]_
+
+## Slide 66: Answer
+- [heading] ANSWER · PUTTING IT ALL TOGETHER
+- [heading] Answer
+- [heading] D
+- **Yearly IV zoledronic acid or a subcutaneous injectable agent.**
+- **Why:** Route of administration and adherence are explicit factors in choosing osteoporosis therapy — IV zoledronic acid or an injectable agent (e.g., denosumab) avoids the swallowing difficulty that limits oral options.
+
+_[1 small image(s)/icons]_
+
+## Slide 67: Key Takeaways
 - [heading] BIG PICTURE
 - [heading] Key Takeaways
 - [heading] 1
@@ -690,7 +867,7 @@ _[1 small image(s)/icons]_
 
 > Speaker notes: Close by connecting back to Lecture 1: every mechanism in this lecture (COX inhibition, CYP interactions, renal dosing, pharmacogenomics) was really just Lecture 1’s toolkit applied to one organ system.
 
-## Slide 50: 09
+## Slide 68: 09
 - **SECTION**
 - [heading] 09
 - [heading] Lecture Recall Quiz
@@ -698,7 +875,7 @@ _[1 small image(s)/icons]_
 
 _[1 small image(s)/icons]_
 
-## Slide 51: Lecture Recall Quiz (1 of 2)
+## Slide 69: Lecture Recall Quiz (1 of 2)
 - [heading] LECTURE RECALL QUIZ
 - [heading] Lecture Recall Quiz (1 of 2)
 - **1.  Why is acetaminophen not a reliable first-line choice for an inflammatory joint flare, despite being a good analgesic/antipyretic?**
@@ -716,11 +893,10 @@ _[1 small image(s)/icons]_
 - B.  Colchicine — xanthine oxidase inhibition
 - C.  Baclofen — calcium channel blockade in skeletal muscle
 - D.  Methotrexate — dihydrofolate reductase inhibition
-- **69**
 
 _[1 small image(s)/icons]_
 
-## Slide 52: Lecture Recall Quiz (2 of 2)
+## Slide 70: Lecture Recall Quiz (2 of 2)
 - [heading] LECTURE RECALL QUIZ
 - [heading] Lecture Recall Quiz (2 of 2)
 - **4.  A patient on a biologic DMARD develops a fever. What is the most important immediate concern?**
@@ -738,11 +914,10 @@ _[1 small image(s)/icons]_
 - B.  Increased osteoblast activity
 - C.  Excess vitamin D
 - D.  Increased calcitonin secretion
-- **70**
 
 _[1 small image(s)/icons]_
 
-## Slide 53: Lecture Recall Quiz — Answer Key
+## Slide 71: Lecture Recall Quiz — Answer Key
 - [heading] ANSWER KEY
 - [heading] Lecture Recall Quiz — Answer Key
 - **1.  B —** **Acetaminophen has minimal peripheral anti-inflammatory effect, unlike NSAIDs — it treats pain and fever, not inflammation itself.**
@@ -754,12 +929,11 @@ _[1 small image(s)/icons]_
 
 > Speaker notes: Encourage students to revisit this quiz on their own before the exam — it is designed as a standalone recall resource, separate from the in-lecture quick checks.
 
-## Slide 54: Image Attribution
+## Slide 72: Image Attribution
 - [heading] APPENDIX
 - [heading] Image Attribution
 - **●  Original figures in this deck:** Figures 4–8 (Gout: From Purine Metabolism to Joint Inflammation; Skeletal Muscle Relaxants: Central vs. Peripheral Site of Action; Calcium Homeostasis: The PTH Feedback Loop; Bisphosphonate Dosing Frequency; How Osteoporosis Drugs Shift the Remodeling Balance) were generated by the course director using the AI tool Claude to illustrate standard, non-copyrighted pharmacologic concepts. They are original diagrams, not reproduced from Katzung’s Basic and Clinical Pharmacology or any other copyrighted source.
 - **●  Reference:** Anthropic. (2026). Claude (Sonnet 5) [Large language model]. https://claude.ai
-- **72**
 
 _[1 small image(s)/icons]_
 

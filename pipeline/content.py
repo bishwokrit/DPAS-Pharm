@@ -92,7 +92,16 @@ def answer_sequence(n, seed):
         rng.shuffle(bag)
         if all(bag[i] != bag[i + 1] for i in range(n - 1)):
             return bag
-    return bag
+    # random shuffles rarely succeed for long lectures: build it greedily (most-remaining letter that differs from the last)
+    left = {l: bag.count(l) for l in LETTERS}
+    out = []
+    for _ in range(n):
+        pool = [l for l in LETTERS if left[l] and (not out or l != out[-1])]
+        top = max(left[l] for l in pool)
+        pick = rng.choice([l for l in pool if left[l] == top])
+        out.append(pick)
+        left[pick] -= 1
+    return out
 
 
 def resolve(c):

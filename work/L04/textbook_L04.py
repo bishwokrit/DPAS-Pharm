@@ -115,25 +115,25 @@ ADD = {
 CONFLICTS = {
     GOUT: [
         {"topic": "Febuxostat cardiovascular risk",
-         "slides": {"text": "Febuxostat carries a boxed warning for cardiovascular death.", "src": "S11"},
+         "slides": {"text": "Febuxostat carries a boxed warning for cardiovascular death.", "src": "S13"},
          "textbook": {"text": "Initial concerns about increased MACE with febuxostat have not been borne out; the FDA approved only the 40- and 80-mg doses.", "src": "p. 697"}},
         {"topic": "Colchicine timing",
-         "slides": {"text": "Best started within 24 hours of flare onset.", "src": "S9"},
+         "slides": {"text": "Best started within 24 hours of flare onset.", "src": "S11"},
          "textbook": {"text": "Guidelines suggest giving colchicine within 36 hours of an attack; efficacy falls after that.", "src": "p. 696"}},
     ],
     BONE: [
         {"topic": "Oral bisphosphonate absorption",
-         "slides": {"text": "Poor oral absorption (under 1%).", "src": "S41"},
+         "slides": {"text": "Poor oral absorption (under 1%).", "src": "S53"},
          "textbook": {"text": "Less than 10% of an oral dose is absorbed.", "src": "p. 819"}},
     ],
 }
 
 DISCREPANCIES = [
-    ("**Febuxostat CV risk:** the slides teach a boxed warning for cardiovascular death; the textbook says early MACE concerns were not borne out. Answer course exams with the slide version (boxed warning).", "S11; p. 697"),
-    ("**Colchicine window:** slides say best within 24 hours of onset; the textbook cites a 36-hour guideline window. Both agree: start early.", "S9; p. 696"),
-    ("**ULT prophylaxis:** slides give colchicine or an NSAID for 3–6 months; the textbook says 6 months or longer. Answer with the slides.", "S11; p. 695"),
-    ("**Bisphosphonate absorption and holidays:** slides say under 1% absorbed and a holiday after 3–5 years of oral therapy; the textbook says under 10% absorbed and reassessment after 5 years (3 for zoledronate).", "S38; S41; p. 819; p. 820"),
-    ("**Starting vs. stopping in a flare:** don’t *start* urate-lowering therapy during a flare (slides), but don’t *stop* allopurinol a patient already takes (textbook).", "S7; p. 696"),
+    ("**Febuxostat CV risk:** the slides teach a boxed warning for cardiovascular death; the textbook says early MACE concerns were not borne out. Answer course exams with the slide version (boxed warning).", "S13; p. 697"),
+    ("**Colchicine window:** slides say best within 24 hours of onset; the textbook cites a 36-hour guideline window. Both agree: start early.", "S11; p. 696"),
+    ("**ULT prophylaxis:** slides give colchicine or an NSAID for 3–6 months; the textbook says 6 months or longer. Answer with the slides.", "S13; p. 695"),
+    ("**Bisphosphonate absorption and holidays:** slides say under 1% absorbed and a holiday after 3–5 years of oral therapy; the textbook says under 10% absorbed and reassessment after 5 years (3 for zoledronate).", "S48; S53; p. 819; p. 820"),
+    ("**Starting vs. stopping in a flare:** don’t *start* urate-lowering therapy during a flare (slides), but don’t *stop* allopurinol a patient already takes (textbook).", "S9; p. 696"),
 ]
 
 CRAM = [

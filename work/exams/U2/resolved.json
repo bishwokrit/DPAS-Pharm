@@ -29,7 +29,7 @@
   "why_correct": "Higher-risk patients may need an anabolic agent first (then an antiresorptive); fracture history, renal function, and route also guide choice.",
   "takeaway": "Very high fracture risk → anabolic first, antiresorptive after.",
   "discriminator": "Anabolic: teriparatide, abaloparatide, romosozumab. Antiresorptive: bisphosphonates, denosumab, SERMs, calcitonin.",
-  "src": "L04 S45; S42-43",
+  "src": "L04 S59; S54-55",
   "id": "U2-047",
   "answer": "A",
   "options": {
@@ -160,7 +160,7 @@
   "why_correct": "Allopurinol blocks xanthine oxidase, which clears azathioprine and mercaptopurine — reduce their dose (textbook: by 75%).",
   "takeaway": "Allopurinol + azathioprine/mercaptopurine → cut the thiopurine dose.",
   "discriminator": "Colchicine’s interaction is CYP3A4/P-gp; allopurinol’s is the thiopurines.",
-  "src": "L04 S11; p. 696",
+  "src": "L04 S13; p. 696",
   "id": "U2-035",
   "answer": "E",
   "options": {
@@ -225,7 +225,7 @@
   "why_correct": "Cyclobenzaprine carries serotonin syndrome risk with SSRIs, SNRIs, and tramadol; MAOIs are contraindicated.",
   "takeaway": "Cyclobenzaprine + SSRI/SNRI/tramadol → serotonin syndrome.",
   "discriminator": "Tizanidine’s interaction is CYP1A2; cyclobenzaprine’s is serotonergic.",
-  "src": "L04 S26",
+  "src": "L04 S32",
   "id": "U2-042",
   "answer": "B",
   "options": {
@@ -290,7 +290,7 @@
   "why_correct": "Probenecid raises urinary uric acid, so avoid it with uric acid kidney stones or significant renal impairment.",
   "takeaway": "Uricosurics load the urine with urate: no stones, hydrate well.",
   "discriminator": "Probenecid: kidney stones and renal impairment are the stop signs.",
-  "src": "L04 S12-13",
+  "src": "L04 S14-15",
   "id": "U2-033",
   "answer": "A",
   "options": {
@@ -355,7 +355,7 @@
   "why_correct": "Glucocorticoids increase osteoclast-mediated resorption and suppress osteoblast-driven formation, tipping the balance to bone loss.",
   "takeaway": "Chronic steroids: build less, break more.",
   "discriminator": "Steroid-induced osteoporosis is the Session 1 corticosteroid link.",
-  "src": "L04 S36; S53",
+  "src": "L04 S46; S71",
   "id": "U2-050",
   "answer": "D",
   "options": {
@@ -558,7 +558,7 @@
   "why_correct": "Baclofen activates GABA-B receptors, causing presynaptic inhibition and less excitatory transmitter release.",
   "takeaway": "Baclofen = GABA-B (B for Baclofen).",
   "discriminator": "GABA-B = baclofen; GABA-A = benzodiazepines.",
-  "src": "L04 S21-22; SG U2-M",
+  "src": "L04 S27-28; SG U2-M",
   "id": "U2-040",
   "answer": "A",
   "options": {
@@ -688,7 +688,7 @@
   "why_correct": "Teriparatide is limited to 2 years lifetime, then followed by an antiresorptive to keep the bone gained.",
   "takeaway": "Build (teriparatide 2 years), then keep (antiresorptive).",
   "discriminator": "Teriparatide = time limit; denosumab = no abrupt stop; romosozumab = CV boxed warning.",
-  "src": "L04 S43",
+  "src": "L04 S55",
   "id": "U2-048",
   "answer": "E",
   "options": {
@@ -821,7 +821,7 @@
   "why_correct": "Take it first thing in the morning, fasting, with a full glass of plain water, and stay upright for 30 minutes to limit esophageal irritation.",
   "takeaway": "Oral bisphosphonates: empty stomach, full glass of water, upright.",
   "discriminator": "Absorption is under 1% — anything else in the stomach cuts it further.",
-  "src": "L04 S40-41; SG U2-R13",
+  "src": "L04 S52-53; SG U2-R13",
   "id": "U2-044",
   "answer": "C",
   "options": {
@@ -886,7 +886,7 @@
   "why_correct": "Tizanidine causes sedation, hypotension/bradycardia, dry mouth, and hepatotoxicity — monitor LFTs.",
   "takeaway": "Tizanidine: low BP, sleepy, dry, check LFTs.",
   "discriminator": "Tizanidine = α2 effects + liver; cyclobenzaprine = anticholinergic.",
-  "src": "L04 S23-24",
+  "src": "L04 S29-30",
   "id": "U2-041",
   "answer": "D",
   "options": {
@@ -953,7 +953,7 @@
   "why_correct": "With these risk factors an oral NSAID is relatively contraindicated; a short corticosteroid course (oral or intra-articular) is often preferred.",
   "takeaway": "Stacked NSAID red flags in a flare → steroid; adjust colchicine; defer ULT.",
   "discriminator": "OA pain in this patient: acetaminophen/topical NSAID; gout flare: short steroid course.",
-  "src": "SG U2-S; L04 S7; S9",
+  "src": "SG U2-S; L04 S9; S11",
   "id": "U2-036",
   "answer": "A",
   "options": {
@@ -1423,7 +1423,7 @@
   "why_correct": "Denosumab is a monoclonal antibody against RANKL that blocks osteoclast formation (it mimics OPG).",
   "takeaway": "Denosumab = RANKL; romosozumab = sclerostin.",
   "discriminator": "Both are -sumab bone antibodies; know the target.",
-  "src": "L04 S33; S42-43; SG U2-M",
+  "src": "L04 S41; S54-55; SG U2-M",
   "id": "U2-046",
   "answer": "D",
   "options": {
@@ -1558,7 +1558,7 @@
   "why_correct": "Malignant hyperthermia (volatile anesthetics, succinylcholine) is treated with IV dantrolene, which blocks RyR1 calcium release.",
   "takeaway": "MH → IV dantrolene, now.",
   "discriminator": "Dantrolene also treats neuroleptic malignant syndrome; MH triggers are volatile anesthetics and succinylcholine.",
-  "src": "L04 S28-29; SG U2-R11",
+  "src": "L04 S34-35; SG U2-R11",
   "id": "U2-039",
   "answer": "C",
   "options": {
@@ -1951,7 +1951,7 @@
   "why_correct": "Raloxifene raises VTE risk (and causes hot flashes), though it may reduce breast cancer risk.",
   "takeaway": "Raloxifene: clots up, breast cancer risk down.",
   "discriminator": "SERM = VTE; romosozumab = MI/stroke.",
-  "src": "L04 S43",
+  "src": "L04 S55",
   "id": "U2-049",
   "answer": "E",
   "options": {
@@ -2086,7 +2086,7 @@
   "why_correct": "Probenecid is a uricosuric: it blocks URAT1-mediated tubular reabsorption, so excretion rises.",
   "takeaway": "Make less (xanthine oxidase inhibitors), pee more (probenecid), break it down (uricase).",
   "discriminator": "Uricosuric = ↑ excretion; xanthine oxidase inhibitor = ↓ production.",
-  "src": "L04 S12-13; SG U2-R9",
+  "src": "L04 S14-15; SG U2-R9",
   "id": "U2-031",
   "answer": "C",
   "options": {
@@ -2284,7 +2284,7 @@
   "why_correct": "Dantrolene decreases calcium release from the sarcoplasmic reticulum (RyR1) inside the muscle fiber; the others act in the CNS.",
   "takeaway": "Dantrolene = the only muscle-side relaxant.",
   "discriminator": "Central: baclofen, tizanidine, cyclobenzaprine. Peripheral: dantrolene (muscle), botulinum (junction).",
-  "src": "L04 S19-20; S28; SG U2-R11",
+  "src": "L04 S23-24; S34; SG U2-R11",
   "id": "U2-038",
   "answer": "E",
   "options": {
@@ -2483,7 +2483,7 @@
   "why_correct": "Once the flare resolves, start a xanthine oxidase inhibitor low, titrate to a urate target, and give colchicine or an NSAID prophylaxis for 3–6 months.",
   "takeaway": "ULT starts after the flare, low and slow, with prophylaxis.",
   "discriminator": "During a flare: treat the flare. After it: start ULT.",
-  "src": "L04 S7; S11; SG U2-R10",
+  "src": "L04 S9; S13; SG U2-R10",
   "id": "U2-032",
   "answer": "C",
   "options": {
@@ -2681,7 +2681,7 @@
   "why_correct": "PTH raises calcium via bone resorption, renal reabsorption, and (via vitamin D activation) intestinal absorption.",
   "takeaway": "PTH pulls from three: bone, kidney, gut.",
   "discriminator": "PTH raises calcium; calcitonin lowers it.",
-  "src": "L04 S35; SG U2-R12",
+  "src": "L04 S43; SG U2-R12",
   "id": "U2-045",
   "answer": "B",
   "options": {
@@ -2949,7 +2949,7 @@
   "why_correct": "Febuxostat carries a boxed warning for cardiovascular death (the textbook notes later data were reassuring; answer with the slides).",
   "takeaway": "Allopurinol = HLA-B*58:01; febuxostat = CV boxed warning.",
   "discriminator": "Both are xanthine oxidase inhibitors — the choice turns on safety profile.",
-  "src": "L04 S10-11; p. 697",
+  "src": "L04 S12-13; p. 697",
   "id": "U2-034",
   "answer": "B",
   "options": {
@@ -3216,7 +3216,7 @@
   "why_correct": "Spasticity is velocity-dependent increased tone from upper motor neuron injury; rigidity is constant tone, independent of velocity.",
   "takeaway": "Spasticity speeds up with speed; rigidity doesn’t care.",
   "discriminator": "Spasm = sudden contraction after injury; spasticity = UMN; rigidity = constant.",
-  "src": "L04 S17",
+  "src": "L04 S21",
   "id": "U2-043",
   "answer": "B",
   "options": {
