@@ -1,0 +1,627 @@
+{
+ "lecture": "L06",
+ "passed": true,
+ "units_checked": 2661,
+ "missing": [],
+ "uncited": [
+  {
+   "ref": "S4",
+   "text": "This four-way split is the organizing scaffold for the whole laxative section — students should be able to sort any laxative name into one of these four buckets.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S6",
+   "text": "Use this to connect mechanism to clinical choice: a patient who needs relief tonight is not a bulk-forming-laxative candidate, no matter how favorable its long-term safety profile is.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S11",
+   "text": "This escalation ladder is the organizing framework for every drug class in this section — ask students where each drug they learn next \"lives\" on this ladder.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S14",
+   "text": "\"slow but sustainable\" contrast here directly parallels the acute-vs-chronic gout framework from Lecture 2 — point that out explicitly if students took that unit.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S16",
+   "text": "Example: vedolizumab",
+   "kind": "slide"
+  },
+  {
+   "ref": "S16",
+   "text": "Example: ustekinumab",
+   "kind": "slide"
+  },
+  {
+   "ref": "S16",
+   "text": "Example: tofacitinib",
+   "kind": "slide"
+  },
+  {
+   "ref": "S16",
+   "text": "The next slide shows this full set as a mechanism diagram.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S18",
+   "text": "Monitor labs.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S22",
+   "text": "This distinction is the organizing concept for the whole vitamin section — \"can it accumulate to toxic levels\" is the single most useful question to ask about any vitamin.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S23",
+   "text": "Vitamin D and A toxicity (from excessive supplementation) are the clearest clinical examples to cite here — both are seen in real practice from over-the-counter supplement overuse.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S26",
+   "text": "This figure ties the whole unit together: a dietary nutrient and an herbal supplement both working against the same drug, through two completely different mechanisms (pharmacodynamic antagonism vs.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S29",
+   "text": "Parenteral nutrition (IV): monitor electrolytes and line infection",
+   "kind": "slide"
+  },
+  {
+   "ref": "S39",
+   "text": "BID / TID / QID = two / three / four times daily",
+   "kind": "slide"
+  },
+  {
+   "ref": "S39",
+   "text": "G6PD = glucose-6-phosphate dehydrogenase",
+   "kind": "slide"
+  },
+  {
+   "ref": "S39",
+   "text": "CYP / P-gp = cytochrome P450 / P-glycoprotein",
+   "kind": "slide"
+  },
+  {
+   "ref": "S39",
+   "text": "SSRI = selective serotonin reuptake inhibitor",
+   "kind": "slide"
+  },
+  {
+   "ref": "SG:U3-S",
+   "text": "next steps are discontinuing the supplement (or adjusting the warfarin dose) with close INR monitoring.",
+   "kind": "study guide"
+  },
+  {
+   "ref": "SG:U3-S",
+   "text": "The preventive practice: ask every patient about supplement/OTC use at every visit, as a required part of medication reconciliation.",
+   "kind": "study guide"
+  }
+ ],
+ "emphasis_not_bold": [],
+ "skipped": [
+  {
+   "ref": "S1",
+   "text": "Diane S. Allen-Gipson, Ph.D., M.S., Course Director",
+   "kind": "slide",
+   "reason": "faculty identifier (site policy: no school or instructor identifiers)"
+  },
+  {
+   "ref": "S1",
+   "text": "\"Session 1 followed acid and vomiting.",
+   "kind": "speaker note",
+   "reason": "presenter script; the overview is in About this lecture"
+  },
+  {
+   "ref": "S2",
+   "text": "Briefly recap Session 1 (Nov 3) before diving in: acid-peptic disease and antiemetics.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; the recap is in About this lecture"
+  },
+  {
+   "ref": "S2",
+   "text": "Objectives: Read them aloud.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S2",
+   "text": "Recap Session 1 in one sentence: acid-peptic disease and antiemetics.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S3",
+   "text": "Section transition.",
+   "kind": "speaker note",
+   "reason": "section divider"
+  },
+  {
+   "ref": "S6",
+   "text": "The values are illustrative onset times, not trial data.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; the caption says the values are illustrative"
+  },
+  {
+   "ref": "S9",
+   "text": "Great opportunity to connect back to the antibiotic-associated-diarrhea concept and reinforce that \"stopping diarrhea\" is not always the correct first move.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S9",
+   "text": "Case: Diarrhea and fever after clindamycin.",
+   "kind": "speaker note",
+   "reason": "presenter script; the case is rebuilt as a practice question"
+  },
+  {
+   "ref": "S10",
+   "text": "Section transition.",
+   "kind": "speaker note",
+   "reason": "section divider"
+  },
+  {
+   "ref": "S11",
+   "text": "\"Step therapy.",
+   "kind": "speaker note",
+   "reason": "presenter script; taught from S11"
+  },
+  {
+   "ref": "S13",
+   "text": "\"Sulfasalazine reaches the colon.",
+   "kind": "speaker note",
+   "reason": "presenter script; taught from S13"
+  },
+  {
+   "ref": "S14",
+   "text": "\"Fast but not for the long term versus slow but sustainable.\" Budesonide has high first-pass metabolism, so less systemic exposure than prednisone.",
+   "kind": "speaker note",
+   "reason": "presenter script; taught from S14"
+  },
+  {
+   "ref": "S15",
+   "text": "\"Azathioprine becomes 6-mercaptopurine, then thioguanine nucleotides, which block purine synthesis in lymphocytes.\"",
+   "kind": "speaker note",
+   "reason": "presenter script; taught from S15"
+  },
+  {
+   "ref": "S16",
+   "text": "Targets: TNF-alpha (infliximab, adalimumab), integrin (vedolizumab), IL-12/23 (ustekinumab), JAK (tofacitinib).",
+   "kind": "speaker note",
+   "reason": "duplicate of the S16 slide content"
+  },
+  {
+   "ref": "S17",
+   "text": "Have students sort each drug into its target before revealing labels — the same exercise used for the DMARD figure in Lecture 2, now applied to a new organ system.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; the sorting is the Figure 7 interactive"
+  },
+  {
+   "ref": "S17",
+   "text": "Sort each drug into its target before revealing labels: TNF-alpha (infliximab, adalimumab), integrin (vedolizumab), IL-12/23 (ustekinumab), JAK (tofacitinib).",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S18",
+   "text": "This is almost a direct repeat of the DMARD-safety slide from Lecture 2 — a deliberate, explicit callback to reinforce that \"biologic\" as a drug category carries this risk profile regardless of the organ system being treated.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; the shared-risk point is taught from S18"
+  },
+  {
+   "ref": "S19",
+   "text": "A good patient-communication exercise (IO3.6) — have students practice explaining step therapy in plain language, not just reciting the drug ladder.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S19",
+   "text": "Case: Mild ulcerative colitis starts with mesalamine, not a biologic.",
+   "kind": "speaker note",
+   "reason": "presenter script; the case is rebuilt as a practice question"
+  },
+  {
+   "ref": "S20",
+   "text": "\"-ximab chimeric, -umab human, -zumab humanized, -tinib kinase inhibitor, -sone corticosteroid, -tide peptide.",
+   "kind": "speaker note",
+   "reason": "presenter script; the stems table covers it"
+  },
+  {
+   "ref": "S21",
+   "text": "Section transition.",
+   "kind": "speaker note",
+   "reason": "section divider"
+  },
+  {
+   "ref": "S21",
+   "text": "Ask one question about any vitamin: can it build up to toxic levels?",
+   "kind": "speaker note",
+   "reason": "presenter script; taught from S21"
+  },
+  {
+   "ref": "S22",
+   "text": "\"Ask one question about any vitamin: can it build up to toxic levels?",
+   "kind": "speaker note",
+   "reason": "presenter script; taught from S22"
+  },
+  {
+   "ref": "S23",
+   "text": "The figure values are illustrative.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; the caption says so"
+  },
+  {
+   "ref": "S25",
+   "text": "Dietary B12 is bound to food protein",
+   "kind": "slide",
+   "reason": "presenter script; taught from S25"
+  },
+  {
+   "ref": "S25",
+   "text": "\"Dietary B12 is bound to protein.",
+   "kind": "speaker note",
+   "reason": "presenter script; taught from S25"
+  },
+  {
+   "ref": "S26",
+   "text": "\"Two different ways to lower warfarin's effect.",
+   "kind": "speaker note",
+   "reason": "presenter script; taught from S26"
+  },
+  {
+   "ref": "S27",
+   "text": "Warfarin blocks VKORC1, which recycles vitamin K.",
+   "kind": "speaker note",
+   "reason": "presenter script; taught from S27"
+  },
+  {
+   "ref": "S28",
+   "text": "The \"if the gut works, use it\" principle is a simple, memorable rule students can apply across many clinical contexts — worth stating explicitly as the single takeaway from this slide.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; the rule is taught from S28"
+  },
+  {
+   "ref": "S28",
+   "text": "\"If the gut works, use it.\"",
+   "kind": "speaker note",
+   "reason": "presenter script; taught from S28"
+  },
+  {
+   "ref": "S29",
+   "text": "Refeeding: carbohydrate raises insulin, phosphate, potassium and magnesium shift into cells, and levels fall dangerously.",
+   "kind": "speaker note",
+   "reason": "presenter script; taught from S29"
+  },
+  {
+   "ref": "S30",
+   "text": "Supplements are not held to the same FDA premarket efficacy/safety standards as prescription drugs — potency and purity can vary by product.",
+   "kind": "slide",
+   "reason": "presenter script; taught from S30"
+  },
+  {
+   "ref": "S30",
+   "text": "This slide operationalizes IO3.6 (patient communication/safety) directly — the counseling point about \"ask specifically\" is something students can apply in every future patient encounter, not just GI/nutrition cases.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S30",
+   "text": "Supplements are not held to premarket efficacy or safety standards.",
+   "kind": "speaker note",
+   "reason": "presenter script; taught from S30"
+  },
+  {
+   "ref": "S30",
+   "text": "Always ask specifically.",
+   "kind": "speaker note",
+   "reason": "presenter script; taught from S30"
+  },
+  {
+   "ref": "S30",
+   "text": "Have patients tell every prescriber and pharmacist.",
+   "kind": "speaker note",
+   "reason": "presenter script; taught from S30"
+  },
+  {
+   "ref": "S31",
+   "text": "This case is the direct clinical application of Figure 10 — a great closing vignette for the nutrition section.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S31",
+   "text": "Case: Subtherapeutic INR after starting St.",
+   "kind": "speaker note",
+   "reason": "presenter script; the case is rebuilt as a practice question"
+  },
+  {
+   "ref": "S32",
+   "text": "Section transition.",
+   "kind": "speaker note",
+   "reason": "section divider"
+  },
+  {
+   "ref": "S32",
+   "text": "Pairs of students name a first-line approach and the biggest safety check for each patient.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S33",
+   "text": "Have students work in pairs: for each patient, name a first-line approach AND the single biggest safety concern to check before prescribing/counseling.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S34",
+   "text": "Read the five points.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S34",
+   "text": "Link biologics back to the DMARD lecture and interactions back to the metabolism lecture.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S35",
+   "text": "Section transition.",
+   "kind": "speaker note",
+   "reason": "section divider"
+  },
+  {
+   "ref": "S35",
+   "text": "Give students the six recall questions for self-testing and walk through the answer key.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S36",
+   "text": "Give students the six recall questions for self-testing.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S37",
+   "text": "Give students the six recall questions for self-testing.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S38",
+   "text": "Encourage students to revisit this quiz on their own before the exam — it is designed as a standalone recall resource, separate from the in-lecture quick checks.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S38",
+   "text": "Walk through the answer key.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S39",
+   "text": "Section transition.",
+   "kind": "speaker note",
+   "reason": "section divider"
+  },
+  {
+   "ref": "S70",
+   "text": "Listed for context; not profiled in detail.",
+   "kind": "slide",
+   "reason": "slide label (the supporting drugs are in the table)"
+  },
+  {
+   "ref": "S70",
+   "text": "Listed for context; not profiled in detail.",
+   "kind": "speaker note",
+   "reason": "slide label (the supporting drugs are in the table)"
+  },
+  {
+   "ref": "S70",
+   "text": "Ten compact rows cover the supporting drugs: antibiotics and antidotes for C.",
+   "kind": "speaker note",
+   "reason": "teaching instruction describing the table"
+  },
+  {
+   "ref": "S71",
+   "text": "This slide documents AI-tool use for original figure generation per university citation requirements.",
+   "kind": "speaker note",
+   "reason": "administrative note on AI-tool citation"
+  }
+ ],
+ "not_in_deck": [],
+ "not_in_notebooklm": [],
+ "layout_problems": [],
+ "question_issues": [],
+ "question_stats": {
+  "count": 20,
+  "letters": {
+   "A": 4,
+   "B": 4,
+   "C": 4,
+   "D": 4,
+   "E": 4
+  },
+  "vignette": 11,
+  "mechanism": 9
+ },
+ "thin_objectives": [],
+ "textbook_unused": 1761,
+ "reading_missing": [],
+ "reading_skipped": [
+  {
+   "page": "1153",
+   "heading": "INTRODUCTION",
+   "reason": "Chapter introduction (orientation paragraph, no drug content)"
+  },
+  {
+   "page": "1153",
+   "heading": "DRUGS USED IN ACID-PEPTIC DISEASES",
+   "reason": "Taught in L05 (Session 1: acid-peptic disease, prokinetics, antiemetics, Ch. 62)"
+  },
+  {
+   "page": "1153",
+   "heading": "Physiology of Acid Secretion",
+   "reason": "Taught in L05 (Session 1: acid-peptic disease, prokinetics, antiemetics, Ch. 62)"
+  },
+  {
+   "page": "1155",
+   "heading": "H2-Receptor Antagonists",
+   "reason": "Taught in L05 (Session 1: acid-peptic disease, prokinetics, antiemetics, Ch. 62)"
+  },
+  {
+   "page": "1158",
+   "heading": "Lansoprazole Rabeprazole",
+   "reason": "Taught in L05 (Session 1: acid-peptic disease, prokinetics, antiemetics, Ch. 62)"
+  },
+  {
+   "page": "1161",
+   "heading": "MUCOSAL PROTECTIVE AGENTS",
+   "reason": "Taught in L05 (Session 1: acid-peptic disease, prokinetics, antiemetics, Ch. 62)"
+  },
+  {
+   "page": "1162",
+   "heading": "DRUGS STIMULATING GASTROINTESTINAL MOTILITY",
+   "reason": "Taught in L05 (Session 1: acid-peptic disease, prokinetics, antiemetics, Ch. 62)"
+  },
+  {
+   "page": "1162",
+   "heading": "Physiology of the Enteric Nervous System",
+   "reason": "Taught in L05 (Session 1: acid-peptic disease, prokinetics, antiemetics, Ch. 62)"
+  },
+  {
+   "page": "1163",
+   "heading": "CHOLINOMIMETIC AGENTS",
+   "reason": "Taught in L05 (Session 1: acid-peptic disease, prokinetics, antiemetics, Ch. 62)"
+  },
+  {
+   "page": "1163",
+   "heading": "METOCLOPRAMIDE & DOMPERIDONE",
+   "reason": "Taught in L05 (Session 1: acid-peptic disease, prokinetics, antiemetics, Ch. 62)"
+  },
+  {
+   "page": "1163",
+   "heading": "Clinical Uses",
+   "reason": "Taught in L05 (Session 1: acid-peptic disease, prokinetics, antiemetics, Ch. 62)"
+  },
+  {
+   "page": "1164",
+   "heading": "Adverse Effects",
+   "reason": "Taught in L05 (Session 1: acid-peptic disease, prokinetics, antiemetics, Ch. 62)"
+  },
+  {
+   "page": "1164",
+   "heading": "MACROLIDES",
+   "reason": "Taught in L05 (Session 1: acid-peptic disease, prokinetics, antiemetics, Ch. 62)"
+  },
+  {
+   "page": "1169",
+   "heading": "ANTIEMETIC AGENTS",
+   "reason": "Taught in L05 (Session 1: acid-peptic disease, prokinetics, antiemetics, Ch. 62)"
+  },
+  {
+   "page": "1169",
+   "heading": "PATHOPHYSIOLOGY",
+   "reason": "Taught in L05 (Session 1: acid-peptic disease, prokinetics, antiemetics, Ch. 62)"
+  },
+  {
+   "page": "1170",
+   "heading": "Pharmacokinetics & Pharmacodynamics",
+   "reason": "Taught in L05 (Session 1: acid-peptic disease, prokinetics, antiemetics, Ch. 62)"
+  },
+  {
+   "page": "1171",
+   "heading": "CORTICOSTEROIDS",
+   "reason": "Taught in L05 (Session 1: acid-peptic disease, prokinetics, antiemetics, Ch. 62)"
+  },
+  {
+   "page": "1171",
+   "heading": "NEUROKININ RECEPTOR ANTAGONISTS",
+   "reason": "Taught in L05 (Session 1: acid-peptic disease, prokinetics, antiemetics, Ch. 62)"
+  },
+  {
+   "page": "1171",
+   "heading": "Adverse Effects & Drug Interactions",
+   "reason": "Taught in L05 (Session 1: acid-peptic disease, prokinetics, antiemetics, Ch. 62)"
+  },
+  {
+   "page": "1171",
+   "heading": "ANTIPSYCHOTIC AGENTS AS ANTIEMETICS (PHENOTHIAZINES, BUTYROPHENONES, & THIENOBENZODIAZEPINES)",
+   "reason": "Taught in L05 (Session 1: acid-peptic disease, prokinetics, antiemetics, Ch. 62)"
+  },
+  {
+   "page": "1172",
+   "heading": "SUBSTITUTED BENZAMIDES",
+   "reason": "Taught in L05 (Session 1: acid-peptic disease, prokinetics, antiemetics, Ch. 62)"
+  },
+  {
+   "page": "1172",
+   "heading": "H1 ANTIHISTAMINES & ANTICHOLINERGIC DRUGS",
+   "reason": "Taught in L05 (Session 1: acid-peptic disease, prokinetics, antiemetics, Ch. 62)"
+  },
+  {
+   "page": "1172",
+   "heading": "BENZODIAZEPINES",
+   "reason": "Taught in L05 (Session 1: acid-peptic disease, prokinetics, antiemetics, Ch. 62)"
+  },
+  {
+   "page": "1172",
+   "heading": "CANNABINOIDS",
+   "reason": "Taught in L05 (Session 1: acid-peptic disease, prokinetics, antiemetics, Ch. 62)"
+  },
+  {
+   "page": "1183",
+   "heading": "Toxicities, Interactions",
+   "reason": "Chapter summary-table column heading; the drugs are taught in their own sections"
+  },
+  {
+   "page": "1183",
+   "heading": "GENERIC NAME AVAILABLE AS ANTACIDS",
+   "reason": "Preparations list (brand names only, no teaching content)"
+  },
+  {
+   "page": "1183",
+   "heading": "GENERIC NAME AVAILABLE AS",
+   "reason": "Preparations list (brand names only, no teaching content)"
+  },
+  {
+   "page": "1184",
+   "heading": "Acid-Peptic Diseases",
+   "reason": "Reference-list heading (citations only, no teaching content)"
+  },
+  {
+   "page": "1184",
+   "heading": "Motility Disorders",
+   "reason": "Reference-list heading (citations only, no teaching content)"
+  },
+  {
+   "page": "1185",
+   "heading": "Drugs Used for Irritable Bowel Syndrome",
+   "reason": "Reference-list heading (citations only, no teaching content)"
+  },
+  {
+   "page": "1185",
+   "heading": "Drugs Used for Inflammatory Bowel Disease",
+   "reason": "Reference-list heading (citations only, no teaching content)"
+  },
+  {
+   "page": "1186",
+   "heading": "Drugs for Portal Hypertension",
+   "reason": "Reference-list heading (citations only, no teaching content)"
+  },
+  {
+   "page": "1186",
+   "heading": "Drugs for Short-Bowel Syndrome",
+   "reason": "Reference-list heading (citations only, no teaching content)"
+  },
+  {
+   "page": "1203",
+   "heading": "Candy Tsourounis, PharmD",
+   "reason": "Chapter author byline (no teaching content; no names on the site)"
+  }
+ ]
+}

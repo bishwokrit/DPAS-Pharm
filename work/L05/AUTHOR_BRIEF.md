@@ -1,0 +1,199 @@
+# Authoring brief — L05: Unit 3: GI & Nutrition — Session 1 (2026-11-03)
+
+Tell Claude: **"author L05"**. Claude writes `work/L05/author_L05.py`, `guide_L05.py` and `textbook_L05.py` (copy the shape of the L02 files), adds the lecture's drugs to `work/drugs.py`, then runs `./run.sh new L05` until every gate says PASS.
+
+## The standard (every lecture, no exceptions)
+- **Sources:** slides (with speaker notes), the assigned textbook pages, the syllabus and the course study guide only. No internet facts. Every fact cited (`S12`, `S12 (notes)`, `p. 245`, `SG U1-R3`).
+- **Everything taught:** every slide line and every assigned-reading section below lands in the guide (the audit fails otherwise). A section taught in another session, or beyond PA scope, goes in `READING_SKIP` with the reason.
+- **PA-student depth, no more, no less:** what a PA needs to prescribe safely and pass the exam. Skip chemistry, molecular-biology and industry detail with no prescribing decision attached. PA students are short on time: lean, never dense.
+- **Easier to learn:** order (big idea → mechanism → clinical use → traps), one idea per bullet (≤25 words), discriminator tables, flows, why-hooks. A student with only the guide or only the deck can answer any exam question.
+- **Length gates:** textbook-only bullets ≤30% of the guide; bullets ≤40 words; deck ≤2.25× the lecture’s slides.
+- **Template:** `drug_class` for every class/topic (overview, prototype, moa, indications, adverse — boxed warnings first, contra, interactions, pk, monitoring, pearls).
+- **Textbook facts** in `textbook_<ID>.py` as `("text", "p. N")`; write apostrophes as ’ so `./run.sh check` can verify the numbers on that page.
+- **Questions:** ~50/50 vignette and mechanism; 5 options, all similar in length; rebuild every quick-check slide question (`from_slides`).
+- **Figures:** each saved figure gets a caption and an interactive version (`"viz": {"type": …}`, list below).
+- **Drugs:** every drug named gets a card (or new facts) in `work/drugs.py`, citing `L05 S#` or `p. N`, filled field by field: class, mechanism, indications, contraindications, adverse effects, interactions, distinguishing / patient-specific factors, extra.
+- **Home teaser:** `TEASER` in `guide_<ID>.py` — two calm sentences, no hype.
+- **No school, course-director or instructor names** anywhere (slide 1 credits are skipped on purpose).
+- **Original files are never edited** (they are fingerprinted; the build stops if one changes).
+
+## Objectives to cover
+- IO3.1: Identify major pharmacologic classes used in the management of gastrointestinal and nutrition-related conditions and describe their mechanisms of action.
+- IO3.2: Describe the indications, contraindications, adverse effects, and clinically significant interactions associated with medications used to treat gastrointestinal and nutrition-related conditions.
+- IO3.3: Compare pharmacologic agents within and across therapeutic classes to distinguish clinically relevant differences in efficacy, safety, and use.
+- IO3.4: Select appropriate pharmacologic therapy for common gastrointestinal and nutrition-related conditions based on clinical presentation and patient-specific factors.
+- IO3.5: Identify appropriate dosing, administration, and monitoring considerations for medications used in gastrointestinal and nutrition-related conditions.
+- IO3.6: Explain important medication-use and safety information to patients receiving pharmacotherapy for gastrointestinal and nutrition-related.
+
+## Slides (62) — every one must be covered
+- [ ] S1: GI & Nutrition Pharmacology
+- [ ] S2: Learning Objectives — Session 1
+- [ ] S3: Required & Recommended Readings — Unit 3
+- [ ] S4: 01
+- [ ] S5: Mucosal Defense vs. Aggressive Factors
+- [ ] S6: How Acid Injures the Mucosa
+- [ ] S7: GERD, Peptic Ulcer Disease, and Gastritis
+- [ ] S8: Gastric Acid Secretion: Where Antisecretory Drugs Act
+- [ ] S9: 02
+- [ ] S10: Antacids
+- [ ] S11: H2 Receptor Antagonists
+- [ ] S12: H2 Blockers: Blocking the Histamine Signal
+- [ ] S13: Proton Pump Inhibitors (PPIs)
+- [ ] S14: PPIs: Irreversible Pump Inhibition
+- [ ] S15: PPIs vs. H2 Receptor Antagonists: Potency and Duration
+- [ ] S16: Mucosal Protective Agents
+- [ ] S17: Sucralfate and Misoprostol: Strengthening Defense
+- [ ] S18: Acid-Peptic Disease Agents at a Glance
+- [ ] S19: H. pylori Eradication Therapy
+- [ ] S20: Why H. pylori Needs Multiple Drugs
+- [ ] S21: Choosing an H. pylori Regimen
+- [ ] S22: Drug Names Reveal the Class: Acid-Peptic Disease
+- [ ] S23: 03
+- [ ] S24: Antiemetic Drug Classes
+- [ ] S25: Ondansetron: Blocking Serotonin at 5-HT3
+- [ ] S26: Receptors in the Vomiting Pathway
+- [ ] S27: The Vomiting Reflex: Where Antiemetics Act
+- [ ] S28: Metoclopramide: Antiemetic and Prokinetic
+- [ ] S29: Metoclopramide: D2 Blockade and 5-HT4 Agonism
+- [ ] S30: Cannabinoids for Chemotherapy-Induced Nausea
+- [ ] S31: Cannabinoids: CB1 Activation in the Brain
+- [ ] S32: Which Antiemetic for This Patient?
+- [ ] S33: Drug Names Reveal the Class: Antiemetics
+- [ ] S34: Session 1 Recap — To Be Continued
+- [ ] S35: Drug Profiles
+- [ ] S36: Omeprazole (Prilosec)
+- [ ] S37: Esomeprazole (Nexium)
+- [ ] S38: Pantoprazole (Protonix)
+- [ ] S39: Lansoprazole (Prevacid)
+- [ ] S40: Dexlansoprazole (Dexilant)
+- [ ] S41: Famotidine (Pepcid)
+- [ ] S42: Cimetidine (Tagamet)
+- [ ] S43: Calcium carbonate (Tums)
+- [ ] S44: Magnesium hydroxide (Milk of Magnesia)
+- [ ] S45: Aluminum hydroxide (Amphojel)
+- [ ] S46: Sucralfate (Carafate)
+- [ ] S47: Misoprostol (Cytotec)
+- [ ] S48: Bismuth subsalicylate (Pepto-Bismol)
+- [ ] S49: Amoxicillin (Amoxil)
+- [ ] S50: Clarithromycin (Biaxin)
+- [ ] S51: Metronidazole (Flagyl)
+- [ ] S52: Tetracycline (Sumycin)
+- [ ] S53: Ondansetron (Zofran)
+- [ ] S54: Metoclopramide (Reglan)
+- [ ] S55: Aprepitant (Emend)
+- [ ] S56: Meclizine (Antivert)
+- [ ] S57: Scopolamine (Transderm Scop)
+- [ ] S58: Prochlorperazine (Compazine)
+- [ ] S59: Dronabinol (Marinol) and nabilone (Cesamet)
+- [ ] S60: Dexamethasone (Decadron)
+- [ ] S61: Supporting Drugs at a Glance
+- [ ] S62: Image Attribution
+
+## Assigned reading — Ch. 62, pp. 1153–1186; Ch. 65, pp. 1203–1219 (75 sections to teach)
+If this session covers only part of the reading (the unit is split across two sessions), put the other session’s sections in `READING_SKIP` with “Taught in L0x”, and teach them there.
+- [ ] p. 1153: INTRODUCTION
+- [ ] p. 1153: DRUGS USED IN ACID-PEPTIC DISEASES
+- [ ] p. 1153: Physiology of Acid Secretion
+- [ ] p. 1155: H2-Receptor Antagonists
+- [ ] p. 1158: Lansoprazole Rabeprazole
+- [ ] p. 1161: MUCOSAL PROTECTIVE AGENTS
+- [ ] p. 1162: DRUGS STIMULATING GASTROINTESTINAL MOTILITY
+- [ ] p. 1162: Physiology of the Enteric Nervous System
+- [ ] p. 1163: CHOLINOMIMETIC AGENTS
+- [ ] p. 1163: METOCLOPRAMIDE & DOMPERIDONE
+- [ ] p. 1163: Clinical Uses
+- [ ] p. 1164: Adverse Effects
+- [ ] p. 1164: MACROLIDES
+- [ ] p. 1164: BULK-FORMING LAXATIVES
+- [ ] p. 1164: STOOL SURFACTANT AGENTS (SOFTENERS)
+- [ ] p. 1164: OSMOTIC LAXATIVES
+- [ ] p. 1165: Balanced Polyethylene Glycol
+- [ ] p. 1165: STIMULANT LAXATIVES
+- [ ] p. 1165: Anthraquinone Derivatives
+- [ ] p. 1165: Diphenylmethane Derivatives
+- [ ] p. 1165: CHLORIDE SECRETION ACTIVATORS
+- [ ] p. 1165: OPIOID RECEPTOR ANTAGONISTS
+- [ ] p. 1166: SEROTONIN 5-HT 4-RECEPTOR AGONISTS
+- [ ] p. 1166: ANTIDIARRHEAL AGENTS
+- [ ] p. 1166: OPIOID AGONISTS
+- [ ] p. 1167: COLLOIDAL BISMUTH COMPOUNDS
+- [ ] p. 1167: BILE SAL T-BINDING RESINS
+- [ ] p. 1167: OCTREOTIDE
+- [ ] p. 1168: ANTISPASMODICS (ANTICHOLINERGICS)
+- [ ] p. 1168: SEROTONIN 5-HT 3-RECEPTOR ANTAGONISTS
+- [ ] p. 1168: CHLORIDE CHANNEL ACTIVATORS
+- [ ] p. 1169: ANTIEMETIC AGENTS
+- [ ] p. 1169: PATHOPHYSIOLOGY
+- [ ] p. 1170: Pharmacokinetics & Pharmacodynamics
+- [ ] p. 1171: CORTICOSTEROIDS
+- [ ] p. 1171: NEUROKININ RECEPTOR ANTAGONISTS
+- [ ] p. 1171: Adverse Effects & Drug Interactions
+- [ ] p. 1171: ANTIPSYCHOTIC AGENTS AS ANTIEMETICS (PHENOTHIAZINES, BUTYROPHENONES, & THIENOBENZODIAZEPINES)
+- [ ] p. 1172: SUBSTITUTED BENZAMIDES
+- [ ] p. 1172: H1 ANTIHISTAMINES & ANTICHOLINERGIC DRUGS
+- [ ] p. 1172: BENZODIAZEPINES
+- [ ] p. 1172: CANNABINOIDS
+- [ ] p. 1172: DRUGS USED TO TREAT INFLAMMATORY BOWEL DISEASE (IBD)
+- [ ] p. 1172: Chemistry & Formulations
+- [ ] p. 1176: Infliximab Adalimumab Certolizumab Golimumab
+- [ ] p. 1177: ANTI-INTEGRIN THERAPY
+- [ ] p. 1178: ANTI–IL-23 THERAPY
+- [ ] p. 1178: JANUS KINASE INHIBITORS
+- [ ] p. 1178: PANCREATIC ENZYME SUPPLEMENTS
+- [ ] p. 1179: GLUCAGON-LIKE PEPTIDE 2 ANALOG FOR SHORT-BOWEL SYNDROME
+- [ ] p. 1179: BILE ACID AGENTS
+- [ ] p. 1180: DRUGS USED TO TREAT VARICEAL HEMORRHAGE
+- [ ] p. 1180: SOMATOSTATIN & OCTREOTIDE
+- [ ] p. 1180: VASOPRESSIN & TERLIPRESSIN
+- [ ] p. 1180: BETA-RECEPTOR-BLOCKING DRUGS
+- [ ] p. 1182: PANCREATIC SUPPLEMENTS
+- [ ] p. 1183: Toxicities, Interactions
+- [ ] p. 1183: GENERIC NAME AVAILABLE AS ANTACIDS
+- [ ] p. 1183: GENERIC NAME AVAILABLE AS
+- [ ] p. 1184: Acid-Peptic Diseases
+- [ ] p. 1184: Motility Disorders
+- [ ] p. 1185: Drugs Used for Irritable Bowel Syndrome
+- [ ] p. 1185: Drugs Used for Inflammatory Bowel Disease
+- [ ] p. 1186: Drugs for Portal Hypertension
+- [ ] p. 1186: Drugs for Short-Bowel Syndrome
+- [ ] p. 1203: Candy Tsourounis, PharmD
+- [ ] p. 1204: HISTORIC & REGULATORY FACTORS
+- [ ] p. 1206: Pharmacologic Effects
+- [ ] p. 1206: Clinical Trials
+- [ ] p. 1207: Drug Interactions & Precautions
+- [ ] p. 1213: Drug Interactions, Precautions, & Dosage
+- [ ] p. 1215: PURIFIED NUTRITIONAL SUPPLEMENTS COENZYME Q10
+- [ ] p. 1216: GLUCOSAMINE
+- [ ] p. 1216: Pharmacologic Effects & Clinical Uses
+- [ ] p. 1217: MELATONIN
+
+## Figures saved from the slides
+- [ ] `S12_1.jpg` — caption + viz type
+- [ ] `S14_1.jpg` — caption + viz type
+- [ ] `S15_1.jpg` — caption + viz type
+- [ ] `S17_1.jpg` — caption + viz type
+- [ ] `S20_1.jpg` — caption + viz type
+- [ ] `S25_1.jpg` — caption + viz type
+- [ ] `S26_1.jpg` — caption + viz type
+- [ ] `S27_1.jpg` — caption + viz type
+- [ ] `S29_1.jpg` — caption + viz type
+- [ ] `S30_1.jpg` — caption + viz type
+- [ ] `S31_1.jpg` — caption + viz type
+- [ ] `S8_1.jpg` — caption + viz type
+
+## Interactive figure types (`"viz": {"type": "…"}` on a figure)
+- `dose-response` — graded dose-response curve (EC50, Emax)
+- `antagonist` — agonist curve shifted by a competitive vs noncompetitive antagonist
+- `potency-efficacy` — two drugs compared on potency and efficacy
+- `therapeutic-index` — ED50 vs TD50, narrow vs wide window
+- `cyp-interaction` — substrate level with an inhibitor vs an inducer
+- `half-life` — exponential decay over half-lives
+- `steady-state` — accumulation to steady state, with/without loading dose
+- `fill-empty` — time to fill and time to empty are the same
+- `adme` — absorption → distribution → metabolism → excretion map
+- `bars` — any bar chart; give {title, unit, bars:[{label, value, note}], steps:[{label, pick}]}
+- `nomogram` — Rumack-Matthew nomogram: drag a level to a time; give {point, steps:[{label, t, c}]}
+- `onset` — fast symptom relief vs slow disease modification over time (schematic); give {point, steps:[{label, t}]}
+- `pathway` — mechanism flow (boxes + arrows) where each drug cuts in; give {title, h, nodes:[{id, label, x, y, w, col}], edges:[[a, b]], drugs:[{label, at, off, less, note}]}
+
+If none fits, ask for a new dedicated diagram in `site_src/assets/viz.js` (same palette, reset after 30 s idle, Try-it steps).

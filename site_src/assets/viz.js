@@ -421,8 +421,10 @@
     if (narrow) {
       const rank = Object.fromEntries(N.map((n) => [n.id, 0]));
       for (let k = 0; k < N.length; k++) E.forEach(([a, b]) => (rank[b] = Math.max(rank[b], rank[a] + 1)));
-      const rows = [];
-      N.forEach((n) => (rows[rank[n.id]] ||= []).push(n.id));
+      const byRank = [];
+      N.forEach((n) => (byRank[rank[n.id]] ||= []).push(n.id));
+      // at most two boxes side by side on a phone, so labels keep their large size
+      const rows = byRank.filter(Boolean).flatMap((ids) => ids.length > 2 ? Array.from({ length: Math.ceil(ids.length / 2) }, (_, k) => ids.slice(2 * k, 2 * k + 2)) : [ids]);
       const GAP = 74, PAD = 14;
       rows.forEach((ids, r) => {
         const w = (W - 2 * PAD - (ids.length - 1) * 24) / ids.length;

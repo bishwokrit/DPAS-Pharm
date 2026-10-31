@@ -1,0 +1,663 @@
+{
+ "lecture": "L05",
+ "passed": true,
+ "units_checked": 2540,
+ "missing": [],
+ "uncited": [
+  {
+   "ref": "S2",
+   "text": "pylori eradication, and antiemetics.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S5",
+   "text": "Everything in this section — GERD, PUD, gastritis — comes down to this balance tipping toward aggression or away from defense.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S6",
+   "text": "A gastrinoma drives extreme acid output.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S7",
+   "text": "pylori) is largely the same across all three.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S8",
+   "text": "This is the conceptual spine for the whole antisecretory-agent section that follows.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S11",
+   "text": "Cimetidine — effective, but a potent CYP450 inhibitor (ties back to the drug-metabolism concepts from Lecture 1) and carries antiandrogenic effects (gynecomastia) with prolonged use.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S11",
+   "text": "Less pump activity",
+   "kind": "slide"
+  },
+  {
+   "ref": "S14",
+   "text": "The pump stays off until the cell makes new pumps.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S16",
+   "text": "Misoprostol’s pregnancy contraindication is a must-know, high-stakes safety point — this is also the drug’s other well-known clinical use (labor induction/medical abortion), so the mechanism-to-contraindication link should feel obvious once stated.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S16",
+   "text": "Misoprostol: contraindicated in pregnancy because it causes uterine contractions.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S17",
+   "text": "Gastric lumen (acid)",
+   "kind": "slide"
+  },
+  {
+   "ref": "S18",
+   "text": "pylori eradication, which combines several of these agents together.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S19",
+   "text": "Multi-drug regimens like this are a classic source of adherence problems — worth pausing to ask students what patient-counseling points would most improve completion of a 10–14 day, 3–4 drug regimen.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S20",
+   "text": "Metronidazole adds another mechanism.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S22",
+   "text": "-prazole Proton pump inhibitors Omeprazole, esomeprazole, pantoprazole, lansoprazole Irreversibly block H+/K+ ATPase Stem Drug class Examples Key point",
+   "kind": "slide table"
+  },
+  {
+   "ref": "S22",
+   "text": "-prostol Prostaglandin analogs Misoprostol PGE1 analog; protects the mucosa Stem Drug class Examples Key point",
+   "kind": "slide table"
+  },
+  {
+   "ref": "S22",
+   "text": "None shared Mucosal protectants Sucralfate, bismuth subsalicylate Name does not reveal the class Stem Drug class Examples Key point",
+   "kind": "slide table"
+  },
+  {
+   "ref": "S26",
+   "text": "Antihistamines and scopolamine",
+   "kind": "slide"
+  },
+  {
+   "ref": "S26",
+   "text": "Do not duplicate the same mechanism.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S28",
+   "text": "Metoclopramide’s boxed warning is one of the highest-yield patient-safety facts in this whole session — many students only remember \"it helps nausea\" without knowing why duration of use matters so much.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S29",
+   "text": "Less nausea and vomiting",
+   "kind": "slide"
+  },
+  {
+   "ref": "S30",
+   "text": "This is a good moment to flag that cannabinoid pharmacology is an expanding area in the newest edition of Katzung — worth a brief mention that this mechanism class is distinct from everything else in this lecture.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S31",
+   "text": "They also stimulate appetite.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S32",
+   "text": "Use this to connect back to the Nutrition half of the unit (pyridoxine is a vitamin) — a preview of the Session 2 material on vitamins and supplements.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S34",
+   "text": "pylori needs multiple drugs.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S34",
+   "text": "Antiemetics follow receptor systems.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S35",
+   "text": "Formulation, dose, indications, adverse effects, contraindications and toxicity for each drug in this lecture",
+   "kind": "slide"
+  },
+  {
+   "ref": "S49",
+   "text": "Strength/recommended dose: H.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S50",
+   "text": "Strength/recommended dose: H.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S51",
+   "text": "Strength/recommended dose: H.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S52",
+   "text": "Strength/recommended dose: H.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "SG:U3-R3",
+   "text": "difficile risk — e.g., reduced acid impairs B12 release from dietary protein.",
+   "kind": "study guide"
+  },
+  {
+   "ref": "SG:U3-M",
+   "text": "Match each drug to the receptor/pathway it blocks.",
+   "kind": "study guide"
+  }
+ ],
+ "emphasis_not_bold": [],
+ "skipped": [
+  {
+   "ref": "S1",
+   "text": "Diane S. Allen-Gipson, Ph.D., M.S., Course Director",
+   "kind": "slide",
+   "reason": "faculty identifier (site policy: no school or instructor identifiers)"
+  },
+  {
+   "ref": "S2",
+   "text": "Orient students to the arc of this session: acid-peptic disease pathophysiology, antisecretory/mucosal-protective agents, H.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; the arc is in About this lecture"
+  },
+  {
+   "ref": "S2",
+   "text": "Objectives (2): Read them aloud.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S3",
+   "text": "Point students to the required and recommended texts for Unit 3 before diving into content.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; readings are in About this lecture"
+  },
+  {
+   "ref": "S3",
+   "text": "Readings (3): Point to Katzung and the course text.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S4",
+   "text": "Section transition.",
+   "kind": "speaker note",
+   "reason": "section divider"
+  },
+  {
+   "ref": "S4",
+   "text": "Section 01: Acid-peptic disease (slides 4-10).",
+   "kind": "speaker note",
+   "reason": "section divider"
+  },
+  {
+   "ref": "S5",
+   "text": "Think of a balance.",
+   "kind": "speaker note",
+   "reason": "presenter script; the balance is taught from S5"
+  },
+  {
+   "ref": "S5",
+   "text": "pylori and NSAIDs push one way.",
+   "kind": "speaker note",
+   "reason": "presenter script (continuation)"
+  },
+  {
+   "ref": "S6",
+   "text": "Walk the four boxes top to bottom.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; the four boxes are taught from S6"
+  },
+  {
+   "ref": "S7",
+   "text": "Define each in one sentence.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S9",
+   "text": "Section transition.",
+   "kind": "speaker note",
+   "reason": "section divider"
+  },
+  {
+   "ref": "S9",
+   "text": "Section 02: Antisecretory and mucosal-protective agents (slides 11-28).",
+   "kind": "speaker note",
+   "reason": "section divider"
+  },
+  {
+   "ref": "S15",
+   "text": "This is the quantified version of the mechanistic point just made — more complete blockade (Figure 1) translates into both higher potency and longer duration here.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; Figure 4 caption covers it"
+  },
+  {
+   "ref": "S15",
+   "text": "Figure 4: Remind the class that the bars are illustrative relative values, not trial data.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; the caption says the values are illustrative"
+  },
+  {
+   "ref": "S18",
+   "text": "Use this table as the organizing summary before moving into H.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S18",
+   "text": "Slide at a glance: Read across the table row by row.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S18",
+   "text": "This is a good review point.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S21",
+   "text": "This vignette forces students to apply two separate exclusion criteria at once — a good checkpoint for whether the regimen differences actually landed.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S22",
+   "text": "Drug-name stems: -prazole is a PPI, -tidine is an H2 blocker, -prostol is a prostaglandin analog, -cillin is a penicillin, -thromycin is a macrolide.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; the stems table covers it"
+  },
+  {
+   "ref": "S23",
+   "text": "Section transition.",
+   "kind": "speaker note",
+   "reason": "section divider"
+  },
+  {
+   "ref": "S23",
+   "text": "Section 03: Antiemetics (slides 29-43).",
+   "kind": "speaker note",
+   "reason": "section divider"
+  },
+  {
+   "ref": "S24",
+   "text": "Each class corresponds to a different input feeding the vomiting center — the next slide shows these same four classes as a single mechanism diagram.",
+   "kind": "speaker note",
+   "reason": "teaching instruction (pointer to the next slide)"
+  },
+  {
+   "ref": "S24",
+   "text": "Name the four target groups: 5-HT3, D2, NK1, and H1/M1.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S27",
+   "text": "Have students match each generic drug name to its input pathway on this diagram before revealing the labels — this is the single most testable concept in the antiemetic section.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; the matching is the Figure 9 interactive"
+  },
+  {
+   "ref": "S32",
+   "text": "First-trimester nausea unresponsive to diet.",
+   "kind": "speaker note",
+   "reason": "presenter script; the case is rebuilt as a practice question"
+  },
+  {
+   "ref": "S32",
+   "text": "Let the class discuss.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S33",
+   "text": "Drug-name stems: -setron is a 5-HT3 antagonist, -pitant is an NK1 antagonist, -azine is a phenothiazine, -izine is an H1 antihistamine, -pramide is a benzamide D2 antagonist, -sone is a corticosteroid.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; the stems table covers it"
+  },
+  {
+   "ref": "S34",
+   "text": "Close Session 1 by previewing Session 2 explicitly — students should leave knowing acid-peptic disease and antiemetics are complete, and that laxatives/antidiarrheals, IBD, and nutrition pick up first next time.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S34",
+   "text": "Recap: Read the five points.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; the recap is in the high-yield lists"
+  },
+  {
+   "ref": "S35",
+   "text": "Section transition: appendix of drug profiles for the agents in this lecture.",
+   "kind": "speaker note",
+   "reason": "section divider"
+  },
+  {
+   "ref": "S61",
+   "text": "Listed for context; not profiled in detail.",
+   "kind": "slide",
+   "reason": "slide label (the supporting drugs themselves are in the table)"
+  },
+  {
+   "ref": "S61",
+   "text": "Listed for context; not profiled in detail.",
+   "kind": "speaker note",
+   "reason": "slide label (the supporting drugs themselves are in the table)"
+  },
+  {
+   "ref": "S62",
+   "text": "This slide documents AI-tool use for original figure generation per university citation requirements.",
+   "kind": "speaker note",
+   "reason": "administrative note on AI-tool citation"
+  }
+ ],
+ "not_in_deck": [],
+ "not_in_notebooklm": [],
+ "layout_problems": [],
+ "question_issues": [],
+ "question_stats": {
+  "count": 23,
+  "letters": {
+   "A": 5,
+   "B": 4,
+   "C": 5,
+   "D": 5,
+   "E": 4
+  },
+  "vignette": 13,
+  "mechanism": 10
+ },
+ "thin_objectives": [
+  "SO6: Preview: GI motility disorders, IBD pharmacotherapy, and Nutrition/Dietary Supplements continue in Session 2 (Thursday, November 5). — 0 class(es), 0 facts (Preview only — taught in Session 2 (L06))"
+ ],
+ "textbook_unused": 1777,
+ "reading_missing": [],
+ "reading_skipped": [
+  {
+   "page": "1153",
+   "heading": "INTRODUCTION",
+   "reason": "Chapter introduction (orientation paragraph, no drug content)"
+  },
+  {
+   "page": "1164",
+   "heading": "BULK-FORMING LAXATIVES",
+   "reason": "Taught in L06 (Session 2: bowel disorders, IBD, and GI drugs, Ch. 62)"
+  },
+  {
+   "page": "1164",
+   "heading": "STOOL SURFACTANT AGENTS (SOFTENERS)",
+   "reason": "Taught in L06 (Session 2: bowel disorders, IBD, and GI drugs, Ch. 62)"
+  },
+  {
+   "page": "1164",
+   "heading": "OSMOTIC LAXATIVES",
+   "reason": "Taught in L06 (Session 2: bowel disorders, IBD, and GI drugs, Ch. 62)"
+  },
+  {
+   "page": "1165",
+   "heading": "Balanced Polyethylene Glycol",
+   "reason": "Taught in L06 (Session 2: bowel disorders, IBD, and GI drugs, Ch. 62)"
+  },
+  {
+   "page": "1165",
+   "heading": "STIMULANT LAXATIVES",
+   "reason": "Taught in L06 (Session 2: bowel disorders, IBD, and GI drugs, Ch. 62)"
+  },
+  {
+   "page": "1165",
+   "heading": "Anthraquinone Derivatives",
+   "reason": "Taught in L06 (Session 2: bowel disorders, IBD, and GI drugs, Ch. 62)"
+  },
+  {
+   "page": "1165",
+   "heading": "Diphenylmethane Derivatives",
+   "reason": "Taught in L06 (Session 2: bowel disorders, IBD, and GI drugs, Ch. 62)"
+  },
+  {
+   "page": "1165",
+   "heading": "CHLORIDE SECRETION ACTIVATORS",
+   "reason": "Taught in L06 (Session 2: bowel disorders, IBD, and GI drugs, Ch. 62)"
+  },
+  {
+   "page": "1165",
+   "heading": "OPIOID RECEPTOR ANTAGONISTS",
+   "reason": "Taught in L06 (Session 2: bowel disorders, IBD, and GI drugs, Ch. 62)"
+  },
+  {
+   "page": "1166",
+   "heading": "SEROTONIN 5-HT 4-RECEPTOR AGONISTS",
+   "reason": "Taught in L06 (Session 2: bowel disorders, IBD, and GI drugs, Ch. 62)"
+  },
+  {
+   "page": "1166",
+   "heading": "ANTIDIARRHEAL AGENTS",
+   "reason": "Taught in L06 (Session 2: bowel disorders, IBD, and GI drugs, Ch. 62)"
+  },
+  {
+   "page": "1166",
+   "heading": "OPIOID AGONISTS",
+   "reason": "Taught in L06 (Session 2: bowel disorders, IBD, and GI drugs, Ch. 62)"
+  },
+  {
+   "page": "1167",
+   "heading": "COLLOIDAL BISMUTH COMPOUNDS",
+   "reason": "Taught in L06 (Session 2: bowel disorders, IBD, and GI drugs, Ch. 62)"
+  },
+  {
+   "page": "1167",
+   "heading": "BILE SAL T-BINDING RESINS",
+   "reason": "Taught in L06 (Session 2: bowel disorders, IBD, and GI drugs, Ch. 62)"
+  },
+  {
+   "page": "1167",
+   "heading": "OCTREOTIDE",
+   "reason": "Taught in L06 (Session 2: bowel disorders, IBD, and GI drugs, Ch. 62)"
+  },
+  {
+   "page": "1168",
+   "heading": "ANTISPASMODICS (ANTICHOLINERGICS)",
+   "reason": "Taught in L06 (Session 2: bowel disorders, IBD, and GI drugs, Ch. 62)"
+  },
+  {
+   "page": "1168",
+   "heading": "SEROTONIN 5-HT 3-RECEPTOR ANTAGONISTS",
+   "reason": "Taught in L06 (Session 2: bowel disorders, IBD, and GI drugs, Ch. 62)"
+  },
+  {
+   "page": "1168",
+   "heading": "CHLORIDE CHANNEL ACTIVATORS",
+   "reason": "Taught in L06 (Session 2: bowel disorders, IBD, and GI drugs, Ch. 62)"
+  },
+  {
+   "page": "1172",
+   "heading": "DRUGS USED TO TREAT INFLAMMATORY BOWEL DISEASE (IBD)",
+   "reason": "Taught in L06 (Session 2: bowel disorders, IBD, and GI drugs, Ch. 62)"
+  },
+  {
+   "page": "1172",
+   "heading": "Chemistry & Formulations",
+   "reason": "Taught in L06 (Session 2: bowel disorders, IBD, and GI drugs, Ch. 62)"
+  },
+  {
+   "page": "1176",
+   "heading": "Infliximab Adalimumab Certolizumab Golimumab",
+   "reason": "Taught in L06 (Session 2: bowel disorders, IBD, and GI drugs, Ch. 62)"
+  },
+  {
+   "page": "1177",
+   "heading": "ANTI-INTEGRIN THERAPY",
+   "reason": "Taught in L06 (Session 2: bowel disorders, IBD, and GI drugs, Ch. 62)"
+  },
+  {
+   "page": "1178",
+   "heading": "ANTI–IL-23 THERAPY",
+   "reason": "Taught in L06 (Session 2: bowel disorders, IBD, and GI drugs, Ch. 62)"
+  },
+  {
+   "page": "1178",
+   "heading": "JANUS KINASE INHIBITORS",
+   "reason": "Taught in L06 (Session 2: bowel disorders, IBD, and GI drugs, Ch. 62)"
+  },
+  {
+   "page": "1178",
+   "heading": "PANCREATIC ENZYME SUPPLEMENTS",
+   "reason": "Taught in L06 (Session 2: bowel disorders, IBD, and GI drugs, Ch. 62)"
+  },
+  {
+   "page": "1179",
+   "heading": "GLUCAGON-LIKE PEPTIDE 2 ANALOG FOR SHORT-BOWEL SYNDROME",
+   "reason": "Taught in L06 (Session 2: bowel disorders, IBD, and GI drugs, Ch. 62)"
+  },
+  {
+   "page": "1179",
+   "heading": "BILE ACID AGENTS",
+   "reason": "Taught in L06 (Session 2: bowel disorders, IBD, and GI drugs, Ch. 62)"
+  },
+  {
+   "page": "1180",
+   "heading": "DRUGS USED TO TREAT VARICEAL HEMORRHAGE",
+   "reason": "Taught in L06 (Session 2: bowel disorders, IBD, and GI drugs, Ch. 62)"
+  },
+  {
+   "page": "1180",
+   "heading": "SOMATOSTATIN & OCTREOTIDE",
+   "reason": "Taught in L06 (Session 2: bowel disorders, IBD, and GI drugs, Ch. 62)"
+  },
+  {
+   "page": "1180",
+   "heading": "VASOPRESSIN & TERLIPRESSIN",
+   "reason": "Taught in L06 (Session 2: bowel disorders, IBD, and GI drugs, Ch. 62)"
+  },
+  {
+   "page": "1180",
+   "heading": "BETA-RECEPTOR-BLOCKING DRUGS",
+   "reason": "Taught in L06 (Session 2: bowel disorders, IBD, and GI drugs, Ch. 62)"
+  },
+  {
+   "page": "1182",
+   "heading": "PANCREATIC SUPPLEMENTS",
+   "reason": "Taught in L06 (Session 2: bowel disorders, IBD, and GI drugs, Ch. 62)"
+  },
+  {
+   "page": "1183",
+   "heading": "Toxicities, Interactions",
+   "reason": "Chapter summary-table column heading; the drugs are taught in their own sections"
+  },
+  {
+   "page": "1183",
+   "heading": "GENERIC NAME AVAILABLE AS ANTACIDS",
+   "reason": "Preparations list (brand names only, no teaching content)"
+  },
+  {
+   "page": "1183",
+   "heading": "GENERIC NAME AVAILABLE AS",
+   "reason": "Preparations list (brand names only, no teaching content)"
+  },
+  {
+   "page": "1184",
+   "heading": "Acid-Peptic Diseases",
+   "reason": "Reference-list heading (citations only, no teaching content)"
+  },
+  {
+   "page": "1184",
+   "heading": "Motility Disorders",
+   "reason": "Reference-list heading (citations only, no teaching content)"
+  },
+  {
+   "page": "1185",
+   "heading": "Drugs Used for Irritable Bowel Syndrome",
+   "reason": "Reference-list heading (citations only, no teaching content)"
+  },
+  {
+   "page": "1185",
+   "heading": "Drugs Used for Inflammatory Bowel Disease",
+   "reason": "Reference-list heading (citations only, no teaching content)"
+  },
+  {
+   "page": "1186",
+   "heading": "Drugs for Portal Hypertension",
+   "reason": "Reference-list heading (citations only, no teaching content)"
+  },
+  {
+   "page": "1186",
+   "heading": "Drugs for Short-Bowel Syndrome",
+   "reason": "Reference-list heading (citations only, no teaching content)"
+  },
+  {
+   "page": "1203",
+   "heading": "Candy Tsourounis, PharmD",
+   "reason": "Taught in L06 (Session 2: dietary supplements and herbal medications, Ch. 65)"
+  },
+  {
+   "page": "1204",
+   "heading": "HISTORIC & REGULATORY FACTORS",
+   "reason": "Taught in L06 (Session 2: dietary supplements and herbal medications, Ch. 65)"
+  },
+  {
+   "page": "1206",
+   "heading": "Pharmacologic Effects",
+   "reason": "Taught in L06 (Session 2: dietary supplements and herbal medications, Ch. 65)"
+  },
+  {
+   "page": "1206",
+   "heading": "Clinical Trials",
+   "reason": "Taught in L06 (Session 2: dietary supplements and herbal medications, Ch. 65)"
+  },
+  {
+   "page": "1207",
+   "heading": "Drug Interactions & Precautions",
+   "reason": "Taught in L06 (Session 2: dietary supplements and herbal medications, Ch. 65)"
+  },
+  {
+   "page": "1213",
+   "heading": "Drug Interactions, Precautions, & Dosage",
+   "reason": "Taught in L06 (Session 2: dietary supplements and herbal medications, Ch. 65)"
+  },
+  {
+   "page": "1215",
+   "heading": "PURIFIED NUTRITIONAL SUPPLEMENTS COENZYME Q10",
+   "reason": "Taught in L06 (Session 2: dietary supplements and herbal medications, Ch. 65)"
+  },
+  {
+   "page": "1216",
+   "heading": "GLUCOSAMINE",
+   "reason": "Taught in L06 (Session 2: dietary supplements and herbal medications, Ch. 65)"
+  },
+  {
+   "page": "1216",
+   "heading": "Pharmacologic Effects & Clinical Uses",
+   "reason": "Taught in L06 (Session 2: dietary supplements and herbal medications, Ch. 65)"
+  },
+  {
+   "page": "1217",
+   "heading": "MELATONIN",
+   "reason": "Taught in L06 (Session 2: dietary supplements and herbal medications, Ch. 65)"
+  }
+ ]
+}

@@ -605,3 +605,126 @@ CLASS_SOURCES = {"Albuterol": "L01 S26", "Warfarin": "p. 72", "Propranolol": "p.
                  "Teriparatide": "L04 S54", "Abaloparatide": "L04 S54", "Romosozumab": "L04 S54-55", "Raloxifene": "L04 S54; S62", "Calcitonin": "L04 S42; S62"}
 for _d in DRUGS:
     _d["cls_src"] = CLASS_SOURCES.get(_d["name"], "")
+
+
+# ---------------------------------------------------------------- Unit 3 (L05, L06): cards built from the lectures' Drug Profile slides
+# Every profile field (indications, adverse effects, contraindications, toxicity, formulation, dose) is copied from the slide;
+# mechanism and patient-specific lines below come from the teaching slides of the same lecture.
+import profiles as _profiles
+
+_MOA = {
+    "Omeprazole": ("Irreversibly inhibits the H⁺/K⁺-ATPase proton pump — the final common pathway of acid secretion (acid-activated prodrug, covalent bond).", "L05 S13-14; SG U3-R2"),
+    "Esomeprazole": ("PPI: irreversibly inhibits the H⁺/K⁺-ATPase proton pump (S-isomer of omeprazole).", "L05 S13; p. 1157"),
+    "Pantoprazole": ("PPI: irreversibly inhibits the H⁺/K⁺-ATPase proton pump.", "L05 S13"),
+    "Lansoprazole": ("PPI: irreversibly inhibits the H⁺/K⁺-ATPase proton pump.", "L05 S13"),
+    "Dexlansoprazole": ("PPI: irreversibly inhibits the H⁺/K⁺-ATPase proton pump (R-isomer of lansoprazole).", "L05 S13; p. 1157"),
+    "Famotidine": ("Competitively blocks histamine at the parietal-cell H2 receptor → less cAMP → less pump activity → less acid.", "L05 S11-12"),
+    "Cimetidine": ("Competitively blocks histamine at the parietal-cell H2 receptor.", "L05 S11-12"),
+    "Calcium carbonate": ("Antacid: directly neutralizes existing gastric acid; does not reduce acid production.", "L05 S10"),
+    "Magnesium hydroxide": ("Antacid: neutralizes existing acid; also an osmotic laxative (draws water into the lumen).", "L05 S10; L06 S4"),
+    "Aluminum hydroxide": ("Antacid: neutralizes existing acid; also binds phosphate.", "L05 S10; S45"),
+    "Sucralfate": ("Polymerizes in acid (pH below 4) and binds the ulcer base, forming a protective barrier; minimal systemic absorption.", "L05 S16-17; SG U3-R5"),
+    "Misoprostol": ("PGE1 analog: acts on EP receptors to cut acid and raise mucus and bicarbonate — restores the prostaglandin tone NSAIDs suppress.", "L05 S16-17; SG U3-R5"),
+    "Bismuth subsalicylate": ("Antisecretory, mild antimicrobial, and anti-inflammatory; coats ulcers.", "L06 S7; p. 1162"),
+    "Amoxicillin": ("Penicillin: blocks bacterial cell wall synthesis (H. pylori triple therapy).", "L05 S20; S22"),
+    "Clarithromycin": ("Macrolide: binds the 50S ribosome (H. pylori triple therapy).", "L05 S20 (notes)"),
+    "Metronidazole": ("Nitroimidazole: adds a second antibiotic mechanism in H. pylori regimens.", "L05 S20"),
+    "Tetracycline": ("Tetracycline antibiotic in bismuth quadruple therapy.", "L05 S19-20"),
+    "Ondansetron": ("Blocks serotonin 5-HT3 receptors on gut vagal afferents and the chemoreceptor trigger zone, so no signal reaches the vomiting center.", "L05 S24-25; SG U3-M"),
+    "Metoclopramide": ("D2 antagonism in the CTZ (antiemetic) plus D2 blockade and 5-HT4 agonism in the gut → more acetylcholine → faster gastric emptying (prokinetic).", "L05 S28-29; SG U3-M"),
+    "Aprepitant": ("Blocks substance P/neurokinin at NK1 receptors in the CTZ.", "L05 S24; SG U3-M"),
+    "Meclizine": ("Blocks histamine H1 (and acetylcholine) signals from the vestibular system.", "L05 S24; SG U3-M"),
+    "Scopolamine": ("Muscarinic antagonist: blocks acetylcholine from the vestibular system.", "L05 S24; S33; SG U3-M"),
+    "Prochlorperazine": ("Phenothiazine: blocks dopamine D2 at the CTZ (and other receptors).", "L05 S24; S33"),
+    "Dronabinol": ("Synthetic cannabinoid: activates CB1 receptors in the vomiting center and CTZ, reducing neurotransmitter release; also stimulates appetite — a pathway distinct from 5-HT3, D2, NK1, H1/M1.", "L05 S30-31; SG U3-M"),
+    "Dexamethasone": ("Corticosteroid that adds to other antiemetics in chemotherapy regimens.", "L05 S26; S33"),
+    "Polyethylene glycol 3350": ("Osmotic laxative: draws water into the lumen.", "L06 S4-5"),
+    "Psyllium": ("Bulk-forming laxative: absorbs water, increases stool bulk and transit.", "L06 S4-5"),
+    "Methylcellulose": ("Bulk-forming laxative: holds water and expands stool.", "L06 S4-5"),
+    "Lactulose": ("Osmotic laxative (nonabsorbable sugar): draws water into the lumen; also lowers ammonia.", "L06 S4; S43"),
+    "Senna": ("Stimulant laxative: directly stimulates enteric nerves and motility.", "L06 S4-5"),
+    "Bisacodyl": ("Stimulant laxative: activates enteric nerves.", "L06 S4-5"),
+    "Lubiprostone": ("Secretagogue: activates the ClC-2 chloride channel → more chloride and fluid secretion.", "L06 S4-5; S46"),
+    "Linaclotide": ("Secretagogue: guanylate cyclase-C agonist → more chloride and fluid secretion.", "L06 S4-5; S47"),
+    "Loperamide": ("Peripheral mu-opioid agonist on enteric neurons → less acetylcholine → slower peristalsis, more water absorbed; enters the CNS poorly (P-gp efflux).", "L06 S7-8"),
+    "Diphenoxylate/atropine": ("Opioid-receptor agonist slows motility; atropine at a subtherapeutic dose discourages misuse.", "L06 S7-8; SG U3-R10"),
+    "Mesalamine": ("5-ASA: anti-inflammatory action local to the GI mucosa, reducing inflammatory mediators.", "L06 S12-13"),
+    "Budesonide": ("Locally acting corticosteroid with high first-pass metabolism — less systemic exposure than prednisone.", "L06 S14"),
+    "Mercaptopurine": ("Thiopurine: metabolized to thioguanine nucleotides that block purine synthesis in lymphocytes.", "L06 S15"),
+    "Vedolizumab": ("Blocks α4β7 integrin-mediated leukocyte gut-homing — gut-selective, less systemic immunosuppression.", "L06 S16; S38; SG U3-R11"),
+    "Ustekinumab": ("Blocks interleukin-12 and -23 signaling.", "L06 S16"),
+    "Cyanocobalamin": ("Replaces vitamin B12 (absorption needs stomach acid to free it from food and intrinsic factor in the terminal ileum).", "L06 S25"),
+    "Folic acid": ("Replaces folate (water-soluble vitamin B9).", "L06 S24; S63"),
+    "Vitamin D": ("Fat-soluble vitamin; deficiency impairs bone mineralization.", "L06 S22; S24"),
+    "Phytonadione": ("Vitamin K1: supports carboxylation of clotting factors II, VII, IX, X, opposing warfarin.", "L06 S24; S27"),
+    "Ferrous sulfate": ("Replaces iron; absorption enhanced by vitamin C, impaired by antacids and PPIs.", "L06 S24"),
+    "Ginkgo biloba": ("Herbal supplement that raises bleeding risk with anticoagulants/antiplatelets.", "L06 S30"),
+    "Fish oil": ("Omega-3 fatty acids; raise bleeding risk at high doses with anticoagulants.", "L06 S30; S69"),
+}
+_PT = {
+    "Omeprazole": [("Take 30-60 minutes before the first meal (works on actively secreting pumps).", "L05 S13-14"),
+                   ("Omeprazole and esomeprazole inhibit CYP2C19 and can blunt clopidogrel activation.", "L05 S13; SG U3-R4"),
+                   ("Long-term risks: C. difficile, fractures, hypomagnesemia, B12 deficiency, pneumonia, acute interstitial nephritis; rebound acid on stopping.", "L05 S14; SG U3-R3")],
+    "Esomeprazole": [("Like omeprazole, inhibits CYP2C19 (clopidogrel interaction).", "L05 S14")],
+    "Pantoprazole": [("Fewer CYP drug interactions than omeprazole — textbook: preferred with clopidogrel.", "L05 S38; p. 1161")],
+    "Famotidine": [("Most commonly used H2 blocker; minimal CYP450 interaction; renal dose adjustment; confusion risk in older adults.", "L05 S11-12")],
+    "Cimetidine": [("Potent CYP450 inhibitor (1A2, 2C19, 3A4) and antiandrogenic (gynecomastia) — raises warfarin, phenytoin, theophylline.", "L05 S11-12; S42")],
+    "Calcium carbonate": [("Separate from other oral drugs by at least 2 hours.", "L05 S10")],
+    "Magnesium hydroxide": [("Diarrhea; caution in renal impairment (magnesium accumulation).", "L05 S10; L06 S4")],
+    "Aluminum hydroxide": [("Constipating.", "L05 S10")],
+    "Sucralfate": [("Needs acid to activate — empty stomach, separated from antacids/PPIs and other drugs by 2 hours; aluminum accumulates in CKD.", "L05 S16-17")],
+    "Misoprostol": [("Contraindicated in pregnancy — potent uterotonic/abortifacient; diarrhea and cramping common.", "L05 S16-17; SG U3-R5")],
+    "Clarithromycin": [("Strong CYP3A4 inhibitor (statins); recent macrolide exposure raises resistance concern → bismuth quadruple therapy.", "L05 S19-21; SG U3-R6")],
+    "Metronidazole": [("Disulfiram-like reaction with alcohol; substitutes for amoxicillin with penicillin allergy.", "L05 S19; SG U3-R6")],
+    "Tetracycline": [("Avoid in pregnancy and children.", "L05 S19")],
+    "Amoxicillin": [("Penicillin allergy rules it out — substitute metronidazole or use bismuth quadruple therapy.", "L05 S19; S21; SG U3-R6")],
+    "Ondansetron": [("Give before chemotherapy; QT prolongation; CYP2D6 ultrarapid metabolizers may respond less well.", "L05 S25")],
+    "Metoclopramide": [("Boxed warning: tardive dyskinesia — avoid beyond 12 weeks; acute dystonia → diphenhydramine or benztropine; avoid in Parkinson disease; renal dosing; CYP2D6 poor metabolizers need lower doses.", "L05 S28-29; SG U3-R8")],
+    "Meclizine": [("Motion sickness is vestibular — H1/M1 blockers fit.", "L05 S27; SG U3-R7")],
+    "Dronabinol": [("Reserved for refractory CINV; dronabinol Schedule III, nabilone Schedule II; caution in older adults.", "L05 S30-31")],
+    "Polyethylene glycol 3350": [("First-line for chronic constipation; fast, reliable onset.", "L06 S4-5")],
+    "Psyllium": [("Slowest onset, safest long term; needs adequate fluids; avoid in obstruction.", "L06 S4-5")],
+    "Senna": [("Short-term or breakthrough use; cramping.", "L06 S4-5")],
+    "Linaclotide": [("Diarrhea; contraindicated in mechanical obstruction and in children under 2.", "L06 S5")],
+    "Lubiprostone": [("Nausea is the classic adverse effect.", "L06 S5")],
+    "Loperamide": [("Avoid in suspected C. difficile and in bloody or febrile diarrhea; very high doses → QT prolongation.", "L06 S7-9; SG U3-R10")],
+    "Diphenoxylate/atropine": [("Schedule V; avoid in young children and in infectious diarrhea.", "L06 S7-8; SG U3-R10")],
+    "Mesalamine": [("First-line for mild-to-moderate UC; monitor renal function (interstitial nephritis); enemas/suppositories for distal disease.", "L06 S12-13; SG U3-R11")],
+    "Budesonide": [("Short-term induction of remission; not for maintenance.", "L06 S14")],
+    "Mercaptopurine": [("Test TPMT and NUDT15 first; allopurinol → cut dose by about two-thirds to three-quarters; monitor CBC and LFTs; onset weeks to months.", "L06 S15")],
+    "Vedolizumab": [("The IBD biologic that is most gut-selective.", "L06 S38; SG U3-R11")],
+    "Cyanocobalamin": [("Monitor B12 in long-term PPI or metformin users; treat with IM or high-dose oral B12.", "L06 S25; SG U3-R12")],
+    "Folic acid": [("Critical in pregnancy to prevent neural tube defects.", "L06 S24")],
+    "Phytonadione": [("Warfarin patients: keep vitamin K intake consistent rather than avoiding it.", "L06 S27")],
+    "Ginkgo biloba": [("Ask about supplements at every medication reconciliation.", "L06 S30")],
+}
+_EXTRA_ALIAS = {"Dronabinol": ["Nabilone", "Cesamet"], "Diphenoxylate/atropine": ["Diphenoxylate"], "Polyethylene glycol 3350": ["PEG 3350", "Polyethylene glycol"],
+                "Mercaptopurine": ["6-mercaptopurine"]}
+_by = {d["name"].lower(): d for d in DRUGS}
+for _lec in ("L05", "L06"):
+    for _p in _profiles.read(_lec):
+        _c = f"{_lec} S{_p['slide']}"
+        _f = [("ind", _p.get("ind"), _c), ("ae", _p.get("ae"), _c), ("contra", _p.get("contra"), _c),
+              ("ae", "Toxicity/overdose: " + _p["tox"] if _p.get("tox") else None, _c),
+              ("extra", f"Formulation: {_p.get('form', '')}. Adult dose: {_p.get('dose', '')}.", _c)]
+        if _p["name"] in _MOA:
+            _f.insert(0, ("moa", *_MOA[_p["name"]]))
+        _f += [("pt", t, s) for t, s in _PT.get(_p["name"], [])]
+        _facts = [{"text": t, "src": s, "tb": not re.search(r"\bL0\d|\bSG\b", s), "sec": k} for k, t, s in _f if t]
+        _d = _by.get(_p["name"].lower())
+        if _d:
+            _d["facts"] += _facts
+            _d["unit"] = min(_d.get("unit", 3), 3) if _d.get("unit") else 3
+            for _a in _p["aliases"] + _EXTRA_ALIAS.get(_p["name"], []):
+                if _a not in _d["aliases"]:
+                    _d["aliases"].append(_a)
+            if _d["cls"].startswith("Not covered"):
+                _d["cls"] = _p["cls"]
+        else:
+            _d = {"name": _p["name"], "cls": _p["cls"], "tags": ["GI" if _lec == "L05" else "GI & nutrition", _p["cls"].split(",")[0]],
+                  "aliases": _p["aliases"] + _EXTRA_ALIAS.get(_p["name"], []), "unit": 3, "facts": _facts}
+            DRUGS.append(_d)
+            _by[_p["name"].lower()] = _d
+        CLASS_SOURCES.setdefault(_p["name"], _c)
+        if not _d.get("cls_src"):
+            _d["cls_src"] = CLASS_SOURCES[_p["name"]]

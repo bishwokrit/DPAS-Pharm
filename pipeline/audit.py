@@ -101,8 +101,11 @@ def source_units(slides, textbook, guide):
             head = t[0] if t else []
             for row in t[1:] or t:
                 units.append({"ref": ref, "text": " ".join(row) + " " + " ".join(head), "kind": "slide table"})
-        for sent in re.split(r"(?<=[.!?])\s+", s.get("notes", "")):
-            units.append({"ref": ref, "text": sent, "kind": "speaker note"})
+        for para in re.split(r"\n\s*\n", s.get("notes", "")):
+            # presenter labels ("Instructor script:", "Know:", "Say:") carry no facts; the sentence after them does
+            para = re.sub(r"^(?:\s*(?:Instructor script|Know|Say|Ask)\s*:\s*)+", "", para.strip())
+            for sent in re.split(r"(?<=[.!?])\s+", para):
+                units.append({"ref": ref, "text": sent, "kind": "speaker note"})
     for p in textbook:
         page = re.sub(r"\D", "", p["page"]) or p["page"]
         for sent in re.split(r"(?<=[.!?])\s+", p["text"].replace("\n", " ")):

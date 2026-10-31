@@ -264,15 +264,9 @@
     "U3-R6",
     "U3-R7",
     "U3-R8",
-    "U3-R9",
-    "U3-R10",
-    "U3-R11",
-    "U3-R12",
-    "U3-R13",
-    "U3-M",
-    "U3-S"
+    "U3-M"
    ],
-   "study_guide_note": "Unit items not yet split between the two sessions; split when authoring."
+   "study_guide_note": "Unit 3 split by topic: Session 1 (acid-peptic disease, antiemetics) = U3-R1–R8 and U3-M; U3-S (H. pylori + warfarin/St. John’s wort case) is taught in Session 2."
   },
   {
    "id": "L06",
@@ -317,23 +311,14 @@
     }
    ],
    "study_guide": [
-    "U3-R1",
-    "U3-R2",
-    "U3-R3",
-    "U3-R4",
-    "U3-R5",
-    "U3-R6",
-    "U3-R7",
-    "U3-R8",
     "U3-R9",
     "U3-R10",
     "U3-R11",
     "U3-R12",
     "U3-R13",
-    "U3-M",
     "U3-S"
    ],
-   "study_guide_note": "Unit items not yet split between the two sessions; split when authoring."
+   "study_guide_note": "Unit 3 split by topic: Session 2 (bowel disorders, IBD, nutrition and supplements) = U3-R9–R13, plus the integrated case U3-S."
   },
   {
    "id": "L07",
