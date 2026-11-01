@@ -1,0 +1,520 @@
+{
+ "lecture": "L10",
+ "passed": true,
+ "units_checked": 1726,
+ "missing": [],
+ "uncited": [],
+ "emphasis_not_bold": [],
+ "skipped": [
+  {
+   "ref": "S1",
+   "text": "Diane S. Allen-Gipson, Ph.D., M.S., Course Director",
+   "kind": "slide",
+   "reason": "faculty identifier (site policy: no school or instructor identifiers)"
+  },
+  {
+   "ref": "S2",
+   "text": "Briefly recap Session 1 before diving in: diuretic pharmacology by nephron site, and the hyperkalemia-with-ACEi/ARB preview from the closing case.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; the recap is in About this lecture"
+  },
+  {
+   "ref": "S3",
+   "text": "Section transition.",
+   "kind": "speaker note",
+   "reason": "section divider"
+  },
+  {
+   "ref": "S4",
+   "text": "This is the conceptual spine for the entire session — every drug class in Section 4 and much of Section 5 maps onto this single pathway.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; taught from S4 (notes) script"
+  },
+  {
+   "ref": "S4",
+   "text": "Walk it step by step before naming any individual drugs, so students see the cascade logic first.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S6",
+   "text": "Explain that bradykinin accumulation is the mechanism of ACE-inhibitor cough; switch to an ARB if cough is troublesome.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; taught from S6"
+  },
+  {
+   "ref": "S7",
+   "text": "Aliskiren is included mainly for conceptual completeness on Figure 8 — keep this brief and emphasize that ACE inhibitors and ARBs are the clinically dominant classes, while flagging the combination-therapy caution as a safety point worth remembering.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; taught from S7"
+  },
+  {
+   "ref": "S8",
+   "text": "This slide is the clinical payoff of Figure 8 and the pregnancy/creatinine points from the ACE inhibitor slide — make the connection explicit: the drug class students might expect to avoid in kidney disease is actually the preferred therapy, precisely because of how it works at the glomerulus.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; the payoff is taught from S8"
+  },
+  {
+   "ref": "S9",
+   "text": "Frame the creatinine rise as a predictable hemodynamic effect; reinforce sick-day rules.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S11",
+   "text": "Section transition.",
+   "kind": "speaker note",
+   "reason": "section divider"
+  },
+  {
+   "ref": "S12",
+   "text": "The point here is classification, not exhaustive detail.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S13",
+   "text": "Contrast vascular dilation with cardiac slowing; flag the diltiazem or verapamil plus beta-blocker combination.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S14",
+   "text": "Use this figure to directly answer \"if all these classes lower blood pressure similarly, why are RAAS blockers preferred in CKD?\" — the answer is the renoprotective gap shown here, not a difference in BP control.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; the question is answered in the Figure 12 caption"
+  },
+  {
+   "ref": "S16",
+   "text": "Contrast central sympatholytics with direct vasodilators, and stress the beta-blocker and diuretic pairing for hydralazine.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S17",
+   "text": "Case cue: pause and ask the class where to look first before revealing the answer.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S18",
+   "text": "Section transition.",
+   "kind": "speaker note",
+   "reason": "section divider"
+  },
+  {
+   "ref": "S20",
+   "text": "Walk through the NO to cGMP pathway, then stress PDE5 inhibitor co-prescription and the nitrate-free interval.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; the pathway is Figure 14"
+  },
+  {
+   "ref": "S21",
+   "text": "Have students sort drugs by supply or demand effect.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; the sorting is the Figure 15 interactive"
+  },
+  {
+   "ref": "S23",
+   "text": "NSAID plus ACE inhibitor or ARB plus diuretic.",
+   "kind": "speaker note",
+   "reason": "presenter script; taught from S23"
+  },
+  {
+   "ref": "S25",
+   "text": "Direct students to Figure 18 (the next slide) for the visual version of this same bidirectional relationship — this slide states it in words first.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S27",
+   "text": "Case cue: pause and ask the class to spot the triple whammy before revealing the answer.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S28",
+   "text": "Walk the stems row by row and ask students to predict the class from the suffix before revealing it.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S29",
+   "text": "Section transition.",
+   "kind": "speaker note",
+   "reason": "section divider"
+  },
+  {
+   "ref": "S30",
+   "text": "Have students work in pairs: for each patient, name a first-line approach AND the single biggest safety concern to check before prescribing or counseling.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S30",
+   "text": "Work in pairs: first-line approach and the biggest safety check for each patient.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S32",
+   "text": "Section transition.",
+   "kind": "speaker note",
+   "reason": "section divider"
+  },
+  {
+   "ref": "S33",
+   "text": "D.  Discontinue diuretic therapy entirely",
+   "kind": "slide",
+   "reason": "quiz distractor (wrong option); the quiz is rebuilt as practice questions"
+  },
+  {
+   "ref": "S33",
+   "text": "Use the quiz for self-testing.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S34",
+   "text": "D.  They increase aldosterone release to protect sodium balance",
+   "kind": "slide",
+   "reason": "quiz distractor (wrong option); the quiz is rebuilt as practice questions"
+  },
+  {
+   "ref": "S36",
+   "text": "Class activity (10 minutes): Give groups two or three profiles to teach back in 60 seconds each.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S36",
+   "text": "Teaching points: ACE inhibitors (captopril, lisinopril, enalapril), ARBs (losartan, valsartan), aliskiren, CCBs (amlodipine, nifedipine, diltiazem, verapamil), beta-blockers (metoprolol, atenolol), central agents (clonidine, methyldopa), hydralazine, nitrates.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; the drugs are in the profiles"
+  },
+  {
+   "ref": "S36",
+   "text": "Bloom's prompts: Remember: state lisinopril dosing.",
+   "kind": "speaker note",
+   "reason": "Bloom's teaching prompt; rebuilt as practice questions"
+  },
+  {
+   "ref": "S36",
+   "text": "Understand: explain the creatinine rise.",
+   "kind": "speaker note",
+   "reason": "Bloom's teaching prompt; rebuilt as practice questions"
+  },
+  {
+   "ref": "S36",
+   "text": "Apply: counsel an older adult about naproxen.",
+   "kind": "speaker note",
+   "reason": "Bloom's teaching prompt; rebuilt as practice questions"
+  },
+  {
+   "ref": "S36",
+   "text": "Analyze: explain bradycardia on verapamil plus metoprolol.",
+   "kind": "speaker note",
+   "reason": "Bloom's teaching prompt; rebuilt as practice questions"
+  },
+  {
+   "ref": "S36",
+   "text": "Evaluate: choose therapy for a woman of reproductive age with proteinuric CKD.",
+   "kind": "speaker note",
+   "reason": "Bloom's teaching prompt; rebuilt as practice questions"
+  },
+  {
+   "ref": "S55",
+   "text": "Abbreviation key: Review HF, MI, AV, ECG, ACE, ARB, AKI, CKD, PDE5 and CYP.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; the abbreviations are in About this lecture"
+  },
+  {
+   "ref": "S56",
+   "text": "This slide documents AI-tool use for original figure generation per university citation requirements.",
+   "kind": "speaker note",
+   "reason": "administrative note on AI-tool citation"
+  },
+  {
+   "ref": "S56",
+   "text": "The diagrams in this deck were originally generated with Claude; the mechanism schematics are illustrative.",
+   "kind": "speaker note",
+   "reason": "administrative note on AI-tool citation"
+  }
+ ],
+ "not_in_deck": [],
+ "not_in_notebooklm": [],
+ "layout_problems": [],
+ "question_issues": [],
+ "question_stats": {
+  "count": 20,
+  "letters": {
+   "A": 4,
+   "B": 4,
+   "C": 4,
+   "D": 4,
+   "E": 4
+  },
+  "vignette": 9,
+  "mechanism": 11
+ },
+ "thin_objectives": [],
+ "textbook_unused": 1266,
+ "reading_missing": [],
+ "reading_skipped": [
+  {
+   "page": "261",
+   "heading": "RENAL TUBULE TRANSPORT MECHANISMS PROXIMAL TUBULE",
+   "reason": "Taught in L09 (Session 1: diuretics and renal dosing — same assigned chapters)"
+  },
+  {
+   "page": "264",
+   "heading": "DISTAL CONVOLUTED TUBULE",
+   "reason": "Taught in L09 (Session 1: diuretics and renal dosing — same assigned chapters)"
+  },
+  {
+   "page": "264",
+   "heading": "COLLECTING TUBULE SYSTEM",
+   "reason": "Taught in L09 (Session 1: diuretics and renal dosing — same assigned chapters)"
+  },
+  {
+   "page": "266",
+   "heading": "RENAL AUTACOIDS",
+   "reason": "Taught in L09 (Session 1: diuretics and renal dosing — same assigned chapters)"
+  },
+  {
+   "page": "266",
+   "heading": "ADENOSINE",
+   "reason": "Taught in L09 (Session 1: diuretics and renal dosing — same assigned chapters)"
+  },
+  {
+   "page": "266",
+   "heading": "PROSTAGLANDINS",
+   "reason": "Taught in L09 (Session 1: diuretics and renal dosing — same assigned chapters)"
+  },
+  {
+   "page": "266",
+   "heading": "PEPTIDES",
+   "reason": "Taught in L09 (Session 1: diuretics and renal dosing — same assigned chapters)"
+  },
+  {
+   "page": "266",
+   "heading": "CARBONIC ANHYDRASE INHIBITORS",
+   "reason": "Taught in L09 (Session 1: diuretics and renal dosing — same assigned chapters)"
+  },
+  {
+   "page": "267",
+   "heading": "Drug Usual Oral Dosage",
+   "reason": "Taught in L09 (Session 1: diuretics and renal dosing — same assigned chapters)"
+  },
+  {
+   "page": "268",
+   "heading": "SODIUM GLUCOSE COTRANSPORTER 2 (SGL T2) INHIBITORS",
+   "reason": "Taught in L09 (Session 1: diuretics and renal dosing — same assigned chapters)"
+  },
+  {
+   "page": "268",
+   "heading": "Clinical Indications",
+   "reason": "Taught in L09 (Session 1: diuretics and renal dosing — same assigned chapters)"
+  },
+  {
+   "page": "269",
+   "heading": "Adverse Reactions",
+   "reason": "Taught in L09 (Session 1: diuretics and renal dosing — same assigned chapters)"
+  },
+  {
+   "page": "269",
+   "heading": "LOOP DIURETICS",
+   "reason": "Taught in L09 (Session 1: diuretics and renal dosing — same assigned chapters)"
+  },
+  {
+   "page": "270",
+   "heading": "Clinical Indications & Dosage",
+   "reason": "Taught in L09 (Session 1: diuretics and renal dosing — same assigned chapters)"
+  },
+  {
+   "page": "271",
+   "heading": "THIAZIDES",
+   "reason": "Taught in L09 (Session 1: diuretics and renal dosing — same assigned chapters)"
+  },
+  {
+   "page": "271",
+   "heading": "Chemistry & Pharmacokinetics",
+   "reason": "Taught in L09 (Session 1: diuretics and renal dosing — same assigned chapters)"
+  },
+  {
+   "page": "273",
+   "heading": "POTASSIUM-SPARING DIURETICS",
+   "reason": "Taught in L09 (Session 1: diuretics and renal dosing — same assigned chapters)"
+  },
+  {
+   "page": "274",
+   "heading": "Agent Hydrochlorothiazide",
+   "reason": "Taught in L09 (Session 1: diuretics and renal dosing — same assigned chapters)"
+  },
+  {
+   "page": "275",
+   "heading": "AGENTS THAT AL TER WATER EXCRETION (AQUARETICS) OSMOTIC DIURETICS",
+   "reason": "Taught in L09 (Session 1: diuretics and renal dosing — same assigned chapters)"
+  },
+  {
+   "page": "276",
+   "heading": "ANTIDIURETIC HORMONE ANTAGONISTS",
+   "reason": "Taught in L09 (Session 1: diuretics and renal dosing — same assigned chapters)"
+  },
+  {
+   "page": "277",
+   "heading": "UREARETICS",
+   "reason": "Taught in L09 (Session 1: diuretics and renal dosing — same assigned chapters)"
+  },
+  {
+   "page": "277",
+   "heading": "DIURETIC COMBINATIONS LOOP AGENTS & THIAZIDES",
+   "reason": "Taught in L09 (Session 1: diuretics and renal dosing — same assigned chapters)"
+  },
+  {
+   "page": "278",
+   "heading": "CLINICAL PHARMACOLOGY OF DIURETIC AGENTS",
+   "reason": "Taught in L09 (Session 1: diuretics and renal dosing — same assigned chapters)"
+  },
+  {
+   "page": "278",
+   "heading": "EDEMATOUS STATES",
+   "reason": "Taught in L09 (Session 1: diuretics and renal dosing — same assigned chapters)"
+  },
+  {
+   "page": "278",
+   "heading": "HEART FAILURE",
+   "reason": "Taught in L09 (Session 1: diuretics and renal dosing — same assigned chapters)"
+  },
+  {
+   "page": "278",
+   "heading": "KIDNEY DISEASE AND RENAL FAILURE",
+   "reason": "Taught in L09 (Session 1: diuretics and renal dosing — same assigned chapters)"
+  },
+  {
+   "page": "279",
+   "heading": "HEPATIC CIRRHOSIS",
+   "reason": "Taught in L09 (Session 1: diuretics and renal dosing — same assigned chapters)"
+  },
+  {
+   "page": "279",
+   "heading": "IDIOPATHIC EDEMA",
+   "reason": "Taught in L09 (Session 1: diuretics and renal dosing — same assigned chapters)"
+  },
+  {
+   "page": "280",
+   "heading": "NONEDEMATOUS STATES HYPERTENSION",
+   "reason": "Taught in L09 (Session 1: diuretics and renal dosing — same assigned chapters)"
+  },
+  {
+   "page": "280",
+   "heading": "NEPHROLITHIASIS",
+   "reason": "Taught in L09 (Session 1: diuretics and renal dosing — same assigned chapters)"
+  },
+  {
+   "page": "280",
+   "heading": "HYPERCALCEMIA",
+   "reason": "Taught in L09 (Session 1: diuretics and renal dosing — same assigned chapters)"
+  },
+  {
+   "page": "280",
+   "heading": "DIABETES INSIPIDUS",
+   "reason": "Taught in L09 (Session 1: diuretics and renal dosing — same assigned chapters)"
+  },
+  {
+   "page": "281",
+   "heading": "RENAL & CARDIAC PROTECTION",
+   "reason": "Taught in L09 (Session 1: diuretics and renal dosing — same assigned chapters)"
+  },
+  {
+   "page": "281",
+   "heading": "RISK OF HYPONATREMIA WITH DIFFERENT DIURETIC CLASSES",
+   "reason": "Taught in L09 (Session 1: diuretics and renal dosing — same assigned chapters)"
+  },
+  {
+   "page": "282",
+   "heading": "VASOPRESSIN (ADH) ANTAGONISTS",
+   "reason": "Taught in L09 (Session 1: diuretics and renal dosing — same assigned chapters)"
+  },
+  {
+   "page": "42",
+   "heading": "PHARMACOKINETICS",
+   "reason": "Taught in L09 (Session 1: diuretics and renal dosing — same assigned chapters)"
+  },
+  {
+   "page": "43",
+   "heading": "Volume of Distribution",
+   "reason": "Taught in L09 (Session 1: diuretics and renal dosing — same assigned chapters)"
+  },
+  {
+   "page": "48",
+   "heading": "Drug Accumulation",
+   "reason": "Taught in L09 (Session 1: diuretics and renal dosing — same assigned chapters)"
+  },
+  {
+   "page": "49",
+   "heading": "Rate of Absorption",
+   "reason": "Taught in L09 (Session 1: diuretics and renal dosing — same assigned chapters)"
+  },
+  {
+   "page": "49",
+   "heading": "Extraction Ratio & the First-Pass Effect",
+   "reason": "Taught in L09 (Session 1: diuretics and renal dosing — same assigned chapters)"
+  },
+  {
+   "page": "49",
+   "heading": "THE TIME COURSE OF DRUG EFFECT",
+   "reason": "Taught in L09 (Session 1: diuretics and renal dosing — same assigned chapters)"
+  },
+  {
+   "page": "50",
+   "heading": "Immediate Effects",
+   "reason": "Taught in L09 (Session 1: diuretics and renal dosing — same assigned chapters)"
+  },
+  {
+   "page": "50",
+   "heading": "Delayed Effects",
+   "reason": "Taught in L09 (Session 1: diuretics and renal dosing — same assigned chapters)"
+  },
+  {
+   "page": "50",
+   "heading": "Schedule-Dependent Effects",
+   "reason": "Taught in L09 (Session 1: diuretics and renal dosing — same assigned chapters)"
+  },
+  {
+   "page": "50",
+   "heading": "Conc Effect",
+   "reason": "Taught in L09 (Session 1: diuretics and renal dosing — same assigned chapters)"
+  },
+  {
+   "page": "51",
+   "heading": "Cumulative Effects",
+   "reason": "Taught in L09 (Session 1: diuretics and renal dosing — same assigned chapters)"
+  },
+  {
+   "page": "51",
+   "heading": "Maintenance Dose",
+   "reason": "Taught in L09 (Session 1: diuretics and renal dosing — same assigned chapters)"
+  },
+  {
+   "page": "52",
+   "heading": "Loading Dose",
+   "reason": "Taught in L09 (Session 1: diuretics and renal dosing — same assigned chapters)"
+  },
+  {
+   "page": "53",
+   "heading": "The Target Concentration Strategy",
+   "reason": "Taught in L09 (Session 1: diuretics and renal dosing — same assigned chapters)"
+  },
+  {
+   "page": "54",
+   "heading": "Dosing History",
+   "reason": "Taught in L09 (Session 1: diuretics and renal dosing — same assigned chapters)"
+  },
+  {
+   "page": "56",
+   "heading": "Distribution & Clearance",
+   "reason": "Taught in L09 (Session 1: diuretics and renal dosing — same assigned chapters)"
+  }
+ ]
+}

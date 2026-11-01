@@ -1,0 +1,3406 @@
+{
+ "lecture": {
+  "id": "L10",
+  "title": "Renal Pharmacotherapeutics — Session 2",
+  "date": "Thu, Nov 19, 2026"
+ },
+ "textbook_status": "included",
+ "objectives": [
+  {
+   "id": "IO5.1",
+   "src": "Syllabus",
+   "text": "Identify major pharmacologic classes used in the management of renal conditions and describe their mechanisms of action."
+  },
+  {
+   "id": "IO5.2",
+   "src": "Syllabus",
+   "text": "Describe the indications, contraindications, adverse effects, and clinically significant interactions associated with medications used to treat renal conditions."
+  },
+  {
+   "id": "IO5.3",
+   "src": "Syllabus",
+   "text": "Compare pharmacologic agents within and across therapeutic classes to distinguish clinically relevant differences in efficacy, safety, and use."
+  },
+  {
+   "id": "IO5.4",
+   "src": "Syllabus",
+   "text": "Select appropriate pharmacologic therapy for common renal conditions based on clinical presentation and patient-specific factors."
+  },
+  {
+   "id": "IO5.5",
+   "src": "Syllabus",
+   "text": "Identify appropriate dosing, administration, and monitoring considerations for medications used in renal conditions."
+  },
+  {
+   "id": "IO5.6",
+   "src": "Syllabus",
+   "text": "Explain important medication-use and safety information to patients receiving pharmacotherapy for renal."
+  },
+  {
+   "id": "SO1",
+   "src": "S2",
+   "text": "Describe the renin-angiotensin-aldosterone system (RAAS) and identify where each antihypertensive drug class acts."
+  },
+  {
+   "id": "SO2",
+   "src": "S2",
+   "text": "Explain why ACE inhibitors and ARBs are preferred first-line therapy for hypertension in chronic kidney disease, including their renoprotective mechanism."
+  },
+  {
+   "id": "SO3",
+   "src": "S2",
+   "text": "Identify major antihypertensive drug classes beyond RAAS blockers, their mechanisms, and their role in CKD-specific management."
+  },
+  {
+   "id": "SO4",
+   "src": "S2",
+   "text": "Describe vasodilator pharmacology (nitrates, calcium channel blockers) in angina pectoris and its mechanistic overlap with cardiovascular-renal disease management."
+  },
+  {
+   "id": "SO5",
+   "src": "S2",
+   "text": "Identify high-risk drug combinations and monitoring needs at the cardiorenal interface, including the \"triple whammy,\" and apply the full renal/cardiorenal toolkit to integrated clinical scenarios with a cumulative recall quiz."
+  }
+ ],
+ "about": [
+  {
+   "text": "**PA PHARMACOLOGY COURSE · LECTURE 5 · SESSION 2 OF 2** — Renal Pharmacotherapeutics. **Session 2: Hypertension in CKD and the Cardiovascular-Renal Overlap  |  Thursday, November 19  |  8:30–11:00 AM**",
+   "src": "S1"
+  },
+  {
+   "text": "Recap: Session 1 covered renal dosing principles and the five diuretic classes, organized by nephron site — Session 1 gave us nephron sites — plus the hyperkalemia-with-ACEi/ARB preview from the closing case.",
+   "src": "S1 (notes); S2; S2 (notes)"
+  },
+  {
+   "text": "Today we follow one pathway, the renin-angiotensin-aldosterone system, then see where it intersects with angina drugs and with the most preventable cause of AKI, the triple whammy — closing with a cumulative recall quiz spanning both sessions.",
+   "src": "S2 (notes)"
+  },
+  {
+   "text": "Appendix 1 abbreviation key: PO = by mouth; IV = intravenous; SL = sublingual; BID / TID / QID = two / three / four times daily; ER / SR = extended-release / sustained-release; IR = immediate-release; HF = heart failure; MI = myocardial infarction.",
+   "src": "S36; S36 (notes)"
+  },
+  {
+   "text": "LV = left ventricular; EF = ejection fraction; AV = atrioventricular; SVT = supraventricular tachycardia; WPW = Wolff-Parkinson-White; CAD = coronary artery disease; ECG = electrocardiogram; ICP = intracranial pressure; CBC = complete blood count.",
+   "src": "S36; S36 (notes)"
+  },
+  {
+   "text": "ACE = angiotensin-converting enzyme; ARB = angiotensin receptor blocker; AKI = acute kidney injury; CKD = chronic kidney disease; CrCl = creatinine clearance; eGFR = estimated glomerular filtration rate; PDE5 = phosphodiesterase type 5; CYP = cytochrome P450.",
+   "src": "S36; S36 (notes); S55 (notes)"
+  },
+  {
+   "text": "The profiles give **Formulation, dose, indications, adverse effects, contraindications and toxicity** — your study reference: know the dose logic, the serious adverse effects, the contraindication that changes decisions and the toxicity you would need to recognize. **Standard adult dosing for teaching; verify against current prescribing information.**",
+   "src": "S36; S36 (notes); S37-54"
+  },
+  {
+   "text": "**Appendix 2: DRUG PROFILE · SUPPORTING** — supporting drugs explain interactions, not doses. **Listed for context; not profiled in detail.**",
+   "src": "S55; S55 (notes)"
+  },
+  {
+   "text": "**Original figures in this deck:** Figures 8, 12, 15, 16 and 18 (The Renin-Angiotensin-Aldosterone System: Where Antihypertensives Act; Antihypertensive Classes: BP-Lowering Efficacy vs. Renoprotection in CKD; Angina Pathophysiology: Where Nitrates and Calcium Channel Blockers Act;",
+   "src": "S56"
+  },
+  {
+   "text": "The \"Triple Whammy\": A Classic Preventable Cause of AKI; The Cardiorenal-Hypertension Cycle) were generated by the course director using the AI tool Claude to illustrate standard, non-copyrighted pharmacologic concepts — original diagrams, not reproduced from Katzung’s Basic and Clinical Pharmacology or any other copyrighted source.",
+   "src": "S56; S56 (notes)"
+  },
+  {
+   "text": "**Mechanism illustrations:** Figures 9, 10, 11, 13, 14 and 17 are illustrative AI-generated schematics of drug mechanisms, not reproduced from any copyrighted source. **Reference:** Anthropic. (2026). Claude (Sonnet 5) [Large language model]. https://claude.ai",
+   "src": "S56; S56 (notes)"
+  }
+ ],
+ "classes": [
+  {
+   "name": "RAAS Blockers",
+   "template": "drug_class",
+   "objectives": [
+    "SO1",
+    "SO2",
+    "IO5.1",
+    "IO5.2",
+    "IO5.4",
+    "IO5.5"
+   ],
+   "sections": {
+    "overview": [
+     {
+      "text": "**One pathway, four drug classes, and the preferred therapy for hypertension in CKD.** Today we follow the renin-angiotensin-aldosterone system, the pathway these drugs act on.",
+      "src": "S3; S3 (notes)"
+     },
+     {
+      "text": "**Figure 8. Original illustrative diagram (not from Katzung): angiotensinogen is converted to angiotensin I by renin, then to angiotensin II by ACE; angiotensin II drives both vasoconstriction and aldosterone release.**",
+      "src": "S4; SG U5-R7"
+     },
+     {
+      "text": "**Direct renin inhibitors, ACE inhibitors, ARBs, and aldosterone antagonists each block a different point in this cascade.**",
+      "src": "S4; SG U5-R7"
+     },
+     {
+      "text": "This is the conceptual spine for the session: walk the cascade before naming drugs — angiotensinogen, renin, angiotensin I, ACE, angiotensin II, vasoconstriction and aldosterone.",
+      "src": "S4 (notes)"
+     }
+    ],
+    "prototype": [
+     {
+      "text": "ACE inhibitors: captopril, lisinopril, enalapril — \"-pril\" suffix across the class. ARBs: losartan, valsartan — \"-sartan\" suffix. Direct renin inhibitor: aliskiren.",
+      "src": "S5; S7"
+     }
+    ],
+    "moa": [
+     {
+      "text": "**Mechanism: block the conversion of angiotensin I to angiotensin II, reducing both vasoconstriction and aldosterone release (Figure 8).**",
+      "src": "S5"
+     },
+     {
+      "text": "ACE also breaks down bradykinin: ACE inhibitor blocks ACE → less angiotensin II (less vasoconstriction and aldosterone) → less bradykinin breakdown, so bradykinin accumulates → cough or angioedema → switch to an ARB for cough.",
+      "src": "S6; S6 (notes)"
+     },
+     {
+      "text": "ARBs block the AT1 receptor directly, rather than preventing angiotensin II formation. Aliskiren blocks the rate-limiting first step of the entire cascade.",
+      "src": "S7"
+     },
+     {
+      "text": "Renoprotection: by reducing angiotensin II, these drugs preferentially dilate the efferent (outflow) arteriole of the glomerulus, lowering intraglomerular pressure and reducing proteinuria — a direct, structural renoprotective effect beyond systemic BP control.",
+      "src": "S8; SG U5-R8"
+     },
+     {
+      "text": "Chain (Figure 10): angiotensin II normally constricts the efferent arteriole → ACE inhibitor or ARB removes that signal → efferent arteriole dilates; intraglomerular pressure falls → proteinuria falls; creatinine rises up to ~30%.",
+      "src": "S9"
+     }
+    ],
+    "indications": [
+     {
+      "text": "**ACE inhibitors and ARBs are first-line antihypertensive therapy in CKD, especially with proteinuria — not simply because they lower blood pressure.**",
+      "src": "S8"
+     },
+     {
+      "text": "ARBs: no bradykinin-related cough — preferred alternative when ACE inhibitor cough is intolerable. ARBs do not raise bradykinin, so they are the usual switch.",
+      "src": "S6; S7"
+     },
+     {
+      "text": "Aliskiren: limited clinical use; useful mainly as a teaching example of where a drug could act upstream of ACE — included for conceptual completeness on Figure 8.",
+      "src": "S7; S7 (notes)"
+     },
+     {
+      "text": "The drug class students might expect to avoid in kidney disease is actually the preferred therapy, precisely because of how it works at the glomerulus.",
+      "src": "S8 (notes)"
+     }
+    ],
+    "adverse": [
+     {
+      "text": "**Adverse effects: dry cough (bradykinin accumulation — the single most common reason for switching to an ARB), angioedema (rare but potentially life-threatening), and hyperkalemia.**",
+      "src": "S5"
+     },
+     {
+      "text": "Cough is bradykinin-mediated, not allergic. Angioedema is rare but can be life-threatening: stop the drug.",
+      "src": "S6"
+     },
+     {
+      "text": "An initial rise in serum creatinine of up to ~30% after starting therapy is expected and acceptable — reflects reduced intraglomerular pressure, not drug-induced kidney injury; a larger rise warrants evaluation for renal artery stenosis.",
+      "src": "S5; SG U5-R9"
+     },
+     {
+      "text": "Students frequently get the creatinine point wrong: many want to stop the ACE inhibitor at the first rise. It is a predictable hemodynamic effect, not toxicity — the mechanism and the \"side effect\" are two faces of the same action.",
+      "src": "S5 (notes); S8; S9 (notes)"
+     }
+    ],
+    "contra": [
+     {
+      "text": "**Contraindicated in pregnancy — fetal renal toxicity; avoid in women who are or may become pregnant.** ARBs share the same pregnancy contraindication and hyperkalemia risk as ACE inhibitors.",
+      "src": "S5; S7"
+     },
+     {
+      "text": "Aliskiren: generally not combined with an ACE inhibitor or ARB due to additive hyperkalemia/hypotension risk with no added benefit — never in diabetes.",
+      "src": "S7; S7 (notes)"
+     }
+    ],
+    "interactions": [
+     {
+      "text": "Potassium supplements, potassium-sparing diuretics and trimethoprim: hyperkalemia with ACE inhibitors and ARBs. NSAIDs blunt antihypertensives and raise AKI risk with an ACE inhibitor or ARB plus diuretic.",
+      "src": "S55; S55 (notes)"
+     },
+     {
+      "text": "Hyperkalemia with potassium-sparing diuretics rises with drugs that cut renin or angiotensin II: β blockers, NSAIDs, aliskiren, ACE inhibitors, ARBs.",
+      "src": "p. 275",
+      "tb": true
+     }
+    ],
+    "pk": [
+     {
+      "text": "Enalapril’s ACE-inhibition half-life is about 4 hours, yet once-daily dosing works: concentrations stay far above the C50, so ACE stays inhibited.",
+      "src": "p. 50",
+      "tb": true
+     }
+    ],
+    "monitoring": [
+     {
+      "text": "**Monitor potassium and renal function within 1–2 weeks of starting or up-titrating therapy, and periodically thereafter.**",
+      "src": "S8; S9 (notes)"
+     },
+     {
+      "text": "**Hold or use with caution during acute illness causing volume depletion (\"sick day rules\") — combined with reduced renal perfusion, RAAS blockade can precipitate acute kidney injury.**",
+      "src": "S8"
+     },
+     {
+      "text": "Sick-day rules: hold the ACE inhibitor or ARB during vomiting, diarrhea or dehydration. An early creatinine rise is expected and hemodynamic, not nephrotoxicity; a larger rise warrants checking for volume depletion or renal artery stenosis.",
+      "src": "S9; SG U5-R9"
+     }
+    ],
+    "pearls": [
+     {
+      "text": "Case: a patient with hypertension and diabetic nephropathy is started on lisinopril; two weeks later serum creatinine has risen from 1.1 to 1.4 mg/dL. **Is this an indication to stop the ACE inhibitor?**",
+      "src": "S10"
+     },
+     {
+      "text": "**A rise of roughly 27% is within the expected range for ACE inhibitor initiation, reflecting reduced intraglomerular pressure from efferent arteriolar dilation — not drug toxicity.**",
+      "src": "S10; S10 (notes)"
+     },
+     {
+      "text": "**Therapy should generally continue with ongoing monitoring; a rise beyond approximately 30%, or a much sharper increase, should prompt evaluation for renal artery stenosis or volume depletion.**",
+      "src": "S10"
+     },
+     {
+      "text": "A student who reflexively says \"stop the drug\" has missed that this creatinine rise is expected and even reflects the mechanism working as intended.",
+      "src": "S10 (notes)"
+     }
+    ]
+   },
+   "figures": [
+    {
+     "image": "S4_1.jpg",
+     "title": "Figure 8 · The RAAS: where antihypertensives act",
+     "src": "S4; S4 (notes)",
+     "caption": "Original illustrative diagram (not from Katzung): angiotensinogen → (renin) → angiotensin I → (ACE) → angiotensin II → vasoconstriction and aldosterone. Direct renin inhibitors, ACE inhibitors, ARBs and aldosterone antagonists each block a different step.",
+     "viz": {
+      "type": "pathway",
+      "title": "The RAAS: where antihypertensives act",
+      "h": 240,
+      "point": "One pathway, four places to block it.",
+      "nodes": [
+       {
+        "id": "agt",
+        "label": "Angiotensinogen",
+        "glyph": "molecule",
+        "x": 10,
+        "y": 20,
+        "w": 140,
+        "col": "sage"
+       },
+       {
+        "id": "a1",
+        "label": "Angiotensin I",
+        "glyph": "molecule",
+        "x": 170,
+        "y": 20,
+        "w": 130,
+        "col": "teal"
+       },
+       {
+        "id": "a2",
+        "label": "Angiotensin II",
+        "glyph": "molecule",
+        "x": 320,
+        "y": 20,
+        "w": 130,
+        "col": "amber"
+       },
+       {
+        "id": "at1",
+        "label": "AT1 receptor",
+        "glyph": "membrane",
+        "x": 470,
+        "y": 20,
+        "w": 150,
+        "col": "blue"
+       },
+       {
+        "id": "vc",
+        "label": "Vasoconstriction",
+        "glyph": "effect",
+        "x": 330,
+        "y": 140,
+        "w": 150,
+        "col": "coral"
+       },
+       {
+        "id": "ald",
+        "label": "Aldosterone →\nNa⁺ retention",
+        "glyph": "signal",
+        "x": 490,
+        "y": 140,
+        "w": 140,
+        "col": "deep"
+       }
+      ],
+      "edges": [
+       [
+        "agt",
+        "a1"
+       ],
+       [
+        "a1",
+        "a2"
+       ],
+       [
+        "a2",
+        "at1"
+       ],
+       [
+        "at1",
+        "vc"
+       ],
+       [
+        "at1",
+        "ald"
+       ]
+      ],
+      "drugs": [
+       {
+        "label": "Aliskiren (renin)",
+        "at": "agt>a1",
+        "off": [
+         "a1",
+         "a2",
+         "at1",
+         "vc",
+         "ald"
+        ],
+        "less": [],
+        "note": "Top of the cascade; never with ACEi/ARB in diabetes (S7)."
+       },
+       {
+        "label": "Lisinopril (ACE)",
+        "at": "a1>a2",
+        "off": [
+         "a2",
+         "at1",
+         "vc",
+         "ald"
+        ],
+        "less": [],
+        "note": "Cough, angioedema, hyperkalemia; pregnancy contraindicated (S5)."
+       },
+       {
+        "label": "Losartan (AT1)",
+        "at": "a2>at1",
+        "off": [
+         "at1",
+         "vc",
+         "ald"
+        ],
+        "less": [],
+        "note": "No bradykinin cough (S7)."
+       },
+       {
+        "label": "Spironolactone",
+        "at": "ald",
+        "off": [],
+        "less": [
+         "ald"
+        ],
+        "note": "Blocks aldosterone’s receptor — hyperkalemia with ACEi/ARB (L09)."
+       }
+      ],
+      "read": "Pick a drug to see where it acts."
+     }
+    },
+    {
+     "image": "S6_1.png",
+     "title": "Figure 9 · ACE inhibitors: bradykinin, cough and angioedema",
+     "src": "S6; S6 (notes)",
+     "caption": "Schematic (illustrative) — Figure 9. ACE inhibition and bradykinin accumulation: ACE also breaks down bradykinin, so blocking it raises bradykinin (cough, angioedema); ARBs spare bradykinin.",
+     "viz": {
+      "type": "pathway",
+      "title": "ACE inhibitors: bradykinin, cough and angioedema",
+      "h": 190,
+      "point": "Cough is a mechanism, not an allergy.",
+      "nodes": [
+       {
+        "id": "ace",
+        "label": "ACE (kininase)",
+        "glyph": "enzyme",
+        "x": 10,
+        "y": 55,
+        "w": 140,
+        "col": "amber"
+       },
+       {
+        "id": "bk",
+        "label": "Bradykinin\naccumulates",
+        "glyph": "molecule",
+        "x": 175,
+        "y": 55,
+        "w": 140,
+        "col": "coral"
+       },
+       {
+        "id": "cough",
+        "label": "Dry cough",
+        "glyph": "effect",
+        "x": 340,
+        "y": 20,
+        "w": 130,
+        "col": "blue"
+       },
+       {
+        "id": "ae",
+        "label": "Angioedema\n(rare, serious)",
+        "glyph": "effect",
+        "x": 340,
+        "y": 105,
+        "w": 130,
+        "col": "coral"
+       },
+       {
+        "id": "arb",
+        "label": "Switch to an ARB",
+        "glyph": "effect",
+        "x": 495,
+        "y": 55,
+        "w": 135,
+        "col": "sage"
+       }
+      ],
+      "edges": [
+       [
+        "ace",
+        "bk"
+       ],
+       [
+        "bk",
+        "cough"
+       ],
+       [
+        "bk",
+        "ae"
+       ],
+       [
+        "cough",
+        "arb"
+       ]
+      ],
+      "drugs": [
+       {
+        "label": "ACE inhibitor",
+        "at": "ace",
+        "off": [],
+        "less": [],
+        "note": "Blocks bradykinin breakdown → cough (not allergic) (S6)."
+       },
+       {
+        "label": "ARB (losartan)",
+        "at": "arb",
+        "off": [
+         "bk",
+         "cough"
+        ],
+        "less": [],
+        "note": "Does not raise bradykinin — the usual switch (S6–S7)."
+       }
+      ],
+      "read": "Pick a drug to see where it acts."
+     }
+    },
+    {
+     "image": "S9_1.png",
+     "title": "Figure 10 · Efferent arteriole dilation: why creatinine rises",
+     "src": "S9; S9 (notes)",
+     "caption": "Schematic (illustrative) — Figure 10. Efferent arteriole dilation and intraglomerular pressure: removing angiotensin II’s efferent constriction lowers glomerular pressure — less proteinuria, and an expected creatinine rise of up to ~30%.",
+     "viz": {
+      "type": "pathway",
+      "title": "Efferent arteriole dilation: why creatinine rises",
+      "h": 170,
+      "point": "The benefit and the creatinine rise are the same action.",
+      "nodes": [
+       {
+        "id": "a2",
+        "label": "Angiotensin II\nconstricts efferent",
+        "glyph": "signal",
+        "x": 10,
+        "y": 55,
+        "w": 150,
+        "col": "amber"
+       },
+       {
+        "id": "eff",
+        "label": "Efferent arteriole\ndilates",
+        "glyph": "membrane",
+        "x": 180,
+        "y": 55,
+        "w": 150,
+        "col": "blue"
+       },
+       {
+        "id": "igp",
+        "label": "Intraglomerular\npressure falls",
+        "glyph": "effect",
+        "x": 350,
+        "y": 55,
+        "w": 140,
+        "col": "teal"
+       },
+       {
+        "id": "out",
+        "label": "Less proteinuria;\ncreatinine ≤ 30% ↑",
+        "glyph": "effect",
+        "x": 505,
+        "y": 55,
+        "w": 130,
+        "col": "sage"
+       }
+      ],
+      "edges": [
+       [
+        "a2",
+        "eff"
+       ],
+       [
+        "eff",
+        "igp"
+       ],
+       [
+        "igp",
+        "out"
+       ]
+      ],
+      "drugs": [
+       {
+        "label": "Lisinopril or losartan",
+        "at": "a2",
+        "off": [
+         "a2"
+        ],
+        "less": [],
+        "note": "Removes the efferent signal: benefit and creatinine rise are the same action (S8–S9)."
+       },
+       {
+        "label": "Volume depletion (sick day)",
+        "at": "igp",
+        "off": [],
+        "less": [],
+        "note": "Hold the ACEi/ARB: pressure can fall too far → AKI (S8–S9)."
+       }
+      ],
+      "read": "Pick a drug to see where it acts."
+     }
+    }
+   ],
+   "comparisons": [
+    {
+     "title": "ACE inhibitors vs. ARBs vs. aliskiren",
+     "columns": [
+      "",
+      "ACE inhibitors (-pril)",
+      "ARBs (-sartan)",
+      "Aliskiren (-kiren)"
+     ],
+     "rows": [
+      [
+       "Block",
+       "Angiotensin I → II conversion",
+       "AT1 receptor",
+       "Renin (first step)"
+      ],
+      [
+       "Cough / bradykinin",
+       "Yes — most common reason to switch",
+       "No",
+       "Cough listed on profile"
+      ],
+      [
+       "Pregnancy",
+       "Contraindicated",
+       "Contraindicated",
+       "Contraindicated"
+      ],
+      [
+       "Use",
+       "First-line HTN in proteinuric CKD",
+       "First-line; ACEi cough alternative",
+       "Limited; never with ACEi/ARB in diabetes"
+      ]
+     ],
+     "src": "S5; S7; S37-42"
+    },
+    {
+     "title": "ACE inhibitor profiles: formulation, dose, indications",
+     "columns": [
+      "Drug",
+      "Class",
+      "Formulation",
+      "Adult dose",
+      "Indications"
+     ],
+     "rows": [
+      [
+       "Captopril (Capoten)",
+       "**ACE inhibitor**",
+       "Tablets 12.5/25/50/100 mg",
+       "Hypertension: 12.5-25 mg PO BID-TID (maximum 450 mg/day); heart failure: 6.25-12.5 mg TID",
+       "Hypertension, heart failure, post-MI, diabetic nephropathy"
+      ],
+      [
+       "Lisinopril (Zestril, Prinivil)",
+       "**ACE inhibitor**",
+       "Tablets 2.5/5/10/20/30/40 mg",
+       "Hypertension: 10 mg PO daily, titrate to 40 mg (maximum 80 mg); heart failure: start 2.5-5 mg daily",
+       "Hypertension, heart failure, post-MI, diabetic nephropathy"
+      ],
+      [
+       "Enalapril (Vasotec)",
+       "**ACE inhibitor (prodrug)**",
+       "Tablets 2.5/5/10/20 mg; IV enalaprilat",
+       "Hypertension: 5 mg PO daily, titrate to 40 mg daily or divided; heart failure: 2.5 mg BID",
+       "Hypertension, heart failure, asymptomatic LV dysfunction"
+      ]
+     ],
+     "src": "S37; S38; S39"
+    },
+    {
+     "title": "ACE inhibitor profiles: adverse effects, contraindications, toxicity",
+     "columns": [
+      "Drug",
+      "Adverse effects",
+      "Contraindications",
+      "Toxicity / overdose"
+     ],
+     "rows": [
+      [
+       "Captopril (Capoten)",
+       "Cough, hyperkalemia, hypotension, taste change, rash, angioedema",
+       "Pregnancy, history of angioedema with ACE inhibitors, bilateral renal artery stenosis, concomitant aliskiren in diabetes",
+       "Angioedema, hyperkalemia, hypotension, AKI; take 1 hour before meals; monitor potassium and creatinine"
+      ],
+      [
+       "Lisinopril (Zestril, Prinivil)",
+       "Dry cough, dizziness, hyperkalemia, creatinine rise up to 30%, angioedema",
+       "Pregnancy, angioedema history, bilateral renal artery stenosis, concomitant aliskiren in diabetes",
+       "Angioedema, hyperkalemia, symptomatic hypotension, AKI during volume depletion"
+      ],
+      [
+       "Enalapril (Vasotec)",
+       "Cough, hyperkalemia, dizziness, hypotension, angioedema",
+       "Pregnancy, angioedema history, bilateral renal artery stenosis",
+       "Hypotension, hyperkalemia, angioedema, AKI; reduce dose when CrCl is below 30 mL/min"
+      ]
+     ],
+     "src": "S37; S38; S39"
+    },
+    {
+     "title": "ARB and renin inhibitor profiles: formulation, dose, indications",
+     "columns": [
+      "Drug",
+      "Class",
+      "Formulation",
+      "Adult dose",
+      "Indications"
+     ],
+     "rows": [
+      [
+       "Losartan (Cozaar)",
+       "**Angiotensin receptor blocker (ARB)**",
+       "Tablets 25/50/100 mg",
+       "Hypertension: 50 mg PO daily, up to 100 mg; diabetic nephropathy: 50 mg daily, increase to 100 mg",
+       "Hypertension, diabetic nephropathy, stroke risk reduction with LV hypertrophy, heart failure alternative"
+      ],
+      [
+       "Valsartan (Diovan)",
+       "**Angiotensin receptor blocker (ARB)**",
+       "Tablets 40/80/160/320 mg",
+       "Hypertension: 80-160 mg PO daily (maximum 320 mg); heart failure: 40 mg BID, titrate to 160 mg BID",
+       "Hypertension, heart failure, post-MI"
+      ],
+      [
+       "Aliskiren (Tekturna)",
+       "**Direct renin inhibitor**",
+       "Tablets 150/300 mg",
+       "150 mg PO daily, may increase to 300 mg daily; take consistently with respect to meals",
+       "Hypertension (rarely first-line)"
+      ]
+     ],
+     "src": "S40; S41; S42"
+    },
+    {
+     "title": "ARB and renin inhibitor profiles: adverse effects, contraindications, toxicity",
+     "columns": [
+      "Drug",
+      "Adverse effects",
+      "Contraindications",
+      "Toxicity / overdose"
+     ],
+     "rows": [
+      [
+       "Losartan (Cozaar)",
+       "Dizziness, hyperkalemia, creatinine rise, rare angioedema",
+       "Pregnancy, concomitant aliskiren in diabetes, bilateral renal artery stenosis",
+       "Hypotension, hyperkalemia, fetal toxicity; no bradykinin cough"
+      ],
+      [
+       "Valsartan (Diovan)",
+       "Dizziness, hyperkalemia, fatigue, creatinine rise",
+       "Pregnancy, concomitant aliskiren in diabetes, bilateral renal artery stenosis",
+       "Hypotension, hyperkalemia, fetal toxicity"
+      ],
+      [
+       "Aliskiren (Tekturna)",
+       "Diarrhea, cough, hyperkalemia, angioedema, hypotension",
+       "Pregnancy; do not combine with ACE inhibitors or ARBs in diabetes or with eGFR below 60 mL/min",
+       "Hypotension, hyperkalemia, AKI when combined with ACE inhibitors or ARBs"
+      ]
+     ],
+     "src": "S40; S41; S42"
+    }
+   ],
+   "hooks": [
+    {
+     "kind": "why",
+     "text": "Why does creatinine rise on an ACE inhibitor? The drug lowers glomerular pressure on purpose — that same drop protects the kidney from proteinuria.",
+     "src": "S8; S9; SG U5-R8"
+    },
+    {
+     "kind": "mnemonic",
+     "text": "Thirty is fine, more is a sign: up to ~30% creatinine rise → continue; more → look for renal artery stenosis or volume depletion.",
+     "src": "S5; S10; SG U5-R9"
+    }
+   ],
+   "high_yield": [
+    {
+     "text": "ACEi/ARB first-line in proteinuric CKD: efferent dilation lowers intraglomerular pressure and proteinuria.",
+     "src": "S8; SG U5-R8"
+    },
+    {
+     "text": "Creatinine rise up to ~30% is expected; check K⁺ and creatinine in 1–2 weeks; sick-day rules; never in pregnancy.",
+     "src": "S5; S8; S9; SG U5-R9"
+    }
+   ],
+   "questions": [
+    {
+     "kind": "vignette",
+     "stem": "Two weeks after starting lisinopril for diabetic nephropathy, creatinine rose from 1.1 to 1.4 mg/dL. What is the best response?",
+     "correct": "Continue lisinopril and keep monitoring",
+     "why_correct": "A ~27% rise is within the expected range, reflecting reduced intraglomerular pressure; continue with monitoring (S10).",
+     "distractors": [
+      {
+       "text": "Stop lisinopril for nephrotoxicity",
+       "why": "This is expected, not toxicity (S10)."
+      },
+      {
+       "text": "Switch to an NSAID for blood pressure",
+       "why": "NSAIDs raise AKI risk (S55)."
+      },
+      {
+       "text": "Add aliskiren to protect the kidney",
+       "why": "Never with ACEi in diabetes (S7)."
+      },
+      {
+       "text": "Double the lisinopril dose today",
+       "why": "Not the response (S10)."
+      }
+     ],
+     "src": "S10; SG U5-R9",
+     "from_slides": "S10"
+    },
+    {
+     "kind": "mechanism",
+     "stem": "Why does an ACE inhibitor cause a dry cough?",
+     "correct": "Bradykinin accumulates because ACE also degrades it",
+     "why_correct": "ACE also breaks down bradykinin; blocking it raises bradykinin, causing cough and angioedema (S6).",
+     "distractors": [
+      {
+       "text": "It is an IgE-mediated allergy to the drug",
+       "why": "Cough is not allergic (S6)."
+      },
+      {
+       "text": "Angiotensin II rises and irritates airways",
+       "why": "Angiotensin II falls (S5)."
+      },
+      {
+       "text": "Aldosterone excess dries the airway",
+       "why": "Aldosterone falls (S5)."
+      },
+      {
+       "text": "It blocks AT1 receptors in the lung",
+       "why": "That is an ARB, which spares cough (S7)."
+      }
+     ],
+     "src": "S6; S7"
+    },
+    {
+     "kind": "vignette",
+     "stem": "A woman of reproductive age with proteinuric CKD needs antihypertensive therapy. What must be addressed first with an ACE inhibitor?",
+     "correct": "Pregnancy risk — fetal renal toxicity",
+     "why_correct": "ACE inhibitors (and ARBs) are contraindicated in pregnancy; avoid in women who are or may become pregnant (S5; S7).",
+     "distractors": [
+      {
+       "text": "Bradykinin cough risk only",
+       "why": "Pregnancy is the contraindication (S5)."
+      },
+      {
+       "text": "Ototoxicity with loop diuretics",
+       "why": "Not an ACEi issue (L09)."
+      },
+      {
+       "text": "Gynecomastia with long-term use",
+       "why": "Spironolactone (L09)."
+      },
+      {
+       "text": "Rebound hypertension if stopped",
+       "why": "Clonidine (S16)."
+      }
+     ],
+     "src": "S5; S7"
+    },
+    {
+     "kind": "mechanism",
+     "stem": "Why are ACE inhibitors and ARBs preferred in proteinuric CKD beyond lowering blood pressure?",
+     "correct": "They dilate the efferent arteriole",
+     "why_correct": "Reducing angiotensin II preferentially dilates the efferent arteriole, lowering intraglomerular pressure and proteinuria (S8; SG U5-R8).",
+     "distractors": [
+      {
+       "text": "They constrict the afferent arteriole",
+       "why": "That is NSAIDs (S23)."
+      },
+      {
+       "text": "They increase aldosterone to retain sodium",
+       "why": "They lower aldosterone (S5)."
+      },
+      {
+       "text": "They are the only class allowed in CKD",
+       "why": "Other classes are used too (S12)."
+      },
+      {
+       "text": "They raise GFR by expanding volume",
+       "why": "Not the mechanism (S8)."
+      }
+     ],
+     "src": "S8; S9; SG U5-R8"
+    }
+   ],
+   "flows": [
+    {
+     "title": "Creatinine rose after starting an ACE inhibitor",
+     "steps": [
+      "Recheck K⁺ and creatinine at 1–2 weeks",
+      "Rise ≤ ~30%? Expected — continue and monitor",
+      "Rise > 30% or sharp? Look for volume depletion or renal artery stenosis",
+      "Vomiting, diarrhea, dehydration → sick-day rules: hold it"
+     ],
+     "src": "S8; S9; S10"
+    }
+   ]
+  },
+  {
+   "name": "Other Antihypertensives & Resistant Hypertension",
+   "template": "drug_class",
+   "objectives": [
+    "SO3",
+    "IO5.1",
+    "IO5.2",
+    "IO5.3",
+    "IO5.4"
+   ],
+   "sections": {
+    "overview": [
+     {
+      "text": "**RAAS blockers are first-line — but rarely the whole story.** Other major classes: CCBs, beta-blockers, diuretics, central agents and direct vasodilators.",
+      "src": "S11; S11 (notes); S12 (notes)"
+     },
+     {
+      "text": "This four-card slide is a brief classification recap — CCBs and beta-blockers get fuller treatment later this session (angina) and in cardiovascular coursework.",
+      "src": "S12 (notes)"
+     }
+    ],
+    "prototype": [
+     {
+      "text": "Calcium channel blockers: dihydropyridines (amlodipine) and non-dihydropyridines (diltiazem, verapamil). Beta-blockers: metoprolol, atenolol. Central α2 agonists: clonidine, methyldopa. Direct arteriolar vasodilator: hydralazine.",
+      "src": "S12; S28"
+     }
+    ],
+    "moa": [
+     {
+      "text": "Dihydropyridines (amlodipine): arteriolar dilation. Non-dihydropyridines (diltiazem, verapamil): also ↓ HR/contractility.",
+      "src": "S12"
+     },
+     {
+      "text": "Beta-blockers: ↓ heart rate, ↓ contractility, ↓ renin release.",
+      "src": "S12"
+     },
+     {
+      "text": "Chain (Figure 11): dihydropyridine arteriolar dilation → afterload falls; blood pressure lowers. Non-DHP CCB or beta-blocker: heart rate and contractility fall → renin release falls.",
+      "src": "S13; S13 (notes)"
+     },
+     {
+      "text": "Clonidine or methyldopa stimulates central α2 receptors → sympathetic outflow falls, so BP falls. Hydralazine dilates arterioles directly → reflex tachycardia and fluid retention.",
+      "src": "S16; S16 (notes)"
+     }
+    ],
+    "indications": [
+     {
+      "text": "Beta-blockers: not generally first-line for uncomplicated HTN, but compelling indications include concurrent CAD/heart failure/arrhythmia.",
+      "src": "S12"
+     },
+     {
+      "text": "If all these classes lower blood pressure similarly, why are RAAS blockers preferred in CKD? Similar BP lowering; ACE inhibitors and ARBs add renoprotection — the renoprotective gap in Figure 12, not a difference in BP control.",
+      "src": "S14; S14 (notes)"
+     },
+     {
+      "text": "Thiazide / loop diuretics (covered in depth in Session 1): thiazides first-line with preserved renal function; loops preferred as GFR falls.",
+      "src": "S12"
+     },
+     {
+      "text": "Central agents (clonidine, methyldopa) and hydralazine: reserved for resistant hypertension or specific situations (e.g., methyldopa in pregnancy).",
+      "src": "S12; S16"
+     },
+     {
+      "text": "Diuretics enhance the efficacy of many agents, particularly ACE inhibitors; hydralazine and minoxidil need a diuretic because they cause salt and water retention.",
+      "src": "p. 280",
+      "tb": true
+     },
+     {
+      "text": "Spironolactone may be the most effective single agent for drug-resistant hypertension.",
+      "src": "p. 280",
+      "tb": true
+     }
+    ],
+    "adverse": [
+     {
+      "text": "Peripheral edema is a CCB class adverse effect.",
+      "src": "S12"
+     },
+     {
+      "text": "Hydralazine: reflex tachycardia and fluid retention — must be paired with a beta-blocker and a diuretic.",
+      "src": "S16; S16 (notes)"
+     },
+     {
+      "text": "Abrupt clonidine withdrawal causes rebound hypertension.",
+      "src": "S16; S16 (notes)"
+     }
+    ],
+    "contra": [
+     {
+      "text": "Atenolol accumulates in renal impairment (reduce dose when CrCl is below 35 mL/min); beta-blockers: do not stop abruptly.",
+      "src": "S47; S48"
+     }
+    ],
+    "interactions": [
+     {
+      "text": "Diltiazem or verapamil with a beta-blocker risks bradycardia and AV block; dihydropyridines pair with beta-blockers without that conduction risk.",
+      "src": "S13; S13 (notes)"
+     },
+     {
+      "text": "Verapamil and diltiazem raise digoxin levels. Rifampin and carbamazepine lower CCB levels; grapefruit juice raises dihydropyridine levels.",
+      "src": "S55; S55 (notes)"
+     }
+    ],
+    "pk": [],
+    "monitoring": [
+     {
+      "text": "**Resistant hypertension (BP above goal despite three or more antihypertensive classes, including a diuretic) is common in CKD, often driven by volume overload.**",
+      "src": "S15"
+     },
+     {
+      "text": "First step: confirm diuretic therapy is adequate — a thiazide may simply no longer be effective at the patient’s current GFR (Session 1’s loop-vs-thiazide cutoff).",
+      "src": "S15; S15 (notes)"
+     },
+     {
+      "text": "Switching from a thiazide to a loop diuretic, or increasing loop diuretic dosing, is often the most effective single change in advanced CKD.",
+      "src": "S15"
+     },
+     {
+      "text": "**Aldosterone antagonists (spironolactone) can be added for resistant hypertension, but require close potassium and renal-function monitoring, especially on top of an ACE inhibitor or ARB.**",
+      "src": "S15"
+     }
+    ],
+    "pearls": [
+     {
+      "text": "\"Resistant hypertension in CKD\" is often really a diuretic-selection problem, not a need for an entirely new drug class — check diuretic adequacy first; thiazide to loop switch; add spironolactone with close monitoring.",
+      "src": "S15 (notes)"
+     },
+     {
+      "text": "Case: CKD (eGFR 28 mL/min), still hypertensive despite lisinopril, amlodipine, and hydrochlorothiazide. **What is the most likely contributor to inadequate control, and what change would you suggest first?**",
+      "src": "S17"
+     },
+     {
+      "text": "**At this GFR, hydrochlorothiazide has largely lost its natriuretic efficacy (Session 1). Switching to a loop diuretic such as furosemide or torsemide is usually the most effective next step before adding an entirely new drug class.**",
+      "src": "S17"
+     },
+     {
+      "text": "This case is a direct callback to the Session 1 \"Choosing a Diuretic for Advancing CKD\" case — point out the parallel if you remember it.",
+      "src": "S17 (notes)"
+     }
+    ]
+   },
+   "figures": [
+    {
+     "image": "S13_1.png",
+     "title": "Figure 11 · CCBs and beta-blockers: different targets",
+     "src": "S13; S13 (notes)",
+     "caption": "**Schematic (illustrative)** — Figure 11. Vascular versus cardiac targets of antihypertensive drugs: dihydropyridines dilate arterioles (afterload falls); non-dihydropyridines and beta-blockers slow heart rate and contractility (beta-blockers also cut renin).",
+     "viz": {
+      "type": "pathway",
+      "title": "CCBs and beta-blockers: different targets",
+      "h": 240,
+      "point": "Vessel drugs vs. heart drugs — never stack two heart-slowers.",
+      "nodes": [
+       {
+        "id": "ves",
+        "label": "Arterioles",
+        "glyph": "membrane",
+        "x": 10,
+        "y": 20,
+        "w": 130,
+        "col": "teal"
+       },
+       {
+        "id": "aft",
+        "label": "Afterload falls",
+        "glyph": "effect",
+        "x": 170,
+        "y": 20,
+        "w": 140,
+        "col": "sage"
+       },
+       {
+        "id": "hrt",
+        "label": "Heart: rate and\ncontractility",
+        "glyph": "cell",
+        "x": 10,
+        "y": 130,
+        "w": 150,
+        "col": "coral"
+       },
+       {
+        "id": "ren",
+        "label": "Renin release",
+        "glyph": "signal",
+        "x": 190,
+        "y": 130,
+        "w": 130,
+        "col": "amber"
+       },
+       {
+        "id": "bp",
+        "label": "Blood pressure\nlowers",
+        "glyph": "effect",
+        "x": 470,
+        "y": 75,
+        "w": 150,
+        "col": "blue"
+       }
+      ],
+      "edges": [
+       [
+        "ves",
+        "aft"
+       ],
+       [
+        "aft",
+        "bp"
+       ],
+       [
+        "hrt",
+        "bp"
+       ],
+       [
+        "ren",
+        "bp"
+       ]
+      ],
+      "drugs": [
+       {
+        "label": "Amlodipine (DHP)",
+        "at": "ves",
+        "off": [],
+        "less": [],
+        "note": "Arteriolar dilation; peripheral edema (S12–S13)."
+       },
+       {
+        "label": "Diltiazem / verapamil",
+        "at": "hrt",
+        "off": [],
+        "less": [
+         "hrt"
+        ],
+        "note": "↓ HR and contractility; avoid with beta-blockers (AV block) (S13)."
+       },
+       {
+        "label": "Metoprolol (beta-blocker)",
+        "at": "hrt",
+        "off": [],
+        "less": [
+         "hrt",
+         "ren"
+        ],
+        "note": "↓ HR, contractility and renin (S12)."
+       }
+      ],
+      "read": "Pick a drug to see where it acts."
+     }
+    },
+    {
+     "image": "S14_1.jpg",
+     "title": "Figure 12 · BP-lowering efficacy vs. renoprotection in CKD",
+     "src": "S14; S14 (notes)",
+     "caption": "Original illustrative comparison (illustrative relative values, not from Katzung): BP-lowering efficacy is broadly comparable — ACEi/ARBs 70, CCBs 72, thiazide/loop diuretics 68, beta-blockers 55 — but renoprotection in proteinuric CKD is far greater with ACEi/ARBs (90) than CCBs (45), diuretics (35) or beta-blockers (30).",
+     "viz": {
+      "type": "bars",
+      "title": "BP vs. renoprotection",
+      "yLabel": "Illustrative relative scale",
+      "point": "Similar BP lowering; only ACE inhibitors/ARBs add big renoprotection.",
+      "legend": [
+       [
+        "blue",
+        "BP-lowering efficacy"
+       ],
+       [
+        "teal",
+        "Renoprotection in proteinuric CKD"
+       ]
+      ],
+      "bars": [
+       {
+        "label": "ACEi/ARB · BP",
+        "value": 70,
+        "col": "blue",
+        "note": "Comparable BP lowering."
+       },
+       {
+        "label": "ACEi/ARB · kidney",
+        "value": 90,
+        "col": "teal",
+        "note": "Efferent dilation, less proteinuria."
+       },
+       {
+        "label": "CCB · BP",
+        "value": 72,
+        "col": "blue",
+        "note": "Comparable BP lowering."
+       },
+       {
+        "label": "CCB · kidney",
+        "value": 45,
+        "col": "teal",
+        "note": "Less renoprotection."
+       },
+       {
+        "label": "Diuretic · BP",
+        "value": 68,
+        "col": "blue",
+        "note": "Comparable BP lowering."
+       },
+       {
+        "label": "Diuretic · kidney",
+        "value": 35,
+        "col": "teal",
+        "note": "Less renoprotection."
+       },
+       {
+        "label": "BB · BP",
+        "value": 55,
+        "col": "blue",
+        "note": "Somewhat less BP lowering."
+       },
+       {
+        "label": "BB · kidney",
+        "value": 30,
+        "col": "teal",
+        "note": "Least renoprotection."
+       }
+      ],
+      "steps": [
+       {
+        "label": "ACEi/ARB kidney",
+        "pick": 1
+       },
+       {
+        "label": "CCB kidney",
+        "pick": 3
+       },
+       {
+        "label": "Diuretic kidney",
+        "pick": 5
+       },
+       {
+        "label": "Beta-blocker kidney",
+        "pick": 7
+       }
+      ]
+     }
+    },
+    {
+     "image": "S16_1.png",
+     "title": "Figure 13 · Central agents and hydralazine",
+     "src": "S16; S16 (notes)",
+     "caption": "Schematic (illustrative) — Figure 13. Central agents and direct arteriolar vasodilation: clonidine and methyldopa reduce sympathetic outflow; hydralazine dilates arterioles directly, triggering reflex tachycardia and fluid retention.",
+     "viz": {
+      "type": "pathway",
+      "title": "Central agents and hydralazine",
+      "h": 240,
+      "point": "When others are not enough.",
+      "nodes": [
+       {
+        "id": "a2",
+        "label": "Central α2\nreceptors",
+        "glyph": "signal",
+        "x": 10,
+        "y": 20,
+        "w": 140,
+        "col": "blue"
+       },
+       {
+        "id": "sym",
+        "label": "Sympathetic\noutflow falls",
+        "glyph": "effect",
+        "x": 170,
+        "y": 20,
+        "w": 140,
+        "col": "teal"
+       },
+       {
+        "id": "art",
+        "label": "Arterioles dilate",
+        "glyph": "membrane",
+        "x": 10,
+        "y": 130,
+        "w": 150,
+        "col": "amber"
+       },
+       {
+        "id": "ref",
+        "label": "Reflex tachycardia,\nfluid retention",
+        "glyph": "effect",
+        "x": 190,
+        "y": 130,
+        "w": 160,
+        "col": "coral"
+       },
+       {
+        "id": "bp",
+        "label": "BP falls",
+        "glyph": "effect",
+        "x": 480,
+        "y": 75,
+        "w": 140,
+        "col": "sage"
+       }
+      ],
+      "edges": [
+       [
+        "a2",
+        "sym"
+       ],
+       [
+        "sym",
+        "bp"
+       ],
+       [
+        "art",
+        "bp"
+       ],
+       [
+        "art",
+        "ref"
+       ]
+      ],
+      "drugs": [
+       {
+        "label": "Clonidine",
+        "at": "a2",
+        "off": [],
+        "less": [],
+        "note": "Rebound hypertension if stopped abruptly (S16)."
+       },
+       {
+        "label": "Methyldopa",
+        "at": "a2",
+        "off": [],
+        "less": [],
+        "note": "Used in pregnancy (S16)."
+       },
+       {
+        "label": "Hydralazine",
+        "at": "art",
+        "off": [],
+        "less": [],
+        "note": "Pair with a beta-blocker and a diuretic (S16)."
+       }
+      ],
+      "read": "Pick a drug to see where it acts."
+     }
+    }
+   ],
+   "comparisons": [
+    {
+     "title": "Other major antihypertensive classes (S12)",
+     "columns": [
+      "Class",
+      "Examples",
+      "Mechanism",
+      "Key point"
+     ],
+     "rows": [
+      [
+       "Calcium channel blockers",
+       "Amlodipine; diltiazem, verapamil",
+       "Arteriolar dilation; non-DHP also ↓ HR/contractility",
+       "Peripheral edema"
+      ],
+      [
+       "Beta-blockers",
+       "Metoprolol, atenolol",
+       "↓ HR, contractility, renin",
+       "Compelling: CAD, HF, arrhythmia"
+      ],
+      [
+       "Thiazide / loop diuretics",
+       "HCTZ; furosemide",
+       "Session 1",
+       "Loops as GFR falls"
+      ],
+      [
+       "Central agents & direct vasodilators",
+       "Clonidine, methyldopa; hydralazine",
+       "Central α2; direct arteriolar",
+       "Resistant HTN; methyldopa in pregnancy"
+      ]
+     ],
+     "src": "S12"
+    },
+    {
+     "title": "Calcium channel blocker profiles: formulation, dose, indications",
+     "columns": [
+      "Drug",
+      "Class",
+      "Formulation",
+      "Adult dose",
+      "Indications"
+     ],
+     "rows": [
+      [
+       "Amlodipine (Norvasc)",
+       "**Dihydropyridine calcium channel blocker**",
+       "Tablets 2.5/5/10 mg; oral suspension",
+       "Hypertension or angina: 5 mg PO daily, up to 10 mg daily; start 2.5 mg in older or frail patients",
+       "Hypertension, chronic stable angina, vasospastic angina"
+      ],
+      [
+       "Nifedipine ER (Procardia XL, Adalat CC)",
+       "**Dihydropyridine calcium channel blocker**",
+       "Extended-release tablets 30/60/90 mg",
+       "30-60 mg PO daily, titrate to 90-120 mg daily; avoid immediate-release capsules for hypertension",
+       "Hypertension, chronic stable angina, vasospastic angina"
+      ],
+      [
+       "Diltiazem (Cardizem)",
+       "**Non-dihydropyridine calcium channel blocker**",
+       "Tablets 30/60/90/120 mg; ER capsules 120-420 mg; IV injection",
+       "Hypertension: ER 120-240 mg PO daily up to 360 mg; angina: 30 mg QID (immediate-release) or ER daily",
+       "Hypertension, angina, atrial fibrillation rate control"
+      ],
+      [
+       "Verapamil (Calan, Isoptin)",
+       "**Non-dihydropyridine calcium channel blocker**",
+       "Tablets 40/80/120 mg; ER tablets 120/180/240 mg; IV injection",
+       "Hypertension: SR 180-240 mg PO daily up to 480 mg; angina: 80-120 mg TID",
+       "Hypertension, angina, atrial fibrillation and SVT rate control"
+      ]
+     ],
+     "src": "S43; S44; S45; S46"
+    },
+    {
+     "title": "Calcium channel blocker profiles: adverse effects, contraindications, toxicity",
+     "columns": [
+      "Drug",
+      "Adverse effects",
+      "Contraindications",
+      "Toxicity / overdose"
+     ],
+     "rows": [
+      [
+       "Amlodipine (Norvasc)",
+       "Peripheral edema, flushing, headache, dizziness, gingival hyperplasia",
+       "Hypersensitivity, severe aortic stenosis (caution), cardiogenic shock",
+       "Profound hypotension with reflex tachycardia, prolonged vasodilation; slow onset and long half-life"
+      ],
+      [
+       "Nifedipine ER (Procardia XL, Adalat CC)",
+       "Peripheral edema, headache, flushing, reflex tachycardia, constipation",
+       "Cardiogenic shock, hypersensitivity; avoid immediate-release forms in acute coronary syndrome",
+       "Severe hypotension, reflex tachycardia, edema; swallow ER tablet whole"
+      ],
+      [
+       "Diltiazem (Cardizem)",
+       "Bradycardia, AV block, edema, constipation, dizziness, CYP3A4 interactions",
+       "Sick sinus syndrome, second- or third-degree AV block, severe hypotension, acute MI with pulmonary congestion, reduced EF",
+       "Bradycardia, AV block, heart failure exacerbation; strongly interacts with beta-blockers"
+      ],
+      [
+       "Verapamil (Calan, Isoptin)",
+       "Constipation, bradycardia, AV block, edema, dizziness, gingival hyperplasia",
+       "Sick sinus syndrome, AV block, severe LV dysfunction, WPW with atrial fibrillation, cardiogenic shock",
+       "Severe bradycardia, AV block, heart failure; avoid with beta-blockers; raises digoxin levels"
+      ]
+     ],
+     "src": "S43; S44; S45; S46"
+    },
+    {
+     "title": "Beta-blocker profiles: formulation, dose, indications",
+     "columns": [
+      "Drug",
+      "Class",
+      "Formulation",
+      "Adult dose",
+      "Indications"
+     ],
+     "rows": [
+      [
+       "Metoprolol (Lopressor, Toprol-XL)",
+       "**Beta-1 selective beta-blocker**",
+       "Tartrate tablets 25/50/100 mg; succinate ER tablets 25-200 mg; IV injection",
+       "Hypertension: tartrate 50 mg PO BID or succinate 50-100 mg daily (maximum 400 mg/day); heart failure: succinate 12.5-25 mg daily, titrate",
+       "Hypertension with CAD or HF, angina, post-MI, atrial fibrillation"
+      ],
+      [
+       "Atenolol (Tenormin)",
+       "**Beta-1 selective beta-blocker**",
+       "Tablets 25/50/100 mg",
+       "Hypertension: 25-50 mg PO daily (maximum 100 mg); reduce dose when CrCl is below 35 mL/min",
+       "Hypertension, angina, post-MI"
+      ]
+     ],
+     "src": "S47; S48"
+    },
+    {
+     "title": "Beta-blocker profiles: adverse effects, contraindications, toxicity",
+     "columns": [
+      "Drug",
+      "Adverse effects",
+      "Contraindications",
+      "Toxicity / overdose"
+     ],
+     "rows": [
+      [
+       "Metoprolol (Lopressor, Toprol-XL)",
+       "Fatigue, bradycardia, dizziness, cold extremities, sexual dysfunction, bronchospasm at high dose",
+       "Severe bradycardia, high-grade AV block, decompensated HF, cardiogenic shock; do not stop abruptly",
+       "Bradycardia, hypotension, heart block, bronchospasm; rebound tachycardia with abrupt withdrawal"
+      ],
+      [
+       "Atenolol (Tenormin)",
+       "Fatigue, bradycardia, cold extremities, depression, erectile dysfunction",
+       "Severe bradycardia, high-grade AV block, decompensated HF; do not stop abruptly",
+       "Accumulates in renal impairment, causing bradycardia and hypotension; rebound after abrupt withdrawal"
+      ]
+     ],
+     "src": "S47; S48"
+    },
+    {
+     "title": "Central agent and hydralazine profiles: formulation, dose, indications",
+     "columns": [
+      "Drug",
+      "Class",
+      "Formulation",
+      "Adult dose",
+      "Indications"
+     ],
+     "rows": [
+      [
+       "Clonidine (Catapres)",
+       "**Central alpha-2 agonist**",
+       "Tablets 0.1/0.2/0.3 mg; transdermal patch 0.1-0.3 mg/day weekly",
+       "Hypertension: 0.1 mg PO BID, titrate (usual maximum 2.4 mg/day); patch 0.1 mg/day weekly",
+       "Resistant hypertension, hypertensive urgency adjunct, opioid withdrawal adjunct"
+      ],
+      [
+       "Methyldopa (Aldomet)",
+       "**Central alpha-2 agonist**",
+       "Tablets 250/500 mg",
+       "250 mg PO BID-TID, titrate (maximum 3 g/day); preferred oral option for hypertension in pregnancy",
+       "Hypertension in pregnancy, resistant hypertension"
+      ],
+      [
+       "Hydralazine (Apresoline)",
+       "**Direct arteriolar vasodilator**",
+       "Tablets 10/25/50/100 mg; IV injection",
+       "Hypertension: 10 mg PO QID, titrate to 25-50 mg QID (maximum 300 mg/day); heart failure with isosorbide dinitrate: 25-75 mg TID",
+       "Resistant hypertension, hypertensive emergency in pregnancy, heart failure (with nitrate)"
+      ]
+     ],
+     "src": "S49; S50; S51"
+    },
+    {
+     "title": "Central agent and hydralazine profiles: adverse effects, contraindications, toxicity",
+     "columns": [
+      "Drug",
+      "Adverse effects",
+      "Contraindications",
+      "Toxicity / overdose"
+     ],
+     "rows": [
+      [
+       "Clonidine (Catapres)",
+       "Sedation, dry mouth, bradycardia, constipation, rebound hypertension",
+       "Hypersensitivity; use caution in bradycardia and AV block",
+       "Rebound hypertension with abrupt withdrawal; overdose causes bradycardia, hypotension, coma and miosis"
+      ],
+      [
+       "Methyldopa (Aldomet)",
+       "Sedation, depression, dry mouth, positive Coombs test, hepatotoxicity",
+       "Active liver disease, concomitant MAO inhibitors, history of methyldopa hepatitis",
+       "Hemolytic anemia, hepatitis, drug fever; monitor liver tests and CBC"
+      ],
+      [
+       "Hydralazine (Apresoline)",
+       "Headache, reflex tachycardia, fluid retention, flushing, drug-induced lupus",
+       "Coronary artery disease without beta-blocker, mitral valve rheumatic disease, hypersensitivity",
+       "Reflex tachycardia, angina, lupus-like syndrome with high dose or slow acetylators; pair with beta-blocker and diuretic"
+      ]
+     ],
+     "src": "S49; S50; S51"
+    }
+   ],
+   "hooks": [
+    {
+     "kind": "why",
+     "text": "Why pair hydralazine with a beta-blocker and a diuretic? Direct dilation triggers reflex tachycardia and fluid retention; the partners cancel both.",
+     "src": "S16"
+    }
+   ],
+   "high_yield": [
+    {
+     "text": "Non-DHP CCB + beta-blocker → bradycardia/AV block; DHP + beta-blocker is fine.",
+     "src": "S13"
+    },
+    {
+     "text": "Resistant HTN in CKD: fix the diuretic first (thiazide → loop), then spironolactone with K⁺ monitoring.",
+     "src": "S15; S17"
+    }
+   ],
+   "questions": [
+    {
+     "kind": "vignette",
+     "stem": "A patient with eGFR 28 mL/min stays hypertensive on lisinopril, amlodipine and hydrochlorothiazide. What change comes first?",
+     "correct": "Switch hydrochlorothiazide to a loop diuretic",
+     "why_correct": "At this GFR HCTZ has largely lost efficacy; switching to furosemide or torsemide is usually the most effective next step (S17).",
+     "distractors": [
+      {
+       "text": "Add clonidine as a fourth drug class",
+       "why": "Fix the diuretic first (S15)."
+      },
+      {
+       "text": "Add aliskiren to the lisinopril",
+       "why": "Hyperkalemia/hypotension, no benefit (S7)."
+      },
+      {
+       "text": "Double the hydrochlorothiazide dose",
+       "why": "The site has too little filtrate (S17)."
+      },
+      {
+       "text": "Stop lisinopril because of CKD",
+       "why": "First-line in CKD (S8)."
+      }
+     ],
+     "src": "S15; S17",
+     "from_slides": "S17"
+    },
+    {
+     "kind": "vignette",
+     "stem": "A patient on metoprolol develops heart block after a second drug is added for blood pressure. Which drug most likely?",
+     "correct": "Verapamil",
+     "why_correct": "Non-dihydropyridines (diltiazem, verapamil) with a beta-blocker risk bradycardia and AV block (S13).",
+     "distractors": [
+      {
+       "text": "Amlodipine",
+       "why": "DHPs pair safely with beta-blockers (S13)."
+      },
+      {
+       "text": "Lisinopril",
+       "why": "No conduction effect (S5)."
+      },
+      {
+       "text": "Losartan",
+       "why": "No conduction effect (S7)."
+      },
+      {
+       "text": "Hydralazine",
+       "why": "Causes reflex tachycardia (S16)."
+      }
+     ],
+     "src": "S13; S46"
+    },
+    {
+     "kind": "vignette",
+     "stem": "A pregnant patient needs an oral antihypertensive. Which central agent is the preferred option on the slides?",
+     "correct": "Methyldopa",
+     "why_correct": "Methyldopa is used in pregnancy (S12; S16; S50).",
+     "distractors": [
+      {
+       "text": "Lisinopril",
+       "why": "Contraindicated in pregnancy (S5)."
+      },
+      {
+       "text": "Losartan",
+       "why": "Contraindicated in pregnancy (S7)."
+      },
+      {
+       "text": "Aliskiren",
+       "why": "Contraindicated in pregnancy (S42)."
+      },
+      {
+       "text": "Clonidine",
+       "why": "Rebound risk; not the pregnancy agent (S16)."
+      }
+     ],
+     "src": "S12; S16; S50"
+    },
+    {
+     "kind": "mechanism",
+     "stem": "Why must hydralazine be paired with a beta-blocker and a diuretic?",
+     "correct": "To block reflex tachycardia and fluid retention",
+     "why_correct": "Direct arteriolar dilation triggers reflex tachycardia and fluid retention (S16).",
+     "distractors": [
+      {
+       "text": "To prevent rebound hypertension on stopping",
+       "why": "That is clonidine (S16)."
+      },
+      {
+       "text": "To prevent bradykinin cough",
+       "why": "That is ACE inhibitors (S6)."
+      },
+      {
+       "text": "To reduce its hepatic first-pass loss",
+       "why": "Not the taught reason (S16)."
+      },
+      {
+       "text": "To avoid hyperkalemia from RAAS blockade",
+       "why": "Not the reason (S16)."
+      }
+     ],
+     "src": "S16"
+    },
+    {
+     "kind": "mechanism",
+     "stem": "What happens if clonidine is stopped abruptly?",
+     "correct": "Rebound hypertension",
+     "why_correct": "Abrupt clonidine withdrawal causes rebound hypertension (S16; S49).",
+     "distractors": [
+      {
+       "text": "Bradykinin cough",
+       "why": "ACE inhibitors (S6)."
+      },
+      {
+       "text": "Hyperkalemia",
+       "why": "RAAS blockers (S5)."
+      },
+      {
+       "text": "Angioedema",
+       "why": "ACE inhibitors (S5)."
+      },
+      {
+       "text": "Drug-induced lupus",
+       "why": "Hydralazine (S51)."
+      }
+     ],
+     "src": "S16; S49"
+    }
+   ],
+   "flows": [
+    {
+     "title": "Resistant hypertension in CKD",
+     "steps": [
+      "BP above goal on 3+ classes including a diuretic",
+      "Check the diuretic first: thiazide at low GFR?",
+      "Switch thiazide → loop, or raise the loop dose",
+      "Then add spironolactone with close K⁺ and renal monitoring"
+     ],
+     "src": "S15; S17"
+    }
+   ]
+  },
+  {
+   "name": "Nitrates, Angina & the Triple Whammy",
+   "template": "drug_class",
+   "objectives": [
+    "SO4",
+    "SO5",
+    "IO5.1",
+    "IO5.2",
+    "IO5.3",
+    "IO5.6"
+   ],
+   "sections": {
+    "overview": [
+     {
+      "text": "**Where cardiovascular and renal pharmacology converge — and where that convergence can go wrong.** This section covers vasodilators and angina, then the cardiorenal overlap.",
+      "src": "S18; S18 (notes)"
+     },
+     {
+      "text": "**Figure 15. Original illustrative diagram (not from Katzung): angina results when myocardial oxygen demand exceeds supply; nitrates reduce preload, dihydropyridine CCBs reduce afterload,**",
+      "src": "S21"
+     },
+     {
+      "text": "**non-dihydropyridine CCBs also reduce heart rate/contractility and increase coronary flow, and beta-blockers reduce heart rate and contractility.**",
+      "src": "S21"
+     },
+     {
+      "text": "This figure organizes every antianginal drug class by exactly which side of the supply/demand equation it affects — sort nitrates, each CCB subtype, and beta-blockers onto it from memory.",
+      "src": "S21 (notes)"
+     }
+    ],
+    "prototype": [
+     {
+      "text": "Nitroglycerin (sublingual for acute angina; IV/patch for sustained use), isosorbide mononitrate/dinitrate (oral, longer-acting).",
+      "src": "S19"
+     }
+    ],
+    "moa": [
+     {
+      "text": "**Mechanism: release nitric oxide, activating guanylate cyclase and increasing cGMP, producing smooth muscle relaxation — predominantly venodilation at usual doses, reducing preload and myocardial oxygen demand.**",
+      "src": "S19; SG U5-R11"
+     },
+     {
+      "text": "Chain (Figure 14): nitrate donates nitric oxide (NO) → NO activates guanylate cyclase, so cGMP rises → cGMP relaxes smooth muscle: venodilation → preload and oxygen demand fall.",
+      "src": "S20; S20 (notes)"
+     },
+     {
+      "text": "**Dihydropyridines (amlodipine, nifedipine) — predominantly arteriolar dilation, reducing afterload; the same mechanism used for hypertension (Section 5).**",
+      "src": "S22; SG U5-R10"
+     },
+     {
+      "text": "**Non-dihydropyridines (diltiazem, verapamil) — also reduce heart rate and contractility and increase coronary blood flow; avoid combining with beta-blockers due to additive bradycardia/AV block risk.**",
+      "src": "S22"
+     }
+    ],
+    "indications": [
+     {
+      "text": "CCBs are the clearest example in the unit of the same drug class, same mechanism, treating two different conditions (hypertension and angina).",
+      "src": "S22; SG U5-R10"
+     },
+     {
+      "text": "This is the deliberate cardiovascular-renal \"overlap\" moment the lecture title promises — calcium channel blockers are not a separate topic from the antihypertensive content in Section 5; they are the same drugs doing double duty.",
+      "src": "S22 (notes)"
+     }
+    ],
+    "adverse": [
+     {
+      "text": "**Adverse effects: headache (vasodilation), reflex tachycardia, orthostatic hypotension.**",
+      "src": "S19"
+     },
+     {
+      "text": "**Adverse effects: peripheral edema and reflex tachycardia (dihydropyridines); bradycardia, AV block, and constipation (non-dihydropyridines, especially verapamil).**",
+      "src": "S22"
+     }
+    ],
+    "contra": [
+     {
+      "text": "**Absolute contraindication: concurrent use with PDE5 inhibitors (sildenafil and similar) — the combination can cause life-threatening hypotension.**",
+      "src": "S19; SG U5-R11"
+     },
+     {
+      "text": "PDE5 inhibitors such as sildenafil block cGMP breakdown, causing severe hypotension with nitrates.",
+      "src": "S20; S20 (notes)"
+     },
+     {
+      "text": "The PDE5-inhibitor interaction is one of the highest-stakes medication-safety points in this whole unit — a real-world, repeatedly tested safety question worth a memorable callout.",
+      "src": "S19 (notes)"
+     }
+    ],
+    "interactions": [
+     {
+      "text": "**Figure 16. Original illustrative diagram (not from Katzung): an NSAID (afferent arteriolar constriction), an ACE inhibitor or ARB (efferent arteriolar dilation), and a diuretic (volume depletion) each independently reduce glomerular filtration pressure —**",
+      "src": "S23; SG U5-R12"
+     },
+     {
+      "text": "**combined, the effect on kidney perfusion is additive to synergistic, substantially raising acute kidney injury risk.** An extremely common, often missed, entirely preventable cause of AKI.",
+      "src": "S23; S23 (notes); SG U5-R12"
+     },
+     {
+      "text": "Three hits (Figure 17): NSAID constricts the afferent arteriole → ACE inhibitor or ARB dilates the efferent arteriole → diuretic causes volume depletion → filtration pressure collapses: AKI.",
+      "src": "S24; S24 (notes)"
+     },
+     {
+      "text": "NSAIDs blunt loop and thiazide action by reducing renal prostaglandins — significant in nephrotic syndrome or cirrhosis.",
+      "src": "p. 270; p. 272",
+      "tb": true
+     }
+    ],
+    "pk": [],
+    "monitoring": [
+     {
+      "text": "Tolerance develops with continuous exposure — a nitrate-free interval (typically overnight) is required to maintain efficacy with long-acting formulations.",
+      "src": "S19; S20"
+     },
+     {
+      "text": "Prevention: counsel patients about over-the-counter NSAIDs — ask which OTC NSAIDs they commonly take.",
+      "src": "S24; S24 (notes)"
+     }
+    ],
+    "pearls": [
+     {
+      "text": "The triple whammy is the capstone cardiorenal interaction: Session 1’s diuretics + this session’s RAAS blockers + NSAIDs students will meet constantly in practice.",
+      "src": "S23 (notes)"
+     },
+     {
+      "text": "Hypertension → CKD: uncontrolled blood pressure causes glomerular capillary injury and nephrosclerosis over time — a leading cause of CKD progression, alongside diabetes.",
+      "src": "S25; S25 (notes)"
+     },
+     {
+      "text": "CKD → hypertension: reduced renal function causes volume overload and RAAS activation, which worsens and complicates blood pressure control, often requiring multiple drug classes.",
+      "src": "S25; S25 (notes)"
+     },
+     {
+      "text": "**Figure 18. Original illustrative diagram (not from Katzung): hypertension and chronic kidney disease drive one another in a self-reinforcing cycle — uncontrolled blood pressure causes glomerular injury and CKD progression,**",
+      "src": "S26"
+     },
+     {
+      "text": "**while CKD causes volume overload and RAAS activation that worsens hypertension.**",
+      "src": "S26"
+     },
+     {
+      "text": "Figure 18 is the conceptual closer for the whole unit — tie it back to Figure 8: RAAS blockade is effective precisely because it intervenes in both directions of this cycle at once.",
+      "src": "S26 (notes)"
+     },
+     {
+      "text": "Case: an older adult on lisinopril and hydrochlorothiazide starts a regular OTC NSAID for a knee injury; one week later, lethargy and an acute rise in creatinine. **What is the most likely explanation, and how could this have been prevented?**",
+      "src": "S27"
+     },
+     {
+      "text": "**This is a classic \"triple whammy\" presentation (Figure 16) — the NSAID, ACE inhibitor, and diuretic each independently reduced glomerular filtration pressure, and together precipitated acute kidney injury.**",
+      "src": "S27; SG U5-S"
+     },
+     {
+      "text": "**Prevention requires counseling patients on RAAS blockers and diuretics to avoid regular NSAID use and to seek guidance before starting one, even an over-the-counter product.**",
+      "src": "S27; SG U5-S"
+     },
+     {
+      "text": "This case is the direct clinical application of Figure 16 and reinforces IO5.6 (patient counseling): the preventable element is entirely what the patient was or wasn’t told about OTC NSAID use.",
+      "src": "S27 (notes)"
+     },
+     {
+      "text": "Same patient, eGFR now 25: hydrochlorothiazide has likely lost much of its efficacy — switching to a loop diuretic (furosemide, torsemide) is more effective for blood pressure regardless of the NSAID issue.",
+      "src": "SG U5-S"
+     },
+     {
+      "text": "Counsel the patient to avoid regular OTC NSAID use and to check with a prescriber or pharmacist before starting any new OTC product, given the RAAS blocker + diuretic combination already in place.",
+      "src": "SG U5-S"
+     }
+    ]
+   },
+   "figures": [
+    {
+     "image": "S20_1.png",
+     "title": "Figure 14 · Nitrates: NO, cGMP and venodilation",
+     "src": "S20; S20 (notes)",
+     "caption": "Schematic (illustrative) — Figure 14. Nitrate action: NO → guanylate cyclase → cGMP → smooth-muscle relaxation (venodilation) → lower preload and oxygen demand. PDE5 inhibitors block cGMP breakdown — severe hypotension with nitrates.",
+     "viz": {
+      "type": "pathway",
+      "title": "Nitrates: NO, cGMP and venodilation",
+      "h": 170,
+      "point": "NO → cGMP → veins relax; never add a PDE5 inhibitor.",
+      "nodes": [
+       {
+        "id": "no",
+        "label": "Nitrate donates\nNO",
+        "glyph": "molecule",
+        "x": 10,
+        "y": 55,
+        "w": 130,
+        "col": "teal"
+       },
+       {
+        "id": "gc",
+        "label": "Guanylate\ncyclase",
+        "glyph": "enzyme",
+        "x": 160,
+        "y": 55,
+        "w": 120,
+        "col": "blue"
+       },
+       {
+        "id": "cg",
+        "label": "cGMP rises",
+        "glyph": "molecule",
+        "x": 300,
+        "y": 55,
+        "w": 120,
+        "col": "amber"
+       },
+       {
+        "id": "ven",
+        "label": "Venodilation:\npreload, O₂ demand ↓",
+        "glyph": "effect",
+        "x": 440,
+        "y": 55,
+        "w": 190,
+        "col": "sage"
+       }
+      ],
+      "edges": [
+       [
+        "no",
+        "gc"
+       ],
+       [
+        "gc",
+        "cg"
+       ],
+       [
+        "cg",
+        "ven"
+       ]
+      ],
+      "drugs": [
+       {
+        "label": "Nitroglycerin SL",
+        "at": "no",
+        "off": [],
+        "less": [],
+        "note": "Acute angina: 0.4 mg every 5 min up to 3 doses (S19; S52)."
+       },
+       {
+        "label": "Isosorbide mononitrate",
+        "at": "no",
+        "off": [],
+        "less": [],
+        "note": "Long-acting; needs a nitrate-free interval (S19; S53)."
+       },
+       {
+        "label": "Sildenafil (PDE5 inhibitor)",
+        "at": "cg",
+        "off": [],
+        "less": [],
+        "note": "Blocks cGMP breakdown → life-threatening hypotension with nitrates (S19–S20)."
+       }
+      ],
+      "read": "Pick a drug to see where it acts."
+     }
+    },
+    {
+     "image": "S21_1.jpg",
+     "title": "Figure 15 · Angina: where nitrates and CCBs act",
+     "src": "S21; S21 (notes)",
+     "caption": "Original illustrative diagram (not from Katzung): angina results when myocardial oxygen demand exceeds supply. Nitrates reduce preload; dihydropyridine CCBs reduce afterload; non-dihydropyridine CCBs also reduce heart rate/contractility and increase coronary flow; beta-blockers reduce heart rate and contractility.",
+     "viz": {
+      "type": "pathway",
+      "title": "Angina: where nitrates and CCBs act",
+      "h": 280,
+      "point": "Sort each drug: preload, afterload, or heart rate.",
+      "nodes": [
+       {
+        "id": "pre",
+        "label": "Preload",
+        "glyph": "effect",
+        "x": 10,
+        "y": 20,
+        "w": 120,
+        "col": "teal"
+       },
+       {
+        "id": "aft",
+        "label": "Afterload",
+        "glyph": "effect",
+        "x": 10,
+        "y": 100,
+        "w": 120,
+        "col": "blue"
+       },
+       {
+        "id": "hr",
+        "label": "Heart rate,\ncontractility",
+        "glyph": "cell",
+        "x": 10,
+        "y": 180,
+        "w": 140,
+        "col": "coral"
+       },
+       {
+        "id": "dem",
+        "label": "O₂ demand",
+        "glyph": "signal",
+        "x": 260,
+        "y": 100,
+        "w": 130,
+        "col": "amber"
+       },
+       {
+        "id": "sup",
+        "label": "Coronary\nsupply",
+        "glyph": "signal",
+        "x": 260,
+        "y": 200,
+        "w": 130,
+        "col": "sage"
+       },
+       {
+        "id": "ang",
+        "label": "Angina when\ndemand > supply",
+        "glyph": "effect",
+        "x": 470,
+        "y": 140,
+        "w": 160,
+        "col": "deep"
+       }
+      ],
+      "edges": [
+       [
+        "pre",
+        "dem"
+       ],
+       [
+        "aft",
+        "dem"
+       ],
+       [
+        "hr",
+        "dem"
+       ],
+       [
+        "dem",
+        "ang"
+       ],
+       [
+        "sup",
+        "ang"
+       ]
+      ],
+      "drugs": [
+       {
+        "label": "Nitrates",
+        "at": "pre",
+        "off": [],
+        "less": [
+         "pre",
+         "dem"
+        ],
+        "note": "Reduce preload (S21)."
+       },
+       {
+        "label": "Amlodipine (DHP)",
+        "at": "aft",
+        "off": [],
+        "less": [
+         "aft",
+         "dem"
+        ],
+        "note": "Reduce afterload (S21–S22)."
+       },
+       {
+        "label": "Diltiazem / verapamil",
+        "at": "hr",
+        "off": [],
+        "less": [
+         "hr",
+         "dem"
+        ],
+        "note": "↓ HR/contractility and ↑ coronary flow (S21–S22)."
+       },
+       {
+        "label": "Metoprolol",
+        "at": "hr",
+        "off": [],
+        "less": [
+         "hr",
+         "dem"
+        ],
+        "note": "↓ HR and contractility (S21)."
+       }
+      ],
+      "read": "Pick a drug to see where it acts."
+     }
+    },
+    {
+     "image": "S23_1.jpg",
+     "title": "Figure 16 · The triple whammy",
+     "src": "S23; S23 (notes)",
+     "caption": "Original illustrative diagram (not from Katzung): NSAID (afferent constriction) + ACE inhibitor or ARB (efferent dilation) + diuretic (volume depletion) each independently lower glomerular filtration pressure — combined, additive to synergistic AKI risk.",
+     "viz": {
+      "type": "pathway",
+      "title": "The triple whammy",
+      "h": 240,
+      "point": "Add all three hits to see filtration pressure collapse.",
+      "nodes": [
+       {
+        "id": "aff",
+        "label": "Afferent arteriole\n(inflow)",
+        "glyph": "membrane",
+        "x": 10,
+        "y": 20,
+        "w": 160,
+        "col": "coral"
+       },
+       {
+        "id": "vol",
+        "label": "Plasma volume",
+        "glyph": "molecule",
+        "x": 10,
+        "y": 130,
+        "w": 160,
+        "col": "blue"
+       },
+       {
+        "id": "eff",
+        "label": "Efferent arteriole\n(outflow)",
+        "glyph": "membrane",
+        "x": 200,
+        "y": 75,
+        "w": 160,
+        "col": "amber"
+       },
+       {
+        "id": "gfp",
+        "label": "Glomerular filtration\npressure",
+        "glyph": "signal",
+        "x": 390,
+        "y": 75,
+        "w": 160,
+        "col": "teal"
+       },
+       {
+        "id": "aki",
+        "label": "AKI",
+        "glyph": "effect",
+        "x": 570,
+        "y": 75,
+        "w": 60,
+        "col": "deep"
+       }
+      ],
+      "edges": [
+       [
+        "aff",
+        "gfp"
+       ],
+       [
+        "vol",
+        "gfp"
+       ],
+       [
+        "eff",
+        "gfp"
+       ],
+       [
+        "gfp",
+        "aki"
+       ]
+      ],
+      "drugs": [
+       {
+        "label": "NSAID",
+        "at": "aff",
+        "off": [],
+        "less": [
+         "aff",
+         "gfp"
+        ],
+        "note": "Constricts the afferent arteriole (S23–S24)."
+       },
+       {
+        "label": "Lisinopril or losartan",
+        "at": "eff",
+        "off": [],
+        "less": [
+         "gfp"
+        ],
+        "note": "Dilates the efferent arteriole (S23–S24)."
+       },
+       {
+        "label": "Hydrochlorothiazide / furosemide",
+        "at": "vol",
+        "off": [],
+        "less": [
+         "vol",
+         "gfp"
+        ],
+        "note": "Volume depletion (S23–S24)."
+       }
+      ],
+      "read": "Pick a drug to see where it acts."
+     }
+    },
+    {
+     "image": "S24_1.png",
+     "title": "Figure 17 · Three hits on glomerular pressure",
+     "src": "S24; S24 (notes)",
+     "caption": "Schematic (illustrative) — Figure 17. Three hits on glomerular filtration pressure: afferent constriction (NSAID), efferent dilation (ACE inhibitor or ARB), volume depletion (diuretic) → filtration pressure collapses: AKI. Prevention: counsel patients about OTC NSAIDs.",
+     "viz": {
+      "type": "pathway",
+      "title": "Three hits on glomerular pressure",
+      "h": 170,
+      "point": "Remove one hit to protect the kidney.",
+      "nodes": [
+       {
+        "id": "n",
+        "label": "NSAID: afferent\nconstricts",
+        "glyph": "membrane",
+        "x": 10,
+        "y": 55,
+        "w": 145,
+        "col": "coral"
+       },
+       {
+        "id": "a",
+        "label": "ACEi/ARB: efferent\ndilates",
+        "glyph": "membrane",
+        "x": 170,
+        "y": 55,
+        "w": 150,
+        "col": "amber"
+       },
+       {
+        "id": "d",
+        "label": "Diuretic: volume\ndepleted",
+        "glyph": "molecule",
+        "x": 335,
+        "y": 55,
+        "w": 140,
+        "col": "blue"
+       },
+       {
+        "id": "k",
+        "label": "Filtration\npressure → AKI",
+        "glyph": "effect",
+        "x": 490,
+        "y": 55,
+        "w": 140,
+        "col": "deep"
+       }
+      ],
+      "edges": [
+       [
+        "n",
+        "a"
+       ],
+       [
+        "a",
+        "d"
+       ],
+       [
+        "d",
+        "k"
+       ]
+      ],
+      "drugs": [
+       {
+        "label": "Stop the OTC NSAID",
+        "at": "n",
+        "off": [
+         "n"
+        ],
+        "less": [],
+        "note": "Counsel: avoid regular NSAIDs on a RAAS blocker + diuretic (S24; S27)."
+       },
+       {
+        "label": "Sick-day rules",
+        "at": "a",
+        "off": [
+         "a"
+        ],
+        "less": [],
+        "note": "Hold ACEi/ARB in vomiting, diarrhea, dehydration (S9)."
+       }
+      ],
+      "read": "Pick a drug to see where it acts."
+     }
+    },
+    {
+     "image": "S26_1.jpg",
+     "title": "Figure 18 · The cardiorenal-hypertension cycle",
+     "src": "S26; S26 (notes)",
+     "caption": "Original illustrative diagram (not from Katzung): uncontrolled blood pressure causes glomerular injury and CKD progression, while CKD causes volume overload and RAAS activation that worsens hypertension — a self-reinforcing cycle that RAAS blockade interrupts in both directions.",
+     "viz": {
+      "type": "pathway",
+      "title": "The cardiorenal-hypertension cycle",
+      "h": 230,
+      "point": "Managing one well means managing the other.",
+      "nodes": [
+       {
+        "id": "htn",
+        "label": "Hypertension",
+        "glyph": "signal",
+        "x": 10,
+        "y": 20,
+        "w": 140,
+        "col": "coral"
+       },
+       {
+        "id": "inj",
+        "label": "Glomerular injury,\nnephrosclerosis",
+        "glyph": "cell",
+        "x": 330,
+        "y": 20,
+        "w": 170,
+        "col": "amber"
+       },
+       {
+        "id": "ckd",
+        "label": "CKD",
+        "glyph": "cell",
+        "x": 330,
+        "y": 140,
+        "w": 170,
+        "col": "blue"
+       },
+       {
+        "id": "vol",
+        "label": "Volume overload,\nRAAS activation",
+        "glyph": "signal",
+        "x": 10,
+        "y": 140,
+        "w": 160,
+        "col": "teal"
+       }
+      ],
+      "edges": [
+       [
+        "htn",
+        "inj"
+       ],
+       [
+        "inj",
+        "ckd"
+       ],
+       [
+        "ckd",
+        "vol"
+       ],
+       [
+        "vol",
+        "htn"
+       ]
+      ],
+      "drugs": [
+       {
+        "label": "ACE inhibitor / ARB",
+        "at": "vol",
+        "off": [],
+        "less": [
+         "vol",
+         "inj"
+        ],
+        "note": "Interrupts both directions at once (S26)."
+       }
+      ],
+      "read": "Pick a drug to see where it acts."
+     }
+    }
+   ],
+   "comparisons": [
+    {
+     "title": "Calcium channel blockers: DHP vs. non-DHP (S22)",
+     "columns": [
+      "",
+      "Dihydropyridines",
+      "Non-dihydropyridines"
+     ],
+     "rows": [
+      [
+       "Examples",
+       "Amlodipine, nifedipine",
+       "Diltiazem, verapamil"
+      ],
+      [
+       "Main action",
+       "Arteriolar dilation → ↓ afterload",
+       "↓ HR, contractility; ↑ coronary flow"
+      ],
+      [
+       "Adverse effects",
+       "Peripheral edema, reflex tachycardia",
+       "Bradycardia, AV block, constipation (verapamil)"
+      ],
+      [
+       "With a beta-blocker",
+       "Safe pairing",
+       "Avoid — bradycardia/AV block"
+      ]
+     ],
+     "src": "S13; S22"
+    },
+    {
+     "title": "Drug names reveal the class: cardiorenal agents (S28)",
+     "columns": [
+      "Stem",
+      "Class",
+      "Examples",
+      "Memory aid"
+     ],
+     "rows": [
+      [
+       "-pril",
+       "ACE inhibitor",
+       "Lisinopril, enalapril, captopril",
+       "Angiotensin-converting enzyme"
+      ],
+      [
+       "-sartan",
+       "ARB",
+       "Losartan, valsartan",
+       "Angiotensin receptor blocker"
+      ],
+      [
+       "-kiren",
+       "Direct renin inhibitor",
+       "Aliskiren",
+       "Renin is the top of the cascade"
+      ],
+      [
+       "-dipine",
+       "Dihydropyridine CCB",
+       "Amlodipine, nifedipine",
+       "Arteriolar dilation"
+      ],
+      [
+       "-olol",
+       "Beta-blocker",
+       "Metoprolol, atenolol",
+       "Heart rate and renin down"
+      ],
+      [
+       "-azine / -alazine",
+       "Hydralazine vasodilator",
+       "Hydralazine",
+       "Pair with beta-blocker and diuretic"
+      ],
+      [
+       "-onidine",
+       "Central alpha-2 agonist",
+       "Clonidine",
+       "Central, so sympathetic outflow falls"
+      ],
+      [
+       "-nitrate / nitro-",
+       "Nitrates",
+       "Isosorbide, nitroglycerin",
+       "Venodilation, preload down"
+      ],
+      [
+       "-afil",
+       "PDE5 inhibitor",
+       "Sildenafil",
+       "Never combine with nitrates"
+      ],
+      [
+       "-semide",
+       "Loop diuretic",
+       "Furosemide",
+       "Loop of Henle"
+      ]
+     ],
+     "src": "S28; S28 (notes)"
+    },
+    {
+     "title": "Supporting drugs at a glance (S55)",
+     "columns": [
+      "Drug(s)",
+      "Why it matters here"
+     ],
+     "rows": [
+      [
+       "NSAIDs",
+       "Blunt antihypertensives; raise AKI risk with ACE inhibitor or ARB plus diuretic"
+      ],
+      [
+       "PDE5 inhibitors (such as sildenafil)",
+       "Never combine with nitrates"
+      ],
+      [
+       "Potassium supplements and potassium-sparing diuretics",
+       "Hyperkalemia with ACE inhibitors and ARBs"
+      ],
+      [
+       "Trimethoprim",
+       "Hyperkalemia"
+      ],
+      [
+       "Loop and thiazide diuretics",
+       "Covered in Session 1"
+      ],
+      [
+       "Statins and aspirin",
+       "Cardiovascular risk reduction"
+      ],
+      [
+       "Digoxin",
+       "Verapamil and diltiazem raise digoxin levels"
+      ],
+      [
+       "Rifampin and carbamazepine",
+       "Lower calcium channel blocker levels"
+      ],
+      [
+       "Grapefruit juice",
+       "Raises dihydropyridine calcium channel blocker levels"
+      ]
+     ],
+     "src": "S55; S55 (notes)"
+    },
+    {
+     "title": "Nitrate profiles: formulation, dose, indications",
+     "columns": [
+      "Drug",
+      "Class",
+      "Formulation",
+      "Adult dose",
+      "Indications"
+     ],
+     "rows": [
+      [
+       "Nitroglycerin (Nitrostat, Nitro-Dur)",
+       "**Organic nitrate**",
+       "Sublingual tablet 0.3/0.4/0.6 mg; spray 0.4 mg; patch 0.1-0.8 mg/h; IV infusion",
+       "Acute angina: 0.4 mg SL every 5 minutes up to 3 doses; patch 0.2-0.8 mg/h applied 12-14 hours per day; IV 5-10 mcg/min titrated",
+       "Acute angina, angina prophylaxis, acute heart failure, hypertensive emergency"
+      ],
+      [
+       "Isosorbide mononitrate (Imdur)",
+       "**Organic nitrate (long-acting)**",
+       "ER tablets 30/60/120 mg; immediate-release tablets 10/20 mg",
+       "ER: 30-60 mg PO every morning, up to 240 mg/day; immediate-release: 20 mg BID given 7 hours apart",
+       "Angina prophylaxis"
+      ],
+      [
+       "Isosorbide dinitrate (Isordil)",
+       "**Organic nitrate**",
+       "Tablets 5/10/20/30/40 mg; ER capsules 40 mg; combination with hydralazine (BiDil)",
+       "Angina: 10-40 mg PO TID with a 14-hour nitrate-free interval; heart failure: 20-40 mg TID with hydralazine",
+       "Angina prophylaxis, heart failure in Black patients (with hydralazine)"
+      ]
+     ],
+     "src": "S52; S53; S54"
+    },
+    {
+     "title": "Nitrate profiles: adverse effects, contraindications, toxicity",
+     "columns": [
+      "Drug",
+      "Adverse effects",
+      "Contraindications",
+      "Toxicity / overdose"
+     ],
+     "rows": [
+      [
+       "Nitroglycerin (Nitrostat, Nitro-Dur)",
+       "Headache, flushing, hypotension, reflex tachycardia, dizziness",
+       "Concurrent PDE5 inhibitors (sildenafil, tadalafil) or riociguat, severe anemia, increased intracranial pressure, right ventricular infarction",
+       "Severe hypotension and syncope, especially with PDE5 inhibitors; tolerance without a nitrate-free interval; methemoglobinemia at very high doses"
+      ],
+      [
+       "Isosorbide mononitrate (Imdur)",
+       "Headache, dizziness, hypotension, flushing",
+       "Concurrent PDE5 inhibitors or riociguat, severe anemia, increased intracranial pressure",
+       "Hypotension, headache; tolerance requires nitrate-free interval"
+      ],
+      [
+       "Isosorbide dinitrate (Isordil)",
+       "Headache, flushing, hypotension, reflex tachycardia",
+       "Concurrent PDE5 inhibitors or riociguat, severe anemia, increased intracranial pressure",
+       "Hypotension, syncope, headache; tolerance without a nitrate-free interval"
+      ]
+     ],
+     "src": "S52; S53; S54"
+    }
+   ],
+   "hooks": [
+    {
+     "kind": "mnemonic",
+     "text": "Stems: **-pril**, **-sartan**, **-kiren**, **-dipine**, **-olol**, **-azine / -alazine**, **-onidine**, **-nitrate / nitro-**, **-afil**, **-semide**. Read the **Stem**, name the **Class**, recall the **Examples** and the **Memory aid**.",
+     "src": "S28; S28 (notes)"
+    },
+    {
+     "kind": "why",
+     "text": "Why are nitrates + sildenafil deadly? Nitrates make cGMP; sildenafil stops its breakdown — cGMP piles up and blood pressure collapses.",
+     "src": "S20"
+    }
+   ],
+   "high_yield": [
+    {
+     "text": "Nitrates: NO → cGMP → venodilation, ↓ preload; nitrate-free interval; never with PDE5 inhibitors.",
+     "src": "S19; S20; SG U5-R11"
+    },
+    {
+     "text": "Triple whammy: NSAID (afferent) + ACEi/ARB (efferent) + diuretic (volume) → AKI; counsel on OTC NSAIDs.",
+     "src": "S23; S27; SG U5-R12"
+    }
+   ],
+   "questions": [
+    {
+     "kind": "vignette",
+     "stem": "An older adult on lisinopril and hydrochlorothiazide starts daily OTC ibuprofen for a knee injury. A week later creatinine is up acutely. Best explanation?",
+     "correct": "Triple whammy: three hits on filtration pressure",
+     "why_correct": "The NSAID, ACE inhibitor and diuretic each independently reduce glomerular filtration pressure, together precipitating AKI (S27).",
+     "distractors": [
+      {
+       "text": "Allergic interstitial nephritis from lisinopril",
+       "why": "Not the taught picture (S27)."
+      },
+      {
+       "text": "Expected creatinine rise from starting lisinopril",
+       "why": "He is not newly started (S27)."
+      },
+      {
+       "text": "Thiazide-induced hypercalcemia",
+       "why": "Not the mechanism (S27)."
+      },
+      {
+       "text": "Contrast nephropathy from imaging",
+       "why": "No contrast given (S27)."
+      }
+     ],
+     "src": "S27; SG U5-S",
+     "from_slides": "S27"
+    },
+    {
+     "kind": "vignette",
+     "stem": "A man using sildenafil asks for a nitroglycerin prescription for chest pain. What is the key concern?",
+     "correct": "Life-threatening hypotension",
+     "why_correct": "Concurrent PDE5 inhibitors are an absolute contraindication to nitrates — severe hypotension (S19–S20).",
+     "distractors": [
+      {
+       "text": "Reflex bradycardia and AV block",
+       "why": "Nitrates cause reflex tachycardia (S19)."
+      },
+      {
+       "text": "Severe hyperkalemia",
+       "why": "Not a nitrate effect (S19)."
+      },
+      {
+       "text": "Bradykinin-mediated cough",
+       "why": "ACE inhibitors (S6)."
+      },
+      {
+       "text": "Faster nitrate tolerance only",
+       "why": "The interaction is the danger (S19)."
+      }
+     ],
+     "src": "S19; S20; SG U5-R11"
+    },
+    {
+     "kind": "mechanism",
+     "stem": "How do nitrates relieve angina?",
+     "correct": "NO raises cGMP, venodilation cuts preload",
+     "why_correct": "Nitrates release NO → guanylate cyclase → cGMP → venodilation, reducing preload and oxygen demand (S19–S20).",
+     "distractors": [
+      {
+       "text": "They block β1 receptors to slow the heart",
+       "why": "Beta-blockers (S21)."
+      },
+      {
+       "text": "They block L-type calcium channels",
+       "why": "CCBs (S22)."
+      },
+      {
+       "text": "They block ACE to lower angiotensin II",
+       "why": "ACE inhibitors (S5)."
+      },
+      {
+       "text": "They inhibit PDE5 to raise cAMP",
+       "why": "PDE5 inhibitors (S20)."
+      }
+     ],
+     "src": "S19; S20"
+    },
+    {
+     "kind": "mechanism",
+     "stem": "Why does a patient on long-acting isosorbide mononitrate need a nitrate-free interval?",
+     "correct": "Continuous exposure causes tolerance",
+     "why_correct": "Tolerance develops with continuous exposure; a nitrate-free interval (typically overnight) maintains efficacy (S19).",
+     "distractors": [
+      {
+       "text": "To prevent rebound hypertension",
+       "why": "Clonidine (S16)."
+      },
+      {
+       "text": "To let potassium normalize",
+       "why": "Not a nitrate issue (S19)."
+      },
+      {
+       "text": "To prevent angioedema",
+       "why": "ACE inhibitors (S5)."
+      },
+      {
+       "text": "To clear its toxic metabolite",
+       "why": "Not the reason (S19)."
+      }
+     ],
+     "src": "S19; S53"
+    },
+    {
+     "kind": "mechanism",
+     "stem": "Which drug class is used for both hypertension and angina via the same mechanism?",
+     "correct": "Calcium channel blockers",
+     "why_correct": "CCBs dilate arterioles, lowering afterload — treating both hypertension and angina (S22; SG U5-R10).",
+     "distractors": [
+      {
+       "text": "Thiazide diuretics",
+       "why": "Hypertension only (L09)."
+      },
+      {
+       "text": "Carbonic anhydrase inhibitors",
+       "why": "Niche diuretic uses (L09)."
+      },
+      {
+       "text": "Aldosterone antagonists",
+       "why": "Not an angina class (L09)."
+      },
+      {
+       "text": "Central alpha-2 agonists",
+       "why": "Resistant HTN (S16)."
+      }
+     ],
+     "src": "S22; SG U5-R10"
+    }
+   ],
+   "flows": [
+    {
+     "title": "Triple whammy",
+     "steps": [
+      "NSAID constricts the afferent arteriole",
+      "ACE inhibitor or ARB dilates the efferent arteriole",
+      "Diuretic causes volume depletion",
+      "Filtration pressure collapses → AKI",
+      "Prevent: counsel on OTC NSAIDs"
+     ],
+     "src": "S24; S27"
+    }
+   ]
+  },
+  {
+   "name": "Putting It All Together: Renal Toolkit",
+   "template": "concept",
+   "objectives": [
+    "SO5",
+    "IO5.3",
+    "IO5.4",
+    "IO5.6"
+   ],
+   "sections": {
+    "definitions": [
+     {
+      "text": "**Applying the whole Renal pharmacology toolkit.** Integration: put the drug classes together — for each patient, name a first-line approach AND the single biggest safety concern to check before prescribing or counseling.",
+      "src": "S29; S29 (notes); S30 (notes)"
+     }
+    ],
+    "how": [
+     {
+      "text": "**1.** Diuretic classes (Session 1) and RAAS-blocking antihypertensives both map onto specific, drug-targetable points in renal physiology — the nephron (Figure 1) and the RAAS cascade (Figure 8), respectively.",
+      "src": "S31"
+     },
+     {
+      "text": "**2.** ACE inhibitors and ARBs are preferred first-line therapy for hypertension in CKD because of their renoprotective efferent-arteriolar mechanism, not just their blood-pressure-lowering effect.",
+      "src": "S31"
+     },
+     {
+      "text": "**3.** Calcium channel blockers exemplify the cardiovascular-renal overlap directly — the same drug class, same mechanism, treats both hypertension and angina.",
+      "src": "S31"
+     },
+     {
+      "text": "**4.** The \"triple whammy\" (NSAID + ACEi/ARB + diuretic) is a classic, common, and preventable cause of acute kidney injury that draws on content from both sessions at once.",
+      "src": "S31"
+     },
+     {
+      "text": "**5.** Hypertension and chronic kidney disease exist in a bidirectional, self-reinforcing cycle (Figure 18) — which is exactly why managing one well so often means managing the other.",
+      "src": "S31"
+     },
+     {
+      "text": "All three threads center on glomerular filtration pressure.",
+      "src": "S31 (notes)"
+     },
+     {
+      "text": "Connecting back to earlier units: drug-metabolism/dosing concepts (Unit 1) and the biologic-mechanism callbacks from Units 2–4 all reinforce that pharmacology is cumulative — the cardiorenal interface is where several organ-system units visibly intersect.",
+      "src": "S31 (notes)"
+     }
+    ],
+    "clinical": [
+     {
+      "text": "**Patient A — advancing CKD, hypertension no longer controlled on a thiazide:** switch to a loop diuretic; check potassium and volume status.",
+      "src": "S30; S15; S17"
+     },
+     {
+      "text": "**Patient B — proteinuric CKD, needs first-line antihypertensive therapy:** ACE inhibitor or ARB; check potassium and creatinine in 1–2 weeks and pregnancy potential.",
+      "src": "S30; S5; S8"
+     },
+     {
+      "text": "**Patient C — on an ACE inhibitor and a diuretic, about to start a daily OTC NSAID:** counsel against regular NSAID use — triple whammy AKI risk.",
+      "src": "S30; S27"
+     },
+     {
+      "text": "**Patient D — stable angina, already on a beta-blocker, needs additional symptom control:** add a dihydropyridine CCB or a long-acting nitrate; avoid diltiazem/verapamil (AV block) and PDE5 inhibitors with nitrates.",
+      "src": "S30; S13; S19; S22"
+     }
+    ],
+    "examples": [
+     {
+      "text": "**A cumulative self-test spanning both sessions — use this to review before exams.** The recall quiz is a standalone resource, separate from in-lecture quick checks.",
+      "src": "S32; S32 (notes); S35 (notes)"
+     },
+     {
+      "text": "**Recall Q1–2:** loops collapse the lumen-positive potential (↑ Ca²⁺ excretion), thiazides increase distal Ca²⁺ reabsorption; at eGFR 22 switch the thiazide to a loop.",
+      "src": "S33; S35"
+     },
+     {
+      "text": "**Recall Q3–4:** a creatinine rise up to ~30% on an ACE inhibitor is expected — continue with monitoring; ACEi/ARBs dilate the efferent arteriole, lowering intraglomerular pressure and proteinuria.",
+      "src": "S33; S34; S35"
+     },
+     {
+      "text": "**Recall Q5:** the triple whammy is three independent reductions in filtration pressure combining additively to synergistically, precipitating AKI.",
+      "src": "S34; S35"
+     },
+     {
+      "text": "**Recall Q6:** CCBs treat hypertension via arteriolar dilation (reducing afterload/systemic vascular resistance) and angina via the same mechanism (reducing afterload and myocardial oxygen demand) — one drug class, one mechanism, two indications.",
+      "src": "S34; S35"
+     }
+    ],
+    "traps": [
+     {
+      "text": "Reflexively stopping an ACE inhibitor for a ≤30% creatinine rise is the classic trap.",
+      "src": "S5 (notes); S10 (notes)"
+     },
+     {
+      "text": "Adding a new drug class when the real problem is a thiazide at low GFR.",
+      "src": "S15 (notes); S17"
+     }
+    ]
+   },
+   "comparisons": [
+    {
+     "title": "Which approach would you choose? (S30)",
+     "columns": [
+      "Patient",
+      "First-line approach",
+      "Biggest safety check"
+     ],
+     "rows": [
+      [
+       "A · Advancing CKD, BP no longer controlled on a thiazide",
+       "Switch to a loop diuretic",
+       "Potassium, volume status"
+      ],
+      [
+       "B · Proteinuric CKD, first-line therapy",
+       "ACE inhibitor or ARB",
+       "K⁺ and creatinine in 1–2 weeks; pregnancy"
+      ],
+      [
+       "C · ACEi + diuretic, about to start daily OTC NSAID",
+       "Counsel to avoid the NSAID",
+       "Triple whammy AKI"
+      ],
+      [
+       "D · Stable angina on a beta-blocker",
+       "Add DHP CCB or long-acting nitrate",
+       "No non-DHP with BB; no PDE5 with nitrates"
+      ]
+     ],
+     "src": "S30; S13; S15; S19; S27"
+    }
+   ],
+   "hooks": [
+    {
+     "kind": "mnemonic",
+     "text": "Every case, two answers: **the approach** and **the one thing to check**.",
+     "src": "S30 (notes)"
+    }
+   ],
+   "high_yield": [
+    {
+     "text": "Five takeaways: two targetable maps · ACEi/ARB renoprotection · CCB overlap · triple whammy · HTN–CKD cycle.",
+     "src": "S31"
+    }
+   ],
+   "questions": [
+    {
+     "kind": "mechanism",
+     "stem": "Why do loop diuretics increase calcium excretion while thiazide diuretics decrease it?",
+     "correct": "Loops collapse the lumen-positive potential",
+     "why_correct": "Loops block NKCC2, collapsing the lumen-positive potential driving paracellular Ca²⁺/Mg²⁺ reabsorption; thiazides increase distal Ca²⁺ reabsorption (S35).",
+     "distractors": [
+      {
+       "text": "Loops act in the collecting duct",
+       "why": "Loops act at the thick ascending limb (S35)."
+      },
+      {
+       "text": "Thiazides block the Na-K-2Cl cotransporter",
+       "why": "Loops do (S35)."
+      },
+      {
+       "text": "There is no mechanistic difference",
+       "why": "There is (S35)."
+      },
+      {
+       "text": "Thiazides act in the proximal tubule",
+       "why": "Distal tubule (S35)."
+      }
+     ],
+     "src": "S33; S35",
+     "from_slides": "S33; S35"
+    },
+    {
+     "kind": "vignette",
+     "stem": "A patient’s thiazide stops controlling blood pressure as CKD advances to eGFR 22 mL/min. What is the best change?",
+     "correct": "Switch to a loop diuretic",
+     "why_correct": "Thiazides lose most natriuretic efficacy below GFR ~30; loops act upstream and remain effective (S35).",
+     "distractors": [
+      {
+       "text": "Increase the thiazide dose",
+       "why": "Too little filtrate reaches the site (S35)."
+      },
+      {
+       "text": "Add a second thiazide",
+       "why": "Same failing site (S35)."
+      },
+      {
+       "text": "Stop all diuretic therapy",
+       "why": "A loop remains effective (S35)."
+      },
+      {
+       "text": "Switch to acetazolamide",
+       "why": "Weak; not the answer (S35)."
+      }
+     ],
+     "src": "S33; S35",
+     "from_slides": "S33; S35"
+    },
+    {
+     "kind": "vignette",
+     "stem": "A patient starts lisinopril for proteinuric CKD; creatinine rises 25% in two weeks. What is the best response?",
+     "correct": "Continue with monitoring; this is expected",
+     "why_correct": "A rise up to ~30% reflects reduced intraglomerular pressure — an expected hemodynamic effect (S35).",
+     "distractors": [
+      {
+       "text": "Stop the ACE inhibitor immediately",
+       "why": "Expected, not toxicity (S35)."
+      },
+      {
+       "text": "Double the lisinopril dose",
+       "why": "Not the response (S35)."
+      },
+      {
+       "text": "Switch to an NSAID instead",
+       "why": "NSAIDs raise AKI risk (S35)."
+      },
+      {
+       "text": "Add aliskiren for renoprotection",
+       "why": "Avoid the combination (S7)."
+      }
+     ],
+     "src": "S33; S35",
+     "from_slides": "S33; S35"
+    },
+    {
+     "kind": "mechanism",
+     "stem": "Why are ACE inhibitors and ARBs preferred first-line therapy in proteinuric CKD?",
+     "correct": "They dilate the efferent arteriole",
+     "why_correct": "They preferentially dilate the efferent arteriole, lowering intraglomerular pressure and proteinuria (S35).",
+     "distractors": [
+      {
+       "text": "They have no renal effects at all",
+       "why": "They do (S35)."
+      },
+      {
+       "text": "They are the only class usable in CKD",
+       "why": "Other classes are used (S35)."
+      },
+      {
+       "text": "They increase aldosterone release",
+       "why": "They reduce it (S35)."
+      },
+      {
+       "text": "They constrict the afferent arteriole",
+       "why": "That is NSAIDs (S23)."
+      }
+     ],
+     "src": "S34; S35",
+     "from_slides": "S34; S35"
+    },
+    {
+     "kind": "mechanism",
+     "stem": "A patient on an ACE inhibitor and a diuretic starts a daily OTC NSAID and develops AKI. What is the mechanism?",
+     "correct": "Three reductions in filtration pressure add up",
+     "why_correct": "NSAID afferent constriction + ACEi efferent dilation + diuretic volume depletion combine additively to synergistically (S35).",
+     "distractors": [
+      {
+       "text": "NSAIDs have no renal effects",
+       "why": "They constrict the afferent arteriole (S35)."
+      },
+      {
+       "text": "The ACE inhibitor inactivates the NSAID",
+       "why": "Not a mechanism (S35)."
+      },
+      {
+       "text": "This combination has no extra risk",
+       "why": "It is the triple whammy (S35)."
+      },
+      {
+       "text": "The diuretic causes allergic nephritis",
+       "why": "Not the mechanism (S35)."
+      }
+     ],
+     "src": "S34; S35",
+     "from_slides": "S34; S35"
+    },
+    {
+     "kind": "mechanism",
+     "stem": "Which drug class treats BOTH hypertension and angina pectoris via the same mechanism?",
+     "correct": "Calcium channel blockers",
+     "why_correct": "CCBs treat hypertension and angina via the same arteriolar-dilation mechanism (S35).",
+     "distractors": [
+      {
+       "text": "Thiazide diuretics",
+       "why": "Hypertension only (S35)."
+      },
+      {
+       "text": "Carbonic anhydrase inhibitors",
+       "why": "Not antianginal (S35)."
+      },
+      {
+       "text": "Aldosterone antagonists",
+       "why": "Not antianginal (S35)."
+      },
+      {
+       "text": "Loop diuretics",
+       "why": "Edema, not angina (S35)."
+      }
+     ],
+     "src": "S34; S35",
+     "from_slides": "S34; S35"
+    }
+   ],
+   "flows": []
+  }
+ ],
+ "notebooklm": {
+  "patient": "a diabetic-nephropathy patient whose creatinine rises from 1.1 to 1.4 on lisinopril, a CKD patient (eGFR 28) uncontrolled on lisinopril, amlodipine and hydrochlorothiazide, and an older adult on lisinopril and HCTZ who starts an OTC NSAID (the lecture’s and study guide’s cases)",
+  "suggested_questions": [
+   "Walk the RAAS cascade and name the drug that blocks each step.",
+   "Why are ACE inhibitors and ARBs first-line in proteinuric CKD, and why does creatinine rise?",
+   "When do you switch an ACE inhibitor to an ARB, and what about aliskiren?",
+   "Compare dihydropyridine and non-dihydropyridine CCBs.",
+   "How do nitrates work, and why never with sildenafil?",
+   "Explain the triple whammy and how to prevent it."
+  ]
+ },
+ "audit_skip": [
+  {
+   "ref": "S1",
+   "starts_with": "Diane",
+   "reason": "instructor name (no names on the site)"
+  },
+  {
+   "ref": "S2",
+   "starts_with": "Briefly recap",
+   "reason": "teaching instruction; the recap is in About this lecture"
+  },
+  {
+   "ref": "S3",
+   "starts_with": "Section transition",
+   "reason": "section divider"
+  },
+  {
+   "ref": "S18",
+   "starts_with": "Section transition",
+   "reason": "section divider"
+  },
+  {
+   "ref": "S29",
+   "starts_with": "Section transition",
+   "reason": "section divider"
+  },
+  {
+   "ref": "S32",
+   "starts_with": "Section transition",
+   "reason": "section divider"
+  },
+  {
+   "ref": "S4",
+   "starts_with": "Walk it step by step",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S12",
+   "starts_with": "The point here is classification",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S20",
+   "starts_with": "Walk through the NO",
+   "reason": "teaching instruction; the pathway is Figure 14"
+  },
+  {
+   "ref": "S33",
+   "starts_with": "D.  Discontinue",
+   "reason": "quiz distractor (wrong option); the quiz is rebuilt as practice questions"
+  },
+  {
+   "ref": "S34",
+   "starts_with": "D.  They increase aldosterone",
+   "reason": "quiz distractor (wrong option); the quiz is rebuilt as practice questions"
+  },
+  {
+   "ref": "S4",
+   "starts_with": "This is the conceptual spine",
+   "reason": "teaching instruction; taught from S4 (notes) script"
+  },
+  {
+   "ref": "S6",
+   "starts_with": "Explain that bradykinin",
+   "reason": "teaching instruction; taught from S6"
+  },
+  {
+   "ref": "S7",
+   "starts_with": "Aliskiren is included mainly",
+   "reason": "teaching instruction; taught from S7"
+  },
+  {
+   "ref": "S8",
+   "starts_with": "This slide is the clinical payoff",
+   "reason": "teaching instruction; the payoff is taught from S8"
+  },
+  {
+   "ref": "S9",
+   "starts_with": "Frame the creatinine",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S11",
+   "starts_with": "Section transition",
+   "reason": "section divider"
+  },
+  {
+   "ref": "S13",
+   "starts_with": "Contrast vascular",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S14",
+   "starts_with": "Use this figure",
+   "reason": "teaching instruction; the question is answered in the Figure 12 caption"
+  },
+  {
+   "ref": "S16",
+   "starts_with": "Contrast central",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S17",
+   "starts_with": "Case cue",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S21",
+   "starts_with": "Have students sort",
+   "reason": "teaching instruction; the sorting is the Figure 15 interactive"
+  },
+  {
+   "ref": "S23",
+   "starts_with": "NSAID plus ACE",
+   "reason": "presenter script; taught from S23"
+  },
+  {
+   "ref": "S25",
+   "starts_with": "Direct students to Figure 18",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S27",
+   "starts_with": "Case cue",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S28",
+   "starts_with": "Walk the stems",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S30",
+   "starts_with": "Have students work",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S30",
+   "starts_with": "Work in pairs",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S33",
+   "starts_with": "Use the quiz",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S36",
+   "starts_with": "Class activity",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S36",
+   "starts_with": "Teaching points",
+   "reason": "teaching instruction; the drugs are in the profiles"
+  },
+  {
+   "ref": "S36",
+   "starts_with": "Bloom",
+   "reason": "Bloom's teaching prompt; rebuilt as practice questions"
+  },
+  {
+   "ref": "S36",
+   "starts_with": "Understand",
+   "reason": "Bloom's teaching prompt; rebuilt as practice questions"
+  },
+  {
+   "ref": "S36",
+   "starts_with": "Apply",
+   "reason": "Bloom's teaching prompt; rebuilt as practice questions"
+  },
+  {
+   "ref": "S36",
+   "starts_with": "Analyze",
+   "reason": "Bloom's teaching prompt; rebuilt as practice questions"
+  },
+  {
+   "ref": "S36",
+   "starts_with": "Evaluate",
+   "reason": "Bloom's teaching prompt; rebuilt as practice questions"
+  },
+  {
+   "ref": "S55",
+   "starts_with": "Abbreviation key: Review",
+   "reason": "teaching instruction; the abbreviations are in About this lecture"
+  },
+  {
+   "ref": "S56",
+   "starts_with": "This slide documents",
+   "reason": "administrative note on AI-tool citation"
+  },
+  {
+   "ref": "S56",
+   "starts_with": "The diagrams in this deck",
+   "reason": "administrative note on AI-tool citation"
+  }
+ ],
+ "guide": {
+  "summary": [
+   {
+    "text": "The **RAAS**: angiotensinogen → (renin) → angiotensin I → (ACE) → angiotensin II → vasoconstriction + aldosterone; aliskiren, ACE inhibitors, ARBs and aldosterone antagonists each block one step.",
+    "src": "S4; SG U5-R7"
+   },
+   {
+    "text": "**ACE inhibitors/ARBs** are first-line in proteinuric CKD: efferent dilation lowers glomerular pressure; a creatinine rise **up to ~30%** is expected; check K⁺/creatinine in 1–2 weeks; **never in pregnancy**.",
+    "src": "S5; S8; S10; SG U5-R8; SG U5-R9"
+   },
+   {
+    "text": "ACE-inhibitor **cough** is bradykinin, not allergy → switch to an **ARB**; angioedema → stop.",
+    "src": "S6; S7"
+   },
+   {
+    "text": "**Non-DHP CCBs + beta-blockers** → bradycardia/AV block; resistant HTN in CKD is often a thiazide that needs to become a **loop**.",
+    "src": "S13; S15; S17"
+   },
+   {
+    "text": "**Nitrates**: NO → cGMP → venodilation; nitrate-free interval; **never with PDE5 inhibitors**. **CCBs** treat both hypertension and angina by the same mechanism.",
+    "src": "S19; S20; S22; SG U5-R10; SG U5-R11"
+   },
+   {
+    "text": "**Triple whammy**: NSAID + ACEi/ARB + diuretic → AKI; counsel against OTC NSAIDs.",
+    "src": "S23; S27; SG U5-R12; SG U5-S"
+   }
+  ],
+  "teaser": "Today: the renin-angiotensin-aldosterone system and why ACE inhibitors and ARBs protect the kidney, the other antihypertensive classes, nitrates and calcium channel blockers in angina, and the triple whammy. The recall quiz spans both renal sessions.",
+  "cram": [
+   {
+    "prompt": "RAAS blocks",
+    "answer": "Aliskiren renin · -pril ACE · -sartan AT1 · spironolactone aldosterone",
+    "src": "S4; S28; SG U5-R7"
+   },
+   {
+    "prompt": "ACEi adverse effects",
+    "answer": "Cough (bradykinin), angioedema, hyperkalemia",
+    "src": "S5; S6"
+   },
+   {
+    "prompt": "ACEi cough → ?",
+    "answer": "Switch to an ARB",
+    "src": "S6; S7"
+   },
+   {
+    "prompt": "ACEi/ARB in pregnancy",
+    "answer": "Contraindicated (fetal renal toxicity)",
+    "src": "S5; S7"
+   },
+   {
+    "prompt": "Why first-line in proteinuric CKD",
+    "answer": "Efferent dilation → ↓ intraglomerular pressure, ↓ proteinuria",
+    "src": "S8; SG U5-R8"
+   },
+   {
+    "prompt": "Creatinine after ACEi",
+    "answer": "Up to ~30% expected; more → stenosis or volume depletion",
+    "src": "S5; S10; SG U5-R9"
+   },
+   {
+    "prompt": "Monitoring",
+    "answer": "K⁺ and creatinine within 1–2 weeks; sick-day rules",
+    "src": "S8; S9"
+   },
+   {
+    "prompt": "Aliskiren",
+    "answer": "Never with ACEi/ARB in diabetes",
+    "src": "S7; S42"
+   },
+   {
+    "prompt": "DHP vs. non-DHP",
+    "answer": "Arterioles · heart rate/contractility",
+    "src": "S12; S22"
+   },
+   {
+    "prompt": "Non-DHP + beta-blocker",
+    "answer": "Bradycardia, AV block",
+    "src": "S13"
+   },
+   {
+    "prompt": "Hydralazine",
+    "answer": "Pair with beta-blocker + diuretic",
+    "src": "S16"
+   },
+   {
+    "prompt": "Clonidine",
+    "answer": "Rebound hypertension if stopped abruptly",
+    "src": "S16"
+   },
+   {
+    "prompt": "Methyldopa",
+    "answer": "Hypertension in pregnancy",
+    "src": "S16; S50"
+   },
+   {
+    "prompt": "Nitrates",
+    "answer": "NO → cGMP → venodilation; nitrate-free interval",
+    "src": "S19; S20"
+   },
+   {
+    "prompt": "Nitrate + PDE5 inhibitor",
+    "answer": "Absolute contraindication — hypotension",
+    "src": "S19; SG U5-R11"
+   },
+   {
+    "prompt": "HTN and angina, one mechanism",
+    "answer": "Calcium channel blockers",
+    "src": "S22; SG U5-R10"
+   },
+   {
+    "prompt": "Triple whammy",
+    "answer": "NSAID + ACEi/ARB + diuretic",
+    "src": "S23; SG U5-R12"
+   },
+   {
+    "prompt": "Once-daily ACE inhibitor",
+    "answer": "Levels stay far above C50",
+    "src": "p. 50",
+    "tb": true
+   },
+   {
+    "prompt": "Hydralazine + diuretic",
+    "answer": "Vasodilators cause salt and water retention",
+    "src": "p. 280",
+    "tb": true
+   }
+  ],
+  "discrepancies": []
+ }
+}

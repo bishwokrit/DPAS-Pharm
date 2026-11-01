@@ -1,0 +1,225 @@
+{
+ "lecture": "L09",
+ "passed": true,
+ "units_checked": 1608,
+ "missing": [],
+ "uncited": [],
+ "emphasis_not_bold": [],
+ "skipped": [
+  {
+   "ref": "S1",
+   "text": "Diane S. Allen-Gipson, Ph.D., M.S., Course Director",
+   "kind": "slide",
+   "reason": "faculty identifier (site policy: no school or instructor identifiers)"
+  },
+  {
+   "ref": "S3",
+   "text": "AccessMedicine: accessmedicine.mhmedical.com/book.aspx?bookid=3382",
+   "kind": "slide",
+   "reason": "access link for the textbook"
+  },
+  {
+   "ref": "S4",
+   "text": "Section transition.",
+   "kind": "speaker note",
+   "reason": "section divider"
+  },
+  {
+   "ref": "S6",
+   "text": "Walk the flow from falling GFR to toxicity, then ask students which lever to pull: dose, interval, or both.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; the flow is Figure 1"
+  },
+  {
+   "ref": "S6",
+   "text": "This sets up the renal dosing content that follows.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S9",
+   "text": "Section transition.",
+   "kind": "speaker note",
+   "reason": "section divider"
+  },
+  {
+   "ref": "S11",
+   "text": "Left to right, then the potassium recycling box.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; the walk-through is the Figure 3 interactive"
+  },
+  {
+   "ref": "S14",
+   "text": "Use this slide as the consolidating recap before the case — students should be able to generate this table from memory by the end of the unit.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S14",
+   "text": "Students should reproduce this table from memory.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S15",
+   "text": "This case makes the loop-vs-thiazide GFR cutoff concrete and clinical rather than an isolated fact to memorize — a good checkpoint before the quick check.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S16",
+   "text": "Section transition.",
+   "kind": "speaker note",
+   "reason": "section divider"
+  },
+  {
+   "ref": "S21",
+   "text": "Close the loop with Figure 2.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S22",
+   "text": "Use this table as the organizing summary for the whole diuretic section before the closing case — a good anchor point for the recall quiz questions students will see in Session 2.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S22",
+   "text": "Close the loop with Figure 2.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S25",
+   "text": "Close Session 1 by previewing Session 2 explicitly — students should leave knowing diuretic pharmacology is complete, and that RAAS-blocking antihypertensives, other antihypertensive classes, and the cardiorenal overlap pick up first next time.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S26",
+   "text": "Class activity (10 minutes): Give groups two or three profiles to teach back in 60 seconds each.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S26",
+   "text": "Teaching points: Loops (furosemide, bumetanide, torsemide), thiazides (hydrochlorothiazide, chlorthalidone), potassium-sparing (spironolactone, eplerenone, amiloride, triamterene), acetazolamide, mannitol.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; the drugs are listed in the profiles"
+  },
+  {
+   "ref": "S26",
+   "text": "Bloom's prompts: Remember: state the hydrochlorothiazide dose.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; the prompts are rebuilt as practice questions"
+  },
+  {
+   "ref": "S26",
+   "text": "Understand: explain why loops waste calcium.",
+   "kind": "speaker note",
+   "reason": "Bloom's teaching prompt; rebuilt as practice questions"
+  },
+  {
+   "ref": "S26",
+   "text": "Apply: choose a diuretic at eGFR 25.",
+   "kind": "speaker note",
+   "reason": "Bloom's teaching prompt; rebuilt as practice questions"
+  },
+  {
+   "ref": "S26",
+   "text": "Analyze: explain why digoxin toxicity follows loop diuretic hypokalemia.",
+   "kind": "speaker note",
+   "reason": "Bloom's teaching prompt; rebuilt as practice questions"
+  },
+  {
+   "ref": "S26",
+   "text": "Evaluate: choose a diuretic for a patient with gout and heart failure.",
+   "kind": "speaker note",
+   "reason": "Bloom's teaching prompt; rebuilt as practice questions"
+  },
+  {
+   "ref": "S38",
+   "text": "Listed for context; not profiled in detail.",
+   "kind": "slide",
+   "reason": "slide label (the supporting drugs are in the table)"
+  },
+  {
+   "ref": "S39",
+   "text": "This slide documents AI-tool use for original figure generation per university citation requirements.",
+   "kind": "speaker note",
+   "reason": "administrative note on AI-tool citation"
+  }
+ ],
+ "not_in_deck": [],
+ "not_in_notebooklm": [],
+ "layout_problems": [],
+ "question_issues": [],
+ "question_stats": {
+  "count": 19,
+  "letters": {
+   "A": 4,
+   "B": 4,
+   "C": 4,
+   "D": 4,
+   "E": 3
+  },
+  "vignette": 11,
+  "mechanism": 8
+ },
+ "thin_objectives": [],
+ "textbook_unused": 1249,
+ "reading_missing": [],
+ "reading_skipped": [
+  {
+   "page": "267",
+   "heading": "Drug Usual Oral Dosage",
+   "reason": "Table column heading (dosage table); the doses are in the drug profiles"
+  },
+  {
+   "page": "277",
+   "heading": "UREARETICS",
+   "reason": "Beyond PA scope: investigational urea-transport blockers still in preclinical studies, no prescribing decision"
+  },
+  {
+   "page": "49",
+   "heading": "Rate of Absorption",
+   "reason": "Taught in L02 (Unit 1 pharmacokinetics, Ch. 3); not part of renal dose adjustment"
+  },
+  {
+   "page": "49",
+   "heading": "Extraction Ratio & the First-Pass Effect",
+   "reason": "Taught in L02 (Unit 1 pharmacokinetics, Ch. 3); not part of renal dose adjustment"
+  },
+  {
+   "page": "49",
+   "heading": "THE TIME COURSE OF DRUG EFFECT",
+   "reason": "Taught in L02 (Unit 1 pharmacokinetics, Ch. 3); not part of renal dose adjustment"
+  },
+  {
+   "page": "50",
+   "heading": "Immediate Effects",
+   "reason": "Taught in L02 (Unit 1 pharmacokinetics, Ch. 3); not part of renal dose adjustment"
+  },
+  {
+   "page": "50",
+   "heading": "Delayed Effects",
+   "reason": "Taught in L02 (Unit 1 pharmacokinetics, Ch. 3); not part of renal dose adjustment"
+  },
+  {
+   "page": "50",
+   "heading": "Schedule-Dependent Effects",
+   "reason": "Taught in L02 (Unit 1 pharmacokinetics, Ch. 3); not part of renal dose adjustment"
+  },
+  {
+   "page": "50",
+   "heading": "Conc Effect",
+   "reason": "Taught in L02 (Unit 1 pharmacokinetics, Ch. 3); not part of renal dose adjustment"
+  },
+  {
+   "page": "51",
+   "heading": "Cumulative Effects",
+   "reason": "Taught in L02 (Unit 1 pharmacokinetics, Ch. 3); not part of renal dose adjustment"
+  }
+ ]
+}

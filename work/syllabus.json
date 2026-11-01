@@ -511,16 +511,9 @@
     "U5-R4",
     "U5-R5",
     "U5-R6",
-    "U5-R7",
-    "U5-R8",
-    "U5-R9",
-    "U5-R10",
-    "U5-R11",
-    "U5-R12",
-    "U5-M",
-    "U5-S"
+    "U5-M"
    ],
-   "study_guide_note": "Unit items not yet split between the two sessions; split when authoring."
+   "study_guide_note": "Unit 5 split by topic: Session 1 (renal dosing, diuretics) = U5-R1–R6 and U5-M; Session 2 (RAAS, antihypertensives in CKD, angina, triple whammy) = U5-R7–R12 and U5-S."
   },
   {
    "id": "L10",
@@ -565,22 +558,15 @@
     }
    ],
    "study_guide": [
-    "U5-R1",
-    "U5-R2",
-    "U5-R3",
-    "U5-R4",
-    "U5-R5",
-    "U5-R6",
     "U5-R7",
     "U5-R8",
     "U5-R9",
     "U5-R10",
     "U5-R11",
     "U5-R12",
-    "U5-M",
     "U5-S"
    ],
-   "study_guide_note": "Unit items not yet split between the two sessions; split when authoring."
+   "study_guide_note": "Unit 5 split by topic: Session 1 (renal dosing, diuretics) = U5-R1–R6 and U5-M; Session 2 (RAAS, antihypertensives in CKD, angina, triple whammy) = U5-R7–R12 and U5-S."
   },
   {
    "id": "L11",

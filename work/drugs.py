@@ -16,7 +16,7 @@ SECTIONS = [("moa", "Mechanism of action"), ("ind", "Indications"), ("contra", "
 
 def D(name, cls, tags, secs, aliases=(), unit=1, utd=None):
     # utd: optional exact UpToDate link; otherwise the site links an UpToDate search for the drug's name
-    facts = [{"text": t, "src": s, "tb": not re.search(r"\bL0\d|\bSG\b", s), "sec": k} for k, _ in SECTIONS for t, s in secs.get(k, [])]
+    facts = [{"text": t, "src": s, "tb": not re.search(r"\bL\d\d|\bSG\b", s), "sec": k} for k, _ in SECTIONS for t, s in secs.get(k, [])]
     return {"name": name, "cls": cls, "tags": list(tags), "aliases": list(aliases), "unit": unit, **({"utd": utd} if utd else {}), "facts": facts}
 
 
@@ -68,14 +68,17 @@ DRUGS = [
                   ("99% protein-bound; half-life about 37 h.", "p. 45")],
     }),
     D("Lithium", "Not covered in materials", ["Narrow TI", "Renal dosing"], {
-        "ix": [("Celecoxib raises lithium levels.", "p. 679")],
+        "ix": [("Celecoxib raises lithium levels.", "p. 679"),
+               ("Thiazides raise lithium levels — monitor.", "L09 S38; p. 280")],
         "pt": [("Renally cleared with a narrow TI — adjust dose or interval in renal impairment.", "L02 S15")],
         "extra": [("Classic narrow-TI drug requiring blood-level monitoring.", "L01 S38; SG U1-R7"),
                   ("About 95% excreted unchanged in urine, 0% protein-bound; target ~0.7 mEq/L, toxic above 2 mEq/L; half-life ~22 h.", "p. 44")],
     }),
     D("Digoxin", "Not covered in materials", ["Narrow TI", "High Vd", "Renal dosing", "Transporters"], {
-        "ix": [("Inhibiting P-glycoprotein (MDR1) raises digoxin blood levels.", "p. 9")],
-        "pt": [("Renally cleared — adjust dose or interval in renal impairment.", "L02 S15")],
+        "ix": [("Inhibiting P-glycoprotein (MDR1) raises digoxin blood levels.", "p. 9"),
+               ("Hypokalemia from loop diuretics increases digoxin toxicity.", "L09 S38; p. 278")],
+        "pt": [("Renally cleared — adjust dose or interval in renal impairment.", "L02 S15"),
+               ("Older adult with CrCl 22 mL/min: clearance falls to 3.7 L/h, so about 127 mcg/day (two 62.5-mcg tablets); draw levels at least 6 hours after a dose.", "p. 55; p. 56")],
         "extra": [("Classic narrow-TI drug requiring blood-level monitoring.", "L01 S38; SG U1-R7"),
                   ("Very high Vd — mostly sequestered in tissue, not plasma.", "L01 S52 (notes)"),
                   ("Vd ~500 L, half-life ~39 h; target ~1 ng/mL, toxic above 2 ng/mL.", "p. 44")],
@@ -698,10 +701,95 @@ _PT = {
     "Phytonadione": [("Warfarin patients: keep vitamin K intake consistent rather than avoiding it.", "L06 S27")],
     "Ginkgo biloba": [("Ask about supplements at every medication reconciliation.", "L06 S30")],
 }
+_MOA.update({
+    "Furosemide": ("Loop diuretic: blocks NKCC2 in the thick ascending limb (~25% of filtered Na⁺) and collapses the lumen-positive potential → ↑ Ca²⁺ and Mg²⁺ excretion.", "L09 S10-11"),
+    "Bumetanide": ("Loop diuretic: blocks NKCC2 in the thick ascending limb; about 40× furosemide potency mg for mg.", "L09 S10; S24; S28"),
+    "Torsemide": ("Loop diuretic: blocks NKCC2 in the thick ascending limb.", "L09 S10"),
+    "Hydrochlorothiazide": ("Thiazide: blocks the Na-Cl cotransporter (NCC) in the distal convoluted tubule (~5–8% of Na⁺); lower cell Na⁺ drives NCX Ca²⁺ reabsorption → ↓ urinary Ca²⁺.", "L09 S12-13"),
+    "Chlorthalidone": ("Thiazide-like: blocks NCC in the distal convoluted tubule; same site as HCTZ, longer action.", "L09 S12; S24"),
+    "Spironolactone": ("Aldosterone (mineralocorticoid) receptor antagonist in the collecting duct → less ENaC and Na/K pump activity → less K⁺ and H⁺ secretion; also antiandrogen.", "L09 S17-18"),
+    "Eplerenone": ("Selective aldosterone receptor antagonist in the collecting duct; far fewer antiandrogen effects than spironolactone.", "L09 S17-18; S33"),
+    "Amiloride": ("ENaC blocker: blocks the collecting-duct sodium channel directly, independent of aldosterone → less K⁺ and H⁺ secretion.", "L09 S17-18"),
+    "Triamterene": ("ENaC blocker: blocks the collecting-duct sodium channel directly, independent of aldosterone.", "L09 S17-18"),
+    "Acetazolamide": ("Carbonic anhydrase inhibitor: blocks Na⁺/HCO₃⁻ reabsorption in the proximal tubule → bicarbonate diuresis and metabolic acidosis; weak diuretic.", "L09 S19-20; SG U5-R6"),
+    "Mannitol": ("Osmotic diuretic: filtered but poorly reabsorbed, so it holds water in the tubule lumen; draws water out of cells (lowers ICP/IOP).", "L09 S19-20"),
+})
+_PT.update({
+    "Furosemide": [("Preferred over thiazides in edema and advanced CKD (GFR < 30); give IV no faster than 4 mg/min.", "L09 S14-15; S27"),
+                   ("Hypokalemia raises digoxin toxicity; aminoglycosides add ototoxicity; NSAIDs blunt the effect.", "L09 S38"),
+                   ("Hypercalcemia: give with saline — a loop alone causes volume contraction.", "p. 280")],
+    "Bumetanide": [("About 40 times more potent than furosemide mg for mg.", "L09 S28")],
+    "Torsemide": [("Longer half-life and more predictable absorption than furosemide; less ototoxicity.", "L09 S29")],
+    "Hydrochlorothiazide": [("First-line for essential hypertension with preserved renal function; loses efficacy below GFR ~30 — switch to a loop.", "L09 S12; S15"),
+                            ("Hyponatremia in older adults; raises lithium levels; useful for calcium stones and osteoporosis.", "L09 S12; S38"),
+                            ("Hyperglycemia mainly above 50 mg/d.", "p. 272")],
+    "Chlorthalidone": [("Often preferred for 24-hour BP control (half-life 40–60 h); more hypokalemia and hyponatremia than HCTZ at equal dose.", "L09 S12; S31")],
+    "Spironolactone": [("Hyperkalemia, especially with ACE inhibitors/ARBs or CKD — check potassium and creatinine within 1 week; gynecomastia.", "L09 S17; S23; S32"),
+                       ("Cirrhotic ascites responds well; RALES benefit in severe heart failure.", "p. 275; p. 279")],
+    "Eplerenone": [("Choose over spironolactone when gynecomastia is a problem; avoid with strong CYP3A4 inhibitors, K⁺ > 5.5 or CrCl < 30.", "L09 S17; S33")],
+    "Amiloride": [("Adjunct to a loop or thiazide to preserve potassium; lithium-induced nephrogenic diabetes insipidus.", "L09 S17; S34")],
+    "Triamterene": [("Combined with HCTZ (Maxzide, Dyazide); kidney stones, blue urine; AKI with NSAIDs.", "L09 S35; p. 275")],
+    "Acetazolamide": [("Niche uses: glaucoma, altitude sickness (start a day before ascent), metabolic alkalosis; sulfonamide caution.", "L09 S19; S36; S38")],
+    "Mannitol": [("Raised ICP/IOP; needs intact renal perfusion; avoid in heart failure and volume depletion; monitor osmolality and electrolytes.", "L09 S19-20; S37")],
+})
 _EXTRA_ALIAS = {"Dronabinol": ["Nabilone", "Cesamet"], "Diphenoxylate/atropine": ["Diphenoxylate"], "Polyethylene glycol 3350": ["PEG 3350", "Polyethylene glycol"],
                 "Mercaptopurine": ["6-mercaptopurine"]}
 _by = {d["name"].lower(): d for d in DRUGS}
-for _lec in ("L05", "L06"):
+_LOOP_IX = [("Digoxin: loop hypokalemia increases toxicity. Aminoglycosides: additive ototoxicity. NSAIDs blunt the diuretic effect and raise AKI risk.", "L09 S38")]
+_THZ_IX = [("Lithium levels rise; NSAIDs blunt the effect.", "L09 S38")]
+_KS_IX = [("Hyperkalemia with ACE inhibitors, ARBs, potassium supplements, trimethoprim, or CKD.", "L09 S17; S38")]
+_IX = {"Furosemide": _LOOP_IX, "Bumetanide": _LOOP_IX, "Torsemide": _LOOP_IX, "Hydrochlorothiazide": _THZ_IX, "Chlorthalidone": _THZ_IX,
+       "Spironolactone": _KS_IX, "Eplerenone": [*_KS_IX, ("Strong CYP3A4 inhibitors (ketoconazole) raise levels sharply.", "L09 S33")],
+       "Amiloride": _KS_IX, "Triamterene": [*_KS_IX, ("AKI with NSAIDs (indomethacin).", "L09 S35; p. 275")],
+       "Acetazolamide": [("Sulfonamide allergy: use caution.", "L09 S38")]}
+_ACEI_MOA = ("Blocks ACE (angiotensin I → II): less vasoconstriction and aldosterone; also less bradykinin breakdown (cough, angioedema). Dilates the efferent arteriole → ↓ intraglomerular pressure and proteinuria.", "L10 S5-6; S8; SG U5-R8")
+_ARB_MOA = ("Blocks the AT1 receptor directly; no bradykinin rise, so no cough. Same efferent-arteriole renoprotection as ACE inhibitors.", "L10 S7-8")
+_RAAS_PT = [("First-line in proteinuric CKD; creatinine rise up to ~30% is expected — continue; more → renal artery stenosis or volume depletion.", "L10 S5; S8; S10; SG U5-R9"),
+            ("Contraindicated in pregnancy; check potassium and creatinine within 1–2 weeks; sick-day rules (hold in vomiting, diarrhea, dehydration).", "L10 S5; S8-9")]
+_RAAS_IX = [("Hyperkalemia with potassium supplements, potassium-sparing diuretics, trimethoprim; triple whammy AKI with an NSAID plus a diuretic; never with aliskiren in diabetes.", "L10 S7; S23; S55")]
+_DHP_MOA = ("Dihydropyridine CCB: arteriolar dilation → ↓ afterload — the same mechanism treats hypertension and angina.", "L10 S12-13; S22; SG U5-R10")
+_NDHP_MOA = ("Non-dihydropyridine CCB: ↓ heart rate and contractility, ↑ coronary flow, plus arteriolar dilation.", "L10 S12-13; S22")
+_NDHP_IX = [("With a beta-blocker → bradycardia and AV block; raises digoxin levels; rifampin and carbamazepine lower levels.", "L10 S13; S55")]
+_BB_MOA = ("Beta-1 selective blocker: ↓ heart rate, contractility and renin release.", "L10 S12-13")
+_NIT_MOA = ("Releases nitric oxide → guanylate cyclase → ↑ cGMP → smooth-muscle relaxation, mainly venodilation → ↓ preload and O₂ demand.", "L10 S19-20; SG U5-R11")
+_NIT_PT = [("Absolute contraindication with PDE5 inhibitors (sildenafil) — life-threatening hypotension; nitrate-free interval prevents tolerance.", "L10 S19-20; SG U5-R11")]
+_MOA.update({
+    "Captopril": _ACEI_MOA, "Lisinopril": _ACEI_MOA, "Enalapril": _ACEI_MOA, "Losartan": _ARB_MOA, "Valsartan": _ARB_MOA,
+    "Aliskiren": ("Direct renin inhibitor: blocks the rate-limiting first step of the RAAS.", "L10 S7"),
+    "Amlodipine": _DHP_MOA, "Nifedipine ER": _DHP_MOA, "Diltiazem": _NDHP_MOA, "Verapamil": _NDHP_MOA, "Metoprolol": _BB_MOA, "Atenolol": _BB_MOA,
+    "Clonidine": ("Central α2 agonist: ↓ sympathetic outflow → ↓ BP.", "L10 S16"),
+    "Methyldopa": ("Central α2 agonist: ↓ sympathetic outflow → ↓ BP.", "L10 S16"),
+    "Hydralazine": ("Direct arteriolar vasodilator → reflex tachycardia and fluid retention.", "L10 S16"),
+    "Nitroglycerin": _NIT_MOA, "Isosorbide mononitrate": _NIT_MOA, "Isosorbide dinitrate": _NIT_MOA,
+})
+_PT.update({
+    "Captopril": _RAAS_PT, "Lisinopril": _RAAS_PT, "Enalapril": _RAAS_PT,
+    "Losartan": [("The usual switch for ACE-inhibitor cough.", "L10 S6-7"), *_RAAS_PT], "Valsartan": [("The usual switch for ACE-inhibitor cough.", "L10 S6-7"), *_RAAS_PT],
+    "Aliskiren": [("Limited use; not combined with an ACE inhibitor or ARB (additive hyperkalemia and hypotension, no benefit).", "L10 S7")],
+    "Amlodipine": [("Pairs safely with beta-blockers; peripheral edema is the class adverse effect.", "L10 S12-13")],
+    "Nifedipine ER": [("Avoid immediate-release forms; peripheral edema, reflex tachycardia.", "L10 S22; S44")],
+    "Diltiazem": [("Avoid with beta-blockers (bradycardia, AV block).", "L10 S13; S22")],
+    "Verapamil": [("Avoid with beta-blockers; constipation; raises digoxin.", "L10 S13; S22; S55")],
+    "Metoprolol": [("Not first-line for uncomplicated HTN; compelling with CAD, heart failure, arrhythmia; never with diltiazem/verapamil; do not stop abruptly.", "L10 S12-13; S47")],
+    "Atenolol": [("Accumulates in renal impairment — reduce dose when CrCl < 35 mL/min.", "L10 S48")],
+    "Clonidine": [("Abrupt withdrawal → rebound hypertension; reserved for resistant hypertension.", "L10 S12; S16")],
+    "Methyldopa": [("Preferred oral option for hypertension in pregnancy.", "L10 S12; S16; S50")],
+    "Hydralazine": [("Must be paired with a beta-blocker and a diuretic; drug-induced lupus.", "L10 S16; S51")],
+    "Nitroglycerin": [("Acute angina: 0.4 mg SL every 5 minutes up to 3 doses.", "L10 S19; S52"), *_NIT_PT],
+    "Isosorbide mononitrate": _NIT_PT, "Isosorbide dinitrate": [*_NIT_PT, ("With hydralazine for heart failure in Black patients.", "L10 S54")],
+})
+_IX.update({"Captopril": _RAAS_IX, "Lisinopril": _RAAS_IX, "Enalapril": _RAAS_IX, "Losartan": _RAAS_IX, "Valsartan": _RAAS_IX,
+            "Aliskiren": [("Never with ACE inhibitors or ARBs in diabetes or eGFR < 60.", "L10 S7; S42")],
+            "Amlodipine": [("Grapefruit juice raises dihydropyridine levels.", "L10 S55")], "Nifedipine ER": [("Grapefruit juice raises dihydropyridine levels.", "L10 S55")],
+            "Diltiazem": _NDHP_IX, "Verapamil": _NDHP_IX,
+            "Metoprolol": [("With diltiazem or verapamil → bradycardia, AV block.", "L10 S13")], "Atenolol": [("With diltiazem or verapamil → bradycardia, AV block.", "L10 S13")],
+            "Nitroglycerin": [("PDE5 inhibitors or riociguat → severe hypotension.", "L10 S19; S52")],
+            "Isosorbide mononitrate": [("PDE5 inhibitors or riociguat → severe hypotension.", "L10 S53")],
+            "Isosorbide dinitrate": [("PDE5 inhibitors or riociguat → severe hypotension.", "L10 S54")]})
+_EXTRA_ALIAS.update({"Nifedipine ER": ["Nifedipine"]})
+_UNIT = {"L05": 3, "L06": 3, "L09": 5, "L10": 5}
+_TAG = {"L05": "GI", "L06": "GI & nutrition", "L09": "Renal", "L10": "Cardiorenal"}
+for _lec in ("L05", "L06", "L09", "L10"):
     for _p in _profiles.read(_lec):
         _c = f"{_lec} S{_p['slide']}"
         _f = [("ind", _p.get("ind"), _c), ("ae", _p.get("ae"), _c), ("contra", _p.get("contra"), _c),
@@ -710,19 +798,20 @@ for _lec in ("L05", "L06"):
         if _p["name"] in _MOA:
             _f.insert(0, ("moa", *_MOA[_p["name"]]))
         _f += [("pt", t, s) for t, s in _PT.get(_p["name"], [])]
-        _facts = [{"text": t, "src": s, "tb": not re.search(r"\bL0\d|\bSG\b", s), "sec": k} for k, t, s in _f if t]
+        _f += [("ix", t, s) for t, s in _IX.get(_p["name"], [])]
+        _facts = [{"text": t, "src": s, "tb": not re.search(r"\bL\d\d|\bSG\b", s), "sec": k} for k, t, s in _f if t]
         _d = _by.get(_p["name"].lower())
         if _d:
             _d["facts"] += _facts
-            _d["unit"] = min(_d.get("unit", 3), 3) if _d.get("unit") else 3
+            _d["unit"] = min(_d.get("unit", _UNIT[_lec]), _UNIT[_lec]) if _d.get("unit") else _UNIT[_lec]
             for _a in _p["aliases"] + _EXTRA_ALIAS.get(_p["name"], []):
                 if _a not in _d["aliases"]:
                     _d["aliases"].append(_a)
             if _d["cls"].startswith("Not covered"):
                 _d["cls"] = _p["cls"]
         else:
-            _d = {"name": _p["name"], "cls": _p["cls"], "tags": ["GI" if _lec == "L05" else "GI & nutrition", _p["cls"].split(",")[0]],
-                  "aliases": _p["aliases"] + _EXTRA_ALIAS.get(_p["name"], []), "unit": 3, "facts": _facts}
+            _d = {"name": _p["name"], "cls": _p["cls"], "tags": [_TAG[_lec], _p["cls"].split(",")[0]],
+                  "aliases": _p["aliases"] + _EXTRA_ALIAS.get(_p["name"], []), "unit": _UNIT[_lec], "facts": _facts}
             DRUGS.append(_d)
             _by[_p["name"].lower()] = _d
         CLASS_SOURCES.setdefault(_p["name"], _c)
