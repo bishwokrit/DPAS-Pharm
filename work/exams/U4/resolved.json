@@ -2,63 +2,260 @@
  {
   "topic": "Thyroid",
   "objectives": [
-   "IO4.3"
+   "IO4.5"
   ],
-  "sg": [
-   "U4-R6"
-  ],
+  "sg": [],
   "kind": "vignette",
-  "stem": "A woman at 9 weeks’ gestation has Graves hyperthyroidism. Which drug is preferred now?",
-  "correct": "Propylthiouracil",
+  "stem": "A patient’s levothyroxine dose was changed today. When should TSH be rechecked?",
+  "correct": "In 6–8 weeks",
   "distractors": [
    {
-    "text": "Methimazole",
-    "why": "Avoid in first trimester."
+    "text": "Tomorrow",
+    "why": "Too early."
    },
    {
-    "text": "Radioactive iodine",
-    "why": "Contraindicated in pregnancy."
+    "text": "In 3 days",
+    "why": "Too early."
    },
    {
-    "text": "Potassium iodide alone",
-    "why": "Escape; fetal goiter."
+    "text": "In 1 week",
+    "why": "Not at steady state."
    },
    {
-    "text": "Levothyroxine",
-    "why": "Hypothyroidism drug."
+    "text": "Only in 1 year",
+    "why": "Too late."
    }
   ],
-  "why_correct": "PTU is preferred in the first trimester (methimazole teratogenic); switch to methimazole after.",
-  "takeaway": "First trimester and storm → PTU.",
-  "discriminator": "PTU carries the greater liver risk.",
-  "src": "L07 S15; SG U4-R6",
-  "id": "U4-009",
+  "why_correct": "T4’s 7-day half-life means steady state takes about 6 weeks; recheck TSH at 6–8 weeks.",
+  "takeaway": "TSH after a dose change: 6–8 weeks.",
+  "discriminator": "Same rule after starting.",
+  "src": "L07 S12; S13; p. 733",
+  "id": "U4-033",
   "answer": "E",
   "options": {
    "A": {
-    "text": "Methimazole",
-    "why": "Avoid in first trimester.",
+    "text": "In 1 week",
+    "why": "Not at steady state.",
     "correct": false
    },
    "B": {
-    "text": "Radioactive iodine",
-    "why": "Contraindicated in pregnancy.",
+    "text": "Only in 1 year",
+    "why": "Too late.",
     "correct": false
    },
    "C": {
-    "text": "Potassium iodide alone",
-    "why": "Escape; fetal goiter.",
+    "text": "Tomorrow",
+    "why": "Too early.",
     "correct": false
    },
    "D": {
-    "text": "Levothyroxine",
-    "why": "Hypothyroidism drug.",
+    "text": "In 3 days",
+    "why": "Too early.",
     "correct": false
    },
    "E": {
-    "text": "Propylthiouracil",
-    "why": "PTU is preferred in the first trimester (methimazole teratogenic); switch to methimazole after.",
+    "text": "In 6–8 weeks",
+    "why": "T4’s 7-day half-life means steady state takes about 6 weeks; recheck TSH at 6–8 weeks.",
     "correct": true
+   }
+  },
+  "link": {
+   "href": "../../L07/index.html#thyroid-antithyroid-drugs",
+   "label": "Study this: L07 · Part 2 →"
+  }
+ },
+ {
+  "topic": "Glucose-lowering drugs",
+  "objectives": [
+   "IO4.2"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A patient with a family history of medullary thyroid carcinoma asks about semaglutide. Best answer?",
+  "correct": "Avoid it (C-cell warning)",
+  "distractors": [
+   {
+    "text": "Safe; gut-only drug",
+    "why": "C-cell warning."
+   },
+   {
+    "text": "Safe with a DPP-4 inhibitor",
+    "why": "Never combine."
+   },
+   {
+    "text": "Safe if taken with food",
+    "why": "Not relevant."
+   },
+   {
+    "text": "Only liraglutide is a risk",
+    "why": "Class warning."
+   }
+  ],
+  "why_correct": "GLP-1 RAs are contraindicated with personal or family history of MTC or MEN2.",
+  "takeaway": "GLP-1 RA: GI upset, pancreatitis, gallstones, MTC/MEN2.",
+  "discriminator": "Weight loss; glucose-dependent, low hypoglycemia.",
+  "src": "L08 S18; S19",
+  "id": "U4-025",
+  "answer": "B",
+  "options": {
+   "A": {
+    "text": "Only liraglutide is a risk",
+    "why": "Class warning.",
+    "correct": false
+   },
+   "B": {
+    "text": "Avoid it (C-cell warning)",
+    "why": "GLP-1 RAs are contraindicated with personal or family history of MTC or MEN2.",
+    "correct": true
+   },
+   "C": {
+    "text": "Safe with a DPP-4 inhibitor",
+    "why": "Never combine.",
+    "correct": false
+   },
+   "D": {
+    "text": "Safe; gut-only drug",
+    "why": "C-cell warning.",
+    "correct": false
+   },
+   "E": {
+    "text": "Safe if taken with food",
+    "why": "Not relevant.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L08/index.html#non-insulin-glucose-lowering-drugs",
+   "label": "Study this: L08 · Part 3 →"
+  }
+ },
+ {
+  "topic": "Pituitary",
+  "objectives": [
+   "IO4.6"
+  ],
+  "sg": [
+   "U4-R4"
+  ],
+  "kind": "vignette",
+  "stem": "A patient starting desmopressin for central diabetes insipidus asks what to watch for. Best counseling?",
+  "correct": "Limit fluids (low sodium)",
+  "distractors": [
+   {
+    "text": "Drink extra water all day",
+    "why": "Raises hyponatremia risk."
+   },
+   {
+    "text": "Watch for high sodium",
+    "why": "Opposite."
+   },
+   {
+    "text": "Check liver tests monthly",
+    "why": "Tolvaptan."
+   },
+   {
+    "text": "Avoid sunlight",
+    "why": "Demeclocycline."
+   }
+  ],
+  "why_correct": "Desmopressin keeps free water; the risk is hyponatremia — monitor sodium and limit fluids.",
+  "takeaway": "DI drug keeps water; SIADH drug lets it go.",
+  "discriminator": "Tolvaptan: start in hospital (overcorrection).",
+  "src": "L07 S8; S10; SG U4-R4",
+  "id": "U4-005",
+  "answer": "C",
+  "options": {
+   "A": {
+    "text": "Avoid sunlight",
+    "why": "Demeclocycline.",
+    "correct": false
+   },
+   "B": {
+    "text": "Drink extra water all day",
+    "why": "Raises hyponatremia risk.",
+    "correct": false
+   },
+   "C": {
+    "text": "Limit fluids (low sodium)",
+    "why": "Desmopressin keeps free water; the risk is hyponatremia — monitor sodium and limit fluids.",
+    "correct": true
+   },
+   "D": {
+    "text": "Watch for high sodium",
+    "why": "Opposite.",
+    "correct": false
+   },
+   "E": {
+    "text": "Check liver tests monthly",
+    "why": "Tolvaptan.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L07/index.html#pituitary-gh-prolactin-adh",
+   "label": "Study this: L07 · Part 1 →"
+  }
+ },
+ {
+  "topic": "Thyroid",
+  "objectives": [
+   "IO4.4"
+  ],
+  "sg": [
+   "U4-R7"
+  ],
+  "kind": "vignette",
+  "stem": "A patient with untreated Graves disease arrives febrile, tachycardic and confused. Correct sequence?",
+  "correct": "Beta-blocker + PTU, then iodine",
+  "distractors": [
+   {
+    "text": "Iodine first, then PTU",
+    "why": "Supplies substrate."
+   },
+   {
+    "text": "Methimazole alone",
+    "why": "Needs beta-blocker and more."
+   },
+   {
+    "text": "Aspirin for fever first",
+    "why": "Frees bound hormone."
+   },
+   {
+    "text": "Levothyroxine to reset feedback",
+    "why": "Wrong direction."
+   }
+  ],
+  "why_correct": "Iodine is given only after PTU; giving it first supplies substrate for new synthesis before synthesis is blocked.",
+  "takeaway": "Storm: block, block, then iodine.",
+  "discriminator": "Steroids blunt conversion and cover adrenal insufficiency.",
+  "src": "L07 S16; S17; S18; SG U4-R7",
+  "id": "U4-011",
+  "answer": "A",
+  "options": {
+   "A": {
+    "text": "Beta-blocker + PTU, then iodine",
+    "why": "Iodine is given only after PTU; giving it first supplies substrate for new synthesis before synthesis is blocked.",
+    "correct": true
+   },
+   "B": {
+    "text": "Iodine first, then PTU",
+    "why": "Supplies substrate.",
+    "correct": false
+   },
+   "C": {
+    "text": "Aspirin for fever first",
+    "why": "Frees bound hormone.",
+    "correct": false
+   },
+   "D": {
+    "text": "Methimazole alone",
+    "why": "Needs beta-blocker and more.",
+    "correct": false
+   },
+   "E": {
+    "text": "Levothyroxine to reset feedback",
+    "why": "Wrong direction.",
+    "correct": false
    }
   },
   "link": {
@@ -74,7 +271,7 @@
   "sg": [],
   "kind": "vignette",
   "stem": "A patient on metformin with eGFR 38 is scheduled for a CT with iodinated contrast. What should happen?",
-  "correct": "Hold metformin around the study",
+  "correct": "Hold metformin",
   "distractors": [
    {
     "text": "Double metformin",
@@ -101,162 +298,29 @@
   "answer": "A",
   "options": {
    "A": {
-    "text": "Hold metformin around the study",
+    "text": "Hold metformin",
     "why": "Hold metformin for contrast with reduced kidney function (lactic acidosis); avoid when eGFR < 30.",
     "correct": true
    },
    "B": {
-    "text": "Add an SGLT2 the same day",
-    "why": "Not the answer.",
+    "text": "Continue unchanged",
+    "why": "Hold it.",
     "correct": false
    },
    "C": {
-    "text": "Double metformin",
-    "why": "Raises risk.",
-    "correct": false
-   },
-   "D": {
     "text": "Switch to glyburide for good",
     "why": "Not the step.",
     "correct": false
    },
-   "E": {
-    "text": "Continue unchanged",
-    "why": "Hold it.",
-    "correct": false
-   }
-  },
-  "link": {
-   "href": "../../L08/index.html#non-insulin-glucose-lowering-drugs",
-   "label": "Study this: L08 · Part 3 →"
-  }
- },
- {
-  "topic": "Thyroid",
-  "objectives": [
-   "IO4.5",
-   "IO4.6"
-  ],
-  "sg": [
-   "U4-R5"
-  ],
-  "kind": "vignette",
-  "stem": "A woman on levothyroxine takes it with her calcium and iron at breakfast; her TSH is high. Best advice?",
-  "correct": "Separate them by 4 hours",
-  "distractors": [
-   {
-    "text": "Double the levothyroxine dose",
-    "why": "Fix timing first."
-   },
-   {
-    "text": "Take it with breakfast",
-    "why": "Empty stomach."
-   },
-   {
-    "text": "Stop calcium for good",
-    "why": "Separation is enough."
-   },
-   {
-    "text": "Switch to methimazole",
-    "why": "Antithyroid drug."
-   }
-  ],
-  "why_correct": "Calcium, iron and antacids reduce absorption; take levothyroxine 30–60 minutes before breakfast, 4 hours apart.",
-  "takeaway": "Levothyroxine timing matters as much as dose.",
-  "discriminator": "Recheck TSH 6–8 weeks after any change.",
-  "src": "L07 S12; S13; SG U4-R5",
-  "id": "U4-007",
-  "answer": "A",
-  "options": {
-   "A": {
-    "text": "Separate them by 4 hours",
-    "why": "Calcium, iron and antacids reduce absorption; take levothyroxine 30–60 minutes before breakfast, 4 hours apart.",
-    "correct": true
-   },
-   "B": {
-    "text": "Stop calcium for good",
-    "why": "Separation is enough.",
-    "correct": false
-   },
-   "C": {
-    "text": "Switch to methimazole",
-    "why": "Antithyroid drug.",
-    "correct": false
-   },
    "D": {
-    "text": "Double the levothyroxine dose",
-    "why": "Fix timing first.",
+    "text": "Double metformin",
+    "why": "Raises risk.",
     "correct": false
    },
    "E": {
-    "text": "Take it with breakfast",
-    "why": "Empty stomach.",
+    "text": "Add an SGLT2 the same day",
+    "why": "Not the answer.",
     "correct": false
-   }
-  },
-  "link": {
-   "href": "../../L07/index.html#thyroid-antithyroid-drugs",
-   "label": "Study this: L07 · Part 2 →"
-  }
- },
- {
-  "topic": "Glucose-lowering drugs",
-  "objectives": [
-   "IO4.2"
-  ],
-  "sg": [],
-  "kind": "vignette",
-  "stem": "A patient with NYHA class III heart failure needs diabetes therapy. Which drug is contraindicated?",
-  "correct": "Pioglitazone",
-  "distractors": [
-   {
-    "text": "Empagliflozin",
-    "why": "Benefits HF."
-   },
-   {
-    "text": "Metformin",
-    "why": "Not the HF contraindication."
-   },
-   {
-    "text": "Sitagliptin",
-    "why": "Not contraindicated."
-   },
-   {
-    "text": "Semaglutide",
-    "why": "Not contraindicated."
-   }
-  ],
-  "why_correct": "TZDs cause fluid retention and are contraindicated in NYHA class III–IV heart failure.",
-  "takeaway": "TZD = fluid.",
-  "discriminator": "SGLT2 inhibitors reduce heart-failure events.",
-  "src": "L08 S14; p. 799",
-  "id": "U4-026",
-  "answer": "E",
-  "options": {
-   "A": {
-    "text": "Empagliflozin",
-    "why": "Benefits HF.",
-    "correct": false
-   },
-   "B": {
-    "text": "Metformin",
-    "why": "Not the HF contraindication.",
-    "correct": false
-   },
-   "C": {
-    "text": "Semaglutide",
-    "why": "Not contraindicated.",
-    "correct": false
-   },
-   "D": {
-    "text": "Sitagliptin",
-    "why": "Not contraindicated.",
-    "correct": false
-   },
-   "E": {
-    "text": "Pioglitazone",
-    "why": "TZDs cause fluid retention and are contraindicated in NYHA class III–IV heart failure.",
-    "correct": true
    }
   },
   "link": {
@@ -299,8 +363,8 @@
   "answer": "E",
   "options": {
    "A": {
-    "text": "Hyponatremia from desmopressin",
-    "why": "Not on desmopressin.",
+    "text": "Peptic ulcer from somatropin",
+    "why": "Not the taught AE.",
     "correct": false
    },
    "B": {
@@ -309,13 +373,13 @@
     "correct": false
    },
    "C": {
-    "text": "Pancreatitis from pegvisomant",
-    "why": "Not on pegvisomant.",
+    "text": "Hyponatremia from desmopressin",
+    "why": "Not on desmopressin.",
     "correct": false
    },
    "D": {
-    "text": "Peptic ulcer from somatropin",
-    "why": "Not the taught AE.",
+    "text": "Pancreatitis from pegvisomant",
+    "why": "Not on pegvisomant.",
     "correct": false
    },
    "E": {
@@ -327,6 +391,406 @@
   "link": {
    "href": "../../L07/index.html#pituitary-gh-prolactin-adh",
    "label": "Study this: L07 · Part 1 →"
+  }
+ },
+ {
+  "topic": "Glucose-lowering drugs",
+  "objectives": [
+   "IO4.1"
+  ],
+  "sg": [
+   "U4-R11",
+   "U4-M"
+  ],
+  "kind": "mechanism",
+  "stem": "Which class carries the highest hypoglycemia risk among oral agents, and why?",
+  "correct": "Sulfonylureas (forced release)",
+  "distractors": [
+   {
+    "text": "Metformin — liver glucose output",
+    "why": "Low risk."
+   },
+   {
+    "text": "DPP-4 inhibitors — GLP-1",
+    "why": "Glucose-dependent."
+   },
+   {
+    "text": "SGLT2 inhibitors — glucosuria",
+    "why": "Low risk."
+   },
+   {
+    "text": "TZDs — insulin sensitivity",
+    "why": "Low alone."
+   }
+  ],
+  "why_correct": "Sulfonylureas close K-ATP channels and release insulin regardless of glucose.",
+  "takeaway": "Forced vs. glucose-dependent release.",
+  "discriminator": "Older adults who fall → avoid sulfonylureas.",
+  "src": "L08 S11; S14; S35; SG U4-R11; SG U4-M",
+  "id": "U4-021",
+  "answer": "C",
+  "options": {
+   "A": {
+    "text": "SGLT2 inhibitors — glucosuria",
+    "why": "Low risk.",
+    "correct": false
+   },
+   "B": {
+    "text": "TZDs — insulin sensitivity",
+    "why": "Low alone.",
+    "correct": false
+   },
+   "C": {
+    "text": "Sulfonylureas (forced release)",
+    "why": "Sulfonylureas close K-ATP channels and release insulin regardless of glucose.",
+    "correct": true
+   },
+   "D": {
+    "text": "Metformin — liver glucose output",
+    "why": "Low risk.",
+    "correct": false
+   },
+   "E": {
+    "text": "DPP-4 inhibitors — GLP-1",
+    "why": "Glucose-dependent.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L08/index.html#non-insulin-glucose-lowering-drugs",
+   "label": "Study this: L08 · Part 3 →"
+  }
+ },
+ {
+  "topic": "Adrenal",
+  "objectives": [
+   "IO4.1",
+   "IO4.3"
+  ],
+  "sg": [
+   "U4-R9"
+  ],
+  "kind": "mechanism",
+  "stem": "Which pairing of drug and mechanism in Cushing syndrome is correct?",
+  "correct": "Metyrapone — blocks 11-β-hydroxylase",
+  "distractors": [
+   {
+    "text": "Mifepristone — blocks cortisol synthesis",
+    "why": "Receptor blocker."
+   },
+   {
+    "text": "Ketoconazole — blocks the GR",
+    "why": "Enzyme blocker."
+   },
+   {
+    "text": "Spironolactone — blocks GR",
+    "why": "Blocks the MR."
+   },
+   {
+    "text": "Fludrocortisone — blocks the MR",
+    "why": "MR agonist."
+   }
+  ],
+  "why_correct": "Ketoconazole blocks several steroidogenic CYPs; metyrapone the last cortisol step; mifepristone the glucocorticoid receptor; spironolactone the mineralocorticoid receptor.",
+  "takeaway": "Factory blockers vs. lock blockers.",
+  "discriminator": "Receptor blockers leave hormone levels high.",
+  "src": "L07 S23; S24; SG U4-R9",
+  "id": "U4-015",
+  "answer": "A",
+  "options": {
+   "A": {
+    "text": "Metyrapone — blocks 11-β-hydroxylase",
+    "why": "Ketoconazole blocks several steroidogenic CYPs; metyrapone the last cortisol step; mifepristone the glucocorticoid receptor; spironolactone the mineralocorticoid receptor.",
+    "correct": true
+   },
+   "B": {
+    "text": "Spironolactone — blocks GR",
+    "why": "Blocks the MR.",
+    "correct": false
+   },
+   "C": {
+    "text": "Ketoconazole — blocks the GR",
+    "why": "Enzyme blocker.",
+    "correct": false
+   },
+   "D": {
+    "text": "Fludrocortisone — blocks the MR",
+    "why": "MR agonist.",
+    "correct": false
+   },
+   "E": {
+    "text": "Mifepristone — blocks cortisol synthesis",
+    "why": "Receptor blocker.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L07/index.html#adrenocorticosteroids-antagonists",
+   "label": "Study this: L07 · Part 3 →"
+  }
+ },
+ {
+  "topic": "Thyroid",
+  "objectives": [
+   "IO4.1"
+  ],
+  "sg": [],
+  "kind": "mechanism",
+  "stem": "Why is PTU preferred over methimazole in thyroid storm?",
+  "correct": "It also blocks T4→T3",
+  "distractors": [
+   {
+    "text": "It is better absorbed",
+    "why": "Not the reason."
+   },
+   {
+    "text": "It has less liver toxicity",
+    "why": "It has more."
+   },
+   {
+    "text": "It blocks iodide trapping",
+    "why": "Not the reason."
+   },
+   {
+    "text": "It is a beta-blocker",
+    "why": "Propranolol."
+   }
+  ],
+  "why_correct": "PTU blocks synthesis and peripheral conversion — a faster effect on active hormone.",
+  "takeaway": "PTU = one extra step.",
+  "discriminator": "Propranolol and steroids also blunt conversion.",
+  "src": "L07 S14; S15; S16",
+  "id": "U4-012",
+  "answer": "B",
+  "options": {
+   "A": {
+    "text": "It has less liver toxicity",
+    "why": "It has more.",
+    "correct": false
+   },
+   "B": {
+    "text": "It also blocks T4→T3",
+    "why": "PTU blocks synthesis and peripheral conversion — a faster effect on active hormone.",
+    "correct": true
+   },
+   "C": {
+    "text": "It blocks iodide trapping",
+    "why": "Not the reason.",
+    "correct": false
+   },
+   "D": {
+    "text": "It is better absorbed",
+    "why": "Not the reason.",
+    "correct": false
+   },
+   "E": {
+    "text": "It is a beta-blocker",
+    "why": "Propranolol.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L07/index.html#thyroid-antithyroid-drugs",
+   "label": "Study this: L07 · Part 2 →"
+  }
+ },
+ {
+  "topic": "Adrenal",
+  "objectives": [
+   "IO4.6"
+  ],
+  "sg": [
+   "U4-R8"
+  ],
+  "kind": "vignette",
+  "stem": "A patient on chronic prednisone ran out of refills; now hypotensive, weak and confused. Best management?",
+  "correct": "IV hydrocortisone and IV fluids",
+  "distractors": [
+   {
+    "text": "Restart oral prednisone at home",
+    "why": "Emergency."
+   },
+   {
+    "text": "Fludrocortisone alone",
+    "why": "Needs glucocorticoid."
+   },
+   {
+    "text": "Observe; it will pass",
+    "why": "Life-threatening."
+   },
+   {
+    "text": "Dexamethasone test first",
+    "why": "Treat first."
+   }
+  ],
+  "why_correct": "Adrenal crisis from abrupt withdrawal after HPA suppression — immediate IV hydrocortisone and fluids.",
+  "takeaway": "Chronic steroids: taper, never stop.",
+  "discriminator": "Hydrocortisone has mineralocorticoid action too.",
+  "src": "L07 S22; S27; SG U4-R8",
+  "id": "U4-013",
+  "answer": "C",
+  "options": {
+   "A": {
+    "text": "Restart oral prednisone at home",
+    "why": "Emergency.",
+    "correct": false
+   },
+   "B": {
+    "text": "Dexamethasone test first",
+    "why": "Treat first.",
+    "correct": false
+   },
+   "C": {
+    "text": "IV hydrocortisone and IV fluids",
+    "why": "Adrenal crisis from abrupt withdrawal after HPA suppression — immediate IV hydrocortisone and fluids.",
+    "correct": true
+   },
+   "D": {
+    "text": "Fludrocortisone alone",
+    "why": "Needs glucocorticoid.",
+    "correct": false
+   },
+   "E": {
+    "text": "Observe; it will pass",
+    "why": "Life-threatening.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L07/index.html#adrenocorticosteroids-antagonists",
+   "label": "Study this: L07 · Part 3 →"
+  }
+ },
+ {
+  "topic": "Pituitary",
+  "objectives": [
+   "IO4.2"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A patient with Parkinson disease on high-dose cabergoline needs monitoring for which serious effect?",
+  "correct": "Valve fibrosis",
+  "distractors": [
+   {
+    "text": "Agranulocytosis",
+    "why": "Thionamides."
+   },
+   {
+    "text": "Gallstones",
+    "why": "Octreotide."
+   },
+   {
+    "text": "Hyponatremia",
+    "why": "Desmopressin."
+   },
+   {
+    "text": "Lactic acidosis",
+    "why": "Metformin."
+   }
+  ],
+  "why_correct": "High-dose cabergoline (Parkinson doses) is linked to valvulopathy; lower prolactinoma doses carry less risk.",
+  "takeaway": "Cabergoline: twice weekly; high dose → valves.",
+  "discriminator": "Nausea and orthostasis are common.",
+  "src": "L07 S9; p. 716",
+  "id": "U4-031",
+  "answer": "A",
+  "options": {
+   "A": {
+    "text": "Valve fibrosis",
+    "why": "High-dose cabergoline (Parkinson doses) is linked to valvulopathy; lower prolactinoma doses carry less risk.",
+    "correct": true
+   },
+   "B": {
+    "text": "Hyponatremia",
+    "why": "Desmopressin.",
+    "correct": false
+   },
+   "C": {
+    "text": "Gallstones",
+    "why": "Octreotide.",
+    "correct": false
+   },
+   "D": {
+    "text": "Agranulocytosis",
+    "why": "Thionamides.",
+    "correct": false
+   },
+   "E": {
+    "text": "Lactic acidosis",
+    "why": "Metformin.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L07/index.html#pituitary-gh-prolactin-adh",
+   "label": "Study this: L07 · Part 1 →"
+  }
+ },
+ {
+  "topic": "Glucose-lowering drugs",
+  "objectives": [
+   "IO4.4"
+  ],
+  "sg": [
+   "U4-S"
+  ],
+  "kind": "vignette",
+  "stem": "A 74-year-old living alone with a prior fall needs an add-on to metformin. Best class?",
+  "correct": "DPP-4 or SGLT2 inhibitor",
+  "distractors": [
+   {
+    "text": "Glyburide (sulfonylurea)",
+    "why": "Hypoglycemia risk."
+   },
+   {
+    "text": "Glipizide (sulfonylurea)",
+    "why": "Hypoglycemia risk."
+   },
+   {
+    "text": "Repaglinide (meglitinide)",
+    "why": "Secretagogue."
+   },
+   {
+    "text": "Mealtime insulin lispro",
+    "why": "Hypoglycemia risk."
+   }
+  ],
+  "why_correct": "Low intrinsic hypoglycemia risk; sulfonylureas force glucose-independent insulin release, raising fall risk.",
+  "takeaway": "Most potent ≠ most appropriate.",
+  "discriminator": "Match the drug to the patient’s risk profile.",
+  "src": "L08 S20; S21; SG U4-S",
+  "id": "U4-022",
+  "answer": "A",
+  "options": {
+   "A": {
+    "text": "DPP-4 or SGLT2 inhibitor",
+    "why": "Low intrinsic hypoglycemia risk; sulfonylureas force glucose-independent insulin release, raising fall risk.",
+    "correct": true
+   },
+   "B": {
+    "text": "Mealtime insulin lispro",
+    "why": "Hypoglycemia risk.",
+    "correct": false
+   },
+   "C": {
+    "text": "Glyburide (sulfonylurea)",
+    "why": "Hypoglycemia risk.",
+    "correct": false
+   },
+   "D": {
+    "text": "Glipizide (sulfonylurea)",
+    "why": "Hypoglycemia risk.",
+    "correct": false
+   },
+   "E": {
+    "text": "Repaglinide (meglitinide)",
+    "why": "Secretagogue.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L08/index.html#non-insulin-glucose-lowering-drugs",
+   "label": "Study this: L08 · Part 3 →"
   }
  },
  {
@@ -375,8 +839,8 @@
     "correct": true
    },
    "C": {
-    "text": "Reassure; it is a cold",
-    "why": "Not reassurance.",
+    "text": "Switch straight to PTU",
+    "why": "Check the CBC first.",
     "correct": false
    },
    "D": {
@@ -385,8 +849,8 @@
     "correct": false
    },
    "E": {
-    "text": "Switch straight to PTU",
-    "why": "Check the CBC first.",
+    "text": "Reassure; it is a cold",
+    "why": "Not reassurance.",
     "correct": false
    }
   },
@@ -398,599 +862,131 @@
  {
   "topic": "Glucose-lowering drugs",
   "objectives": [
-   "IO4.1"
+   "IO4.2"
   ],
-  "sg": [
-   "U4-R11",
-   "U4-M"
-  ],
-  "kind": "mechanism",
-  "stem": "Which class carries the highest hypoglycemia risk among oral agents, and why?",
-  "correct": "Sulfonylureas (forced release)",
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A patient on repaglinide starts gemfibrozil for triglycerides. What should be anticipated?",
+  "correct": "Hypoglycemia (higher levels)",
   "distractors": [
    {
-    "text": "Metformin — liver glucose output",
-    "why": "Low risk."
+    "text": "Lower repaglinide levels",
+    "why": "Raised."
    },
    {
-    "text": "DPP-4 inhibitors — GLP-1",
-    "why": "Glucose-dependent."
+    "text": "No interaction at all",
+    "why": "CYP2C8 inhibitor."
    },
    {
-    "text": "SGLT2 inhibitors — glucosuria",
-    "why": "Low risk."
+    "text": "Hyperkalemia from both",
+    "why": "Not related."
    },
    {
-    "text": "TZDs — insulin sensitivity",
-    "why": "Low alone."
+    "text": "Lactic acidosis risk",
+    "why": "Metformin."
    }
   ],
-  "why_correct": "Sulfonylureas close K-ATP channels and release insulin regardless of glucose.",
-  "takeaway": "Forced vs. glucose-dependent release.",
-  "discriminator": "Older adults who fall → avoid sulfonylureas.",
-  "src": "L08 S11; S14; S35; SG U4-R11; SG U4-M",
-  "id": "U4-021",
-  "answer": "A",
+  "why_correct": "Gemfibrozil raises repaglinide levels (CYP2C8) — hypoglycemia risk.",
+  "takeaway": "Meglitinides: mealtime secretagogues.",
+  "discriminator": "Skip the dose if the meal is skipped.",
+  "src": "L08 S67",
+  "id": "U4-048",
+  "answer": "E",
   "options": {
    "A": {
-    "text": "Sulfonylureas (forced release)",
-    "why": "Sulfonylureas close K-ATP channels and release insulin regardless of glucose.",
-    "correct": true
+    "text": "Lower repaglinide levels",
+    "why": "Raised.",
+    "correct": false
    },
    "B": {
-    "text": "TZDs — insulin sensitivity",
-    "why": "Low alone.",
+    "text": "Hyperkalemia from both",
+    "why": "Not related.",
     "correct": false
    },
    "C": {
-    "text": "SGLT2 inhibitors — glucosuria",
-    "why": "Low risk.",
+    "text": "Lactic acidosis risk",
+    "why": "Metformin.",
     "correct": false
    },
    "D": {
-    "text": "DPP-4 inhibitors — GLP-1",
-    "why": "Glucose-dependent.",
+    "text": "No interaction at all",
+    "why": "CYP2C8 inhibitor.",
     "correct": false
    },
    "E": {
-    "text": "Metformin — liver glucose output",
-    "why": "Low risk.",
-    "correct": false
+    "text": "Hypoglycemia (higher levels)",
+    "why": "Gemfibrozil raises repaglinide levels (CYP2C8) — hypoglycemia risk.",
+    "correct": true
    }
   },
   "link": {
-   "href": "../../L08/index.html#non-insulin-glucose-lowering-drugs",
-   "label": "Study this: L08 · Part 3 →"
+   "href": "../../L08/index.html#gonadal-hormones-inhibitors",
+   "label": "Study this: L08 · Part 1 →"
   }
  },
  {
-  "topic": "Pituitary",
+  "topic": "Gonadal hormones",
   "objectives": [
-   "IO4.4",
    "IO4.5"
   ],
-  "sg": [
-   "U4-R4"
-  ],
+  "sg": [],
   "kind": "vignette",
-  "stem": "A patient with SIADH stays hyponatremic despite fluid restriction. Tolvaptan is chosen. Key safety step?",
-  "correct": "Start it in hospital",
+  "stem": "A man on finasteride for BPH has a PSA of 1.9 ng/mL. How should it be read?",
+  "correct": "As about 3.8 ng/mL",
   "distractors": [
    {
-    "text": "Give with salt tablets at home",
-    "why": "Not the taught step."
+    "text": "As 1.9 ng/mL",
+    "why": "It is halved."
    },
    {
-    "text": "Monitor for hyperkalemia only",
-    "why": "Not the risk."
+    "text": "As about 1.0 ng/mL",
+    "why": "Doubled, not halved."
    },
    {
-    "text": "Combine with desmopressin",
-    "why": "Opposite action."
+    "text": "As meaningless",
+    "why": "Still usable."
    },
    {
-    "text": "Stop fluid restriction entirely",
-    "why": "Not the step."
+    "text": "Only after stopping",
+    "why": "Not taught."
    }
   ],
-  "why_correct": "Tolvaptan can overcorrect sodium (osmotic demyelination) and injure the liver — start in hospital.",
-  "takeaway": "SIADH: fluid restriction first, then tolvaptan or demeclocycline.",
-  "discriminator": "Demeclocycline: photosensitivity, nephrotoxicity.",
-  "src": "L07 S8; S10",
-  "id": "U4-006",
+  "why_correct": "Finasteride lowers PSA by about half — double the value when screening.",
+  "takeaway": "5-ARI → double the PSA.",
+  "discriminator": "Pregnant women must not handle crushed tablets.",
+  "src": "L08 S9",
+  "id": "U4-018",
   "answer": "A",
   "options": {
    "A": {
-    "text": "Start it in hospital",
-    "why": "Tolvaptan can overcorrect sodium (osmotic demyelination) and injure the liver — start in hospital.",
+    "text": "As about 3.8 ng/mL",
+    "why": "Finasteride lowers PSA by about half — double the value when screening.",
     "correct": true
    },
    "B": {
-    "text": "Combine with desmopressin",
-    "why": "Opposite action.",
+    "text": "As meaningless",
+    "why": "Still usable.",
     "correct": false
    },
    "C": {
-    "text": "Give with salt tablets at home",
-    "why": "Not the taught step.",
-    "correct": false
-   },
-   "D": {
-    "text": "Stop fluid restriction entirely",
-    "why": "Not the step.",
-    "correct": false
-   },
-   "E": {
-    "text": "Monitor for hyperkalemia only",
-    "why": "Not the risk.",
-    "correct": false
-   }
-  },
-  "link": {
-   "href": "../../L07/index.html#pituitary-gh-prolactin-adh",
-   "label": "Study this: L07 · Part 1 →"
-  }
- },
- {
-  "topic": "Glucose-lowering drugs",
-  "objectives": [
-   "IO4.2"
-  ],
-  "sg": [],
-  "kind": "vignette",
-  "stem": "A patient with a family history of medullary thyroid carcinoma asks about semaglutide. Best answer?",
-  "correct": "Avoid it (C-cell warning)",
-  "distractors": [
-   {
-    "text": "Safe; gut-only drug",
-    "why": "C-cell warning."
-   },
-   {
-    "text": "Safe with a DPP-4 inhibitor",
-    "why": "Never combine."
-   },
-   {
-    "text": "Safe if taken with food",
-    "why": "Not relevant."
-   },
-   {
-    "text": "Only liraglutide is a risk",
-    "why": "Class warning."
-   }
-  ],
-  "why_correct": "GLP-1 RAs are contraindicated with personal or family history of MTC or MEN2.",
-  "takeaway": "GLP-1 RA: GI upset, pancreatitis, gallstones, MTC/MEN2.",
-  "discriminator": "Weight loss; glucose-dependent, low hypoglycemia.",
-  "src": "L08 S18; S19",
-  "id": "U4-025",
-  "answer": "B",
-  "options": {
-   "A": {
-    "text": "Safe; gut-only drug",
-    "why": "C-cell warning.",
-    "correct": false
-   },
-   "B": {
-    "text": "Avoid it (C-cell warning)",
-    "why": "GLP-1 RAs are contraindicated with personal or family history of MTC or MEN2.",
-    "correct": true
-   },
-   "C": {
-    "text": "Only liraglutide is a risk",
-    "why": "Class warning.",
-    "correct": false
-   },
-   "D": {
-    "text": "Safe with a DPP-4 inhibitor",
-    "why": "Never combine.",
-    "correct": false
-   },
-   "E": {
-    "text": "Safe if taken with food",
-    "why": "Not relevant.",
-    "correct": false
-   }
-  },
-  "link": {
-   "href": "../../L08/index.html#non-insulin-glucose-lowering-drugs",
-   "label": "Study this: L08 · Part 3 →"
-  }
- },
- {
-  "topic": "Thyroid",
-  "objectives": [
-   "IO4.4"
-  ],
-  "sg": [],
-  "kind": "vignette",
-  "stem": "An 82-year-old with coronary artery disease is newly hypothyroid. How should levothyroxine start?",
-  "correct": "Low dose, titrated slowly",
-  "distractors": [
-   {
-    "text": "Full weight-based dose at once",
-    "why": "Risks angina."
-   },
-   {
-    "text": "A loading dose first",
-    "why": "Not the approach."
-   },
-   {
-    "text": "High-dose T3 instead",
-    "why": "Not taught."
-   },
-   {
-    "text": "Wait until TSH exceeds 20",
-    "why": "Not the approach."
-   }
-  ],
-  "why_correct": "Older adults and cardiac patients start low and titrate slowly to avoid angina or arrhythmia.",
-  "takeaway": "Old heart → start low, go slow.",
-  "discriminator": "Over-replacement: AF and bone loss.",
-  "src": "L07 S12; S13",
-  "id": "U4-008",
-  "answer": "D",
-  "options": {
-   "A": {
-    "text": "Wait until TSH exceeds 20",
-    "why": "Not the approach.",
-    "correct": false
-   },
-   "B": {
-    "text": "Full weight-based dose at once",
-    "why": "Risks angina.",
-    "correct": false
-   },
-   "C": {
-    "text": "High-dose T3 instead",
+    "text": "Only after stopping",
     "why": "Not taught.",
     "correct": false
    },
    "D": {
-    "text": "Low dose, titrated slowly",
-    "why": "Older adults and cardiac patients start low and titrate slowly to avoid angina or arrhythmia.",
-    "correct": true
+    "text": "As 1.9 ng/mL",
+    "why": "It is halved.",
+    "correct": false
    },
    "E": {
-    "text": "A loading dose first",
-    "why": "Not the approach.",
+    "text": "As about 1.0 ng/mL",
+    "why": "Doubled, not halved.",
     "correct": false
    }
   },
   "link": {
-   "href": "../../L07/index.html#thyroid-antithyroid-drugs",
-   "label": "Study this: L07 · Part 2 →"
-  }
- },
- {
-  "topic": "Pituitary",
-  "objectives": [
-   "IO4.6"
-  ],
-  "sg": [
-   "U4-R4"
-  ],
-  "kind": "vignette",
-  "stem": "A patient starting desmopressin for central diabetes insipidus asks what to watch for. Best counseling?",
-  "correct": "Limit fluids (low sodium)",
-  "distractors": [
-   {
-    "text": "Drink extra water all day",
-    "why": "Raises hyponatremia risk."
-   },
-   {
-    "text": "Watch for high sodium",
-    "why": "Opposite."
-   },
-   {
-    "text": "Check liver tests monthly",
-    "why": "Tolvaptan."
-   },
-   {
-    "text": "Avoid sunlight",
-    "why": "Demeclocycline."
-   }
-  ],
-  "why_correct": "Desmopressin keeps free water; the risk is hyponatremia — monitor sodium and limit fluids.",
-  "takeaway": "DI drug keeps water; SIADH drug lets it go.",
-  "discriminator": "Tolvaptan: start in hospital (overcorrection).",
-  "src": "L07 S8; S10; SG U4-R4",
-  "id": "U4-005",
-  "answer": "C",
-  "options": {
-   "A": {
-    "text": "Watch for high sodium",
-    "why": "Opposite.",
-    "correct": false
-   },
-   "B": {
-    "text": "Avoid sunlight",
-    "why": "Demeclocycline.",
-    "correct": false
-   },
-   "C": {
-    "text": "Limit fluids (low sodium)",
-    "why": "Desmopressin keeps free water; the risk is hyponatremia — monitor sodium and limit fluids.",
-    "correct": true
-   },
-   "D": {
-    "text": "Check liver tests monthly",
-    "why": "Tolvaptan.",
-    "correct": false
-   },
-   "E": {
-    "text": "Drink extra water all day",
-    "why": "Raises hyponatremia risk.",
-    "correct": false
-   }
-  },
-  "link": {
-   "href": "../../L07/index.html#pituitary-gh-prolactin-adh",
-   "label": "Study this: L07 · Part 1 →"
-  }
- },
- {
-  "topic": "Adrenal",
-  "objectives": [
-   "IO4.4"
-  ],
-  "sg": [],
-  "kind": "vignette",
-  "stem": "A patient with Addison disease on hydrocortisone has low BP and high potassium. What should be added?",
-  "correct": "Fludrocortisone",
-  "distractors": [
-   {
-    "text": "Spironolactone",
-    "why": "Blocks mineralocorticoids."
-   },
-   {
-    "text": "Dexamethasone",
-    "why": "Little mineralocorticoid action."
-   },
-   {
-    "text": "Ketoconazole",
-    "why": "Blocks synthesis."
-   },
-   {
-    "text": "Potassium chloride",
-    "why": "Wrong direction."
-   }
-  ],
-  "why_correct": "Primary adrenal insufficiency needs mineralocorticoid replacement alongside a glucocorticoid.",
-  "takeaway": "Addison = cortisol + fludrocortisone.",
-  "discriminator": "Monitor BP and potassium.",
-  "src": "L07 S20",
-  "id": "U4-014",
-  "answer": "B",
-  "options": {
-   "A": {
-    "text": "Dexamethasone",
-    "why": "Little mineralocorticoid action.",
-    "correct": false
-   },
-   "B": {
-    "text": "Fludrocortisone",
-    "why": "Primary adrenal insufficiency needs mineralocorticoid replacement alongside a glucocorticoid.",
-    "correct": true
-   },
-   "C": {
-    "text": "Potassium chloride",
-    "why": "Wrong direction.",
-    "correct": false
-   },
-   "D": {
-    "text": "Spironolactone",
-    "why": "Blocks mineralocorticoids.",
-    "correct": false
-   },
-   "E": {
-    "text": "Ketoconazole",
-    "why": "Blocks synthesis.",
-    "correct": false
-   }
-  },
-  "link": {
-   "href": "../../L07/index.html#adrenocorticosteroids-antagonists",
-   "label": "Study this: L07 · Part 3 →"
-  }
- },
- {
-  "topic": "Glucose-lowering drugs",
-  "objectives": [
-   "IO4.2"
-  ],
-  "sg": [
-   "U4-R12"
-  ],
-  "kind": "mechanism",
-  "stem": "Why do SGLT2 inhibitors increase genital yeast infections?",
-  "correct": "Urinary glucose feeds fungi",
-  "distractors": [
-   {
-    "text": "They suppress immunity",
-    "why": "Not the mechanism."
-   },
-   {
-    "text": "They lower renal blood flow",
-    "why": "Not the mechanism."
-   },
-   {
-    "text": "They cause candidemia",
-    "why": "Not the mechanism."
-   },
-   {
-    "text": "They raise skin pH",
-    "why": "Not taught."
-   }
-  ],
-  "why_correct": "Blocking renal glucose reabsorption raises urinary glucose, favoring fungal overgrowth.",
-  "takeaway": "Glucose in the urine = fuel for yeast.",
-  "discriminator": "Also euglycemic DKA — hold when ill or before surgery.",
-  "src": "L08 S16; S35; SG U4-R12",
-  "id": "U4-024",
-  "answer": "D",
-  "options": {
-   "A": {
-    "text": "They raise skin pH",
-    "why": "Not taught.",
-    "correct": false
-   },
-   "B": {
-    "text": "They suppress immunity",
-    "why": "Not the mechanism.",
-    "correct": false
-   },
-   "C": {
-    "text": "They cause candidemia",
-    "why": "Not the mechanism.",
-    "correct": false
-   },
-   "D": {
-    "text": "Urinary glucose feeds fungi",
-    "why": "Blocking renal glucose reabsorption raises urinary glucose, favoring fungal overgrowth.",
-    "correct": true
-   },
-   "E": {
-    "text": "They lower renal blood flow",
-    "why": "Not the mechanism.",
-    "correct": false
-   }
-  },
-  "link": {
-   "href": "../../L08/index.html#putting-it-all-together-endocrine-toolkit",
-   "label": "Study this: L08 · Part 5 →"
-  }
- },
- {
-  "topic": "Integration",
-  "objectives": [
-   "IO4.3"
-  ],
-  "sg": [
-   "U4-S"
-  ],
-  "kind": "mechanism",
-  "stem": "What shared concept links thyroid-storm sequencing and diabetes drug choice?",
-  "correct": "Where in the pathway a drug acts",
-  "distractors": [
-   {
-    "text": "All endocrine drugs are interchangeable",
-    "why": "Not true."
-   },
-   {
-    "text": "Potency decides every choice",
-    "why": "Risk matters."
-   },
-   {
-    "text": "Feedback is irrelevant to therapy",
-    "why": "Feedback is central."
-   },
-   {
-    "text": "Only drug cost matters",
-    "why": "Not the concept."
-   }
-  ],
-  "why_correct": "Knowing exactly where a drug acts determines both its efficacy and its specific risks.",
-  "takeaway": "Position in the pathway = benefit and risk.",
-  "discriminator": "Same idea: iodine after PTU; no sulfonylurea in a faller.",
-  "src": "L08 S31; SG U4-S",
-  "id": "U4-029",
-  "answer": "D",
-  "options": {
-   "A": {
-    "text": "Potency decides every choice",
-    "why": "Risk matters.",
-    "correct": false
-   },
-   "B": {
-    "text": "Feedback is irrelevant to therapy",
-    "why": "Feedback is central.",
-    "correct": false
-   },
-   "C": {
-    "text": "All endocrine drugs are interchangeable",
-    "why": "Not true.",
-    "correct": false
-   },
-   "D": {
-    "text": "Where in the pathway a drug acts",
-    "why": "Knowing exactly where a drug acts determines both its efficacy and its specific risks.",
-    "correct": true
-   },
-   "E": {
-    "text": "Only drug cost matters",
-    "why": "Not the concept.",
-    "correct": false
-   }
-  },
-  "link": {
-   "href": "../../L08/index.html#putting-it-all-together-endocrine-toolkit",
-   "label": "Study this: L08 · Part 5 →"
-  }
- },
- {
-  "topic": "Insulin",
-  "objectives": [
-   "IO4.2",
-   "IO4.6"
-  ],
-  "sg": [],
-  "kind": "vignette",
-  "stem": "A patient on insulin and propranolol has glucose 48 mg/dL without tremor or palpitations. Why?",
-  "correct": "Beta-blockade masks symptoms",
-  "distractors": [
-   {
-    "text": "Insulin has stopped working",
-    "why": "Glucose is low."
-   },
-   {
-    "text": "Propranolol raises glucose",
-    "why": "Not the reason."
-   },
-   {
-    "text": "Hypoglycemia never causes tremor",
-    "why": "It does — masked here."
-   },
-   {
-    "text": "The meter is wrong",
-    "why": "Not the taught answer."
-   }
-  ],
-  "why_correct": "Beta-blockers can mask hypoglycemia warning symptoms.",
-  "takeaway": "Insulin + beta-blocker → check glucose, not symptoms.",
-  "discriminator": "Rule of 15: 15 g carbohydrate, recheck in 15 minutes.",
-  "src": "L08 S13; S67",
-  "id": "U4-019",
-  "answer": "A",
-  "options": {
-   "A": {
-    "text": "Beta-blockade masks symptoms",
-    "why": "Beta-blockers can mask hypoglycemia warning symptoms.",
-    "correct": true
-   },
-   "B": {
-    "text": "Hypoglycemia never causes tremor",
-    "why": "It does — masked here.",
-    "correct": false
-   },
-   "C": {
-    "text": "Propranolol raises glucose",
-    "why": "Not the reason.",
-    "correct": false
-   },
-   "D": {
-    "text": "The meter is wrong",
-    "why": "Not the taught answer.",
-    "correct": false
-   },
-   "E": {
-    "text": "Insulin has stopped working",
-    "why": "Glucose is low.",
-    "correct": false
-   }
-  },
-  "link": {
-   "href": "../../L08/index.html#insulin",
-   "label": "Study this: L08 · Part 2 →"
+   "href": "../../L08/index.html#gonadal-hormones-inhibitors",
+   "label": "Study this: L08 · Part 1 →"
   }
  },
  {
@@ -998,60 +994,58 @@
   "objectives": [
    "IO4.6"
   ],
-  "sg": [
-   "U4-R8"
-  ],
+  "sg": [],
   "kind": "vignette",
-  "stem": "A patient on chronic prednisone ran out of refills; now hypotensive, weak and confused. Best management?",
-  "correct": "IV hydrocortisone and IV fluids",
+  "stem": "A patient starting a 3-month prednisone course asks how to take it. Best counseling?",
+  "correct": "Mornings with food; taper",
   "distractors": [
    {
-    "text": "Restart oral prednisone at home",
-    "why": "Emergency."
+    "text": "At bedtime on an empty stomach",
+    "why": "Morning with food."
    },
    {
-    "text": "Fludrocortisone alone",
-    "why": "Needs glucocorticoid."
+    "text": "Stop when you feel better",
+    "why": "Taper."
    },
    {
-    "text": "Observe; it will pass",
-    "why": "Life-threatening."
+    "text": "Double doses if you miss one",
+    "why": "Not advised."
    },
    {
-    "text": "Dexamethasone test first",
-    "why": "Treat first."
+    "text": "Take with grapefruit juice",
+    "why": "Not advised."
    }
   ],
-  "why_correct": "Adrenal crisis from abrupt withdrawal after HPA suppression — immediate IV hydrocortisone and fluids.",
-  "takeaway": "Chronic steroids: taper, never stop.",
-  "discriminator": "Hydrocortisone has mineralocorticoid action too.",
-  "src": "L07 S22; S27; SG U4-R8",
-  "id": "U4-013",
-  "answer": "C",
+  "why_correct": "Take in the morning with food; consider bone and GI protection; taper chronic therapy.",
+  "takeaway": "Steroid > 2 weeks → taper.",
+  "discriminator": "Watch glucose, mood, infection.",
+  "src": "L07 S21; S22; p. 750",
+  "id": "U4-038",
+  "answer": "D",
   "options": {
    "A": {
-    "text": "Fludrocortisone alone",
-    "why": "Needs glucocorticoid.",
+    "text": "Double doses if you miss one",
+    "why": "Not advised.",
     "correct": false
    },
    "B": {
-    "text": "Restart oral prednisone at home",
-    "why": "Emergency.",
+    "text": "At bedtime on an empty stomach",
+    "why": "Morning with food.",
     "correct": false
    },
    "C": {
-    "text": "IV hydrocortisone and IV fluids",
-    "why": "Adrenal crisis from abrupt withdrawal after HPA suppression — immediate IV hydrocortisone and fluids.",
-    "correct": true
-   },
-   "D": {
-    "text": "Observe; it will pass",
-    "why": "Life-threatening.",
+    "text": "Stop when you feel better",
+    "why": "Taper.",
     "correct": false
    },
+   "D": {
+    "text": "Mornings with food; taper",
+    "why": "Take in the morning with food; consider bone and GI protection; taper chronic therapy.",
+    "correct": true
+   },
    "E": {
-    "text": "Dexamethasone test first",
-    "why": "Treat first.",
+    "text": "Take with grapefruit juice",
+    "why": "Not advised.",
     "correct": false
    }
   },
@@ -1094,30 +1088,30 @@
   "discriminator": "Same logic: levothyroxine lowers TSH; prednisone lowers ACTH.",
   "src": "L07 S5; SG U4-R1",
   "id": "U4-001",
-  "answer": "D",
+  "answer": "A",
   "options": {
    "A": {
-    "text": "Receptor down-regulation in the target",
-    "why": "Not the taught mechanism.",
-    "correct": false
-   },
-   "B": {
-    "text": "Direct toxicity to the pituitary",
-    "why": "Suppression, not toxicity.",
-    "correct": false
-   },
-   "C": {
-    "text": "Antibodies against the hormone",
-    "why": "Not the mechanism.",
-    "correct": false
-   },
-   "D": {
     "text": "Negative feedback on the axis",
     "why": "The peripheral hormone feeds back on the hypothalamus/pituitary, turning the levels above it down.",
     "correct": true
    },
-   "E": {
+   "B": {
     "text": "Increased hormone clearance",
+    "why": "Not the mechanism.",
+    "correct": false
+   },
+   "C": {
+    "text": "Receptor down-regulation in the target",
+    "why": "Not the taught mechanism.",
+    "correct": false
+   },
+   "D": {
+    "text": "Direct toxicity to the pituitary",
+    "why": "Suppression, not toxicity.",
+    "correct": false
+   },
+   "E": {
+    "text": "Antibodies against the hormone",
     "why": "Not the mechanism.",
     "correct": false
    }
@@ -1130,66 +1124,526 @@
  {
   "topic": "Thyroid",
   "objectives": [
-   "IO4.1"
+   "IO4.4"
   ],
   "sg": [],
-  "kind": "mechanism",
-  "stem": "Why is PTU preferred over methimazole in thyroid storm?",
-  "correct": "It also blocks T4→T3",
+  "kind": "vignette",
+  "stem": "An 82-year-old with coronary artery disease is newly hypothyroid. How should levothyroxine start?",
+  "correct": "Low dose, titrated slowly",
   "distractors": [
    {
-    "text": "It is better absorbed",
-    "why": "Not the reason."
+    "text": "Full weight-based dose at once",
+    "why": "Risks angina."
    },
    {
-    "text": "It has less liver toxicity",
-    "why": "It has more."
+    "text": "A loading dose first",
+    "why": "Not the approach."
    },
    {
-    "text": "It blocks iodide trapping",
-    "why": "Not the reason."
+    "text": "High-dose T3 instead",
+    "why": "Not taught."
    },
    {
-    "text": "It is a beta-blocker",
-    "why": "Propranolol."
+    "text": "Wait until TSH exceeds 20",
+    "why": "Not the approach."
    }
   ],
-  "why_correct": "PTU blocks synthesis and peripheral conversion — a faster effect on active hormone.",
-  "takeaway": "PTU = one extra step.",
-  "discriminator": "Propranolol and steroids also blunt conversion.",
-  "src": "L07 S14; S15; S16",
-  "id": "U4-012",
-  "answer": "C",
+  "why_correct": "Older adults and cardiac patients start low and titrate slowly to avoid angina or arrhythmia.",
+  "takeaway": "Old heart → start low, go slow.",
+  "discriminator": "Over-replacement: AF and bone loss.",
+  "src": "L07 S12; S13",
+  "id": "U4-008",
+  "answer": "A",
   "options": {
    "A": {
-    "text": "It is better absorbed",
-    "why": "Not the reason.",
-    "correct": false
+    "text": "Low dose, titrated slowly",
+    "why": "Older adults and cardiac patients start low and titrate slowly to avoid angina or arrhythmia.",
+    "correct": true
    },
    "B": {
-    "text": "It blocks iodide trapping",
-    "why": "Not the reason.",
+    "text": "Full weight-based dose at once",
+    "why": "Risks angina.",
     "correct": false
    },
    "C": {
-    "text": "It also blocks T4→T3",
-    "why": "PTU blocks synthesis and peripheral conversion — a faster effect on active hormone.",
-    "correct": true
+    "text": "Wait until TSH exceeds 20",
+    "why": "Not the approach.",
+    "correct": false
    },
    "D": {
-    "text": "It has less liver toxicity",
-    "why": "It has more.",
+    "text": "A loading dose first",
+    "why": "Not the approach.",
     "correct": false
    },
    "E": {
-    "text": "It is a beta-blocker",
-    "why": "Propranolol.",
+    "text": "High-dose T3 instead",
+    "why": "Not taught.",
     "correct": false
    }
   },
   "link": {
    "href": "../../L07/index.html#thyroid-antithyroid-drugs",
    "label": "Study this: L07 · Part 2 →"
+  }
+ },
+ {
+  "topic": "Gonadal hormones",
+  "objectives": [
+   "IO4.2"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A woman on tamoxifen for breast cancer starts paroxetine for hot flashes. What is the concern?",
+  "correct": "Less tamoxifen activation",
+  "distractors": [
+   {
+    "text": "Serotonin syndrome only",
+    "why": "Not the taught issue."
+   },
+   {
+    "text": "More endometrial cancer",
+    "why": "Not from paroxetine."
+   },
+   {
+    "text": "Hyperkalemia",
+    "why": "Not related."
+   },
+   {
+    "text": "No interaction",
+    "why": "CYP2D6 inhibitor."
+   }
+  ],
+  "why_correct": "Paroxetine and fluoxetine inhibit CYP2D6 and blunt tamoxifen activation.",
+  "takeaway": "Tamoxifen + SSRI → check which one.",
+  "discriminator": "Report vaginal bleeding on tamoxifen.",
+  "src": "L08 S8 (notes); S67",
+  "id": "U4-042",
+  "answer": "B",
+  "options": {
+   "A": {
+    "text": "Hyperkalemia",
+    "why": "Not related.",
+    "correct": false
+   },
+   "B": {
+    "text": "Less tamoxifen activation",
+    "why": "Paroxetine and fluoxetine inhibit CYP2D6 and blunt tamoxifen activation.",
+    "correct": true
+   },
+   "C": {
+    "text": "More endometrial cancer",
+    "why": "Not from paroxetine.",
+    "correct": false
+   },
+   "D": {
+    "text": "No interaction",
+    "why": "CYP2D6 inhibitor.",
+    "correct": false
+   },
+   "E": {
+    "text": "Serotonin syndrome only",
+    "why": "Not the taught issue.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L08/index.html#gonadal-hormones-inhibitors",
+   "label": "Study this: L08 · Part 1 →"
+  }
+ },
+ {
+  "topic": "Thyroid",
+  "objectives": [
+   "IO4.2"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A patient on amiodarone develops thyroid dysfunction. What should be expected after stopping it?",
+  "correct": "Slow improvement",
+  "distractors": [
+   {
+    "text": "Immediate recovery",
+    "why": "Long half-life."
+   },
+   {
+    "text": "Only hyperthyroidism occurs",
+    "why": "Either."
+   },
+   {
+    "text": "Iodine will cure it",
+    "why": "Not the answer."
+   },
+   {
+    "text": "Lithium reverses it",
+    "why": "Also affects thyroid."
+   }
+  ],
+  "why_correct": "Amiodarone can cause hypo- or hyperthyroidism; it persists after stopping because of its very long half-life.",
+  "takeaway": "Amiodarone and lithium → check thyroid.",
+  "discriminator": "About 3% develop thyrotoxicosis (textbook).",
+  "src": "L07 S52; p. 734; p. 736",
+  "id": "U4-035",
+  "answer": "D",
+  "options": {
+   "A": {
+    "text": "Only hyperthyroidism occurs",
+    "why": "Either.",
+    "correct": false
+   },
+   "B": {
+    "text": "Immediate recovery",
+    "why": "Long half-life.",
+    "correct": false
+   },
+   "C": {
+    "text": "Lithium reverses it",
+    "why": "Also affects thyroid.",
+    "correct": false
+   },
+   "D": {
+    "text": "Slow improvement",
+    "why": "Amiodarone can cause hypo- or hyperthyroidism; it persists after stopping because of its very long half-life.",
+    "correct": true
+   },
+   "E": {
+    "text": "Iodine will cure it",
+    "why": "Not the answer.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L07/index.html#thyroid-antithyroid-drugs",
+   "label": "Study this: L07 · Part 2 →"
+  }
+ },
+ {
+  "topic": "Insulin",
+  "objectives": [
+   "IO4.6"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A conscious patient on insulin has glucose 55 mg/dL. What first?",
+  "correct": "15 g fast carbs, recheck in 15 min",
+  "distractors": [
+   {
+    "text": "Glucagon IM first",
+    "why": "For patients who can’t swallow."
+   },
+   {
+    "text": "Skip the next meal",
+    "why": "Treat now."
+   },
+   {
+    "text": "Give the next insulin dose early",
+    "why": "Worsens it."
+   },
+   {
+    "text": "Wait an hour",
+    "why": "Treat now."
+   }
+  ],
+  "why_correct": "Rule of 15: 15 g carbohydrate, recheck in 15 minutes; glucagon or IV dextrose for severe cases.",
+  "takeaway": "Rule of 15.",
+  "discriminator": "Beta-blockers mask warning signs.",
+  "src": "L08 S13; S67",
+  "id": "U4-044",
+  "answer": "D",
+  "options": {
+   "A": {
+    "text": "Give the next insulin dose early",
+    "why": "Worsens it.",
+    "correct": false
+   },
+   "B": {
+    "text": "Glucagon IM first",
+    "why": "For patients who can’t swallow.",
+    "correct": false
+   },
+   "C": {
+    "text": "Wait an hour",
+    "why": "Treat now.",
+    "correct": false
+   },
+   "D": {
+    "text": "15 g fast carbs, recheck in 15 min",
+    "why": "Rule of 15: 15 g carbohydrate, recheck in 15 minutes; glucagon or IV dextrose for severe cases.",
+    "correct": true
+   },
+   "E": {
+    "text": "Skip the next meal",
+    "why": "Treat now.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L08/index.html#insulin",
+   "label": "Study this: L08 · Part 2 →"
+  }
+ },
+ {
+  "topic": "Pituitary",
+  "objectives": [
+   "IO4.4",
+   "IO4.5"
+  ],
+  "sg": [
+   "U4-R4"
+  ],
+  "kind": "vignette",
+  "stem": "A patient with SIADH stays hyponatremic despite fluid restriction. Tolvaptan is chosen. Key safety step?",
+  "correct": "Start it in hospital",
+  "distractors": [
+   {
+    "text": "Give with salt tablets at home",
+    "why": "Not the taught step."
+   },
+   {
+    "text": "Monitor for hyperkalemia only",
+    "why": "Not the risk."
+   },
+   {
+    "text": "Combine with desmopressin",
+    "why": "Opposite action."
+   },
+   {
+    "text": "Stop fluid restriction entirely",
+    "why": "Not the step."
+   }
+  ],
+  "why_correct": "Tolvaptan can overcorrect sodium (osmotic demyelination) and injure the liver — start in hospital.",
+  "takeaway": "SIADH: fluid restriction first, then tolvaptan or demeclocycline.",
+  "discriminator": "Demeclocycline: photosensitivity, nephrotoxicity.",
+  "src": "L07 S8; S10",
+  "id": "U4-006",
+  "answer": "B",
+  "options": {
+   "A": {
+    "text": "Give with salt tablets at home",
+    "why": "Not the taught step.",
+    "correct": false
+   },
+   "B": {
+    "text": "Start it in hospital",
+    "why": "Tolvaptan can overcorrect sodium (osmotic demyelination) and injure the liver — start in hospital.",
+    "correct": true
+   },
+   "C": {
+    "text": "Monitor for hyperkalemia only",
+    "why": "Not the risk.",
+    "correct": false
+   },
+   "D": {
+    "text": "Combine with desmopressin",
+    "why": "Opposite action.",
+    "correct": false
+   },
+   "E": {
+    "text": "Stop fluid restriction entirely",
+    "why": "Not the step.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L07/index.html#pituitary-gh-prolactin-adh",
+   "label": "Study this: L07 · Part 1 →"
+  }
+ },
+ {
+  "topic": "Glucose-lowering drugs",
+  "objectives": [
+   "IO4.2"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A patient with NYHA class III heart failure needs diabetes therapy. Which drug is contraindicated?",
+  "correct": "Pioglitazone",
+  "distractors": [
+   {
+    "text": "Empagliflozin",
+    "why": "Benefits HF."
+   },
+   {
+    "text": "Metformin",
+    "why": "Not the HF contraindication."
+   },
+   {
+    "text": "Sitagliptin",
+    "why": "Not contraindicated."
+   },
+   {
+    "text": "Semaglutide",
+    "why": "Not contraindicated."
+   }
+  ],
+  "why_correct": "TZDs cause fluid retention and are contraindicated in NYHA class III–IV heart failure.",
+  "takeaway": "TZD = fluid.",
+  "discriminator": "SGLT2 inhibitors reduce heart-failure events.",
+  "src": "L08 S14; p. 799",
+  "id": "U4-026",
+  "answer": "D",
+  "options": {
+   "A": {
+    "text": "Empagliflozin",
+    "why": "Benefits HF.",
+    "correct": false
+   },
+   "B": {
+    "text": "Sitagliptin",
+    "why": "Not contraindicated.",
+    "correct": false
+   },
+   "C": {
+    "text": "Semaglutide",
+    "why": "Not contraindicated.",
+    "correct": false
+   },
+   "D": {
+    "text": "Pioglitazone",
+    "why": "TZDs cause fluid retention and are contraindicated in NYHA class III–IV heart failure.",
+    "correct": true
+   },
+   "E": {
+    "text": "Metformin",
+    "why": "Not the HF contraindication.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L08/index.html#non-insulin-glucose-lowering-drugs",
+   "label": "Study this: L08 · Part 3 →"
+  }
+ },
+ {
+  "topic": "Thyroid",
+  "objectives": [
+   "IO4.2"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A patient on levothyroxine starts an oral contraceptive. What change should be anticipated?",
+  "correct": "Higher levothyroxine needs",
+  "distractors": [
+   {
+    "text": "Lower levothyroxine needs",
+    "why": "Estrogen raises needs."
+   },
+   {
+    "text": "No change",
+    "why": "Estrogen raises TBG."
+   },
+   {
+    "text": "Switch to methimazole",
+    "why": "Wrong direction."
+   },
+   {
+    "text": "Stop levothyroxine",
+    "why": "Not the answer."
+   }
+  ],
+  "why_correct": "Estrogens raise thyroid-binding globulin, so levothyroxine needs rise — check TSH.",
+  "takeaway": "Estrogen or pregnancy → more levothyroxine.",
+  "discriminator": "Inducers (rifampin) also raise needs.",
+  "src": "L07 S12; S52",
+  "id": "U4-034",
+  "answer": "D",
+  "options": {
+   "A": {
+    "text": "Lower levothyroxine needs",
+    "why": "Estrogen raises needs.",
+    "correct": false
+   },
+   "B": {
+    "text": "No change",
+    "why": "Estrogen raises TBG.",
+    "correct": false
+   },
+   "C": {
+    "text": "Stop levothyroxine",
+    "why": "Not the answer.",
+    "correct": false
+   },
+   "D": {
+    "text": "Higher levothyroxine needs",
+    "why": "Estrogens raise thyroid-binding globulin, so levothyroxine needs rise — check TSH.",
+    "correct": true
+   },
+   "E": {
+    "text": "Switch to methimazole",
+    "why": "Wrong direction.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L07/index.html#thyroid-antithyroid-drugs",
+   "label": "Study this: L07 · Part 2 →"
+  }
+ },
+ {
+  "topic": "Parathyroid",
+  "objectives": [
+   "IO4.4"
+  ],
+  "sg": [
+   "U4-R13"
+  ],
+  "kind": "vignette",
+  "stem": "After thyroidectomy, a patient has perioral numbness, low calcium and low PTH. Mainstay therapy?",
+  "correct": "Calcitriol + calcium",
+  "distractors": [
+   {
+    "text": "Cinacalcet alone",
+    "why": "Lowers PTH."
+   },
+   {
+    "text": "A bisphosphonate",
+    "why": "Osteoporosis."
+   },
+   {
+    "text": "Plain vitamin D alone",
+    "why": "Needs PTH to activate."
+   },
+   {
+    "text": "Levothyroxine alone",
+    "why": "Thyroid only."
+   }
+  ],
+  "why_correct": "PTH activates vitamin D; calcitriol bypasses that step — given with oral calcium.",
+  "takeaway": "Low PTH → calcitriol + calcium; watch hypercalcemia.",
+  "discriminator": "Recombinant PTH 1-84 if refractory.",
+  "src": "L08 S25; S27; S35; SG U4-R13",
+  "id": "U4-027",
+  "answer": "B",
+  "options": {
+   "A": {
+    "text": "A bisphosphonate",
+    "why": "Osteoporosis.",
+    "correct": false
+   },
+   "B": {
+    "text": "Calcitriol + calcium",
+    "why": "PTH activates vitamin D; calcitriol bypasses that step — given with oral calcium.",
+    "correct": true
+   },
+   "C": {
+    "text": "Plain vitamin D alone",
+    "why": "Needs PTH to activate.",
+    "correct": false
+   },
+   "D": {
+    "text": "Cinacalcet alone",
+    "why": "Lowers PTH.",
+    "correct": false
+   },
+   "E": {
+    "text": "Levothyroxine alone",
+    "why": "Thyroid only.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L08/index.html#parathyroid-disorders",
+   "label": "Study this: L08 · Part 4 →"
   }
  },
  {
@@ -1226,27 +1680,27 @@
   "discriminator": "Pegvisomant doesn’t shrink the tumor — check liver tests too.",
   "src": "L07 S7; SG U4-R2",
   "id": "U4-002",
-  "answer": "B",
+  "answer": "D",
   "options": {
    "A": {
-    "text": "Sodium",
-    "why": "ADH drugs.",
-    "correct": false
-   },
-   "B": {
-    "text": "IGF-1",
-    "why": "Pegvisomant blocks the GH receptor so IGF-1 falls; GH rises and is not used to monitor it.",
-    "correct": true
-   },
-   "C": {
     "text": "Serum GH",
     "why": "GH rises on pegvisomant.",
     "correct": false
    },
-   "D": {
+   "B": {
     "text": "Prolactin",
     "why": "Not the target.",
     "correct": false
+   },
+   "C": {
+    "text": "Sodium",
+    "why": "ADH drugs.",
+    "correct": false
+   },
+   "D": {
+    "text": "IGF-1",
+    "why": "Pegvisomant blocks the GH receptor so IGF-1 falls; GH rises and is not used to monitor it.",
+    "correct": true
    },
    "E": {
     "text": "TSH",
@@ -1260,263 +1714,193 @@
   }
  },
  {
-  "topic": "Gonadal hormones",
+  "topic": "Insulin",
   "objectives": [
-   "IO4.5"
+   "IO4.2",
+   "IO4.6"
   ],
   "sg": [],
   "kind": "vignette",
-  "stem": "A man on finasteride for BPH has a PSA of 1.9 ng/mL. How should it be read?",
-  "correct": "As about 3.8 ng/mL",
+  "stem": "A patient on insulin and propranolol has glucose 48 mg/dL without tremor or palpitations. Why?",
+  "correct": "Beta-blockade masks symptoms",
   "distractors": [
    {
-    "text": "As 1.9 ng/mL",
-    "why": "It is halved."
+    "text": "Insulin has stopped working",
+    "why": "Glucose is low."
    },
    {
-    "text": "As about 1.0 ng/mL",
-    "why": "Doubled, not halved."
+    "text": "Propranolol raises glucose",
+    "why": "Not the reason."
    },
    {
-    "text": "As meaningless",
-    "why": "Still usable."
+    "text": "Hypoglycemia never causes tremor",
+    "why": "It does — masked here."
    },
    {
-    "text": "Only after stopping",
-    "why": "Not taught."
+    "text": "The meter is wrong",
+    "why": "Not the taught answer."
    }
   ],
-  "why_correct": "Finasteride lowers PSA by about half — double the value when screening.",
-  "takeaway": "5-ARI → double the PSA.",
-  "discriminator": "Pregnant women must not handle crushed tablets.",
-  "src": "L08 S9",
-  "id": "U4-018",
-  "answer": "B",
-  "options": {
-   "A": {
-    "text": "Only after stopping",
-    "why": "Not taught.",
-    "correct": false
-   },
-   "B": {
-    "text": "As about 3.8 ng/mL",
-    "why": "Finasteride lowers PSA by about half — double the value when screening.",
-    "correct": true
-   },
-   "C": {
-    "text": "As meaningless",
-    "why": "Still usable.",
-    "correct": false
-   },
-   "D": {
-    "text": "As about 1.0 ng/mL",
-    "why": "Doubled, not halved.",
-    "correct": false
-   },
-   "E": {
-    "text": "As 1.9 ng/mL",
-    "why": "It is halved.",
-    "correct": false
-   }
-  },
-  "link": {
-   "href": "../../L08/index.html#gonadal-hormones-inhibitors",
-   "label": "Study this: L08 · Part 1 →"
-  }
- },
- {
-  "topic": "Pituitary",
-  "objectives": [
-   "IO4.4"
-  ],
-  "sg": [
-   "U4-R3"
-  ],
-  "kind": "vignette",
-  "stem": "A woman with galactorrhea and amenorrhea has a prolactinoma. First-line therapy?",
-  "correct": "Cabergoline",
-  "distractors": [
-   {
-    "text": "Octreotide",
-    "why": "GH excess."
-   },
-   {
-    "text": "Metoclopramide",
-    "why": "Raises prolactin."
-   },
-   {
-    "text": "Desmopressin",
-    "why": "Diabetes insipidus."
-   },
-   {
-    "text": "Levothyroxine",
-    "why": "Hypothyroidism."
-   }
-  ],
-  "why_correct": "Dopamine agonists restore dopamine’s inhibitory brake on prolactin; cabergoline is twice weekly and better tolerated.",
-  "takeaway": "Prolactin → dopamine agonist.",
-  "discriminator": "Antipsychotics and metoclopramide raise prolactin.",
-  "src": "L07 S8; S9; SG U4-R3",
-  "id": "U4-004",
+  "why_correct": "Beta-blockers can mask hypoglycemia warning symptoms.",
+  "takeaway": "Insulin + beta-blocker → check glucose, not symptoms.",
+  "discriminator": "Rule of 15: 15 g carbohydrate, recheck in 15 minutes.",
+  "src": "L08 S13; S67",
+  "id": "U4-019",
   "answer": "C",
   "options": {
    "A": {
-    "text": "Octreotide",
-    "why": "GH excess.",
+    "text": "Propranolol raises glucose",
+    "why": "Not the reason.",
     "correct": false
    },
    "B": {
-    "text": "Desmopressin",
-    "why": "Diabetes insipidus.",
+    "text": "The meter is wrong",
+    "why": "Not the taught answer.",
     "correct": false
    },
    "C": {
-    "text": "Cabergoline",
-    "why": "Dopamine agonists restore dopamine’s inhibitory brake on prolactin; cabergoline is twice weekly and better tolerated.",
+    "text": "Beta-blockade masks symptoms",
+    "why": "Beta-blockers can mask hypoglycemia warning symptoms.",
     "correct": true
    },
    "D": {
-    "text": "Levothyroxine",
-    "why": "Hypothyroidism.",
+    "text": "Insulin has stopped working",
+    "why": "Glucose is low.",
     "correct": false
    },
    "E": {
-    "text": "Metoclopramide",
-    "why": "Raises prolactin.",
+    "text": "Hypoglycemia never causes tremor",
+    "why": "It does — masked here.",
     "correct": false
    }
   },
   "link": {
-   "href": "../../L07/index.html#pituitary-gh-prolactin-adh",
-   "label": "Study this: L07 · Part 1 →"
+   "href": "../../L08/index.html#insulin",
+   "label": "Study this: L08 · Part 2 →"
   }
  },
  {
-  "topic": "Parathyroid",
+  "topic": "Adrenal",
   "objectives": [
-   "IO4.5"
+   "IO4.2"
   ],
-  "sg": [
-   "U4-R13"
-  ],
+  "sg": [],
   "kind": "vignette",
-  "stem": "A dialysis patient with high PTH starts cinacalcet. What must be monitored?",
-  "correct": "Calcium (hypocalcemia)",
+  "stem": "A patient with Cushing syndrome on ketoconazole starts simvastatin. What is the concern?",
+  "correct": "Statin levels rise (CYP3A4)",
   "distractors": [
    {
-    "text": "Calcium (hypercalcemia)",
-    "why": "Calcitriol."
+    "text": "Ketoconazole induces CYP3A4",
+    "why": "Inhibits it."
    },
    {
-    "text": "Glucose (hyperglycemia)",
-    "why": "Not the target."
+    "text": "No interaction",
+    "why": "Strong inhibitor."
    },
    {
-    "text": "Potassium (hyperkalemia)",
-    "why": "Not the target."
+    "text": "Hypokalemia from simvastatin",
+    "why": "Not the issue."
    },
    {
-    "text": "TSH (hypothyroidism)",
-    "why": "Not the target."
+    "text": "Ketoconazole lowers glucose",
+    "why": "Not the issue."
    }
   ],
-  "why_correct": "Cinacalcet sensitizes the CaSR so PTH and calcium fall; monitor for hypocalcemia (and QT).",
-  "takeaway": "Opposite drugs, opposite monitoring.",
-  "discriminator": "Cinacalcet inhibits CYP2D6.",
-  "src": "L08 S25; S26",
-  "id": "U4-028",
-  "answer": "B",
+  "why_correct": "Ketoconazole: hepatotoxicity, QT prolongation and strong CYP3A4 inhibition.",
+  "takeaway": "Azole + CYP3A4 substrate → toxicity.",
+  "discriminator": "Azoles also raise corticosteroid exposure.",
+  "src": "L07 S23; S24; S52",
+  "id": "U4-039",
+  "answer": "E",
   "options": {
    "A": {
-    "text": "Glucose (hyperglycemia)",
-    "why": "Not the target.",
+    "text": "Hypokalemia from simvastatin",
+    "why": "Not the issue.",
     "correct": false
    },
    "B": {
-    "text": "Calcium (hypocalcemia)",
-    "why": "Cinacalcet sensitizes the CaSR so PTH and calcium fall; monitor for hypocalcemia (and QT).",
-    "correct": true
+    "text": "Ketoconazole induces CYP3A4",
+    "why": "Inhibits it.",
+    "correct": false
    },
    "C": {
-    "text": "Calcium (hypercalcemia)",
-    "why": "Calcitriol.",
+    "text": "No interaction",
+    "why": "Strong inhibitor.",
     "correct": false
    },
    "D": {
-    "text": "Potassium (hyperkalemia)",
-    "why": "Not the target.",
+    "text": "Ketoconazole lowers glucose",
+    "why": "Not the issue.",
     "correct": false
    },
    "E": {
-    "text": "TSH (hypothyroidism)",
-    "why": "Not the target.",
-    "correct": false
+    "text": "Statin levels rise (CYP3A4)",
+    "why": "Ketoconazole: hepatotoxicity, QT prolongation and strong CYP3A4 inhibition.",
+    "correct": true
    }
   },
   "link": {
-   "href": "../../L08/index.html#parathyroid-disorders",
-   "label": "Study this: L08 · Part 4 →"
+   "href": "../../L07/index.html#adrenocorticosteroids-antagonists",
+   "label": "Study this: L07 · Part 3 →"
   }
  },
  {
   "topic": "Gonadal hormones",
   "objectives": [
-   "IO4.4"
+   "IO4.3"
   ],
-  "sg": [
-   "U4-R10"
-  ],
-  "kind": "vignette",
-  "stem": "A 37-year-old who smokes daily asks for hormonal contraception. Which choice fits?",
-  "correct": "Levonorgestrel IUD",
+  "sg": [],
+  "kind": "mechanism",
+  "stem": "Which statement about tamoxifen and raloxifene is correct?",
+  "correct": "Only tamoxifen hits the uterus",
   "distractors": [
    {
-    "text": "Combined pill",
-    "why": "Estrogen contraindicated."
+    "text": "Only raloxifene raises VTE",
+    "why": "Both do."
    },
    {
-    "text": "Combined patch",
-    "why": "Contains estrogen."
+    "text": "Raloxifene treats breast cancer",
+    "why": "Not used to treat it."
    },
    {
-    "text": "Combined ring",
-    "why": "Contains estrogen."
+    "text": "Both are breast agonists",
+    "why": "Both block breast."
    },
    {
-    "text": "Low-dose combined pill",
-    "why": "Still estrogen."
+    "text": "Tamoxifen weakens bone",
+    "why": "Bone agonist."
    }
   ],
-  "why_correct": "Smoking at 35+ substantially raises estrogen’s thromboembolic risk; progestin-only methods avoid it.",
-  "takeaway": "Smoker ≥ 35, migraine with aura, VTE → progestin-only.",
-  "discriminator": "Rifampin and other inducers → backup method.",
-  "src": "L08 S5; S6; SG U4-R10",
-  "id": "U4-016",
-  "answer": "A",
+  "why_correct": "Tamoxifen activates the endometrium (cancer risk); raloxifene blocks it; both raise VTE.",
+  "takeaway": "Report bleeding on tamoxifen.",
+  "discriminator": "CYP2D6 inhibitors blunt tamoxifen.",
+  "src": "L08 S7; S8",
+  "id": "U4-017",
+  "answer": "D",
   "options": {
    "A": {
-    "text": "Levonorgestrel IUD",
-    "why": "Smoking at 35+ substantially raises estrogen’s thromboembolic risk; progestin-only methods avoid it.",
-    "correct": true
+    "text": "Both are breast agonists",
+    "why": "Both block breast.",
+    "correct": false
    },
    "B": {
-    "text": "Combined pill",
-    "why": "Estrogen contraindicated.",
+    "text": "Only raloxifene raises VTE",
+    "why": "Both do.",
     "correct": false
    },
    "C": {
-    "text": "Combined ring",
-    "why": "Contains estrogen.",
+    "text": "Raloxifene treats breast cancer",
+    "why": "Not used to treat it.",
     "correct": false
    },
    "D": {
-    "text": "Combined patch",
-    "why": "Contains estrogen.",
-    "correct": false
+    "text": "Only tamoxifen hits the uterus",
+    "why": "Tamoxifen activates the endometrium (cancer risk); raloxifene blocks it; both raise VTE.",
+    "correct": true
    },
    "E": {
-    "text": "Low-dose combined pill",
-    "why": "Still estrogen.",
+    "text": "Tamoxifen weakens bone",
+    "why": "Bone agonist.",
     "correct": false
    }
   },
@@ -1528,64 +1912,61 @@
  {
   "topic": "Adrenal",
   "objectives": [
-   "IO4.1",
-   "IO4.3"
+   "IO4.4"
   ],
-  "sg": [
-   "U4-R9"
-  ],
-  "kind": "mechanism",
-  "stem": "Which pairing of drug and mechanism in Cushing syndrome is correct?",
-  "correct": "Metyrapone — blocks 11-β-hydroxylase",
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A patient with Addison disease on hydrocortisone has low BP and high potassium. What should be added?",
+  "correct": "Fludrocortisone",
   "distractors": [
    {
-    "text": "Mifepristone — blocks cortisol synthesis",
-    "why": "Receptor blocker."
+    "text": "Spironolactone",
+    "why": "Blocks mineralocorticoids."
    },
    {
-    "text": "Ketoconazole — blocks the GR",
-    "why": "Enzyme blocker."
+    "text": "Dexamethasone",
+    "why": "Little mineralocorticoid action."
    },
    {
-    "text": "Spironolactone — blocks GR",
-    "why": "Blocks the MR."
+    "text": "Ketoconazole",
+    "why": "Blocks synthesis."
    },
    {
-    "text": "Fludrocortisone — blocks the MR",
-    "why": "MR agonist."
+    "text": "Potassium chloride",
+    "why": "Wrong direction."
    }
   ],
-  "why_correct": "Ketoconazole blocks several steroidogenic CYPs; metyrapone the last cortisol step; mifepristone the glucocorticoid receptor; spironolactone the mineralocorticoid receptor.",
-  "takeaway": "Factory blockers vs. lock blockers.",
-  "discriminator": "Receptor blockers leave hormone levels high.",
-  "src": "L07 S23; S24; SG U4-R9",
-  "id": "U4-015",
-  "answer": "E",
+  "why_correct": "Primary adrenal insufficiency needs mineralocorticoid replacement alongside a glucocorticoid.",
+  "takeaway": "Addison = cortisol + fludrocortisone.",
+  "discriminator": "Monitor BP and potassium.",
+  "src": "L07 S20",
+  "id": "U4-014",
+  "answer": "C",
   "options": {
    "A": {
-    "text": "Ketoconazole — blocks the GR",
-    "why": "Enzyme blocker.",
+    "text": "Dexamethasone",
+    "why": "Little mineralocorticoid action.",
     "correct": false
    },
    "B": {
-    "text": "Spironolactone — blocks GR",
-    "why": "Blocks the MR.",
+    "text": "Potassium chloride",
+    "why": "Wrong direction.",
     "correct": false
    },
    "C": {
-    "text": "Mifepristone — blocks cortisol synthesis",
-    "why": "Receptor blocker.",
-    "correct": false
+    "text": "Fludrocortisone",
+    "why": "Primary adrenal insufficiency needs mineralocorticoid replacement alongside a glucocorticoid.",
+    "correct": true
    },
    "D": {
-    "text": "Fludrocortisone — blocks the MR",
-    "why": "MR agonist.",
+    "text": "Spironolactone",
+    "why": "Blocks mineralocorticoids.",
     "correct": false
    },
    "E": {
-    "text": "Metyrapone — blocks 11-β-hydroxylase",
-    "why": "Ketoconazole blocks several steroidogenic CYPs; metyrapone the last cortisol step; mifepristone the glucocorticoid receptor; spironolactone the mineralocorticoid receptor.",
-    "correct": true
+    "text": "Ketoconazole",
+    "why": "Blocks synthesis.",
+    "correct": false
    }
   },
   "link": {
@@ -1594,131 +1975,457 @@
   }
  },
  {
-  "topic": "Parathyroid",
+  "topic": "Thyroid",
   "objectives": [
-   "IO4.4"
+   "IO4.5",
+   "IO4.6"
   ],
   "sg": [
-   "U4-R13"
+   "U4-R5"
   ],
   "kind": "vignette",
-  "stem": "After thyroidectomy, a patient has perioral numbness, low calcium and low PTH. Mainstay therapy?",
-  "correct": "Calcitriol plus oral calcium",
+  "stem": "A woman on levothyroxine takes it with her calcium and iron at breakfast; her TSH is high. Best advice?",
+  "correct": "Separate them by 4 hours",
   "distractors": [
    {
-    "text": "Cinacalcet alone",
-    "why": "Lowers PTH."
+    "text": "Double the levothyroxine dose",
+    "why": "Fix timing first."
    },
    {
-    "text": "A bisphosphonate",
-    "why": "Osteoporosis."
+    "text": "Take it with breakfast",
+    "why": "Empty stomach."
    },
    {
-    "text": "Plain vitamin D alone",
-    "why": "Needs PTH to activate."
+    "text": "Stop calcium for good",
+    "why": "Separation is enough."
    },
    {
-    "text": "Levothyroxine alone",
-    "why": "Thyroid only."
+    "text": "Switch to methimazole",
+    "why": "Antithyroid drug."
    }
   ],
-  "why_correct": "PTH activates vitamin D; calcitriol bypasses that step — given with oral calcium.",
-  "takeaway": "Low PTH → calcitriol + calcium; watch hypercalcemia.",
-  "discriminator": "Recombinant PTH 1-84 if refractory.",
-  "src": "L08 S25; S27; S35; SG U4-R13",
-  "id": "U4-027",
-  "answer": "D",
+  "why_correct": "Calcium, iron and antacids reduce absorption; take levothyroxine 30–60 minutes before breakfast, 4 hours apart.",
+  "takeaway": "Levothyroxine timing matters as much as dose.",
+  "discriminator": "Recheck TSH 6–8 weeks after any change.",
+  "src": "L07 S12; S13; SG U4-R5",
+  "id": "U4-007",
+  "answer": "C",
   "options": {
    "A": {
-    "text": "Plain vitamin D alone",
-    "why": "Needs PTH to activate.",
+    "text": "Switch to methimazole",
+    "why": "Antithyroid drug.",
     "correct": false
    },
    "B": {
-    "text": "A bisphosphonate",
-    "why": "Osteoporosis.",
+    "text": "Take it with breakfast",
+    "why": "Empty stomach.",
     "correct": false
    },
    "C": {
-    "text": "Levothyroxine alone",
-    "why": "Thyroid only.",
-    "correct": false
-   },
-   "D": {
-    "text": "Calcitriol plus oral calcium",
-    "why": "PTH activates vitamin D; calcitriol bypasses that step — given with oral calcium.",
+    "text": "Separate them by 4 hours",
+    "why": "Calcium, iron and antacids reduce absorption; take levothyroxine 30–60 minutes before breakfast, 4 hours apart.",
     "correct": true
    },
+   "D": {
+    "text": "Double the levothyroxine dose",
+    "why": "Fix timing first.",
+    "correct": false
+   },
    "E": {
-    "text": "Cinacalcet alone",
-    "why": "Lowers PTH.",
+    "text": "Stop calcium for good",
+    "why": "Separation is enough.",
     "correct": false
    }
   },
   "link": {
-   "href": "../../L08/index.html#parathyroid-disorders",
-   "label": "Study this: L08 · Part 4 →"
+   "href": "../../L07/index.html#thyroid-antithyroid-drugs",
+   "label": "Study this: L07 · Part 2 →"
+  }
+ },
+ {
+  "topic": "Integration",
+  "objectives": [
+   "IO4.3"
+  ],
+  "sg": [
+   "U4-S"
+  ],
+  "kind": "mechanism",
+  "stem": "What shared concept links thyroid-storm sequencing and diabetes drug choice?",
+  "correct": "Where in the pathway a drug acts",
+  "distractors": [
+   {
+    "text": "All endocrine drugs are interchangeable",
+    "why": "Not true."
+   },
+   {
+    "text": "Potency decides every choice",
+    "why": "Risk matters."
+   },
+   {
+    "text": "Feedback is irrelevant to therapy",
+    "why": "Feedback is central."
+   },
+   {
+    "text": "Only drug cost matters",
+    "why": "Not the concept."
+   }
+  ],
+  "why_correct": "Knowing exactly where a drug acts determines both its efficacy and its specific risks.",
+  "takeaway": "Position in the pathway = benefit and risk.",
+  "discriminator": "Same idea: iodine after PTU; no sulfonylurea in a faller.",
+  "src": "L08 S31; SG U4-S",
+  "id": "U4-029",
+  "answer": "B",
+  "options": {
+   "A": {
+    "text": "Feedback is irrelevant to therapy",
+    "why": "Feedback is central.",
+    "correct": false
+   },
+   "B": {
+    "text": "Where in the pathway a drug acts",
+    "why": "Knowing exactly where a drug acts determines both its efficacy and its specific risks.",
+    "correct": true
+   },
+   "C": {
+    "text": "Only drug cost matters",
+    "why": "Not the concept.",
+    "correct": false
+   },
+   "D": {
+    "text": "All endocrine drugs are interchangeable",
+    "why": "Not true.",
+    "correct": false
+   },
+   "E": {
+    "text": "Potency decides every choice",
+    "why": "Risk matters.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L08/index.html#putting-it-all-together-endocrine-toolkit",
+   "label": "Study this: L08 · Part 5 →"
+  }
+ },
+ {
+  "topic": "Glucose-lowering drugs",
+  "objectives": [
+   "IO4.2"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A patient on semaglutide asks to add sitagliptin. Best answer?",
+  "correct": "Don’t combine them",
+  "distractors": [
+   {
+    "text": "Combine for stronger effect",
+    "why": "Never combine."
+   },
+   {
+    "text": "Fine at half doses",
+    "why": "Not advised."
+   },
+   {
+    "text": "Only with insulin",
+    "why": "Not the point."
+   },
+   {
+    "text": "Switch to glyburide",
+    "why": "Not the answer."
+   }
+  ],
+  "why_correct": "Do not combine a GLP-1 RA with a DPP-4 inhibitor — same incretin pathway.",
+  "takeaway": "Incretin + incretin = no.",
+  "discriminator": "GLP-1 RA: weight loss; DPP-4: weight neutral.",
+  "src": "L08 S19",
+  "id": "U4-047",
+  "answer": "C",
+  "options": {
+   "A": {
+    "text": "Only with insulin",
+    "why": "Not the point.",
+    "correct": false
+   },
+   "B": {
+    "text": "Switch to glyburide",
+    "why": "Not the answer.",
+    "correct": false
+   },
+   "C": {
+    "text": "Don’t combine them",
+    "why": "Do not combine a GLP-1 RA with a DPP-4 inhibitor — same incretin pathway.",
+    "correct": true
+   },
+   "D": {
+    "text": "Combine for stronger effect",
+    "why": "Never combine.",
+    "correct": false
+   },
+   "E": {
+    "text": "Fine at half doses",
+    "why": "Not advised.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L08/index.html#non-insulin-glucose-lowering-drugs",
+   "label": "Study this: L08 · Part 3 →"
+  }
+ },
+ {
+  "topic": "Gonadal hormones",
+  "objectives": [
+   "IO4.1"
+  ],
+  "sg": [],
+  "kind": "mechanism",
+  "stem": "How does combined hormonal contraception prevent ovulation?",
+  "correct": "Suppresses GnRH, FSH and LH",
+  "distractors": [
+   {
+    "text": "Blocks estrogen receptors",
+    "why": "Not the mechanism."
+   },
+   {
+    "text": "Raises the LH surge",
+    "why": "Prevents it."
+   },
+   {
+    "text": "Inhibits aromatase",
+    "why": "Not the mechanism."
+   },
+   {
+    "text": "Kills sperm in the cervix",
+    "why": "Not the mechanism."
+   }
+  ],
+  "why_correct": "Exogenous estrogen + progestin feed back to suppress GnRH pulses and FSH/LH — no follicle, no LH surge; progestin thickens mucus.",
+  "takeaway": "The same feedback template as Session 1.",
+  "discriminator": ">99% effective with perfect use.",
+  "src": "L08 S4; S5; S6",
+  "id": "U4-041",
+  "answer": "E",
+  "options": {
+   "A": {
+    "text": "Inhibits aromatase",
+    "why": "Not the mechanism.",
+    "correct": false
+   },
+   "B": {
+    "text": "Raises the LH surge",
+    "why": "Prevents it.",
+    "correct": false
+   },
+   "C": {
+    "text": "Blocks estrogen receptors",
+    "why": "Not the mechanism.",
+    "correct": false
+   },
+   "D": {
+    "text": "Kills sperm in the cervix",
+    "why": "Not the mechanism.",
+    "correct": false
+   },
+   "E": {
+    "text": "Suppresses GnRH, FSH and LH",
+    "why": "Exogenous estrogen + progestin feed back to suppress GnRH pulses and FSH/LH — no follicle, no LH surge; progestin thickens mucus.",
+    "correct": true
+   }
+  },
+  "link": {
+   "href": "../../L08/index.html#gonadal-hormones-inhibitors",
+   "label": "Study this: L08 · Part 1 →"
+  }
+ },
+ {
+  "topic": "Integration",
+  "objectives": [
+   "IO4.1"
+  ],
+  "sg": [],
+  "kind": "mechanism",
+  "stem": "Which drug–site pairing for glucose lowering is correct?",
+  "correct": "Empagliflozin — kidney",
+  "distractors": [
+   {
+    "text": "Metformin — β-cell",
+    "why": "Liver."
+   },
+   {
+    "text": "Glipizide — liver",
+    "why": "β-cell."
+   },
+   {
+    "text": "Pioglitazone — kidney",
+    "why": "Muscle/fat."
+   },
+   {
+    "text": "Sitagliptin — kidney",
+    "why": "Incretin axis."
+   }
+  ],
+  "why_correct": "β-cell: sulfonylureas, meglitinides; liver: metformin; muscle/fat: TZDs; kidney: SGLT2; gut/incretin: GLP-1 RA, DPP-4.",
+  "takeaway": "Place each class on the map.",
+  "discriminator": "Incretin drugs are glucose-dependent.",
+  "src": "L08 S17; SG U4-M",
+  "id": "U4-030",
+  "answer": "E",
+  "options": {
+   "A": {
+    "text": "Sitagliptin — kidney",
+    "why": "Incretin axis.",
+    "correct": false
+   },
+   "B": {
+    "text": "Metformin — β-cell",
+    "why": "Liver.",
+    "correct": false
+   },
+   "C": {
+    "text": "Pioglitazone — kidney",
+    "why": "Muscle/fat.",
+    "correct": false
+   },
+   "D": {
+    "text": "Glipizide — liver",
+    "why": "β-cell.",
+    "correct": false
+   },
+   "E": {
+    "text": "Empagliflozin — kidney",
+    "why": "β-cell: sulfonylureas, meglitinides; liver: metformin; muscle/fat: TZDs; kidney: SGLT2; gut/incretin: GLP-1 RA, DPP-4.",
+    "correct": true
+   }
+  },
+  "link": {
+   "href": "../../L08/index.html#non-insulin-glucose-lowering-drugs",
+   "label": "Study this: L08 · Part 3 →"
+  }
+ },
+ {
+  "topic": "Pituitary",
+  "objectives": [
+   "IO4.2"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A patient on haloperidol develops galactorrhea and a high prolactin. What explains it?",
+  "correct": "Dopamine blockade lifts the brake",
+  "distractors": [
+   {
+    "text": "Haloperidol is a D2 agonist",
+    "why": "D2 antagonist."
+   },
+   {
+    "text": "A new prolactinoma is certain",
+    "why": "Drug cause first."
+   },
+   {
+    "text": "Thyroid storm",
+    "why": "Not related."
+   },
+   {
+    "text": "Excess somatostatin",
+    "why": "Not related."
+   }
+  ],
+  "why_correct": "Antipsychotics and metoclopramide raise prolactin by blocking dopamine’s inhibitory brake.",
+  "takeaway": "Drug-induced hyperprolactinemia: think D2 blockers.",
+  "discriminator": "Avoid unmonitored antipsychotic changes with dopamine agonists.",
+  "src": "L07 S9; S52",
+  "id": "U4-032",
+  "answer": "C",
+  "options": {
+   "A": {
+    "text": "Haloperidol is a D2 agonist",
+    "why": "D2 antagonist.",
+    "correct": false
+   },
+   "B": {
+    "text": "Thyroid storm",
+    "why": "Not related.",
+    "correct": false
+   },
+   "C": {
+    "text": "Dopamine blockade lifts the brake",
+    "why": "Antipsychotics and metoclopramide raise prolactin by blocking dopamine’s inhibitory brake.",
+    "correct": true
+   },
+   "D": {
+    "text": "A new prolactinoma is certain",
+    "why": "Drug cause first.",
+    "correct": false
+   },
+   "E": {
+    "text": "Excess somatostatin",
+    "why": "Not related.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L07/index.html#pituitary-gh-prolactin-adh",
+   "label": "Study this: L07 · Part 1 →"
   }
  },
  {
   "topic": "Thyroid",
   "objectives": [
-   "IO4.4"
+   "IO4.2"
   ],
-  "sg": [
-   "U4-R7"
-  ],
+  "sg": [],
   "kind": "vignette",
-  "stem": "A patient with untreated Graves disease arrives febrile, tachycardic and confused. Correct sequence?",
-  "correct": "Beta-blocker + PTU, then iodine",
+  "stem": "A patient with asthma is in thyroid storm. Which drug choice needs caution?",
+  "correct": "Propranolol",
   "distractors": [
    {
-    "text": "Iodine first, then PTU",
-    "why": "Supplies substrate."
+    "text": "PTU",
+    "why": "Core therapy."
    },
    {
-    "text": "Methimazole alone",
-    "why": "Needs beta-blocker and more."
+    "text": "Hydrocortisone",
+    "why": "Core therapy."
    },
    {
-    "text": "Aspirin for fever first",
-    "why": "Frees bound hormone."
+    "text": "Iodine after PTU",
+    "why": "Core therapy."
    },
    {
-    "text": "Levothyroxine to reset feedback",
-    "why": "Wrong direction."
+    "text": "IV fluids",
+    "why": "Supportive."
    }
   ],
-  "why_correct": "Iodine is given only after PTU; giving it first supplies substrate for new synthesis before synthesis is blocked.",
-  "takeaway": "Storm: block, block, then iodine.",
-  "discriminator": "Steroids blunt conversion and cover adrenal insufficiency.",
-  "src": "L07 S16; S17; S18; SG U4-R7",
-  "id": "U4-011",
+  "why_correct": "Propranolol is avoided in asthma and decompensated heart failure; it blunts symptoms and conversion.",
+  "takeaway": "Storm + asthma → rethink the beta-blocker.",
+  "discriminator": "Avoid aspirin for fever — it frees bound hormone.",
+  "src": "L07 S17; S29 (notes)",
+  "id": "U4-036",
   "answer": "E",
   "options": {
    "A": {
-    "text": "Aspirin for fever first",
-    "why": "Frees bound hormone.",
+    "text": "IV fluids",
+    "why": "Supportive.",
     "correct": false
    },
    "B": {
-    "text": "Levothyroxine to reset feedback",
-    "why": "Wrong direction.",
+    "text": "PTU",
+    "why": "Core therapy.",
     "correct": false
    },
    "C": {
-    "text": "Iodine first, then PTU",
-    "why": "Supplies substrate.",
+    "text": "Iodine after PTU",
+    "why": "Core therapy.",
     "correct": false
    },
    "D": {
-    "text": "Methimazole alone",
-    "why": "Needs beta-blocker and more.",
+    "text": "Hydrocortisone",
+    "why": "Core therapy.",
     "correct": false
    },
    "E": {
-    "text": "Beta-blocker + PTU, then iodine",
-    "why": "Iodine is given only after PTU; giving it first supplies substrate for new synthesis before synthesis is blocked.",
+    "text": "Propranolol",
+    "why": "Propranolol is avoided in asthma and decompensated heart failure; it blunts symptoms and conversion.",
     "correct": true
    }
   },
@@ -1759,10 +2466,10 @@
   "discriminator": "Glargine is never mixed with other insulins.",
   "src": "L08 S12; S13",
   "id": "U4-020",
-  "answer": "C",
+  "answer": "E",
   "options": {
    "A": {
-    "text": "Insulin degludec",
+    "text": "Insulin glargine",
     "why": "Basal, SC.",
     "correct": false
    },
@@ -1772,18 +2479,345 @@
     "correct": false
    },
    "C": {
-    "text": "Regular insulin",
-    "why": "Only regular insulin is given IV; rapid-acting goes with meals, regular 30 minutes before.",
-    "correct": true
-   },
-   "D": {
     "text": "Insulin detemir",
     "why": "Basal, SC.",
     "correct": false
    },
-   "E": {
-    "text": "Insulin glargine",
+   "D": {
+    "text": "Insulin degludec",
     "why": "Basal, SC.",
+    "correct": false
+   },
+   "E": {
+    "text": "Regular insulin",
+    "why": "Only regular insulin is given IV; rapid-acting goes with meals, regular 30 minutes before.",
+    "correct": true
+   }
+  },
+  "link": {
+   "href": "../../L08/index.html#insulin",
+   "label": "Study this: L08 · Part 2 →"
+  }
+ },
+ {
+  "topic": "Adrenal",
+  "objectives": [
+   "IO4.3"
+  ],
+  "sg": [],
+  "kind": "mechanism",
+  "stem": "Which glucocorticoid is the most potent relative to hydrocortisone?",
+  "correct": "Dexamethasone",
+  "distractors": [
+   {
+    "text": "Prednisone",
+    "why": "About 4× — less potent."
+   },
+   {
+    "text": "Hydrocortisone",
+    "why": "Reference (1×)."
+   },
+   {
+    "text": "Fludrocortisone",
+    "why": "Mineralocorticoid."
+   },
+   {
+    "text": "Spironolactone",
+    "why": "Antagonist."
+   }
+  ],
+  "why_correct": "Potency vs. hydrocortisone: prednisone about 4×, dexamethasone about 25–30×.",
+  "takeaway": "Dexamethasone: potent, long-acting, little salt retention.",
+  "discriminator": "Hydrocortisone has mineralocorticoid action too.",
+  "src": "L07 S21",
+  "id": "U4-037",
+  "answer": "D",
+  "options": {
+   "A": {
+    "text": "Spironolactone",
+    "why": "Antagonist.",
+    "correct": false
+   },
+   "B": {
+    "text": "Hydrocortisone",
+    "why": "Reference (1×).",
+    "correct": false
+   },
+   "C": {
+    "text": "Prednisone",
+    "why": "About 4× — less potent.",
+    "correct": false
+   },
+   "D": {
+    "text": "Dexamethasone",
+    "why": "Potency vs. hydrocortisone: prednisone about 4×, dexamethasone about 25–30×.",
+    "correct": true
+   },
+   "E": {
+    "text": "Fludrocortisone",
+    "why": "Mineralocorticoid.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L07/index.html#adrenocorticosteroids-antagonists",
+   "label": "Study this: L07 · Part 3 →"
+  }
+ },
+ {
+  "topic": "Parathyroid",
+  "objectives": [
+   "IO4.1"
+  ],
+  "sg": [],
+  "kind": "mechanism",
+  "stem": "How does cinacalcet lower PTH?",
+  "correct": "Sensitizes the CaSR",
+  "distractors": [
+   {
+    "text": "Replaces vitamin D",
+    "why": "Calcitriol."
+   },
+   {
+    "text": "Blocks the PTH receptor",
+    "why": "Not the mechanism."
+   },
+   {
+    "text": "Binds phosphate in the gut",
+    "why": "Not the mechanism."
+   },
+   {
+    "text": "Inhibits osteoclasts",
+    "why": "Bisphosphonates."
+   }
+  ],
+  "why_correct": "Cinacalcet makes the CaSR more sensitive so the gland reads calcium as high and lowers PTH.",
+  "takeaway": "Calcimimetic = tricks the sensor.",
+  "discriminator": "Nausea, hypocalcemia, QT; CYP2D6 inhibitor.",
+  "src": "L08 S25; S26",
+  "id": "U4-049",
+  "answer": "D",
+  "options": {
+   "A": {
+    "text": "Inhibits osteoclasts",
+    "why": "Bisphosphonates.",
+    "correct": false
+   },
+   "B": {
+    "text": "Replaces vitamin D",
+    "why": "Calcitriol.",
+    "correct": false
+   },
+   "C": {
+    "text": "Blocks the PTH receptor",
+    "why": "Not the mechanism.",
+    "correct": false
+   },
+   "D": {
+    "text": "Sensitizes the CaSR",
+    "why": "Cinacalcet makes the CaSR more sensitive so the gland reads calcium as high and lowers PTH.",
+    "correct": true
+   },
+   "E": {
+    "text": "Binds phosphate in the gut",
+    "why": "Not the mechanism.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L08/index.html#parathyroid-disorders",
+   "label": "Study this: L08 · Part 4 →"
+  }
+ },
+ {
+  "topic": "Glucose-lowering drugs",
+  "objectives": [
+   "IO4.2"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A patient on long-term metformin has numb feet and macrocytic anemia. What should be checked?",
+  "correct": "Vitamin B12",
+  "distractors": [
+   {
+    "text": "Vitamin D",
+    "why": "Bone."
+   },
+   {
+    "text": "Thiamine",
+    "why": "Refeeding."
+   },
+   {
+    "text": "Iron studies",
+    "why": "Microcytic anemia."
+   },
+   {
+    "text": "TSH",
+    "why": "Not the cue."
+   }
+  ],
+  "why_correct": "Long-term metformin causes B12 deficiency (impaired ileal uptake) — monitor B12.",
+  "takeaway": "Metformin + neuropathy → B12.",
+  "discriminator": "Same with long-term PPIs (Unit 3).",
+  "src": "L08 S15; p. 798",
+  "id": "U4-046",
+  "answer": "E",
+  "options": {
+   "A": {
+    "text": "Thiamine",
+    "why": "Refeeding.",
+    "correct": false
+   },
+   "B": {
+    "text": "TSH",
+    "why": "Not the cue.",
+    "correct": false
+   },
+   "C": {
+    "text": "Iron studies",
+    "why": "Microcytic anemia.",
+    "correct": false
+   },
+   "D": {
+    "text": "Vitamin D",
+    "why": "Bone.",
+    "correct": false
+   },
+   "E": {
+    "text": "Vitamin B12",
+    "why": "Long-term metformin causes B12 deficiency (impaired ileal uptake) — monitor B12.",
+    "correct": true
+   }
+  },
+  "link": {
+   "href": "../../L08/index.html#non-insulin-glucose-lowering-drugs",
+   "label": "Study this: L08 · Part 3 →"
+  }
+ },
+ {
+  "topic": "Pituitary",
+  "objectives": [
+   "IO4.4"
+  ],
+  "sg": [
+   "U4-R3"
+  ],
+  "kind": "vignette",
+  "stem": "A woman with galactorrhea and amenorrhea has a prolactinoma. First-line therapy?",
+  "correct": "Cabergoline",
+  "distractors": [
+   {
+    "text": "Octreotide",
+    "why": "GH excess."
+   },
+   {
+    "text": "Metoclopramide",
+    "why": "Raises prolactin."
+   },
+   {
+    "text": "Desmopressin",
+    "why": "Diabetes insipidus."
+   },
+   {
+    "text": "Levothyroxine",
+    "why": "Hypothyroidism."
+   }
+  ],
+  "why_correct": "Dopamine agonists restore dopamine’s inhibitory brake on prolactin; cabergoline is twice weekly and better tolerated.",
+  "takeaway": "Prolactin → dopamine agonist.",
+  "discriminator": "Antipsychotics and metoclopramide raise prolactin.",
+  "src": "L07 S8; S9; SG U4-R3",
+  "id": "U4-004",
+  "answer": "E",
+  "options": {
+   "A": {
+    "text": "Desmopressin",
+    "why": "Diabetes insipidus.",
+    "correct": false
+   },
+   "B": {
+    "text": "Metoclopramide",
+    "why": "Raises prolactin.",
+    "correct": false
+   },
+   "C": {
+    "text": "Levothyroxine",
+    "why": "Hypothyroidism.",
+    "correct": false
+   },
+   "D": {
+    "text": "Octreotide",
+    "why": "GH excess.",
+    "correct": false
+   },
+   "E": {
+    "text": "Cabergoline",
+    "why": "Dopamine agonists restore dopamine’s inhibitory brake on prolactin; cabergoline is twice weekly and better tolerated.",
+    "correct": true
+   }
+  },
+  "link": {
+   "href": "../../L07/index.html#pituitary-gh-prolactin-adh",
+   "label": "Study this: L07 · Part 1 →"
+  }
+ },
+ {
+  "topic": "Insulin",
+  "objectives": [
+   "IO4.5"
+  ],
+  "sg": [],
+  "kind": "mechanism",
+  "stem": "Which insulin is cloudy with variable absorption and a peak at about 4–10 hours?",
+  "correct": "NPH",
+  "distractors": [
+   {
+    "text": "Glargine",
+    "why": "Peakless basal."
+   },
+   {
+    "text": "Lispro",
+    "why": "Rapid-acting."
+   },
+   {
+    "text": "Regular",
+    "why": "Short-acting."
+   },
+   {
+    "text": "Degludec",
+    "why": "Ultra-long basal."
+   }
+  ],
+  "why_correct": "NPH is an intermediate-acting suspension with variable absorption.",
+  "takeaway": "Sort insulins: rapid, short, intermediate, long.",
+  "discriminator": "Glargine must not be mixed with other insulins.",
+  "src": "L08 S12; S13",
+  "id": "U4-043",
+  "answer": "B",
+  "options": {
+   "A": {
+    "text": "Regular",
+    "why": "Short-acting.",
+    "correct": false
+   },
+   "B": {
+    "text": "NPH",
+    "why": "NPH is an intermediate-acting suspension with variable absorption.",
+    "correct": true
+   },
+   "C": {
+    "text": "Degludec",
+    "why": "Ultra-long basal.",
+    "correct": false
+   },
+   "D": {
+    "text": "Lispro",
+    "why": "Rapid-acting.",
+    "correct": false
+   },
+   "E": {
+    "text": "Glargine",
+    "why": "Peakless basal.",
     "correct": false
    }
   },
@@ -1793,62 +2827,395 @@
   }
  },
  {
-  "topic": "Gonadal hormones",
+  "topic": "Glucose-lowering drugs",
   "objectives": [
-   "IO4.3"
+   "IO4.2"
   ],
-  "sg": [],
+  "sg": [
+   "U4-R12"
+  ],
   "kind": "mechanism",
-  "stem": "Which statement about tamoxifen and raloxifene is correct?",
-  "correct": "Only tamoxifen stimulates the uterus",
+  "stem": "Why do SGLT2 inhibitors increase genital yeast infections?",
+  "correct": "Urinary glucose feeds fungi",
   "distractors": [
    {
-    "text": "Only raloxifene raises VTE",
-    "why": "Both do."
+    "text": "They suppress immunity",
+    "why": "Not the mechanism."
    },
    {
-    "text": "Raloxifene treats breast cancer",
-    "why": "Not used to treat it."
+    "text": "They lower renal blood flow",
+    "why": "Not the mechanism."
    },
    {
-    "text": "Both are breast agonists",
-    "why": "Both block breast."
+    "text": "They cause candidemia",
+    "why": "Not the mechanism."
    },
    {
-    "text": "Tamoxifen weakens bone",
-    "why": "Bone agonist."
+    "text": "They raise skin pH",
+    "why": "Not taught."
    }
   ],
-  "why_correct": "Tamoxifen activates the endometrium (cancer risk); raloxifene blocks it; both raise VTE.",
-  "takeaway": "Report bleeding on tamoxifen.",
-  "discriminator": "CYP2D6 inhibitors blunt tamoxifen.",
-  "src": "L08 S7; S8",
-  "id": "U4-017",
-  "answer": "D",
+  "why_correct": "Blocking renal glucose reabsorption raises urinary glucose, favoring fungal overgrowth.",
+  "takeaway": "Glucose in the urine = fuel for yeast.",
+  "discriminator": "Also euglycemic DKA — hold when ill or before surgery.",
+  "src": "L08 S16; S35; SG U4-R12",
+  "id": "U4-024",
+  "answer": "B",
   "options": {
    "A": {
-    "text": "Raloxifene treats breast cancer",
-    "why": "Not used to treat it.",
+    "text": "They suppress immunity",
+    "why": "Not the mechanism.",
     "correct": false
    },
    "B": {
-    "text": "Both are breast agonists",
-    "why": "Both block breast.",
-    "correct": false
+    "text": "Urinary glucose feeds fungi",
+    "why": "Blocking renal glucose reabsorption raises urinary glucose, favoring fungal overgrowth.",
+    "correct": true
    },
    "C": {
-    "text": "Only raloxifene raises VTE",
-    "why": "Both do.",
+    "text": "They cause candidemia",
+    "why": "Not the mechanism.",
     "correct": false
    },
    "D": {
-    "text": "Only tamoxifen stimulates the uterus",
-    "why": "Tamoxifen activates the endometrium (cancer risk); raloxifene blocks it; both raise VTE.",
-    "correct": true
+    "text": "They raise skin pH",
+    "why": "Not taught.",
+    "correct": false
    },
    "E": {
-    "text": "Tamoxifen weakens bone",
-    "why": "Bone agonist.",
+    "text": "They lower renal blood flow",
+    "why": "Not the mechanism.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L08/index.html#putting-it-all-together-endocrine-toolkit",
+   "label": "Study this: L08 · Part 5 →"
+  }
+ },
+ {
+  "topic": "Integration",
+  "objectives": [
+   "IO4.4"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A patient with Graves disease is in thyroid storm and on long-term prednisone. What extra role do steroids play?",
+  "correct": "Block T4→T3; cover the adrenals",
+  "distractors": [
+   {
+    "text": "They block iodide trapping",
+    "why": "Not the role."
+   },
+   {
+    "text": "They replace thyroid hormone",
+    "why": "Wrong direction."
+   },
+   {
+    "text": "They block beta receptors",
+    "why": "Propranolol."
+   },
+   {
+    "text": "They have no role in storm",
+    "why": "They do."
+   }
+  ],
+  "why_correct": "Corticosteroids blunt peripheral T4-to-T3 conversion and cover relative adrenal insufficiency.",
+  "takeaway": "Storm: beta-blocker, PTU, iodine, steroids.",
+  "discriminator": "Chronic steroid users also need stress coverage.",
+  "src": "L07 S16; S17; SG U4-S",
+  "id": "U4-050",
+  "answer": "A",
+  "options": {
+   "A": {
+    "text": "Block T4→T3; cover the adrenals",
+    "why": "Corticosteroids blunt peripheral T4-to-T3 conversion and cover relative adrenal insufficiency.",
+    "correct": true
+   },
+   "B": {
+    "text": "They replace thyroid hormone",
+    "why": "Wrong direction.",
+    "correct": false
+   },
+   "C": {
+    "text": "They block iodide trapping",
+    "why": "Not the role.",
+    "correct": false
+   },
+   "D": {
+    "text": "They block beta receptors",
+    "why": "Propranolol.",
+    "correct": false
+   },
+   "E": {
+    "text": "They have no role in storm",
+    "why": "They do.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L07/index.html#thyroid-antithyroid-drugs",
+   "label": "Study this: L07 · Part 2 →"
+  }
+ },
+ {
+  "topic": "Parathyroid",
+  "objectives": [
+   "IO4.5"
+  ],
+  "sg": [
+   "U4-R13"
+  ],
+  "kind": "vignette",
+  "stem": "A dialysis patient with high PTH starts cinacalcet. What must be monitored?",
+  "correct": "Calcium (hypocalcemia)",
+  "distractors": [
+   {
+    "text": "Calcium (hypercalcemia)",
+    "why": "Calcitriol."
+   },
+   {
+    "text": "Glucose (hyperglycemia)",
+    "why": "Not the target."
+   },
+   {
+    "text": "Potassium",
+    "why": "Not the target."
+   },
+   {
+    "text": "TSH (hypothyroidism)",
+    "why": "Not the target."
+   }
+  ],
+  "why_correct": "Cinacalcet sensitizes the CaSR so PTH and calcium fall; monitor for hypocalcemia (and QT).",
+  "takeaway": "Opposite drugs, opposite monitoring.",
+  "discriminator": "Cinacalcet inhibits CYP2D6.",
+  "src": "L08 S25; S26",
+  "id": "U4-028",
+  "answer": "A",
+  "options": {
+   "A": {
+    "text": "Calcium (hypocalcemia)",
+    "why": "Cinacalcet sensitizes the CaSR so PTH and calcium fall; monitor for hypocalcemia (and QT).",
+    "correct": true
+   },
+   "B": {
+    "text": "Calcium (hypercalcemia)",
+    "why": "Calcitriol.",
+    "correct": false
+   },
+   "C": {
+    "text": "Potassium",
+    "why": "Not the target.",
+    "correct": false
+   },
+   "D": {
+    "text": "TSH (hypothyroidism)",
+    "why": "Not the target.",
+    "correct": false
+   },
+   "E": {
+    "text": "Glucose (hyperglycemia)",
+    "why": "Not the target.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L08/index.html#parathyroid-disorders",
+   "label": "Study this: L08 · Part 4 →"
+  }
+ },
+ {
+  "topic": "Adrenal",
+  "objectives": [
+   "IO4.2"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A patient on spironolactone for hyperaldosteronism also takes lisinopril. What should be monitored?",
+  "correct": "Potassium",
+  "distractors": [
+   {
+    "text": "Glucose",
+    "why": "Not the main risk."
+   },
+   {
+    "text": "TSH",
+    "why": "Not related."
+   },
+   {
+    "text": "Calcium",
+    "why": "Not the main risk."
+   },
+   {
+    "text": "Hematocrit",
+    "why": "Not related."
+   }
+  ],
+  "why_correct": "Spironolactone blocks the mineralocorticoid receptor; ACEi/ARBs and potassium add to hyperkalemia.",
+  "takeaway": "Spironolactone + ACEi → check K⁺.",
+  "discriminator": "Gynecomastia is the other classic effect.",
+  "src": "L07 S23; S24; S52",
+  "id": "U4-040",
+  "answer": "B",
+  "options": {
+   "A": {
+    "text": "TSH",
+    "why": "Not related.",
+    "correct": false
+   },
+   "B": {
+    "text": "Potassium",
+    "why": "Spironolactone blocks the mineralocorticoid receptor; ACEi/ARBs and potassium add to hyperkalemia.",
+    "correct": true
+   },
+   "C": {
+    "text": "Hematocrit",
+    "why": "Not related.",
+    "correct": false
+   },
+   "D": {
+    "text": "Glucose",
+    "why": "Not the main risk.",
+    "correct": false
+   },
+   "E": {
+    "text": "Calcium",
+    "why": "Not the main risk.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L07/index.html#adrenocorticosteroids-antagonists",
+   "label": "Study this: L07 · Part 3 →"
+  }
+ },
+ {
+  "topic": "Thyroid",
+  "objectives": [
+   "IO4.3"
+  ],
+  "sg": [
+   "U4-R6"
+  ],
+  "kind": "vignette",
+  "stem": "A woman at 9 weeks’ gestation has Graves hyperthyroidism. Which drug is preferred now?",
+  "correct": "Propylthiouracil",
+  "distractors": [
+   {
+    "text": "Methimazole",
+    "why": "Avoid in first trimester."
+   },
+   {
+    "text": "Radioactive iodine",
+    "why": "Contraindicated in pregnancy."
+   },
+   {
+    "text": "Potassium iodide alone",
+    "why": "Escape; fetal goiter."
+   },
+   {
+    "text": "Levothyroxine",
+    "why": "Hypothyroidism drug."
+   }
+  ],
+  "why_correct": "PTU is preferred in the first trimester (methimazole teratogenic); switch to methimazole after.",
+  "takeaway": "First trimester and storm → PTU.",
+  "discriminator": "PTU carries the greater liver risk.",
+  "src": "L07 S15; SG U4-R6",
+  "id": "U4-009",
+  "answer": "C",
+  "options": {
+   "A": {
+    "text": "Methimazole",
+    "why": "Avoid in first trimester.",
+    "correct": false
+   },
+   "B": {
+    "text": "Levothyroxine",
+    "why": "Hypothyroidism drug.",
+    "correct": false
+   },
+   "C": {
+    "text": "Propylthiouracil",
+    "why": "PTU is preferred in the first trimester (methimazole teratogenic); switch to methimazole after.",
+    "correct": true
+   },
+   "D": {
+    "text": "Potassium iodide alone",
+    "why": "Escape; fetal goiter.",
+    "correct": false
+   },
+   "E": {
+    "text": "Radioactive iodine",
+    "why": "Contraindicated in pregnancy.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L07/index.html#thyroid-antithyroid-drugs",
+   "label": "Study this: L07 · Part 2 →"
+  }
+ },
+ {
+  "topic": "Gonadal hormones",
+  "objectives": [
+   "IO4.4"
+  ],
+  "sg": [
+   "U4-R10"
+  ],
+  "kind": "vignette",
+  "stem": "A 37-year-old who smokes daily asks for hormonal contraception. Which choice fits?",
+  "correct": "Levonorgestrel IUD",
+  "distractors": [
+   {
+    "text": "Combined pill",
+    "why": "Estrogen contraindicated."
+   },
+   {
+    "text": "Combined patch",
+    "why": "Contains estrogen."
+   },
+   {
+    "text": "Combined ring",
+    "why": "Contains estrogen."
+   },
+   {
+    "text": "Low-dose combined pill",
+    "why": "Still estrogen."
+   }
+  ],
+  "why_correct": "Smoking at 35+ substantially raises estrogen’s thromboembolic risk; progestin-only methods avoid it.",
+  "takeaway": "Smoker ≥ 35, migraine with aura, VTE → progestin-only.",
+  "discriminator": "Rifampin and other inducers → backup method.",
+  "src": "L08 S5; S6; SG U4-R10",
+  "id": "U4-016",
+  "answer": "C",
+  "options": {
+   "A": {
+    "text": "Combined patch",
+    "why": "Contains estrogen.",
+    "correct": false
+   },
+   "B": {
+    "text": "Combined pill",
+    "why": "Estrogen contraindicated.",
+    "correct": false
+   },
+   "C": {
+    "text": "Levonorgestrel IUD",
+    "why": "Smoking at 35+ substantially raises estrogen’s thromboembolic risk; progestin-only methods avoid it.",
+    "correct": true
+   },
+   "D": {
+    "text": "Low-dose combined pill",
+    "why": "Still estrogen.",
+    "correct": false
+   },
+   "E": {
+    "text": "Combined ring",
+    "why": "Contains estrogen.",
     "correct": false
    }
   },
@@ -1860,128 +3227,61 @@
  {
   "topic": "Glucose-lowering drugs",
   "objectives": [
-   "IO4.4"
-  ],
-  "sg": [
-   "U4-S"
-  ],
-  "kind": "vignette",
-  "stem": "A 74-year-old living alone with a prior fall needs an add-on to metformin. Best class?",
-  "correct": "DPP-4 or SGLT2 inhibitor",
-  "distractors": [
-   {
-    "text": "Glyburide (sulfonylurea)",
-    "why": "Hypoglycemia risk."
-   },
-   {
-    "text": "Glipizide (sulfonylurea)",
-    "why": "Hypoglycemia risk."
-   },
-   {
-    "text": "Repaglinide (meglitinide)",
-    "why": "Secretagogue."
-   },
-   {
-    "text": "Mealtime insulin lispro",
-    "why": "Hypoglycemia risk."
-   }
-  ],
-  "why_correct": "Low intrinsic hypoglycemia risk; sulfonylureas force glucose-independent insulin release, raising fall risk.",
-  "takeaway": "Most potent ≠ most appropriate.",
-  "discriminator": "Match the drug to the patient’s risk profile.",
-  "src": "L08 S20; S21; SG U4-S",
-  "id": "U4-022",
-  "answer": "C",
-  "options": {
-   "A": {
-    "text": "Glyburide (sulfonylurea)",
-    "why": "Hypoglycemia risk.",
-    "correct": false
-   },
-   "B": {
-    "text": "Mealtime insulin lispro",
-    "why": "Hypoglycemia risk.",
-    "correct": false
-   },
-   "C": {
-    "text": "DPP-4 or SGLT2 inhibitor",
-    "why": "Low intrinsic hypoglycemia risk; sulfonylureas force glucose-independent insulin release, raising fall risk.",
-    "correct": true
-   },
-   "D": {
-    "text": "Glipizide (sulfonylurea)",
-    "why": "Hypoglycemia risk.",
-    "correct": false
-   },
-   "E": {
-    "text": "Repaglinide (meglitinide)",
-    "why": "Secretagogue.",
-    "correct": false
-   }
-  },
-  "link": {
-   "href": "../../L08/index.html#non-insulin-glucose-lowering-drugs",
-   "label": "Study this: L08 · Part 3 →"
-  }
- },
- {
-  "topic": "Integration",
-  "objectives": [
-   "IO4.1"
+   "IO4.2"
   ],
   "sg": [],
-  "kind": "mechanism",
-  "stem": "Which drug–site pairing for glucose lowering is correct?",
-  "correct": "Empagliflozin — kidney",
+  "kind": "vignette",
+  "stem": "A patient on empagliflozin is admitted for surgery and is vomiting. What should happen?",
+  "correct": "Hold empagliflozin",
   "distractors": [
    {
-    "text": "Metformin — β-cell",
-    "why": "Liver."
+    "text": "Double the dose",
+    "why": "Raises risk."
    },
    {
-    "text": "Glipizide — liver",
-    "why": "β-cell."
+    "text": "Continue unchanged",
+    "why": "Hold it."
    },
    {
-    "text": "Pioglitazone — kidney",
-    "why": "Muscle/fat."
+    "text": "Add a sulfonylurea",
+    "why": "Not the step."
    },
    {
-    "text": "Sitagliptin — kidney",
-    "why": "Incretin axis."
+    "text": "Give it with food",
+    "why": "Not the issue."
    }
   ],
-  "why_correct": "β-cell: sulfonylureas, meglitinides; liver: metformin; muscle/fat: TZDs; kidney: SGLT2; gut/incretin: GLP-1 RA, DPP-4.",
-  "takeaway": "Place each class on the map.",
-  "discriminator": "Incretin drugs are glucose-dependent.",
-  "src": "L08 S17; SG U4-M",
-  "id": "U4-030",
-  "answer": "E",
+  "why_correct": "SGLT2 inhibitors risk volume depletion and euglycemic DKA — hold when ill or before surgery.",
+  "takeaway": "Sick day or surgery → hold SGLT2.",
+  "discriminator": "Genital yeast infections; rare Fournier gangrene.",
+  "src": "L08 S16",
+  "id": "U4-045",
+  "answer": "D",
   "options": {
    "A": {
-    "text": "Pioglitazone — kidney",
-    "why": "Muscle/fat.",
+    "text": "Continue unchanged",
+    "why": "Hold it.",
     "correct": false
    },
    "B": {
-    "text": "Glipizide — liver",
-    "why": "β-cell.",
+    "text": "Double the dose",
+    "why": "Raises risk.",
     "correct": false
    },
    "C": {
-    "text": "Metformin — β-cell",
-    "why": "Liver.",
+    "text": "Add a sulfonylurea",
+    "why": "Not the step.",
     "correct": false
    },
    "D": {
-    "text": "Sitagliptin — kidney",
-    "why": "Incretin axis.",
-    "correct": false
+    "text": "Hold empagliflozin",
+    "why": "SGLT2 inhibitors risk volume depletion and euglycemic DKA — hold when ill or before surgery.",
+    "correct": true
    },
    "E": {
-    "text": "Empagliflozin — kidney",
-    "why": "β-cell: sulfonylureas, meglitinides; liver: metformin; muscle/fat: TZDs; kidney: SGLT2; gut/incretin: GLP-1 RA, DPP-4.",
-    "correct": true
+    "text": "Give it with food",
+    "why": "Not the issue.",
+    "correct": false
    }
   },
   "link": {

@@ -27,6 +27,13 @@ def final_tile(up):
             '<h3>Final prep</h3><p>Every unit so far: by-unit scores, your misses, and a timed final mock.</p></div><span class="tile-go">Open →</span></a>')
 
 
+def final_exam_tile(up):
+    if not (ROOT / "docs" / "exams" / "final" / "index.html").exists():
+        return ""
+    return (f'<a class="tile appear" style="--d:.06s" href="{up}exams/final/index.html"><span class="tile-ic">{icon("timer")}</span><div><div class="tile-k">100 questions · 100 minutes</div>'
+            '<h3>Comprehensive final mock</h3><p>A fixed exam across all six units, in your exam’s decision style, with a debrief at the end.</p></div><span class="tile-go">Start →</span></a>')
+
+
 def unit_tiles(u, syl, built, exams_built, up="", full=False):
     """A unit's practice. Home (full=False): its review + the main practice exam. Practice page (full=True):
     every practice exam, every lecture self-test, and the cumulative card."""
@@ -108,7 +115,7 @@ def practice_page(syl, built, exams_built):
 <script type="application/json" id="qp-data">{qp_json}</script>
 <section class="section" id="tools"><div class="wrap"><p class="kicker">Tools</p><h2>Cards and quick sets</h2><div class="bento bento-2">{tools}</div></div></section>
 <div id="pr-units">{secs}</div>
-<section class="section" id="final"><div class="wrap"><p class="kicker">Cumulative</p><h2>Final prep</h2><div class="bento bento-2">{final_tile("../")}</div></div></section>
+<section class="section" id="final"><div class="wrap"><p class="kicker">Cumulative</p><h2>Final prep</h2><div class="bento bento-2">{final_tile("../")}{final_exam_tile("../")}</div></div></section>
 <script type="application/json" id="practice-data">{upnext}</script>
 <script src="../assets/mol3d.js"></script><script src="../assets/dotd.js"></script><script src="../assets/quizprep.js"></script>"""
     return page(f"Prepare · {SITE_NAME}", body, depth=1, active="practice")

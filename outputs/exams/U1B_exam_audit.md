@@ -30,8 +30,8 @@
 - Sequence: `EBAABDAADCBDACBCADCBECCEDEADBCEDCEEABCCEEDDBAEADBB`
 
 ## Option-length audit (can length give the answer away?)
-- Correct answer's length rank among its 5 options (1 = shortest, 5 = longest): rank 1: 7 · rank 2: 9 · rank 3: 11 · rank 4: 11 · rank 5: 12
-- Word-count spread within a question (longest − shortest option): 0 words: 12 · 1 words: 11 · 2 words: 12 · 3 words: 6 · 4 words: 4 · 5 words: 4 · 6 words: 1
+- Correct answer's length rank among its 5 options (1 = shortest, 5 = longest): rank 1: 10 · rank 2: 10 · rank 3: 13 · rank 4: 9 · rank 5: 8
+- Word-count spread within a question (longest − shortest option): 0 words: 12 · 1 words: 13 · 2 words: 10 · 3 words: 8 · 4 words: 3 · 5 words: 3 · 6 words: 1
 
 ## Interleaving
 - Longest run of same-topic questions back to back: 1

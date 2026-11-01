@@ -76,7 +76,7 @@ BANK_B = [
       "L10 S15; S17"),
     Q("Other antihypertensives", ["IO5.2"], [], "mechanism",
       "Why is hydralazine given with a beta-blocker and a diuretic?",
-      "To offset reflex tachycardia and edema",
+      "To offset reflex effects",
       [("To prevent rebound hypertension", "Clonidine."), ("To block bradykinin cough", "ACE inhibitors."),
        ("To raise its oral bioavailability", "Not the reason."), ("To prevent hyperkalemia it causes", "Not the reason.")],
       "Direct arteriolar dilation triggers reflex tachycardia and salt and water retention.",

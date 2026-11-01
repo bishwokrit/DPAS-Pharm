@@ -341,7 +341,7 @@
   "sg": [],
   "kind": "mechanism",
   "stem": "Which statement about the order of metabolism phases is correct?",
-  "correct": "Phase I often comes first, but not always",
+  "correct": "Phase I usually first, not always",
   "distractors": [
    {
     "text": "Phase II must always follow Phase I",
@@ -383,7 +383,7 @@
     "correct": false
    },
    "D": {
-    "text": "Phase I often comes first, but not always",
+    "text": "Phase I usually first, not always",
     "why": "Phase I often comes before Phase II, but not always — some drugs go straight to conjugation.",
     "correct": true
    },
@@ -541,7 +541,7 @@
   "correct": "Bile and feces",
   "distractors": [
    {
-    "text": "The lungs",
+    "text": "The lungs (exhaled)",
     "why": "The lungs eliminate volatile agents."
    },
    {
@@ -549,11 +549,11 @@
     "why": "A minor route that matters in lactation."
    },
    {
-    "text": "Sweat glands",
+    "text": "Sweat glands (skin)",
     "why": "A minor route."
    },
    {
-    "text": "The kidney",
+    "text": "The kidney (urine)",
     "why": "The kidney is the dominant route for MOST drugs."
    }
   ],
@@ -565,17 +565,17 @@
   "answer": "D",
   "options": {
    "A": {
-    "text": "The lungs",
+    "text": "The lungs (exhaled)",
     "why": "The lungs eliminate volatile agents.",
     "correct": false
    },
    "B": {
-    "text": "Sweat glands",
+    "text": "Sweat glands (skin)",
     "why": "A minor route.",
     "correct": false
    },
    "C": {
-    "text": "The kidney",
+    "text": "The kidney (urine)",
     "why": "The kidney is the dominant route for MOST drugs.",
     "correct": false
    },
@@ -1595,11 +1595,11 @@
   "correct": "Ion channels",
   "distractors": [
    {
-    "text": "Enzymes",
+    "text": "Enzymes (catalytic)",
     "why": "Drugs inhibit or, less commonly, activate enzyme activity."
    },
    {
-    "text": "Transporters",
+    "text": "Membrane transporters",
     "why": "Transporters are carrier proteins that move substances."
    },
    {
@@ -1619,7 +1619,7 @@
   "answer": "B",
   "options": {
    "A": {
-    "text": "Enzymes",
+    "text": "Enzymes (catalytic)",
     "why": "Drugs inhibit or, less commonly, activate enzyme activity.",
     "correct": false
    },
@@ -1639,7 +1639,7 @@
     "correct": false
    },
    "E": {
-    "text": "Transporters",
+    "text": "Membrane transporters",
     "why": "Transporters are carrier proteins that move substances.",
     "correct": false
    }
@@ -2058,11 +2058,11 @@
     "why": "Important for some large or protein-bound drugs."
    },
    {
-    "text": "The lungs",
+    "text": "The lungs (exhaled)",
     "why": "For volatile agents (anesthetic gases)."
    },
    {
-    "text": "Sweat glands",
+    "text": "Sweat glands (skin)",
     "why": "A minor route."
    },
    {
@@ -2078,7 +2078,7 @@
   "answer": "D",
   "options": {
    "A": {
-    "text": "Sweat glands",
+    "text": "Sweat glands (skin)",
     "why": "A minor route.",
     "correct": false
    },
@@ -2088,7 +2088,7 @@
     "correct": false
    },
    "C": {
-    "text": "The lungs",
+    "text": "The lungs (exhaled)",
     "why": "For volatile agents (anesthetic gases).",
     "correct": false
    },
@@ -2265,7 +2265,7 @@
     "why": "HLA-B*5801 affects allopurinol reactions."
    },
    {
-    "text": "CYP3A4",
+    "text": "CYP3A4 enzyme",
     "why": "CYP3A4 was used for the interaction example."
    }
   ],
@@ -2277,7 +2277,7 @@
   "answer": "D",
   "options": {
    "A": {
-    "text": "CYP3A4",
+    "text": "CYP3A4 enzyme",
     "why": "CYP3A4 was used for the interaction example.",
     "correct": false
    },
@@ -2516,7 +2516,7 @@
   ],
   "kind": "vignette",
   "stem": "A PA wants a patient's drug to avoid hepatic first-pass metabolism. Which route enters systemic venous circulation directly?",
-  "correct": "Sublingual, under-the-tongue absorption",
+  "correct": "Sublingual (under the tongue)",
   "distractors": [
    {
     "text": "Oral, taken on an empty stomach",
@@ -2558,7 +2558,7 @@
     "correct": false
    },
    "D": {
-    "text": "Sublingual, under-the-tongue absorption",
+    "text": "Sublingual (under the tongue)",
     "why": "Sublingual absorption enters systemic venous circulation directly, bypassing the portal vein and the liver's first-pass metabolism.",
     "correct": true
    },
@@ -2844,7 +2844,7 @@
   "sg": [],
   "kind": "mechanism",
   "stem": "Which two parameters together determine half-life?",
-  "correct": "Clearance and volume of distribution",
+  "correct": "Clearance and Vd",
   "distractors": [
    {
     "text": "Bioavailability and potency",
@@ -2871,7 +2871,7 @@
   "answer": "A",
   "options": {
    "A": {
-    "text": "Clearance and volume of distribution",
+    "text": "Clearance and Vd",
     "why": "Half-life is determined by clearance and Vd together — not a fixed drug property independent of physiology.",
     "correct": true
    },
@@ -5306,7 +5306,7 @@
     "why": "CYP2C19 affects clopidogrel activation and some antidepressant/PPI dosing."
    },
    {
-    "text": "CYP3A4",
+    "text": "CYP3A4 enzyme",
     "why": "CYP3A4 was the inhibitor/substrate interaction example."
    },
    {
@@ -5326,7 +5326,7 @@
   "answer": "B",
   "options": {
    "A": {
-    "text": "CYP3A4",
+    "text": "CYP3A4 enzyme",
     "why": "CYP3A4 was the inhibitor/substrate interaction example.",
     "correct": false
    },
@@ -5498,7 +5498,7 @@
   "sg": [],
   "kind": "mechanism",
   "stem": "Which statement about routes and first-pass metabolism matches the lecture?",
-  "correct": "Essentially every route except oral bypasses it",
+  "correct": "Nearly every non-oral route",
   "distractors": [
    {
     "text": "Only the IV route bypasses first-pass",
@@ -5535,7 +5535,7 @@
     "correct": false
    },
    "C": {
-    "text": "Essentially every route except oral bypasses it",
+    "text": "Nearly every non-oral route",
     "why": "Routes that bypass first-pass: essentially everything except oral — IV, sublingual, inhaled, transdermal, topical, SC, IM.",
     "correct": true
    },
@@ -6025,7 +6025,7 @@
   "sg": [],
   "kind": "mechanism",
   "stem": "Which can genetic variation alter, according to the lecture?",
-  "correct": "Metabolism, transport, target, and response",
+  "correct": "Metabolism, transport, target, response",
   "distractors": [
    {
     "text": "Only drug metabolism by CYP enzymes",
@@ -6052,7 +6052,7 @@
   "answer": "A",
   "options": {
    "A": {
-    "text": "Metabolism, transport, target, and response",
+    "text": "Metabolism, transport, target, response",
     "why": "Genetic variation can alter drug metabolism (CYP activity), transport, target structure/expression, and overall response and ADR risk.",
     "correct": true
    },

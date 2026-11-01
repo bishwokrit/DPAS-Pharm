@@ -205,7 +205,7 @@
   "sg": [],
   "kind": "vignette",
   "stem": "A patient on lithium develops worsening chronic kidney disease. What is the safest plan?",
-  "correct": "Lower the dose or extend the interval and check levels",
+  "correct": "Lower dose or extend interval; check levels",
   "distractors": [
    {
     "text": "Keep the dose, since lithium is liver-cleared",
@@ -232,7 +232,7 @@
   "answer": "A",
   "options": {
    "A": {
-    "text": "Lower the dose or extend the interval and check levels",
+    "text": "Lower dose or extend interval; check levels",
     "why": "Renally cleared, narrow-TI drugs (lithium, digoxin, many antibiotics) need a dose or interval adjustment in renal impairment, guided by eGFR/CrCl, with blood levels.",
     "correct": true
    },
@@ -471,7 +471,7 @@
   ],
   "kind": "vignette",
   "stem": "A patient on digoxin has nausea and a level of 2.6 ng/mL (textbook target about 1 ng/mL; toxic above 2). What is the best interpretation?",
-  "correct": "The level is in the toxic range for a narrow-TI drug",
+  "correct": "The level is in the toxic range",
   "distractors": [
    {
     "text": "The level is ideal; continue the same dose",
@@ -498,7 +498,7 @@
   "answer": "A",
   "options": {
    "A": {
-    "text": "The level is in the toxic range for a narrow-TI drug",
+    "text": "The level is in the toxic range",
     "why": "Digoxin is a classic narrow-TI drug (target ~1 ng/mL, toxic >2 ng/mL in the textbook table); small changes push it into toxicity, so levels are monitored.",
     "correct": true
    },
@@ -807,7 +807,7 @@
   "sg": [],
   "kind": "vignette",
   "stem": "A patient with HIV tests positive for HLA-B*57:01. What does this mean for abacavir?",
-  "correct": "Abacavir is contraindicated (hypersensitivity)",
+  "correct": "Abacavir is contraindicated",
   "distractors": [
    {
     "text": "Abacavir needs a higher dose",
@@ -834,7 +834,7 @@
   "answer": "A",
   "options": {
    "A": {
-    "text": "Abacavir is contraindicated (hypersensitivity)",
+    "text": "Abacavir is contraindicated",
     "why": "Abacavir is contraindicated in HLA-B*57:01-positive patients because of hypersensitivity — like HLA-B*58:01 with allopurinol.",
     "correct": true
    },
@@ -872,7 +872,7 @@
   "sg": [],
   "kind": "mechanism",
   "stem": "How does protamine reverse heparin's anticoagulant effect?",
-  "correct": "It binds heparin directly (chemical antagonism)",
+  "correct": "It binds heparin directly",
   "distractors": [
    {
     "text": "It competes with heparin at its receptor",
@@ -909,7 +909,7 @@
     "correct": false
    },
    "C": {
-    "text": "It binds heparin directly (chemical antagonism)",
+    "text": "It binds heparin directly",
     "why": "Positively charged protamine binds negatively charged heparin, neutralizing it — chemical antagonism needs no receptor.",
     "correct": true
    },
@@ -1269,15 +1269,15 @@
   "correct": "Nucleic acids (DNA/RNA)",
   "distractors": [
    {
-    "text": "Ion channels",
+    "text": "Ion channels (gated)",
     "why": "Ion channels gate the flow of ions across membranes."
    },
    {
-    "text": "Enzymes",
+    "text": "Enzymes (catalytic)",
     "why": "Drugs inhibit (or rarely activate) enzymes."
    },
    {
-    "text": "Transporters",
+    "text": "Membrane transporters",
     "why": "Transporters are carrier proteins."
    },
    {
@@ -1293,7 +1293,7 @@
   "answer": "B",
   "options": {
    "A": {
-    "text": "Ion channels",
+    "text": "Ion channels (gated)",
     "why": "Ion channels gate the flow of ions across membranes.",
     "correct": false
    },
@@ -1308,12 +1308,12 @@
     "correct": false
    },
    "D": {
-    "text": "Transporters",
+    "text": "Membrane transporters",
     "why": "Transporters are carrier proteins.",
     "correct": false
    },
    "E": {
-    "text": "Enzymes",
+    "text": "Enzymes (catalytic)",
     "why": "Drugs inhibit (or rarely activate) enzymes.",
     "correct": false
    }
@@ -2121,7 +2121,7 @@
   "sg": [],
   "kind": "mechanism",
   "stem": "Which statement reflects the textbook's view of drug selectivity?",
-  "correct": "No drug causes only a single specific effect",
+  "correct": "No drug has only one effect",
   "distractors": [
    {
     "text": "Each drug binds only one receptor type",
@@ -2158,7 +2158,7 @@
     "correct": false
    },
    "C": {
-    "text": "No drug causes only a single specific effect",
+    "text": "No drug has only one effect",
     "why": "Drugs are selective rather than specific: no drug causes only a single effect, so 'side effects' are expected pharmacologic effects.",
     "correct": true
    },
@@ -2783,7 +2783,7 @@
   "sg": [],
   "kind": "mechanism",
   "stem": "What does the textbook mean by \"spare receptors\"?",
-  "correct": "Maximal response occurs without full receptor occupancy",
+  "correct": "Full response without full occupancy",
   "distractors": [
    {
     "text": "Receptors that cannot bind any drug at all",
@@ -2825,7 +2825,7 @@
     "correct": false
    },
    "D": {
-    "text": "Maximal response occurs without full receptor occupancy",
+    "text": "Full response without full occupancy",
     "why": "Receptors are 'spare' when a maximal response can be produced without occupying all of them (e.g., ~90% of cardiac β receptors can be blocked and maximal inotropic response preserved).",
     "correct": true
    },
@@ -2848,10 +2848,10 @@
   "sg": [],
   "kind": "mechanism",
   "stem": "Which efflux transporter is found in the brain and testes and limits drug entry there?",
-  "correct": "P-glycoprotein (MDR1)",
+  "correct": "P-glycoprotein",
   "distractors": [
    {
-    "text": "CYP3A4",
+    "text": "CYP3A4 enzyme",
     "why": "CYP3A4 is a metabolizing enzyme."
    },
    {
@@ -2863,7 +2863,7 @@
     "why": "Albumin binds drug in plasma."
    },
    {
-    "text": "VKORC1",
+    "text": "VKORC1 enzyme",
     "why": "VKORC1 is the warfarin target gene."
    }
   ],
@@ -2875,12 +2875,12 @@
   "answer": "B",
   "options": {
    "A": {
-    "text": "CYP3A4",
+    "text": "CYP3A4 enzyme",
     "why": "CYP3A4 is a metabolizing enzyme.",
     "correct": false
    },
    "B": {
-    "text": "P-glycoprotein (MDR1)",
+    "text": "P-glycoprotein",
     "why": "P-glycoprotein (MDR1), an ABC efflux transporter in the brain, testes, and other tissues, pumps drugs back out.",
     "correct": true
    },
@@ -2890,7 +2890,7 @@
     "correct": false
    },
    "D": {
-    "text": "VKORC1",
+    "text": "VKORC1 enzyme",
     "why": "VKORC1 is the warfarin target gene.",
     "correct": false
    },

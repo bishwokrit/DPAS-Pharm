@@ -2,261 +2,61 @@
  {
   "topic": "RAAS blockers",
   "objectives": [
-   "IO5.6"
-  ],
-  "sg": [],
-  "kind": "vignette",
-  "stem": "A patient on lisinopril asks what to do during a bout of vomiting and diarrhea. Best advice?",
-  "correct": "Hold lisinopril until drinking normally",
-  "distractors": [
-   {
-    "text": "Double the dose to protect the kidney",
-    "why": "Raises AKI risk."
-   },
-   {
-    "text": "Add ibuprofen for cramps",
-    "why": "Triple-whammy risk."
-   },
-   {
-    "text": "Keep taking it without change",
-    "why": "Sick-day rules apply."
-   },
-   {
-    "text": "Switch to aliskiren",
-    "why": "Not a sick-day plan."
-   }
-  ],
-  "why_correct": "Sick-day rules: hold ACEi/ARB during volume depletion — reduced perfusion plus RAAS blockade can precipitate AKI.",
-  "takeaway": "Dehydration + RAAS blocker → hold.",
-  "discriminator": "Same principle drives the triple whammy.",
-  "src": "L10 S8; S9",
-  "id": "U5-021",
-  "answer": "E",
-  "options": {
-   "A": {
-    "text": "Double the dose to protect the kidney",
-    "why": "Raises AKI risk.",
-    "correct": false
-   },
-   "B": {
-    "text": "Add ibuprofen for cramps",
-    "why": "Triple-whammy risk.",
-    "correct": false
-   },
-   "C": {
-    "text": "Switch to aliskiren",
-    "why": "Not a sick-day plan.",
-    "correct": false
-   },
-   "D": {
-    "text": "Keep taking it without change",
-    "why": "Sick-day rules apply.",
-    "correct": false
-   },
-   "E": {
-    "text": "Hold lisinopril until drinking normally",
-    "why": "Sick-day rules: hold ACEi/ARB during volume depletion — reduced perfusion plus RAAS blockade can precipitate AKI.",
-    "correct": true
-   }
-  },
-  "link": {
-   "href": "../../L10/index.html#raas-blockers",
-   "label": "Study this: L10 · Part 1 →"
-  }
- },
- {
-  "topic": "Angina & nitrates",
-  "objectives": [
-   "IO5.2",
-   "IO5.6"
-  ],
-  "sg": [
-   "U5-R11"
-  ],
-  "kind": "vignette",
-  "stem": "A man with stable angina asks whether he can use sildenafil. He carries nitroglycerin. Best answer?",
-  "correct": "No — risk of severe hypotension",
-  "distractors": [
-   {
-    "text": "Yes, if doses are 6 hours apart",
-    "why": "Absolute contraindication."
-   },
-   {
-    "text": "Yes, nitrates prevent tolerance",
-    "why": "Not relevant."
-   },
-   {
-    "text": "Yes, sildenafil lowers preload less",
-    "why": "The combination is dangerous."
-   },
-   {
-    "text": "Only if he also takes a beta-blocker",
-    "why": "Still contraindicated."
-   }
-  ],
-  "why_correct": "PDE5 inhibitors block cGMP breakdown; with nitrates, life-threatening hypotension — an absolute contraindication.",
-  "takeaway": "Nitrate + -afil = never.",
-  "discriminator": "One of the highest-stakes safety points in the unit.",
-  "src": "L10 S19; S20; SG U5-R11",
-  "id": "U5-026",
-  "answer": "B",
-  "options": {
-   "A": {
-    "text": "Only if he also takes a beta-blocker",
-    "why": "Still contraindicated.",
-    "correct": false
-   },
-   "B": {
-    "text": "No — risk of severe hypotension",
-    "why": "PDE5 inhibitors block cGMP breakdown; with nitrates, life-threatening hypotension — an absolute contraindication.",
-    "correct": true
-   },
-   "C": {
-    "text": "Yes, sildenafil lowers preload less",
-    "why": "The combination is dangerous.",
-    "correct": false
-   },
-   "D": {
-    "text": "Yes, nitrates prevent tolerance",
-    "why": "Not relevant.",
-    "correct": false
-   },
-   "E": {
-    "text": "Yes, if doses are 6 hours apart",
-    "why": "Absolute contraindication.",
-    "correct": false
-   }
-  },
-  "link": {
-   "href": "../../L10/index.html#nitrates-angina-the-triple-whammy",
-   "label": "Study this: L10 · Part 3 →"
-  }
- },
- {
-  "topic": "Loop vs. thiazide",
-  "objectives": [
    "IO5.2"
   ],
   "sg": [],
   "kind": "vignette",
-  "stem": "An older woman on hydrochlorothiazide is confused with sodium 121 mEq/L. Which statement fits?",
-  "correct": "Thiazide-induced hyponatremia",
+  "stem": "A patient develops lip and tongue swelling a month after starting lisinopril. Best step?",
+  "correct": "Stop the ACE inhibitor",
   "distractors": [
    {
-    "text": "Loop-type hyponatremia, not thiazide",
-    "why": "Thiazides do."
+    "text": "Switch to enalapril",
+    "why": "Same class."
    },
    {
-    "text": "Thiazides raise sodium",
-    "why": "They lower it."
+    "text": "Add an antihistamine, continue",
+    "why": "Stop the drug."
    },
    {
-    "text": "This is hyperkalemia",
-    "why": "Thiazides lower potassium."
+    "text": "Lower the dose",
+    "why": "Not enough."
    },
    {
-    "text": "This is lithium toxicity",
-    "why": "No lithium given."
+    "text": "Add aliskiren",
+    "why": "Never combine."
    }
   ],
-  "why_correct": "Thiazide hyponatremia can be significant, especially in older adults.",
-  "takeaway": "Thiazide AEs: ↓Na, ↓K, ↑glucose, ↑uric acid, ↑Ca.",
-  "discriminator": "Loops are, if anything, protective against hyponatremia (textbook).",
-  "src": "L09 S12; p. 272",
-  "id": "U5-009",
+  "why_correct": "Angioedema is rare but life-threatening — stop the drug.",
+  "takeaway": "Cough → switch to ARB; angioedema → stop.",
+  "discriminator": "Bradykinin accumulation drives both.",
+  "src": "L10 S5; S6",
+  "id": "U5-041",
   "answer": "E",
   "options": {
    "A": {
-    "text": "This is lithium toxicity",
-    "why": "No lithium given.",
+    "text": "Switch to enalapril",
+    "why": "Same class.",
     "correct": false
    },
    "B": {
-    "text": "This is hyperkalemia",
-    "why": "Thiazides lower potassium.",
+    "text": "Add aliskiren",
+    "why": "Never combine.",
     "correct": false
    },
    "C": {
-    "text": "Thiazides raise sodium",
-    "why": "They lower it.",
+    "text": "Add an antihistamine, continue",
+    "why": "Stop the drug.",
     "correct": false
    },
    "D": {
-    "text": "Loop-type hyponatremia, not thiazide",
-    "why": "Thiazides do.",
+    "text": "Lower the dose",
+    "why": "Not enough.",
     "correct": false
    },
    "E": {
-    "text": "Thiazide-induced hyponatremia",
-    "why": "Thiazide hyponatremia can be significant, especially in older adults.",
+    "text": "Stop the ACE inhibitor",
+    "why": "Angioedema is rare but life-threatening — stop the drug.",
     "correct": true
-   }
-  },
-  "link": {
-   "href": "../../L09/index.html#loop-thiazide-diuretics",
-   "label": "Study this: L09 · Part 2 →"
-  }
- },
- {
-  "topic": "RAAS blockers",
-  "objectives": [
-   "IO5.3"
-  ],
-  "sg": [
-   "U5-R8"
-  ],
-  "kind": "mechanism",
-  "stem": "Why are ACE inhibitors and ARBs preferred in proteinuric CKD?",
-  "correct": "They dilate the efferent arteriole",
-  "distractors": [
-   {
-    "text": "They constrict the afferent arteriole",
-    "why": "That is NSAIDs."
-   },
-   {
-    "text": "They raise aldosterone",
-    "why": "They lower it."
-   },
-   {
-    "text": "They lower BP more than any class",
-    "why": "BP lowering is similar."
-   },
-   {
-    "text": "They are the only class allowed",
-    "why": "Other classes are used."
-   }
-  ],
-  "why_correct": "Less angiotensin II dilates the efferent arteriole, lowering intraglomerular pressure and proteinuria — renoprotection beyond BP.",
-  "takeaway": "Similar BP lowering; ACEi/ARBs add renoprotection.",
-  "discriminator": "The same action explains the creatinine rise.",
-  "src": "L10 S8; S14; SG U5-R8",
-  "id": "U5-018",
-  "answer": "D",
-  "options": {
-   "A": {
-    "text": "They constrict the afferent arteriole",
-    "why": "That is NSAIDs.",
-    "correct": false
-   },
-   "B": {
-    "text": "They raise aldosterone",
-    "why": "They lower it.",
-    "correct": false
-   },
-   "C": {
-    "text": "They are the only class allowed",
-    "why": "Other classes are used.",
-    "correct": false
-   },
-   "D": {
-    "text": "They dilate the efferent arteriole",
-    "why": "Less angiotensin II dilates the efferent arteriole, lowering intraglomerular pressure and proteinuria — renoprotection beyond BP.",
-    "correct": true
-   },
-   "E": {
-    "text": "They lower BP more than any class",
-    "why": "BP lowering is similar.",
-    "correct": false
    }
   },
   "link": {
@@ -299,7 +99,7 @@
   "discriminator": "Thiazides help calcium stones and osteoporosis; loops help hypercalcemia.",
   "src": "L09 S11; S13; SG U5-R3",
   "id": "U5-005",
-  "answer": "C",
+  "answer": "D",
   "options": {
    "A": {
     "text": "Thiazides block NKCC2 in the loop",
@@ -312,14 +112,14 @@
     "correct": false
    },
    "C": {
-    "text": "Loops collapse the lumen potential",
-    "why": "NKCC2 block collapses the lumen-positive potential that drives paracellular Ca²⁺/Mg²⁺ reabsorption; thiazides lower cell Na⁺ so NCX reabsorbs more Ca²⁺.",
-    "correct": true
-   },
-   "D": {
     "text": "Loops block calcium channels directly",
     "why": "Not the mechanism.",
     "correct": false
+   },
+   "D": {
+    "text": "Loops collapse the lumen potential",
+    "why": "NKCC2 block collapses the lumen-positive potential that drives paracellular Ca²⁺/Mg²⁺ reabsorption; thiazides lower cell Na⁺ so NCX reabsorbs more Ca²⁺.",
+    "correct": true
    },
    "E": {
     "text": "Both block the same cotransporter",
@@ -333,68 +133,200 @@
   }
  },
  {
-  "topic": "CAI & osmotic",
+  "topic": "RAAS blockers",
   "objectives": [
-   "IO5.2"
+   "IO5.3"
   ],
-  "sg": [],
+  "sg": [
+   "U5-R8"
+  ],
   "kind": "mechanism",
-  "stem": "Which acid–base change does acetazolamide predictably cause?",
-  "correct": "Metabolic acidosis",
+  "stem": "Why are ACE inhibitors and ARBs preferred in proteinuric CKD?",
+  "correct": "They dilate the efferent arteriole",
   "distractors": [
    {
-    "text": "Metabolic alkalosis",
-    "why": "Loops and thiazides."
+    "text": "They constrict the afferent arteriole",
+    "why": "That is NSAIDs."
    },
    {
-    "text": "Respiratory acidosis",
-    "why": "Not the drug effect."
+    "text": "They raise aldosterone",
+    "why": "They lower it."
    },
    {
-    "text": "Respiratory alkalosis",
-    "why": "It counters this at altitude."
+    "text": "They lower BP more than any class",
+    "why": "BP lowering is similar."
    },
    {
-    "text": "No change",
-    "why": "Acidosis is predictable."
+    "text": "They are the only class allowed",
+    "why": "Other classes are used."
    }
   ],
-  "why_correct": "Blocking carbonic anhydrase causes bicarbonate diuresis and metabolic acidosis.",
-  "takeaway": "CAI = acidosis; loops/thiazides = alkalosis.",
-  "discriminator": "Watch for kidney stones and potassium loss.",
-  "src": "L09 S19; S20",
-  "id": "U5-014",
+  "why_correct": "Less angiotensin II dilates the efferent arteriole, lowering intraglomerular pressure and proteinuria — renoprotection beyond BP.",
+  "takeaway": "Similar BP lowering; ACEi/ARBs add renoprotection.",
+  "discriminator": "The same action explains the creatinine rise.",
+  "src": "L10 S8; S14; SG U5-R8",
+  "id": "U5-018",
   "answer": "A",
   "options": {
    "A": {
-    "text": "Metabolic acidosis",
-    "why": "Blocking carbonic anhydrase causes bicarbonate diuresis and metabolic acidosis.",
+    "text": "They dilate the efferent arteriole",
+    "why": "Less angiotensin II dilates the efferent arteriole, lowering intraglomerular pressure and proteinuria — renoprotection beyond BP.",
     "correct": true
    },
    "B": {
-    "text": "Metabolic alkalosis",
-    "why": "Loops and thiazides.",
+    "text": "They are the only class allowed",
+    "why": "Other classes are used.",
     "correct": false
    },
    "C": {
-    "text": "No change",
-    "why": "Acidosis is predictable.",
+    "text": "They raise aldosterone",
+    "why": "They lower it.",
     "correct": false
    },
    "D": {
-    "text": "Respiratory acidosis",
-    "why": "Not the drug effect.",
+    "text": "They constrict the afferent arteriole",
+    "why": "That is NSAIDs.",
     "correct": false
    },
    "E": {
-    "text": "Respiratory alkalosis",
-    "why": "It counters this at altitude.",
+    "text": "They lower BP more than any class",
+    "why": "BP lowering is similar.",
     "correct": false
    }
   },
   "link": {
-   "href": "../../L09/index.html#potassium-sparing-cai-osmotic-diuretics",
-   "label": "Study this: L09 · Part 3 →"
+   "href": "../../L10/index.html#raas-blockers",
+   "label": "Study this: L10 · Part 1 →"
+  }
+ },
+ {
+  "topic": "Loop vs. thiazide",
+  "objectives": [
+   "IO5.4"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A woman with hypertension, normal renal function and recurrent calcium kidney stones needs a diuretic. Which fits best?",
+  "correct": "Hydrochlorothiazide",
+  "distractors": [
+   {
+    "text": "Furosemide (loop)",
+    "why": "Increases calcium excretion."
+   },
+   {
+    "text": "Acetazolamide (CAI)",
+    "why": "Promotes stones."
+   },
+   {
+    "text": "Mannitol (osmotic)",
+    "why": "IV for ICP/IOP."
+   },
+   {
+    "text": "Bumetanide (loop)",
+    "why": "Loop; raises urinary calcium."
+   }
+  ],
+  "why_correct": "Thiazides decrease calcium excretion — first-line HTN and helpful for calcium stones.",
+  "takeaway": "Stones + HTN → thiazide.",
+  "discriminator": "Textbook: add fluid, cut salt, don’t restrict dietary calcium.",
+  "src": "L09 S12; S30; p. 280",
+  "id": "U5-007",
+  "answer": "B",
+  "options": {
+   "A": {
+    "text": "Bumetanide (loop)",
+    "why": "Loop; raises urinary calcium.",
+    "correct": false
+   },
+   "B": {
+    "text": "Hydrochlorothiazide",
+    "why": "Thiazides decrease calcium excretion — first-line HTN and helpful for calcium stones.",
+    "correct": true
+   },
+   "C": {
+    "text": "Furosemide (loop)",
+    "why": "Increases calcium excretion.",
+    "correct": false
+   },
+   "D": {
+    "text": "Mannitol (osmotic)",
+    "why": "IV for ICP/IOP.",
+    "correct": false
+   },
+   "E": {
+    "text": "Acetazolamide (CAI)",
+    "why": "Promotes stones.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L09/index.html#loop-thiazide-diuretics",
+   "label": "Study this: L09 · Part 2 →"
+  }
+ },
+ {
+  "topic": "RAAS blockers",
+  "objectives": [
+   "IO5.5"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A week after starting losartan, creatinine rose 45% with a soft BP. What should be evaluated?",
+  "correct": "Volume loss or artery stenosis",
+  "distractors": [
+   {
+    "text": "Nothing; it is expected",
+    "why": "> 30% is not."
+   },
+   {
+    "text": "Losartan allergy",
+    "why": "Not the cue."
+   },
+   {
+    "text": "Thyroid function",
+    "why": "Not related."
+   },
+   {
+    "text": "Liver enzymes",
+    "why": "Not related."
+   }
+  ],
+  "why_correct": "Up to ~30% is expected; a larger rise warrants checking for volume depletion or renal artery stenosis.",
+  "takeaway": "Thirty is fine, more is a sign.",
+  "discriminator": "Bilateral renal artery stenosis is a contraindication.",
+  "src": "L10 S9; S10; SG U5-R9",
+  "id": "U5-043",
+  "answer": "B",
+  "options": {
+   "A": {
+    "text": "Losartan allergy",
+    "why": "Not the cue.",
+    "correct": false
+   },
+   "B": {
+    "text": "Volume loss or artery stenosis",
+    "why": "Up to ~30% is expected; a larger rise warrants checking for volume depletion or renal artery stenosis.",
+    "correct": true
+   },
+   "C": {
+    "text": "Liver enzymes",
+    "why": "Not related.",
+    "correct": false
+   },
+   "D": {
+    "text": "Thyroid function",
+    "why": "Not related.",
+    "correct": false
+   },
+   "E": {
+    "text": "Nothing; it is expected",
+    "why": "> 30% is not.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L10/index.html#raas-blockers",
+   "label": "Study this: L10 · Part 1 →"
   }
  },
  {
@@ -431,7 +363,7 @@
   "discriminator": "Nitrate-free interval prevents tolerance.",
   "src": "L10 S19; S20; SG U5-R11",
   "id": "U5-025",
-  "answer": "E",
+  "answer": "C",
   "options": {
    "A": {
     "text": "ACE inhibition lowers angiotensin II",
@@ -439,29 +371,224 @@
     "correct": false
    },
    "B": {
-    "text": "PDE5 inhibition raises cAMP",
-    "why": "PDE5 inhibitors.",
-    "correct": false
-   },
-   "C": {
-    "text": "L-type Ca²⁺ channel block",
-    "why": "CCBs.",
-    "correct": false
-   },
-   "D": {
     "text": "β1 blockade slows the heart",
     "why": "Beta-blockers.",
     "correct": false
    },
-   "E": {
+   "C": {
     "text": "NO → cGMP → venodilation, lower preload",
     "why": "Nitric oxide activates guanylate cyclase, raising cGMP; venodilation reduces preload and myocardial oxygen demand.",
     "correct": true
+   },
+   "D": {
+    "text": "PDE5 inhibition raises cAMP",
+    "why": "PDE5 inhibitors.",
+    "correct": false
+   },
+   "E": {
+    "text": "L-type Ca²⁺ channel block",
+    "why": "CCBs.",
+    "correct": false
    }
   },
   "link": {
    "href": "../../L10/index.html#nitrates-angina-the-triple-whammy",
    "label": "Study this: L10 · Part 3 →"
+  }
+ },
+ {
+  "topic": "Loop vs. thiazide",
+  "objectives": [
+   "IO5.2"
+  ],
+  "sg": [],
+  "kind": "mechanism",
+  "stem": "Which electrolyte pattern do loop diuretics produce?",
+  "correct": "↓K, ↓Mg, metabolic alkalosis",
+  "distractors": [
+   {
+    "text": "↑K, metabolic acidosis",
+    "why": "K⁺-sparing."
+   },
+   {
+    "text": "↓Na with ↑Ca",
+    "why": "Thiazides."
+   },
+   {
+    "text": "Metabolic acidosis, ↓HCO₃",
+    "why": "Acetazolamide."
+   },
+   {
+    "text": "No electrolyte changes",
+    "why": "Not true."
+   }
+  ],
+  "why_correct": "Loops: hypokalemia, hypomagnesemia, metabolic alkalosis, hyperuricemia, ototoxicity.",
+  "takeaway": "Loops waste K, Mg, Ca.",
+  "discriminator": "Hypokalemia raises digoxin toxicity.",
+  "src": "L09 S10",
+  "id": "U5-034",
+  "answer": "C",
+  "options": {
+   "A": {
+    "text": "↓Na with ↑Ca",
+    "why": "Thiazides.",
+    "correct": false
+   },
+   "B": {
+    "text": "No electrolyte changes",
+    "why": "Not true.",
+    "correct": false
+   },
+   "C": {
+    "text": "↓K, ↓Mg, metabolic alkalosis",
+    "why": "Loops: hypokalemia, hypomagnesemia, metabolic alkalosis, hyperuricemia, ototoxicity.",
+    "correct": true
+   },
+   "D": {
+    "text": "Metabolic acidosis, ↓HCO₃",
+    "why": "Acetazolamide.",
+    "correct": false
+   },
+   "E": {
+    "text": "↑K, metabolic acidosis",
+    "why": "K⁺-sparing.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L09/index.html#loop-thiazide-diuretics",
+   "label": "Study this: L09 · Part 2 →"
+  }
+ },
+ {
+  "topic": "Potassium-sparing",
+  "objectives": [
+   "IO5.2"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A patient on spironolactone is prescribed trimethoprim-sulfamethoxazole. Main concern?",
+  "correct": "Hyperkalemia",
+  "distractors": [
+   {
+    "text": "Hyponatremia only",
+    "why": "Not the main concern."
+   },
+   {
+    "text": "Ototoxicity",
+    "why": "Loops."
+   },
+   {
+    "text": "Metabolic alkalosis",
+    "why": "Loops/thiazides."
+   },
+   {
+    "text": "Lithium toxicity",
+    "why": "Not given."
+   }
+  ],
+  "why_correct": "Potassium supplements and trimethoprim add hyperkalemia with potassium-sparing diuretics.",
+  "takeaway": "K⁺-sparing + anything that holds K⁺ → check K⁺.",
+  "discriminator": "Also ACEi/ARB and CKD.",
+  "src": "L09 S38; S17",
+  "id": "U5-038",
+  "answer": "E",
+  "options": {
+   "A": {
+    "text": "Hyponatremia only",
+    "why": "Not the main concern.",
+    "correct": false
+   },
+   "B": {
+    "text": "Metabolic alkalosis",
+    "why": "Loops/thiazides.",
+    "correct": false
+   },
+   "C": {
+    "text": "Ototoxicity",
+    "why": "Loops.",
+    "correct": false
+   },
+   "D": {
+    "text": "Lithium toxicity",
+    "why": "Not given.",
+    "correct": false
+   },
+   "E": {
+    "text": "Hyperkalemia",
+    "why": "Potassium supplements and trimethoprim add hyperkalemia with potassium-sparing diuretics.",
+    "correct": true
+   }
+  },
+  "link": {
+   "href": "../../L09/index.html#potassium-sparing-cai-osmotic-diuretics",
+   "label": "Study this: L09 · Part 3 →"
+  }
+ },
+ {
+  "topic": "RAAS blockers",
+  "objectives": [
+   "IO5.6"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A patient on lisinopril asks what to do during a bout of vomiting and diarrhea. Best advice?",
+  "correct": "Hold lisinopril until drinking normally",
+  "distractors": [
+   {
+    "text": "Double the dose to protect the kidney",
+    "why": "Raises AKI risk."
+   },
+   {
+    "text": "Add ibuprofen for cramps",
+    "why": "Triple-whammy risk."
+   },
+   {
+    "text": "Keep taking it without change",
+    "why": "Sick-day rules apply."
+   },
+   {
+    "text": "Switch to aliskiren",
+    "why": "Not a sick-day plan."
+   }
+  ],
+  "why_correct": "Sick-day rules: hold ACEi/ARB during volume depletion — reduced perfusion plus RAAS blockade can precipitate AKI.",
+  "takeaway": "Dehydration + RAAS blocker → hold.",
+  "discriminator": "Same principle drives the triple whammy.",
+  "src": "L10 S8; S9",
+  "id": "U5-021",
+  "answer": "E",
+  "options": {
+   "A": {
+    "text": "Double the dose to protect the kidney",
+    "why": "Raises AKI risk.",
+    "correct": false
+   },
+   "B": {
+    "text": "Switch to aliskiren",
+    "why": "Not a sick-day plan.",
+    "correct": false
+   },
+   "C": {
+    "text": "Keep taking it without change",
+    "why": "Sick-day rules apply.",
+    "correct": false
+   },
+   "D": {
+    "text": "Add ibuprofen for cramps",
+    "why": "Triple-whammy risk.",
+    "correct": false
+   },
+   "E": {
+    "text": "Hold lisinopril until drinking normally",
+    "why": "Sick-day rules: hold ACEi/ARB during volume depletion — reduced perfusion plus RAAS blockade can precipitate AKI.",
+    "correct": true
+   }
+  },
+  "link": {
+   "href": "../../L10/index.html#raas-blockers",
+   "label": "Study this: L10 · Part 1 →"
   }
  },
  {
@@ -501,8 +628,8 @@
   "answer": "B",
   "options": {
    "A": {
-    "text": "Stop all diuretics",
-    "why": "A loop remains effective.",
+    "text": "Increase chlorthalidone to the maximum",
+    "why": "The site lacks filtered sodium.",
     "correct": false
    },
    "B": {
@@ -511,18 +638,18 @@
     "correct": true
    },
    "C": {
-    "text": "Increase chlorthalidone to the maximum",
-    "why": "The site lacks filtered sodium.",
-    "correct": false
-   },
-   "D": {
     "text": "Switch to acetazolamide",
     "why": "Weak; avoided in kidney disease.",
     "correct": false
    },
-   "E": {
+   "D": {
     "text": "Add hydrochlorothiazide",
     "why": "Same failing site.",
+    "correct": false
+   },
+   "E": {
+    "text": "Stop all diuretics",
+    "why": "A loop remains effective.",
     "correct": false
    }
   },
@@ -532,62 +659,197 @@
   }
  },
  {
+  "topic": "Angina & nitrates",
+  "objectives": [
+   "IO5.2",
+   "IO5.6"
+  ],
+  "sg": [
+   "U5-R11"
+  ],
+  "kind": "vignette",
+  "stem": "A man with stable angina asks whether he can use sildenafil. He carries nitroglycerin. Best answer?",
+  "correct": "No — risk of severe hypotension",
+  "distractors": [
+   {
+    "text": "Yes, if doses are 6 hours apart",
+    "why": "Absolute contraindication."
+   },
+   {
+    "text": "Yes, nitrates prevent tolerance",
+    "why": "Not relevant."
+   },
+   {
+    "text": "Yes, sildenafil lowers preload less",
+    "why": "The combination is dangerous."
+   },
+   {
+    "text": "Only if he also takes a beta-blocker",
+    "why": "Still contraindicated."
+   }
+  ],
+  "why_correct": "PDE5 inhibitors block cGMP breakdown; with nitrates, life-threatening hypotension — an absolute contraindication.",
+  "takeaway": "Nitrate + -afil = never.",
+  "discriminator": "One of the highest-stakes safety points in the unit.",
+  "src": "L10 S19; S20; SG U5-R11",
+  "id": "U5-026",
+  "answer": "E",
+  "options": {
+   "A": {
+    "text": "Yes, if doses are 6 hours apart",
+    "why": "Absolute contraindication.",
+    "correct": false
+   },
+   "B": {
+    "text": "Only if he also takes a beta-blocker",
+    "why": "Still contraindicated.",
+    "correct": false
+   },
+   "C": {
+    "text": "Yes, nitrates prevent tolerance",
+    "why": "Not relevant.",
+    "correct": false
+   },
+   "D": {
+    "text": "Yes, sildenafil lowers preload less",
+    "why": "The combination is dangerous.",
+    "correct": false
+   },
+   "E": {
+    "text": "No — risk of severe hypotension",
+    "why": "PDE5 inhibitors block cGMP breakdown; with nitrates, life-threatening hypotension — an absolute contraindication.",
+    "correct": true
+   }
+  },
+  "link": {
+   "href": "../../L10/index.html#nitrates-angina-the-triple-whammy",
+   "label": "Study this: L10 · Part 3 →"
+  }
+ },
+ {
+  "topic": "RAAS blockers",
+  "objectives": [
+   "IO5.1"
+  ],
+  "sg": [
+   "U5-R7"
+  ],
+  "kind": "mechanism",
+  "stem": "Which drug blocks the RAAS at the step that converts angiotensin I to angiotensin II?",
+  "correct": "Lisinopril",
+  "distractors": [
+   {
+    "text": "Losartan",
+    "why": "Blocks the AT1 receptor."
+   },
+   {
+    "text": "Aliskiren",
+    "why": "Blocks renin."
+   },
+   {
+    "text": "Spironolactone",
+    "why": "Blocks the aldosterone receptor."
+   },
+   {
+    "text": "Amlodipine",
+    "why": "Not a RAAS blocker."
+   }
+  ],
+  "why_correct": "ACE inhibitors (-pril) block angiotensin I → II; ARBs block AT1; aliskiren blocks renin; spironolactone blocks aldosterone.",
+  "takeaway": "Renin → ACE → AT1 → aldosterone: four blockers, four steps.",
+  "discriminator": "Angiotensin II drives vasoconstriction and aldosterone release.",
+  "src": "L10 S4; S5; SG U5-R7",
+  "id": "U5-016",
+  "answer": "A",
+  "options": {
+   "A": {
+    "text": "Lisinopril",
+    "why": "ACE inhibitors (-pril) block angiotensin I → II; ARBs block AT1; aliskiren blocks renin; spironolactone blocks aldosterone.",
+    "correct": true
+   },
+   "B": {
+    "text": "Aliskiren",
+    "why": "Blocks renin.",
+    "correct": false
+   },
+   "C": {
+    "text": "Spironolactone",
+    "why": "Blocks the aldosterone receptor.",
+    "correct": false
+   },
+   "D": {
+    "text": "Losartan",
+    "why": "Blocks the AT1 receptor.",
+    "correct": false
+   },
+   "E": {
+    "text": "Amlodipine",
+    "why": "Not a RAAS blocker.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L10/index.html#raas-blockers",
+   "label": "Study this: L10 · Part 1 →"
+  }
+ },
+ {
   "topic": "Other antihypertensives",
   "objectives": [
    "IO5.2"
   ],
   "sg": [],
-  "kind": "vignette",
-  "stem": "A patient on metoprolol develops second-degree AV block after a new BP drug. Which drug was added?",
-  "correct": "Verapamil",
+  "kind": "mechanism",
+  "stem": "Why is hydralazine given with a beta-blocker and a diuretic?",
+  "correct": "To offset reflex effects",
   "distractors": [
    {
-    "text": "Amlodipine",
-    "why": "Pairs safely with beta-blockers."
+    "text": "To prevent rebound hypertension",
+    "why": "Clonidine."
    },
    {
-    "text": "Losartan",
-    "why": "No conduction effect."
+    "text": "To block bradykinin cough",
+    "why": "ACE inhibitors."
    },
    {
-    "text": "Hydralazine",
-    "why": "Causes reflex tachycardia."
+    "text": "To raise its oral bioavailability",
+    "why": "Not the reason."
    },
    {
-    "text": "Lisinopril",
-    "why": "No conduction effect."
+    "text": "To prevent hyperkalemia it causes",
+    "why": "Not the reason."
    }
   ],
-  "why_correct": "Non-DHP CCBs (diltiazem, verapamil) plus a beta-blocker → bradycardia and AV block.",
-  "takeaway": "Never stack two heart-slowers.",
-  "discriminator": "DHPs act on arterioles, not the AV node.",
-  "src": "L10 S13; S46",
-  "id": "U5-022",
-  "answer": "C",
+  "why_correct": "Direct arteriolar dilation triggers reflex tachycardia and salt and water retention.",
+  "takeaway": "Hydralazine never travels alone.",
+  "discriminator": "Clonidine: rebound hypertension if stopped abruptly.",
+  "src": "L10 S16; p. 280",
+  "id": "U5-024",
+  "answer": "A",
   "options": {
    "A": {
-    "text": "Hydralazine",
-    "why": "Causes reflex tachycardia.",
-    "correct": false
+    "text": "To offset reflex effects",
+    "why": "Direct arteriolar dilation triggers reflex tachycardia and salt and water retention.",
+    "correct": true
    },
    "B": {
-    "text": "Amlodipine",
-    "why": "Pairs safely with beta-blockers.",
+    "text": "To prevent rebound hypertension",
+    "why": "Clonidine.",
     "correct": false
    },
    "C": {
-    "text": "Verapamil",
-    "why": "Non-DHP CCBs (diltiazem, verapamil) plus a beta-blocker → bradycardia and AV block.",
-    "correct": true
+    "text": "To raise its oral bioavailability",
+    "why": "Not the reason.",
+    "correct": false
    },
    "D": {
-    "text": "Losartan",
-    "why": "No conduction effect.",
+    "text": "To block bradykinin cough",
+    "why": "ACE inhibitors.",
     "correct": false
    },
    "E": {
-    "text": "Lisinopril",
-    "why": "No conduction effect.",
+    "text": "To prevent hyperkalemia it causes",
+    "why": "Not the reason.",
     "correct": false
    }
   },
@@ -597,64 +859,585 @@
   }
  },
  {
-  "topic": "Potassium-sparing",
+  "topic": "Triple whammy",
   "objectives": [
-   "IO5.1"
+   "IO5.6"
   ],
-  "sg": [
-   "U5-R5"
-  ],
-  "kind": "mechanism",
-  "stem": "Which statement about potassium-sparing diuretics is correct?",
-  "correct": "Amiloride blocks ENaC; spironolactone, the receptor",
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A patient on valsartan and furosemide has back pain. Which pain reliever plan is safest per the lecture?",
+  "correct": "Avoid regular NSAIDs",
   "distractors": [
    {
-    "text": "Both block NKCC2 in the thick ascending limb",
-    "why": "That is loops."
+    "text": "Daily naproxen is fine",
+    "why": "Triple whammy."
    },
    {
-    "text": "Amiloride blocks the aldosterone receptor",
-    "why": "Amiloride blocks ENaC."
+    "text": "Ibuprofen with extra water",
+    "why": "Still risky."
    },
    {
-    "text": "Spironolactone blocks ENaC directly",
-    "why": "It blocks the receptor."
+    "text": "Stop valsartan to allow NSAIDs",
+    "why": "Not the counseling."
    },
    {
-    "text": "Both cause hypokalemia, like the loops do",
-    "why": "Both cause hyperkalemia."
+    "text": "Double furosemide with NSAIDs",
+    "why": "Worse."
    }
   ],
-  "why_correct": "Aldosterone antagonists (spironolactone, eplerenone) vs. ENaC blockers (amiloride, triamterene); shared risk hyperkalemia.",
-  "takeaway": "Block the hormone or block the channel.",
-  "discriminator": "Spironolactone is antiandrogen; eplerenone mostly isn’t.",
-  "src": "L09 S17; S18; SG U5-R5",
-  "id": "U5-010",
+  "why_correct": "On a RAAS blocker and diuretic, avoid regular NSAIDs and ask before any OTC product.",
+  "takeaway": "RAAS blocker + diuretic → no routine NSAIDs.",
+  "discriminator": "The preventable element is what the patient was told.",
+  "src": "L10 S27; SG U5-S",
+  "id": "U5-050",
   "answer": "C",
   "options": {
    "A": {
-    "text": "Amiloride blocks the aldosterone receptor",
-    "why": "Amiloride blocks ENaC.",
+    "text": "Double furosemide with NSAIDs",
+    "why": "Worse.",
     "correct": false
    },
    "B": {
-    "text": "Both block NKCC2 in the thick ascending limb",
-    "why": "That is loops.",
+    "text": "Stop valsartan to allow NSAIDs",
+    "why": "Not the counseling.",
     "correct": false
    },
    "C": {
-    "text": "Amiloride blocks ENaC; spironolactone, the receptor",
-    "why": "Aldosterone antagonists (spironolactone, eplerenone) vs. ENaC blockers (amiloride, triamterene); shared risk hyperkalemia.",
+    "text": "Avoid regular NSAIDs",
+    "why": "On a RAAS blocker and diuretic, avoid regular NSAIDs and ask before any OTC product.",
     "correct": true
    },
    "D": {
-    "text": "Spironolactone blocks ENaC directly",
-    "why": "It blocks the receptor.",
+    "text": "Daily naproxen is fine",
+    "why": "Triple whammy.",
     "correct": false
    },
    "E": {
-    "text": "Both cause hypokalemia, like the loops do",
-    "why": "Both cause hyperkalemia.",
+    "text": "Ibuprofen with extra water",
+    "why": "Still risky.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L10/index.html#nitrates-angina-the-triple-whammy",
+   "label": "Study this: L10 · Part 3 →"
+  }
+ },
+ {
+  "topic": "Renal dosing",
+  "objectives": [
+   "IO5.5"
+  ],
+  "sg": [
+   "U5-R1"
+  ],
+  "kind": "mechanism",
+  "stem": "Why must a renally cleared drug be adjusted when GFR falls?",
+  "correct": "It accumulates unless dosing changes",
+  "distractors": [
+   {
+    "text": "Its oral absorption falls along with GFR",
+    "why": "GFR affects elimination."
+   },
+   {
+    "text": "It is cleared faster in CKD",
+    "why": "Clearance falls."
+   },
+   {
+    "text": "Its loading dose must always double",
+    "why": "Loading doses are often unchanged."
+   },
+   {
+    "text": "Only its metabolites need adjusting",
+    "why": "Parent drug and active metabolites both matter."
+   }
+  ],
+  "why_correct": "Reduced GFR causes accumulation; reduce the dose, extend the interval, or both.",
+  "takeaway": "Falling GFR → accumulation → toxicity.",
+  "discriminator": "Maintenance doses get adjusted; loading doses often don’t.",
+  "src": "L09 S5; S6; S8; SG U5-R1",
+  "id": "U5-001",
+  "answer": "C",
+  "options": {
+   "A": {
+    "text": "Only its metabolites need adjusting",
+    "why": "Parent drug and active metabolites both matter.",
+    "correct": false
+   },
+   "B": {
+    "text": "It is cleared faster in CKD",
+    "why": "Clearance falls.",
+    "correct": false
+   },
+   "C": {
+    "text": "It accumulates unless dosing changes",
+    "why": "Reduced GFR causes accumulation; reduce the dose, extend the interval, or both.",
+    "correct": true
+   },
+   "D": {
+    "text": "Its loading dose must always double",
+    "why": "Loading doses are often unchanged.",
+    "correct": false
+   },
+   "E": {
+    "text": "Its oral absorption falls along with GFR",
+    "why": "GFR affects elimination.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L09/index.html#renal-dosing-diuretic-sites",
+   "label": "Study this: L09 · Part 1 →"
+  }
+ },
+ {
+  "topic": "Angina & nitrates",
+  "objectives": [
+   "IO5.2"
+  ],
+  "sg": [],
+  "kind": "mechanism",
+  "stem": "What is the most common adverse effect of nitrates, and why?",
+  "correct": "Headache from vasodilation",
+  "distractors": [
+   {
+    "text": "Bradycardia from vagal tone",
+    "why": "Reflex tachycardia."
+   },
+   {
+    "text": "Hyperkalemia",
+    "why": "Not nitrates."
+   },
+   {
+    "text": "Dry cough",
+    "why": "ACE inhibitors."
+   },
+   {
+    "text": "Constipation",
+    "why": "Verapamil."
+   }
+  ],
+  "why_correct": "Nitrate adverse effects: headache (vasodilation), reflex tachycardia, orthostatic hypotension.",
+  "takeaway": "Nitrates: headache, flush, dizzy.",
+  "discriminator": "Tolerance → nitrate-free interval.",
+  "src": "L10 S19",
+  "id": "U5-048",
+  "answer": "A",
+  "options": {
+   "A": {
+    "text": "Headache from vasodilation",
+    "why": "Nitrate adverse effects: headache (vasodilation), reflex tachycardia, orthostatic hypotension.",
+    "correct": true
+   },
+   "B": {
+    "text": "Hyperkalemia",
+    "why": "Not nitrates.",
+    "correct": false
+   },
+   "C": {
+    "text": "Bradycardia from vagal tone",
+    "why": "Reflex tachycardia.",
+    "correct": false
+   },
+   "D": {
+    "text": "Constipation",
+    "why": "Verapamil.",
+    "correct": false
+   },
+   "E": {
+    "text": "Dry cough",
+    "why": "ACE inhibitors.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L10/index.html#nitrates-angina-the-triple-whammy",
+   "label": "Study this: L10 · Part 3 →"
+  }
+ },
+ {
+  "topic": "Other antihypertensives",
+  "objectives": [
+   "IO5.2"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A patient on amlodipine has ankle swelling without heart failure. Most likely cause?",
+  "correct": "Dihydropyridine CCB edema",
+  "distractors": [
+   {
+    "text": "Loop diuretic resistance",
+    "why": "Not the cue."
+   },
+   {
+    "text": "ACE-inhibitor angioedema",
+    "why": "Not ankles."
+   },
+   {
+    "text": "Hyperkalemia",
+    "why": "Not edema."
+   },
+   {
+    "text": "Beta-blocker fatigue",
+    "why": "Not edema."
+   }
+  ],
+  "why_correct": "Peripheral edema is a CCB class adverse effect, especially dihydropyridines.",
+  "takeaway": "Amlodipine → ankle edema.",
+  "discriminator": "Non-DHPs: bradycardia, constipation.",
+  "src": "L10 S12; S22; S43",
+  "id": "U5-044",
+  "answer": "B",
+  "options": {
+   "A": {
+    "text": "Loop diuretic resistance",
+    "why": "Not the cue.",
+    "correct": false
+   },
+   "B": {
+    "text": "Dihydropyridine CCB edema",
+    "why": "Peripheral edema is a CCB class adverse effect, especially dihydropyridines.",
+    "correct": true
+   },
+   "C": {
+    "text": "Hyperkalemia",
+    "why": "Not edema.",
+    "correct": false
+   },
+   "D": {
+    "text": "ACE-inhibitor angioedema",
+    "why": "Not ankles.",
+    "correct": false
+   },
+   "E": {
+    "text": "Beta-blocker fatigue",
+    "why": "Not edema.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L10/index.html#other-antihypertensives-resistant-hypertension",
+   "label": "Study this: L10 · Part 2 →"
+  }
+ },
+ {
+  "topic": "Loop vs. thiazide",
+  "objectives": [
+   "IO5.2"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "An older woman on hydrochlorothiazide is confused with sodium 121 mEq/L. Which statement fits?",
+  "correct": "Thiazide-induced hyponatremia",
+  "distractors": [
+   {
+    "text": "Loop-type hyponatremia, not thiazide",
+    "why": "Thiazides do."
+   },
+   {
+    "text": "Thiazides raise sodium",
+    "why": "They lower it."
+   },
+   {
+    "text": "This is hyperkalemia",
+    "why": "Thiazides lower potassium."
+   },
+   {
+    "text": "This is lithium toxicity",
+    "why": "No lithium given."
+   }
+  ],
+  "why_correct": "Thiazide hyponatremia can be significant, especially in older adults.",
+  "takeaway": "Thiazide AEs: ↓Na, ↓K, ↑glucose, ↑uric acid, ↑Ca.",
+  "discriminator": "Loops are, if anything, protective against hyponatremia (textbook).",
+  "src": "L09 S12; p. 272",
+  "id": "U5-009",
+  "answer": "A",
+  "options": {
+   "A": {
+    "text": "Thiazide-induced hyponatremia",
+    "why": "Thiazide hyponatremia can be significant, especially in older adults.",
+    "correct": true
+   },
+   "B": {
+    "text": "Thiazides raise sodium",
+    "why": "They lower it.",
+    "correct": false
+   },
+   "C": {
+    "text": "This is hyperkalemia",
+    "why": "Thiazides lower potassium.",
+    "correct": false
+   },
+   "D": {
+    "text": "This is lithium toxicity",
+    "why": "No lithium given.",
+    "correct": false
+   },
+   "E": {
+    "text": "Loop-type hyponatremia, not thiazide",
+    "why": "Thiazides do.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L09/index.html#loop-thiazide-diuretics",
+   "label": "Study this: L09 · Part 2 →"
+  }
+ },
+ {
+  "topic": "Angina & nitrates",
+  "objectives": [
+   "IO5.5"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A patient on isosorbide mononitrate twice daily, around the clock, reports angina returning. Likely cause?",
+  "correct": "Tolerance from no nitrate-free gap",
+  "distractors": [
+   {
+    "text": "Hyperkalemia from the nitrate",
+    "why": "Not a nitrate effect."
+   },
+   {
+    "text": "Bradykinin accumulation",
+    "why": "ACE inhibitors."
+   },
+   {
+    "text": "Reflex bradycardia from the nitrate",
+    "why": "Nitrates cause tachycardia."
+   },
+   {
+    "text": "AV block from the nitrate",
+    "why": "Non-DHP CCBs."
+   }
+  ],
+  "why_correct": "Continuous exposure causes tolerance; a nitrate-free interval (typically overnight) maintains efficacy.",
+  "takeaway": "Long-acting nitrate → planned gap.",
+  "discriminator": "Isosorbide dinitrate profile: 14-hour nitrate-free interval.",
+  "src": "L10 S19; S53; S54",
+  "id": "U5-028",
+  "answer": "C",
+  "options": {
+   "A": {
+    "text": "AV block from the nitrate",
+    "why": "Non-DHP CCBs.",
+    "correct": false
+   },
+   "B": {
+    "text": "Hyperkalemia from the nitrate",
+    "why": "Not a nitrate effect.",
+    "correct": false
+   },
+   "C": {
+    "text": "Tolerance from no nitrate-free gap",
+    "why": "Continuous exposure causes tolerance; a nitrate-free interval (typically overnight) maintains efficacy.",
+    "correct": true
+   },
+   "D": {
+    "text": "Reflex bradycardia from the nitrate",
+    "why": "Nitrates cause tachycardia.",
+    "correct": false
+   },
+   "E": {
+    "text": "Bradykinin accumulation",
+    "why": "ACE inhibitors.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L10/index.html#nitrates-angina-the-triple-whammy",
+   "label": "Study this: L10 · Part 3 →"
+  }
+ },
+ {
+  "topic": "Triple whammy",
+  "objectives": [
+   "IO5.1"
+  ],
+  "sg": [],
+  "kind": "mechanism",
+  "stem": "Which component of the triple whammy constricts the afferent arteriole?",
+  "correct": "The NSAID",
+  "distractors": [
+   {
+    "text": "The ACE inhibitor",
+    "why": "Dilates efferent."
+   },
+   {
+    "text": "The diuretic",
+    "why": "Volume depletion."
+   },
+   {
+    "text": "The ARB",
+    "why": "Dilates efferent."
+   },
+   {
+    "text": "The calcium channel blocker",
+    "why": "Not in the triad."
+   }
+  ],
+  "why_correct": "NSAID afferent constriction + ACEi/ARB efferent dilation + diuretic volume depletion each lower filtration pressure.",
+  "takeaway": "Three hits on glomerular pressure.",
+  "discriminator": "Counsel on OTC NSAIDs.",
+  "src": "L10 S23; S24; SG U5-R12",
+  "id": "U5-049",
+  "answer": "B",
+  "options": {
+   "A": {
+    "text": "The calcium channel blocker",
+    "why": "Not in the triad.",
+    "correct": false
+   },
+   "B": {
+    "text": "The NSAID",
+    "why": "NSAID afferent constriction + ACEi/ARB efferent dilation + diuretic volume depletion each lower filtration pressure.",
+    "correct": true
+   },
+   "C": {
+    "text": "The ACE inhibitor",
+    "why": "Dilates efferent.",
+    "correct": false
+   },
+   "D": {
+    "text": "The ARB",
+    "why": "Dilates efferent.",
+    "correct": false
+   },
+   "E": {
+    "text": "The diuretic",
+    "why": "Volume depletion.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L10/index.html#nitrates-angina-the-triple-whammy",
+   "label": "Study this: L10 · Part 3 →"
+  }
+ },
+ {
+  "topic": "Renal dosing",
+  "objectives": [
+   "IO5.5"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A drug’s toxic effect tracks its peak level, and kidney function has fallen. Which lever is described on the slides?",
+  "correct": "Lower the maintenance dose",
+  "distractors": [
+   {
+    "text": "Raise the loading dose",
+    "why": "Not the lever."
+   },
+   {
+    "text": "Shorten the interval",
+    "why": "Wrong direction."
+   },
+   {
+    "text": "Add a second renally cleared drug",
+    "why": "Not the lever."
+   },
+   {
+    "text": "Give it IV instead",
+    "why": "Not the lever."
+   }
+  ],
+  "why_correct": "Reduce the maintenance dose when the effect is concentration-dependent; extend the interval when the half-life is long.",
+  "takeaway": "Dose, interval, or both.",
+  "discriminator": "Monitor after each change.",
+  "src": "L09 S6",
+  "id": "U5-032",
+  "answer": "B",
+  "options": {
+   "A": {
+    "text": "Add a second renally cleared drug",
+    "why": "Not the lever.",
+    "correct": false
+   },
+   "B": {
+    "text": "Lower the maintenance dose",
+    "why": "Reduce the maintenance dose when the effect is concentration-dependent; extend the interval when the half-life is long.",
+    "correct": true
+   },
+   "C": {
+    "text": "Give it IV instead",
+    "why": "Not the lever.",
+    "correct": false
+   },
+   "D": {
+    "text": "Raise the loading dose",
+    "why": "Not the lever.",
+    "correct": false
+   },
+   "E": {
+    "text": "Shorten the interval",
+    "why": "Wrong direction.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L09/index.html#renal-dosing-diuretic-sites",
+   "label": "Study this: L09 · Part 1 →"
+  }
+ },
+ {
+  "topic": "CAI & osmotic",
+  "objectives": [
+   "IO5.2",
+   "IO5.4"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A patient with decompensated heart failure has raised intracranial pressure. Why is mannitol risky?",
+  "correct": "It expands ECF volume first",
+  "distractors": [
+   {
+    "text": "It causes ototoxicity",
+    "why": "Loops."
+   },
+   {
+    "text": "It blocks ENaC",
+    "why": "Amiloride."
+   },
+   {
+    "text": "It raises potassium via aldosterone",
+    "why": "Not its mechanism."
+   },
+   {
+    "text": "It is ineffective IV",
+    "why": "It is given IV."
+   }
+  ],
+  "why_correct": "Mannitol pulls water into the extracellular space before diuresis — can worsen volume overload; avoid in heart failure.",
+  "takeaway": "Mannitol: ICP/IOP; needs renal perfusion; not in heart failure.",
+  "discriminator": "Monitor osmolality and electrolytes.",
+  "src": "L09 S19; S20; S37",
+  "id": "U5-015",
+  "answer": "A",
+  "options": {
+   "A": {
+    "text": "It expands ECF volume first",
+    "why": "Mannitol pulls water into the extracellular space before diuresis — can worsen volume overload; avoid in heart failure.",
+    "correct": true
+   },
+   "B": {
+    "text": "It blocks ENaC",
+    "why": "Amiloride.",
+    "correct": false
+   },
+   "C": {
+    "text": "It causes ototoxicity",
+    "why": "Loops.",
+    "correct": false
+   },
+   "D": {
+    "text": "It is ineffective IV",
+    "why": "It is given IV.",
+    "correct": false
+   },
+   "E": {
+    "text": "It raises potassium via aldosterone",
+    "why": "Not its mechanism.",
     "correct": false
    }
   },
@@ -697,27 +1480,27 @@
   "discriminator": "Check K⁺ and creatinine in 1–2 weeks.",
   "src": "L10 S5; S9; S10; SG U5-R9",
   "id": "U5-019",
-  "answer": "B",
+  "answer": "D",
   "options": {
    "A": {
-    "text": "Stop losartan for toxicity",
-    "why": "A ~25% rise is expected.",
+    "text": "Switch to an NSAID",
+    "why": "NSAIDs raise AKI risk.",
     "correct": false
    },
    "B": {
-    "text": "Continue and keep monitoring",
-    "why": "A rise up to ~30% reflects reduced intraglomerular pressure; a larger rise suggests renal artery stenosis or volume depletion.",
-    "correct": true
-   },
-   "C": {
     "text": "Double the losartan dose",
     "why": "Not the response.",
     "correct": false
    },
-   "D": {
-    "text": "Switch to an NSAID",
-    "why": "NSAIDs raise AKI risk.",
+   "C": {
+    "text": "Stop losartan for toxicity",
+    "why": "A ~25% rise is expected.",
     "correct": false
+   },
+   "D": {
+    "text": "Continue and keep monitoring",
+    "why": "A rise up to ~30% reflects reduced intraglomerular pressure; a larger rise suggests renal artery stenosis or volume depletion.",
+    "correct": true
    },
    "E": {
     "text": "Add aliskiren",
@@ -728,6 +1511,468 @@
   "link": {
    "href": "../../L10/index.html#raas-blockers",
    "label": "Study this: L10 · Part 1 →"
+  }
+ },
+ {
+  "topic": "CAI & osmotic",
+  "objectives": [
+   "IO5.1"
+  ],
+  "sg": [
+   "U5-R6"
+  ],
+  "kind": "vignette",
+  "stem": "A climber plans a rapid ascent above 3000 m next week. Which drug and timing fit?",
+  "correct": "Acetazolamide, a day before ascent",
+  "distractors": [
+   {
+    "text": "Mannitol IV once at the summit",
+    "why": "For raised ICP/IOP."
+   },
+   {
+    "text": "Furosemide during ascent",
+    "why": "Edema, not altitude."
+   },
+   {
+    "text": "Spironolactone for a week before",
+    "why": "Not for altitude."
+   },
+   {
+    "text": "Hydrochlorothiazide daily",
+    "why": "Not for altitude."
+   }
+  ],
+  "why_correct": "Acetazolamide 125–250 mg BID starting a day before ascent; it blocks Na⁺/HCO₃⁻ reabsorption in the proximal tubule.",
+  "takeaway": "Acetazolamide = glaucoma, altitude, alkalosis.",
+  "discriminator": "Predictable adverse effect: metabolic acidosis.",
+  "src": "L09 S19; S36; SG U5-R6",
+  "id": "U5-013",
+  "answer": "D",
+  "options": {
+   "A": {
+    "text": "Hydrochlorothiazide daily",
+    "why": "Not for altitude.",
+    "correct": false
+   },
+   "B": {
+    "text": "Spironolactone for a week before",
+    "why": "Not for altitude.",
+    "correct": false
+   },
+   "C": {
+    "text": "Furosemide during ascent",
+    "why": "Edema, not altitude.",
+    "correct": false
+   },
+   "D": {
+    "text": "Acetazolamide, a day before ascent",
+    "why": "Acetazolamide 125–250 mg BID starting a day before ascent; it blocks Na⁺/HCO₃⁻ reabsorption in the proximal tubule.",
+    "correct": true
+   },
+   "E": {
+    "text": "Mannitol IV once at the summit",
+    "why": "For raised ICP/IOP.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L09/index.html#potassium-sparing-cai-osmotic-diuretics",
+   "label": "Study this: L09 · Part 3 →"
+  }
+ },
+ {
+  "topic": "Potassium-sparing",
+  "objectives": [
+   "IO5.2",
+   "IO5.5"
+  ],
+  "sg": [
+   "U5-R5"
+  ],
+  "kind": "vignette",
+  "stem": "A stage 3 CKD patient on lisinopril starts spironolactone; two weeks later K⁺ is 6.1 mEq/L. Best explanation?",
+  "correct": "Additive aldosterone blockade",
+  "distractors": [
+   {
+    "text": "Spironolactone blocks NKCC2",
+    "why": "It blocks the aldosterone receptor."
+   },
+   {
+    "text": "Lisinopril raises aldosterone",
+    "why": "It lowers aldosterone."
+   },
+   {
+    "text": "CKD increases K⁺ excretion",
+    "why": "CKD impairs it."
+   },
+   {
+    "text": "Acetazolamide-like acidosis",
+    "why": "Not acetazolamide."
+   }
+  ],
+  "why_correct": "ACE inhibitor lowers aldosterone, spironolactone blocks its receptor, and CKD limits K⁺ excretion — risk compounds.",
+  "takeaway": "K⁺-sparing + ACEi/ARB + CKD = hyperkalemia setup.",
+  "discriminator": "Check K⁺ and creatinine within 1 week of starting spironolactone.",
+  "src": "L09 S23; S32; SG U5-R5",
+  "id": "U5-011",
+  "answer": "B",
+  "options": {
+   "A": {
+    "text": "CKD increases K⁺ excretion",
+    "why": "CKD impairs it.",
+    "correct": false
+   },
+   "B": {
+    "text": "Additive aldosterone blockade",
+    "why": "ACE inhibitor lowers aldosterone, spironolactone blocks its receptor, and CKD limits K⁺ excretion — risk compounds.",
+    "correct": true
+   },
+   "C": {
+    "text": "Spironolactone blocks NKCC2",
+    "why": "It blocks the aldosterone receptor.",
+    "correct": false
+   },
+   "D": {
+    "text": "Acetazolamide-like acidosis",
+    "why": "Not acetazolamide.",
+    "correct": false
+   },
+   "E": {
+    "text": "Lisinopril raises aldosterone",
+    "why": "It lowers aldosterone.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L09/index.html#potassium-sparing-cai-osmotic-diuretics",
+   "label": "Study this: L09 · Part 3 →"
+  }
+ },
+ {
+  "topic": "Other antihypertensives",
+  "objectives": [
+   "IO5.2"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A patient on verapamil starts digoxin for atrial fibrillation. What should be anticipated?",
+  "correct": "Higher digoxin levels",
+  "distractors": [
+   {
+    "text": "Lower digoxin levels",
+    "why": "Raised."
+   },
+   {
+    "text": "No interaction",
+    "why": "Known interaction."
+   },
+   {
+    "text": "Hyperkalemia",
+    "why": "Not the issue."
+   },
+   {
+    "text": "Tachycardia",
+    "why": "Both slow the heart."
+   }
+  ],
+  "why_correct": "Verapamil and diltiazem raise digoxin levels.",
+  "takeaway": "Non-DHP + digoxin → check levels.",
+  "discriminator": "Non-DHP + beta-blocker → AV block.",
+  "src": "L10 S55; S46",
+  "id": "U5-046",
+  "answer": "A",
+  "options": {
+   "A": {
+    "text": "Higher digoxin levels",
+    "why": "Verapamil and diltiazem raise digoxin levels.",
+    "correct": true
+   },
+   "B": {
+    "text": "Hyperkalemia",
+    "why": "Not the issue.",
+    "correct": false
+   },
+   "C": {
+    "text": "Tachycardia",
+    "why": "Both slow the heart.",
+    "correct": false
+   },
+   "D": {
+    "text": "Lower digoxin levels",
+    "why": "Raised.",
+    "correct": false
+   },
+   "E": {
+    "text": "No interaction",
+    "why": "Known interaction.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L10/index.html#raas-blockers",
+   "label": "Study this: L10 · Part 1 →"
+  }
+ },
+ {
+  "topic": "Loop vs. thiazide",
+  "objectives": [
+   "IO5.2"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A patient on digoxin starts high-dose furosemide for edema. Which lab change most raises digoxin toxicity?",
+  "correct": "Hypokalemia",
+  "distractors": [
+   {
+    "text": "Hypercalcemia",
+    "why": "Loops lower calcium."
+   },
+   {
+    "text": "Hyperkalemia",
+    "why": "Loops waste potassium."
+   },
+   {
+    "text": "Metabolic acidosis",
+    "why": "Loops cause alkalosis."
+   },
+   {
+    "text": "Hypernatremia",
+    "why": "Not the digoxin link."
+   }
+  ],
+  "why_correct": "Hypokalemia from loops increases digoxin toxicity.",
+  "takeaway": "Loop + digoxin → watch K⁺.",
+  "discriminator": "Aminoglycosides add ototoxicity with loops.",
+  "src": "L09 S10; S38",
+  "id": "U5-008",
+  "answer": "E",
+  "options": {
+   "A": {
+    "text": "Hypernatremia",
+    "why": "Not the digoxin link.",
+    "correct": false
+   },
+   "B": {
+    "text": "Hyperkalemia",
+    "why": "Loops waste potassium.",
+    "correct": false
+   },
+   "C": {
+    "text": "Hypercalcemia",
+    "why": "Loops lower calcium.",
+    "correct": false
+   },
+   "D": {
+    "text": "Metabolic acidosis",
+    "why": "Loops cause alkalosis.",
+    "correct": false
+   },
+   "E": {
+    "text": "Hypokalemia",
+    "why": "Hypokalemia from loops increases digoxin toxicity.",
+    "correct": true
+   }
+  },
+  "link": {
+   "href": "../../L09/index.html#loop-thiazide-diuretics",
+   "label": "Study this: L09 · Part 2 →"
+  }
+ },
+ {
+  "topic": "Renal dosing",
+  "objectives": [
+   "IO5.5"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "An 82-year-old on several renally cleared drugs is admitted with vomiting and dehydration. What is the best dosing habit?",
+  "correct": "Re-estimate CrCl and adjust doses",
+  "distractors": [
+   {
+    "text": "Keep doses based on last year’s labs",
+    "why": "Acute illness drops GFR quickly."
+   },
+   {
+    "text": "Double every loading dose to be safe",
+    "why": "Loading doses are often unchanged."
+   },
+   {
+    "text": "Adjust only the antibiotics, nothing else",
+    "why": "Digoxin, DOACs and metformin too."
+   },
+   {
+    "text": "Stop checking renal function after 80",
+    "why": "Older adults are the priority."
+   }
+  ],
+  "why_correct": "Reassess as renal function changes — acute illness, dehydration or nephrotoxic drugs can drop GFR quickly.",
+  "takeaway": "Check CrCl or eGFR before dosing, and again when the patient gets sick.",
+  "discriminator": "Examples needing adjustment: vancomycin, beta-lactams, digoxin, DOACs, metformin.",
+  "src": "L09 S5; S8",
+  "id": "U5-002",
+  "answer": "D",
+  "options": {
+   "A": {
+    "text": "Adjust only the antibiotics, nothing else",
+    "why": "Digoxin, DOACs and metformin too.",
+    "correct": false
+   },
+   "B": {
+    "text": "Keep doses based on last year’s labs",
+    "why": "Acute illness drops GFR quickly.",
+    "correct": false
+   },
+   "C": {
+    "text": "Stop checking renal function after 80",
+    "why": "Older adults are the priority.",
+    "correct": false
+   },
+   "D": {
+    "text": "Re-estimate CrCl and adjust doses",
+    "why": "Reassess as renal function changes — acute illness, dehydration or nephrotoxic drugs can drop GFR quickly.",
+    "correct": true
+   },
+   "E": {
+    "text": "Double every loading dose to be safe",
+    "why": "Loading doses are often unchanged.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L09/index.html#renal-dosing-diuretic-sites",
+   "label": "Study this: L09 · Part 1 →"
+  }
+ },
+ {
+  "topic": "Potassium-sparing",
+  "objectives": [
+   "IO5.1"
+  ],
+  "sg": [
+   "U5-R5"
+  ],
+  "kind": "mechanism",
+  "stem": "Which statement about potassium-sparing diuretics is correct?",
+  "correct": "Amiloride: ENaC; spironolactone: receptor",
+  "distractors": [
+   {
+    "text": "Both block NKCC2 in the thick ascending limb",
+    "why": "That is loops."
+   },
+   {
+    "text": "Amiloride blocks the aldosterone receptor",
+    "why": "Amiloride blocks ENaC."
+   },
+   {
+    "text": "Spironolactone blocks ENaC directly",
+    "why": "It blocks the receptor."
+   },
+   {
+    "text": "Both cause hypokalemia, like the loops do",
+    "why": "Both cause hyperkalemia."
+   }
+  ],
+  "why_correct": "Aldosterone antagonists (spironolactone, eplerenone) vs. ENaC blockers (amiloride, triamterene); shared risk hyperkalemia.",
+  "takeaway": "Block the hormone or block the channel.",
+  "discriminator": "Spironolactone is antiandrogen; eplerenone mostly isn’t.",
+  "src": "L09 S17; S18; SG U5-R5",
+  "id": "U5-010",
+  "answer": "C",
+  "options": {
+   "A": {
+    "text": "Amiloride blocks the aldosterone receptor",
+    "why": "Amiloride blocks ENaC.",
+    "correct": false
+   },
+   "B": {
+    "text": "Spironolactone blocks ENaC directly",
+    "why": "It blocks the receptor.",
+    "correct": false
+   },
+   "C": {
+    "text": "Amiloride: ENaC; spironolactone: receptor",
+    "why": "Aldosterone antagonists (spironolactone, eplerenone) vs. ENaC blockers (amiloride, triamterene); shared risk hyperkalemia.",
+    "correct": true
+   },
+   "D": {
+    "text": "Both cause hypokalemia, like the loops do",
+    "why": "Both cause hyperkalemia.",
+    "correct": false
+   },
+   "E": {
+    "text": "Both block NKCC2 in the thick ascending limb",
+    "why": "That is loops.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L09/index.html#potassium-sparing-cai-osmotic-diuretics",
+   "label": "Study this: L09 · Part 3 →"
+  }
+ },
+ {
+  "topic": "Loop vs. thiazide",
+  "objectives": [
+   "IO5.2"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A patient on lithium starts hydrochlorothiazide. What should be anticipated?",
+  "correct": "Rising lithium levels",
+  "distractors": [
+   {
+    "text": "Falling lithium levels",
+    "why": "Rises."
+   },
+   {
+    "text": "No interaction",
+    "why": "Known interaction."
+   },
+   {
+    "text": "Hyperkalemia",
+    "why": "Not this pair."
+   },
+   {
+    "text": "Ototoxicity",
+    "why": "Loops + aminoglycosides."
+   }
+  ],
+  "why_correct": "Thiazides raise lithium levels — monitor closely.",
+  "takeaway": "Lithium + thiazide → check levels.",
+  "discriminator": "NSAIDs blunt diuretic effect.",
+  "src": "L09 S38; p. 280",
+  "id": "U5-036",
+  "answer": "D",
+  "options": {
+   "A": {
+    "text": "Falling lithium levels",
+    "why": "Rises.",
+    "correct": false
+   },
+   "B": {
+    "text": "Ototoxicity",
+    "why": "Loops + aminoglycosides.",
+    "correct": false
+   },
+   "C": {
+    "text": "No interaction",
+    "why": "Known interaction.",
+    "correct": false
+   },
+   "D": {
+    "text": "Rising lithium levels",
+    "why": "Thiazides raise lithium levels — monitor closely.",
+    "correct": true
+   },
+   "E": {
+    "text": "Hyperkalemia",
+    "why": "Not this pair.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L09/index.html#loop-thiazide-diuretics",
+   "label": "Study this: L09 · Part 2 →"
   }
  },
  {
@@ -767,18 +2012,18 @@
   "answer": "E",
   "options": {
    "A": {
-    "text": "Double the diuretic when using NSAIDs",
-    "why": "Worsens volume depletion.",
-    "correct": false
-   },
-   "B": {
     "text": "NSAIDs are safe because they are OTC",
     "why": "OTC ≠ safe.",
     "correct": false
    },
-   "C": {
+   "B": {
     "text": "Take NSAIDs with extra water only",
     "why": "Still risky.",
+    "correct": false
+   },
+   "C": {
+    "text": "Double the diuretic when using NSAIDs",
+    "why": "Worsens volume depletion.",
     "correct": false
    },
    "D": {
@@ -800,66 +2045,392 @@
  {
   "topic": "Angina & nitrates",
   "objectives": [
-   "IO5.5"
+   "IO5.5",
+   "IO5.6"
   ],
   "sg": [],
   "kind": "vignette",
-  "stem": "A patient on isosorbide mononitrate twice daily, around the clock, reports angina returning. Likely cause?",
-  "correct": "Tolerance from no nitrate-free gap",
+  "stem": "A patient’s chest pain persists 5 minutes after one sublingual nitroglycerin. Per the profile, what next?",
+  "correct": "Take another dose (up to 3)",
   "distractors": [
    {
-    "text": "Hyperkalemia from the nitrate",
-    "why": "Not a nitrate effect."
+    "text": "Wait an hour, then repeat",
+    "why": "Every 5 minutes."
    },
    {
-    "text": "Bradykinin accumulation",
-    "why": "ACE inhibitors."
+    "text": "Swallow the tablet",
+    "why": "Sublingual."
    },
    {
-    "text": "Reflex bradycardia from the nitrate",
-    "why": "Nitrates cause tachycardia."
+    "text": "Add sildenafil",
+    "why": "Contraindicated."
    },
    {
-    "text": "AV block from the nitrate",
-    "why": "Non-DHP CCBs."
+    "text": "Stop all nitrates",
+    "why": "Not the step."
    }
   ],
-  "why_correct": "Continuous exposure causes tolerance; a nitrate-free interval (typically overnight) maintains efficacy.",
-  "takeaway": "Long-acting nitrate → planned gap.",
-  "discriminator": "Isosorbide dinitrate profile: 14-hour nitrate-free interval.",
-  "src": "L10 S19; S53; S54",
-  "id": "U5-028",
-  "answer": "D",
+  "why_correct": "Acute angina: 0.4 mg SL every 5 minutes up to 3 doses.",
+  "takeaway": "SL nitro: up to 3 doses, 5 minutes apart.",
+  "discriminator": "Sublingual bypasses first-pass.",
+  "src": "L10 S19; S52",
+  "id": "U5-047",
+  "answer": "B",
   "options": {
    "A": {
-    "text": "Reflex bradycardia from the nitrate",
-    "why": "Nitrates cause tachycardia.",
+    "text": "Wait an hour, then repeat",
+    "why": "Every 5 minutes.",
     "correct": false
    },
    "B": {
-    "text": "Bradykinin accumulation",
-    "why": "ACE inhibitors.",
-    "correct": false
+    "text": "Take another dose (up to 3)",
+    "why": "Acute angina: 0.4 mg SL every 5 minutes up to 3 doses.",
+    "correct": true
    },
    "C": {
-    "text": "Hyperkalemia from the nitrate",
-    "why": "Not a nitrate effect.",
+    "text": "Stop all nitrates",
+    "why": "Not the step.",
     "correct": false
    },
    "D": {
-    "text": "Tolerance from no nitrate-free gap",
-    "why": "Continuous exposure causes tolerance; a nitrate-free interval (typically overnight) maintains efficacy.",
-    "correct": true
+    "text": "Swallow the tablet",
+    "why": "Sublingual.",
+    "correct": false
    },
    "E": {
-    "text": "AV block from the nitrate",
-    "why": "Non-DHP CCBs.",
+    "text": "Add sildenafil",
+    "why": "Contraindicated.",
     "correct": false
    }
   },
   "link": {
    "href": "../../L10/index.html#nitrates-angina-the-triple-whammy",
    "label": "Study this: L10 · Part 3 →"
+  }
+ },
+ {
+  "topic": "Loop vs. thiazide",
+  "objectives": [
+   "IO5.2"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A patient with gout and hypertension is starting a diuretic. Which class most worsens gout?",
+  "correct": "Thiazides",
+  "distractors": [
+   {
+    "text": "Potassium-sparing",
+    "why": "Not the gout culprit."
+   },
+   {
+    "text": "Carbonic anhydrase inhibitors",
+    "why": "Not the main one."
+   },
+   {
+    "text": "Osmotic",
+    "why": "Not the main one."
+   },
+   {
+    "text": "None affect uric acid",
+    "why": "Thiazides and loops do."
+   }
+  ],
+  "why_correct": "Thiazides cause hyperuricemia and can precipitate gout (they compete for uric acid secretion).",
+  "takeaway": "Thiazide → gout flare risk.",
+  "discriminator": "Loops also raise uric acid.",
+  "src": "L09 S12; p. 272",
+  "id": "U5-035",
+  "answer": "C",
+  "options": {
+   "A": {
+    "text": "Potassium-sparing",
+    "why": "Not the gout culprit.",
+    "correct": false
+   },
+   "B": {
+    "text": "None affect uric acid",
+    "why": "Thiazides and loops do.",
+    "correct": false
+   },
+   "C": {
+    "text": "Thiazides",
+    "why": "Thiazides cause hyperuricemia and can precipitate gout (they compete for uric acid secretion).",
+    "correct": true
+   },
+   "D": {
+    "text": "Osmotic",
+    "why": "Not the main one.",
+    "correct": false
+   },
+   "E": {
+    "text": "Carbonic anhydrase inhibitors",
+    "why": "Not the main one.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L09/index.html#loop-thiazide-diuretics",
+   "label": "Study this: L09 · Part 2 →"
+  }
+ },
+ {
+  "topic": "CAI & osmotic",
+  "objectives": [
+   "IO5.4"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A patient with acute angle-closure concerns and high intraocular pressure needs a systemic agent before surgery. Which diuretic lowers IOP?",
+  "correct": "Mannitol IV",
+  "distractors": [
+   {
+    "text": "Furosemide",
+    "why": "Not for IOP."
+   },
+   {
+    "text": "Hydrochlorothiazide",
+    "why": "Not for IOP."
+   },
+   {
+    "text": "Spironolactone",
+    "why": "Not for IOP."
+   },
+   {
+    "text": "Amiloride",
+    "why": "Not for IOP."
+   }
+  ],
+  "why_correct": "Mannitol lowers raised intraocular and intracranial pressure; acetazolamide lowers aqueous humor production.",
+  "takeaway": "IOP/ICP → mannitol (or acetazolamide for glaucoma).",
+  "discriminator": "Avoid mannitol in heart failure.",
+  "src": "L09 S19; S37",
+  "id": "U5-040",
+  "answer": "E",
+  "options": {
+   "A": {
+    "text": "Hydrochlorothiazide",
+    "why": "Not for IOP.",
+    "correct": false
+   },
+   "B": {
+    "text": "Spironolactone",
+    "why": "Not for IOP.",
+    "correct": false
+   },
+   "C": {
+    "text": "Furosemide",
+    "why": "Not for IOP.",
+    "correct": false
+   },
+   "D": {
+    "text": "Amiloride",
+    "why": "Not for IOP.",
+    "correct": false
+   },
+   "E": {
+    "text": "Mannitol IV",
+    "why": "Mannitol lowers raised intraocular and intracranial pressure; acetazolamide lowers aqueous humor production.",
+    "correct": true
+   }
+  },
+  "link": {
+   "href": "../../L09/index.html#potassium-sparing-cai-osmotic-diuretics",
+   "label": "Study this: L09 · Part 3 →"
+  }
+ },
+ {
+  "topic": "Other antihypertensives",
+  "objectives": [
+   "IO5.4"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "CKD with eGFR 27 mL/min; BP above goal on lisinopril, amlodipine and hydrochlorothiazide. First change?",
+  "correct": "Swap HCTZ for a loop",
+  "distractors": [
+   {
+    "text": "Add clonidine",
+    "why": "Fix the diuretic first."
+   },
+   {
+    "text": "Add aliskiren",
+    "why": "No benefit, more risk."
+   },
+   {
+    "text": "Raise the thiazide dose",
+    "why": "The site lacks sodium."
+   },
+   {
+    "text": "Stop lisinopril",
+    "why": "First-line in CKD."
+   }
+  ],
+  "why_correct": "Resistant HTN in CKD is often a diuretic-selection problem: at this GFR HCTZ has lost efficacy; switch to furosemide or torsemide.",
+  "takeaway": "Check the diuretic before adding a class.",
+  "discriminator": "Then spironolactone with close K⁺ monitoring.",
+  "src": "L10 S15; S17",
+  "id": "U5-023",
+  "answer": "E",
+  "options": {
+   "A": {
+    "text": "Add clonidine",
+    "why": "Fix the diuretic first.",
+    "correct": false
+   },
+   "B": {
+    "text": "Add aliskiren",
+    "why": "No benefit, more risk.",
+    "correct": false
+   },
+   "C": {
+    "text": "Stop lisinopril",
+    "why": "First-line in CKD.",
+    "correct": false
+   },
+   "D": {
+    "text": "Raise the thiazide dose",
+    "why": "The site lacks sodium.",
+    "correct": false
+   },
+   "E": {
+    "text": "Swap HCTZ for a loop",
+    "why": "Resistant HTN in CKD is often a diuretic-selection problem: at this GFR HCTZ has lost efficacy; switch to furosemide or torsemide.",
+    "correct": true
+   }
+  },
+  "link": {
+   "href": "../../L10/index.html#other-antihypertensives-resistant-hypertension",
+   "label": "Study this: L10 · Part 2 →"
+  }
+ },
+ {
+  "topic": "RAAS blockers",
+  "objectives": [
+   "IO5.2"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A patient on enalapril has a persistent dry cough. What is the best change?",
+  "correct": "Switch to an ARB (losartan)",
+  "distractors": [
+   {
+    "text": "Add a daily antihistamine",
+    "why": "Cough is not allergic."
+   },
+   {
+    "text": "Switch to captopril",
+    "why": "Same class, same cough."
+   },
+   {
+    "text": "Add aliskiren",
+    "why": "Not combined; no benefit."
+   },
+   {
+    "text": "Stop all antihypertensives",
+    "why": "An ARB keeps the benefit."
+   }
+  ],
+  "why_correct": "ACE-inhibitor cough is bradykinin-mediated; ARBs don’t raise bradykinin, so they are the usual switch.",
+  "takeaway": "Cough → ARB; angioedema → stop.",
+  "discriminator": "Cough is the most common reason to switch.",
+  "src": "L10 S5; S6; S7",
+  "id": "U5-017",
+  "answer": "C",
+  "options": {
+   "A": {
+    "text": "Add aliskiren",
+    "why": "Not combined; no benefit.",
+    "correct": false
+   },
+   "B": {
+    "text": "Add a daily antihistamine",
+    "why": "Cough is not allergic.",
+    "correct": false
+   },
+   "C": {
+    "text": "Switch to an ARB (losartan)",
+    "why": "ACE-inhibitor cough is bradykinin-mediated; ARBs don’t raise bradykinin, so they are the usual switch.",
+    "correct": true
+   },
+   "D": {
+    "text": "Switch to captopril",
+    "why": "Same class, same cough.",
+    "correct": false
+   },
+   "E": {
+    "text": "Stop all antihypertensives",
+    "why": "An ARB keeps the benefit.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L10/index.html#raas-blockers",
+   "label": "Study this: L10 · Part 1 →"
+  }
+ },
+ {
+  "topic": "Other antihypertensives",
+  "objectives": [
+   "IO5.2"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A patient on metoprolol develops second-degree AV block after a new BP drug. Which drug was added?",
+  "correct": "Verapamil",
+  "distractors": [
+   {
+    "text": "Amlodipine",
+    "why": "Pairs safely with beta-blockers."
+   },
+   {
+    "text": "Losartan",
+    "why": "No conduction effect."
+   },
+   {
+    "text": "Hydralazine",
+    "why": "Causes reflex tachycardia."
+   },
+   {
+    "text": "Lisinopril",
+    "why": "No conduction effect."
+   }
+  ],
+  "why_correct": "Non-DHP CCBs (diltiazem, verapamil) plus a beta-blocker → bradycardia and AV block.",
+  "takeaway": "Never stack two heart-slowers.",
+  "discriminator": "DHPs act on arterioles, not the AV node.",
+  "src": "L10 S13; S46",
+  "id": "U5-022",
+  "answer": "D",
+  "options": {
+   "A": {
+    "text": "Losartan",
+    "why": "No conduction effect.",
+    "correct": false
+   },
+   "B": {
+    "text": "Amlodipine",
+    "why": "Pairs safely with beta-blockers.",
+    "correct": false
+   },
+   "C": {
+    "text": "Hydralazine",
+    "why": "Causes reflex tachycardia.",
+    "correct": false
+   },
+   "D": {
+    "text": "Verapamil",
+    "why": "Non-DHP CCBs (diltiazem, verapamil) plus a beta-blocker → bradycardia and AV block.",
+    "correct": true
+   },
+   "E": {
+    "text": "Lisinopril",
+    "why": "No conduction effect.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L10/index.html#other-antihypertensives-resistant-hypertension",
+   "label": "Study this: L10 · Part 2 →"
   }
  },
  {
@@ -903,8 +2474,8 @@
     "correct": false
    },
    "B": {
-    "text": "Gynecomastia over time",
-    "why": "Spironolactone.",
+    "text": "Rebound hypertension",
+    "why": "Clonidine.",
     "correct": false
    },
    "C": {
@@ -913,481 +2484,13 @@
     "correct": true
    },
    "D": {
-    "text": "Rebound hypertension",
-    "why": "Clonidine.",
-    "correct": false
-   },
-   "E": {
     "text": "Ototoxicity with high doses",
     "why": "Loops.",
     "correct": false
-   }
-  },
-  "link": {
-   "href": "../../L10/index.html#raas-blockers",
-   "label": "Study this: L10 · Part 1 →"
-  }
- },
- {
-  "topic": "Potassium-sparing",
-  "objectives": [
-   "IO5.2",
-   "IO5.5"
-  ],
-  "sg": [
-   "U5-R5"
-  ],
-  "kind": "vignette",
-  "stem": "A stage 3 CKD patient on lisinopril starts spironolactone; two weeks later K⁺ is 6.1 mEq/L. Best explanation?",
-  "correct": "Additive aldosterone blockade in CKD",
-  "distractors": [
-   {
-    "text": "Spironolactone blocks NKCC2",
-    "why": "It blocks the aldosterone receptor."
-   },
-   {
-    "text": "Lisinopril raises aldosterone",
-    "why": "It lowers aldosterone."
-   },
-   {
-    "text": "CKD increases K⁺ excretion",
-    "why": "CKD impairs it."
-   },
-   {
-    "text": "Acetazolamide-like acidosis",
-    "why": "Not acetazolamide."
-   }
-  ],
-  "why_correct": "ACE inhibitor lowers aldosterone, spironolactone blocks its receptor, and CKD limits K⁺ excretion — risk compounds.",
-  "takeaway": "K⁺-sparing + ACEi/ARB + CKD = hyperkalemia setup.",
-  "discriminator": "Check K⁺ and creatinine within 1 week of starting spironolactone.",
-  "src": "L09 S23; S32; SG U5-R5",
-  "id": "U5-011",
-  "answer": "D",
-  "options": {
-   "A": {
-    "text": "Spironolactone blocks NKCC2",
-    "why": "It blocks the aldosterone receptor.",
-    "correct": false
-   },
-   "B": {
-    "text": "CKD increases K⁺ excretion",
-    "why": "CKD impairs it.",
-    "correct": false
-   },
-   "C": {
-    "text": "Lisinopril raises aldosterone",
-    "why": "It lowers aldosterone.",
-    "correct": false
-   },
-   "D": {
-    "text": "Additive aldosterone blockade in CKD",
-    "why": "ACE inhibitor lowers aldosterone, spironolactone blocks its receptor, and CKD limits K⁺ excretion — risk compounds.",
-    "correct": true
    },
    "E": {
-    "text": "Acetazolamide-like acidosis",
-    "why": "Not acetazolamide.",
-    "correct": false
-   }
-  },
-  "link": {
-   "href": "../../L09/index.html#potassium-sparing-cai-osmotic-diuretics",
-   "label": "Study this: L09 · Part 3 →"
-  }
- },
- {
-  "topic": "Nephron sites",
-  "objectives": [
-   "IO5.1"
-  ],
-  "sg": [
-   "U5-R2",
-   "U5-M"
-  ],
-  "kind": "mechanism",
-  "stem": "Which pairing of diuretic class and nephron site is correct?",
-  "correct": "Thiazide — distal convoluted tubule",
-  "distractors": [
-   {
-    "text": "Loop — collecting duct",
-    "why": "Loops act at the thick ascending limb."
-   },
-   {
-    "text": "Acetazolamide — distal tubule",
-    "why": "Proximal tubule."
-   },
-   {
-    "text": "Amiloride — proximal tubule",
-    "why": "Collecting duct."
-   },
-   {
-    "text": "Spironolactone — thick ascending limb",
-    "why": "Collecting duct."
-   }
-  ],
-  "why_correct": "Loop TAL; thiazide DCT; K⁺-sparing collecting duct; CAI proximal tubule; osmotic throughout (mainly proximal).",
-  "takeaway": "Site predicts potency and electrolyte effects.",
-  "discriminator": "Na⁺ reabsorbed: PT ~65%, TAL ~25%, DCT 5–8%, CD 2–3%.",
-  "src": "L09 S7; SG U5-R2; SG U5-M",
-  "id": "U5-003",
-  "answer": "D",
-  "options": {
-   "A": {
-    "text": "Amiloride — proximal tubule",
-    "why": "Collecting duct.",
-    "correct": false
-   },
-   "B": {
-    "text": "Acetazolamide — distal tubule",
-    "why": "Proximal tubule.",
-    "correct": false
-   },
-   "C": {
-    "text": "Spironolactone — thick ascending limb",
-    "why": "Collecting duct.",
-    "correct": false
-   },
-   "D": {
-    "text": "Thiazide — distal convoluted tubule",
-    "why": "Loop TAL; thiazide DCT; K⁺-sparing collecting duct; CAI proximal tubule; osmotic throughout (mainly proximal).",
-    "correct": true
-   },
-   "E": {
-    "text": "Loop — collecting duct",
-    "why": "Loops act at the thick ascending limb.",
-    "correct": false
-   }
-  },
-  "link": {
-   "href": "../../L09/index.html#renal-dosing-diuretic-sites",
-   "label": "Study this: L09 · Part 1 →"
-  }
- },
- {
-  "topic": "RAAS blockers",
-  "objectives": [
-   "IO5.1"
-  ],
-  "sg": [
-   "U5-R7"
-  ],
-  "kind": "mechanism",
-  "stem": "Which drug blocks the RAAS at the step that converts angiotensin I to angiotensin II?",
-  "correct": "Lisinopril",
-  "distractors": [
-   {
-    "text": "Losartan",
-    "why": "Blocks the AT1 receptor."
-   },
-   {
-    "text": "Aliskiren",
-    "why": "Blocks renin."
-   },
-   {
-    "text": "Spironolactone",
-    "why": "Blocks the aldosterone receptor."
-   },
-   {
-    "text": "Amlodipine",
-    "why": "Not a RAAS blocker."
-   }
-  ],
-  "why_correct": "ACE inhibitors (-pril) block angiotensin I → II; ARBs block AT1; aliskiren blocks renin; spironolactone blocks aldosterone.",
-  "takeaway": "Renin → ACE → AT1 → aldosterone: four blockers, four steps.",
-  "discriminator": "Angiotensin II drives vasoconstriction and aldosterone release.",
-  "src": "L10 S4; S5; SG U5-R7",
-  "id": "U5-016",
-  "answer": "C",
-  "options": {
-   "A": {
-    "text": "Spironolactone",
-    "why": "Blocks the aldosterone receptor.",
-    "correct": false
-   },
-   "B": {
-    "text": "Losartan",
-    "why": "Blocks the AT1 receptor.",
-    "correct": false
-   },
-   "C": {
-    "text": "Lisinopril",
-    "why": "ACE inhibitors (-pril) block angiotensin I → II; ARBs block AT1; aliskiren blocks renin; spironolactone blocks aldosterone.",
-    "correct": true
-   },
-   "D": {
-    "text": "Amlodipine",
-    "why": "Not a RAAS blocker.",
-    "correct": false
-   },
-   "E": {
-    "text": "Aliskiren",
-    "why": "Blocks renin.",
-    "correct": false
-   }
-  },
-  "link": {
-   "href": "../../L10/index.html#raas-blockers",
-   "label": "Study this: L10 · Part 1 →"
-  }
- },
- {
-  "topic": "Angina & nitrates",
-  "objectives": [
-   "IO5.3"
-  ],
-  "sg": [
-   "U5-R10"
-  ],
-  "kind": "mechanism",
-  "stem": "Which class treats both hypertension and angina by the same mechanism?",
-  "correct": "Dihydropyridine CCBs",
-  "distractors": [
-   {
-    "text": "Thiazide diuretics",
-    "why": "Hypertension only."
-   },
-   {
-    "text": "Carbonic anhydrase inhibitors",
-    "why": "Not antianginal."
-   },
-   {
-    "text": "Aldosterone antagonists",
-    "why": "Not antianginal."
-   },
-   {
-    "text": "Central α2 agonists",
-    "why": "Not antianginal."
-   }
-  ],
-  "why_correct": "Arteriolar dilation reduces afterload — lowering BP and myocardial oxygen demand.",
-  "takeaway": "CCBs = the cardiorenal overlap.",
-  "discriminator": "Non-DHPs also slow the heart and raise coronary flow.",
-  "src": "L10 S22; SG U5-R10",
-  "id": "U5-027",
-  "answer": "A",
-  "options": {
-   "A": {
-    "text": "Dihydropyridine CCBs",
-    "why": "Arteriolar dilation reduces afterload — lowering BP and myocardial oxygen demand.",
-    "correct": true
-   },
-   "B": {
-    "text": "Carbonic anhydrase inhibitors",
-    "why": "Not antianginal.",
-    "correct": false
-   },
-   "C": {
-    "text": "Aldosterone antagonists",
-    "why": "Not antianginal.",
-    "correct": false
-   },
-   "D": {
-    "text": "Central α2 agonists",
-    "why": "Not antianginal.",
-    "correct": false
-   },
-   "E": {
-    "text": "Thiazide diuretics",
-    "why": "Hypertension only.",
-    "correct": false
-   }
-  },
-  "link": {
-   "href": "../../L10/index.html#nitrates-angina-the-triple-whammy",
-   "label": "Study this: L10 · Part 3 →"
-  }
- },
- {
-  "topic": "Triple whammy",
-  "objectives": [
-   "IO5.2"
-  ],
-  "sg": [
-   "U5-R12",
-   "U5-S"
-  ],
-  "kind": "vignette",
-  "stem": "An older adult on lisinopril and HCTZ starts daily OTC naproxen; a week later creatinine is up acutely. Mechanism?",
-  "correct": "Three hits on filtration pressure",
-  "distractors": [
-   {
-    "text": "Allergic interstitial nephritis",
-    "why": "Not the taught picture."
-   },
-   {
-    "text": "Expected ACE-inhibitor creatinine rise",
-    "why": "Not newly started."
-   },
-   {
-    "text": "Thiazide-induced hypercalcemia",
-    "why": "Not the mechanism."
-   },
-   {
-    "text": "Contrast nephropathy",
-    "why": "No contrast given."
-   }
-  ],
-  "why_correct": "NSAID afferent constriction + ACEi efferent dilation + diuretic volume depletion combine additively to synergistically → AKI.",
-  "takeaway": "NSAID + ACEi/ARB + diuretic = triple whammy.",
-  "discriminator": "At eGFR 25, also switch HCTZ to a loop.",
-  "src": "L10 S23; S27; SG U5-R12; SG U5-S",
-  "id": "U5-029",
-  "answer": "B",
-  "options": {
-   "A": {
-    "text": "Thiazide-induced hypercalcemia",
-    "why": "Not the mechanism.",
-    "correct": false
-   },
-   "B": {
-    "text": "Three hits on filtration pressure",
-    "why": "NSAID afferent constriction + ACEi efferent dilation + diuretic volume depletion combine additively to synergistically → AKI.",
-    "correct": true
-   },
-   "C": {
-    "text": "Allergic interstitial nephritis",
-    "why": "Not the taught picture.",
-    "correct": false
-   },
-   "D": {
-    "text": "Contrast nephropathy",
-    "why": "No contrast given.",
-    "correct": false
-   },
-   "E": {
-    "text": "Expected ACE-inhibitor creatinine rise",
-    "why": "Not newly started.",
-    "correct": false
-   }
-  },
-  "link": {
-   "href": "../../L10/index.html#nitrates-angina-the-triple-whammy",
-   "label": "Study this: L10 · Part 3 →"
-  }
- },
- {
-  "topic": "Other antihypertensives",
-  "objectives": [
-   "IO5.2"
-  ],
-  "sg": [],
-  "kind": "mechanism",
-  "stem": "Why is hydralazine given with a beta-blocker and a diuretic?",
-  "correct": "To offset reflex tachycardia and edema",
-  "distractors": [
-   {
-    "text": "To prevent rebound hypertension",
-    "why": "Clonidine."
-   },
-   {
-    "text": "To block bradykinin cough",
-    "why": "ACE inhibitors."
-   },
-   {
-    "text": "To raise its oral bioavailability",
-    "why": "Not the reason."
-   },
-   {
-    "text": "To prevent hyperkalemia it causes",
-    "why": "Not the reason."
-   }
-  ],
-  "why_correct": "Direct arteriolar dilation triggers reflex tachycardia and salt and water retention.",
-  "takeaway": "Hydralazine never travels alone.",
-  "discriminator": "Clonidine: rebound hypertension if stopped abruptly.",
-  "src": "L10 S16; p. 280",
-  "id": "U5-024",
-  "answer": "B",
-  "options": {
-   "A": {
-    "text": "To block bradykinin cough",
-    "why": "ACE inhibitors.",
-    "correct": false
-   },
-   "B": {
-    "text": "To offset reflex tachycardia and edema",
-    "why": "Direct arteriolar dilation triggers reflex tachycardia and salt and water retention.",
-    "correct": true
-   },
-   "C": {
-    "text": "To prevent hyperkalemia it causes",
-    "why": "Not the reason.",
-    "correct": false
-   },
-   "D": {
-    "text": "To raise its oral bioavailability",
-    "why": "Not the reason.",
-    "correct": false
-   },
-   "E": {
-    "text": "To prevent rebound hypertension",
-    "why": "Clonidine.",
-    "correct": false
-   }
-  },
-  "link": {
-   "href": "../../L10/index.html#other-antihypertensives-resistant-hypertension",
-   "label": "Study this: L10 · Part 2 →"
-  }
- },
- {
-  "topic": "RAAS blockers",
-  "objectives": [
-   "IO5.2"
-  ],
-  "sg": [],
-  "kind": "vignette",
-  "stem": "A patient on enalapril has a persistent dry cough. What is the best change?",
-  "correct": "Switch to an ARB (losartan)",
-  "distractors": [
-   {
-    "text": "Add a daily antihistamine",
-    "why": "Cough is not allergic."
-   },
-   {
-    "text": "Switch to captopril",
-    "why": "Same class, same cough."
-   },
-   {
-    "text": "Add aliskiren",
-    "why": "Not combined; no benefit."
-   },
-   {
-    "text": "Stop all antihypertensives",
-    "why": "An ARB keeps the benefit."
-   }
-  ],
-  "why_correct": "ACE-inhibitor cough is bradykinin-mediated; ARBs don’t raise bradykinin, so they are the usual switch.",
-  "takeaway": "Cough → ARB; angioedema → stop.",
-  "discriminator": "Cough is the most common reason to switch.",
-  "src": "L10 S5; S6; S7",
-  "id": "U5-017",
-  "answer": "A",
-  "options": {
-   "A": {
-    "text": "Switch to an ARB (losartan)",
-    "why": "ACE-inhibitor cough is bradykinin-mediated; ARBs don’t raise bradykinin, so they are the usual switch.",
-    "correct": true
-   },
-   "B": {
-    "text": "Add a daily antihistamine",
-    "why": "Cough is not allergic.",
-    "correct": false
-   },
-   "C": {
-    "text": "Add aliskiren",
-    "why": "Not combined; no benefit.",
-    "correct": false
-   },
-   "D": {
-    "text": "Switch to captopril",
-    "why": "Same class, same cough.",
-    "correct": false
-   },
-   "E": {
-    "text": "Stop all antihypertensives",
-    "why": "An ARB keeps the benefit.",
+    "text": "Gynecomastia over time",
+    "why": "Spironolactone.",
     "correct": false
    }
   },
@@ -1446,12 +2549,12 @@
     "correct": false
    },
    "D": {
-    "text": "Hydrochlorothiazide",
+    "text": "Acetazolamide",
     "why": "Not an aldosterone antagonist.",
     "correct": false
    },
    "E": {
-    "text": "Acetazolamide",
+    "text": "Hydrochlorothiazide",
     "why": "Not an aldosterone antagonist.",
     "correct": false
    }
@@ -1459,6 +2562,599 @@
   "link": {
    "href": "../../L09/index.html#potassium-sparing-cai-osmotic-diuretics",
    "label": "Study this: L09 · Part 3 →"
+  }
+ },
+ {
+  "topic": "Nephron sites",
+  "objectives": [
+   "IO5.1"
+  ],
+  "sg": [],
+  "kind": "mechanism",
+  "stem": "Where is the most potent diuretic target located?",
+  "correct": "Thick ascending limb",
+  "distractors": [
+   {
+    "text": "Proximal tubule",
+    "why": "CAI, weak."
+   },
+   {
+    "text": "Distal convoluted tubule",
+    "why": "Thiazides, modest."
+   },
+   {
+    "text": "Collecting duct",
+    "why": "K⁺-sparing, weakest."
+   },
+   {
+    "text": "Glomerulus",
+    "why": "Not a diuretic site."
+   }
+  ],
+  "why_correct": "Loops block NKCC2 in the thick ascending limb (~25% of filtered sodium).",
+  "takeaway": "Potency follows the share of sodium reabsorbed.",
+  "discriminator": "Loops stay effective in advanced CKD.",
+  "src": "L09 S7; S10; S21",
+  "id": "U5-033",
+  "answer": "E",
+  "options": {
+   "A": {
+    "text": "Distal convoluted tubule",
+    "why": "Thiazides, modest.",
+    "correct": false
+   },
+   "B": {
+    "text": "Glomerulus",
+    "why": "Not a diuretic site.",
+    "correct": false
+   },
+   "C": {
+    "text": "Collecting duct",
+    "why": "K⁺-sparing, weakest.",
+    "correct": false
+   },
+   "D": {
+    "text": "Proximal tubule",
+    "why": "CAI, weak.",
+    "correct": false
+   },
+   "E": {
+    "text": "Thick ascending limb",
+    "why": "Loops block NKCC2 in the thick ascending limb (~25% of filtered sodium).",
+    "correct": true
+   }
+  },
+  "link": {
+   "href": "../../L09/index.html#loop-thiazide-diuretics",
+   "label": "Study this: L09 · Part 2 →"
+  }
+ },
+ {
+  "topic": "Loop vs. thiazide",
+  "objectives": [
+   "IO5.5"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A patient will receive IV furosemide for pulmonary edema. Which administration rule prevents ototoxicity?",
+  "correct": "Give it slowly (≤ 4 mg/min)",
+  "distractors": [
+   {
+    "text": "Give it as a rapid push",
+    "why": "Raises ototoxicity."
+   },
+   {
+    "text": "Give it with gentamicin",
+    "why": "Additive ototoxicity."
+   },
+   {
+    "text": "Give double the oral dose IV",
+    "why": "Not the rule."
+   },
+   {
+    "text": "Give it with an NSAID",
+    "why": "Blunts effect."
+   }
+  ],
+  "why_correct": "Ototoxicity occurs with rapid IV or high doses; give IV furosemide no faster than 4 mg/min.",
+  "takeaway": "Loops + aminoglycosides = additive ototoxicity.",
+  "discriminator": "Usually reversible (textbook).",
+  "src": "L09 S10; S27; S38",
+  "id": "U5-037",
+  "answer": "E",
+  "options": {
+   "A": {
+    "text": "Give it as a rapid push",
+    "why": "Raises ototoxicity.",
+    "correct": false
+   },
+   "B": {
+    "text": "Give it with gentamicin",
+    "why": "Additive ototoxicity.",
+    "correct": false
+   },
+   "C": {
+    "text": "Give double the oral dose IV",
+    "why": "Not the rule.",
+    "correct": false
+   },
+   "D": {
+    "text": "Give it with an NSAID",
+    "why": "Blunts effect.",
+    "correct": false
+   },
+   "E": {
+    "text": "Give it slowly (≤ 4 mg/min)",
+    "why": "Ototoxicity occurs with rapid IV or high doses; give IV furosemide no faster than 4 mg/min.",
+    "correct": true
+   }
+  },
+  "link": {
+   "href": "../../L09/index.html#loop-thiazide-diuretics",
+   "label": "Study this: L09 · Part 2 →"
+  }
+ },
+ {
+  "topic": "Triple whammy",
+  "objectives": [
+   "IO5.2"
+  ],
+  "sg": [
+   "U5-R12",
+   "U5-S"
+  ],
+  "kind": "vignette",
+  "stem": "An older adult on lisinopril and HCTZ starts daily OTC naproxen; a week later creatinine is up acutely. Mechanism?",
+  "correct": "Three hits on filtration pressure",
+  "distractors": [
+   {
+    "text": "Allergic interstitial nephritis",
+    "why": "Not the taught picture."
+   },
+   {
+    "text": "Expected ACE-inhibitor creatinine rise",
+    "why": "Not newly started."
+   },
+   {
+    "text": "Thiazide-induced hypercalcemia",
+    "why": "Not the mechanism."
+   },
+   {
+    "text": "Contrast nephropathy",
+    "why": "No contrast given."
+   }
+  ],
+  "why_correct": "NSAID afferent constriction + ACEi efferent dilation + diuretic volume depletion combine additively to synergistically → AKI.",
+  "takeaway": "NSAID + ACEi/ARB + diuretic = triple whammy.",
+  "discriminator": "At eGFR 25, also switch HCTZ to a loop.",
+  "src": "L10 S23; S27; SG U5-R12; SG U5-S",
+  "id": "U5-029",
+  "answer": "A",
+  "options": {
+   "A": {
+    "text": "Three hits on filtration pressure",
+    "why": "NSAID afferent constriction + ACEi efferent dilation + diuretic volume depletion combine additively to synergistically → AKI.",
+    "correct": true
+   },
+   "B": {
+    "text": "Allergic interstitial nephritis",
+    "why": "Not the taught picture.",
+    "correct": false
+   },
+   "C": {
+    "text": "Expected ACE-inhibitor creatinine rise",
+    "why": "Not newly started.",
+    "correct": false
+   },
+   "D": {
+    "text": "Thiazide-induced hypercalcemia",
+    "why": "Not the mechanism.",
+    "correct": false
+   },
+   "E": {
+    "text": "Contrast nephropathy",
+    "why": "No contrast given.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L10/index.html#nitrates-angina-the-triple-whammy",
+   "label": "Study this: L10 · Part 3 →"
+  }
+ },
+ {
+  "topic": "Renal dosing",
+  "objectives": [
+   "IO5.5"
+  ],
+  "sg": [],
+  "kind": "mechanism",
+  "stem": "When GFR falls, which dose is usually unchanged for a renally cleared drug?",
+  "correct": "The loading dose",
+  "distractors": [
+   {
+    "text": "The maintenance dose",
+    "why": "Adjusted."
+   },
+   {
+    "text": "The dosing interval",
+    "why": "May be extended."
+   },
+   {
+    "text": "Every dose equally",
+    "why": "Not the rule."
+   },
+   {
+    "text": "No dose; stop the drug",
+    "why": "Not the rule."
+   }
+  ],
+  "why_correct": "Loading doses depend on volume of distribution and are often unchanged; maintenance doses are adjusted.",
+  "takeaway": "Loading = Vd; maintenance = clearance.",
+  "discriminator": "Reassess when GFR changes.",
+  "src": "L09 S8; p. 51; p. 52",
+  "id": "U5-031",
+  "answer": "A",
+  "options": {
+   "A": {
+    "text": "The loading dose",
+    "why": "Loading doses depend on volume of distribution and are often unchanged; maintenance doses are adjusted.",
+    "correct": true
+   },
+   "B": {
+    "text": "No dose; stop the drug",
+    "why": "Not the rule.",
+    "correct": false
+   },
+   "C": {
+    "text": "Every dose equally",
+    "why": "Not the rule.",
+    "correct": false
+   },
+   "D": {
+    "text": "The maintenance dose",
+    "why": "Adjusted.",
+    "correct": false
+   },
+   "E": {
+    "text": "The dosing interval",
+    "why": "May be extended.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L09/index.html#renal-dosing-diuretic-sites",
+   "label": "Study this: L09 · Part 1 →"
+  }
+ },
+ {
+  "topic": "Angina & nitrates",
+  "objectives": [
+   "IO5.3"
+  ],
+  "sg": [
+   "U5-R10"
+  ],
+  "kind": "mechanism",
+  "stem": "Which class treats both hypertension and angina by the same mechanism?",
+  "correct": "Dihydropyridine CCBs",
+  "distractors": [
+   {
+    "text": "Thiazide diuretics",
+    "why": "Hypertension only."
+   },
+   {
+    "text": "Carbonic anhydrase inhibitors",
+    "why": "Not antianginal."
+   },
+   {
+    "text": "Aldosterone antagonists",
+    "why": "Not antianginal."
+   },
+   {
+    "text": "Central α2 agonists",
+    "why": "Not antianginal."
+   }
+  ],
+  "why_correct": "Arteriolar dilation reduces afterload — lowering BP and myocardial oxygen demand.",
+  "takeaway": "CCBs = the cardiorenal overlap.",
+  "discriminator": "Non-DHPs also slow the heart and raise coronary flow.",
+  "src": "L10 S22; SG U5-R10",
+  "id": "U5-027",
+  "answer": "D",
+  "options": {
+   "A": {
+    "text": "Carbonic anhydrase inhibitors",
+    "why": "Not antianginal.",
+    "correct": false
+   },
+   "B": {
+    "text": "Central α2 agonists",
+    "why": "Not antianginal.",
+    "correct": false
+   },
+   "C": {
+    "text": "Thiazide diuretics",
+    "why": "Hypertension only.",
+    "correct": false
+   },
+   "D": {
+    "text": "Dihydropyridine CCBs",
+    "why": "Arteriolar dilation reduces afterload — lowering BP and myocardial oxygen demand.",
+    "correct": true
+   },
+   "E": {
+    "text": "Aldosterone antagonists",
+    "why": "Not antianginal.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L10/index.html#nitrates-angina-the-triple-whammy",
+   "label": "Study this: L10 · Part 3 →"
+  }
+ },
+ {
+  "topic": "Potassium-sparing",
+  "objectives": [
+   "IO5.4"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A patient on lithium develops nephrogenic diabetes insipidus. Which diuretic is used?",
+  "correct": "Amiloride",
+  "distractors": [
+   {
+    "text": "Furosemide",
+    "why": "Not for NDI."
+   },
+   {
+    "text": "Mannitol",
+    "why": "Worsens water loss."
+   },
+   {
+    "text": "Acetazolamide",
+    "why": "Not the slide answer."
+   },
+   {
+    "text": "Spironolactone",
+    "why": "Not the NDI drug."
+   }
+  ],
+  "why_correct": "Amiloride blocks lithium entry into collecting-duct cells and treats lithium-induced NDI; thiazides also help.",
+  "takeaway": "Lithium NDI → amiloride.",
+  "discriminator": "Monitor lithium levels with diuretics.",
+  "src": "L09 S34; p. 280",
+  "id": "U5-039",
+  "answer": "D",
+  "options": {
+   "A": {
+    "text": "Acetazolamide",
+    "why": "Not the slide answer.",
+    "correct": false
+   },
+   "B": {
+    "text": "Spironolactone",
+    "why": "Not the NDI drug.",
+    "correct": false
+   },
+   "C": {
+    "text": "Mannitol",
+    "why": "Worsens water loss.",
+    "correct": false
+   },
+   "D": {
+    "text": "Amiloride",
+    "why": "Amiloride blocks lithium entry into collecting-duct cells and treats lithium-induced NDI; thiazides also help.",
+    "correct": true
+   },
+   "E": {
+    "text": "Furosemide",
+    "why": "Not for NDI.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L09/index.html#loop-thiazide-diuretics",
+   "label": "Study this: L09 · Part 2 →"
+  }
+ },
+ {
+  "topic": "Nephron sites",
+  "objectives": [
+   "IO5.1"
+  ],
+  "sg": [
+   "U5-R2",
+   "U5-M"
+  ],
+  "kind": "mechanism",
+  "stem": "Which pairing of diuretic class and nephron site is correct?",
+  "correct": "Thiazide — distal convoluted tubule",
+  "distractors": [
+   {
+    "text": "Loop — collecting duct",
+    "why": "Loops act at the thick ascending limb."
+   },
+   {
+    "text": "Acetazolamide — distal tubule",
+    "why": "Proximal tubule."
+   },
+   {
+    "text": "Amiloride — proximal tubule",
+    "why": "Collecting duct."
+   },
+   {
+    "text": "Spironolactone — thick ascending limb",
+    "why": "Collecting duct."
+   }
+  ],
+  "why_correct": "Loop TAL; thiazide DCT; K⁺-sparing collecting duct; CAI proximal tubule; osmotic throughout (mainly proximal).",
+  "takeaway": "Site predicts potency and electrolyte effects.",
+  "discriminator": "Na⁺ reabsorbed: PT ~65%, TAL ~25%, DCT 5–8%, CD 2–3%.",
+  "src": "L09 S7; SG U5-R2; SG U5-M",
+  "id": "U5-003",
+  "answer": "B",
+  "options": {
+   "A": {
+    "text": "Acetazolamide — distal tubule",
+    "why": "Proximal tubule.",
+    "correct": false
+   },
+   "B": {
+    "text": "Thiazide — distal convoluted tubule",
+    "why": "Loop TAL; thiazide DCT; K⁺-sparing collecting duct; CAI proximal tubule; osmotic throughout (mainly proximal).",
+    "correct": true
+   },
+   "C": {
+    "text": "Loop — collecting duct",
+    "why": "Loops act at the thick ascending limb.",
+    "correct": false
+   },
+   "D": {
+    "text": "Amiloride — proximal tubule",
+    "why": "Collecting duct.",
+    "correct": false
+   },
+   "E": {
+    "text": "Spironolactone — thick ascending limb",
+    "why": "Collecting duct.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L09/index.html#renal-dosing-diuretic-sites",
+   "label": "Study this: L09 · Part 1 →"
+  }
+ },
+ {
+  "topic": "Other antihypertensives",
+  "objectives": [
+   "IO5.4"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A patient with CKD and resistant hypertension is already on a loop diuretic, ACEi and CCB. Next add-on per the slides?",
+  "correct": "Spironolactone",
+  "distractors": [
+   {
+    "text": "Aliskiren",
+    "why": "Never with ACEi."
+   },
+   {
+    "text": "Enalapril",
+    "why": "Same class."
+   },
+   {
+    "text": "Hydralazine",
+    "why": "Needs partners."
+   },
+   {
+    "text": "Clonidine",
+    "why": "Not the slide order."
+   }
+  ],
+  "why_correct": "Aldosterone antagonists can be added for resistant hypertension, with close potassium and renal monitoring on an ACEi/ARB.",
+  "takeaway": "Fix the diuretic first, then spironolactone.",
+  "discriminator": "Watch hyperkalemia.",
+  "src": "L10 S15",
+  "id": "U5-045",
+  "answer": "C",
+  "options": {
+   "A": {
+    "text": "Aliskiren",
+    "why": "Never with ACEi.",
+    "correct": false
+   },
+   "B": {
+    "text": "Clonidine",
+    "why": "Not the slide order.",
+    "correct": false
+   },
+   "C": {
+    "text": "Spironolactone",
+    "why": "Aldosterone antagonists can be added for resistant hypertension, with close potassium and renal monitoring on an ACEi/ARB.",
+    "correct": true
+   },
+   "D": {
+    "text": "Hydralazine",
+    "why": "Needs partners.",
+    "correct": false
+   },
+   "E": {
+    "text": "Enalapril",
+    "why": "Same class.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L10/index.html#other-antihypertensives-resistant-hypertension",
+   "label": "Study this: L10 · Part 2 →"
+  }
+ },
+ {
+  "topic": "RAAS blockers",
+  "objectives": [
+   "IO5.4"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A diabetic patient on lisinopril is started on aliskiren for extra BP control. Best response?",
+  "correct": "Do not combine them",
+  "distractors": [
+   {
+    "text": "Combine for renoprotection",
+    "why": "No benefit, more risk."
+   },
+   {
+    "text": "Combine at low doses",
+    "why": "Still avoided."
+   },
+   {
+    "text": "Combine with potassium",
+    "why": "Worse."
+   },
+   {
+    "text": "Combine and check BP yearly",
+    "why": "Avoid."
+   }
+  ],
+  "why_correct": "Aliskiren is not combined with an ACEi or ARB — additive hyperkalemia/hypotension, no added benefit; never in diabetes.",
+  "takeaway": "Never double-block RAAS with aliskiren.",
+  "discriminator": "Aliskiren is mainly a teaching example.",
+  "src": "L10 S7; S42",
+  "id": "U5-042",
+  "answer": "D",
+  "options": {
+   "A": {
+    "text": "Combine and check BP yearly",
+    "why": "Avoid.",
+    "correct": false
+   },
+   "B": {
+    "text": "Combine with potassium",
+    "why": "Worse.",
+    "correct": false
+   },
+   "C": {
+    "text": "Combine for renoprotection",
+    "why": "No benefit, more risk.",
+    "correct": false
+   },
+   "D": {
+    "text": "Do not combine them",
+    "why": "Aliskiren is not combined with an ACEi or ARB — additive hyperkalemia/hypotension, no added benefit; never in diabetes.",
+    "correct": true
+   },
+   "E": {
+    "text": "Combine at low doses",
+    "why": "Still avoided.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L10/index.html#raas-blockers",
+   "label": "Study this: L10 · Part 1 →"
   }
  },
  {
@@ -1493,227 +3189,32 @@
   "discriminator": "Proximal agents act before the loop, so the loop compensates.",
   "src": "L09 S7; S21",
   "id": "U5-004",
-  "answer": "B",
+  "answer": "D",
   "options": {
    "A": {
-    "text": "They act in the collecting duct",
-    "why": "They act at the thick ascending limb.",
-    "correct": false
-   },
-   "B": {
-    "text": "Their segment reabsorbs ~25% of Na⁺",
-    "why": "Potency tracks the share of sodium reabsorbed at the blocked segment: loop ~25%, thiazide ~6%, CAI ~4%, K⁺-sparing ~2%.",
-    "correct": true
-   },
-   "C": {
     "text": "They block aldosterone receptors",
     "why": "That is spironolactone.",
     "correct": false
    },
-   "D": {
+   "B": {
+    "text": "They are filtered but not reabsorbed",
+    "why": "That is mannitol.",
+    "correct": false
+   },
+   "C": {
     "text": "They inhibit carbonic anhydrase",
     "why": "That is acetazolamide.",
     "correct": false
    },
-   "E": {
-    "text": "They are filtered but not reabsorbed",
-    "why": "That is mannitol.",
-    "correct": false
-   }
-  },
-  "link": {
-   "href": "../../L09/index.html#renal-dosing-diuretic-sites",
-   "label": "Study this: L09 · Part 1 →"
-  }
- },
- {
-  "topic": "Loop vs. thiazide",
-  "objectives": [
-   "IO5.4"
-  ],
-  "sg": [],
-  "kind": "vignette",
-  "stem": "A woman with hypertension, normal renal function and recurrent calcium kidney stones needs a diuretic. Which fits best?",
-  "correct": "Hydrochlorothiazide",
-  "distractors": [
-   {
-    "text": "Furosemide (loop)",
-    "why": "Increases calcium excretion."
-   },
-   {
-    "text": "Acetazolamide (CAI)",
-    "why": "Promotes stones."
-   },
-   {
-    "text": "Mannitol (osmotic)",
-    "why": "IV for ICP/IOP."
-   },
-   {
-    "text": "Bumetanide (loop)",
-    "why": "Loop; raises urinary calcium."
-   }
-  ],
-  "why_correct": "Thiazides decrease calcium excretion — first-line HTN and helpful for calcium stones.",
-  "takeaway": "Stones + HTN → thiazide.",
-  "discriminator": "Textbook: add fluid, cut salt, don’t restrict dietary calcium.",
-  "src": "L09 S12; S30; p. 280",
-  "id": "U5-007",
-  "answer": "D",
-  "options": {
-   "A": {
-    "text": "Furosemide (loop)",
-    "why": "Increases calcium excretion.",
-    "correct": false
-   },
-   "B": {
-    "text": "Bumetanide (loop)",
-    "why": "Loop; raises urinary calcium.",
-    "correct": false
-   },
-   "C": {
-    "text": "Acetazolamide (CAI)",
-    "why": "Promotes stones.",
-    "correct": false
-   },
    "D": {
-    "text": "Hydrochlorothiazide",
-    "why": "Thiazides decrease calcium excretion — first-line HTN and helpful for calcium stones.",
+    "text": "Their segment reabsorbs ~25% of Na⁺",
+    "why": "Potency tracks the share of sodium reabsorbed at the blocked segment: loop ~25%, thiazide ~6%, CAI ~4%, K⁺-sparing ~2%.",
     "correct": true
    },
    "E": {
-    "text": "Mannitol (osmotic)",
-    "why": "IV for ICP/IOP.",
+    "text": "They act in the collecting duct",
+    "why": "They act at the thick ascending limb.",
     "correct": false
-   }
-  },
-  "link": {
-   "href": "../../L09/index.html#loop-thiazide-diuretics",
-   "label": "Study this: L09 · Part 2 →"
-  }
- },
- {
-  "topic": "Other antihypertensives",
-  "objectives": [
-   "IO5.4"
-  ],
-  "sg": [],
-  "kind": "vignette",
-  "stem": "CKD with eGFR 27 mL/min; BP above goal on lisinopril, amlodipine and hydrochlorothiazide. First change?",
-  "correct": "Swap HCTZ for a loop",
-  "distractors": [
-   {
-    "text": "Add clonidine",
-    "why": "Fix the diuretic first."
-   },
-   {
-    "text": "Add aliskiren",
-    "why": "No benefit, more risk."
-   },
-   {
-    "text": "Raise the thiazide dose",
-    "why": "The site lacks sodium."
-   },
-   {
-    "text": "Stop lisinopril",
-    "why": "First-line in CKD."
-   }
-  ],
-  "why_correct": "Resistant HTN in CKD is often a diuretic-selection problem: at this GFR HCTZ has lost efficacy; switch to furosemide or torsemide.",
-  "takeaway": "Check the diuretic before adding a class.",
-  "discriminator": "Then spironolactone with close K⁺ monitoring.",
-  "src": "L10 S15; S17",
-  "id": "U5-023",
-  "answer": "D",
-  "options": {
-   "A": {
-    "text": "Add aliskiren",
-    "why": "No benefit, more risk.",
-    "correct": false
-   },
-   "B": {
-    "text": "Raise the thiazide dose",
-    "why": "The site lacks sodium.",
-    "correct": false
-   },
-   "C": {
-    "text": "Add clonidine",
-    "why": "Fix the diuretic first.",
-    "correct": false
-   },
-   "D": {
-    "text": "Swap HCTZ for a loop",
-    "why": "Resistant HTN in CKD is often a diuretic-selection problem: at this GFR HCTZ has lost efficacy; switch to furosemide or torsemide.",
-    "correct": true
-   },
-   "E": {
-    "text": "Stop lisinopril",
-    "why": "First-line in CKD.",
-    "correct": false
-   }
-  },
-  "link": {
-   "href": "../../L10/index.html#other-antihypertensives-resistant-hypertension",
-   "label": "Study this: L10 · Part 2 →"
-  }
- },
- {
-  "topic": "Renal dosing",
-  "objectives": [
-   "IO5.5"
-  ],
-  "sg": [],
-  "kind": "vignette",
-  "stem": "An 82-year-old on several renally cleared drugs is admitted with vomiting and dehydration. What is the best dosing habit?",
-  "correct": "Re-estimate CrCl and adjust doses",
-  "distractors": [
-   {
-    "text": "Keep doses based on last year’s labs",
-    "why": "Acute illness drops GFR quickly."
-   },
-   {
-    "text": "Double every loading dose to be safe",
-    "why": "Loading doses are often unchanged."
-   },
-   {
-    "text": "Adjust only the antibiotics, nothing else",
-    "why": "Digoxin, DOACs and metformin too."
-   },
-   {
-    "text": "Stop checking renal function after 80",
-    "why": "Older adults are the priority."
-   }
-  ],
-  "why_correct": "Reassess as renal function changes — acute illness, dehydration or nephrotoxic drugs can drop GFR quickly.",
-  "takeaway": "Check CrCl or eGFR before dosing, and again when the patient gets sick.",
-  "discriminator": "Examples needing adjustment: vancomycin, beta-lactams, digoxin, DOACs, metformin.",
-  "src": "L09 S5; S8",
-  "id": "U5-002",
-  "answer": "E",
-  "options": {
-   "A": {
-    "text": "Keep doses based on last year’s labs",
-    "why": "Acute illness drops GFR quickly.",
-    "correct": false
-   },
-   "B": {
-    "text": "Adjust only the antibiotics, nothing else",
-    "why": "Digoxin, DOACs and metformin too.",
-    "correct": false
-   },
-   "C": {
-    "text": "Double every loading dose to be safe",
-    "why": "Loading doses are often unchanged.",
-    "correct": false
-   },
-   "D": {
-    "text": "Stop checking renal function after 80",
-    "why": "Older adults are the priority.",
-    "correct": false
-   },
-   "E": {
-    "text": "Re-estimate CrCl and adjust doses",
-    "why": "Reassess as renal function changes — acute illness, dehydration or nephrotoxic drugs can drop GFR quickly.",
-    "correct": true
    }
   },
   "link": {
@@ -1723,267 +3224,67 @@
  },
  {
   "topic": "CAI & osmotic",
-  "objectives": [
-   "IO5.2",
-   "IO5.4"
-  ],
-  "sg": [],
-  "kind": "vignette",
-  "stem": "A patient with decompensated heart failure has raised intracranial pressure. Why is mannitol risky?",
-  "correct": "It expands ECF volume first",
-  "distractors": [
-   {
-    "text": "It causes ototoxicity",
-    "why": "Loops."
-   },
-   {
-    "text": "It blocks ENaC",
-    "why": "Amiloride."
-   },
-   {
-    "text": "It raises potassium via aldosterone",
-    "why": "Not its mechanism."
-   },
-   {
-    "text": "It is ineffective IV",
-    "why": "It is given IV."
-   }
-  ],
-  "why_correct": "Mannitol pulls water into the extracellular space before diuresis — can worsen volume overload; avoid in heart failure.",
-  "takeaway": "Mannitol: ICP/IOP; needs renal perfusion; not in heart failure.",
-  "discriminator": "Monitor osmolality and electrolytes.",
-  "src": "L09 S19; S20; S37",
-  "id": "U5-015",
-  "answer": "E",
-  "options": {
-   "A": {
-    "text": "It is ineffective IV",
-    "why": "It is given IV.",
-    "correct": false
-   },
-   "B": {
-    "text": "It raises potassium via aldosterone",
-    "why": "Not its mechanism.",
-    "correct": false
-   },
-   "C": {
-    "text": "It causes ototoxicity",
-    "why": "Loops.",
-    "correct": false
-   },
-   "D": {
-    "text": "It blocks ENaC",
-    "why": "Amiloride.",
-    "correct": false
-   },
-   "E": {
-    "text": "It expands ECF volume first",
-    "why": "Mannitol pulls water into the extracellular space before diuresis — can worsen volume overload; avoid in heart failure.",
-    "correct": true
-   }
-  },
-  "link": {
-   "href": "../../L09/index.html#potassium-sparing-cai-osmotic-diuretics",
-   "label": "Study this: L09 · Part 3 →"
-  }
- },
- {
-  "topic": "Loop vs. thiazide",
   "objectives": [
    "IO5.2"
   ],
   "sg": [],
-  "kind": "vignette",
-  "stem": "A patient on digoxin starts high-dose furosemide for edema. Which lab change most raises digoxin toxicity?",
-  "correct": "Hypokalemia",
+  "kind": "mechanism",
+  "stem": "Which acid–base change does acetazolamide predictably cause?",
+  "correct": "Metabolic acidosis",
   "distractors": [
    {
-    "text": "Hypercalcemia",
-    "why": "Loops lower calcium."
+    "text": "Metabolic alkalosis",
+    "why": "Loops and thiazides."
    },
    {
-    "text": "Hyperkalemia",
-    "why": "Loops waste potassium."
+    "text": "Respiratory acidosis",
+    "why": "Not the drug effect."
    },
    {
-    "text": "Metabolic acidosis",
-    "why": "Loops cause alkalosis."
+    "text": "Respiratory alkalosis",
+    "why": "It counters this at altitude."
    },
    {
-    "text": "Hypernatremia",
-    "why": "Not the digoxin link."
+    "text": "No change",
+    "why": "Acidosis is predictable."
    }
   ],
-  "why_correct": "Hypokalemia from loops increases digoxin toxicity.",
-  "takeaway": "Loop + digoxin → watch K⁺.",
-  "discriminator": "Aminoglycosides add ototoxicity with loops.",
-  "src": "L09 S10; S38",
-  "id": "U5-008",
-  "answer": "A",
+  "why_correct": "Blocking carbonic anhydrase causes bicarbonate diuresis and metabolic acidosis.",
+  "takeaway": "CAI = acidosis; loops/thiazides = alkalosis.",
+  "discriminator": "Watch for kidney stones and potassium loss.",
+  "src": "L09 S19; S20",
+  "id": "U5-014",
+  "answer": "B",
   "options": {
    "A": {
-    "text": "Hypokalemia",
-    "why": "Hypokalemia from loops increases digoxin toxicity.",
-    "correct": true
-   },
-   "B": {
-    "text": "Hypernatremia",
-    "why": "Not the digoxin link.",
-    "correct": false
-   },
-   "C": {
-    "text": "Hyperkalemia",
-    "why": "Loops waste potassium.",
-    "correct": false
-   },
-   "D": {
-    "text": "Metabolic acidosis",
-    "why": "Loops cause alkalosis.",
-    "correct": false
-   },
-   "E": {
-    "text": "Hypercalcemia",
-    "why": "Loops lower calcium.",
-    "correct": false
-   }
-  },
-  "link": {
-   "href": "../../L09/index.html#loop-thiazide-diuretics",
-   "label": "Study this: L09 · Part 2 →"
-  }
- },
- {
-  "topic": "CAI & osmotic",
-  "objectives": [
-   "IO5.1"
-  ],
-  "sg": [
-   "U5-R6"
-  ],
-  "kind": "vignette",
-  "stem": "A climber plans a rapid ascent above 3000 m next week. Which drug and timing fit?",
-  "correct": "Acetazolamide, a day before ascent",
-  "distractors": [
-   {
-    "text": "Mannitol IV once at the summit",
-    "why": "For raised ICP/IOP."
-   },
-   {
-    "text": "Furosemide during ascent",
-    "why": "Edema, not altitude."
-   },
-   {
-    "text": "Spironolactone for a week before",
-    "why": "Not for altitude."
-   },
-   {
-    "text": "Hydrochlorothiazide daily",
-    "why": "Not for altitude."
-   }
-  ],
-  "why_correct": "Acetazolamide 125–250 mg BID starting a day before ascent; it blocks Na⁺/HCO₃⁻ reabsorption in the proximal tubule.",
-  "takeaway": "Acetazolamide = glaucoma, altitude, alkalosis.",
-  "discriminator": "Predictable adverse effect: metabolic acidosis.",
-  "src": "L09 S19; S36; SG U5-R6",
-  "id": "U5-013",
-  "answer": "C",
-  "options": {
-   "A": {
-    "text": "Furosemide during ascent",
-    "why": "Edema, not altitude.",
+    "text": "Metabolic alkalosis",
+    "why": "Loops and thiazides.",
     "correct": false
    },
    "B": {
-    "text": "Mannitol IV once at the summit",
-    "why": "For raised ICP/IOP.",
-    "correct": false
-   },
-   "C": {
-    "text": "Acetazolamide, a day before ascent",
-    "why": "Acetazolamide 125–250 mg BID starting a day before ascent; it blocks Na⁺/HCO₃⁻ reabsorption in the proximal tubule.",
+    "text": "Metabolic acidosis",
+    "why": "Blocking carbonic anhydrase causes bicarbonate diuresis and metabolic acidosis.",
     "correct": true
    },
+   "C": {
+    "text": "Respiratory alkalosis",
+    "why": "It counters this at altitude.",
+    "correct": false
+   },
    "D": {
-    "text": "Hydrochlorothiazide daily",
-    "why": "Not for altitude.",
+    "text": "Respiratory acidosis",
+    "why": "Not the drug effect.",
     "correct": false
    },
    "E": {
-    "text": "Spironolactone for a week before",
-    "why": "Not for altitude.",
+    "text": "No change",
+    "why": "Acidosis is predictable.",
     "correct": false
    }
   },
   "link": {
    "href": "../../L09/index.html#potassium-sparing-cai-osmotic-diuretics",
    "label": "Study this: L09 · Part 3 →"
-  }
- },
- {
-  "topic": "Renal dosing",
-  "objectives": [
-   "IO5.5"
-  ],
-  "sg": [
-   "U5-R1"
-  ],
-  "kind": "mechanism",
-  "stem": "Why must a renally cleared drug be adjusted when GFR falls?",
-  "correct": "It accumulates unless dosing changes",
-  "distractors": [
-   {
-    "text": "Its oral absorption falls along with GFR",
-    "why": "GFR affects elimination."
-   },
-   {
-    "text": "It is cleared faster in CKD",
-    "why": "Clearance falls."
-   },
-   {
-    "text": "Its loading dose must always double",
-    "why": "Loading doses are often unchanged."
-   },
-   {
-    "text": "Only its metabolites need adjusting",
-    "why": "Parent drug and active metabolites both matter."
-   }
-  ],
-  "why_correct": "Reduced GFR causes accumulation; reduce the dose, extend the interval, or both.",
-  "takeaway": "Falling GFR → accumulation → toxicity.",
-  "discriminator": "Maintenance doses get adjusted; loading doses often don’t.",
-  "src": "L09 S5; S6; S8; SG U5-R1",
-  "id": "U5-001",
-  "answer": "A",
-  "options": {
-   "A": {
-    "text": "It accumulates unless dosing changes",
-    "why": "Reduced GFR causes accumulation; reduce the dose, extend the interval, or both.",
-    "correct": true
-   },
-   "B": {
-    "text": "Its oral absorption falls along with GFR",
-    "why": "GFR affects elimination.",
-    "correct": false
-   },
-   "C": {
-    "text": "Its loading dose must always double",
-    "why": "Loading doses are often unchanged.",
-    "correct": false
-   },
-   "D": {
-    "text": "It is cleared faster in CKD",
-    "why": "Clearance falls.",
-    "correct": false
-   },
-   "E": {
-    "text": "Only its metabolites need adjusting",
-    "why": "Parent drug and active metabolites both matter.",
-    "correct": false
-   }
-  },
-  "link": {
-   "href": "../../L09/index.html#renal-dosing-diuretic-sites",
-   "label": "Study this: L09 · Part 1 →"
   }
  }
 ]

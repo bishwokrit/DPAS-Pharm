@@ -1,69 +1,268 @@
 [
  {
-  "topic": "PCOS",
+  "topic": "SERMs & aromatase inhibitors",
   "objectives": [
-   "IO6.1"
+   "IO6.4",
+   "IO6.6"
   ],
-  "sg": [
-   "U6-R9"
-  ],
-  "kind": "mechanism",
-  "stem": "What is the central mechanism linking insulin resistance to hyperandrogenism in PCOS?",
-  "correct": "More ovarian androgen, less SHBG",
+  "sg": [],
+  "kind": "vignette",
+  "stem": "Eight months into tamoxifen, a 55-year-old reports new vaginal bleeding. What should happen?",
+  "correct": "Prompt gynecologic evaluation",
   "distractors": [
    {
-    "text": "Insulin raises SHBG",
-    "why": "Reversed."
+    "text": "Reassure — expected and harmless",
+    "why": "Not reassurance."
    },
    {
-    "text": "No mechanistic link exists",
-    "why": "There is one."
+    "text": "Add estrogen to stabilize the lining",
+    "why": "Worsens risk."
    },
    {
-    "text": "Hyperandrogenism always comes first",
-    "why": "Absolute claim."
+    "text": "Stop tamoxifen without workup",
+    "why": "Evaluate first."
    },
    {
-    "text": "Insulin blocks aromatase",
-    "why": "Not the mechanism."
+    "text": "Switch to finasteride",
+    "why": "Wrong pathway."
    }
   ],
-  "why_correct": "Hyperinsulinemia directly stimulates theca-cell androgen production and lowers hepatic SHBG, raising free testosterone.",
-  "takeaway": "Insulin → androgens → worse insulin resistance (a cycle).",
-  "discriminator": "Explains why metabolic therapy helps reproductive symptoms.",
-  "src": "L11 S20; S21; SG U6-R9",
-  "id": "U6-013",
-  "answer": "D",
+  "why_correct": "Tamoxifen’s endometrial agonism raises hyperplasia/cancer risk — new bleeding needs prompt evaluation.",
+  "takeaway": "Tamoxifen + bleeding = evaluate.",
+  "discriminator": "Raloxifene would not carry this risk.",
+  "src": "L11 S18",
+  "id": "U6-007",
+  "answer": "E",
   "options": {
    "A": {
-    "text": "Hyperandrogenism always comes first",
-    "why": "Absolute claim.",
+    "text": "Stop tamoxifen without workup",
+    "why": "Evaluate first.",
     "correct": false
    },
    "B": {
-    "text": "Insulin blocks aromatase",
-    "why": "Not the mechanism.",
+    "text": "Switch to finasteride",
+    "why": "Wrong pathway.",
     "correct": false
    },
    "C": {
-    "text": "Insulin raises SHBG",
-    "why": "Reversed.",
+    "text": "Add estrogen to stabilize the lining",
+    "why": "Worsens risk.",
     "correct": false
    },
    "D": {
-    "text": "More ovarian androgen, less SHBG",
-    "why": "Hyperinsulinemia directly stimulates theca-cell androgen production and lowers hepatic SHBG, raising free testosterone.",
-    "correct": true
+    "text": "Reassure — expected and harmless",
+    "why": "Not reassurance.",
+    "correct": false
    },
    "E": {
-    "text": "No mechanistic link exists",
-    "why": "There is one.",
+    "text": "Prompt gynecologic evaluation",
+    "why": "Tamoxifen’s endometrial agonism raises hyperplasia/cancer risk — new bleeding needs prompt evaluation.",
+    "correct": true
+   }
+  },
+  "link": {
+   "href": "../../L11/index.html#serms-aromatase-inhibitors-androgens",
+   "label": "Study this: L11 · Part 2 →"
+  }
+ },
+ {
+  "topic": "ED & PDE5",
+  "objectives": [
+   "IO6.2",
+   "IO6.6"
+  ],
+  "sg": [
+   "U6-R16"
+  ],
+  "kind": "vignette",
+  "stem": "A 66-year-old on isosorbide mononitrate for angina requests tadalafil. What should the PA do?",
+  "correct": "Decline; involve cardiology",
+  "distractors": [
+   {
+    "text": "Prescribe a low dose",
+    "why": "Still contraindicated."
+   },
+   {
+    "text": "Space doses by 12 hours",
+    "why": "Absolute contraindication."
+   },
+   {
+    "text": "Switch to sildenafil",
+    "why": "Same class."
+   },
+   {
+    "text": "Prescribe if BP is normal",
+    "why": "Not acceptable."
+   }
+  ],
+  "why_correct": "Nitrates and PDE5 inhibitors both raise NO/cGMP; together, life-threatening hypotension — an absolute contraindication.",
+  "takeaway": "Nitrate + -afil = never.",
+  "discriminator": "Riociguat is also contraindicated with PDE5 inhibitors.",
+  "src": "L12 S22; S24; S25; SG U6-R16",
+  "id": "U6-026",
+  "answer": "C",
+  "options": {
+   "A": {
+    "text": "Switch to sildenafil",
+    "why": "Same class.",
+    "correct": false
+   },
+   "B": {
+    "text": "Prescribe a low dose",
+    "why": "Still contraindicated.",
+    "correct": false
+   },
+   "C": {
+    "text": "Decline; involve cardiology",
+    "why": "Nitrates and PDE5 inhibitors both raise NO/cGMP; together, life-threatening hypotension — an absolute contraindication.",
+    "correct": true
+   },
+   "D": {
+    "text": "Space doses by 12 hours",
+    "why": "Absolute contraindication.",
+    "correct": false
+   },
+   "E": {
+    "text": "Prescribe if BP is normal",
+    "why": "Not acceptable.",
     "correct": false
    }
   },
   "link": {
-   "href": "../../L11/index.html#pcos-the-reproductive-metabolic-overlap",
-   "label": "Study this: L11 · Part 3 →"
+   "href": "../../L12/index.html#bph-erectile-dysfunction-pde5-inhibitors",
+   "label": "Study this: L12 · Part 3 →"
+  }
+ },
+ {
+  "topic": "Contraception",
+  "objectives": [
+   "IO6.4"
+  ],
+  "sg": [
+   "U6-R3"
+  ],
+  "kind": "vignette",
+  "stem": "A 38-year-old who smokes daily asks for contraception. Which choice is most appropriate?",
+  "correct": "Levonorgestrel IUD",
+  "distractors": [
+   {
+    "text": "Combined pill at the lowest dose",
+    "why": "Estrogen contraindicated."
+   },
+   {
+    "text": "Combined vaginal ring",
+    "why": "Contains estrogen."
+   },
+   {
+    "text": "Combined transdermal patch",
+    "why": "Contains estrogen."
+   },
+   {
+    "text": "Any method; smoking is irrelevant",
+    "why": "Smoking > 35 is the trigger."
+   }
+  ],
+  "why_correct": "Smoking with age over 35 substantially raises estrogen’s thromboembolic risk; progestin-only methods carry no estrogen.",
+  "takeaway": "Smoker > 35, VTE history, migraine with aura → progestin-only.",
+  "discriminator": "When estrogen is off the table, progestin-only is the right first choice.",
+  "src": "L11 S5; S9; SG U6-R3",
+  "id": "U6-003",
+  "answer": "A",
+  "options": {
+   "A": {
+    "text": "Levonorgestrel IUD",
+    "why": "Smoking with age over 35 substantially raises estrogen’s thromboembolic risk; progestin-only methods carry no estrogen.",
+    "correct": true
+   },
+   "B": {
+    "text": "Combined transdermal patch",
+    "why": "Contains estrogen.",
+    "correct": false
+   },
+   "C": {
+    "text": "Combined pill at the lowest dose",
+    "why": "Estrogen contraindicated.",
+    "correct": false
+   },
+   "D": {
+    "text": "Any method; smoking is irrelevant",
+    "why": "Smoking > 35 is the trigger.",
+    "correct": false
+   },
+   "E": {
+    "text": "Combined vaginal ring",
+    "why": "Contains estrogen.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L11/index.html#estrogens-progestins-contraception",
+   "label": "Study this: L11 · Part 1 →"
+  }
+ },
+ {
+  "topic": "ED & PDE5",
+  "objectives": [
+   "IO6.2"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A patient with pulmonary hypertension on riociguat asks for tadalafil for ED. Best answer?",
+  "correct": "Contraindicated",
+  "distractors": [
+   {
+    "text": "Fine at low dose",
+    "why": "Contraindicated."
+   },
+   {
+    "text": "Fine if spaced 12 h",
+    "why": "Contraindicated."
+   },
+   {
+    "text": "Switch riociguat to a nitrate",
+    "why": "Also contraindicated."
+   },
+   {
+    "text": "Use vardenafil instead",
+    "why": "Same class."
+   }
+  ],
+  "why_correct": "PDE5 inhibitors are contraindicated with nitrates or riociguat.",
+  "takeaway": "PDE5 + riociguat = no.",
+  "discriminator": "Same cGMP logic as nitrates.",
+  "src": "L12 S50; S48",
+  "id": "U6-049",
+  "answer": "C",
+  "options": {
+   "A": {
+    "text": "Use vardenafil instead",
+    "why": "Same class.",
+    "correct": false
+   },
+   "B": {
+    "text": "Fine at low dose",
+    "why": "Contraindicated.",
+    "correct": false
+   },
+   "C": {
+    "text": "Contraindicated",
+    "why": "PDE5 inhibitors are contraindicated with nitrates or riociguat.",
+    "correct": true
+   },
+   "D": {
+    "text": "Fine if spaced 12 h",
+    "why": "Contraindicated.",
+    "correct": false
+   },
+   "E": {
+    "text": "Switch riociguat to a nitrate",
+    "why": "Also contraindicated.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L12/index.html#overactive-bladder-drugs",
+   "label": "Study this: L12 · Part 2 →"
   }
  },
  {
@@ -101,12 +300,12 @@
   "discriminator": "Tissue-selective agonism, not a class effect.",
   "src": "L11 S11; S12; SG U6-R5",
   "id": "U6-006",
-  "answer": "A",
+  "answer": "C",
   "options": {
    "A": {
-    "text": "Tamoxifen stimulates the endometrium",
-    "why": "SERMs act as agonists in some tissues and antagonists in others; tamoxifen activates the endometrium, raloxifene is essentially neutral.",
-    "correct": true
+    "text": "Tamoxifen blocks the androgen receptor",
+    "why": "ER, not AR.",
+    "correct": false
    },
    "B": {
     "text": "They have identical endometrial effects",
@@ -114,747 +313,83 @@
     "correct": false
    },
    "C": {
-    "text": "Raloxifene has no ER effects",
-    "why": "Bone agonist.",
-    "correct": false
+    "text": "Tamoxifen stimulates the endometrium",
+    "why": "SERMs act as agonists in some tissues and antagonists in others; tamoxifen activates the endometrium, raloxifene is essentially neutral.",
+    "correct": true
    },
    "D": {
-    "text": "Tamoxifen blocks the androgen receptor",
-    "why": "ER, not AR.",
-    "correct": false
-   },
-   "E": {
     "text": "Raloxifene blocks aromatase",
     "why": "Not the mechanism.",
     "correct": false
-   }
-  },
-  "link": {
-   "href": "../../L11/index.html#serms-aromatase-inhibitors-androgens",
-   "label": "Study this: L11 · Part 2 →"
-  }
- },
- {
-  "topic": "Contraception",
-  "objectives": [
-   "IO6.2"
-  ],
-  "sg": [
-   "U6-R4"
-  ],
-  "kind": "mechanism",
-  "stem": "Which adverse effect is specific to long-term depot medroxyprogesterone (DMPA)?",
-  "correct": "Reversible bone mineral density loss",
-  "distractors": [
-   {
-    "text": "Endometrial cancer from unopposed estrogen",
-    "why": "No estrogen in DMPA."
-   },
-   {
-    "text": "Hyperkalemia",
-    "why": "Drospirenone or spironolactone."
-   },
-   {
-    "text": "Erythrocytosis",
-    "why": "Testosterone."
-   },
-   {
-    "text": "Lactic acidosis",
-    "why": "Metformin."
-   }
-  ],
-  "why_correct": "DMPA carries a boxed warning for loss of bone mineral density with prolonged use.",
-  "takeaway": "DMPA = bones.",
-  "discriminator": "Progestin-only methods also cause irregular bleeding early.",
-  "src": "L11 S6; S9; S31; SG U6-R4",
-  "id": "U6-004",
-  "answer": "A",
-  "options": {
-   "A": {
-    "text": "Reversible bone mineral density loss",
-    "why": "DMPA carries a boxed warning for loss of bone mineral density with prolonged use.",
-    "correct": true
-   },
-   "B": {
-    "text": "Endometrial cancer from unopposed estrogen",
-    "why": "No estrogen in DMPA.",
-    "correct": false
-   },
-   "C": {
-    "text": "Lactic acidosis",
-    "why": "Metformin.",
-    "correct": false
-   },
-   "D": {
-    "text": "Erythrocytosis",
-    "why": "Testosterone.",
-    "correct": false
    },
    "E": {
-    "text": "Hyperkalemia",
-    "why": "Drospirenone or spironolactone.",
-    "correct": false
-   }
-  },
-  "link": {
-   "href": "../../L11/index.html#estrogens-progestins-contraception",
-   "label": "Study this: L11 · Part 1 →"
-  }
- },
- {
-  "topic": "SERMs & aromatase inhibitors",
-  "objectives": [
-   "IO6.4",
-   "IO6.6"
-  ],
-  "sg": [],
-  "kind": "vignette",
-  "stem": "Eight months into tamoxifen, a 55-year-old reports new vaginal bleeding. What should happen?",
-  "correct": "Prompt gynecologic evaluation",
-  "distractors": [
-   {
-    "text": "Reassure — expected and harmless",
-    "why": "Not reassurance."
-   },
-   {
-    "text": "Add estrogen to stabilize the lining",
-    "why": "Worsens risk."
-   },
-   {
-    "text": "Stop tamoxifen without workup",
-    "why": "Evaluate first."
-   },
-   {
-    "text": "Switch to finasteride",
-    "why": "Wrong pathway."
-   }
-  ],
-  "why_correct": "Tamoxifen’s endometrial agonism raises hyperplasia/cancer risk — new bleeding needs prompt evaluation.",
-  "takeaway": "Tamoxifen + bleeding = evaluate.",
-  "discriminator": "Raloxifene would not carry this risk.",
-  "src": "L11 S18",
-  "id": "U6-007",
-  "answer": "E",
-  "options": {
-   "A": {
-    "text": "Switch to finasteride",
-    "why": "Wrong pathway.",
-    "correct": false
-   },
-   "B": {
-    "text": "Reassure — expected and harmless",
-    "why": "Not reassurance.",
-    "correct": false
-   },
-   "C": {
-    "text": "Add estrogen to stabilize the lining",
-    "why": "Worsens risk.",
-    "correct": false
-   },
-   "D": {
-    "text": "Stop tamoxifen without workup",
-    "why": "Evaluate first.",
-    "correct": false
-   },
-   "E": {
-    "text": "Prompt gynecologic evaluation",
-    "why": "Tamoxifen’s endometrial agonism raises hyperplasia/cancer risk — new bleeding needs prompt evaluation.",
-    "correct": true
-   }
-  },
-  "link": {
-   "href": "../../L11/index.html#serms-aromatase-inhibitors-androgens",
-   "label": "Study this: L11 · Part 2 →"
-  }
- },
- {
-  "topic": "BPH",
-  "objectives": [
-   "IO6.3"
-  ],
-  "sg": [
-   "U6-R14"
-  ],
-  "kind": "mechanism",
-  "stem": "What distinguishes tamsulosin from doxazosin?",
-  "correct": "Tamsulosin is more uroselective",
-  "distractors": [
-   {
-    "text": "Doxazosin is the uroselective one",
-    "why": "Reversed."
-   },
-   {
-    "text": "Tamsulosin shrinks the prostate",
-    "why": "5-ARIs do."
-   },
-   {
-    "text": "Only doxazosin causes orthostasis",
-    "why": "All share it."
-   },
-   {
-    "text": "Tamsulosin is a 5-ARI",
-    "why": "Alpha1 blocker."
-   }
-  ],
-  "why_correct": "Tamsulosin/silodosin are uroselective; doxazosin/terazosin lower BP more; all share orthostatic hypotension and a first-dose effect.",
-  "takeaway": "Selectivity changes degree, not the class risk.",
-  "discriminator": "Floppy iris syndrome in cataract surgery.",
-  "src": "L12 S17; SG U6-R14",
-  "id": "U6-021",
-  "answer": "D",
-  "options": {
-   "A": {
-    "text": "Tamsulosin is a 5-ARI",
-    "why": "Alpha1 blocker.",
-    "correct": false
-   },
-   "B": {
-    "text": "Only doxazosin causes orthostasis",
-    "why": "All share it.",
-    "correct": false
-   },
-   "C": {
-    "text": "Tamsulosin shrinks the prostate",
-    "why": "5-ARIs do.",
-    "correct": false
-   },
-   "D": {
-    "text": "Tamsulosin is more uroselective",
-    "why": "Tamsulosin/silodosin are uroselective; doxazosin/terazosin lower BP more; all share orthostatic hypotension and a first-dose effect.",
-    "correct": true
-   },
-   "E": {
-    "text": "Doxazosin is the uroselective one",
-    "why": "Reversed.",
-    "correct": false
-   }
-  },
-  "link": {
-   "href": "../../L12/index.html#bph-erectile-dysfunction-pde5-inhibitors",
-   "label": "Study this: L12 · Part 3 →"
-  }
- },
- {
-  "topic": "Androgens & antiandrogens",
-  "objectives": [
-   "IO6.6"
-  ],
-  "sg": [],
-  "kind": "vignette",
-  "stem": "A woman with PCOS on spironolactone for hirsutism plans to conceive. Key counseling?",
-  "correct": "Stop it before conceiving",
-  "distractors": [
-   {
-    "text": "Continue; it is safe in pregnancy",
-    "why": "Avoid."
-   },
-   {
-    "text": "Double it to aid fertility",
-    "why": "Not the advice."
-   },
-   {
-    "text": "Add potassium supplements",
-    "why": "Hyperkalemia risk."
-   },
-   {
-    "text": "Switch to testosterone",
-    "why": "Wrong direction."
-   }
-  ],
-  "why_correct": "Spironolactone blocks the androgen receptor; avoid in pregnancy (feminization of a male fetus).",
-  "takeaway": "Antiandrogens and pregnancy don’t mix.",
-  "discriminator": "Also hyperkalemia with ACEi/ARB or potassium.",
-  "src": "L11 S24; S39; S45",
-  "id": "U6-012",
-  "answer": "B",
-  "options": {
-   "A": {
-    "text": "Continue; it is safe in pregnancy",
-    "why": "Avoid.",
-    "correct": false
-   },
-   "B": {
-    "text": "Stop it before conceiving",
-    "why": "Spironolactone blocks the androgen receptor; avoid in pregnancy (feminization of a male fetus).",
-    "correct": true
-   },
-   "C": {
-    "text": "Switch to testosterone",
-    "why": "Wrong direction.",
-    "correct": false
-   },
-   "D": {
-    "text": "Add potassium supplements",
-    "why": "Hyperkalemia risk.",
-    "correct": false
-   },
-   "E": {
-    "text": "Double it to aid fertility",
-    "why": "Not the advice.",
+    "text": "Raloxifene has no ER effects",
+    "why": "Bone agonist.",
     "correct": false
    }
   },
   "link": {
    "href": "../../L11/index.html#serms-aromatase-inhibitors-androgens",
    "label": "Study this: L11 · Part 2 →"
-  }
- },
- {
-  "topic": "ED & PDE5",
-  "objectives": [
-   "IO6.2"
-  ],
-  "sg": [],
-  "kind": "mechanism",
-  "stem": "Which adverse effect is most associated with sildenafil?",
-  "correct": "Blue-tinged vision",
-  "distractors": [
-   {
-    "text": "Dry mouth and constipation",
-    "why": "Antimuscarinics."
-   },
-   {
-    "text": "First-dose syncope",
-    "why": "Alpha1 blockers."
-   },
-   {
-    "text": "Decreased PSA",
-    "why": "5-ARIs."
-   },
-   {
-    "text": "Erythrocytosis",
-    "why": "Testosterone."
-   }
-  ],
-  "why_correct": "PDE5 inhibitors cause headache, flushing, dyspepsia and visual disturbance (blue tinge, notably sildenafil).",
-  "takeaway": "Sildenafil: blue vision.",
-  "discriminator": "Strong CYP3A4 inhibitors raise PDE5 inhibitor levels.",
-  "src": "L12 S22",
-  "id": "U6-028",
-  "answer": "E",
-  "options": {
-   "A": {
-    "text": "Dry mouth and constipation",
-    "why": "Antimuscarinics.",
-    "correct": false
-   },
-   "B": {
-    "text": "First-dose syncope",
-    "why": "Alpha1 blockers.",
-    "correct": false
-   },
-   "C": {
-    "text": "Decreased PSA",
-    "why": "5-ARIs.",
-    "correct": false
-   },
-   "D": {
-    "text": "Erythrocytosis",
-    "why": "Testosterone.",
-    "correct": false
-   },
-   "E": {
-    "text": "Blue-tinged vision",
-    "why": "PDE5 inhibitors cause headache, flushing, dyspepsia and visual disturbance (blue tinge, notably sildenafil).",
-    "correct": true
-   }
-  },
-  "link": {
-   "href": "../../L12/index.html#bph-erectile-dysfunction-pde5-inhibitors",
-   "label": "Study this: L12 · Part 3 →"
-  }
- },
- {
-  "topic": "Overactive bladder",
-  "objectives": [
-   "IO6.4"
-  ],
-  "sg": [
-   "U6-R12",
-   "U6-R13"
-  ],
-  "kind": "vignette",
-  "stem": "A 79-year-old with mild cognitive impairment becomes confused weeks after starting oxybutynin. Best change?",
-  "correct": "Switch to mirabegron",
-  "distractors": [
-   {
-    "text": "Increase oxybutynin",
-    "why": "Worsens burden."
-   },
-   {
-    "text": "Add tolterodine",
-    "why": "Adds burden."
-   },
-   {
-    "text": "Add donepezil, keep oxybutynin",
-    "why": "Opposing drugs."
-   },
-   {
-    "text": "Continue; unrelated",
-    "why": "It is related."
-   }
-  ],
-  "why_correct": "Oxybutynin has the highest CNS anticholinergic burden; mirabegron relaxes the detrusor via beta3 with no anticholinergic activity.",
-  "takeaway": "Older adult + OAB → mirabegron.",
-  "discriminator": "Review all anticholinergics (diphenhydramine, TCAs).",
-  "src": "L12 S11; S13; S15; SG U6-R12; SG U6-R13",
-  "id": "U6-018",
-  "answer": "B",
-  "options": {
-   "A": {
-    "text": "Add tolterodine",
-    "why": "Adds burden.",
-    "correct": false
-   },
-   "B": {
-    "text": "Switch to mirabegron",
-    "why": "Oxybutynin has the highest CNS anticholinergic burden; mirabegron relaxes the detrusor via beta3 with no anticholinergic activity.",
-    "correct": true
-   },
-   "C": {
-    "text": "Continue; unrelated",
-    "why": "It is related.",
-    "correct": false
-   },
-   "D": {
-    "text": "Increase oxybutynin",
-    "why": "Worsens burden.",
-    "correct": false
-   },
-   "E": {
-    "text": "Add donepezil, keep oxybutynin",
-    "why": "Opposing drugs.",
-    "correct": false
-   }
-  },
-  "link": {
-   "href": "../../L12/index.html#overactive-bladder-drugs",
-   "label": "Study this: L12 · Part 2 →"
-  }
- },
- {
-  "topic": "Estrogens & progestins",
-  "objectives": [
-   "IO6.4"
-  ],
-  "sg": [
-   "U6-R2"
-  ],
-  "kind": "vignette",
-  "stem": "A 54-year-old with an intact uterus starts estradiol for vasomotor symptoms. What else is required?",
-  "correct": "A progestin",
-  "distractors": [
-   {
-    "text": "Nothing extra",
-    "why": "Still unopposed."
-   },
-   {
-    "text": "Tamoxifen",
-    "why": "Tamoxifen stimulates it."
-   },
-   {
-    "text": "A PSA test",
-    "why": "Wrong system."
-   },
-   {
-    "text": "Spironolactone",
-    "why": "Not the reason."
-   }
-  ],
-  "why_correct": "Unopposed estrogen with a uterus drives endometrial proliferation → hyperplasia and cancer; a progestin counters it.",
-  "takeaway": "Uterus + estrogen → always a progestin.",
-  "discriminator": "After hysterectomy, estrogen alone is fine.",
-  "src": "L11 S6; S7; SG U6-R2",
-  "id": "U6-002",
-  "answer": "C",
-  "options": {
-   "A": {
-    "text": "Nothing extra",
-    "why": "Still unopposed.",
-    "correct": false
-   },
-   "B": {
-    "text": "A PSA test",
-    "why": "Wrong system.",
-    "correct": false
-   },
-   "C": {
-    "text": "A progestin",
-    "why": "Unopposed estrogen with a uterus drives endometrial proliferation → hyperplasia and cancer; a progestin counters it.",
-    "correct": true
-   },
-   "D": {
-    "text": "Spironolactone",
-    "why": "Not the reason.",
-    "correct": false
-   },
-   "E": {
-    "text": "Tamoxifen",
-    "why": "Tamoxifen stimulates it.",
-    "correct": false
-   }
-  },
-  "link": {
-   "href": "../../L11/index.html#estrogens-progestins-contraception",
-   "label": "Study this: L11 · Part 1 →"
-  }
- },
- {
-  "topic": "Contraception",
-  "objectives": [
-   "IO6.6"
-  ],
-  "sg": [],
-  "kind": "vignette",
-  "stem": "A woman on a combined pill starts rifampin for latent TB. What counseling is needed?",
-  "correct": "Use a backup method",
-  "distractors": [
-   {
-    "text": "No change is needed",
-    "why": "Inducers lower efficacy."
-   },
-   {
-    "text": "Stop the pill during rifampin",
-    "why": "Backup, not stopping."
-   },
-   {
-    "text": "Double the pill daily",
-    "why": "Not the advice."
-   },
-   {
-    "text": "Switch rifampin to St. John’s wort",
-    "why": "Also an inducer."
-   }
-  ],
-  "why_correct": "Enzyme inducers (rifampin, carbamazepine, phenytoin, St. John’s wort) lower combined contraceptive efficacy.",
-  "takeaway": "Inducer + pill → backup method.",
-  "discriminator": "Textbook: rifampin speeds estrogen/progestin metabolism.",
-  "src": "L11 S45; p. 773",
-  "id": "U6-005",
-  "answer": "D",
-  "options": {
-   "A": {
-    "text": "Switch rifampin to St. John’s wort",
-    "why": "Also an inducer.",
-    "correct": false
-   },
-   "B": {
-    "text": "Double the pill daily",
-    "why": "Not the advice.",
-    "correct": false
-   },
-   "C": {
-    "text": "Stop the pill during rifampin",
-    "why": "Backup, not stopping.",
-    "correct": false
-   },
-   "D": {
-    "text": "Use a backup method",
-    "why": "Enzyme inducers (rifampin, carbamazepine, phenytoin, St. John’s wort) lower combined contraceptive efficacy.",
-    "correct": true
-   },
-   "E": {
-    "text": "No change is needed",
-    "why": "Inducers lower efficacy.",
-    "correct": false
-   }
-  },
-  "link": {
-   "href": "../../L11/index.html#estrogens-progestins-contraception",
-   "label": "Study this: L11 · Part 1 →"
-  }
- },
- {
-  "topic": "Overactive bladder",
-  "objectives": [
-   "IO6.2"
-  ],
-  "sg": [
-   "U6-R12"
-  ],
-  "kind": "mechanism",
-  "stem": "Which adverse-effect cluster follows from antimuscarinic OAB therapy?",
-  "correct": "Dry mouth, constipation, confusion",
-  "distractors": [
-   {
-    "text": "Orthostasis and first-dose syncope",
-    "why": "Alpha1 blockers."
-   },
-   {
-    "text": "Blue vision and flushing",
-    "why": "PDE5 inhibitors."
-   },
-   {
-    "text": "Raised BP and nasopharyngitis",
-    "why": "Mirabegron."
-   },
-   {
-    "text": "Decreased libido, PSA halved",
-    "why": "5-ARIs."
-   }
-  ],
-  "why_correct": "Systemic muscarinic blockade causes dry mouth, constipation, blurred vision and confusion; avoid in narrow-angle glaucoma and retention.",
-  "takeaway": "Can’t see, can’t spit, can’t poop, can’t think.",
-  "discriminator": "Burden is cumulative across all drugs.",
-  "src": "L12 S11; S12",
-  "id": "U6-019",
-  "answer": "C",
-  "options": {
-   "A": {
-    "text": "Decreased libido, PSA halved",
-    "why": "5-ARIs.",
-    "correct": false
-   },
-   "B": {
-    "text": "Raised BP and nasopharyngitis",
-    "why": "Mirabegron.",
-    "correct": false
-   },
-   "C": {
-    "text": "Dry mouth, constipation, confusion",
-    "why": "Systemic muscarinic blockade causes dry mouth, constipation, blurred vision and confusion; avoid in narrow-angle glaucoma and retention.",
-    "correct": true
-   },
-   "D": {
-    "text": "Orthostasis and first-dose syncope",
-    "why": "Alpha1 blockers.",
-    "correct": false
-   },
-   "E": {
-    "text": "Blue vision and flushing",
-    "why": "PDE5 inhibitors.",
-    "correct": false
-   }
-  },
-  "link": {
-   "href": "../../L12/index.html#overactive-bladder-drugs",
-   "label": "Study this: L12 · Part 2 →"
-  }
- },
- {
-  "topic": "Integration",
-  "objectives": [
-   "IO6.3"
-  ],
-  "sg": [
-   "U6-M"
-  ],
-  "kind": "mechanism",
-  "stem": "Which pairing of drug and mechanism is correct?",
-  "correct": "Mirabegron — beta3 agonism",
-  "distractors": [
-   {
-    "text": "Tamsulosin — 5-alpha-reductase inhibition",
-    "why": "Alpha1 blocker."
-   },
-   {
-    "text": "Oxybutynin — beta3 agonism",
-    "why": "M3 antagonist."
-   },
-   {
-    "text": "Finasteride — PDE5 inhibition",
-    "why": "5-ARI."
-   },
-   {
-    "text": "Sildenafil — alpha1 blockade",
-    "why": "PDE5 inhibitor."
-   }
-  ],
-  "why_correct": "Mirabegron beta3; oxybutynin M3 (and M2) antagonist; tamsulosin alpha1; finasteride 5-ARI; sildenafil PDE5.",
-  "takeaway": "One receptor, one location, one class.",
-  "discriminator": "Metformin in PCOS works through insulin.",
-  "src": "L12 S26; SG U6-M",
-  "id": "U6-029",
-  "answer": "E",
-  "options": {
-   "A": {
-    "text": "Tamsulosin — 5-alpha-reductase inhibition",
-    "why": "Alpha1 blocker.",
-    "correct": false
-   },
-   "B": {
-    "text": "Sildenafil — alpha1 blockade",
-    "why": "PDE5 inhibitor.",
-    "correct": false
-   },
-   "C": {
-    "text": "Finasteride — PDE5 inhibition",
-    "why": "5-ARI.",
-    "correct": false
-   },
-   "D": {
-    "text": "Oxybutynin — beta3 agonism",
-    "why": "M3 antagonist.",
-    "correct": false
-   },
-   "E": {
-    "text": "Mirabegron — beta3 agonism",
-    "why": "Mirabegron beta3; oxybutynin M3 (and M2) antagonist; tamsulosin alpha1; finasteride 5-ARI; sildenafil PDE5.",
-    "correct": true
-   }
-  },
-  "link": {
-   "href": "../../L12/index.html#bph-erectile-dysfunction-pde5-inhibitors",
-   "label": "Study this: L12 · Part 3 →"
   }
  },
  {
   "topic": "PCOS",
   "objectives": [
-   "IO6.4"
+   "IO6.2"
   ],
   "sg": [],
   "kind": "vignette",
-  "stem": "A 25-year-old with PCOS, irregular cycles and hirsutism (BMI 32) does not want pregnancy. Best plan?",
-  "correct": "Combined pill plus metformin",
+  "stem": "A woman with PCOS on metformin is scheduled for a CT with iodinated contrast and has reduced kidney function. Advice?",
+  "correct": "Hold metformin",
   "distractors": [
    {
-    "text": "Metformin alone, never hormones",
-    "why": "Usually combined."
+    "text": "Double metformin",
+    "why": "Raises risk."
    },
    {
-    "text": "Clomiphene to induce ovulation",
-    "why": "Not trying to conceive."
+    "text": "Continue unchanged",
+    "why": "Hold it."
    },
    {
-    "text": "Estradiol alone, no progestin",
-    "why": "Unopposed estrogen."
+    "text": "Switch to clomiphene",
+    "why": "Not the step."
    },
    {
-    "text": "Letrozole for hirsutism",
-    "why": "Ovulation agent."
+    "text": "Add spironolactone",
+    "why": "Not the step."
    }
   ],
-  "why_correct": "Contraception for immediate symptom control; metformin for the metabolic driver and long-term diabetes risk.",
-  "takeaway": "PCOS therapy is rarely single-agent.",
-  "discriminator": "GLP-1 agonists: off-label with obesity.",
-  "src": "L11 S22; S24; S25",
-  "id": "U6-015",
-  "answer": "B",
+  "why_correct": "Hold metformin for an iodinated contrast study or renal impairment (lactic acidosis).",
+  "takeaway": "Metformin + contrast + low eGFR → hold.",
+  "discriminator": "GI upset early; take with meals.",
+  "src": "L11 S22; S23",
+  "id": "U6-040",
+  "answer": "D",
   "options": {
    "A": {
-    "text": "Estradiol alone, no progestin",
-    "why": "Unopposed estrogen.",
+    "text": "Switch to clomiphene",
+    "why": "Not the step.",
     "correct": false
    },
    "B": {
-    "text": "Combined pill plus metformin",
-    "why": "Contraception for immediate symptom control; metformin for the metabolic driver and long-term diabetes risk.",
-    "correct": true
+    "text": "Continue unchanged",
+    "why": "Hold it.",
+    "correct": false
    },
    "C": {
-    "text": "Letrozole for hirsutism",
-    "why": "Ovulation agent.",
+    "text": "Add spironolactone",
+    "why": "Not the step.",
     "correct": false
    },
    "D": {
-    "text": "Metformin alone, never hormones",
-    "why": "Usually combined.",
-    "correct": false
+    "text": "Hold metformin",
+    "why": "Hold metformin for an iodinated contrast study or renal impairment (lactic acidosis).",
+    "correct": true
    },
    "E": {
-    "text": "Clomiphene to induce ovulation",
-    "why": "Not trying to conceive.",
+    "text": "Double metformin",
+    "why": "Raises risk.",
     "correct": false
    }
   },
@@ -910,7 +445,7 @@
     "correct": false
    },
    "C": {
-    "text": "Spironolactone effect",
+    "text": "Aromatase-inhibitor effect",
     "why": "Not given.",
     "correct": false
    },
@@ -920,7 +455,7 @@
     "correct": false
    },
    "E": {
-    "text": "Aromatase-inhibitor effect",
+    "text": "Spironolactone effect",
     "why": "Not given.",
     "correct": false
    }
@@ -928,6 +463,730 @@
   "link": {
    "href": "../../L11/index.html#serms-aromatase-inhibitors-androgens",
    "label": "Study this: L11 · Part 2 →"
+  }
+ },
+ {
+  "topic": "ED & PDE5",
+  "objectives": [
+   "IO6.2"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A patient on sildenafil starts clarithromycin. What should be anticipated?",
+  "correct": "Higher sildenafil levels",
+  "distractors": [
+   {
+    "text": "Lower sildenafil levels",
+    "why": "Raised."
+   },
+   {
+    "text": "No interaction",
+    "why": "CYP3A4 inhibitor."
+   },
+   {
+    "text": "Hyperkalemia",
+    "why": "Not related."
+   },
+   {
+    "text": "Serotonin syndrome",
+    "why": "Not related."
+   }
+  ],
+  "why_correct": "Strong CYP3A4 inhibitors (ketoconazole, clarithromycin) raise PDE5 inhibitor levels.",
+  "takeaway": "CYP3A4 inhibitor + PDE5 → lower the dose.",
+  "discriminator": "Nitrates remain absolutely contraindicated.",
+  "src": "L12 S50",
+  "id": "U6-048",
+  "answer": "A",
+  "options": {
+   "A": {
+    "text": "Higher sildenafil levels",
+    "why": "Strong CYP3A4 inhibitors (ketoconazole, clarithromycin) raise PDE5 inhibitor levels.",
+    "correct": true
+   },
+   "B": {
+    "text": "Lower sildenafil levels",
+    "why": "Raised.",
+    "correct": false
+   },
+   "C": {
+    "text": "Hyperkalemia",
+    "why": "Not related.",
+    "correct": false
+   },
+   "D": {
+    "text": "Serotonin syndrome",
+    "why": "Not related.",
+    "correct": false
+   },
+   "E": {
+    "text": "No interaction",
+    "why": "CYP3A4 inhibitor.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L12/index.html#overactive-bladder-drugs",
+   "label": "Study this: L12 · Part 2 →"
+  }
+ },
+ {
+  "topic": "SERMs & aromatase inhibitors",
+  "objectives": [
+   "IO6.5"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A woman on anastrozole asks how to protect her bones. Best advice?",
+  "correct": "Calcium, vitamin D, bisphosphonate",
+  "distractors": [
+   {
+    "text": "Add estradiol",
+    "why": "Defeats therapy."
+   },
+   {
+    "text": "Switch to tamoxifen for bone",
+    "why": "Not the advice."
+   },
+   {
+    "text": "Nothing; no bone effect",
+    "why": "Bone loss."
+   },
+   {
+    "text": "Stop it after 1 month",
+    "why": "Not the advice."
+   }
+  ],
+  "why_correct": "Aromatase inhibitors cause bone loss and joint pain; bisphosphonates and calcium with vitamin D protect bone.",
+  "takeaway": "AI → protect bone, check density.",
+  "discriminator": "Postmenopausal use only.",
+  "src": "L11 S14; S36; S45",
+  "id": "U6-036",
+  "answer": "D",
+  "options": {
+   "A": {
+    "text": "Stop it after 1 month",
+    "why": "Not the advice.",
+    "correct": false
+   },
+   "B": {
+    "text": "Switch to tamoxifen for bone",
+    "why": "Not the advice.",
+    "correct": false
+   },
+   "C": {
+    "text": "Nothing; no bone effect",
+    "why": "Bone loss.",
+    "correct": false
+   },
+   "D": {
+    "text": "Calcium, vitamin D, bisphosphonate",
+    "why": "Aromatase inhibitors cause bone loss and joint pain; bisphosphonates and calcium with vitamin D protect bone.",
+    "correct": true
+   },
+   "E": {
+    "text": "Add estradiol",
+    "why": "Defeats therapy.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L11/index.html#serms-aromatase-inhibitors-androgens",
+   "label": "Study this: L11 · Part 2 →"
+  }
+ },
+ {
+  "topic": "BPH",
+  "objectives": [
+   "IO6.3"
+  ],
+  "sg": [
+   "U6-R14"
+  ],
+  "kind": "mechanism",
+  "stem": "What distinguishes tamsulosin from doxazosin?",
+  "correct": "Tamsulosin is more uroselective",
+  "distractors": [
+   {
+    "text": "Doxazosin is the uroselective one",
+    "why": "Reversed."
+   },
+   {
+    "text": "Tamsulosin shrinks the prostate",
+    "why": "5-ARIs do."
+   },
+   {
+    "text": "Only doxazosin causes orthostasis",
+    "why": "All share it."
+   },
+   {
+    "text": "Tamsulosin is a 5-ARI",
+    "why": "Alpha1 blocker."
+   }
+  ],
+  "why_correct": "Tamsulosin/silodosin are uroselective; doxazosin/terazosin lower BP more; all share orthostatic hypotension and a first-dose effect.",
+  "takeaway": "Selectivity changes degree, not the class risk.",
+  "discriminator": "Floppy iris syndrome in cataract surgery.",
+  "src": "L12 S17; SG U6-R14",
+  "id": "U6-021",
+  "answer": "E",
+  "options": {
+   "A": {
+    "text": "Only doxazosin causes orthostasis",
+    "why": "All share it.",
+    "correct": false
+   },
+   "B": {
+    "text": "Tamsulosin shrinks the prostate",
+    "why": "5-ARIs do.",
+    "correct": false
+   },
+   "C": {
+    "text": "Doxazosin is the uroselective one",
+    "why": "Reversed.",
+    "correct": false
+   },
+   "D": {
+    "text": "Tamsulosin is a 5-ARI",
+    "why": "Alpha1 blocker.",
+    "correct": false
+   },
+   "E": {
+    "text": "Tamsulosin is more uroselective",
+    "why": "Tamsulosin/silodosin are uroselective; doxazosin/terazosin lower BP more; all share orthostatic hypotension and a first-dose effect.",
+    "correct": true
+   }
+  },
+  "link": {
+   "href": "../../L12/index.html#bph-erectile-dysfunction-pde5-inhibitors",
+   "label": "Study this: L12 · Part 3 →"
+  }
+ },
+ {
+  "topic": "Contraception",
+  "objectives": [
+   "IO6.6"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A patient on the progestin-only pill took today’s dose 4 hours late. What counseling applies?",
+  "correct": "Efficacy falls — use backup",
+  "distractors": [
+   {
+    "text": "No effect if under 12 hours",
+    "why": "3-hour window."
+   },
+   {
+    "text": "Double tomorrow’s dose only",
+    "why": "Use backup."
+   },
+   {
+    "text": "Switch to a combined pill now",
+    "why": "Not the step."
+   },
+   {
+    "text": "Stop the pill for a week",
+    "why": "Not the step."
+   }
+  ],
+  "why_correct": "Norethindrone’s efficacy falls if a dose is more than 3 hours late; taken daily with no pill-free days.",
+  "takeaway": "Mini-pill: same time every day.",
+  "discriminator": "Ectopic risk if it fails.",
+  "src": "L11 S30",
+  "id": "U6-033",
+  "answer": "D",
+  "options": {
+   "A": {
+    "text": "Stop the pill for a week",
+    "why": "Not the step.",
+    "correct": false
+   },
+   "B": {
+    "text": "Double tomorrow’s dose only",
+    "why": "Use backup.",
+    "correct": false
+   },
+   "C": {
+    "text": "No effect if under 12 hours",
+    "why": "3-hour window.",
+    "correct": false
+   },
+   "D": {
+    "text": "Efficacy falls — use backup",
+    "why": "Norethindrone’s efficacy falls if a dose is more than 3 hours late; taken daily with no pill-free days.",
+    "correct": true
+   },
+   "E": {
+    "text": "Switch to a combined pill now",
+    "why": "Not the step.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L11/index.html",
+   "label": "Study this: L11 →"
+  }
+ },
+ {
+  "topic": "Androgens & antiandrogens",
+  "objectives": [
+   "IO6.1"
+  ],
+  "sg": [
+   "U6-R8"
+  ],
+  "kind": "mechanism",
+  "stem": "How do bicalutamide and finasteride differ in reducing androgen action?",
+  "correct": "Receptor vs. DHT-synthesis block",
+  "distractors": [
+   {
+    "text": "Both block 5-alpha-reductase",
+    "why": "Bicalutamide blocks AR."
+   },
+   {
+    "text": "Both block the androgen receptor",
+    "why": "Finasteride blocks the enzyme."
+   },
+   {
+    "text": "Finasteride blocks aromatase",
+    "why": "Anastrozole does."
+   },
+   {
+    "text": "Bicalutamide lowers GnRH",
+    "why": "That is leuprolide."
+   }
+  ],
+  "why_correct": "Flutamide/bicalutamide are direct AR blockers (prostate cancer, with a GnRH agonist); finasteride/dutasteride block testosterone → DHT.",
+  "takeaway": "Receptor blockers vs. enzyme blockers.",
+  "discriminator": "Same drugs (5-ARIs) return for BPH.",
+  "src": "L11 S15; S16; SG U6-R8",
+  "id": "U6-011",
+  "answer": "B",
+  "options": {
+   "A": {
+    "text": "Both block 5-alpha-reductase",
+    "why": "Bicalutamide blocks AR.",
+    "correct": false
+   },
+   "B": {
+    "text": "Receptor vs. DHT-synthesis block",
+    "why": "Flutamide/bicalutamide are direct AR blockers (prostate cancer, with a GnRH agonist); finasteride/dutasteride block testosterone → DHT.",
+    "correct": true
+   },
+   "C": {
+    "text": "Finasteride blocks aromatase",
+    "why": "Anastrozole does.",
+    "correct": false
+   },
+   "D": {
+    "text": "Bicalutamide lowers GnRH",
+    "why": "That is leuprolide.",
+    "correct": false
+   },
+   "E": {
+    "text": "Both block the androgen receptor",
+    "why": "Finasteride blocks the enzyme.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L11/index.html#serms-aromatase-inhibitors-androgens",
+   "label": "Study this: L11 · Part 2 →"
+  }
+ },
+ {
+  "topic": "SERMs & aromatase inhibitors",
+  "objectives": [
+   "IO6.2"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A patient on warfarin starts tamoxifen. What should be anticipated?",
+  "correct": "A rising INR",
+  "distractors": [
+   {
+    "text": "A falling INR",
+    "why": "Rises."
+   },
+   {
+    "text": "No interaction",
+    "why": "Known interaction."
+   },
+   {
+    "text": "Hyperkalemia",
+    "why": "Not related."
+   },
+   {
+    "text": "Hypoglycemia",
+    "why": "Not related."
+   }
+  ],
+  "why_correct": "Testosterone and tamoxifen raise INR with warfarin.",
+  "takeaway": "Tamoxifen + warfarin → check INR.",
+  "discriminator": "Tamoxifen also raises VTE risk.",
+  "src": "L11 S45",
+  "id": "U6-037",
+  "answer": "B",
+  "options": {
+   "A": {
+    "text": "Hypoglycemia",
+    "why": "Not related.",
+    "correct": false
+   },
+   "B": {
+    "text": "A rising INR",
+    "why": "Testosterone and tamoxifen raise INR with warfarin.",
+    "correct": true
+   },
+   "C": {
+    "text": "No interaction",
+    "why": "Known interaction.",
+    "correct": false
+   },
+   "D": {
+    "text": "A falling INR",
+    "why": "Rises.",
+    "correct": false
+   },
+   "E": {
+    "text": "Hyperkalemia",
+    "why": "Not related.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L11/index.html#serms-aromatase-inhibitors-androgens",
+   "label": "Study this: L11 · Part 2 →"
+  }
+ },
+ {
+  "topic": "BPH",
+  "objectives": [
+   "IO6.6"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A man on tamsulosin is scheduled for cataract surgery. What should be done?",
+  "correct": "Tell the ophthalmologist (floppy iris)",
+  "distractors": [
+   {
+    "text": "Nothing; unrelated",
+    "why": "Floppy iris risk."
+   },
+   {
+    "text": "Double the dose",
+    "why": "Not the step."
+   },
+   {
+    "text": "Switch to finasteride the day before",
+    "why": "Not the step."
+   },
+   {
+    "text": "Add sildenafil",
+    "why": "Not the step."
+   }
+  ],
+  "why_correct": "Floppy iris syndrome is a recognized intraoperative complication with alpha1 blockers — preoperative reconciliation.",
+  "takeaway": "Alpha1 blocker + cataract surgery → flag it.",
+  "discriminator": "Also orthostasis, first-dose effect.",
+  "src": "L12 S17",
+  "id": "U6-045",
+  "answer": "A",
+  "options": {
+   "A": {
+    "text": "Tell the ophthalmologist (floppy iris)",
+    "why": "Floppy iris syndrome is a recognized intraoperative complication with alpha1 blockers — preoperative reconciliation.",
+    "correct": true
+   },
+   "B": {
+    "text": "Switch to finasteride the day before",
+    "why": "Not the step.",
+    "correct": false
+   },
+   "C": {
+    "text": "Nothing; unrelated",
+    "why": "Floppy iris risk.",
+    "correct": false
+   },
+   "D": {
+    "text": "Double the dose",
+    "why": "Not the step.",
+    "correct": false
+   },
+   "E": {
+    "text": "Add sildenafil",
+    "why": "Not the step.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L12/index.html#bph-erectile-dysfunction-pde5-inhibitors",
+   "label": "Study this: L12 · Part 3 →"
+  }
+ },
+ {
+  "topic": "Estrogens & progestins",
+  "objectives": [
+   "IO6.4"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A woman who had a hysterectomy wants estrogen for hot flashes. Does she need a progestin?",
+  "correct": "No — estrogen alone is fine",
+  "distractors": [
+   {
+    "text": "Yes, always",
+    "why": "Only with a uterus."
+   },
+   {
+    "text": "Yes, at double dose",
+    "why": "Not needed."
+   },
+   {
+    "text": "Yes, plus tamoxifen",
+    "why": "Not needed."
+   },
+   {
+    "text": "She cannot take estrogen",
+    "why": "She can."
+   }
+  ],
+  "why_correct": "The progestin protects the endometrium; after hysterectomy estrogen alone is acceptable.",
+  "takeaway": "No uterus → no progestin needed.",
+  "discriminator": "Still screen for VTE risk.",
+  "src": "L11 S7; p. 763",
+  "id": "U6-032",
+  "answer": "C",
+  "options": {
+   "A": {
+    "text": "Yes, always",
+    "why": "Only with a uterus.",
+    "correct": false
+   },
+   "B": {
+    "text": "She cannot take estrogen",
+    "why": "She can.",
+    "correct": false
+   },
+   "C": {
+    "text": "No — estrogen alone is fine",
+    "why": "The progestin protects the endometrium; after hysterectomy estrogen alone is acceptable.",
+    "correct": true
+   },
+   "D": {
+    "text": "Yes, at double dose",
+    "why": "Not needed.",
+    "correct": false
+   },
+   "E": {
+    "text": "Yes, plus tamoxifen",
+    "why": "Not needed.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L11/index.html#estrogens-progestins-contraception",
+   "label": "Study this: L11 · Part 1 →"
+  }
+ },
+ {
+  "topic": "ED & PDE5",
+  "objectives": [
+   "IO6.2"
+  ],
+  "sg": [
+   "U6-S"
+  ],
+  "kind": "vignette",
+  "stem": "A man on tamsulosin (no nitrates) wants sildenafil. What is the remaining concern?",
+  "correct": "Additive hypotension",
+  "distractors": [
+   {
+    "text": "No interaction at all",
+    "why": "Additive hypotension."
+   },
+   {
+    "text": "Absolute contraindication",
+    "why": "That is nitrates."
+   },
+   {
+    "text": "Hyperkalemia from both drugs",
+    "why": "Not this pair."
+   },
+   {
+    "text": "Anticholinergic confusion",
+    "why": "Antimuscarinics."
+   }
+  ],
+  "why_correct": "Alpha1 blockade and NO-cGMP potentiation both lower BP — less severe than nitrates but warrants spacing or monitoring.",
+  "takeaway": "Nitrate = never; alpha1 blocker = caution.",
+  "discriminator": "Tadalafil profile allows tamsulosin 0.4 mg with caution.",
+  "src": "L12 S22; S25; S48; SG U6-S",
+  "id": "U6-027",
+  "answer": "B",
+  "options": {
+   "A": {
+    "text": "Hyperkalemia from both drugs",
+    "why": "Not this pair.",
+    "correct": false
+   },
+   "B": {
+    "text": "Additive hypotension",
+    "why": "Alpha1 blockade and NO-cGMP potentiation both lower BP — less severe than nitrates but warrants spacing or monitoring.",
+    "correct": true
+   },
+   "C": {
+    "text": "Absolute contraindication",
+    "why": "That is nitrates.",
+    "correct": false
+   },
+   "D": {
+    "text": "Anticholinergic confusion",
+    "why": "Antimuscarinics.",
+    "correct": false
+   },
+   "E": {
+    "text": "No interaction at all",
+    "why": "Additive hypotension.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L12/index.html#bph-erectile-dysfunction-pde5-inhibitors",
+   "label": "Study this: L12 · Part 3 →"
+  }
+ },
+ {
+  "topic": "BPH",
+  "objectives": [
+   "IO6.6"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A man on finasteride lives with his pregnant wife. Key counseling?",
+  "correct": "No handling broken tablets",
+  "distractors": [
+   {
+    "text": "No precautions needed",
+    "why": "Fetal risk."
+   },
+   {
+    "text": "He must stop finasteride",
+    "why": "Handling precautions suffice."
+   },
+   {
+    "text": "She can crush them for him",
+    "why": "Avoid."
+   },
+   {
+    "text": "Only dutasteride is a risk",
+    "why": "Both."
+   }
+  ],
+  "why_correct": "5-ARIs can cause ambiguous genitalia in a male fetus; pregnant partners avoid crushed or broken tablets.",
+  "takeaway": "5-ARI + pregnant partner → no handling.",
+  "discriminator": "PSA halved on therapy.",
+  "src": "L12 S19; S20",
+  "id": "U6-046",
+  "answer": "C",
+  "options": {
+   "A": {
+    "text": "No precautions needed",
+    "why": "Fetal risk.",
+    "correct": false
+   },
+   "B": {
+    "text": "He must stop finasteride",
+    "why": "Handling precautions suffice.",
+    "correct": false
+   },
+   "C": {
+    "text": "No handling broken tablets",
+    "why": "5-ARIs can cause ambiguous genitalia in a male fetus; pregnant partners avoid crushed or broken tablets.",
+    "correct": true
+   },
+   "D": {
+    "text": "Only dutasteride is a risk",
+    "why": "Both.",
+    "correct": false
+   },
+   "E": {
+    "text": "She can crush them for him",
+    "why": "Avoid.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L12/index.html#bph-erectile-dysfunction-pde5-inhibitors",
+   "label": "Study this: L12 · Part 3 →"
+  }
+ },
+ {
+  "topic": "Overactive bladder",
+  "objectives": [
+   "IO6.4"
+  ],
+  "sg": [
+   "U6-R12",
+   "U6-R13"
+  ],
+  "kind": "vignette",
+  "stem": "A 79-year-old with mild cognitive impairment becomes confused weeks after starting oxybutynin. Best change?",
+  "correct": "Switch to mirabegron",
+  "distractors": [
+   {
+    "text": "Increase oxybutynin",
+    "why": "Worsens burden."
+   },
+   {
+    "text": "Add tolterodine",
+    "why": "Adds burden."
+   },
+   {
+    "text": "Add donepezil, keep oxybutynin",
+    "why": "Opposing drugs."
+   },
+   {
+    "text": "Continue; unrelated",
+    "why": "It is related."
+   }
+  ],
+  "why_correct": "Oxybutynin has the highest CNS anticholinergic burden; mirabegron relaxes the detrusor via beta3 with no anticholinergic activity.",
+  "takeaway": "Older adult + OAB → mirabegron.",
+  "discriminator": "Review all anticholinergics (diphenhydramine, TCAs).",
+  "src": "L12 S11; S13; S15; SG U6-R12; SG U6-R13",
+  "id": "U6-018",
+  "answer": "C",
+  "options": {
+   "A": {
+    "text": "Add donepezil, keep oxybutynin",
+    "why": "Opposing drugs.",
+    "correct": false
+   },
+   "B": {
+    "text": "Increase oxybutynin",
+    "why": "Worsens burden.",
+    "correct": false
+   },
+   "C": {
+    "text": "Switch to mirabegron",
+    "why": "Oxybutynin has the highest CNS anticholinergic burden; mirabegron relaxes the detrusor via beta3 with no anticholinergic activity.",
+    "correct": true
+   },
+   "D": {
+    "text": "Add tolterodine",
+    "why": "Adds burden.",
+    "correct": false
+   },
+   "E": {
+    "text": "Continue; unrelated",
+    "why": "It is related.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L12/index.html#overactive-bladder-drugs",
+   "label": "Study this: L12 · Part 2 →"
   }
  },
  {
@@ -965,12 +1224,12 @@
   "discriminator": "M2 is abundant but contributes less.",
   "src": "L12 S5; S7; S9; SG U6-R11",
   "id": "U6-016",
-  "answer": "A",
+  "answer": "D",
   "options": {
    "A": {
-    "text": "M3 on the detrusor (contraction)",
-    "why": "Parasympathetic ACh at M3 contracts the detrusor; sympathetic alpha1 closes the neck and beta3 relaxes the detrusor during storage.",
-    "correct": true
+    "text": "Beta3 on the detrusor",
+    "why": "Relaxes it (storage).",
+    "correct": false
    },
    "B": {
     "text": "Alpha1 on the detrusor body",
@@ -978,24 +1237,351 @@
     "correct": false
    },
    "C": {
-    "text": "Nicotinic at the external sphincter",
-    "why": "Holds continence.",
+    "text": "Alpha1 at the bladder neck",
+    "why": "Closes the outlet.",
     "correct": false
    },
    "D": {
-    "text": "Beta3 on the detrusor",
-    "why": "Relaxes it (storage).",
-    "correct": false
+    "text": "M3 on the detrusor (contraction)",
+    "why": "Parasympathetic ACh at M3 contracts the detrusor; sympathetic alpha1 closes the neck and beta3 relaxes the detrusor during storage.",
+    "correct": true
    },
    "E": {
-    "text": "Alpha1 at the bladder neck",
-    "why": "Closes the outlet.",
+    "text": "Nicotinic at the external sphincter",
+    "why": "Holds continence.",
     "correct": false
    }
   },
   "link": {
    "href": "../../L12/index.html#autonomic-control-of-the-lower-urinary-tract",
    "label": "Study this: L12 · Part 1 →"
+  }
+ },
+ {
+  "topic": "BPH",
+  "objectives": [
+   "IO6.2"
+  ],
+  "sg": [],
+  "kind": "mechanism",
+  "stem": "Why do alpha1 blockers for BPH cause orthostatic hypotension?",
+  "correct": "Alpha1 also sets vascular tone",
+  "distractors": [
+   {
+    "text": "They block cardiac beta receptors",
+    "why": "Not the mechanism."
+   },
+   {
+    "text": "They raise cGMP",
+    "why": "PDE5 inhibitors."
+   },
+   {
+    "text": "They act only in the bladder",
+    "why": "They don’t."
+   },
+   {
+    "text": "Only beta3 agonists cause it",
+    "why": "Not true."
+   }
+  ],
+  "why_correct": "Alpha1 blockade at the bladder neck also lowers systemic vascular resistance — orthostasis and a first-dose effect.",
+  "takeaway": "Same receptor family as the Unit 5 antihypertensives.",
+  "discriminator": "Give the first dose of doxazosin at bedtime.",
+  "src": "L12 S17; S18; S34",
+  "id": "U6-022",
+  "answer": "D",
+  "options": {
+   "A": {
+    "text": "They raise cGMP",
+    "why": "PDE5 inhibitors.",
+    "correct": false
+   },
+   "B": {
+    "text": "They act only in the bladder",
+    "why": "They don’t.",
+    "correct": false
+   },
+   "C": {
+    "text": "Only beta3 agonists cause it",
+    "why": "Not true.",
+    "correct": false
+   },
+   "D": {
+    "text": "Alpha1 also sets vascular tone",
+    "why": "Alpha1 blockade at the bladder neck also lowers systemic vascular resistance — orthostasis and a first-dose effect.",
+    "correct": true
+   },
+   "E": {
+    "text": "They block cardiac beta receptors",
+    "why": "Not the mechanism.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L12/index.html#bph-erectile-dysfunction-pde5-inhibitors",
+   "label": "Study this: L12 · Part 3 →"
+  }
+ },
+ {
+  "topic": "Overactive bladder",
+  "objectives": [
+   "IO6.5"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A patient with poorly controlled hypertension needs OAB therapy. What is the concern with mirabegron?",
+  "correct": "It can raise blood pressure",
+  "distractors": [
+   {
+    "text": "It causes severe confusion",
+    "why": "Antimuscarinics."
+   },
+   {
+    "text": "It causes first-dose hypotension",
+    "why": "Alpha1 blockers."
+   },
+   {
+    "text": "It lowers PSA by half",
+    "why": "5-ARIs."
+   },
+   {
+    "text": "It worsens narrow-angle glaucoma",
+    "why": "Antimuscarinics."
+   }
+  ],
+  "why_correct": "Mirabegron can raise blood pressure — monitor in uncontrolled hypertension; it also inhibits CYP2D6.",
+  "takeaway": "Mirabegron: no anticholinergic burden, but watch BP.",
+  "discriminator": "Can combine with an antimuscarinic for refractory OAB.",
+  "src": "L12 S13; S40",
+  "id": "U6-020",
+  "answer": "E",
+  "options": {
+   "A": {
+    "text": "It lowers PSA by half",
+    "why": "5-ARIs.",
+    "correct": false
+   },
+   "B": {
+    "text": "It causes first-dose hypotension",
+    "why": "Alpha1 blockers.",
+    "correct": false
+   },
+   "C": {
+    "text": "It worsens narrow-angle glaucoma",
+    "why": "Antimuscarinics.",
+    "correct": false
+   },
+   "D": {
+    "text": "It causes severe confusion",
+    "why": "Antimuscarinics.",
+    "correct": false
+   },
+   "E": {
+    "text": "It can raise blood pressure",
+    "why": "Mirabegron can raise blood pressure — monitor in uncontrolled hypertension; it also inhibits CYP2D6.",
+    "correct": true
+   }
+  },
+  "link": {
+   "href": "../../L12/index.html#overactive-bladder-drugs",
+   "label": "Study this: L12 · Part 2 →"
+  }
+ },
+ {
+  "topic": "Androgens & antiandrogens",
+  "objectives": [
+   "IO6.6"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A woman with PCOS on spironolactone for hirsutism plans to conceive. Key counseling?",
+  "correct": "Stop it before conceiving",
+  "distractors": [
+   {
+    "text": "Continue; it is safe in pregnancy",
+    "why": "Avoid."
+   },
+   {
+    "text": "Double it to aid fertility",
+    "why": "Not the advice."
+   },
+   {
+    "text": "Add potassium supplements",
+    "why": "Hyperkalemia risk."
+   },
+   {
+    "text": "Switch to testosterone",
+    "why": "Wrong direction."
+   }
+  ],
+  "why_correct": "Spironolactone blocks the androgen receptor; avoid in pregnancy (feminization of a male fetus).",
+  "takeaway": "Antiandrogens and pregnancy don’t mix.",
+  "discriminator": "Also hyperkalemia with ACEi/ARB or potassium.",
+  "src": "L11 S24; S39; S45",
+  "id": "U6-012",
+  "answer": "D",
+  "options": {
+   "A": {
+    "text": "Switch to testosterone",
+    "why": "Wrong direction.",
+    "correct": false
+   },
+   "B": {
+    "text": "Add potassium supplements",
+    "why": "Hyperkalemia risk.",
+    "correct": false
+   },
+   "C": {
+    "text": "Continue; it is safe in pregnancy",
+    "why": "Avoid.",
+    "correct": false
+   },
+   "D": {
+    "text": "Stop it before conceiving",
+    "why": "Spironolactone blocks the androgen receptor; avoid in pregnancy (feminization of a male fetus).",
+    "correct": true
+   },
+   "E": {
+    "text": "Double it to aid fertility",
+    "why": "Not the advice.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L11/index.html#serms-aromatase-inhibitors-androgens",
+   "label": "Study this: L11 · Part 2 →"
+  }
+ },
+ {
+  "topic": "Integration",
+  "objectives": [
+   "IO6.3"
+  ],
+  "sg": [
+   "U6-M"
+  ],
+  "kind": "mechanism",
+  "stem": "Which pairing of drug and mechanism is correct?",
+  "correct": "Mirabegron — beta3 agonism",
+  "distractors": [
+   {
+    "text": "Tamsulosin — 5-alpha-reductase inhibition",
+    "why": "Alpha1 blocker."
+   },
+   {
+    "text": "Oxybutynin — beta3 agonism",
+    "why": "M3 antagonist."
+   },
+   {
+    "text": "Finasteride — PDE5 inhibition",
+    "why": "5-ARI."
+   },
+   {
+    "text": "Sildenafil — alpha1 blockade",
+    "why": "PDE5 inhibitor."
+   }
+  ],
+  "why_correct": "Mirabegron beta3; oxybutynin M3 (and M2) antagonist; tamsulosin alpha1; finasteride 5-ARI; sildenafil PDE5.",
+  "takeaway": "One receptor, one location, one class.",
+  "discriminator": "Metformin in PCOS works through insulin.",
+  "src": "L12 S26; SG U6-M",
+  "id": "U6-029",
+  "answer": "A",
+  "options": {
+   "A": {
+    "text": "Mirabegron — beta3 agonism",
+    "why": "Mirabegron beta3; oxybutynin M3 (and M2) antagonist; tamsulosin alpha1; finasteride 5-ARI; sildenafil PDE5.",
+    "correct": true
+   },
+   "B": {
+    "text": "Sildenafil — alpha1 blockade",
+    "why": "PDE5 inhibitor.",
+    "correct": false
+   },
+   "C": {
+    "text": "Tamsulosin — 5-alpha-reductase inhibition",
+    "why": "Alpha1 blocker.",
+    "correct": false
+   },
+   "D": {
+    "text": "Oxybutynin — beta3 agonism",
+    "why": "M3 antagonist.",
+    "correct": false
+   },
+   "E": {
+    "text": "Finasteride — PDE5 inhibition",
+    "why": "5-ARI.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L12/index.html#bph-erectile-dysfunction-pde5-inhibitors",
+   "label": "Study this: L12 · Part 3 →"
+  }
+ },
+ {
+  "topic": "Overactive bladder",
+  "objectives": [
+   "IO6.2"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A patient with dementia on donepezil is started on oxybutynin. What is the problem?",
+  "correct": "They oppose each other",
+  "distractors": [
+   {
+    "text": "They are synergistic",
+    "why": "Opposite."
+   },
+   {
+    "text": "No interaction",
+    "why": "Opposing."
+   },
+   {
+    "text": "Hyperkalemia",
+    "why": "Not related."
+   },
+   {
+    "text": "Serotonin syndrome",
+    "why": "Not related."
+   }
+  ],
+  "why_correct": "Cholinesterase inhibitors oppose antimuscarinics, and oxybutynin adds CNS anticholinergic burden.",
+  "takeaway": "Dementia + oxybutynin = avoid.",
+  "discriminator": "Mirabegron is the alternative.",
+  "src": "L12 S50; S11",
+  "id": "U6-044",
+  "answer": "D",
+  "options": {
+   "A": {
+    "text": "No interaction",
+    "why": "Opposing.",
+    "correct": false
+   },
+   "B": {
+    "text": "They are synergistic",
+    "why": "Opposite.",
+    "correct": false
+   },
+   "C": {
+    "text": "Serotonin syndrome",
+    "why": "Not related.",
+    "correct": false
+   },
+   "D": {
+    "text": "They oppose each other",
+    "why": "Cholinesterase inhibitors oppose antimuscarinics, and oxybutynin adds CNS anticholinergic burden.",
+    "correct": true
+   },
+   "E": {
+    "text": "Hyperkalemia",
+    "why": "Not related.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L12/index.html#overactive-bladder-drugs",
+   "label": "Study this: L12 · Part 2 →"
   }
  },
  {
@@ -1006,7 +1592,7 @@
   "sg": [],
   "kind": "mechanism",
   "stem": "Which drug interaction blunts tamoxifen’s activation?",
-  "correct": "Paroxetine (CYP2D6 inhibitor)",
+  "correct": "Paroxetine",
   "distractors": [
    {
     "text": "Rifampin (CYP3A4 inducer)",
@@ -1030,32 +1616,296 @@
   "discriminator": "Tamoxifen also raises INR with warfarin.",
   "src": "L11 S45",
   "id": "U6-009",
-  "answer": "B",
+  "answer": "D",
   "options": {
    "A": {
-    "text": "Calcium with vitamin D",
-    "why": "Bone protection.",
-    "correct": false
-   },
-   "B": {
-    "text": "Paroxetine (CYP2D6 inhibitor)",
-    "why": "CYP2D6 inhibitors (paroxetine, fluoxetine) blunt tamoxifen activation.",
-    "correct": true
-   },
-   "C": {
-    "text": "Rifampin (CYP3A4 inducer)",
-    "why": "Not the taught interaction.",
-    "correct": false
-   },
-   "D": {
     "text": "Finasteride",
     "why": "No interaction.",
     "correct": false
    },
-   "E": {
+   "B": {
     "text": "Metformin (biguanide)",
     "why": "No interaction.",
     "correct": false
+   },
+   "C": {
+    "text": "Calcium with vitamin D",
+    "why": "Bone protection.",
+    "correct": false
+   },
+   "D": {
+    "text": "Paroxetine",
+    "why": "CYP2D6 inhibitors (paroxetine, fluoxetine) blunt tamoxifen activation.",
+    "correct": true
+   },
+   "E": {
+    "text": "Rifampin (CYP3A4 inducer)",
+    "why": "Not the taught interaction.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L11/index.html#serms-aromatase-inhibitors-androgens",
+   "label": "Study this: L11 · Part 2 →"
+  }
+ },
+ {
+  "topic": "PCOS",
+  "objectives": [
+   "IO6.4"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A woman with PCOS and a BMI of 36 has not improved on metformin. Which emerging option fits?",
+  "correct": "A GLP-1 agonist",
+  "distractors": [
+   {
+    "text": "Testosterone",
+    "why": "Wrong direction."
+   },
+   {
+    "text": "Tamoxifen (SERM)",
+    "why": "Not for PCOS."
+   },
+   {
+    "text": "Dutasteride alone",
+    "why": "Not the slide option."
+   },
+   {
+    "text": "Desmopressin (ADH)",
+    "why": "Not related."
+   }
+  ],
+  "why_correct": "GLP-1 receptor agonists are increasingly used off-label in PCOS with obesity (weight loss, insulin sensitization).",
+  "takeaway": "PCOS + obesity → GLP-1 RA (off-label).",
+  "discriminator": "Usually combined with other therapy.",
+  "src": "L11 S22; S24; S45",
+  "id": "U6-041",
+  "answer": "E",
+  "options": {
+   "A": {
+    "text": "Dutasteride alone",
+    "why": "Not the slide option.",
+    "correct": false
+   },
+   "B": {
+    "text": "Tamoxifen (SERM)",
+    "why": "Not for PCOS.",
+    "correct": false
+   },
+   "C": {
+    "text": "Desmopressin (ADH)",
+    "why": "Not related.",
+    "correct": false
+   },
+   "D": {
+    "text": "Testosterone",
+    "why": "Wrong direction.",
+    "correct": false
+   },
+   "E": {
+    "text": "A GLP-1 agonist",
+    "why": "GLP-1 receptor agonists are increasingly used off-label in PCOS with obesity (weight loss, insulin sensitization).",
+    "correct": true
+   }
+  },
+  "link": {
+   "href": "../../L11/index.html#pcos-the-reproductive-metabolic-overlap",
+   "label": "Study this: L11 · Part 3 →"
+  }
+ },
+ {
+  "topic": "Estrogens & progestins",
+  "objectives": [
+   "IO6.4"
+  ],
+  "sg": [
+   "U6-R2"
+  ],
+  "kind": "vignette",
+  "stem": "A 54-year-old with an intact uterus starts estradiol for vasomotor symptoms. What else is required?",
+  "correct": "A progestin",
+  "distractors": [
+   {
+    "text": "Nothing extra",
+    "why": "Still unopposed."
+   },
+   {
+    "text": "Tamoxifen",
+    "why": "Tamoxifen stimulates it."
+   },
+   {
+    "text": "A PSA test",
+    "why": "Wrong system."
+   },
+   {
+    "text": "Spironolactone",
+    "why": "Not the reason."
+   }
+  ],
+  "why_correct": "Unopposed estrogen with a uterus drives endometrial proliferation → hyperplasia and cancer; a progestin counters it.",
+  "takeaway": "Uterus + estrogen → always a progestin.",
+  "discriminator": "After hysterectomy, estrogen alone is fine.",
+  "src": "L11 S6; S7; SG U6-R2",
+  "id": "U6-002",
+  "answer": "E",
+  "options": {
+   "A": {
+    "text": "Tamoxifen",
+    "why": "Tamoxifen stimulates it.",
+    "correct": false
+   },
+   "B": {
+    "text": "Spironolactone",
+    "why": "Not the reason.",
+    "correct": false
+   },
+   "C": {
+    "text": "A PSA test",
+    "why": "Wrong system.",
+    "correct": false
+   },
+   "D": {
+    "text": "Nothing extra",
+    "why": "Still unopposed.",
+    "correct": false
+   },
+   "E": {
+    "text": "A progestin",
+    "why": "Unopposed estrogen with a uterus drives endometrial proliferation → hyperplasia and cancer; a progestin counters it.",
+    "correct": true
+   }
+  },
+  "link": {
+   "href": "../../L11/index.html#estrogens-progestins-contraception",
+   "label": "Study this: L11 · Part 1 →"
+  }
+ },
+ {
+  "topic": "PCOS",
+  "objectives": [
+   "IO6.1"
+  ],
+  "sg": [
+   "U6-R9"
+  ],
+  "kind": "mechanism",
+  "stem": "What is the central mechanism linking insulin resistance to hyperandrogenism in PCOS?",
+  "correct": "More ovarian androgen, less SHBG",
+  "distractors": [
+   {
+    "text": "Insulin raises SHBG",
+    "why": "Reversed."
+   },
+   {
+    "text": "No mechanistic link exists",
+    "why": "There is one."
+   },
+   {
+    "text": "Hyperandrogenism always comes first",
+    "why": "Absolute claim."
+   },
+   {
+    "text": "Insulin blocks aromatase",
+    "why": "Not the mechanism."
+   }
+  ],
+  "why_correct": "Hyperinsulinemia directly stimulates theca-cell androgen production and lowers hepatic SHBG, raising free testosterone.",
+  "takeaway": "Insulin → androgens → worse insulin resistance (a cycle).",
+  "discriminator": "Explains why metabolic therapy helps reproductive symptoms.",
+  "src": "L11 S20; S21; SG U6-R9",
+  "id": "U6-013",
+  "answer": "A",
+  "options": {
+   "A": {
+    "text": "More ovarian androgen, less SHBG",
+    "why": "Hyperinsulinemia directly stimulates theca-cell androgen production and lowers hepatic SHBG, raising free testosterone.",
+    "correct": true
+   },
+   "B": {
+    "text": "Insulin blocks aromatase",
+    "why": "Not the mechanism.",
+    "correct": false
+   },
+   "C": {
+    "text": "No mechanistic link exists",
+    "why": "There is one.",
+    "correct": false
+   },
+   "D": {
+    "text": "Hyperandrogenism always comes first",
+    "why": "Absolute claim.",
+    "correct": false
+   },
+   "E": {
+    "text": "Insulin raises SHBG",
+    "why": "Reversed.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L11/index.html#pcos-the-reproductive-metabolic-overlap",
+   "label": "Study this: L11 · Part 3 →"
+  }
+ },
+ {
+  "topic": "Androgens & antiandrogens",
+  "objectives": [
+   "IO6.4"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A man with metastatic prostate cancer starts leuprolide. Which antiandrogen is often added?",
+  "correct": "Bicalutamide",
+  "distractors": [
+   {
+    "text": "Finasteride",
+    "why": "5-ARI, not for flare."
+   },
+   {
+    "text": "Testosterone",
+    "why": "Wrong direction."
+   },
+   {
+    "text": "Spironolactone",
+    "why": "Not the slide choice."
+   },
+   {
+    "text": "Anastrozole",
+    "why": "Aromatase inhibitor."
+   }
+  ],
+  "why_correct": "Flutamide/bicalutamide are pure AR blockers, often combined with a GnRH agonist (tumor-flare prevention).",
+  "takeaway": "GnRH agonist + AR blocker.",
+  "discriminator": "Flutamide: gynecomastia, hepatotoxicity.",
+  "src": "L11 S15; S45; p. 782",
+  "id": "U6-038",
+  "answer": "E",
+  "options": {
+   "A": {
+    "text": "Finasteride",
+    "why": "5-ARI, not for flare.",
+    "correct": false
+   },
+   "B": {
+    "text": "Testosterone",
+    "why": "Wrong direction.",
+    "correct": false
+   },
+   "C": {
+    "text": "Spironolactone",
+    "why": "Not the slide choice.",
+    "correct": false
+   },
+   "D": {
+    "text": "Anastrozole",
+    "why": "Aromatase inhibitor.",
+    "correct": false
+   },
+   "E": {
+    "text": "Bicalutamide",
+    "why": "Flutamide/bicalutamide are pure AR blockers, often combined with a GnRH agonist (tumor-flare prevention).",
+    "correct": true
    }
   },
   "link": {
@@ -1066,69 +1916,658 @@
  {
   "topic": "ED & PDE5",
   "objectives": [
-   "IO6.2",
-   "IO6.6"
+   "IO6.2"
   ],
-  "sg": [
-   "U6-R16"
-  ],
-  "kind": "vignette",
-  "stem": "A 66-year-old on isosorbide mononitrate for angina requests tadalafil. What should the PA do?",
-  "correct": "Decline; involve cardiology",
+  "sg": [],
+  "kind": "mechanism",
+  "stem": "Which adverse effect is most associated with sildenafil?",
+  "correct": "Blue-tinged vision",
   "distractors": [
    {
-    "text": "Prescribe a low dose",
-    "why": "Still contraindicated."
+    "text": "Dry mouth and constipation",
+    "why": "Antimuscarinics."
    },
    {
-    "text": "Space doses by 12 hours",
-    "why": "Absolute contraindication."
+    "text": "First-dose syncope",
+    "why": "Alpha1 blockers."
    },
    {
-    "text": "Switch to sildenafil",
-    "why": "Same class."
+    "text": "Decreased PSA",
+    "why": "5-ARIs."
    },
    {
-    "text": "Prescribe if BP is normal",
-    "why": "Not acceptable."
+    "text": "Erythrocytosis",
+    "why": "Testosterone."
    }
   ],
-  "why_correct": "Nitrates and PDE5 inhibitors both raise NO/cGMP; together, life-threatening hypotension — an absolute contraindication.",
-  "takeaway": "Nitrate + -afil = never.",
-  "discriminator": "Riociguat is also contraindicated with PDE5 inhibitors.",
-  "src": "L12 S22; S24; S25; SG U6-R16",
-  "id": "U6-026",
-  "answer": "C",
+  "why_correct": "PDE5 inhibitors cause headache, flushing, dyspepsia and visual disturbance (blue tinge, notably sildenafil).",
+  "takeaway": "Sildenafil: blue vision.",
+  "discriminator": "Strong CYP3A4 inhibitors raise PDE5 inhibitor levels.",
+  "src": "L12 S22",
+  "id": "U6-028",
+  "answer": "E",
   "options": {
    "A": {
-    "text": "Prescribe a low dose",
-    "why": "Still contraindicated.",
+    "text": "Erythrocytosis",
+    "why": "Testosterone.",
     "correct": false
    },
    "B": {
-    "text": "Switch to sildenafil",
-    "why": "Same class.",
+    "text": "Decreased PSA",
+    "why": "5-ARIs.",
     "correct": false
    },
    "C": {
-    "text": "Decline; involve cardiology",
-    "why": "Nitrates and PDE5 inhibitors both raise NO/cGMP; together, life-threatening hypotension — an absolute contraindication.",
-    "correct": true
+    "text": "First-dose syncope",
+    "why": "Alpha1 blockers.",
+    "correct": false
    },
    "D": {
-    "text": "Prescribe if BP is normal",
-    "why": "Not acceptable.",
+    "text": "Dry mouth and constipation",
+    "why": "Antimuscarinics.",
     "correct": false
    },
    "E": {
-    "text": "Space doses by 12 hours",
-    "why": "Absolute contraindication.",
+    "text": "Blue-tinged vision",
+    "why": "PDE5 inhibitors cause headache, flushing, dyspepsia and visual disturbance (blue tinge, notably sildenafil).",
+    "correct": true
+   }
+  },
+  "link": {
+   "href": "../../L12/index.html#bph-erectile-dysfunction-pde5-inhibitors",
+   "label": "Study this: L12 · Part 3 →"
+  }
+ },
+ {
+  "topic": "Estrogens & progestins",
+  "objectives": [
+   "IO6.2"
+  ],
+  "sg": [],
+  "kind": "mechanism",
+  "stem": "Which adverse effect of estrogen therapy is most tested?",
+  "correct": "Blood clots (VTE)",
+  "distractors": [
+   {
+    "text": "Hyperkalemia",
+    "why": "Drospirenone/spironolactone."
+   },
+   {
+    "text": "Erythrocytosis",
+    "why": "Testosterone."
+   },
+   {
+    "text": "Bone loss",
+    "why": "DMPA, aromatase inhibitors."
+   },
+   {
+    "text": "Lactic acidosis",
+    "why": "Metformin."
+   }
+  ],
+  "why_correct": "Estrogen’s VTE risk rises with smoking, age over 35 and VTE history.",
+  "takeaway": "Estrogen = clots.",
+  "discriminator": "Raises hepatic clotting factors (textbook).",
+  "src": "L11 S5",
+  "id": "U6-031",
+  "answer": "B",
+  "options": {
+   "A": {
+    "text": "Hyperkalemia",
+    "why": "Drospirenone/spironolactone.",
+    "correct": false
+   },
+   "B": {
+    "text": "Blood clots (VTE)",
+    "why": "Estrogen’s VTE risk rises with smoking, age over 35 and VTE history.",
+    "correct": true
+   },
+   "C": {
+    "text": "Bone loss",
+    "why": "DMPA, aromatase inhibitors.",
+    "correct": false
+   },
+   "D": {
+    "text": "Lactic acidosis",
+    "why": "Metformin.",
+    "correct": false
+   },
+   "E": {
+    "text": "Erythrocytosis",
+    "why": "Testosterone.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L11/index.html#estrogens-progestins-contraception",
+   "label": "Study this: L11 · Part 1 →"
+  }
+ },
+ {
+  "topic": "Overactive bladder",
+  "objectives": [
+   "IO6.2"
+  ],
+  "sg": [
+   "U6-R12"
+  ],
+  "kind": "mechanism",
+  "stem": "Which adverse-effect cluster follows from antimuscarinic OAB therapy?",
+  "correct": "Dry mouth, constipation, confusion",
+  "distractors": [
+   {
+    "text": "Orthostasis and first-dose syncope",
+    "why": "Alpha1 blockers."
+   },
+   {
+    "text": "Blue vision and flushing",
+    "why": "PDE5 inhibitors."
+   },
+   {
+    "text": "Raised BP and nasopharyngitis",
+    "why": "Mirabegron."
+   },
+   {
+    "text": "Decreased libido, PSA halved",
+    "why": "5-ARIs."
+   }
+  ],
+  "why_correct": "Systemic muscarinic blockade causes dry mouth, constipation, blurred vision and confusion; avoid in narrow-angle glaucoma and retention.",
+  "takeaway": "Can’t see, can’t spit, can’t poop, can’t think.",
+  "discriminator": "Burden is cumulative across all drugs.",
+  "src": "L12 S11; S12",
+  "id": "U6-019",
+  "answer": "A",
+  "options": {
+   "A": {
+    "text": "Dry mouth, constipation, confusion",
+    "why": "Systemic muscarinic blockade causes dry mouth, constipation, blurred vision and confusion; avoid in narrow-angle glaucoma and retention.",
+    "correct": true
+   },
+   "B": {
+    "text": "Raised BP and nasopharyngitis",
+    "why": "Mirabegron.",
+    "correct": false
+   },
+   "C": {
+    "text": "Blue vision and flushing",
+    "why": "PDE5 inhibitors.",
+    "correct": false
+   },
+   "D": {
+    "text": "Decreased libido, PSA halved",
+    "why": "5-ARIs.",
+    "correct": false
+   },
+   "E": {
+    "text": "Orthostasis and first-dose syncope",
+    "why": "Alpha1 blockers.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L12/index.html#overactive-bladder-drugs",
+   "label": "Study this: L12 · Part 2 →"
+  }
+ },
+ {
+  "topic": "Bladder receptors",
+  "objectives": [
+   "IO6.1"
+  ],
+  "sg": [],
+  "kind": "mechanism",
+  "stem": "Which receptor does the external urethral sphincter use?",
+  "correct": "Nicotinic",
+  "distractors": [
+   {
+    "text": "M3 muscarinic",
+    "why": "Detrusor."
+   },
+   {
+    "text": "Beta3",
+    "why": "Detrusor."
+   },
+   {
+    "text": "Alpha1",
+    "why": "Bladder neck."
+   },
+   {
+    "text": "Dopamine D2",
+    "why": "Not bladder."
+   }
+  ],
+  "why_correct": "Somatic (pudendal) nicotinic control holds the external sphincter.",
+  "takeaway": "Three nerves, three receptor families.",
+  "discriminator": "Voluntary relaxation during voiding.",
+  "src": "L12 S4; S9",
+  "id": "U6-042",
+  "answer": "B",
+  "options": {
+   "A": {
+    "text": "Beta3",
+    "why": "Detrusor.",
+    "correct": false
+   },
+   "B": {
+    "text": "Nicotinic",
+    "why": "Somatic (pudendal) nicotinic control holds the external sphincter.",
+    "correct": true
+   },
+   "C": {
+    "text": "Alpha1",
+    "why": "Bladder neck.",
+    "correct": false
+   },
+   "D": {
+    "text": "M3 muscarinic",
+    "why": "Detrusor.",
+    "correct": false
+   },
+   "E": {
+    "text": "Dopamine D2",
+    "why": "Not bladder.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L12/index.html#autonomic-control-of-the-lower-urinary-tract",
+   "label": "Study this: L12 · Part 1 →"
+  }
+ },
+ {
+  "topic": "PCOS",
+  "objectives": [
+   "IO6.1",
+   "IO6.3"
+  ],
+  "sg": [
+   "U6-R10"
+  ],
+  "kind": "mechanism",
+  "stem": "Why is metformin called an indirect therapy for hyperandrogenism in PCOS?",
+  "correct": "It lowers insulin",
+  "distractors": [
+   {
+    "text": "It blocks the androgen receptor",
+    "why": "Spironolactone."
+   },
+   {
+    "text": "It blocks 5-alpha-reductase",
+    "why": "Finasteride."
+   },
+   {
+    "text": "It suppresses FSH and LH",
+    "why": "Combined contraception."
+   },
+   {
+    "text": "It blocks aromatase",
+    "why": "Anastrozole."
+   }
+  ],
+  "why_correct": "Metformin improves insulin sensitivity and reduces hyperinsulinemia’s stimulation of ovarian androgens — no hormone receptor involved.",
+  "takeaway": "Metformin works upstream, on insulin.",
+  "discriminator": "GI upset; hold for contrast or renal impairment.",
+  "src": "L11 S22; S23; SG U6-R10",
+  "id": "U6-014",
+  "answer": "C",
+  "options": {
+   "A": {
+    "text": "It blocks 5-alpha-reductase",
+    "why": "Finasteride.",
+    "correct": false
+   },
+   "B": {
+    "text": "It blocks the androgen receptor",
+    "why": "Spironolactone.",
+    "correct": false
+   },
+   "C": {
+    "text": "It lowers insulin",
+    "why": "Metformin improves insulin sensitivity and reduces hyperinsulinemia’s stimulation of ovarian androgens — no hormone receptor involved.",
+    "correct": true
+   },
+   "D": {
+    "text": "It blocks aromatase",
+    "why": "Anastrozole.",
+    "correct": false
+   },
+   "E": {
+    "text": "It suppresses FSH and LH",
+    "why": "Combined contraception.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L11/index.html#pcos-the-reproductive-metabolic-overlap",
+   "label": "Study this: L11 · Part 3 →"
+  }
+ },
+ {
+  "topic": "SERMs & aromatase inhibitors",
+  "objectives": [
+   "IO6.4"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A postmenopausal woman with osteoporosis and no breast cancer wants a SERM. Which fits?",
+  "correct": "Raloxifene",
+  "distractors": [
+   {
+    "text": "Tamoxifen",
+    "why": "Endometrial risk."
+   },
+   {
+    "text": "Anastrozole",
+    "why": "Causes bone loss."
+   },
+   {
+    "text": "Letrozole",
+    "why": "Causes bone loss."
+   },
+   {
+    "text": "Estradiol alone",
+    "why": "Unopposed estrogen."
+   }
+  ],
+  "why_correct": "Raloxifene is a bone agonist, endometrium-neutral — preferred for osteoporosis prevention without a breast cancer indication.",
+  "takeaway": "Bone + no cancer → raloxifene.",
+  "discriminator": "Both SERMs raise VTE.",
+  "src": "L11 S11; S35",
+  "id": "U6-035",
+  "answer": "A",
+  "options": {
+   "A": {
+    "text": "Raloxifene",
+    "why": "Raloxifene is a bone agonist, endometrium-neutral — preferred for osteoporosis prevention without a breast cancer indication.",
+    "correct": true
+   },
+   "B": {
+    "text": "Letrozole",
+    "why": "Causes bone loss.",
+    "correct": false
+   },
+   "C": {
+    "text": "Tamoxifen",
+    "why": "Endometrial risk.",
+    "correct": false
+   },
+   "D": {
+    "text": "Anastrozole",
+    "why": "Causes bone loss.",
+    "correct": false
+   },
+   "E": {
+    "text": "Estradiol alone",
+    "why": "Unopposed estrogen.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L11/index.html#serms-aromatase-inhibitors-androgens",
+   "label": "Study this: L11 · Part 2 →"
+  }
+ },
+ {
+  "topic": "BPH",
+  "objectives": [
+   "IO6.4"
+  ],
+  "sg": [
+   "U6-R15"
+  ],
+  "kind": "vignette",
+  "stem": "A man with BPH wants quick relief and a smaller prostate long term. Best regimen?",
+  "correct": "Alpha1 blocker plus a 5-ARI",
+  "distractors": [
+   {
+    "text": "5-ARI alone for quick relief",
+    "why": "Takes 3–6 months."
+   },
+   {
+    "text": "Oxybutynin alone",
+    "why": "Risks retention."
+   },
+   {
+    "text": "Doxazosin alone to shrink it",
+    "why": "No shrinkage."
+   },
+   {
+    "text": "Sildenafil plus nitrate",
+    "why": "Contraindicated."
+   }
+  ],
+  "why_correct": "Alpha1 blockers act in days; 5-ARIs shrink the prostate over 3–6 months — frequently combined.",
+  "takeaway": "Fast + slow = combine.",
+  "discriminator": "5-ARI: PSA halved; pregnant partners avoid crushed tablets.",
+  "src": "L12 S19; S20; S29; SG U6-R15",
+  "id": "U6-023",
+  "answer": "E",
+  "options": {
+   "A": {
+    "text": "Oxybutynin alone",
+    "why": "Risks retention.",
+    "correct": false
+   },
+   "B": {
+    "text": "Sildenafil plus nitrate",
+    "why": "Contraindicated.",
+    "correct": false
+   },
+   "C": {
+    "text": "Doxazosin alone to shrink it",
+    "why": "No shrinkage.",
+    "correct": false
+   },
+   "D": {
+    "text": "5-ARI alone for quick relief",
+    "why": "Takes 3–6 months.",
+    "correct": false
+   },
+   "E": {
+    "text": "Alpha1 blocker plus a 5-ARI",
+    "why": "Alpha1 blockers act in days; 5-ARIs shrink the prostate over 3–6 months — frequently combined.",
+    "correct": true
+   }
+  },
+  "link": {
+   "href": "../../L12/index.html#bph-erectile-dysfunction-pde5-inhibitors",
+   "label": "Study this: L12 · Part 3 →"
+  }
+ },
+ {
+  "topic": "Integration",
+  "objectives": [
+   "IO6.3"
+  ],
+  "sg": [],
+  "kind": "mechanism",
+  "stem": "Why do finasteride and dutasteride appear in both GU sessions?",
+  "correct": "Same drug, new indication",
+  "distractors": [
+   {
+    "text": "They are antimuscarinics",
+    "why": "5-ARIs."
+   },
+   {
+    "text": "They block alpha1",
+    "why": "5-ARIs."
+   },
+   {
+    "text": "They raise DHT",
+    "why": "Lower DHT."
+   },
+   {
+    "text": "They are estrogens",
+    "why": "5-ARIs."
+   }
+  ],
+  "why_correct": "5-ARIs block testosterone → DHT: hirsutism/alopecia in Session 1, BPH in Session 2.",
+  "takeaway": "Same mechanism, two clinical problems.",
+  "discriminator": "PSA halved — double it.",
+  "src": "L11 S15; L12 S19; S30",
+  "id": "U6-050",
+  "answer": "E",
+  "options": {
+   "A": {
+    "text": "They block alpha1",
+    "why": "5-ARIs.",
+    "correct": false
+   },
+   "B": {
+    "text": "They are estrogens",
+    "why": "5-ARIs.",
+    "correct": false
+   },
+   "C": {
+    "text": "They raise DHT",
+    "why": "Lower DHT.",
+    "correct": false
+   },
+   "D": {
+    "text": "They are antimuscarinics",
+    "why": "5-ARIs.",
+    "correct": false
+   },
+   "E": {
+    "text": "Same drug, new indication",
+    "why": "5-ARIs block testosterone → DHT: hirsutism/alopecia in Session 1, BPH in Session 2.",
+    "correct": true
+   }
+  },
+  "link": {
+   "href": "../../L11/index.html#serms-aromatase-inhibitors-androgens",
+   "label": "Study this: L11 · Part 2 →"
+  }
+ },
+ {
+  "topic": "ED & PDE5",
+  "objectives": [
+   "IO6.1"
+  ],
+  "sg": [],
+  "kind": "mechanism",
+  "stem": "How do PDE5 inhibitors produce an erection?",
+  "correct": "They block cGMP breakdown",
+  "distractors": [
+   {
+    "text": "They release nitric oxide directly",
+    "why": "NANC nerves do."
+   },
+   {
+    "text": "They block alpha1 in the penis",
+    "why": "Not the mechanism."
+   },
+   {
+    "text": "They raise testosterone",
+    "why": "Not the mechanism."
+   },
+   {
+    "text": "They work without sexual stimulation",
+    "why": "Stimulation is needed."
+   }
+  ],
+  "why_correct": "NANC nerves release NO → cGMP → smooth-muscle relaxation; PDE5 inhibitors prolong cGMP.",
+  "takeaway": "No stimulation, no signal to prolong.",
+  "discriminator": "Tadalafil has the longest half-life.",
+  "src": "L12 S21; S22; S23",
+  "id": "U6-025",
+  "answer": "A",
+  "options": {
+   "A": {
+    "text": "They block cGMP breakdown",
+    "why": "NANC nerves release NO → cGMP → smooth-muscle relaxation; PDE5 inhibitors prolong cGMP.",
+    "correct": true
+   },
+   "B": {
+    "text": "They block alpha1 in the penis",
+    "why": "Not the mechanism.",
+    "correct": false
+   },
+   "C": {
+    "text": "They work without sexual stimulation",
+    "why": "Stimulation is needed.",
+    "correct": false
+   },
+   "D": {
+    "text": "They raise testosterone",
+    "why": "Not the mechanism.",
+    "correct": false
+   },
+   "E": {
+    "text": "They release nitric oxide directly",
+    "why": "NANC nerves do.",
     "correct": false
    }
   },
   "link": {
    "href": "../../L12/index.html#bph-erectile-dysfunction-pde5-inhibitors",
    "label": "Study this: L12 · Part 3 →"
+  }
+ },
+ {
+  "topic": "Contraception",
+  "objectives": [
+   "IO6.4"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A patient with migraine with aura wants contraception that also lightens heavy periods. Best fit?",
+  "correct": "Levonorgestrel IUD",
+  "distractors": [
+   {
+    "text": "Combined oral pill",
+    "why": "Estrogen contraindicated."
+   },
+   {
+    "text": "Combined vaginal ring",
+    "why": "Contains estrogen."
+   },
+   {
+    "text": "Estradiol skin patch",
+    "why": "Not contraception."
+   },
+   {
+    "text": "Combined skin patch",
+    "why": "Contains estrogen."
+   }
+  ],
+  "why_correct": "Migraine with aura rules out estrogen; the LNG IUD is progestin-only and treats heavy menstrual bleeding.",
+  "takeaway": "No estrogen → progestin-only.",
+  "discriminator": "Check strings; perforation and expulsion risks.",
+  "src": "L11 S9; S32",
+  "id": "U6-034",
+  "answer": "C",
+  "options": {
+   "A": {
+    "text": "Combined skin patch",
+    "why": "Contains estrogen.",
+    "correct": false
+   },
+   "B": {
+    "text": "Estradiol skin patch",
+    "why": "Not contraception.",
+    "correct": false
+   },
+   "C": {
+    "text": "Levonorgestrel IUD",
+    "why": "Migraine with aura rules out estrogen; the LNG IUD is progestin-only and treats heavy menstrual bleeding.",
+    "correct": true
+   },
+   "D": {
+    "text": "Combined oral pill",
+    "why": "Estrogen contraindicated.",
+    "correct": false
+   },
+   "E": {
+    "text": "Combined vaginal ring",
+    "why": "Contains estrogen.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L11/index.html#estrogens-progestins-contraception",
+   "label": "Study this: L11 · Part 1 →"
   }
  },
  {
@@ -1165,17 +2604,17 @@
   "discriminator": "Onset of benefit 3–6 months.",
   "src": "L12 S19; S20; SG U6-R15",
   "id": "U6-024",
-  "answer": "E",
+  "answer": "B",
   "options": {
    "A": {
-    "text": "Only after stopping for 6 months",
-    "why": "Not the taught approach.",
+    "text": "Halve it to about 1.0",
+    "why": "Doubled, not halved.",
     "correct": false
    },
    "B": {
-    "text": "PSA is meaningless now",
-    "why": "Still usable.",
-    "correct": false
+    "text": "Double it — about 4.2 ng/mL",
+    "why": "5-ARIs lower PSA by roughly half on long-term therapy; adjust when interpreting.",
+    "correct": true
    },
    "C": {
     "text": "At face value",
@@ -1183,285 +2622,19 @@
     "correct": false
    },
    "D": {
-    "text": "Halve it to about 1.0",
-    "why": "Doubled, not halved.",
+    "text": "PSA is meaningless now",
+    "why": "Still usable.",
     "correct": false
    },
    "E": {
-    "text": "Double it — about 4.2 ng/mL",
-    "why": "5-ARIs lower PSA by roughly half on long-term therapy; adjust when interpreting.",
-    "correct": true
+    "text": "Only after stopping for 6 months",
+    "why": "Not the taught approach.",
+    "correct": false
    }
   },
   "link": {
    "href": "../../L12/index.html#bph-erectile-dysfunction-pde5-inhibitors",
    "label": "Study this: L12 · Part 3 →"
-  }
- },
- {
-  "topic": "Estrogens & progestins",
-  "objectives": [
-   "IO6.1"
-  ],
-  "sg": [
-   "U6-R1"
-  ],
-  "kind": "mechanism",
-  "stem": "How do estrogens produce their effects on the endometrium, bone and lipids?",
-  "correct": "Nuclear ER-α/β, gene transcription",
-  "distractors": [
-   {
-    "text": "Cell-surface receptors raising cAMP",
-    "why": "Intracellular receptors."
-   },
-   {
-    "text": "Inhibiting aromatase in fat",
-    "why": "That is anastrozole."
-   },
-   {
-    "text": "Blocking progesterone receptors",
-    "why": "That is mifepristone."
-   },
-   {
-    "text": "Activating androgen receptors",
-    "why": "Not estrogen’s receptor."
-   }
-  ],
-  "why_correct": "Estrogens bind intracellular ER-alpha/ER-beta and regulate gene transcription in reproductive, bone, cardiovascular and CNS tissue.",
-  "takeaway": "Steroid hormone → nuclear receptor → transcription.",
-  "discriminator": "Effects: endometrial proliferation, bone density, ↑ HDL ↓ LDL.",
-  "src": "L11 S5; SG U6-R1",
-  "id": "U6-001",
-  "answer": "E",
-  "options": {
-   "A": {
-    "text": "Cell-surface receptors raising cAMP",
-    "why": "Intracellular receptors.",
-    "correct": false
-   },
-   "B": {
-    "text": "Blocking progesterone receptors",
-    "why": "That is mifepristone.",
-    "correct": false
-   },
-   "C": {
-    "text": "Inhibiting aromatase in fat",
-    "why": "That is anastrozole.",
-    "correct": false
-   },
-   "D": {
-    "text": "Activating androgen receptors",
-    "why": "Not estrogen’s receptor.",
-    "correct": false
-   },
-   "E": {
-    "text": "Nuclear ER-α/β, gene transcription",
-    "why": "Estrogens bind intracellular ER-alpha/ER-beta and regulate gene transcription in reproductive, bone, cardiovascular and CNS tissue.",
-    "correct": true
-   }
-  },
-  "link": {
-   "href": "../../L11/index.html#estrogens-progestins-contraception",
-   "label": "Study this: L11 · Part 1 →"
-  }
- },
- {
-  "topic": "Contraception",
-  "objectives": [
-   "IO6.4"
-  ],
-  "sg": [
-   "U6-R3"
-  ],
-  "kind": "vignette",
-  "stem": "A 38-year-old who smokes daily asks for contraception. Which choice is most appropriate?",
-  "correct": "Levonorgestrel IUD",
-  "distractors": [
-   {
-    "text": "Combined pill at the lowest dose",
-    "why": "Estrogen contraindicated."
-   },
-   {
-    "text": "Combined vaginal ring",
-    "why": "Contains estrogen."
-   },
-   {
-    "text": "Combined transdermal patch",
-    "why": "Contains estrogen."
-   },
-   {
-    "text": "Any method; smoking is irrelevant",
-    "why": "Smoking > 35 is the trigger."
-   }
-  ],
-  "why_correct": "Smoking with age over 35 substantially raises estrogen’s thromboembolic risk; progestin-only methods carry no estrogen.",
-  "takeaway": "Smoker > 35, VTE history, migraine with aura → progestin-only.",
-  "discriminator": "When estrogen is off the table, progestin-only is the right first choice.",
-  "src": "L11 S5; S9; SG U6-R3",
-  "id": "U6-003",
-  "answer": "C",
-  "options": {
-   "A": {
-    "text": "Any method; smoking is irrelevant",
-    "why": "Smoking > 35 is the trigger.",
-    "correct": false
-   },
-   "B": {
-    "text": "Combined pill at the lowest dose",
-    "why": "Estrogen contraindicated.",
-    "correct": false
-   },
-   "C": {
-    "text": "Levonorgestrel IUD",
-    "why": "Smoking with age over 35 substantially raises estrogen’s thromboembolic risk; progestin-only methods carry no estrogen.",
-    "correct": true
-   },
-   "D": {
-    "text": "Combined vaginal ring",
-    "why": "Contains estrogen.",
-    "correct": false
-   },
-   "E": {
-    "text": "Combined transdermal patch",
-    "why": "Contains estrogen.",
-    "correct": false
-   }
-  },
-  "link": {
-   "href": "../../L11/index.html#estrogens-progestins-contraception",
-   "label": "Study this: L11 · Part 1 →"
-  }
- },
- {
-  "topic": "Androgens & antiandrogens",
-  "objectives": [
-   "IO6.1"
-  ],
-  "sg": [
-   "U6-R8"
-  ],
-  "kind": "mechanism",
-  "stem": "How do bicalutamide and finasteride differ in reducing androgen action?",
-  "correct": "Receptor block vs. DHT-synthesis block",
-  "distractors": [
-   {
-    "text": "Both block 5-alpha-reductase",
-    "why": "Bicalutamide blocks AR."
-   },
-   {
-    "text": "Both block the androgen receptor",
-    "why": "Finasteride blocks the enzyme."
-   },
-   {
-    "text": "Finasteride blocks aromatase",
-    "why": "Anastrozole does."
-   },
-   {
-    "text": "Bicalutamide lowers GnRH",
-    "why": "That is leuprolide."
-   }
-  ],
-  "why_correct": "Flutamide/bicalutamide are direct AR blockers (prostate cancer, with a GnRH agonist); finasteride/dutasteride block testosterone → DHT.",
-  "takeaway": "Receptor blockers vs. enzyme blockers.",
-  "discriminator": "Same drugs (5-ARIs) return for BPH.",
-  "src": "L11 S15; S16; SG U6-R8",
-  "id": "U6-011",
-  "answer": "E",
-  "options": {
-   "A": {
-    "text": "Both block the androgen receptor",
-    "why": "Finasteride blocks the enzyme.",
-    "correct": false
-   },
-   "B": {
-    "text": "Both block 5-alpha-reductase",
-    "why": "Bicalutamide blocks AR.",
-    "correct": false
-   },
-   "C": {
-    "text": "Bicalutamide lowers GnRH",
-    "why": "That is leuprolide.",
-    "correct": false
-   },
-   "D": {
-    "text": "Finasteride blocks aromatase",
-    "why": "Anastrozole does.",
-    "correct": false
-   },
-   "E": {
-    "text": "Receptor block vs. DHT-synthesis block",
-    "why": "Flutamide/bicalutamide are direct AR blockers (prostate cancer, with a GnRH agonist); finasteride/dutasteride block testosterone → DHT.",
-    "correct": true
-   }
-  },
-  "link": {
-   "href": "../../L11/index.html#serms-aromatase-inhibitors-androgens",
-   "label": "Study this: L11 · Part 2 →"
-  }
- },
- {
-  "topic": "Overactive bladder",
-  "objectives": [
-   "IO6.5"
-  ],
-  "sg": [],
-  "kind": "vignette",
-  "stem": "A patient with poorly controlled hypertension needs OAB therapy. What is the concern with mirabegron?",
-  "correct": "It can raise blood pressure",
-  "distractors": [
-   {
-    "text": "It causes severe confusion",
-    "why": "Antimuscarinics."
-   },
-   {
-    "text": "It causes first-dose hypotension",
-    "why": "Alpha1 blockers."
-   },
-   {
-    "text": "It lowers PSA by half",
-    "why": "5-ARIs."
-   },
-   {
-    "text": "It worsens narrow-angle glaucoma",
-    "why": "Antimuscarinics."
-   }
-  ],
-  "why_correct": "Mirabegron can raise blood pressure — monitor in uncontrolled hypertension; it also inhibits CYP2D6.",
-  "takeaway": "Mirabegron: no anticholinergic burden, but watch BP.",
-  "discriminator": "Can combine with an antimuscarinic for refractory OAB.",
-  "src": "L12 S13; S40",
-  "id": "U6-020",
-  "answer": "D",
-  "options": {
-   "A": {
-    "text": "It worsens narrow-angle glaucoma",
-    "why": "Antimuscarinics.",
-    "correct": false
-   },
-   "B": {
-    "text": "It lowers PSA by half",
-    "why": "5-ARIs.",
-    "correct": false
-   },
-   "C": {
-    "text": "It causes severe confusion",
-    "why": "Antimuscarinics.",
-    "correct": false
-   },
-   "D": {
-    "text": "It can raise blood pressure",
-    "why": "Mirabegron can raise blood pressure — monitor in uncontrolled hypertension; it also inhibits CYP2D6.",
-    "correct": true
-   },
-   "E": {
-    "text": "It causes first-dose hypotension",
-    "why": "Alpha1 blockers.",
-    "correct": false
-   }
-  },
-  "link": {
-   "href": "../../L12/index.html#overactive-bladder-drugs",
-   "label": "Study this: L12 · Part 2 →"
   }
  },
  {
@@ -1499,7 +2672,7 @@
   "discriminator": "Protect bone: calcium, vitamin D, bisphosphonate.",
   "src": "L11 S13; S14; S45; SG U6-R6",
   "id": "U6-008",
-  "answer": "C",
+  "answer": "B",
   "options": {
    "A": {
     "text": "It blocks the estrogen receptor",
@@ -1507,14 +2680,14 @@
     "correct": false
    },
    "B": {
-    "text": "It raises estrogen to fight tumor",
-    "why": "Lowers it.",
-    "correct": false
-   },
-   "C": {
     "text": "Not enough alone before menopause",
     "why": "Aromatase inhibitors block peripheral conversion of androgens to estrogen; before menopause the ovary dominates (needs ovarian suppression).",
     "correct": true
+   },
+   "C": {
+    "text": "It raises estrogen to fight tumor",
+    "why": "Lowers it.",
+    "correct": false
    },
    "D": {
     "text": "Main risk is endometrial cancer",
@@ -1533,65 +2706,127 @@
   }
  },
  {
-  "topic": "PCOS",
+  "topic": "ED & PDE5",
   "objectives": [
-   "IO6.1",
    "IO6.3"
   ],
-  "sg": [
-   "U6-R10"
-  ],
+  "sg": [],
   "kind": "mechanism",
-  "stem": "Why is metformin called an indirect therapy for hyperandrogenism in PCOS?",
-  "correct": "It lowers insulin, so androgens fall",
+  "stem": "Which PDE5 inhibitor has the longest half-life, allowing flexible dosing?",
+  "correct": "Tadalafil",
   "distractors": [
    {
-    "text": "It blocks the androgen receptor",
-    "why": "Spironolactone."
+    "text": "Sildenafil",
+    "why": "Shorter."
    },
    {
-    "text": "It blocks 5-alpha-reductase",
-    "why": "Finasteride."
+    "text": "Vardenafil",
+    "why": "Shorter."
    },
    {
-    "text": "It suppresses FSH and LH",
-    "why": "Combined contraception."
+    "text": "Tamsulosin",
+    "why": "Alpha1 blocker."
    },
    {
-    "text": "It blocks aromatase",
-    "why": "Anastrozole."
+    "text": "Mirabegron",
+    "why": "Beta3 agonist."
    }
   ],
-  "why_correct": "Metformin improves insulin sensitivity and reduces hyperinsulinemia’s stimulation of ovarian androgens — no hormone receptor involved.",
-  "takeaway": "Metformin works upstream, on insulin.",
-  "discriminator": "GI upset; hold for contrast or renal impairment.",
-  "src": "L11 S22; S23; SG U6-R10",
-  "id": "U6-014",
-  "answer": "A",
+  "why_correct": "Tadalafil has a longer half-life and more flexible dosing.",
+  "takeaway": "Tadalafil = long-acting.",
+  "discriminator": "Sildenafil = blue vision.",
+  "src": "L12 S22; S48",
+  "id": "U6-047",
+  "answer": "D",
   "options": {
    "A": {
-    "text": "It lowers insulin, so androgens fall",
-    "why": "Metformin improves insulin sensitivity and reduces hyperinsulinemia’s stimulation of ovarian androgens — no hormone receptor involved.",
-    "correct": true
+    "text": "Sildenafil",
+    "why": "Shorter.",
+    "correct": false
    },
    "B": {
-    "text": "It blocks 5-alpha-reductase",
-    "why": "Finasteride.",
+    "text": "Vardenafil",
+    "why": "Shorter.",
     "correct": false
    },
    "C": {
-    "text": "It suppresses FSH and LH",
-    "why": "Combined contraception.",
+    "text": "Mirabegron",
+    "why": "Beta3 agonist.",
     "correct": false
    },
    "D": {
-    "text": "It blocks the androgen receptor",
-    "why": "Spironolactone.",
+    "text": "Tadalafil",
+    "why": "Tadalafil has a longer half-life and more flexible dosing.",
+    "correct": true
+   },
+   "E": {
+    "text": "Tamsulosin",
+    "why": "Alpha1 blocker.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L12/index.html#bph-erectile-dysfunction-pde5-inhibitors",
+   "label": "Study this: L12 · Part 3 →"
+  }
+ },
+ {
+  "topic": "PCOS",
+  "objectives": [
+   "IO6.4"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A 25-year-old with PCOS, irregular cycles and hirsutism (BMI 32) does not want pregnancy. Best plan?",
+  "correct": "Combined pill plus metformin",
+  "distractors": [
+   {
+    "text": "Metformin alone, never hormones",
+    "why": "Usually combined."
+   },
+   {
+    "text": "Clomiphene to induce ovulation",
+    "why": "Not trying to conceive."
+   },
+   {
+    "text": "Estradiol alone, no progestin",
+    "why": "Unopposed estrogen."
+   },
+   {
+    "text": "Letrozole for hirsutism",
+    "why": "Ovulation agent."
+   }
+  ],
+  "why_correct": "Contraception for immediate symptom control; metformin for the metabolic driver and long-term diabetes risk.",
+  "takeaway": "PCOS therapy is rarely single-agent.",
+  "discriminator": "GLP-1 agonists: off-label with obesity.",
+  "src": "L11 S22; S24; S25",
+  "id": "U6-015",
+  "answer": "B",
+  "options": {
+   "A": {
+    "text": "Clomiphene to induce ovulation",
+    "why": "Not trying to conceive.",
+    "correct": false
+   },
+   "B": {
+    "text": "Combined pill plus metformin",
+    "why": "Contraception for immediate symptom control; metformin for the metabolic driver and long-term diabetes risk.",
+    "correct": true
+   },
+   "C": {
+    "text": "Metformin alone, never hormones",
+    "why": "Usually combined.",
+    "correct": false
+   },
+   "D": {
+    "text": "Estradiol alone, no progestin",
+    "why": "Unopposed estrogen.",
     "correct": false
    },
    "E": {
-    "text": "It blocks aromatase",
-    "why": "Anastrozole.",
+    "text": "Letrozole for hirsutism",
+    "why": "Ovulation agent.",
     "correct": false
    }
   },
@@ -1601,70 +2836,135 @@
   }
  },
  {
-  "topic": "BPH",
+  "topic": "Estrogens & progestins",
   "objectives": [
-   "IO6.4"
+   "IO6.1"
   ],
   "sg": [
-   "U6-R15"
+   "U6-R1"
   ],
-  "kind": "vignette",
-  "stem": "A man with BPH wants quick relief and a smaller prostate long term. Best regimen?",
-  "correct": "Alpha1 blocker plus a 5-ARI",
+  "kind": "mechanism",
+  "stem": "How do estrogens produce their effects on the endometrium, bone and lipids?",
+  "correct": "Nuclear ER-α/β, gene transcription",
   "distractors": [
    {
-    "text": "5-ARI alone for quick relief",
-    "why": "Takes 3–6 months."
+    "text": "Cell-surface receptors raising cAMP",
+    "why": "Intracellular receptors."
    },
    {
-    "text": "Oxybutynin alone",
-    "why": "Risks retention."
+    "text": "Inhibiting aromatase in fat",
+    "why": "That is anastrozole."
    },
    {
-    "text": "Doxazosin alone to shrink it",
-    "why": "No shrinkage."
+    "text": "Blocking progesterone receptors",
+    "why": "That is mifepristone."
    },
    {
-    "text": "Sildenafil plus nitrate",
-    "why": "Contraindicated."
+    "text": "Activating androgen receptors",
+    "why": "Not estrogen’s receptor."
    }
   ],
-  "why_correct": "Alpha1 blockers act in days; 5-ARIs shrink the prostate over 3–6 months — frequently combined.",
-  "takeaway": "Fast + slow = combine.",
-  "discriminator": "5-ARI: PSA halved; pregnant partners avoid crushed tablets.",
-  "src": "L12 S19; S20; S29; SG U6-R15",
-  "id": "U6-023",
+  "why_correct": "Estrogens bind intracellular ER-alpha/ER-beta and regulate gene transcription in reproductive, bone, cardiovascular and CNS tissue.",
+  "takeaway": "Steroid hormone → nuclear receptor → transcription.",
+  "discriminator": "Effects: endometrial proliferation, bone density, ↑ HDL ↓ LDL.",
+  "src": "L11 S5; SG U6-R1",
+  "id": "U6-001",
   "answer": "A",
   "options": {
    "A": {
-    "text": "Alpha1 blocker plus a 5-ARI",
-    "why": "Alpha1 blockers act in days; 5-ARIs shrink the prostate over 3–6 months — frequently combined.",
+    "text": "Nuclear ER-α/β, gene transcription",
+    "why": "Estrogens bind intracellular ER-alpha/ER-beta and regulate gene transcription in reproductive, bone, cardiovascular and CNS tissue.",
     "correct": true
    },
    "B": {
-    "text": "Oxybutynin alone",
-    "why": "Risks retention.",
+    "text": "Blocking progesterone receptors",
+    "why": "That is mifepristone.",
     "correct": false
    },
    "C": {
-    "text": "5-ARI alone for quick relief",
-    "why": "Takes 3–6 months.",
+    "text": "Cell-surface receptors raising cAMP",
+    "why": "Intracellular receptors.",
     "correct": false
    },
    "D": {
-    "text": "Sildenafil plus nitrate",
-    "why": "Contraindicated.",
+    "text": "Inhibiting aromatase in fat",
+    "why": "That is anastrozole.",
     "correct": false
    },
    "E": {
-    "text": "Doxazosin alone to shrink it",
-    "why": "No shrinkage.",
+    "text": "Activating androgen receptors",
+    "why": "Not estrogen’s receptor.",
     "correct": false
    }
   },
   "link": {
-   "href": "../../L12/index.html#bph-erectile-dysfunction-pde5-inhibitors",
-   "label": "Study this: L12 · Part 3 →"
+   "href": "../../L11/index.html#estrogens-progestins-contraception",
+   "label": "Study this: L11 · Part 1 →"
+  }
+ },
+ {
+  "topic": "Androgens & antiandrogens",
+  "objectives": [
+   "IO6.6"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A man on testosterone gel lives with young children. Key counseling?",
+  "correct": "Prevent skin transfer",
+  "distractors": [
+   {
+    "text": "Apply it to the hands only",
+    "why": "Transfer risk."
+   },
+   {
+    "text": "No risk to others",
+    "why": "Secondary exposure."
+   },
+   {
+    "text": "Use it only at bedtime",
+    "why": "Not the point."
+   },
+   {
+    "text": "Double the dose",
+    "why": "Not the point."
+   }
+  ],
+  "why_correct": "Testosterone gels risk secondary exposure; also monitor hematocrit, PSA, lipids.",
+  "takeaway": "Gel → cover and wash.",
+  "discriminator": "Contraindicated in prostate cancer.",
+  "src": "L11 S38",
+  "id": "U6-039",
+  "answer": "C",
+  "options": {
+   "A": {
+    "text": "No risk to others",
+    "why": "Secondary exposure.",
+    "correct": false
+   },
+   "B": {
+    "text": "Apply it to the hands only",
+    "why": "Transfer risk.",
+    "correct": false
+   },
+   "C": {
+    "text": "Prevent skin transfer",
+    "why": "Testosterone gels risk secondary exposure; also monitor hematocrit, PSA, lipids.",
+    "correct": true
+   },
+   "D": {
+    "text": "Use it only at bedtime",
+    "why": "Not the point.",
+    "correct": false
+   },
+   "E": {
+    "text": "Double the dose",
+    "why": "Not the point.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L11/index.html",
+   "label": "Study this: L11 →"
   }
  },
  {
@@ -1714,8 +3014,8 @@
     "correct": false
    },
    "C": {
-    "text": "Switch her to letrozole first",
-    "why": "Evaluate first.",
+    "text": "Expected; no action",
+    "why": "Needs evaluation.",
     "correct": false
    },
    "D": {
@@ -1724,14 +3024,144 @@
     "correct": true
    },
    "E": {
-    "text": "Expected; no action",
-    "why": "Needs evaluation.",
+    "text": "Switch her to letrozole first",
+    "why": "Evaluate first.",
     "correct": false
    }
   },
   "link": {
    "href": "../../L12/index.html#putting-it-all-together-gu-toolkit",
    "label": "Study this: L12 · Part 4 →"
+  }
+ },
+ {
+  "topic": "Overactive bladder",
+  "objectives": [
+   "IO6.2"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A patient with narrow-angle glaucoma needs OAB treatment. Which class is preferred?",
+  "correct": "Mirabegron",
+  "distractors": [
+   {
+    "text": "Oxybutynin",
+    "why": "Antimuscarinic."
+   },
+   {
+    "text": "Tolterodine",
+    "why": "Antimuscarinic."
+   },
+   {
+    "text": "Solifenacin",
+    "why": "Antimuscarinic."
+   },
+   {
+    "text": "Darifenacin",
+    "why": "Antimuscarinic."
+   }
+  ],
+  "why_correct": "Antimuscarinics can worsen narrow-angle glaucoma and urinary retention; mirabegron has no anticholinergic activity.",
+  "takeaway": "Glaucoma or retention → avoid antimuscarinics.",
+  "discriminator": "Mirabegron can raise BP.",
+  "src": "L12 S11; S13",
+  "id": "U6-043",
+  "answer": "B",
+  "options": {
+   "A": {
+    "text": "Tolterodine",
+    "why": "Antimuscarinic.",
+    "correct": false
+   },
+   "B": {
+    "text": "Mirabegron",
+    "why": "Antimuscarinics can worsen narrow-angle glaucoma and urinary retention; mirabegron has no anticholinergic activity.",
+    "correct": true
+   },
+   "C": {
+    "text": "Oxybutynin",
+    "why": "Antimuscarinic.",
+    "correct": false
+   },
+   "D": {
+    "text": "Darifenacin",
+    "why": "Antimuscarinic.",
+    "correct": false
+   },
+   "E": {
+    "text": "Solifenacin",
+    "why": "Antimuscarinic.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L12/index.html#overactive-bladder-drugs",
+   "label": "Study this: L12 · Part 2 →"
+  }
+ },
+ {
+  "topic": "Contraception",
+  "objectives": [
+   "IO6.6"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A woman on a combined pill starts rifampin for latent TB. What counseling is needed?",
+  "correct": "Use a backup method",
+  "distractors": [
+   {
+    "text": "No change is needed",
+    "why": "Inducers lower efficacy."
+   },
+   {
+    "text": "Stop the pill during rifampin",
+    "why": "Backup, not stopping."
+   },
+   {
+    "text": "Double the pill daily",
+    "why": "Not the advice."
+   },
+   {
+    "text": "Switch rifampin to St. John’s wort",
+    "why": "Also an inducer."
+   }
+  ],
+  "why_correct": "Enzyme inducers (rifampin, carbamazepine, phenytoin, St. John’s wort) lower combined contraceptive efficacy.",
+  "takeaway": "Inducer + pill → backup method.",
+  "discriminator": "Textbook: rifampin speeds estrogen/progestin metabolism.",
+  "src": "L11 S45; p. 773",
+  "id": "U6-005",
+  "answer": "B",
+  "options": {
+   "A": {
+    "text": "Switch rifampin to St. John’s wort",
+    "why": "Also an inducer.",
+    "correct": false
+   },
+   "B": {
+    "text": "Use a backup method",
+    "why": "Enzyme inducers (rifampin, carbamazepine, phenytoin, St. John’s wort) lower combined contraceptive efficacy.",
+    "correct": true
+   },
+   "C": {
+    "text": "Double the pill daily",
+    "why": "Not the advice.",
+    "correct": false
+   },
+   "D": {
+    "text": "No change is needed",
+    "why": "Inducers lower efficacy.",
+    "correct": false
+   },
+   "E": {
+    "text": "Stop the pill during rifampin",
+    "why": "Backup, not stopping.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L11/index.html#estrogens-progestins-contraception",
+   "label": "Study this: L11 · Part 1 →"
   }
  },
  {
@@ -1768,22 +3198,22 @@
   "discriminator": "Both become drug targets: tamsulosin and mirabegron.",
   "src": "L12 S7; S8",
   "id": "U6-017",
-  "answer": "B",
+  "answer": "C",
   "options": {
    "A": {
+    "text": "Contracts the detrusor and opens the neck",
+    "why": "That is voiding.",
+    "correct": false
+   },
+   "B": {
     "text": "Contracts both outlet and detrusor",
     "why": "Beta3 relaxes.",
     "correct": false
    },
-   "B": {
+   "C": {
     "text": "Outlet closed, detrusor relaxed",
     "why": "Alpha1 at the bladder neck contracts (continence); beta3 on the detrusor relaxes (low-pressure filling).",
     "correct": true
-   },
-   "C": {
-    "text": "Relaxes both outlet and detrusor",
-    "why": "Alpha1 contracts.",
-    "correct": false
    },
    "D": {
     "text": "Has no role in storage",
@@ -1791,8 +3221,8 @@
     "correct": false
    },
    "E": {
-    "text": "Contracts the detrusor and opens the neck",
-    "why": "That is voiding.",
+    "text": "Relaxes both outlet and detrusor",
+    "why": "Alpha1 contracts.",
     "correct": false
    }
   },
@@ -1802,200 +3232,70 @@
   }
  },
  {
-  "topic": "ED & PDE5",
+  "topic": "Contraception",
   "objectives": [
    "IO6.2"
   ],
   "sg": [
-   "U6-S"
+   "U6-R4"
   ],
-  "kind": "vignette",
-  "stem": "A man on tamsulosin (no nitrates) wants sildenafil. What is the remaining concern?",
-  "correct": "Additive hypotension",
-  "distractors": [
-   {
-    "text": "No interaction at all",
-    "why": "Additive hypotension."
-   },
-   {
-    "text": "Absolute contraindication",
-    "why": "That is nitrates."
-   },
-   {
-    "text": "Hyperkalemia from both drugs",
-    "why": "Not this pair."
-   },
-   {
-    "text": "Anticholinergic confusion",
-    "why": "Antimuscarinics."
-   }
-  ],
-  "why_correct": "Alpha1 blockade and NO-cGMP potentiation both lower BP — less severe than nitrates but warrants spacing or monitoring.",
-  "takeaway": "Nitrate = never; alpha1 blocker = caution.",
-  "discriminator": "Tadalafil profile allows tamsulosin 0.4 mg with caution.",
-  "src": "L12 S22; S25; S48; SG U6-S",
-  "id": "U6-027",
-  "answer": "B",
-  "options": {
-   "A": {
-    "text": "No interaction at all",
-    "why": "Additive hypotension.",
-    "correct": false
-   },
-   "B": {
-    "text": "Additive hypotension",
-    "why": "Alpha1 blockade and NO-cGMP potentiation both lower BP — less severe than nitrates but warrants spacing or monitoring.",
-    "correct": true
-   },
-   "C": {
-    "text": "Anticholinergic confusion",
-    "why": "Antimuscarinics.",
-    "correct": false
-   },
-   "D": {
-    "text": "Hyperkalemia from both drugs",
-    "why": "Not this pair.",
-    "correct": false
-   },
-   "E": {
-    "text": "Absolute contraindication",
-    "why": "That is nitrates.",
-    "correct": false
-   }
-  },
-  "link": {
-   "href": "../../L12/index.html#bph-erectile-dysfunction-pde5-inhibitors",
-   "label": "Study this: L12 · Part 3 →"
-  }
- },
- {
-  "topic": "BPH",
-  "objectives": [
-   "IO6.2"
-  ],
-  "sg": [],
   "kind": "mechanism",
-  "stem": "Why do alpha1 blockers for BPH cause orthostatic hypotension?",
-  "correct": "Alpha1 also sets vascular tone",
+  "stem": "Which adverse effect is specific to long-term depot medroxyprogesterone (DMPA)?",
+  "correct": "Reversible bone mineral density loss",
   "distractors": [
    {
-    "text": "They block cardiac beta receptors",
-    "why": "Not the mechanism."
+    "text": "Endometrial cancer from unopposed estrogen",
+    "why": "No estrogen in DMPA."
    },
    {
-    "text": "They raise cGMP",
-    "why": "PDE5 inhibitors."
+    "text": "Hyperkalemia",
+    "why": "Drospirenone or spironolactone."
    },
    {
-    "text": "They act only in the bladder",
-    "why": "They don’t."
+    "text": "Erythrocytosis",
+    "why": "Testosterone."
    },
    {
-    "text": "Only beta3 agonists cause it",
-    "why": "Not true."
+    "text": "Lactic acidosis",
+    "why": "Metformin."
    }
   ],
-  "why_correct": "Alpha1 blockade at the bladder neck also lowers systemic vascular resistance — orthostasis and a first-dose effect.",
-  "takeaway": "Same receptor family as the Unit 5 antihypertensives.",
-  "discriminator": "Give the first dose of doxazosin at bedtime.",
-  "src": "L12 S17; S18; S34",
-  "id": "U6-022",
-  "answer": "C",
+  "why_correct": "DMPA carries a boxed warning for loss of bone mineral density with prolonged use.",
+  "takeaway": "DMPA = bones.",
+  "discriminator": "Progestin-only methods also cause irregular bleeding early.",
+  "src": "L11 S6; S9; S31; SG U6-R4",
+  "id": "U6-004",
+  "answer": "E",
   "options": {
    "A": {
-    "text": "Only beta3 agonists cause it",
-    "why": "Not true.",
+    "text": "Erythrocytosis",
+    "why": "Testosterone.",
     "correct": false
    },
    "B": {
-    "text": "They act only in the bladder",
-    "why": "They don’t.",
+    "text": "Hyperkalemia",
+    "why": "Drospirenone or spironolactone.",
     "correct": false
    },
    "C": {
-    "text": "Alpha1 also sets vascular tone",
-    "why": "Alpha1 blockade at the bladder neck also lowers systemic vascular resistance — orthostasis and a first-dose effect.",
-    "correct": true
-   },
-   "D": {
-    "text": "They raise cGMP",
-    "why": "PDE5 inhibitors.",
-    "correct": false
-   },
-   "E": {
-    "text": "They block cardiac beta receptors",
-    "why": "Not the mechanism.",
-    "correct": false
-   }
-  },
-  "link": {
-   "href": "../../L12/index.html#bph-erectile-dysfunction-pde5-inhibitors",
-   "label": "Study this: L12 · Part 3 →"
-  }
- },
- {
-  "topic": "ED & PDE5",
-  "objectives": [
-   "IO6.1"
-  ],
-  "sg": [],
-  "kind": "mechanism",
-  "stem": "How do PDE5 inhibitors produce an erection?",
-  "correct": "They block cGMP breakdown",
-  "distractors": [
-   {
-    "text": "They release nitric oxide directly",
-    "why": "NANC nerves do."
-   },
-   {
-    "text": "They block alpha1 in the penis",
-    "why": "Not the mechanism."
-   },
-   {
-    "text": "They raise testosterone",
-    "why": "Not the mechanism."
-   },
-   {
-    "text": "They work without sexual stimulation",
-    "why": "Stimulation is needed."
-   }
-  ],
-  "why_correct": "NANC nerves release NO → cGMP → smooth-muscle relaxation; PDE5 inhibitors prolong cGMP.",
-  "takeaway": "No stimulation, no signal to prolong.",
-  "discriminator": "Tadalafil has the longest half-life.",
-  "src": "L12 S21; S22; S23",
-  "id": "U6-025",
-  "answer": "D",
-  "options": {
-   "A": {
-    "text": "They release nitric oxide directly",
-    "why": "NANC nerves do.",
-    "correct": false
-   },
-   "B": {
-    "text": "They work without sexual stimulation",
-    "why": "Stimulation is needed.",
-    "correct": false
-   },
-   "C": {
-    "text": "They block alpha1 in the penis",
-    "why": "Not the mechanism.",
+    "text": "Endometrial cancer from unopposed estrogen",
+    "why": "No estrogen in DMPA.",
     "correct": false
    },
    "D": {
-    "text": "They block cGMP breakdown",
-    "why": "NANC nerves release NO → cGMP → smooth-muscle relaxation; PDE5 inhibitors prolong cGMP.",
-    "correct": true
+    "text": "Lactic acidosis",
+    "why": "Metformin.",
+    "correct": false
    },
    "E": {
-    "text": "They raise testosterone",
-    "why": "Not the mechanism.",
-    "correct": false
+    "text": "Reversible bone mineral density loss",
+    "why": "DMPA carries a boxed warning for loss of bone mineral density with prolonged use.",
+    "correct": true
    }
   },
   "link": {
-   "href": "../../L12/index.html#bph-erectile-dysfunction-pde5-inhibitors",
-   "label": "Study this: L12 · Part 3 →"
+   "href": "../../L11/index.html#estrogens-progestins-contraception",
+   "label": "Study this: L11 · Part 1 →"
   }
  }
 ]

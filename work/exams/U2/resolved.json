@@ -735,7 +735,7 @@
   "sg": [],
   "kind": "mechanism",
   "stem": "Which effect explains glucocorticoid-induced osteoporosis?",
-  "correct": "↑ Osteoclast resorption and ↓ osteoblast formation",
+  "correct": "↑ Resorption, ↓ formation",
   "distractors": [
    {
     "text": "↑ Osteoblast formation and ↓ resorption",
@@ -782,7 +782,7 @@
     "correct": false
    },
    "E": {
-    "text": "↑ Osteoclast resorption and ↓ osteoblast formation",
+    "text": "↑ Resorption, ↓ formation",
     "why": "Glucocorticoids increase osteoclast-mediated resorption and suppress osteoblast-driven formation, tipping the balance to bone loss.",
     "correct": true
    }
@@ -800,7 +800,7 @@
   "sg": [],
   "kind": "mechanism",
   "stem": "In a gout flare, what activates the inflammatory response once urate crystals form in the joint?",
-  "correct": "Neutrophils and macrophages via NLRP3 and IL-1β",
+  "correct": "Neutrophils via NLRP3 and IL-1β",
   "distractors": [
    {
     "text": "Osteoclasts via RANKL signaling",
@@ -842,7 +842,7 @@
     "correct": false
    },
    "D": {
-    "text": "Neutrophils and macrophages via NLRP3 and IL-1β",
+    "text": "Neutrophils via NLRP3 and IL-1β",
     "why": "Monosodium urate crystals activate neutrophils and macrophages through NLRP3 and IL-1β, producing the acute flare.",
     "correct": true
    },
@@ -1064,7 +1064,7 @@
   ],
   "kind": "mechanism",
   "stem": "Falling serum calcium triggers PTH release. Which set lists PTH’s three ways of raising calcium?",
-  "correct": "Bone resorption, renal reabsorption, vitamin D gut absorption",
+  "correct": "Bone resorption, renal reabsorption, gut absorption",
   "distractors": [
    {
     "text": "Bone formation, renal excretion, gut secretion",
@@ -1111,7 +1111,7 @@
     "correct": false
    },
    "E": {
-    "text": "Bone resorption, renal reabsorption, vitamin D gut absorption",
+    "text": "Bone resorption, renal reabsorption, gut absorption",
     "why": "PTH raises calcium via bone resorption, renal reabsorption, and (via vitamin D activation) intestinal absorption.",
     "correct": true
    }
@@ -1199,22 +1199,22 @@
   ],
   "kind": "vignette",
   "stem": "A 19-year-old arrives 4 hours after taking a large acetaminophen overdose. Which drug restores the pathway that detoxifies the toxic metabolite?",
-  "correct": "N-acetylcysteine",
+  "correct": "Acetylcysteine",
   "distractors": [
    {
-    "text": "Naloxone",
+    "text": "Naloxone (Narcan)",
     "why": "Naloxone is not taught as an acetaminophen antidote."
    },
    {
-    "text": "Folic acid",
+    "text": "Folic acid (folate)",
     "why": "Folate reduces methotrexate toxicity."
    },
    {
-    "text": "Omeprazole",
+    "text": "Omeprazole (PPI)",
     "why": "Not an antidote; used with NSAIDs for GI protection (textbook)."
    },
    {
-    "text": "Leucovorin",
+    "text": "Leucovorin (folinic acid)",
     "why": "Leucovorin offsets methotrexate toxicity (textbook)."
    }
   ],
@@ -1226,27 +1226,27 @@
   "answer": "A",
   "options": {
    "A": {
-    "text": "N-acetylcysteine",
+    "text": "Acetylcysteine",
     "why": "Overdose depletes glutathione, so NAPQI accumulates; N-acetylcysteine is a glutathione precursor that replenishes it to detoxify NAPQI.",
     "correct": true
    },
    "B": {
-    "text": "Folic acid",
+    "text": "Folic acid (folate)",
     "why": "Folate reduces methotrexate toxicity.",
     "correct": false
    },
    "C": {
-    "text": "Naloxone",
+    "text": "Naloxone (Narcan)",
     "why": "Naloxone is not taught as an acetaminophen antidote.",
     "correct": false
    },
    "D": {
-    "text": "Omeprazole",
+    "text": "Omeprazole (PPI)",
     "why": "Not an antidote; used with NSAIDs for GI protection (textbook).",
     "correct": false
    },
    "E": {
-    "text": "Leucovorin",
+    "text": "Leucovorin (folinic acid)",
     "why": "Leucovorin offsets methotrexate toxicity (textbook).",
     "correct": false
    }
@@ -2989,7 +2989,7 @@
   "sg": [],
   "kind": "mechanism",
   "stem": "Which non-drug approaches does the lecture include in osteoarthritis management?",
-  "correct": "Activity modification, physical therapy, weight management",
+  "correct": "Activity changes, PT, weight loss",
   "distractors": [
    {
     "text": "Live vaccines, TB screening, folate",
@@ -3016,7 +3016,7 @@
   "answer": "A",
   "options": {
    "A": {
-    "text": "Activity modification, physical therapy, weight management",
+    "text": "Activity changes, PT, weight loss",
     "why": "OA management includes activity modification, physical therapy, and weight management alongside drugs.",
     "correct": true
    },
@@ -3389,7 +3389,7 @@
   ],
   "kind": "vignette",
   "stem": "A patient starting weekly risedronate asks how to take it. Which instruction is correct?",
-  "correct": "Fasting, full glass of water, upright 30 minutes",
+  "correct": "Fasting, full glass of water, upright",
   "distractors": [
    {
     "text": "With breakfast and a calcium tablet",
@@ -3436,7 +3436,7 @@
     "correct": false
    },
    "E": {
-    "text": "Fasting, full glass of water, upright 30 minutes",
+    "text": "Fasting, full glass of water, upright",
     "why": "Take it first thing in the morning, fasting, with a full glass of plain water, and stay upright for 30 minutes to limit esophageal irritation.",
     "correct": true
    }
@@ -3454,7 +3454,7 @@
   "sg": [],
   "kind": "vignette",
   "stem": "A transplant patient taking azathioprine develops gout and needs allopurinol. What must happen?",
-  "correct": "Reduce the azathioprine dose substantially",
+  "correct": "Cut the azathioprine dose",
   "distractors": [
    {
     "text": "Double the azathioprine dose",
@@ -3491,7 +3491,7 @@
     "correct": false
    },
    "C": {
-    "text": "Reduce the azathioprine dose substantially",
+    "text": "Cut the azathioprine dose",
     "why": "Allopurinol blocks xanthine oxidase, which clears azathioprine and mercaptopurine — reduce their dose (textbook: by 75%).",
     "correct": true
    },
@@ -3720,7 +3720,7 @@
   "sg": [],
   "kind": "vignette",
   "stem": "A 68-year-old woman with prior vertebral fractures and very high fracture risk is choosing therapy. What does the lecture suggest first?",
-  "correct": "An anabolic agent such as teriparatide",
+  "correct": "An anabolic agent (teriparatide)",
   "distractors": [
    {
     "text": "Calcium and vitamin D alone",
@@ -3757,7 +3757,7 @@
     "correct": false
    },
    "C": {
-    "text": "An anabolic agent such as teriparatide",
+    "text": "An anabolic agent (teriparatide)",
     "why": "Higher-risk patients may need an anabolic agent first (then an antiresorptive); fracture history, renal function, and route also guide choice.",
     "correct": true
    },
@@ -4185,7 +4185,7 @@
   ],
   "kind": "mechanism",
   "stem": "Which set lists methotrexate's key adverse effects from the lecture?",
-  "correct": "Hepatotoxicity, marrow suppression, pulmonary toxicity",
+  "correct": "Liver, marrow and lung toxicity",
   "distractors": [
    {
     "text": "GI bleeding, AKI, cardiovascular events",
@@ -4217,7 +4217,7 @@
     "correct": false
    },
    "B": {
-    "text": "Hepatotoxicity, marrow suppression, pulmonary toxicity",
+    "text": "Liver, marrow and lung toxicity",
     "why": "Methotrexate's key adverse effects are hepatotoxicity, bone marrow suppression, and pulmonary toxicity; folate reduces toxicity.",
     "correct": true
    },
@@ -4387,7 +4387,7 @@
   ],
   "kind": "vignette",
   "stem": "A patient from a region with high tuberculosis rates is about to start adalimumab. Which step matters most before the first dose?",
-  "correct": "Screen for latent tuberculosis and hepatitis B/C",
+  "correct": "Screen for TB and hepatitis B/C",
   "distractors": [
    {
     "text": "Check a uric acid level",
@@ -4434,7 +4434,7 @@
     "correct": false
    },
    "E": {
-    "text": "Screen for latent tuberculosis and hepatitis B/C",
+    "text": "Screen for TB and hepatitis B/C",
     "why": "Immunosuppression is the shared DMARD risk; baseline TB and hepatitis B/C screening comes before biologics (TNF inhibitors can reactivate TB and hepatitis B).",
     "correct": true
    }
@@ -4582,14 +4582,14 @@
   "sg": [],
   "kind": "vignette",
   "stem": "A 70-year-old with knee OA has a flare limited to one knee despite acetaminophen and topical diclofenac. Which option does the lecture list for short-term relief?",
-  "correct": "Intra-articular corticosteroid injection",
+  "correct": "Intra-articular steroid injection",
   "distractors": [
    {
     "text": "Weekly oral methotrexate",
     "why": "Methotrexate is a DMARD for RA."
    },
    {
-    "text": "Infliximab infusion",
+    "text": "An infliximab infusion",
     "why": "Biologics treat RA, not degenerative OA."
    },
    {
@@ -4619,12 +4619,12 @@
     "correct": false
    },
    "C": {
-    "text": "Intra-articular corticosteroid injection",
+    "text": "Intra-articular steroid injection",
     "why": "Intra-articular corticosteroid injections give short-term relief for flares in a single joint.",
     "correct": true
    },
    "D": {
-    "text": "Infliximab infusion",
+    "text": "An infliximab infusion",
     "why": "Biologics treat RA, not degenerative OA.",
     "correct": false
    },
