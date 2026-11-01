@@ -32,7 +32,10 @@ EXAMS = {"U1": {"slug": "unit1", "title": "Unit 1 Practice Exam — Introduction
                 "about": "Built only from the Unit 3 slides, study guide, and assigned Katzung chapters (textbook questions are cited by page). Covers acid-peptic disease, H. pylori, and antiemetics (Session 1), then laxatives, antidiarrheals, IBD, and nutrition and supplements (Session 2). Mostly patient cases that ask what you would do."},
          "U5": {"slug": "unit5", "title": "Unit 5 Practice Exam — Renal",
                 "short": "Unit 5 Practice Exam", "lectures": ["L09", "L10"], "seed": 1105, "unit": 5,
-                "about": "Built only from the Unit 5 slides, study guide, and assigned Katzung chapters (textbook questions are cited by page). Covers renal dosing and the five diuretic classes (Session 1), then RAAS blockers, antihypertensives in CKD, nitrates and angina, and the triple whammy (Session 2). Mostly patient cases that ask what you would do."}}
+                "about": "Built only from the Unit 5 slides, study guide, and assigned Katzung chapters (textbook questions are cited by page). Covers renal dosing and the five diuretic classes (Session 1), then RAAS blockers, antihypertensives in CKD, nitrates and angina, and the triple whammy (Session 2). Mostly patient cases that ask what you would do."},
+         "U6": {"slug": "unit6", "title": "Unit 6 Practice Exam — Genitourinary & Reproductive",
+                "short": "Unit 6 Practice Exam", "lectures": ["L11", "L12"], "seed": 1106, "unit": 6,
+                "about": "Built only from the Unit 6 slides, study guide, and assigned Katzung chapters. Covers estrogens, progestins, contraception, SERMs, aromatase inhibitors, androgens and PCOS (Session 1), then bladder receptors, overactive bladder, BPH and PDE5 inhibitors (Session 2). Mostly patient cases that ask what you would do."}}
 
 
 def load_bank(exam_id):

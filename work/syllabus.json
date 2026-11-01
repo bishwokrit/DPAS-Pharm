@@ -381,15 +381,9 @@
     "U4-R6",
     "U4-R7",
     "U4-R8",
-    "U4-R9",
-    "U4-R10",
-    "U4-R11",
-    "U4-R12",
-    "U4-R13",
-    "U4-M",
-    "U4-S"
+    "U4-R9"
    ],
-   "study_guide_note": "Unit items not yet split between the two sessions; split when authoring."
+   "study_guide_note": "Unit 4 split by topic: Session 1 (pituitary, thyroid, adrenal) = U4-R1–R9; Session 2 (gonadal hormones, diabetes, parathyroid) = U4-R10–R13, U4-M and U4-S."
   },
   {
    "id": "L08",
@@ -444,15 +438,6 @@
     }
    ],
    "study_guide": [
-    "U4-R1",
-    "U4-R2",
-    "U4-R3",
-    "U4-R4",
-    "U4-R5",
-    "U4-R6",
-    "U4-R7",
-    "U4-R8",
-    "U4-R9",
     "U4-R10",
     "U4-R11",
     "U4-R12",
@@ -460,7 +445,7 @@
     "U4-M",
     "U4-S"
    ],
-   "study_guide_note": "Unit items not yet split between the two sessions; split when authoring."
+   "study_guide_note": "Unit 4 split by topic: Session 1 (pituitary, thyroid, adrenal) = U4-R1–R9; Session 2 (gonadal hormones, diabetes, parathyroid) = U4-R10–R13, U4-M and U4-S."
   },
   {
    "id": "L09",
@@ -621,17 +606,9 @@
     "U6-R7",
     "U6-R8",
     "U6-R9",
-    "U6-R10",
-    "U6-R11",
-    "U6-R12",
-    "U6-R13",
-    "U6-R14",
-    "U6-R15",
-    "U6-R16",
-    "U6-M",
-    "U6-S"
+    "U6-R10"
    ],
-   "study_guide_note": "Unit items not yet split between the two sessions; split when authoring."
+   "study_guide_note": "Unit 6 split by topic: Session 1 (gonadal hormones, PCOS) = U6-R1–R10; Session 2 (bladder, BPH, ED) = U6-R11–R16, U6-M and U6-S."
   },
   {
    "id": "L12",
@@ -677,16 +654,6 @@
     }
    ],
    "study_guide": [
-    "U6-R1",
-    "U6-R2",
-    "U6-R3",
-    "U6-R4",
-    "U6-R5",
-    "U6-R6",
-    "U6-R7",
-    "U6-R8",
-    "U6-R9",
-    "U6-R10",
     "U6-R11",
     "U6-R12",
     "U6-R13",
@@ -696,7 +663,7 @@
     "U6-M",
     "U6-S"
    ],
-   "study_guide_note": "Unit items not yet split between the two sessions; split when authoring."
+   "study_guide_note": "Unit 6 split by topic: Session 1 (gonadal hormones, PCOS) = U6-R1–R10; Session 2 (bladder, BPH, ED) = U6-R11–R16, U6-M and U6-S."
   }
  ],
  "exams": [

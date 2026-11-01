@@ -264,22 +264,29 @@
     document.querySelectorAll(".appear").forEach((el) => ro.observe(el));
   } else document.querySelectorAll(".appear").forEach((el) => el.classList.add("in"));
 
-  // home: show the current lecture (latest one on or before today) and label it Today / This week / Last lecture
+  // home: show the lecture closest to right now (class starts 8:30), before or after, and label it
+  // Today / Next / This week / Latest — so a student opening the site on the weekend sees Monday's lecture coming up
+  const closest = (dates) => {
+    const now = Date.now();
+    let best = 0, gap = Infinity;
+    dates.forEach((d, i) => { const g = Math.abs(new Date(d + "T08:30").getTime() - now); if (g < gap) { gap = g; best = i; } });
+    return best;
+  };
   const panels = [...document.querySelectorAll(".now-panel")];
   if (panels.length) {
+    const cur = panels[closest(panels.map((p) => p.dataset.date))];
     const t0 = new Date(); t0.setHours(0, 0, 0, 0);
-    const past = panels.filter((p) => new Date(p.dataset.date + "T00:00") <= t0);
-    const cur = past.pop() || panels[0], d = Math.round((t0 - new Date(cur.dataset.date + "T00:00")) / 864e5);
+    const d = Math.round((t0 - new Date(cur.dataset.date + "T00:00")) / 864e5);
     cur.hidden = false;
     const k = cur.querySelector("[data-now-kicker]");
-    if (k) k.textContent = d === 0 ? "Today's lecture" : d < 0 ? "Next lecture" : d <= 6 ? "This week's lecture" : "Latest lecture";
+    if (k) k.textContent = d === 0 ? "Today's lecture" : d < 0 ? (d >= -6 ? "This week's lecture · coming up" : "Next lecture") : d <= 6 ? "This week's lecture" : "Latest lecture";
   }
 
-  // home teaser: the most recent lecture's two-sentence pitch (switches on each class day, no rebuild needed)
+  // home teaser: the pitch of that same closest lecture (switches by itself, no rebuild needed)
   const td = document.getElementById("teaser-data"), tp = document.getElementById("home-teaser");
   if (td && tp) {
-    const list = JSON.parse(td.textContent), t = new Date(); t.setHours(23, 59, 59, 0);
-    const pick = list.filter((x) => new Date(x.date + "T00:00") <= t).pop() || list[0];
+    const list = JSON.parse(td.textContent);
+    const pick = list.length ? list[closest(list.map((x) => x.date))] : null;
     if (pick) tp.textContent = pick.text;
   }
 

@@ -1,0 +1,639 @@
+{
+ "lecture": "L12",
+ "passed": true,
+ "units_checked": 2271,
+ "missing": [],
+ "uncited": [],
+ "emphasis_not_bold": [],
+ "skipped": [
+  {
+   "ref": "S1",
+   "text": "Diane S. Allen-Gipson, Ph.D., M.S., Course Director",
+   "kind": "slide",
+   "reason": "faculty identifier (site policy: no school or instructor identifiers)"
+  },
+  {
+   "ref": "S2",
+   "text": "Start with a genuine 1-2 minute recap of Session 1 — today's content is mechanistically distinct (autonomic pharmacology rather than steroid hormone pharmacology), so the connective tissue between the two sessions is mostly the finasteride/dutasteride callback and the shared organ system, not a continuous mechanism like Unit 5 had.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; the recap is in About this lecture"
+  },
+  {
+   "ref": "S2",
+   "text": "Recap Session 1 in a minute.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S3",
+   "text": "Section transition.",
+   "kind": "speaker note",
+   "reason": "section divider"
+  },
+  {
+   "ref": "S4",
+   "text": "Take the extra time here; it is what makes Sections 5 and 6 feel like \"zooming in\" on parts of this map rather than new, unrelated content.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S4",
+   "text": "The spine of the session.",
+   "kind": "speaker note",
+   "reason": "presenter script; taught from S4"
+  },
+  {
+   "ref": "S5",
+   "text": "This slide is deliberately framed as applied Chapter 6 content — the goal is for students to see muscarinic receptor pharmacology not as bladder-specific trivia but as the same general principle from basic autonomic pharmacology, now applied to a specific organ.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S5",
+   "text": "M3 is dominant; M2 is dense but less important.",
+   "kind": "speaker note",
+   "reason": "presenter script; taught from S5"
+  },
+  {
+   "ref": "S6",
+   "text": "Acetylcholine, M3, Gq, phospholipase C, calcium, contraction.",
+   "kind": "speaker note",
+   "reason": "presenter script; taught from S6"
+  },
+  {
+   "ref": "S7",
+   "text": "Norepinephrine acts on alpha-1 (outlet closes) and beta-3 (reservoir relaxes).",
+   "kind": "speaker note",
+   "reason": "presenter script; taught from S7"
+  },
+  {
+   "ref": "S9",
+   "text": "Use this slide as the consolidating recap before the quick check — students should be able to generate this two-column comparison from memory by the end of the unit, and it is the direct physiologic basis for every drug covered afterward.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S9",
+   "text": "Students should generate the two-column table from memory.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S10",
+   "text": "Section transition.",
+   "kind": "speaker note",
+   "reason": "section divider"
+  },
+  {
+   "ref": "S13",
+   "text": "The \"no anticholinergic burden\" advantage is the single most important comparison point versus antimuscarinics — make sure students can articulate why that specifically matters in an older adult population.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S14",
+   "text": "Reinforce that these are complementary, not competing, mechanisms — this is the mechanistic basis for combination therapy mentioned on the previous slide.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S14",
+   "text": "Complementary mechanisms.",
+   "kind": "speaker note",
+   "reason": "presenter script"
+  },
+  {
+   "ref": "S15",
+   "text": "This case is designed to make the Section 5 comparison concrete and clinical — a good checkpoint before the quick check, and a natural segue into discussing medication reconciliation for anticholinergic burden more broadly.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S16",
+   "text": "Section transition.",
+   "kind": "speaker note",
+   "reason": "section divider"
+  },
+  {
+   "ref": "S17",
+   "text": "The Unit 5 cross-reference here is deliberate and worth stating explicitly — tamsulosin and doxazosin are not new drug classes, they are the same alpha1-blocker pharmacology applied to a different primary indication.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S17",
+   "text": "Tamsulosin and silodosin are uroselective; doxazosin and terazosin lower BP more.",
+   "kind": "speaker note",
+   "reason": "presenter script; taught from S17"
+  },
+  {
+   "ref": "S18",
+   "text": "Point explicitly to the side note about systemic alpha1 blockade and orthostatic hypotension — this is the figure's direct link back to Unit 5's antihypertensive content.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S18",
+   "text": "Same receptor family as in blood vessels.",
+   "kind": "speaker note",
+   "reason": "presenter script"
+  },
+  {
+   "ref": "S19",
+   "text": "Explicitly call back to Session 1 here — students met finasteride/dutasteride already for hirsutism; this slide is the same mechanism, same drugs, different clinical application, reinforcing the bridge between the two sessions.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S19",
+   "text": "Finasteride, dutasteride; benefit takes 3-6 months; PSA falls by half; pregnancy caution.",
+   "kind": "speaker note",
+   "reason": "presenter script; taught from S19"
+  },
+  {
+   "ref": "S21",
+   "text": "This figure is the direct application of the Chapter 6 \"non-adrenergic, noncholinergic neurons\" content named in the reading assignment — point that out explicitly.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S21",
+   "text": "Slow down on the nitrate warning box; it is the highest-stakes safety point in the entire unit.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S21",
+   "text": "Slow down on the nitrate warning.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S22",
+   "text": "Make the connection explicit rather than assuming they will make it themselves.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S24",
+   "text": "Never prescribe together.",
+   "kind": "speaker note",
+   "reason": "presenter script; taught from S24"
+  },
+  {
+   "ref": "S25",
+   "text": "Nitrates and PDE5 inhibitors both raise cGMP; never prescribe together.",
+   "kind": "speaker note",
+   "reason": "presenter script; taught from S25"
+  },
+  {
+   "ref": "S26",
+   "text": "Drug names reveal the class: -osin, -terodine, -fenacin, -begron, -afil, -steride, and nitrates.",
+   "kind": "speaker note",
+   "reason": "presenter script; the stems are taught in Part 3"
+  },
+  {
+   "ref": "S28",
+   "text": "This capstone figure is the visual summary of the entire session's unifying theme — use it to set up the fourCard exercise and quick check that follow, both of which ask students to apply this cross-system receptor logic directly.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; the theme is taught from S28"
+  },
+  {
+   "ref": "S28",
+   "text": "Receptor families are shared with the vasculature.",
+   "kind": "speaker note",
+   "reason": "presenter script; taught from S28"
+  },
+  {
+   "ref": "S29",
+   "text": "Work through these as a rapid-fire discussion.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S29",
+   "text": "Pairs: first-line approach and biggest safety check.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S30",
+   "text": "Common thread: receptor families shared with the systemic vasculature.",
+   "kind": "speaker note",
+   "reason": "presenter script; taught from S30"
+  },
+  {
+   "ref": "S35",
+   "text": "Class activity (10 minutes): groups teach back two or three profiles in 60 seconds each.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S35",
+   "text": "Abbreviation key: review BPH, PSA, ED, PAH, QT, CYP and PDE5.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S35",
+   "text": "Teaching points: antimuscarinics (oxybutynin, tolterodine, solifenacin, darifenacin), mirabegron, alpha-1 blockers (tamsulosin, silodosin, doxazosin, terazosin), 5-ARIs, PDE5 inhibitors.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; the drugs are in the profiles"
+  },
+  {
+   "ref": "S35",
+   "text": "Bloom's prompts: Remember: state tamsulosin dosing.",
+   "kind": "speaker note",
+   "reason": "Bloom's teaching prompt; rebuilt as practice questions"
+  },
+  {
+   "ref": "S35",
+   "text": "Understand: explain mirabegron versus oxybutynin.",
+   "kind": "speaker note",
+   "reason": "Bloom's teaching prompt; rebuilt as practice questions"
+  },
+  {
+   "ref": "S35",
+   "text": "Apply: counsel a man starting doxazosin.",
+   "kind": "speaker note",
+   "reason": "Bloom's teaching prompt; rebuilt as practice questions"
+  },
+  {
+   "ref": "S35",
+   "text": "Analyze: explain bradycardia on metoprolol plus mirabegron.",
+   "kind": "speaker note",
+   "reason": "Bloom's teaching prompt; rebuilt as practice questions"
+  },
+  {
+   "ref": "S35",
+   "text": "Evaluate: choose therapy for an older adult with BPH and OAB.",
+   "kind": "speaker note",
+   "reason": "Bloom's teaching prompt; rebuilt as practice questions"
+  },
+  {
+   "ref": "S50",
+   "text": "Supporting drugs listed for context only: nitrates and riociguat with PDE5 inhibitors; other anticholinergics add to burden; cholinesterase inhibitors oppose antimuscarinics; antihypertensives add hypotension with alpha-1 blockers; strong CYP3A4 inhibitors raise PDE5 inhibitor and solifenacin levels.",
+   "kind": "speaker note",
+   "reason": "presenter script; the table covers it"
+  },
+  {
+   "ref": "S50",
+   "text": "Supporting drugs: nitrates and riociguat, other anticholinergics, cholinesterase inhibitors and CYP3A4 inhibitors explain interactions.",
+   "kind": "speaker note",
+   "reason": "presenter script; the table covers it"
+  },
+  {
+   "ref": "S51",
+   "text": "This slide documents AI-tool use for original figure generation per university citation requirements.",
+   "kind": "speaker note",
+   "reason": "administrative note on AI-tool citation"
+  },
+  {
+   "ref": "S51",
+   "text": "Original Claude-generated diagrams and illustrative mechanism schematics.",
+   "kind": "speaker note",
+   "reason": "administrative note on AI-tool citation"
+  }
+ ],
+ "not_in_deck": [],
+ "not_in_notebooklm": [],
+ "layout_problems": [],
+ "question_issues": [],
+ "question_stats": {
+  "count": 14,
+  "letters": {
+   "A": 3,
+   "B": 2,
+   "C": 3,
+   "D": 3,
+   "E": 3
+  },
+  "vignette": 6,
+  "mechanism": 8
+ },
+ "thin_objectives": [],
+ "textbook_unused": 1848,
+ "reading_missing": [],
+ "reading_skipped": [
+  {
+   "page": "758",
+   "heading": "Disturbances in Ovarian Function",
+   "reason": "Taught in L11 (GU Session 1: gonadal hormones, Ch. 40)"
+  },
+  {
+   "page": "759",
+   "heading": "Natural Estrogens",
+   "reason": "Taught in L11 (GU Session 1: gonadal hormones, Ch. 40)"
+  },
+  {
+   "page": "760",
+   "heading": "Synthetic Estrogens",
+   "reason": "Taught in L11 (GU Session 1: gonadal hormones, Ch. 40)"
+  },
+  {
+   "page": "763",
+   "heading": "Adverse Effects",
+   "reason": "Taught in L11 (GU Session 1: gonadal hormones, Ch. 40)"
+  },
+  {
+   "page": "764",
+   "heading": "Preparations & Dosages",
+   "reason": "Taught in L11 (GU Session 1: gonadal hormones, Ch. 40)"
+  },
+  {
+   "page": "765",
+   "heading": "Synthetic Progestins",
+   "reason": "Taught in L11 (GU Session 1: gonadal hormones, Ch. 40)"
+  },
+  {
+   "page": "767",
+   "heading": "Azurette, Kariva, Mircette, Viorele",
+   "reason": "Taught in L11 (GU Session 1: gonadal hormones, Ch. 40)"
+  },
+  {
+   "page": "767",
+   "heading": "Enpresse, Levonest, Myzilra, Triphasil, Tri-Levlen, Trivora",
+   "reason": "Taught in L11 (GU Session 1: gonadal hormones, Ch. 40)"
+  },
+  {
+   "page": "767",
+   "heading": "Casiant, Cyclessa, Cesia, Velivet",
+   "reason": "Taught in L11 (GU Session 1: gonadal hormones, Ch. 40)"
+  },
+  {
+   "page": "768",
+   "heading": "Implantable Progestin Preparation",
+   "reason": "Taught in L11 (GU Session 1: gonadal hormones, Ch. 40)"
+  },
+  {
+   "page": "769",
+   "heading": "OTHER OVARIAN HORMONES",
+   "reason": "Taught in L11 (GU Session 1: gonadal hormones, Ch. 40)"
+  },
+  {
+   "page": "769",
+   "heading": "HORMONAL CONTRACEPTION (ORAL, PARENTERAL, & IMPLANTED CONTRACEPTIVES)",
+   "reason": "Taught in L11 (GU Session 1: gonadal hormones, Ch. 40)"
+  },
+  {
+   "page": "771",
+   "heading": "Clinical Uses",
+   "reason": "Taught in L11 (GU Session 1: gonadal hormones, Ch. 40)"
+  },
+  {
+   "page": "773",
+   "heading": "Contraindications & Cautions",
+   "reason": "Taught in L11 (GU Session 1: gonadal hormones, Ch. 40)"
+  },
+  {
+   "page": "773",
+   "heading": "Contraception with Progestins Alone",
+   "reason": "Taught in L11 (GU Session 1: gonadal hormones, Ch. 40)"
+  },
+  {
+   "page": "774",
+   "heading": "Beneficial Effects of Oral Contraceptives",
+   "reason": "Taught in L11 (GU Session 1: gonadal hormones, Ch. 40)"
+  },
+  {
+   "page": "774",
+   "heading": "TAMOXIFEN & RELATED PARTIAL AGONIST ESTROGENS",
+   "reason": "Taught in L11 (GU Session 1: gonadal hormones, Ch. 40)"
+  },
+  {
+   "page": "775",
+   "heading": "MIFEPRISTONE (RU-486)",
+   "reason": "Taught in L11 (GU Session 1: gonadal hormones, Ch. 40)"
+  },
+  {
+   "page": "775",
+   "heading": "DANAZOL",
+   "reason": "Taught in L11 (GU Session 1: gonadal hormones, Ch. 40)"
+  },
+  {
+   "page": "776",
+   "heading": "OTHER INHIBITORS",
+   "reason": "Taught in L11 (GU Session 1: gonadal hormones, Ch. 40)"
+  },
+  {
+   "page": "776",
+   "heading": "OVULATION-INDUCING AGENTS CLOMIPHENE",
+   "reason": "Taught in L11 (GU Session 1: gonadal hormones, Ch. 40)"
+  },
+  {
+   "page": "777",
+   "heading": "OTHER DRUGS USED IN OVULATORY DISORDERS",
+   "reason": "Taught in L11 (GU Session 1: gonadal hormones, Ch. 40)"
+  },
+  {
+   "page": "777",
+   "heading": "ANDROGENS & ANABOLIC STEROIDS",
+   "reason": "Taught in L11 (GU Session 1: gonadal hormones, Ch. 40)"
+  },
+  {
+   "page": "778",
+   "heading": "Physiologic Effects",
+   "reason": "Taught in L11 (GU Session 1: gonadal hormones, Ch. 40)"
+  },
+  {
+   "page": "778",
+   "heading": "Anabolic Action",
+   "reason": "Taught in L11 (GU Session 1: gonadal hormones, Ch. 40)"
+  },
+  {
+   "page": "780",
+   "heading": "ANDROGEN SUPPRESSION & ANTIANDROGENS ANDROGEN SUPPRESSION",
+   "reason": "Taught in L11 (GU Session 1: gonadal hormones, Ch. 40)"
+  },
+  {
+   "page": "781",
+   "heading": "ANTIANDROGENS",
+   "reason": "Taught in L11 (GU Session 1: gonadal hormones, Ch. 40)"
+  },
+  {
+   "page": "781",
+   "heading": "Steroid Synthesis Inhibitors",
+   "reason": "Taught in L11 (GU Session 1: gonadal hormones, Ch. 40)"
+  },
+  {
+   "page": "781",
+   "heading": "Precursors to Androgens",
+   "reason": "Taught in L11 (GU Session 1: gonadal hormones, Ch. 40)"
+  },
+  {
+   "page": "782",
+   "heading": "Receptor Inhibitors",
+   "reason": "Taught in L11 (GU Session 1: gonadal hormones, Ch. 40)"
+  },
+  {
+   "page": "782",
+   "heading": "CHEMICAL CONTRACEPTION IN MEN",
+   "reason": "Taught in L11 (GU Session 1: gonadal hormones, Ch. 40)"
+  },
+  {
+   "page": "782",
+   "heading": "GOSSYPOL",
+   "reason": "Taught in L11 (GU Session 1: gonadal hormones, Ch. 40)"
+  },
+  {
+   "page": "783",
+   "heading": "Toremifene Fareston",
+   "reason": "Taught in L11 (GU Session 1: gonadal hormones, Ch. 40)"
+  },
+  {
+   "page": "785",
+   "heading": "THE ENDOCRINE PANCREAS",
+   "reason": "Taught in L08 (Endocrine Session 2: diabetes, Ch. 41); PCOS use taught in L11"
+  },
+  {
+   "page": "786",
+   "heading": "Insulin Secretion",
+   "reason": "Taught in L08 (Endocrine Session 2: diabetes, Ch. 41); PCOS use taught in L11"
+  },
+  {
+   "page": "786",
+   "heading": "Insulin Degradation",
+   "reason": "Taught in L08 (Endocrine Session 2: diabetes, Ch. 41); PCOS use taught in L11"
+  },
+  {
+   "page": "786",
+   "heading": "Circulating Insulin",
+   "reason": "Taught in L08 (Endocrine Session 2: diabetes, Ch. 41); PCOS use taught in L11"
+  },
+  {
+   "page": "786",
+   "heading": "The Insulin Receptor",
+   "reason": "Taught in L08 (Endocrine Session 2: diabetes, Ch. 41); PCOS use taught in L11"
+  },
+  {
+   "page": "786",
+   "heading": "Islet Mass Secretory Products",
+   "reason": "Taught in L08 (Endocrine Session 2: diabetes, Ch. 41); PCOS use taught in L11"
+  },
+  {
+   "page": "787",
+   "heading": "Effects of Insulin on Its Targets",
+   "reason": "Taught in L08 (Endocrine Session 2: diabetes, Ch. 41); PCOS use taught in L11"
+  },
+  {
+   "page": "787",
+   "heading": "Chemistry & Metabolism",
+   "reason": "Taught in L08 (Endocrine Session 2: diabetes, Ch. 41); PCOS use taught in L11"
+  },
+  {
+   "page": "788",
+   "heading": "Pharmacologic Effects of Glucagon",
+   "reason": "Taught in L08 (Endocrine Session 2: diabetes, Ch. 41); PCOS use taught in L11"
+  },
+  {
+   "page": "789",
+   "heading": "DIABETES MELLITUS",
+   "reason": "Taught in L08 (Endocrine Session 2: diabetes, Ch. 41); PCOS use taught in L11"
+  },
+  {
+   "page": "790",
+   "heading": "Other Specific Types of Diabetes Mellitus",
+   "reason": "Taught in L08 (Endocrine Session 2: diabetes, Ch. 41); PCOS use taught in L11"
+  },
+  {
+   "page": "790",
+   "heading": "Gestational Diabetes Mellitus",
+   "reason": "Taught in L08 (Endocrine Session 2: diabetes, Ch. 41); PCOS use taught in L11"
+  },
+  {
+   "page": "791",
+   "heading": "Insulin Preparations",
+   "reason": "Taught in L08 (Endocrine Session 2: diabetes, Ch. 41); PCOS use taught in L11"
+  },
+  {
+   "page": "795",
+   "heading": "Immunopathology of Insulin Therapy",
+   "reason": "Taught in L08 (Endocrine Session 2: diabetes, Ch. 41); PCOS use taught in L11"
+  },
+  {
+   "page": "795",
+   "heading": "MEDICATIONS FOR TREATMENT OF TYPE 2 DIABETES",
+   "reason": "Taught in L08 (Endocrine Session 2: diabetes, Ch. 41); PCOS use taught in L11"
+  },
+  {
+   "page": "796",
+   "heading": "Mechanism of Action",
+   "reason": "Taught in L08 (Endocrine Session 2: diabetes, Ch. 41); PCOS use taught in L11"
+  },
+  {
+   "page": "796",
+   "heading": "Efficacy & Safety of the Sulfonylureas",
+   "reason": "Taught in L08 (Endocrine Session 2: diabetes, Ch. 41); PCOS use taught in L11"
+  },
+  {
+   "page": "796",
+   "heading": "FIRST-GENERATION SULFONYLUREAS",
+   "reason": "Taught in L08 (Endocrine Session 2: diabetes, Ch. 41); PCOS use taught in L11"
+  },
+  {
+   "page": "796",
+   "heading": "SECOND-GENERATION SULFONYLUREAS",
+   "reason": "Taught in L08 (Endocrine Session 2: diabetes, Ch. 41); PCOS use taught in L11"
+  },
+  {
+   "page": "797",
+   "heading": "MEGLITINIDE ANALOGS",
+   "reason": "Taught in L08 (Endocrine Session 2: diabetes, Ch. 41); PCOS use taught in L11"
+  },
+  {
+   "page": "797",
+   "heading": "BIGUANIDES",
+   "reason": "Taught in L08 (Endocrine Session 2: diabetes, Ch. 41); PCOS use taught in L11"
+  },
+  {
+   "page": "798",
+   "heading": "THIAZOLIDINEDIONES",
+   "reason": "Taught in L08 (Endocrine Session 2: diabetes, Ch. 41); PCOS use taught in L11"
+  },
+  {
+   "page": "799",
+   "heading": "DRUGS THAT AFFECT ABSORPTION OF GLUCOSE",
+   "reason": "Taught in L08 (Endocrine Session 2: diabetes, Ch. 41); PCOS use taught in L11"
+  },
+  {
+   "page": "800",
+   "heading": "GLUCAGON-LIKE PEPTIDE-1 (GLP-1) RECEPTOR AGONISTS",
+   "reason": "Taught in L08 (Endocrine Session 2: diabetes, Ch. 41); PCOS use taught in L11"
+  },
+  {
+   "page": "801",
+   "heading": "DIPEPTIDYL PEPTIDASE 4 (DPP-4) INHIBITORS",
+   "reason": "Taught in L08 (Endocrine Session 2: diabetes, Ch. 41); PCOS use taught in L11"
+  },
+  {
+   "page": "801",
+   "heading": "SODIUM-GLUCOSE CO-TRANSPORTER 2 (SGL T2) INHIBITORS",
+   "reason": "Taught in L08 (Endocrine Session 2: diabetes, Ch. 41); PCOS use taught in L11"
+  },
+  {
+   "page": "802",
+   "heading": "OTHER GLUCOSE-LOWERING DRUGS",
+   "reason": "Taught in L08 (Endocrine Session 2: diabetes, Ch. 41); PCOS use taught in L11"
+  },
+  {
+   "page": "803",
+   "heading": "Glycemic Targets",
+   "reason": "Taught in L08 (Endocrine Session 2: diabetes, Ch. 41); PCOS use taught in L11"
+  },
+  {
+   "page": "804",
+   "heading": "Prebreakfast Prelunch Predinner Bedtime",
+   "reason": "Taught in L08 (Endocrine Session 2: diabetes, Ch. 41); PCOS use taught in L11"
+  },
+  {
+   "page": "804",
+   "heading": "Benefits of Tight Glycemic Control in Diabetes",
+   "reason": "Taught in L08 (Endocrine Session 2: diabetes, Ch. 41); PCOS use taught in L11"
+  },
+  {
+   "page": "806",
+   "heading": "Chronic Complications of Diabetes",
+   "reason": "Taught in L08 (Endocrine Session 2: diabetes, Ch. 41); PCOS use taught in L11"
+  }
+ ]
+}

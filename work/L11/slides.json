@@ -1,0 +1,6242 @@
+[
+ {
+  "slide": 1,
+  "title": "Genitourinary & Reproductive Pharmacology",
+  "items": [
+   {
+    "text": "PA PHARMACOLOGY COURSE · LECTURE 6 · SESSION 1 OF 2",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "PA PHARMACOLOGY COURSE · LECTURE 6 · SESSION 1 OF 2",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**PA PHARMACOLOGY COURSE · LECTURE 6 · SESSION 1 OF 2**",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Genitourinary & Reproductive Pharmacology",
+    "level": 0,
+    "emphasis": [],
+    "md": "Genitourinary & Reproductive Pharmacology",
+    "heading": true,
+    "size": 40.0
+   },
+   {
+    "text": "Session 1: Gonadal Hormones and the Reproductive-Metabolic Overlap  |  Tuesday, November 24  |  8:30–11:00 AM",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Session 1: Gonadal Hormones and the Reproductive-Metabolic Overlap  |  Tuesday, November 24  |  8:30–11:00 AM",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Session 1: Gonadal Hormones and the Reproductive-Metabolic Overlap  |  Tuesday, November 24  |  8:30–11:00 AM**",
+    "heading": false,
+    "size": 19.0
+   },
+   {
+    "text": "Diane S. Allen-Gipson, Ph.D., M.S., Course Director",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Diane S. Allen-Gipson, Ph.D., M.S., Course Director",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Diane S. Allen-Gipson, Ph.D., M.S., Course Director**",
+    "heading": false,
+    "size": 14.5
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Say: \"Today's organizing idea is the hypothalamic-pituitary-gonadal axis. Every drug in this session either replaces a sex steroid, blocks its receptor, blocks its synthesis, or reduces the metabolic driver, insulin resistance, that fuels androgen excess in PCOS.\""
+ },
+ {
+  "slide": 2,
+  "title": "Learning Objectives — Session 1",
+  "items": [
+   {
+    "text": "BY THE END OF THIS LECTURE",
+    "level": 0,
+    "emphasis": [],
+    "md": "BY THE END OF THIS LECTURE",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Learning Objectives — Session 1",
+    "level": 0,
+    "emphasis": [],
+    "md": "Learning Objectives — Session 1",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Describe the physiologic roles and clinical uses of estrogens and progestins, including combined and progestin-only hormonal contraception.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Describe the physiologic roles and clinical uses of estrogens and progestins, including combined and progestin-only hormonal contraception.",
+    "heading": false,
+    "size": 15.5
+   },
+   {
+    "text": "Describe the mechanism, tissue-selective actions, and adverse effects of selective estrogen receptor modulators (SERMs) and aromatase inhibitors.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Describe the mechanism, tissue-selective actions, and adverse effects of selective estrogen receptor modulators (SERMs) and aromatase inhibitors.",
+    "heading": false,
+    "size": 15.5
+   },
+   {
+    "text": "Describe the clinical uses, adverse effects, and monitoring considerations for androgens and antiandrogens.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Describe the clinical uses, adverse effects, and monitoring considerations for androgens and antiandrogens.",
+    "heading": false,
+    "size": 15.5
+   },
+   {
+    "text": "Explain the pathophysiology of polycystic ovary syndrome (PCOS) as a reproductive-metabolic overlap condition, including the central role of insulin resistance.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Explain the pathophysiology of polycystic ovary syndrome (PCOS) as a reproductive-metabolic overlap condition, including the central role of insulin resistance.",
+    "heading": false,
+    "size": 15.5
+   },
+   {
+    "text": "Describe the role of metformin and other antidiabetic agents in the management of PCOS and related reproductive-metabolic conditions.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Describe the role of metformin and other antidiabetic agents in the management of PCOS and related reproductive-metabolic conditions.",
+    "heading": false,
+    "size": 15.5
+   },
+   {
+    "text": "Preview: autonomic pharmacology of the bladder and lower urinary tract continues in Session 2 (Tuesday, December 1).",
+    "level": 0,
+    "emphasis": [],
+    "md": "Preview: autonomic pharmacology of the bladder and lower urinary tract continues in Session 2 (Tuesday, December 1).",
+    "heading": false,
+    "size": 15.5
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Orient students to the arc of this session: gonadal steroid pharmacology first (estrogens, progestins, SERMs, aromatase inhibitors, androgens/antiandrogens), then the reproductive-metabolic overlap through PCOS. Session 2 shifts to autonomic pharmacology of the lower urinary tract, which is mechanistically distinct but shares several cross-system drug-class connections (e.g., alpha1 blockers, NO-cGMP signaling) that will be flagged throughout."
+ },
+ {
+  "slide": 3,
+  "title": "Required & Recommended Readings — Unit 6",
+  "items": [
+   {
+    "text": "COURSE MATERIALS",
+    "level": 0,
+    "emphasis": [],
+    "md": "COURSE MATERIALS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Required & Recommended Readings — Unit 6",
+    "level": 0,
+    "emphasis": [],
+    "md": "Required & Recommended Readings — Unit 6",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Required Text",
+    "level": 0,
+    "emphasis": [],
+    "md": "Required Text",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Supplemental Reading — Session 2",
+    "level": 0,
+    "emphasis": [],
+    "md": "Supplemental Reading — Session 2",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Katzung's Basic and Clinical Pharmacology, 16th Edition",
+    "level": 0,
+    "emphasis": [],
+    "md": "Katzung's Basic and Clinical Pharmacology, 16th Edition",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Todd W. Vanderah · 2024/2025 · McGraw-Hill Education",
+    "level": 0,
+    "emphasis": [],
+    "md": "Todd W. Vanderah · 2024/2025 · McGraw-Hill Education",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "ISBN 1260463303 (eBook)",
+    "level": 0,
+    "emphasis": [],
+    "md": "ISBN 1260463303 (eBook)",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "AccessMedicine: accessmedicine.mhmedical.com/book.aspx?bookid=3382",
+    "level": 0,
+    "emphasis": [],
+    "md": "AccessMedicine: accessmedicine.mhmedical.com/book.aspx?bookid=3382",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Unit 6 — Genitourinary & Reproductive: Chapter 40 (The Gonadal Hormones and Inhibitors) and selected sections of Chapter 41 (Pancreatic Hormones & Antidiabetic Drugs), focused on the reproductive/metabolic overlap (e.g., PCOS and insulin resistance)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Unit 6 — Genitourinary & Reproductive: Chapter 40 (The Gonadal Hormones and Inhibitors) and selected sections of Chapter 41 (Pancreatic Hormones & Antidiabetic Drugs), focused on the reproductive/metabolic overlap (e.g., PCOS and insulin resistance)",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Chapter 6 (Introduction to Autonomic Pharmacology) — the sections on Autonomic Receptors and Non-Adrenergic, Noncholinergic (NANC) Neurons",
+    "level": 0,
+    "emphasis": [],
+    "md": "Chapter 6 (Introduction to Autonomic Pharmacology) — the sections on Autonomic Receptors and Non-Adrenergic, Noncholinergic (NANC) Neurons",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "These sections support Session 2's bladder and lower urinary tract content (Tuesday, December 1), not today",
+    "level": 0,
+    "emphasis": [],
+    "md": "These sections support Session 2's bladder and lower urinary tract content (Tuesday, December 1), not today",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Pharmacotherapy Principles and Practice (Chisholm-Burns et al., 2022) remains available as additional support alongside all assigned chapters",
+    "level": 0,
+    "emphasis": [],
+    "md": "Pharmacotherapy Principles and Practice (Chisholm-Burns et al., 2022) remains available as additional support alongside all assigned chapters",
+    "heading": false,
+    "size": 14.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Point students to the required readings for today — Chapter 40 and the selected Chapter 41 sections — and flag that the Chapter 6 autonomic-pharmacology sections are supplemental reading specifically for Session 2, where they will frame bladder and lower urinary tract pharmacology.\n\nInstructor script:\n\nReadings: Katzung chapter 40 and selected parts of chapter 41; chapter 6 is supplemental for Session 2."
+ },
+ {
+  "slide": 4,
+  "title": "01",
+  "items": [
+   {
+    "text": "SECTION",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "SECTION",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**SECTION**",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "01",
+    "level": 0,
+    "emphasis": [],
+    "md": "01",
+    "heading": true,
+    "size": 68.0
+   },
+   {
+    "text": "Estrogens, Progestins & Hormonal Contraception",
+    "level": 0,
+    "emphasis": [],
+    "md": "Estrogens, Progestins & Hormonal Contraception",
+    "heading": true,
+    "size": 32.0
+   },
+   {
+    "text": "The two core gonadal steroid classes, and how they are combined for contraception and hormone therapy.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "The two core gonadal steroid classes, and how they are combined for contraception and hormone therapy.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**The two core gonadal steroid classes, and how they are combined for contraception and hormone therapy.**",
+    "heading": false,
+    "size": 15.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Section transition. Estrogens bind ER-alpha and ER-beta and change transcription."
+ },
+ {
+  "slide": 5,
+  "title": "Estrogens",
+  "items": [
+   {
+    "text": "FROM CHAPTER 40",
+    "level": 0,
+    "emphasis": [],
+    "md": "FROM CHAPTER 40",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Estrogens",
+    "level": 0,
+    "emphasis": [],
+    "md": "Estrogens",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Mechanism: bind intracellular estrogen receptors (ER-alpha, ER-beta), regulating gene transcription in reproductive, bone, cardiovascular, and CNS tissue.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Mechanism: bind intracellular estrogen receptors (ER-alpha, ER-beta), regulating gene transcription in reproductive, bone, cardiovascular, and CNS tissue.",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Mechanism: bind intracellular estrogen receptors (ER-alpha, ER-beta), regulating gene transcription in reproductive, bone, cardiovascular, and CNS tissue.**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Physiologic effects: endometrial proliferation, breast development, bone density maintenance, favorable lipid profile effects (↑ HDL, ↓ LDL).",
+    "level": 0,
+    "emphasis": [],
+    "md": "Physiologic effects: endometrial proliferation, breast development, bone density maintenance, favorable lipid profile effects (↑ HDL, ↓ LDL).",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Clinical uses: hormonal contraception (combined with a progestin), menopausal hormone therapy for vasomotor symptoms, and hypogonadism.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Clinical uses: hormonal contraception (combined with a progestin), menopausal hormone therapy for vasomotor symptoms, and hypogonadism.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Adverse effects: venous thromboembolism (VTE) risk, increased risk with smoking and age over 35, nausea, breast tenderness, and a possible increase in certain hormone-sensitive cancer risks with long-term use.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Adverse effects: venous thromboembolism (VTE) risk, increased risk with smoking and age over 35, nausea, breast tenderness, and a possible increase in certain hormone-sensitive cancer risks with long-term use.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Adverse effects: venous thromboembolism (VTE) risk, increased risk with smoking and age over 35, nausea, breast tenderness, and a possible increase in certain hormone-sensitive cancer risks with long-term use.**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Contraindications: history of VTE, estrogen-sensitive breast cancer, uncontrolled hypertension, and smokers over age 35 — all raise cardiovascular/thrombotic risk substantially.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Contraindications: history of VTE, estrogen-sensitive breast cancer, uncontrolled hypertension, and smokers over age 35 — all raise cardiovascular/thrombotic risk substantially.",
+    "heading": false,
+    "size": 16.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Estrogen's VTE risk is the single most tested adverse effect in this topic — make sure students can state the major risk factors (smoking, age >35, personal/family VTE history) that shift a patient from \"candidate\" to \"contraindicated.\"\n\nInstructor script:\n\nEstrogens bind ER-alpha and ER-beta and change transcription. VTE is the most tested adverse effect. Contraindications: VTE history, estrogen-sensitive cancer, uncontrolled hypertension, smoker over 35."
+ },
+ {
+  "slide": 6,
+  "title": "Progestins",
+  "items": [
+   {
+    "text": "FROM CHAPTER 40",
+    "level": 0,
+    "emphasis": [],
+    "md": "FROM CHAPTER 40",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Progestins",
+    "level": 0,
+    "emphasis": [],
+    "md": "Progestins",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Mechanism: bind progesterone receptors, counteracting estrogen-driven endometrial proliferation and thickening cervical mucus.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Mechanism: bind progesterone receptors, counteracting estrogen-driven endometrial proliferation and thickening cervical mucus.",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Mechanism: bind progesterone receptors, counteracting estrogen-driven endometrial proliferation and thickening cervical mucus.**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Clinical uses: a required component of combined hormonal contraception (protects the endometrium from unopposed estrogen), progestin-only contraception, and management of abnormal uterine bleeding.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Clinical uses: a required component of combined hormonal contraception (protects the endometrium from unopposed estrogen), progestin-only contraception, and management of abnormal uterine bleeding.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Progestin-only methods — the \"mini-pill,\" depot medroxyprogesterone acetate (DMPA) injection, the subdermal implant, and the levonorgestrel intrauterine system — avoid estrogen-related VTE risk entirely.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Progestin-only methods — the \"mini-pill,\" depot medroxyprogesterone acetate (DMPA) injection, the subdermal implant, and the levonorgestrel intrauterine system — avoid estrogen-related VTE risk entirely.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Adverse effects: irregular bleeding/spotting (especially early in use), mood changes, and — with DMPA specifically — reversible bone mineral density loss with prolonged use.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Adverse effects: irregular bleeding/spotting (especially early in use), mood changes, and — with DMPA specifically — reversible bone mineral density loss with prolonged use.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Adverse effects: irregular bleeding/spotting (especially early in use), mood changes, and — with DMPA specifically — reversible bone mineral density loss with prolonged use.**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Unopposed estrogen (estrogen without a progestin) in a patient with a uterus significantly increases endometrial cancer risk — this is why progestin-only or combined regimens, never estrogen alone, are used in patients with an intact uterus.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Unopposed estrogen (estrogen without a progestin) in a patient with a uterus significantly increases endometrial cancer risk — this is why progestin-only or combined regimens, never estrogen alone, are used in patients with an intact uterus.",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Unopposed estrogen (estrogen without a progestin) in a patient with a uterus significantly increases endometrial cancer risk — this is why progestin-only or combined regimens, never estrogen alone, are used in patients with an intact uterus.**",
+    "heading": false,
+    "size": 16.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "The \"unopposed estrogen\" teaching point is a classic exam item — any patient with a uterus receiving estrogen therapy needs a progestin too, unless she has had a hysterectomy.\n\nInstructor script:\n\nProgestins oppose estrogen-driven proliferation and thicken cervical mucus. DMPA causes reversible bone loss."
+ },
+ {
+  "slide": 7,
+  "title": "Unopposed Estrogen: Why a Progestin Is Added",
+  "items": [
+   {
+    "text": "MECHANISM & DEPTH",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "MECHANISM & DEPTH",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**MECHANISM & DEPTH**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Unopposed Estrogen: Why a Progestin Is Added",
+    "level": 0,
+    "emphasis": [],
+    "md": "Unopposed Estrogen: Why a Progestin Is Added",
+    "heading": true,
+    "size": 30.0
+   },
+   {
+    "text": "Estrogen binds ER in the endometrium",
+    "level": 0,
+    "emphasis": [],
+    "md": "Estrogen binds ER in the endometrium",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "↓",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "↓",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**↓**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Proliferation and thickening of the lining",
+    "level": 0,
+    "emphasis": [],
+    "md": "Proliferation and thickening of the lining",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "↓",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "↓",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**↓**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Without progestin: hyperplasia and cancer risk",
+    "level": 0,
+    "emphasis": [],
+    "md": "Without progestin: hyperplasia and cancer risk",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "↓",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "↓",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**↓**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Progestin binds PR: limits proliferation, matures the endometrium",
+    "level": 0,
+    "emphasis": [],
+    "md": "Progestin binds PR: limits proliferation, matures the endometrium",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Hysterectomy patients can take estrogen alone.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Hysterectomy patients can take estrogen alone.",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Schematic (illustrative)",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Schematic (illustrative)",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Schematic (illustrative)**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Figure 1. Progestin counters estrogen's proliferative effect on the endometrium.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Figure 1. Progestin counters estrogen's proliferative effect on the endometrium.",
+    "heading": false,
+    "size": 11.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [
+   "S7_1.jpg"
+  ],
+  "notes": "Explain that the progestin protects the endometrium when the uterus is intact.\n\nInstructor script:\n\nEstrogen drives endometrial proliferation; without a progestin the risk is hyperplasia and cancer. Estrogen alone is acceptable only after hysterectomy."
+ },
+ {
+  "slide": 8,
+  "title": "The Hypothalamic-Pituitary-Gonadal (HPG) Axis: Sites of Hormonal Drug Action",
+  "items": [
+   {
+    "text": "ORIGINAL ILLUSTRATION · FIGURE 2",
+    "level": 0,
+    "emphasis": [],
+    "md": "ORIGINAL ILLUSTRATION · FIGURE 2",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "The Hypothalamic-Pituitary-Gonadal (HPG) Axis: Sites of Hormonal Drug Action",
+    "level": 0,
+    "emphasis": [],
+    "md": "The Hypothalamic-Pituitary-Gonadal (HPG) Axis: Sites of Hormonal Drug Action",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Figure 2. Original illustrative diagram (not from Katzung): GnRH drives FSH/LH release, which drives gonadal sex-steroid production, which in turn negatively feeds back on the hypothalamus and pituitary — with four distinct classes of drugs intervening at different points along this axis.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Figure 2. Original illustrative diagram (not from Katzung): GnRH drives FSH/LH release, which drives gonadal sex-steroid production, which in turn negatively feeds back on the hypothalamus and pituitary — with four distinct classes of drugs intervening at different points along this axis.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Figure 2. Original illustrative diagram (not from Katzung): GnRH drives FSH/LH release, which drives gonadal sex-steroid production, which in turn negatively feeds back on the hypothalamus and pituitary — with four distinct classes of drugs intervening at different points along this axis.**",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 2,
+  "figures": [
+   "S8_1.jpg"
+  ],
+  "notes": "This is the organizing map for the entire session — every drug class that follows (GnRH agonists/antagonists, SERMs, aromatase inhibitors, antiandrogens) gets anchored back to its point of action on this diagram. Spend real time here; it pays off for the rest of the unit.\n\nInstructor script:\n\nSpend real time here; it anchors the session. Name the points where each drug class intervenes."
+ },
+ {
+  "slide": 9,
+  "title": "Combined Hormonal Contraception vs. Progestin-Only Methods",
+  "items": [
+   {
+    "text": "APPLYING THE PRINCIPLE",
+    "level": 0,
+    "emphasis": [],
+    "md": "APPLYING THE PRINCIPLE",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Combined Hormonal Contraception vs. Progestin-Only Methods",
+    "level": 0,
+    "emphasis": [],
+    "md": "Combined Hormonal Contraception vs. Progestin-Only Methods",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Combined (Estrogen + Progestin)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Combined (Estrogen + Progestin)",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Progestin-Only",
+    "level": 0,
+    "emphasis": [],
+    "md": "Progestin-Only",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Oral pills, transdermal patch, vaginal ring",
+    "level": 0,
+    "emphasis": [],
+    "md": "Oral pills, transdermal patch, vaginal ring",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Suppresses ovulation via negative feedback on FSH/LH",
+    "level": 0,
+    "emphasis": [],
+    "md": "Suppresses ovulation via negative feedback on FSH/LH",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Carries estrogen-related VTE risk — requires screening for contraindications",
+    "level": 0,
+    "emphasis": [],
+    "md": "Carries estrogen-related VTE risk — requires screening for contraindications",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Often chosen for added benefits: cycle regulation, acne/hirsutism improvement",
+    "level": 0,
+    "emphasis": [],
+    "md": "Often chosen for added benefits: cycle regulation, acne/hirsutism improvement",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Mini-pill, DMPA injection, subdermal implant, levonorgestrel IUD",
+    "level": 0,
+    "emphasis": [],
+    "md": "Mini-pill, DMPA injection, subdermal implant, levonorgestrel IUD",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "No estrogen — safe in patients with VTE history, migraine with aura, or smokers over 35",
+    "level": 0,
+    "emphasis": [],
+    "md": "No estrogen — safe in patients with VTE history, migraine with aura, or smokers over 35",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "More irregular bleeding patterns, especially initially",
+    "level": 0,
+    "emphasis": [],
+    "md": "More irregular bleeding patterns, especially initially",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "DMPA specifically: reversible bone density loss with long-term use",
+    "level": 0,
+    "emphasis": [],
+    "md": "DMPA specifically: reversible bone density loss with long-term use",
+    "heading": false,
+    "size": 14.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Use this slide to reinforce the core decision point in clinical practice: when estrogen is contraindicated, a progestin-only method is not a compromise — it's often the correct first choice.\n\nInstructor script:\n\nWhen estrogen is contraindicated, a progestin-only method is the correct first choice."
+ },
+ {
+  "slide": 10,
+  "title": "02",
+  "items": [
+   {
+    "text": "SECTION",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "SECTION",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**SECTION**",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "02",
+    "level": 0,
+    "emphasis": [],
+    "md": "02",
+    "heading": true,
+    "size": 68.0
+   },
+   {
+    "text": "SERMs, Aromatase Inhibitors, Androgens & Antiandrogens",
+    "level": 0,
+    "emphasis": [],
+    "md": "SERMs, Aromatase Inhibitors, Androgens & Antiandrogens",
+    "heading": true,
+    "size": 32.0
+   },
+   {
+    "text": "Tissue-selective and blocking strategies — how drugs can turn hormone signaling on in one tissue and off in another.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Tissue-selective and blocking strategies — how drugs can turn hormone signaling on in one tissue and off in another.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Tissue-selective and blocking strategies — how drugs can turn hormone signaling on in one tissue and off in another.**",
+    "heading": false,
+    "size": 15.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Section transition. Tamoxifen antagonizes breast and agonizes bone and endometrium."
+ },
+ {
+  "slide": 11,
+  "title": "Selective Estrogen Receptor Modulators (SERMs)",
+  "items": [
+   {
+    "text": "TISSUE-SELECTIVE ESTROGEN ACTION",
+    "level": 0,
+    "emphasis": [],
+    "md": "TISSUE-SELECTIVE ESTROGEN ACTION",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Selective Estrogen Receptor Modulators (SERMs)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Selective Estrogen Receptor Modulators (SERMs)",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Mechanism: bind the estrogen receptor, but act as an agonist in some tissues and an antagonist in others — the defining feature of this class.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Mechanism: bind the estrogen receptor, but act as an agonist in some tissues and an antagonist in others — the defining feature of this class.",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Mechanism: bind the estrogen receptor, but act as an agonist in some tissues and an antagonist in others — the defining feature of this class.**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Tamoxifen: ER antagonist in breast tissue (used for ER-positive breast cancer treatment and prevention) but an ER agonist in bone (preserves density) and, notably, in the endometrium.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Tamoxifen: ER antagonist in breast tissue (used for ER-positive breast cancer treatment and prevention) but an ER agonist in bone (preserves density) and, notably, in the endometrium.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Tamoxifen's endometrial agonist activity increases the risk of endometrial hyperplasia and endometrial cancer — patients require counseling on abnormal bleeding and routine gynecologic follow-up.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Tamoxifen's endometrial agonist activity increases the risk of endometrial hyperplasia and endometrial cancer — patients require counseling on abnormal bleeding and routine gynecologic follow-up.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Tamoxifen's endometrial agonist activity increases the risk of endometrial hyperplasia and endometrial cancer — patients require counseling on abnormal bleeding and routine gynecologic follow-up.**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Raloxifene: ER antagonist in breast tissue and ER agonist in bone, but — unlike tamoxifen — essentially neutral at the endometrium, making it a preferred option for osteoporosis prevention in postmenopausal women without a breast cancer indication.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Raloxifene: ER antagonist in breast tissue and ER agonist in bone, but — unlike tamoxifen — essentially neutral at the endometrium, making it a preferred option for osteoporosis prevention in postmenopausal women without a breast cancer indication.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Both carry an increased VTE risk, similar in magnitude to estrogen therapy itself.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Both carry an increased VTE risk, similar in magnitude to estrogen therapy itself.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "13",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "13",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**13**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "The tamoxifen-vs-raloxifene endometrial distinction is a classic high-yield comparison — make sure students can state which one carries the endometrial cancer risk and why (tissue-selective agonism, not a class effect).\n\nInstructor script:\n\nTamoxifen antagonizes breast, agonizes bone and endometrium. Raloxifene antagonizes breast, agonizes bone, neutral at endometrium. Both raise VTE risk."
+ },
+ {
+  "slide": 12,
+  "title": "SERMs: One Receptor, Different Tissue Effects",
+  "items": [
+   {
+    "text": "MECHANISM & DEPTH",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "MECHANISM & DEPTH",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**MECHANISM & DEPTH**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "SERMs: One Receptor, Different Tissue Effects",
+    "level": 0,
+    "emphasis": [],
+    "md": "SERMs: One Receptor, Different Tissue Effects",
+    "heading": true,
+    "size": 30.0
+   },
+   {
+    "text": "Tamoxifen: breast blocks (antagonist)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Tamoxifen: breast blocks (antagonist)",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "↓",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "↓",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**↓**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Tamoxifen: bone agonist; endometrium agonist",
+    "level": 0,
+    "emphasis": [],
+    "md": "Tamoxifen: bone agonist; endometrium agonist",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "↓",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "↓",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**↓**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Raloxifene: breast blocks; bone agonist",
+    "level": 0,
+    "emphasis": [],
+    "md": "Raloxifene: breast blocks; bone agonist",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "↓",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "↓",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**↓**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Raloxifene: endometrium neutral",
+    "level": 0,
+    "emphasis": [],
+    "md": "Raloxifene: endometrium neutral",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "↓",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "↓",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**↓**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Schematic (illustrative)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Schematic (illustrative)",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Both raise VTE risk",
+    "level": 0,
+    "emphasis": [],
+    "md": "Both raise VTE risk",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Figure 3. Tamoxifen and raloxifene act on the same receptor but differ by tissue; tamoxifen's endometrial agonism carries cancer risk.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Figure 3. Tamoxifen and raloxifene act on the same receptor but differ by tissue; tamoxifen's endometrial agonism carries cancer risk.",
+    "heading": false,
+    "size": 11.0
+   },
+   {
+    "text": "14",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "14",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**14**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [
+   "S12_1.png"
+  ],
+  "notes": "Tamoxifen's endometrial agonism is the reason for cancer-risk monitoring; raloxifene is neutral there.\n\nInstructor script:\n\nSame receptor, different conformation and co-regulators in each tissue."
+ },
+ {
+  "slide": 13,
+  "title": "Two Ways to Reduce Estrogen Signaling: SERMs vs. Aromatase Inhibitors",
+  "items": [
+   {
+    "text": "ORIGINAL ILLUSTRATION · FIGURE 4",
+    "level": 0,
+    "emphasis": [],
+    "md": "ORIGINAL ILLUSTRATION · FIGURE 4",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Two Ways to Reduce Estrogen Signaling: SERMs vs. Aromatase Inhibitors",
+    "level": 0,
+    "emphasis": [],
+    "md": "Two Ways to Reduce Estrogen Signaling: SERMs vs. Aromatase Inhibitors",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Figure 4. Original illustrative diagram (not from Katzung): SERMs block the estrogen receptor directly in breast tissue (while remaining agonists elsewhere), while aromatase inhibitors block the peripheral enzymatic conversion of androgens to estrogen — two distinct strategies converging on the same clinical goal in hormone-sensitive breast cancer.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Figure 4. Original illustrative diagram (not from Katzung): SERMs block the estrogen receptor directly in breast tissue (while remaining agonists elsewhere), while aromatase inhibitors block the peripheral enzymatic conversion of androgens to estrogen — two distinct strategies converging on the same clinical goal in hormone-sensitive breast cancer.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Figure 4. Original illustrative diagram (not from Katzung): SERMs block the estrogen receptor directly in breast tissue (while remaining agonists elsewhere), while aromatase inhibitors block the peripheral enzymatic conversion of androgens to estrogen — two distinct strategies converging on the same clinical goal in hormone-sensitive breast cancer.**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "15",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "15",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**15**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [],
+  "images": 2,
+  "figures": [
+   "S13_1.jpg"
+  ],
+  "notes": "Emphasize the postmenopausal-only caveat for aromatase inhibitors — in a premenopausal patient, the ovaries are still the dominant estrogen source and aromatase inhibition alone is insufficient (often combined with ovarian suppression in that population).\n\nInstructor script:\n\nReceptor blockade versus synthesis blockade; aromatase inhibitors are postmenopausal only."
+ },
+ {
+  "slide": 14,
+  "title": "Aromatase Inhibitors: Blocking Estrogen Synthesis",
+  "items": [
+   {
+    "text": "MECHANISM & DEPTH",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "MECHANISM & DEPTH",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**MECHANISM & DEPTH**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Aromatase Inhibitors: Blocking Estrogen Synthesis",
+    "level": 0,
+    "emphasis": [],
+    "md": "Aromatase Inhibitors: Blocking Estrogen Synthesis",
+    "heading": true,
+    "size": 30.0
+   },
+   {
+    "text": "Androgens (androstenedione, testosterone)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Androgens (androstenedione, testosterone)",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "↓",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "↓",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**↓**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Aromatase in fat tissue converts them to estrogens",
+    "level": 0,
+    "emphasis": [],
+    "md": "Aromatase in fat tissue converts them to estrogens",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "↓",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "↓",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**↓**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Estrogens drive ER-positive tumor growth",
+    "level": 0,
+    "emphasis": [],
+    "md": "Estrogens drive ER-positive tumor growth",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "↓",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "↓",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**↓**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Anastrozole and letrozole block aromatase",
+    "level": 0,
+    "emphasis": [],
+    "md": "Anastrozole and letrozole block aromatase",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Postmenopausal use only: ovaries still make estrogen before menopause.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Postmenopausal use only: ovaries still make estrogen before menopause.",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Adverse effects: bone loss and joint pain.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Adverse effects: bone loss and joint pain.",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Schematic (illustrative)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Schematic (illustrative)",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Figure 5. Aromatase converts androgens to estrogens in peripheral fat; aromatase inhibitors block this step.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Figure 5. Aromatase converts androgens to estrogens in peripheral fat; aromatase inhibitors block this step.",
+    "heading": false,
+    "size": 11.0
+   },
+   {
+    "text": "16",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "16",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**16**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [
+   "S14_1.png"
+  ],
+  "notes": "Aromatase inhibitors act downstream of the ovary, so they work mainly after menopause.\n\nInstructor script:\n\nAnastrozole and letrozole block conversion of androgens to estrogens. Adverse effects: bone loss and joint pain."
+ },
+ {
+  "slide": 15,
+  "title": "Androgens & Antiandrogens",
+  "items": [
+   {
+    "text": "FROM CHAPTER 40",
+    "level": 0,
+    "emphasis": [],
+    "md": "FROM CHAPTER 40",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Androgens & Antiandrogens",
+    "level": 0,
+    "emphasis": [],
+    "md": "Androgens & Antiandrogens",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "●  Testosterone (androgen): used for male hypogonadism; adverse effects include erythrocytosis, hepatotoxicity (oral formulations), and suppression of endogenous testicular function/fertility. Monitor hematocrit and PSA with long-term use.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "●  Testosterone (androgen):",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**●  Testosterone (androgen):** used for male hypogonadism; adverse effects include erythrocytosis, hepatotoxicity (oral formulations), and suppression of endogenous testicular function/fertility. Monitor hematocrit and PSA with long-term use.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "●  Spironolactone (antiandrogen): blocks the androgen receptor (in addition to its aldosterone-antagonist diuretic effect from Unit 5) — used off-label for hirsutism and acne in women, especially in PCOS.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "●  Spironolactone (antiandrogen):",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**●  Spironolactone (antiandrogen):** blocks the androgen receptor (in addition to its aldosterone-antagonist diuretic effect from Unit 5) — used off-label for hirsutism and acne in women, especially in PCOS.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "●  Flutamide / bicalutamide (antiandrogens): pure androgen receptor blockers used primarily in prostate cancer, often combined with a GnRH agonist.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "●  Flutamide / bicalutamide (antiandrogens):",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**●  Flutamide / bicalutamide (antiandrogens):** pure androgen receptor blockers used primarily in prostate cancer, often combined with a GnRH agonist.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "●  Finasteride / dutasteride (5-alpha-reductase inhibitors): block conversion of testosterone to the more potent dihydrotestosterone (DHT); used for hirsutism and androgenetic alopecia here, and — as Session 2 will cover — for benign prostatic hyperplasia (BPH).",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "●  Finasteride / dutasteride (5-alpha-reductase inhibitors):",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**●  Finasteride / dutasteride (5-alpha-reductase inhibitors):** block conversion of testosterone to the more potent dihydrotestosterone (DHT); used for hirsutism and androgenetic alopecia here, and — as Session 2 will cover — for benign prostatic hyperplasia (BPH).",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "17",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "17",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**17**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Flag finasteride/dutasteride explicitly as a direct bridge to Session 2 — the exact same drugs reappear in the BPH discussion, just applied to a different clinical problem (prostate growth rather than hirsutism).\n\nInstructor script:\n\nTestosterone to DHT via 5-alpha-reductase."
+ },
+ {
+  "slide": 16,
+  "title": "Androgen Pathway: Where Each Drug Acts",
+  "items": [
+   {
+    "text": "MECHANISM & DEPTH",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "MECHANISM & DEPTH",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**MECHANISM & DEPTH**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Androgen Pathway: Where Each Drug Acts",
+    "level": 0,
+    "emphasis": [],
+    "md": "Androgen Pathway: Where Each Drug Acts",
+    "heading": true,
+    "size": 30.0
+   },
+   {
+    "text": "Testosterone (circulating androgen)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Testosterone (circulating androgen)",
+    "heading": true,
+    "size": 14.0
+   },
+   {
+    "text": "↓",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "↓",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**↓**",
+    "heading": false,
+    "size": 11.0
+   },
+   {
+    "text": "5-alpha-reductase converts it to DHT",
+    "level": 0,
+    "emphasis": [],
+    "md": "5-alpha-reductase converts it to DHT",
+    "heading": true,
+    "size": 14.0
+   },
+   {
+    "text": "↓",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "↓",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**↓**",
+    "heading": false,
+    "size": 11.0
+   },
+   {
+    "text": "↓",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "↓",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**↓**",
+    "heading": false,
+    "size": 11.0
+   },
+   {
+    "text": "DHT (more potent androgen)",
+    "level": 0,
+    "emphasis": [],
+    "md": "DHT (more potent androgen)",
+    "heading": true,
+    "size": 14.0
+   },
+   {
+    "text": "Binds the androgen receptor",
+    "level": 0,
+    "emphasis": [],
+    "md": "Binds the androgen receptor",
+    "heading": true,
+    "size": 14.0
+   },
+   {
+    "text": "↓",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "↓",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**↓**",
+    "heading": false,
+    "size": 11.0
+   },
+   {
+    "text": "Hair follicle and prostate effects",
+    "level": 0,
+    "emphasis": [],
+    "md": "Hair follicle and prostate effects",
+    "heading": true,
+    "size": 14.0
+   },
+   {
+    "text": "Finasteride and dutasteride block 5-alpha-reductase, lowering DHT.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Finasteride and dutasteride block 5-alpha-reductase, lowering DHT.",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Spironolactone, flutamide and bicalutamide block the androgen receptor.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Spironolactone, flutamide and bicalutamide block the androgen receptor.",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Blocking the enzyme or the receptor both reduce androgen action.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Blocking the enzyme or the receptor both reduce androgen action.",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Schematic (illustrative)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Schematic (illustrative)",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Figure 6. Androgen pathway from testosterone to receptor action, with the sites of finasteride, dutasteride, spironolactone, flutamide and bicalutamide.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Figure 6. Androgen pathway from testosterone to receptor action, with the sites of finasteride, dutasteride, spironolactone, flutamide and bicalutamide.",
+    "heading": false,
+    "size": 11.0
+   },
+   {
+    "text": "18",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "18",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**18**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [
+   "S16_1.png"
+  ],
+  "notes": "Anchor each drug to its site: the enzyme inhibitors lower DHT; the receptor blockers stop androgen signaling.\n\nInstructor script:\n\nFinasteride and dutasteride block the enzyme; spironolactone, flutamide and bicalutamide block the receptor."
+ },
+ {
+  "slide": 17,
+  "title": "Estrogen-Pathway Drugs vs. Androgen-Pathway Drugs",
+  "items": [
+   {
+    "text": "HIGH-YIELD COMPARISON",
+    "level": 0,
+    "emphasis": [],
+    "md": "HIGH-YIELD COMPARISON",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Estrogen-Pathway Drugs vs. Androgen-Pathway Drugs",
+    "level": 0,
+    "emphasis": [],
+    "md": "Estrogen-Pathway Drugs vs. Androgen-Pathway Drugs",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Estrogen Pathway",
+    "level": 0,
+    "emphasis": [],
+    "md": "Estrogen Pathway",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Androgen Pathway",
+    "level": 0,
+    "emphasis": [],
+    "md": "Androgen Pathway",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "SERMs (tamoxifen, raloxifene): tissue-selective receptor agonist/antagonist",
+    "level": 0,
+    "emphasis": [],
+    "md": "SERMs (tamoxifen, raloxifene): tissue-selective receptor agonist/antagonist",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Aromatase inhibitors (anastrozole, letrozole): block peripheral estrogen synthesis, postmenopausal use only",
+    "level": 0,
+    "emphasis": [],
+    "md": "Aromatase inhibitors (anastrozole, letrozole): block peripheral estrogen synthesis, postmenopausal use only",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Both used primarily in hormone-sensitive breast cancer",
+    "level": 0,
+    "emphasis": [],
+    "md": "Both used primarily in hormone-sensitive breast cancer",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Antiandrogens (spironolactone, flutamide): block the androgen receptor directly",
+    "level": 0,
+    "emphasis": [],
+    "md": "Antiandrogens (spironolactone, flutamide): block the androgen receptor directly",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "5-alpha-reductase inhibitors (finasteride, dutasteride): block DHT formation",
+    "level": 0,
+    "emphasis": [],
+    "md": "5-alpha-reductase inhibitors (finasteride, dutasteride): block DHT formation",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Used for hirsutism, prostate cancer, alopecia, and — in Session 2 — BPH",
+    "level": 0,
+    "emphasis": [],
+    "md": "Used for hirsutism, prostate cancer, alopecia, and — in Session 2 — BPH",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "19",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "19",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**19**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Use this slide to reinforce the parallel structure across both pathways: a receptor-blocking strategy and a synthesis/activation-blocking strategy exist on both the estrogen and androgen sides.\n\nInstructor script:\n\nA receptor strategy and a synthesis strategy exist on both the estrogen and androgen sides."
+ },
+ {
+  "slide": 18,
+  "title": "Weighing Tamoxifen's Tissue-Selective Effects",
+  "items": [
+   {
+    "text": "CLINICAL CASE",
+    "level": 0,
+    "emphasis": [],
+    "md": "CLINICAL CASE",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Weighing Tamoxifen's Tissue-Selective Effects",
+    "level": 0,
+    "emphasis": [],
+    "md": "Weighing Tamoxifen's Tissue-Selective Effects",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "A 52-year-old postmenopausal woman with ER-positive breast cancer is started on tamoxifen. Six months later, she reports new-onset irregular vaginal bleeding.",
+    "level": 0,
+    "emphasis": [],
+    "md": "A 52-year-old postmenopausal woman with ER-positive breast cancer is started on tamoxifen. Six months later, she reports new-onset irregular vaginal bleeding.",
+    "heading": false,
+    "size": 17.0
+   },
+   {
+    "text": "Ask yourself:  What is the most likely explanation, and what should happen next?",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Ask yourself:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     },
+     {
+      "text": "What is the most likely explanation, and what should happen next?",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Ask yourself:** **What is the most likely explanation, and what should happen next?**",
+    "heading": false,
+    "size": 18.0
+   },
+   {
+    "text": "Clinical pearl:  Tamoxifen acts as an estrogen receptor agonist in the endometrium even while acting as an antagonist in breast tissue — this tissue-selective agonism increases the risk of endometrial hyperplasia and endometrial cancer. New abnormal bleeding on tamoxifen warrants prompt gynecologic evaluation, not reassurance.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Clinical pearl:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     },
+     {
+      "text": "Tamoxifen acts as an estrogen receptor agonist in the endometrium even while acting as an antagonist in breast tissue — this tissue-selective agonism increases the risk of endometrial hyperplasia and endometrial cancer. New abnormal bleeding on tamoxifen warrants prompt gynecologic evaluation, not reassurance.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Clinical pearl:** **Tamoxifen acts as an estrogen receptor agonist in the endometrium even while acting as an antagonist in breast tissue — this tissue-selective agonism increases the risk of endometrial hyperplasia and endometrial cancer. New abnormal bleeding on tamoxifen warrants prompt gynecologic evaluation, not reassurance.**",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "20",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "20",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**20**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "This case makes the tissue-selectivity concept concrete and clinical — a good checkpoint before the quick check, and a natural point to contrast with raloxifene's neutral endometrial profile.\n\nInstructor script:\n\nNew bleeding on tamoxifen needs prompt gynecologic evaluation."
+ },
+ {
+  "slide": 19,
+  "title": "03",
+  "items": [
+   {
+    "text": "SECTION",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "SECTION",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**SECTION**",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "03",
+    "level": 0,
+    "emphasis": [],
+    "md": "03",
+    "heading": true,
+    "size": 68.0
+   },
+   {
+    "text": "Reproductive-Metabolic Overlap: PCOS & Antidiabetic Pharmacology",
+    "level": 0,
+    "emphasis": [],
+    "md": "Reproductive-Metabolic Overlap: PCOS & Antidiabetic Pharmacology",
+    "heading": true,
+    "size": 32.0
+   },
+   {
+    "text": "Where Chapter 40 and Chapter 41 meet — insulin resistance as a driver of reproductive endocrine disease.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Where Chapter 40 and Chapter 41 meet — insulin resistance as a driver of reproductive endocrine disease.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Where Chapter 40 and Chapter 41 meet — insulin resistance as a driver of reproductive endocrine disease.**",
+    "heading": false,
+    "size": 15.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Section transition. Hyperinsulinemia raises ovarian androgen production and lowers SHBG."
+ },
+ {
+  "slide": 20,
+  "title": "PCOS: A Reproductive-Metabolic Overlap Condition",
+  "items": [
+   {
+    "text": "FROM CHAPTER 40 & 41",
+    "level": 0,
+    "emphasis": [],
+    "md": "FROM CHAPTER 40 & 41",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "PCOS: A Reproductive-Metabolic Overlap Condition",
+    "level": 0,
+    "emphasis": [],
+    "md": "PCOS: A Reproductive-Metabolic Overlap Condition",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Polycystic ovary syndrome (PCOS) is defined by a combination of hyperandrogenism, ovulatory dysfunction, and polycystic ovarian morphology — but its pharmacologic management is fundamentally a metabolic problem as much as a reproductive one.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Polycystic ovary syndrome (PCOS) is defined by a combination of hyperandrogenism, ovulatory dysfunction, and polycystic ovarian morphology — but its pharmacologic management is fundamentally a metabolic problem as much as a reproductive one.",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Polycystic ovary syndrome (PCOS) is defined by a combination of hyperandrogenism, ovulatory dysfunction, and polycystic ovarian morphology — but its pharmacologic management is fundamentally a metabolic problem as much as a reproductive one.**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Insulin resistance and compensatory hyperinsulinemia are central to PCOS pathophysiology in most patients, independent of body weight.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Insulin resistance and compensatory hyperinsulinemia are central to PCOS pathophysiology in most patients, independent of body weight.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Hyperinsulinemia stimulates ovarian theca-cell androgen production directly and lowers hepatic sex hormone-binding globulin (SHBG) production, raising free (biologically active) testosterone.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Hyperinsulinemia stimulates ovarian theca-cell androgen production directly and lowers hepatic sex hormone-binding globulin (SHBG) production, raising free (biologically active) testosterone.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Clinical features follow directly from this mechanism: hirsutism, acne, and anovulation/irregular cycles from hyperandrogenism; and an elevated long-term risk of type 2 diabetes and metabolic syndrome from the underlying insulin resistance.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Clinical features follow directly from this mechanism: hirsutism, acne, and anovulation/irregular cycles from hyperandrogenism; and an elevated long-term risk of type 2 diabetes and metabolic syndrome from the underlying insulin resistance.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "This is why PCOS management routinely pulls drugs from Chapter 41 (antidiabetic agents) as well as Chapter 40 (hormonal agents) — the two chapters converge on the same patient.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "This is why PCOS management routinely pulls drugs from Chapter 41 (antidiabetic agents) as well as Chapter 40 (hormonal agents) — the two chapters converge on the same patient.",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**This is why PCOS management routinely pulls drugs from Chapter 41 (antidiabetic agents) as well as Chapter 40 (hormonal agents) — the two chapters converge on the same patient.**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "24",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "24",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**24**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "This is the thesis slide for the entire section — make sure students leave understanding that PCOS pharmacology is not purely \"gynecologic,\" which is why it is taught here as a bridge between Chapters 40 and 41."
+ },
+ {
+  "slide": 21,
+  "title": "The PCOS–Insulin Resistance Cycle",
+  "items": [
+   {
+    "text": "ORIGINAL ILLUSTRATION · FIGURE 7",
+    "level": 0,
+    "emphasis": [],
+    "md": "ORIGINAL ILLUSTRATION · FIGURE 7",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "The PCOS–Insulin Resistance Cycle",
+    "level": 0,
+    "emphasis": [],
+    "md": "The PCOS–Insulin Resistance Cycle",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Figure 7. Original illustrative diagram (not from Katzung): insulin resistance and hyperandrogenism reinforce one another in a self-sustaining cycle — hyperinsulinemia raises free testosterone, and hyperandrogenism worsens insulin resistance, explaining why metabolic therapy improves reproductive symptoms and vice versa.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Figure 7. Original illustrative diagram (not from Katzung): insulin resistance and hyperandrogenism reinforce one another in a self-sustaining cycle — hyperinsulinemia raises free testosterone, and hyperandrogenism worsens insulin resistance, explaining why metabolic therapy improves reproductive symptoms and vice versa.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Figure 7. Original illustrative diagram (not from Katzung): insulin resistance and hyperandrogenism reinforce one another in a self-sustaining cycle — hyperinsulinemia raises free testosterone, and hyperandrogenism worsens insulin resistance, explaining why metabolic therapy improves reproductive symptoms and vice versa.**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "25",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "25",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**25**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [],
+  "images": 2,
+  "figures": [
+   "S21_1.jpg"
+  ],
+  "notes": "This figure is the mechanistic payoff of the previous slide — walk both arrows of the cycle explicitly, and preview that the next slide covers where metformin intervenes (the point already flagged at the bottom of this figure).\n\nInstructor script:\n\nHyperandrogenism worsens insulin resistance. Walk both arrows."
+ },
+ {
+  "slide": 22,
+  "title": "Antidiabetic Agents in Reproductive-Metabolic Management",
+  "items": [
+   {
+    "text": "FROM CHAPTER 41",
+    "level": 0,
+    "emphasis": [],
+    "md": "FROM CHAPTER 41",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Antidiabetic Agents in Reproductive-Metabolic Management",
+    "level": 0,
+    "emphasis": [],
+    "md": "Antidiabetic Agents in Reproductive-Metabolic Management",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Metformin: first-line insulin-sensitizing agent in PCOS management; improves insulin sensitivity, can restore ovulatory cycles, and is commonly used alongside or instead of hormonal therapy depending on the patient's goals (cycle regulation vs. fertility).",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Metformin: first-line insulin-sensitizing agent in PCOS management; improves insulin sensitivity, can restore ovulatory cycles, and is commonly used alongside or instead of hormonal therapy depending on the patient's goals (cycle regulation vs. fertility).",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Metformin: first-line insulin-sensitizing agent in PCOS management; improves insulin sensitivity, can restore ovulatory cycles, and is commonly used alongside or instead of hormonal therapy depending on the patient's goals (cycle regulation vs. fertility).**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Metformin is not a direct hormonal agent — it improves hyperandrogenism indirectly, by reducing hyperinsulinemia's stimulatory effect on ovarian androgen production (Figure 7).",
+    "level": 0,
+    "emphasis": [],
+    "md": "Metformin is not a direct hormonal agent — it improves hyperandrogenism indirectly, by reducing hyperinsulinemia's stimulatory effect on ovarian androgen production (Figure 7).",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Adverse effects: GI upset (common, often transient), and rare but serious lactic acidosis risk in renal impairment — recall the renal dose-adjustment principles from Unit 5.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Adverse effects: GI upset (common, often transient), and rare but serious lactic acidosis risk in renal impairment — recall the renal dose-adjustment principles from Unit 5.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Adverse effects: GI upset (common, often transient), and rare but serious lactic acidosis risk in renal impairment — recall the renal dose-adjustment principles from Unit 5.**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "GLP-1 receptor agonists are increasingly used off-label in PCOS patients with obesity, given their weight-loss and insulin-sensitizing effects — an emerging extension of the same reproductive-metabolic overlap principle.",
+    "level": 0,
+    "emphasis": [],
+    "md": "GLP-1 receptor agonists are increasingly used off-label in PCOS patients with obesity, given their weight-loss and insulin-sensitizing effects — an emerging extension of the same reproductive-metabolic overlap principle.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Combined hormonal contraception (Section 1) remains first-line specifically for cycle regulation and hirsutism/acne when pregnancy is not desired — metformin and hormonal therapy are frequently used together, not as alternatives.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Combined hormonal contraception (Section 1) remains first-line specifically for cycle regulation and hirsutism/acne when pregnancy is not desired — metformin and hormonal therapy are frequently used together, not as alternatives.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "26",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "26",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**26**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Reinforce the Unit 5 callback on metformin's renal dosing caveat — this is a deliberate cross-unit integration point, not a new concept.\n\nInstructor script:\n\nMetformin is first-line metabolic therapy; GLP-1 agonists are emerging off-label."
+ },
+ {
+  "slide": 23,
+  "title": "Metformin in PCOS: Insulin, Androgens and Ovulation",
+  "items": [
+   {
+    "text": "MECHANISM & DEPTH",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "MECHANISM & DEPTH",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**MECHANISM & DEPTH**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Metformin in PCOS: Insulin, Androgens and Ovulation",
+    "level": 0,
+    "emphasis": [],
+    "md": "Metformin in PCOS: Insulin, Androgens and Ovulation",
+    "heading": true,
+    "size": 30.0
+   },
+   {
+    "text": "Insulin resistance",
+    "level": 0,
+    "emphasis": [],
+    "md": "Insulin resistance",
+    "heading": true,
+    "size": 14.0
+   },
+   {
+    "text": "↓",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "↓",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**↓**",
+    "heading": false,
+    "size": 11.0
+   },
+   {
+    "text": "High insulin",
+    "level": 0,
+    "emphasis": [],
+    "md": "High insulin",
+    "heading": true,
+    "size": 14.0
+   },
+   {
+    "text": "↓",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "↓",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**↓**",
+    "heading": false,
+    "size": 11.0
+   },
+   {
+    "text": "Ovarian androgens up; liver SHBG down",
+    "level": 0,
+    "emphasis": [],
+    "md": "Ovarian androgens up; liver SHBG down",
+    "heading": true,
+    "size": 14.0
+   },
+   {
+    "text": "↓",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "↓",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**↓**",
+    "heading": false,
+    "size": 11.0
+   },
+   {
+    "text": "Free testosterone up",
+    "level": 0,
+    "emphasis": [],
+    "md": "Free testosterone up",
+    "heading": true,
+    "size": 14.0
+   },
+   {
+    "text": "↓",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "↓",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**↓**",
+    "heading": false,
+    "size": 11.0
+   },
+   {
+    "text": "Metformin lowers insulin",
+    "level": 0,
+    "emphasis": [],
+    "md": "Metformin lowers insulin",
+    "heading": true,
+    "size": 14.0
+   },
+   {
+    "text": "↓",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "↓",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**↓**",
+    "heading": false,
+    "size": 11.0
+   },
+   {
+    "text": "Androgens fall; cycles and ovulation can return",
+    "level": 0,
+    "emphasis": [],
+    "md": "Androgens fall; cycles and ovulation can return",
+    "heading": true,
+    "size": 14.0
+   },
+   {
+    "text": "Common early effect: GI upset (nausea, diarrhea); take with meals.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Common early effect: GI upset (nausea, diarrhea); take with meals.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Hold for iodinated contrast study or renal impairment.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Hold for iodinated contrast study or renal impairment.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Schematic (illustrative)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Schematic (illustrative)",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Figure 8. Insulin, androgens and ovulation in PCOS, and where metformin acts in the loop.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Figure 8. Insulin, androgens and ovulation in PCOS, and where metformin acts in the loop.",
+    "heading": false,
+    "size": 11.0
+   },
+   {
+    "text": "27",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "27",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**27**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [
+   "S23_1.png"
+  ],
+  "notes": "Explain that metformin acts through insulin, so androgens fall and ovulation can resume in many patients.\n\nInstructor script:\n\nLower insulin means lower androgens and a chance of ovulation. Hold for contrast with renal impairment."
+ },
+ {
+  "slide": 24,
+  "title": "Agents Used in PCOS Management at a Glance",
+  "items": [
+   {
+    "text": "HIGH-YIELD COMPARISON · TABLE 1",
+    "level": 0,
+    "emphasis": [],
+    "md": "HIGH-YIELD COMPARISON · TABLE 1",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Agents Used in PCOS Management at a Glance",
+    "level": 0,
+    "emphasis": [],
+    "md": "Agents Used in PCOS Management at a Glance",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "28",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "28",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**28**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [
+   [
+    [
+     "Agent",
+     "Primary Goal",
+     "Key Teaching Point"
+    ],
+    [
+     "Combined hormonal contraception",
+     "Cycle regulation, hirsutism/acne",
+     "Progestin component opposes unopposed-estrogen endometrial risk"
+    ],
+    [
+     "Metformin",
+     "Insulin sensitization",
+     "First-line metabolic therapy; can restore ovulation; GI upset common"
+    ],
+    [
+     "Spironolactone",
+     "Antiandrogen effect on hirsutism/acne",
+     "Androgen receptor blockade; avoid in pregnancy (teratogenic risk)"
+    ],
+    [
+     "GLP-1 receptor agonists",
+     "Weight loss, insulin sensitization",
+     "Emerging off-label use in PCOS with obesity"
+    ]
+   ]
+  ],
+  "images": 1,
+  "figures": [],
+  "notes": "Use this table as the organizing summary for PCOS pharmacology before the closing case — note that these agents are frequently combined rather than used as single-agent therapy.\n\nInstructor script:\n\nThe agents are usually combined, not alternatives."
+ },
+ {
+  "slide": 25,
+  "title": "Choosing Between Metformin and Combined Contraception in PCOS",
+  "items": [
+   {
+    "text": "CLINICAL CASE",
+    "level": 0,
+    "emphasis": [],
+    "md": "CLINICAL CASE",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Choosing Between Metformin and Combined Contraception in PCOS",
+    "level": 0,
+    "emphasis": [],
+    "md": "Choosing Between Metformin and Combined Contraception in PCOS",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "A 24-year-old woman with PCOS presents with irregular cycles, hirsutism, and a BMI of 31. She is not currently trying to conceive and has no contraindications to estrogen.",
+    "level": 0,
+    "emphasis": [],
+    "md": "A 24-year-old woman with PCOS presents with irregular cycles, hirsutism, and a BMI of 31. She is not currently trying to conceive and has no contraindications to estrogen.",
+    "heading": false,
+    "size": 17.0
+   },
+   {
+    "text": "Ask yourself:  What are the two major pharmacologic strategies available, and how do their goals differ?",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Ask yourself:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     },
+     {
+      "text": "What are the two major pharmacologic strategies available, and how do their goals differ?",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Ask yourself:** **What are the two major pharmacologic strategies available, and how do their goals differ?**",
+    "heading": false,
+    "size": 18.0
+   },
+   {
+    "text": "Clinical pearl:  Combined hormonal contraception directly regulates cycles and improves hirsutism/acne through its hormonal effects, while metformin addresses the underlying insulin resistance driving the condition metabolically. The two are frequently combined rather than chosen as alternatives — contraception for immediate symptom control, metformin for the metabolic driver and long-term diabetes risk reduction.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Clinical pearl:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     },
+     {
+      "text": "Combined hormonal contraception directly regulates cycles and improves hirsutism/acne through its hormonal effects, while metformin addresses the underlying insulin resistance driving the condition metabolically. The two are frequently combined rather than chosen as alternatives — contraception for immediate symptom control, metformin for the metabolic driver and long-term diabetes risk reduction.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Clinical pearl:** **Combined hormonal contraception directly regulates cycles and improves hirsutism/acne through its hormonal effects, while metformin addresses the underlying insulin resistance driving the condition metabolically. The two are frequently combined rather than chosen as alternatives — contraception for immediate symptom control, metformin for the metabolic driver and long-term diabetes risk reduction.**",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "29",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "29",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**29**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Use this case to reinforce that PCOS management is rarely single-agent — this is a good moment to ask students to justify combining therapies rather than picking just one.\n\nInstructor script:\n\nThe agents are usually combined, not alternatives."
+ },
+ {
+  "slide": 26,
+  "title": "Drug Names Reveal the Class: GU and Reproductive Agents",
+  "items": [
+   {
+    "text": "DRUG NAMES",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "DRUG NAMES",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**DRUG NAMES**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Drug Names Reveal the Class: GU and Reproductive Agents",
+    "level": 0,
+    "emphasis": [],
+    "md": "Drug Names Reveal the Class: GU and Reproductive Agents",
+    "heading": true,
+    "size": 30.0
+   },
+   {
+    "text": "Stem",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Stem",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Stem**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Class",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Class",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Class**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Examples",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Examples",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Examples**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Memory aid",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Memory aid",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Memory aid**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "estr-/-estradiol",
+    "level": 0,
+    "emphasis": [],
+    "md": "estr-/-estradiol",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Estrogen",
+    "level": 0,
+    "emphasis": [],
+    "md": "Estrogen",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Estradiol, ethinyl estradiol",
+    "level": 0,
+    "emphasis": [],
+    "md": "Estradiol, ethinyl estradiol",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Estr- = estrogen",
+    "level": 0,
+    "emphasis": [],
+    "md": "Estr- = estrogen",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "-gest- / -gestrel",
+    "level": 0,
+    "emphasis": [],
+    "md": "-gest- / -gestrel",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Progestin",
+    "level": 0,
+    "emphasis": [],
+    "md": "Progestin",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Levonorgestrel, norethindrone, medroxyprogesterone",
+    "level": 0,
+    "emphasis": [],
+    "md": "Levonorgestrel, norethindrone, medroxyprogesterone",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Gest- = progestin (pregnancy hormone)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Gest- = progestin (pregnancy hormone)",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "-ifene",
+    "level": 0,
+    "emphasis": [],
+    "md": "-ifene",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "SERM",
+    "level": 0,
+    "emphasis": [],
+    "md": "SERM",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Tamoxifen, raloxifene",
+    "level": 0,
+    "emphasis": [],
+    "md": "Tamoxifen, raloxifene",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "-ifene = modulates the estrogen receptor",
+    "level": 0,
+    "emphasis": [],
+    "md": "-ifene = modulates the estrogen receptor",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "-trozole",
+    "level": 0,
+    "emphasis": [],
+    "md": "-trozole",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Aromatase inhibitor",
+    "level": 0,
+    "emphasis": [],
+    "md": "Aromatase inhibitor",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Anastrozole, letrozole",
+    "level": 0,
+    "emphasis": [],
+    "md": "Anastrozole, letrozole",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "-trozole = blocks aromatase",
+    "level": 0,
+    "emphasis": [],
+    "md": "-trozole = blocks aromatase",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "-steride",
+    "level": 0,
+    "emphasis": [],
+    "md": "-steride",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "5-alpha-reductase inhibitor",
+    "level": 0,
+    "emphasis": [],
+    "md": "5-alpha-reductase inhibitor",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Finasteride, dutasteride",
+    "level": 0,
+    "emphasis": [],
+    "md": "Finasteride, dutasteride",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "-steride = blocks steroid enzyme",
+    "level": 0,
+    "emphasis": [],
+    "md": "-steride = blocks steroid enzyme",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "-lutamide",
+    "level": 0,
+    "emphasis": [],
+    "md": "-lutamide",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Antiandrogen",
+    "level": 0,
+    "emphasis": [],
+    "md": "Antiandrogen",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Flutamide, bicalutamide",
+    "level": 0,
+    "emphasis": [],
+    "md": "Flutamide, bicalutamide",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "-lutamide = blocks the androgen receptor",
+    "level": 0,
+    "emphasis": [],
+    "md": "-lutamide = blocks the androgen receptor",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "-sterone",
+    "level": 0,
+    "emphasis": [],
+    "md": "-sterone",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Androgen or antagonist",
+    "level": 0,
+    "emphasis": [],
+    "md": "Androgen or antagonist",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Testosterone, spironolactone",
+    "level": 0,
+    "emphasis": [],
+    "md": "Testosterone, spironolactone",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "-sterone = steroid; drug sets the effect",
+    "level": 0,
+    "emphasis": [],
+    "md": "-sterone = steroid; drug sets the effect",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "-formin",
+    "level": 0,
+    "emphasis": [],
+    "md": "-formin",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Biguanide",
+    "level": 0,
+    "emphasis": [],
+    "md": "Biguanide",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Metformin",
+    "level": 0,
+    "emphasis": [],
+    "md": "Metformin",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "-formin = biguanide, lowers insulin",
+    "level": 0,
+    "emphasis": [],
+    "md": "-formin = biguanide, lowers insulin",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "32",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "32",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**32**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": "Drug names reveal the class: estr-, -gest-, -ifene, -trozole, -steride, -lutamide, -sterone, -formin."
+ },
+ {
+  "slide": 27,
+  "title": "Session 1 Recap — To Be Continued",
+  "items": [
+   {
+    "text": "BIG PICTURE",
+    "level": 0,
+    "emphasis": [],
+    "md": "BIG PICTURE",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Session 1 Recap — To Be Continued",
+    "level": 0,
+    "emphasis": [],
+    "md": "Session 1 Recap — To Be Continued",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "1",
+    "level": 0,
+    "emphasis": [],
+    "md": "1",
+    "heading": true,
+    "size": 20.0
+   },
+   {
+    "text": "Estrogens and progestins are always paired in a patient with a uterus — unopposed estrogen significantly raises endometrial cancer risk (Chapter 40).",
+    "level": 0,
+    "emphasis": [],
+    "md": "Estrogens and progestins are always paired in a patient with a uterus — unopposed estrogen significantly raises endometrial cancer risk (Chapter 40).",
+    "heading": true,
+    "size": 16.5
+   },
+   {
+    "text": "2",
+    "level": 0,
+    "emphasis": [],
+    "md": "2",
+    "heading": true,
+    "size": 20.0
+   },
+   {
+    "text": "SERMs and aromatase inhibitors are two distinct strategies for reducing estrogen signaling in hormone-sensitive breast cancer — tissue-selective receptor modulation (Figure 3) vs. blocking peripheral synthesis (Figure 5), compared in Figure 4.",
+    "level": 0,
+    "emphasis": [],
+    "md": "SERMs and aromatase inhibitors are two distinct strategies for reducing estrogen signaling in hormone-sensitive breast cancer — tissue-selective receptor modulation (Figure 3) vs. blocking peripheral synthesis (Figure 5), compared in Figure 4.",
+    "heading": true,
+    "size": 16.5
+   },
+   {
+    "text": "3",
+    "level": 0,
+    "emphasis": [],
+    "md": "3",
+    "heading": true,
+    "size": 20.0
+   },
+   {
+    "text": "Finasteride and dutasteride (5-alpha-reductase inhibitors) appear here for hirsutism and alopecia — the same drugs return in Session 2 for benign prostatic hyperplasia.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Finasteride and dutasteride (5-alpha-reductase inhibitors) appear here for hirsutism and alopecia — the same drugs return in Session 2 for benign prostatic hyperplasia.",
+    "heading": true,
+    "size": 16.5
+   },
+   {
+    "text": "4",
+    "level": 0,
+    "emphasis": [],
+    "md": "4",
+    "heading": true,
+    "size": 20.0
+   },
+   {
+    "text": "PCOS is a reproductive-metabolic overlap condition: insulin resistance and hyperandrogenism reinforce one another (Figure 7), which is why metformin and hormonal therapy are frequently combined.",
+    "level": 0,
+    "emphasis": [],
+    "md": "PCOS is a reproductive-metabolic overlap condition: insulin resistance and hyperandrogenism reinforce one another (Figure 7), which is why metformin and hormonal therapy are frequently combined.",
+    "heading": true,
+    "size": 16.5
+   },
+   {
+    "text": "Session 2 (Tuesday, December 1) shifts to autonomic pharmacology of the bladder and lower urinary tract — a mechanistically different topic, but one that shares several cross-system drug-class connections with content already covered in Units 5 and 6.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Session 2 (Tuesday, December 1) shifts to autonomic pharmacology of the bladder and lower urinary tract — a mechanistically different topic, but one that shares several cross-system drug-class connections with content already covered in Units 5 and 6.",
+    "heading": true,
+    "size": 16.5
+   },
+   {
+    "text": "5",
+    "level": 0,
+    "emphasis": [],
+    "md": "5",
+    "heading": true,
+    "size": 20.0
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": "Close Session 1 by previewing Session 2 explicitly — students should leave knowing gonadal hormone pharmacology is complete, and that autonomic/bladder pharmacology picks up next time, with the 5-alpha-reductase inhibitor callback as a concrete bridge.\n\nInstructor script:\n\nPreview Session 2 and the finasteride bridge."
+ },
+ {
+  "slide": 28,
+  "title": "Drug Profiles",
+  "items": [
+   {
+    "text": "Appendix 1",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Appendix 1",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Appendix 1**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Drug Profiles",
+    "level": 0,
+    "emphasis": [],
+    "md": "Drug Profiles",
+    "heading": true,
+    "size": 40.0
+   },
+   {
+    "text": "Study reference for the drugs covered in Session 1",
+    "level": 0,
+    "emphasis": [],
+    "md": "Study reference for the drugs covered in Session 1",
+    "heading": true,
+    "size": 24.0
+   },
+   {
+    "text": "Abbreviation key",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Abbreviation key",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Abbreviation key**",
+    "heading": false,
+    "size": 11.0
+   },
+   {
+    "text": "PO = by mouth",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "PO = by mouth",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**PO = by mouth**",
+    "heading": false,
+    "size": 11.0
+   },
+   {
+    "text": "IM = intramuscular",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "IM = intramuscular",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**IM = intramuscular**",
+    "heading": false,
+    "size": 11.0
+   },
+   {
+    "text": "IV = intravenous",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "IV = intravenous",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**IV = intravenous**",
+    "heading": false,
+    "size": 11.0
+   },
+   {
+    "text": "SC = subcutaneous",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "SC = subcutaneous",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**SC = subcutaneous**",
+    "heading": false,
+    "size": 11.0
+   },
+   {
+    "text": "BID / TID = twice / three times daily",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "BID / TID = twice / three times daily",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**BID / TID = twice / three times daily**",
+    "heading": false,
+    "size": 11.0
+   },
+   {
+    "text": "ER = extended-release",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "ER = extended-release",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**ER = extended-release**",
+    "heading": false,
+    "size": 11.0
+   },
+   {
+    "text": "IUD = intrauterine device",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "IUD = intrauterine device",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**IUD = intrauterine device**",
+    "heading": false,
+    "size": 11.0
+   },
+   {
+    "text": "DMPA = depot medroxyprogesterone acetate",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "DMPA = depot medroxyprogesterone acetate",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**DMPA = depot medroxyprogesterone acetate**",
+    "heading": false,
+    "size": 11.0
+   },
+   {
+    "text": "GnRH = gonadotropin-releasing hormone",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "GnRH = gonadotropin-releasing hormone",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**GnRH = gonadotropin-releasing hormone**",
+    "heading": false,
+    "size": 11.0
+   },
+   {
+    "text": "VTE = venous thromboembolism",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "VTE = venous thromboembolism",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**VTE = venous thromboembolism**",
+    "heading": false,
+    "size": 11.0
+   },
+   {
+    "text": "DVT / PE = deep vein thrombosis / pulmonary embolism",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "DVT / PE = deep vein thrombosis / pulmonary embolism",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**DVT / PE = deep vein thrombosis / pulmonary embolism**",
+    "heading": false,
+    "size": 11.0
+   },
+   {
+    "text": "MI = myocardial infarction",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "MI = myocardial infarction",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**MI = myocardial infarction**",
+    "heading": false,
+    "size": 11.0
+   },
+   {
+    "text": "PCOS = polycystic ovary syndrome",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "PCOS = polycystic ovary syndrome",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**PCOS = polycystic ovary syndrome**",
+    "heading": false,
+    "size": 11.0
+   },
+   {
+    "text": "BPH = benign prostatic hyperplasia",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "BPH = benign prostatic hyperplasia",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**BPH = benign prostatic hyperplasia**",
+    "heading": false,
+    "size": 11.0
+   },
+   {
+    "text": "PSA = prostate-specific antigen",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "PSA = prostate-specific antigen",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**PSA = prostate-specific antigen**",
+    "heading": false,
+    "size": 11.0
+   },
+   {
+    "text": "CBC = complete blood count",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "CBC = complete blood count",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**CBC = complete blood count**",
+    "heading": false,
+    "size": 11.0
+   },
+   {
+    "text": "CYP = cytochrome P450",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "CYP = cytochrome P450",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**CYP = cytochrome P450**",
+    "heading": false,
+    "size": 11.0
+   },
+   {
+    "text": "GI = gastrointestinal",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "GI = gastrointestinal",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**GI = gastrointestinal**",
+    "heading": false,
+    "size": 11.0
+   },
+   {
+    "text": "DCIS = ductal carcinoma in situ",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "DCIS = ductal carcinoma in situ",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**DCIS = ductal carcinoma in situ**",
+    "heading": false,
+    "size": 11.0
+   },
+   {
+    "text": "eGFR / CrCl = estimated glomerular filtration rate / creatinine clearance",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "eGFR / CrCl = estimated glomerular filtration rate / creatinine clearance",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**eGFR / CrCl = estimated glomerular filtration rate / creatinine clearance**",
+    "heading": false,
+    "size": 11.0
+   },
+   {
+    "text": "ER-positive = estrogen receptor-positive",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "ER-positive = estrogen receptor-positive",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**ER-positive = estrogen receptor-positive**",
+    "heading": false,
+    "size": 11.0
+   },
+   {
+    "text": "34",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "34",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**34**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": "Abbreviation key: PO = by mouth; IM = intramuscular; IV = intravenous; SC = subcutaneous; BID / TID = twice / three times daily; ER = extended-release; IUD = intrauterine device; DMPA = depot medroxyprogesterone acetate; GnRH = gonadotropin-releasing hormone; VTE = venous thromboembolism; DVT / PE = deep vein thrombosis / pulmonary embolism; MI = myocardial infarction; PCOS = polycystic ovary syndrome; BPH = benign prostatic hyperplasia; PSA = prostate-specific antigen; CBC = complete blood count; CYP = cytochrome P450; GI = gastrointestinal; DCIS = ductal carcinoma in situ; eGFR / CrCl = estimated glomerular filtration rate / creatinine clearance; ER-positive = estrogen receptor-positive.\n\nInstructor script:\n\nAppendix talk track: Say: \"Use these as a study reference. Know the dose logic, the serious adverse effect, the contraindication that changes decisions and the toxicity you would need to recognize.\"\n\nClass activity (10 minutes): Groups teach back two or three profiles in 60 seconds each.\n\nAbbreviation key: Review PO, DMPA, VTE, PCOS, BPH, PSA and CYP.\n\nTeaching points: Hormones (contraceptives, estradiol), SERMs, aromatase inhibitors, androgens and antiandrogens, 5-ARIs, metformin.\n\nBloom's prompts: Remember: state the tamoxifen dose. Understand: explain why tamoxifen but not raloxifene stimulates the endometrium. Apply: counsel a woman starting rifampin on a combined pill. Analyze: explain bone loss on an aromatase inhibitor. Evaluate: choose therapy for a smoker with PCOS."
+ },
+ {
+  "slide": 29,
+  "title": "Combined oral contraceptives (ethinyl estradiol plus a progestin)",
+  "items": [
+   {
+    "text": "DRUG PROFILE",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "DRUG PROFILE",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**DRUG PROFILE**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Combined oral contraceptives (ethinyl estradiol plus a progestin)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Combined oral contraceptives (ethinyl estradiol plus a progestin)",
+    "heading": true,
+    "size": 30.0
+   },
+   {
+    "text": "ESTROGEN PLUS PROGESTIN",
+    "level": 0,
+    "emphasis": [],
+    "md": "ESTROGEN PLUS PROGESTIN",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "FORMULATION",
+    "level": 0,
+    "emphasis": [],
+    "md": "FORMULATION",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Tablets (21/28-day packs); patch; vaginal ring",
+    "level": 0,
+    "emphasis": [],
+    "md": "Tablets (21/28-day packs); patch; vaginal ring",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "DOSE (ADULT)",
+    "level": 0,
+    "emphasis": [],
+    "md": "DOSE (ADULT)",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Ethinyl estradiol 20-35 mcg plus a progestin PO daily; patch weekly for 3 weeks; ring 3 weeks in, 1 week out",
+    "level": 0,
+    "emphasis": [],
+    "md": "Ethinyl estradiol 20-35 mcg plus a progestin PO daily; patch weekly for 3 weeks; ring 3 weeks in, 1 week out",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "INDICATIONS",
+    "level": 0,
+    "emphasis": [],
+    "md": "INDICATIONS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Contraception, cycle control, dysmenorrhea, acne",
+    "level": 0,
+    "emphasis": [],
+    "md": "Contraception, cycle control, dysmenorrhea, acne",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "ADVERSE EFFECTS",
+    "level": 0,
+    "emphasis": [],
+    "md": "ADVERSE EFFECTS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Nausea, breast tenderness, breakthrough bleeding, headache",
+    "level": 0,
+    "emphasis": [],
+    "md": "Nausea, breast tenderness, breakthrough bleeding, headache",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "CONTRAINDICATIONS",
+    "level": 0,
+    "emphasis": [],
+    "md": "CONTRAINDICATIONS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "VTE or stroke history, smoker 35 or older, migraine with aura, estrogen-sensitive cancer, uncontrolled hypertension, liver disease",
+    "level": 0,
+    "emphasis": [],
+    "md": "VTE or stroke history, smoker 35 or older, migraine with aura, estrogen-sensitive cancer, uncontrolled hypertension, liver disease",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "TOXICITY / OVERDOSE",
+    "level": 0,
+    "emphasis": [],
+    "md": "TOXICITY / OVERDOSE",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "VTE, stroke and MI risk; hyperkalemia with drospirenone; rifampin and some antiepileptics lower efficacy",
+    "level": 0,
+    "emphasis": [],
+    "md": "VTE, stroke and MI risk; hyperkalemia with drospirenone; rifampin and some antiepileptics lower efficacy",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "35",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "35",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**35**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": "Drug: Combined oral contraceptives (ethinyl estradiol plus a progestin)\n\nClass: Estrogen plus progestin\n\nFormulation: Tablets (21/28-day packs); patch; vaginal ring\n\nAdult dose: Ethinyl estradiol 20-35 mcg plus a progestin PO daily; patch weekly for 3 weeks; ring 3 weeks in, 1 week out\n\nIndications: Contraception, cycle control, dysmenorrhea, acne\n\nAdverse effects: Nausea, breast tenderness, breakthrough bleeding, headache\n\nContraindications: VTE or stroke history, smoker 35 or older, migraine with aura, estrogen-sensitive cancer, uncontrolled hypertension, liver disease\n\nToxicity / overdose: VTE, stroke and MI risk; hyperkalemia with drospirenone; rifampin and some antiepileptics lower efficacy"
+ },
+ {
+  "slide": 30,
+  "title": "Norethindrone (progestin-only pill)",
+  "items": [
+   {
+    "text": "DRUG PROFILE",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "DRUG PROFILE",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**DRUG PROFILE**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Norethindrone (progestin-only pill)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Norethindrone (progestin-only pill)",
+    "heading": true,
+    "size": 30.0
+   },
+   {
+    "text": "PROGESTIN",
+    "level": 0,
+    "emphasis": [],
+    "md": "PROGESTIN",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "FORMULATION",
+    "level": 0,
+    "emphasis": [],
+    "md": "FORMULATION",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Tablet 0.35 mg",
+    "level": 0,
+    "emphasis": [],
+    "md": "Tablet 0.35 mg",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "DOSE (ADULT)",
+    "level": 0,
+    "emphasis": [],
+    "md": "DOSE (ADULT)",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "0.35 mg PO daily at the same time, with no pill-free days",
+    "level": 0,
+    "emphasis": [],
+    "md": "0.35 mg PO daily at the same time, with no pill-free days",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "INDICATIONS",
+    "level": 0,
+    "emphasis": [],
+    "md": "INDICATIONS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Contraception when estrogen is contraindicated, breastfeeding",
+    "level": 0,
+    "emphasis": [],
+    "md": "Contraception when estrogen is contraindicated, breastfeeding",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "ADVERSE EFFECTS",
+    "level": 0,
+    "emphasis": [],
+    "md": "ADVERSE EFFECTS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Irregular bleeding, headache, acne, breast tenderness",
+    "level": 0,
+    "emphasis": [],
+    "md": "Irregular bleeding, headache, acne, breast tenderness",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "CONTRAINDICATIONS",
+    "level": 0,
+    "emphasis": [],
+    "md": "CONTRAINDICATIONS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Breast cancer, undiagnosed vaginal bleeding, liver tumor",
+    "level": 0,
+    "emphasis": [],
+    "md": "Breast cancer, undiagnosed vaginal bleeding, liver tumor",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "TOXICITY / OVERDOSE",
+    "level": 0,
+    "emphasis": [],
+    "md": "TOXICITY / OVERDOSE",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Efficacy falls if a dose is more than 3 hours late; ectopic pregnancy risk if it fails",
+    "level": 0,
+    "emphasis": [],
+    "md": "Efficacy falls if a dose is more than 3 hours late; ectopic pregnancy risk if it fails",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "36",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "36",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**36**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": "Drug: Norethindrone (progestin-only pill)\n\nClass: Progestin\n\nFormulation: Tablet 0.35 mg\n\nAdult dose: 0.35 mg PO daily at the same time, with no pill-free days\n\nIndications: Contraception when estrogen is contraindicated, breastfeeding\n\nAdverse effects: Irregular bleeding, headache, acne, breast tenderness\n\nContraindications: Breast cancer, undiagnosed vaginal bleeding, liver tumor\n\nToxicity / overdose: Efficacy falls if a dose is more than 3 hours late; ectopic pregnancy risk if it fails"
+ },
+ {
+  "slide": 31,
+  "title": "Medroxyprogesterone depot (Depo-Provera)",
+  "items": [
+   {
+    "text": "DRUG PROFILE",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "DRUG PROFILE",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**DRUG PROFILE**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Medroxyprogesterone depot (Depo-Provera)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Medroxyprogesterone depot (Depo-Provera)",
+    "heading": true,
+    "size": 30.0
+   },
+   {
+    "text": "INJECTABLE PROGESTIN",
+    "level": 0,
+    "emphasis": [],
+    "md": "INJECTABLE PROGESTIN",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "FORMULATION",
+    "level": 0,
+    "emphasis": [],
+    "md": "FORMULATION",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "IM 150 mg/mL; SC 104 mg/0.65 mL",
+    "level": 0,
+    "emphasis": [],
+    "md": "IM 150 mg/mL; SC 104 mg/0.65 mL",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "DOSE (ADULT)",
+    "level": 0,
+    "emphasis": [],
+    "md": "DOSE (ADULT)",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "150 mg IM (or 104 mg SC) every 12-13 weeks",
+    "level": 0,
+    "emphasis": [],
+    "md": "150 mg IM (or 104 mg SC) every 12-13 weeks",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "INDICATIONS",
+    "level": 0,
+    "emphasis": [],
+    "md": "INDICATIONS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Contraception, endometriosis pain, endometrial protection",
+    "level": 0,
+    "emphasis": [],
+    "md": "Contraception, endometriosis pain, endometrial protection",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "ADVERSE EFFECTS",
+    "level": 0,
+    "emphasis": [],
+    "md": "ADVERSE EFFECTS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Irregular bleeding, weight gain, delayed return of fertility",
+    "level": 0,
+    "emphasis": [],
+    "md": "Irregular bleeding, weight gain, delayed return of fertility",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "CONTRAINDICATIONS",
+    "level": 0,
+    "emphasis": [],
+    "md": "CONTRAINDICATIONS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Breast cancer, pregnancy, unexplained vaginal bleeding",
+    "level": 0,
+    "emphasis": [],
+    "md": "Breast cancer, pregnancy, unexplained vaginal bleeding",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "TOXICITY / OVERDOSE",
+    "level": 0,
+    "emphasis": [],
+    "md": "TOXICITY / OVERDOSE",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Boxed warning: loss of bone mineral density; limit prolonged use; VTE",
+    "level": 0,
+    "emphasis": [],
+    "md": "Boxed warning: loss of bone mineral density; limit prolonged use; VTE",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "37",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "37",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**37**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": "Drug: Medroxyprogesterone depot (Depo-Provera)\n\nClass: Injectable progestin\n\nFormulation: IM 150 mg/mL; SC 104 mg/0.65 mL\n\nAdult dose: 150 mg IM (or 104 mg SC) every 12-13 weeks\n\nIndications: Contraception, endometriosis pain, endometrial protection\n\nAdverse effects: Irregular bleeding, weight gain, delayed return of fertility\n\nContraindications: Breast cancer, pregnancy, unexplained vaginal bleeding\n\nToxicity / overdose: Boxed warning: loss of bone mineral density; limit prolonged use; VTE"
+ },
+ {
+  "slide": 32,
+  "title": "Levonorgestrel IUD (Mirena)",
+  "items": [
+   {
+    "text": "DRUG PROFILE",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "DRUG PROFILE",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**DRUG PROFILE**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Levonorgestrel IUD (Mirena)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Levonorgestrel IUD (Mirena)",
+    "heading": true,
+    "size": 30.0
+   },
+   {
+    "text": "INTRAUTERINE PROGESTIN",
+    "level": 0,
+    "emphasis": [],
+    "md": "INTRAUTERINE PROGESTIN",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "FORMULATION",
+    "level": 0,
+    "emphasis": [],
+    "md": "FORMULATION",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Intrauterine system 52 mg (about 20 mcg/day)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Intrauterine system 52 mg (about 20 mcg/day)",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "DOSE (ADULT)",
+    "level": 0,
+    "emphasis": [],
+    "md": "DOSE (ADULT)",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "One system placed in the uterus; effective up to 8 years for contraception",
+    "level": 0,
+    "emphasis": [],
+    "md": "One system placed in the uterus; effective up to 8 years for contraception",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "INDICATIONS",
+    "level": 0,
+    "emphasis": [],
+    "md": "INDICATIONS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Contraception, heavy menstrual bleeding, endometrial protection",
+    "level": 0,
+    "emphasis": [],
+    "md": "Contraception, heavy menstrual bleeding, endometrial protection",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "ADVERSE EFFECTS",
+    "level": 0,
+    "emphasis": [],
+    "md": "ADVERSE EFFECTS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Irregular spotting, amenorrhea, ovarian cysts, pelvic pain",
+    "level": 0,
+    "emphasis": [],
+    "md": "Irregular spotting, amenorrhea, ovarian cysts, pelvic pain",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "CONTRAINDICATIONS",
+    "level": 0,
+    "emphasis": [],
+    "md": "CONTRAINDICATIONS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Pregnancy, pelvic infection, uterine anomaly, breast cancer",
+    "level": 0,
+    "emphasis": [],
+    "md": "Pregnancy, pelvic infection, uterine anomaly, breast cancer",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "TOXICITY / OVERDOSE",
+    "level": 0,
+    "emphasis": [],
+    "md": "TOXICITY / OVERDOSE",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Uterine perforation, expulsion, infection; check strings",
+    "level": 0,
+    "emphasis": [],
+    "md": "Uterine perforation, expulsion, infection; check strings",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "38",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "38",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**38**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": "Drug: Levonorgestrel IUD (Mirena)\n\nClass: Intrauterine progestin\n\nFormulation: Intrauterine system 52 mg (about 20 mcg/day)\n\nAdult dose: One system placed in the uterus; effective up to 8 years for contraception\n\nIndications: Contraception, heavy menstrual bleeding, endometrial protection\n\nAdverse effects: Irregular spotting, amenorrhea, ovarian cysts, pelvic pain\n\nContraindications: Pregnancy, pelvic infection, uterine anomaly, breast cancer\n\nToxicity / overdose: Uterine perforation, expulsion, infection; check strings"
+ },
+ {
+  "slide": 33,
+  "title": "Estradiol (Estrace, Vivelle-Dot)",
+  "items": [
+   {
+    "text": "DRUG PROFILE",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "DRUG PROFILE",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**DRUG PROFILE**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Estradiol (Estrace, Vivelle-Dot)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Estradiol (Estrace, Vivelle-Dot)",
+    "heading": true,
+    "size": 30.0
+   },
+   {
+    "text": "ESTROGEN",
+    "level": 0,
+    "emphasis": [],
+    "md": "ESTROGEN",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "FORMULATION",
+    "level": 0,
+    "emphasis": [],
+    "md": "FORMULATION",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Oral tablets 0.5/1/2 mg; transdermal patch 0.025-0.1 mg/day; vaginal cream, tablet or ring; injectable valerate",
+    "level": 0,
+    "emphasis": [],
+    "md": "Oral tablets 0.5/1/2 mg; transdermal patch 0.025-0.1 mg/day; vaginal cream, tablet or ring; injectable valerate",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "DOSE (ADULT)",
+    "level": 0,
+    "emphasis": [],
+    "md": "DOSE (ADULT)",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Menopausal symptoms: 1-2 mg PO daily or patch 0.05 mg/day twice weekly, lowest effective dose; add a progestin if the uterus is intact",
+    "level": 0,
+    "emphasis": [],
+    "md": "Menopausal symptoms: 1-2 mg PO daily or patch 0.05 mg/day twice weekly, lowest effective dose; add a progestin if the uterus is intact",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "INDICATIONS",
+    "level": 0,
+    "emphasis": [],
+    "md": "INDICATIONS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Menopausal vasomotor symptoms, genitourinary syndrome of menopause, hypoestrogenism, prevention of osteoporosis (when other agents unsuitable)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Menopausal vasomotor symptoms, genitourinary syndrome of menopause, hypoestrogenism, prevention of osteoporosis (when other agents unsuitable)",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "ADVERSE EFFECTS",
+    "level": 0,
+    "emphasis": [],
+    "md": "ADVERSE EFFECTS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Breast tenderness, nausea, headache, VTE, stroke, endometrial hyperplasia (unopposed), gallbladder disease",
+    "level": 0,
+    "emphasis": [],
+    "md": "Breast tenderness, nausea, headache, VTE, stroke, endometrial hyperplasia (unopposed), gallbladder disease",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "CONTRAINDICATIONS",
+    "level": 0,
+    "emphasis": [],
+    "md": "CONTRAINDICATIONS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "History of VTE or stroke, estrogen-sensitive cancer, undiagnosed vaginal bleeding, active liver disease, pregnancy",
+    "level": 0,
+    "emphasis": [],
+    "md": "History of VTE or stroke, estrogen-sensitive cancer, undiagnosed vaginal bleeding, active liver disease, pregnancy",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "TOXICITY / OVERDOSE",
+    "level": 0,
+    "emphasis": [],
+    "md": "TOXICITY / OVERDOSE",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Nausea, vomiting, withdrawal bleeding; long-term risk of VTE, stroke, breast cancer; endometrial cancer if unopposed",
+    "level": 0,
+    "emphasis": [],
+    "md": "Nausea, vomiting, withdrawal bleeding; long-term risk of VTE, stroke, breast cancer; endometrial cancer if unopposed",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "39",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "39",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**39**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": "Drug: Estradiol (Estrace, Vivelle-Dot)\n\nClass: Estrogen\n\nFormulation: Oral tablets 0.5/1/2 mg; transdermal patch 0.025-0.1 mg/day; vaginal cream, tablet or ring; injectable valerate\n\nAdult dose: Menopausal symptoms: 1-2 mg PO daily or patch 0.05 mg/day twice weekly, lowest effective dose; add a progestin if the uterus is intact\n\nIndications: Menopausal vasomotor symptoms, genitourinary syndrome of menopause, hypoestrogenism, prevention of osteoporosis (when other agents unsuitable)\n\nAdverse effects: Breast tenderness, nausea, headache, VTE, stroke, endometrial hyperplasia (unopposed), gallbladder disease\n\nContraindications: History of VTE or stroke, estrogen-sensitive cancer, undiagnosed vaginal bleeding, active liver disease, pregnancy\n\nToxicity / overdose: Nausea, vomiting, withdrawal bleeding; long-term risk of VTE, stroke, breast cancer; endometrial cancer if unopposed"
+ },
+ {
+  "slide": 34,
+  "title": "Tamoxifen (Nolvadex)",
+  "items": [
+   {
+    "text": "DRUG PROFILE",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "DRUG PROFILE",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**DRUG PROFILE**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Tamoxifen (Nolvadex)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Tamoxifen (Nolvadex)",
+    "heading": true,
+    "size": 30.0
+   },
+   {
+    "text": "SELECTIVE ESTROGEN-RECEPTOR MODULATOR",
+    "level": 0,
+    "emphasis": [],
+    "md": "SELECTIVE ESTROGEN-RECEPTOR MODULATOR",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "FORMULATION",
+    "level": 0,
+    "emphasis": [],
+    "md": "FORMULATION",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Tablet 10/20 mg",
+    "level": 0,
+    "emphasis": [],
+    "md": "Tablet 10/20 mg",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "DOSE (ADULT)",
+    "level": 0,
+    "emphasis": [],
+    "md": "DOSE (ADULT)",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "20 mg PO daily for 5-10 years in breast cancer",
+    "level": 0,
+    "emphasis": [],
+    "md": "20 mg PO daily for 5-10 years in breast cancer",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "INDICATIONS",
+    "level": 0,
+    "emphasis": [],
+    "md": "INDICATIONS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Breast cancer treatment and risk reduction, DCIS",
+    "level": 0,
+    "emphasis": [],
+    "md": "Breast cancer treatment and risk reduction, DCIS",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "ADVERSE EFFECTS",
+    "level": 0,
+    "emphasis": [],
+    "md": "ADVERSE EFFECTS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Hot flashes, vaginal discharge, menstrual irregularity",
+    "level": 0,
+    "emphasis": [],
+    "md": "Hot flashes, vaginal discharge, menstrual irregularity",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "CONTRAINDICATIONS",
+    "level": 0,
+    "emphasis": [],
+    "md": "CONTRAINDICATIONS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "History of DVT or PE, pregnancy, warfarin (for risk-reduction use)",
+    "level": 0,
+    "emphasis": [],
+    "md": "History of DVT or PE, pregnancy, warfarin (for risk-reduction use)",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "TOXICITY / OVERDOSE",
+    "level": 0,
+    "emphasis": [],
+    "md": "TOXICITY / OVERDOSE",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Endometrial cancer, VTE, stroke, cataracts; CYP2D6 inhibitors (paroxetine, fluoxetine) reduce activation",
+    "level": 0,
+    "emphasis": [],
+    "md": "Endometrial cancer, VTE, stroke, cataracts; CYP2D6 inhibitors (paroxetine, fluoxetine) reduce activation",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "40",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "40",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**40**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": "Drug: Tamoxifen (Nolvadex)\n\nClass: Selective estrogen-receptor modulator\n\nFormulation: Tablet 10/20 mg\n\nAdult dose: 20 mg PO daily for 5-10 years in breast cancer\n\nIndications: Breast cancer treatment and risk reduction, DCIS\n\nAdverse effects: Hot flashes, vaginal discharge, menstrual irregularity\n\nContraindications: History of DVT or PE, pregnancy, warfarin (for risk-reduction use)\n\nToxicity / overdose: Endometrial cancer, VTE, stroke, cataracts; CYP2D6 inhibitors (paroxetine, fluoxetine) reduce activation"
+ },
+ {
+  "slide": 35,
+  "title": "Raloxifene (Evista)",
+  "items": [
+   {
+    "text": "DRUG PROFILE",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "DRUG PROFILE",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**DRUG PROFILE**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Raloxifene (Evista)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Raloxifene (Evista)",
+    "heading": true,
+    "size": 30.0
+   },
+   {
+    "text": "SELECTIVE ESTROGEN-RECEPTOR MODULATOR",
+    "level": 0,
+    "emphasis": [],
+    "md": "SELECTIVE ESTROGEN-RECEPTOR MODULATOR",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "FORMULATION",
+    "level": 0,
+    "emphasis": [],
+    "md": "FORMULATION",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Tablet 60 mg",
+    "level": 0,
+    "emphasis": [],
+    "md": "Tablet 60 mg",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "DOSE (ADULT)",
+    "level": 0,
+    "emphasis": [],
+    "md": "DOSE (ADULT)",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "60 mg PO daily",
+    "level": 0,
+    "emphasis": [],
+    "md": "60 mg PO daily",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "INDICATIONS",
+    "level": 0,
+    "emphasis": [],
+    "md": "INDICATIONS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Postmenopausal osteoporosis treatment and prevention, breast cancer risk reduction",
+    "level": 0,
+    "emphasis": [],
+    "md": "Postmenopausal osteoporosis treatment and prevention, breast cancer risk reduction",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "ADVERSE EFFECTS",
+    "level": 0,
+    "emphasis": [],
+    "md": "ADVERSE EFFECTS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Hot flashes, leg cramps, peripheral edema",
+    "level": 0,
+    "emphasis": [],
+    "md": "Hot flashes, leg cramps, peripheral edema",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "CONTRAINDICATIONS",
+    "level": 0,
+    "emphasis": [],
+    "md": "CONTRAINDICATIONS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "VTE history, pregnancy",
+    "level": 0,
+    "emphasis": [],
+    "md": "VTE history, pregnancy",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "TOXICITY / OVERDOSE",
+    "level": 0,
+    "emphasis": [],
+    "md": "TOXICITY / OVERDOSE",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Boxed warning: VTE and fatal stroke risk; does not stimulate the endometrium",
+    "level": 0,
+    "emphasis": [],
+    "md": "Boxed warning: VTE and fatal stroke risk; does not stimulate the endometrium",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Standard adult dosing for teaching; verify against current prescribing information.**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "41",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "41",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**41**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": "Drug: Raloxifene (Evista)\n\nClass: Selective estrogen-receptor modulator\n\nFormulation: Tablet 60 mg\n\nAdult dose: 60 mg PO daily\n\nIndications: Postmenopausal osteoporosis treatment and prevention, breast cancer risk reduction\n\nAdverse effects: Hot flashes, leg cramps, peripheral edema\n\nContraindications: VTE history, pregnancy\n\nToxicity / overdose: Boxed warning: VTE and fatal stroke risk; does not stimulate the endometrium"
+ },
+ {
+  "slide": 36,
+  "title": "Anastrozole (Arimidex)",
+  "items": [
+   {
+    "text": "DRUG PROFILE",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "DRUG PROFILE",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**DRUG PROFILE**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Anastrozole (Arimidex)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Anastrozole (Arimidex)",
+    "heading": true,
+    "size": 30.0
+   },
+   {
+    "text": "AROMATASE INHIBITOR",
+    "level": 0,
+    "emphasis": [],
+    "md": "AROMATASE INHIBITOR",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "FORMULATION",
+    "level": 0,
+    "emphasis": [],
+    "md": "FORMULATION",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Tablets 1 mg",
+    "level": 0,
+    "emphasis": [],
+    "md": "Tablets 1 mg",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "DOSE (ADULT)",
+    "level": 0,
+    "emphasis": [],
+    "md": "DOSE (ADULT)",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "1 mg PO once daily, usually for 5 years or more",
+    "level": 0,
+    "emphasis": [],
+    "md": "1 mg PO once daily, usually for 5 years or more",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "INDICATIONS",
+    "level": 0,
+    "emphasis": [],
+    "md": "INDICATIONS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Adjuvant and metastatic hormone receptor-positive breast cancer in postmenopausal women",
+    "level": 0,
+    "emphasis": [],
+    "md": "Adjuvant and metastatic hormone receptor-positive breast cancer in postmenopausal women",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "ADVERSE EFFECTS",
+    "level": 0,
+    "emphasis": [],
+    "md": "ADVERSE EFFECTS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Hot flashes, joint pain, bone loss, osteoporosis, mood changes, hypercholesterolemia",
+    "level": 0,
+    "emphasis": [],
+    "md": "Hot flashes, joint pain, bone loss, osteoporosis, mood changes, hypercholesterolemia",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "CONTRAINDICATIONS",
+    "level": 0,
+    "emphasis": [],
+    "md": "CONTRAINDICATIONS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Pregnancy; ineffective in premenopausal women unless ovarian function is suppressed",
+    "level": 0,
+    "emphasis": [],
+    "md": "Pregnancy; ineffective in premenopausal women unless ovarian function is suppressed",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "TOXICITY / OVERDOSE",
+    "level": 0,
+    "emphasis": [],
+    "md": "TOXICITY / OVERDOSE",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Bone loss and fractures; monitor bone density and lipids; overdose causes mainly GI upset",
+    "level": 0,
+    "emphasis": [],
+    "md": "Bone loss and fractures; monitor bone density and lipids; overdose causes mainly GI upset",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "42",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "42",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**42**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": "Drug: Anastrozole (Arimidex)\n\nClass: Aromatase inhibitor\n\nFormulation: Tablets 1 mg\n\nAdult dose: 1 mg PO once daily, usually for 5 years or more\n\nIndications: Adjuvant and metastatic hormone receptor-positive breast cancer in postmenopausal women\n\nAdverse effects: Hot flashes, joint pain, bone loss, osteoporosis, mood changes, hypercholesterolemia\n\nContraindications: Pregnancy; ineffective in premenopausal women unless ovarian function is suppressed\n\nToxicity / overdose: Bone loss and fractures; monitor bone density and lipids; overdose causes mainly GI upset"
+ },
+ {
+  "slide": 37,
+  "title": "Letrozole (Femara)",
+  "items": [
+   {
+    "text": "DRUG PROFILE",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "DRUG PROFILE",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**DRUG PROFILE**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Letrozole (Femara)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Letrozole (Femara)",
+    "heading": true,
+    "size": 30.0
+   },
+   {
+    "text": "AROMATASE INHIBITOR",
+    "level": 0,
+    "emphasis": [],
+    "md": "AROMATASE INHIBITOR",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "FORMULATION",
+    "level": 0,
+    "emphasis": [],
+    "md": "FORMULATION",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Tablets 2.5 mg",
+    "level": 0,
+    "emphasis": [],
+    "md": "Tablets 2.5 mg",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "DOSE (ADULT)",
+    "level": 0,
+    "emphasis": [],
+    "md": "DOSE (ADULT)",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "2.5 mg PO once daily, up to 5 years or extended therapy",
+    "level": 0,
+    "emphasis": [],
+    "md": "2.5 mg PO once daily, up to 5 years or extended therapy",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "INDICATIONS",
+    "level": 0,
+    "emphasis": [],
+    "md": "INDICATIONS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Hormone receptor-positive breast cancer in postmenopausal women; off-label ovulation induction",
+    "level": 0,
+    "emphasis": [],
+    "md": "Hormone receptor-positive breast cancer in postmenopausal women; off-label ovulation induction",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "ADVERSE EFFECTS",
+    "level": 0,
+    "emphasis": [],
+    "md": "ADVERSE EFFECTS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Hot flashes, arthralgia, osteoporosis, fatigue, hypercholesterolemia",
+    "level": 0,
+    "emphasis": [],
+    "md": "Hot flashes, arthralgia, osteoporosis, fatigue, hypercholesterolemia",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "CONTRAINDICATIONS",
+    "level": 0,
+    "emphasis": [],
+    "md": "CONTRAINDICATIONS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Pregnancy; premenopausal status without ovarian suppression",
+    "level": 0,
+    "emphasis": [],
+    "md": "Pregnancy; premenopausal status without ovarian suppression",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "TOXICITY / OVERDOSE",
+    "level": 0,
+    "emphasis": [],
+    "md": "TOXICITY / OVERDOSE",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Bone loss and fractures; monitor bone density; nonspecific toxicity in overdose",
+    "level": 0,
+    "emphasis": [],
+    "md": "Bone loss and fractures; monitor bone density; nonspecific toxicity in overdose",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "43",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "43",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**43**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": "Drug: Letrozole (Femara)\n\nClass: Aromatase inhibitor\n\nFormulation: Tablets 2.5 mg\n\nAdult dose: 2.5 mg PO once daily, up to 5 years or extended therapy\n\nIndications: Hormone receptor-positive breast cancer in postmenopausal women; off-label ovulation induction\n\nAdverse effects: Hot flashes, arthralgia, osteoporosis, fatigue, hypercholesterolemia\n\nContraindications: Pregnancy; premenopausal status without ovarian suppression\n\nToxicity / overdose: Bone loss and fractures; monitor bone density; nonspecific toxicity in overdose"
+ },
+ {
+  "slide": 38,
+  "title": "Testosterone (cypionate, gel, patch)",
+  "items": [
+   {
+    "text": "DRUG PROFILE",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "DRUG PROFILE",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**DRUG PROFILE**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Testosterone (cypionate, gel, patch)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Testosterone (cypionate, gel, patch)",
+    "heading": true,
+    "size": 30.0
+   },
+   {
+    "text": "ANDROGEN",
+    "level": 0,
+    "emphasis": [],
+    "md": "ANDROGEN",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "FORMULATION",
+    "level": 0,
+    "emphasis": [],
+    "md": "FORMULATION",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "IM cypionate or enanthate 100-200 mg/mL; gel; patch; pellets",
+    "level": 0,
+    "emphasis": [],
+    "md": "IM cypionate or enanthate 100-200 mg/mL; gel; patch; pellets",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "DOSE (ADULT)",
+    "level": 0,
+    "emphasis": [],
+    "md": "DOSE (ADULT)",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Cypionate 100-200 mg IM every 2 weeks (or 50-100 mg weekly); gel 50-100 mg daily",
+    "level": 0,
+    "emphasis": [],
+    "md": "Cypionate 100-200 mg IM every 2 weeks (or 50-100 mg weekly); gel 50-100 mg daily",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "INDICATIONS",
+    "level": 0,
+    "emphasis": [],
+    "md": "INDICATIONS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Male hypogonadism, delayed puberty",
+    "level": 0,
+    "emphasis": [],
+    "md": "Male hypogonadism, delayed puberty",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "ADVERSE EFFECTS",
+    "level": 0,
+    "emphasis": [],
+    "md": "ADVERSE EFFECTS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Acne, erythrocytosis, sleep apnea, gynecomastia, testicular atrophy",
+    "level": 0,
+    "emphasis": [],
+    "md": "Acne, erythrocytosis, sleep apnea, gynecomastia, testicular atrophy",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "CONTRAINDICATIONS",
+    "level": 0,
+    "emphasis": [],
+    "md": "CONTRAINDICATIONS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Prostate or breast cancer, polycythemia, pregnancy",
+    "level": 0,
+    "emphasis": [],
+    "md": "Prostate or breast cancer, polycythemia, pregnancy",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "TOXICITY / OVERDOSE",
+    "level": 0,
+    "emphasis": [],
+    "md": "TOXICITY / OVERDOSE",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Erythrocytosis, thrombosis, secondary exposure with gels; monitor hematocrit, PSA, lipids",
+    "level": 0,
+    "emphasis": [],
+    "md": "Erythrocytosis, thrombosis, secondary exposure with gels; monitor hematocrit, PSA, lipids",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "44",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "44",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**44**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": "Drug: Testosterone (cypionate, gel, patch)\n\nClass: Androgen\n\nFormulation: IM cypionate or enanthate 100-200 mg/mL; gel; patch; pellets\n\nAdult dose: Cypionate 100-200 mg IM every 2 weeks (or 50-100 mg weekly); gel 50-100 mg daily\n\nIndications: Male hypogonadism, delayed puberty\n\nAdverse effects: Acne, erythrocytosis, sleep apnea, gynecomastia, testicular atrophy\n\nContraindications: Prostate or breast cancer, polycythemia, pregnancy\n\nToxicity / overdose: Erythrocytosis, thrombosis, secondary exposure with gels; monitor hematocrit, PSA, lipids"
+ },
+ {
+  "slide": 39,
+  "title": "Spironolactone (Aldactone)",
+  "items": [
+   {
+    "text": "DRUG PROFILE",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "DRUG PROFILE",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**DRUG PROFILE**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Spironolactone (Aldactone)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Spironolactone (Aldactone)",
+    "heading": true,
+    "size": 30.0
+   },
+   {
+    "text": "ALDOSTERONE ANTAGONIST WITH ANTIANDROGEN ACTIVITY",
+    "level": 0,
+    "emphasis": [],
+    "md": "ALDOSTERONE ANTAGONIST WITH ANTIANDROGEN ACTIVITY",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "FORMULATION",
+    "level": 0,
+    "emphasis": [],
+    "md": "FORMULATION",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Tablets 25/50/100 mg",
+    "level": 0,
+    "emphasis": [],
+    "md": "Tablets 25/50/100 mg",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "DOSE (ADULT)",
+    "level": 0,
+    "emphasis": [],
+    "md": "DOSE (ADULT)",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Hirsutism or acne (off-label): 50-200 mg PO daily in divided doses; hypertension and heart failure per cardiology dosing",
+    "level": 0,
+    "emphasis": [],
+    "md": "Hirsutism or acne (off-label): 50-200 mg PO daily in divided doses; hypertension and heart failure per cardiology dosing",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "INDICATIONS",
+    "level": 0,
+    "emphasis": [],
+    "md": "INDICATIONS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Hirsutism and acne in PCOS (off-label), resistant hypertension, heart failure, primary hyperaldosteronism",
+    "level": 0,
+    "emphasis": [],
+    "md": "Hirsutism and acne in PCOS (off-label), resistant hypertension, heart failure, primary hyperaldosteronism",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "ADVERSE EFFECTS",
+    "level": 0,
+    "emphasis": [],
+    "md": "ADVERSE EFFECTS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Hyperkalemia, menstrual irregularity, breast tenderness, dizziness, gynecomastia in men",
+    "level": 0,
+    "emphasis": [],
+    "md": "Hyperkalemia, menstrual irregularity, breast tenderness, dizziness, gynecomastia in men",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "CONTRAINDICATIONS",
+    "level": 0,
+    "emphasis": [],
+    "md": "CONTRAINDICATIONS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Hyperkalemia, Addison disease, anuria, pregnancy (feminization of a male fetus), concurrent potassium supplements",
+    "level": 0,
+    "emphasis": [],
+    "md": "Hyperkalemia, Addison disease, anuria, pregnancy (feminization of a male fetus), concurrent potassium supplements",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "TOXICITY / OVERDOSE",
+    "level": 0,
+    "emphasis": [],
+    "md": "TOXICITY / OVERDOSE",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Life-threatening hyperkalemia, especially with CKD or ACE inhibitors or ARBs; monitor potassium; effective contraception needed",
+    "level": 0,
+    "emphasis": [],
+    "md": "Life-threatening hyperkalemia, especially with CKD or ACE inhibitors or ARBs; monitor potassium; effective contraception needed",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "45",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "45",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**45**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": "Drug: Spironolactone (Aldactone)\n\nClass: Aldosterone antagonist with antiandrogen activity\n\nFormulation: Tablets 25/50/100 mg\n\nAdult dose: Hirsutism or acne (off-label): 50-200 mg PO daily in divided doses; hypertension and heart failure per cardiology dosing\n\nIndications: Hirsutism and acne in PCOS (off-label), resistant hypertension, heart failure, primary hyperaldosteronism\n\nAdverse effects: Hyperkalemia, menstrual irregularity, breast tenderness, dizziness, gynecomastia in men\n\nContraindications: Hyperkalemia, Addison disease, anuria, pregnancy (feminization of a male fetus), concurrent potassium supplements\n\nToxicity / overdose: Life-threatening hyperkalemia, especially with CKD or ACE inhibitors or ARBs; monitor potassium; effective contraception needed"
+ },
+ {
+  "slide": 40,
+  "title": "Flutamide (Eulexin)",
+  "items": [
+   {
+    "text": "DRUG PROFILE",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "DRUG PROFILE",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**DRUG PROFILE**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Flutamide (Eulexin)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Flutamide (Eulexin)",
+    "heading": true,
+    "size": 30.0
+   },
+   {
+    "text": "NONSTEROIDAL ANTIANDROGEN",
+    "level": 0,
+    "emphasis": [],
+    "md": "NONSTEROIDAL ANTIANDROGEN",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "FORMULATION",
+    "level": 0,
+    "emphasis": [],
+    "md": "FORMULATION",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Capsules 125 mg",
+    "level": 0,
+    "emphasis": [],
+    "md": "Capsules 125 mg",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "DOSE (ADULT)",
+    "level": 0,
+    "emphasis": [],
+    "md": "DOSE (ADULT)",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "250 mg PO three times daily, given with a GnRH agonist in prostate cancer",
+    "level": 0,
+    "emphasis": [],
+    "md": "250 mg PO three times daily, given with a GnRH agonist in prostate cancer",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "INDICATIONS",
+    "level": 0,
+    "emphasis": [],
+    "md": "INDICATIONS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Metastatic prostate cancer in combination with a GnRH agonist",
+    "level": 0,
+    "emphasis": [],
+    "md": "Metastatic prostate cancer in combination with a GnRH agonist",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "ADVERSE EFFECTS",
+    "level": 0,
+    "emphasis": [],
+    "md": "ADVERSE EFFECTS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Hot flashes, gynecomastia, diarrhea, hepatotoxicity, methemoglobinemia",
+    "level": 0,
+    "emphasis": [],
+    "md": "Hot flashes, gynecomastia, diarrhea, hepatotoxicity, methemoglobinemia",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "CONTRAINDICATIONS",
+    "level": 0,
+    "emphasis": [],
+    "md": "CONTRAINDICATIONS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Severe hepatic impairment, pregnancy",
+    "level": 0,
+    "emphasis": [],
+    "md": "Severe hepatic impairment, pregnancy",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "TOXICITY / OVERDOSE",
+    "level": 0,
+    "emphasis": [],
+    "md": "TOXICITY / OVERDOSE",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Boxed warning for severe hepatotoxicity; monitor liver tests regularly",
+    "level": 0,
+    "emphasis": [],
+    "md": "Boxed warning for severe hepatotoxicity; monitor liver tests regularly",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "46",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "46",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**46**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": "Drug: Flutamide (Eulexin)\n\nClass: Nonsteroidal antiandrogen\n\nFormulation: Capsules 125 mg\n\nAdult dose: 250 mg PO three times daily, given with a GnRH agonist in prostate cancer\n\nIndications: Metastatic prostate cancer in combination with a GnRH agonist\n\nAdverse effects: Hot flashes, gynecomastia, diarrhea, hepatotoxicity, methemoglobinemia\n\nContraindications: Severe hepatic impairment, pregnancy\n\nToxicity / overdose: Boxed warning for severe hepatotoxicity; monitor liver tests regularly"
+ },
+ {
+  "slide": 41,
+  "title": "Bicalutamide (Casodex)",
+  "items": [
+   {
+    "text": "DRUG PROFILE",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "DRUG PROFILE",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**DRUG PROFILE**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Bicalutamide (Casodex)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Bicalutamide (Casodex)",
+    "heading": true,
+    "size": 30.0
+   },
+   {
+    "text": "NONSTEROIDAL ANTIANDROGEN",
+    "level": 0,
+    "emphasis": [],
+    "md": "NONSTEROIDAL ANTIANDROGEN",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "FORMULATION",
+    "level": 0,
+    "emphasis": [],
+    "md": "FORMULATION",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Tablets 50 mg (150 mg in some regions)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Tablets 50 mg (150 mg in some regions)",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "DOSE (ADULT)",
+    "level": 0,
+    "emphasis": [],
+    "md": "DOSE (ADULT)",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "50 mg PO once daily with a GnRH agonist in prostate cancer",
+    "level": 0,
+    "emphasis": [],
+    "md": "50 mg PO once daily with a GnRH agonist in prostate cancer",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "INDICATIONS",
+    "level": 0,
+    "emphasis": [],
+    "md": "INDICATIONS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Metastatic prostate cancer in combination with a GnRH agonist",
+    "level": 0,
+    "emphasis": [],
+    "md": "Metastatic prostate cancer in combination with a GnRH agonist",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "ADVERSE EFFECTS",
+    "level": 0,
+    "emphasis": [],
+    "md": "ADVERSE EFFECTS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Hot flashes, gynecomastia, breast tenderness, fatigue, liver enzyme elevation",
+    "level": 0,
+    "emphasis": [],
+    "md": "Hot flashes, gynecomastia, breast tenderness, fatigue, liver enzyme elevation",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "CONTRAINDICATIONS",
+    "level": 0,
+    "emphasis": [],
+    "md": "CONTRAINDICATIONS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Pregnancy (not indicated in women), severe hepatic impairment",
+    "level": 0,
+    "emphasis": [],
+    "md": "Pregnancy (not indicated in women), severe hepatic impairment",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "TOXICITY / OVERDOSE",
+    "level": 0,
+    "emphasis": [],
+    "md": "TOXICITY / OVERDOSE",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Hepatotoxicity (rare); monitor liver tests; potentiates warfarin",
+    "level": 0,
+    "emphasis": [],
+    "md": "Hepatotoxicity (rare); monitor liver tests; potentiates warfarin",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "47",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "47",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**47**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": "Drug: Bicalutamide (Casodex)\n\nClass: Nonsteroidal antiandrogen\n\nFormulation: Tablets 50 mg (150 mg in some regions)\n\nAdult dose: 50 mg PO once daily with a GnRH agonist in prostate cancer\n\nIndications: Metastatic prostate cancer in combination with a GnRH agonist\n\nAdverse effects: Hot flashes, gynecomastia, breast tenderness, fatigue, liver enzyme elevation\n\nContraindications: Pregnancy (not indicated in women), severe hepatic impairment\n\nToxicity / overdose: Hepatotoxicity (rare); monitor liver tests; potentiates warfarin"
+ },
+ {
+  "slide": 42,
+  "title": "Finasteride (Proscar, Propecia)",
+  "items": [
+   {
+    "text": "DRUG PROFILE",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "DRUG PROFILE",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**DRUG PROFILE**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Finasteride (Proscar, Propecia)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Finasteride (Proscar, Propecia)",
+    "heading": true,
+    "size": 30.0
+   },
+   {
+    "text": "5-ALPHA-REDUCTASE INHIBITOR",
+    "level": 0,
+    "emphasis": [],
+    "md": "5-ALPHA-REDUCTASE INHIBITOR",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "FORMULATION",
+    "level": 0,
+    "emphasis": [],
+    "md": "FORMULATION",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Tablet 5 mg (BPH); 1 mg (hair loss)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Tablet 5 mg (BPH); 1 mg (hair loss)",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "DOSE (ADULT)",
+    "level": 0,
+    "emphasis": [],
+    "md": "DOSE (ADULT)",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "5 mg PO daily for BPH; 1 mg PO daily for male-pattern hair loss",
+    "level": 0,
+    "emphasis": [],
+    "md": "5 mg PO daily for BPH; 1 mg PO daily for male-pattern hair loss",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "INDICATIONS",
+    "level": 0,
+    "emphasis": [],
+    "md": "INDICATIONS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "BPH, androgenetic alopecia",
+    "level": 0,
+    "emphasis": [],
+    "md": "BPH, androgenetic alopecia",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "ADVERSE EFFECTS",
+    "level": 0,
+    "emphasis": [],
+    "md": "ADVERSE EFFECTS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Decreased libido, erectile dysfunction, reduced ejaculate, gynecomastia",
+    "level": 0,
+    "emphasis": [],
+    "md": "Decreased libido, erectile dysfunction, reduced ejaculate, gynecomastia",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "CONTRAINDICATIONS",
+    "level": 0,
+    "emphasis": [],
+    "md": "CONTRAINDICATIONS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Pregnancy and women who may be pregnant (do not handle crushed tablets), hypersensitivity",
+    "level": 0,
+    "emphasis": [],
+    "md": "Pregnancy and women who may be pregnant (do not handle crushed tablets), hypersensitivity",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "TOXICITY / OVERDOSE",
+    "level": 0,
+    "emphasis": [],
+    "md": "TOXICITY / OVERDOSE",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Lowers PSA by about half; reports of depression; teratogenic to a male fetus",
+    "level": 0,
+    "emphasis": [],
+    "md": "Lowers PSA by about half; reports of depression; teratogenic to a male fetus",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "48",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "48",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**48**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": "Drug: Finasteride (Proscar, Propecia)\n\nClass: 5-alpha-reductase inhibitor\n\nFormulation: Tablet 5 mg (BPH); 1 mg (hair loss)\n\nAdult dose: 5 mg PO daily for BPH; 1 mg PO daily for male-pattern hair loss\n\nIndications: BPH, androgenetic alopecia\n\nAdverse effects: Decreased libido, erectile dysfunction, reduced ejaculate, gynecomastia\n\nContraindications: Pregnancy and women who may be pregnant (do not handle crushed tablets), hypersensitivity\n\nToxicity / overdose: Lowers PSA by about half; reports of depression; teratogenic to a male fetus"
+ },
+ {
+  "slide": 43,
+  "title": "Dutasteride (Avodart)",
+  "items": [
+   {
+    "text": "DRUG PROFILE",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "DRUG PROFILE",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**DRUG PROFILE**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Dutasteride (Avodart)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Dutasteride (Avodart)",
+    "heading": true,
+    "size": 30.0
+   },
+   {
+    "text": "5-ALPHA-REDUCTASE INHIBITOR (TYPES 1 AND 2)",
+    "level": 0,
+    "emphasis": [],
+    "md": "5-ALPHA-REDUCTASE INHIBITOR (TYPES 1 AND 2)",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "FORMULATION",
+    "level": 0,
+    "emphasis": [],
+    "md": "FORMULATION",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Capsules 0.5 mg; combination with tamsulosin (Jalyn)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Capsules 0.5 mg; combination with tamsulosin (Jalyn)",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "DOSE (ADULT)",
+    "level": 0,
+    "emphasis": [],
+    "md": "DOSE (ADULT)",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "0.5 mg PO once daily for BPH; effects take 3-6 months; off-label for hair loss",
+    "level": 0,
+    "emphasis": [],
+    "md": "0.5 mg PO once daily for BPH; effects take 3-6 months; off-label for hair loss",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "INDICATIONS",
+    "level": 0,
+    "emphasis": [],
+    "md": "INDICATIONS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Benign prostatic hyperplasia, off-label androgenetic alopecia and hirsutism",
+    "level": 0,
+    "emphasis": [],
+    "md": "Benign prostatic hyperplasia, off-label androgenetic alopecia and hirsutism",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "ADVERSE EFFECTS",
+    "level": 0,
+    "emphasis": [],
+    "md": "ADVERSE EFFECTS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Decreased libido, erectile dysfunction, ejaculation disorders, breast tenderness, depression",
+    "level": 0,
+    "emphasis": [],
+    "md": "Decreased libido, erectile dysfunction, ejaculation disorders, breast tenderness, depression",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "CONTRAINDICATIONS",
+    "level": 0,
+    "emphasis": [],
+    "md": "CONTRAINDICATIONS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Pregnancy and women of childbearing potential handling capsules, severe hepatic impairment",
+    "level": 0,
+    "emphasis": [],
+    "md": "Pregnancy and women of childbearing potential handling capsules, severe hepatic impairment",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "TOXICITY / OVERDOSE",
+    "level": 0,
+    "emphasis": [],
+    "md": "TOXICITY / OVERDOSE",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Lowers PSA by about half; pregnant partners must avoid handling capsules; monitor PSA and mood",
+    "level": 0,
+    "emphasis": [],
+    "md": "Lowers PSA by about half; pregnant partners must avoid handling capsules; monitor PSA and mood",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "49",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "49",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**49**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": "Drug: Dutasteride (Avodart)\n\nClass: 5-alpha-reductase inhibitor (types 1 and 2)\n\nFormulation: Capsules 0.5 mg; combination with tamsulosin (Jalyn)\n\nAdult dose: 0.5 mg PO once daily for BPH; effects take 3-6 months; off-label for hair loss\n\nIndications: Benign prostatic hyperplasia, off-label androgenetic alopecia and hirsutism\n\nAdverse effects: Decreased libido, erectile dysfunction, ejaculation disorders, breast tenderness, depression\n\nContraindications: Pregnancy and women of childbearing potential handling capsules, severe hepatic impairment\n\nToxicity / overdose: Lowers PSA by about half; pregnant partners must avoid handling capsules; monitor PSA and mood"
+ },
+ {
+  "slide": 44,
+  "title": "Metformin (Glucophage)",
+  "items": [
+   {
+    "text": "DRUG PROFILE",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "DRUG PROFILE",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**DRUG PROFILE**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Metformin (Glucophage)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Metformin (Glucophage)",
+    "heading": true,
+    "size": 30.0
+   },
+   {
+    "text": "BIGUANIDE",
+    "level": 0,
+    "emphasis": [],
+    "md": "BIGUANIDE",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "FORMULATION",
+    "level": 0,
+    "emphasis": [],
+    "md": "FORMULATION",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Tablet 500/850/1,000 mg; ER tablet; oral solution",
+    "level": 0,
+    "emphasis": [],
+    "md": "Tablet 500/850/1,000 mg; ER tablet; oral solution",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "DOSE (ADULT)",
+    "level": 0,
+    "emphasis": [],
+    "md": "DOSE (ADULT)",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Start 500 mg PO daily or BID with meals, titrate to 1,000 mg BID (max 2,550 mg/day)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Start 500 mg PO daily or BID with meals, titrate to 1,000 mg BID (max 2,550 mg/day)",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "INDICATIONS",
+    "level": 0,
+    "emphasis": [],
+    "md": "INDICATIONS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Type 2 diabetes, prediabetes, PCOS (off-label)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Type 2 diabetes, prediabetes, PCOS (off-label)",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "ADVERSE EFFECTS",
+    "level": 0,
+    "emphasis": [],
+    "md": "ADVERSE EFFECTS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Nausea, diarrhea, metallic taste, vitamin B12 deficiency",
+    "level": 0,
+    "emphasis": [],
+    "md": "Nausea, diarrhea, metallic taste, vitamin B12 deficiency",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "CONTRAINDICATIONS",
+    "level": 0,
+    "emphasis": [],
+    "md": "CONTRAINDICATIONS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "eGFR below 30, acute metabolic acidosis, hypersensitivity",
+    "level": 0,
+    "emphasis": [],
+    "md": "eGFR below 30, acute metabolic acidosis, hypersensitivity",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "TOXICITY / OVERDOSE",
+    "level": 0,
+    "emphasis": [],
+    "md": "TOXICITY / OVERDOSE",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Lactic acidosis (renal impairment, contrast, alcohol, sepsis); hold around iodinated contrast; monitor B12",
+    "level": 0,
+    "emphasis": [],
+    "md": "Lactic acidosis (renal impairment, contrast, alcohol, sepsis); hold around iodinated contrast; monitor B12",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "50",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "50",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**50**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": "Drug: Metformin (Glucophage)\n\nClass: Biguanide\n\nFormulation: Tablet 500/850/1,000 mg; ER tablet; oral solution\n\nAdult dose: Start 500 mg PO daily or BID with meals, titrate to 1,000 mg BID (max 2,550 mg/day)\n\nIndications: Type 2 diabetes, prediabetes, PCOS (off-label)\n\nAdverse effects: Nausea, diarrhea, metallic taste, vitamin B12 deficiency\n\nContraindications: eGFR below 30, acute metabolic acidosis, hypersensitivity\n\nToxicity / overdose: Lactic acidosis (renal impairment, contrast, alcohol, sepsis); hold around iodinated contrast; monitor B12"
+ },
+ {
+  "slide": 45,
+  "title": "Supporting Drugs at a Glance",
+  "items": [
+   {
+    "text": "Appendix 2: DRUG PROFILE · SUPPORTING",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Appendix 2: DRUG PROFILE · SUPPORTING",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Appendix 2: DRUG PROFILE · SUPPORTING**",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Supporting Drugs at a Glance",
+    "level": 0,
+    "emphasis": [],
+    "md": "Supporting Drugs at a Glance",
+    "heading": true,
+    "size": 30.0
+   },
+   {
+    "text": "Enzyme inducers",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Enzyme inducers",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Enzyme inducers**",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Rifampin, carbamazepine, phenytoin and St. John's wort lower combined contraceptive efficacy",
+    "level": 0,
+    "emphasis": [],
+    "md": "Rifampin, carbamazepine, phenytoin and St. John's wort lower combined contraceptive efficacy",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Warfarin",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Warfarin",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Warfarin**",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Testosterone and tamoxifen raise INR",
+    "level": 0,
+    "emphasis": [],
+    "md": "Testosterone and tamoxifen raise INR",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "GnRH agonists",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "GnRH agonists",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**GnRH agonists**",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Leuprolide is used with antiandrogens in prostate cancer",
+    "level": 0,
+    "emphasis": [],
+    "md": "Leuprolide is used with antiandrogens in prostate cancer",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "GLP-1 receptor agonists",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "GLP-1 receptor agonists",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**GLP-1 receptor agonists**",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Off-label for PCOS with obesity",
+    "level": 0,
+    "emphasis": [],
+    "md": "Off-label for PCOS with obesity",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Clomiphene and letrozole",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Clomiphene and letrozole",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Clomiphene and letrozole**",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Ovulation induction, beyond this lecture",
+    "level": 0,
+    "emphasis": [],
+    "md": "Ovulation induction, beyond this lecture",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Bisphosphonates and calcium with vitamin D",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Bisphosphonates and calcium with vitamin D",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Bisphosphonates and calcium with vitamin D**",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Bone protection with aromatase inhibitors",
+    "level": 0,
+    "emphasis": [],
+    "md": "Bone protection with aromatase inhibitors",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "CYP2D6 inhibitors",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "CYP2D6 inhibitors",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**CYP2D6 inhibitors**",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Paroxetine and fluoxetine blunt tamoxifen activation",
+    "level": 0,
+    "emphasis": [],
+    "md": "Paroxetine and fluoxetine blunt tamoxifen activation",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "ACE inhibitors, ARBs and potassium",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "ACE inhibitors, ARBs and potassium",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**ACE inhibitors, ARBs and potassium**",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Hyperkalemia with spironolactone",
+    "level": 0,
+    "emphasis": [],
+    "md": "Hyperkalemia with spironolactone",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Listed for context; not profiled in detail.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Listed for context; not profiled in detail.",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "51",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "51",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**51**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": "Supporting drugs listed for context; not profiled in detail. Enzyme inducers lower combined contraceptive efficacy. Testosterone and tamoxifen raise INR with warfarin. Leuprolide is a GnRH agonist used with antiandrogens in prostate cancer. GLP-1 receptor agonists are off-label for PCOS with obesity. Clomiphene and letrozole are for ovulation induction, beyond this lecture. Bisphosphonates and calcium with vitamin D protect bone with aromatase inhibitors. Paroxetine and fluoxetine (CYP2D6 inhibitors) blunt tamoxifen activation. ACE inhibitors, ARBs and potassium cause hyperkalemia with spironolactone.\n\nInstructor script:\n\nSupporting drugs: enzyme inducers, warfarin, GnRH agonists, CYP2D6 inhibitors and bone-protective drugs explain interactions."
+ },
+ {
+  "slide": 46,
+  "title": "Image Attribution",
+  "items": [
+   {
+    "text": "APPENDIX 3",
+    "level": 0,
+    "emphasis": [],
+    "md": "APPENDIX 3",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Image Attribution",
+    "level": 0,
+    "emphasis": [],
+    "md": "Image Attribution",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "●  Original figures in this deck: Figures 2, 4 and 7 (The Hypothalamic-Pituitary-Gonadal (HPG) Axis: Sites of Hormonal Drug Action; Two Ways to Reduce Estrogen Signaling: SERMs vs. Aromatase Inhibitors; The PCOS–Insulin Resistance Cycle) were generated by the course director using the AI tool Claude to illustrate standard, non-copyrighted pharmacologic concepts. They are original diagrams, not reproduced from Katzung’s Basic and Clinical Pharmacology or any other copyrighted source.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "●  Original figures in this deck:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**●  Original figures in this deck:** Figures 2, 4 and 7 (The Hypothalamic-Pituitary-Gonadal (HPG) Axis: Sites of Hormonal Drug Action; Two Ways to Reduce Estrogen Signaling: SERMs vs. Aromatase Inhibitors; The PCOS–Insulin Resistance Cycle) were generated by the course director using the AI tool Claude to illustrate standard, non-copyrighted pharmacologic concepts. They are original diagrams, not reproduced from Katzung’s Basic and Clinical Pharmacology or any other copyrighted source.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "●  Mechanism illustrations: Figures 1, 3, 5, 6 and 8 are illustrative AI-generated schematics, not reproduced from any copyrighted source.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "●  Mechanism illustrations:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**●  Mechanism illustrations:** Figures 1, 3, 5, 6 and 8 are illustrative AI-generated schematics, not reproduced from any copyrighted source.",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "●  Reference: Anthropic. (2026). Claude (Sonnet 5) [Large language model]. https://claude.ai",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "●  Reference:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**●  Reference:** Anthropic. (2026). Claude (Sonnet 5) [Large language model]. https://claude.ai",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "52",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "52",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**52**",
+    "heading": false,
+    "size": 10.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "This slide documents AI-tool use for original figure generation per university citation requirements. It covers every original diagram in this deck (Figures 2, 4 and 7); none are reproduced from any textbook.\n\nInstructor script:\n\nThe original Claude-generated diagrams and the illustrative mechanism schematics are credited here."
+ }
+]

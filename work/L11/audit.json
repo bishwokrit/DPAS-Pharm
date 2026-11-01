@@ -1,0 +1,473 @@
+{
+ "lecture": "L11",
+ "passed": true,
+ "units_checked": 2366,
+ "missing": [],
+ "uncited": [],
+ "emphasis_not_bold": [],
+ "skipped": [
+  {
+   "ref": "S1",
+   "text": "Diane S. Allen-Gipson, Ph.D., M.S., Course Director",
+   "kind": "slide",
+   "reason": "faculty identifier (site policy: no school or instructor identifiers)"
+  },
+  {
+   "ref": "S3",
+   "text": "AccessMedicine: accessmedicine.mhmedical.com/book.aspx?bookid=3382",
+   "kind": "slide",
+   "reason": "access link for the textbook"
+  },
+  {
+   "ref": "S4",
+   "text": "Section transition.",
+   "kind": "speaker note",
+   "reason": "section divider"
+  },
+  {
+   "ref": "S6",
+   "text": "Progestins oppose estrogen-driven proliferation and thicken cervical mucus.",
+   "kind": "speaker note",
+   "reason": "presenter script; taught from S6"
+  },
+  {
+   "ref": "S7",
+   "text": "Explain that the progestin protects the endometrium when the uterus is intact.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S8",
+   "text": "Spend real time here; it pays off for the rest of the unit.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S8",
+   "text": "Spend real time here; it anchors the session.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S8",
+   "text": "Name the points where each drug class intervenes.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; the points are the Figure 2 interactive"
+  },
+  {
+   "ref": "S9",
+   "text": "Use this slide to reinforce the core decision point in clinical practice: when estrogen is contraindicated, a progestin-only method is not a compromise — it's often the correct first choice.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; the point is taught from S9"
+  },
+  {
+   "ref": "S10",
+   "text": "Section transition.",
+   "kind": "speaker note",
+   "reason": "section divider"
+  },
+  {
+   "ref": "S12",
+   "text": "Tamoxifen's endometrial agonism is the reason for cancer-risk monitoring; raloxifene is neutral there.",
+   "kind": "speaker note",
+   "reason": "presenter script; taught from S12"
+  },
+  {
+   "ref": "S13",
+   "text": "Emphasize the postmenopausal-only caveat for aromatase inhibitors — in a premenopausal patient, the ovaries are still the dominant estrogen source and aromatase inhibition alone is insufficient (often combined with ovarian suppression in that population).",
+   "kind": "speaker note",
+   "reason": "teaching instruction; the caveat is taught from S14"
+  },
+  {
+   "ref": "S14",
+   "text": "Anastrozole and letrozole block aromatase",
+   "kind": "slide",
+   "reason": "presenter script; taught from S14"
+  },
+  {
+   "ref": "S14",
+   "text": "Anastrozole and letrozole block conversion of androgens to estrogens.",
+   "kind": "speaker note",
+   "reason": "presenter script; taught from S14"
+  },
+  {
+   "ref": "S16",
+   "text": "Anchor each drug to its site: the enzyme inhibitors lower DHT; the receptor blockers stop androgen signaling.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S16",
+   "text": "Finasteride and dutasteride block the enzyme; spironolactone, flutamide and bicalutamide block the receptor.",
+   "kind": "speaker note",
+   "reason": "presenter script; taught from S16"
+  },
+  {
+   "ref": "S17",
+   "text": "Use this slide to reinforce the parallel structure across both pathways: a receptor-blocking strategy and a synthesis/activation-blocking strategy exist on both the estrogen and androgen sides.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S18",
+   "text": "This case makes the tissue-selectivity concept concrete and clinical — a good checkpoint before the quick check, and a natural point to contrast with raloxifene's neutral endometrial profile.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S18",
+   "text": "New bleeding on tamoxifen needs prompt gynecologic evaluation.",
+   "kind": "speaker note",
+   "reason": "presenter script; taught from S18"
+  },
+  {
+   "ref": "S19",
+   "text": "Section transition.",
+   "kind": "speaker note",
+   "reason": "section divider"
+  },
+  {
+   "ref": "S20",
+   "text": "This is the thesis slide for the entire section — make sure students leave understanding that PCOS pharmacology is not purely \"gynecologic,\" which is why it is taught here as a bridge between Chapters 40 and 41.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S21",
+   "text": "This figure is the mechanistic payoff of the previous slide — walk both arrows of the cycle explicitly, and preview that the next slide covers where metformin intervenes (the point already flagged at the bottom of this figure).",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S22",
+   "text": "Reinforce the Unit 5 callback on metformin's renal dosing caveat — this is a deliberate cross-unit integration point, not a new concept.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; the callback is taught from S22"
+  },
+  {
+   "ref": "S22",
+   "text": "Metformin is first-line metabolic therapy; GLP-1 agonists are emerging off-label.",
+   "kind": "speaker note",
+   "reason": "presenter script; taught from S22"
+  },
+  {
+   "ref": "S23",
+   "text": "Explain that metformin acts through insulin, so androgens fall and ovulation can resume in many patients.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S24",
+   "text": "Use this table as the organizing summary for PCOS pharmacology before the closing case — note that these agents are frequently combined rather than used as single-agent therapy.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S25",
+   "text": "Use this case to reinforce that PCOS management is rarely single-agent — this is a good moment to ask students to justify combining therapies rather than picking just one.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S27",
+   "text": "Close Session 1 by previewing Session 2 explicitly — students should leave knowing gonadal hormone pharmacology is complete, and that autonomic/bladder pharmacology picks up next time, with the 5-alpha-reductase inhibitor callback as a concrete bridge.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S27",
+   "text": "Preview Session 2 and the finasteride bridge.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S28",
+   "text": "Appendix talk track: Say: \"Use these as a study reference.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S28",
+   "text": "Class activity (10 minutes): Groups teach back two or three profiles in 60 seconds each.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S28",
+   "text": "Abbreviation key: Review PO, DMPA, VTE, PCOS, BPH, PSA and CYP.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S28",
+   "text": "Teaching points: Hormones (contraceptives, estradiol), SERMs, aromatase inhibitors, androgens and antiandrogens, 5-ARIs, metformin.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; the drugs are in the profiles"
+  },
+  {
+   "ref": "S28",
+   "text": "Bloom's prompts: Remember: state the tamoxifen dose.",
+   "kind": "speaker note",
+   "reason": "Bloom's teaching prompt; rebuilt as practice questions"
+  },
+  {
+   "ref": "S28",
+   "text": "Understand: explain why tamoxifen but not raloxifene stimulates the endometrium.",
+   "kind": "speaker note",
+   "reason": "Bloom's teaching prompt; rebuilt as practice questions"
+  },
+  {
+   "ref": "S28",
+   "text": "Apply: counsel a woman starting rifampin on a combined pill.",
+   "kind": "speaker note",
+   "reason": "Bloom's teaching prompt; rebuilt as practice questions"
+  },
+  {
+   "ref": "S28",
+   "text": "Analyze: explain bone loss on an aromatase inhibitor.",
+   "kind": "speaker note",
+   "reason": "Bloom's teaching prompt; rebuilt as practice questions"
+  },
+  {
+   "ref": "S28",
+   "text": "Evaluate: choose therapy for a smoker with PCOS.",
+   "kind": "speaker note",
+   "reason": "Bloom's teaching prompt; rebuilt as practice questions"
+  },
+  {
+   "ref": "S45",
+   "text": "Supporting drugs listed for context; not profiled in detail.",
+   "kind": "speaker note",
+   "reason": "presenter script; the table covers it"
+  },
+  {
+   "ref": "S45",
+   "text": "Supporting drugs: enzyme inducers, warfarin, GnRH agonists, CYP2D6 inhibitors and bone-protective drugs explain interactions.",
+   "kind": "speaker note",
+   "reason": "presenter script; the table covers it"
+  },
+  {
+   "ref": "S46",
+   "text": "This slide documents AI-tool use for original figure generation per university citation requirements.",
+   "kind": "speaker note",
+   "reason": "administrative note on AI-tool citation"
+  },
+  {
+   "ref": "S46",
+   "text": "The original Claude-generated diagrams and the illustrative mechanism schematics are credited here.",
+   "kind": "speaker note",
+   "reason": "administrative note on AI-tool citation"
+  }
+ ],
+ "not_in_deck": [],
+ "not_in_notebooklm": [],
+ "layout_problems": [],
+ "question_issues": [],
+ "question_stats": {
+  "count": 14,
+  "letters": {
+   "A": 2,
+   "B": 3,
+   "C": 3,
+   "D": 3,
+   "E": 3
+  },
+  "vignette": 8,
+  "mechanism": 6
+ },
+ "thin_objectives": [],
+ "textbook_unused": 1843,
+ "reading_missing": [],
+ "reading_skipped": [
+  {
+   "page": "764",
+   "heading": "Preparations & Dosages",
+   "reason": "Preparations and dosing table; the doses are in the drug profiles"
+  },
+  {
+   "page": "767",
+   "heading": "Azurette, Kariva, Mircette, Viorele",
+   "reason": "Preparations list (brand names only, no teaching content)"
+  },
+  {
+   "page": "767",
+   "heading": "Enpresse, Levonest, Myzilra, Triphasil, Tri-Levlen, Trivora",
+   "reason": "Preparations list (brand names only, no teaching content)"
+  },
+  {
+   "page": "767",
+   "heading": "Casiant, Cyclessa, Cesia, Velivet",
+   "reason": "Preparations list (brand names only, no teaching content)"
+  },
+  {
+   "page": "782",
+   "heading": "CHEMICAL CONTRACEPTION IN MEN",
+   "reason": "Beyond PA scope: investigational male contraceptives, none approved"
+  },
+  {
+   "page": "782",
+   "heading": "GOSSYPOL",
+   "reason": "Beyond PA scope: experimental male contraceptive, not in use"
+  },
+  {
+   "page": "783",
+   "heading": "Toremifene Fareston",
+   "reason": "Preparations list (brand names only, no teaching content)"
+  },
+  {
+   "page": "785",
+   "heading": "THE ENDOCRINE PANCREAS",
+   "reason": "Taught in L08 (Endocrine Session 2: insulin and glucose-lowering drugs, Ch. 41); metformin and GLP-1 agonists in PCOS are taught here"
+  },
+  {
+   "page": "786",
+   "heading": "Insulin Secretion",
+   "reason": "Taught in L08 (Endocrine Session 2: insulin and glucose-lowering drugs, Ch. 41); metformin and GLP-1 agonists in PCOS are taught here"
+  },
+  {
+   "page": "786",
+   "heading": "Insulin Degradation",
+   "reason": "Taught in L08 (Endocrine Session 2: insulin and glucose-lowering drugs, Ch. 41); metformin and GLP-1 agonists in PCOS are taught here"
+  },
+  {
+   "page": "786",
+   "heading": "Circulating Insulin",
+   "reason": "Taught in L08 (Endocrine Session 2: insulin and glucose-lowering drugs, Ch. 41); metformin and GLP-1 agonists in PCOS are taught here"
+  },
+  {
+   "page": "786",
+   "heading": "The Insulin Receptor",
+   "reason": "Taught in L08 (Endocrine Session 2: insulin and glucose-lowering drugs, Ch. 41); metformin and GLP-1 agonists in PCOS are taught here"
+  },
+  {
+   "page": "786",
+   "heading": "Islet Mass Secretory Products",
+   "reason": "Taught in L08 (Endocrine Session 2: insulin and glucose-lowering drugs, Ch. 41); metformin and GLP-1 agonists in PCOS are taught here"
+  },
+  {
+   "page": "787",
+   "heading": "Effects of Insulin on Its Targets",
+   "reason": "Taught in L08 (Endocrine Session 2: insulin and glucose-lowering drugs, Ch. 41); metformin and GLP-1 agonists in PCOS are taught here"
+  },
+  {
+   "page": "787",
+   "heading": "Chemistry & Metabolism",
+   "reason": "Taught in L08 (Endocrine Session 2: insulin and glucose-lowering drugs, Ch. 41); metformin and GLP-1 agonists in PCOS are taught here"
+  },
+  {
+   "page": "788",
+   "heading": "Pharmacologic Effects of Glucagon",
+   "reason": "Taught in L08 (Endocrine Session 2: insulin and glucose-lowering drugs, Ch. 41); metformin and GLP-1 agonists in PCOS are taught here"
+  },
+  {
+   "page": "789",
+   "heading": "DIABETES MELLITUS",
+   "reason": "Taught in L08 (Endocrine Session 2: insulin and glucose-lowering drugs, Ch. 41); metformin and GLP-1 agonists in PCOS are taught here"
+  },
+  {
+   "page": "790",
+   "heading": "Other Specific Types of Diabetes Mellitus",
+   "reason": "Taught in L08 (Endocrine Session 2: insulin and glucose-lowering drugs, Ch. 41); metformin and GLP-1 agonists in PCOS are taught here"
+  },
+  {
+   "page": "790",
+   "heading": "Gestational Diabetes Mellitus",
+   "reason": "Taught in L08 (Endocrine Session 2: insulin and glucose-lowering drugs, Ch. 41); metformin and GLP-1 agonists in PCOS are taught here"
+  },
+  {
+   "page": "791",
+   "heading": "Insulin Preparations",
+   "reason": "Taught in L08 (Endocrine Session 2: insulin and glucose-lowering drugs, Ch. 41); metformin and GLP-1 agonists in PCOS are taught here"
+  },
+  {
+   "page": "795",
+   "heading": "Immunopathology of Insulin Therapy",
+   "reason": "Taught in L08 (Endocrine Session 2: insulin and glucose-lowering drugs, Ch. 41); metformin and GLP-1 agonists in PCOS are taught here"
+  },
+  {
+   "page": "795",
+   "heading": "MEDICATIONS FOR TREATMENT OF TYPE 2 DIABETES",
+   "reason": "Taught in L08 (Endocrine Session 2: insulin and glucose-lowering drugs, Ch. 41); metformin and GLP-1 agonists in PCOS are taught here"
+  },
+  {
+   "page": "796",
+   "heading": "Mechanism of Action",
+   "reason": "Taught in L08 (Endocrine Session 2: insulin and glucose-lowering drugs, Ch. 41); metformin and GLP-1 agonists in PCOS are taught here"
+  },
+  {
+   "page": "796",
+   "heading": "Efficacy & Safety of the Sulfonylureas",
+   "reason": "Taught in L08 (Endocrine Session 2: insulin and glucose-lowering drugs, Ch. 41); metformin and GLP-1 agonists in PCOS are taught here"
+  },
+  {
+   "page": "796",
+   "heading": "FIRST-GENERATION SULFONYLUREAS",
+   "reason": "Taught in L08 (Endocrine Session 2: insulin and glucose-lowering drugs, Ch. 41); metformin and GLP-1 agonists in PCOS are taught here"
+  },
+  {
+   "page": "796",
+   "heading": "SECOND-GENERATION SULFONYLUREAS",
+   "reason": "Taught in L08 (Endocrine Session 2: insulin and glucose-lowering drugs, Ch. 41); metformin and GLP-1 agonists in PCOS are taught here"
+  },
+  {
+   "page": "797",
+   "heading": "MEGLITINIDE ANALOGS",
+   "reason": "Taught in L08 (Endocrine Session 2: insulin and glucose-lowering drugs, Ch. 41); metformin and GLP-1 agonists in PCOS are taught here"
+  },
+  {
+   "page": "797",
+   "heading": "BIGUANIDES",
+   "reason": "Taught in L08 (Endocrine Session 2: insulin and glucose-lowering drugs, Ch. 41); metformin and GLP-1 agonists in PCOS are taught here"
+  },
+  {
+   "page": "798",
+   "heading": "THIAZOLIDINEDIONES",
+   "reason": "Taught in L08 (Endocrine Session 2: insulin and glucose-lowering drugs, Ch. 41); metformin and GLP-1 agonists in PCOS are taught here"
+  },
+  {
+   "page": "799",
+   "heading": "DRUGS THAT AFFECT ABSORPTION OF GLUCOSE",
+   "reason": "Taught in L08 (Endocrine Session 2: insulin and glucose-lowering drugs, Ch. 41); metformin and GLP-1 agonists in PCOS are taught here"
+  },
+  {
+   "page": "800",
+   "heading": "GLUCAGON-LIKE PEPTIDE-1 (GLP-1) RECEPTOR AGONISTS",
+   "reason": "Taught in L08 (Endocrine Session 2: insulin and glucose-lowering drugs, Ch. 41); metformin and GLP-1 agonists in PCOS are taught here"
+  },
+  {
+   "page": "801",
+   "heading": "DIPEPTIDYL PEPTIDASE 4 (DPP-4) INHIBITORS",
+   "reason": "Taught in L08 (Endocrine Session 2: insulin and glucose-lowering drugs, Ch. 41); metformin and GLP-1 agonists in PCOS are taught here"
+  },
+  {
+   "page": "801",
+   "heading": "SODIUM-GLUCOSE CO-TRANSPORTER 2 (SGL T2) INHIBITORS",
+   "reason": "Taught in L08 (Endocrine Session 2: insulin and glucose-lowering drugs, Ch. 41); metformin and GLP-1 agonists in PCOS are taught here"
+  },
+  {
+   "page": "802",
+   "heading": "OTHER GLUCOSE-LOWERING DRUGS",
+   "reason": "Taught in L08 (Endocrine Session 2: insulin and glucose-lowering drugs, Ch. 41); metformin and GLP-1 agonists in PCOS are taught here"
+  },
+  {
+   "page": "803",
+   "heading": "Glycemic Targets",
+   "reason": "Taught in L08 (Endocrine Session 2: insulin and glucose-lowering drugs, Ch. 41); metformin and GLP-1 agonists in PCOS are taught here"
+  },
+  {
+   "page": "804",
+   "heading": "Prebreakfast Prelunch Predinner Bedtime",
+   "reason": "Taught in L08 (Endocrine Session 2: insulin and glucose-lowering drugs, Ch. 41); metformin and GLP-1 agonists in PCOS are taught here"
+  },
+  {
+   "page": "804",
+   "heading": "Benefits of Tight Glycemic Control in Diabetes",
+   "reason": "Taught in L08 (Endocrine Session 2: insulin and glucose-lowering drugs, Ch. 41); metformin and GLP-1 agonists in PCOS are taught here"
+  },
+  {
+   "page": "806",
+   "heading": "Chronic Complications of Diabetes",
+   "reason": "Taught in L08 (Endocrine Session 2: insulin and glucose-lowering drugs, Ch. 41); metformin and GLP-1 agonists in PCOS are taught here"
+  }
+ ]
+}

@@ -787,9 +787,116 @@ _IX.update({"Captopril": _RAAS_IX, "Lisinopril": _RAAS_IX, "Enalapril": _RAAS_IX
             "Isosorbide mononitrate": [("PDE5 inhibitors or riociguat → severe hypotension.", "L10 S53")],
             "Isosorbide dinitrate": [("PDE5 inhibitors or riociguat → severe hypotension.", "L10 S54")]})
 _EXTRA_ALIAS.update({"Nifedipine ER": ["Nifedipine"]})
-_UNIT = {"L05": 3, "L06": 3, "L09": 5, "L10": 5}
-_TAG = {"L05": "GI", "L06": "GI & nutrition", "L09": "Renal", "L10": "Cardiorenal"}
-for _lec in ("L05", "L06", "L09", "L10"):
+_INS = ("Activates the insulin receptor → GLUT4 to the cell surface (glucose uptake), glycogen storage, ↓ hepatic glucose output.", "L08 S12-13")
+_INS_PT = [("Main risk hypoglycemia: rule of 15; beta-blockers mask warning signs; rotate sites; never share pens.", "L08 S12-13")]
+_COC_MOA = ("Estrogen + progestin suppress GnRH/FSH/LH → no follicle maturation or LH surge; progestin thickens cervical mucus and thins the endometrium.", "L08 S4-6")
+_PO_MOA = ("Progestin: thickens cervical mucus and thins the endometrium; no estrogen, so no estrogen-related VTE risk.", "L08 S5-6")
+_PO_PT = [("Preferred when estrogen is contraindicated (VTE/stroke, smoker ≥ 35, migraine with aura).", "L08 S5-6")]
+_GLP = ("GLP-1 receptor agonist: glucose-dependent insulin release, less glucagon, slower gastric emptying, satiety/weight loss.", "L08 S18-19")
+_GLP_PT = [("GI upset, pancreatitis, gallstones; contraindicated with personal/family MTC or MEN2; never with a DPP-4 inhibitor.", "L08 S18-19")]
+_DPP = ("DPP-4 inhibitor: blocks breakdown of endogenous GLP-1, prolonging its glucose-dependent effect.", "L08 S18-19")
+_DPP_PT = [("Weight-neutral, well tolerated, low hypoglycemia risk — a good add-on for an older adult who falls.", "L08 S18; S21")]
+_SU = ("Sulfonylurea: binds and closes the β-cell K-ATP channel → insulin release regardless of glucose.", "L08 S11; S14; S35")
+_SU_PT = [("Highest hypoglycemia risk among oral agents — avoid in an older adult living alone with falls.", "L08 S14; S21")]
+_MOA.update({
+    "Combined oral contraceptives": _COC_MOA, "Norethindrone": _PO_MOA, "Medroxyprogesterone depot": _PO_MOA, "Levonorgestrel IUD": _PO_MOA,
+    "Tamoxifen": ("SERM: estrogen-receptor antagonist in breast, agonist in bone and endometrium (prodrug activated by CYP2D6).", "L08 S7-8"),
+    "Raloxifene": ("SERM: agonist in bone; antagonist in breast and endometrium.", "L08 S7-8"),
+    "Testosterone": ("Androgen replacement; converted to DHT by 5-alpha-reductase.", "L08 S7; S9"),
+    "Finasteride": ("5-alpha-reductase inhibitor: blocks testosterone → DHT in prostate and skin.", "L08 S9"),
+    "Insulin lispro": _INS, "Insulin aspart": _INS, "Regular insulin": _INS, "NPH insulin": _INS, "Insulin glargine": _INS, "Insulin detemir": _INS, "Insulin degludec": _INS,
+    "Metformin": ("Biguanide: enters hepatocytes via OCT1, inhibits mitochondrial complex I and activates AMPK → ↓ gluconeogenesis; ↑ muscle insulin sensitivity.", "L08 S14-15"),
+    "Glipizide": _SU, "Glyburide": _SU,
+    "Repaglinide": ("Meglitinide: closes K-ATP channels — short-acting mealtime insulin secretagogue.", "L08 S14; S28"),
+    "Pioglitazone": ("Thiazolidinedione (PPAR-γ agonist): ↑ peripheral insulin sensitivity.", "L08 S14; p. 798"),
+    "Empagliflozin": ("SGLT2 inhibitor: blocks proximal-tubule glucose reabsorption (SGLT2 normally takes back ~90%) → glucosuria.", "L08 S16"),
+    "Exenatide": _GLP, "Liraglutide": _GLP, "Semaglutide": _GLP, "Sitagliptin": _DPP, "Linagliptin": _DPP,
+    "Cinacalcet": ("Calcimimetic: makes the parathyroid calcium-sensing receptor more sensitive, so PTH secretion falls.", "L08 S25-26"),
+    "Calcitriol": ("Active vitamin D (1,25-dihydroxy): bypasses the PTH-dependent activation step.", "L08 S25; S35"),
+    "Recombinant PTH 1-84": ("Replaces parathyroid hormone.", "L08 S25"),
+    "Calcium carbonate or citrate": ("Calcium replacement given with calcitriol in hypoparathyroidism.", "L08 S25"),
+})
+_PT.update({
+    "Combined oral contraceptives": [("No estrogen with VTE/stroke, smoker ≥ 35, migraine with aura, estrogen-sensitive cancer, uncontrolled HTN, liver disease.", "L08 S5; SG U4-R10")],
+    "Norethindrone": _PO_PT, "Medroxyprogesterone depot": [*_PO_PT, ("Bone density warning with long-term use.", "L08 S6 (notes)")], "Levonorgestrel IUD": _PO_PT,
+    "Tamoxifen": [("Endometrial cancer and VTE risk, hot flashes — report vaginal bleeding.", "L08 S8")],
+    "Raloxifene": [("Prevents osteoporosis/vertebral fracture; no endometrial cancer increase; VTE and hot flashes; not for breast cancer treatment.", "L08 S8")],
+    "Testosterone": [("Monitor hematocrit (erythrocytosis), PSA and lipids; avoid in prostate cancer.", "L08 S7; S9")],
+    "Finasteride": [("PSA falls by about half — double it when screening; pregnant women must not handle crushed tablets; sexual side effects.", "L08 S9")],
+    "Insulin lispro": [("Rapid-acting: dose with meals (onset ~15 min).", "L08 S12-13"), *_INS_PT], "Insulin aspart": [("Rapid-acting: dose with meals (onset ~15 min).", "L08 S12-13"), *_INS_PT],
+    "Regular insulin": [("Short-acting (onset ~30 min, give 30 min before meals); the only insulin given IV.", "L08 S12; S13"), *_INS_PT],
+    "NPH insulin": [("Intermediate: cloudy suspension, variable absorption, peaks about 4–10 h.", "L08 S12-13"), *_INS_PT],
+    "Insulin glargine": [("Basal, relatively peakless; do not mix with other insulins.", "L08 S12; p. 793"), *_INS_PT],
+    "Insulin detemir": [("Basal, relatively peakless.", "L08 S12"), *_INS_PT], "Insulin degludec": [("Ultra-long basal.", "L08 S12"), *_INS_PT],
+    "Metformin": [("First-line type 2 diabetes: no weight gain, low hypoglycemia; GI upset (start low, with food); B12 deficiency.", "L08 S14-15"),
+                  ("Avoid eGFR < 30 (lactic acidosis); hold for iodinated contrast with reduced kidney function.", "L08 S15; S67; p. 798")],
+    "Glipizide": _SU_PT, "Glyburide": _SU_PT,
+    "Repaglinide": [("Take with meals; gemfibrozil raises levels (CYP2C8).", "L08 S67")],
+    "Pioglitazone": [("Fluid retention/heart failure, weight gain; contraindicated in NYHA III–IV.", "L08 S14; p. 799")],
+    "Empagliflozin": [("Cardiorenal benefit; genital yeast infections, volume depletion, euglycemic DKA — hold when ill or before surgery; rare Fournier gangrene.", "L08 S16")],
+    "Exenatide": _GLP_PT, "Liraglutide": _GLP_PT, "Semaglutide": _GLP_PT, "Sitagliptin": _DPP_PT, "Linagliptin": _DPP_PT,
+    "Cinacalcet": [("Secondary hyperparathyroidism in CKD on dialysis, parathyroid carcinoma; nausea, hypocalcemia, QT — monitor calcium.", "L08 S25-26")],
+    "Calcitriol": [("With oral calcium for hypoparathyroidism (post-thyroidectomy); monitor for hypercalcemia.", "L08 S25; S27")],
+    "Recombinant PTH 1-84": [("Reserved when calcium/calcitriol fail; monitor for hypercalcemia/hypercalciuria.", "L08 S25")],
+})
+_IX.update({
+    "Combined oral contraceptives": [("Rifampin, carbamazepine, phenytoin, St. John’s wort lower efficacy — backup contraception.", "L08 S6; S67")],
+    "Tamoxifen": [("CYP2D6 inhibitors (paroxetine, fluoxetine) blunt activation.", "L08 S8 (notes); S67")],
+    "Metformin": [("Iodinated contrast with reduced kidney function → hold metformin.", "L08 S67")],
+    "Glipizide": [("Beta-blockers mask hypoglycemia symptoms.", "L08 S67")], "Glyburide": [("Beta-blockers mask hypoglycemia symptoms.", "L08 S67")],
+    "Repaglinide": [("Gemfibrozil raises levels (CYP2C8).", "L08 S67")],
+    "Cinacalcet": [("CYP2D6 inhibitor.", "L08 S26")],
+    "Semaglutide": [("Do not combine with a DPP-4 inhibitor.", "L08 S19")], "Liraglutide": [("Do not combine with a DPP-4 inhibitor.", "L08 S19")],
+    "Exenatide": [("Do not combine with a DPP-4 inhibitor.", "L08 S19")],
+})
+_EXTRA_ALIAS.update({"Combined oral contraceptives": ["Combined pill", "Ethinyl estradiol"], "Medroxyprogesterone depot": ["DMPA", "Medroxyprogesterone"],
+                     "Levonorgestrel IUD": ["Levonorgestrel"], "Regular insulin": ["Insulin regular"], "Recombinant PTH 1-84": ["Parathyroid hormone"]})
+_MOA.update({
+    "Estradiol": ("Binds intracellular estrogen receptors (ER-α, ER-β) → gene transcription in reproductive, bone, cardiovascular and CNS tissue.", "L11 S5; SG U6-R1"),
+    "Anastrozole": ("Aromatase inhibitor: blocks peripheral (fat) conversion of androgens to estrogens.", "L11 S13-14; SG U6-R6"),
+    "Letrozole": ("Aromatase inhibitor: blocks peripheral conversion of androgens to estrogens.", "L11 S13-14"),
+    "Flutamide": ("Pure androgen-receptor blocker.", "L11 S15-16; SG U6-R8"),
+    "Bicalutamide": ("Pure androgen-receptor blocker (once daily).", "L11 S15-16; p. 782"),
+    "Dutasteride": ("5-alpha-reductase (types 1 and 2) inhibitor: blocks testosterone → DHT.", "L11 S15-16"),
+})
+_PT.update({
+    "Estradiol": [("With a uterus, always add a progestin (unopposed estrogen → endometrial cancer); VTE risk rises with smoking and age > 35.", "L11 S5-7; SG U6-R2")],
+    "Anastrozole": [("Postmenopausal only (ovaries still make estrogen before menopause); bone loss and joint pain — protect bone.", "L11 S14; S45")],
+    "Letrozole": [("Postmenopausal only; bone loss and joint pain; off-label ovulation induction.", "L11 S14; S37; S45")],
+    "Flutamide": [("Prostate cancer, often with a GnRH agonist; gynecomastia and reversible hepatotoxicity.", "L11 S15; p. 782")],
+    "Bicalutamide": [("Prostate cancer with a GnRH analog (leuprolide) to prevent tumor flare.", "L11 S15; S45; p. 782")],
+    "Dutasteride": [("Hirsutism, alopecia and BPH (Session 2); lowers PSA; much longer half-life than finasteride.", "L11 S15; p. 781")],
+})
+_IX.update({"Anastrozole": [("Bisphosphonates and calcium with vitamin D protect bone.", "L11 S45")],
+            "Letrozole": [("Bisphosphonates and calcium with vitamin D protect bone.", "L11 S45")],
+            "Bicalutamide": [("Combined with leuprolide (GnRH agonist) in prostate cancer.", "L11 S45")],
+            "Flutamide": [("Combined with a GnRH agonist in prostate cancer.", "L11 S15; S45")]})
+_AM = ("Antimuscarinic: blocks M3 (and M2) receptors on the detrusor → fewer involuntary contractions, larger functional capacity.", "L12 S11-12; SG U6-R12")
+_AM_PT = [("Dry mouth, constipation, blurred vision, confusion (older adults); anticholinergic burden is cumulative; avoid in narrow-angle glaucoma and urinary retention.", "L12 S11")]
+_AM_IX = [("Other anticholinergics add burden; cholinesterase inhibitors (donepezil) oppose the effect.", "L12 S50")]
+_A1 = ("Alpha1 blocker: relaxes bladder-neck, prostatic and proximal-urethral smooth muscle → better urinary flow in BPH; the same receptors set vascular tone.", "L12 S17-18")
+_A1_IX = [("Additive hypotension with antihypertensives and PDE5 inhibitors.", "L12 S22; S50")]
+_P5 = ("PDE5 inhibitor: blocks cGMP breakdown, prolonging corpus cavernosum relaxation (needs sexual stimulation).", "L12 S22-23")
+_P5_PT = [("Absolute contraindication with any nitrate (or riociguat) — life-threatening hypotension; caution with alpha1 blockers; headache, flushing, dyspepsia.", "L12 S22; S24; SG U6-R16")]
+_P5_IX = [("Nitrates, riociguat: contraindicated. Strong CYP3A4 inhibitors (ketoconazole, clarithromycin) raise levels.", "L12 S22; S50")]
+_MOA.update({"Oxybutynin": _AM, "Tolterodine": _AM, "Solifenacin": _AM, "Darifenacin": _AM,
+             "Mirabegron": ("Beta3 agonist: enhances detrusor relaxation during filling, with no anticholinergic activity.", "L12 S13; SG U6-R13"),
+             "Tamsulosin": _A1, "Silodosin": _A1, "Doxazosin": _A1, "Terazosin": _A1, "Sildenafil": _P5, "Tadalafil": _P5, "Vardenafil": _P5})
+_PT.update({"Oxybutynin": [("Highest CNS anticholinergic burden of the class — avoid in older adults or dementia risk; switch to mirabegron if confused.", "L12 S11; S15"), *_AM_PT],
+            "Tolterodine": _AM_PT, "Solifenacin": [*_AM_PT, ("Strong CYP3A4 inhibitors raise levels.", "L12 S50")], "Darifenacin": _AM_PT,
+            "Mirabegron": [("Preferred in older adults or patients on other anticholinergics; may raise blood pressure; can combine with an antimuscarinic.", "L12 S13; S15")],
+            "Tamsulosin": [("Uroselective — less vascular effect; still orthostasis, first-dose effect, floppy iris in cataract surgery.", "L12 S17; SG U6-R14")],
+            "Silodosin": [("Highly uroselective; avoid with CrCl below 30 mL/min.", "L12 S17; S42")],
+            "Doxazosin": [("Less selective — lowers blood pressure more; first dose at bedtime (first-dose hypotension).", "L12 S17")],
+            "Terazosin": [("Less selective — lowers blood pressure more; first-dose effect.", "L12 S17")],
+            "Sildenafil": [*_P5_PT, ("Blue-tinged vision.", "L12 S22")], "Tadalafil": [*_P5_PT, ("Longer half-life, flexible dosing.", "L12 S22")], "Vardenafil": _P5_PT})
+_IX.update({"Oxybutynin": _AM_IX, "Tolterodine": _AM_IX, "Solifenacin": _AM_IX, "Darifenacin": _AM_IX,
+            "Mirabegron": [("Inhibits CYP2D6.", "L12 S13 (notes)")], "Tamsulosin": _A1_IX, "Silodosin": _A1_IX, "Doxazosin": _A1_IX, "Terazosin": _A1_IX,
+            "Sildenafil": _P5_IX, "Tadalafil": _P5_IX, "Vardenafil": _P5_IX})
+_SAME = {"calcium carbonate or citrate": "calcium carbonate"}
+_UNIT = {"L05": 3, "L06": 3, "L08": 4, "L09": 5, "L10": 5, "L11": 6, "L12": 6}
+_TAG = {"L05": "GI", "L06": "GI & nutrition", "L08": "Endocrine", "L09": "Renal", "L10": "Cardiorenal", "L11": "Reproductive", "L12": "Genitourinary"}
+for _lec in ("L05", "L06", "L08", "L09", "L10", "L11", "L12"):
     for _p in _profiles.read(_lec):
         _c = f"{_lec} S{_p['slide']}"
         _f = [("ind", _p.get("ind"), _c), ("ae", _p.get("ae"), _c), ("contra", _p.get("contra"), _c),
@@ -800,7 +907,7 @@ for _lec in ("L05", "L06", "L09", "L10"):
         _f += [("pt", t, s) for t, s in _PT.get(_p["name"], [])]
         _f += [("ix", t, s) for t, s in _IX.get(_p["name"], [])]
         _facts = [{"text": t, "src": s, "tb": not re.search(r"\bL\d\d|\bSG\b", s), "sec": k} for k, t, s in _f if t]
-        _d = _by.get(_p["name"].lower())
+        _d = _by.get(_SAME.get(_p["name"].lower(), _p["name"].lower()))
         if _d:
             _d["facts"] += _facts
             _d["unit"] = min(_d.get("unit", _UNIT[_lec]), _UNIT[_lec]) if _d.get("unit") else _UNIT[_lec]
