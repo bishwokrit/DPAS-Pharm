@@ -1,0 +1,3271 @@
+{
+ "lecture": {
+  "id": "L07",
+  "title": "Endocrine Pharmacotherapy — Session 1",
+  "date": "Tue, Nov 10, 2026"
+ },
+ "textbook_status": "included",
+ "objectives": [
+  {
+   "id": "IO4.1",
+   "src": "Syllabus",
+   "text": "Identify major pharmacologic classes used in the management of endocrine conditions and describe their mechanisms of action."
+  },
+  {
+   "id": "IO4.2",
+   "src": "Syllabus",
+   "text": "Describe the indications, contraindications, adverse effects, and clinically significant interactions associated with medications used to treat endocrine conditions."
+  },
+  {
+   "id": "IO4.3",
+   "src": "Syllabus",
+   "text": "Compare pharmacologic agents within and across therapeutic classes to distinguish clinically relevant differences in efficacy, safety, and use."
+  },
+  {
+   "id": "IO4.4",
+   "src": "Syllabus",
+   "text": "Select appropriate pharmacologic therapy for common endocrine conditions based on clinical presentation and patient-specific factors."
+  },
+  {
+   "id": "IO4.5",
+   "src": "Syllabus",
+   "text": "Identify appropriate dosing, administration, and monitoring considerations for medications used in endocrine conditions."
+  },
+  {
+   "id": "IO4.6",
+   "src": "Syllabus",
+   "text": "Explain important medication-use and safety information to patients receiving pharmacotherapy for endocrine conditions."
+  },
+  {
+   "id": "SO1",
+   "src": "S2",
+   "text": "Describe the hypothalamic-pituitary-target gland axis as a shared regulatory template, and identify where drug therapy intervenes at each level."
+  },
+  {
+   "id": "SO2",
+   "src": "S2",
+   "text": "Identify the major agents used for growth hormone disorders, hyperprolactinemia, and disorders of antidiuretic hormone (diabetes insipidus, SIADH)."
+  },
+  {
+   "id": "SO3",
+   "src": "S2",
+   "text": "Describe the mechanisms, indications, and monitoring of thyroid hormone replacement and antithyroid drug therapy, including management of thyroid storm."
+  },
+  {
+   "id": "SO4",
+   "src": "S2",
+   "text": "Compare glucocorticoid and mineralocorticoid pharmacology, and identify agents used to block adrenocortical hormone synthesis or action."
+  },
+  {
+   "id": "SO5",
+   "src": "S2",
+   "text": "Identify dosing, administration, and monitoring considerations, and explain key medication-safety counseling points to patients, including HPA-axis suppression and the need to taper chronic glucocorticoids."
+  }
+ ],
+ "about": [
+  {
+   "text": "**PA PHARMACOLOGY COURSE · LECTURE 4 · SESSION 1 OF 2** — Endocrine Pharmacotherapy. **Session 1: Pituitary, Thyroid, and Adrenal Pharmacology  |  Tuesday, November 10  |  8:30–11:00 AM**",
+   "src": "S1"
+  },
+  {
+   "text": "One template runs this whole unit: hypothalamus drives the pituitary, the pituitary drives a target gland, and the gland’s hormone feeds back to turn the levels above it down. Every drug today replaces a hormone, blocks one, or interrupts that loop.",
+   "src": "S1 (notes); S4 (notes)"
+  },
+  {
+   "text": "Arc: the shared HPA-template concept, then pituitary, thyroid and adrenal in turn. Preview: gonadal hormones, pancreatic/diabetes pharmacology, and parathyroid disorders continue in Session 2 (Thursday, November 12).",
+   "src": "S2"
+  },
+  {
+   "text": "Orient to the arc: the shared HPA-template concept, then three organ systems in turn (pituitary, thyroid, adrenal) that all follow the same hypothalamic-pituitary-target gland logic of Figure 1; Session 2 continues with gonadal hormones, diabetes, and parathyroid disorders on Nov 12.",
+   "src": "S2 (notes)"
+  },
+  {
+   "text": "Readings: Katzung’s Chapters 37–42 are required for Unit 4 (Hypothalamic & Pituitary Hormones; Thyroid & Antithyroid Drugs; Adrenocorticosteroids & Adrenocortical Antagonists; Gonadal Hormones & Inhibitors; Pancreatic Hormones & Glucose-Lowering Drugs; Agents That Affect Bone Mineral Homeostasis).",
+   "src": "S3; S3 (notes)"
+  },
+  {
+   "text": "Session 1 covers Chapters 37–39; Session 2 covers Chapters 40–42. Recommended: Pharmacotherapy Principles and Practice (Chisholm-Burns, Schwinghammer, Malone, Kolesar, Lee, 2022, McGraw-Hill; print ISBN 9781260460278, eText ISBN 9781260460285) as supplemental support, not a substitute.",
+   "src": "S3; S3 (notes)"
+  },
+  {
+   "text": "Required text: Katzung’s Basic and Clinical Pharmacology, 16th Edition (Todd W. Vanderah, 2024/2025, McGraw-Hill Education; ISBN 1260463303 eBook).",
+   "src": "S3"
+  },
+  {
+   "text": "**APPENDIX 1** gives **Formulation, dose, indications, adverse effects, contraindications and toxicity** — your study reference: know the dose logic, the one or two serious adverse effects, the contraindication that changes the decision, and the toxicity you would need to recognize.",
+   "src": "S29; S29 (notes); S30-51"
+  },
+  {
+   "text": "**Abbreviation key** **PO** **= by mouth** **SC** **= subcutaneous** **IM** **= intramuscular** **IV** **= intravenous** **ER** **= extended-release** **ODT** **= orally disintegrating tablet** **LAR** **= long-acting release** **BID / TID / QID** **= two / three / four times daily** **mcg** **= microgram**",
+   "src": "S29; S29 (notes)"
+  },
+  {
+   "text": "**GH** **= growth hormone** **IGF-1** **= insulin-like growth factor 1** **TSH** **= thyroid-stimulating hormone** **T4 / T3** **= thyroxine / triiodothyronine** **DI** **= diabetes insipidus** **SIADH** **= syndrome of inappropriate ADH secretion** **HPA** **= hypothalamic-pituitary-adrenal**",
+   "src": "S29; S29 (notes)"
+  },
+  {
+   "text": "**CBC** **= complete blood count** **LFT** **= liver function tests** **QT** **= QT interval on ECG** **CYP** **= cytochrome P450** **MI** **= myocardial infarction** **MRI** **= magnetic resonance imaging** **ARB** **= angiotensin receptor blocker** **AV** **= atrioventricular** **CNS** **= central nervous system**",
+   "src": "S29; S29 (notes)"
+  },
+  {
+   "text": "**Appendix 2: DRUG PROFILE · SUPPORTING** — supporting drugs explain interactions, not doses. Listed for context; not profiled in detail.",
+   "src": "S52; S52 (notes)"
+  },
+  {
+   "text": "**Original figures in this deck:** Figures 1, 6 and 9 (The Hypothalamic-Pituitary-Target Gland Axis; Thyroid Hormone Synthesis: Where Antithyroid Drugs Act; Exogenous Corticosteroids and HPA Axis Suppression) were generated by the course director using the AI tool Claude to illustrate standard, non-copyrighted pharmacologic concepts.",
+   "src": "S53"
+  },
+  {
+   "text": "They are original diagrams, not reproduced from Katzung’s Basic and Clinical Pharmacology or any other copyrighted source. **Mechanism illustrations:** (AI-generated, illustrative, not reproduced from copyrighted sources; schematic and not to scale): somatostatin analogs and pegvisomant (Figure 2, slide 7); dopamine agonists (Figure 3, slide 9);",
+   "src": "S53; S53 (notes)"
+  },
+  {
+   "text": "ADH, desmopressin and tolvaptan (Figure 4, slide 10); levothyroxine absorption (Figure 5, slide 15); thyroid storm targets (Figure 7, slide 19); glucocorticoid receptor signaling (Figure 8, slide 25); steroid synthesis and receptor blockade (Figure 10, slide 30). **Reference:** Anthropic. (2026). Claude (Sonnet 5) [Large language model]. https://claude.ai",
+   "src": "S53"
+  }
+ ],
+ "classes": [
+  {
+   "name": "Pituitary: GH, Prolactin & ADH",
+   "template": "drug_class",
+   "objectives": [
+    "SO1",
+    "SO2",
+    "IO4.1",
+    "IO4.2",
+    "IO4.4",
+    "IO4.5"
+   ],
+   "sections": {
+    "overview": [
+     {
+      "text": "**One regulatory template governs thyroid, adrenal, and gonadal control alike.**",
+      "src": "S4"
+     },
+     {
+      "text": "**Figure 1. Original illustrative diagram (not from Katzung): the hypothalamus drives the anterior pituitary, which drives a target endocrine gland, whose peripheral hormone produces end-organ effects and negatively feeds back to suppress the levels above it.**",
+      "src": "S5"
+     },
+     {
+      "text": "This is the conceptual spine for the unit — thyroid, adrenal and gonadal pharmacology all map onto this three-level axis; return to it every time a new gland appears.",
+      "src": "S5 (notes); SG U4-R1"
+     },
+     {
+      "text": "The peripheral hormone negatively feeds back on the hypothalamus/pituitary above it — which explains why every exogenous hormone therapy in the unit suppresses the levels above it.",
+      "src": "SG U4-R1"
+     }
+    ],
+    "prototype": [
+     {
+      "text": "Somatropin (GH deficiency); octreotide, lanreotide, pegvisomant (GH excess); cabergoline, bromocriptine (prolactin); desmopressin (DI); tolvaptan, demeclocycline (SIADH).",
+      "src": "S6; S8"
+     }
+    ],
+    "moa": [
+     {
+      "text": "GH axis (Figure 2): pituitary somatotroph releases GH → GH drives liver IGF-1 production → octreotide and lanreotide bind somatostatin receptors and lower GH release.",
+      "src": "S7; S7 (notes)"
+     },
+     {
+      "text": "Pegvisomant blocks the GH receptor so IGF-1 falls → acromegaly symptoms improve (monitor IGF-1). GH rises on pegvisomant, so GH is not used to monitor it.",
+      "src": "S7; S7 (notes)"
+     },
+     {
+      "text": "Dopamine normally inhibits prolactin release — dopamine agonists restore that inhibitory tone. Hypothalamic dopamine is the brake on lactotrophs; prolactinoma or drugs (antipsychotics, metoclopramide) lift the brake.",
+      "src": "S8; S9; S8 (notes); SG U4-R3"
+     },
+     {
+      "text": "Cabergoline or bromocriptine activate D2 receptors → prolactin release falls and the tumor often shrinks → cycles and fertility return; galactorrhea resolves.",
+      "src": "S9; S9 (notes)"
+     },
+     {
+      "text": "ADH (Figure 4): ADH binds the V2 receptor in the collecting duct → aquaporin-2 channels insert → water is reabsorbed and urine concentrates.",
+      "src": "S10"
+     },
+     {
+      "text": "Desmopressin boosts this (diabetes insipidus); tolvaptan or demeclocycline blunt it (SIADH) → free water retained in DI therapy, excreted in SIADH therapy.",
+      "src": "S10; S10 (notes)"
+     },
+     {
+      "text": "Anterior pituitary hormones & their hypothalamic regulators: continuous (not pulsatile) GnRH analogs down-regulate GnRH receptors and suppress LH and FSH.",
+      "src": "p. 705",
+      "tb": true
+     }
+    ],
+    "indications": [
+     {
+      "text": "**●  GH deficiency:** treated with recombinant human growth hormone (somatropin); monitor growth velocity in children and IGF-1 levels in adults.",
+      "src": "S6; S7; S6 (notes); SG U4-R2"
+     },
+     {
+      "text": "**●  GH excess (acromegaly):** treated with somatostatin analogs (octreotide, lanreotide — suppress GH release), the GH-receptor antagonist pegvisomant, or dopamine agonists (cabergoline) in select cases.",
+      "src": "S6; SG U4-R2"
+     },
+     {
+      "text": "**●  Clinical pearl:** octreotide also has major uses outside the pituitary axis — variceal bleeding and carcinoid syndrome — worth flagging as a cross-system agent.",
+      "src": "S6; S6 (notes)"
+     },
+     {
+      "text": "**●  Indication:** octreotide and lanreotide treat acromegaly; octreotide also treats carcinoid syndrome and variceal bleeding.",
+      "src": "S7"
+     },
+     {
+      "text": "Hyperprolactinemia: dopamine agonists are first-line — cabergoline, bromocriptine — used for prolactinomas and drug-induced hyperprolactinemia.",
+      "src": "S8"
+     },
+     {
+      "text": "Diabetes insipidus (ADH deficiency/resistance): desmopressin (DDAVP) for central DI. SIADH (ADH excess): fluid restriction first-line; vasopressin-receptor antagonists (tolvaptan) or demeclocycline for refractory cases.",
+      "src": "S8; S10; SG U4-R4"
+     },
+     {
+      "text": "**●  Somatropin (GH deficiency):** monitor growth velocity or IGF-1.",
+      "src": "S7"
+     }
+    ],
+    "adverse": [
+     {
+      "text": "**●  Adverse effects:** GI upset, gallstones and bradycardia with octreotide and lanreotide (also glucose changes).",
+      "src": "S7; S7 (notes)"
+     },
+     {
+      "text": "**●  Limitation:** pegvisomant does not shrink the tumor; monitor IGF-1 and liver tests.",
+      "src": "S7"
+     },
+     {
+      "text": "**●  Adverse effects:** nausea, orthostatic hypotension and dizziness (dopamine agonists).",
+      "src": "S9"
+     },
+     {
+      "text": "Cabergoline is twice weekly and better tolerated; high doses link to valvulopathy.",
+      "src": "S9 (notes)"
+     },
+     {
+      "text": "**●  Caution:** high-dose cabergoline in Parkinson patients is linked to cardiac valve fibrosis; use caution with severe psychiatric disease and avoid unmonitored antipsychotic changes.",
+      "src": "S9; S9 (notes)"
+     },
+     {
+      "text": "**●  Desmopressin:** risk is hyponatremia; monitor sodium and limit fluids.",
+      "src": "S10; S10 (notes)"
+     },
+     {
+      "text": "**●  Tolvaptan:** can overcorrect sodium (osmotic demyelination) and cause liver injury; start in hospital.",
+      "src": "S10; S10 (notes)"
+     },
+     {
+      "text": "**●  SIADH:** first-line is fluid restriction; demeclocycline causes photosensitivity and nephrotoxicity.",
+      "src": "S10"
+     },
+     {
+      "text": "Short stature from GH deficiency, Turner syndrome and other growth disorders is the main somatropin use; long-acting weekly forms (somapacitan) exist.",
+      "src": "p. 707; p. 721",
+      "tb": true
+     },
+     {
+      "text": "Growth hormone (somatropin) adverse effects are rare: pseudotumor cerebri, slipped capital femoral epiphysis, scoliosis progression, edema, hyperglycemia.",
+      "src": "p. 708",
+      "tb": true
+     },
+     {
+      "text": "Mecasermin (recombinant IGF-I for GH-unresponsive growth failure) causes hypoglycemia — give with a carbohydrate meal within 20 minutes.",
+      "src": "p. 708",
+      "tb": true
+     },
+     {
+      "text": "Octreotide: nausea, cramps, steatorrhea, gallstones, and vitamin B12 deficiency with long-term use.",
+      "src": "p. 709",
+      "tb": true
+     }
+    ],
+    "contra": [],
+    "interactions": [
+     {
+      "text": "Antipsychotics and metoclopramide raise prolactin by blocking dopamine.",
+      "src": "S9 (notes); S52"
+     }
+    ],
+    "pk": [
+     {
+      "text": "**●  Dosing:** cabergoline is better tolerated and given twice weekly; bromocriptine is daily.",
+      "src": "S9; S9 (notes)"
+     },
+     {
+      "text": "Octreotide is 45 times more potent than somatostatin at inhibiting GH; somatostatin analogs come as long-acting monthly depots. Cabergoline’s half-life is about 65 hours.",
+      "src": "p. 709; p. 716",
+      "tb": true
+     }
+    ],
+    "monitoring": [
+     {
+      "text": "**●  Monitoring:** pregnancy testing and prolactin monitoring (dopamine agonists). Monitor IGF-1 for acromegaly therapy.",
+      "src": "S9; S7 (notes)"
+     },
+     {
+      "text": "Pegvisomant does not lower GH secretion and may let the adenoma grow — monitor IGF-I and yearly pituitary MRI.",
+      "src": "p. 709",
+      "tb": true
+     }
+    ],
+    "pearls": [
+     {
+      "text": "DI vs. SIADH is a classic exam pairing — opposite problems; anchor it to \"which way does free water move\" rather than drug names in isolation.",
+      "src": "S8; S8 (notes)"
+     },
+     {
+      "text": "Octreotide reappears in GI/variceal contexts — drug classes are not siloed by organ system.",
+      "src": "S6 (notes)"
+     },
+     {
+      "text": "Hyperprolactinemia causes hypogonadism — infertility, amenorrhea, galactorrhea in women; low libido and ED in men; macroadenomas can compress the optic nerves.",
+      "src": "p. 715",
+      "tb": true
+     },
+     {
+      "text": "Oxytocin (posterior pituitary) is given IV to start or augment labor; it also triggers milk letdown. Its half-life is about 5 minutes.",
+      "src": "p. 717",
+      "tb": true
+     }
+    ]
+   },
+   "figures": [
+    {
+     "image": "S5_1.jpg",
+     "title": "Figure 1 · The hypothalamic-pituitary-target gland axis",
+     "src": "S5; S5 (notes)",
+     "caption": "Original illustrative diagram (not from Katzung): hypothalamus → anterior pituitary → target gland → peripheral hormone and end-organ effects, with negative feedback to the levels above. Trace the axis and the feedback arrows.",
+     "viz": {
+      "type": "pathway",
+      "title": "The hypothalamic-pituitary-target gland axis",
+      "h": 170,
+      "point": "Give a hormone and the levels above it turn down.",
+      "nodes": [
+       {
+        "id": "h",
+        "label": "Hypothalamus\n(TRH, CRH, GnRH)",
+        "glyph": "signal",
+        "x": 10,
+        "y": 55,
+        "w": 150,
+        "col": "blue"
+       },
+       {
+        "id": "p",
+        "label": "Anterior pituitary\n(TSH, ACTH, LH/FSH)",
+        "glyph": "signal",
+        "x": 180,
+        "y": 55,
+        "w": 160,
+        "col": "teal"
+       },
+       {
+        "id": "g",
+        "label": "Target gland",
+        "glyph": "cell",
+        "x": 360,
+        "y": 55,
+        "w": 120,
+        "col": "amber"
+       },
+       {
+        "id": "e",
+        "label": "Hormone,\nend-organ effects",
+        "glyph": "effect",
+        "x": 500,
+        "y": 55,
+        "w": 130,
+        "col": "sage"
+       }
+      ],
+      "edges": [
+       [
+        "h",
+        "p"
+       ],
+       [
+        "p",
+        "g"
+       ],
+       [
+        "g",
+        "e"
+       ]
+      ],
+      "drugs": [
+       {
+        "label": "Levothyroxine",
+        "at": "e",
+        "off": [],
+        "less": [
+         "p"
+        ],
+        "note": "Exogenous hormone feeds back → TSH falls (S12)."
+       },
+       {
+        "label": "Chronic prednisone",
+        "at": "e",
+        "off": [],
+        "less": [
+         "h",
+         "p",
+         "g"
+        ],
+        "note": "Suppresses CRH/ACTH → taper (S22)."
+       },
+       {
+        "label": "Combined pill",
+        "at": "e",
+        "off": [],
+        "less": [
+         "h",
+         "p"
+        ],
+        "note": "Suppresses GnRH/FSH/LH (Session 2)."
+       }
+      ],
+      "read": "Pick a drug to see where it acts."
+     }
+    },
+    {
+     "image": "S7_1.jpg",
+     "title": "Figure 2 · Somatostatin analogs and pegvisomant",
+     "src": "S7; S7 (notes)",
+     "caption": "Schematic (illustrative) — Figure 2. Octreotide and lanreotide lower GH release; pegvisomant blocks the GH receptor so IGF-1 falls; acromegaly improves — monitor IGF-1.",
+     "viz": {
+      "type": "pathway",
+      "title": "Somatostatin analogs and pegvisomant",
+      "h": 170,
+      "point": "Cut the GH or block its receptor.",
+      "nodes": [
+       {
+        "id": "gh",
+        "label": "Somatotroph\nreleases GH",
+        "glyph": "cell",
+        "x": 10,
+        "y": 55,
+        "w": 140,
+        "col": "teal"
+       },
+       {
+        "id": "rec",
+        "label": "GH receptor\n(liver)",
+        "glyph": "membrane",
+        "x": 170,
+        "y": 55,
+        "w": 130,
+        "col": "blue"
+       },
+       {
+        "id": "igf",
+        "label": "IGF-1",
+        "glyph": "molecule",
+        "x": 320,
+        "y": 55,
+        "w": 110,
+        "col": "amber"
+       },
+       {
+        "id": "acro",
+        "label": "Acromegaly\nfeatures",
+        "glyph": "effect",
+        "x": 450,
+        "y": 55,
+        "w": 150,
+        "col": "coral"
+       }
+      ],
+      "edges": [
+       [
+        "gh",
+        "rec"
+       ],
+       [
+        "rec",
+        "igf"
+       ],
+       [
+        "igf",
+        "acro"
+       ]
+      ],
+      "drugs": [
+       {
+        "label": "Octreotide / lanreotide",
+        "at": "gh",
+        "off": [],
+        "less": [
+         "gh",
+         "igf",
+         "acro"
+        ],
+        "note": "Lower GH release; GI upset, gallstones, bradycardia (S7)."
+       },
+       {
+        "label": "Pegvisomant",
+        "at": "rec",
+        "off": [
+         "igf",
+         "acro"
+        ],
+        "less": [],
+        "note": "Blocks the receptor; GH rises — monitor IGF-1, LFTs (S7)."
+       }
+      ],
+      "read": "Pick a drug to see where it acts."
+     }
+    },
+    {
+     "image": "S9_1.jpg",
+     "title": "Figure 3 · Dopamine agonists: restoring the brake on prolactin",
+     "src": "S9; S9 (notes)",
+     "caption": "Schematic (illustrative) — Figure 3. Dopamine is the brake on prolactin; prolactinomas or dopamine blockers lift it; cabergoline and bromocriptine (D2 agonists) restore it — prolactin falls, cycles and fertility return.",
+     "viz": {
+      "type": "pathway",
+      "title": "Dopamine agonists: restoring the brake on prolactin",
+      "h": 170,
+      "point": "Dopamine is the brake; D2 agonists press it.",
+      "nodes": [
+       {
+        "id": "da",
+        "label": "Hypothalamic\ndopamine (brake)",
+        "glyph": "signal",
+        "x": 10,
+        "y": 55,
+        "w": 150,
+        "col": "teal"
+       },
+       {
+        "id": "lac",
+        "label": "Lactotroph\n(D2 receptor)",
+        "glyph": "cell",
+        "x": 180,
+        "y": 55,
+        "w": 140,
+        "col": "blue"
+       },
+       {
+        "id": "prl",
+        "label": "Prolactin",
+        "glyph": "molecule",
+        "x": 340,
+        "y": 55,
+        "w": 110,
+        "col": "amber"
+       },
+       {
+        "id": "out",
+        "label": "Galactorrhea,\ninfertility",
+        "glyph": "effect",
+        "x": 470,
+        "y": 55,
+        "w": 150,
+        "col": "coral"
+       }
+      ],
+      "edges": [
+       [
+        "da",
+        "lac"
+       ],
+       [
+        "lac",
+        "prl"
+       ],
+       [
+        "prl",
+        "out"
+       ]
+      ],
+      "drugs": [
+       {
+        "label": "Cabergoline",
+        "at": "lac",
+        "off": [],
+        "less": [
+         "prl",
+         "out"
+        ],
+        "note": "Twice weekly, better tolerated (S9)."
+       },
+       {
+        "label": "Antipsychotic / metoclopramide",
+        "at": "da",
+        "off": [],
+        "less": [],
+        "note": "Blocks dopamine → prolactin rises (S9; S52)."
+       }
+      ],
+      "read": "Pick a drug to see where it acts."
+     }
+    },
+    {
+     "image": "S10_1.jpg",
+     "title": "Figure 4 · ADH, desmopressin and tolvaptan",
+     "src": "S10; S10 (notes)",
+     "caption": "Schematic (illustrative) — Figure 4. ADH → V2 → aquaporin-2 → water reabsorbed. Desmopressin keeps water in (DI; hyponatremia risk); tolvaptan lets it pass out (SIADH; overcorrection risk).",
+     "viz": {
+      "type": "pathway",
+      "title": "ADH, desmopressin and tolvaptan",
+      "h": 170,
+      "point": "Which way does free water move?",
+      "nodes": [
+       {
+        "id": "adh",
+        "label": "ADH binds V2\n(collecting duct)",
+        "glyph": "membrane",
+        "x": 10,
+        "y": 55,
+        "w": 150,
+        "col": "blue"
+       },
+       {
+        "id": "aqp",
+        "label": "Aquaporin-2\ninserted",
+        "glyph": "membrane",
+        "x": 180,
+        "y": 55,
+        "w": 140,
+        "col": "teal"
+       },
+       {
+        "id": "w",
+        "label": "Water\nreabsorbed",
+        "glyph": "effect",
+        "x": 340,
+        "y": 55,
+        "w": 130,
+        "col": "sage"
+       },
+       {
+        "id": "na",
+        "label": "Serum sodium",
+        "glyph": "molecule",
+        "x": 490,
+        "y": 55,
+        "w": 130,
+        "col": "amber"
+       }
+      ],
+      "edges": [
+       [
+        "adh",
+        "aqp"
+       ],
+       [
+        "aqp",
+        "w"
+       ],
+       [
+        "w",
+        "na"
+       ]
+      ],
+      "drugs": [
+       {
+        "label": "Desmopressin (central DI)",
+        "at": "adh",
+        "off": [],
+        "less": [],
+        "note": "Keeps water — watch hyponatremia (S10)."
+       },
+       {
+        "label": "Tolvaptan (SIADH)",
+        "at": "adh",
+        "off": [
+         "aqp",
+         "w"
+        ],
+        "less": [],
+        "note": "Lets water go — start in hospital (S10)."
+       }
+      ],
+      "read": "Pick a drug to see where it acts."
+     }
+    }
+   ],
+   "comparisons": [
+    {
+     "title": "Opposite ADH problems (S8; S10)",
+     "columns": [
+      "",
+      "Diabetes insipidus",
+      "SIADH"
+     ],
+     "rows": [
+      [
+       "Problem",
+       "ADH deficiency/resistance — water lost",
+       "ADH excess — water retained"
+      ],
+      [
+       "Drug",
+       "Desmopressin (central DI)",
+       "Fluid restriction; tolvaptan or demeclocycline if refractory"
+      ],
+      [
+       "Watch for",
+       "Hyponatremia — limit fluids",
+       "Overcorrection (osmotic demyelination); liver injury; photosensitivity"
+      ]
+     ],
+     "src": "S8; S10; SG U4-R4"
+    },
+    {
+     "title": "GH-axis profiles: formulation, dose, indications",
+     "columns": [
+      "Drug",
+      "Class",
+      "Formulation",
+      "Adult dose",
+      "Indications"
+     ],
+     "rows": [
+      [
+       "Somatropin (Genotropin, Norditropin)",
+       "**Recombinant human growth hormone**",
+       "SC injection pens and cartridges (several mg strengths)",
+       "Adults: start about 0.2 mg SC daily and titrate by IGF-1; children: weight-based daily SC dosing",
+       "GH deficiency (children and adults), Turner syndrome, other growth disorders"
+      ],
+      [
+       "Octreotide (Sandostatin)",
+       "**Somatostatin analog**",
+       "SC injection 50/100/500 mcg/mL; LAR depot IM 10/20/30 mg; oral capsule",
+       "Acromegaly: 50 mcg SC TID, titrate to 100-200 mcg TID; LAR 20 mg IM every 4 weeks",
+       "Acromegaly, carcinoid syndrome, VIPoma, esophageal variceal bleeding"
+      ],
+      [
+       "Lanreotide (Somatuline Depot)",
+       "**Somatostatin analog**",
+       "Deep SC injection 60/90/120 mg prefilled syringe",
+       "90 mg deep SC every 4 weeks for 3 months, then adjust between 60 and 120 mg",
+       "Acromegaly, neuroendocrine tumors, carcinoid syndrome"
+      ],
+      [
+       "Pegvisomant (Somavert)",
+       "**GH receptor antagonist**",
+       "SC injection vials 10/15/20/25/30 mg",
+       "Load 40 mg SC, then 10 mg SC daily, titrate by IGF-1 (max 30 mg/day)",
+       "Acromegaly not controlled by surgery or somatostatin analogs"
+      ]
+     ],
+     "src": "S30; S31; S32; S33"
+    },
+    {
+     "title": "GH-axis profiles: adverse effects, contraindications, toxicity",
+     "columns": [
+      "Drug",
+      "Adverse effects",
+      "Contraindications",
+      "Toxicity / overdose"
+     ],
+     "rows": [
+      [
+       "Somatropin (Genotropin, Norditropin)",
+       "Injection-site reaction, edema, joint pain, headache, hyperglycemia",
+       "Active malignancy, closed epiphyses (for growth promotion), acute critical illness",
+       "Fluid retention, glucose intolerance, intracranial hypertension, slipped capital femoral epiphysis; titrate by IGF-1"
+      ],
+      [
+       "Octreotide (Sandostatin)",
+       "GI upset, diarrhea, gallstones, bradycardia, glucose changes",
+       "Hypersensitivity",
+       "Gallstones, hypo- or hyperglycemia, bradycardia and conduction block; monitor IGF-1, glucose, gallbladder"
+      ],
+      [
+       "Lanreotide (Somatuline Depot)",
+       "Diarrhea, abdominal pain, gallstones, injection-site reaction, bradycardia",
+       "Hypersensitivity",
+       "Gallstones, glucose dysregulation, bradycardia; monitor GH and IGF-1"
+      ],
+      [
+       "Pegvisomant (Somavert)",
+       "Injection-site reaction, headache, raised liver enzymes, flu-like symptoms",
+       "Hypersensitivity",
+       "Liver injury; monitor tumor size by MRI; GH levels rise and are not used for monitoring"
+      ]
+     ],
+     "src": "S30; S31; S32; S33"
+    },
+    {
+     "title": "Prolactin and ADH profiles: formulation, dose, indications",
+     "columns": [
+      "Drug",
+      "Class",
+      "Formulation",
+      "Adult dose",
+      "Indications"
+     ],
+     "rows": [
+      [
+       "Cabergoline (Dostinex)",
+       "**Dopamine D2 agonist (ergot-derived)**",
+       "Tablet 0.5 mg",
+       "0.25 mg PO twice weekly, increase by 0.25 mg every 4 weeks to usual max 1 mg twice weekly",
+       "Hyperprolactinemia, prolactinoma"
+      ],
+      [
+       "Bromocriptine (Parlodel, Cycloset)",
+       "**Dopamine D2 agonist (ergot-derived)**",
+       "Tablet 2.5 mg; capsule 5 mg; Cycloset 0.8 mg tablet",
+       "1.25-2.5 mg PO at bedtime, titrate to 2.5 mg BID-TID for prolactinoma (max 15 mg/day)",
+       "Hyperprolactinemia, acromegaly (adjunct), Parkinson disease, type 2 diabetes (Cycloset)"
+      ],
+      [
+       "Desmopressin (DDAVP)",
+       "**Synthetic vasopressin V2 agonist**",
+       "Tablet 0.1/0.2 mg; nasal spray; SC/IV 4 mcg/mL; ODT 60 mcg",
+       "Central DI: 0.05-0.2 mg PO BID, or 10-40 mcg intranasal daily in divided doses; titrate to urine output",
+       "Central diabetes insipidus, nocturnal enuresis, hemophilia A and von Willebrand disease (IV)"
+      ],
+      [
+       "Tolvaptan (Samsca)",
+       "**Vasopressin V2 receptor antagonist**",
+       "Tablet 15/30 mg",
+       "15 mg PO once daily, titrate to 30-60 mg; start in hospital",
+       "Hyponatremia from SIADH or heart failure"
+      ],
+      [
+       "Demeclocycline",
+       "**Tetracycline with ADH-antagonist effect**",
+       "Tablet 150/300 mg",
+       "150-300 mg PO 3-4 times daily for SIADH (off-label)",
+       "Refractory SIADH (off-label), bacterial infections"
+      ]
+     ],
+     "src": "S34; S35; S36; S37; S38"
+    },
+    {
+     "title": "Prolactin and ADH profiles: adverse effects, contraindications, toxicity",
+     "columns": [
+      "Drug",
+      "Adverse effects",
+      "Contraindications",
+      "Toxicity / overdose"
+     ],
+     "rows": [
+      [
+       "Cabergoline (Dostinex)",
+       "Nausea, dizziness, headache, orthostatic hypotension",
+       "Uncontrolled hypertension, cardiac valvulopathy, ergot hypersensitivity",
+       "Cardiac valve fibrosis at high doses; impulse-control and psychiatric effects; overdose causes hypotension and nausea"
+      ],
+      [
+       "Bromocriptine (Parlodel, Cycloset)",
+       "Nausea, orthostatic hypotension, dizziness, headache, nasal congestion",
+       "Uncontrolled hypertension, pregnancy-related hypertension, ergot hypersensitivity",
+       "Hypotension and syncope, psychosis, fibrosis with long-term high doses; take with food"
+      ],
+      [
+       "Desmopressin (DDAVP)",
+       "Headache, nausea, flushing, hyponatremia",
+       "Hyponatremia history, polydipsia, eGFR below 50, heart failure",
+       "Water intoxication with severe hyponatremia and seizures; limit fluids and monitor sodium"
+      ],
+      [
+       "Tolvaptan (Samsca)",
+       "Thirst, dry mouth, polyuria, hypernatremia, liver injury",
+       "Urgent need to raise sodium, hypovolemia, anuria, strong CYP3A4 inhibitors",
+       "Overly rapid sodium correction (osmotic demyelination); liver injury; limit therapy to 30 days"
+      ],
+      [
+       "Demeclocycline",
+       "Photosensitivity, nausea, nephrogenic diabetes insipidus",
+       "Pregnancy, children under 8 years, hypersensitivity, severe renal impairment",
+       "Nephrotoxicity, photosensitivity, tooth discoloration; separate from calcium and antacids"
+      ]
+     ],
+     "src": "S34; S35; S36; S37; S38"
+    }
+   ],
+   "hooks": [
+    {
+     "kind": "why",
+     "text": "Why is GH useless for monitoring pegvisomant? The drug blocks the receptor, not the release — GH actually rises; IGF-1 is what falls.",
+     "src": "S7 (notes)"
+    }
+   ],
+   "high_yield": [
+    {
+     "text": "Acromegaly: octreotide/lanreotide or pegvisomant (monitor IGF-1); prolactinoma: cabergoline; DI: desmopressin (hyponatremia); SIADH: fluid restriction, then tolvaptan.",
+     "src": "S6; S8; S10"
+    }
+   ],
+   "questions": [
+    {
+     "kind": "vignette",
+     "stem": "A patient with acromegaly starts pegvisomant. Which lab best tracks the response?",
+     "correct": "IGF-1",
+     "why_correct": "Pegvisomant blocks the GH receptor so IGF-1 falls; GH rises and is not used to monitor it (S7).",
+     "distractors": [
+      {
+       "text": "Serum GH",
+       "why": "GH rises on pegvisomant (S7)."
+      },
+      {
+       "text": "Prolactin",
+       "why": "Not the target (S9)."
+      },
+      {
+       "text": "Sodium",
+       "why": "ADH drugs (S10)."
+      },
+      {
+       "text": "Cortisol",
+       "why": "Adrenal axis (S22)."
+      }
+     ],
+     "src": "S7"
+    },
+    {
+     "kind": "mechanism",
+     "stem": "How does cabergoline treat a prolactinoma?",
+     "correct": "D2 agonism restores dopamine’s brake",
+     "why_correct": "Dopamine normally inhibits prolactin; D2 agonists restore that tone and often shrink the tumor (S8–S9; SG U4-R3).",
+     "distractors": [
+      {
+       "text": "Blocks dopamine D2 receptors",
+       "why": "That raises prolactin (S9)."
+      },
+      {
+       "text": "Blocks somatostatin receptors",
+       "why": "Not the mechanism (S7)."
+      },
+      {
+       "text": "Blocks the prolactin receptor",
+       "why": "Not the mechanism (S9)."
+      },
+      {
+       "text": "Inhibits thyroid hormone release",
+       "why": "Not related (S16)."
+      }
+     ],
+     "src": "S8; S9; SG U4-R3"
+    },
+    {
+     "kind": "mechanism",
+     "stem": "How do octreotide and lanreotide treat acromegaly?",
+     "correct": "They lower GH release",
+     "why_correct": "Somatostatin analogs bind somatostatin receptors and suppress GH release (S6–S7).",
+     "distractors": [
+      {
+       "text": "They block the GH receptor",
+       "why": "That is pegvisomant (S7)."
+      },
+      {
+       "text": "They activate D2 receptors",
+       "why": "Dopamine agonists (S9)."
+      },
+      {
+       "text": "They block IGF-1 receptors",
+       "why": "Not the mechanism (S7)."
+      },
+      {
+       "text": "They replace missing GH",
+       "why": "That is somatropin (S6)."
+      }
+     ],
+     "src": "S6; S7; SG U4-R2"
+    },
+    {
+     "kind": "vignette",
+     "stem": "A patient with central diabetes insipidus starts desmopressin. What is the main safety counseling?",
+     "correct": "Limit fluids (hyponatremia)",
+     "why_correct": "Desmopressin keeps free water; risk is hyponatremia — monitor sodium and limit fluids (S10).",
+     "distractors": [
+      {
+       "text": "Drink extra water all day",
+       "why": "Raises hyponatremia risk (S10)."
+      },
+      {
+       "text": "Watch for hypernatremia",
+       "why": "Opposite direction (S10)."
+      },
+      {
+       "text": "Check liver tests monthly",
+       "why": "Tolvaptan (S10)."
+      },
+      {
+       "text": "Avoid sun exposure",
+       "why": "Demeclocycline (S10)."
+      }
+     ],
+     "src": "S8; S10; SG U4-R4"
+    },
+    {
+     "kind": "vignette",
+     "stem": "A patient with SIADH stays hyponatremic despite fluid restriction. Tolvaptan is planned. Why start it in hospital?",
+     "correct": "Risk of sodium overcorrection",
+     "why_correct": "Tolvaptan can overcorrect sodium (osmotic demyelination) and injure the liver; start in hospital (S10).",
+     "distractors": [
+      {
+       "text": "It causes severe hypoglycemia",
+       "why": "Not tolvaptan (S10)."
+      },
+      {
+       "text": "It causes hyperkalemia",
+       "why": "Not the taught risk (S10)."
+      },
+      {
+       "text": "It must be given IV only",
+       "why": "Oral drug (S37)."
+      },
+      {
+       "text": "It causes bradycardia",
+       "why": "Octreotide (S7)."
+      }
+     ],
+     "src": "S8; S10"
+    }
+   ],
+   "flows": [],
+   "deeper": {
+    "chapter": 37,
+    "first": 703,
+    "last": 721,
+    "why": "Hypothalamic and pituitary hormones in full"
+   }
+  },
+  {
+   "name": "Thyroid & Antithyroid Drugs",
+   "template": "drug_class",
+   "objectives": [
+    "SO3",
+    "SO5",
+    "IO4.1",
+    "IO4.2",
+    "IO4.3",
+    "IO4.4",
+    "IO4.5",
+    "IO4.6"
+   ],
+   "sections": {
+    "overview": [
+     {
+      "text": "**Replacing a deficient gland, or slowing down an overactive one.**",
+      "src": "S11"
+     },
+     {
+      "text": "**Figure 6. Original illustrative diagram (not from Katzung): iodide trapping, organification, and coupling produce T3/T4, which undergo peripheral T4-to-T3 conversion; methimazole and PTU block organification and coupling, while PTU additionally blocks peripheral conversion.**",
+      "src": "S14"
+     },
+     {
+      "text": "Figure 6 is the key to the next slides: PTU, not methimazole, is preferred in thyroid storm because it blocks an extra step.",
+      "src": "S14 (notes)"
+     }
+    ],
+    "prototype": [
+     {
+      "text": "Levothyroxine (replacement); methimazole, propylthiouracil (thionamides); propranolol; potassium iodide.",
+      "src": "S12; S15; S16"
+     }
+    ],
+    "moa": [
+     {
+      "text": "**Mechanism: synthetic T4, converted peripherally to active T3.**",
+      "src": "S12"
+     },
+     {
+      "text": "Levothyroxine path (Figure 5): tablet taken on an empty stomach → absorbed in the small intestine; calcium, iron and antacid binders block it.",
+      "src": "S13"
+     },
+     {
+      "text": "T4 converted to active T3 in tissues → T3 binds nuclear receptors and restores metabolism → TSH falls to the target range (recheck at 6–8 weeks).",
+      "src": "S13"
+     },
+     {
+      "text": "Methimazole and PTU block organification and coupling; PTU also blocks peripheral T4→T3 conversion — a faster symptomatic effect in crisis.",
+      "src": "S14; S15"
+     },
+     {
+      "text": "Storm targets (Figure 7): Graves thyroid makes excess hormone — PTU blocks synthesis; hormone is released — iodine (after PTU) blocks release.",
+      "src": "S17"
+     },
+     {
+      "text": "T4 converts to T3 in tissues — PTU, propranolol and steroids block conversion; T3 stimulates beta receptors — propranolol blunts tachycardia and tremor; crisis settles with fluids, cooling and support.",
+      "src": "S17; S17 (notes)"
+     },
+     {
+      "text": "Thyroid physiology: large doses of iodine inhibit organification (Wolff-Chaikoff block); amiodarone, contrast, β blockers and corticosteroids inhibit T4-to-T3 conversion.",
+      "src": "p. 724; p. 725",
+      "tb": true
+     }
+    ],
+    "indications": [
+     {
+      "text": "Levothyroxine: first-line for hypothyroidism; narrow therapeutic index — dose titrated using TSH (primary hypothyroidism) with repeat labs every 6–8 weeks after a dose change.",
+      "src": "S12; S12 (notes)"
+     },
+     {
+      "text": "About 1.6 mcg/kg/day is full replacement; estrogen raises needs. **●  Pregnancy:** often raises dose needs; monitor TSH closely.",
+      "src": "S12 (notes); S13"
+     },
+     {
+      "text": "Methimazole: first-line for most non-pregnant patients — once-daily dosing, more convenient; avoid in the first trimester of pregnancy (teratogenic risk).",
+      "src": "S15; S15 (notes)"
+     },
+     {
+      "text": "PTU: preferred in the first trimester of pregnancy and in thyroid storm. PTU first trimester (lower teratogenic risk) and thyroid storm (also blocks peripheral T4→T3 conversion).",
+      "src": "S15; SG U4-R6"
+     },
+     {
+      "text": "**A life-threatening hyperthyroid crisis requiring rapid, multi-pronged therapy.** Thyroid storm is treated with four drugs that hit four targets.",
+      "src": "S16; S16 (notes)"
+     },
+     {
+      "text": "Beta-blockers (propranolol) — control adrenergic symptoms (tachycardia, tremor) and blunt peripheral T4-to-T3 conversion. PTU (preferred over methimazole) — blocks new hormone synthesis and peripheral conversion.",
+      "src": "S16"
+     },
+     {
+      "text": "Iodine solution (given after PTU/methimazole) — acutely blocks hormone release; must follow the antithyroid drug to avoid providing substrate for new synthesis. Corticosteroids — blunt peripheral conversion and treat relative adrenal insufficiency.",
+      "src": "S16"
+     },
+     {
+      "text": "Laboratory diagnosis of Graves disease: suppressed TSH with high free thyroid hormone. Management of Graves disease: antithyroid drugs, radioactive iodine, or thyroidectomy; methimazole preferred except in pregnancy and storm.",
+      "src": "p. 734",
+      "tb": true
+     },
+     {
+      "text": "Pregnant hypothyroid patients often need about 25–30% more levothyroxine; add two extra doses a week as soon as pregnancy is confirmed.",
+      "src": "p. 734",
+      "tb": true
+     }
+    ],
+    "adverse": [
+     {
+      "text": "Methimazole boxed warning: agranulocytosis, hepatotoxicity. PTU boxed warning: severe hepatotoxicity (more than methimazole) — reserve for specific indications.",
+      "src": "S15; S17"
+     },
+     {
+      "text": "Thioamide agranulocytosis occurs in 0.1–0.5%, usually within the first 90 days; PTU’s severe hepatitis (boxed warning) restricts it to the first trimester, thyroid storm, or methimazole reactions.",
+      "src": "p. 730; p. 731",
+      "tb": true
+     },
+     {
+      "text": "Both thionamides carry agranulocytosis and liver warnings; PTU has the greater liver risk. Fever or sore throat on a thionamide means stop and check a CBC.",
+      "src": "S15 (notes)"
+     },
+     {
+      "text": "**●  Over-replacement:** tachycardia, atrial fibrillation and bone loss.",
+      "src": "S13; S12 (notes)"
+     },
+     {
+      "text": "Iodides given alone can escape in 2–8 weeks and worsen thyrotoxicosis; avoid chronic iodide in pregnancy (fetal goiter).",
+      "src": "p. 732",
+      "tb": true
+     }
+    ],
+    "contra": [
+     {
+      "text": "**Older adults and patients with cardiac disease: start at lower doses and titrate slowly to avoid precipitating angina/arrhythmia.**",
+      "src": "S12; S13; S12 (notes)"
+     },
+     {
+      "text": "**●  Propranolol:** avoided in decompensated heart failure and asthma.",
+      "src": "S17"
+     },
+     {
+      "text": "Radioactive iodine (131I) is avoided in pregnancy and breastfeeding — it destroys the fetal thyroid.",
+      "src": "p. 732",
+      "tb": true
+     }
+    ],
+    "interactions": [
+     {
+      "text": "**Significant absorption interactions: calcium, iron, and antacids can all reduce absorption — separate dosing by at least 4 hours.**",
+      "src": "S12; SG U4-R5"
+     },
+     {
+      "text": "**●  Timing:** separate from calcium, iron, antacids, PPIs and bile acid binders by 4 hours.",
+      "src": "S13"
+     },
+     {
+      "text": "Amiodarone and lithium can cause hypo- or hyperthyroidism. Estrogens raise thyroid-binding globulin, so levothyroxine needs rise. Rifampin, phenytoin, carbamazepine speed clearance of levothyroxine and steroids.",
+      "src": "S52; S52 (notes)"
+     },
+     {
+      "text": "**●  Steroids:** also treat relative adrenal insufficiency; avoid aspirin in thyroid storm (it frees bound hormone).",
+      "src": "S17"
+     }
+    ],
+    "pk": [
+     {
+      "text": "Take on an empty stomach, 30–60 minutes before breakfast, consistently relative to other medications and food.",
+      "src": "S12; S13 (notes)"
+     },
+     {
+      "text": "T4 has a 7-day half-life (allows once-daily dosing); T3 about 1 day. Enzyme inducers (rifampin, phenytoin, carbamazepine) speed thyroid hormone metabolism.",
+      "src": "p. 725; p. 726; p. 733",
+      "tb": true
+     }
+    ],
+    "monitoring": [
+     {
+      "text": "**●  Start low:** in older adults and in cardiac disease. Check TSH at 6–8 weeks.",
+      "src": "S13; S12 (notes)"
+     }
+    ],
+    "pearls": [
+     {
+      "text": "The absorption-interaction list is extremely high-yield — many patients also take calcium or iron, so timing counseling matters as much as the drug itself.",
+      "src": "S12 (notes)"
+     },
+     {
+      "text": "The pregnancy-trimester switch (PTU in first trimester, methimazole after) is a frequently tested nuance — worth stating explicitly rather than assuming one drug is simply \"better.\"",
+      "src": "S15 (notes)"
+     },
+     {
+      "text": "**●  Sequence:** start PTU and beta-blocker first; give iodine at least an hour later. **●  PTU:** boxed warning for hepatotoxicity.",
+      "src": "S17"
+     },
+     {
+      "text": "Case: fever, tachycardia, and altered mental status in untreated Graves disease. **What is the correct sequence of pharmacologic therapy, and why does the order matter?**",
+      "src": "S18"
+     },
+     {
+      "text": "**Beta-blockade and PTU are started first; iodine solution is given only after PTU, since giving iodine first would supply additional substrate for thyroid hormone synthesis before the gland’s synthetic machinery is blocked — potentially worsening the crisis.**",
+      "src": "S18; S16 (notes); SG U4-R7"
+     },
+     {
+      "text": "Iodine-first sequencing is the classic high-yield detail: giving iodine first can worsen the crisis by supplying substrate before synthesis is blocked.",
+      "src": "S16 (notes); S18 (notes)"
+     },
+     {
+      "text": "Subclinical hypothyroidism (high TSH, normal hormones) affects 4–10%; amiodarone causes hypo- or hyperthyroidism (about 3% thyrotoxicosis) that persists after stopping.",
+      "src": "p. 734; p. 736",
+      "tb": true
+     },
+     {
+      "text": "Subacute thyroiditis releases stored hormone transiently; nontoxic goiter in the US is most often Hashimoto thyroiditis; neonatal Graves comes from maternal antibodies.",
+      "src": "p. 735; p. 736",
+      "tb": true
+     }
+    ]
+   },
+   "figures": [
+    {
+     "image": "S13_1.jpg",
+     "title": "Figure 5 · Levothyroxine: absorption, conversion and timing",
+     "src": "S13; S13 (notes)",
+     "caption": "**Schematic (illustrative)** — Figure 5. Red X marks absorption blocked by calcium, iron or antacids. Blue steps show T4 to T3 conversion and receptor action. Red outcome: TSH falls to target.",
+     "viz": {
+      "type": "pathway",
+      "title": "Levothyroxine: absorption, conversion and timing",
+      "h": 170,
+      "point": "Timing decides whether the dose gets in.",
+      "nodes": [
+       {
+        "id": "tab",
+        "label": "Tablet, empty\nstomach",
+        "glyph": "molecule",
+        "x": 10,
+        "y": 55,
+        "w": 130,
+        "col": "teal"
+       },
+       {
+        "id": "abs",
+        "label": "Small-bowel\nabsorption",
+        "glyph": "membrane",
+        "x": 160,
+        "y": 55,
+        "w": 130,
+        "col": "blue"
+       },
+       {
+        "id": "t3",
+        "label": "T4 → T3\nin tissues",
+        "glyph": "enzyme",
+        "x": 310,
+        "y": 55,
+        "w": 120,
+        "col": "amber"
+       },
+       {
+        "id": "tsh",
+        "label": "TSH falls\nto target",
+        "glyph": "effect",
+        "x": 450,
+        "y": 55,
+        "w": 150,
+        "col": "sage"
+       }
+      ],
+      "edges": [
+       [
+        "tab",
+        "abs"
+       ],
+       [
+        "abs",
+        "t3"
+       ],
+       [
+        "t3",
+        "tsh"
+       ]
+      ],
+      "drugs": [
+       {
+        "label": "Calcium / iron / antacid",
+        "at": "abs",
+        "off": [
+         "t3",
+         "tsh"
+        ],
+        "less": [],
+        "note": "Binds the dose — separate by 4 hours (S12–S13)."
+       },
+       {
+        "label": "Levothyroxine",
+        "at": "tab",
+        "off": [],
+        "less": [],
+        "note": "30–60 min before breakfast; TSH at 6–8 weeks (S12–S13)."
+       }
+      ],
+      "read": "Pick a drug to see where it acts."
+     }
+    },
+    {
+     "image": "S14_1.jpg",
+     "title": "Figure 6 · Thyroid hormone synthesis: where antithyroid drugs act",
+     "src": "S14; S14 (notes)",
+     "caption": "Original illustrative diagram (not from Katzung): iodide trapping → organification → coupling → T3/T4 release → peripheral T4-to-T3 conversion. Methimazole and PTU block organification and coupling; PTU also blocks conversion.",
+     "viz": {
+      "type": "pathway",
+      "title": "Thyroid hormone synthesis: where antithyroid drugs act",
+      "h": 170,
+      "point": "PTU blocks one extra step.",
+      "nodes": [
+       {
+        "id": "trap",
+        "label": "Iodide\ntrapping",
+        "glyph": "membrane",
+        "x": 10,
+        "y": 55,
+        "w": 110,
+        "col": "teal"
+       },
+       {
+        "id": "org",
+        "label": "Organification,\ncoupling",
+        "glyph": "enzyme",
+        "x": 140,
+        "y": 55,
+        "w": 140,
+        "col": "blue"
+       },
+       {
+        "id": "rel",
+        "label": "T4/T3\nrelease",
+        "glyph": "molecule",
+        "x": 300,
+        "y": 55,
+        "w": 110,
+        "col": "amber"
+       },
+       {
+        "id": "conv",
+        "label": "T4 → T3\n(peripheral)",
+        "glyph": "enzyme",
+        "x": 430,
+        "y": 55,
+        "w": 130,
+        "col": "coral"
+       }
+      ],
+      "edges": [
+       [
+        "trap",
+        "org"
+       ],
+       [
+        "org",
+        "rel"
+       ],
+       [
+        "rel",
+        "conv"
+       ]
+      ],
+      "drugs": [
+       {
+        "label": "Methimazole",
+        "at": "org",
+        "off": [
+         "rel"
+        ],
+        "less": [],
+        "note": "First line, once daily (S15)."
+       },
+       {
+        "label": "PTU",
+        "at": "org",
+        "off": [
+         "rel",
+         "conv"
+        ],
+        "less": [],
+        "note": "Also blocks conversion — storm, first trimester (S14–S15)."
+       },
+       {
+        "label": "Iodine (after PTU)",
+        "at": "rel",
+        "off": [
+         "conv"
+        ],
+        "less": [],
+        "note": "Blocks release (S16)."
+       }
+      ],
+      "read": "Pick a drug to see where it acts."
+     }
+    },
+    {
+     "image": "S17_1.jpg",
+     "title": "Figure 7 · Thyroid storm: four drugs, four targets",
+     "src": "S17; S17 (notes)",
+     "caption": "Schematic (illustrative) — Figure 7. Red bars mark where PTU (synthesis), iodine (release, after PTU), propranolol and steroids (conversion, symptoms) act.",
+     "viz": {
+      "type": "pathway",
+      "title": "Thyroid storm: four drugs, four targets",
+      "h": 170,
+      "point": "Four drugs, four targets — in order.",
+      "nodes": [
+       {
+        "id": "syn",
+        "label": "Synthesis",
+        "glyph": "enzyme",
+        "x": 10,
+        "y": 55,
+        "w": 110,
+        "col": "teal"
+       },
+       {
+        "id": "rel",
+        "label": "Release",
+        "glyph": "molecule",
+        "x": 140,
+        "y": 55,
+        "w": 110,
+        "col": "blue"
+       },
+       {
+        "id": "conv",
+        "label": "T4 → T3",
+        "glyph": "enzyme",
+        "x": 270,
+        "y": 55,
+        "w": 110,
+        "col": "amber"
+       },
+       {
+        "id": "beta",
+        "label": "Beta-receptor\neffects",
+        "glyph": "effect",
+        "x": 400,
+        "y": 55,
+        "w": 150,
+        "col": "coral"
+       }
+      ],
+      "edges": [
+       [
+        "syn",
+        "rel"
+       ],
+       [
+        "rel",
+        "conv"
+       ],
+       [
+        "conv",
+        "beta"
+       ]
+      ],
+      "drugs": [
+       {
+        "label": "PTU (first)",
+        "at": "syn",
+        "off": [
+         "rel"
+        ],
+        "less": [],
+        "note": "Blocks synthesis and conversion (S16–S17)."
+       },
+       {
+        "label": "Iodine (≥1 h after PTU)",
+        "at": "rel",
+        "off": [
+         "conv"
+        ],
+        "less": [],
+        "note": "Blocks release (S16–S17)."
+       },
+       {
+        "label": "Propranolol",
+        "at": "beta",
+        "off": [],
+        "less": [
+         "beta"
+        ],
+        "note": "Rate, tremor; also less conversion; avoid in asthma (S17)."
+       },
+       {
+        "label": "Hydrocortisone",
+        "at": "conv",
+        "off": [],
+        "less": [
+         "conv"
+        ],
+        "note": "Blunts conversion; covers adrenal insufficiency (S16–S17)."
+       }
+      ],
+      "read": "Pick a drug to see where it acts."
+     }
+    }
+   ],
+   "comparisons": [
+    {
+     "title": "Methimazole vs. propylthiouracil (S15)",
+     "columns": [
+      "",
+      "Methimazole",
+      "Propylthiouracil (PTU)"
+     ],
+     "rows": [
+      [
+       "Use",
+       "First-line for most non-pregnant patients; once daily",
+       "First trimester of pregnancy; thyroid storm"
+      ],
+      [
+       "Extra action",
+       "—",
+       "Also blocks peripheral T4→T3 conversion"
+      ],
+      [
+       "Pregnancy",
+       "Avoid in first trimester (teratogenic)",
+       "Preferred in first trimester"
+      ],
+      [
+       "Boxed warning",
+       "Agranulocytosis, hepatotoxicity",
+       "Severe hepatotoxicity (more than methimazole)"
+      ]
+     ],
+     "src": "S15; SG U4-R6"
+    },
+    {
+     "title": "Thyroid drug profiles: formulation, dose, indications",
+     "columns": [
+      "Drug",
+      "Class",
+      "Formulation",
+      "Adult dose",
+      "Indications"
+     ],
+     "rows": [
+      [
+       "Levothyroxine (Synthroid, Levoxyl)",
+       "**Synthetic thyroid hormone (T4)**",
+       "Tablet 25-300 mcg (12 strengths); IV 100-500 mcg vial; liquid and capsule",
+       "Full replacement about 1.6 mcg/kg/day PO; start 12.5-50 mcg in older adults or heart disease; recheck TSH in 6-8 weeks",
+       "Hypothyroidism, myxedema coma (IV), TSH suppression in thyroid cancer"
+      ],
+      [
+       "Methimazole (Tapazole)",
+       "**Thionamide antithyroid drug**",
+       "Tablet 5/10 mg",
+       "Graves disease: start 10-30 mg PO once daily; adjust to free T4 every 4-6 weeks",
+       "Graves disease, toxic nodular goiter, pre-operative control"
+      ],
+      [
+       "Propylthiouracil (PTU)",
+       "**Thionamide antithyroid drug (also blocks T4 to T3)**",
+       "Tablet 50 mg",
+       "Start 100 mg PO TID (up to 300-400 mg/day); thyroid storm: 500-1,000 mg load, then 250 mg every 4 hours",
+       "First-trimester Graves disease, thyroid storm, methimazole intolerance"
+      ],
+      [
+       "Propranolol (Inderal)",
+       "**Nonselective beta-blocker**",
+       "Tablet 10/20/40/60/80 mg; ER capsule; IV 1 mg/mL",
+       "Thyrotoxic symptoms: 20-40 mg PO every 6-8 hours; thyroid storm: 60-80 mg PO every 4 hours or 0.5-1 mg IV",
+       "Thyrotoxic symptoms, thyroid storm, hypertension, tremor"
+      ],
+      [
+       "Potassium iodide (SSKI, Lugol solution)",
+       "**Iodine (blocks hormone release)**",
+       "SSKI 1 g/mL solution; Lugol 5% solution; tablets 65/130 mg",
+       "Thyroid storm: 5 drops (about 250 mg) SSKI PO every 6 hours, at least 1 hour after a thionamide",
+       "Thyroid storm, pre-thyroidectomy preparation, radiation protection"
+      ]
+     ],
+     "src": "S39; S40; S41; S42; S43"
+    },
+    {
+     "title": "Thyroid drug profiles: adverse effects, contraindications, toxicity",
+     "columns": [
+      "Drug",
+      "Adverse effects",
+      "Contraindications",
+      "Toxicity / overdose"
+     ],
+     "rows": [
+      [
+       "Levothyroxine (Synthroid, Levoxyl)",
+       "Usually none at the right dose; over-replacement causes tachycardia, tremor, insomnia, bone loss",
+       "Uncorrected adrenal insufficiency, acute MI, hypersensitivity",
+       "Over-replacement: atrial fibrillation, angina, osteoporosis; separate from calcium, iron and antacids by 4 hours"
+      ],
+      [
+       "Methimazole (Tapazole)",
+       "Rash, itching, joint pain, taste change; agranulocytosis (rare)",
+       "First trimester of pregnancy; prior methimazole agranulocytosis",
+       "Agranulocytosis (fever or sore throat: stop and check CBC), hepatotoxicity, teratogenicity"
+      ],
+      [
+       "Propylthiouracil (PTU)",
+       "Rash, nausea, taste change, joint pain",
+       "Prior PTU liver injury; avoid in children",
+       "Boxed warning: severe liver failure; agranulocytosis; ANCA-positive vasculitis"
+      ],
+      [
+       "Propranolol (Inderal)",
+       "Bradycardia, fatigue, bronchospasm, masks hypoglycemia",
+       "Asthma, decompensated heart failure, high-grade AV block, severe bradycardia",
+       "Bradycardia, hypotension, bronchospasm; avoid abrupt stopping; may mask hypoglycemia"
+      ],
+      [
+       "Potassium iodide (SSKI, Lugol solution)",
+       "Metallic taste, GI upset, salivary gland swelling, rash",
+       "Giving before a thionamide; iodine allergy",
+       "Iodism (rash, swelling, fever); thyroid escape after about 10 days; hypo- or hyperthyroidism"
+      ]
+     ],
+     "src": "S39; S40; S41; S42; S43"
+    }
+   ],
+   "hooks": [
+    {
+     "kind": "mnemonic",
+     "text": "Storm order: Block (beta-blocker), then Block synthesis (PTU), then Block release (iodine) — iodine never first.",
+     "src": "S16; S18"
+    }
+   ],
+   "high_yield": [
+    {
+     "text": "Levothyroxine: empty stomach, separate calcium/iron/antacids by 4 h, TSH at 6–8 weeks, start low in older/cardiac patients.",
+     "src": "S12; S13; SG U4-R5"
+    },
+    {
+     "text": "PTU for storm and first trimester; methimazole otherwise; fever/sore throat → stop, CBC.",
+     "src": "S15; SG U4-R6"
+    }
+   ],
+   "questions": [
+    {
+     "kind": "vignette",
+     "stem": "A patient with untreated Graves disease presents with fever, tachycardia and confusion. What is the correct order of therapy?",
+     "correct": "Beta-blocker and PTU first, iodine after",
+     "why_correct": "Iodine is given only after PTU; giving it first supplies substrate for new hormone synthesis (S18).",
+     "distractors": [
+      {
+       "text": "Iodine first, then PTU",
+       "why": "Worsens the crisis (S18)."
+      },
+      {
+       "text": "Methimazole alone, no beta-blocker",
+       "why": "Propranolol controls symptoms (S16)."
+      },
+      {
+       "text": "Levothyroxine to reset feedback",
+       "why": "Wrong direction (S12)."
+      },
+      {
+       "text": "Aspirin for the fever first",
+       "why": "Frees bound hormone (S17)."
+      }
+     ],
+     "src": "S16; S18; SG U4-R7",
+     "from_slides": "S18"
+    },
+    {
+     "kind": "vignette",
+     "stem": "A woman taking levothyroxine with her calcium and iron each morning has a high TSH. Best advice?",
+     "correct": "Separate them by at least 4 hours",
+     "why_correct": "Calcium, iron and antacids reduce absorption — separate by at least 4 hours; take it 30–60 minutes before breakfast (S12–S13).",
+     "distractors": [
+      {
+       "text": "Double the levothyroxine dose",
+       "why": "Fix the timing first (S12)."
+      },
+      {
+       "text": "Take it with breakfast instead",
+       "why": "Empty stomach (S12)."
+      },
+      {
+       "text": "Switch to methimazole",
+       "why": "Antithyroid drug (S15)."
+      },
+      {
+       "text": "Stop calcium permanently",
+       "why": "Separation is enough (S13)."
+      }
+     ],
+     "src": "S12; S13; SG U4-R5"
+    },
+    {
+     "kind": "vignette",
+     "stem": "A woman in her first trimester has hyperthyroidism. Which drug is preferred?",
+     "correct": "Propylthiouracil",
+     "why_correct": "PTU is preferred in the first trimester; methimazole is avoided then (teratogenic) (S15).",
+     "distractors": [
+      {
+       "text": "Methimazole",
+       "why": "Avoid in first trimester (S15)."
+      },
+      {
+       "text": "Radioactive iodine",
+       "why": "Contraindicated in pregnancy (p. 732)."
+      },
+      {
+       "text": "Potassium iodide alone",
+       "why": "Escape and fetal goiter risk (p. 732)."
+      },
+      {
+       "text": "Levothyroxine",
+       "why": "For hypothyroidism (S12)."
+      }
+     ],
+     "src": "S15; SG U4-R6"
+    },
+    {
+     "kind": "vignette",
+     "stem": "Six weeks into methimazole, a patient has fever and a sore throat. What should happen?",
+     "correct": "Stop it and check a CBC",
+     "why_correct": "Thionamides carry an agranulocytosis warning; fever or sore throat → stop and check a CBC (S15).",
+     "distractors": [
+      {
+       "text": "Continue and add an antibiotic",
+       "why": "Check for agranulocytosis first (S15)."
+      },
+      {
+       "text": "Switch to PTU immediately",
+       "why": "Check the CBC first (S15)."
+      },
+      {
+       "text": "Double the dose",
+       "why": "Not the answer (S15)."
+      },
+      {
+       "text": "Reassure: a common cold",
+       "why": "Not reassurance (S15)."
+      }
+     ],
+     "src": "S15"
+    },
+    {
+     "kind": "mechanism",
+     "stem": "Why is PTU preferred over methimazole in thyroid storm?",
+     "correct": "It also blocks T4→T3 conversion",
+     "why_correct": "PTU blocks synthesis and conversion, a faster effect on active hormone (S14–S15).",
+     "distractors": [
+      {
+       "text": "It is better absorbed orally",
+       "why": "Not the reason (S15)."
+      },
+      {
+       "text": "It has no liver toxicity",
+       "why": "Greater liver risk (S15)."
+      },
+      {
+       "text": "It blocks iodide trapping faster",
+       "why": "Not the reason (S14)."
+      },
+      {
+       "text": "It is a beta-blocker",
+       "why": "Propranolol (S16)."
+      }
+     ],
+     "src": "S14; S15"
+    },
+    {
+     "kind": "mechanism",
+     "stem": "What is levothyroxine, and how does it act?",
+     "correct": "Synthetic T4, converted to T3",
+     "why_correct": "Levothyroxine is synthetic T4, converted peripherally to active T3, which binds nuclear receptors (S12–S13).",
+     "distractors": [
+      {
+       "text": "Synthetic T3 acting directly",
+       "why": "That is liothyronine (S12)."
+      },
+      {
+       "text": "A TSH-receptor agonist drug",
+       "why": "Not the mechanism (S12)."
+      },
+      {
+       "text": "A TRH analog acting centrally",
+       "why": "Not the mechanism (S12)."
+      },
+      {
+       "text": "An iodide supplement for synthesis",
+       "why": "Not the mechanism (S12)."
+      }
+     ],
+     "src": "S12; S13"
+    },
+    {
+     "kind": "vignette",
+     "stem": "An 80-year-old with coronary disease is newly hypothyroid. How should levothyroxine be started?",
+     "correct": "Low dose, titrated slowly",
+     "why_correct": "Older adults and cardiac patients start low and titrate slowly to avoid angina or arrhythmia (S12).",
+     "distractors": [
+      {
+       "text": "Full 1.6 mcg/kg/day at once",
+       "why": "Risks angina (S12)."
+      },
+      {
+       "text": "A loading dose then full dose",
+       "why": "Not the approach (S12)."
+      },
+      {
+       "text": "Liothyronine (T3) at a high dose",
+       "why": "Not taught (S12)."
+      },
+      {
+       "text": "No treatment until TSH > 20",
+       "why": "Not the approach (S12)."
+      }
+     ],
+     "src": "S12; S13"
+    },
+    {
+     "kind": "vignette",
+     "stem": "A hypothyroid woman on levothyroxine learns she is pregnant. What dose change does the textbook advise?",
+     "correct": "Increase by about 25–30%",
+     "why_correct": "Many pregnant hypothyroid patients need about 25–30% more thyroxine; add two extra doses a week as soon as pregnancy is confirmed (p. 734).",
+     "distractors": [
+      {
+       "text": "Stop it until delivery",
+       "why": "Fetal brain needs it (p. 733)."
+      },
+      {
+       "text": "Halve the dose",
+       "why": "Needs rise (p. 734)."
+      },
+      {
+       "text": "Switch to methimazole",
+       "why": "Wrong direction (p. 734)."
+      },
+      {
+       "text": "No change; recheck after birth",
+       "why": "Monitor closely (p. 734)."
+      }
+     ],
+     "src": "p. 733; p. 734",
+     "tb": true
+    }
+   ],
+   "flows": [
+    {
+     "title": "Thyroid storm sequence",
+     "steps": [
+      "Recognize: fever, tachycardia, altered mental status in Graves",
+      "Propranolol (avoid in asthma/decompensated HF)",
+      "PTU: blocks synthesis and T4→T3",
+      "Iodine at least 1 hour after PTU",
+      "Steroids; fluids, cooling; no aspirin"
+     ],
+     "src": "S16; S17; S18"
+    }
+   ],
+   "deeper": {
+    "chapter": 38,
+    "first": 723,
+    "last": 738,
+    "why": "Thyroid physiology, replacement, antithyroid drugs and special problems"
+   }
+  },
+  {
+   "name": "Adrenocorticosteroids & Antagonists",
+   "template": "drug_class",
+   "objectives": [
+    "SO4",
+    "SO5",
+    "IO4.1",
+    "IO4.2",
+    "IO4.3",
+    "IO4.4",
+    "IO4.5",
+    "IO4.6"
+   ],
+   "sections": {
+    "overview": [
+     {
+      "text": "**Glucocorticoid power and mineralocorticoid balance — and what happens when therapy stops.**",
+      "src": "S19"
+     },
+     {
+      "text": "**Figure 9. Original illustrative diagram (not from Katzung): chronic exogenous glucocorticoid use suppresses CRH and ACTH via negative feedback, reducing endogenous cortisol production — abrupt withdrawal can precipitate adrenal insufficiency.**",
+      "src": "S22"
+     },
+     {
+      "text": "This is the single most clinically important concept in the glucocorticoid section — it explains why tapering (not stopping) is the standard of care.",
+      "src": "S22 (notes)"
+     }
+    ],
+    "prototype": [
+     {
+      "text": "Prednisone, dexamethasone, hydrocortisone (glucocorticoids); fludrocortisone (mineralocorticoid); ketoconazole, metyrapone, mifepristone, spironolactone (antagonists).",
+      "src": "S20; S23"
+     }
+    ],
+    "moa": [
+     {
+      "text": "Glucocorticoids (e.g., prednisone, dexamethasone): anti-inflammatory and immunosuppressive effects, with a spectrum of relative potency and mineralocorticoid activity across agents.",
+      "src": "S20"
+     },
+     {
+      "text": "Signaling (Figure 8): prednisone or cortisol crosses the cell membrane → binds the cytoplasmic glucocorticoid receptor → the complex moves into the nucleus → switches on anti-inflammatory genes and represses NF-kB cytokines → fewer inflammatory cells and mediators.",
+      "src": "S21; S21 (notes)"
+     },
+     {
+      "text": "Mineralocorticoids (fludrocortisone): promote renal sodium retention and potassium excretion.",
+      "src": "S20"
+     },
+     {
+      "text": "Synthesis chain (Figure 10): cholesterol enters the adrenal cortex → CYP enzymes convert it to cortisol and aldosterone → ketoconazole blocks several enzymes; metyrapone blocks the last cortisol step (11-beta-hydroxylase).",
+      "src": "S24"
+     },
+     {
+      "text": "Then cortisol or aldosterone binds its receptor → mifepristone blocks the glucocorticoid receptor; spironolactone blocks the mineralocorticoid receptor. Receptor blockers leave hormone levels high.",
+      "src": "S24; S24 (notes)"
+     }
+    ],
+    "indications": [
+     {
+      "text": "Glucocorticoids are used across nearly every organ system for inflammatory/autoimmune disease.",
+      "src": "S20"
+     },
+     {
+      "text": "Fludrocortisone: replacement therapy in primary adrenal insufficiency (Addison disease), alongside a glucocorticoid — primary adrenal insufficiency needs BOTH hormone classes replaced, not just cortisol.",
+      "src": "S20; S20 (notes)"
+     },
+     {
+      "text": "**●  Ketoconazole:** inhibits multiple steps in steroidogenesis (CYP enzymes); used for Cushing syndrome; significant drug-interaction and hepatotoxicity concerns.",
+      "src": "S23; SG U4-R9"
+     },
+     {
+      "text": "**●  Metyrapone:** blocks the final step of cortisol synthesis (11-β-hydroxylase); used diagnostically and for Cushing syndrome.",
+      "src": "S23; SG U4-R9"
+     },
+     {
+      "text": "**●  Mifepristone:** a glucocorticoid-receptor antagonist; used for hyperglycemia associated with Cushing syndrome when surgery is not an option (distinct from its progesterone-receptor antagonist use in pregnancy termination).",
+      "src": "S23; S23 (notes); SG U4-R9"
+     },
+     {
+      "text": "**●  Spironolactone:** a mineralocorticoid-receptor antagonist; used for hyperaldosteronism and as a potassium-sparing diuretic — ties back to the diuretic pharmacology concepts from earlier coursework.",
+      "src": "S23; SG U4-R9"
+     },
+     {
+      "text": "Addison disease: hydrocortisone 20–30 mg daily (more during stress) plus fludrocortisone 0.05–0.2 mg/d.",
+      "src": "p. 747",
+      "tb": true
+     },
+     {
+      "text": "Dexamethasone suppression test diagnoses Cushing syndrome; antenatal glucocorticoids reduce neonatal respiratory distress.",
+      "src": "p. 748",
+      "tb": true
+     }
+    ],
+    "adverse": [
+     {
+      "text": "**●  Adverse effects:** hyperglycemia, osteoporosis, infection, mood change, cataracts, adrenal suppression.",
+      "src": "S21; S20 (notes)"
+     },
+     {
+      "text": "**●  Ketoconazole:** hepatotoxicity, QT prolongation, strong CYP3A4 inhibition.",
+      "src": "S24; S23 (notes)"
+     },
+     {
+      "text": "**●  Metyrapone:** raises androgens and deoxycorticosterone (hirsutism, hypertension).",
+      "src": "S24; S23 (notes)"
+     },
+     {
+      "text": "**●  Mifepristone:** contraindicated in pregnancy; causes hypokalemia; cortisol levels rise, so monitor clinically. **●  Spironolactone:** hyperkalemia and gynecomastia.",
+      "src": "S24; S24 (notes)"
+     },
+     {
+      "text": "Adrenal suppression can occur after more than 2 weeks of corticosteroids; ACTH does not speed recovery.",
+      "src": "p. 750",
+      "tb": true
+     },
+     {
+      "text": "Long-term steroids: Cushingoid changes, myopathy, osteoporosis, peptic ulcer, masked infection, hypomania or psychosis, posterior subcapsular cataracts.",
+      "src": "p. 745; p. 750",
+      "tb": true
+     }
+    ],
+    "contra": [],
+    "interactions": [
+     {
+      "text": "Azole antifungals raise corticosteroid exposure through CYP3A4. ACE inhibitors, ARBs and potassium add to spironolactone hyperkalemia. Insulin and oral agents need adjusting during steroid therapy.",
+      "src": "S52; S52 (notes)"
+     }
+    ],
+    "pk": [
+     {
+      "text": "**●  Potency vs. hydrocortisone:** prednisone about 4x, dexamethasone about 25-30x. **●  Mineralocorticoid action:** fludrocortisone has it; hydrocortisone has both.",
+      "src": "S21; S20 (notes)"
+     },
+     {
+      "text": "**●  Dosing:** take in the morning with food; consider bone and GI protection.",
+      "src": "S21"
+     },
+     {
+      "text": "Synthetic corticosteroids — pharmacokinetics & pharmacodynamics: potency and salt-retaining activity differ by agent (equivalent-dose table).",
+      "src": "p. 746; p. 747",
+      "tb": true
+     },
+     {
+      "text": "Selection of drug & dosage schedule: give steroids as a single morning dose; alternate-day dosing lessens suppression when disease control allows.",
+      "src": "p. 750; p. 751",
+      "tb": true
+     }
+    ],
+    "monitoring": [
+     {
+      "text": "Fludrocortisone: monitor blood pressure and potassium.",
+      "src": "S20"
+     },
+     {
+      "text": "Chronic steroids suppress CRH and ACTH — abrupt withdrawal risks adrenal crisis; taper. Chronic suppression leaves the axis unable to resume adequate cortisol quickly — taper, don’t stop abruptly.",
+      "src": "S22 (notes); SG U4-R8"
+     }
+    ],
+    "pearls": [
+     {
+      "text": "Case: chronic high-dose prednisone for a rheumatologic condition, stopped abruptly after running out of refills; now hypotension, weakness, nausea, confusion. **What is the most likely cause of this presentation, and how should it be managed?**",
+      "src": "S27"
+     },
+     {
+      "text": "**This presentation is consistent with acute adrenal insufficiency (adrenal crisis) from abrupt glucocorticoid withdrawal after HPA-axis suppression.**",
+      "src": "S27"
+     },
+     {
+      "text": "**Management requires immediate IV hydrocortisone (which has both glucocorticoid and mineralocorticoid activity) and IV fluids — this is a medical emergency, not a routine medication-refill issue.**",
+      "src": "S27; S27 (notes)"
+     },
+     {
+      "text": "The fix for a missed refill here is not \"just restart the pill\" — it is emergent IV steroid replacement; tapering protects against it.",
+      "src": "S27 (notes)"
+     },
+     {
+      "text": "Mifepristone’s dual identity (glucocorticoid-receptor antagonist here vs. progesterone-receptor antagonist elsewhere) is worth flagging explicitly — don’t conflate the two uses or assume a single mechanism.",
+      "src": "S23 (notes)"
+     },
+     {
+      "text": "Drug names reveal the class: **-tide** somatostatin analog (octreotide, lanreotide; lowers GH release); **-pressin** vasopressin analog (desmopressin; central diabetes insipidus); **-vaptan** V2 antagonist (tolvaptan; SIADH).",
+      "src": "S26; S26 (notes)"
+     },
+     {
+      "text": "**-ergoline** dopamine agonist, ergot-derived (cabergoline; lowers prolactin); **-thyroxine** thyroid hormone (levothyroxine; replacement, titrate to TSH); **-imazole / -thiouracil** thionamide antithyroid (methimazole, propylthiouracil; blocks hormone synthesis).",
+      "src": "S26"
+     },
+     {
+      "text": "**-sone / -solone** corticosteroid (prednisone, dexamethasone; anti-inflammatory, taper); **-conazole** azole steroidogenesis inhibitor (ketoconazole; Cushing syndrome); **-pristone** receptor antagonist (mifepristone; glucocorticoid-receptor block); **-lactone** mineralocorticoid antagonist (spironolactone; hyperkalemia risk).",
+      "src": "S26"
+     },
+     {
+      "text": "**A stem is a memory aid, not a rule: where no shared stem exists, learn the class name instead.**",
+      "src": "S26"
+     },
+     {
+      "text": "Recap: **1.** The hypothalamic-pituitary-target gland axis (Figure 1) is a shared regulatory template across thyroid, adrenal, and gonadal systems — drug therapy can intervene at any level.",
+      "src": "S28"
+     },
+     {
+      "text": "**2.** Thyroid hormone synthesis has distinct, drug-targetable steps (Figure 6); PTU uniquely blocks peripheral T4-to-T3 conversion, making it preferred in thyroid storm and first-trimester pregnancy.",
+      "src": "S28"
+     },
+     {
+      "text": "**3.** Chronic exogenous glucocorticoid use suppresses the HPA axis (Figure 9) — abrupt withdrawal risks adrenal crisis, so chronic therapy is tapered, not stopped.",
+      "src": "S28"
+     },
+     {
+      "text": "**4.** Adrenocortical antagonists (ketoconazole, metyrapone, mifepristone, spironolactone) block cortisol or aldosterone synthesis/action at different points for Cushing syndrome and hyperaldosteronism. **5.** Session 2 (Thursday, November 12) continues with gonadal hormones, diabetes, and parathyroid disorders.",
+      "src": "S28; S28 (notes)"
+     },
+     {
+      "text": "Older synthesis inhibitors — aminoglutethimide and trilostane — and the adrenolytic mitotane are rarely used; mifepristone (RU-486) is the receptor antagonist.",
+      "src": "p. 752; p. 753; p. 754",
+      "tb": true
+     },
+     {
+      "text": "Synthesis inhibitors & glucocorticoid antagonists: metyrapone is the only adrenal inhibitor usable in pregnancy; abiraterone treats refractory prostate cancer; mifepristone half-life about 20 hours.",
+      "src": "p. 754",
+      "tb": true
+     }
+    ]
+   },
+   "figures": [
+    {
+     "image": "S21_1.jpg",
+     "title": "Figure 8 · Glucocorticoid receptor signaling",
+     "src": "S21; S21 (notes)",
+     "caption": "**Schematic (illustrative)** — Figure 8. A steroid enters the cell, binds its cytoplasmic receptor, and the complex switches genes on and off in the nucleus; NF-kB-driven cytokines are repressed.",
+     "viz": {
+      "type": "pathway",
+      "title": "Glucocorticoid receptor signaling",
+      "h": 170,
+      "point": "Receptor → nucleus → fewer cytokines.",
+      "nodes": [
+       {
+        "id": "st",
+        "label": "Steroid enters\nthe cell",
+        "glyph": "molecule",
+        "x": 10,
+        "y": 55,
+        "w": 130,
+        "col": "teal"
+       },
+       {
+        "id": "gr",
+        "label": "Cytoplasmic\nGR binds",
+        "glyph": "membrane",
+        "x": 160,
+        "y": 55,
+        "w": 130,
+        "col": "blue"
+       },
+       {
+        "id": "nuc",
+        "label": "Nucleus: genes\non/off, NF-kB ↓",
+        "glyph": "signal",
+        "x": 310,
+        "y": 55,
+        "w": 160,
+        "col": "amber"
+       },
+       {
+        "id": "out",
+        "label": "Less\ninflammation",
+        "glyph": "effect",
+        "x": 490,
+        "y": 55,
+        "w": 130,
+        "col": "sage"
+       }
+      ],
+      "edges": [
+       [
+        "st",
+        "gr"
+       ],
+       [
+        "gr",
+        "nuc"
+       ],
+       [
+        "nuc",
+        "out"
+       ]
+      ],
+      "drugs": [
+       {
+        "label": "Prednisone (~4×)",
+        "at": "st",
+        "off": [],
+        "less": [],
+        "note": "Morning with food; bone and GI protection (S21)."
+       },
+       {
+        "label": "Dexamethasone (~25–30×)",
+        "at": "st",
+        "off": [],
+        "less": [],
+        "note": "Long-acting (S21)."
+       },
+       {
+        "label": "Mifepristone",
+        "at": "gr",
+        "off": [
+         "nuc",
+         "out"
+        ],
+        "less": [],
+        "note": "Blocks the receptor; cortisol rises (S24)."
+       }
+      ],
+      "read": "Pick a drug to see where it acts."
+     }
+    },
+    {
+     "image": "S22_1.jpg",
+     "title": "Figure 9 · Exogenous corticosteroids and HPA suppression",
+     "src": "S22; S22 (notes)",
+     "caption": "Original illustrative diagram (not from Katzung): chronic exogenous glucocorticoid suppresses CRH and ACTH via negative feedback; endogenous cortisol falls; abrupt withdrawal → adrenal insufficiency. Taper.",
+     "viz": {
+      "type": "pathway",
+      "title": "Exogenous corticosteroids and HPA suppression",
+      "h": 170,
+      "point": "Suppressed axes need time — taper.",
+      "nodes": [
+       {
+        "id": "crh",
+        "label": "Hypothalamus:\nCRH",
+        "glyph": "signal",
+        "x": 10,
+        "y": 55,
+        "w": 130,
+        "col": "blue"
+       },
+       {
+        "id": "acth",
+        "label": "Pituitary:\nACTH",
+        "glyph": "signal",
+        "x": 160,
+        "y": 55,
+        "w": 130,
+        "col": "teal"
+       },
+       {
+        "id": "adr",
+        "label": "Adrenal\ncortisol",
+        "glyph": "cell",
+        "x": 310,
+        "y": 55,
+        "w": 130,
+        "col": "amber"
+       },
+       {
+        "id": "crisis",
+        "label": "Stop abruptly →\nadrenal crisis",
+        "glyph": "effect",
+        "x": 460,
+        "y": 55,
+        "w": 160,
+        "col": "coral"
+       }
+      ],
+      "edges": [
+       [
+        "crh",
+        "acth"
+       ],
+       [
+        "acth",
+        "adr"
+       ],
+       [
+        "adr",
+        "crisis"
+       ]
+      ],
+      "drugs": [
+       {
+        "label": "Chronic prednisone",
+        "at": "crh",
+        "off": [],
+        "less": [
+         "crh",
+         "acth",
+         "adr"
+        ],
+        "note": "Feedback suppresses CRH/ACTH (S22)."
+       },
+       {
+        "label": "Slow taper",
+        "at": "adr",
+        "off": [],
+        "less": [],
+        "note": "Gives the axis time to recover (S22; S28)."
+       }
+      ],
+      "read": "Pick a drug to see where it acts."
+     }
+    },
+    {
+     "image": "S24_1.jpg",
+     "title": "Figure 10 · Blocking steroid synthesis vs. blocking the receptor",
+     "src": "S24; S24 (notes)",
+     "caption": "Schematic (illustrative) — Figure 10. Left: enzyme blocks on the cortisol pathway (ketoconazole, metyrapone). Right: receptor blocks (mifepristone at the glucocorticoid receptor, spironolactone at the mineralocorticoid receptor).",
+     "viz": {
+      "type": "pathway",
+      "title": "Blocking steroid synthesis vs. blocking the receptor",
+      "h": 250,
+      "point": "Block the factory or block the lock.",
+      "nodes": [
+       {
+        "id": "ch",
+        "label": "Cholesterol",
+        "glyph": "molecule",
+        "x": 10,
+        "y": 95,
+        "w": 120,
+        "col": "teal"
+       },
+       {
+        "id": "cyp",
+        "label": "CYP enzymes\n(11β-hydroxylase)",
+        "glyph": "enzyme",
+        "x": 150,
+        "y": 95,
+        "w": 150,
+        "col": "blue"
+       },
+       {
+        "id": "cort",
+        "label": "Cortisol",
+        "glyph": "molecule",
+        "x": 330,
+        "y": 20,
+        "w": 120,
+        "col": "amber"
+       },
+       {
+        "id": "ald",
+        "label": "Aldosterone",
+        "glyph": "molecule",
+        "x": 330,
+        "y": 170,
+        "w": 120,
+        "col": "amber"
+       },
+       {
+        "id": "gr",
+        "label": "GR",
+        "glyph": "membrane",
+        "x": 490,
+        "y": 20,
+        "w": 110,
+        "col": "coral"
+       },
+       {
+        "id": "mr",
+        "label": "MR",
+        "glyph": "membrane",
+        "x": 490,
+        "y": 170,
+        "w": 110,
+        "col": "deep"
+       }
+      ],
+      "edges": [
+       [
+        "ch",
+        "cyp"
+       ],
+       [
+        "cyp",
+        "cort"
+       ],
+       [
+        "cyp",
+        "ald"
+       ],
+       [
+        "cort",
+        "gr"
+       ],
+       [
+        "ald",
+        "mr"
+       ]
+      ],
+      "drugs": [
+       {
+        "label": "Ketoconazole",
+        "at": "cyp",
+        "off": [
+         "cort",
+         "ald"
+        ],
+        "less": [],
+        "note": "Several enzymes; liver, QT, CYP3A4 (S23–S24)."
+       },
+       {
+        "label": "Metyrapone",
+        "at": "cyp",
+        "off": [
+         "cort"
+        ],
+        "less": [],
+        "note": "Last cortisol step (S23–S24)."
+       },
+       {
+        "label": "Mifepristone",
+        "at": "gr",
+        "off": [
+         "gr"
+        ],
+        "less": [],
+        "note": "Receptor block; cortisol stays high (S24)."
+       },
+       {
+        "label": "Spironolactone",
+        "at": "mr",
+        "off": [
+         "mr"
+        ],
+        "less": [],
+        "note": "Hyperkalemia (S24)."
+       }
+      ],
+      "read": "Pick a drug to see where it acts."
+     }
+    }
+   ],
+   "comparisons": [
+    {
+     "title": "Glucocorticoids vs. mineralocorticoids (S20)",
+     "columns": [
+      "",
+      "Glucocorticoids (prednisone, dexamethasone)",
+      "Mineralocorticoids (fludrocortisone)"
+     ],
+     "rows": [
+      [
+       "Main effect",
+       "Anti-inflammatory, immunosuppressive",
+       "Renal sodium retention, potassium excretion"
+      ],
+      [
+       "Use",
+       "Inflammatory/autoimmune disease in nearly every organ system",
+       "Addison disease replacement, with a glucocorticoid"
+      ],
+      [
+       "Monitor",
+       "Glucose, bone, infection, mood; taper chronic use",
+       "Blood pressure and potassium"
+      ]
+     ],
+     "src": "S20"
+    },
+    {
+     "title": "Table 1 · Adrenal pharmacology at a glance",
+     "columns": [
+      "Agent",
+      "Category",
+      "Key teaching point"
+     ],
+     "rows": [
+      [
+       "Prednisone, dexamethasone",
+       "Glucocorticoid",
+       "Anti-inflammatory; chronic use risks HPA suppression — taper, don’t stop abruptly"
+      ],
+      [
+       "Fludrocortisone",
+       "Mineralocorticoid",
+       "Sodium retention/potassium excretion; replacement in Addison disease"
+      ],
+      [
+       "Ketoconazole, metyrapone",
+       "Steroidogenesis inhibitor",
+       "Block cortisol synthesis at different steps; used in Cushing syndrome"
+      ],
+      [
+       "Mifepristone",
+       "Glucocorticoid-receptor antagonist",
+       "Hyperglycemia in Cushing syndrome when surgery isn’t an option"
+      ]
+     ],
+     "src": "S25; S25 (notes)"
+    },
+    {
+     "title": "Supporting drugs at a glance (S52)",
+     "columns": [
+      "Drug(s)",
+      "Why it matters here"
+     ],
+     "rows": [
+      [
+       "**Antipsychotics and metoclopramide**",
+       "Raise prolactin by blocking dopamine"
+      ],
+      [
+       "**Calcium, iron and antacids**",
+       "Block levothyroxine absorption; separate by 4 hours"
+      ],
+      [
+       "**Amiodarone and lithium**",
+       "Can cause hypo- or hyperthyroidism"
+      ],
+      [
+       "**Estrogens**",
+       "Raise thyroid-binding globulin, so levothyroxine needs rise"
+      ],
+      [
+       "**Rifampin, phenytoin, carbamazepine**",
+       "Speed clearance of levothyroxine and steroids"
+      ],
+      [
+       "**Azole antifungals**",
+       "Raise corticosteroid exposure through CYP3A4"
+      ],
+      [
+       "**ACE inhibitors, ARBs and potassium**",
+       "Add to spironolactone hyperkalemia"
+      ],
+      [
+       "**Insulin and oral agents**",
+       "Doses need adjusting during steroid therapy"
+      ]
+     ],
+     "src": "S52; S52 (notes)"
+    },
+    {
+     "title": "Corticosteroid profiles: formulation, dose, indications",
+     "columns": [
+      "Drug",
+      "Class",
+      "Formulation",
+      "Adult dose",
+      "Indications"
+     ],
+     "rows": [
+      [
+       "Prednisone",
+       "**Glucocorticoid (prodrug of prednisolone)**",
+       "Tablet 1/2.5/5/10/20/50 mg; oral solution",
+       "5-60 mg PO daily depending on indication; taper after more than 3 weeks of therapy",
+       "Inflammatory and autoimmune disease, allergic reactions"
+      ],
+      [
+       "Dexamethasone (Decadron)",
+       "**Long-acting glucocorticoid**",
+       "Tablet 0.5-6 mg; oral solution; IV 4/10 mg/mL",
+       "0.5-9 mg PO or IV daily by indication; cerebral edema 10 mg IV load, then 4 mg every 6 hours; thyroid storm 2 mg IV every 6 hours",
+       "Cerebral edema, antiemetic, severe inflammation, Cushing screening test"
+      ],
+      [
+       "Hydrocortisone (Cortef, Solu-Cortef)",
+       "**Glucocorticoid with mineralocorticoid activity**",
+       "Tablet 5/10/20 mg; IV 100 mg vial",
+       "Replacement 15-25 mg/day PO in 2-3 divided doses; adrenal crisis 100 mg IV, then 200 mg over 24 hours",
+       "Adrenal insufficiency, adrenal crisis, inflammatory conditions"
+      ],
+      [
+       "Fludrocortisone (Florinef)",
+       "**Mineralocorticoid**",
+       "Tablet 0.1 mg",
+       "0.05-0.2 mg PO once daily",
+       "Primary adrenal insufficiency (with a glucocorticoid), orthostatic hypotension"
+      ]
+     ],
+     "src": "S44; S45; S46; S47"
+    },
+    {
+     "title": "Corticosteroid profiles: adverse effects, contraindications, toxicity",
+     "columns": [
+      "Drug",
+      "Adverse effects",
+      "Contraindications",
+      "Toxicity / overdose"
+     ],
+     "rows": [
+      [
+       "Prednisone",
+       "Hyperglycemia, insomnia, mood change, weight gain, infection, osteoporosis",
+       "Systemic fungal infection; live vaccines at high dose",
+       "Adrenal suppression and crisis on abrupt stopping; Cushingoid features, cataracts, avascular necrosis"
+      ],
+      [
+       "Dexamethasone (Decadron)",
+       "Insomnia, hyperglycemia, mood change, immune suppression",
+       "Systemic fungal infection, hypersensitivity",
+       "Potency about 25-30 times hydrocortisone with no mineralocorticoid effect; adrenal suppression, psychosis"
+      ],
+      [
+       "Hydrocortisone (Cortef, Solu-Cortef)",
+       "Hyperglycemia, fluid retention, mood change, infection risk",
+       "Systemic fungal infection",
+       "Excess causes Cushingoid features, hypertension, hypokalemia; stress-dose during illness and surgery"
+      ],
+      [
+       "Fludrocortisone (Florinef)",
+       "Hypertension, edema, hypokalemia, headache",
+       "Systemic fungal infection; caution in heart failure",
+       "Hypokalemia, fluid overload, supine hypertension; monitor blood pressure and potassium"
+      ]
+     ],
+     "src": "S44; S45; S46; S47"
+    },
+    {
+     "title": "Adrenal antagonist profiles: formulation, dose, indications",
+     "columns": [
+      "Drug",
+      "Class",
+      "Formulation",
+      "Adult dose",
+      "Indications"
+     ],
+     "rows": [
+      [
+       "Ketoconazole",
+       "**Azole antifungal and steroidogenesis inhibitor**",
+       "Tablet 200 mg",
+       "Cushing syndrome (off-label): start 200 mg PO BID, usual 400-1,200 mg/day divided",
+       "Cushing syndrome (off-label), fungal infections"
+      ],
+      [
+       "Metyrapone (Metopirone)",
+       "**11-beta-hydroxylase inhibitor**",
+       "Capsule 250 mg",
+       "Cushing syndrome: start 250 mg PO TID-QID, titrate to cortisol (up to 6 g/day); diagnostic test: 30 mg/kg once at midnight",
+       "Cushing syndrome, diagnostic test of the HPA axis"
+      ],
+      [
+       "Mifepristone (Korlym)",
+       "**Glucocorticoid-receptor antagonist**",
+       "Tablet 300 mg (Cushing); 200 mg (pregnancy termination)",
+       "Cushing hyperglycemia: 300 mg PO daily with a meal, titrate up to 1,200 mg/day",
+       "Hyperglycemia with Cushing syndrome when surgery is not an option"
+      ],
+      [
+       "Spironolactone (Aldactone)",
+       "**Mineralocorticoid-receptor antagonist**",
+       "Tablet 25/50/100 mg",
+       "Hyperaldosteronism: 25-100 mg PO daily (up to 400 mg); heart failure 12.5-50 mg daily",
+       "Primary hyperaldosteronism, heart failure, resistant hypertension, edema, hirsutism (off-label)"
+      ]
+     ],
+     "src": "S48; S49; S50; S51"
+    },
+    {
+     "title": "Adrenal antagonist profiles: adverse effects, contraindications, toxicity",
+     "columns": [
+      "Drug",
+      "Adverse effects",
+      "Contraindications",
+      "Toxicity / overdose"
+     ],
+     "rows": [
+      [
+       "Ketoconazole",
+       "Nausea, abdominal pain, headache, gynecomastia, adrenal insufficiency",
+       "Liver disease, QT prolongation or interacting QT drugs, pregnancy",
+       "Boxed hepatotoxicity and QT prolongation; strong CYP3A4 inhibitor; monitor LFTs and ECG"
+      ],
+      [
+       "Metyrapone (Metopirone)",
+       "Nausea, dizziness, hypertension, edema, hirsutism",
+       "Adrenal insufficiency, hypersensitivity",
+       "Adrenal insufficiency, hypokalemia, hypertension from deoxycorticosterone, androgen excess"
+      ],
+      [
+       "Mifepristone (Korlym)",
+       "Fatigue, nausea, headache, hypokalemia, edema, endometrial thickening",
+       "Pregnancy (boxed warning), simvastatin or lovastatin, need for long-term corticosteroids",
+       "Pregnancy loss; adrenal insufficiency (cortisol rises so labs mislead); hypokalemia"
+      ],
+      [
+       "Spironolactone (Aldactone)",
+       "Hyperkalemia, gynecomastia, menstrual irregularity, dizziness",
+       "Hyperkalemia, Addison disease, severe renal impairment",
+       "Life-threatening hyperkalemia (with ACE inhibitors, ARBs, potassium); monitor potassium and creatinine"
+      ]
+     ],
+     "src": "S48; S49; S50; S51"
+    }
+   ],
+   "hooks": [
+    {
+     "kind": "why",
+     "text": "Why IV hydrocortisone in adrenal crisis, not just prednisone? Hydrocortisone replaces both glucocorticoid and mineralocorticoid action — and the patient is in shock.",
+     "src": "S21; S27"
+    }
+   ],
+   "high_yield": [
+    {
+     "text": "Chronic steroids suppress CRH/ACTH → taper; abrupt stop → adrenal crisis → IV hydrocortisone + fluids.",
+     "src": "S22; S27; SG U4-R8"
+    },
+    {
+     "text": "Addison disease needs a glucocorticoid plus fludrocortisone.",
+     "src": "S20"
+    }
+   ],
+   "questions": [
+    {
+     "kind": "vignette",
+     "stem": "A patient on chronic high-dose prednisone ran out of refills and now has hypotension, weakness and confusion. Best management?",
+     "correct": "IV hydrocortisone and IV fluids now",
+     "why_correct": "Adrenal crisis from abrupt withdrawal after HPA suppression — emergent IV hydrocortisone and fluids (S27).",
+     "distractors": [
+      {
+       "text": "Restart oral prednisone at home",
+       "why": "This is an emergency (S27)."
+      },
+      {
+       "text": "Give fludrocortisone alone",
+       "why": "Needs glucocorticoid too (S27)."
+      },
+      {
+       "text": "Give IV dexamethasone only, no fluids",
+       "why": "Fluids and hydrocortisone (S27)."
+      },
+      {
+       "text": "Observe; symptoms will pass",
+       "why": "Life-threatening (S27)."
+      }
+     ],
+     "src": "S22; S27; SG U4-R8",
+     "from_slides": "S27"
+    },
+    {
+     "kind": "mechanism",
+     "stem": "Why must chronic glucocorticoid therapy be tapered rather than stopped?",
+     "correct": "The suppressed HPA axis needs time to recover",
+     "why_correct": "Exogenous steroid suppresses CRH and ACTH; abrupt withdrawal leaves too little endogenous cortisol (S22; SG U4-R8).",
+     "distractors": [
+      {
+       "text": "To prevent rebound inflammation only",
+       "why": "Not the main reason (S22)."
+      },
+      {
+       "text": "Because the adrenal gland is destroyed",
+       "why": "Suppressed, not destroyed (S22)."
+      },
+      {
+       "text": "To prevent hyperkalemia",
+       "why": "Not the reason (S22)."
+      },
+      {
+       "text": "Because steroids cause dependence",
+       "why": "Not the mechanism (S22)."
+      }
+     ],
+     "src": "S22; SG U4-R8"
+    },
+    {
+     "kind": "vignette",
+     "stem": "A patient with primary adrenal insufficiency is on hydrocortisone but has low BP and high potassium. What should be added?",
+     "correct": "Fludrocortisone",
+     "why_correct": "Addison disease needs mineralocorticoid replacement alongside a glucocorticoid (S20).",
+     "distractors": [
+      {
+       "text": "Spironolactone",
+       "why": "Blocks mineralocorticoid action (S23)."
+      },
+      {
+       "text": "Dexamethasone",
+       "why": "Little mineralocorticoid action (S21)."
+      },
+      {
+       "text": "Ketoconazole",
+       "why": "Blocks steroid synthesis (S23)."
+      },
+      {
+       "text": "Potassium supplement",
+       "why": "Wrong direction (S20)."
+      }
+     ],
+     "src": "S20; S47"
+    },
+    {
+     "kind": "mechanism",
+     "stem": "What does fludrocortisone do at the kidney?",
+     "correct": "Retains sodium, excretes potassium",
+     "why_correct": "Mineralocorticoids promote renal sodium retention and potassium excretion; monitor BP and potassium (S20).",
+     "distractors": [
+      {
+       "text": "Excretes sodium, retains potassium",
+       "why": "Reversed (S20)."
+      },
+      {
+       "text": "Blocks the mineralocorticoid receptor",
+       "why": "That is spironolactone (S23)."
+      },
+      {
+       "text": "Suppresses inflammation only",
+       "why": "Glucocorticoid action (S20)."
+      },
+      {
+       "text": "Blocks ADH at V2 receptors",
+       "why": "That is tolvaptan (S10)."
+      }
+     ],
+     "src": "S20"
+    },
+    {
+     "kind": "mechanism",
+     "stem": "How do chronic exogenous glucocorticoids cause adrenal insufficiency on abrupt withdrawal?",
+     "correct": "Feedback suppresses CRH and ACTH",
+     "why_correct": "Chronic steroid suppresses CRH/ACTH via negative feedback, so endogenous cortisol cannot resume quickly (S22; S28).",
+     "distractors": [
+      {
+       "text": "They destroy the adrenal cortex",
+       "why": "Suppression, not destruction (S22)."
+      },
+      {
+       "text": "They block cortisol synthesis enzymes",
+       "why": "That is metyrapone (S23)."
+      },
+      {
+       "text": "They raise ACTH until it is exhausted",
+       "why": "ACTH falls (S22)."
+      },
+      {
+       "text": "They block the glucocorticoid receptor",
+       "why": "That is mifepristone (S23)."
+      }
+     ],
+     "src": "S22; S28"
+    },
+    {
+     "kind": "mechanism",
+     "stem": "Which drug lowers cortisol by blocking 11-β-hydroxylase?",
+     "correct": "Metyrapone",
+     "why_correct": "Metyrapone blocks the final step of cortisol synthesis (S23–S24).",
+     "distractors": [
+      {
+       "text": "Mifepristone",
+       "why": "Blocks the receptor (S23)."
+      },
+      {
+       "text": "Spironolactone",
+       "why": "Blocks the mineralocorticoid receptor (S23)."
+      },
+      {
+       "text": "Fludrocortisone",
+       "why": "Mineralocorticoid agonist (S20)."
+      },
+      {
+       "text": "Octreotide",
+       "why": "Somatostatin analog (S7)."
+      }
+     ],
+     "src": "S23; S24; SG U4-R9"
+    },
+    {
+     "kind": "vignette",
+     "stem": "A patient with Cushing syndrome on mifepristone has persistently high cortisol levels. What explains this?",
+     "correct": "Receptor blockade leaves cortisol high",
+     "why_correct": "Mifepristone blocks the glucocorticoid receptor, so cortisol levels rise — monitor clinically (S24).",
+     "distractors": [
+      {
+       "text": "The drug has failed",
+       "why": "Expected effect (S24)."
+      },
+      {
+       "text": "It blocks 11-β-hydroxylase",
+       "why": "Metyrapone (S23)."
+      },
+      {
+       "text": "It increases ACTH secretion by itself",
+       "why": "Not the taught mechanism (S24)."
+      },
+      {
+       "text": "Lab interference from ketoconazole",
+       "why": "Not the reason (S24)."
+      }
+     ],
+     "src": "S24"
+    }
+   ],
+   "flows": [
+    {
+     "title": "Chronic steroid patient",
+     "steps": [
+      "On steroids > 2 weeks → assume HPA suppression",
+      "Stopping → taper, never abruptly",
+      "Missed doses + hypotension, confusion → adrenal crisis",
+      "IV hydrocortisone + IV fluids (emergency)",
+      "Addison disease: glucocorticoid + fludrocortisone"
+     ],
+     "src": "S20; S22; S27; p. 750"
+    }
+   ],
+   "deeper": {
+    "chapter": 39,
+    "first": 740,
+    "last": 756,
+    "why": "Corticosteroids, mineralocorticoids and adrenal antagonists"
+   }
+  }
+ ],
+ "notebooklm": {
+  "patient": "a patient with untreated Graves disease in thyroid storm, and a patient who abruptly stopped chronic high-dose prednisone (the lecture’s cases)",
+  "suggested_questions": [
+   "Trace the hypothalamic-pituitary-target gland axis and its feedback.",
+   "Compare desmopressin and tolvaptan: which way does water move?",
+   "How should levothyroxine be taken and monitored?",
+   "Methimazole vs. PTU: when is each used?",
+   "Walk through thyroid storm treatment and why iodine comes last.",
+   "Why taper steroids, and how is adrenal crisis treated?"
+  ]
+ },
+ "audit_skip": [
+  {
+   "ref": "S1",
+   "starts_with": "Diane",
+   "reason": "instructor name (no names on the site)"
+  },
+  {
+   "ref": "S2",
+   "starts_with": "Objectives: Read",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S3",
+   "starts_with": "AccessMedicine",
+   "reason": "access link for the textbook"
+  },
+  {
+   "ref": "S3",
+   "starts_with": "Point students",
+   "reason": "teaching instruction; the reading split is taught in About this lecture"
+  },
+  {
+   "ref": "S3",
+   "starts_with": "Readings: Katzung chapters 37-39",
+   "reason": "presenter script; taught in About this lecture"
+  },
+  {
+   "ref": "S4",
+   "starts_with": "Section transition",
+   "reason": "section divider"
+  },
+  {
+   "ref": "S11",
+   "starts_with": "Section transition",
+   "reason": "section divider"
+  },
+  {
+   "ref": "S19",
+   "starts_with": "Section transition",
+   "reason": "section divider"
+  },
+  {
+   "ref": "S4",
+   "starts_with": "Section 01",
+   "reason": "section divider"
+  },
+  {
+   "ref": "S11",
+   "starts_with": "Section 02",
+   "reason": "section divider"
+  },
+  {
+   "ref": "S19",
+   "starts_with": "Section 03",
+   "reason": "section divider"
+  },
+  {
+   "ref": "S5",
+   "starts_with": "Keep returning",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S7",
+   "starts_with": "Figure 2. Teal",
+   "reason": "figure colour key (the figure is redrawn as an interactive)"
+  },
+  {
+   "ref": "S18",
+   "starts_with": "\"Why must iodine",
+   "reason": "teaching instruction; the answer is taught from S18"
+  },
+  {
+   "ref": "S29",
+   "starts_with": "Thyroid: levothyroxine",
+   "reason": "teaching instruction; the drugs are in the profiles"
+  },
+  {
+   "ref": "S29",
+   "starts_with": "Adrenal: prednisone",
+   "reason": "teaching instruction; the drugs are in the profiles"
+  },
+  {
+   "ref": "S5",
+   "starts_with": "Figure 1: Trace",
+   "reason": "teaching instruction; the figure is interactive"
+  },
+  {
+   "ref": "S6",
+   "starts_with": "Acromegaly pharmacology",
+   "reason": "teaching instruction; taught in pearls"
+  },
+  {
+   "ref": "S8",
+   "starts_with": "Prolactin: dopamine",
+   "reason": "presenter script; taught from S9"
+  },
+  {
+   "ref": "S8",
+   "starts_with": "Ask: \"Which way",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S14",
+   "starts_with": "Figure 6: Iodide",
+   "reason": "presenter script; taught from S14"
+  },
+  {
+   "ref": "S15",
+   "starts_with": "Methimazole is first-line for most patients and",
+   "reason": "presenter script; taught from S15"
+  },
+  {
+   "ref": "S16",
+   "starts_with": "Thyroid storm is treated",
+   "reason": "presenter script"
+  },
+  {
+   "ref": "S17",
+   "starts_with": "Figure 7: Four drugs",
+   "reason": "presenter script; taught from S17"
+  },
+  {
+   "ref": "S18",
+   "starts_with": "This case reinforces",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S18",
+   "starts_with": "Ask: \"Why must",
+   "reason": "teaching instruction; the answer is taught from S18"
+  },
+  {
+   "ref": "S21",
+   "starts_with": "Figure 8: The steroid",
+   "reason": "presenter script; taught from S21"
+  },
+  {
+   "ref": "S22",
+   "starts_with": "Figure 9: Chronic",
+   "reason": "presenter script; taught from S22"
+  },
+  {
+   "ref": "S23",
+   "starts_with": "Enzyme blockers",
+   "reason": "presenter script"
+  },
+  {
+   "ref": "S24",
+   "starts_with": "Figure 10: Receptor",
+   "reason": "presenter script; taught from S24"
+  },
+  {
+   "ref": "S25",
+   "starts_with": "Use this table",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S25",
+   "starts_with": "Walk the four rows",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S26",
+   "starts_with": "Drug-name stems",
+   "reason": "presenter script; the stems are taught in Part 3"
+  },
+  {
+   "ref": "S27",
+   "starts_with": "Missed refills",
+   "reason": "presenter script; taught from S27"
+  },
+  {
+   "ref": "S28",
+   "starts_with": "Close Session 1",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S28",
+   "starts_with": "Read the five points",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S29",
+   "starts_with": "How to use in class",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S29",
+   "starts_with": "Abbreviation key: Review",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S29",
+   "starts_with": "Teaching points by class",
+   "reason": "teaching instruction; the drugs are in the profiles"
+  },
+  {
+   "ref": "S29",
+   "starts_with": "Bloom",
+   "reason": "Bloom's teaching prompt; rebuilt as practice questions"
+  },
+  {
+   "ref": "S29",
+   "starts_with": "Understand",
+   "reason": "Bloom's teaching prompt; rebuilt as practice questions"
+  },
+  {
+   "ref": "S29",
+   "starts_with": "Apply",
+   "reason": "Bloom's teaching prompt; rebuilt as practice questions"
+  },
+  {
+   "ref": "S29",
+   "starts_with": "Analyze",
+   "reason": "Bloom's teaching prompt; rebuilt as practice questions"
+  },
+  {
+   "ref": "S29",
+   "starts_with": "Evaluate",
+   "reason": "Bloom's teaching prompt; rebuilt as practice questions"
+  },
+  {
+   "ref": "S52",
+   "starts_with": "Supporting drugs: Read",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S53",
+   "starts_with": "This slide documents",
+   "reason": "administrative note on AI-tool citation"
+  },
+  {
+   "ref": "S53",
+   "starts_with": "Original figures 1, 6 and 9",
+   "reason": "administrative note on AI-tool citation"
+  }
+ ],
+ "guide": {
+  "summary": [
+   {
+    "text": "One **axis** (hypothalamus → pituitary → gland) with **negative feedback**: every exogenous hormone suppresses the levels above it.",
+    "src": "S5; SG U4-R1"
+   },
+   {
+    "text": "**Acromegaly**: octreotide/lanreotide or pegvisomant (monitor IGF-1); **prolactinoma**: cabergoline; **DI**: desmopressin (hyponatremia); **SIADH**: fluid restriction, then tolvaptan (start in hospital).",
+    "src": "S6; S8; S10; SG U4-R2; SG U4-R3; SG U4-R4"
+   },
+   {
+    "text": "**Levothyroxine**: empty stomach, separate calcium/iron/antacids by 4 h, TSH at 6–8 weeks, start low in older/cardiac patients.",
+    "src": "S12; S13; SG U4-R5"
+   },
+   {
+    "text": "**Methimazole** first line; **PTU** in the first trimester and **thyroid storm** (also blocks T4→T3); fever/sore throat → CBC.",
+    "src": "S15; SG U4-R6"
+   },
+   {
+    "text": "**Thyroid storm**: beta-blocker + PTU first, **iodine after**, steroids too.",
+    "src": "S16; S18; SG U4-R7"
+   },
+   {
+    "text": "**Chronic steroids** suppress CRH/ACTH → **taper**; abrupt stop → adrenal crisis → IV hydrocortisone + fluids. Antagonists: ketoconazole, metyrapone, mifepristone, spironolactone.",
+    "src": "S22; S23; S27; SG U4-R8; SG U4-R9"
+   }
+  ],
+  "teaser": "Today: one feedback template for the whole endocrine unit, then pituitary drugs for GH, prolactin and water balance, thyroid replacement and antithyroid drugs including thyroid storm, and steroids — why they are tapered and how adrenal crisis is treated.",
+  "cram": [
+   {
+    "prompt": "Axis rule",
+    "answer": "Hormone feeds back to suppress the levels above",
+    "src": "S5; SG U4-R1"
+   },
+   {
+    "prompt": "Acromegaly drugs",
+    "answer": "Octreotide, lanreotide, pegvisomant (IGF-1), cabergoline",
+    "src": "S6; S7"
+   },
+   {
+    "prompt": "Octreotide AEs",
+    "answer": "GI upset, gallstones, bradycardia",
+    "src": "S7"
+   },
+   {
+    "prompt": "Prolactinoma",
+    "answer": "Cabergoline (twice weekly) or bromocriptine",
+    "src": "S8; S9"
+   },
+   {
+    "prompt": "DI vs SIADH",
+    "answer": "Desmopressin (hyponatremia) · fluid restriction, tolvaptan",
+    "src": "S8; S10"
+   },
+   {
+    "prompt": "Levothyroxine",
+    "answer": "Empty stomach; separate Ca/Fe/antacids 4 h; TSH 6–8 weeks",
+    "src": "S12; S13"
+   },
+   {
+    "prompt": "Over-replacement",
+    "answer": "AF, bone loss",
+    "src": "S13"
+   },
+   {
+    "prompt": "Methimazole vs PTU",
+    "answer": "First line · first trimester and storm",
+    "src": "S15"
+   },
+   {
+    "prompt": "Thionamide + fever/sore throat",
+    "answer": "Stop, check CBC (agranulocytosis)",
+    "src": "S15 (notes)"
+   },
+   {
+    "prompt": "Storm order",
+    "answer": "Beta-blocker + PTU → iodine ≥ 1 h later → steroids",
+    "src": "S16; S17"
+   },
+   {
+    "prompt": "Steroid potency",
+    "answer": "Prednisone ~4×, dexamethasone ~25–30× hydrocortisone",
+    "src": "S21"
+   },
+   {
+    "prompt": "Adrenal crisis",
+    "answer": "IV hydrocortisone + IV fluids",
+    "src": "S27"
+   },
+   {
+    "prompt": "Addison disease",
+    "answer": "Glucocorticoid + fludrocortisone",
+    "src": "S20"
+   },
+   {
+    "prompt": "Cushing drugs",
+    "answer": "Ketoconazole, metyrapone (synthesis); mifepristone (receptor)",
+    "src": "S23"
+   },
+   {
+    "prompt": "T4 half-life",
+    "answer": "7 days → once daily",
+    "src": "p. 733",
+    "tb": true
+   },
+   {
+    "prompt": "Agranulocytosis",
+    "answer": "0.1–0.5%, first 90 days",
+    "src": "p. 731",
+    "tb": true
+   },
+   {
+    "prompt": "Iodide escape",
+    "answer": "2–8 weeks if given alone",
+    "src": "p. 732",
+    "tb": true
+   },
+   {
+    "prompt": "Adrenal suppression",
+    "answer": "After > 2 weeks of steroids",
+    "src": "p. 750",
+    "tb": true
+   }
+  ],
+  "discrepancies": [
+   {
+    "text": "**Iodine timing in thyroid storm:** slides say at least 1 hour after PTU; the textbook only says not until thioamides have begun. Use the slide timing.",
+    "src": "S17; p. 732"
+   }
+  ]
+ }
+}

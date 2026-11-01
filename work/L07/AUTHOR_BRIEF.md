@@ -1,0 +1,291 @@
+# Authoring brief — L07: Unit 4: Endocrine — Session 1 (2026-11-10)
+
+Tell Claude: **"author L07"**. Claude writes `work/L07/author_L07.py`, `guide_L07.py` and `textbook_L07.py` (copy the shape of the L02 files), adds the lecture's drugs to `work/drugs.py`, then runs `./run.sh new L07` until every gate says PASS.
+
+## The standard (every lecture, no exceptions)
+- **Sources:** slides (with speaker notes), the assigned textbook pages, the syllabus and the course study guide only. No internet facts. Every fact cited (`S12`, `S12 (notes)`, `p. 245`, `SG U1-R3`).
+- **Everything taught:** every slide line and every assigned-reading section below lands in the guide (the audit fails otherwise). A section taught in another session, or beyond PA scope, goes in `READING_SKIP` with the reason.
+- **PA-student depth, no more, no less:** what a PA needs to prescribe safely and pass the exam. Skip chemistry, molecular-biology and industry detail with no prescribing decision attached. PA students are short on time: lean, never dense.
+- **Easier to learn:** order (big idea → mechanism → clinical use → traps), one idea per bullet (≤25 words), discriminator tables, flows, why-hooks. A student with only the guide or only the deck can answer any exam question.
+- **Length gates:** textbook-only bullets ≤30% of the guide; bullets ≤40 words; deck ≤2.25× the lecture’s slides.
+- **Template:** `drug_class` for every class/topic (overview, prototype, moa, indications, adverse — boxed warnings first, contra, interactions, pk, monitoring, pearls).
+- **Textbook facts** in `textbook_<ID>.py` as `("text", "p. N")`; write apostrophes as ’ so `./run.sh check` can verify the numbers on that page.
+- **Questions:** ~50/50 vignette and mechanism; 5 options, all similar in length; rebuild every quick-check slide question (`from_slides`).
+- **Figures:** each saved figure gets a caption and an interactive version (`"viz": {"type": …}`, list below).
+- **Drugs:** every drug named gets a card (or new facts) in `work/drugs.py`, citing `L07 S#` or `p. N`, filled field by field: class, mechanism, indications, contraindications, adverse effects, interactions, distinguishing / patient-specific factors, extra.
+- **Home teaser:** `TEASER` in `guide_<ID>.py` — two calm sentences, no hype.
+- **No school, course-director or instructor names** anywhere (slide 1 credits are skipped on purpose).
+- **Original files are never edited** (they are fingerprinted; the build stops if one changes).
+
+## Objectives to cover
+- IO4.1: Identify major pharmacologic classes used in the management of endocrine conditions and describe their mechanisms of action.
+- IO4.2: Describe the indications, contraindications, adverse effects, and clinically significant interactions associated with medications used to treat endocrine conditions.
+- IO4.3: Compare pharmacologic agents within and across therapeutic classes to distinguish clinically relevant differences in efficacy, safety, and use.
+- IO4.4: Select appropriate pharmacologic therapy for common endocrine conditions based on clinical presentation and patient-specific factors.
+- IO4.5: Identify appropriate dosing, administration, and monitoring considerations for medications used in endocrine conditions.
+- IO4.6: Explain important medication-use and safety information to patients receiving pharmacotherapy for endocrine.
+
+## Slides (53) — every one must be covered
+- [ ] S1: Endocrine Pharmacotherapy
+- [ ] S2: Learning Objectives — Session 1
+- [ ] S3: Required & Recommended Readings — Unit 4
+- [ ] S4: 01
+- [ ] S5: The Hypothalamic-Pituitary-Target Gland Axis
+- [ ] S6: Growth Hormone Disorders
+- [ ] S7: Somatostatin Analogs and Pegvisomant: Controlling GH Excess
+- [ ] S8: Hyperprolactinemia and ADH Disorders
+- [ ] S9: Dopamine Agonists: Restoring the Brake on Prolactin
+- [ ] S10: ADH, Desmopressin and Tolvaptan: Which Way Does Water Move?
+- [ ] S11: 02
+- [ ] S12: Levothyroxine for Hypothyroidism
+- [ ] S13: Levothyroxine: Absorption, Conversion and Timing
+- [ ] S14: Thyroid Hormone Synthesis: Where Antithyroid Drugs Act
+- [ ] S15: Methimazole vs. Propylthiouracil (PTU)
+- [ ] S16: Thyroid Storm: A Multi-Drug Approach
+- [ ] S17: Thyroid Storm: Four Drugs, Four Targets
+- [ ] S18: Sequencing Therapy in Thyroid Storm
+- [ ] S19: 03
+- [ ] S20: Glucocorticoids vs. Mineralocorticoids
+- [ ] S21: Glucocorticoid Receptor Signaling: How Steroids Quiet Inflammation
+- [ ] S22: Exogenous Corticosteroids and HPA Axis Suppression
+- [ ] S23: Adrenocortical Antagonists
+- [ ] S24: Blocking Steroid Synthesis vs. Blocking the Receptor
+- [ ] S25: Adrenal Pharmacology at a Glance
+- [ ] S26: Drug Names Reveal the Class: Endocrine Agents
+- [ ] S27: Recognizing Adrenal Crisis
+- [ ] S28: Session 1 Recap — To Be Continued
+- [ ] S29: Drug Profiles
+- [ ] S30: Somatropin (Genotropin, Norditropin)
+- [ ] S31: Octreotide (Sandostatin)
+- [ ] S32: Lanreotide (Somatuline Depot)
+- [ ] S33: Pegvisomant (Somavert)
+- [ ] S34: Cabergoline (Dostinex)
+- [ ] S35: Bromocriptine (Parlodel, Cycloset)
+- [ ] S36: Desmopressin (DDAVP)
+- [ ] S37: Tolvaptan (Samsca)
+- [ ] S38: Demeclocycline
+- [ ] S39: Levothyroxine (Synthroid, Levoxyl)
+- [ ] S40: Methimazole (Tapazole)
+- [ ] S41: Propylthiouracil (PTU)
+- [ ] S42: Propranolol (Inderal)
+- [ ] S43: Potassium iodide (SSKI, Lugol solution)
+- [ ] S44: Prednisone
+- [ ] S45: Dexamethasone (Decadron)
+- [ ] S46: Hydrocortisone (Cortef, Solu-Cortef)
+- [ ] S47: Fludrocortisone (Florinef)
+- [ ] S48: Ketoconazole
+- [ ] S49: Metyrapone (Metopirone)
+- [ ] S50: Mifepristone (Korlym)
+- [ ] S51: Spironolactone (Aldactone)
+- [ ] S52: Supporting Drugs at a Glance
+- [ ] S53: Image Attribution
+
+## Assigned reading — Ch. 37, pp. 703–722; Ch. 38, pp. 723–739; Ch. 39, pp. 740–756; Ch. 40, pp. 757–784; Ch. 41, pp. 785–810; Ch. 42, pp. 811–832 (178 sections to teach)
+If this session covers only part of the reading (the unit is split across two sessions), put the other session’s sections in `READING_SKIP` with “Taught in L0x”, and teach them there.
+- [ ] p. 704: ANTERIOR PITUITARY HORMONES & THEIR HYPOTHALAMIC REGULATORS
+- [ ] p. 704: ANTERIOR PITUITARY & HYPOTHALAMIC HORMONE RECEPTORS
+- [ ] p. 706: GROWTH HORMONE (SOMATOTROPIN)
+- [ ] p. 707: Short Stature
+- [ ] p. 707: Other Uses of Growth Hormone
+- [ ] p. 707: Objective Clinical Condition
+- [ ] p. 708: Toxicity & Contraindications
+- [ ] p. 708: MECASERMIN
+- [ ] p. 708: GROWTH HORMONE ANTAGONISTS
+- [ ] p. 708: Somatostatin Analogs
+- [ ] p. 710: Chemistry & Pharmacokinetics
+- [ ] p. 712: GONADOTROPIN-RELEASING HORMONE & ITS ANALOGS
+- [ ] p. 713: Clinical Pharmacology
+- [ ] p. 714: GnRH RECEPTOR ANTAGONISTS
+- [ ] p. 715: PROLACTIN
+- [ ] p. 715: DOPAMINE AGONISTS
+- [ ] p. 717: POSTERIOR PITUITARY HORMONES
+- [ ] p. 717: OXYTOCIN
+- [ ] p. 718: OXYTOCIN ANTAGONIST
+- [ ] p. 718: VASOPRESSIN (ANTIDIURETIC HORMONE, ADH)
+- [ ] p. 718: VASOPRESSIN RECEPTOR ANTAGONISTS
+- [ ] p. 719: GH RECEPTOR ANTAGONIST
+- [ ] p. 720: OXYTOCIN RECEPTOR ANTAGONIST
+- [ ] p. 721: Conivaptan HCl Vaprisol
+- [ ] p. 721: Somapacitan Sogroya
+- [ ] p. 723: THYROID PHYSIOLOGY
+- [ ] p. 723: Iodide Metabolism
+- [ ] p. 723: Biosynthesis of Thyroid Hormones
+- [ ] p. 724: Transport of Thyroid Hormones
+- [ ] p. 725: Evaluation of Thyroid Function
+- [ ] p. 726: Mechanism of Action
+- [ ] p. 727: Effects of Thyroid Hormones
+- [ ] p. 727: Thyroid Preparations
+- [ ] p. 729: ANTITHYROID AGENTS
+- [ ] p. 730: THIOAMIDES
+- [ ] p. 730: System Thyrotoxicosis Hypothyroidism
+- [ ] p. 731: ANION INHIBITORS
+- [ ] p. 731: IODIDES
+- [ ] p. 731: Clinical Use of Iodide
+- [ ] p. 732: RADIOACTIVE IODINE
+- [ ] p. 732: ADRENOCEPTOR-BLOCKING AGENTS
+- [ ] p. 732: CLINICAL PHARMACOLOGY OF THYROID & ANTITHYROID DRUGS HYPOTHYROIDISM
+- [ ] p. 732: Cause Pathogenesis Goiter Degree of Hypothyroidism
+- [ ] p. 733: MANAGEMENT OF HYPOTHYROIDISM
+- [ ] p. 734: HYPERTHYROIDISM
+- [ ] p. 734: Laboratory Diagnosis
+- [ ] p. 734: Management of Graves Disease
+- [ ] p. 735: SUBACUTE THYROIDITIS
+- [ ] p. 735: Thyroid Storm
+- [ ] p. 736: Neonatal Graves Disease
+- [ ] p. 736: SUBCLINICAL HYPERTHYROIDISM
+- [ ] p. 736: Amiodarone-Induced Thyrotoxicosis
+- [ ] p. 736: NONTOXIC GOITER
+- [ ] p. 737: THYROID NEOPLASMS
+- [ ] p. 738: Subclinical Hypothyroidism and Hyperthyroidism
+- [ ] p. 738: Antithyroid Agents and Management of Hyperthyroidism
+- [ ] p. 738: The Effects of Drugs on Thyroid Function
+- [ ] p. 738: GENERIC NAME AVAILABLE AS THYROID AGENTS
+- [ ] p. 738: Tirosint, Tirosint-SOL, Unithroid
+- [ ] p. 738: Thyroid Hormone Action
+- [ ] p. 740: ADRENOCORTICOSTEROIDS
+- [ ] p. 746: SYNTHETIC CORTICOSTEROIDS
+- [ ] p. 746: PHARMACOKINETICS
+- [ ] p. 746: Equivalent Oral
+- [ ] p. 747: PHARMACODYNAMICS
+- [ ] p. 749: Disorder Examples
+- [ ] p. 751: Selection of Drug & Dosage Schedule
+- [ ] p. 751: MINERALOCORTICOIDS (ALDOSTERONE, DEOXYCORTICOSTERONE, FLUDROCORTISONE)
+- [ ] p. 752: ADRENAL ANDROGENS
+- [ ] p. 752: SYNTHESIS INHIBITORS & GLUCOCORTICOID ANTAGONISTS
+- [ ] p. 752: AMINOGLUTETHIMIDE
+- [ ] p. 753: KETOCONAZOLE
+- [ ] p. 753: METYRAPONE
+- [ ] p. 754: TRILOSTANE
+- [ ] p. 754: ABIRATERONE
+- [ ] p. 754: MIFEPRISTONE (RU-486)
+- [ ] p. 754: MITOTANE
+- [ ] p. 755: MINERALOCORTICOID ANTAGONISTS
+- [ ] p. 755: GENERIC NAME AVAILABLE AS
+- [ ] p. 755: Betamethasone Celestone
+- [ ] p. 755: Mitotane Lysodren
+- [ ] p. 758: Disturbances in Ovarian Function
+- [ ] p. 759: Natural Estrogens
+- [ ] p. 760: Synthetic Estrogens
+- [ ] p. 763: Adverse Effects
+- [ ] p. 764: Preparations & Dosages
+- [ ] p. 765: Synthetic Progestins
+- [ ] p. 767: Azurette, Kariva, Mircette, Viorele
+- [ ] p. 767: Enpresse, Levonest, Myzilra, Triphasil, Tri-Levlen, Trivora
+- [ ] p. 767: Casiant, Cyclessa, Cesia, Velivet
+- [ ] p. 768: Implantable Progestin Preparation
+- [ ] p. 769: OTHER OVARIAN HORMONES
+- [ ] p. 769: HORMONAL CONTRACEPTION (ORAL, PARENTERAL, & IMPLANTED CONTRACEPTIVES)
+- [ ] p. 771: Clinical Uses
+- [ ] p. 773: Contraindications & Cautions
+- [ ] p. 773: Contraception with Progestins Alone
+- [ ] p. 774: Beneficial Effects of Oral Contraceptives
+- [ ] p. 774: TAMOXIFEN & RELATED PARTIAL AGONIST ESTROGENS
+- [ ] p. 775: DANAZOL
+- [ ] p. 776: OTHER INHIBITORS
+- [ ] p. 776: OVULATION-INDUCING AGENTS CLOMIPHENE
+- [ ] p. 777: OTHER DRUGS USED IN OVULATORY DISORDERS
+- [ ] p. 777: ANDROGENS & ANABOLIC STEROIDS
+- [ ] p. 778: Physiologic Effects
+- [ ] p. 778: Anabolic Action
+- [ ] p. 780: ANDROGEN SUPPRESSION & ANTIANDROGENS ANDROGEN SUPPRESSION
+- [ ] p. 781: ANTIANDROGENS
+- [ ] p. 781: Steroid Synthesis Inhibitors
+- [ ] p. 781: Precursors to Androgens
+- [ ] p. 782: Receptor Inhibitors
+- [ ] p. 782: CHEMICAL CONTRACEPTION IN MEN
+- [ ] p. 782: GOSSYPOL
+- [ ] p. 783: Toremifene Fareston
+- [ ] p. 785: THE ENDOCRINE PANCREAS
+- [ ] p. 786: Insulin Secretion
+- [ ] p. 786: Insulin Degradation
+- [ ] p. 786: Circulating Insulin
+- [ ] p. 786: The Insulin Receptor
+- [ ] p. 786: Islet Mass Secretory Products
+- [ ] p. 787: Effects of Insulin on Its Targets
+- [ ] p. 787: Chemistry & Metabolism
+- [ ] p. 788: Pharmacologic Effects of Glucagon
+- [ ] p. 789: DIABETES MELLITUS
+- [ ] p. 790: Other Specific Types of Diabetes Mellitus
+- [ ] p. 790: Gestational Diabetes Mellitus
+- [ ] p. 791: Insulin Preparations
+- [ ] p. 795: Immunopathology of Insulin Therapy
+- [ ] p. 795: MEDICATIONS FOR TREATMENT OF TYPE 2 DIABETES
+- [ ] p. 796: Efficacy & Safety of the Sulfonylureas
+- [ ] p. 796: FIRST-GENERATION SULFONYLUREAS
+- [ ] p. 796: SECOND-GENERATION SULFONYLUREAS
+- [ ] p. 797: MEGLITINIDE ANALOGS
+- [ ] p. 797: BIGUANIDES
+- [ ] p. 798: THIAZOLIDINEDIONES
+- [ ] p. 799: DRUGS THAT AFFECT ABSORPTION OF GLUCOSE
+- [ ] p. 800: GLUCAGON-LIKE PEPTIDE-1 (GLP-1) RECEPTOR AGONISTS
+- [ ] p. 801: DIPEPTIDYL PEPTIDASE 4 (DPP-4) INHIBITORS
+- [ ] p. 801: SODIUM-GLUCOSE CO-TRANSPORTER 2 (SGL T2) INHIBITORS
+- [ ] p. 802: OTHER GLUCOSE-LOWERING DRUGS
+- [ ] p. 803: Glycemic Targets
+- [ ] p. 804: Prebreakfast Prelunch Predinner Bedtime
+- [ ] p. 804: Benefits of Tight Glycemic Control in Diabetes
+- [ ] p. 806: Chronic Complications of Diabetes
+- [ ] p. 811: BASIC PHARMACOLOGY
+- [ ] p. 813: PRINCIPAL HORMONAL REGULATORS OF BONE MINERAL HOMEOSTASIS PARATHYROID HORMONE
+- [ ] p. 816: FIBROBLAST GROWTH FACTOR 23
+- [ ] p. 817: SECONDARY HORMONAL REGULATORS OF BONE MINERAL HOMEOSTASIS
+- [ ] p. 817: CALCITONIN
+- [ ] p. 818: GLUCOCORTICOIDS
+- [ ] p. 818: ESTROGENS
+- [ ] p. 818: Therapies for Osteoporosis
+- [ ] p. 819: NONHORMONAL AGENTS AFFECTING BONE MINERAL HOMEOSTASIS BISPHOSPHONATES
+- [ ] p. 820: DENOSUMAB
+- [ ] p. 820: SCLEROSTIN ANTIBODIES
+- [ ] p. 820: CALCIMIMETICS
+- [ ] p. 821: THIAZIDE DIURETICS
+- [ ] p. 821: FLUORIDE
+- [ ] p. 821: STRONTIUM RANELATE
+- [ ] p. 822: ABNORMAL SERUM CALCIUM & PHOSPHATE LEVELS HYPERCALCEMIA
+- [ ] p. 822: Saline Diuresis
+- [ ] p. 822: Gallium Nitrate
+- [ ] p. 823: HYPOCALCEMIA
+- [ ] p. 823: HYPERPHOSPHATEMIA
+- [ ] p. 824: HYPOPHOSPHATEMIA
+- [ ] p. 824: SPECIFIC DISORDERS INVOLVING BONE MINERAL–REGULATING HORMONES PRIMARY HYPERPARATHYROIDISM
+- [ ] p. 824: HYPOPARATHYROIDISM
+- [ ] p. 825: NUTRITIONAL VITAMIN D DEFICIENCY OR INSUFFICIENCY
+- [ ] p. 825: CHRONIC KIDNEY DISEASE
+- [ ] p. 826: Vitamin D Preparations
+- [ ] p. 826: INTESTINAL OSTEODYSTROPHY
+- [ ] p. 826: OSTEOPOROSIS
+- [ ] p. 828: IDIOPATHIC INFANTILE HYPERCALCEMIA
+- [ ] p. 828: NEPHROTIC SYNDROME
+- [ ] p. 829: IDIOPATHIC HYPERCALCIURIA
+- [ ] p. 829: OTHER DISORDERS OF BONE MINERAL HOMEOSTASIS PAGET DISEASE OF BONE
+- [ ] p. 829: ENTERIC OXALURIA
+- [ ] p. 830: SCLEROSTIN ANTIBODY
+- [ ] p. 831: CALCIUM
+
+## Figures saved from the slides
+- [ ] `S10_1.jpg` — caption + viz type
+- [ ] `S13_1.jpg` — caption + viz type
+- [ ] `S14_1.jpg` — caption + viz type
+- [ ] `S17_1.jpg` — caption + viz type
+- [ ] `S21_1.jpg` — caption + viz type
+- [ ] `S22_1.jpg` — caption + viz type
+- [ ] `S24_1.jpg` — caption + viz type
+- [ ] `S5_1.jpg` — caption + viz type
+- [ ] `S7_1.jpg` — caption + viz type
+- [ ] `S9_1.jpg` — caption + viz type
+
+## Interactive figure types (`"viz": {"type": "…"}` on a figure)
+- `dose-response` — graded dose-response curve (EC50, Emax)
+- `antagonist` — agonist curve shifted by a competitive vs noncompetitive antagonist
+- `potency-efficacy` — two drugs compared on potency and efficacy
+- `therapeutic-index` — ED50 vs TD50, narrow vs wide window
+- `cyp-interaction` — substrate level with an inhibitor vs an inducer
+- `half-life` — exponential decay over half-lives
+- `steady-state` — accumulation to steady state, with/without loading dose
+- `fill-empty` — time to fill and time to empty are the same
+- `adme` — absorption → distribution → metabolism → excretion map
+- `bars` — any bar chart; give {title, unit, bars:[{label, value, note}], steps:[{label, pick}]}
+- `nomogram` — Rumack-Matthew nomogram: drag a level to a time; give {point, steps:[{label, t, c}]}
+- `onset` — fast symptom relief vs slow disease modification over time (schematic); give {point, steps:[{label, t}]}
+- `pathway` — mechanism flow (boxes + arrows) where each drug cuts in; give {title, h, nodes:[{id, label, x, y, w, col}], edges:[[a, b]], drugs:[{label, at, off, less, note}]}
+
+If none fits, ask for a new dedicated diagram in `site_src/assets/viz.js` (same palette, reset after 30 s idle, Try-it steps).

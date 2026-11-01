@@ -893,10 +893,56 @@ _PT.update({"Oxybutynin": [("Highest CNS anticholinergic burden of the class —
 _IX.update({"Oxybutynin": _AM_IX, "Tolterodine": _AM_IX, "Solifenacin": _AM_IX, "Darifenacin": _AM_IX,
             "Mirabegron": [("Inhibits CYP2D6.", "L12 S13 (notes)")], "Tamsulosin": _A1_IX, "Silodosin": _A1_IX, "Doxazosin": _A1_IX, "Terazosin": _A1_IX,
             "Sildenafil": _P5_IX, "Tadalafil": _P5_IX, "Vardenafil": _P5_IX})
+_SSA = ("Somatostatin analog: binds somatostatin receptors and lowers GH release (IGF-1 falls).", "L07 S6-7")
+_DA = ("Dopamine D2 agonist (ergot-derived): restores dopamine’s brake on prolactin; tumor often shrinks.", "L07 S8-9; SG U4-R3")
+_TH = ("Thionamide: blocks thyroid hormone organification and coupling.", "L07 S14-15")
+_GC = ("Glucocorticoid: binds the cytoplasmic receptor → nucleus → anti-inflammatory genes on, NF-kB cytokines off.", "L07 S20-21")
+_GC_PT = [("Chronic use suppresses CRH/ACTH — taper, never stop abruptly; hyperglycemia, osteoporosis, infection, mood change, cataracts.", "L07 S21-22; SG U4-R8")]
+_MOA.update({
+    "Somatropin": ("Recombinant human growth hormone (replacement).", "L07 S6"),
+    "Octreotide": _SSA, "Lanreotide": _SSA,
+    "Pegvisomant": ("GH-receptor antagonist: blocks GH action so IGF-1 falls (GH itself rises).", "L07 S7"),
+    "Cabergoline": _DA, "Bromocriptine": _DA,
+    "Desmopressin": ("Synthetic vasopressin V2 agonist: aquaporin-2 insertion → free water retained.", "L07 S10"),
+    "Tolvaptan": ("Vasopressin V2 receptor antagonist: free water excreted (aquaresis).", "L07 S10"),
+    "Demeclocycline": ("Tetracycline that blunts ADH action in the collecting duct.", "L07 S10"),
+    "Levothyroxine": ("Synthetic T4, converted peripherally to active T3, which binds nuclear receptors.", "L07 S12-13"),
+    "Methimazole": _TH, "Propylthiouracil": ("Thionamide: blocks organification and coupling and also peripheral T4 → T3 conversion.", "L07 S14-15"),
+    "Potassium iodide": ("Iodine: acutely blocks thyroid hormone release (Wolff-Chaikoff).", "L07 S16; p. 725"),
+    "Hydrocortisone": ("Cortisol: glucocorticoid with mineralocorticoid activity.", "L07 S21; S27"),
+    "Fludrocortisone": ("Mineralocorticoid: renal sodium retention and potassium excretion.", "L07 S20"),
+    "Metyrapone": ("Blocks 11-β-hydroxylase, the final step of cortisol synthesis.", "L07 S23-24"),
+    "Mifepristone": ("Glucocorticoid-receptor antagonist (also a progesterone-receptor antagonist).", "L07 S23-24"),
+})
+_PT.update({
+    "Somatropin": [("Monitor growth velocity in children and IGF-1 in adults.", "L07 S6-7")],
+    "Octreotide": [("Also variceal bleeding and carcinoid syndrome; GI upset, gallstones, bradycardia, glucose changes.", "L07 S6-7")],
+    "Lanreotide": [("GI upset, gallstones, bradycardia; monitor IGF-1.", "L07 S7")],
+    "Pegvisomant": [("Does not shrink the tumor; monitor IGF-1 (not GH) and liver tests.", "L07 S7")],
+    "Cabergoline": [("Twice weekly, better tolerated; high doses (Parkinson) linked to valve fibrosis; nausea, orthostasis.", "L07 S9")],
+    "Bromocriptine": [("Daily dosing; nausea, orthostatic hypotension, dizziness.", "L07 S9")],
+    "Desmopressin": [("Central DI; risk is hyponatremia — monitor sodium and limit fluids.", "L07 S8; S10")],
+    "Tolvaptan": [("SIADH refractory to fluid restriction; overcorrection (osmotic demyelination) and liver injury — start in hospital.", "L07 S8; S10")],
+    "Demeclocycline": [("Refractory SIADH; photosensitivity and nephrotoxicity.", "L07 S10")],
+    "Levothyroxine": [("Empty stomach 30–60 min before breakfast; separate calcium, iron, antacids, PPIs, binders by 4 h; TSH at 6–8 weeks.", "L07 S12-13; SG U4-R5"),
+                      ("Start low in older adults and cardiac disease; over-replacement → AF, bone loss; pregnancy raises needs.", "L07 S12-13")],
+    "Methimazole": [("First line for most non-pregnant patients (once daily); avoid in first trimester; agranulocytosis and liver boxed warning — fever or sore throat → CBC.", "L07 S15")],
+    "Propylthiouracil": [("First trimester and thyroid storm only — severe hepatotoxicity boxed warning.", "L07 S15; SG U4-R6")],
+    "Potassium iodide": [("Thyroid storm: give at least 1 hour after a thionamide — never first (supplies substrate).", "L07 S16-18; SG U4-R7")],
+    "Hydrocortisone": [("Adrenal crisis: immediate IV hydrocortisone plus IV fluids.", "L07 S27"), *_GC_PT],
+    "Fludrocortisone": [("Addison disease with a glucocorticoid; monitor blood pressure and potassium.", "L07 S20")],
+    "Metyrapone": [("Cushing syndrome and diagnostic testing; raises androgens and deoxycorticosterone.", "L07 S23-24")],
+    "Mifepristone": [("Cushing hyperglycemia when surgery isn’t an option; contraindicated in pregnancy; hypokalemia; cortisol stays high — monitor clinically.", "L07 S23-24")],
+})
+_IX.update({
+    "Levothyroxine": [("Calcium, iron, antacids block absorption; estrogens raise needs; rifampin, phenytoin, carbamazepine speed clearance.", "L07 S52")],
+    "Cabergoline": [("Antipsychotics and metoclopramide raise prolactin.", "L07 S52")], "Bromocriptine": [("Antipsychotics and metoclopramide raise prolactin.", "L07 S52")],
+    "Hydrocortisone": [("Azole antifungals raise exposure (CYP3A4); insulin and oral agents need adjusting.", "L07 S52")],
+})
 _SAME = {"calcium carbonate or citrate": "calcium carbonate"}
-_UNIT = {"L05": 3, "L06": 3, "L08": 4, "L09": 5, "L10": 5, "L11": 6, "L12": 6}
-_TAG = {"L05": "GI", "L06": "GI & nutrition", "L08": "Endocrine", "L09": "Renal", "L10": "Cardiorenal", "L11": "Reproductive", "L12": "Genitourinary"}
-for _lec in ("L05", "L06", "L08", "L09", "L10", "L11", "L12"):
+_UNIT = {"L05": 3, "L06": 3, "L07": 4, "L08": 4, "L09": 5, "L10": 5, "L11": 6, "L12": 6}
+_TAG = {"L05": "GI", "L06": "GI & nutrition", "L07": "Endocrine", "L08": "Endocrine", "L09": "Renal", "L10": "Cardiorenal", "L11": "Reproductive", "L12": "Genitourinary"}
+for _lec in ("L05", "L06", "L07", "L08", "L09", "L10", "L11", "L12"):
     for _p in _profiles.read(_lec):
         _c = f"{_lec} S{_p['slide']}"
         _f = [("ind", _p.get("ind"), _c), ("ae", _p.get("ae"), _c), ("contra", _p.get("contra"), _c),

@@ -26,7 +26,7 @@ def read(lec):
             p.update(dict(zip(("_t", "cls", "form", "dose", "ind", "ae", "contra", "tox"), cells)))
             p.pop("_t")
         one = s["notes"].strip().split("\n")[0]
-        if one.startswith("Drug:") and one.count(":") >= 6:
+        if ("Class:" in one and "Toxicity / overdose:" in one) and one.count(":") >= 6:
             # one-line form: "Drug: X. Class: Y. Formulation: … Toxicity / overdose: …."
             parts = re.split(r"(?:^|\.\s+)(Drug|Class|Formulation|Dose \(adult\)|Indications|Adverse effects|Contraindications|Toxicity / overdose):\s*", one)
             for k, v in zip(parts[1::2], parts[2::2]):

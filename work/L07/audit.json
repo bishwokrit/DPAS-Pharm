@@ -1,0 +1,821 @@
+{
+ "lecture": "L07",
+ "passed": true,
+ "units_checked": 4918,
+ "missing": [],
+ "uncited": [],
+ "emphasis_not_bold": [],
+ "skipped": [
+  {
+   "ref": "S1",
+   "text": "Diane S. Allen-Gipson, Ph.D., M.S., Course Director",
+   "kind": "slide",
+   "reason": "faculty identifier (site policy: no school or instructor identifiers)"
+  },
+  {
+   "ref": "S2",
+   "text": "Objectives: Read them aloud.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S3",
+   "text": "AccessMedicine: accessmedicine.mhmedical.com/book.aspx?bookid=3382",
+   "kind": "slide",
+   "reason": "access link for the textbook"
+  },
+  {
+   "ref": "S3",
+   "text": "Point students to the required and recommended texts for Unit 4 before diving into content.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; the reading split is taught in About this lecture"
+  },
+  {
+   "ref": "S3",
+   "text": "Readings: Katzung chapters 37-39 cover this session.",
+   "kind": "speaker note",
+   "reason": "presenter script; taught in About this lecture"
+  },
+  {
+   "ref": "S4",
+   "text": "Section transition.",
+   "kind": "speaker note",
+   "reason": "section divider"
+  },
+  {
+   "ref": "S4",
+   "text": "Section 01: the hypothalamic-pituitary axis, where every drug either replaces a hormone, blocks one, or interrupts the loop.",
+   "kind": "speaker note",
+   "reason": "section divider"
+  },
+  {
+   "ref": "S5",
+   "text": "Keep returning to this diagram as each new system is introduced.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S5",
+   "text": "Figure 1: Trace the axis and the negative-feedback arrows.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; the figure is interactive"
+  },
+  {
+   "ref": "S6",
+   "text": "Acromegaly pharmacology is a good place to preview that octreotide will reappear later in GI/variceal contexts — reinforces that these drug classes are not siloed by organ system.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; taught in pearls"
+  },
+  {
+   "ref": "S7",
+   "text": "Figure 2. Teal starts the axis; blue steps are GH and IGF-1 signalling and drug blocks. Red bar marks a blocked signal; red outcome: acromegaly symptoms improve.",
+   "kind": "slide",
+   "reason": "figure colour key (the figure is redrawn as an interactive)"
+  },
+  {
+   "ref": "S8",
+   "text": "Prolactin: dopamine is the brake on prolactin, shown on the next slide.",
+   "kind": "speaker note",
+   "reason": "presenter script; taught from S9"
+  },
+  {
+   "ref": "S11",
+   "text": "Section transition.",
+   "kind": "speaker note",
+   "reason": "section divider"
+  },
+  {
+   "ref": "S11",
+   "text": "Section 02: thyroid and antithyroid drugs.",
+   "kind": "speaker note",
+   "reason": "section divider"
+  },
+  {
+   "ref": "S14",
+   "text": "Figure 6: Iodide trapping, organification, coupling and peripheral conversion.",
+   "kind": "speaker note",
+   "reason": "presenter script; taught from S14"
+  },
+  {
+   "ref": "S15",
+   "text": "Methimazole is first-line for most patients and is avoided in the first trimester.",
+   "kind": "speaker note",
+   "reason": "presenter script; taught from S15"
+  },
+  {
+   "ref": "S16",
+   "text": "Thyroid storm is treated with four drugs that hit four targets; the next two slides show the mechanism and the sequence.",
+   "kind": "speaker note",
+   "reason": "presenter script"
+  },
+  {
+   "ref": "S17",
+   "text": "Figure 7: Four drugs, four targets: PTU blocks synthesis, iodine blocks release (after PTU), propranolol blunts symptoms, steroids blunt conversion.",
+   "kind": "speaker note",
+   "reason": "presenter script; taught from S17"
+  },
+  {
+   "ref": "S18",
+   "text": "This case reinforces Figure 6 and the sequencing point from the prior slide — a good checkpoint for whether the mechanism actually landed, not just the drug names.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S18",
+   "text": "\"Why must iodine come after the thionamide?\" Answer: iodine first provides substrate for new hormone.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; the answer is taught from S18"
+  },
+  {
+   "ref": "S19",
+   "text": "Section transition.",
+   "kind": "speaker note",
+   "reason": "section divider"
+  },
+  {
+   "ref": "S19",
+   "text": "Section 03: adrenal drugs.",
+   "kind": "speaker note",
+   "reason": "section divider"
+  },
+  {
+   "ref": "S21",
+   "text": "Figure 8: The steroid binds the cytoplasmic receptor, enters the nucleus, and changes transcription; NF-kB driven cytokines are repressed.",
+   "kind": "speaker note",
+   "reason": "presenter script; taught from S21"
+  },
+  {
+   "ref": "S22",
+   "text": "Figure 9: Chronic steroids suppress CRH and ACTH.",
+   "kind": "speaker note",
+   "reason": "presenter script; taught from S22"
+  },
+  {
+   "ref": "S23",
+   "text": "Enzyme blockers (ketoconazole, metyrapone) lower cortisol.",
+   "kind": "speaker note",
+   "reason": "presenter script"
+  },
+  {
+   "ref": "S24",
+   "text": "Figure 10: Receptor blockers (mifepristone, spironolactone) leave hormone levels high.",
+   "kind": "speaker note",
+   "reason": "presenter script; taught from S24"
+  },
+  {
+   "ref": "S25",
+   "text": "Use this table to consolidate the adrenal section before the case vignette — a good moment to pause for questions before applying the concepts clinically.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S25",
+   "text": "Walk the four rows of the table.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S26",
+   "text": "Drug-name stems: -tide, -pressin, -vaptan, -ergoline, -thyroxine, -imazole/-thiouracil, -sone, -conazole, -pristone, -lactone.",
+   "kind": "speaker note",
+   "reason": "presenter script; the stems are taught in Part 3"
+  },
+  {
+   "ref": "S27",
+   "text": "Missed refills with hypotension and confusion is adrenal crisis.",
+   "kind": "speaker note",
+   "reason": "presenter script; taught from S27"
+  },
+  {
+   "ref": "S28",
+   "text": "Close Session 1 by previewing Session 2 explicitly — students should leave knowing the pituitary-thyroid-adrenal axis is complete, and that reproductive hormones, diabetes, and bone/calcium pharmacology pick up first next time.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S28",
+   "text": "Read the five points and preview Session 2.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S29",
+   "text": "How to use in class (10 minutes): Give each group two or three profiles and have them teach back dose, key contraindication and toxicity in 60 seconds each.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S29",
+   "text": "Abbreviation key: Review PO, SC, IM, IV, LAR, DI, SIADH, HPA, CYP and QT.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S29",
+   "text": "Teaching points by class: Pituitary: somatostatin analogs, pegvisomant, dopamine agonists, desmopressin, tolvaptan, demeclocycline.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; the drugs are in the profiles"
+  },
+  {
+   "ref": "S29",
+   "text": "Thyroid: levothyroxine, methimazole, PTU, propranolol, potassium iodide.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; the drugs are in the profiles"
+  },
+  {
+   "ref": "S29",
+   "text": "Adrenal: prednisone, dexamethasone, hydrocortisone, fludrocortisone, ketoconazole, metyrapone, mifepristone, spironolactone.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; the drugs are in the profiles"
+  },
+  {
+   "ref": "S29",
+   "text": "Bloom's prompts: Remember: state the levothyroxine dose logic.",
+   "kind": "speaker note",
+   "reason": "Bloom's teaching prompt; rebuilt as practice questions"
+  },
+  {
+   "ref": "S29",
+   "text": "Understand: explain why iodine follows PTU.",
+   "kind": "speaker note",
+   "reason": "Bloom's teaching prompt; rebuilt as practice questions"
+  },
+  {
+   "ref": "S29",
+   "text": "Apply: counsel a patient out of prednisone refills.",
+   "kind": "speaker note",
+   "reason": "Bloom's teaching prompt; rebuilt as practice questions"
+  },
+  {
+   "ref": "S29",
+   "text": "Analyze: explain the cortisol rise on mifepristone.",
+   "kind": "speaker note",
+   "reason": "Bloom's teaching prompt; rebuilt as practice questions"
+  },
+  {
+   "ref": "S29",
+   "text": "Evaluate: choose therapy for storm in a patient with asthma and defend it.",
+   "kind": "speaker note",
+   "reason": "Bloom's teaching prompt; rebuilt as practice questions"
+  },
+  {
+   "ref": "S52",
+   "text": "Supporting drugs: Read quickly; these explain interactions, not doses.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S53",
+   "text": "This slide documents AI-tool use for original figure generation per university citation requirements.",
+   "kind": "speaker note",
+   "reason": "administrative note on AI-tool citation"
+  },
+  {
+   "ref": "S53",
+   "text": "Original figures 1, 6 and 9 and the AI mechanism illustrations are credited on this slide.",
+   "kind": "speaker note",
+   "reason": "administrative note on AI-tool citation"
+  }
+ ],
+ "not_in_deck": [],
+ "not_in_notebooklm": [],
+ "layout_problems": [],
+ "question_issues": [],
+ "question_stats": {
+  "count": 20,
+  "letters": {
+   "A": 4,
+   "B": 4,
+   "C": 4,
+   "D": 4,
+   "E": 4
+  },
+  "vignette": 12,
+  "mechanism": 8
+ },
+ "thin_objectives": [],
+ "textbook_unused": 4252,
+ "reading_missing": [],
+ "reading_skipped": [
+  {
+   "page": "710",
+   "heading": "Chemistry & Pharmacokinetics",
+   "reason": "Beyond PA scope: gonadotropin and GnRH-analog chemistry for specialist fertility protocols"
+  },
+  {
+   "page": "721",
+   "heading": "Conivaptan HCl Vaprisol",
+   "reason": "Preparations list (brand names only, no teaching content)"
+  },
+  {
+   "page": "721",
+   "heading": "Somapacitan Sogroya",
+   "reason": "Preparations list (brand names only, no teaching content)"
+  },
+  {
+   "page": "738",
+   "heading": "Tirosint, Tirosint-SOL, Unithroid",
+   "reason": "Preparations list (brand names only, no teaching content)"
+  },
+  {
+   "page": "755",
+   "heading": "GENERIC NAME AVAILABLE AS",
+   "reason": "Preparations list (brand names only, no teaching content)"
+  },
+  {
+   "page": "755",
+   "heading": "Betamethasone Celestone",
+   "reason": "Preparations list (brand names only, no teaching content)"
+  },
+  {
+   "page": "755",
+   "heading": "Mitotane Lysodren",
+   "reason": "Preparations list (brand names only, no teaching content)"
+  },
+  {
+   "page": "758",
+   "heading": "Disturbances in Ovarian Function",
+   "reason": "Taught in L11 (GU & Reproductive Session 1: gonadal hormones, Ch. 40)"
+  },
+  {
+   "page": "759",
+   "heading": "Natural Estrogens",
+   "reason": "Taught in L11 (GU & Reproductive Session 1: gonadal hormones, Ch. 40)"
+  },
+  {
+   "page": "760",
+   "heading": "Synthetic Estrogens",
+   "reason": "Taught in L11 (GU & Reproductive Session 1: gonadal hormones, Ch. 40)"
+  },
+  {
+   "page": "763",
+   "heading": "Adverse Effects",
+   "reason": "Taught in L11 (GU & Reproductive Session 1: gonadal hormones, Ch. 40)"
+  },
+  {
+   "page": "764",
+   "heading": "Preparations & Dosages",
+   "reason": "Taught in L11 (GU & Reproductive Session 1: gonadal hormones, Ch. 40)"
+  },
+  {
+   "page": "765",
+   "heading": "Synthetic Progestins",
+   "reason": "Taught in L11 (GU & Reproductive Session 1: gonadal hormones, Ch. 40)"
+  },
+  {
+   "page": "767",
+   "heading": "Azurette, Kariva, Mircette, Viorele",
+   "reason": "Taught in L11 (GU & Reproductive Session 1: gonadal hormones, Ch. 40)"
+  },
+  {
+   "page": "767",
+   "heading": "Enpresse, Levonest, Myzilra, Triphasil, Tri-Levlen, Trivora",
+   "reason": "Taught in L11 (GU & Reproductive Session 1: gonadal hormones, Ch. 40)"
+  },
+  {
+   "page": "767",
+   "heading": "Casiant, Cyclessa, Cesia, Velivet",
+   "reason": "Taught in L11 (GU & Reproductive Session 1: gonadal hormones, Ch. 40)"
+  },
+  {
+   "page": "768",
+   "heading": "Implantable Progestin Preparation",
+   "reason": "Taught in L11 (GU & Reproductive Session 1: gonadal hormones, Ch. 40)"
+  },
+  {
+   "page": "769",
+   "heading": "OTHER OVARIAN HORMONES",
+   "reason": "Taught in L11 (GU & Reproductive Session 1: gonadal hormones, Ch. 40)"
+  },
+  {
+   "page": "769",
+   "heading": "HORMONAL CONTRACEPTION (ORAL, PARENTERAL, & IMPLANTED CONTRACEPTIVES)",
+   "reason": "Taught in L11 (GU & Reproductive Session 1: gonadal hormones, Ch. 40)"
+  },
+  {
+   "page": "771",
+   "heading": "Clinical Uses",
+   "reason": "Taught in L11 (GU & Reproductive Session 1: gonadal hormones, Ch. 40)"
+  },
+  {
+   "page": "773",
+   "heading": "Contraindications & Cautions",
+   "reason": "Taught in L11 (GU & Reproductive Session 1: gonadal hormones, Ch. 40)"
+  },
+  {
+   "page": "773",
+   "heading": "Contraception with Progestins Alone",
+   "reason": "Taught in L11 (GU & Reproductive Session 1: gonadal hormones, Ch. 40)"
+  },
+  {
+   "page": "774",
+   "heading": "Beneficial Effects of Oral Contraceptives",
+   "reason": "Taught in L11 (GU & Reproductive Session 1: gonadal hormones, Ch. 40)"
+  },
+  {
+   "page": "774",
+   "heading": "TAMOXIFEN & RELATED PARTIAL AGONIST ESTROGENS",
+   "reason": "Taught in L11 (GU & Reproductive Session 1: gonadal hormones, Ch. 40)"
+  },
+  {
+   "page": "775",
+   "heading": "DANAZOL",
+   "reason": "Taught in L11 (GU & Reproductive Session 1: gonadal hormones, Ch. 40)"
+  },
+  {
+   "page": "776",
+   "heading": "OTHER INHIBITORS",
+   "reason": "Taught in L11 (GU & Reproductive Session 1: gonadal hormones, Ch. 40)"
+  },
+  {
+   "page": "776",
+   "heading": "OVULATION-INDUCING AGENTS CLOMIPHENE",
+   "reason": "Taught in L11 (GU & Reproductive Session 1: gonadal hormones, Ch. 40)"
+  },
+  {
+   "page": "777",
+   "heading": "OTHER DRUGS USED IN OVULATORY DISORDERS",
+   "reason": "Taught in L11 (GU & Reproductive Session 1: gonadal hormones, Ch. 40)"
+  },
+  {
+   "page": "777",
+   "heading": "ANDROGENS & ANABOLIC STEROIDS",
+   "reason": "Taught in L11 (GU & Reproductive Session 1: gonadal hormones, Ch. 40)"
+  },
+  {
+   "page": "778",
+   "heading": "Physiologic Effects",
+   "reason": "Taught in L11 (GU & Reproductive Session 1: gonadal hormones, Ch. 40)"
+  },
+  {
+   "page": "778",
+   "heading": "Anabolic Action",
+   "reason": "Taught in L11 (GU & Reproductive Session 1: gonadal hormones, Ch. 40)"
+  },
+  {
+   "page": "780",
+   "heading": "ANDROGEN SUPPRESSION & ANTIANDROGENS ANDROGEN SUPPRESSION",
+   "reason": "Taught in L11 (GU & Reproductive Session 1: gonadal hormones, Ch. 40)"
+  },
+  {
+   "page": "781",
+   "heading": "ANTIANDROGENS",
+   "reason": "Taught in L11 (GU & Reproductive Session 1: gonadal hormones, Ch. 40)"
+  },
+  {
+   "page": "781",
+   "heading": "Steroid Synthesis Inhibitors",
+   "reason": "Taught in L11 (GU & Reproductive Session 1: gonadal hormones, Ch. 40)"
+  },
+  {
+   "page": "781",
+   "heading": "Precursors to Androgens",
+   "reason": "Taught in L11 (GU & Reproductive Session 1: gonadal hormones, Ch. 40)"
+  },
+  {
+   "page": "782",
+   "heading": "Receptor Inhibitors",
+   "reason": "Taught in L11 (GU & Reproductive Session 1: gonadal hormones, Ch. 40)"
+  },
+  {
+   "page": "782",
+   "heading": "CHEMICAL CONTRACEPTION IN MEN",
+   "reason": "Taught in L11 (GU & Reproductive Session 1: gonadal hormones, Ch. 40)"
+  },
+  {
+   "page": "782",
+   "heading": "GOSSYPOL",
+   "reason": "Taught in L11 (GU & Reproductive Session 1: gonadal hormones, Ch. 40)"
+  },
+  {
+   "page": "783",
+   "heading": "Toremifene Fareston",
+   "reason": "Taught in L11 (GU & Reproductive Session 1: gonadal hormones, Ch. 40)"
+  },
+  {
+   "page": "785",
+   "heading": "THE ENDOCRINE PANCREAS",
+   "reason": "Taught in L08 (Endocrine Session 2: insulin and glucose-lowering drugs, Ch. 41)"
+  },
+  {
+   "page": "786",
+   "heading": "Insulin Secretion",
+   "reason": "Taught in L08 (Endocrine Session 2: insulin and glucose-lowering drugs, Ch. 41)"
+  },
+  {
+   "page": "786",
+   "heading": "Insulin Degradation",
+   "reason": "Taught in L08 (Endocrine Session 2: insulin and glucose-lowering drugs, Ch. 41)"
+  },
+  {
+   "page": "786",
+   "heading": "Circulating Insulin",
+   "reason": "Taught in L08 (Endocrine Session 2: insulin and glucose-lowering drugs, Ch. 41)"
+  },
+  {
+   "page": "786",
+   "heading": "The Insulin Receptor",
+   "reason": "Taught in L08 (Endocrine Session 2: insulin and glucose-lowering drugs, Ch. 41)"
+  },
+  {
+   "page": "786",
+   "heading": "Islet Mass Secretory Products",
+   "reason": "Taught in L08 (Endocrine Session 2: insulin and glucose-lowering drugs, Ch. 41)"
+  },
+  {
+   "page": "787",
+   "heading": "Effects of Insulin on Its Targets",
+   "reason": "Taught in L08 (Endocrine Session 2: insulin and glucose-lowering drugs, Ch. 41)"
+  },
+  {
+   "page": "787",
+   "heading": "Chemistry & Metabolism",
+   "reason": "Taught in L08 (Endocrine Session 2: insulin and glucose-lowering drugs, Ch. 41)"
+  },
+  {
+   "page": "788",
+   "heading": "Pharmacologic Effects of Glucagon",
+   "reason": "Taught in L08 (Endocrine Session 2: insulin and glucose-lowering drugs, Ch. 41)"
+  },
+  {
+   "page": "789",
+   "heading": "DIABETES MELLITUS",
+   "reason": "Taught in L08 (Endocrine Session 2: insulin and glucose-lowering drugs, Ch. 41)"
+  },
+  {
+   "page": "790",
+   "heading": "Other Specific Types of Diabetes Mellitus",
+   "reason": "Taught in L08 (Endocrine Session 2: insulin and glucose-lowering drugs, Ch. 41)"
+  },
+  {
+   "page": "790",
+   "heading": "Gestational Diabetes Mellitus",
+   "reason": "Taught in L08 (Endocrine Session 2: insulin and glucose-lowering drugs, Ch. 41)"
+  },
+  {
+   "page": "791",
+   "heading": "Insulin Preparations",
+   "reason": "Taught in L08 (Endocrine Session 2: insulin and glucose-lowering drugs, Ch. 41)"
+  },
+  {
+   "page": "795",
+   "heading": "Immunopathology of Insulin Therapy",
+   "reason": "Taught in L08 (Endocrine Session 2: insulin and glucose-lowering drugs, Ch. 41)"
+  },
+  {
+   "page": "795",
+   "heading": "MEDICATIONS FOR TREATMENT OF TYPE 2 DIABETES",
+   "reason": "Taught in L08 (Endocrine Session 2: insulin and glucose-lowering drugs, Ch. 41)"
+  },
+  {
+   "page": "796",
+   "heading": "Efficacy & Safety of the Sulfonylureas",
+   "reason": "Taught in L08 (Endocrine Session 2: insulin and glucose-lowering drugs, Ch. 41)"
+  },
+  {
+   "page": "796",
+   "heading": "FIRST-GENERATION SULFONYLUREAS",
+   "reason": "Taught in L08 (Endocrine Session 2: insulin and glucose-lowering drugs, Ch. 41)"
+  },
+  {
+   "page": "796",
+   "heading": "SECOND-GENERATION SULFONYLUREAS",
+   "reason": "Taught in L08 (Endocrine Session 2: insulin and glucose-lowering drugs, Ch. 41)"
+  },
+  {
+   "page": "797",
+   "heading": "MEGLITINIDE ANALOGS",
+   "reason": "Taught in L08 (Endocrine Session 2: insulin and glucose-lowering drugs, Ch. 41)"
+  },
+  {
+   "page": "797",
+   "heading": "BIGUANIDES",
+   "reason": "Taught in L08 (Endocrine Session 2: insulin and glucose-lowering drugs, Ch. 41)"
+  },
+  {
+   "page": "798",
+   "heading": "THIAZOLIDINEDIONES",
+   "reason": "Taught in L08 (Endocrine Session 2: insulin and glucose-lowering drugs, Ch. 41)"
+  },
+  {
+   "page": "799",
+   "heading": "DRUGS THAT AFFECT ABSORPTION OF GLUCOSE",
+   "reason": "Taught in L08 (Endocrine Session 2: insulin and glucose-lowering drugs, Ch. 41)"
+  },
+  {
+   "page": "800",
+   "heading": "GLUCAGON-LIKE PEPTIDE-1 (GLP-1) RECEPTOR AGONISTS",
+   "reason": "Taught in L08 (Endocrine Session 2: insulin and glucose-lowering drugs, Ch. 41)"
+  },
+  {
+   "page": "801",
+   "heading": "DIPEPTIDYL PEPTIDASE 4 (DPP-4) INHIBITORS",
+   "reason": "Taught in L08 (Endocrine Session 2: insulin and glucose-lowering drugs, Ch. 41)"
+  },
+  {
+   "page": "801",
+   "heading": "SODIUM-GLUCOSE CO-TRANSPORTER 2 (SGL T2) INHIBITORS",
+   "reason": "Taught in L08 (Endocrine Session 2: insulin and glucose-lowering drugs, Ch. 41)"
+  },
+  {
+   "page": "802",
+   "heading": "OTHER GLUCOSE-LOWERING DRUGS",
+   "reason": "Taught in L08 (Endocrine Session 2: insulin and glucose-lowering drugs, Ch. 41)"
+  },
+  {
+   "page": "803",
+   "heading": "Glycemic Targets",
+   "reason": "Taught in L08 (Endocrine Session 2: insulin and glucose-lowering drugs, Ch. 41)"
+  },
+  {
+   "page": "804",
+   "heading": "Prebreakfast Prelunch Predinner Bedtime",
+   "reason": "Taught in L08 (Endocrine Session 2: insulin and glucose-lowering drugs, Ch. 41)"
+  },
+  {
+   "page": "804",
+   "heading": "Benefits of Tight Glycemic Control in Diabetes",
+   "reason": "Taught in L08 (Endocrine Session 2: insulin and glucose-lowering drugs, Ch. 41)"
+  },
+  {
+   "page": "806",
+   "heading": "Chronic Complications of Diabetes",
+   "reason": "Taught in L08 (Endocrine Session 2: insulin and glucose-lowering drugs, Ch. 41)"
+  },
+  {
+   "page": "811",
+   "heading": "BASIC PHARMACOLOGY",
+   "reason": "Taught in L04 (Musculoskeletal Session 2: bone mineral homeostasis, Ch. 42)"
+  },
+  {
+   "page": "813",
+   "heading": "PRINCIPAL HORMONAL REGULATORS OF BONE MINERAL HOMEOSTASIS PARATHYROID HORMONE",
+   "reason": "Taught in L04 (Musculoskeletal Session 2: bone mineral homeostasis, Ch. 42)"
+  },
+  {
+   "page": "816",
+   "heading": "FIBROBLAST GROWTH FACTOR 23",
+   "reason": "Taught in L04 (Musculoskeletal Session 2: bone mineral homeostasis, Ch. 42)"
+  },
+  {
+   "page": "817",
+   "heading": "SECONDARY HORMONAL REGULATORS OF BONE MINERAL HOMEOSTASIS",
+   "reason": "Taught in L04 (Musculoskeletal Session 2: bone mineral homeostasis, Ch. 42)"
+  },
+  {
+   "page": "817",
+   "heading": "CALCITONIN",
+   "reason": "Taught in L04 (Musculoskeletal Session 2: bone mineral homeostasis, Ch. 42)"
+  },
+  {
+   "page": "818",
+   "heading": "GLUCOCORTICOIDS",
+   "reason": "Taught in L04 (Musculoskeletal Session 2: bone mineral homeostasis, Ch. 42)"
+  },
+  {
+   "page": "818",
+   "heading": "ESTROGENS",
+   "reason": "Taught in L04 (Musculoskeletal Session 2: bone mineral homeostasis, Ch. 42)"
+  },
+  {
+   "page": "818",
+   "heading": "Therapies for Osteoporosis",
+   "reason": "Taught in L04 (Musculoskeletal Session 2: bone mineral homeostasis, Ch. 42)"
+  },
+  {
+   "page": "819",
+   "heading": "NONHORMONAL AGENTS AFFECTING BONE MINERAL HOMEOSTASIS BISPHOSPHONATES",
+   "reason": "Taught in L04 (Musculoskeletal Session 2: bone mineral homeostasis, Ch. 42)"
+  },
+  {
+   "page": "820",
+   "heading": "DENOSUMAB",
+   "reason": "Taught in L04 (Musculoskeletal Session 2: bone mineral homeostasis, Ch. 42)"
+  },
+  {
+   "page": "820",
+   "heading": "SCLEROSTIN ANTIBODIES",
+   "reason": "Taught in L04 (Musculoskeletal Session 2: bone mineral homeostasis, Ch. 42)"
+  },
+  {
+   "page": "820",
+   "heading": "CALCIMIMETICS",
+   "reason": "Taught in L04 (Musculoskeletal Session 2: bone mineral homeostasis, Ch. 42)"
+  },
+  {
+   "page": "821",
+   "heading": "THIAZIDE DIURETICS",
+   "reason": "Taught in L04 (Musculoskeletal Session 2: bone mineral homeostasis, Ch. 42)"
+  },
+  {
+   "page": "821",
+   "heading": "FLUORIDE",
+   "reason": "Taught in L04 (Musculoskeletal Session 2: bone mineral homeostasis, Ch. 42)"
+  },
+  {
+   "page": "821",
+   "heading": "STRONTIUM RANELATE",
+   "reason": "Taught in L04 (Musculoskeletal Session 2: bone mineral homeostasis, Ch. 42)"
+  },
+  {
+   "page": "822",
+   "heading": "ABNORMAL SERUM CALCIUM & PHOSPHATE LEVELS HYPERCALCEMIA",
+   "reason": "Taught in L04 (Musculoskeletal Session 2: bone mineral homeostasis, Ch. 42)"
+  },
+  {
+   "page": "822",
+   "heading": "Saline Diuresis",
+   "reason": "Taught in L04 (Musculoskeletal Session 2: bone mineral homeostasis, Ch. 42)"
+  },
+  {
+   "page": "822",
+   "heading": "Gallium Nitrate",
+   "reason": "Taught in L04 (Musculoskeletal Session 2: bone mineral homeostasis, Ch. 42)"
+  },
+  {
+   "page": "823",
+   "heading": "HYPOCALCEMIA",
+   "reason": "Taught in L04 (Musculoskeletal Session 2: bone mineral homeostasis, Ch. 42)"
+  },
+  {
+   "page": "823",
+   "heading": "HYPERPHOSPHATEMIA",
+   "reason": "Taught in L04 (Musculoskeletal Session 2: bone mineral homeostasis, Ch. 42)"
+  },
+  {
+   "page": "824",
+   "heading": "HYPOPHOSPHATEMIA",
+   "reason": "Taught in L04 (Musculoskeletal Session 2: bone mineral homeostasis, Ch. 42)"
+  },
+  {
+   "page": "824",
+   "heading": "SPECIFIC DISORDERS INVOLVING BONE MINERAL–REGULATING HORMONES PRIMARY HYPERPARATHYROIDISM",
+   "reason": "Taught in L04 (Musculoskeletal Session 2: bone mineral homeostasis, Ch. 42)"
+  },
+  {
+   "page": "824",
+   "heading": "HYPOPARATHYROIDISM",
+   "reason": "Taught in L04 (Musculoskeletal Session 2: bone mineral homeostasis, Ch. 42)"
+  },
+  {
+   "page": "825",
+   "heading": "NUTRITIONAL VITAMIN D DEFICIENCY OR INSUFFICIENCY",
+   "reason": "Taught in L04 (Musculoskeletal Session 2: bone mineral homeostasis, Ch. 42)"
+  },
+  {
+   "page": "825",
+   "heading": "CHRONIC KIDNEY DISEASE",
+   "reason": "Taught in L04 (Musculoskeletal Session 2: bone mineral homeostasis, Ch. 42)"
+  },
+  {
+   "page": "826",
+   "heading": "Vitamin D Preparations",
+   "reason": "Taught in L04 (Musculoskeletal Session 2: bone mineral homeostasis, Ch. 42)"
+  },
+  {
+   "page": "826",
+   "heading": "INTESTINAL OSTEODYSTROPHY",
+   "reason": "Taught in L04 (Musculoskeletal Session 2: bone mineral homeostasis, Ch. 42)"
+  },
+  {
+   "page": "826",
+   "heading": "OSTEOPOROSIS",
+   "reason": "Taught in L04 (Musculoskeletal Session 2: bone mineral homeostasis, Ch. 42)"
+  },
+  {
+   "page": "828",
+   "heading": "IDIOPATHIC INFANTILE HYPERCALCEMIA",
+   "reason": "Taught in L04 (Musculoskeletal Session 2: bone mineral homeostasis, Ch. 42)"
+  },
+  {
+   "page": "828",
+   "heading": "NEPHROTIC SYNDROME",
+   "reason": "Taught in L04 (Musculoskeletal Session 2: bone mineral homeostasis, Ch. 42)"
+  },
+  {
+   "page": "829",
+   "heading": "IDIOPATHIC HYPERCALCIURIA",
+   "reason": "Taught in L04 (Musculoskeletal Session 2: bone mineral homeostasis, Ch. 42)"
+  },
+  {
+   "page": "829",
+   "heading": "OTHER DISORDERS OF BONE MINERAL HOMEOSTASIS PAGET DISEASE OF BONE",
+   "reason": "Taught in L04 (Musculoskeletal Session 2: bone mineral homeostasis, Ch. 42)"
+  },
+  {
+   "page": "829",
+   "heading": "ENTERIC OXALURIA",
+   "reason": "Taught in L04 (Musculoskeletal Session 2: bone mineral homeostasis, Ch. 42)"
+  },
+  {
+   "page": "830",
+   "heading": "SCLEROSTIN ANTIBODY",
+   "reason": "Taught in L04 (Musculoskeletal Session 2: bone mineral homeostasis, Ch. 42)"
+  },
+  {
+   "page": "831",
+   "heading": "CALCIUM",
+   "reason": "Taught in L04 (Musculoskeletal Session 2: bone mineral homeostasis, Ch. 42)"
+  }
+ ]
+}
