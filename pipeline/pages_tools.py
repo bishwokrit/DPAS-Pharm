@@ -165,7 +165,7 @@ def drugs_page(built, exams):
 <div class="dx-bar"><div class="dx-search">{SEARCH_ICON}<input id="dx-q" type="search" placeholder="Search drugs, classes, or facts…" autocomplete="off"></div>
 <div class="dx-tools"><button class="btn ghost small dx-filter" id="dx-filter" aria-expanded="false" aria-controls="dx-tags-wrap"><svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M4 6h16M7 12h10M10 18h4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>Filter</button><span id="dx-active"></span><label class="dx-sort"><span>Sort</span><select id="dx-sort" aria-label="Sort drugs">
 <option value="unit">Unit (course order)</option><option value="az">A–Z</option><option value="za">Z–A</option><option value="class">Drug class</option>
-<option value="mentions">Most mentioned in lectures</option><option value="complete">Most complete card</option></select></label><button class="btn ghost small" id="dx-drill">Drill drug flashcards</button><button class="btn ghost small" id="dx-cmp" disabled>Compare (0/2)</button></div></div>
+<option value="mentions">Most mentioned in lectures</option><option value="complete">Most complete card</option></select></label><a class="btn ghost small" id="dx-drill" href="flashcards.html">Flashcards</a><button class="btn ghost small" id="dx-cmp" disabled>Compare (0/2)</button></div></div>
 <div class="dx-tags-wrap" id="dx-tags-wrap"><div class="dx-tags-in"><div class="dx-opts"><label class="dx-check" title="Only drugs named in the course's Units 1–6 Cumulative Study Guide &amp; Worksheet"><input type="checkbox" id="dx-sgonly"><span>Study-guide drugs only <em id="dx-sgn"></em></span></label><label class="dx-check" title="Drugs that appear only in the assigned textbook reading, not on the lecture slides"><input type="checkbox" id="dx-tbonly" checked><span>Textbook-only drugs <em id="dx-tbn"></em></span></label></div><div class="dx-tags" id="dx-tags"><button class="sch-chip on" data-tag="">All</button>{"".join(f'<button class="sch-chip" data-tag="{html.escape(t)}">{html.escape(t)}</button>' for t in tags)}</div></div></div>
 <div class="dx-grid" id="dx-grid"></div><p class="muted" id="dx-empty" hidden>No drugs match. It may be <strong>not covered in materials</strong> yet.</p>
 </div></section>
@@ -240,3 +240,28 @@ def dotd_data(built, exams, data):
         out.append({"name": d["name"], "cls": d["cls"], "unit": d["unit"], "taught": taught, "facts": d["facts"][:4], "qs": qs,
                     "lectures": [{"text": m["text"], "src": m["src"], "where": f'{m["lid"]} · {m["where"]}'} for m in d["mentions"][:2]]})
     return out
+
+
+# ---------------------------------------------------------------- drug flashcards (Anki-style, in the browser)
+def flashcards_page(built, data):
+    """docs/drugs/flashcards.html: pick drugs (unit, lecture, class, study guide) and what goes on each card, then study them
+    with Anki-style spaced repetition (Again / Hard / Good / Easy). Works with keyboards, clickers and Bluetooth
+    remote rings (page-turn, scroll/TikTok, tap or media modes). Progress stays in this browser."""
+    syl = json.loads((ROOT / "work" / "syllabus.json").read_text())
+    kbs = {lid: json.loads((DOCS / lid / "kb.json").read_text()) for lid in built}
+    lectures = [{"id": l["id"], "unit": int(l["unit"]), "title": json.loads((ROOT / "work" / l["id"] / "content.resolved.json").read_text())["lecture"]["title"]}
+                for l in syl["lectures"] if l["id"] in built]
+    drugs = []
+    for d in data:
+        pat = re.compile(r"\b(" + d["pattern"] + r")\b", re.I)
+        lids = [lid for lid, kb in kbs.items() if any(pat.search(ch["text"]) for ch in kb["chunks"])]
+        drugs.append({"n": d["name"], "c": d["cls"], "cs": d.get("cls_src", ""), "a": d["aliases"], "u": int(d["unit"]), "t": d["tags"], "l": lids,
+                      "sg": bool(d["sg"]), "f": [[f.get("sec") or "extra", f["text"], f.get("src", ""), bool(f.get("tb"))] for f in d["facts"]]})
+    cfg = json.dumps({"drugs": drugs, "lectures": lectures, "units": syl["units"]}, ensure_ascii=False).replace("</", "<\\/")
+    body = f"""<header class="hero wrap fc-hero"><p class="eyebrow appear"><a href="index.html">Drugs</a> · Flashcards</p>
+<h1 class="appear" style="--d:.05s">Drug flashcards, <span class="accent-text">Anki-style.</span></h1>
+<p class="lede appear" style="--d:.12s">Choose the drugs and exactly what each card asks. Grade yourself Again, Hard, Good or Easy and the cards come back just before you'd forget them. Works hands-free with a Bluetooth remote ring.</p></header>
+<section class="section fc-sec"><div class="wrap"><div id="fc-app" class="fc-app"><p class="muted">Loading {len(drugs)} drugs…</p></div></div></section>
+<script type="application/json" id="fc-data">{cfg}</script>
+<script src="../assets/mol3d.js"></script><script src="../assets/flash.js"></script>"""
+    return page(f"Drug flashcards · {SITE_NAME}", body, depth=1, active="drugs")

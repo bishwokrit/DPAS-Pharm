@@ -1,6 +1,6 @@
 // Drug index: search + tag filters, a detail sheet per drug (the drug card — name, class, mechanism, indications,
 // contraindications, adverse effects, interactions, patient factors, extra — plus every lecture mention,
-// a quiz built from questions that mention it), side-by-side compare, and a drug flashcard drill.
+// a quiz built from questions that mention it) and side-by-side compare. Flashcards live on drugs/flashcards.html.
 (function () {
   const CFG = JSON.parse(document.getElementById("drug-data").textContent), DR = CFG.drugs;
   const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
@@ -230,34 +230,6 @@
     close();
     window.dpasQuiz?.start(qs.sort(() => Math.random() - 0.5).slice(0, 15), { title: `${d.name} · ${qs.length} question${qs.length > 1 ? "s" : ""}` });
   }
-
-  // ---- drug flashcards: name → class + top facts
-  $("dx-drill").addEventListener("click", () => {
-    const cards = DR.filter((d) => !tag || d.tags.includes(tag)).sort(() => Math.random() - 0.5);
-    let i = 0;
-    const el = document.createElement("div");
-    el.className = "qm"; document.body.append(el); document.documentElement.style.overflow = "hidden";
-    const end = () => { el.remove(); document.documentElement.style.overflow = ""; document.removeEventListener("keydown", key, true); };
-    const drawCard = () => {
-      if (i >= cards.length) { el.innerHTML = `<div class="qm-scroll"><div class="qm-card" style="text-align:center;padding-top:15vh"><div class="qm-score">${cards.length} drugs reviewed</div><button class="btn" data-x style="margin-top:16px">Done</button></div></div>`; el.querySelector("[data-x]").onclick = end; return; }
-      const d = cards[i];
-      el.innerHTML = `<div class="qm-top"><button class="qm-x" data-x>✕</button><div class="qm-count">${i + 1} <span>/ ${cards.length}</span></div><div class="qm-title">Drug flashcards${tag ? " · " + esc(tag) : ""}</div><span></span></div>
-        <div class="qm-scroll"><div class="qm-card"><div class="sk-card" style="min-height:300px"><div class="sk-face"><div class="small muted">What does the course teach about…</div><div class="sk-q" style="font-size:30px">${esc(d.name)}</div><div class="small muted">Tap, Enter, or ↓ to flip</div></div>
-        <div class="sk-face back" style="justify-content:flex-start;overflow:auto"><div class="small muted">${d.cls === "Not covered in materials" ? "Class: later unit" : esc(d.cls)}</div><ul style="margin:6px 0 0;padding-left:18px">${["moa", "ind", "ae", "ix", "pt", "contra", "extra"].flatMap((k) => secFacts(d, k).slice(0, 1).map((f) => [k, f])).slice(0, 4).map(([k, f]) => `<li style="margin:6px 0"><span class="small muted">${SECS.find((x) => x[0] === k)[1]}:</span> ${md(f.text)}${cite(f.src)}</li>`).join("")}</ul></div></div>
-        <div class="sk-row" style="justify-content:center;margin-top:18px"><button class="btn ghost" data-prev>← Back</button><button class="btn" data-next>Next →</button></div></div></div>`;
-      el.querySelector("[data-x]").onclick = end;
-      const c = el.querySelector(".sk-card"); c.onclick = () => c.classList.toggle("flipped");
-      el.querySelector("[data-next]").onclick = () => { i++; drawCard(); };
-      el.querySelector("[data-prev]").onclick = () => { i = Math.max(0, i - 1); drawCard(); };
-    };
-    const key = (e) => {
-      if (e.key === "Escape") end();
-      else if (["Enter", " ", "ArrowDown", "ArrowUp"].includes(e.key)) { el.querySelector(".sk-card")?.classList.toggle("flipped"); e.preventDefault(); }
-      else if (e.key === "ArrowRight") { i++; drawCard(); } else if (e.key === "ArrowLeft") { i = Math.max(0, i - 1); drawCard(); }
-    };
-    document.addEventListener("keydown", key, true);
-    drawCard();
-  });
 
   draw(); paintTray();
   const want = location.hash.slice(1), hit = DR.find((d) => slug(d.name) === want);

@@ -104,6 +104,8 @@ def practice_page(syl, built, exams_built):
     ic = lambda n: f'<span class="tile-ic">{icon(n)}</span>'
     tools = (f'<a class="tile appear" href="../anki/index.html">{ic("card")}<div><div class="tile-k">Deck builder</div><h3>Anki cards</h3>'
              '<p>Any lecture, any depth: cloze, basic, reversed, type-in or multiple choice. Downloads ready for Anki.</p></div><span class="tile-go">Build a deck →</span></a>'
+             f'<a class="tile appear" style="--d:.03s" href="../drugs/flashcards.html">{ic("card")}<div><div class="tile-k">Spaced repetition</div><h3>Drug flashcards</h3>'
+             '<p>Pick the drugs and every field on the card, then study Anki-style. Hands-free with a Bluetooth remote ring.</p></div><span class="tile-go">Study →</span></a>'
              f'<a class="tile appear" style="--d:.06s" href="../review/index.html">{ic("review")}<div><div class="tile-k">5 minutes a day</div><h3>Daily 10</h3>'
              '<p>Ten questions weighted toward what you missed, with a streak. Lives in Insight with your scores.</p></div><span class="tile-go">Start →</span></a>')
     body = f"""<header class="hero wrap"><p class="eyebrow appear">Prepare</p><h1 class="appear" style="--d:.05s">Pull it out of memory. That's how it sticks.</h1>

@@ -1,6 +1,7 @@
 """One-off: 3D coordinates for the drug-sheet constellation (needs RDKit: pip install rdkit).
 Writes work/mol3d.json, which the site build copies to docs/drugs/. Each SMILES is checked against its
-molecular formula before use. Biologics, mixtures and foods (heparin, insulin, St. John's wort…) have none.
+molecular formula before use; every other drug's SMILES comes from work/mol_smiles.json (DrugBank approved-drug
+structures, salts stripped to the drug itself). Biologics, mixtures and foods (heparin, insulin, St. John's wort…) have none.
     python3 pipeline/tools/make_mol3d.py"""
 import json
 from pathlib import Path
@@ -36,10 +37,23 @@ S = {
 }
 
 
+def main_part(smi):
+    """Drop counter-ions (besylate, sodium…) unless the drug is itself a small salt (calcium carbonate, potassium iodide)."""
+    m = Chem.MolFromSmiles(smi)
+    frags = sorted(Chem.GetMolFrags(m, asMols=True), key=lambda f: f.GetNumHeavyAtoms(), reverse=True)
+    return Chem.MolToSmiles(frags[0]) if frags[0].GetNumHeavyAtoms() >= 8 else smi
+
+
 def coords(smi):
     m = Chem.AddHs(Chem.MolFromSmiles(smi))
-    AllChem.EmbedMolecule(m, randomSeed=7)
-    AllChem.MMFFOptimizeMolecule(m)
+    p = AllChem.ETKDGv3(); p.randomSeed = 7
+    if AllChem.EmbedMolecule(m, p) != 0:
+        p.useRandomCoords = True
+        assert AllChem.EmbedMolecule(m, p) == 0, smi
+    if AllChem.MMFFHasAllMoleculeParams(m):
+        AllChem.MMFFOptimizeMolecule(m, maxIters=2000)
+    else:
+        AllChem.UFFOptimizeMolecule(m, maxIters=2000)
     m = Chem.RemoveHs(m)
     pos = m.GetConformer().GetPositions()
     pos -= pos.mean(axis=0)
@@ -53,6 +67,12 @@ if __name__ == "__main__":
         got = rdMolDescriptors.CalcMolFormula(Chem.MolFromSmiles(smi)).replace("+2", "").replace("-2", "")
         assert got == formula, f"{name}: {got} != {formula}"
         out[name] = {"f": formula, **coords(smi)}
+    extra = json.loads((Path(__file__).resolve().parents[2] / "work" / "mol_smiles.json").read_text())
+    for name, (smi, _src) in extra.items():
+        if name in out:
+            continue
+        smi = main_part(smi)
+        out[name] = {"f": rdMolDescriptors.CalcMolFormula(Chem.MolFromSmiles(smi)), **coords(smi)}
     p = Path(__file__).resolve().parents[2] / "work" / "mol3d.json"
     p.write_text(json.dumps(out, separators=(",", ":")))
     print(f"{len(out)} structures -> {p} ({p.stat().st_size // 1024} KB)")
