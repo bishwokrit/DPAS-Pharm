@@ -427,7 +427,7 @@ Learning objectives covered: SO3, SO4, IO2.1, IO2.2, IO2.3, IO2.4, IO2.5, IO2.6
 - Poor oral absorption (under 1%) → take fasting with plain water. (S53)
 - **Dosing:** alendronate, risedronate — oral, typically weekly; ibandronate — oral, monthly; zoledronic acid — IV, as infrequently as once yearly. (S47; S49)
 - Teriparatide is limited to 2 years lifetime, then follow with an antiresorptive. (S55)
-- [TB] Bisphosphonates: less than 10% of an oral dose is absorbed; about half goes to bone, the rest is excreted unchanged in urine. (p. 819)
+- [TB] Bisphosphonates: less than 10% of an oral dose is absorbed; about half goes to bone, the rest is excreted unchanged in urine. Drug bound in bone is retained for months to years — unlike denosumab, whose effect fades when stopped. (p. 819)
 - [TB] Denosumab 60 mg SC every 6 months; teriparatide 20 mcg SC daily; romosozumab 210 mg SC monthly for one year, then an antiresorptive. (p. 819; p. 827)
 
 ### Bone Pharmacology & Osteoporosis — Monitoring

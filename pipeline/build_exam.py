@@ -27,6 +27,9 @@ EXAMS = {"U1": {"slug": "unit1", "title": "Unit 1 Practice Exam — Introduction
                 "short": "Unit 2 Practice Exam", "lectures": ["L03", "L04"], "seed": 1027, "unit": 2,
                 "about": "Built only from the Unit 2 slides, study guide, and assigned Katzung chapters (textbook questions are cited by page). Covers both sessions: pain, acetaminophen, NSAIDs, OA/RA, and DMARDs (Session 1), then gout, skeletal muscle relaxants, and bone (Session 2)."},
          # Unit 3: bank_a.py = Session 1 (L05: acid-peptic, antiemetics); bank_b.py = Session 2 (L06: bowel, IBD, nutrition)
+         "U2B": {"slug": "unit2b", "title": "Unit 2 Practice Exam B — Harder, Exam Conditions",
+                 "short": "Unit 2 Practice Exam B · harder (30 Q · 36 min)", "lectures": ["L03", "L04"], "seed": 1105, "unit": 2, "minutes": 36,
+                 "about": "30 harder questions in the style of the latest Unit 2 quiz: patients with several competing findings, “which drug and why” choices, drug-vs-drug comparisons, and doses and contraindications from the new drug-profile slides. Best taken timed: 36 minutes."},
          "U3": {"slug": "unit3", "title": "Unit 3 Practice Exam — GI & Nutrition",
                 "short": "Unit 3 Practice Exam", "lectures": ["L05", "L06"], "seed": 1103, "unit": 3,
                 "about": "Built only from the Unit 3 slides, study guide, and assigned Katzung chapters (textbook questions are cited by page). Covers acid-peptic disease, H. pylori, and antiemetics (Session 1), then laxatives, antidiarrheals, IBD, and nutrition and supplements (Session 2). Mostly patient cases that ask what you would do."},

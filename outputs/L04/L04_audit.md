@@ -2,7 +2,7 @@
 
 **Result: PASS ✅ nothing missing**
 
-Checked 2899 source lines (90 slides; 7 study-guide items; 69 textbook pages read; 63 textbook sentences used, the rest left out as not needed for this lecture (info only).)
+Checked 2899 source lines (90 slides; 7 study-guide items; 69 textbook pages read; 64 textbook sentences used, the rest left out as not needed for this lecture (info only).)
 
 ## Missing from the study materials
 - None ✅

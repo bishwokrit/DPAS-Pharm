@@ -103,7 +103,7 @@ ADD = {
             ("Unlike bisphosphonates, denosumab can be used in advanced renal disease (not renally cleared) — watch calcium.", "p. 820"),
         ],
         "pk": [
-            ("Bisphosphonates: less than 10% of an oral dose is absorbed; about half goes to bone, the rest is excreted unchanged in urine.", "p. 819"),
+            ("Bisphosphonates: less than 10% of an oral dose is absorbed; about half goes to bone, the rest is excreted unchanged in urine. Drug bound in bone is retained for months to years — unlike denosumab, whose effect fades when stopped.", "p. 819"),
             ("Denosumab 60 mg SC every 6 months; teriparatide 20 mcg SC daily; romosozumab 210 mg SC monthly for one year, then an antiresorptive.", "p. 819; p. 827"),
         ],
         "monitoring": [
