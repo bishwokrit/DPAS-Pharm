@@ -15,7 +15,7 @@ ADD = {
 }
 CONFLICTS = {}
 DISCREPANCIES = []
-CRAM = [("Finasteride onset", "DHT falls within 8 h; prostate shrinks over months", "p. 781; S19")]
+CRAM = [("Finasteride onset", "DHT falls within 8 h; prostate shrinks over months", "p. 781; S23")]
 QUESTIONS = []
 COMPARISONS = {}
 DEEPER = {BPH: (40, 780, 782, "Androgen suppression, 5-alpha-reductase inhibitors and antiandrogens")}

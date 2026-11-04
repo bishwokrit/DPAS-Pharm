@@ -816,6 +816,178 @@
  },
  {
   "slide": 10,
+  "title": "Quick Check",
+  "items": [
+   {
+    "text": "QUICK CHECK · AUTONOMIC CONTROL OF THE BLADDER",
+    "level": 0,
+    "emphasis": [],
+    "md": "QUICK CHECK · AUTONOMIC CONTROL OF THE BLADDER",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Quick Check",
+    "level": 0,
+    "emphasis": [],
+    "md": "Quick Check",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Which receptor and location combination is primarily responsible for keeping the bladder outlet closed during the storage phase?",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Which receptor and location combination is primarily responsible for keeping the bladder outlet closed during the storage phase?",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Which receptor and location combination is primarily responsible for keeping the bladder outlet closed during the storage phase?**",
+    "heading": false,
+    "size": 18.5
+   },
+   {
+    "text": "A",
+    "level": 0,
+    "emphasis": [],
+    "md": "A",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Alpha1 receptors at the bladder neck and proximal urethra",
+    "level": 0,
+    "emphasis": [],
+    "md": "Alpha1 receptors at the bladder neck and proximal urethra",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "B",
+    "level": 0,
+    "emphasis": [],
+    "md": "B",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "M3 receptors on the detrusor muscle",
+    "level": 0,
+    "emphasis": [],
+    "md": "M3 receptors on the detrusor muscle",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "C",
+    "level": 0,
+    "emphasis": [],
+    "md": "C",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Beta3 receptors on the detrusor muscle",
+    "level": 0,
+    "emphasis": [],
+    "md": "Beta3 receptors on the detrusor muscle",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "D",
+    "level": 0,
+    "emphasis": [],
+    "md": "D",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Nicotinic receptors at the detrusor muscle",
+    "level": 0,
+    "emphasis": [],
+    "md": "Nicotinic receptors at the detrusor muscle",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Quick Check. Ask the class: which receptor closes the bladder neck during storage?"
+ },
+ {
+  "slide": 11,
+  "title": "Answer",
+  "items": [
+   {
+    "text": "ANSWER · AUTONOMIC CONTROL OF THE BLADDER",
+    "level": 0,
+    "emphasis": [],
+    "md": "ANSWER · AUTONOMIC CONTROL OF THE BLADDER",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Answer",
+    "level": 0,
+    "emphasis": [],
+    "md": "Answer",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "A",
+    "level": 0,
+    "emphasis": [],
+    "md": "A",
+    "heading": true,
+    "size": 26.0
+   },
+   {
+    "text": "Alpha1 receptors at the bladder neck and proximal urethra.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Alpha1 receptors at the bladder neck and proximal urethra.",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Alpha1 receptors at the bladder neck and proximal urethra.**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Why:  Sympathetic norepinephrine acting on alpha1 receptors at the bladder neck and proximal urethra produces smooth muscle contraction, keeping the outlet closed during storage. Beta3 receptors, by contrast, relax the detrusor body (not the outlet) during this same phase.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Why:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Why:** Sympathetic norepinephrine acting on alpha1 receptors at the bladder neck and proximal urethra produces smooth muscle contraction, keeping the outlet closed during storage. Beta3 receptors, by contrast, relax the detrusor body (not the outlet) during this same phase.",
+    "heading": false,
+    "size": 15.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Answer: alpha-1 at the bladder neck."
+ },
+ {
+  "slide": 12,
   "title": "05",
   "items": [
    {
@@ -872,7 +1044,7 @@
   "notes": "Section transition. Overactive bladder and urinary incontinence: antimuscarinics block the detrusor's muscarinic signal, while beta-3 agonists relax it."
  },
  {
-  "slide": 11,
+  "slide": 13,
   "title": "Antimuscarinic Agents",
   "items": [
    {
@@ -945,21 +1117,6 @@
     "md": "Caution/contraindication: narrow-angle glaucoma and significant urinary retention can be worsened by antimuscarinic therapy.",
     "heading": false,
     "size": 16.0
-   },
-   {
-    "text": "13",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "13",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**13**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
@@ -968,7 +1125,7 @@
   "notes": "The anticholinergic-burden-in-older-adults point is the highest-yield safety teaching point in this section — it directly sets up both the Quick Check and the upcoming clinical case.\n\nInstructor script:\n\nOxybutynin, tolterodine, solifenacin, darifenacin. Dry mouth, constipation, blurred vision, confusion. Oxybutynin has the highest CNS burden."
  },
  {
-  "slide": 12,
+  "slide": 14,
   "title": "Antimuscarinics: Bladder Benefit and Anticholinergic Burden",
   "items": [
    {
@@ -1104,38 +1261,23 @@
     "size": 13.5
    },
    {
-    "text": "Figure 93. Antimuscarinics relax the bladder but block the same receptors throughout the body.",
+    "text": "Figure 12. Antimuscarinics relax the bladder but block the same receptors throughout the body.",
     "level": 0,
     "emphasis": [],
-    "md": "Figure 93. Antimuscarinics relax the bladder but block the same receptors throughout the body.",
+    "md": "Figure 12. Antimuscarinics relax the bladder but block the same receptors throughout the body.",
     "heading": false,
     "size": 11.0
-   },
-   {
-    "text": "14",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "14",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**14**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
   "images": 1,
   "figures": [
-   "S12_1.png"
+   "S14_1.png"
   ],
   "notes": "The same blockade in brain, gut and salivary glands causes the side effects."
  },
  {
-  "slide": 13,
+  "slide": 15,
   "title": "Beta-3 Agonists",
   "items": [
    {
@@ -1208,21 +1350,6 @@
     "md": "Mirabegron can be used alone or combined with an antimuscarinic for refractory symptoms, since the two act by complementary (not redundant) mechanisms.",
     "heading": false,
     "size": 16.0
-   },
-   {
-    "text": "15",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "15",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**15**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
@@ -1231,14 +1358,14 @@
   "notes": "The \"no anticholinergic burden\" advantage is the single most important comparison point versus antimuscarinics — make sure students can articulate why that specifically matters in an older adult population.\n\nInstructor script:\n\nMirabegron; may raise blood pressure; inhibits CYP2D6."
  },
  {
-  "slide": 14,
+  "slide": 16,
   "title": "Antimuscarinics vs. Beta-3 Agonists: Two Mechanisms for Bladder Storage",
   "items": [
    {
-    "text": "ORIGINAL ILLUSTRATION · FIGURE 12",
+    "text": "ORIGINAL ILLUSTRATION · FIGURE 13",
     "level": 0,
     "emphasis": [],
-    "md": "ORIGINAL ILLUSTRATION · FIGURE 12",
+    "md": "ORIGINAL ILLUSTRATION · FIGURE 13",
     "heading": true,
     "size": 12.0
    },
@@ -1251,45 +1378,30 @@
     "size": 28.0
    },
    {
-    "text": "Figure 12. Original illustrative diagram (not from Katzung): antimuscarinics block the M3-mediated contraction signal, while beta3 agonists enhance the norepinephrine-mediated relaxation signal — two distinct mechanisms converging on the same clinical goal of improved bladder storage.",
+    "text": "Figure 13. Original illustrative diagram (not from Katzung): antimuscarinics block the M3-mediated contraction signal, while beta3 agonists enhance the norepinephrine-mediated relaxation signal — two distinct mechanisms converging on the same clinical goal of improved bladder storage.",
     "level": 0,
     "emphasis": [
      {
-      "text": "Figure 12. Original illustrative diagram (not from Katzung): antimuscarinics block the M3-mediated contraction signal, while beta3 agonists enhance the norepinephrine-mediated relaxation signal — two distinct mechanisms converging on the same clinical goal of improved bladder storage.",
+      "text": "Figure 13. Original illustrative diagram (not from Katzung): antimuscarinics block the M3-mediated contraction signal, while beta3 agonists enhance the norepinephrine-mediated relaxation signal — two distinct mechanisms converging on the same clinical goal of improved bladder storage.",
       "marks": [
        "color"
       ]
      }
     ],
-    "md": "**Figure 12. Original illustrative diagram (not from Katzung): antimuscarinics block the M3-mediated contraction signal, while beta3 agonists enhance the norepinephrine-mediated relaxation signal — two distinct mechanisms converging on the same clinical goal of improved bladder storage.**",
+    "md": "**Figure 13. Original illustrative diagram (not from Katzung): antimuscarinics block the M3-mediated contraction signal, while beta3 agonists enhance the norepinephrine-mediated relaxation signal — two distinct mechanisms converging on the same clinical goal of improved bladder storage.**",
     "heading": false,
     "size": 13.5
-   },
-   {
-    "text": "16",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "16",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**16**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
   "images": 2,
   "figures": [
-   "S14_1.jpg"
+   "S16_1.jpg"
   ],
   "notes": "Reinforce that these are complementary, not competing, mechanisms — this is the mechanistic basis for combination therapy mentioned on the previous slide.\n\nInstructor script:\n\nComplementary mechanisms."
  },
  {
-  "slide": 15,
+  "slide": 17,
   "title": "Anticholinergic Burden in an Older Adult",
   "items": [
    {
@@ -1360,21 +1472,6 @@
     "md": "**Clinical pearl:** **Oxybutynin carries a relatively high CNS anticholinergic burden, and in an older adult — especially one with pre-existing cognitive impairment — this can precipitate or worsen confusion. Switching to a beta3 agonist (mirabegron), which lacks anticholinergic activity, treats the same overactive bladder symptoms without this risk.**",
     "heading": false,
     "size": 14.0
-   },
-   {
-    "text": "17",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "17",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**17**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
@@ -1383,7 +1480,179 @@
   "notes": "This case is designed to make the Section 5 comparison concrete and clinical — a good checkpoint before the quick check, and a natural segue into discussing medication reconciliation for anticholinergic burden more broadly.\n\nInstructor script:\n\nSwitch to mirabegron and review other anticholinergics."
  },
  {
-  "slide": 16,
+  "slide": 18,
+  "title": "Quick Check",
+  "items": [
+   {
+    "text": "QUICK CHECK · OVERACTIVE BLADDER PHARMACOLOGY",
+    "level": 0,
+    "emphasis": [],
+    "md": "QUICK CHECK · OVERACTIVE BLADDER PHARMACOLOGY",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Quick Check",
+    "level": 0,
+    "emphasis": [],
+    "md": "Quick Check",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Which overactive bladder medication is generally preferred in an older adult already taking multiple anticholinergic medications?",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Which overactive bladder medication is generally preferred in an older adult already taking multiple anticholinergic medications?",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Which overactive bladder medication is generally preferred in an older adult already taking multiple anticholinergic medications?**",
+    "heading": false,
+    "size": 18.5
+   },
+   {
+    "text": "A",
+    "level": 0,
+    "emphasis": [],
+    "md": "A",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Mirabegron, a beta3 agonist with no anticholinergic activity",
+    "level": 0,
+    "emphasis": [],
+    "md": "Mirabegron, a beta3 agonist with no anticholinergic activity",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "B",
+    "level": 0,
+    "emphasis": [],
+    "md": "B",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Oxybutynin, for its high potency",
+    "level": 0,
+    "emphasis": [],
+    "md": "Oxybutynin, for its high potency",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "C",
+    "level": 0,
+    "emphasis": [],
+    "md": "C",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Any antimuscarinic agent, since they are interchangeable",
+    "level": 0,
+    "emphasis": [],
+    "md": "Any antimuscarinic agent, since they are interchangeable",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "D",
+    "level": 0,
+    "emphasis": [],
+    "md": "D",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "No pharmacologic therapy should be used in older adults",
+    "level": 0,
+    "emphasis": [],
+    "md": "No pharmacologic therapy should be used in older adults",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Quick Check. Ask the class: which agent fits an older adult with OAB and high anticholinergic burden?"
+ },
+ {
+  "slide": 19,
+  "title": "Answer",
+  "items": [
+   {
+    "text": "ANSWER · OVERACTIVE BLADDER PHARMACOLOGY",
+    "level": 0,
+    "emphasis": [],
+    "md": "ANSWER · OVERACTIVE BLADDER PHARMACOLOGY",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Answer",
+    "level": 0,
+    "emphasis": [],
+    "md": "Answer",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "A",
+    "level": 0,
+    "emphasis": [],
+    "md": "A",
+    "heading": true,
+    "size": 26.0
+   },
+   {
+    "text": "Mirabegron, a beta3 agonist with no anticholinergic activity.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Mirabegron, a beta3 agonist with no anticholinergic activity.",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Mirabegron, a beta3 agonist with no anticholinergic activity.**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Why:  Because mirabegron works by enhancing beta3-mediated detrusor relaxation rather than blocking muscarinic receptors, it avoids adding to a patient's cumulative anticholinergic burden — a key consideration in older adults, who are more susceptible to anticholinergic-related confusion and cognitive impairment.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Why:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Why:** Because mirabegron works by enhancing beta3-mediated detrusor relaxation rather than blocking muscarinic receptors, it avoids adding to a patient's cumulative anticholinergic burden — a key consideration in older adults, who are more susceptible to anticholinergic-related confusion and cognitive impairment.",
+    "heading": false,
+    "size": 15.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Answer: mirabegron."
+ },
+ {
+  "slide": 20,
   "title": "06",
   "items": [
    {
@@ -1440,7 +1709,7 @@
   "notes": "Section transition. BPH and erectile dysfunction: alpha1 blockers relax the prostate, and nitric oxide and cGMP drive erection."
  },
  {
-  "slide": 17,
+  "slide": 21,
   "title": "Alpha1 Blockers for BPH",
   "items": [
    {
@@ -1519,21 +1788,6 @@
     "md": "Floppy iris syndrome is a recognized intraoperative complication during cataract surgery in patients on alpha1 blockers — relevant to preoperative medication reconciliation.",
     "heading": false,
     "size": 16.0
-   },
-   {
-    "text": "21",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "21",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**21**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
@@ -1542,14 +1796,14 @@
   "notes": "The Unit 5 cross-reference here is deliberate and worth stating explicitly — tamsulosin and doxazosin are not new drug classes, they are the same alpha1-blocker pharmacology applied to a different primary indication.\n\nInstructor script:\n\nTamsulosin and silodosin are uroselective; doxazosin and terazosin lower BP more. First-dose effect; floppy iris syndrome."
  },
  {
-  "slide": 18,
+  "slide": 22,
   "title": "Alpha1 Blockade at the Bladder Neck and Prostate",
   "items": [
    {
-    "text": "ORIGINAL ILLUSTRATION · FIGURE 13",
+    "text": "ORIGINAL ILLUSTRATION · FIGURE 14",
     "level": 0,
     "emphasis": [],
-    "md": "ORIGINAL ILLUSTRATION · FIGURE 13",
+    "md": "ORIGINAL ILLUSTRATION · FIGURE 14",
     "heading": true,
     "size": 12.0
    },
@@ -1562,45 +1816,30 @@
     "size": 28.0
    },
    {
-    "text": "Figure 13. Original illustrative diagram (not from Katzung): sympathetic norepinephrine normally contracts bladder neck and prostatic smooth muscle via alpha1 receptors, narrowing the outflow tract; alpha1 blockers relax this same muscle to improve urinary flow — while the same receptor family elsewhere mediates vascular tone.",
+    "text": "Figure 14. Original illustrative diagram (not from Katzung): sympathetic norepinephrine normally contracts bladder neck and prostatic smooth muscle via alpha1 receptors, narrowing the outflow tract; alpha1 blockers relax this same muscle to improve urinary flow — while the same receptor family elsewhere mediates vascular tone.",
     "level": 0,
     "emphasis": [
      {
-      "text": "Figure 13. Original illustrative diagram (not from Katzung): sympathetic norepinephrine normally contracts bladder neck and prostatic smooth muscle via alpha1 receptors, narrowing the outflow tract; alpha1 blockers relax this same muscle to improve urinary flow — while the same receptor family elsewhere mediates vascular tone.",
+      "text": "Figure 14. Original illustrative diagram (not from Katzung): sympathetic norepinephrine normally contracts bladder neck and prostatic smooth muscle via alpha1 receptors, narrowing the outflow tract; alpha1 blockers relax this same muscle to improve urinary flow — while the same receptor family elsewhere mediates vascular tone.",
       "marks": [
        "color"
       ]
      }
     ],
-    "md": "**Figure 13. Original illustrative diagram (not from Katzung): sympathetic norepinephrine normally contracts bladder neck and prostatic smooth muscle via alpha1 receptors, narrowing the outflow tract; alpha1 blockers relax this same muscle to improve urinary flow — while the same receptor family elsewhere mediates vascular tone.**",
+    "md": "**Figure 14. Original illustrative diagram (not from Katzung): sympathetic norepinephrine normally contracts bladder neck and prostatic smooth muscle via alpha1 receptors, narrowing the outflow tract; alpha1 blockers relax this same muscle to improve urinary flow — while the same receptor family elsewhere mediates vascular tone.**",
     "heading": false,
     "size": 13.5
-   },
-   {
-    "text": "22",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "22",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**22**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
   "images": 2,
   "figures": [
-   "S18_1.jpg"
+   "S22_1.jpg"
   ],
   "notes": "Point explicitly to the side note about systemic alpha1 blockade and orthostatic hypotension — this is the figure's direct link back to Unit 5's antihypertensive content.\n\nInstructor script:\n\nSame receptor family as in blood vessels."
  },
  {
-  "slide": 19,
+  "slide": 23,
   "title": "5-Alpha-Reductase Inhibitors",
   "items": [
    {
@@ -1672,21 +1911,6 @@
     "md": "Pregnancy caution: finasteride/dutasteride can cause ambiguous genitalia in a male fetus; pregnant partners should avoid handling crushed or broken tablets.",
     "heading": false,
     "size": 16.0
-   },
-   {
-    "text": "23",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "23",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**23**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
@@ -1695,7 +1919,7 @@
   "notes": "Explicitly call back to Session 1 here — students met finasteride/dutasteride already for hirsutism; this slide is the same mechanism, same drugs, different clinical application, reinforcing the bridge between the two sessions.\n\nInstructor script:\n\nFinasteride, dutasteride; benefit takes 3-6 months; PSA falls by half; pregnancy caution."
  },
  {
-  "slide": 20,
+  "slide": 24,
   "title": "5-ARIs: Shrinking the Prostate Slowly",
   "items": [
    {
@@ -1818,45 +2042,30 @@
     "size": 13.5
    },
    {
-    "text": "Figure 14. 5-ARIs block DHT production, so the prostate shrinks slowly over months.",
+    "text": "Figure 15. 5-ARIs block DHT production, so the prostate shrinks slowly over months.",
     "level": 0,
     "emphasis": [],
-    "md": "Figure 14. 5-ARIs block DHT production, so the prostate shrinks slowly over months.",
+    "md": "Figure 15. 5-ARIs block DHT production, so the prostate shrinks slowly over months.",
     "heading": false,
     "size": 11.0
-   },
-   {
-    "text": "24",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "24",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**24**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
   "images": 1,
   "figures": [
-   "S20_1.jpg"
+   "S24_1.jpg"
   ],
   "notes": "DHT falls and the prostate shrinks gradually; combine with an alpha-1 blocker."
  },
  {
-  "slide": 21,
+  "slide": 25,
   "title": "NANC Neurotransmission and the NO-cGMP Pathway in Erectile Function",
   "items": [
    {
-    "text": "ORIGINAL ILLUSTRATION · FIGURE 15",
+    "text": "ORIGINAL ILLUSTRATION · FIGURE 16",
     "level": 0,
     "emphasis": [],
-    "md": "ORIGINAL ILLUSTRATION · FIGURE 15",
+    "md": "ORIGINAL ILLUSTRATION · FIGURE 16",
     "heading": true,
     "size": 12.0
    },
@@ -1869,45 +2078,30 @@
     "size": 28.0
    },
    {
-    "text": "Figure 15. Original illustrative diagram (not from Katzung): non-adrenergic, noncholinergic (NANC) nerves release nitric oxide, raising cGMP and relaxing corpus cavernosum smooth muscle; PDE5 normally terminates this signal by breaking down cGMP, and nitrates independently raise NO/cGMP systemically — the mechanistic basis for the absolute nitrate/PDE5-inhibitor contraindication.",
+    "text": "Figure 16. Original illustrative diagram (not from Katzung): non-adrenergic, noncholinergic (NANC) nerves release nitric oxide, raising cGMP and relaxing corpus cavernosum smooth muscle; PDE5 normally terminates this signal by breaking down cGMP, and nitrates independently raise NO/cGMP systemically — the mechanistic basis for the absolute nitrate/PDE5-inhibitor contraindication.",
     "level": 0,
     "emphasis": [
      {
-      "text": "Figure 15. Original illustrative diagram (not from Katzung): non-adrenergic, noncholinergic (NANC) nerves release nitric oxide, raising cGMP and relaxing corpus cavernosum smooth muscle; PDE5 normally terminates this signal by breaking down cGMP, and nitrates independently raise NO/cGMP systemically — the mechanistic basis for the absolute nitrate/PDE5-inhibitor contraindication.",
+      "text": "Figure 16. Original illustrative diagram (not from Katzung): non-adrenergic, noncholinergic (NANC) nerves release nitric oxide, raising cGMP and relaxing corpus cavernosum smooth muscle; PDE5 normally terminates this signal by breaking down cGMP, and nitrates independently raise NO/cGMP systemically — the mechanistic basis for the absolute nitrate/PDE5-inhibitor contraindication.",
       "marks": [
        "color"
       ]
      }
     ],
-    "md": "**Figure 15. Original illustrative diagram (not from Katzung): non-adrenergic, noncholinergic (NANC) nerves release nitric oxide, raising cGMP and relaxing corpus cavernosum smooth muscle; PDE5 normally terminates this signal by breaking down cGMP, and nitrates independently raise NO/cGMP systemically — the mechanistic basis for the absolute nitrate/PDE5-inhibitor contraindication.**",
+    "md": "**Figure 16. Original illustrative diagram (not from Katzung): non-adrenergic, noncholinergic (NANC) nerves release nitric oxide, raising cGMP and relaxing corpus cavernosum smooth muscle; PDE5 normally terminates this signal by breaking down cGMP, and nitrates independently raise NO/cGMP systemically — the mechanistic basis for the absolute nitrate/PDE5-inhibitor contraindication.**",
     "heading": false,
     "size": 13.5
-   },
-   {
-    "text": "25",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "25",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**25**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
   "images": 2,
   "figures": [
-   "S21_1.jpg"
+   "S25_1.jpg"
   ],
   "notes": "This figure is the direct application of the Chapter 6 \"non-adrenergic, noncholinergic neurons\" content named in the reading assignment — point that out explicitly. Slow down on the nitrate warning box; it is the highest-stakes safety point in the entire unit.\n\nInstructor script:\n\nSlow down on the nitrate warning."
  },
  {
-  "slide": 22,
+  "slide": 26,
   "title": "PDE5 Inhibitors",
   "items": [
    {
@@ -1927,17 +2121,17 @@
     "size": 28.0
    },
    {
-    "text": "Mechanism: block phosphodiesterase type 5 (PDE5), the enzyme that normally breaks down cGMP, prolonging smooth muscle relaxation in the corpus cavernosum and sustaining erectile function (Figure 15).",
+    "text": "Mechanism: block phosphodiesterase type 5 (PDE5), the enzyme that normally breaks down cGMP, prolonging smooth muscle relaxation in the corpus cavernosum and sustaining erectile function (Figure 16).",
     "level": 0,
     "emphasis": [
      {
-      "text": "Mechanism: block phosphodiesterase type 5 (PDE5), the enzyme that normally breaks down cGMP, prolonging smooth muscle relaxation in the corpus cavernosum and sustaining erectile function (Figure 15).",
+      "text": "Mechanism: block phosphodiesterase type 5 (PDE5), the enzyme that normally breaks down cGMP, prolonging smooth muscle relaxation in the corpus cavernosum and sustaining erectile function (Figure 16).",
       "marks": [
        "bold"
       ]
      }
     ],
-    "md": "**Mechanism: block phosphodiesterase type 5 (PDE5), the enzyme that normally breaks down cGMP, prolonging smooth muscle relaxation in the corpus cavernosum and sustaining erectile function (Figure 15).**",
+    "md": "**Mechanism: block phosphodiesterase type 5 (PDE5), the enzyme that normally breaks down cGMP, prolonging smooth muscle relaxation in the corpus cavernosum and sustaining erectile function (Figure 16).**",
     "heading": false,
     "size": 16.0
    },
@@ -1980,21 +2174,6 @@
     "md": "Use caution with alpha1 blockers as well — the additive hypotensive risk, while less severe than with nitrates, still warrants spacing doses or careful monitoring when both are used.",
     "heading": false,
     "size": 16.0
-   },
-   {
-    "text": "26",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "26",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**26**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
@@ -2003,7 +2182,7 @@
   "notes": "This is the single most important safety point in the session — students saw this exact contraindication from the nitrate side in Unit 5; today they see it from the PDE5-inhibitor side. Make the connection explicit rather than assuming they will make it themselves.\n\nInstructor script:\n\nSildenafil, tadalafil, vardenafil. Absolute contraindication with nitrates."
  },
  {
-  "slide": 23,
+  "slide": 27,
   "title": "PDE5 Inhibitors: NO, cGMP and Erection",
   "items": [
    {
@@ -2170,38 +2349,23 @@
     "size": 13.5
    },
    {
-    "text": "Figure 16. PDE5 inhibitors keep cGMP high, prolonging smooth muscle relaxation.",
+    "text": "Figure 17. PDE5 inhibitors keep cGMP high, prolonging smooth muscle relaxation.",
     "level": 0,
     "emphasis": [],
-    "md": "Figure 16. PDE5 inhibitors keep cGMP high, prolonging smooth muscle relaxation.",
+    "md": "Figure 17. PDE5 inhibitors keep cGMP high, prolonging smooth muscle relaxation.",
     "heading": false,
     "size": 11.0
-   },
-   {
-    "text": "27",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "27",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**27**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
   "images": 1,
   "figures": [
-   "S23_1.jpg"
+   "S27_1.jpg"
   ],
   "notes": "They prolong cGMP but need sexual stimulation."
  },
  {
-  "slide": 24,
+  "slide": 28,
   "title": "A Dangerous Combination",
   "items": [
    {
@@ -2272,21 +2436,6 @@
     "md": "**Clinical pearl:** **PDE5 inhibitors are absolutely contraindicated with any nitrate — both raise NO/cGMP signaling, and the combination can cause severe, life-threatening hypotension. This prescription should not be written while the patient remains on a nitrate; the conversation should include alternative angina management or alternative ED options that do not involve this interaction, in consultation with his cardiologist.**",
     "heading": false,
     "size": 14.0
-   },
-   {
-    "text": "28",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "28",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**28**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
@@ -2295,7 +2444,7 @@
   "notes": "This case is the capstone integration point for the unit — it deliberately pulls a Unit 5 drug (isosorbide mononitrate) into a Unit 6 clinical decision, making the shared NO-cGMP mechanism unmistakable.\n\nInstructor script:\n\nNever prescribe together."
  },
  {
-  "slide": 25,
+  "slide": 29,
   "title": "Nitrate plus PDE5 Inhibitor: A Double Hit on cGMP",
   "items": [
    {
@@ -2410,38 +2559,195 @@
     "size": 13.5
    },
    {
-    "text": "Figure 17. Nitrates and PDE5 inhibitors both raise cGMP, so vasodilation and hypotension stack.",
+    "text": "Figure 18. Nitrates and PDE5 inhibitors both raise cGMP, so vasodilation and hypotension stack.",
     "level": 0,
     "emphasis": [],
-    "md": "Figure 17. Nitrates and PDE5 inhibitors both raise cGMP, so vasodilation and hypotension stack.",
+    "md": "Figure 18. Nitrates and PDE5 inhibitors both raise cGMP, so vasodilation and hypotension stack.",
     "heading": false,
     "size": 11.0
-   },
-   {
-    "text": "29",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "29",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**29**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
   "images": 1,
   "figures": [
-   "S25_1.png"
+   "S29_1.png"
   ],
   "notes": "Nitrates and PDE5 inhibitors both raise cGMP; never prescribe together."
  },
  {
-  "slide": 26,
+  "slide": 30,
+  "title": "Quick Check",
+  "items": [
+   {
+    "text": "QUICK CHECK · BPH, ED & THE NANC/PDE5 PATHWAY",
+    "level": 0,
+    "emphasis": [],
+    "md": "QUICK CHECK · BPH, ED & THE NANC/PDE5 PATHWAY",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Quick Check",
+    "level": 0,
+    "emphasis": [],
+    "md": "Quick Check",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Why is the combination of a nitrate and a PDE5 inhibitor absolutely contraindicated?",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Why is the combination of a nitrate and a PDE5 inhibitor absolutely contraindicated?",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Why is the combination of a nitrate and a PDE5 inhibitor absolutely contraindicated?**",
+    "heading": false,
+    "size": 18.5
+   },
+   {
+    "text": "A",
+    "level": 0,
+    "emphasis": [],
+    "md": "A",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Both drugs independently raise NO/cGMP signaling, and together can cause life-threatening hypotension",
+    "level": 0,
+    "emphasis": [],
+    "md": "Both drugs independently raise NO/cGMP signaling, and together can cause life-threatening hypotension",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "B",
+    "level": 0,
+    "emphasis": [],
+    "md": "B",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Nitrates block the PDE5 enzyme, making PDE5 inhibitors ineffective",
+    "level": 0,
+    "emphasis": [],
+    "md": "Nitrates block the PDE5 enzyme, making PDE5 inhibitors ineffective",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "The combination has no significant interaction and is commonly prescribed together",
+    "level": 0,
+    "emphasis": [],
+    "md": "The combination has no significant interaction and is commonly prescribed together",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "PDE5 inhibitors increase nitrate metabolism, reducing anti-anginal efficacy",
+    "level": 0,
+    "emphasis": [],
+    "md": "PDE5 inhibitors increase nitrate metabolism, reducing anti-anginal efficacy",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "C",
+    "level": 0,
+    "emphasis": [],
+    "md": "C",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "D",
+    "level": 0,
+    "emphasis": [],
+    "md": "D",
+    "heading": true,
+    "size": 16.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Quick Check. Ask the class what nitrates and PDE5 inhibitors have in common."
+ },
+ {
+  "slide": 31,
+  "title": "Answer",
+  "items": [
+   {
+    "text": "ANSWER · BPH, ED & THE NANC/PDE5 PATHWAY",
+    "level": 0,
+    "emphasis": [],
+    "md": "ANSWER · BPH, ED & THE NANC/PDE5 PATHWAY",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Answer",
+    "level": 0,
+    "emphasis": [],
+    "md": "Answer",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "A",
+    "level": 0,
+    "emphasis": [],
+    "md": "A",
+    "heading": true,
+    "size": 26.0
+   },
+   {
+    "text": "Both drugs independently raise NO/cGMP signaling, and together can cause life-threatening hypotension.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Both drugs independently raise NO/cGMP signaling, and together can cause life-threatening hypotension.",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Both drugs independently raise NO/cGMP signaling, and together can cause life-threatening hypotension.**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Why:  Nitrates raise NO/cGMP systemically (the mechanism behind their anti-anginal effect), while PDE5 inhibitors prevent cGMP breakdown. Combined, these two independent mechanisms produce profound vasodilation and can precipitate severe, potentially fatal hypotension — the same NO-cGMP pathway shown in Figure 16, now viewed as a drug-interaction risk rather than a therapeutic mechanism.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Why:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Why:** Nitrates raise NO/cGMP systemically (the mechanism behind their anti-anginal effect), while PDE5 inhibitors prevent cGMP breakdown. Combined, these two independent mechanisms produce profound vasodilation and can precipitate severe, potentially fatal hypotension — the same NO-cGMP pathway shown in Figure 16, now viewed as a drug-interaction risk rather than a therapeutic mechanism.",
+    "heading": false,
+    "size": 15.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Answer: both raise NO/cGMP signaling."
+ },
+ {
+  "slide": 32,
   "title": "Drug Names Reveal the Class: Urologic Agents",
   "items": [
    {
@@ -2811,21 +3117,6 @@
     "md": "Never with a PDE5 inhibitor",
     "heading": false,
     "size": 12.0
-   },
-   {
-    "text": "32",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "32",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**32**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
@@ -2834,7 +3125,7 @@
   "notes": "Drug names reveal the class: -osin, -terodine, -fenacin, -begron, -afil, -steride, and nitrates."
  },
  {
-  "slide": 27,
+  "slide": 33,
   "title": "07",
   "items": [
    {
@@ -2891,14 +3182,14 @@
   "notes": ""
  },
  {
-  "slide": 28,
+  "slide": 34,
   "title": "Autonomic Receptor Map Across the Genitourinary Tract",
   "items": [
    {
-    "text": "ORIGINAL ILLUSTRATION · FIGURE 18",
+    "text": "ORIGINAL ILLUSTRATION · FIGURE 19",
     "level": 0,
     "emphasis": [],
-    "md": "ORIGINAL ILLUSTRATION · FIGURE 18",
+    "md": "ORIGINAL ILLUSTRATION · FIGURE 19",
     "heading": true,
     "size": 12.0
    },
@@ -2911,45 +3202,30 @@
     "size": 28.0
    },
    {
-    "text": "Figure 18. Original illustrative diagram (not from Katzung): the detrusor, bladder neck/prostate, and corpus cavernosum each rely on receptor families — muscarinic, adrenergic, and NO-cGMP signaling — that recur in the systemic vasculature, explaining why so many genitourinary drug classes have direct cardiovascular counterparts or interactions.",
+    "text": "Figure 19. Original illustrative diagram (not from Katzung): the detrusor, bladder neck/prostate, and corpus cavernosum each rely on receptor families — muscarinic, adrenergic, and NO-cGMP signaling — that recur in the systemic vasculature, explaining why so many genitourinary drug classes have direct cardiovascular counterparts or interactions.",
     "level": 0,
     "emphasis": [
      {
-      "text": "Figure 18. Original illustrative diagram (not from Katzung): the detrusor, bladder neck/prostate, and corpus cavernosum each rely on receptor families — muscarinic, adrenergic, and NO-cGMP signaling — that recur in the systemic vasculature, explaining why so many genitourinary drug classes have direct cardiovascular counterparts or interactions.",
+      "text": "Figure 19. Original illustrative diagram (not from Katzung): the detrusor, bladder neck/prostate, and corpus cavernosum each rely on receptor families — muscarinic, adrenergic, and NO-cGMP signaling — that recur in the systemic vasculature, explaining why so many genitourinary drug classes have direct cardiovascular counterparts or interactions.",
       "marks": [
        "color"
       ]
      }
     ],
-    "md": "**Figure 18. Original illustrative diagram (not from Katzung): the detrusor, bladder neck/prostate, and corpus cavernosum each rely on receptor families — muscarinic, adrenergic, and NO-cGMP signaling — that recur in the systemic vasculature, explaining why so many genitourinary drug classes have direct cardiovascular counterparts or interactions.**",
+    "md": "**Figure 19. Original illustrative diagram (not from Katzung): the detrusor, bladder neck/prostate, and corpus cavernosum each rely on receptor families — muscarinic, adrenergic, and NO-cGMP signaling — that recur in the systemic vasculature, explaining why so many genitourinary drug classes have direct cardiovascular counterparts or interactions.**",
     "heading": false,
     "size": 13.5
-   },
-   {
-    "text": "34",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "34",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**34**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
   "images": 2,
   "figures": [
-   "S28_1.jpg"
+   "S34_1.jpg"
   ],
   "notes": "This capstone figure is the visual summary of the entire session's unifying theme — use it to set up the fourCard exercise and quick check that follow, both of which ask students to apply this cross-system receptor logic directly.\n\nInstructor script:\n\nReceptor families are shared with the vasculature."
  },
  {
-  "slide": 29,
+  "slide": 35,
   "title": "Which Approach Would You Choose?",
   "items": [
    {
@@ -3031,21 +3307,6 @@
     "md": "Man with stable angina on a long-acting nitrate, requesting treatment for erectile dysfunction",
     "heading": false,
     "size": 13.0
-   },
-   {
-    "text": "35",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "35",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**35**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
@@ -3054,7 +3315,179 @@
   "notes": "Work through these as a rapid-fire discussion. Patient A → mirabegron (Section 5). Patient B → combine an alpha1 blocker with a 5-alpha-reductase inhibitor (Section 6). Patient C → combined hormonal contraception ± metformin (Session 1). Patient D → PDE5 inhibitors are contraindicated; this requires a cardiology-involved conversation about alternatives (Section 6 case, revisited).\n\nInstructor script:\n\nPairs: first-line approach and biggest safety check."
  },
  {
-  "slide": 30,
+  "slide": 36,
+  "title": "Quick Check",
+  "items": [
+   {
+    "text": "QUICK CHECK · PUTTING IT ALL TOGETHER",
+    "level": 0,
+    "emphasis": [],
+    "md": "QUICK CHECK · PUTTING IT ALL TOGETHER",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Quick Check",
+    "level": 0,
+    "emphasis": [],
+    "md": "Quick Check",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Across this unit, what is the common thread linking alpha1 blockers' orthostatic hypotension risk and the nitrate/PDE5-inhibitor contraindication?",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Across this unit, what is the common thread linking alpha1 blockers' orthostatic hypotension risk and the nitrate/PDE5-inhibitor contraindication?",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Across this unit, what is the common thread linking alpha1 blockers' orthostatic hypotension risk and the nitrate/PDE5-inhibitor contraindication?**",
+    "heading": false,
+    "size": 18.5
+   },
+   {
+    "text": "Both reflect genitourinary drug classes acting on receptor families (adrenergic, NO-cGMP) that are shared with the systemic vasculature",
+    "level": 0,
+    "emphasis": [],
+    "md": "Both reflect genitourinary drug classes acting on receptor families (adrenergic, NO-cGMP) that are shared with the systemic vasculature",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "A",
+    "level": 0,
+    "emphasis": [],
+    "md": "A",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "B",
+    "level": 0,
+    "emphasis": [],
+    "md": "B",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Both are reasons to avoid all genitourinary pharmacology in older adults",
+    "level": 0,
+    "emphasis": [],
+    "md": "Both are reasons to avoid all genitourinary pharmacology in older adults",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "C",
+    "level": 0,
+    "emphasis": [],
+    "md": "C",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Both are unrelated adverse effects with no shared mechanism",
+    "level": 0,
+    "emphasis": [],
+    "md": "Both are unrelated adverse effects with no shared mechanism",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "D",
+    "level": 0,
+    "emphasis": [],
+    "md": "D",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Both apply only to patients with no cardiovascular disease",
+    "level": 0,
+    "emphasis": [],
+    "md": "Both apply only to patients with no cardiovascular disease",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 37,
+  "title": "Answer",
+  "items": [
+   {
+    "text": "ANSWER · PUTTING IT ALL TOGETHER",
+    "level": 0,
+    "emphasis": [],
+    "md": "ANSWER · PUTTING IT ALL TOGETHER",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Answer",
+    "level": 0,
+    "emphasis": [],
+    "md": "Answer",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "A",
+    "level": 0,
+    "emphasis": [],
+    "md": "A",
+    "heading": true,
+    "size": 26.0
+   },
+   {
+    "text": "Both reflect genitourinary drug classes acting on receptor families (adrenergic, NO-cGMP) that are shared with the systemic vasculature.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Both reflect genitourinary drug classes acting on receptor families (adrenergic, NO-cGMP) that are shared with the systemic vasculature.",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Both reflect genitourinary drug classes acting on receptor families (adrenergic, NO-cGMP) that are shared with the systemic vasculature.**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Why:  Alpha1 blockers act on the same receptor family in the bladder neck/prostate and in blood vessels, and PDE5 inhibitors/nitrates both converge on the same NO-cGMP signaling pathway used in both the corpus cavernosum and the vasculature. Recognizing receptor families as the shared variable — not organ system — is what ties genitourinary and cardiovascular pharmacology together across Units 5 and 6.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Why:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Why:** Alpha1 blockers act on the same receptor family in the bladder neck/prostate and in blood vessels, and PDE5 inhibitors/nitrates both converge on the same NO-cGMP signaling pathway used in both the corpus cavernosum and the vasculature. Recognizing receptor families as the shared variable — not organ system — is what ties genitourinary and cardiovascular pharmacology together across Units 5 and 6.",
+    "heading": false,
+    "size": 15.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": ""
+ },
+ {
+  "slide": 38,
   "title": "Key Takeaways",
   "items": [
    {
@@ -3138,10 +3571,10 @@
     "size": 16.5
    },
    {
-    "text": "The NO-cGMP pathway (Figure 15) underlies both erectile function and nitrate-based angina therapy (Unit 5) — the same mechanism is therapeutic in one context and dangerous in combination in another, making the nitrate/PDE5-inhibitor contraindication one of the highest-stakes safety points in the course.",
+    "text": "The NO-cGMP pathway (Figure 16) underlies both erectile function and nitrate-based angina therapy (Unit 5) — the same mechanism is therapeutic in one context and dangerous in combination in another, making the nitrate/PDE5-inhibitor contraindication one of the highest-stakes safety points in the course.",
     "level": 0,
     "emphasis": [],
-    "md": "The NO-cGMP pathway (Figure 15) underlies both erectile function and nitrate-based angina therapy (Unit 5) — the same mechanism is therapeutic in one context and dangerous in combination in another, making the nitrate/PDE5-inhibitor contraindication one of the highest-stakes safety points in the course.",
+    "md": "The NO-cGMP pathway (Figure 16) underlies both erectile function and nitrate-based angina therapy (Unit 5) — the same mechanism is therapeutic in one context and dangerous in combination in another, making the nitrate/PDE5-inhibitor contraindication one of the highest-stakes safety points in the course.",
     "heading": true,
     "size": 16.5
    },
@@ -3160,7 +3593,7 @@
   "notes": "Close the full two-session unit by explicitly naming the cross-unit integration — students should leave recognizing that genitourinary pharmacology is not an isolated topic but shares receptor families and drug classes with cardiovascular pharmacology covered earlier in the course.\n\nInstructor script:\n\nCommon thread: receptor families shared with the systemic vasculature."
  },
  {
-  "slide": 31,
+  "slide": 39,
   "title": "08",
   "items": [
    {
@@ -3217,7 +3650,7 @@
   "notes": ""
  },
  {
-  "slide": 32,
+  "slide": 40,
   "title": "Lecture Recall Quiz (1 of 2)",
   "items": [
    {
@@ -3379,21 +3812,6 @@
     "md": "D.  Metformin directly blocks the androgen receptor",
     "heading": false,
     "size": 12.5
-   },
-   {
-    "text": "40",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "40",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**40**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
@@ -3402,7 +3820,7 @@
   "notes": ""
  },
  {
-  "slide": 33,
+  "slide": 41,
   "title": "Lecture Recall Quiz (2 of 2)",
   "items": [
    {
@@ -3564,21 +3982,6 @@
     "md": "D.  Nitrates block PDE5 directly, making the combination redundant but safe",
     "heading": false,
     "size": 12.5
-   },
-   {
-    "text": "41",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "41",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**41**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
@@ -3587,7 +3990,7 @@
   "notes": ""
  },
  {
-  "slide": 34,
+  "slide": 42,
   "title": "Lecture Recall Quiz — Answer Key",
   "items": [
    {
@@ -3745,24 +4148,24 @@
   "notes": ""
  },
  {
-  "slide": 35,
+  "slide": 43,
   "title": "Drug Profiles",
   "items": [
    {
-    "text": "APPENDIX 1",
+    "text": "PA PHARMACOLOGY COURSE · SESSION 2",
     "level": 0,
     "emphasis": [
      {
-      "text": "APPENDIX 1",
+      "text": "PA PHARMACOLOGY COURSE · SESSION 2",
       "marks": [
        "bold",
        "color"
       ]
      }
     ],
-    "md": "**APPENDIX 1**",
+    "md": "**PA PHARMACOLOGY COURSE · SESSION 2**",
     "heading": false,
-    "size": 13.0
+    "size": 13.5
    },
    {
     "text": "Drug Profiles",
@@ -3770,22 +4173,15 @@
     "emphasis": [],
     "md": "Drug Profiles",
     "heading": true,
-    "size": 36.0
+    "size": 40.0
    },
    {
-    "text": "Formulation, dose, indications, adverse effects, contraindications and toxicity",
+    "text": "Study reference for the drugs covered in Session 2",
     "level": 0,
-    "emphasis": [
-     {
-      "text": "Formulation, dose, indications, adverse effects, contraindications and toxicity",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**Formulation, dose, indications, adverse effects, contraindications and toxicity**",
-    "heading": false,
-    "size": 15.0
+    "emphasis": [],
+    "md": "Study reference for the drugs covered in Session 2",
+    "heading": true,
+    "size": 20.0
    },
    {
     "text": "PO = by mouth",
@@ -4064,7 +4460,7 @@
   "notes": "PO = by mouth | TID = three times daily | IR / ER = immediate-release / extended-release | BPH = benign prostatic hyperplasia | PSA = prostate-specific antigen | ED = erectile dysfunction | PAH = pulmonary arterial hypertension | OAB = overactive bladder | CNS = central nervous system | QT = QT interval on ECG | CYP = cytochrome P450 | eGFR / CrCl = estimated glomerular filtration rate / creatinine clearance | PDE5 = phosphodiesterase type 5 | GnRH = gonadotropin-releasing hormone | BP = blood pressure | GI = gastrointestinal | ECG = electrocardiogram | NO / cGMP = nitric oxide / cyclic guanosine monophosphate\n\nInstructor script:\n\nSay: These profiles are your study reference. Know the dose logic, the serious adverse effects, the contraindication that changes decisions and the toxicity you would need to recognize.\n\nClass activity (10 minutes): groups teach back two or three profiles in 60 seconds each.\n\nAbbreviation key: review BPH, PSA, ED, PAH, QT, CYP and PDE5.\n\nTeaching points: antimuscarinics (oxybutynin, tolterodine, solifenacin, darifenacin), mirabegron, alpha-1 blockers (tamsulosin, silodosin, doxazosin, terazosin), 5-ARIs, PDE5 inhibitors.\n\nBloom's prompts: Remember: state tamsulosin dosing. Understand: explain mirabegron versus oxybutynin. Apply: counsel a man starting doxazosin. Analyze: explain bradycardia on metoprolol plus mirabegron. Evaluate: choose therapy for an older adult with BPH and OAB."
  },
  {
-  "slide": 36,
+  "slide": 44,
   "title": "Oxybutynin (Ditropan, Oxytrol)",
   "items": [
    {
@@ -4209,21 +4605,6 @@
     "md": "Standard adult dosing for teaching; verify against current prescribing information.",
     "heading": false,
     "size": 11.0
-   },
-   {
-    "text": "44",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "44",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**44**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
@@ -4232,7 +4613,7 @@
   "notes": "Oxybutynin (Ditropan, Oxytrol)|Antimuscarinic (overactive bladder)|IR tablets 5 mg; ER tablets 5/10/15 mg; transdermal patch 3.9 mg/day; gel|IR: 5 mg PO two to three times daily (maximum 20 mg/day); ER: 5-10 mg daily (maximum 30 mg)|Overactive bladder, urge incontinence, neurogenic bladder|Dry mouth, constipation, blurred vision, drowsiness, confusion, urinary retention|Narrow-angle glaucoma, urinary retention, gastric retention, severe ulcerative colitis; avoid in older adults with dementia|Anticholinergic toxicity: confusion, hallucinations, tachycardia, hyperthermia, urinary retention; highest CNS burden in the class"
  },
  {
-  "slide": 37,
+  "slide": 45,
   "title": "Tolterodine (Detrol)",
   "items": [
    {
@@ -4377,21 +4758,6 @@
     "md": "Standard adult dosing for teaching; verify against current prescribing information.",
     "heading": false,
     "size": 11.0
-   },
-   {
-    "text": "45",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "45",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**45**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
@@ -4400,7 +4766,7 @@
   "notes": "Tolterodine (Detrol)|Antimuscarinic|Tablets 1/2 mg; ER capsules 2/4 mg|IR: 2 mg PO twice daily (1 mg if hepatic impairment or strong CYP3A4 inhibitors); ER: 4 mg daily|Overactive bladder with urgency, frequency, and urge incontinence|Dry mouth, constipation, headache, dizziness, dry eyes, QT prolongation (rare)|Urinary retention, gastric retention, uncontrolled narrow-angle glaucoma|Anticholinergic toxicity; reduce dose with CYP3A4 inhibitors or hepatic impairment"
  },
  {
-  "slide": 38,
+  "slide": 46,
   "title": "Solifenacin (Vesicare)",
   "items": [
    {
@@ -4545,21 +4911,6 @@
     "md": "Standard adult dosing for teaching; verify against current prescribing information.",
     "heading": false,
     "size": 11.0
-   },
-   {
-    "text": "46",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "46",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**46**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
@@ -4568,7 +4919,7 @@
   "notes": "Solifenacin (Vesicare)|Antimuscarinic (M3-selective)|Tablets 5/10 mg|5 mg PO once daily, may increase to 10 mg (maximum 5 mg with severe renal impairment or strong CYP3A4 inhibitors)|Overactive bladder|Dry mouth, constipation, blurred vision, QT prolongation, urinary retention|Urinary retention, gastric retention, uncontrolled narrow-angle glaucoma|Anticholinergic toxicity and QT prolongation in overdose; adjust dose with kidney, liver, and CYP3A4 interactions"
  },
  {
-  "slide": 39,
+  "slide": 47,
   "title": "Darifenacin (Enablex)",
   "items": [
    {
@@ -4713,21 +5064,6 @@
     "md": "Standard adult dosing for teaching; verify against current prescribing information.",
     "heading": false,
     "size": 11.0
-   },
-   {
-    "text": "47",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "47",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**47**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
@@ -4736,7 +5072,7 @@
   "notes": "Darifenacin (Enablex)|Antimuscarinic (M3-selective)|ER tablets 7.5/15 mg|7.5 mg PO once daily, may increase to 15 mg after 2 weeks|Overactive bladder|Constipation (prominent), dry mouth, dyspepsia, headache|Urinary or gastric retention, uncontrolled narrow-angle glaucoma|Anticholinergic toxicity; CYP2D6 and CYP3A4 interactions; limit dose with moderate CYP3A4 inhibitors"
  },
  {
-  "slide": 40,
+  "slide": 48,
   "title": "Mirabegron (Myrbetriq)",
   "items": [
    {
@@ -4888,21 +5224,6 @@
     "md": "**Standard adult dosing for teaching; verify against current prescribing information.**",
     "heading": false,
     "size": 11.0
-   },
-   {
-    "text": "48",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "48",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**48**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
@@ -4911,7 +5232,7 @@
   "notes": "Mirabegron (Myrbetriq)|Beta-3 adrenergic agonist|ER tablets 25/50 mg; granules for suspension|25 mg PO once daily, may increase to 50 mg after 4-8 weeks (maximum 25 mg with eGFR 15-29)|Overactive bladder (alone or with an antimuscarinic)|Hypertension, nasopharyngitis, urinary tract infection, headache, urinary retention|Severe uncontrolled hypertension, end-stage renal disease; caution with CYP2D6 substrates|Raises blood pressure; inhibits CYP2D6, increasing metoprolol and desipramine levels; no anticholinergic burden"
  },
  {
-  "slide": 41,
+  "slide": 49,
   "title": "Tamsulosin (Flomax)",
   "items": [
    {
@@ -5056,21 +5377,6 @@
     "md": "Standard adult dosing for teaching; verify against current prescribing information.",
     "heading": false,
     "size": 11.0
-   },
-   {
-    "text": "49",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "49",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**49**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
@@ -5079,7 +5385,7 @@
   "notes": "Tamsulosin (Flomax)|Alpha-1A selective blocker|Capsules 0.4 mg|0.4 mg PO once daily 30 minutes after the same meal, may increase to 0.8 mg|Benign prostatic hyperplasia symptoms, ureteral stone passage (off-label)|Dizziness, orthostatic hypotension, retrograde ejaculation, rhinitis, intraoperative floppy iris syndrome|Hypersensitivity (sulfonamide allergy caution); strong CYP3A4 inhibitors|Orthostatic hypotension and syncope with first dose; floppy iris syndrome in cataract surgery"
  },
  {
-  "slide": 42,
+  "slide": 50,
   "title": "Silodosin (Rapaflo)",
   "items": [
    {
@@ -5224,21 +5530,6 @@
     "md": "Standard adult dosing for teaching; verify against current prescribing information.",
     "heading": false,
     "size": 11.0
-   },
-   {
-    "text": "50",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "50",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**50**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
@@ -5247,7 +5538,7 @@
   "notes": "Silodosin (Rapaflo)|Highly uroselective alpha-1A blocker|Capsules 4/8 mg|8 mg PO once daily with a meal (4 mg with moderate renal impairment)|Benign prostatic hyperplasia symptoms|Retrograde ejaculation (common), dizziness, orthostatic hypotension, diarrhea|Severe renal impairment (CrCl below 30 mL/min), severe hepatic impairment, strong CYP3A4 inhibitors|Orthostatic hypotension; floppy iris syndrome; contraindicated with strong CYP3A4 inhibitors"
  },
  {
-  "slide": 43,
+  "slide": 51,
   "title": "Doxazosin (Cardura)",
   "items": [
    {
@@ -5392,21 +5683,6 @@
     "md": "Standard adult dosing for teaching; verify against current prescribing information.",
     "heading": false,
     "size": 11.0
-   },
-   {
-    "text": "51",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "51",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**51**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
@@ -5415,7 +5691,7 @@
   "notes": "Doxazosin (Cardura)|Alpha-1 blocker (nonselective among alpha-1 subtypes)|Tablets 1/2/4/8 mg; ER tablets 4/8 mg|BPH: 1 mg PO daily at bedtime, titrate to 4-8 mg daily; hypertension: 1-16 mg daily|Benign prostatic hyperplasia, hypertension|Dizziness, orthostatic hypotension, first-dose syncope, fatigue, edema, floppy iris syndrome|Hypersensitivity to quinazolines; caution with PDE5 inhibitors|First-dose syncope and profound hypotension; restart at 1 mg after interruption of several days"
  },
  {
-  "slide": 44,
+  "slide": 52,
   "title": "Terazosin (Hytrin)",
   "items": [
    {
@@ -5560,21 +5836,6 @@
     "md": "Standard adult dosing for teaching; verify against current prescribing information.",
     "heading": false,
     "size": 11.0
-   },
-   {
-    "text": "52",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "52",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**52**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
@@ -5583,7 +5844,7 @@
   "notes": "Terazosin (Hytrin)|Alpha-1 blocker|Tablets 1/2/5/10 mg; capsules|BPH: 1 mg PO at bedtime, titrate to 5-10 mg daily; hypertension: 1-5 mg daily (maximum 20 mg)|Benign prostatic hyperplasia, hypertension|Dizziness, orthostatic hypotension, first-dose syncope, fatigue, peripheral edema, floppy iris syndrome|Hypersensitivity to quinazolines; caution with PDE5 inhibitors|First-dose hypotension and syncope; repeat titration after missed doses"
  },
  {
-  "slide": 45,
+  "slide": 53,
   "title": "Finasteride (Proscar, Propecia)",
   "items": [
    {
@@ -5728,21 +5989,6 @@
     "md": "Standard adult dosing for teaching; verify against current prescribing information.",
     "heading": false,
     "size": 11.0
-   },
-   {
-    "text": "53",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "53",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**53**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
@@ -5751,7 +5997,7 @@
   "notes": "Finasteride (Proscar, Propecia)|5-alpha-reductase inhibitor|Tablet 5 mg (BPH); 1 mg (hair loss)|5 mg PO daily for BPH; 1 mg PO daily for male-pattern hair loss|BPH, androgenetic alopecia|Decreased libido, erectile dysfunction, reduced ejaculate, gynecomastia|Pregnancy and women who may be pregnant (do not handle crushed tablets), hypersensitivity|Lowers PSA by about half; reports of depression; teratogenic to a male fetus"
  },
  {
-  "slide": 46,
+  "slide": 54,
   "title": "Dutasteride (Avodart)",
   "items": [
    {
@@ -5896,21 +6142,6 @@
     "md": "Standard adult dosing for teaching; verify against current prescribing information.",
     "heading": false,
     "size": 11.0
-   },
-   {
-    "text": "54",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "54",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**54**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
@@ -5919,7 +6150,7 @@
   "notes": "Dutasteride (Avodart)|5-alpha-reductase inhibitor (types 1 and 2)|Capsules 0.5 mg; combination with tamsulosin (Jalyn)|0.5 mg PO once daily for BPH; effects take 3-6 months|Benign prostatic hyperplasia, combination therapy with an alpha-1 blocker|Decreased libido, erectile dysfunction, ejaculation disorders, breast tenderness, depression|Pregnancy and women of childbearing potential handling capsules, severe hepatic impairment|Lowers PSA by about half; pregnant partners must avoid handling capsules; monitor PSA"
  },
  {
-  "slide": 47,
+  "slide": 55,
   "title": "Sildenafil (Viagra, Revatio)",
   "items": [
    {
@@ -6064,21 +6295,6 @@
     "md": "Standard adult dosing for teaching; verify against current prescribing information.",
     "heading": false,
     "size": 11.0
-   },
-   {
-    "text": "55",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "55",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**55**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
@@ -6087,7 +6303,7 @@
   "notes": "Sildenafil (Viagra, Revatio)|PDE5 inhibitor|Tablets 25/50/100 mg (Viagra); 20 mg (Revatio)|ED: 50 mg PO about 1 hour before activity (range 25-100 mg), no more than once daily; PAH: 20 mg TID|Erectile dysfunction, pulmonary arterial hypertension (Revatio)|Headache, flushing, dyspepsia, nasal congestion, visual changes (blue tint), hypotension|Concurrent nitrates or riociguat, hypersensitivity; caution with alpha-1 blockers and severe cardiovascular disease|Profound hypotension with nitrates; priapism over 4 hours is an emergency; sudden vision or hearing loss"
  },
  {
-  "slide": 48,
+  "slide": 56,
   "title": "Tadalafil (Cialis, Adcirca)",
   "items": [
    {
@@ -6232,21 +6448,6 @@
     "md": "Standard adult dosing for teaching; verify against current prescribing information.",
     "heading": false,
     "size": 11.0
-   },
-   {
-    "text": "56",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "56",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**56**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
@@ -6255,7 +6456,7 @@
   "notes": "Tadalafil (Cialis, Adcirca)|PDE5 inhibitor (long-acting)|Tablets 2.5/5/10/20 mg|ED: 10 mg PO before activity (5-20 mg), or 2.5-5 mg daily; BPH: 5 mg daily|Erectile dysfunction, BPH symptoms, pulmonary arterial hypertension (Adcirca)|Headache, dyspepsia, back pain, myalgia, flushing, nasal congestion|Concurrent nitrates or riociguat; caution with alpha-1 blockers (except tamsulosin 0.4 mg) and strong CYP3A4 inhibitors|Profound hypotension with nitrates for at least 48 hours after the last dose; priapism"
  },
  {
-  "slide": 49,
+  "slide": 57,
   "title": "Vardenafil (Levitra, Staxyn)",
   "items": [
    {
@@ -6400,21 +6601,6 @@
     "md": "Standard adult dosing for teaching; verify against current prescribing information.",
     "heading": false,
     "size": 11.0
-   },
-   {
-    "text": "57",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "57",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**57**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
@@ -6423,24 +6609,24 @@
   "notes": "Vardenafil (Levitra, Staxyn)|PDE5 inhibitor|Tablets 2.5/5/10/20 mg; orally disintegrating tablet 10 mg|10 mg PO about 60 minutes before activity (5-20 mg), no more than once daily|Erectile dysfunction|Headache, flushing, rhinitis, dyspepsia, QT prolongation, visual changes|Concurrent nitrates or riociguat, congenital long QT, class IA or III antiarrhythmics|Profound hypotension with nitrates; QT prolongation; priapism"
  },
  {
-  "slide": 50,
+  "slide": 58,
   "title": "Supporting Drugs at a Glance",
   "items": [
    {
-    "text": "Appendix 2: DRUG PROFILE · SUPPORTING",
+    "text": "REFERENCE",
     "level": 0,
     "emphasis": [
      {
-      "text": "Appendix 2: DRUG PROFILE · SUPPORTING",
+      "text": "REFERENCE",
       "marks": [
        "bold",
        "color"
       ]
      }
     ],
-    "md": "**Appendix 2: DRUG PROFILE · SUPPORTING**",
+    "md": "**REFERENCE**",
     "heading": false,
-    "size": 14.0
+    "size": 13.5
    },
    {
     "text": "Supporting Drugs at a Glance",
@@ -6664,21 +6850,6 @@
     "md": "Listed for context; not profiled in detail.",
     "heading": false,
     "size": 11.0
-   },
-   {
-    "text": "58",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "58",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**58**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
@@ -6687,7 +6858,7 @@
   "notes": "Supporting drugs listed for context only: nitrates and riociguat with PDE5 inhibitors; other anticholinergics add to burden; cholinesterase inhibitors oppose antimuscarinics; antihypertensives add hypotension with alpha-1 blockers; strong CYP3A4 inhibitors raise PDE5 inhibitor and solifenacin levels.\n\nInstructor script:\n\nSupporting drugs: nitrates and riociguat, other anticholinergics, cholinesterase inhibitors and CYP3A4 inhibitors explain interactions."
  },
  {
-  "slide": 51,
+  "slide": 59,
   "title": "Image Attribution",
   "items": [
    {
@@ -6707,7 +6878,7 @@
     "size": 28.0
    },
    {
-    "text": "●  Original figures in this deck: Figures 9, 12, 13, 15 and 18 (Autonomic & Somatic Receptors of the Lower Urinary Tract; Antimuscarinics vs. Beta-3 Agonists: Two Mechanisms for Bladder Storage; Alpha1 Blockade at the Bladder Neck and Prostate; NANC Neurotransmission and the NO-cGMP Pathway in Erectile Function; Autonomic Receptor Map Across the Genitourinary Tract) were generated by the course director using the AI tool Claude to illustrate standard, non-copyrighted pharmacologic concepts. They are original diagrams, not reproduced from Katzung’s Basic and Clinical Pharmacology or any other copyrighted source.",
+    "text": "●  Original figures in this deck: Figures 9, 13, 14, 16 and 19 (Autonomic & Somatic Receptors of the Lower Urinary Tract; Antimuscarinics vs. Beta-3 Agonists: Two Mechanisms for Bladder Storage; Alpha1 Blockade at the Bladder Neck and Prostate; NANC Neurotransmission and the NO-cGMP Pathway in Erectile Function; Autonomic Receptor Map Across the Genitourinary Tract) were generated by the course director using the AI tool Claude to illustrate standard, non-copyrighted pharmacologic concepts. They are original diagrams, not reproduced from Katzung’s Basic and Clinical Pharmacology or any other copyrighted source.",
     "level": 0,
     "emphasis": [
      {
@@ -6718,12 +6889,12 @@
       ]
      }
     ],
-    "md": "**●  Original figures in this deck:** Figures 9, 12, 13, 15 and 18 (Autonomic & Somatic Receptors of the Lower Urinary Tract; Antimuscarinics vs. Beta-3 Agonists: Two Mechanisms for Bladder Storage; Alpha1 Blockade at the Bladder Neck and Prostate; NANC Neurotransmission and the NO-cGMP Pathway in Erectile Function; Autonomic Receptor Map Across the Genitourinary Tract) were generated by the course director using the AI tool Claude to illustrate standard, non-copyrighted pharmacologic concepts. They are original diagrams, not reproduced from Katzung’s Basic and Clinical Pharmacology or any other copyrighted source.",
+    "md": "**●  Original figures in this deck:** Figures 9, 13, 14, 16 and 19 (Autonomic & Somatic Receptors of the Lower Urinary Tract; Antimuscarinics vs. Beta-3 Agonists: Two Mechanisms for Bladder Storage; Alpha1 Blockade at the Bladder Neck and Prostate; NANC Neurotransmission and the NO-cGMP Pathway in Erectile Function; Autonomic Receptor Map Across the Genitourinary Tract) were generated by the course director using the AI tool Claude to illustrate standard, non-copyrighted pharmacologic concepts. They are original diagrams, not reproduced from Katzung’s Basic and Clinical Pharmacology or any other copyrighted source.",
     "heading": false,
     "size": 16.0
    },
    {
-    "text": "●  Mechanism illustrations: Figures 10, 11, 14, 16 and 17 are illustrative AI-generated schematics, not reproduced from copyrighted sources.",
+    "text": "●  Mechanism illustrations: Figures 10, 11, 12, 15, 17 and 18 are illustrative AI-generated schematics, not reproduced from copyrighted sources.",
     "level": 0,
     "emphasis": [
      {
@@ -6734,7 +6905,7 @@
       ]
      }
     ],
-    "md": "**●  Mechanism illustrations:** Figures 10, 11, 14, 16 and 17 are illustrative AI-generated schematics, not reproduced from copyrighted sources.",
+    "md": "**●  Mechanism illustrations:** Figures 10, 11, 12, 15, 17 and 18 are illustrative AI-generated schematics, not reproduced from copyrighted sources.",
     "heading": false,
     "size": 16.0
    },
@@ -6753,21 +6924,6 @@
     "md": "**●  Reference:** Anthropic. (2026). Claude (Sonnet 5) [Large language model]. https://claude.ai",
     "heading": false,
     "size": 16.0
-   },
-   {
-    "text": "59",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "59",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**59**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],

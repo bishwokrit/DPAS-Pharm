@@ -1,7 +1,7 @@
 {
  "lecture": "L06",
  "passed": true,
- "units_checked": 2661,
+ "units_checked": 2662,
  "missing": [],
  "uncited": [
   {
@@ -90,6 +90,11 @@
    "kind": "slide"
   },
   {
+   "ref": "S70",
+   "text": "Appendix 2: DRUG PROFILE · SUPPORTING",
+   "kind": "slide"
+  },
+  {
    "ref": "SG:U3-S",
    "text": "next steps are discontinuing the supplement (or adjusting the warfarin dose) with close INR monitoring.",
    "kind": "study guide"
@@ -100,7 +105,16 @@
    "kind": "study guide"
   }
  ],
- "emphasis_not_bold": [],
+ "emphasis_not_bold": [
+  {
+   "ref": "S70",
+   "text": "Appendix 2: DRUG PROFILE · SUPPORTING",
+   "marks": [
+    "bold",
+    "color"
+   ]
+  }
+ ],
  "skipped": [
   {
    "ref": "S1",

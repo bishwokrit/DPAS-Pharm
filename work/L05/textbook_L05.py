@@ -79,14 +79,14 @@ ADD = {
 CONFLICTS = {
     PROT: [
         {"topic": "H. pylori triple therapy duration",
-         "slides": {"text": "Triple therapy: PPI + amoxicillin + clarithromycin for 10–14 days (usual duration 14 days).", "src": "S19; S19 (notes)"},
+         "slides": {"text": "Triple therapy: PPI + amoxicillin + clarithromycin for 10–14 days (usual duration 14 days).", "src": "S23; S23 (notes)"},
          "textbook": {"text": "A 14-day regimen is recommended; quadruple therapy is now first-line where clarithromycin resistance is likely.", "src": "p. 1159"}},
     ],
 }
 
 DISCREPANCIES = [
-    ("**Triple therapy length:** slides say 10–14 days (usual 14); the textbook recommends 14 days and quadruple therapy first-line where clarithromycin resistance is likely. Answer with 14 days.", "S19; p. 1159"),
-    ("**Cimetidine’s CYP targets:** slides list 1A2, 2C19, 3A4; the textbook lists 1A2, 2C9, 2D6, 3A4. Either way: a broad CYP inhibitor that raises warfarin, phenytoin, theophylline.", "S12; p. 1157"),
+    ("**Triple therapy length:** slides say 10–14 days (usual 14); the textbook recommends 14 days and quadruple therapy first-line where clarithromycin resistance is likely. Answer with 14 days.", "S23; p. 1159"),
+    ("**Cimetidine’s CYP targets:** slides list 1A2, 2C19, 3A4; the textbook lists 1A2, 2C9, 2D6, 3A4. Either way: a broad CYP inhibitor that raises warfarin, phenytoin, theophylline.", "S14; p. 1157"),
 ]
 
 CRAM = [
@@ -103,9 +103,9 @@ QUESTIONS = [
          stem="A patient on clopidogrel after a stent needs long-term acid suppression. Which PPI does the textbook prefer?",
          correct="Pantoprazole, with minimal CYP2C19 inhibition",
          why_correct="When PPIs are prescribed with clopidogrel, agents with minimal CYP2C19 inhibition (pantoprazole or rabeprazole) may be preferred (p. 1161).",
-         distractors=[("Omeprazole, the most studied prototype", "Omeprazole inhibits CYP2C19 (S13)."),
-                      ("Esomeprazole, the S-isomer of omeprazole", "Also inhibits CYP2C19 (S14)."),
-                      ("Cimetidine, since it is not a PPI", "A broad CYP inhibitor (S11)."),
+         distractors=[("Omeprazole, the most studied prototype", "Omeprazole inhibits CYP2C19 (S15)."),
+                      ("Esomeprazole, the S-isomer of omeprazole", "Also inhibits CYP2C19 (S16)."),
+                      ("Cimetidine, since it is not a PPI", "A broad CYP inhibitor (S13)."),
                       ("Any PPI — none interact with clopidogrel", "Several do (p. 1161).")],
          src="p. 1161"),
 ]

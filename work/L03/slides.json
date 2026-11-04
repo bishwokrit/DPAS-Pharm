@@ -61,7 +61,7 @@
   "tables": [],
   "images": 1,
   "figures": [],
-  "notes": "Opening. Say: \"Today's question is simple: how do we treat musculoskeletal pain safely? We'll follow one pathway, arachidonic acid, and see where each drug class steps in.\""
+  "notes": "Opening. Say: \"Today's question is simple: how do we treat musculoskeletal pain safely? We'll follow one pathway, arachidonic acid, and see where each drug class steps in.\"\n\nInstructor script:\n\nToday's organizing idea is the pain pathway. Every drug in this session either blocks prostaglandin synthesis, modifies the immune process behind arthritis, or treats the toxicity those drugs can cause."
  },
  {
   "slide": 2,
@@ -314,7 +314,7 @@
   "tables": [],
   "images": 1,
   "figures": [],
-  "notes": ""
+  "notes": "Section transition.\n\nNow we move from the pathway to the pain itself."
  },
  {
   "slide": 5,
@@ -455,7 +455,7 @@
     "emphasis": [],
     "md": "Prostaglandins",
     "heading": false,
-    "size": 16.0
+    "size": 14.0
    },
    {
     "text": "Bradykinin",
@@ -566,7 +566,7 @@
   "figures": [
    "S7_1.jpg"
   ],
-  "notes": "Say: \"Injury releases prostaglandins, bradykinin, histamine and cytokines. These lower the nociceptor threshold, so normally harmless stimuli hurt.\"\n\nKnow: Prostaglandins sensitize nociceptors, so they are the main NSAID target.\n\nKnow: Bradykinin, histamine and cytokines are not blocked by NSAIDs."
+  "notes": "Say: \"Injury releases prostaglandins, bradykinin, histamine and cytokines. These lower the nociceptor threshold, so normally harmless stimuli hurt.\"\n\nKnow: Prostaglandins sensitize nociceptors, so they are the main NSAID target.\n\nKnow: Bradykinin, histamine and cytokines are not blocked by NSAIDs.\n\nInstructor script:\n\nKnow: Inflammatory mediators sensitize nociceptors, so pain and inflammation are related but distinct.\n\nAsk: Which mediators lower the pain threshold?"
  },
  {
   "slide": 8,
@@ -706,7 +706,7 @@
   "figures": [
    "S9_1.jpg"
   ],
-  "notes": "This figure adds the drug layer on top of the previous flow slide: name the specific drug classes (corticosteroids vs. NSAIDs/COX-2 inhibitors) and exactly where each one interrupts the cascade.\n\nFigure 1: Corticosteroids block phospholipase A2 upstream. NSAIDs block COX one step later."
+  "notes": "This figure adds the drug layer on top of the previous flow slide: name the specific drug classes (corticosteroids vs. NSAIDs/COX-2 inhibitors) and exactly where each one interrupts the cascade.\n\nFigure 1: Corticosteroids block phospholipase A2 upstream. NSAIDs block COX one step later.\n\nInstructor script:\n\nWalk the pathway: phospholipids to arachidonic acid, COX-1 and COX-2, prostaglandins and thromboxane. Mark where corticosteroids, NSAIDs and acetaminophen act."
  },
  {
   "slide": 10,
@@ -812,7 +812,7 @@
   "tables": [],
   "images": 1,
   "figures": [],
-  "notes": "Quick check: give 30 seconds, take a show of hands, then reveal."
+  "notes": "Quick check: give 30 seconds, take a show of hands, then reveal.\n\nInstructor script:\n\nPause for the class to commit to an answer before you reveal it."
  },
  {
   "slide": 11,
@@ -878,7 +878,7 @@
   "tables": [],
   "images": 1,
   "figures": [],
-  "notes": "Answer: corticosteroids act upstream of NSAIDs."
+  "notes": "Answer: corticosteroids act upstream of NSAIDs.\n\nInstructor script:\n\nReveal the answer after the class has committed to one."
  },
  {
   "slide": 12,
@@ -984,7 +984,7 @@
   "tables": [],
   "images": 1,
   "figures": [],
-  "notes": "Quick check: give 30 seconds, take a show of hands, then reveal."
+  "notes": "Quick check: give 30 seconds, take a show of hands, then reveal.\n\nInstructor script:\n\nPause for the class to commit to an answer before you reveal it."
  },
  {
   "slide": 13,
@@ -1050,7 +1050,7 @@
   "tables": [],
   "images": 1,
   "figures": [],
-  "notes": "Answer: prostaglandins are the NSAID target.\n\nSay: \"That's the pathway. Now the simplest drug on it: acetaminophen.\""
+  "notes": "Answer: prostaglandins are the NSAID target.\n\nSay: \"That's the pathway. Now the simplest drug on it: acetaminophen.\"\n\nInstructor script:\n\nReveal the answer after the class has committed to one."
  },
  {
   "slide": 14,
@@ -1107,7 +1107,7 @@
   "tables": [],
   "images": 1,
   "figures": [],
-  "notes": ""
+  "notes": "Section transition.\n\nNext, acetaminophen, the simplest drug on the pathway."
  },
  {
   "slide": 15,
@@ -1212,22 +1212,126 @@
     "size": 27.5
    },
    {
-    "text": "Mechanism: analgesia and antipyresis are mainly central via reduced CNS prostaglandin synthesis; peripheral anti-inflammatory action is minimal.",
+    "text": "Oral acetaminophen → Liver",
+    "level": 0,
+    "emphasis": [],
+    "md": "Oral acetaminophen → Liver",
+    "heading": true,
+    "size": 14.0
+   },
+   {
+    "text": "Major route (~90%)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Major route (~90%)",
+    "heading": true,
+    "size": 13.0
+   },
+   {
+    "text": "Minor route (~5–10%)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Minor route (~5–10%)",
+    "heading": true,
+    "size": 13.0
+   },
+   {
+    "text": "↓",
+    "level": 0,
+    "emphasis": [],
+    "md": "↓",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "↓",
+    "level": 0,
+    "emphasis": [],
+    "md": "↓",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Glucuronidation and sulfation",
+    "level": 0,
+    "emphasis": [],
+    "md": "Glucuronidation and sulfation",
+    "heading": true,
+    "size": 13.0
+   },
+   {
+    "text": "CYP2E1 oxidation",
+    "level": 0,
+    "emphasis": [],
+    "md": "CYP2E1 oxidation",
+    "heading": true,
+    "size": 13.0
+   },
+   {
+    "text": "↓",
+    "level": 0,
+    "emphasis": [],
+    "md": "↓",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "↓",
+    "level": 0,
+    "emphasis": [],
+    "md": "↓",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Safe urinary excretion",
+    "level": 0,
+    "emphasis": [],
+    "md": "Safe urinary excretion",
+    "heading": true,
+    "size": 13.0
+   },
+   {
+    "text": "NAPQI (toxic)",
+    "level": 0,
+    "emphasis": [],
+    "md": "NAPQI (toxic)",
+    "heading": true,
+    "size": 13.0
+   },
+   {
+    "text": "↓",
+    "level": 0,
+    "emphasis": [],
+    "md": "↓",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "GSH conjugation → safe excretion",
+    "level": 0,
+    "emphasis": [],
+    "md": "GSH conjugation → safe excretion",
+    "heading": true,
+    "size": 13.0
+   },
+   {
+    "text": "Schematic (illustrative)",
     "level": 0,
     "emphasis": [
      {
-      "text": "Mechanism:",
+      "text": "Schematic (illustrative)",
       "marks": [
-       "bold"
+       "color"
       ]
      }
     ],
-    "md": "**Mechanism:**  analgesia and antipyresis are mainly central via reduced CNS prostaglandin synthesis; peripheral anti-inflammatory action is minimal.",
+    "md": "**Schematic (illustrative)**",
     "heading": false,
-    "size": 16.0
+    "size": 13.5
    },
    {
-    "text": "Major route: glucuronidation and sulfation handle about 90% of the dose, giving safe urinary excretion.",
+    "text": "Major route: glucuronidation and sulfation handle ~90% safely.",
     "level": 0,
     "emphasis": [
      {
@@ -1237,12 +1341,12 @@
       ]
      }
     ],
-    "md": "**Major route:**  glucuronidation and sulfation handle about 90% of the dose, giving safe urinary excretion.",
+    "md": "**Major route:**  glucuronidation and sulfation handle ~90% safely.",
     "heading": false,
-    "size": 16.0
+    "size": 12.0
    },
    {
-    "text": "Minor route: CYP2E1 converts a small fraction to NAPQI (N-acetyl-p-benzoquinone-imine), normally neutralized by glutathione.",
+    "text": "Minor route: CYP2E1 makes NAPQI, normally neutralized by glutathione.",
     "level": 0,
     "emphasis": [
      {
@@ -1252,119 +1356,25 @@
       ]
      }
     ],
-    "md": "**Minor route:**  CYP2E1 converts a small fraction to NAPQI (N-acetyl-p-benzoquinone-imine), normally neutralized by glutathione.",
+    "md": "**Minor route:**  CYP2E1 makes NAPQI, normally neutralized by glutathione.",
     "heading": false,
-    "size": 16.0
+    "size": 12.0
    },
    {
-    "text": "Oral acetaminophen → Liver",
+    "text": "Figure 19. Acetaminophen metabolism: major glucuronidation and sulfation route versus minor CYP2E1 route to NAPQI.",
     "level": 0,
     "emphasis": [],
-    "md": "Oral acetaminophen → Liver",
-    "heading": true,
-    "size": 18.0
-   },
-   {
-    "text": "Major route (~90%)",
-    "level": 0,
-    "emphasis": [],
-    "md": "Major route (~90%)",
-    "heading": true,
-    "size": 16.0
-   },
-   {
-    "text": "Minor route (~5–10%)",
-    "level": 0,
-    "emphasis": [],
-    "md": "Minor route (~5–10%)",
-    "heading": true,
-    "size": 16.0
-   },
-   {
-    "text": "↓",
-    "level": 0,
-    "emphasis": [],
-    "md": "↓",
+    "md": "Figure 19. Acetaminophen metabolism: major glucuronidation and sulfation route versus minor CYP2E1 route to NAPQI.",
     "heading": false,
-    "size": 16.0
-   },
-   {
-    "text": "↓",
-    "level": 0,
-    "emphasis": [],
-    "md": "↓",
-    "heading": false,
-    "size": 16.0
-   },
-   {
-    "text": "Glucuronidation and sulfation",
-    "level": 0,
-    "emphasis": [],
-    "md": "Glucuronidation and sulfation",
-    "heading": true,
-    "size": 16.0
-   },
-   {
-    "text": "CYP2E1 oxidation",
-    "level": 0,
-    "emphasis": [],
-    "md": "CYP2E1 oxidation",
-    "heading": true,
-    "size": 16.0
-   },
-   {
-    "text": "↓",
-    "level": 0,
-    "emphasis": [],
-    "md": "↓",
-    "heading": false,
-    "size": 16.0
-   },
-   {
-    "text": "↓",
-    "level": 0,
-    "emphasis": [],
-    "md": "↓",
-    "heading": false,
-    "size": 16.0
-   },
-   {
-    "text": "Safe urinary excretion",
-    "level": 0,
-    "emphasis": [],
-    "md": "Safe urinary excretion",
-    "heading": true,
-    "size": 16.0
-   },
-   {
-    "text": "NAPQI (toxic metabolite)",
-    "level": 0,
-    "emphasis": [],
-    "md": "NAPQI (toxic metabolite)",
-    "heading": true,
-    "size": 16.0
-   },
-   {
-    "text": "↓",
-    "level": 0,
-    "emphasis": [],
-    "md": "↓",
-    "heading": false,
-    "size": 16.0
-   },
-   {
-    "text": "GSH conjugation → safe excretion (at therapeutic doses)",
-    "level": 0,
-    "emphasis": [],
-    "md": "GSH conjugation → safe excretion (at therapeutic doses)",
-    "heading": true,
-    "size": 16.0
+    "size": 11.0
    }
   ],
   "tables": [],
-  "images": 0,
-  "figures": [],
-  "notes": "Explain the major safe route first, then the minor CYP2E1 route, where NAPQI is normally neutralized by glutathione conjugation at therapeutic doses.\n\nSay: \"About 90% goes down the safe route of glucuronidation and sulfation. A small fraction goes through CYP2E1 to NAPQI, which glutathione neutralizes at normal doses.\""
+  "images": 1,
+  "figures": [
+   "S16_1.jpg"
+  ],
+  "notes": "Explain the major safe route first, then the minor CYP2E1 route, where NAPQI is normally neutralized by glutathione conjugation at therapeutic doses.\n\nSay: \"About 90% goes down the safe route of glucuronidation and sulfation. A small fraction goes through CYP2E1 to NAPQI, which glutathione neutralizes at normal doses.\"\n\nInstructor script:\n\nKnow: Therapeutic doses are conjugated; overdose saturates conjugation and CYP2E1 makes NAPQI."
  },
  {
   "slide": 17,
@@ -1395,7 +1405,103 @@
     "size": 27.5
    },
    {
-    "text": "Overdose: glutathione is exhausted, so NAPQI injures hepatocytes.",
+    "text": "Overdose: saturated glucuronidation/sulfation",
+    "level": 0,
+    "emphasis": [],
+    "md": "Overdose: saturated glucuronidation/sulfation",
+    "heading": true,
+    "size": 14.0
+   },
+   {
+    "text": "↓",
+    "level": 0,
+    "emphasis": [],
+    "md": "↓",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "More drug shunted to CYP2E1",
+    "level": 0,
+    "emphasis": [],
+    "md": "More drug shunted to CYP2E1",
+    "heading": true,
+    "size": 14.0
+   },
+   {
+    "text": "↓",
+    "level": 0,
+    "emphasis": [],
+    "md": "↓",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "More NAPQI; GSH depleted",
+    "level": 0,
+    "emphasis": [],
+    "md": "More NAPQI; GSH depleted",
+    "heading": true,
+    "size": 14.0
+   },
+   {
+    "text": "←",
+    "level": 0,
+    "emphasis": [],
+    "md": "←",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "NAC replenishes GSH",
+    "level": 0,
+    "emphasis": [],
+    "md": "NAC replenishes GSH",
+    "heading": true,
+    "size": 14.0
+   },
+   {
+    "text": "↓",
+    "level": 0,
+    "emphasis": [],
+    "md": "↓",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "NAPQI binds hepatocyte proteins",
+    "level": 0,
+    "emphasis": [],
+    "md": "NAPQI binds hepatocyte proteins",
+    "heading": true,
+    "size": 14.0
+   },
+   {
+    "text": "↓",
+    "level": 0,
+    "emphasis": [],
+    "md": "↓",
+    "heading": false,
+    "size": 14.0
+   },
+   {
+    "text": "Centrilobular liver necrosis",
+    "level": 0,
+    "emphasis": [],
+    "md": "Centrilobular liver necrosis",
+    "heading": true,
+    "size": 14.0
+   },
+   {
+    "text": "Schematic (illustrative)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Schematic (illustrative)",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Overdose: GSH exhausted; NAPQI injures hepatocytes.",
     "level": 0,
     "emphasis": [
      {
@@ -1405,12 +1511,12 @@
       ]
      }
     ],
-    "md": "**Overdose:**  glutathione is exhausted, so NAPQI injures hepatocytes.",
+    "md": "**Overdose:**  GSH exhausted; NAPQI injures hepatocytes.",
     "heading": false,
-    "size": 16.0
+    "size": 12.0
    },
    {
-    "text": "Antidote: NAC replenishes glutathione; give early for best effect.",
+    "text": "Antidote: NAC replenishes GSH; give early.",
     "level": 0,
     "emphasis": [
      {
@@ -1420,12 +1526,12 @@
       ]
      }
     ],
-    "md": "**Antidote:**  NAC replenishes glutathione; give early for best effect.",
+    "md": "**Antidote:**  NAC replenishes GSH; give early.",
     "heading": false,
-    "size": 16.0
+    "size": 12.0
    },
    {
-    "text": "Pearl: chronic alcohol use and fasting lower GSH and raise risk; both also induce CYP2E1.",
+    "text": "Pearl: alcohol and fasting lower GSH; both induce CYP2E1.",
     "level": 0,
     "emphasis": [
      {
@@ -1435,118 +1541,25 @@
       ]
      }
     ],
-    "md": "**Pearl:**  chronic alcohol use and fasting lower GSH and raise risk; both also induce CYP2E1.",
+    "md": "**Pearl:**  alcohol and fasting lower GSH; both induce CYP2E1.",
     "heading": false,
-    "size": 16.0
+    "size": 12.0
    },
    {
-    "text": "Monitoring: plot the acetaminophen level on the Rumack-Matthew nomogram for acute single ingestion; check AST/ALT.",
+    "text": "Figure 4. Overdose saturates safe conjugation, shunting drug to CYP2E1; NAC restores glutathione.",
     "level": 0,
-    "emphasis": [
-     {
-      "text": "Monitoring:",
-      "marks": [
-       "bold"
-      ]
-     }
-    ],
-    "md": "**Monitoring:**  plot the acetaminophen level on the Rumack-Matthew nomogram for acute single ingestion; check AST/ALT.",
+    "emphasis": [],
+    "md": "Figure 4. Overdose saturates safe conjugation, shunting drug to CYP2E1; NAC restores glutathione.",
     "heading": false,
-    "size": 16.0
-   },
-   {
-    "text": "Overdose: saturated glucuronidation/sulfation",
-    "level": 0,
-    "emphasis": [],
-    "md": "Overdose: saturated glucuronidation/sulfation",
-    "heading": true,
-    "size": 16.0
-   },
-   {
-    "text": "↓",
-    "level": 0,
-    "emphasis": [],
-    "md": "↓",
-    "heading": false,
-    "size": 16.0
-   },
-   {
-    "text": "More drug shunted to CYP2E1",
-    "level": 0,
-    "emphasis": [],
-    "md": "More drug shunted to CYP2E1",
-    "heading": true,
-    "size": 16.0
-   },
-   {
-    "text": "↓",
-    "level": 0,
-    "emphasis": [],
-    "md": "↓",
-    "heading": false,
-    "size": 16.0
-   },
-   {
-    "text": "More NAPQI; glutathione (GSH) depleted",
-    "level": 0,
-    "emphasis": [],
-    "md": "More NAPQI; glutathione (GSH) depleted",
-    "heading": true,
-    "size": 16.0
-   },
-   {
-    "text": "N-acetylcysteine (NAC) replenishes GSH",
-    "level": 0,
-    "emphasis": [],
-    "md": "N-acetylcysteine (NAC) replenishes GSH",
-    "heading": true,
-    "size": 16.0
-   },
-   {
-    "text": "←",
-    "level": 0,
-    "emphasis": [],
-    "md": "←",
-    "heading": false,
-    "size": 16.0
-   },
-   {
-    "text": "↓",
-    "level": 0,
-    "emphasis": [],
-    "md": "↓",
-    "heading": false,
-    "size": 16.0
-   },
-   {
-    "text": "NAPQI binds hepatocyte proteins",
-    "level": 0,
-    "emphasis": [],
-    "md": "NAPQI binds hepatocyte proteins",
-    "heading": true,
-    "size": 16.0
-   },
-   {
-    "text": "↓",
-    "level": 0,
-    "emphasis": [],
-    "md": "↓",
-    "heading": false,
-    "size": 16.0
-   },
-   {
-    "text": "Centrilobular liver necrosis",
-    "level": 0,
-    "emphasis": [],
-    "md": "Centrilobular liver necrosis",
-    "heading": true,
-    "size": 16.0
+    "size": 11.0
    }
   ],
   "tables": [],
-  "images": 0,
-  "figures": [],
-  "notes": "Overdose saturates glucuronidation and sulfation, shunting more drug to CYP2E1 and producing more NAPQI. Once glutathione is depleted, NAPQI injures hepatocytes. Give N-acetylcysteine early.\n\nSay: \"In overdose the safe route saturates, more drug goes to CYP2E1, glutathione runs out, and NAPQI injures hepatocytes.\"\n\nKnow: The antidote is N-acetylcysteine (NAC), given early.\n\nKnow: Chronic alcohol use and fasting raise the risk.\n\nKnow: Use the Rumack-Matthew nomogram for acute single ingestions, and check AST/ALT."
+  "images": 1,
+  "figures": [
+   "S17_1.jpg"
+  ],
+  "notes": "Overdose saturates glucuronidation and sulfation, shunting more drug to CYP2E1 and producing more NAPQI. Once glutathione is depleted, NAPQI injures hepatocytes. Give N-acetylcysteine early.\n\nSay: \"In overdose the safe route saturates, more drug goes to CYP2E1, glutathione runs out, and NAPQI injures hepatocytes.\"\n\nKnow: The antidote is N-acetylcysteine (NAC), given early.\n\nKnow: Chronic alcohol use and fasting raise the risk.\n\nKnow: Use the Rumack-Matthew nomogram for acute single ingestions, and check AST/ALT.\n\nInstructor script:\n\nKnow: N-acetylcysteine replenishes glutathione."
  },
  {
   "slide": 18,
@@ -1658,7 +1671,7 @@
   "figures": [
    "S18_1.jpg"
   ],
-  "notes": "The nomogram predicts hepatotoxicity risk after a single acute ingestion; if time of ingestion is unknown or ingestion is chronic, do not rely on it. Start NAC without waiting if presentation is late or the level is unavailable and ingestion is significant.\n\nAfter 24 hours the nomogram is not used: 4.7 mcg/mL is only where the treatment line ends, not a safe cutoff. Get AST/ALT; a detectable level or elevated AST/ALT guides NAC, per protocol or poison control."
+  "notes": "The nomogram predicts hepatotoxicity risk after a single acute ingestion; if time of ingestion is unknown or ingestion is chronic, do not rely on it. Start NAC without waiting if presentation is late or the level is unavailable and ingestion is significant.\n\nAfter 24 hours the nomogram is not used: 4.7 mcg/mL is only where the treatment line ends, not a safe cutoff. Get AST/ALT; a detectable level or elevated AST/ALT guides NAC, per protocol or poison control.\n\nInstructor script:\n\nKnow: Use the Rumack-Matthew nomogram."
  },
  {
   "slide": 19,
@@ -1834,7 +1847,7 @@
   "tables": [],
   "images": 1,
   "figures": [],
-  "notes": "Good moment to reinforce generic-name awareness from Lecture 1 — patients often do not realize a product contains acetaminophen unless they check the label.\n\nHidden overdose case (slides 18-19): see the Ask on the previous slide."
+  "notes": "Good moment to reinforce generic-name awareness from Lecture 1 — patients often do not realize a product contains acetaminophen unless they check the label.\n\nHidden overdose case (slides 18-19): see the Ask on the previous slide.\n\nInstructor script:\n\nAsk: What changes the risk in a chronic drinker?"
  },
  {
   "slide": 21,
@@ -1940,7 +1953,7 @@
   "tables": [],
   "images": 1,
   "figures": [],
-  "notes": "Quick check: give 30 seconds, take a show of hands, then reveal."
+  "notes": "Quick check: give 30 seconds, take a show of hands, then reveal.\n\nInstructor script:\n\nPause for the class to commit to an answer before you reveal it."
  },
  {
   "slide": 22,
@@ -2006,7 +2019,7 @@
   "tables": [],
   "images": 1,
   "figures": [],
-  "notes": "Answer: NAPQI accumulation after glutathione depletion.\n\nSay: \"Acetaminophen leaves inflammation alone. NSAIDs go after it directly.\""
+  "notes": "Answer: NAPQI accumulation after glutathione depletion.\n\nSay: \"Acetaminophen leaves inflammation alone. NSAIDs go after it directly.\"\n\nInstructor script:\n\nReveal the answer after the class has committed to one."
  },
  {
   "slide": 23,
@@ -2063,7 +2076,7 @@
   "tables": [],
   "images": 1,
   "figures": [],
-  "notes": ""
+  "notes": "Section transition.\n\nNow we turn to the NSAIDs, which act on the same pathway."
  },
  {
   "slide": 24,
@@ -2168,7 +2181,103 @@
     "size": 27.5
    },
    {
-    "text": "Pathway: arachidonic acid is converted by COX to prostaglandins and thromboxane A2.",
+    "text": "Membrane phospholipids",
+    "level": 0,
+    "emphasis": [],
+    "md": "Membrane phospholipids",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "↓",
+    "level": 0,
+    "emphasis": [],
+    "md": "↓",
+    "heading": false,
+    "size": 7.0
+   },
+   {
+    "text": "Arachidonic acid",
+    "level": 0,
+    "emphasis": [],
+    "md": "Arachidonic acid",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "↓",
+    "level": 0,
+    "emphasis": [],
+    "md": "↓",
+    "heading": false,
+    "size": 7.0
+   },
+   {
+    "text": "↓",
+    "level": 0,
+    "emphasis": [],
+    "md": "↓",
+    "heading": false,
+    "size": 7.0
+   },
+   {
+    "text": "COX-1 / COX-2",
+    "level": 0,
+    "emphasis": [],
+    "md": "COX-1 / COX-2",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Prostaglandins and TXA2",
+    "level": 0,
+    "emphasis": [],
+    "md": "Prostaglandins and TXA2",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "↓",
+    "level": 0,
+    "emphasis": [],
+    "md": "↓",
+    "heading": false,
+    "size": 7.0
+   },
+   {
+    "text": "NSAIDs block COX",
+    "level": 0,
+    "emphasis": [],
+    "md": "NSAIDs block COX",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "↓",
+    "level": 0,
+    "emphasis": [],
+    "md": "↓",
+    "heading": false,
+    "size": 7.0
+   },
+   {
+    "text": "Less prostaglandin: pain and fever fall",
+    "level": 0,
+    "emphasis": [],
+    "md": "Less prostaglandin: pain and fever fall",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "Less TXA2: bleeding risk",
+    "level": 0,
+    "emphasis": [],
+    "md": "Less TXA2: bleeding risk",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "Pathway: COX turns arachidonic acid into prostaglandins and TXA2.",
     "level": 0,
     "emphasis": [
      {
@@ -2178,12 +2287,12 @@
       ]
      }
     ],
-    "md": "**Pathway:**  arachidonic acid is converted by COX to prostaglandins and thromboxane A2.",
+    "md": "**Pathway:**  COX turns arachidonic acid into prostaglandins and TXA2.",
     "heading": false,
-    "size": 16.0
+    "size": 12.0
    },
    {
-    "text": "Effect: reduced prostaglandins give analgesia, antipyresis and anti-inflammation.",
+    "text": "Effect: less pain, fever and inflammation.",
     "level": 0,
     "emphasis": [
      {
@@ -2193,125 +2302,32 @@
       ]
      }
     ],
-    "md": "**Effect:**  reduced prostaglandins give analgesia, antipyresis and anti-inflammation.",
+    "md": "**Effect:**  less pain, fever and inflammation.",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Schematic (illustrative)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Schematic (illustrative)",
     "heading": false,
     "size": 16.0
    },
    {
-    "text": "Adverse effects: GI injury, platelet inhibition and renal effects.",
+    "text": "Figure 6. NSAIDs block COX, reducing prostaglandin and TXA2 synthesis.",
     "level": 0,
-    "emphasis": [
-     {
-      "text": "Adverse effects:",
-      "marks": [
-       "bold"
-      ]
-     }
-    ],
-    "md": "**Adverse effects:**  GI injury, platelet inhibition and renal effects.",
+    "emphasis": [],
+    "md": "Figure 6. NSAIDs block COX, reducing prostaglandin and TXA2 synthesis.",
     "heading": false,
-    "size": 16.0
-   },
-   {
-    "text": "Membrane phospholipids",
-    "level": 0,
-    "emphasis": [],
-    "md": "Membrane phospholipids",
-    "heading": true,
-    "size": 16.0
-   },
-   {
-    "text": "↓",
-    "level": 0,
-    "emphasis": [],
-    "md": "↓",
-    "heading": false,
-    "size": 14.0
-   },
-   {
-    "text": "Arachidonic acid",
-    "level": 0,
-    "emphasis": [],
-    "md": "Arachidonic acid",
-    "heading": true,
-    "size": 16.0
-   },
-   {
-    "text": "↓",
-    "level": 0,
-    "emphasis": [],
-    "md": "↓",
-    "heading": false,
-    "size": 14.0
-   },
-   {
-    "text": "COX-1 / COX-2",
-    "level": 0,
-    "emphasis": [],
-    "md": "COX-1 / COX-2",
-    "heading": true,
-    "size": 16.0
-   },
-   {
-    "text": "↓",
-    "level": 0,
-    "emphasis": [],
-    "md": "↓",
-    "heading": false,
-    "size": 14.0
-   },
-   {
-    "text": "Prostaglandins and TXA2",
-    "level": 0,
-    "emphasis": [],
-    "md": "Prostaglandins and TXA2",
-    "heading": true,
-    "size": 16.0
-   },
-   {
-    "text": "↓",
-    "level": 0,
-    "emphasis": [],
-    "md": "↓",
-    "heading": false,
-    "size": 14.0
-   },
-   {
-    "text": "NSAIDs block COX",
-    "level": 0,
-    "emphasis": [],
-    "md": "NSAIDs block COX",
-    "heading": true,
-    "size": 16.0
-   },
-   {
-    "text": "↓",
-    "level": 0,
-    "emphasis": [],
-    "md": "↓",
-    "heading": false,
-    "size": 14.0
-   },
-   {
-    "text": "Less prostaglandin: pain and fever fall",
-    "level": 0,
-    "emphasis": [],
-    "md": "Less prostaglandin: pain and fever fall",
-    "heading": true,
-    "size": 16.0
-   },
-   {
-    "text": "Less TXA2: bleeding risk",
-    "level": 0,
-    "emphasis": [],
-    "md": "Less TXA2: bleeding risk",
-    "heading": true,
-    "size": 16.0
+    "size": 11.0
    }
   ],
   "tables": [],
-  "images": 0,
-  "figures": [],
+  "images": 1,
+  "figures": [
+   "S25_1.jpg"
+  ],
   "notes": "Explain the COX step first; every NSAID shares this mechanism, and the side effects follow from losing protective prostaglandins.\n\nSay: \"NSAIDs inhibit COX, so less arachidonic acid becomes prostaglandins and thromboxane. That gives less pain, inflammation and fever.\""
  },
  {
@@ -2433,6 +2449,22 @@
     "size": 27.5
    },
    {
+    "text": "Arachidonic acid",
+    "level": 0,
+    "emphasis": [],
+    "md": "Arachidonic acid",
+    "heading": true,
+    "size": 14.0
+   },
+   {
+    "text": "Nonselective NSAIDs block both COX-1 and COX-2 → GI and renal risk",
+    "level": 0,
+    "emphasis": [],
+    "md": "Nonselective NSAIDs block both COX-1 and COX-2 → GI and renal risk",
+    "heading": true,
+    "size": 14.0
+   },
+   {
     "text": "COX-1: constitutive; gastric mucosa, platelets, kidney.",
     "level": 0,
     "emphasis": [
@@ -2445,7 +2477,7 @@
     ],
     "md": "**COX-1:**  constitutive; gastric mucosa, platelets, kidney.",
     "heading": false,
-    "size": 16.0
+    "size": 12.0
    },
    {
     "text": "COX-2: inducible in inflamed tissue; pain, swelling, fever.",
@@ -2460,7 +2492,7 @@
     ],
     "md": "**COX-2:**  inducible in inflamed tissue; pain, swelling, fever.",
     "heading": false,
-    "size": 16.0
+    "size": 12.0
    },
    {
     "text": "Nonselective NSAIDs block both, so GI injury is common.",
@@ -2475,38 +2507,30 @@
     ],
     "md": "**Nonselective NSAIDs**  block both, so GI injury is common.",
     "heading": false,
-    "size": 16.0
+    "size": 12.0
    },
    {
-    "text": "Celecoxib spares COX-1 at therapeutic doses.",
+    "text": "Schematic (illustrative)",
     "level": 0,
     "emphasis": [
      {
-      "text": "Celecoxib",
+      "text": "Schematic (illustrative)",
       "marks": [
-       "bold"
+       "color"
       ]
      }
     ],
-    "md": "**Celecoxib**  spares COX-1 at therapeutic doses.",
+    "md": "**Schematic (illustrative)**",
     "heading": false,
-    "size": 16.0
+    "size": 13.5
    },
    {
-    "text": "Arachidonic acid",
+    "text": "Figure 7. COX-1 protects; COX-2 is induced at inflamed sites.",
     "level": 0,
     "emphasis": [],
-    "md": "Arachidonic acid",
-    "heading": true,
-    "size": 18.0
-   },
-   {
-    "text": "Nonselective NSAIDs block both COX-1 and COX-2 → GI and renal risk",
-    "level": 0,
-    "emphasis": [],
-    "md": "Nonselective NSAIDs block both COX-1 and COX-2 → GI and renal risk",
-    "heading": true,
-    "size": 18.0
+    "md": "Figure 7. COX-1 protects; COX-2 is induced at inflamed sites.",
+    "heading": false,
+    "size": 11.0
    }
   ],
   "tables": [
@@ -2518,13 +2542,7 @@
      "COX-1 (constitutive)"
     ],
     [
-     "Stomach mucosal protection"
-    ],
-    [
-     "Platelet TXA2 (clotting)"
-    ],
-    [
-     "Renal blood flow"
+     "Stomach mucosal protection\nPlatelet TXA2 (clotting)\nRenal blood flow"
     ]
    ],
    [
@@ -2535,19 +2553,15 @@
      "COX-2 (inducible, at inflamed tissue)"
     ],
     [
-     "Inflammation"
-    ],
-    [
-     "Pain"
-    ],
-    [
-     "Fever"
+     "Inflammation\nPain\nFever"
     ]
    ]
   ],
-  "images": 0,
-  "figures": [],
-  "notes": "COX-1 keeps protective prostaglandins; COX-2 is induced by inflammation. Selectivity trades anti-inflammatory benefit against GI and platelet protection.\n\nSay: \"COX-1 is the housekeeper: stomach lining, platelets, kidney. COX-2 is induced at sites of inflammation.\"\n\nKnow: Nonselective NSAIDs block both, which is why GI injury is common."
+  "images": 1,
+  "figures": [
+   "S27_1.jpg"
+  ],
+  "notes": "COX-1 keeps protective prostaglandins; COX-2 is induced by inflammation. Selectivity trades anti-inflammatory benefit against GI and platelet protection.\n\nSay: \"COX-1 is the housekeeper: stomach lining, platelets, kidney. COX-2 is induced at sites of inflammation.\"\n\nKnow: Nonselective NSAIDs block both, which is why GI injury is common.\n\nInstructor script:\n\nKnow: COX-1 inhibition causes GI and platelet effects; COX-2 selectivity spares the stomach but not the cardiovascular risk."
  },
  {
   "slide": 28,
@@ -2707,7 +2721,7 @@
   "tables": [],
   "images": 1,
   "figures": [],
-  "notes": "This is a classic \"trade one risk for another\" teaching point — better GI profile, but not a free lunch cardiovascularly or renally.\n\nSay: \"Celecoxib spares COX-1, so the GI risk is lower. The trade-off is lower PGI2 without a matching drop in TXA2, which raises cardiovascular risk. The kidney is still affected.\""
+  "notes": "This is a classic \"trade one risk for another\" teaching point — better GI profile, but not a free lunch cardiovascularly or renally.\n\nSay: \"Celecoxib spares COX-1, so the GI risk is lower. The trade-off is lower PGI2 without a matching drop in TXA2, which raises cardiovascular risk. The kidney is still affected.\"\n\nInstructor script:\n\nKnow: Celecoxib is contraindicated with sulfonamide allergy."
  },
  {
   "slide": 30,
@@ -2736,66 +2750,6 @@
     "md": "Celecoxib: Sparing COX-1 While Blocking COX-2",
     "heading": true,
     "size": 27.5
-   },
-   {
-    "text": "Mechanism: selectively inhibits inducible COX-2, the main source of inflammatory prostaglandins.",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "Mechanism:",
-      "marks": [
-       "bold"
-      ]
-     }
-    ],
-    "md": "**Mechanism:**  selectively inhibits inducible COX-2, the main source of inflammatory prostaglandins.",
-    "heading": false,
-    "size": 16.0
-   },
-   {
-    "text": "GI benefit: COX-1 in gastric mucosa is largely spared, lowering ulcer and bleeding risk.",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "GI benefit:",
-      "marks": [
-       "bold"
-      ]
-     }
-    ],
-    "md": "**GI benefit:**  COX-1 in gastric mucosa is largely spared, lowering ulcer and bleeding risk.",
-    "heading": false,
-    "size": 16.0
-   },
-   {
-    "text": "Trade-off: suppressed PGI2 without matched TXA2 loss raises cardiovascular event risk.",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "Trade-off:",
-      "marks": [
-       "bold"
-      ]
-     }
-    ],
-    "md": "**Trade-off:**  suppressed PGI2 without matched TXA2 loss raises cardiovascular event risk.",
-    "heading": false,
-    "size": 16.0
-   },
-   {
-    "text": "Renal: kidney prostaglandins are still affected; renal risk is not eliminated.",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "Renal:",
-      "marks": [
-       "bold"
-      ]
-     }
-    ],
-    "md": "**Renal:**  kidney prostaglandins are still affected; renal risk is not eliminated.",
-    "heading": false,
-    "size": 16.0
    },
    {
     "text": "Arachidonic acid",
@@ -2854,17 +2808,80 @@
     "size": 18.0
    },
    {
-    "text": "↓ PGI₂ falls, TXA₂ preserved → cardiovascular risk",
+    "text": "↓ PGI₂ falls, TXA₂ kept → cardiovascular risk",
     "level": 0,
     "emphasis": [],
-    "md": "↓ PGI₂ falls, TXA₂ preserved → cardiovascular risk",
+    "md": "↓ PGI₂ falls, TXA₂ kept → cardiovascular risk",
     "heading": true,
     "size": 18.0
+   },
+   {
+    "text": "Schematic (illustrative)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Schematic (illustrative)",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Figure 8. Celecoxib spares COX-1 while blocking COX-2.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Figure 8. Celecoxib spares COX-1 while blocking COX-2.",
+    "heading": false,
+    "size": 11.0
+   },
+   {
+    "text": "Mechanism: blocks inflammatory COX-2.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Mechanism:",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Mechanism:**  blocks inflammatory COX-2.",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "GI benefit: stomach COX-1 is spared, lowering ulcer risk.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "GI benefit:",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**GI benefit:**  stomach COX-1 is spared, lowering ulcer risk.",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Trade-off: PGI2 falls, TXA2 kept, raising CV risk.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Trade-off:",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Trade-off:**  PGI2 falls, TXA2 kept, raising CV risk.",
+    "heading": false,
+    "size": 12.0
    }
   ],
   "tables": [],
-  "images": 0,
-  "figures": [],
+  "images": 1,
+  "figures": [
+   "S30_1.jpg"
+  ],
   "notes": "Use the diagram to show that selectivity separates the GI benefit from the cardiovascular trade-off. Link back to the nonselective NSAID comparison on the previous slide.\n\nSay: \"Celecoxib spares COX-1, so the GI risk is lower. The trade-off is lower PGI2 without a matching drop in TXA2, which raises cardiovascular risk. The kidney is still affected.\""
  },
  {
@@ -3014,7 +3031,7 @@
   "tables": [],
   "images": 1,
   "figures": [],
-  "notes": "Quick check: give 30 seconds, take a show of hands, then reveal."
+  "notes": "Quick check: give 30 seconds, take a show of hands, then reveal.\n\nInstructor script:\n\nPause for the class to commit to an answer before you reveal it."
  },
  {
   "slide": 33,
@@ -3080,7 +3097,7 @@
   "tables": [],
   "images": 1,
   "figures": [],
-  "notes": "Answer: lower GI risk, with some increase in cardiovascular risk. These risk values are illustrative, not clinical data."
+  "notes": "Answer: lower GI risk, with some increase in cardiovascular risk. These risk values are illustrative, not clinical data.\n\nInstructor script:\n\nReveal the answer after the class has committed to one."
  },
  {
   "slide": 34,
@@ -3206,7 +3223,7 @@
   "figures": [
    "S35_1.jpg"
   ],
-  "notes": "Say: \"Lose prostaglandins and you lose mucosal protection, renal afferent dilation and normal platelet function.\"\n\nKnow: GI (ulcer, bleeding), renal (AKI, fluid retention), cardiovascular (hypertension, events)."
+  "notes": "Say: \"Lose prostaglandins and you lose mucosal protection, renal afferent dilation and normal platelet function.\"\n\nKnow: GI (ulcer, bleeding), renal (AKI, fluid retention), cardiovascular (hypertension, events).\n\nInstructor script:\n\nProstaglandin loss in the kidney reduces afferent blood flow: stress the triple whammy with ACE inhibitors and diuretics."
  },
  {
   "slide": 36,
@@ -3505,7 +3522,7 @@
   "tables": [],
   "images": 1,
   "figures": [],
-  "notes": "Quick check: give 30 seconds, take a show of hands, then reveal."
+  "notes": "Quick check: give 30 seconds, take a show of hands, then reveal.\n\nInstructor script:\n\nPause for the class to commit to an answer before you reveal it."
  },
  {
   "slide": 39,
@@ -3571,7 +3588,7 @@
   "tables": [],
   "images": 1,
   "figures": [],
-  "notes": "Answer: no. Oral NSAIDs carry the highest combined risk. Acetaminophen or a non-NSAID approach is generally safer.\n\nSay: \"Now the same drugs in the setting of arthritis.\""
+  "notes": "Answer: no. Oral NSAIDs carry the highest combined risk. Acetaminophen or a non-NSAID approach is generally safer.\n\nSay: \"Now the same drugs in the setting of arthritis.\"\n\nInstructor script:\n\nReveal the answer after the class has committed to one."
  },
  {
   "slide": 40,
@@ -3628,7 +3645,7 @@
   "tables": [],
   "images": 1,
   "figures": [],
-  "notes": ""
+  "notes": "Section transition.\n\nNow we apply these drugs to osteoarthritis and rheumatoid arthritis."
  },
  {
   "slide": 41,
@@ -3799,7 +3816,7 @@
   "figures": [
    "S42_1.jpg"
   ],
-  "notes": "Say: \"OA is degenerative and mechanical, with cartilage wear and bone remodeling. RA is autoimmune, with synovitis, pannus, and TNF-alpha and IL-6 driving erosion.\""
+  "notes": "Say: \"OA is degenerative and mechanical, with cartilage wear and bone remodeling. RA is autoimmune, with synovitis, pannus, and TNF-alpha and IL-6 driving erosion.\"\n\nInstructor script:\n\nKnow: OA is mechanical and degenerative; RA is autoimmune."
  },
  {
   "slide": 43,
@@ -4100,7 +4117,7 @@
   "figures": [
    "S46_1.jpg"
   ],
-  "notes": "Contrast the fast, symptomatic effect of NSAIDs with the slow, structure-modifying effect of DMARDs. Set expectations that DMARD benefit builds over months.\n\nSay: \"A DMARD changes the course of RA. An NSAID only masks symptoms.\"\n\nKnow: DMARDs take weeks to months to work. Judge them over months, not at the first visit. The curve is a schematic, not data."
+  "notes": "Contrast the fast, symptomatic effect of NSAIDs with the slow, structure-modifying effect of DMARDs. Set expectations that DMARD benefit builds over months.\n\nSay: \"A DMARD changes the course of RA. An NSAID only masks symptoms.\"\n\nKnow: DMARDs take weeks to months to work. Judge them over months, not at the first visit. The curve is a schematic, not data.\n\nInstructor script:\n\nKnow: Analgesics treat symptoms; DMARDs slow joint destruction."
  },
  {
   "slide": 47,
@@ -4165,7 +4182,7 @@
   "tables": [],
   "images": 1,
   "figures": [],
-  "notes": "Methotrexate (anchor drug, blocks DHFR), hydroxychloroquine (milder disease), sulfasalazine, leflunomide (blocks DHODH, pyrimidine synthesis)."
+  "notes": "Methotrexate (anchor drug, blocks DHFR), hydroxychloroquine (milder disease), sulfasalazine, leflunomide (blocks DHODH, pyrimidine synthesis).\n\nInstructor script:\n\nMethotrexate once weekly with folic acid; hydroxychloroquine needs eye exams; sulfasalazine; leflunomide is teratogenic."
  },
  {
   "slide": 48,
@@ -4196,7 +4213,7 @@
     "size": 27.5
    },
    {
-    "text": "Methotrexate: blocks DHFR and folate metabolism.",
+    "text": "Methotrexate: blocks DHFR.",
     "level": 0,
     "emphasis": [
      {
@@ -4206,12 +4223,12 @@
       ]
      }
     ],
-    "md": "**Methotrexate:**  blocks DHFR and folate metabolism.",
+    "md": "**Methotrexate:**  blocks DHFR.",
     "heading": false,
-    "size": 16.0
+    "size": 12.0
    },
    {
-    "text": "Hydroxychloroquine: alters lysosomal and TLR signaling.",
+    "text": "Hydroxychloroquine: alters lysosome and TLR signals.",
     "level": 0,
     "emphasis": [
      {
@@ -4221,12 +4238,12 @@
       ]
      }
     ],
-    "md": "**Hydroxychloroquine:**  alters lysosomal and TLR signaling.",
+    "md": "**Hydroxychloroquine:**  alters lysosome and TLR signals.",
     "heading": false,
-    "size": 16.0
+    "size": 12.0
    },
    {
-    "text": "Sulfasalazine: reduces cytokine and prostaglandin production.",
+    "text": "Sulfasalazine: cuts cytokine output.",
     "level": 0,
     "emphasis": [
      {
@@ -4236,24 +4253,25 @@
       ]
      }
     ],
-    "md": "**Sulfasalazine:**  reduces cytokine and prostaglandin production.",
+    "md": "**Sulfasalazine:**  cuts cytokine output.",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Schematic (illustrative)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Schematic (illustrative)",
     "heading": false,
     "size": 16.0
    },
    {
-    "text": "Leflunomide: inhibits DHODH, blocking pyrimidine synthesis.",
+    "text": "Figure 14. Conventional DMARDs act at different intracellular and immune-pathway targets.",
     "level": 0,
-    "emphasis": [
-     {
-      "text": "Leflunomide:",
-      "marks": [
-       "bold"
-      ]
-     }
-    ],
-    "md": "**Leflunomide:**  inhibits DHODH, blocking pyrimidine synthesis.",
+    "emphasis": [],
+    "md": "Figure 14. Conventional DMARDs act at different intracellular and immune-pathway targets.",
     "heading": false,
-    "size": 16.0
+    "size": 11.0
    }
   ],
   "tables": [
@@ -4265,28 +4283,30 @@
     ],
     [
      "Methotrexate",
-     "Inhibits DHFR; disrupts folate metabolism",
+     "Inhibits DHFR (folate)",
      "Slower immune-cell growth"
     ],
     [
      "Hydroxychloroquine",
-     "Alters lysosomal and TLR signaling",
+     "Alters lysosome, TLR signals",
      "Less antigen signaling"
     ],
     [
      "Sulfasalazine",
-     "Reduces cytokine and prostaglandin production",
+     "Cuts cytokines, prostaglandins",
      "Less inflammation"
     ],
     [
      "Leflunomide",
-     "Inhibits DHODH; limits pyrimidine synthesis",
+     "Inhibits DHODH",
      "Slower T-cell growth"
     ]
    ]
   ],
-  "images": 0,
-  "figures": [],
+  "images": 1,
+  "figures": [
+   "S48_1.png"
+  ],
   "notes": "These drugs act inside cells or on broad immune pathways, with a slower onset than biologics.\n\nMethotrexate (anchor drug, blocks DHFR), hydroxychloroquine (milder disease), sulfasalazine, leflunomide (blocks DHODH, pyrimidine synthesis)."
  },
  {
@@ -4406,6 +4426,54 @@
     "size": 27.5
    },
    {
+    "text": "Dihydrofolate (DHF) ↓",
+    "level": 0,
+    "emphasis": [],
+    "md": "Dihydrofolate (DHF) ↓",
+    "heading": true,
+    "size": 14.0
+   },
+   {
+    "text": "DHFR enzyme ↓",
+    "level": 0,
+    "emphasis": [],
+    "md": "DHFR enzyme ↓",
+    "heading": true,
+    "size": 14.0
+   },
+   {
+    "text": "THF for DNA synthesis",
+    "level": 0,
+    "emphasis": [],
+    "md": "THF for DNA synthesis",
+    "heading": true,
+    "size": 14.0
+   },
+   {
+    "text": "Methotrexate blocks DHFR ↓",
+    "level": 0,
+    "emphasis": [],
+    "md": "Methotrexate blocks DHFR ↓",
+    "heading": true,
+    "size": 14.0
+   },
+   {
+    "text": "Low dose: anti-inflammatory ↓",
+    "level": 0,
+    "emphasis": [],
+    "md": "Low dose: anti-inflammatory ↓",
+    "heading": true,
+    "size": 14.0
+   },
+   {
+    "text": "Weekly dosing only",
+    "level": 0,
+    "emphasis": [],
+    "md": "Weekly dosing only",
+    "heading": true,
+    "size": 14.0
+   },
+   {
     "text": "Target: inhibits dihydrofolate reductase (DHFR), blocking folate-dependent purine and thymidylate synthesis.",
     "level": 0,
     "emphasis": [
@@ -4418,7 +4486,7 @@
     ],
     "md": "**Target:**  inhibits dihydrofolate reductase (DHFR), blocking folate-dependent purine and thymidylate synthesis.",
     "heading": false,
-    "size": 16.0
+    "size": 12.0
    },
    {
     "text": "Low-dose RA effect: likely anti-inflammatory via adenosine release, not cytotoxicity.",
@@ -4433,7 +4501,7 @@
     ],
     "md": "**Low-dose RA effect:**  likely anti-inflammatory via adenosine release, not cytotoxicity.",
     "heading": false,
-    "size": 16.0
+    "size": 12.0
    },
    {
     "text": "Pearl: weekly dosing only; daily dosing has caused fatal toxicity.",
@@ -4448,75 +4516,37 @@
     ],
     "md": "**Pearl:**  weekly dosing only; daily dosing has caused fatal toxicity.",
     "heading": false,
-    "size": 16.0
+    "size": 12.0
    },
    {
-    "text": "Toxicity: folic acid co-therapy reduces liver, marrow, lung and GI effects.",
+    "text": "Schematic (illustrative)",
     "level": 0,
     "emphasis": [
      {
-      "text": "Toxicity:",
+      "text": "Schematic (illustrative)",
       "marks": [
-       "bold"
+       "color"
       ]
      }
     ],
-    "md": "**Toxicity:**  folic acid co-therapy reduces liver, marrow, lung and GI effects.",
+    "md": "**Schematic (illustrative)**",
     "heading": false,
-    "size": 16.0
+    "size": 13.5
    },
    {
-    "text": "Dihydrofolate (DHF) ↓",
+    "text": "Figure 15. Methotrexate blocks DHFR in the folate pathway; low-dose action is anti-inflammatory.",
     "level": 0,
     "emphasis": [],
-    "md": "Dihydrofolate (DHF) ↓",
-    "heading": true,
-    "size": 16.0
-   },
-   {
-    "text": "DHFR enzyme ↓",
-    "level": 0,
-    "emphasis": [],
-    "md": "DHFR enzyme ↓",
-    "heading": true,
-    "size": 16.0
-   },
-   {
-    "text": "THF for DNA synthesis",
-    "level": 0,
-    "emphasis": [],
-    "md": "THF for DNA synthesis",
-    "heading": true,
-    "size": 16.0
-   },
-   {
-    "text": "Methotrexate blocks DHFR ↓",
-    "level": 0,
-    "emphasis": [],
-    "md": "Methotrexate blocks DHFR ↓",
-    "heading": true,
-    "size": 16.0
-   },
-   {
-    "text": "Low dose: anti-inflammatory ↓",
-    "level": 0,
-    "emphasis": [],
-    "md": "Low dose: anti-inflammatory ↓",
-    "heading": true,
-    "size": 16.0
-   },
-   {
-    "text": "Weekly dosing only",
-    "level": 0,
-    "emphasis": [],
-    "md": "Weekly dosing only",
-    "heading": true,
-    "size": 16.0
+    "md": "Figure 15. Methotrexate blocks DHFR in the folate pathway; low-dose action is anti-inflammatory.",
+    "heading": false,
+    "size": 11.0
    }
   ],
   "tables": [],
-  "images": 0,
-  "figures": [],
+  "images": 1,
+  "figures": [
+   "S50_1.jpg"
+  ],
   "notes": "Walk through the diagram left to right: folate is reduced to THF through DHF, and methotrexate blocks the DHFR step. Emphasize the weekly-dosing safety point.\n\nGive folic acid to reduce liver, marrow, lung and GI toxicity. Contraindicated in pregnancy (teratogenic)."
  },
  {
@@ -4670,7 +4700,23 @@
     "size": 27.5
    },
    {
-    "text": "TNF inhibitors: antibodies and etanercept, a receptor fusion, neutralize soluble and membrane TNF-α. First-line biologic; watch for reactivation of latent TB.",
+    "text": "Schematic (illustrative)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Schematic (illustrative)",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Figure 16. Biologic DMARDs intercept distinct steps of the immune cascade.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Figure 16. Biologic DMARDs intercept distinct steps of the immune cascade.",
+    "heading": false,
+    "size": 11.0
+   },
+   {
+    "text": "TNF inhibitors: antibodies and etanercept neutralize soluble and membrane TNF-α. Watch for latent TB.",
     "level": 0,
     "emphasis": [
      {
@@ -4680,12 +4726,12 @@
       ]
      }
     ],
-    "md": "**TNF inhibitors:**  antibodies and etanercept, a receptor fusion, neutralize soluble and membrane TNF-α. First-line biologic; watch for reactivation of latent TB.",
+    "md": "**TNF inhibitors:**  antibodies and etanercept neutralize soluble and membrane TNF-α. Watch for latent TB.",
     "heading": false,
-    "size": 16.0
+    "size": 12.0
    },
    {
-    "text": "IL-6 blockers: tocilizumab blocks both membrane and soluble IL-6 receptor, and works as monotherapy. Can raise lipids and liver enzymes.",
+    "text": "IL-6 blockers: tocilizumab blocks the IL-6 receptor. Can raise lipids and liver enzymes.",
     "level": 0,
     "emphasis": [
      {
@@ -4695,12 +4741,12 @@
       ]
      }
     ],
-    "md": "**IL-6 blockers:**  tocilizumab blocks both membrane and soluble IL-6 receptor, and works as monotherapy. Can raise lipids and liver enzymes.",
+    "md": "**IL-6 blockers:**  tocilizumab blocks the IL-6 receptor. Can raise lipids and liver enzymes.",
     "heading": false,
-    "size": 16.0
+    "size": 12.0
    },
    {
-    "text": "Abatacept: selective costimulation modulator that acts early, at T-cell activation. Generally a lower infection signal.",
+    "text": "Abatacept: blocks costimulation at T-cell activation. Lower infection signal.",
     "level": 0,
     "emphasis": [
      {
@@ -4710,39 +4756,24 @@
       ]
      }
     ],
-    "md": "**Abatacept:**  selective costimulation modulator that acts early, at T-cell activation. Generally a lower infection signal.",
+    "md": "**Abatacept:**  blocks costimulation at T-cell activation. Lower infection signal.",
     "heading": false,
-    "size": 16.0
-   },
-   {
-    "text": "Rituximab: anti-CD20 depletes B cells for months. Used after TNF-inhibitor failure; check hepatitis B before starting.",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "Rituximab:",
-      "marks": [
-       "bold"
-      ]
-     }
-    ],
-    "md": "**Rituximab:**  anti-CD20 depletes B cells for months. Used after TNF-inhibitor failure; check hepatitis B before starting.",
-    "heading": false,
-    "size": 16.0
+    "size": 12.0
    }
   ],
   "tables": [
    [
     [
      "TNF inhibitors\nInfliximab, adalimumab, etanercept",
-     "Bind soluble or membrane TNF-α, preventing TNFR activation."
+     "Block soluble and membrane TNF-α."
     ],
     [
      "IL-6 inhibitor\nTocilizumab",
-     "Blocks the IL-6 receptor, reducing inflammatory signaling."
+     "Blocks the IL-6 receptor."
     ],
     [
      "Abatacept\nCTLA-4-Ig",
-     "Binds CD80/86; blocks CD28 costimulation of T cells."
+     "Blocks CD28 costimulation of T cells."
     ],
     [
      "Rituximab\nAnti-CD20",
@@ -4750,9 +4781,11 @@
     ]
    ]
   ],
-  "images": 0,
-  "figures": [],
-  "notes": "Each biologic intercepts a different step of the immune cascade; match the target to the drug class.\n\nSay: \"Four classes by target.\" TNF inhibitors (infliximab, adalimumab, etanercept), IL-6 blockers (tocilizumab), abatacept (CTLA-4-Ig, blocks CD28 costimulation), rituximab (anti-CD20, depletes B cells)."
+  "images": 1,
+  "figures": [
+   "S52_1.jpg"
+  ],
+  "notes": "Each biologic intercepts a different step of the immune cascade; match the target to the drug class.\n\nSay: \"Four classes by target.\" TNF inhibitors (infliximab, adalimumab, etanercept), IL-6 blockers (tocilizumab), abatacept (CTLA-4-Ig, blocks CD28 costimulation), rituximab (anti-CD20, depletes B cells).\n\nInstructor script:\n\nKnow: TNF inhibitors, IL-6 blockade, abatacept and rituximab."
  },
  {
   "slide": 53,
@@ -4901,7 +4934,7 @@
   "tables": [],
   "images": 1,
   "figures": [],
-  "notes": "Quick check: give 30 seconds, take a show of hands, then reveal."
+  "notes": "Quick check: give 30 seconds, take a show of hands, then reveal.\n\nInstructor script:\n\nPause for the class to commit to an answer before you reveal it."
  },
  {
   "slide": 55,
@@ -4967,7 +5000,7 @@
   "tables": [],
   "images": 1,
   "figures": [],
-  "notes": "Answer: abatacept acts earliest."
+  "notes": "Answer: abatacept acts earliest.\n\nInstructor script:\n\nReveal the answer after the class has committed to one."
  },
  {
   "slide": 56,
@@ -5041,7 +5074,7 @@
   "tables": [],
   "images": 1,
   "figures": [],
-  "notes": "Say: \"The theme is immunosuppression, so infection risk.\""
+  "notes": "Say: \"The theme is immunosuppression, so infection risk.\"\n\nInstructor script:\n\nScreen for TB and hepatitis B."
  },
  {
   "slide": 57,
@@ -5072,6 +5105,22 @@
     "size": 27.5
    },
    {
+    "text": "Schematic (illustrative)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Schematic (illustrative)",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Figure 18. Immunosuppression lowers defences against latent TB and opportunistic infection.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Figure 18. Immunosuppression lowers defences against latent TB and opportunistic infection.",
+    "heading": false,
+    "size": 11.0
+   },
+   {
     "text": "Risk: suppressed immunity lets latent TB and opportunistic infections emerge.",
     "level": 0,
     "emphasis": [
@@ -5084,7 +5133,7 @@
     ],
     "md": "**Risk:**  suppressed immunity lets latent TB and opportunistic infections emerge.",
     "heading": false,
-    "size": 16.0
+    "size": 12.0
    },
    {
     "text": "Screen first: TB test and hepatitis B and C serology before starting.",
@@ -5099,7 +5148,7 @@
     ],
     "md": "**Screen first:**  TB test and hepatitis B and C serology before starting.",
     "heading": false,
-    "size": 16.0
+    "size": 12.0
    },
    {
     "text": "Vaccines: update non-live vaccines before treatment.",
@@ -5114,30 +5163,15 @@
     ],
     "md": "**Vaccines:**  update non-live vaccines before treatment.",
     "heading": false,
-    "size": 16.0
-   },
-   {
-    "text": "Monitor: CBC and liver and kidney labs every 1–3 months.",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "Monitor:",
-      "marks": [
-       "bold"
-      ]
-     }
-    ],
-    "md": "**Monitor:**  CBC and liver and kidney labs every 1–3 months.",
-    "heading": false,
-    "size": 16.0
+    "size": 12.0
    }
   ],
   "tables": [],
-  "images": 1,
+  "images": 2,
   "figures": [
-   "S57_1.jpg"
+   "S57_1.png"
   ],
-  "notes": "Screen for TB and hepatitis B and C before starting; update non-live vaccines; monitor blood counts and organ function regularly, and act early on fever or infection signs.\n\nSay: \"The theme is immunosuppression, so infection risk.\"\n\nKnow: Screen for TB and hepatitis B/C before biologics. Update vaccines first, especially live vaccines. Monitor CBC and liver and kidney tests. Counsel patients to report fevers early."
+  "notes": "Screen for TB and hepatitis B and C before starting; update non-live vaccines; monitor blood counts and organ function regularly, and act early on fever or infection signs.\n\nSay: \"The theme is immunosuppression, so infection risk.\"\n\nKnow: Screen for TB and hepatitis B/C before biologics. Update vaccines first, especially live vaccines. Monitor CBC and liver and kidney tests. Counsel patients to report fevers early.\n\nInstructor script:\n\nFever is infection until proven otherwise."
  },
  {
   "slide": 58,
@@ -5243,7 +5277,7 @@
   "tables": [],
   "images": 1,
   "figures": [],
-  "notes": "Quick check: give 30 seconds, take a show of hands, then reveal."
+  "notes": "Quick check: give 30 seconds, take a show of hands, then reveal.\n\nInstructor script:\n\nPause for the class to commit to an answer before you reveal it."
  },
  {
   "slide": 59,
@@ -5309,7 +5343,7 @@
   "tables": [],
   "images": 1,
   "figures": [],
-  "notes": "Answer: a DMARD modifies the disease process, while an NSAID only masks symptoms."
+  "notes": "Answer: a DMARD modifies the disease process, while an NSAID only masks symptoms.\n\nInstructor script:\n\nReveal the answer after the class has committed to one."
  },
  {
   "slide": 60,
@@ -5401,7 +5435,7 @@
   ],
   "images": 0,
   "figures": [],
-  "notes": "Teach students to read the stem first: it reveals mechanism class before the drug is recalled.\n\nSay: \"Read the stem and you know the class.\" -mab is a monoclonal antibody. -zumab is humanized, -ximab chimeric, -umab fully human. -cept is a receptor fusion protein. -nib/-tinib is a kinase inhibitor (for example tofacitinib, JAK). -coxib is COX-2 selective. -profen, -fenac and -oxicam are NSAID subclasses."
+  "notes": "Teach students to read the stem first: it reveals mechanism class before the drug is recalled.\n\nSay: \"Read the stem and you know the class.\" -mab is a monoclonal antibody. -zumab is humanized, -ximab chimeric, -umab fully human. -cept is a receptor fusion protein. -nib/-tinib is a kinase inhibitor (for example tofacitinib, JAK). -coxib is COX-2 selective. -profen, -fenac and -oxicam are NSAID subclasses.\n\nInstructor script:\n\nCue the suffixes: -coxib, -profen, -mab, -cept, -trexate."
  },
  {
   "slide": 61,
@@ -5511,6 +5545,2721 @@
  },
  {
   "slide": 62,
+  "title": "Drug Profiles",
+  "items": [
+   {
+    "text": "STUDY REFERENCE",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "STUDY REFERENCE",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**STUDY REFERENCE**",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "Drug Profiles",
+    "level": 0,
+    "emphasis": [],
+    "md": "Drug Profiles",
+    "heading": true,
+    "size": 48.0
+   },
+   {
+    "text": "Study reference for the drugs covered in Session 1",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Study reference for the drugs covered in Session 1",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Study reference for the drugs covered in Session 1**",
+    "heading": false,
+    "size": 18.0
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": "Abbreviation key for the drug profile slides: PO = by mouth; IV = intravenous; IM = intramuscular; SC = subcutaneous; BID = twice daily; TID = three times daily; ER = extended release; DR = delayed release; NSAID = nonsteroidal anti-inflammatory drug; COX = cyclooxygenase; GI = gastrointestinal; DMARD = disease-modifying antirheumatic drug; TNF = tumor necrosis factor; IL-6 = interleukin-6; DHFR = dihydrofolate reductase; DHODH = dihydroorotate dehydrogenase; CBC = complete blood count; TB = tuberculosis; CABG = coronary artery bypass graft; NAPQI = N-acetyl-p-benzoquinone imine; NAC = N-acetylcysteine; OTC = over the counter; CYP = cytochrome P450; eGFR/CrCl = renal function; JIA = juvenile idiopathic arthritis; PML = progressive multifocal leukoencephalopathy.\n\nInstructor script:\n\nSection transition. Move from the main lecture to the drug profiles as a study reference.\n\nUse these as a study reference. Know the dose logic, the serious adverse effect, the contraindication that changes decisions and the toxicity you would need to recognize.\n\nClass activity (10 minutes): Groups teach back two or three profiles in 60 seconds each.\n\nAbbreviation key: Review DMARD, TNF, DHFR, NAPQI and NAC.\n\nTeaching points: acetaminophen, NSAIDs, methotrexate, other conventional DMARDs, TNF inhibitors, other biologics.\n\nSupporting drugs: PPIs, warfarin, ACE inhibitors, lithium, steroids and live vaccines explain interactions.\n\nBloom's prompts: Remember: state methotrexate dosing frequency. Understand: explain why NSAIDs cause ulcers. Apply: counsel a patient starting adalimumab. Analyze: explain methotrexate and TMP-SMX toxicity. Evaluate: choose analgesia for CKD with heart failure."
+ },
+ {
+  "slide": 63,
+  "title": "Acetaminophen (Tylenol)",
+  "items": [
+   {
+    "text": "DRUG PROFILE",
+    "level": 0,
+    "emphasis": [],
+    "md": "DRUG PROFILE",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "Acetaminophen (Tylenol)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Acetaminophen (Tylenol)",
+    "heading": true,
+    "size": 30.0
+   },
+   {
+    "text": "ANALGESIC / ANTIPYRETIC",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "ANALGESIC / ANTIPYRETIC",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**ANALGESIC / ANTIPYRETIC**",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "FORMULATION",
+    "level": 0,
+    "emphasis": [],
+    "md": "FORMULATION",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "DOSE (ADULT)",
+    "level": 0,
+    "emphasis": [],
+    "md": "DOSE (ADULT)",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "INDICATIONS",
+    "level": 0,
+    "emphasis": [],
+    "md": "INDICATIONS",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "Tablets 325/500 mg; ER 650 mg; liquid; suppository; IV 1,000 mg",
+    "level": 0,
+    "emphasis": [],
+    "md": "Tablets 325/500 mg; ER 650 mg; liquid; suppository; IV 1,000 mg",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "650-1,000 mg PO every 6 hours (maximum 3-4 g/day; 2-3 g/day with chronic alcohol use or liver disease)",
+    "level": 0,
+    "emphasis": [],
+    "md": "650-1,000 mg PO every 6 hours (maximum 3-4 g/day; 2-3 g/day with chronic alcohol use or liver disease)",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Mild to moderate pain, fever, osteoarthritis pain",
+    "level": 0,
+    "emphasis": [],
+    "md": "Mild to moderate pain, fever, osteoarthritis pain",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "ADVERSE EFFECTS",
+    "level": 0,
+    "emphasis": [],
+    "md": "ADVERSE EFFECTS",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "CONTRAINDICATIONS",
+    "level": 0,
+    "emphasis": [],
+    "md": "CONTRAINDICATIONS",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "TOXICITY / OVERDOSE",
+    "level": 0,
+    "emphasis": [],
+    "md": "TOXICITY / OVERDOSE",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "Rare at therapeutic doses; rash; hepatotoxicity with excess",
+    "level": 0,
+    "emphasis": [],
+    "md": "Rare at therapeutic doses; rash; hepatotoxicity with excess",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Severe hepatic impairment; caution with chronic alcohol use",
+    "level": 0,
+    "emphasis": [],
+    "md": "Severe hepatic impairment; caution with chronic alcohol use",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Hepatotoxicity from NAPQI after overdose; treat with N-acetylcysteine, ideally within 8 hours; use the Rumack-Matthew nomogram",
+    "level": 0,
+    "emphasis": [],
+    "md": "Hepatotoxicity from NAPQI after overdose; treat with N-acetylcysteine, ideally within 8 hours; use the Rumack-Matthew nomogram",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Standard adult dosing for teaching; verify against current prescribing information.**",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": "Acetaminophen (Tylenol)|Analgesic / antipyretic|Tablets 325/500 mg; ER 650 mg; liquid; suppository; IV 1,000 mg|650-1,000 mg PO every 6 hours (maximum 3-4 g/day; 2-3 g/day with chronic alcohol use or liver disease)|Mild to moderate pain, fever, osteoarthritis pain|Rare at therapeutic doses; rash; hepatotoxicity with excess|Severe hepatic impairment; caution with chronic alcohol use|Hepatotoxicity from NAPQI after overdose; treat with N-acetylcysteine, ideally within 8 hours; use the Rumack-Matthew nomogram"
+ },
+ {
+  "slide": 64,
+  "title": "Ibuprofen (Advil, Motrin)",
+  "items": [
+   {
+    "text": "DRUG PROFILE",
+    "level": 0,
+    "emphasis": [],
+    "md": "DRUG PROFILE",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "Ibuprofen (Advil, Motrin)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Ibuprofen (Advil, Motrin)",
+    "heading": true,
+    "size": 30.0
+   },
+   {
+    "text": "NONSELECTIVE NSAID",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "NONSELECTIVE NSAID",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**NONSELECTIVE NSAID**",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "FORMULATION",
+    "level": 0,
+    "emphasis": [],
+    "md": "FORMULATION",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "DOSE (ADULT)",
+    "level": 0,
+    "emphasis": [],
+    "md": "DOSE (ADULT)",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "INDICATIONS",
+    "level": 0,
+    "emphasis": [],
+    "md": "INDICATIONS",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "Tablets 200/400/600/800 mg; suspension; IV",
+    "level": 0,
+    "emphasis": [],
+    "md": "Tablets 200/400/600/800 mg; suspension; IV",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "200-800 mg PO every 6-8 hours with food (maximum 3,200 mg/day Rx; 1,200 mg OTC)",
+    "level": 0,
+    "emphasis": [],
+    "md": "200-800 mg PO every 6-8 hours with food (maximum 3,200 mg/day Rx; 1,200 mg OTC)",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Pain, inflammation, fever, osteoarthritis, rheumatoid arthritis, dysmenorrhea",
+    "level": 0,
+    "emphasis": [],
+    "md": "Pain, inflammation, fever, osteoarthritis, rheumatoid arthritis, dysmenorrhea",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "ADVERSE EFFECTS",
+    "level": 0,
+    "emphasis": [],
+    "md": "ADVERSE EFFECTS",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "CONTRAINDICATIONS",
+    "level": 0,
+    "emphasis": [],
+    "md": "CONTRAINDICATIONS",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "TOXICITY / OVERDOSE",
+    "level": 0,
+    "emphasis": [],
+    "md": "TOXICITY / OVERDOSE",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "GI upset, ulcer and bleeding, renal injury, hypertension, fluid retention, platelet inhibition",
+    "level": 0,
+    "emphasis": [],
+    "md": "GI upset, ulcer and bleeding, renal injury, hypertension, fluid retention, platelet inhibition",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Active GI bleed, NSAID-triggered asthma, CABG setting, advanced renal disease, third trimester pregnancy, heart failure (caution)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Active GI bleed, NSAID-triggered asthma, CABG setting, advanced renal disease, third trimester pregnancy, heart failure (caution)",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "GI bleeding, acute kidney injury, metabolic acidosis, seizures in large overdose; supportive care",
+    "level": 0,
+    "emphasis": [],
+    "md": "GI bleeding, acute kidney injury, metabolic acidosis, seizures in large overdose; supportive care",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": "Ibuprofen (Advil, Motrin)|Nonselective NSAID|Tablets 200/400/600/800 mg; suspension; IV|200-800 mg PO every 6-8 hours with food (maximum 3,200 mg/day Rx; 1,200 mg OTC)|Pain, inflammation, fever, osteoarthritis, rheumatoid arthritis, dysmenorrhea|GI upset, ulcer and bleeding, renal injury, hypertension, fluid retention, platelet inhibition|Active GI bleed, NSAID-triggered asthma, CABG setting, advanced renal disease, third trimester pregnancy, heart failure (caution)|GI bleeding, acute kidney injury, metabolic acidosis, seizures in large overdose; supportive care"
+ },
+ {
+  "slide": 65,
+  "title": "Naproxen (Naprosyn, Aleve)",
+  "items": [
+   {
+    "text": "DRUG PROFILE",
+    "level": 0,
+    "emphasis": [],
+    "md": "DRUG PROFILE",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "Naproxen (Naprosyn, Aleve)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Naproxen (Naprosyn, Aleve)",
+    "heading": true,
+    "size": 30.0
+   },
+   {
+    "text": "NONSELECTIVE NSAID",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "NONSELECTIVE NSAID",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**NONSELECTIVE NSAID**",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "FORMULATION",
+    "level": 0,
+    "emphasis": [],
+    "md": "FORMULATION",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "DOSE (ADULT)",
+    "level": 0,
+    "emphasis": [],
+    "md": "DOSE (ADULT)",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "INDICATIONS",
+    "level": 0,
+    "emphasis": [],
+    "md": "INDICATIONS",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "Tablets 220/250/375/500 mg; DR and ER forms; suspension",
+    "level": 0,
+    "emphasis": [],
+    "md": "Tablets 220/250/375/500 mg; DR and ER forms; suspension",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "250-500 mg PO twice daily with food (maximum 1,250 mg/day)",
+    "level": 0,
+    "emphasis": [],
+    "md": "250-500 mg PO twice daily with food (maximum 1,250 mg/day)",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Osteoarthritis, rheumatoid arthritis, gout flare, tendinitis, dysmenorrhea",
+    "level": 0,
+    "emphasis": [],
+    "md": "Osteoarthritis, rheumatoid arthritis, gout flare, tendinitis, dysmenorrhea",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "ADVERSE EFFECTS",
+    "level": 0,
+    "emphasis": [],
+    "md": "ADVERSE EFFECTS",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "CONTRAINDICATIONS",
+    "level": 0,
+    "emphasis": [],
+    "md": "CONTRAINDICATIONS",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "TOXICITY / OVERDOSE",
+    "level": 0,
+    "emphasis": [],
+    "md": "TOXICITY / OVERDOSE",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "GI upset and bleeding, renal injury, hypertension, fluid retention, cardiovascular risk",
+    "level": 0,
+    "emphasis": [],
+    "md": "GI upset and bleeding, renal injury, hypertension, fluid retention, cardiovascular risk",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Active GI bleed, NSAID-triggered asthma, CABG setting, severe renal impairment, third trimester",
+    "level": 0,
+    "emphasis": [],
+    "md": "Active GI bleed, NSAID-triggered asthma, CABG setting, severe renal impairment, third trimester",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "GI bleeding, renal injury, lethargy and seizures in overdose; activated charcoal and supportive care",
+    "level": 0,
+    "emphasis": [],
+    "md": "GI bleeding, renal injury, lethargy and seizures in overdose; activated charcoal and supportive care",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Standard adult dosing for teaching; verify against current prescribing information.**",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": "Naproxen (Naprosyn, Aleve)|Nonselective NSAID|Tablets 220/250/375/500 mg; DR and ER forms; suspension|250-500 mg PO twice daily with food (maximum 1,250 mg/day)|Osteoarthritis, rheumatoid arthritis, gout flare, tendinitis, dysmenorrhea|GI upset and bleeding, renal injury, hypertension, fluid retention, cardiovascular risk|Active GI bleed, NSAID-triggered asthma, CABG setting, severe renal impairment, third trimester|GI bleeding, renal injury, lethargy and seizures in overdose; activated charcoal and supportive care"
+ },
+ {
+  "slide": 66,
+  "title": "Diclofenac (Voltaren, Cataflam)",
+  "items": [
+   {
+    "text": "DRUG PROFILE",
+    "level": 0,
+    "emphasis": [],
+    "md": "DRUG PROFILE",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "Diclofenac (Voltaren, Cataflam)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Diclofenac (Voltaren, Cataflam)",
+    "heading": true,
+    "size": 30.0
+   },
+   {
+    "text": "NONSELECTIVE NSAID (COX-2 PREFERRING)",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "NONSELECTIVE NSAID (COX-2 PREFERRING)",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**NONSELECTIVE NSAID (COX-2 PREFERRING)**",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "FORMULATION",
+    "level": 0,
+    "emphasis": [],
+    "md": "FORMULATION",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "DOSE (ADULT)",
+    "level": 0,
+    "emphasis": [],
+    "md": "DOSE (ADULT)",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "INDICATIONS",
+    "level": 0,
+    "emphasis": [],
+    "md": "INDICATIONS",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "Tablets 50 mg; DR 75 mg; ER 100 mg; 1% gel; ophthalmic; patch",
+    "level": 0,
+    "emphasis": [],
+    "md": "Tablets 50 mg; DR 75 mg; ER 100 mg; 1% gel; ophthalmic; patch",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "50 mg PO two to three times daily or 75 mg twice daily (maximum 150 mg/day); gel 2-4 g to joint up to four times daily",
+    "level": 0,
+    "emphasis": [],
+    "md": "50 mg PO two to three times daily or 75 mg twice daily (maximum 150 mg/day); gel 2-4 g to joint up to four times daily",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Osteoarthritis, rheumatoid arthritis, acute pain, topical for knee and hand osteoarthritis",
+    "level": 0,
+    "emphasis": [],
+    "md": "Osteoarthritis, rheumatoid arthritis, acute pain, topical for knee and hand osteoarthritis",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "ADVERSE EFFECTS",
+    "level": 0,
+    "emphasis": [],
+    "md": "ADVERSE EFFECTS",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "CONTRAINDICATIONS",
+    "level": 0,
+    "emphasis": [],
+    "md": "CONTRAINDICATIONS",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "TOXICITY / OVERDOSE",
+    "level": 0,
+    "emphasis": [],
+    "md": "TOXICITY / OVERDOSE",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "GI upset and bleeding, elevated liver enzymes, hypertension, renal injury, cardiovascular risk",
+    "level": 0,
+    "emphasis": [],
+    "md": "GI upset and bleeding, elevated liver enzymes, hypertension, renal injury, cardiovascular risk",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Active GI bleed, CABG setting, severe renal or hepatic impairment, NSAID-triggered asthma",
+    "level": 0,
+    "emphasis": [],
+    "md": "Active GI bleed, CABG setting, severe renal or hepatic impairment, NSAID-triggered asthma",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Hepatotoxicity, GI bleeding, renal injury; topical form has much lower systemic exposure",
+    "level": 0,
+    "emphasis": [],
+    "md": "Hepatotoxicity, GI bleeding, renal injury; topical form has much lower systemic exposure",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": "Diclofenac (Voltaren, Cataflam)|Nonselective NSAID (COX-2 preferring)|Tablets 50 mg; DR 75 mg; ER 100 mg; 1% gel; ophthalmic; patch|50 mg PO two to three times daily or 75 mg twice daily (maximum 150 mg/day); gel 2-4 g to joint up to four times daily|Osteoarthritis, rheumatoid arthritis, acute pain, topical for knee and hand osteoarthritis|GI upset and bleeding, elevated liver enzymes, hypertension, renal injury, cardiovascular risk|Active GI bleed, CABG setting, severe renal or hepatic impairment, NSAID-triggered asthma|Hepatotoxicity, GI bleeding, renal injury; topical form has much lower systemic exposure"
+ },
+ {
+  "slide": 67,
+  "title": "Ketorolac (Toradol)",
+  "items": [
+   {
+    "text": "DRUG PROFILE",
+    "level": 0,
+    "emphasis": [],
+    "md": "DRUG PROFILE",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "Ketorolac (Toradol)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Ketorolac (Toradol)",
+    "heading": true,
+    "size": 30.0
+   },
+   {
+    "text": "NONSELECTIVE NSAID (SHORT-TERM, POTENT)",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "NONSELECTIVE NSAID (SHORT-TERM, POTENT)",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**NONSELECTIVE NSAID (SHORT-TERM, POTENT)**",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "FORMULATION",
+    "level": 0,
+    "emphasis": [],
+    "md": "FORMULATION",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "DOSE (ADULT)",
+    "level": 0,
+    "emphasis": [],
+    "md": "DOSE (ADULT)",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "INDICATIONS",
+    "level": 0,
+    "emphasis": [],
+    "md": "INDICATIONS",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "Tablets 10 mg; injection 15/30 mg; nasal spray",
+    "level": 0,
+    "emphasis": [],
+    "md": "Tablets 10 mg; injection 15/30 mg; nasal spray",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "15-30 mg IV/IM every 6 hours (maximum 120 mg/day) or 10 mg PO every 4-6 hours; total course 5 days or less",
+    "level": 0,
+    "emphasis": [],
+    "md": "15-30 mg IV/IM every 6 hours (maximum 120 mg/day) or 10 mg PO every 4-6 hours; total course 5 days or less",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Short-term management of moderately severe acute pain",
+    "level": 0,
+    "emphasis": [],
+    "md": "Short-term management of moderately severe acute pain",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "ADVERSE EFFECTS",
+    "level": 0,
+    "emphasis": [],
+    "md": "ADVERSE EFFECTS",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "CONTRAINDICATIONS",
+    "level": 0,
+    "emphasis": [],
+    "md": "CONTRAINDICATIONS",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "TOXICITY / OVERDOSE",
+    "level": 0,
+    "emphasis": [],
+    "md": "TOXICITY / OVERDOSE",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "GI bleeding, renal injury, bleeding, hypertension",
+    "level": 0,
+    "emphasis": [],
+    "md": "GI bleeding, renal injury, bleeding, hypertension",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Active GI bleed, renal impairment, high bleeding risk, perioperative CABG, labor and delivery, pregnancy, age 65+ (reduce dose)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Active GI bleed, renal impairment, high bleeding risk, perioperative CABG, labor and delivery, pregnancy, age 65+ (reduce dose)",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Boxed warnings for GI bleeding, renal failure, bleeding and cardiovascular events; limit to 5 days",
+    "level": 0,
+    "emphasis": [],
+    "md": "Boxed warnings for GI bleeding, renal failure, bleeding and cardiovascular events; limit to 5 days",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Standard adult dosing for teaching; verify against current prescribing information.**",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": "Ketorolac (Toradol)|Nonselective NSAID (short-term, potent)|Tablets 10 mg; injection 15/30 mg; nasal spray|15-30 mg IV/IM every 6 hours (maximum 120 mg/day) or 10 mg PO every 4-6 hours; total course 5 days or less|Short-term management of moderately severe acute pain|GI bleeding, renal injury, bleeding, hypertension|Active GI bleed, renal impairment, high bleeding risk, perioperative CABG, labor and delivery, pregnancy, age 65+ (reduce dose)|Boxed warnings for GI bleeding, renal failure, bleeding and cardiovascular events; limit to 5 days"
+ },
+ {
+  "slide": 68,
+  "title": "Celecoxib (Celebrex)",
+  "items": [
+   {
+    "text": "DRUG PROFILE",
+    "level": 0,
+    "emphasis": [],
+    "md": "DRUG PROFILE",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "Celecoxib (Celebrex)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Celecoxib (Celebrex)",
+    "heading": true,
+    "size": 30.0
+   },
+   {
+    "text": "SELECTIVE COX-2 INHIBITOR",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "SELECTIVE COX-2 INHIBITOR",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**SELECTIVE COX-2 INHIBITOR**",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "FORMULATION",
+    "level": 0,
+    "emphasis": [],
+    "md": "FORMULATION",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "DOSE (ADULT)",
+    "level": 0,
+    "emphasis": [],
+    "md": "DOSE (ADULT)",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "INDICATIONS",
+    "level": 0,
+    "emphasis": [],
+    "md": "INDICATIONS",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "Capsules 50/100/200/400 mg",
+    "level": 0,
+    "emphasis": [],
+    "md": "Capsules 50/100/200/400 mg",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "200 mg PO once daily or 100 mg twice daily (rheumatoid arthritis 100-200 mg twice daily)",
+    "level": 0,
+    "emphasis": [],
+    "md": "200 mg PO once daily or 100 mg twice daily (rheumatoid arthritis 100-200 mg twice daily)",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Osteoarthritis, rheumatoid arthritis, acute pain, ankylosing spondylitis",
+    "level": 0,
+    "emphasis": [],
+    "md": "Osteoarthritis, rheumatoid arthritis, acute pain, ankylosing spondylitis",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "ADVERSE EFFECTS",
+    "level": 0,
+    "emphasis": [],
+    "md": "ADVERSE EFFECTS",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "CONTRAINDICATIONS",
+    "level": 0,
+    "emphasis": [],
+    "md": "CONTRAINDICATIONS",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "TOXICITY / OVERDOSE",
+    "level": 0,
+    "emphasis": [],
+    "md": "TOXICITY / OVERDOSE",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "Dyspepsia, hypertension, edema, renal injury, cardiovascular thrombotic risk",
+    "level": 0,
+    "emphasis": [],
+    "md": "Dyspepsia, hypertension, edema, renal injury, cardiovascular thrombotic risk",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Sulfonamide allergy, CABG setting, active GI bleed, advanced renal disease, aspirin-triggered asthma (caution)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Sulfonamide allergy, CABG setting, active GI bleed, advanced renal disease, aspirin-triggered asthma (caution)",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Boxed warning for cardiovascular and GI risk; renal injury in overdose; supportive care",
+    "level": 0,
+    "emphasis": [],
+    "md": "Boxed warning for cardiovascular and GI risk; renal injury in overdose; supportive care",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Standard adult dosing for teaching; verify against current prescribing information.**",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": "Celecoxib (Celebrex)|Selective COX-2 inhibitor|Capsules 50/100/200/400 mg|200 mg PO once daily or 100 mg twice daily (rheumatoid arthritis 100-200 mg twice daily)|Osteoarthritis, rheumatoid arthritis, acute pain, ankylosing spondylitis|Dyspepsia, hypertension, edema, renal injury, cardiovascular thrombotic risk|Sulfonamide allergy, CABG setting, active GI bleed, advanced renal disease, aspirin-triggered asthma (caution)|Boxed warning for cardiovascular and GI risk; renal injury in overdose; supportive care"
+ },
+ {
+  "slide": 69,
+  "title": "Methotrexate (Trexall, Otrexup)",
+  "items": [
+   {
+    "text": "DRUG PROFILE",
+    "level": 0,
+    "emphasis": [],
+    "md": "DRUG PROFILE",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "Methotrexate (Trexall, Otrexup)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Methotrexate (Trexall, Otrexup)",
+    "heading": true,
+    "size": 30.0
+   },
+   {
+    "text": "CONVENTIONAL DMARD (ANTIMETABOLITE, DHFR INHIBITOR)",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "CONVENTIONAL DMARD (ANTIMETABOLITE, DHFR INHIBITOR)",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**CONVENTIONAL DMARD (ANTIMETABOLITE, DHFR INHIBITOR)**",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "FORMULATION",
+    "level": 0,
+    "emphasis": [],
+    "md": "FORMULATION",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "DOSE (ADULT)",
+    "level": 0,
+    "emphasis": [],
+    "md": "DOSE (ADULT)",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "INDICATIONS",
+    "level": 0,
+    "emphasis": [],
+    "md": "INDICATIONS",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "Tablets 2.5 mg; subcutaneous autoinjector; injection",
+    "level": 0,
+    "emphasis": [],
+    "md": "Tablets 2.5 mg; subcutaneous autoinjector; injection",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "7.5-25 mg ONCE WEEKLY PO or SC, with folic acid 1 mg daily",
+    "level": 0,
+    "emphasis": [],
+    "md": "7.5-25 mg ONCE WEEKLY PO or SC, with folic acid 1 mg daily",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Rheumatoid arthritis (anchor DMARD), psoriatic arthritis, psoriasis",
+    "level": 0,
+    "emphasis": [],
+    "md": "Rheumatoid arthritis (anchor DMARD), psoriatic arthritis, psoriasis",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "ADVERSE EFFECTS",
+    "level": 0,
+    "emphasis": [],
+    "md": "ADVERSE EFFECTS",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "CONTRAINDICATIONS",
+    "level": 0,
+    "emphasis": [],
+    "md": "CONTRAINDICATIONS",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "TOXICITY / OVERDOSE",
+    "level": 0,
+    "emphasis": [],
+    "md": "TOXICITY / OVERDOSE",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "Nausea, mucositis, hepatotoxicity, myelosuppression, pneumonitis, teratogenicity",
+    "level": 0,
+    "emphasis": [],
+    "md": "Nausea, mucositis, hepatotoxicity, myelosuppression, pneumonitis, teratogenicity",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Pregnancy, significant liver disease, severe renal impairment, active infection, heavy alcohol use",
+    "level": 0,
+    "emphasis": [],
+    "md": "Pregnancy, significant liver disease, severe renal impairment, active infection, heavy alcohol use",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Daily dosing by mistake causes severe toxicity; leucovorin rescue; monitor CBC, liver tests and creatinine",
+    "level": 0,
+    "emphasis": [],
+    "md": "Daily dosing by mistake causes severe toxicity; leucovorin rescue; monitor CBC, liver tests and creatinine",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Standard adult dosing for teaching; verify against current prescribing information.**",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": "Methotrexate (Trexall, Otrexup)|Conventional DMARD (antimetabolite, DHFR inhibitor)|Tablets 2.5 mg; subcutaneous autoinjector; injection|7.5-25 mg ONCE WEEKLY PO or SC, with folic acid 1 mg daily|Rheumatoid arthritis (anchor DMARD), psoriatic arthritis, psoriasis|Nausea, mucositis, hepatotoxicity, myelosuppression, pneumonitis, teratogenicity|Pregnancy, significant liver disease, severe renal impairment, active infection, heavy alcohol use|Daily dosing by mistake causes severe toxicity; leucovorin rescue; monitor CBC, liver tests and creatinine"
+ },
+ {
+  "slide": 70,
+  "title": "Hydroxychloroquine (Plaquenil)",
+  "items": [
+   {
+    "text": "DRUG PROFILE",
+    "level": 0,
+    "emphasis": [],
+    "md": "DRUG PROFILE",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "Hydroxychloroquine (Plaquenil)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Hydroxychloroquine (Plaquenil)",
+    "heading": true,
+    "size": 30.0
+   },
+   {
+    "text": "CONVENTIONAL DMARD (ANTIMALARIAL)",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "CONVENTIONAL DMARD (ANTIMALARIAL)",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**CONVENTIONAL DMARD (ANTIMALARIAL)**",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "FORMULATION",
+    "level": 0,
+    "emphasis": [],
+    "md": "FORMULATION",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "DOSE (ADULT)",
+    "level": 0,
+    "emphasis": [],
+    "md": "DOSE (ADULT)",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "INDICATIONS",
+    "level": 0,
+    "emphasis": [],
+    "md": "INDICATIONS",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "Tablets 200 mg",
+    "level": 0,
+    "emphasis": [],
+    "md": "Tablets 200 mg",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "200-400 mg PO daily (maximum 5 mg/kg/day actual body weight)",
+    "level": 0,
+    "emphasis": [],
+    "md": "200-400 mg PO daily (maximum 5 mg/kg/day actual body weight)",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Rheumatoid arthritis (mild), lupus, malaria",
+    "level": 0,
+    "emphasis": [],
+    "md": "Rheumatoid arthritis (mild), lupus, malaria",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "ADVERSE EFFECTS",
+    "level": 0,
+    "emphasis": [],
+    "md": "ADVERSE EFFECTS",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "CONTRAINDICATIONS",
+    "level": 0,
+    "emphasis": [],
+    "md": "CONTRAINDICATIONS",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "TOXICITY / OVERDOSE",
+    "level": 0,
+    "emphasis": [],
+    "md": "TOXICITY / OVERDOSE",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "Nausea, rash, headache, retinopathy with long use, QT prolongation",
+    "level": 0,
+    "emphasis": [],
+    "md": "Nausea, rash, headache, retinopathy with long use, QT prolongation",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Known retinal disease, hypersensitivity; caution with QT-prolonging drugs",
+    "level": 0,
+    "emphasis": [],
+    "md": "Known retinal disease, hypersensitivity; caution with QT-prolonging drugs",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Retinal toxicity with long-term use (baseline and annual eye exams); cardiotoxicity and arrhythmia in overdose",
+    "level": 0,
+    "emphasis": [],
+    "md": "Retinal toxicity with long-term use (baseline and annual eye exams); cardiotoxicity and arrhythmia in overdose",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Standard adult dosing for teaching; verify against current prescribing information.**",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": "Hydroxychloroquine (Plaquenil)|Conventional DMARD (antimalarial)|Tablets 200 mg|200-400 mg PO daily (maximum 5 mg/kg/day actual body weight)|Rheumatoid arthritis (mild), lupus, malaria|Nausea, rash, headache, retinopathy with long use, QT prolongation|Known retinal disease, hypersensitivity; caution with QT-prolonging drugs|Retinal toxicity with long-term use (baseline and annual eye exams); cardiotoxicity and arrhythmia in overdose"
+ },
+ {
+  "slide": 71,
+  "title": "Sulfasalazine (Azulfidine)",
+  "items": [
+   {
+    "text": "DRUG PROFILE",
+    "level": 0,
+    "emphasis": [],
+    "md": "DRUG PROFILE",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "Sulfasalazine (Azulfidine)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Sulfasalazine (Azulfidine)",
+    "heading": true,
+    "size": 30.0
+   },
+   {
+    "text": "CONVENTIONAL DMARD",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "CONVENTIONAL DMARD",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**CONVENTIONAL DMARD**",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "FORMULATION",
+    "level": 0,
+    "emphasis": [],
+    "md": "FORMULATION",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "DOSE (ADULT)",
+    "level": 0,
+    "emphasis": [],
+    "md": "DOSE (ADULT)",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "INDICATIONS",
+    "level": 0,
+    "emphasis": [],
+    "md": "INDICATIONS",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "Tablets 500 mg; DR 500 mg",
+    "level": 0,
+    "emphasis": [],
+    "md": "Tablets 500 mg; DR 500 mg",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "500 mg PO daily, titrate to 1,000 mg twice daily",
+    "level": 0,
+    "emphasis": [],
+    "md": "500 mg PO daily, titrate to 1,000 mg twice daily",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Rheumatoid arthritis, ulcerative colitis",
+    "level": 0,
+    "emphasis": [],
+    "md": "Rheumatoid arthritis, ulcerative colitis",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "ADVERSE EFFECTS",
+    "level": 0,
+    "emphasis": [],
+    "md": "ADVERSE EFFECTS",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "CONTRAINDICATIONS",
+    "level": 0,
+    "emphasis": [],
+    "md": "CONTRAINDICATIONS",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "TOXICITY / OVERDOSE",
+    "level": 0,
+    "emphasis": [],
+    "md": "TOXICITY / OVERDOSE",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "Nausea, rash, headache, myelosuppression, hepatotoxicity, orange urine, reversible oligospermia",
+    "level": 0,
+    "emphasis": [],
+    "md": "Nausea, rash, headache, myelosuppression, hepatotoxicity, orange urine, reversible oligospermia",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Sulfa or salicylate allergy, intestinal or urinary obstruction, porphyria; G6PD deficiency (caution)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Sulfa or salicylate allergy, intestinal or urinary obstruction, porphyria; G6PD deficiency (caution)",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Agranulocytosis and hemolysis; monitor CBC and liver tests",
+    "level": 0,
+    "emphasis": [],
+    "md": "Agranulocytosis and hemolysis; monitor CBC and liver tests",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Standard adult dosing for teaching; verify against current prescribing information.**",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": "Sulfasalazine (Azulfidine)|Conventional DMARD|Tablets 500 mg; DR 500 mg|500 mg PO daily, titrate to 1,000 mg twice daily|Rheumatoid arthritis, ulcerative colitis|Nausea, rash, headache, myelosuppression, hepatotoxicity, orange urine, reversible oligospermia|Sulfa or salicylate allergy, intestinal or urinary obstruction, porphyria; G6PD deficiency (caution)|Agranulocytosis and hemolysis; monitor CBC and liver tests"
+ },
+ {
+  "slide": 72,
+  "title": "Leflunomide (Arava)",
+  "items": [
+   {
+    "text": "DRUG PROFILE",
+    "level": 0,
+    "emphasis": [],
+    "md": "DRUG PROFILE",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "Leflunomide (Arava)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Leflunomide (Arava)",
+    "heading": true,
+    "size": 30.0
+   },
+   {
+    "text": "CONVENTIONAL DMARD (DHODH INHIBITOR)",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "CONVENTIONAL DMARD (DHODH INHIBITOR)",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**CONVENTIONAL DMARD (DHODH INHIBITOR)**",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "FORMULATION",
+    "level": 0,
+    "emphasis": [],
+    "md": "FORMULATION",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "DOSE (ADULT)",
+    "level": 0,
+    "emphasis": [],
+    "md": "DOSE (ADULT)",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "INDICATIONS",
+    "level": 0,
+    "emphasis": [],
+    "md": "INDICATIONS",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "Tablets 10/20 mg",
+    "level": 0,
+    "emphasis": [],
+    "md": "Tablets 10/20 mg",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "20 mg PO daily (loading 100 mg daily for 3 days optional)",
+    "level": 0,
+    "emphasis": [],
+    "md": "20 mg PO daily (loading 100 mg daily for 3 days optional)",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Rheumatoid arthritis",
+    "level": 0,
+    "emphasis": [],
+    "md": "Rheumatoid arthritis",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "ADVERSE EFFECTS",
+    "level": 0,
+    "emphasis": [],
+    "md": "ADVERSE EFFECTS",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "CONTRAINDICATIONS",
+    "level": 0,
+    "emphasis": [],
+    "md": "CONTRAINDICATIONS",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "TOXICITY / OVERDOSE",
+    "level": 0,
+    "emphasis": [],
+    "md": "TOXICITY / OVERDOSE",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "Diarrhea, hepatotoxicity, hypertension, alopecia, neuropathy, teratogenicity",
+    "level": 0,
+    "emphasis": [],
+    "md": "Diarrhea, hepatotoxicity, hypertension, alopecia, neuropathy, teratogenicity",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Pregnancy, severe liver disease, concurrent hepatotoxic drugs",
+    "level": 0,
+    "emphasis": [],
+    "md": "Pregnancy, severe liver disease, concurrent hepatotoxic drugs",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Boxed warning for hepatotoxicity and embryo-fetal toxicity; cholestyramine washout",
+    "level": 0,
+    "emphasis": [],
+    "md": "Boxed warning for hepatotoxicity and embryo-fetal toxicity; cholestyramine washout",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Standard adult dosing for teaching; verify against current prescribing information.**",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": "Leflunomide (Arava)|Conventional DMARD (DHODH inhibitor)|Tablets 10/20 mg|20 mg PO daily (loading 100 mg daily for 3 days optional)|Rheumatoid arthritis|Diarrhea, hepatotoxicity, hypertension, alopecia, neuropathy, teratogenicity|Pregnancy, severe liver disease, concurrent hepatotoxic drugs|Boxed warning for hepatotoxicity and embryo-fetal toxicity; cholestyramine washout"
+ },
+ {
+  "slide": 73,
+  "title": "Adalimumab (Humira)",
+  "items": [
+   {
+    "text": "DRUG PROFILE",
+    "level": 0,
+    "emphasis": [],
+    "md": "DRUG PROFILE",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "Adalimumab (Humira)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Adalimumab (Humira)",
+    "heading": true,
+    "size": 30.0
+   },
+   {
+    "text": "BIOLOGIC DMARD (TNF INHIBITOR)",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "BIOLOGIC DMARD (TNF INHIBITOR)",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**BIOLOGIC DMARD (TNF INHIBITOR)**",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "FORMULATION",
+    "level": 0,
+    "emphasis": [],
+    "md": "FORMULATION",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "DOSE (ADULT)",
+    "level": 0,
+    "emphasis": [],
+    "md": "DOSE (ADULT)",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "INDICATIONS",
+    "level": 0,
+    "emphasis": [],
+    "md": "INDICATIONS",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "Prefilled syringe or pen 40 mg/0.8 mL",
+    "level": 0,
+    "emphasis": [],
+    "md": "Prefilled syringe or pen 40 mg/0.8 mL",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "40 mg SC every other week (weekly for some patients)",
+    "level": 0,
+    "emphasis": [],
+    "md": "40 mg SC every other week (weekly for some patients)",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Rheumatoid arthritis, psoriatic arthritis, ankylosing spondylitis, Crohn disease",
+    "level": 0,
+    "emphasis": [],
+    "md": "Rheumatoid arthritis, psoriatic arthritis, ankylosing spondylitis, Crohn disease",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "ADVERSE EFFECTS",
+    "level": 0,
+    "emphasis": [],
+    "md": "ADVERSE EFFECTS",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "CONTRAINDICATIONS",
+    "level": 0,
+    "emphasis": [],
+    "md": "CONTRAINDICATIONS",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "TOXICITY / OVERDOSE",
+    "level": 0,
+    "emphasis": [],
+    "md": "TOXICITY / OVERDOSE",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "Injection-site reaction, infection, headache, rash, demyelination (rare), lymphoma (rare)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Injection-site reaction, infection, headache, rash, demyelination (rare), lymphoma (rare)",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Active serious infection, untreated latent TB, demyelinating disease, NYHA III-IV heart failure",
+    "level": 0,
+    "emphasis": [],
+    "md": "Active serious infection, untreated latent TB, demyelinating disease, NYHA III-IV heart failure",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Boxed warning for serious infections and malignancy; screen for TB and hepatitis B before starting",
+    "level": 0,
+    "emphasis": [],
+    "md": "Boxed warning for serious infections and malignancy; screen for TB and hepatitis B before starting",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Standard adult dosing for teaching; verify against current prescribing information.**",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": "Adalimumab (Humira)|Biologic DMARD (TNF inhibitor)|Prefilled syringe or pen 40 mg/0.8 mL|40 mg SC every other week (weekly for some patients)|Rheumatoid arthritis, psoriatic arthritis, ankylosing spondylitis, Crohn disease|Injection-site reaction, infection, headache, rash, demyelination (rare), lymphoma (rare)|Active serious infection, untreated latent TB, demyelinating disease, NYHA III-IV heart failure|Boxed warning for serious infections and malignancy; screen for TB and hepatitis B before starting"
+ },
+ {
+  "slide": 74,
+  "title": "Etanercept (Enbrel)",
+  "items": [
+   {
+    "text": "DRUG PROFILE",
+    "level": 0,
+    "emphasis": [],
+    "md": "DRUG PROFILE",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "Etanercept (Enbrel)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Etanercept (Enbrel)",
+    "heading": true,
+    "size": 30.0
+   },
+   {
+    "text": "BIOLOGIC DMARD (SOLUBLE TNF RECEPTOR)",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "BIOLOGIC DMARD (SOLUBLE TNF RECEPTOR)",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**BIOLOGIC DMARD (SOLUBLE TNF RECEPTOR)**",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "FORMULATION",
+    "level": 0,
+    "emphasis": [],
+    "md": "FORMULATION",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "DOSE (ADULT)",
+    "level": 0,
+    "emphasis": [],
+    "md": "DOSE (ADULT)",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "INDICATIONS",
+    "level": 0,
+    "emphasis": [],
+    "md": "INDICATIONS",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "Prefilled syringe or pen 25/50 mg; vial",
+    "level": 0,
+    "emphasis": [],
+    "md": "Prefilled syringe or pen 25/50 mg; vial",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "50 mg SC once weekly (or 25 mg twice weekly)",
+    "level": 0,
+    "emphasis": [],
+    "md": "50 mg SC once weekly (or 25 mg twice weekly)",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Rheumatoid arthritis, psoriatic arthritis, ankylosing spondylitis, plaque psoriasis",
+    "level": 0,
+    "emphasis": [],
+    "md": "Rheumatoid arthritis, psoriatic arthritis, ankylosing spondylitis, plaque psoriasis",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "ADVERSE EFFECTS",
+    "level": 0,
+    "emphasis": [],
+    "md": "ADVERSE EFFECTS",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "CONTRAINDICATIONS",
+    "level": 0,
+    "emphasis": [],
+    "md": "CONTRAINDICATIONS",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "TOXICITY / OVERDOSE",
+    "level": 0,
+    "emphasis": [],
+    "md": "TOXICITY / OVERDOSE",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "Injection-site reaction, infection, headache, demyelination (rare)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Injection-site reaction, infection, headache, demyelination (rare)",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Active serious infection, sepsis, untreated latent TB",
+    "level": 0,
+    "emphasis": [],
+    "md": "Active serious infection, sepsis, untreated latent TB",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Boxed warning for serious infections and malignancy; screen for TB and hepatitis B",
+    "level": 0,
+    "emphasis": [],
+    "md": "Boxed warning for serious infections and malignancy; screen for TB and hepatitis B",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Standard adult dosing for teaching; verify against current prescribing information.**",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": "Etanercept (Enbrel)|Biologic DMARD (soluble TNF receptor)|Prefilled syringe or pen 25/50 mg; vial|50 mg SC once weekly (or 25 mg twice weekly)|Rheumatoid arthritis, psoriatic arthritis, ankylosing spondylitis, plaque psoriasis|Injection-site reaction, infection, headache, demyelination (rare)|Active serious infection, sepsis, untreated latent TB|Boxed warning for serious infections and malignancy; screen for TB and hepatitis B"
+ },
+ {
+  "slide": 75,
+  "title": "Infliximab (Remicade)",
+  "items": [
+   {
+    "text": "DRUG PROFILE",
+    "level": 0,
+    "emphasis": [],
+    "md": "DRUG PROFILE",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "Infliximab (Remicade)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Infliximab (Remicade)",
+    "heading": true,
+    "size": 30.0
+   },
+   {
+    "text": "BIOLOGIC DMARD (CHIMERIC TNF ANTIBODY)",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "BIOLOGIC DMARD (CHIMERIC TNF ANTIBODY)",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**BIOLOGIC DMARD (CHIMERIC TNF ANTIBODY)**",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "FORMULATION",
+    "level": 0,
+    "emphasis": [],
+    "md": "FORMULATION",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "DOSE (ADULT)",
+    "level": 0,
+    "emphasis": [],
+    "md": "DOSE (ADULT)",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "INDICATIONS",
+    "level": 0,
+    "emphasis": [],
+    "md": "INDICATIONS",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "IV vial 100 mg; biosimilars",
+    "level": 0,
+    "emphasis": [],
+    "md": "IV vial 100 mg; biosimilars",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "3 mg/kg IV at weeks 0, 2 and 6, then every 8 weeks, with methotrexate",
+    "level": 0,
+    "emphasis": [],
+    "md": "3 mg/kg IV at weeks 0, 2 and 6, then every 8 weeks, with methotrexate",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Rheumatoid arthritis, Crohn disease, ulcerative colitis, ankylosing spondylitis",
+    "level": 0,
+    "emphasis": [],
+    "md": "Rheumatoid arthritis, Crohn disease, ulcerative colitis, ankylosing spondylitis",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "ADVERSE EFFECTS",
+    "level": 0,
+    "emphasis": [],
+    "md": "ADVERSE EFFECTS",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "CONTRAINDICATIONS",
+    "level": 0,
+    "emphasis": [],
+    "md": "CONTRAINDICATIONS",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "TOXICITY / OVERDOSE",
+    "level": 0,
+    "emphasis": [],
+    "md": "TOXICITY / OVERDOSE",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "Infusion reaction, infection, headache, anti-drug antibodies, hepatotoxicity",
+    "level": 0,
+    "emphasis": [],
+    "md": "Infusion reaction, infection, headache, anti-drug antibodies, hepatotoxicity",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Active serious infection, untreated latent TB, NYHA III-IV heart failure at high dose",
+    "level": 0,
+    "emphasis": [],
+    "md": "Active serious infection, untreated latent TB, NYHA III-IV heart failure at high dose",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Boxed warning for serious infections and malignancy; infusion reactions treated by slowing or stopping",
+    "level": 0,
+    "emphasis": [],
+    "md": "Boxed warning for serious infections and malignancy; infusion reactions treated by slowing or stopping",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Standard adult dosing for teaching; verify against current prescribing information.**",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": "Infliximab (Remicade)|Biologic DMARD (chimeric TNF antibody)|IV vial 100 mg; biosimilars|3 mg/kg IV at weeks 0, 2 and 6, then every 8 weeks, with methotrexate|Rheumatoid arthritis, Crohn disease, ulcerative colitis, ankylosing spondylitis|Infusion reaction, infection, headache, anti-drug antibodies, hepatotoxicity|Active serious infection, untreated latent TB, NYHA III-IV heart failure at high dose|Boxed warning for serious infections and malignancy; infusion reactions treated by slowing or stopping"
+ },
+ {
+  "slide": 76,
+  "title": "Tocilizumab (Actemra)",
+  "items": [
+   {
+    "text": "DRUG PROFILE",
+    "level": 0,
+    "emphasis": [],
+    "md": "DRUG PROFILE",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "Tocilizumab (Actemra)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Tocilizumab (Actemra)",
+    "heading": true,
+    "size": 30.0
+   },
+   {
+    "text": "BIOLOGIC DMARD (IL-6 RECEPTOR ANTAGONIST)",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "BIOLOGIC DMARD (IL-6 RECEPTOR ANTAGONIST)",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**BIOLOGIC DMARD (IL-6 RECEPTOR ANTAGONIST)**",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "FORMULATION",
+    "level": 0,
+    "emphasis": [],
+    "md": "FORMULATION",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "DOSE (ADULT)",
+    "level": 0,
+    "emphasis": [],
+    "md": "DOSE (ADULT)",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "INDICATIONS",
+    "level": 0,
+    "emphasis": [],
+    "md": "INDICATIONS",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "IV 20 mg/mL; SC prefilled syringe or pen 162 mg",
+    "level": 0,
+    "emphasis": [],
+    "md": "IV 20 mg/mL; SC prefilled syringe or pen 162 mg",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "IV 4-8 mg/kg every 4 weeks; SC 162 mg every other week to weekly",
+    "level": 0,
+    "emphasis": [],
+    "md": "IV 4-8 mg/kg every 4 weeks; SC 162 mg every other week to weekly",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Rheumatoid arthritis, giant cell arteritis, systemic JIA",
+    "level": 0,
+    "emphasis": [],
+    "md": "Rheumatoid arthritis, giant cell arteritis, systemic JIA",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "ADVERSE EFFECTS",
+    "level": 0,
+    "emphasis": [],
+    "md": "ADVERSE EFFECTS",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "CONTRAINDICATIONS",
+    "level": 0,
+    "emphasis": [],
+    "md": "CONTRAINDICATIONS",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "TOXICITY / OVERDOSE",
+    "level": 0,
+    "emphasis": [],
+    "md": "TOXICITY / OVERDOSE",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "Infection, elevated liver enzymes, neutropenia, hyperlipidemia, GI perforation (rare)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Infection, elevated liver enzymes, neutropenia, hyperlipidemia, GI perforation (rare)",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Active serious infection, untreated latent TB; caution with diverticulitis",
+    "level": 0,
+    "emphasis": [],
+    "md": "Active serious infection, untreated latent TB; caution with diverticulitis",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Boxed warning for serious infections; monitor CBC, liver enzymes and lipids",
+    "level": 0,
+    "emphasis": [],
+    "md": "Boxed warning for serious infections; monitor CBC, liver enzymes and lipids",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Standard adult dosing for teaching; verify against current prescribing information.**",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": "Tocilizumab (Actemra)|Biologic DMARD (IL-6 receptor antagonist)|IV 20 mg/mL; SC prefilled syringe or pen 162 mg|IV 4-8 mg/kg every 4 weeks; SC 162 mg every other week to weekly|Rheumatoid arthritis, giant cell arteritis, systemic JIA|Infection, elevated liver enzymes, neutropenia, hyperlipidemia, GI perforation (rare)|Active serious infection, untreated latent TB; caution with diverticulitis|Boxed warning for serious infections; monitor CBC, liver enzymes and lipids"
+ },
+ {
+  "slide": 77,
+  "title": "Abatacept (Orencia)",
+  "items": [
+   {
+    "text": "DRUG PROFILE",
+    "level": 0,
+    "emphasis": [],
+    "md": "DRUG PROFILE",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "Abatacept (Orencia)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Abatacept (Orencia)",
+    "heading": true,
+    "size": 30.0
+   },
+   {
+    "text": "BIOLOGIC DMARD (T-CELL COSTIMULATION MODULATOR)",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "BIOLOGIC DMARD (T-CELL COSTIMULATION MODULATOR)",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**BIOLOGIC DMARD (T-CELL COSTIMULATION MODULATOR)**",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "FORMULATION",
+    "level": 0,
+    "emphasis": [],
+    "md": "FORMULATION",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "DOSE (ADULT)",
+    "level": 0,
+    "emphasis": [],
+    "md": "DOSE (ADULT)",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "INDICATIONS",
+    "level": 0,
+    "emphasis": [],
+    "md": "INDICATIONS",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "IV 250 mg vial; SC prefilled syringe 125 mg",
+    "level": 0,
+    "emphasis": [],
+    "md": "IV 250 mg vial; SC prefilled syringe 125 mg",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "IV by weight (500-1,000 mg) at weeks 0, 2, 4 then every 4 weeks; SC 125 mg weekly",
+    "level": 0,
+    "emphasis": [],
+    "md": "IV by weight (500-1,000 mg) at weeks 0, 2, 4 then every 4 weeks; SC 125 mg weekly",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Rheumatoid arthritis, psoriatic arthritis, polyarticular JIA",
+    "level": 0,
+    "emphasis": [],
+    "md": "Rheumatoid arthritis, psoriatic arthritis, polyarticular JIA",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "ADVERSE EFFECTS",
+    "level": 0,
+    "emphasis": [],
+    "md": "ADVERSE EFFECTS",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "CONTRAINDICATIONS",
+    "level": 0,
+    "emphasis": [],
+    "md": "CONTRAINDICATIONS",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "TOXICITY / OVERDOSE",
+    "level": 0,
+    "emphasis": [],
+    "md": "TOXICITY / OVERDOSE",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "Headache, infection, nasopharyngitis, infusion reaction",
+    "level": 0,
+    "emphasis": [],
+    "md": "Headache, infection, nasopharyngitis, infusion reaction",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Active serious infection; caution in COPD",
+    "level": 0,
+    "emphasis": [],
+    "md": "Active serious infection; caution in COPD",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Infection risk; do not combine with TNF inhibitors; screen for TB and hepatitis B",
+    "level": 0,
+    "emphasis": [],
+    "md": "Infection risk; do not combine with TNF inhibitors; screen for TB and hepatitis B",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Standard adult dosing for teaching; verify against current prescribing information.**",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": "Abatacept (Orencia)|Biologic DMARD (T-cell costimulation modulator)|IV 250 mg vial; SC prefilled syringe 125 mg|IV by weight (500-1,000 mg) at weeks 0, 2, 4 then every 4 weeks; SC 125 mg weekly|Rheumatoid arthritis, psoriatic arthritis, polyarticular JIA|Headache, infection, nasopharyngitis, infusion reaction|Active serious infection; caution in COPD|Infection risk; do not combine with TNF inhibitors; screen for TB and hepatitis B"
+ },
+ {
+  "slide": 78,
+  "title": "Rituximab (Rituxan)",
+  "items": [
+   {
+    "text": "DRUG PROFILE",
+    "level": 0,
+    "emphasis": [],
+    "md": "DRUG PROFILE",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "Rituximab (Rituxan)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Rituximab (Rituxan)",
+    "heading": true,
+    "size": 30.0
+   },
+   {
+    "text": "BIOLOGIC DMARD (ANTI-CD20 ANTIBODY)",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "BIOLOGIC DMARD (ANTI-CD20 ANTIBODY)",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**BIOLOGIC DMARD (ANTI-CD20 ANTIBODY)**",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "FORMULATION",
+    "level": 0,
+    "emphasis": [],
+    "md": "FORMULATION",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "DOSE (ADULT)",
+    "level": 0,
+    "emphasis": [],
+    "md": "DOSE (ADULT)",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "INDICATIONS",
+    "level": 0,
+    "emphasis": [],
+    "md": "INDICATIONS",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "IV 100/500 mg vials",
+    "level": 0,
+    "emphasis": [],
+    "md": "IV 100/500 mg vials",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "1,000 mg IV on days 1 and 15, repeated no sooner than every 16-24 weeks, with methotrexate",
+    "level": 0,
+    "emphasis": [],
+    "md": "1,000 mg IV on days 1 and 15, repeated no sooner than every 16-24 weeks, with methotrexate",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Rheumatoid arthritis (after TNF inhibitor failure), lymphoma, vasculitis",
+    "level": 0,
+    "emphasis": [],
+    "md": "Rheumatoid arthritis (after TNF inhibitor failure), lymphoma, vasculitis",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "ADVERSE EFFECTS",
+    "level": 0,
+    "emphasis": [],
+    "md": "ADVERSE EFFECTS",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "CONTRAINDICATIONS",
+    "level": 0,
+    "emphasis": [],
+    "md": "CONTRAINDICATIONS",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "TOXICITY / OVERDOSE",
+    "level": 0,
+    "emphasis": [],
+    "md": "TOXICITY / OVERDOSE",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "Infusion reaction, infection, hypogammaglobulinemia, hepatitis B reactivation",
+    "level": 0,
+    "emphasis": [],
+    "md": "Infusion reaction, infection, hypogammaglobulinemia, hepatitis B reactivation",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Active serious infection, severe heart failure; screen hepatitis B first",
+    "level": 0,
+    "emphasis": [],
+    "md": "Active serious infection, severe heart failure; screen hepatitis B first",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Boxed warnings for infusion reactions, hepatitis B reactivation and PML; premedicate with acetaminophen, antihistamine and steroid",
+    "level": 0,
+    "emphasis": [],
+    "md": "Boxed warnings for infusion reactions, hepatitis B reactivation and PML; premedicate with acetaminophen, antihistamine and steroid",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Standard adult dosing for teaching; verify against current prescribing information.**",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": "Rituximab (Rituxan)|Biologic DMARD (anti-CD20 antibody)|IV 100/500 mg vials|1,000 mg IV on days 1 and 15, repeated no sooner than every 16-24 weeks, with methotrexate|Rheumatoid arthritis (after TNF inhibitor failure), lymphoma, vasculitis|Infusion reaction, infection, hypogammaglobulinemia, hepatitis B reactivation|Active serious infection, severe heart failure; screen hepatitis B first|Boxed warnings for infusion reactions, hepatitis B reactivation and PML; premedicate with acetaminophen, antihistamine and steroid"
+ },
+ {
+  "slide": 79,
+  "title": "Supporting Drugs at a Glance",
+  "items": [
+   {
+    "text": "CONTEXT",
+    "level": 0,
+    "emphasis": [],
+    "md": "CONTEXT",
+    "heading": true,
+    "size": 11.0
+   },
+   {
+    "text": "Supporting Drugs at a Glance",
+    "level": 0,
+    "emphasis": [],
+    "md": "Supporting Drugs at a Glance",
+    "heading": true,
+    "size": 30.0
+   },
+   {
+    "text": "PPIs and misoprostol",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "PPIs and misoprostol",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**PPIs and misoprostol**",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Warfarin and anticoagulants",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Warfarin and anticoagulants",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Warfarin and anticoagulants**",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "ACE inhibitors, ARBs and diuretics",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "ACE inhibitors, ARBs and diuretics",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**ACE inhibitors, ARBs and diuretics**",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "GI protection with long-term NSAIDs",
+    "level": 0,
+    "emphasis": [],
+    "md": "GI protection with long-term NSAIDs",
+    "heading": false,
+    "size": 11.0
+   },
+   {
+    "text": "NSAIDs raise bleeding risk",
+    "level": 0,
+    "emphasis": [],
+    "md": "NSAIDs raise bleeding risk",
+    "heading": false,
+    "size": 11.0
+   },
+   {
+    "text": "NSAIDs add kidney injury (\"triple whammy\")",
+    "level": 0,
+    "emphasis": [],
+    "md": "NSAIDs add kidney injury (\"triple whammy\")",
+    "heading": false,
+    "size": 11.0
+   },
+   {
+    "text": "Lithium",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Lithium",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Lithium**",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Systemic corticosteroids",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Systemic corticosteroids",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Systemic corticosteroids**",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Folic acid and leucovorin",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Folic acid and leucovorin",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Folic acid and leucovorin**",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "NSAIDs raise lithium levels",
+    "level": 0,
+    "emphasis": [],
+    "md": "NSAIDs raise lithium levels",
+    "heading": false,
+    "size": 11.0
+   },
+   {
+    "text": "Flare bridge; bone loss and GI risk with NSAIDs",
+    "level": 0,
+    "emphasis": [],
+    "md": "Flare bridge; bone loss and GI risk with NSAIDs",
+    "heading": false,
+    "size": 11.0
+   },
+   {
+    "text": "Lower methotrexate toxicity",
+    "level": 0,
+    "emphasis": [],
+    "md": "Lower methotrexate toxicity",
+    "heading": false,
+    "size": 11.0
+   },
+   {
+    "text": "Isoniazid and rifampin",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Isoniazid and rifampin",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Isoniazid and rifampin**",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Tramadol and opioids",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Tramadol and opioids",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Tramadol and opioids**",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Live vaccines",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Live vaccines",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Live vaccines**",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Latent TB treatment before biologics",
+    "level": 0,
+    "emphasis": [],
+    "md": "Latent TB treatment before biologics",
+    "heading": false,
+    "size": 11.0
+   },
+   {
+    "text": "Add-on analgesia for osteoarthritis",
+    "level": 0,
+    "emphasis": [],
+    "md": "Add-on analgesia for osteoarthritis",
+    "heading": false,
+    "size": 11.0
+   },
+   {
+    "text": "Avoid on biologic or immunosuppressive therapy",
+    "level": 0,
+    "emphasis": [],
+    "md": "Avoid on biologic or immunosuppressive therapy",
+    "heading": false,
+    "size": 11.0
+   },
+   {
+    "text": "Listed for context; not profiled in detail.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Listed for context; not profiled in detail.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Listed for context; not profiled in detail.**",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": "Supporting drugs: PPIs, warfarin, ACE inhibitors, lithium, steroids and live vaccines explain interactions."
+ },
+ {
+  "slide": 80,
   "title": "Image Attribution",
   "items": [
    {
@@ -5565,6 +8314,6 @@
   "tables": [],
   "images": 1,
   "figures": [],
-  "notes": "This slide documents AI-tool use for original figure generation per university citation requirements. It covers every original diagram in this deck (Figures 1–3); none are reproduced from any textbook."
+  "notes": "This slide documents AI-tool use for original figure generation per university citation requirements. It covers every original diagram in this deck (Figures 1–3); none are reproduced from any textbook.\n\nInstructor script:\n\nPoint to the attribution: Figures 1–3 are original diagrams made with AI tools, not reproduced from any textbook."
  }
 ]

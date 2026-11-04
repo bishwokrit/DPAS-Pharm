@@ -1,7 +1,7 @@
 {
  "lecture": "L05",
  "passed": true,
- "units_checked": 2540,
+ "units_checked": 2609,
  "missing": [],
  "uncited": [
   {
@@ -30,134 +30,419 @@
    "kind": "speaker note"
   },
   {
-   "ref": "S11",
+   "ref": "S9",
+   "text": "Based on Figure 1, why do PPIs achieve more complete acid suppression than H2 receptor antagonists?",
+   "kind": "slide"
+  },
+  {
+   "ref": "S9",
+   "text": "PPIs block the final common pathway (the proton pump itself), so they work regardless of which upstream signal is driving acid secretion",
+   "kind": "slide"
+  },
+  {
+   "ref": "S9",
+   "text": "PPIs block only the gastrin pathway, which is the strongest stimulus",
+   "kind": "slide"
+  },
+  {
+   "ref": "S9",
+   "text": "H2RAs block the proton pump directly, while PPIs act upstream",
+   "kind": "slide"
+  },
+  {
+   "ref": "S9",
+   "text": "There is no mechanistic difference between the two classes",
+   "kind": "slide"
+  },
+  {
+   "ref": "S9",
+   "text": "Quick check: Give 30 seconds.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S10",
+   "text": "PPIs block the final common pathway itself, regardless of which upstream signal drove it.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S10",
+   "text": "Why:  H2RAs block only one of three inputs to the parietal cell (histamine), so gastrin and acetylcholine can still drive acid secretion. PPIs irreversibly inhibit the H⁺/K⁺-ATPase proton pump — the single convergence point for all three signals — producing more complete and longer-lasting acid suppression.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S10",
+   "text": "Answer A: PPIs block the final common pathway regardless of which signal drove it.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S13",
    "text": "Cimetidine — effective, but a potent CYP450 inhibitor (ties back to the drug-metabolism concepts from Lecture 1) and carries antiandrogenic effects (gynecomastia) with prolonged use.",
    "kind": "slide"
   },
   {
-   "ref": "S11",
+   "ref": "S13",
    "text": "Less pump activity",
    "kind": "slide"
   },
   {
-   "ref": "S14",
+   "ref": "S16",
    "text": "The pump stays off until the cell makes new pumps.",
    "kind": "speaker note"
   },
   {
-   "ref": "S16",
-   "text": "Misoprostol’s pregnancy contraindication is a must-know, high-stakes safety point — this is also the drug’s other well-known clinical use (labor induction/medical abortion), so the mechanism-to-contraindication link should feel obvious once stated.",
-   "kind": "speaker note"
-  },
-  {
-   "ref": "S16",
-   "text": "Misoprostol: contraindicated in pregnancy because it causes uterine contractions.",
-   "kind": "speaker note"
-  },
-  {
-   "ref": "S17",
-   "text": "Gastric lumen (acid)",
+   "ref": "S18",
+   "text": "A patient taking clopidogrel after a cardiac stent is started on omeprazole for GERD. What is the primary concern with this combination?",
    "kind": "slide"
   },
   {
    "ref": "S18",
-   "text": "pylori eradication, which combines several of these agents together.",
+   "text": "Omeprazole increases clopidogrel absorption, raising bleeding risk",
+   "kind": "slide"
+  },
+  {
+   "ref": "S18",
+   "text": "There is no clinically relevant interaction between these two drugs",
+   "kind": "slide"
+  },
+  {
+   "ref": "S18",
+   "text": "Omeprazole should never be combined with any cardiac medication",
+   "kind": "slide"
+  },
+  {
+   "ref": "S18",
+   "text": "Quick check: Omeprazole plus clopidogrel.",
    "kind": "speaker note"
   },
   {
    "ref": "S19",
-   "text": "Multi-drug regimens like this are a classic source of adherence problems — worth pausing to ask students what patient-counseling points would most improve completion of a 10–14 day, 3–4 drug regimen.",
+   "text": "Omeprazole may reduce CYP2C19-mediated activation of clopidogrel.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S19",
+   "text": "Why:  Clopidogrel is a prodrug that requires CYP2C19 activation. Omeprazole inhibits CYP2C19, which can reduce clopidogrel’s active metabolite and blunt its antiplatelet effect — a clinically important interaction, especially soon after stent placement.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S19",
+   "text": "Answer A: omeprazole may reduce CYP2C19-mediated activation of clopidogrel.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S19",
+   "text": "If a PPI is needed, pantoprazole is the usual choice.",
    "kind": "speaker note"
   },
   {
    "ref": "S20",
+   "text": "Misoprostol’s pregnancy contraindication is a must-know, high-stakes safety point — this is also the drug’s other well-known clinical use (labor induction/medical abortion), so the mechanism-to-contraindication link should feel obvious once stated.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S20",
+   "text": "Misoprostol: contraindicated in pregnancy because it causes uterine contractions.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S21",
+   "text": "Gastric lumen (acid)",
+   "kind": "slide"
+  },
+  {
+   "ref": "S22",
+   "text": "pylori eradication, which combines several of these agents together.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S23",
+   "text": "Multi-drug regimens like this are a classic source of adherence problems — worth pausing to ask students what patient-counseling points would most improve completion of a 10–14 day, 3–4 drug regimen.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S24",
    "text": "Metronidazole adds another mechanism.",
    "kind": "speaker note"
   },
   {
-   "ref": "S22",
-   "text": "-prazole Proton pump inhibitors Omeprazole, esomeprazole, pantoprazole, lansoprazole Irreversibly block H+/K+ ATPase Stem Drug class Examples Key point",
-   "kind": "slide table"
-  },
-  {
-   "ref": "S22",
-   "text": "-prostol Prostaglandin analogs Misoprostol PGE1 analog; protects the mucosa Stem Drug class Examples Key point",
-   "kind": "slide table"
-  },
-  {
-   "ref": "S22",
-   "text": "None shared Mucosal protectants Sucralfate, bismuth subsalicylate Name does not reveal the class Stem Drug class Examples Key point",
-   "kind": "slide table"
-  },
-  {
-   "ref": "S26",
-   "text": "Antihistamines and scopolamine",
+   "ref": "S27",
+   "text": "Is there any possibility of pregnancy?",
    "kind": "slide"
   },
   {
-   "ref": "S26",
-   "text": "Do not duplicate the same mechanism.",
+   "ref": "S27",
+   "text": "Why:  Misoprostol is a potent uterotonic and is contraindicated in pregnancy due to abortifacient risk — pregnancy status must be ruled out (and reliable contraception confirmed) before starting therapy.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S27",
+   "text": "Answer B: ask about possible pregnancy.",
    "kind": "speaker note"
   },
   {
    "ref": "S28",
+   "text": "-prazole Proton pump inhibitors Omeprazole, esomeprazole, pantoprazole, lansoprazole Irreversibly block H+/K+ ATPase Stem Drug class Examples Key point",
+   "kind": "slide table"
+  },
+  {
+   "ref": "S28",
+   "text": "-prostol Prostaglandin analogs Misoprostol PGE1 analog; protects the mucosa Stem Drug class Examples Key point",
+   "kind": "slide table"
+  },
+  {
+   "ref": "S28",
+   "text": "None shared Mucosal protectants Sucralfate, bismuth subsalicylate Name does not reveal the class Stem Drug class Examples Key point",
+   "kind": "slide table"
+  },
+  {
+   "ref": "S32",
+   "text": "Antihistamines and scopolamine",
+   "kind": "slide"
+  },
+  {
+   "ref": "S32",
+   "text": "Do not duplicate the same mechanism.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S34",
+   "text": "A patient with motion sickness needs prophylaxis before a cruise. Based on Figure 9, which drug class targets the pathway most relevant to this cause of nausea?",
+   "kind": "slide"
+  },
+  {
+   "ref": "S34",
+   "text": "H1 / M1 antagonists (e.g., meclizine, scopolamine) — targeting the vestibular system",
+   "kind": "slide"
+  },
+  {
+   "ref": "S34",
+   "text": "5-HT3 antagonists (e.g., ondansetron) — targeting gut/chemo input",
+   "kind": "slide"
+  },
+  {
+   "ref": "S34",
+   "text": "NK1 antagonists (e.g., aprepitant) — targeting the CTZ",
+   "kind": "slide"
+  },
+  {
+   "ref": "S34",
+   "text": "D2 antagonists (e.g., metoclopramide) — targeting the CTZ",
+   "kind": "slide"
+  },
+  {
+   "ref": "S35",
+   "text": "H1 / M1 antagonists (meclizine, scopolamine) — targeting the vestibular system.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S35",
+   "text": "Why:  Motion sickness is driven primarily by vestibular system input, which signals through histamine (H1) and muscarinic (M1) receptors — exactly the pathway meclizine and scopolamine block in Figure 9. The other classes target gut/chemo (5-HT3) or CTZ (D2, NK1) inputs, which are not the primary driver here.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S35",
+   "text": "Answer A: H1/M1 antagonists such as meclizine and scopolamine.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S36",
    "text": "Metoclopramide’s boxed warning is one of the highest-yield patient-safety facts in this whole session — many students only remember \"it helps nausea\" without knowing why duration of use matters so much.",
    "kind": "speaker note"
   },
   {
-   "ref": "S29",
+   "ref": "S37",
    "text": "Less nausea and vomiting",
    "kind": "slide"
   },
   {
-   "ref": "S30",
+   "ref": "S38",
    "text": "This is a good moment to flag that cannabinoid pharmacology is an expanding area in the newest edition of Katzung — worth a brief mention that this mechanism class is distinct from everything else in this lecture.",
    "kind": "speaker note"
   },
   {
-   "ref": "S31",
+   "ref": "S39",
    "text": "They also stimulate appetite.",
    "kind": "speaker note"
   },
   {
-   "ref": "S32",
+   "ref": "S40",
    "text": "Use this to connect back to the Nutrition half of the unit (pyridoxine is a vitamin) — a preview of the Session 2 material on vitamins and supplements.",
    "kind": "speaker note"
   },
   {
-   "ref": "S34",
+   "ref": "S42",
+   "text": "Tardive dyskinesia.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S42",
+   "text": "Why:  Metoclopramide carries a boxed warning for tardive dyskinesia, with risk increasing with duration of use and cumulative dose — therapy should generally be limited to the shortest effective duration (typically no more than 12 weeks).",
+   "kind": "slide"
+  },
+  {
+   "ref": "S42",
+   "text": "Answer B: tardive dyskinesia.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S44",
    "text": "pylori needs multiple drugs.",
    "kind": "speaker note"
   },
   {
-   "ref": "S34",
+   "ref": "S44",
    "text": "Antiemetics follow receptor systems.",
    "kind": "speaker note"
   },
   {
-   "ref": "S35",
+   "ref": "S45",
    "text": "Formulation, dose, indications, adverse effects, contraindications and toxicity for each drug in this lecture",
    "kind": "slide"
   },
   {
+   "ref": "S46",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S47",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S48",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
    "ref": "S49",
-   "text": "Strength/recommended dose: H.",
-   "kind": "speaker note"
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
   },
   {
    "ref": "S50",
-   "text": "Strength/recommended dose: H.",
-   "kind": "speaker note"
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
   },
   {
    "ref": "S51",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S52",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S53",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S54",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S55",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S56",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S57",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S58",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S59",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S59",
    "text": "Strength/recommended dose: H.",
    "kind": "speaker note"
   },
   {
-   "ref": "S52",
+   "ref": "S60",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S60",
    "text": "Strength/recommended dose: H.",
    "kind": "speaker note"
+  },
+  {
+   "ref": "S61",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S61",
+   "text": "Strength/recommended dose: H.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S62",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S62",
+   "text": "Strength/recommended dose: H.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S63",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S64",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S65",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S66",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S67",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S68",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S69",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S70",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
   },
   {
    "ref": "SG:U3-R3",
@@ -239,139 +524,151 @@
    "reason": "teaching instruction"
   },
   {
-   "ref": "S9",
+   "ref": "S11",
    "text": "Section transition.",
    "kind": "speaker note",
    "reason": "section divider"
   },
   {
-   "ref": "S9",
+   "ref": "S11",
    "text": "Section 02: Antisecretory and mucosal-protective agents (slides 11-28).",
    "kind": "speaker note",
    "reason": "section divider"
   },
   {
-   "ref": "S15",
+   "ref": "S17",
    "text": "This is the quantified version of the mechanistic point just made — more complete blockade (Figure 1) translates into both higher potency and longer duration here.",
    "kind": "speaker note",
    "reason": "teaching instruction; Figure 4 caption covers it"
   },
   {
-   "ref": "S15",
+   "ref": "S17",
    "text": "Figure 4: Remind the class that the bars are illustrative relative values, not trial data.",
    "kind": "speaker note",
    "reason": "teaching instruction; the caption says the values are illustrative"
   },
   {
-   "ref": "S18",
+   "ref": "S22",
    "text": "Use this table as the organizing summary before moving into H.",
    "kind": "speaker note",
    "reason": "teaching instruction"
   },
   {
-   "ref": "S18",
+   "ref": "S22",
    "text": "Slide at a glance: Read across the table row by row.",
    "kind": "speaker note",
    "reason": "teaching instruction"
   },
   {
-   "ref": "S18",
+   "ref": "S22",
    "text": "This is a good review point.",
    "kind": "speaker note",
    "reason": "teaching instruction"
   },
   {
-   "ref": "S21",
+   "ref": "S25",
    "text": "This vignette forces students to apply two separate exclusion criteria at once — a good checkpoint for whether the regimen differences actually landed.",
    "kind": "speaker note",
    "reason": "teaching instruction"
   },
   {
-   "ref": "S22",
+   "ref": "S26",
+   "text": "Quick check: Misoprostol.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; the quick check is rebuilt as a question"
+  },
+  {
+   "ref": "S28",
    "text": "Drug-name stems: -prazole is a PPI, -tidine is an H2 blocker, -prostol is a prostaglandin analog, -cillin is a penicillin, -thromycin is a macrolide.",
    "kind": "speaker note",
    "reason": "teaching instruction; the stems table covers it"
   },
   {
-   "ref": "S23",
+   "ref": "S29",
    "text": "Section transition.",
    "kind": "speaker note",
    "reason": "section divider"
   },
   {
-   "ref": "S23",
+   "ref": "S29",
    "text": "Section 03: Antiemetics (slides 29-43).",
    "kind": "speaker note",
    "reason": "section divider"
   },
   {
-   "ref": "S24",
+   "ref": "S30",
    "text": "Each class corresponds to a different input feeding the vomiting center — the next slide shows these same four classes as a single mechanism diagram.",
    "kind": "speaker note",
    "reason": "teaching instruction (pointer to the next slide)"
   },
   {
-   "ref": "S24",
+   "ref": "S30",
    "text": "Name the four target groups: 5-HT3, D2, NK1, and H1/M1.",
    "kind": "speaker note",
    "reason": "teaching instruction"
   },
   {
-   "ref": "S27",
+   "ref": "S33",
    "text": "Have students match each generic drug name to its input pathway on this diagram before revealing the labels — this is the single most testable concept in the antiemetic section.",
    "kind": "speaker note",
    "reason": "teaching instruction; the matching is the Figure 9 interactive"
   },
   {
-   "ref": "S32",
+   "ref": "S34",
+   "text": "Quick check.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; the quick check is rebuilt as a question"
+  },
+  {
+   "ref": "S40",
    "text": "First-trimester nausea unresponsive to diet.",
    "kind": "speaker note",
    "reason": "presenter script; the case is rebuilt as a practice question"
   },
   {
-   "ref": "S32",
+   "ref": "S40",
    "text": "Let the class discuss.",
    "kind": "speaker note",
    "reason": "teaching instruction"
   },
   {
-   "ref": "S33",
+   "ref": "S43",
    "text": "Drug-name stems: -setron is a 5-HT3 antagonist, -pitant is an NK1 antagonist, -azine is a phenothiazine, -izine is an H1 antihistamine, -pramide is a benzamide D2 antagonist, -sone is a corticosteroid.",
    "kind": "speaker note",
    "reason": "teaching instruction; the stems table covers it"
   },
   {
-   "ref": "S34",
+   "ref": "S44",
    "text": "Close Session 1 by previewing Session 2 explicitly — students should leave knowing acid-peptic disease and antiemetics are complete, and that laxatives/antidiarrheals, IBD, and nutrition pick up first next time.",
    "kind": "speaker note",
    "reason": "teaching instruction"
   },
   {
-   "ref": "S34",
+   "ref": "S44",
    "text": "Recap: Read the five points.",
    "kind": "speaker note",
    "reason": "teaching instruction; the recap is in the high-yield lists"
   },
   {
-   "ref": "S35",
+   "ref": "S45",
    "text": "Section transition: appendix of drug profiles for the agents in this lecture.",
    "kind": "speaker note",
    "reason": "section divider"
   },
   {
-   "ref": "S61",
+   "ref": "S71",
    "text": "Listed for context; not profiled in detail.",
    "kind": "slide",
    "reason": "slide label (the supporting drugs themselves are in the table)"
   },
   {
-   "ref": "S61",
+   "ref": "S71",
    "text": "Listed for context; not profiled in detail.",
    "kind": "speaker note",
    "reason": "slide label (the supporting drugs themselves are in the table)"
   },
   {
-   "ref": "S62",
+   "ref": "S72",
    "text": "This slide documents AI-tool use for original figure generation per university citation requirements.",
    "kind": "speaker note",
    "reason": "administrative note on AI-tool citation"
@@ -382,16 +679,16 @@
  "layout_problems": [],
  "question_issues": [],
  "question_stats": {
-  "count": 23,
+  "count": 25,
   "letters": {
    "A": 5,
-   "B": 4,
+   "B": 5,
    "C": 5,
    "D": 5,
-   "E": 4
+   "E": 5
   },
-  "vignette": 13,
-  "mechanism": 10
+  "vignette": 14,
+  "mechanism": 11
  },
  "thin_objectives": [
   "SO6: Preview: GI motility disorders, IBD pharmacotherapy, and Nutrition/Dietary Supplements continue in Session 2 (Thursday, November 5). — 0 class(es), 0 facts (Preview only — taught in Session 2 (L06))"

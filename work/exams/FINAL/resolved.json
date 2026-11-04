@@ -361,7 +361,7 @@
   "why_correct": "Penicillin allergy rules out amoxicillin; prior macrolide exposure raises clarithromycin-resistance concern.",
   "takeaway": "Allergy or macrolide history → bismuth quadruple.",
   "discriminator": "Confirm eradication ≥ 4 weeks later, PPI held 2 weeks.",
-  "src": "L05 S19; S20; S21; SG U3-R6",
+  "src": "L05 S23; S24; S25; SG U3-R6",
   "id": "FINAL-036",
   "answer": "D",
   "options": {
@@ -392,8 +392,8 @@
    }
   },
   "link": {
-   "href": "../../L05/index.html#mucosal-protectants-h-pylori-eradication",
-   "label": "Study this: L05 · Part 3 →"
+   "href": "../../L05/index.html#antiemetics",
+   "label": "Study this: L05 · Part 4 →"
   }
  },
  {
@@ -689,7 +689,7 @@
   "why_correct": "Alpha1 blockade at the bladder neck also lowers systemic vascular resistance — orthostasis and a first-dose effect.",
   "takeaway": "Same receptor family as the Unit 5 antihypertensives.",
   "discriminator": "Give the first dose of doxazosin at bedtime.",
-  "src": "L12 S17; S18; S34",
+  "src": "L12 S21; S22; S42",
   "id": "FINAL-087",
   "answer": "E",
   "options": {
@@ -2015,7 +2015,7 @@
   "why_correct": "PPIs work best on actively secreting pumps; dosing 30–60 minutes before the first meal matches peak pump activity.",
   "takeaway": "PPI before breakfast; H2 blocker is the bedtime/nocturnal drug.",
   "discriminator": "PPIs need active pumps; antacids don’t.",
-  "src": "L05 S13; S14",
+  "src": "L05 S15; S16",
   "id": "FINAL-039",
   "answer": "C",
   "options": {
@@ -2046,8 +2046,8 @@
    }
   },
   "link": {
-   "href": "../../L05/index.html#antacids-h2-blockers-proton-pump-inhibitors",
-   "label": "Study this: L05 · Part 2 →"
+   "href": "../../L05/index.html#mucosal-protectants-h-pylori-eradication",
+   "label": "Study this: L05 · Part 3 →"
   }
  },
  {
@@ -2545,7 +2545,7 @@
   "why_correct": "Magnesium laxatives need caution in CKD — magnesium accumulates.",
   "takeaway": "CKD + magnesium → hypermagnesemia.",
   "discriminator": "PEG is first-line for chronic constipation.",
-  "src": "L06 S5; L05 S10",
+  "src": "L06 S5; L05 S12",
   "id": "FINAL-049",
   "answer": "E",
   "options": {
@@ -2810,7 +2810,7 @@
   "why_correct": "5-ARIs block testosterone → DHT: hirsutism/alopecia in Session 1, BPH in Session 2.",
   "takeaway": "Same mechanism, two clinical problems.",
   "discriminator": "PSA halved — double it.",
-  "src": "L11 S15; L12 S19; S30",
+  "src": "L11 S15; L12 S23; S38",
   "id": "FINAL-095",
   "answer": "E",
   "options": {
@@ -2943,7 +2943,7 @@
   "why_correct": "Ondansetron blocks 5-HT3; it can prolong QT; CYP2D6 ultrarapid metabolizers may respond less.",
   "takeaway": "Ondansetron: give before chemotherapy; watch QT.",
   "discriminator": "5-HT3 + NK1 + dexamethasone for high-emetic chemo.",
-  "src": "L05 S25",
+  "src": "L05 S31",
   "id": "FINAL-041",
   "answer": "A",
   "options": {
@@ -3075,7 +3075,7 @@
   "why_correct": "Recent macrolide exposure raises clarithromycin-resistance concern, so bismuth quadruple therapy (PPI + bismuth + metronidazole + tetracycline) is preferred.",
   "takeaway": "Macrolide history, clarithromycin resistance, or penicillin allergy → bismuth quadruple.",
   "discriminator": "Penicillin allergy alone in triple therapy: metronidazole replaces amoxicillin.",
-  "src": "L05 S19; S21; SG U3-R6",
+  "src": "L05 S23; S25; SG U3-R6",
   "id": "FINAL-050",
   "answer": "E",
   "options": {
@@ -3106,8 +3106,8 @@
    }
   },
   "link": {
-   "href": "../../L05/index.html#mucosal-protectants-h-pylori-eradication",
-   "label": "Study this: L05 · Part 3 →"
+   "href": "../../L05/index.html#antiemetics",
+   "label": "Study this: L05 · Part 4 →"
   }
  },
  {
@@ -3402,7 +3402,7 @@
   "why_correct": "Tamoxifen’s endometrial agonism raises hyperplasia/cancer risk; new bleeding warrants prompt evaluation.",
   "takeaway": "Tamoxifen + bleeding = evaluate.",
   "discriminator": "The U6 integrated case pulls Session 1 into Session 2.",
-  "src": "L12 S32; S34; SG U6-S",
+  "src": "L12 S40; S42; SG U6-S",
   "id": "FINAL-085",
   "answer": "C",
   "options": {
@@ -3536,7 +3536,7 @@
   "why_correct": "Motion sickness is vestibular — H1/M1 blockers such as meclizine and scopolamine fit.",
   "takeaway": "Match the drug to the vomiting pathway.",
   "discriminator": "Scopolamine patch: muscarinic blocker.",
-  "src": "L05 S24; S27; SG U3-R7; SG U3-M",
+  "src": "L05 S30; S33; SG U3-R7; SG U3-M",
   "id": "FINAL-048",
   "answer": "D",
   "options": {
@@ -3799,7 +3799,7 @@
   "why_correct": "Mirabegron can raise blood pressure — monitor in uncontrolled hypertension; it also inhibits CYP2D6.",
   "takeaway": "Mirabegron: no anticholinergic burden, but watch BP.",
   "discriminator": "Can combine with an antimuscarinic for refractory OAB.",
-  "src": "L12 S13; S40",
+  "src": "L12 S15; S48",
   "id": "FINAL-090",
   "answer": "C",
   "options": {
@@ -4456,7 +4456,7 @@
   "why_correct": "Nitrates and PDE5 inhibitors both raise NO/cGMP; together, life-threatening hypotension — an absolute contraindication.",
   "takeaway": "Nitrate + -afil = never.",
   "discriminator": "Riociguat is also contraindicated with PDE5 inhibitors.",
-  "src": "L12 S22; S24; S25; SG U6-R16",
+  "src": "L12 S26; S28; S29; SG U6-R16",
   "id": "FINAL-099",
   "answer": "B",
   "options": {
@@ -4487,8 +4487,8 @@
    }
   },
   "link": {
-   "href": "../../L12/index.html#bph-erectile-dysfunction-pde5-inhibitors",
-   "label": "Study this: L12 · Part 3 →"
+   "href": "../../L12/index.html#putting-it-all-together-gu-toolkit",
+   "label": "Study this: L12 · Part 4 →"
   }
  },
  {
@@ -4655,7 +4655,7 @@
   "why_correct": "Misoprostol (PGE1 analog) is contraindicated in pregnancy — a potent uterotonic/abortifacient.",
   "takeaway": "Misoprostol: replaces prostaglandins, never in pregnancy.",
   "discriminator": "Diarrhea and cramping are common.",
-  "src": "L05 S16; S17; SG U3-R5",
+  "src": "L05 S20; S21; SG U3-R5",
   "id": "FINAL-045",
   "answer": "B",
   "options": {
@@ -5578,7 +5578,7 @@
   "why_correct": "5-ARIs can cause ambiguous genitalia in a male fetus; pregnant partners avoid crushed or broken tablets.",
   "takeaway": "5-ARI + pregnant partner → no handling.",
   "discriminator": "PSA halved on therapy.",
-  "src": "L12 S19; S20",
+  "src": "L12 S23; S24",
   "id": "FINAL-097",
   "answer": "D",
   "options": {
@@ -5777,7 +5777,7 @@
   "why_correct": "Cimetidine is a potent CYP450 inhibitor (1A2, 2C19, 3A4) that raises warfarin, phenytoin, and theophylline levels.",
   "takeaway": "Cimetidine = CYP inhibitor + antiandrogenic.",
   "discriminator": "Antacids/sucralfate bind drugs in the gut; cimetidine inhibits liver enzymes.",
-  "src": "L05 S11; S12; S42",
+  "src": "L05 S13; S14; S52",
   "id": "FINAL-046",
   "answer": "D",
   "options": {
@@ -5974,7 +5974,7 @@
   "why_correct": "Tadalafil has a longer half-life and more flexible dosing.",
   "takeaway": "Tadalafil = long-acting.",
   "discriminator": "Sildenafil = blue vision.",
-  "src": "L12 S22; S48",
+  "src": "L12 S26; S56",
   "id": "FINAL-089",
   "answer": "B",
   "options": {
@@ -6172,7 +6172,7 @@
   "why_correct": "Oxybutynin has the highest CNS anticholinergic burden; mirabegron relaxes the detrusor via beta3 with no anticholinergic activity.",
   "takeaway": "Older adult + OAB → mirabegron.",
   "discriminator": "Review all anticholinergics (diphenhydramine, TCAs).",
-  "src": "L12 S11; S13; S15; SG U6-R12; SG U6-R13",
+  "src": "L12 S13; S15; S17; SG U6-R12; SG U6-R13",
   "id": "FINAL-100",
   "answer": "D",
   "options": {
@@ -6568,7 +6568,7 @@
   "why_correct": "Confirm eradication at least 4 weeks after therapy with the PPI held for 2 weeks to avoid false negatives.",
   "takeaway": "Test of cure: wait 4 weeks, hold the PPI 2 weeks.",
   "discriminator": "Urea breath test or stool antigen.",
-  "src": "L05 S19; S20; p. 1159",
+  "src": "L05 S23; S24; p. 1159",
   "id": "FINAL-043",
   "answer": "E",
   "options": {
@@ -6599,8 +6599,8 @@
    }
   },
   "link": {
-   "href": "../../L05/index.html#mucosal-protectants-h-pylori-eradication",
-   "label": "Study this: L05 · Part 3 →"
+   "href": "../../L05/index.html#antiemetics",
+   "label": "Study this: L05 · Part 4 →"
   }
  }
 ]

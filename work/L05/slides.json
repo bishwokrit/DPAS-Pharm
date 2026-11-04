@@ -857,6 +857,210 @@
  },
  {
   "slide": 9,
+  "title": "Quick Check",
+  "items": [
+   {
+    "text": "QUICK CHECK · FIGURE 1",
+    "level": 0,
+    "emphasis": [],
+    "md": "QUICK CHECK · FIGURE 1",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Quick Check",
+    "level": 0,
+    "emphasis": [],
+    "md": "Quick Check",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Based on Figure 1, why do PPIs achieve more complete acid suppression than H2 receptor antagonists?",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Based on Figure 1, why do PPIs achieve more complete acid suppression than H2 receptor antagonists?",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Based on Figure 1, why do PPIs achieve more complete acid suppression than H2 receptor antagonists?**",
+    "heading": false,
+    "size": 18.5
+   },
+   {
+    "text": "PPIs block the final common pathway (the proton pump itself), so they work regardless of which upstream signal is driving acid secretion",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "PPIs block the final common pathway (the proton pump itself), so they work regardless of which upstream signal is driving acid secretion",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**PPIs block the final common pathway (the proton pump itself), so they work regardless of which upstream signal is driving acid secretion**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "A",
+    "level": 0,
+    "emphasis": [],
+    "md": "A",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "B",
+    "level": 0,
+    "emphasis": [],
+    "md": "B",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "PPIs block only the gastrin pathway, which is the strongest stimulus",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "PPIs block only the gastrin pathway, which is the strongest stimulus",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**PPIs block only the gastrin pathway, which is the strongest stimulus**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "H2RAs block the proton pump directly, while PPIs act upstream",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "H2RAs block the proton pump directly, while PPIs act upstream",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**H2RAs block the proton pump directly, while PPIs act upstream**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "C",
+    "level": 0,
+    "emphasis": [],
+    "md": "C",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "D",
+    "level": 0,
+    "emphasis": [],
+    "md": "D",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "There is no mechanistic difference between the two classes",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "There is no mechanistic difference between the two classes",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**There is no mechanistic difference between the two classes**",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Quick check: Give 30 seconds."
+ },
+ {
+  "slide": 10,
+  "title": "Answer",
+  "items": [
+   {
+    "text": "ANSWER · FIGURE 1",
+    "level": 0,
+    "emphasis": [],
+    "md": "ANSWER · FIGURE 1",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Answer",
+    "level": 0,
+    "emphasis": [],
+    "md": "Answer",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "A",
+    "level": 0,
+    "emphasis": [],
+    "md": "A",
+    "heading": true,
+    "size": 26.0
+   },
+   {
+    "text": "PPIs block the final common pathway itself, regardless of which upstream signal drove it.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "PPIs block the final common pathway itself, regardless of which upstream signal drove it.",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**PPIs block the final common pathway itself, regardless of which upstream signal drove it.**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Why:  H2RAs block only one of three inputs to the parietal cell (histamine), so gastrin and acetylcholine can still drive acid secretion. PPIs irreversibly inhibit the H⁺/K⁺-ATPase proton pump — the single convergence point for all three signals — producing more complete and longer-lasting acid suppression.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Why:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     },
+     {
+      "text": "H2RAs block only one of three inputs to the parietal cell (histamine), so gastrin and acetylcholine can still drive acid secretion. PPIs irreversibly inhibit the H⁺/K⁺-ATPase proton pump — the single convergence point for all three signals — producing more complete and longer-lasting acid suppression.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Why:** **H2RAs block only one of three inputs to the parietal cell (histamine), so gastrin and acetylcholine can still drive acid secretion. PPIs irreversibly inhibit the H⁺/K⁺-ATPase proton pump — the single convergence point for all three signals — producing more complete and longer-lasting acid suppression.**",
+    "heading": false,
+    "size": 15.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Answer A: PPIs block the final common pathway regardless of which signal drove it."
+ },
+ {
+  "slide": 11,
   "title": "02",
   "items": [
    {
@@ -913,7 +1117,7 @@
   "notes": "Section transition.\n\nSection 02: Antisecretory and mucosal-protective agents (slides 11-28)."
  },
  {
-  "slide": 10,
+  "slide": 12,
   "title": "Antacids",
   "items": [
    {
@@ -1099,21 +1303,6 @@
     "md": "Rapid but short relief; no effect on acid production",
     "heading": true,
     "size": 12.0
-   },
-   {
-    "text": "12",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "12",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**12**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
@@ -1122,7 +1311,7 @@
   "notes": "Antacids are the oldest and most \"patient-directed\" class here — good opening point to contrast with the receptor- and enzyme-targeted agents that follow.\n\nInstructor script:\n\nSay: They neutralize acid already made. They do not reduce acid production. Onset is fast and duration is short, so they suit mild, intermittent symptoms.\n\nKnow:\n\nAluminum constipates, magnesium causes diarrhea, calcium carbonate constipates and can cause milk-alkali syndrome with excess use.\n\nThey bind other drugs. Separate dosing by at least 2 hours."
  },
  {
-  "slide": 11,
+  "slide": 13,
   "title": "H2 Receptor Antagonists",
   "items": [
    {
@@ -1323,21 +1512,6 @@
     "md": "Reduced acid",
     "heading": true,
     "size": 14.0
-   },
-   {
-    "text": "13",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "13",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**13**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
@@ -1346,7 +1520,7 @@
   "notes": "Cimetidine’s CYP450 inhibition is a great callback to Lecture 1’s drug-metabolism/interaction framework — ask students to predict what happens to warfarin or phenytoin levels if cimetidine is added.\n\nInstructor script:\n\nKnow:\n\nTolerance (tachyphylaxis) develops with continued use.\n\nBest at controlling nocturnal acid.\n\nFamotidine needs renal dose adjustment and can cause confusion in older adults with renal impairment.\n\nCimetidine inhibits CYP450 (1A2, 2C19, 3A4) and has antiandrogenic effects, including gynecomastia."
  },
  {
-  "slide": 12,
+  "slide": 14,
   "title": "H2 Blockers: Blocking the Histamine Signal",
   "items": [
    {
@@ -1547,32 +1721,17 @@
     "md": "H2 blocker occupies the receptor competitively, so less acid",
     "heading": true,
     "size": 14.0
-   },
-   {
-    "text": "14",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "14",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**14**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
   "images": 2,
   "figures": [
-   "S12_1.jpg"
+   "S14_1.jpg"
   ],
   "notes": "Say: Histamine from the ECL cell binds the H2 receptor, cAMP rises, and the pump turns on. Famotidine competes at that receptor."
  },
  {
-  "slide": 13,
+  "slide": 15,
   "title": "Proton Pump Inhibitors (PPIs)",
   "items": [
    {
@@ -1780,21 +1939,6 @@
     "md": "Profound, prolonged acid suppression",
     "heading": true,
     "size": 13.0
-   },
-   {
-    "text": "15",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "15",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**15**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
@@ -1803,7 +1947,7 @@
   "notes": "The long-term adverse-effect list is high-yield for both exams and real-world deprescribing conversations — many patients are on PPIs far longer than clinically necessary.\n\nInstructor script:\n\nKnow:\n\nTake 30-60 minutes before the first meal, because PPIs work on actively secreting pumps.\n\nLong-term risks: C. difficile infection, fractures, hypomagnesemia, B12 deficiency, pneumonia, acute interstitial nephritis, and rebound acid hypersecretion on stopping.\n\nOmeprazole and esomeprazole inhibit CYP2C19 and can blunt clopidogrel activation.\n\nCYP2C19 genotype changes PPI exposure. Ultrarapid metabolizers may need higher doses."
  },
  {
-  "slide": 14,
+  "slide": 16,
   "title": "PPIs: Irreversible Pump Inhibition",
   "items": [
    {
@@ -2004,32 +2148,17 @@
     "md": "Pump irreversibly blocked until new pumps are made",
     "heading": true,
     "size": 14.0
-   },
-   {
-    "text": "16",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "16",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**16**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
   "images": 2,
   "figures": [
-   "S14_1.jpg"
+   "S16_1.jpg"
   ],
   "notes": "Say: A PPI is an enteric-coated prodrug. It reaches the canaliculus, acid activates it, and it binds a cysteine on the H+/K+ ATPase covalently. The pump stays off until the cell makes new pumps."
  },
  {
-  "slide": 15,
+  "slide": 17,
   "title": "PPIs vs. H2 Receptor Antagonists: Potency and Duration",
   "items": [
    {
@@ -2062,32 +2191,221 @@
     "md": "**Figure 4. Original illustrative comparison (illustrative relative values, not from Katzung): PPIs achieve substantially greater acid-suppression potency and longer duration of effect than H2 receptor antagonists.**",
     "heading": false,
     "size": 13.5
-   },
-   {
-    "text": "17",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "17",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**17**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
   "images": 2,
   "figures": [
-   "S15_1.jpg"
+   "S17_1.jpg"
   ],
   "notes": "This is the quantified version of the mechanistic point just made — more complete blockade (Figure 1) translates into both higher potency and longer duration here.\n\nInstructor script:\n\nFigure 4: Remind the class that the bars are illustrative relative values, not trial data. PPIs give greater and longer suppression than H2 blockers."
  },
  {
-  "slide": 16,
+  "slide": 18,
+  "title": "Quick Check",
+  "items": [
+   {
+    "text": "QUICK CHECK · ANTISECRETORY AGENTS",
+    "level": 0,
+    "emphasis": [],
+    "md": "QUICK CHECK · ANTISECRETORY AGENTS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Quick Check",
+    "level": 0,
+    "emphasis": [],
+    "md": "Quick Check",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "A patient taking clopidogrel after a cardiac stent is started on omeprazole for GERD. What is the primary concern with this combination?",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "A patient taking clopidogrel after a cardiac stent is started on omeprazole for GERD. What is the primary concern with this combination?",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**A patient taking clopidogrel after a cardiac stent is started on omeprazole for GERD. What is the primary concern with this combination?**",
+    "heading": false,
+    "size": 18.5
+   },
+   {
+    "text": "A",
+    "level": 0,
+    "emphasis": [],
+    "md": "A",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Omeprazole may reduce CYP2C19-mediated activation of clopidogrel, blunting its antiplatelet effect",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Omeprazole may reduce CYP2C19-mediated activation of clopidogrel, blunting its antiplatelet effect",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Omeprazole may reduce CYP2C19-mediated activation of clopidogrel, blunting its antiplatelet effect**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "B",
+    "level": 0,
+    "emphasis": [],
+    "md": "B",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Omeprazole increases clopidogrel absorption, raising bleeding risk",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Omeprazole increases clopidogrel absorption, raising bleeding risk",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Omeprazole increases clopidogrel absorption, raising bleeding risk**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "There is no clinically relevant interaction between these two drugs",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "There is no clinically relevant interaction between these two drugs",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**There is no clinically relevant interaction between these two drugs**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Omeprazole should never be combined with any cardiac medication",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Omeprazole should never be combined with any cardiac medication",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Omeprazole should never be combined with any cardiac medication**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "C",
+    "level": 0,
+    "emphasis": [],
+    "md": "C",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "D",
+    "level": 0,
+    "emphasis": [],
+    "md": "D",
+    "heading": true,
+    "size": 16.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Quick check: Omeprazole plus clopidogrel."
+ },
+ {
+  "slide": 19,
+  "title": "Answer",
+  "items": [
+   {
+    "text": "ANSWER · ANTISECRETORY AGENTS",
+    "level": 0,
+    "emphasis": [],
+    "md": "ANSWER · ANTISECRETORY AGENTS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Answer",
+    "level": 0,
+    "emphasis": [],
+    "md": "Answer",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "A",
+    "level": 0,
+    "emphasis": [],
+    "md": "A",
+    "heading": true,
+    "size": 26.0
+   },
+   {
+    "text": "Omeprazole may reduce CYP2C19-mediated activation of clopidogrel.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Omeprazole may reduce CYP2C19-mediated activation of clopidogrel.",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Omeprazole may reduce CYP2C19-mediated activation of clopidogrel.**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Why:  Clopidogrel is a prodrug that requires CYP2C19 activation. Omeprazole inhibits CYP2C19, which can reduce clopidogrel’s active metabolite and blunt its antiplatelet effect — a clinically important interaction, especially soon after stent placement.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Why:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     },
+     {
+      "text": "Clopidogrel is a prodrug that requires CYP2C19 activation. Omeprazole inhibits CYP2C19, which can reduce clopidogrel’s active metabolite and blunt its antiplatelet effect — a clinically important interaction, especially soon after stent placement.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Why:** **Clopidogrel is a prodrug that requires CYP2C19 activation. Omeprazole inhibits CYP2C19, which can reduce clopidogrel’s active metabolite and blunt its antiplatelet effect — a clinically important interaction, especially soon after stent placement.**",
+    "heading": false,
+    "size": 15.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Answer A: omeprazole may reduce CYP2C19-mediated activation of clopidogrel. If a PPI is needed, pantoprazole is the usual choice."
+ },
+ {
+  "slide": 20,
   "title": "Mucosal Protective Agents",
   "items": [
    {
@@ -2226,21 +2544,6 @@
     "md": "**–   Common adverse effect: diarrhea**",
     "heading": false,
     "size": 14.0
-   },
-   {
-    "text": "20",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "20",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**20**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
@@ -2249,7 +2552,7 @@
   "notes": "Misoprostol’s pregnancy contraindication is a must-know, high-stakes safety point — this is also the drug’s other well-known clinical use (labor induction/medical abortion), so the mechanism-to-contraindication link should feel obvious once stated.\n\nInstructor script:\n\nKnow:\n\nSucralfate: separate from other drugs by 2 hours, aluminum accumulates in CKD, constipation is common.\n\nMisoprostol: contraindicated in pregnancy because it causes uterine contractions. Diarrhea and cramping are common."
  },
  {
-  "slide": 17,
+  "slide": 21,
   "title": "Sucralfate and Misoprostol: Strengthening Defense",
   "items": [
    {
@@ -2553,32 +2856,17 @@
     "md": "**Diarrhea and cramping are common with misoprostol**",
     "heading": false,
     "size": 11.0
-   },
-   {
-    "text": "21",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "21",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**21**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
   "images": 2,
   "figures": [
-   "S17_1.jpg"
+   "S21_1.jpg"
   ],
   "notes": "Say: Sucralfate polymerizes in acid, sticks to the ulcer base and forms a barrier. Misoprostol is a PGE1 analog. It acts on EP receptors to cut acid and raise mucus and bicarbonate."
  },
  {
-  "slide": 18,
+  "slide": 22,
   "title": "Acid-Peptic Disease Agents at a Glance",
   "items": [
    {
@@ -2596,21 +2884,6 @@
     "md": "Acid-Peptic Disease Agents at a Glance",
     "heading": true,
     "size": 28.0
-   },
-   {
-    "text": "22",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "22",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**22**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [
@@ -2647,7 +2920,7 @@
   "notes": "Use this table as the organizing summary before moving into H. pylori eradication, which combines several of these agents together.\n\nInstructor script:\n\nSlide at a glance: Read across the table row by row. This is a good review point."
  },
  {
-  "slide": 19,
+  "slide": 23,
   "title": "H. pylori Eradication Therapy",
   "items": [
    {
@@ -2741,21 +3014,6 @@
     "md": "**Confirm eradication with testing (e.g., urea breath test or stool antigen) after completing therapy, not during PPI therapy, which can cause false negatives.**",
     "heading": false,
     "size": 16.0
-   },
-   {
-    "text": "23",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "23",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**23**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
@@ -2764,7 +3022,7 @@
   "notes": "Multi-drug regimens like this are a classic source of adherence problems — worth pausing to ask students what patient-counseling points would most improve completion of a 10–14 day, 3–4 drug regimen.\n\nInstructor script:\n\nKnow:\n\nUsual duration is 14 days.\n\nBismuth quadruple therapy: PPI plus bismuth plus tetracycline plus metronidazole. It is preferred with penicillin allergy or prior macrolide exposure.\n\nConfirm eradication at least 4 weeks after therapy and with the PPI held for 2 weeks.\n\nClarithromycin inhibits CYP3A4 (statins). Metronidazole plus alcohol causes a disulfiram-like reaction. Avoid tetracycline in pregnancy and in children."
  },
  {
-  "slide": 20,
+  "slide": 24,
   "title": "Why H. pylori Needs Multiple Drugs",
   "items": [
    {
@@ -2928,32 +3186,17 @@
     "md": "**Interactions: CYP3A4 (statins), alcohol; avoid tetracycline in pregnancy**",
     "heading": false,
     "size": 11.0
-   },
-   {
-    "text": "24",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "24",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**24**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
   "images": 2,
   "figures": [
-   "S20_1.jpg"
+   "S24_1.jpg"
   ],
   "notes": "Say: The goal is eradication, not only acid suppression. A PPI raises gastric pH, which makes antibiotics work better. Amoxicillin blocks the cell wall. Clarithromycin hits the 50S ribosome. Metronidazole adds another mechanism."
  },
  {
-  "slide": 21,
+  "slide": 25,
   "title": "Choosing an H. pylori Regimen",
   "items": [
    {
@@ -3030,21 +3273,6 @@
     "md": "**Clinical pearl:** **Recent macrolide exposure raises concern for clarithromycin resistance, and the penicillin allergy rules out standard triple therapy — bismuth quadruple therapy (PPI + bismuth + metronidazole + tetracycline) avoids both problems.**",
     "heading": false,
     "size": 14.0
-   },
-   {
-    "text": "25",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "25",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**25**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
@@ -3053,7 +3281,211 @@
   "notes": "This vignette forces students to apply two separate exclusion criteria at once — a good checkpoint for whether the regimen differences actually landed.\n\nInstructor script:\n\nAsk: \"Penicillin allergy and a macrolide two months ago. Which regimen?\" Answer: bismuth quadruple therapy."
  },
  {
-  "slide": 22,
+  "slide": 26,
+  "title": "Quick Check",
+  "items": [
+   {
+    "text": "QUICK CHECK · ACID-PEPTIC DISEASE",
+    "level": 0,
+    "emphasis": [],
+    "md": "QUICK CHECK · ACID-PEPTIC DISEASE",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Quick Check",
+    "level": 0,
+    "emphasis": [],
+    "md": "Quick Check",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "A patient is started on misoprostol for NSAID-induced ulcer prevention. What is the single most important question to ask before prescribing?",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "A patient is started on misoprostol for NSAID-induced ulcer prevention. What is the single most important question to ask before prescribing?",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**A patient is started on misoprostol for NSAID-induced ulcer prevention. What is the single most important question to ask before prescribing?**",
+    "heading": false,
+    "size": 18.5
+   },
+   {
+    "text": "A",
+    "level": 0,
+    "emphasis": [],
+    "md": "A",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Is the patient taking any antacids?",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Is the patient taking any antacids?",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Is the patient taking any antacids?**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "B",
+    "level": 0,
+    "emphasis": [],
+    "md": "B",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Is there any possibility of pregnancy?",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Is there any possibility of pregnancy?",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Is there any possibility of pregnancy?**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "C",
+    "level": 0,
+    "emphasis": [],
+    "md": "C",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Does the patient have a penicillin allergy?",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Does the patient have a penicillin allergy?",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Does the patient have a penicillin allergy?**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "D",
+    "level": 0,
+    "emphasis": [],
+    "md": "D",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Is the patient on a PPI already?",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Is the patient on a PPI already?",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Is the patient on a PPI already?**",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Quick check: Misoprostol."
+ },
+ {
+  "slide": 27,
+  "title": "Answer",
+  "items": [
+   {
+    "text": "ANSWER · ACID-PEPTIC DISEASE",
+    "level": 0,
+    "emphasis": [],
+    "md": "ANSWER · ACID-PEPTIC DISEASE",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Answer",
+    "level": 0,
+    "emphasis": [],
+    "md": "Answer",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "B",
+    "level": 0,
+    "emphasis": [],
+    "md": "B",
+    "heading": true,
+    "size": 26.0
+   },
+   {
+    "text": "Is there any possibility of pregnancy?",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Is there any possibility of pregnancy?",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Is there any possibility of pregnancy?**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Why:  Misoprostol is a potent uterotonic and is contraindicated in pregnancy due to abortifacient risk — pregnancy status must be ruled out (and reliable contraception confirmed) before starting therapy.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Why:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     },
+     {
+      "text": "Misoprostol is a potent uterotonic and is contraindicated in pregnancy due to abortifacient risk — pregnancy status must be ruled out (and reliable contraception confirmed) before starting therapy.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Why:** **Misoprostol is a potent uterotonic and is contraindicated in pregnancy due to abortifacient risk — pregnancy status must be ruled out (and reliable contraception confirmed) before starting therapy.**",
+    "heading": false,
+    "size": 15.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Answer B: ask about possible pregnancy."
+ },
+ {
+  "slide": 28,
   "title": "Drug Names Reveal the Class: Acid-Peptic Disease",
   "items": [
    {
@@ -3071,21 +3503,6 @@
     "md": "Drug Names Reveal the Class: Acid-Peptic Disease",
     "heading": true,
     "size": 28.0
-   },
-   {
-    "text": "28",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "28",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**28**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [
@@ -3139,7 +3556,7 @@
   "notes": "Drug-name stems: -prazole is a PPI, -tidine is an H2 blocker, -prostol is a prostaglandin analog, -cillin is a penicillin, -thromycin is a macrolide. Sucralfate and bismuth subsalicylate have no stem."
  },
  {
-  "slide": 23,
+  "slide": 29,
   "title": "03",
   "items": [
    {
@@ -3196,7 +3613,7 @@
   "notes": "Section transition.\n\nSection 03: Antiemetics (slides 29-43)."
  },
  {
-  "slide": 24,
+  "slide": 30,
   "title": "Antiemetic Drug Classes",
   "items": [
    {
@@ -3366,21 +3783,6 @@
     "md": "**–   Examples: meclizine, scopolamine**",
     "heading": false,
     "size": 13.0
-   },
-   {
-    "text": "30",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "30",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**30**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
@@ -3389,7 +3791,7 @@
   "notes": "Each class corresponds to a different input feeding the vomiting center — the next slide shows these same four classes as a single mechanism diagram.\n\nInstructor script:\n\nName the four target groups: 5-HT3, D2, NK1, and H1/M1."
  },
  {
-  "slide": 25,
+  "slide": 31,
   "title": "Ondansetron: Blocking Serotonin at 5-HT3",
   "items": [
    {
@@ -3590,32 +3992,17 @@
     "md": "Ondansetron blocks 5-HT3, so no signal reaches the vomiting center",
     "heading": true,
     "size": 14.0
-   },
-   {
-    "text": "31",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "31",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**31**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
   "images": 2,
   "figures": [
-   "S25_1.jpg"
+   "S31_1.jpg"
   ],
   "notes": "Say: Chemotherapy injures enterochromaffin cells. They release serotonin. Serotonin binds 5-HT3 on vagal afferents and the chemoreceptor trigger zone. Ondansetron blocks that receptor.\n\nKnow:\n\nGive before chemotherapy. Oral disintegrating and IV forms exist.\n\nQT prolongation: caution with other QT-prolonging drugs and electrolyte problems.\n\nConstipation and headache are common. Serotonin syndrome risk with other serotonergic drugs.\n\nCYP2D6 ultrarapid metabolizers may respond less well."
  },
  {
-  "slide": 26,
+  "slide": 32,
   "title": "Receptors in the Vomiting Pathway",
   "items": [
    {
@@ -3839,32 +4226,17 @@
     "md": "Emesis",
     "heading": true,
     "size": 14.0
-   },
-   {
-    "text": "32",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "32",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**32**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
   "images": 2,
   "figures": [
-   "S26_1.jpg"
+   "S32_1.jpg"
   ],
   "notes": "Say: Four inputs reach the vomiting center in the medulla: the gut through the vagus, the trigger zone, the vestibular system and the cortex. Match the drug to the cause.\n\nKnow: For chemotherapy, combine drugs with different targets, such as a 5-HT3 antagonist, an NK1 antagonist and dexamethasone. Do not duplicate the same mechanism."
  },
  {
-  "slide": 27,
+  "slide": 33,
   "title": "The Vomiting Reflex: Where Antiemetics Act",
   "items": [
    {
@@ -3897,32 +4269,221 @@
     "md": "**Figure 9. Original illustrative diagram (not from Katzung): serotonin, dopamine/neurokinin, and histamine/acetylcholine signals converge on the vomiting center; ondansetron, metoclopramide/prochlorperazine/aprepitant, and meclizine/scopolamine each block a different input.**",
     "heading": false,
     "size": 13.5
-   },
-   {
-    "text": "33",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "33",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**33**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
   "images": 2,
   "figures": [
-   "S27_1.jpg"
+   "S33_1.jpg"
   ],
   "notes": "Have students match each generic drug name to its input pathway on this diagram before revealing the labels — this is the single most testable concept in the antiemetic section.\n\nInstructor script:\n\nMotion sickness is vestibular."
  },
  {
-  "slide": 28,
+  "slide": 34,
+  "title": "Quick Check",
+  "items": [
+   {
+    "text": "QUICK CHECK · FIGURE 9",
+    "level": 0,
+    "emphasis": [],
+    "md": "QUICK CHECK · FIGURE 9",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Quick Check",
+    "level": 0,
+    "emphasis": [],
+    "md": "Quick Check",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "A patient with motion sickness needs prophylaxis before a cruise. Based on Figure 9, which drug class targets the pathway most relevant to this cause of nausea?",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "A patient with motion sickness needs prophylaxis before a cruise. Based on Figure 9, which drug class targets the pathway most relevant to this cause of nausea?",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**A patient with motion sickness needs prophylaxis before a cruise. Based on Figure 9, which drug class targets the pathway most relevant to this cause of nausea?**",
+    "heading": false,
+    "size": 18.5
+   },
+   {
+    "text": "A",
+    "level": 0,
+    "emphasis": [],
+    "md": "A",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "H1 / M1 antagonists (e.g., meclizine, scopolamine) — targeting the vestibular system",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "H1 / M1 antagonists (e.g., meclizine, scopolamine) — targeting the vestibular system",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**H1 / M1 antagonists (e.g., meclizine, scopolamine) — targeting the vestibular system**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "B",
+    "level": 0,
+    "emphasis": [],
+    "md": "B",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "5-HT3 antagonists (e.g., ondansetron) — targeting gut/chemo input",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "5-HT3 antagonists (e.g., ondansetron) — targeting gut/chemo input",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**5-HT3 antagonists (e.g., ondansetron) — targeting gut/chemo input**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "C",
+    "level": 0,
+    "emphasis": [],
+    "md": "C",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "NK1 antagonists (e.g., aprepitant) — targeting the CTZ",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "NK1 antagonists (e.g., aprepitant) — targeting the CTZ",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**NK1 antagonists (e.g., aprepitant) — targeting the CTZ**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "D",
+    "level": 0,
+    "emphasis": [],
+    "md": "D",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "D2 antagonists (e.g., metoclopramide) — targeting the CTZ",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "D2 antagonists (e.g., metoclopramide) — targeting the CTZ",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**D2 antagonists (e.g., metoclopramide) — targeting the CTZ**",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Quick check."
+ },
+ {
+  "slide": 35,
+  "title": "Answer",
+  "items": [
+   {
+    "text": "ANSWER · FIGURE 9",
+    "level": 0,
+    "emphasis": [],
+    "md": "ANSWER · FIGURE 9",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Answer",
+    "level": 0,
+    "emphasis": [],
+    "md": "Answer",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "A",
+    "level": 0,
+    "emphasis": [],
+    "md": "A",
+    "heading": true,
+    "size": 26.0
+   },
+   {
+    "text": "H1 / M1 antagonists (meclizine, scopolamine) — targeting the vestibular system.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "H1 / M1 antagonists (meclizine, scopolamine) — targeting the vestibular system.",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**H1 / M1 antagonists (meclizine, scopolamine) — targeting the vestibular system.**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Why:  Motion sickness is driven primarily by vestibular system input, which signals through histamine (H1) and muscarinic (M1) receptors — exactly the pathway meclizine and scopolamine block in Figure 9. The other classes target gut/chemo (5-HT3) or CTZ (D2, NK1) inputs, which are not the primary driver here.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Why:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     },
+     {
+      "text": "Motion sickness is driven primarily by vestibular system input, which signals through histamine (H1) and muscarinic (M1) receptors — exactly the pathway meclizine and scopolamine block in Figure 9. The other classes target gut/chemo (5-HT3) or CTZ (D2, NK1) inputs, which are not the primary driver here.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Why:** **Motion sickness is driven primarily by vestibular system input, which signals through histamine (H1) and muscarinic (M1) receptors — exactly the pathway meclizine and scopolamine block in Figure 9. The other classes target gut/chemo (5-HT3) or CTZ (D2, NK1) inputs, which are not the primary driver here.**",
+    "heading": false,
+    "size": 15.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Answer A: H1/M1 antagonists such as meclizine and scopolamine."
+ },
+ {
+  "slide": 36,
   "title": "Metoclopramide: Antiemetic and Prokinetic",
   "items": [
    {
@@ -4108,21 +4669,6 @@
     "md": "Faster gastric emptying",
     "heading": true,
     "size": 13.0
-   },
-   {
-    "text": "36",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "36",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**36**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
@@ -4131,7 +4677,7 @@
   "notes": "Metoclopramide’s boxed warning is one of the highest-yield patient-safety facts in this whole session — many students only remember \"it helps nausea\" without knowing why duration of use matters so much.\n\nInstructor script:\n\nKnow:\n\nBoxed warning: tardive dyskinesia. Avoid use beyond 12 weeks.\n\nAcute dystonia is treated with diphenhydramine or benztropine.\n\nContraindicated in GI obstruction. Avoid in Parkinson disease.\n\nRenal dose adjustment. CYP2D6 poor metabolizers have higher exposure."
  },
  {
-  "slide": 29,
+  "slide": 37,
   "title": "Metoclopramide: D2 Blockade and 5-HT4 Agonism",
   "items": [
    {
@@ -4332,32 +4878,17 @@
     "md": "**Renal dosing needed; CYP2D6 poor metabolizers need lower doses**",
     "heading": false,
     "size": 12.0
-   },
-   {
-    "text": "37",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "37",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**37**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
   "images": 2,
   "figures": [
-   "S29_1.jpg"
+   "S37_1.jpg"
   ],
   "notes": "Say: D2 blockade in the trigger zone reduces nausea. In the gut, D2 blockade plus 5-HT4 agonism raises acetylcholine release and speeds gastric emptying."
  },
  {
-  "slide": 30,
+  "slide": 38,
   "title": "Cannabinoids for Chemotherapy-Induced Nausea",
   "items": [
    {
@@ -4467,32 +4998,17 @@
     "md": "**Figure 11. Oral dronabinol is absorbed, crosses the blood-brain barrier and activates CB1 receptors in the vomiting center and hypothalamus, reducing nausea and stimulating appetite.**",
     "heading": false,
     "size": 11.0
-   },
-   {
-    "text": "38",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "38",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**38**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
   "images": 2,
   "figures": [
-   "S30_1.jpg"
+   "S38_1.jpg"
   ],
   "notes": "This is a good moment to flag that cannabinoid pharmacology is an expanding area in the newest edition of Katzung — worth a brief mention that this mechanism class is distinct from everything else in this lecture.\n\nInstructor script:\n\nKnow:\n\nReserved for patients who do not respond to standard antiemetics.\n\nDizziness, euphoria or dysphoria, tachycardia, orthostatic hypotension, additive CNS depression.\n\nUse caution in older adults. Dronabinol is Schedule III and nabilone is Schedule II."
  },
  {
-  "slide": 31,
+  "slide": 39,
   "title": "Cannabinoids: CB1 Activation in the Brain",
   "items": [
    {
@@ -4670,32 +5186,17 @@
     "md": "**Dronabinol is Schedule III; nabilone is Schedule II**",
     "heading": false,
     "size": 12.0
-   },
-   {
-    "text": "39",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "39",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**39**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
   "images": 2,
   "figures": [
-   "S31_1.jpg"
+   "S39_1.jpg"
   ],
   "notes": "Say: Dronabinol and nabilone activate CB1 receptors in the vomiting center and trigger zone. They reduce neurotransmitter release. They also stimulate appetite."
  },
  {
-  "slide": 32,
+  "slide": 40,
   "title": "Which Antiemetic for This Patient?",
   "items": [
    {
@@ -4772,21 +5273,6 @@
     "md": "**Clinical pearl:** **Pyridoxine (vitamin B6), often combined with doxylamine, is typically first-line for nausea in pregnancy; ondansetron is commonly used as well, though data on first-trimester use continue to evolve — always weigh maternal benefit against fetal risk and consult current guidance.**",
     "heading": false,
     "size": 14.0
-   },
-   {
-    "text": "40",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "40",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**40**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
@@ -4795,7 +5281,211 @@
   "notes": "Use this to connect back to the Nutrition half of the unit (pyridoxine is a vitamin) — a preview of the Session 2 material on vitamins and supplements.\n\nInstructor script:\n\nFirst-trimester nausea unresponsive to diet. Let the class discuss. Pyridoxine (vitamin B6), often with doxylamine, is the usual first-line approach."
  },
  {
-  "slide": 33,
+  "slide": 41,
+  "title": "Quick Check",
+  "items": [
+   {
+    "text": "QUICK CHECK · ANTIEMETICS",
+    "level": 0,
+    "emphasis": [],
+    "md": "QUICK CHECK · ANTIEMETICS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Quick Check",
+    "level": 0,
+    "emphasis": [],
+    "md": "Quick Check",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "A patient has been on metoclopramide for gastroparesis for several months. What is the primary long-term safety concern that should limit duration of therapy?",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "A patient has been on metoclopramide for gastroparesis for several months. What is the primary long-term safety concern that should limit duration of therapy?",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**A patient has been on metoclopramide for gastroparesis for several months. What is the primary long-term safety concern that should limit duration of therapy?**",
+    "heading": false,
+    "size": 18.5
+   },
+   {
+    "text": "A",
+    "level": 0,
+    "emphasis": [],
+    "md": "A",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Hepatotoxicity",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Hepatotoxicity",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Hepatotoxicity**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "B",
+    "level": 0,
+    "emphasis": [],
+    "md": "B",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Tardive dyskinesia",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Tardive dyskinesia",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Tardive dyskinesia**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "C",
+    "level": 0,
+    "emphasis": [],
+    "md": "C",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "QT prolongation",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "QT prolongation",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**QT prolongation**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "D",
+    "level": 0,
+    "emphasis": [],
+    "md": "D",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Nephrotoxicity",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Nephrotoxicity",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Nephrotoxicity**",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Quick check: Long-term metoclopramide."
+ },
+ {
+  "slide": 42,
+  "title": "Answer",
+  "items": [
+   {
+    "text": "ANSWER · ANTIEMETICS",
+    "level": 0,
+    "emphasis": [],
+    "md": "ANSWER · ANTIEMETICS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Answer",
+    "level": 0,
+    "emphasis": [],
+    "md": "Answer",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "B",
+    "level": 0,
+    "emphasis": [],
+    "md": "B",
+    "heading": true,
+    "size": 26.0
+   },
+   {
+    "text": "Tardive dyskinesia.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Tardive dyskinesia.",
+      "marks": [
+       "bold"
+      ]
+     }
+    ],
+    "md": "**Tardive dyskinesia.**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Why:  Metoclopramide carries a boxed warning for tardive dyskinesia, with risk increasing with duration of use and cumulative dose — therapy should generally be limited to the shortest effective duration (typically no more than 12 weeks).",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Why:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     },
+     {
+      "text": "Metoclopramide carries a boxed warning for tardive dyskinesia, with risk increasing with duration of use and cumulative dose — therapy should generally be limited to the shortest effective duration (typically no more than 12 weeks).",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Why:** **Metoclopramide carries a boxed warning for tardive dyskinesia, with risk increasing with duration of use and cumulative dose — therapy should generally be limited to the shortest effective duration (typically no more than 12 weeks).**",
+    "heading": false,
+    "size": 15.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Answer B: tardive dyskinesia."
+ },
+ {
+  "slide": 43,
   "title": "Drug Names Reveal the Class: Antiemetics",
   "items": [
    {
@@ -4813,21 +5503,6 @@
     "md": "Drug Names Reveal the Class: Antiemetics",
     "heading": true,
     "size": 28.0
-   },
-   {
-    "text": "43",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "43",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**43**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [
@@ -4893,7 +5568,7 @@
   "notes": "Drug-name stems: -setron is a 5-HT3 antagonist, -pitant is an NK1 antagonist, -azine is a phenothiazine, -izine is an H1 antihistamine, -pramide is a benzamide D2 antagonist, -sone is a corticosteroid. Dronabinol, nabilone and scopolamine have no shared stem."
  },
  {
-  "slide": 34,
+  "slide": 44,
   "title": "Session 1 Recap — To Be Continued",
   "items": [
    {
@@ -4999,7 +5674,7 @@
   "notes": "Close Session 1 by previewing Session 2 explicitly — students should leave knowing acid-peptic disease and antiemetics are complete, and that laxatives/antidiarrheals, IBD, and nutrition pick up first next time.\n\nInstructor script:\n\nRecap: Read the five points. Acid-peptic disease is a balance. PPIs block the final common pathway. H. pylori needs multiple drugs. Antiemetics follow receptor systems. Session 2 continues with lower-GI motility and nutrition."
  },
  {
-  "slide": 35,
+  "slide": 45,
   "title": "Drug Profiles",
   "items": [
    {
@@ -5423,7 +6098,7 @@
   "notes": "Section transition: appendix of drug profiles for the agents in this lecture.\n\nAbbreviation key: DR = delayed-release; ER = extended-release; ODT = orally disintegrating tablet; OTC = over the counter; PO = by mouth; PR = by rectum; IV = intravenous; IM = intramuscular; BID / TID / QID = two / three / four times daily; CrCl = creatinine clearance; CKD = chronic kidney disease; CNS = central nervous system; GERD = gastroesophageal reflux disease; NSAID = nonsteroidal anti-inflammatory drug; CINV = chemotherapy-induced nausea and vomiting; PONV = postoperative nausea and vomiting; H2 = histamine-2; 5-HT3 = serotonin type 3; D2 = dopamine type 2; NK1 = neurokinin-1; QT = QT interval on ECG; CYP / P-gp = cytochrome P450 / P-glycoprotein; BPH = benign prostatic hyperplasia; mcg = microgram; m2 = square meter of body surface area."
  },
  {
-  "slide": 36,
+  "slide": 46,
   "title": "Omeprazole (Prilosec)",
   "items": [
    {
@@ -5547,17 +6222,10 @@
     "size": 12.0
    },
    {
-    "text": "46",
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
     "level": 0,
-    "emphasis": [
-     {
-      "text": "46",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**46**",
+    "emphasis": [],
+    "md": "Standard adult dosing for teaching; verify against current prescribing information.",
     "heading": false,
     "size": 10.0
    }
@@ -5568,7 +6236,7 @@
   "notes": "Formulation: DR capsule 10/20/40 mg; OTC 20 mg tablet; oral suspension packets\n\nStrength/recommended dose: 20-40 mg PO once daily, 30-60 min before breakfast; GERD/ulcer courses 4-8 weeks\n\nIndications: GERD, erosive esophagitis, peptic ulcer, H. pylori regimens, NSAID-ulcer prevention, Zollinger-Ellison\n\nAdverse effects: Headache, diarrhea, abdominal pain, nausea; long-term: low B12 and Mg, fractures, C. difficile\n\nContraindications: Hypersensitivity to PPIs; rilpivirine co-use\n\nToxicity: Overdose rare (flushing, tachycardia, confusion); long-term hypomagnesemia; reduces clopidogrel activation (CYP2C19)"
  },
  {
-  "slide": 37,
+  "slide": 47,
   "title": "Esomeprazole (Nexium)",
   "items": [
    {
@@ -5692,17 +6360,10 @@
     "size": 12.0
    },
    {
-    "text": "47",
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
     "level": 0,
-    "emphasis": [
-     {
-      "text": "47",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**47**",
+    "emphasis": [],
+    "md": "Standard adult dosing for teaching; verify against current prescribing information.",
     "heading": false,
     "size": 10.0
    }
@@ -5713,7 +6374,7 @@
   "notes": "Formulation: DR capsule 20/40 mg; granule packets; IV vial 20/40 mg\n\nStrength/recommended dose: 20-40 mg PO daily; IV 20-40 mg over 10-30 min daily when oral route is not possible\n\nIndications: GERD, erosive esophagitis, H. pylori, NSAID-ulcer prevention, rebleeding risk reduction\n\nAdverse effects: Headache, diarrhea, nausea; long-term: low B12 and Mg, fractures\n\nContraindications: Hypersensitivity to PPIs; rilpivirine co-use\n\nToxicity: Same class toxicities as omeprazole; hypomagnesemia, C. difficile; supportive care for overdose"
  },
  {
-  "slide": 38,
+  "slide": 48,
   "title": "Pantoprazole (Protonix)",
   "items": [
    {
@@ -5837,17 +6498,10 @@
     "size": 12.0
    },
    {
-    "text": "48",
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
     "level": 0,
-    "emphasis": [
-     {
-      "text": "48",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**48**",
+    "emphasis": [],
+    "md": "Standard adult dosing for teaching; verify against current prescribing information.",
     "heading": false,
     "size": 10.0
    }
@@ -5858,7 +6512,7 @@
   "notes": "Formulation: DR tablet 20/40 mg; granule packets; IV vial 40 mg\n\nStrength/recommended dose: 40 mg PO daily before a meal; IV 40 mg daily for up to 7-10 days\n\nIndications: GERD, erosive esophagitis, Zollinger-Ellison; IV when oral therapy is not possible\n\nAdverse effects: Headache, diarrhea, nausea; long-term: low B12 and Mg, fractures\n\nContraindications: Hypersensitivity to PPIs; rilpivirine co-use\n\nToxicity: Class toxicities; fewer CYP drug interactions than omeprazole; supportive care for overdose"
  },
  {
-  "slide": 39,
+  "slide": 49,
   "title": "Lansoprazole (Prevacid)",
   "items": [
    {
@@ -5982,17 +6636,10 @@
     "size": 12.0
    },
    {
-    "text": "49",
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
     "level": 0,
-    "emphasis": [
-     {
-      "text": "49",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**49**",
+    "emphasis": [],
+    "md": "Standard adult dosing for teaching; verify against current prescribing information.",
     "heading": false,
     "size": 10.0
    }
@@ -6003,7 +6650,7 @@
   "notes": "Formulation: DR capsule 15/30 mg; orally disintegrating tablet 15/30 mg\n\nStrength/recommended dose: 15-30 mg PO daily before a meal; courses 4-8 weeks\n\nIndications: GERD, ulcers, H. pylori, NSAID-ulcer healing and prevention\n\nAdverse effects: Diarrhea, abdominal pain, nausea, headache; long-term: low B12 and Mg\n\nContraindications: Hypersensitivity to PPIs; rilpivirine co-use\n\nToxicity: Class toxicities; ODT contains phenylalanine; supportive care for overdose"
  },
  {
-  "slide": 40,
+  "slide": 50,
   "title": "Dexlansoprazole (Dexilant)",
   "items": [
    {
@@ -6127,17 +6774,10 @@
     "size": 12.0
    },
    {
-    "text": "50",
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
     "level": 0,
-    "emphasis": [
-     {
-      "text": "50",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**50**",
+    "emphasis": [],
+    "md": "Standard adult dosing for teaching; verify against current prescribing information.",
     "heading": false,
     "size": 10.0
    }
@@ -6148,7 +6788,7 @@
   "notes": "Formulation: DR capsule 30/60 mg\n\nStrength/recommended dose: 30 mg daily for non-erosive GERD; 60 mg daily for up to 8 weeks for erosive esophagitis; with or without food\n\nIndications: Erosive esophagitis healing and maintenance, non-erosive GERD heartburn\n\nAdverse effects: Diarrhea, abdominal pain, nausea, headache; long-term: low B12 and Mg\n\nContraindications: Hypersensitivity to PPIs; rilpivirine co-use\n\nToxicity: Class toxicities; supportive care for overdose"
  },
  {
-  "slide": 41,
+  "slide": 51,
   "title": "Famotidine (Pepcid)",
   "items": [
    {
@@ -6272,17 +6912,10 @@
     "size": 12.0
    },
    {
-    "text": "51",
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
     "level": 0,
-    "emphasis": [
-     {
-      "text": "51",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**51**",
+    "emphasis": [],
+    "md": "Standard adult dosing for teaching; verify against current prescribing information.",
     "heading": false,
     "size": 10.0
    }
@@ -6293,7 +6926,7 @@
   "notes": "Formulation: Tablet 10 mg (OTC), 20/40 mg; IV 10 mg/mL; oral suspension\n\nStrength/recommended dose: 20 mg BID or 40 mg at bedtime; reduce dose when CrCl is below 60 mL/min\n\nIndications: GERD, duodenal and gastric ulcer, hypersecretory states, heartburn prevention\n\nAdverse effects: Headache, dizziness, constipation or diarrhea; confusion in older or renally impaired patients\n\nContraindications: Hypersensitivity to H2 blockers\n\nToxicity: Overdose rare: CNS effects, tachycardia, hypotension; accumulates in CKD; tolerance with continued use"
  },
  {
-  "slide": 42,
+  "slide": 52,
   "title": "Cimetidine (Tagamet)",
   "items": [
    {
@@ -6417,17 +7050,10 @@
     "size": 12.0
    },
    {
-    "text": "52",
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
     "level": 0,
-    "emphasis": [
-     {
-      "text": "52",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**52**",
+    "emphasis": [],
+    "md": "Standard adult dosing for teaching; verify against current prescribing information.",
     "heading": false,
     "size": 10.0
    }
@@ -6438,7 +7064,7 @@
   "notes": "Formulation: Tablet 200/300/400/800 mg; oral liquid; IV\n\nStrength/recommended dose: 400 mg BID or 800 mg at bedtime; adjust for renal impairment\n\nIndications: Duodenal and gastric ulcer, GERD, hypersecretory states\n\nAdverse effects: Headache, dizziness, confusion, gynecomastia, impotence\n\nContraindications: Hypersensitivity to H2 blockers\n\nToxicity: Strong CYP inhibitor: raises warfarin, phenytoin, theophylline levels; CNS toxicity in older adults"
  },
  {
-  "slide": 43,
+  "slide": 53,
   "title": "Calcium carbonate (Tums)",
   "items": [
    {
@@ -6562,17 +7188,10 @@
     "size": 12.0
    },
    {
-    "text": "53",
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
     "level": 0,
-    "emphasis": [
-     {
-      "text": "53",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**53**",
+    "emphasis": [],
+    "md": "Standard adult dosing for teaching; verify against current prescribing information.",
     "heading": false,
     "size": 10.0
    }
@@ -6583,7 +7202,7 @@
   "notes": "Formulation: Chewable tablet 500-1,000 mg; suspension\n\nStrength/recommended dose: 500-1,500 mg PO as needed; respect label daily maximum (about 7,000-7,500 mg/day)\n\nIndications: Occasional heartburn and indigestion; calcium supplementation\n\nAdverse effects: Constipation, belching, gas; hypercalcemia with excess\n\nContraindications: Hypercalcemia, kidney stones (caution), severe renal impairment\n\nToxicity: Milk-alkali syndrome (hypercalcemia, alkalosis, AKI); acid rebound; binds levothyroxine, quinolones, tetracyclines, iron"
  },
  {
-  "slide": 44,
+  "slide": 54,
   "title": "Magnesium hydroxide (Milk of Magnesia)",
   "items": [
    {
@@ -6707,17 +7326,10 @@
     "size": 12.0
    },
    {
-    "text": "54",
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
     "level": 0,
-    "emphasis": [
-     {
-      "text": "54",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**54**",
+    "emphasis": [],
+    "md": "Standard adult dosing for teaching; verify against current prescribing information.",
     "heading": false,
     "size": 10.0
    }
@@ -6728,7 +7340,7 @@
   "notes": "Formulation: Suspension 400 mg/5 mL; chewable tablet\n\nStrength/recommended dose: Antacid 5-15 mL PO up to four times daily; laxative 30-60 mL once daily\n\nIndications: Occasional heartburn, short-term constipation\n\nAdverse effects: Diarrhea, abdominal cramping\n\nContraindications: Severe renal impairment, bowel obstruction\n\nToxicity: Hypermagnesemia in CKD: hypotension, absent reflexes, respiratory depression, cardiac arrest"
  },
  {
-  "slide": 45,
+  "slide": 55,
   "title": "Aluminum hydroxide (Amphojel)",
   "items": [
    {
@@ -6852,17 +7464,10 @@
     "size": 12.0
    },
    {
-    "text": "55",
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
     "level": 0,
-    "emphasis": [
-     {
-      "text": "55",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**55**",
+    "emphasis": [],
+    "md": "Standard adult dosing for teaching; verify against current prescribing information.",
     "heading": false,
     "size": 10.0
    }
@@ -6873,7 +7478,7 @@
   "notes": "Formulation: Suspension 320 mg/5 mL; tablet\n\nStrength/recommended dose: 5-10 mL PO several times daily between meals and at bedtime as labeled\n\nIndications: Heartburn, indigestion; hyperphosphatemia in kidney disease\n\nAdverse effects: Constipation, hypophosphatemia with prolonged use\n\nContraindications: Bowel obstruction; caution in CKD\n\nToxicity: Aluminum accumulation in CKD: osteomalacia, encephalopathy, anemia; binds other drugs"
  },
  {
-  "slide": 46,
+  "slide": 56,
   "title": "Sucralfate (Carafate)",
   "items": [
    {
@@ -6997,17 +7602,10 @@
     "size": 12.0
    },
    {
-    "text": "56",
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
     "level": 0,
-    "emphasis": [
-     {
-      "text": "56",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**56**",
+    "emphasis": [],
+    "md": "Standard adult dosing for teaching; verify against current prescribing information.",
     "heading": false,
     "size": 10.0
    }
@@ -7018,7 +7616,7 @@
   "notes": "Formulation: Tablet 1 g; suspension 1 g/10 mL\n\nStrength/recommended dose: 1 g PO QID, 1 hour before meals and at bedtime, 4-8 weeks (duodenal ulcer); 1 g BID for maintenance\n\nIndications: Active duodenal ulcer, ulcer maintenance, stress-ulcer prophylaxis (off-label)\n\nAdverse effects: Constipation, dry mouth, nausea\n\nContraindications: Hypersensitivity; caution in CKD and dysphagia\n\nToxicity: Aluminum accumulation in CKD; bezoar risk; binds other drugs (separate by 2 hours); hyperglycemia in diabetes"
  },
  {
-  "slide": 47,
+  "slide": 57,
   "title": "Misoprostol (Cytotec)",
   "items": [
    {
@@ -7142,17 +7740,10 @@
     "size": 12.0
    },
    {
-    "text": "57",
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
     "level": 0,
-    "emphasis": [
-     {
-      "text": "57",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**57**",
+    "emphasis": [],
+    "md": "Standard adult dosing for teaching; verify against current prescribing information.",
     "heading": false,
     "size": 10.0
    }
@@ -7163,7 +7754,7 @@
   "notes": "Formulation: Tablet 100/200 mcg\n\nStrength/recommended dose: 200 mcg PO QID with food and at bedtime during NSAID therapy\n\nIndications: Prevention of NSAID-induced gastric ulcers\n\nAdverse effects: Diarrhea, abdominal cramps, nausea, menstrual-type bleeding\n\nContraindications: Pregnancy (boxed warning), prostaglandin hypersensitivity\n\nToxicity: Miscarriage, uterine rupture and birth defects; overdose: fever, tachycardia, hypotension, seizures"
  },
  {
-  "slide": 48,
+  "slide": 58,
   "title": "Bismuth subsalicylate (Pepto-Bismol)",
   "items": [
    {
@@ -7287,17 +7878,10 @@
     "size": 12.0
    },
    {
-    "text": "58",
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
     "level": 0,
-    "emphasis": [
-     {
-      "text": "58",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**58**",
+    "emphasis": [],
+    "md": "Standard adult dosing for teaching; verify against current prescribing information.",
     "heading": false,
     "size": 10.0
    }
@@ -7308,7 +7892,7 @@
   "notes": "Formulation: Chewable tablet 262 mg; suspension 262 or 525 mg/15 mL\n\nStrength/recommended dose: 524 mg every 30-60 min as needed, max 8 doses per day; H. pylori quadruple therapy 524 mg QID\n\nIndications: Diarrhea, dyspepsia, nausea, H. pylori eradication\n\nAdverse effects: Black stool and tongue, constipation\n\nContraindications: Salicylate allergy, bleeding disorders, anticoagulants, children or teens with viral illness (Reye syndrome)\n\nToxicity: Salicylism: tinnitus, rapid breathing; bismuth neurotoxicity with prolonged high use"
  },
  {
-  "slide": 49,
+  "slide": 59,
   "title": "Amoxicillin (Amoxil)",
   "items": [
    {
@@ -7432,17 +8016,10 @@
     "size": 12.0
    },
    {
-    "text": "59",
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
     "level": 0,
-    "emphasis": [
-     {
-      "text": "59",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**59**",
+    "emphasis": [],
+    "md": "Standard adult dosing for teaching; verify against current prescribing information.",
     "heading": false,
     "size": 10.0
    }
@@ -7453,7 +8030,7 @@
   "notes": "Formulation: Capsule/tablet 250/500/875 mg; suspension\n\nStrength/recommended dose: H. pylori: 1 g PO BID for 14 days as part of combination therapy\n\nIndications: H. pylori (combination), bacterial infections\n\nAdverse effects: Diarrhea, nausea, rash; C. difficile infection\n\nContraindications: Penicillin allergy\n\nToxicity: Anaphylaxis in allergic patients; overdose causes GI upset; rarely crystalluria"
  },
  {
-  "slide": 50,
+  "slide": 60,
   "title": "Clarithromycin (Biaxin)",
   "items": [
    {
@@ -7577,17 +8154,10 @@
     "size": 12.0
    },
    {
-    "text": "60",
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
     "level": 0,
-    "emphasis": [
-     {
-      "text": "60",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**60**",
+    "emphasis": [],
+    "md": "Standard adult dosing for teaching; verify against current prescribing information.",
     "heading": false,
     "size": 10.0
    }
@@ -7598,7 +8168,7 @@
   "notes": "Formulation: Tablet 250/500 mg; ER tablet 500 mg; suspension\n\nStrength/recommended dose: H. pylori: 500 mg PO BID for 14 days in triple therapy\n\nIndications: H. pylori (where resistance is low), respiratory infections\n\nAdverse effects: Taste change, nausea, diarrhea; QT prolongation\n\nContraindications: Macrolide allergy; QT history; co-use with simvastatin, lovastatin, ergotamine\n\nToxicity: Strong CYP3A4 and P-gp inhibitor; torsades, hepatotoxicity; avoid if prior macrolide exposure"
  },
  {
-  "slide": 51,
+  "slide": 61,
   "title": "Metronidazole (Flagyl)",
   "items": [
    {
@@ -7722,17 +8292,10 @@
     "size": 12.0
    },
    {
-    "text": "61",
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
     "level": 0,
-    "emphasis": [
-     {
-      "text": "61",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**61**",
+    "emphasis": [],
+    "md": "Standard adult dosing for teaching; verify against current prescribing information.",
     "heading": false,
     "size": 10.0
    }
@@ -7743,7 +8306,7 @@
   "notes": "Formulation: Tablet 250/500 mg; IV; topical/vaginal forms\n\nStrength/recommended dose: H. pylori quadruple therapy: 500 mg PO TID-QID for 14 days\n\nIndications: H. pylori (bismuth quadruple), anaerobic infections, C. difficile, trichomoniasis\n\nAdverse effects: Metallic taste, nausea, headache; disulfiram-like reaction with alcohol\n\nContraindications: Alcohol use during and for 3 days after, recent disulfiram, Cockayne syndrome\n\nToxicity: Neurotoxicity: neuropathy, encephalopathy, seizures with prolonged or high dosing"
  },
  {
-  "slide": 52,
+  "slide": 62,
   "title": "Tetracycline (Sumycin)",
   "items": [
    {
@@ -7867,17 +8430,10 @@
     "size": 12.0
    },
    {
-    "text": "62",
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
     "level": 0,
-    "emphasis": [
-     {
-      "text": "62",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**62**",
+    "emphasis": [],
+    "md": "Standard adult dosing for teaching; verify against current prescribing information.",
     "heading": false,
     "size": 10.0
    }
@@ -7888,7 +8444,7 @@
   "notes": "Formulation: Capsule 250/500 mg\n\nStrength/recommended dose: H. pylori quadruple therapy: 500 mg PO QID for 14 days\n\nIndications: H. pylori (bismuth quadruple), acne, rickettsial infections\n\nAdverse effects: Nausea, esophagitis, photosensitivity\n\nContraindications: Pregnancy, children under 8 years, hypersensitivity\n\nToxicity: Tooth discoloration and bone effects in children; hepatotoxicity at high dose; chelated by dairy, antacids, iron"
  },
  {
-  "slide": 53,
+  "slide": 63,
   "title": "Ondansetron (Zofran)",
   "items": [
    {
@@ -8012,17 +8568,10 @@
     "size": 12.0
    },
    {
-    "text": "63",
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
     "level": 0,
-    "emphasis": [
-     {
-      "text": "63",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**63**",
+    "emphasis": [],
+    "md": "Standard adult dosing for teaching; verify against current prescribing information.",
     "heading": false,
     "size": 10.0
    }
@@ -8033,7 +8582,7 @@
   "notes": "Formulation: Tablet 4/8 mg; ODT 4/8 mg; oral film; IV/IM 2 mg/mL\n\nStrength/recommended dose: 4-8 mg PO/ODT every 8 hours; IV 4 mg; chemotherapy regimens use 8-24 mg pre-dose; single IV dose max 16 mg\n\nIndications: Chemotherapy, postoperative and radiation nausea; gastroenteritis and pregnancy nausea (off-label)\n\nAdverse effects: Headache, constipation, dizziness; QT prolongation\n\nContraindications: Congenital long QT syndrome; apomorphine co-use\n\nToxicity: QT prolongation and torsades; serotonin syndrome (rare); transient vision loss"
  },
  {
-  "slide": 54,
+  "slide": 64,
   "title": "Metoclopramide (Reglan)",
   "items": [
    {
@@ -8157,17 +8706,10 @@
     "size": 12.0
    },
    {
-    "text": "64",
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
     "level": 0,
-    "emphasis": [
-     {
-      "text": "64",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**64**",
+    "emphasis": [],
+    "md": "Standard adult dosing for teaching; verify against current prescribing information.",
     "heading": false,
     "size": 10.0
    }
@@ -8178,7 +8720,7 @@
   "notes": "Formulation: Tablet 5/10 mg; ODT; oral solution; IV/IM 5 mg/mL\n\nStrength/recommended dose: Gastroparesis: 10 mg PO 30 min before meals and at bedtime (max 40 mg/day); limit to 12 weeks; lower dose in renal impairment\n\nIndications: Diabetic gastroparesis, GERD (short-term), chemotherapy and postoperative nausea\n\nAdverse effects: Drowsiness, restlessness, diarrhea; depression\n\nContraindications: GI obstruction, perforation or bleeding; pheochromocytoma; seizure disorder; history of tardive dyskinesia\n\nToxicity: Boxed warning: tardive dyskinesia (may be irreversible); acute dystonia (diphenhydramine or benztropine); neuroleptic malignant syndrome"
  },
  {
-  "slide": 55,
+  "slide": 65,
   "title": "Aprepitant (Emend)",
   "items": [
    {
@@ -8302,17 +8844,10 @@
     "size": 12.0
    },
    {
-    "text": "65",
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
     "level": 0,
-    "emphasis": [
-     {
-      "text": "65",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**65**",
+    "emphasis": [],
+    "md": "Standard adult dosing for teaching; verify against current prescribing information.",
     "heading": false,
     "size": 10.0
    }
@@ -8323,7 +8858,7 @@
   "notes": "Formulation: Capsule 40/80/125 mg; IV fosaprepitant 150 mg\n\nStrength/recommended dose: CINV: 125 mg PO day 1, then 80 mg days 2-3, with a 5-HT3 antagonist and dexamethasone; PONV: 40 mg pre-op\n\nIndications: Prevention of chemotherapy and postoperative nausea and vomiting\n\nAdverse effects: Fatigue, constipation, hiccups, raised liver enzymes\n\nContraindications: Pimozide co-use; hypersensitivity\n\nToxicity: CYP3A4 substrate and moderate inhibitor: lowers warfarin and hormonal contraceptive effect; overdose drowsiness, headache"
  },
  {
-  "slide": 56,
+  "slide": 66,
   "title": "Meclizine (Antivert)",
   "items": [
    {
@@ -8447,17 +8982,10 @@
     "size": 12.0
    },
    {
-    "text": "66",
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
     "level": 0,
-    "emphasis": [
-     {
-      "text": "66",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**66**",
+    "emphasis": [],
+    "md": "Standard adult dosing for teaching; verify against current prescribing information.",
     "heading": false,
     "size": 10.0
    }
@@ -8468,7 +8996,7 @@
   "notes": "Formulation: Tablet 12.5/25/50 mg; chewable tablet\n\nStrength/recommended dose: Motion sickness: 25-50 mg 1 hour before travel, repeat every 24 hours; vertigo: 25-100 mg/day divided\n\nIndications: Motion sickness, vertigo\n\nAdverse effects: Drowsiness, dry mouth, blurred vision, urinary retention\n\nContraindications: Hypersensitivity; caution in glaucoma, BPH, asthma, older adults\n\nToxicity: Anticholinergic toxicity: agitation, hallucinations, tachycardia, seizures; additive sedation"
  },
  {
-  "slide": 57,
+  "slide": 67,
   "title": "Scopolamine (Transderm Scop)",
   "items": [
    {
@@ -8592,17 +9120,10 @@
     "size": 12.0
    },
    {
-    "text": "67",
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
     "level": 0,
-    "emphasis": [
-     {
-      "text": "67",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**67**",
+    "emphasis": [],
+    "md": "Standard adult dosing for teaching; verify against current prescribing information.",
     "heading": false,
     "size": 10.0
    }
@@ -8613,7 +9134,7 @@
   "notes": "Formulation: Transdermal patch 1.5 mg (about 1 mg over 3 days)\n\nStrength/recommended dose: 1 patch behind the ear at least 4 hours before travel; replace every 72 hours\n\nIndications: Motion sickness, postoperative nausea\n\nAdverse effects: Dry mouth, drowsiness, blurred vision, dizziness\n\nContraindications: Narrow-angle glaucoma; hypersensitivity\n\nToxicity: Anticholinergic toxicity; withdrawal nausea and dizziness; wash hands to avoid dilated pupils"
  },
  {
-  "slide": 58,
+  "slide": 68,
   "title": "Prochlorperazine (Compazine)",
   "items": [
    {
@@ -8737,17 +9258,10 @@
     "size": 12.0
    },
    {
-    "text": "68",
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
     "level": 0,
-    "emphasis": [
-     {
-      "text": "68",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**68**",
+    "emphasis": [],
+    "md": "Standard adult dosing for teaching; verify against current prescribing information.",
     "heading": false,
     "size": 10.0
    }
@@ -8758,7 +9272,7 @@
   "notes": "Formulation: Tablet 5/10 mg; suppository 25 mg; IV/IM 5 mg/mL\n\nStrength/recommended dose: 5-10 mg PO every 6-8 hours (max 40 mg/day); 25 mg PR every 12 hours; 5-10 mg IV/IM\n\nIndications: Severe nausea and vomiting, psychosis\n\nAdverse effects: Sedation, hypotension, dry mouth, extrapyramidal symptoms\n\nContraindications: Children under 2 years, coma, dementia-related psychosis (boxed warning)\n\nToxicity: Acute dystonia, tardive dyskinesia, neuroleptic malignant syndrome, QT prolongation, sedation"
  },
  {
-  "slide": 59,
+  "slide": 69,
   "title": "Dronabinol (Marinol) and nabilone (Cesamet)",
   "items": [
    {
@@ -8882,17 +9396,10 @@
     "size": 12.0
    },
    {
-    "text": "69",
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
     "level": 0,
-    "emphasis": [
-     {
-      "text": "69",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**69**",
+    "emphasis": [],
+    "md": "Standard adult dosing for teaching; verify against current prescribing information.",
     "heading": false,
     "size": 10.0
    }
@@ -8903,7 +9410,7 @@
   "notes": "Formulation: Dronabinol capsule 2.5/5/10 mg, solution; nabilone capsule 1 mg\n\nStrength/recommended dose: Dronabinol 5 mg/m2 1-3 hours before chemotherapy, then every 2-4 hours; appetite: 2.5 mg BID; nabilone 1-2 mg BID\n\nIndications: Refractory chemotherapy nausea; anorexia in AIDS (dronabinol)\n\nAdverse effects: Dizziness, euphoria, drowsiness, tachycardia\n\nContraindications: Hypersensitivity; sesame oil allergy (dronabinol capsule)\n\nToxicity: Psychoactive: anxiety, paranoia, tachycardia, hypotension; additive CNS depression; misuse potential"
  },
  {
-  "slide": 60,
+  "slide": 70,
   "title": "Dexamethasone (Decadron)",
   "items": [
    {
@@ -9027,17 +9534,10 @@
     "size": 12.0
    },
    {
-    "text": "70",
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
     "level": 0,
-    "emphasis": [
-     {
-      "text": "70",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**70**",
+    "emphasis": [],
+    "md": "Standard adult dosing for teaching; verify against current prescribing information.",
     "heading": false,
     "size": 10.0
    }
@@ -9048,7 +9548,7 @@
   "notes": "Formulation: Tablet 0.5-6 mg; oral solution; IV 4 mg/mL\n\nStrength/recommended dose: CINV: 8-12 mg PO/IV on day 1, then 8 mg daily on days 2-4 depending on regimen\n\nIndications: Antiemetic adjunct in chemotherapy; inflammation and allergy\n\nAdverse effects: Insomnia, hyperglycemia, mood change, fluid retention\n\nContraindications: Systemic fungal infection; hypersensitivity\n\nToxicity: Adrenal suppression with prolonged use; infection, hyperglycemia, psychosis; taper after long courses"
  },
  {
-  "slide": 61,
+  "slide": 71,
   "title": "Supporting Drugs at a Glance",
   "items": [
    {
@@ -9258,21 +9758,6 @@
     "md": "Listed for context; not profiled in detail.",
     "heading": false,
     "size": 10.0
-   },
-   {
-    "text": "71",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "71",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**71**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
@@ -9281,7 +9766,7 @@
   "notes": "Listed for context; not profiled in detail."
  },
  {
-  "slide": 62,
+  "slide": 72,
   "title": "Image Attribution",
   "items": [
    {
@@ -9362,21 +9847,6 @@
     "md": "**●  Mechanism illustrations:** **(AI-generated, illustrative, not reproduced from copyrighted sources): H2 blocker action on the parietal cell (Figure 2, slide 14); PPI irreversible pump inhibition (Figure 3, slide 16); sucralfate and misoprostol (Figure 5, slide 21); H. pylori multidrug rationale (Figure 6, slide 24); ondansetron and 5-HT3 blockade (Figure 7, slide 31); receptors in the vomiting pathway (Figure 8, slide 32); metoclopramide D2 blockade and 5-HT4 agonism (Figure 10, slide 37); cannabinoids for chemotherapy-induced nausea (Figure 11, slide 38); cannabinoid CB1 activation (Figure 12, slide 39). Created with an AI image generator under the course director’s direction for educational use; the pictures are schematic and not to scale.**",
     "heading": false,
     "size": 16.0
-   },
-   {
-    "text": "72",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "72",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**72**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],

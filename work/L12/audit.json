@@ -1,9 +1,110 @@
 {
  "lecture": "L12",
  "passed": true,
- "units_checked": 2271,
+ "units_checked": 2308,
  "missing": [],
- "uncited": [],
+ "uncited": [
+  {
+   "ref": "S11",
+   "text": "Alpha1 receptors at the bladder neck and proximal urethra.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S11",
+   "text": "Why:  Sympathetic norepinephrine acting on alpha1 receptors at the bladder neck and proximal urethra produces smooth muscle contraction, keeping the outlet closed during storage. Beta3 receptors, by contrast, relax the detrusor body (not the outlet) during this same phase.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S11",
+   "text": "Answer: alpha-1 at the bladder neck.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S18",
+   "text": "Which overactive bladder medication is generally preferred in an older adult already taking multiple anticholinergic medications?",
+   "kind": "slide"
+  },
+  {
+   "ref": "S18",
+   "text": "Oxybutynin, for its high potency",
+   "kind": "slide"
+  },
+  {
+   "ref": "S18",
+   "text": "Any antimuscarinic agent, since they are interchangeable",
+   "kind": "slide"
+  },
+  {
+   "ref": "S18",
+   "text": "No pharmacologic therapy should be used in older adults",
+   "kind": "slide"
+  },
+  {
+   "ref": "S18",
+   "text": "Ask the class: which agent fits an older adult with OAB and high anticholinergic burden?",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S19",
+   "text": "Mirabegron, a beta3 agonist with no anticholinergic activity.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S19",
+   "text": "Why:  Because mirabegron works by enhancing beta3-mediated detrusor relaxation rather than blocking muscarinic receptors, it avoids adding to a patient's cumulative anticholinergic burden — a key consideration in older adults, who are more susceptible to anticholinergic-related confusion and cognitive impairment.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S19",
+   "text": "Answer: mirabegron.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S30",
+   "text": "Nitrates block the PDE5 enzyme, making PDE5 inhibitors ineffective",
+   "kind": "slide"
+  },
+  {
+   "ref": "S30",
+   "text": "The combination has no significant interaction and is commonly prescribed together",
+   "kind": "slide"
+  },
+  {
+   "ref": "S30",
+   "text": "PDE5 inhibitors increase nitrate metabolism, reducing anti-anginal efficacy",
+   "kind": "slide"
+  },
+  {
+   "ref": "S30",
+   "text": "Ask the class what nitrates and PDE5 inhibitors have in common.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S31",
+   "text": "Both drugs independently raise NO/cGMP signaling, and together can cause life-threatening hypotension.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S31",
+   "text": "Why:  Nitrates raise NO/cGMP systemically (the mechanism behind their anti-anginal effect), while PDE5 inhibitors prevent cGMP breakdown. Combined, these two independent mechanisms produce profound vasodilation and can precipitate severe, potentially fatal hypotension — the same NO-cGMP pathway shown in Figure 16, now viewed as a drug-interaction risk rather than a therapeutic mechanism.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S31",
+   "text": "Answer: both raise NO/cGMP signaling.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S37",
+   "text": "Both reflect genitourinary drug classes acting on receptor families (adrenergic, NO-cGMP) that are shared with the systemic vasculature.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S37",
+   "text": "Why:  Alpha1 blockers act on the same receptor family in the bladder neck/prostate and in blood vessels, and PDE5 inhibitors/nitrates both converge on the same NO-cGMP signaling pathway used in both the corpus cavernosum and the vasculature. Recognizing receptor families as the shared variable — not organ system — is what ties genitourinary and cardiovascular pharmacology together across Units 5 and 6.",
+   "kind": "slide"
+  }
+ ],
  "emphasis_not_bold": [],
  "skipped": [
   {
@@ -80,216 +181,234 @@
   },
   {
    "ref": "S10",
+   "text": "Quick Check.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; the quick check is rebuilt as a question"
+  },
+  {
+   "ref": "S12",
    "text": "Section transition.",
    "kind": "speaker note",
    "reason": "section divider"
   },
   {
-   "ref": "S13",
+   "ref": "S15",
    "text": "The \"no anticholinergic burden\" advantage is the single most important comparison point versus antimuscarinics — make sure students can articulate why that specifically matters in an older adult population.",
    "kind": "speaker note",
    "reason": "teaching instruction"
   },
   {
-   "ref": "S14",
+   "ref": "S16",
    "text": "Reinforce that these are complementary, not competing, mechanisms — this is the mechanistic basis for combination therapy mentioned on the previous slide.",
    "kind": "speaker note",
    "reason": "teaching instruction"
   },
   {
-   "ref": "S14",
+   "ref": "S16",
    "text": "Complementary mechanisms.",
    "kind": "speaker note",
    "reason": "presenter script"
   },
   {
-   "ref": "S15",
+   "ref": "S17",
    "text": "This case is designed to make the Section 5 comparison concrete and clinical — a good checkpoint before the quick check, and a natural segue into discussing medication reconciliation for anticholinergic burden more broadly.",
    "kind": "speaker note",
    "reason": "teaching instruction"
   },
   {
-   "ref": "S16",
+   "ref": "S18",
+   "text": "Quick Check.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; the quick check is rebuilt as a question"
+  },
+  {
+   "ref": "S20",
    "text": "Section transition.",
    "kind": "speaker note",
    "reason": "section divider"
   },
   {
-   "ref": "S17",
+   "ref": "S21",
    "text": "The Unit 5 cross-reference here is deliberate and worth stating explicitly — tamsulosin and doxazosin are not new drug classes, they are the same alpha1-blocker pharmacology applied to a different primary indication.",
    "kind": "speaker note",
    "reason": "teaching instruction"
   },
   {
-   "ref": "S17",
+   "ref": "S21",
    "text": "Tamsulosin and silodosin are uroselective; doxazosin and terazosin lower BP more.",
    "kind": "speaker note",
-   "reason": "presenter script; taught from S17"
+   "reason": "presenter script; taught from S21"
   },
   {
-   "ref": "S18",
+   "ref": "S22",
    "text": "Point explicitly to the side note about systemic alpha1 blockade and orthostatic hypotension — this is the figure's direct link back to Unit 5's antihypertensive content.",
    "kind": "speaker note",
    "reason": "teaching instruction"
   },
   {
-   "ref": "S18",
+   "ref": "S22",
    "text": "Same receptor family as in blood vessels.",
    "kind": "speaker note",
    "reason": "presenter script"
   },
   {
-   "ref": "S19",
+   "ref": "S23",
    "text": "Explicitly call back to Session 1 here — students met finasteride/dutasteride already for hirsutism; this slide is the same mechanism, same drugs, different clinical application, reinforcing the bridge between the two sessions.",
    "kind": "speaker note",
    "reason": "teaching instruction"
   },
   {
-   "ref": "S19",
+   "ref": "S23",
    "text": "Finasteride, dutasteride; benefit takes 3-6 months; PSA falls by half; pregnancy caution.",
    "kind": "speaker note",
-   "reason": "presenter script; taught from S19"
+   "reason": "presenter script; taught from S23"
   },
   {
-   "ref": "S21",
+   "ref": "S25",
    "text": "This figure is the direct application of the Chapter 6 \"non-adrenergic, noncholinergic neurons\" content named in the reading assignment — point that out explicitly.",
    "kind": "speaker note",
    "reason": "teaching instruction"
   },
   {
-   "ref": "S21",
+   "ref": "S25",
    "text": "Slow down on the nitrate warning box; it is the highest-stakes safety point in the entire unit.",
    "kind": "speaker note",
    "reason": "teaching instruction"
   },
   {
-   "ref": "S21",
+   "ref": "S25",
    "text": "Slow down on the nitrate warning.",
    "kind": "speaker note",
    "reason": "teaching instruction"
   },
   {
-   "ref": "S22",
+   "ref": "S26",
    "text": "Make the connection explicit rather than assuming they will make it themselves.",
    "kind": "speaker note",
    "reason": "teaching instruction"
   },
   {
-   "ref": "S24",
+   "ref": "S28",
    "text": "Never prescribe together.",
-   "kind": "speaker note",
-   "reason": "presenter script; taught from S24"
-  },
-  {
-   "ref": "S25",
-   "text": "Nitrates and PDE5 inhibitors both raise cGMP; never prescribe together.",
-   "kind": "speaker note",
-   "reason": "presenter script; taught from S25"
-  },
-  {
-   "ref": "S26",
-   "text": "Drug names reveal the class: -osin, -terodine, -fenacin, -begron, -afil, -steride, and nitrates.",
-   "kind": "speaker note",
-   "reason": "presenter script; the stems are taught in Part 3"
-  },
-  {
-   "ref": "S28",
-   "text": "This capstone figure is the visual summary of the entire session's unifying theme — use it to set up the fourCard exercise and quick check that follow, both of which ask students to apply this cross-system receptor logic directly.",
-   "kind": "speaker note",
-   "reason": "teaching instruction; the theme is taught from S28"
-  },
-  {
-   "ref": "S28",
-   "text": "Receptor families are shared with the vasculature.",
    "kind": "speaker note",
    "reason": "presenter script; taught from S28"
   },
   {
    "ref": "S29",
+   "text": "Nitrates and PDE5 inhibitors both raise cGMP; never prescribe together.",
+   "kind": "speaker note",
+   "reason": "presenter script; taught from S29"
+  },
+  {
+   "ref": "S30",
+   "text": "Quick Check.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; the quick check is rebuilt as a question"
+  },
+  {
+   "ref": "S32",
+   "text": "Drug names reveal the class: -osin, -terodine, -fenacin, -begron, -afil, -steride, and nitrates.",
+   "kind": "speaker note",
+   "reason": "presenter script; the stems are taught in Part 3"
+  },
+  {
+   "ref": "S34",
+   "text": "This capstone figure is the visual summary of the entire session's unifying theme — use it to set up the fourCard exercise and quick check that follow, both of which ask students to apply this cross-system receptor logic directly.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; the theme is taught from S34"
+  },
+  {
+   "ref": "S34",
+   "text": "Receptor families are shared with the vasculature.",
+   "kind": "speaker note",
+   "reason": "presenter script; taught from S34"
+  },
+  {
+   "ref": "S35",
    "text": "Work through these as a rapid-fire discussion.",
    "kind": "speaker note",
    "reason": "teaching instruction"
   },
   {
-   "ref": "S29",
+   "ref": "S35",
    "text": "Pairs: first-line approach and biggest safety check.",
    "kind": "speaker note",
    "reason": "teaching instruction"
   },
   {
-   "ref": "S30",
+   "ref": "S38",
    "text": "Common thread: receptor families shared with the systemic vasculature.",
    "kind": "speaker note",
-   "reason": "presenter script; taught from S30"
+   "reason": "presenter script; taught from S38"
   },
   {
-   "ref": "S35",
+   "ref": "S43",
    "text": "Class activity (10 minutes): groups teach back two or three profiles in 60 seconds each.",
    "kind": "speaker note",
    "reason": "teaching instruction"
   },
   {
-   "ref": "S35",
+   "ref": "S43",
    "text": "Abbreviation key: review BPH, PSA, ED, PAH, QT, CYP and PDE5.",
    "kind": "speaker note",
    "reason": "teaching instruction"
   },
   {
-   "ref": "S35",
+   "ref": "S43",
    "text": "Teaching points: antimuscarinics (oxybutynin, tolterodine, solifenacin, darifenacin), mirabegron, alpha-1 blockers (tamsulosin, silodosin, doxazosin, terazosin), 5-ARIs, PDE5 inhibitors.",
    "kind": "speaker note",
    "reason": "teaching instruction; the drugs are in the profiles"
   },
   {
-   "ref": "S35",
+   "ref": "S43",
    "text": "Bloom's prompts: Remember: state tamsulosin dosing.",
    "kind": "speaker note",
    "reason": "Bloom's teaching prompt; rebuilt as practice questions"
   },
   {
-   "ref": "S35",
+   "ref": "S43",
    "text": "Understand: explain mirabegron versus oxybutynin.",
    "kind": "speaker note",
    "reason": "Bloom's teaching prompt; rebuilt as practice questions"
   },
   {
-   "ref": "S35",
+   "ref": "S43",
    "text": "Apply: counsel a man starting doxazosin.",
    "kind": "speaker note",
    "reason": "Bloom's teaching prompt; rebuilt as practice questions"
   },
   {
-   "ref": "S35",
+   "ref": "S43",
    "text": "Analyze: explain bradycardia on metoprolol plus mirabegron.",
    "kind": "speaker note",
    "reason": "Bloom's teaching prompt; rebuilt as practice questions"
   },
   {
-   "ref": "S35",
+   "ref": "S43",
    "text": "Evaluate: choose therapy for an older adult with BPH and OAB.",
    "kind": "speaker note",
    "reason": "Bloom's teaching prompt; rebuilt as practice questions"
   },
   {
-   "ref": "S50",
+   "ref": "S58",
    "text": "Supporting drugs listed for context only: nitrates and riociguat with PDE5 inhibitors; other anticholinergics add to burden; cholinesterase inhibitors oppose antimuscarinics; antihypertensives add hypotension with alpha-1 blockers; strong CYP3A4 inhibitors raise PDE5 inhibitor and solifenacin levels.",
    "kind": "speaker note",
    "reason": "presenter script; the table covers it"
   },
   {
-   "ref": "S50",
+   "ref": "S58",
    "text": "Supporting drugs: nitrates and riociguat, other anticholinergics, cholinesterase inhibitors and CYP3A4 inhibitors explain interactions.",
    "kind": "speaker note",
    "reason": "presenter script; the table covers it"
   },
   {
-   "ref": "S51",
+   "ref": "S59",
    "text": "This slide documents AI-tool use for original figure generation per university citation requirements.",
    "kind": "speaker note",
    "reason": "administrative note on AI-tool citation"
   },
   {
-   "ref": "S51",
+   "ref": "S59",
    "text": "Original Claude-generated diagrams and illustrative mechanism schematics.",
    "kind": "speaker note",
    "reason": "administrative note on AI-tool citation"
@@ -300,16 +419,16 @@
  "layout_problems": [],
  "question_issues": [],
  "question_stats": {
-  "count": 14,
+  "count": 16,
   "letters": {
-   "A": 3,
-   "B": 2,
+   "A": 4,
+   "B": 3,
    "C": 3,
    "D": 3,
    "E": 3
   },
   "vignette": 6,
-  "mechanism": 8
+  "mechanism": 10
  },
  "thin_objectives": [],
  "textbook_unused": 1848,

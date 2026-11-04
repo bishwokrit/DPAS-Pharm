@@ -1,0 +1,2028 @@
+[
+ {
+  "topic": "Bowel disorders",
+  "objectives": [
+   "IO3.2",
+   "IO3.4"
+  ],
+  "sg": [
+   "U3-R10"
+  ],
+  "kind": "vignette",
+  "stem": "A parent asks for diphenoxylate/atropine for a 4-year-old with watery diarrhea and no fever. What is the best answer?",
+  "correct": "No: under 6 it can depress breathing",
+  "distractors": [
+   {
+    "text": "Yes, at half the adult dose",
+    "why": "Contraindicated under 6 years, not dose-adjusted."
+   },
+   {
+    "text": "Yes; the atropine prevents any overdose",
+    "why": "Subtherapeutic atropine discourages misuse; it doesn't prevent toxicity."
+   },
+   {
+    "text": "Use loperamide instead at the adult dose",
+    "why": "Loperamide is contraindicated under 2 and dosing is not adult."
+   },
+   {
+    "text": "Yes, if limited to 2 days",
+    "why": "Duration does not lift the age contraindication."
+   }
+  ],
+  "why_correct": "Diphenoxylate/atropine is contraindicated under 6 years (respiratory depression and anticholinergic toxicity, especially in children). The atropine is a subtherapeutic dose to deter misuse.",
+  "takeaway": "Lomotil: not under 6; atropine deters abuse.",
+  "discriminator": "Know why the atropine is there — and that it is not a safety net.",
+  "src": "L06 S8; S49; SG U3-R10",
+  "id": "U3B-018",
+  "answer": "D",
+  "options": {
+   "A": {
+    "text": "Yes, at half the adult dose",
+    "why": "Contraindicated under 6 years, not dose-adjusted.",
+    "correct": false
+   },
+   "B": {
+    "text": "Yes; the atropine prevents any overdose",
+    "why": "Subtherapeutic atropine discourages misuse; it doesn't prevent toxicity.",
+    "correct": false
+   },
+   "C": {
+    "text": "Use loperamide instead at the adult dose",
+    "why": "Loperamide is contraindicated under 2 and dosing is not adult.",
+    "correct": false
+   },
+   "D": {
+    "text": "No: under 6 it can depress breathing",
+    "why": "Diphenoxylate/atropine is contraindicated under 6 years (respiratory depression and anticholinergic toxicity, especially in children). The atropine is a subtherapeutic dose to deter misuse.",
+    "correct": true
+   },
+   "E": {
+    "text": "Yes, if limited to 2 days",
+    "why": "Duration does not lift the age contraindication.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L06/index.html#laxatives-antidiarrheals",
+   "label": "Study this: L06 · Part 1 →"
+  }
+ },
+ {
+  "topic": "Antiemetics",
+  "objectives": [
+   "IO3.2"
+  ],
+  "sg": [
+   "U3-R8"
+  ],
+  "kind": "vignette",
+  "stem": "A 19-year-old receives IV metoclopramide in the ED for vomiting. Two hours later her neck twists to one side and her eyes deviate upward. What is happening and what treats it?",
+  "correct": "Acute dystonia; give diphenhydramine or benztropine",
+  "distractors": [
+   {
+    "text": "Tardive dyskinesia; stop and wait months",
+    "why": "Tardive dyskinesia appears after long-term use."
+   },
+   {
+    "text": "A focal seizure; give diazepam",
+    "why": "Sustained posturing with eye deviation after a D2 blocker is dystonia."
+   },
+   {
+    "text": "Neuroleptic malignant syndrome; give dantrolene",
+    "why": "No fever or rigidity crisis described; this is dystonia."
+   },
+   {
+    "text": "Anticholinergic toxicity; give physostigmine",
+    "why": "Metoclopramide is a D2 blocker, not an anticholinergic."
+   }
+  ],
+  "why_correct": "D2 blockade by metoclopramide (and prochlorperazine) can cause acute dystonia within hours to days; diphenhydramine or benztropine reverses it. Tardive dyskinesia is the long-term boxed warning.",
+  "takeaway": "Early dystonia (hours) vs. tardive dyskinesia (months) — both from D2 blockade.",
+  "discriminator": "Time course separates the two movement disorders.",
+  "src": "L05 S36; S37; S64; S68; S71; SG U3-R8",
+  "id": "U3B-012",
+  "answer": "C",
+  "options": {
+   "A": {
+    "text": "Tardive dyskinesia; stop and wait months",
+    "why": "Tardive dyskinesia appears after long-term use.",
+    "correct": false
+   },
+   "B": {
+    "text": "Neuroleptic malignant syndrome; give dantrolene",
+    "why": "No fever or rigidity crisis described; this is dystonia.",
+    "correct": false
+   },
+   "C": {
+    "text": "Acute dystonia; give diphenhydramine or benztropine",
+    "why": "D2 blockade by metoclopramide (and prochlorperazine) can cause acute dystonia within hours to days; diphenhydramine or benztropine reverses it. Tardive dyskinesia is the long-term boxed warning.",
+    "correct": true
+   },
+   "D": {
+    "text": "A focal seizure; give diazepam",
+    "why": "Sustained posturing with eye deviation after a D2 blocker is dystonia.",
+    "correct": false
+   },
+   "E": {
+    "text": "Anticholinergic toxicity; give physostigmine",
+    "why": "Metoclopramide is a D2 blocker, not an anticholinergic.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L05/index.html#antiemetics",
+   "label": "Study this: L05 · Part 4 →"
+  }
+ },
+ {
+  "topic": "IBD",
+  "objectives": [
+   "IO3.5"
+  ],
+  "sg": [
+   "U3-R11"
+  ],
+  "kind": "vignette",
+  "stem": "Before azathioprine is started for Crohn disease, genetic testing shows very low TPMT activity. What should the clinician anticipate?",
+  "correct": "High myelosuppression risk at standard doses",
+  "distractors": [
+   {
+    "text": "Faster onset of remission within days",
+    "why": "Onset takes 8–12 weeks regardless."
+   },
+   {
+    "text": "Lower drug levels, so a higher dose is needed",
+    "why": "Low TPMT raises active metabolite levels."
+   },
+   {
+    "text": "Higher risk of acute pancreatitis only",
+    "why": "The taught TPMT risk is bone marrow suppression."
+   },
+   {
+    "text": "No change, since TPMT affects only allopurinol",
+    "why": "TPMT metabolizes thiopurines."
+   }
+  ],
+  "why_correct": "Test TPMT and NUDT15 before thiopurines: low activity raises myelosuppression risk. Monitor CBC and liver tests; onset takes weeks to months — a Unit 1 pharmacogenomics principle.",
+  "takeaway": "Low TPMT/NUDT15 → myelosuppression with azathioprine or 6-MP.",
+  "discriminator": "Poor metabolizer → more active drug → more toxicity.",
+  "src": "L06 S15; S54; SG U3-R11",
+  "id": "U3B-026",
+  "answer": "A",
+  "options": {
+   "A": {
+    "text": "High myelosuppression risk at standard doses",
+    "why": "Test TPMT and NUDT15 before thiopurines: low activity raises myelosuppression risk. Monitor CBC and liver tests; onset takes weeks to months — a Unit 1 pharmacogenomics principle.",
+    "correct": true
+   },
+   "B": {
+    "text": "Faster onset of remission within days",
+    "why": "Onset takes 8–12 weeks regardless.",
+    "correct": false
+   },
+   "C": {
+    "text": "No change, since TPMT affects only allopurinol",
+    "why": "TPMT metabolizes thiopurines.",
+    "correct": false
+   },
+   "D": {
+    "text": "Lower drug levels, so a higher dose is needed",
+    "why": "Low TPMT raises active metabolite levels.",
+    "correct": false
+   },
+   "E": {
+    "text": "Higher risk of acute pancreatitis only",
+    "why": "The taught TPMT risk is bone marrow suppression.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L06/index.html#inflammatory-bowel-disease",
+   "label": "Study this: L06 · Part 2 →"
+  }
+ },
+ {
+  "topic": "Acid suppression",
+  "objectives": [
+   "IO3.2"
+  ],
+  "sg": [
+   "U3-R3"
+  ],
+  "kind": "vignette",
+  "stem": "A patient with stage 4 CKD has taken Milk of Magnesia daily for months for heartburn and constipation. She now has hypotension, absent deep-tendon reflexes and slow breathing. What is the most likely cause?",
+  "correct": "Hypermagnesemia from magnesium accumulating in CKD",
+  "distractors": [
+   {
+    "text": "Aluminum accumulation causing encephalopathy",
+    "why": "Aluminum hydroxide, not magnesium, causes that."
+   },
+   {
+    "text": "Milk-alkali syndrome from excess calcium",
+    "why": "That is calcium carbonate."
+   },
+   {
+    "text": "Hypokalemia from chronic laxative use",
+    "why": "Stimulant laxatives cause hypokalemia; this pattern is magnesium toxicity."
+   },
+   {
+    "text": "Hypomagnesemia from chronic acid suppression",
+    "why": "PPIs lower magnesium; this patient has too much."
+   }
+  ],
+  "why_correct": "Magnesium is renally cleared. In severe renal impairment it accumulates: hypotension, absent reflexes, respiratory depression and cardiac arrest. Severe renal impairment is a contraindication.",
+  "takeaway": "Mg antacid/laxative + CKD → hypermagnesemia (reflexes vanish first).",
+  "discriminator": "Each antacid's CKD problem: Mg → hypermagnesemia; Al → osteomalacia/encephalopathy; Ca → milk-alkali.",
+  "src": "L05 S12; S53; S54; S55",
+  "id": "U3B-004",
+  "answer": "B",
+  "options": {
+   "A": {
+    "text": "Hypomagnesemia from chronic acid suppression",
+    "why": "PPIs lower magnesium; this patient has too much.",
+    "correct": false
+   },
+   "B": {
+    "text": "Hypermagnesemia from magnesium accumulating in CKD",
+    "why": "Magnesium is renally cleared. In severe renal impairment it accumulates: hypotension, absent reflexes, respiratory depression and cardiac arrest. Severe renal impairment is a contraindication.",
+    "correct": true
+   },
+   "C": {
+    "text": "Hypokalemia from chronic laxative use",
+    "why": "Stimulant laxatives cause hypokalemia; this pattern is magnesium toxicity.",
+    "correct": false
+   },
+   "D": {
+    "text": "Aluminum accumulation causing encephalopathy",
+    "why": "Aluminum hydroxide, not magnesium, causes that.",
+    "correct": false
+   },
+   "E": {
+    "text": "Milk-alkali syndrome from excess calcium",
+    "why": "That is calcium carbonate.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L05/index.html#antacids-h2-blockers-proton-pump-inhibitors",
+   "label": "Study this: L05 · Part 2 →"
+  }
+ },
+ {
+  "topic": "Antiemetics",
+  "objectives": [
+   "IO3.2",
+   "IO3.4"
+  ],
+  "sg": [
+   "U3-R7"
+  ],
+  "kind": "vignette",
+  "stem": "An 86-year-old with Alzheimer dementia in a nursing home has nausea. Which antiemetic carries a boxed warning that applies directly to her?",
+  "correct": "Prochlorperazine",
+  "distractors": [
+   {
+    "text": "Ondansetron",
+    "why": "QT risk, but no dementia boxed warning."
+   },
+   {
+    "text": "Meclizine",
+    "why": "Anticholinergic caution in older adults; no boxed warning."
+   },
+   {
+    "text": "Aprepitant",
+    "why": "No dementia-related boxed warning."
+   },
+   {
+    "text": "Dexamethasone",
+    "why": "Steroid risks; no dementia boxed warning."
+   }
+  ],
+  "why_correct": "Prochlorperazine (a phenothiazine D2 blocker) carries a boxed warning for dementia-related psychosis, plus dystonia, TD, NMS, QT prolongation and sedation.",
+  "takeaway": "Prochlorperazine boxed warning: dementia-related psychosis.",
+  "discriminator": "Older adult + dementia is a filter that removes the phenothiazine.",
+  "src": "L05 S30; S68",
+  "id": "U3B-014",
+  "answer": "D",
+  "options": {
+   "A": {
+    "text": "Meclizine",
+    "why": "Anticholinergic caution in older adults; no boxed warning.",
+    "correct": false
+   },
+   "B": {
+    "text": "Aprepitant",
+    "why": "No dementia-related boxed warning.",
+    "correct": false
+   },
+   "C": {
+    "text": "Dexamethasone",
+    "why": "Steroid risks; no dementia boxed warning.",
+    "correct": false
+   },
+   "D": {
+    "text": "Prochlorperazine",
+    "why": "Prochlorperazine (a phenothiazine D2 blocker) carries a boxed warning for dementia-related psychosis, plus dystonia, TD, NMS, QT prolongation and sedation.",
+    "correct": true
+   },
+   "E": {
+    "text": "Ondansetron",
+    "why": "QT risk, but no dementia boxed warning.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L05/index.html#antiemetics",
+   "label": "Study this: L05 · Part 4 →"
+  }
+ },
+ {
+  "topic": "IBD",
+  "objectives": [
+   "IO3.2",
+   "IO3.5"
+  ],
+  "sg": [
+   "U3-R11"
+  ],
+  "kind": "vignette",
+  "stem": "A patient with mild ulcerative colitis has taken mesalamine 4.8 g daily for 6 months. His creatinine has risen from 0.9 to 1.6 mg/dL with no other cause. What is the most likely explanation?",
+  "correct": "Interstitial nephritis from the 5-ASA agent",
+  "distractors": [
+   {
+    "text": "Expected prerenal change from diarrhea",
+    "why": "Mild disease, no other cause; mesalamine needs creatinine monitoring."
+   },
+   {
+    "text": "Acute intolerance syndrome",
+    "why": "That causes cramps and bloody diarrhea, not creatinine rise."
+   },
+   {
+    "text": "Thiopurine-related hepatotoxicity",
+    "why": "He is not on a thiopurine; the kidney is affected."
+   },
+   {
+    "text": "Steroid-induced kidney injury",
+    "why": "Not a taught corticosteroid effect."
+   }
+  ],
+  "why_correct": "Mesalamine (5-ASA) is first-line for mild UC; its key toxicity is interstitial nephritis, so creatinine is monitored. Acute intolerance syndrome mimics a flare.",
+  "takeaway": "Mesalamine: monitor creatinine (interstitial nephritis).",
+  "discriminator": "Separate the kidney toxicity from the flare-like intolerance syndrome.",
+  "src": "L06 S12; S13; S50; SG U3-R11",
+  "id": "U3B-022",
+  "answer": "E",
+  "options": {
+   "A": {
+    "text": "Expected prerenal change from diarrhea",
+    "why": "Mild disease, no other cause; mesalamine needs creatinine monitoring.",
+    "correct": false
+   },
+   "B": {
+    "text": "Steroid-induced kidney injury",
+    "why": "Not a taught corticosteroid effect.",
+    "correct": false
+   },
+   "C": {
+    "text": "Acute intolerance syndrome",
+    "why": "That causes cramps and bloody diarrhea, not creatinine rise.",
+    "correct": false
+   },
+   "D": {
+    "text": "Thiopurine-related hepatotoxicity",
+    "why": "He is not on a thiopurine; the kidney is affected.",
+    "correct": false
+   },
+   "E": {
+    "text": "Interstitial nephritis from the 5-ASA agent",
+    "why": "Mesalamine (5-ASA) is first-line for mild UC; its key toxicity is interstitial nephritis, so creatinine is monitored. Acute intolerance syndrome mimics a flare.",
+    "correct": true
+   }
+  },
+  "link": {
+   "href": "../../L06/index.html#inflammatory-bowel-disease",
+   "label": "Study this: L06 · Part 2 →"
+  }
+ },
+ {
+  "topic": "Bowel disorders",
+  "objectives": [
+   "IO3.6"
+  ],
+  "sg": [
+   "U3-R9"
+  ],
+  "kind": "vignette",
+  "stem": "A grandmother asks if she can give her 18-month-old grandson some of her linaclotide for constipation. What is the key safety point?",
+  "correct": "Boxed warning: fatal dehydration under age 2",
+  "distractors": [
+   {
+    "text": "It is safe at one quarter of the adult capsule dose",
+    "why": "Contraindicated under 2 years (boxed warning)."
+   },
+   {
+    "text": "It is safe if mixed with plenty of fluid",
+    "why": "Fluid does not remove the boxed warning."
+   },
+   {
+    "text": "It only causes mild diarrhea in children",
+    "why": "Deaths from dehydration occurred in young children."
+   },
+   {
+    "text": "It is safe because it is not absorbed",
+    "why": "Local action still caused fatal dehydration."
+   }
+  ],
+  "why_correct": "Linaclotide (a secretagogue) has a boxed warning against use in children under 2 years — severe dehydration and deaths; also mechanical GI obstruction is a contraindication.",
+  "takeaway": "Linaclotide: boxed warning under 2 years.",
+  "discriminator": "Secretagogues pull fluid into the gut — dangerous in small children.",
+  "src": "L06 S4; S5; S47; SG U3-R9",
+  "id": "U3B-019",
+  "answer": "A",
+  "options": {
+   "A": {
+    "text": "Boxed warning: fatal dehydration under age 2",
+    "why": "Linaclotide (a secretagogue) has a boxed warning against use in children under 2 years — severe dehydration and deaths; also mechanical GI obstruction is a contraindication.",
+    "correct": true
+   },
+   "B": {
+    "text": "It is safe if mixed with plenty of fluid",
+    "why": "Fluid does not remove the boxed warning.",
+    "correct": false
+   },
+   "C": {
+    "text": "It is safe at one quarter of the adult capsule dose",
+    "why": "Contraindicated under 2 years (boxed warning).",
+    "correct": false
+   },
+   "D": {
+    "text": "It only causes mild diarrhea in children",
+    "why": "Deaths from dehydration occurred in young children.",
+    "correct": false
+   },
+   "E": {
+    "text": "It is safe because it is not absorbed",
+    "why": "Local action still caused fatal dehydration.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L06/index.html#laxatives-antidiarrheals",
+   "label": "Study this: L06 · Part 1 →"
+  }
+ },
+ {
+  "topic": "Acid suppression",
+  "objectives": [
+   "IO3.2",
+   "IO3.3"
+  ],
+  "sg": [
+   "U3-R4"
+  ],
+  "kind": "vignette",
+  "stem": "A 66-year-old had a coronary stent placed 2 months ago and takes clopidogrel and warfarin. He now has erosive GERD that needs daily acid suppression for 8 weeks. Which choice best fits?",
+  "correct": "Pantoprazole 40 mg daily before a meal",
+  "distractors": [
+   {
+    "text": "Omeprazole 20 mg daily before breakfast",
+    "why": "Inhibits CYP2C19 and can blunt clopidogrel activation."
+   },
+   {
+    "text": "Esomeprazole 40 mg daily before breakfast",
+    "why": "Same CYP2C19 concern as omeprazole."
+   },
+   {
+    "text": "Cimetidine 400 mg twice daily with meals",
+    "why": "Strong CYP inhibitor that raises warfarin levels."
+   },
+   {
+    "text": "Calcium carbonate 1,000 mg after each meal",
+    "why": "Neutralizes acid briefly; does not heal erosive GERD."
+   }
+  ],
+  "why_correct": "Clopidogrel is a prodrug activated by CYP2C19, which omeprazole and esomeprazole inhibit. Pantoprazole has fewer CYP interactions and still gives full PPI potency; cimetidine would also raise warfarin levels.",
+  "takeaway": "Clopidogrel (or several CYP-sensitive drugs) + PPI need → pantoprazole.",
+  "discriminator": "Two drugs, two CYP traps: CYP2C19 (omeprazole) and broad CYP inhibition (cimetidine).",
+  "src": "L05 S16; S18; S19; S48; S52; SG U3-R4",
+  "id": "U3B-001",
+  "answer": "E",
+  "options": {
+   "A": {
+    "text": "Esomeprazole 40 mg daily before breakfast",
+    "why": "Same CYP2C19 concern as omeprazole.",
+    "correct": false
+   },
+   "B": {
+    "text": "Calcium carbonate 1,000 mg after each meal",
+    "why": "Neutralizes acid briefly; does not heal erosive GERD.",
+    "correct": false
+   },
+   "C": {
+    "text": "Omeprazole 20 mg daily before breakfast",
+    "why": "Inhibits CYP2C19 and can blunt clopidogrel activation.",
+    "correct": false
+   },
+   "D": {
+    "text": "Cimetidine 400 mg twice daily with meals",
+    "why": "Strong CYP inhibitor that raises warfarin levels.",
+    "correct": false
+   },
+   "E": {
+    "text": "Pantoprazole 40 mg daily before a meal",
+    "why": "Clopidogrel is a prodrug activated by CYP2C19, which omeprazole and esomeprazole inhibit. Pantoprazole has fewer CYP interactions and still gives full PPI potency; cimetidine would also raise warfarin levels.",
+    "correct": true
+   }
+  },
+  "link": {
+   "href": "../../L05/index.html#antacids-h2-blockers-proton-pump-inhibitors",
+   "label": "Study this: L05 · Part 2 →"
+  }
+ },
+ {
+  "topic": "Nutrition",
+  "objectives": [
+   "IO3.2"
+  ],
+  "sg": [
+   "U3-R12"
+  ],
+  "kind": "vignette",
+  "stem": "A 70-year-old on metformin and long-term omeprazole has macrocytic anemia. Folic acid alone is started; the anemia improves, but numbness in her feet worsens. What happened?",
+  "correct": "B12 deficiency masked by the folate",
+  "distractors": [
+   {
+    "text": "Folic acid toxicity caused neuropathy",
+    "why": "Folic acid has low toxicity; B12 deficiency drives the nerve damage."
+   },
+   {
+    "text": "Metformin directly damages peripheral nerves",
+    "why": "Metformin impairs B12 absorption."
+   },
+   {
+    "text": "The PPI caused hypomagnesemia neuropathy",
+    "why": "The pattern is B12 deficiency."
+   },
+   {
+    "text": "Iron deficiency developed on folate",
+    "why": "Iron deficiency is microcytic, not this picture."
+   }
+  ],
+  "why_correct": "PPIs and metformin impair B12 absorption. Folate alone can correct the anemia while neurologic damage from B12 deficiency progresses and can become irreversible. Check and replace B12.",
+  "takeaway": "Long-term PPI or metformin → check B12; never folate alone.",
+  "discriminator": "A fixed blood count does not mean the cause is fixed.",
+  "src": "L06 S24; S25; S62; S63; SG U3-R12; L05 S15",
+  "id": "U3B-028",
+  "answer": "C",
+  "options": {
+   "A": {
+    "text": "Folic acid toxicity caused neuropathy",
+    "why": "Folic acid has low toxicity; B12 deficiency drives the nerve damage.",
+    "correct": false
+   },
+   "B": {
+    "text": "Iron deficiency developed on folate",
+    "why": "Iron deficiency is microcytic, not this picture.",
+    "correct": false
+   },
+   "C": {
+    "text": "B12 deficiency masked by the folate",
+    "why": "PPIs and metformin impair B12 absorption. Folate alone can correct the anemia while neurologic damage from B12 deficiency progresses and can become irreversible. Check and replace B12.",
+    "correct": true
+   },
+   "D": {
+    "text": "The PPI caused hypomagnesemia neuropathy",
+    "why": "The pattern is B12 deficiency.",
+    "correct": false
+   },
+   "E": {
+    "text": "Metformin directly damages peripheral nerves",
+    "why": "Metformin impairs B12 absorption.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L06/index.html#nutrition-vitamins-dietary-supplements",
+   "label": "Study this: L06 · Part 3 →"
+  }
+ },
+ {
+  "topic": "H. pylori",
+  "objectives": [
+   "IO3.2"
+  ],
+  "sg": [
+   "U3-R6"
+  ],
+  "kind": "vignette",
+  "stem": "A patient on simvastatin with no drug allergies and no prior macrolide use is about to start clarithromycin triple therapy for H. pylori. What should the clinician anticipate?",
+  "correct": "Contraindicated: CYP3A4 inhibition raises the statin",
+  "distractors": [
+   {
+    "text": "Lower simvastatin levels from CYP3A4 induction",
+    "why": "Clarithromycin inhibits CYP3A4; levels rise."
+   },
+   {
+    "text": "Reduced clarithromycin effect from simvastatin",
+    "why": "The statin is the victim drug, not the perpetrator."
+   },
+   {
+    "text": "No interaction, since clarithromycin affects only warfarin",
+    "why": "Clarithromycin is a strong CYP3A4 and P-gp inhibitor."
+   },
+   {
+    "text": "Disulfiram-like reaction with the statin",
+    "why": "That is metronidazole with alcohol."
+   }
+  ],
+  "why_correct": "Clarithromycin is a strong CYP3A4 and P-gp inhibitor; co-use with simvastatin, lovastatin or ergotamine is contraindicated. It also prolongs QT. An inhibitor raises the victim drug's level and toxicity.",
+  "takeaway": "Clarithromycin + simvastatin/lovastatin/ergotamine = contraindicated (CYP3A4).",
+  "discriminator": "Perpetrator vs. victim: the inhibitor raises the other drug's level (Unit 1).",
+  "src": "L05 S24; S60; SG U3-R6",
+  "id": "U3B-009",
+  "answer": "D",
+  "options": {
+   "A": {
+    "text": "No interaction, since clarithromycin affects only warfarin",
+    "why": "Clarithromycin is a strong CYP3A4 and P-gp inhibitor.",
+    "correct": false
+   },
+   "B": {
+    "text": "Lower simvastatin levels from CYP3A4 induction",
+    "why": "Clarithromycin inhibits CYP3A4; levels rise.",
+    "correct": false
+   },
+   "C": {
+    "text": "Disulfiram-like reaction with the statin",
+    "why": "That is metronidazole with alcohol.",
+    "correct": false
+   },
+   "D": {
+    "text": "Contraindicated: CYP3A4 inhibition raises the statin",
+    "why": "Clarithromycin is a strong CYP3A4 and P-gp inhibitor; co-use with simvastatin, lovastatin or ergotamine is contraindicated. It also prolongs QT. An inhibitor raises the victim drug's level and toxicity.",
+    "correct": true
+   },
+   "E": {
+    "text": "Reduced clarithromycin effect from simvastatin",
+    "why": "The statin is the victim drug, not the perpetrator.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L05/index.html#mucosal-protectants-h-pylori-eradication",
+   "label": "Study this: L05 · Part 3 →"
+  }
+ },
+ {
+  "topic": "IBD",
+  "objectives": [
+   "IO3.2",
+   "IO3.4"
+  ],
+  "sg": [
+   "U3-R11"
+  ],
+  "kind": "vignette",
+  "stem": "A patient with Crohn disease in remission on azathioprine now has recurrent gout and needs urate-lowering therapy. Which plan is safest?",
+  "correct": "Allopurinol plus a major azathioprine dose cut",
+  "distractors": [
+   {
+    "text": "Febuxostat at the usual starting dose",
+    "why": "Contraindicated with azathioprine or mercaptopurine."
+   },
+   {
+    "text": "Allopurinol at full dose with no azathioprine change",
+    "why": "Allopurinol blocks thiopurine metabolism → myelosuppression."
+   },
+   {
+    "text": "Stop azathioprine permanently before any gout drug",
+    "why": "Dose reduction with monitoring is the taught approach."
+   },
+   {
+    "text": "Add colchicine daily instead of urate-lowering therapy",
+    "why": "Prophylaxis does not lower urate."
+   }
+  ],
+  "why_correct": "Xanthine oxidase metabolizes thiopurines. Allopurinol requires a major thiopurine dose cut (about two-thirds to three-quarters) with CBC monitoring; febuxostat use with azathioprine is contraindicated.",
+  "takeaway": "Thiopurine + allopurinol → cut the thiopurine dose; + febuxostat → contraindicated.",
+  "discriminator": "A Unit 2 drug and a Unit 3 drug meeting at xanthine oxidase.",
+  "src": "L06 S15; S54; S55; L04 S74; S75",
+  "id": "U3B-025",
+  "answer": "D",
+  "options": {
+   "A": {
+    "text": "Stop azathioprine permanently before any gout drug",
+    "why": "Dose reduction with monitoring is the taught approach.",
+    "correct": false
+   },
+   "B": {
+    "text": "Febuxostat at the usual starting dose",
+    "why": "Contraindicated with azathioprine or mercaptopurine.",
+    "correct": false
+   },
+   "C": {
+    "text": "Add colchicine daily instead of urate-lowering therapy",
+    "why": "Prophylaxis does not lower urate.",
+    "correct": false
+   },
+   "D": {
+    "text": "Allopurinol plus a major azathioprine dose cut",
+    "why": "Xanthine oxidase metabolizes thiopurines. Allopurinol requires a major thiopurine dose cut (about two-thirds to three-quarters) with CBC monitoring; febuxostat use with azathioprine is contraindicated.",
+    "correct": true
+   },
+   "E": {
+    "text": "Allopurinol at full dose with no azathioprine change",
+    "why": "Allopurinol blocks thiopurine metabolism → myelosuppression.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L06/index.html#inflammatory-bowel-disease",
+   "label": "Study this: L06 · Part 2 →"
+  }
+ },
+ {
+  "topic": "Bowel disorders",
+  "objectives": [
+   "IO3.4"
+  ],
+  "sg": [
+   "U3-R9"
+  ],
+  "kind": "vignette",
+  "stem": "An 81-year-old with an esophageal stricture and trouble swallowing has chronic constipation. Which option is the best fit?",
+  "correct": "Polyethylene glycol 3350, 17 g in fluid daily",
+  "distractors": [
+   {
+    "text": "Psyllium 3.4 g with a full glass of water",
+    "why": "Dysphagia is a contraindication; risk of esophageal obstruction."
+   },
+   {
+    "text": "Methylcellulose 2 g in water",
+    "why": "Bulk-formers are avoided with dysphagia."
+   },
+   {
+    "text": "Senna 17.2 mg nightly long term",
+    "why": "Chronic use: hypokalemia, dependence; not the best fit."
+   },
+   {
+    "text": "Lactulose 30–45 mL four times daily",
+    "why": "That is the hepatic encephalopathy dose."
+   }
+  ],
+  "why_correct": "Bulk-forming laxatives (psyllium, methylcellulose) can obstruct the esophagus or intestine without enough fluid and are contraindicated with dysphagia. PEG 3350 is an osmotic agent mixed into fluid.",
+  "takeaway": "Dysphagia → avoid bulk-formers; choose an osmotic (PEG).",
+  "discriminator": "Patient factor first, then the class.",
+  "src": "L06 S4; S5; S40; S41; S42; S43; S44; SG U3-R9",
+  "id": "U3B-020",
+  "answer": "E",
+  "options": {
+   "A": {
+    "text": "Methylcellulose 2 g in water",
+    "why": "Bulk-formers are avoided with dysphagia.",
+    "correct": false
+   },
+   "B": {
+    "text": "Psyllium 3.4 g with a full glass of water",
+    "why": "Dysphagia is a contraindication; risk of esophageal obstruction.",
+    "correct": false
+   },
+   "C": {
+    "text": "Senna 17.2 mg nightly long term",
+    "why": "Chronic use: hypokalemia, dependence; not the best fit.",
+    "correct": false
+   },
+   "D": {
+    "text": "Lactulose 30–45 mL four times daily",
+    "why": "That is the hepatic encephalopathy dose.",
+    "correct": false
+   },
+   "E": {
+    "text": "Polyethylene glycol 3350, 17 g in fluid daily",
+    "why": "Bulk-forming laxatives (psyllium, methylcellulose) can obstruct the esophagus or intestine without enough fluid and are contraindicated with dysphagia. PEG 3350 is an osmotic agent mixed into fluid.",
+    "correct": true
+   }
+  },
+  "link": {
+   "href": "../../L06/index.html#laxatives-antidiarrheals",
+   "label": "Study this: L06 · Part 1 →"
+  }
+ },
+ {
+  "topic": "Antiemetics",
+  "objectives": [
+   "IO3.2",
+   "IO3.4"
+  ],
+  "sg": [
+   "U3-R8"
+  ],
+  "kind": "vignette",
+  "stem": "A 52-year-old with diabetic gastroparesis also has a seizure disorder controlled on medication. Which statement about metoclopramide is correct for her?",
+  "correct": "Contraindicated because of the seizure disorder",
+  "distractors": [
+   {
+    "text": "It is preferred because it is prokinetic",
+    "why": "Prokinetic, but a seizure disorder is a contraindication."
+   },
+   {
+    "text": "It is safe if limited to 12 weeks",
+    "why": "The 12-week limit addresses tardive dyskinesia, not seizures."
+   },
+   {
+    "text": "It is safe at 10 mg before meals and at bedtime only",
+    "why": "Dose does not remove the contraindication."
+   },
+   {
+    "text": "It is fine if she has never had dystonia",
+    "why": "History of TD is a contraindication; seizures are too."
+   }
+  ],
+  "why_correct": "Metoclopramide is contraindicated with GI obstruction/perforation/bleeding, pheochromocytoma, seizure disorder and a history of tardive dyskinesia. The 12-week limit is for TD risk.",
+  "takeaway": "Metoclopramide contraindications: obstruction, pheochromocytoma, seizures, prior TD.",
+  "discriminator": "The 12-week rule is a safety limit, not a pass for other contraindications.",
+  "src": "L05 S36; S64; SG U3-R8",
+  "id": "U3B-013",
+  "answer": "A",
+  "options": {
+   "A": {
+    "text": "Contraindicated because of the seizure disorder",
+    "why": "Metoclopramide is contraindicated with GI obstruction/perforation/bleeding, pheochromocytoma, seizure disorder and a history of tardive dyskinesia. The 12-week limit is for TD risk.",
+    "correct": true
+   },
+   "B": {
+    "text": "It is safe at 10 mg before meals and at bedtime only",
+    "why": "Dose does not remove the contraindication.",
+    "correct": false
+   },
+   "C": {
+    "text": "It is safe if limited to 12 weeks",
+    "why": "The 12-week limit addresses tardive dyskinesia, not seizures.",
+    "correct": false
+   },
+   "D": {
+    "text": "It is fine if she has never had dystonia",
+    "why": "History of TD is a contraindication; seizures are too.",
+    "correct": false
+   },
+   "E": {
+    "text": "It is preferred because it is prokinetic",
+    "why": "Prokinetic, but a seizure disorder is a contraindication.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L05/index.html#antiemetics",
+   "label": "Study this: L05 · Part 4 →"
+  }
+ },
+ {
+  "topic": "H. pylori",
+  "objectives": [
+   "IO3.5"
+  ],
+  "sg": [
+   "U3-R6"
+  ],
+  "kind": "vignette",
+  "stem": "A patient finished 14 days of H. pylori therapy 3 weeks ago and still takes omeprazole daily for reflux. He wants proof of cure this week. What is the best plan?",
+  "correct": "Stop the PPI now and test in at least 2 weeks",
+  "distractors": [
+   {
+    "text": "Urea breath test this week while on the PPI",
+    "why": "PPIs cause false negatives; too soon after therapy."
+   },
+   {
+    "text": "Stool antigen test now; a PPI does not matter",
+    "why": "PPIs suppress the organism and cause false negatives."
+   },
+   {
+    "text": "Repeat the full course empirically",
+    "why": "Confirm before re-treating."
+   },
+   {
+    "text": "No test is needed if symptoms have resolved",
+    "why": "Eradication should be confirmed."
+   }
+  ],
+  "why_correct": "Test of cure (urea breath test or stool antigen) at least 4 weeks after therapy with the PPI held for 2 weeks. Stopping now satisfies both: 5+ weeks after therapy and 2 weeks off the PPI.",
+  "takeaway": "Test of cure: ≥ 4 weeks after therapy, PPI off ≥ 2 weeks.",
+  "discriminator": "Two clocks run at once — time since therapy and time off the PPI.",
+  "src": "L05 S23; S24; SG U3-R6",
+  "id": "U3B-008",
+  "answer": "C",
+  "options": {
+   "A": {
+    "text": "Stool antigen test now; a PPI does not matter",
+    "why": "PPIs suppress the organism and cause false negatives.",
+    "correct": false
+   },
+   "B": {
+    "text": "No test is needed if symptoms have resolved",
+    "why": "Eradication should be confirmed.",
+    "correct": false
+   },
+   "C": {
+    "text": "Stop the PPI now and test in at least 2 weeks",
+    "why": "Test of cure (urea breath test or stool antigen) at least 4 weeks after therapy with the PPI held for 2 weeks. Stopping now satisfies both: 5+ weeks after therapy and 2 weeks off the PPI.",
+    "correct": true
+   },
+   "D": {
+    "text": "Urea breath test this week while on the PPI",
+    "why": "PPIs cause false negatives; too soon after therapy.",
+    "correct": false
+   },
+   "E": {
+    "text": "Repeat the full course empirically",
+    "why": "Confirm before re-treating.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L05/index.html#mucosal-protectants-h-pylori-eradication",
+   "label": "Study this: L05 · Part 3 →"
+  }
+ },
+ {
+  "topic": "Antiemetics",
+  "objectives": [
+   "IO3.2",
+   "IO3.4"
+  ],
+  "sg": [
+   "U3-R7"
+  ],
+  "kind": "vignette",
+  "stem": "A 35-year-old with congenital long QT syndrome starts highly emetogenic chemotherapy. Which antiemetic is contraindicated for her?",
+  "correct": "Ondansetron",
+  "distractors": [
+   {
+    "text": "Aprepitant",
+    "why": "NK1 antagonist; its issues are CYP3A4 interactions, not QT contraindication."
+   },
+   {
+    "text": "Dexamethasone",
+    "why": "CINV adjunct; no QT contraindication."
+   },
+   {
+    "text": "Dronabinol",
+    "why": "Cannabinoid; psychoactive effects, not QT."
+   },
+   {
+    "text": "Meclizine",
+    "why": "Anticholinergic; not a QT contraindication."
+   }
+  ],
+  "why_correct": "Ondansetron prolongs QT and can cause torsades; congenital long QT syndrome (and apomorphine co-use) are contraindications. A CINV regimen can lean on the NK1 antagonist and dexamethasone instead.",
+  "takeaway": "Ondansetron: QT/torsades — contraindicated in congenital long QT.",
+  "discriminator": "Know each antiemetic's signature risk: 5-HT3 QT, D2 TD/dystonia, NK1 CYP3A4, CB1 psychoactive.",
+  "src": "L05 S30; S31; S63; S65; S69; S70; SG U3-R7",
+  "id": "U3B-010",
+  "answer": "C",
+  "options": {
+   "A": {
+    "text": "Meclizine",
+    "why": "Anticholinergic; not a QT contraindication.",
+    "correct": false
+   },
+   "B": {
+    "text": "Dronabinol",
+    "why": "Cannabinoid; psychoactive effects, not QT.",
+    "correct": false
+   },
+   "C": {
+    "text": "Ondansetron",
+    "why": "Ondansetron prolongs QT and can cause torsades; congenital long QT syndrome (and apomorphine co-use) are contraindications. A CINV regimen can lean on the NK1 antagonist and dexamethasone instead.",
+    "correct": true
+   },
+   "D": {
+    "text": "Dexamethasone",
+    "why": "CINV adjunct; no QT contraindication.",
+    "correct": false
+   },
+   "E": {
+    "text": "Aprepitant",
+    "why": "NK1 antagonist; its issues are CYP3A4 interactions, not QT contraindication.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L05/index.html#antiemetics",
+   "label": "Study this: L05 · Part 4 →"
+  }
+ },
+ {
+  "topic": "IBD",
+  "objectives": [
+   "IO3.2"
+  ],
+  "sg": [
+   "U3-R11"
+  ],
+  "kind": "vignette",
+  "stem": "A patient with Crohn disease takes budesonide 9 mg every morning. He starts ketoconazole for a fungal infection and drinks grapefruit juice daily. Two weeks later he has a round face and high glucose. Why?",
+  "correct": "CYP3A4 inhibition raised budesonide's systemic exposure",
+  "distractors": [
+   {
+    "text": "Budesonide has no first-pass metabolism",
+    "why": "It has high first-pass metabolism — normally."
+   },
+   {
+    "text": "Ketoconazole induced cortisol production",
+    "why": "Ketoconazole inhibits CYP3A4."
+   },
+   {
+    "text": "Expected effect of 9 mg on any regimen",
+    "why": "Low systemic exposure is budesonide's advantage."
+   },
+   {
+    "text": "Grapefruit juice blocks budesonide absorption",
+    "why": "It inhibits CYP3A4, raising exposure."
+   }
+  ],
+  "why_correct": "Budesonide's high first-pass metabolism (CYP3A4) keeps systemic exposure low. Strong CYP3A4 inhibitors (ketoconazole, grapefruit juice) remove that protection → hypercortisolism.",
+  "takeaway": "Budesonide + CYP3A4 inhibitor → Cushingoid effects.",
+  "discriminator": "First-pass metabolism is the safety feature an inhibitor removes (Unit 1).",
+  "src": "L06 S14; S52",
+  "id": "U3B-024",
+  "answer": "A",
+  "options": {
+   "A": {
+    "text": "CYP3A4 inhibition raised budesonide's systemic exposure",
+    "why": "Budesonide's high first-pass metabolism (CYP3A4) keeps systemic exposure low. Strong CYP3A4 inhibitors (ketoconazole, grapefruit juice) remove that protection → hypercortisolism.",
+    "correct": true
+   },
+   "B": {
+    "text": "Ketoconazole induced cortisol production",
+    "why": "Ketoconazole inhibits CYP3A4.",
+    "correct": false
+   },
+   "C": {
+    "text": "Grapefruit juice blocks budesonide absorption",
+    "why": "It inhibits CYP3A4, raising exposure.",
+    "correct": false
+   },
+   "D": {
+    "text": "Budesonide has no first-pass metabolism",
+    "why": "It has high first-pass metabolism — normally.",
+    "correct": false
+   },
+   "E": {
+    "text": "Expected effect of 9 mg on any regimen",
+    "why": "Low systemic exposure is budesonide's advantage.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L06/index.html#inflammatory-bowel-disease",
+   "label": "Study this: L06 · Part 2 →"
+  }
+ },
+ {
+  "topic": "Antiemetics",
+  "objectives": [
+   "IO3.2",
+   "IO3.6"
+  ],
+  "sg": [
+   "U3-R7"
+  ],
+  "kind": "vignette",
+  "stem": "A 29-year-old on a combined oral contraceptive and warfarin starts a CINV regimen with aprepitant. Which counseling is most accurate?",
+  "correct": "Use backup contraception and expect closer INR checks",
+  "distractors": [
+   {
+    "text": "Aprepitant raises the contraceptive's estrogen level",
+    "why": "It lowers the contraceptive effect."
+   },
+   {
+    "text": "Aprepitant raises the INR, so cut the warfarin dose now",
+    "why": "It lowers warfarin effect."
+   },
+   {
+    "text": "No interaction; aprepitant is not metabolized by CYP",
+    "why": "It is a CYP3A4 substrate and moderate inhibitor."
+   },
+   {
+    "text": "Stop warfarin for the 3 days of aprepitant",
+    "why": "Monitoring, not stopping, is the response."
+   }
+  ],
+  "why_correct": "Aprepitant is a CYP3A4 substrate and moderate inhibitor that lowers the effect of warfarin and hormonal contraceptives: use backup contraception and monitor the INR.",
+  "takeaway": "Aprepitant ↓ warfarin and ↓ hormonal contraceptive effect.",
+  "discriminator": "Direction matters: here both partner drugs lose effect.",
+  "src": "L05 S30; S65; SG U3-R7",
+  "id": "U3B-011",
+  "answer": "E",
+  "options": {
+   "A": {
+    "text": "No interaction; aprepitant is not metabolized by CYP",
+    "why": "It is a CYP3A4 substrate and moderate inhibitor.",
+    "correct": false
+   },
+   "B": {
+    "text": "Aprepitant raises the INR, so cut the warfarin dose now",
+    "why": "It lowers warfarin effect.",
+    "correct": false
+   },
+   "C": {
+    "text": "Aprepitant raises the contraceptive's estrogen level",
+    "why": "It lowers the contraceptive effect.",
+    "correct": false
+   },
+   "D": {
+    "text": "Stop warfarin for the 3 days of aprepitant",
+    "why": "Monitoring, not stopping, is the response.",
+    "correct": false
+   },
+   "E": {
+    "text": "Use backup contraception and expect closer INR checks",
+    "why": "Aprepitant is a CYP3A4 substrate and moderate inhibitor that lowers the effect of warfarin and hormonal contraceptives: use backup contraception and monitor the INR.",
+    "correct": true
+   }
+  },
+  "link": {
+   "href": "../../L05/index.html#antiemetics",
+   "label": "Study this: L05 · Part 4 →"
+  }
+ },
+ {
+  "topic": "Acid suppression",
+  "objectives": [
+   "IO3.2",
+   "IO3.6"
+  ],
+  "sg": [
+   "U3-R6"
+  ],
+  "kind": "vignette",
+  "stem": "A patient starts bismuth quadruple therapy (PPI, bismuth, tetracycline, metronidazole). She also takes ferrous sulfate daily and chews calcium carbonate for heartburn. What is the most important counseling point about these extra products?",
+  "correct": "Space calcium and iron away from tetracycline",
+  "distractors": [
+   {
+    "text": "Stop the PPI while taking calcium carbonate",
+    "why": "The PPI is part of the regimen; the problem is chelation of tetracycline."
+   },
+   {
+    "text": "Take all of them together to simplify the schedule",
+    "why": "Calcium and iron chelate tetracycline and lower absorption."
+   },
+   {
+    "text": "Switch the iron to IV for the 14-day course",
+    "why": "Spacing the doses solves the interaction."
+   },
+   {
+    "text": "Expect black stools, so stop the iron until done",
+    "why": "Bismuth darkens stools; iron is not the reason to stop."
+   }
+  ],
+  "why_correct": "Tetracycline is chelated by dairy, antacids and iron, and calcium carbonate binds tetracyclines, quinolones, levothyroxine and iron. Space them (about 2 hours) so the antibiotic is absorbed.",
+  "takeaway": "Tetracycline + calcium/iron/antacids/dairy → chelation → separate doses.",
+  "discriminator": "Chelation lowers antibiotic absorption — a timing fix, not a drug swap.",
+  "src": "L05 S12; S53; S62; SG U3-R6",
+  "id": "U3B-003",
+  "answer": "D",
+  "options": {
+   "A": {
+    "text": "Take all of them together to simplify the schedule",
+    "why": "Calcium and iron chelate tetracycline and lower absorption.",
+    "correct": false
+   },
+   "B": {
+    "text": "Stop the PPI while taking calcium carbonate",
+    "why": "The PPI is part of the regimen; the problem is chelation of tetracycline.",
+    "correct": false
+   },
+   "C": {
+    "text": "Switch the iron to IV for the 14-day course",
+    "why": "Spacing the doses solves the interaction.",
+    "correct": false
+   },
+   "D": {
+    "text": "Space calcium and iron away from tetracycline",
+    "why": "Tetracycline is chelated by dairy, antacids and iron, and calcium carbonate binds tetracyclines, quinolones, levothyroxine and iron. Space them (about 2 hours) so the antibiotic is absorbed.",
+    "correct": true
+   },
+   "E": {
+    "text": "Expect black stools, so stop the iron until done",
+    "why": "Bismuth darkens stools; iron is not the reason to stop.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L05/index.html#antacids-h2-blockers-proton-pump-inhibitors",
+   "label": "Study this: L05 · Part 2 →"
+  }
+ },
+ {
+  "topic": "Mucosal protection",
+  "objectives": [
+   "IO3.2"
+  ],
+  "sg": [
+   "U3-R5"
+  ],
+  "kind": "vignette",
+  "stem": "A 58-year-old with type 2 diabetes and CKD stage 3 has a duodenal ulcer. Sucralfate 1 g four times daily is considered. Which pair of concerns is most relevant to him?",
+  "correct": "Aluminum accumulation and higher blood glucose",
+  "distractors": [
+   {
+    "text": "QT prolongation and serotonin syndrome",
+    "why": "Those are ondansetron concerns."
+   },
+   {
+    "text": "Pregnancy risk and uterine cramping",
+    "why": "Those are misoprostol concerns."
+   },
+   {
+    "text": "CYP2C19 inhibition and B12 deficiency",
+    "why": "Those are PPI concerns."
+   },
+   {
+    "text": "Tardive dyskinesia and acute dystonia",
+    "why": "Those are metoclopramide concerns."
+   }
+  ],
+  "why_correct": "Sucralfate contains aluminum that accumulates in CKD, can raise glucose in diabetes, can form bezoars and binds other drugs (separate by 2 hours).",
+  "takeaway": "Sucralfate: aluminum (CKD), hyperglycemia (diabetes), bezoar, binds drugs.",
+  "discriminator": "Match each mucosal agent to its own patient filter: sucralfate = CKD/diabetes; misoprostol = pregnancy.",
+  "src": "L05 S20; S21; S56; SG U3-R5",
+  "id": "U3B-005",
+  "answer": "E",
+  "options": {
+   "A": {
+    "text": "Pregnancy risk and uterine cramping",
+    "why": "Those are misoprostol concerns.",
+    "correct": false
+   },
+   "B": {
+    "text": "Tardive dyskinesia and acute dystonia",
+    "why": "Those are metoclopramide concerns.",
+    "correct": false
+   },
+   "C": {
+    "text": "CYP2C19 inhibition and B12 deficiency",
+    "why": "Those are PPI concerns.",
+    "correct": false
+   },
+   "D": {
+    "text": "QT prolongation and serotonin syndrome",
+    "why": "Those are ondansetron concerns.",
+    "correct": false
+   },
+   "E": {
+    "text": "Aluminum accumulation and higher blood glucose",
+    "why": "Sucralfate contains aluminum that accumulates in CKD, can raise glucose in diabetes, can form bezoars and binds other drugs (separate by 2 hours).",
+    "correct": true
+   }
+  },
+  "link": {
+   "href": "../../L05/index.html#mucosal-protectants-h-pylori-eradication",
+   "label": "Study this: L05 · Part 3 →"
+  }
+ },
+ {
+  "topic": "IBD",
+  "objectives": [
+   "IO3.2",
+   "IO3.5"
+  ],
+  "sg": [
+   "U3-R11"
+  ],
+  "kind": "vignette",
+  "stem": "A patient starting sulfasalazine for ulcerative colitis has G6PD deficiency and a sulfa allergy. What is the best decision?",
+  "correct": "Avoid sulfasalazine; choose mesalamine instead",
+  "distractors": [
+   {
+    "text": "Use sulfasalazine with folic acid 1 mg daily",
+    "why": "Folic acid prevents folate deficiency, not allergy or hemolysis."
+   },
+   {
+    "text": "Use sulfasalazine and check a CBC monthly",
+    "why": "Sulfa allergy is a contraindication; G6PD raises hemolysis risk."
+   },
+   {
+    "text": "Use sulfasalazine at half the usual dose",
+    "why": "Dose reduction does not remove the contraindication."
+   },
+   {
+    "text": "Skip 5-ASA therapy and start a biologic",
+    "why": "Mild disease starts with 5-ASA — mesalamine fits."
+   }
+  ],
+  "why_correct": "Sulfasalazine is contraindicated with sulfa or salicylate allergy and causes hemolysis in G6PD deficiency (plus agranulocytosis, SJS, folate deficiency). Mesalamine delivers 5-ASA without the sulfa component.",
+  "takeaway": "Sulfa allergy or G6PD → avoid sulfasalazine; mesalamine is the 5-ASA alternative.",
+  "discriminator": "Same active moiety (5-ASA), different carrier — the carrier carries the sulfa risk.",
+  "src": "L06 S12; S50; S51; SG U3-R11",
+  "id": "U3B-023",
+  "answer": "B",
+  "options": {
+   "A": {
+    "text": "Use sulfasalazine with folic acid 1 mg daily",
+    "why": "Folic acid prevents folate deficiency, not allergy or hemolysis.",
+    "correct": false
+   },
+   "B": {
+    "text": "Avoid sulfasalazine; choose mesalamine instead",
+    "why": "Sulfasalazine is contraindicated with sulfa or salicylate allergy and causes hemolysis in G6PD deficiency (plus agranulocytosis, SJS, folate deficiency). Mesalamine delivers 5-ASA without the sulfa component.",
+    "correct": true
+   },
+   "C": {
+    "text": "Use sulfasalazine and check a CBC monthly",
+    "why": "Sulfa allergy is a contraindication; G6PD raises hemolysis risk.",
+    "correct": false
+   },
+   "D": {
+    "text": "Skip 5-ASA therapy and start a biologic",
+    "why": "Mild disease starts with 5-ASA — mesalamine fits.",
+    "correct": false
+   },
+   "E": {
+    "text": "Use sulfasalazine at half the usual dose",
+    "why": "Dose reduction does not remove the contraindication.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L06/index.html#inflammatory-bowel-disease",
+   "label": "Study this: L06 · Part 2 →"
+  }
+ },
+ {
+  "topic": "Nutrition",
+  "objectives": [
+   "IO3.2",
+   "IO3.6"
+  ],
+  "sg": [
+   "U3-R13"
+  ],
+  "kind": "vignette",
+  "stem": "A patient on warfarin has had stable INRs of 2.5 for a year. Over 3 weeks her INR falls to 1.4 with perfect adherence. She recently started a mood supplement. Which mechanism best explains this?",
+  "correct": "St. John's wort induced CYP3A4",
+  "distractors": [
+   {
+    "text": "Ginkgo biloba increased clotting factor synthesis",
+    "why": "Ginkgo increases bleeding risk."
+   },
+   {
+    "text": "Fish oil lowered warfarin absorption",
+    "why": "Fish oil adds bleeding risk at high doses."
+   },
+   {
+    "text": "St. John's wort inhibited CYP3A4",
+    "why": "It induces, which lowers the INR."
+   },
+   {
+    "text": "Vitamin K deficiency from the supplement",
+    "why": "Deficiency would raise the INR."
+   }
+  ],
+  "why_correct": "St. John's wort induces CYP3A4, increasing warfarin metabolism and lowering the INR. That is why supplement use is a required part of medication reconciliation.",
+  "takeaway": "St. John's wort ↓ INR (induction); ginkgo/fish oil ↑ bleeding.",
+  "discriminator": "Inducer → lower level → less effect (Unit 1).",
+  "src": "L06 S26; S27; S31; S67; SG U3-R13",
+  "id": "U3B-029",
+  "answer": "A",
+  "options": {
+   "A": {
+    "text": "St. John's wort induced CYP3A4",
+    "why": "St. John's wort induces CYP3A4, increasing warfarin metabolism and lowering the INR. That is why supplement use is a required part of medication reconciliation.",
+    "correct": true
+   },
+   "B": {
+    "text": "Vitamin K deficiency from the supplement",
+    "why": "Deficiency would raise the INR.",
+    "correct": false
+   },
+   "C": {
+    "text": "St. John's wort inhibited CYP3A4",
+    "why": "It induces, which lowers the INR.",
+    "correct": false
+   },
+   "D": {
+    "text": "Ginkgo biloba increased clotting factor synthesis",
+    "why": "Ginkgo increases bleeding risk.",
+    "correct": false
+   },
+   "E": {
+    "text": "Fish oil lowered warfarin absorption",
+    "why": "Fish oil adds bleeding risk at high doses.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L06/index.html#nutrition-vitamins-dietary-supplements",
+   "label": "Study this: L06 · Part 3 →"
+  }
+ },
+ {
+  "topic": "Bowel disorders",
+  "objectives": [
+   "IO3.5"
+  ],
+  "sg": [
+   "U3-R9"
+  ],
+  "kind": "vignette",
+  "stem": "A patient with cirrhosis takes lactulose for hepatic encephalopathy. He now has 8 watery stools a day, is dizzy, and his sodium is high. What is the best adjustment?",
+  "correct": "Reduce it to reach 2–3 soft stools a day",
+  "distractors": [
+   {
+    "text": "Increase lactulose to clear more ammonia",
+    "why": "Over-use causes dehydration and hypernatremia."
+   },
+   {
+    "text": "Stop lactulose and start loperamide",
+    "why": "Encephalopathy still needs treatment; titrate instead."
+   },
+   {
+    "text": "Switch to senna for gentler stools",
+    "why": "Stimulant laxatives don't treat encephalopathy."
+   },
+   {
+    "text": "Keep the dose and add magnesium hydroxide",
+    "why": "Adds another osmotic laxative."
+   }
+  ],
+  "why_correct": "Lactulose for hepatic encephalopathy is titrated to 2–3 soft stools a day; over-use causes dehydration and hypernatremia.",
+  "takeaway": "Lactulose target: 2–3 soft stools/day.",
+  "discriminator": "The stool count is the dosing gauge.",
+  "src": "L06 S5; S43; SG U3-R9",
+  "id": "U3B-021",
+  "answer": "C",
+  "options": {
+   "A": {
+    "text": "Keep the dose and add magnesium hydroxide",
+    "why": "Adds another osmotic laxative.",
+    "correct": false
+   },
+   "B": {
+    "text": "Increase lactulose to clear more ammonia",
+    "why": "Over-use causes dehydration and hypernatremia.",
+    "correct": false
+   },
+   "C": {
+    "text": "Reduce it to reach 2–3 soft stools a day",
+    "why": "Lactulose for hepatic encephalopathy is titrated to 2–3 soft stools a day; over-use causes dehydration and hypernatremia.",
+    "correct": true
+   },
+   "D": {
+    "text": "Stop lactulose and start loperamide",
+    "why": "Encephalopathy still needs treatment; titrate instead.",
+    "correct": false
+   },
+   "E": {
+    "text": "Switch to senna for gentler stools",
+    "why": "Stimulant laxatives don't treat encephalopathy.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L06/index.html#laxatives-antidiarrheals",
+   "label": "Study this: L06 · Part 1 →"
+  }
+ },
+ {
+  "topic": "Mucosal protection",
+  "objectives": [
+   "IO3.4",
+   "IO3.6"
+  ],
+  "sg": [
+   "U3-R5"
+  ],
+  "kind": "vignette",
+  "stem": "A 27-year-old needs daily naproxen for 3 months after an NSAID ulcer. She is sexually active and uses no contraception. Which ulcer prophylaxis plan is best?",
+  "correct": "A daily PPI rather than misoprostol",
+  "distractors": [
+   {
+    "text": "Misoprostol 200 mcg four times daily with food",
+    "why": "Boxed warning: pregnancy — miscarriage, uterine rupture, birth defects."
+   },
+   {
+    "text": "Misoprostol now, then a pregnancy test monthly",
+    "why": "Testing after exposure does not prevent harm."
+   },
+   {
+    "text": "Sucralfate taken with the naproxen doses",
+    "why": "Sucralfate binds other drugs; not the taught NSAID prophylaxis."
+   },
+   {
+    "text": "No prophylaxis, since the ulcer has healed",
+    "why": "A prior NSAID ulcer is the reason to protect."
+   }
+  ],
+  "why_correct": "Misoprostol replaces the prostaglandins NSAIDs remove, but it is a potent uterotonic with a pregnancy boxed warning. With possible pregnancy and no contraception, a PPI protects without that risk.",
+  "takeaway": "Possible pregnancy + NSAID ulcer prophylaxis → PPI, not misoprostol.",
+  "discriminator": "The single most important question before misoprostol: could she be pregnant?",
+  "src": "L05 S20; S26; S27; S57; SG U3-R5",
+  "id": "U3B-006",
+  "answer": "B",
+  "options": {
+   "A": {
+    "text": "Misoprostol 200 mcg four times daily with food",
+    "why": "Boxed warning: pregnancy — miscarriage, uterine rupture, birth defects.",
+    "correct": false
+   },
+   "B": {
+    "text": "A daily PPI rather than misoprostol",
+    "why": "Misoprostol replaces the prostaglandins NSAIDs remove, but it is a potent uterotonic with a pregnancy boxed warning. With possible pregnancy and no contraception, a PPI protects without that risk.",
+    "correct": true
+   },
+   "C": {
+    "text": "Misoprostol now, then a pregnancy test monthly",
+    "why": "Testing after exposure does not prevent harm.",
+    "correct": false
+   },
+   "D": {
+    "text": "Sucralfate taken with the naproxen doses",
+    "why": "Sucralfate binds other drugs; not the taught NSAID prophylaxis.",
+    "correct": false
+   },
+   "E": {
+    "text": "No prophylaxis, since the ulcer has healed",
+    "why": "A prior NSAID ulcer is the reason to protect.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L05/index.html#mucosal-protectants-h-pylori-eradication",
+   "label": "Study this: L05 · Part 3 →"
+  }
+ },
+ {
+  "topic": "Antiemetics",
+  "objectives": [
+   "IO3.6"
+  ],
+  "sg": [
+   "U3-R7"
+  ],
+  "kind": "vignette",
+  "stem": "A cruise passenger applied a scopolamine patch behind her ear the night before. The next day one pupil is widely dilated, but she has no headache, weakness or confusion. What is the most likely explanation?",
+  "correct": "Patch residue on her fingers touched the eye",
+  "distractors": [
+   {
+    "text": "Acute stroke until proven otherwise",
+    "why": "Isolated dilation after handling a patch, with no deficits, fits contamination."
+   },
+   {
+    "text": "Expected systemic effect of the patch",
+    "why": "Systemic effects are bilateral; one pupil suggests local contact."
+   },
+   {
+    "text": "Withdrawal from removing the patch too soon",
+    "why": "Withdrawal causes nausea and dizziness."
+   },
+   {
+    "text": "Serotonin syndrome from the anticholinergic",
+    "why": "Not a scopolamine effect."
+   }
+  ],
+  "why_correct": "Scopolamine is anticholinergic; touching the patch then the eye dilates that pupil. Counsel: wash hands after handling; apply at least 4 hours before travel, replace every 72 hours; avoid in narrow-angle glaucoma.",
+  "takeaway": "Scopolamine patch: wash hands — one dilated pupil.",
+  "discriminator": "Unilateral after contact = local anticholinergic effect.",
+  "src": "L05 S33; S34; S67; SG U3-R7",
+  "id": "U3B-015",
+  "answer": "B",
+  "options": {
+   "A": {
+    "text": "Acute stroke until proven otherwise",
+    "why": "Isolated dilation after handling a patch, with no deficits, fits contamination.",
+    "correct": false
+   },
+   "B": {
+    "text": "Patch residue on her fingers touched the eye",
+    "why": "Scopolamine is anticholinergic; touching the patch then the eye dilates that pupil. Counsel: wash hands after handling; apply at least 4 hours before travel, replace every 72 hours; avoid in narrow-angle glaucoma.",
+    "correct": true
+   },
+   "C": {
+    "text": "Serotonin syndrome from the anticholinergic",
+    "why": "Not a scopolamine effect.",
+    "correct": false
+   },
+   "D": {
+    "text": "Withdrawal from removing the patch too soon",
+    "why": "Withdrawal causes nausea and dizziness.",
+    "correct": false
+   },
+   "E": {
+    "text": "Expected systemic effect of the patch",
+    "why": "Systemic effects are bilateral; one pupil suggests local contact.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L05/index.html#antiemetics",
+   "label": "Study this: L05 · Part 4 →"
+  }
+ },
+ {
+  "topic": "Nutrition",
+  "objectives": [
+   "IO3.5"
+  ],
+  "sg": [
+   "U3-R12"
+  ],
+  "kind": "vignette",
+  "stem": "A severely malnourished patient who has barely eaten for 3 weeks is about to start nutrition support. Which plan best prevents refeeding syndrome?",
+  "correct": "Thiamine first, slow start, daily phosphate/K/Mg",
+  "distractors": [
+   {
+    "text": "Start full calories at once to restore weight quickly",
+    "why": "Rapid carbohydrate load drives the dangerous shifts."
+   },
+   {
+    "text": "Give thiamine only after feeding begins",
+    "why": "Thiamine is given before feeding."
+   },
+   {
+    "text": "Check electrolytes weekly once feeding starts",
+    "why": "Daily checks are needed at the start."
+   },
+   {
+    "text": "Use IV glucose alone for the first 3 days",
+    "why": "Carbohydrate drives insulin and the shifts."
+   }
+  ],
+  "why_correct": "Carbohydrate feeding raises insulin, shifting phosphate, potassium and magnesium into cells — dangerously low levels with heart, muscle and breathing problems. Feed slowly, monitor daily, give thiamine first.",
+  "takeaway": "Refeeding: thiamine first, start low, phosphate/K/Mg daily.",
+  "discriminator": "Insulin drives the electrolytes into cells.",
+  "src": "L06 S28; S29",
+  "id": "U3B-030",
+  "answer": "E",
+  "options": {
+   "A": {
+    "text": "Give thiamine only after feeding begins",
+    "why": "Thiamine is given before feeding.",
+    "correct": false
+   },
+   "B": {
+    "text": "Check electrolytes weekly once feeding starts",
+    "why": "Daily checks are needed at the start.",
+    "correct": false
+   },
+   "C": {
+    "text": "Start full calories at once to restore weight quickly",
+    "why": "Rapid carbohydrate load drives the dangerous shifts.",
+    "correct": false
+   },
+   "D": {
+    "text": "Use IV glucose alone for the first 3 days",
+    "why": "Carbohydrate drives insulin and the shifts.",
+    "correct": false
+   },
+   "E": {
+    "text": "Thiamine first, slow start, daily phosphate/K/Mg",
+    "why": "Carbohydrate feeding raises insulin, shifting phosphate, potassium and magnesium into cells — dangerously low levels with heart, muscle and breathing problems. Feed slowly, monitor daily, give thiamine first.",
+    "correct": true
+   }
+  },
+  "link": {
+   "href": "../../L06/index.html#nutrition-vitamins-dietary-supplements",
+   "label": "Study this: L06 · Part 3 →"
+  }
+ },
+ {
+  "topic": "H. pylori",
+  "objectives": [
+   "IO3.4",
+   "IO3.6"
+  ],
+  "sg": [
+   "U3-R6",
+   "U3-S"
+  ],
+  "kind": "vignette",
+  "stem": "A patient with confirmed H. pylori has a penicillin allergy, took azithromycin 3 months ago and drinks 2 glasses of wine nightly. Which plan is best?",
+  "correct": "Bismuth quadruple; no alcohol until 3 days after",
+  "distractors": [
+   {
+    "text": "Clarithromycin triple therapy; limit wine to one glass",
+    "why": "Recent macrolide exposure raises resistance concern."
+   },
+   {
+    "text": "Amoxicillin triple therapy; avoid alcohol during therapy",
+    "why": "Penicillin allergy rules out amoxicillin."
+   },
+   {
+    "text": "Bismuth quadruple therapy; alcohol is fine after day 7",
+    "why": "Metronidazole: no alcohol during and for 3 days after."
+   },
+   {
+    "text": "PPI alone for 8 weeks, then retest",
+    "why": "A PPI alone does not eradicate H. pylori."
+   }
+  ],
+  "why_correct": "Penicillin allergy or recent macrolide exposure → bismuth quadruple therapy (PPI, bismuth, tetracycline, metronidazole) for 14 days. Metronidazole causes a disulfiram-like reaction: avoid alcohol during and for 3 days after.",
+  "takeaway": "Allergy or macrolide history → bismuth quadruple; metronidazole = no alcohol + 3 days.",
+  "discriminator": "The regimen choice and the counseling point are both tested.",
+  "src": "L05 S23; S25; S61; SG U3-R6; SG U3-S",
+  "id": "U3B-007",
+  "answer": "B",
+  "options": {
+   "A": {
+    "text": "Amoxicillin triple therapy; avoid alcohol during therapy",
+    "why": "Penicillin allergy rules out amoxicillin.",
+    "correct": false
+   },
+   "B": {
+    "text": "Bismuth quadruple; no alcohol until 3 days after",
+    "why": "Penicillin allergy or recent macrolide exposure → bismuth quadruple therapy (PPI, bismuth, tetracycline, metronidazole) for 14 days. Metronidazole causes a disulfiram-like reaction: avoid alcohol during and for 3 days after.",
+    "correct": true
+   },
+   "C": {
+    "text": "PPI alone for 8 weeks, then retest",
+    "why": "A PPI alone does not eradicate H. pylori.",
+    "correct": false
+   },
+   "D": {
+    "text": "Bismuth quadruple therapy; alcohol is fine after day 7",
+    "why": "Metronidazole: no alcohol during and for 3 days after.",
+    "correct": false
+   },
+   "E": {
+    "text": "Clarithromycin triple therapy; limit wine to one glass",
+    "why": "Recent macrolide exposure raises resistance concern.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L05/index.html#mucosal-protectants-h-pylori-eradication",
+   "label": "Study this: L05 · Part 3 →"
+  }
+ },
+ {
+  "topic": "IBD",
+  "objectives": [
+   "IO3.2",
+   "IO3.4"
+  ],
+  "sg": [
+   "U3-R11"
+  ],
+  "kind": "vignette",
+  "stem": "A 62-year-old smoker with ulcerative colitis and a prior myocardial infarction has failed infliximab. Tofacitinib is proposed. Which concern weighs most heavily?",
+  "correct": "Boxed warnings for MACE and thrombosis",
+  "distractors": [
+   {
+    "text": "Interstitial nephritis requiring creatinine checks",
+    "why": "That is mesalamine."
+   },
+   {
+    "text": "Tardive dyskinesia with use beyond 12 weeks",
+    "why": "That is metoclopramide."
+   },
+   {
+    "text": "Gut-selective action limiting its effectiveness",
+    "why": "That describes vedolizumab."
+   },
+   {
+    "text": "Hypercortisolism with CYP3A4 inhibitors",
+    "why": "That is budesonide."
+   }
+  ],
+  "why_correct": "Tofacitinib (JAK inhibitor) carries boxed warnings for serious infections, mortality, malignancy, major adverse cardiovascular events (MACE) and thrombosis — highest stakes in an older smoker with prior MI. It is used after TNF-inhibitor failure.",
+  "takeaway": "Tofacitinib: boxed MACE, thrombosis, malignancy, infection.",
+  "discriminator": "The patient's CV history is the filter.",
+  "src": "L06 S16; S17; S60",
+  "id": "U3B-027",
+  "answer": "C",
+  "options": {
+   "A": {
+    "text": "Interstitial nephritis requiring creatinine checks",
+    "why": "That is mesalamine.",
+    "correct": false
+   },
+   "B": {
+    "text": "Tardive dyskinesia with use beyond 12 weeks",
+    "why": "That is metoclopramide.",
+    "correct": false
+   },
+   "C": {
+    "text": "Boxed warnings for MACE and thrombosis",
+    "why": "Tofacitinib (JAK inhibitor) carries boxed warnings for serious infections, mortality, malignancy, major adverse cardiovascular events (MACE) and thrombosis — highest stakes in an older smoker with prior MI. It is used after TNF-inhibitor failure.",
+    "correct": true
+   },
+   "D": {
+    "text": "Gut-selective action limiting its effectiveness",
+    "why": "That describes vedolizumab.",
+    "correct": false
+   },
+   "E": {
+    "text": "Hypercortisolism with CYP3A4 inhibitors",
+    "why": "That is budesonide.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L06/index.html#inflammatory-bowel-disease",
+   "label": "Study this: L06 · Part 2 →"
+  }
+ },
+ {
+  "topic": "Bowel disorders",
+  "objectives": [
+   "IO3.4"
+  ],
+  "sg": [
+   "U3-R10"
+  ],
+  "kind": "vignette",
+  "stem": "Four days after finishing clindamycin for a dental abscess, a patient has profuse watery diarrhea and a fever of 38.6 °C. He asks for loperamide. What is the best response?",
+  "correct": "Avoid it; evaluate for C. difficile first",
+  "distractors": [
+   {
+    "text": "Give loperamide 4 mg, then 2 mg after each stool",
+    "why": "Slowing transit can worsen toxin-mediated colitis."
+   },
+   {
+    "text": "Give diphenoxylate/atropine instead",
+    "why": "Also contraindicated with C. difficile or infectious diarrhea."
+   },
+   {
+    "text": "Start bismuth subsalicylate and recheck in a week",
+    "why": "Delays evaluation of a likely C. difficile infection."
+   },
+   {
+    "text": "Give loperamide plus oral rehydration",
+    "why": "Rehydration helps, but antimotility agents are still avoided."
+   }
+  ],
+  "why_correct": "Recent antibiotics + fever + profuse watery diarrhea suggests C. difficile; antimotility agents (loperamide, diphenoxylate) are avoided because slowing transit can worsen toxin-mediated injury. Treat the cause.",
+  "takeaway": "Fever, bloody stool or C. difficile → no antimotility agents.",
+  "discriminator": "The red flags (fever, recent antibiotic) turn a routine request into a contraindication.",
+  "src": "L06 S7; S9; S48; S49; SG U3-R10",
+  "id": "U3B-016",
+  "answer": "D",
+  "options": {
+   "A": {
+    "text": "Start bismuth subsalicylate and recheck in a week",
+    "why": "Delays evaluation of a likely C. difficile infection.",
+    "correct": false
+   },
+   "B": {
+    "text": "Give loperamide 4 mg, then 2 mg after each stool",
+    "why": "Slowing transit can worsen toxin-mediated colitis.",
+    "correct": false
+   },
+   "C": {
+    "text": "Give diphenoxylate/atropine instead",
+    "why": "Also contraindicated with C. difficile or infectious diarrhea.",
+    "correct": false
+   },
+   "D": {
+    "text": "Avoid it; evaluate for C. difficile first",
+    "why": "Recent antibiotics + fever + profuse watery diarrhea suggests C. difficile; antimotility agents (loperamide, diphenoxylate) are avoided because slowing transit can worsen toxin-mediated injury. Treat the cause.",
+    "correct": true
+   },
+   "E": {
+    "text": "Give loperamide plus oral rehydration",
+    "why": "Rehydration helps, but antimotility agents are still avoided.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L06/index.html#laxatives-antidiarrheals",
+   "label": "Study this: L06 · Part 1 →"
+  }
+ },
+ {
+  "topic": "Acid suppression",
+  "objectives": [
+   "IO3.2",
+   "IO3.5"
+  ],
+  "sg": [
+   "U3-R3"
+  ],
+  "kind": "vignette",
+  "stem": "An 84-year-old with a creatinine clearance of 28 mL/min takes famotidine 40 mg twice daily. Over a week she becomes confused and agitated. Infection workup is negative. What is the most likely explanation and fix?",
+  "correct": "Renal accumulation; lower the famotidine dose",
+  "distractors": [
+   {
+    "text": "Cimetidine-like CYP inhibition; switch to omeprazole",
+    "why": "Famotidine has minimal CYP effect; the issue is renal accumulation."
+   },
+   {
+    "text": "Hypomagnesemia from H2 blockade; add magnesium hydroxide",
+    "why": "Hypomagnesemia is a long-term PPI risk, and magnesium accumulates in CKD."
+   },
+   {
+    "text": "Tolerance to famotidine; double the dose",
+    "why": "Raising the dose worsens accumulation."
+   },
+   {
+    "text": "Rebound acid hypersecretion; add sucralfate",
+    "why": "Rebound follows stopping a PPI; sucralfate adds aluminum in CKD."
+   }
+  ],
+  "why_correct": "Famotidine is renally cleared: reduce the dose when CrCl is below 60 mL/min. Accumulation in CKD causes CNS effects, especially in older adults — a Unit 1 renal-dosing principle applied to a Unit 3 drug.",
+  "takeaway": "H2 blockers: reduce dose when CrCl < 60; confusion in older adults with CKD.",
+  "discriminator": "Accumulation (renal) vs. interaction (CYP) — famotidine is the renal one.",
+  "src": "L05 S13; S51; S52",
+  "id": "U3B-002",
+  "answer": "A",
+  "options": {
+   "A": {
+    "text": "Renal accumulation; lower the famotidine dose",
+    "why": "Famotidine is renally cleared: reduce the dose when CrCl is below 60 mL/min. Accumulation in CKD causes CNS effects, especially in older adults — a Unit 1 renal-dosing principle applied to a Unit 3 drug.",
+    "correct": true
+   },
+   "B": {
+    "text": "Hypomagnesemia from H2 blockade; add magnesium hydroxide",
+    "why": "Hypomagnesemia is a long-term PPI risk, and magnesium accumulates in CKD.",
+    "correct": false
+   },
+   "C": {
+    "text": "Tolerance to famotidine; double the dose",
+    "why": "Raising the dose worsens accumulation.",
+    "correct": false
+   },
+   "D": {
+    "text": "Cimetidine-like CYP inhibition; switch to omeprazole",
+    "why": "Famotidine has minimal CYP effect; the issue is renal accumulation.",
+    "correct": false
+   },
+   "E": {
+    "text": "Rebound acid hypersecretion; add sucralfate",
+    "why": "Rebound follows stopping a PPI; sucralfate adds aluminum in CKD.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L05/index.html#antacids-h2-blockers-proton-pump-inhibitors",
+   "label": "Study this: L05 · Part 2 →"
+  }
+ },
+ {
+  "topic": "Bowel disorders",
+  "objectives": [
+   "IO3.2"
+  ],
+  "sg": [
+   "U3-R10"
+  ],
+  "kind": "vignette",
+  "stem": "A 31-year-old in opioid withdrawal has been taking 40 mg of OTC loperamide daily to ease symptoms. He presents with syncope. What is the most important next step?",
+  "correct": "Get an ECG for QT prolongation and arrhythmia",
+  "distractors": [
+   {
+    "text": "Reassure: loperamide does not reach the brain",
+    "why": "High doses cause cardiac toxicity and CNS depression."
+   },
+   {
+    "text": "Switch to diphenoxylate/atropine at the same dose",
+    "why": "Not a fix; also an opioid with toxicity."
+   },
+   {
+    "text": "Give naloxone and discharge if he wakes",
+    "why": "Cardiac toxicity needs monitoring; naloxone may need repeating."
+   },
+   {
+    "text": "Check a stool culture for infection",
+    "why": "Syncope at this dose points to cardiac toxicity."
+   }
+  ],
+  "why_correct": "Loperamide maximum is 16 mg/day Rx (8 mg OTC). High doses cause QT prolongation, torsades and cardiac arrest; CNS depression in overdose may need repeated naloxone.",
+  "takeaway": "Loperamide misuse → QT/torsades: get an ECG.",
+  "discriminator": "Peripheral at normal doses ≠ safe at 5× the maximum.",
+  "src": "L06 S8; S48",
+  "id": "U3B-017",
+  "answer": "B",
+  "options": {
+   "A": {
+    "text": "Check a stool culture for infection",
+    "why": "Syncope at this dose points to cardiac toxicity.",
+    "correct": false
+   },
+   "B": {
+    "text": "Get an ECG for QT prolongation and arrhythmia",
+    "why": "Loperamide maximum is 16 mg/day Rx (8 mg OTC). High doses cause QT prolongation, torsades and cardiac arrest; CNS depression in overdose may need repeated naloxone.",
+    "correct": true
+   },
+   "C": {
+    "text": "Reassure: loperamide does not reach the brain",
+    "why": "High doses cause cardiac toxicity and CNS depression.",
+    "correct": false
+   },
+   "D": {
+    "text": "Switch to diphenoxylate/atropine at the same dose",
+    "why": "Not a fix; also an opioid with toxicity.",
+    "correct": false
+   },
+   "E": {
+    "text": "Give naloxone and discharge if he wakes",
+    "why": "Cardiac toxicity needs monitoring; naloxone may need repeating.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L06/index.html#laxatives-antidiarrheals",
+   "label": "Study this: L06 · Part 1 →"
+  }
+ }
+]

@@ -135,7 +135,7 @@
   "tables": [],
   "images": 1,
   "figures": [],
-  "notes": "Briefly recap Session 1 (Oct 27) before diving in: musculoskeletal pain, acetaminophen, NSAIDs, and OA/RA pharmacotherapy including DMARDs. Today picks up with gout (Section 5) and runs through bone pharmacology, integration, and the cumulative recall quiz."
+  "notes": "Briefly recap Session 1 (Oct 27) before diving in: musculoskeletal pain, acetaminophen, NSAIDs, and OA/RA pharmacotherapy including DMARDs. Today picks up with gout (Section 5) and runs through bone pharmacology, integration, and the cumulative recall quiz.\n\nInstructor script:\n\nRecap Session 1 in a minute. Today has three stories: crystals, muscle tone and bone balance."
  },
  {
   "slide": 3,
@@ -192,7 +192,7 @@
   "tables": [],
   "images": 1,
   "figures": [],
-  "notes": ""
+  "notes": "Section transition.\n\nGout is a crystal-driven arthritis with two very different treatment phases, so we start with how uric acid becomes crystals."
  },
  {
   "slide": 4,
@@ -274,7 +274,7 @@
   "tables": [],
   "images": 1,
   "figures": [],
-  "notes": "Everything downstream — colchicine, allopurinol, febuxostat, probenecid — targets a specific point along this chain. The next slide builds this out with the specific drugs and their targets."
+  "notes": "Everything downstream — colchicine, allopurinol, febuxostat, probenecid — targets a specific point along this chain. The next slide builds this out with the specific drugs and their targets.\n\nInstructor script:\n\nPurine metabolism to uric acid to urate crystals to inflammation."
  },
  {
   "slide": 5,
@@ -396,7 +396,7 @@
   "tables": [],
   "images": 0,
   "figures": [],
-  "notes": "Walk the chain left to right, then top to bottom: each step sets up the next, and the flare is the end of the cascade."
+  "notes": "Walk the chain left to right, then top to bottom: each step sets up the next, and the flare is the end of the cascade.\n\nInstructor script:\n\nEach drug targets one step."
  },
  {
   "slide": 6,
@@ -545,7 +545,7 @@
   "tables": [],
   "images": 1,
   "figures": [],
-  "notes": ""
+  "notes": "Instructor script:\n\nPrompt: have students decide which drug lowers uric acid production and which increases renal excretion before you reveal the answer."
  },
  {
   "slide": 8,
@@ -611,7 +611,7 @@
   "tables": [],
   "images": 1,
   "figures": [],
-  "notes": ""
+  "notes": "Instructor script:\n\nProbenecid raises excretion; allopurinol lowers production."
  },
  {
   "slide": 9,
@@ -701,7 +701,7 @@
   "tables": [],
   "images": 1,
   "figures": [],
-  "notes": "This acute-vs-chronic distinction is one of the single most testable concepts in gout pharmacology — starting or changing a urate-lowering drug during an acute flare can actually prolong it."
+  "notes": "This acute-vs-chronic distinction is one of the single most testable concepts in gout pharmacology — starting or changing a urate-lowering drug during an acute flare can actually prolong it.\n\nInstructor script:\n\nTreat the flare first; do not start or change urate-lowering therapy during a flare."
  },
  {
   "slide": 10,
@@ -773,7 +773,7 @@
   "tables": [],
   "images": 1,
   "figures": [],
-  "notes": ""
+  "notes": "Blocks microtubules in neutrophils; start early."
  },
  {
   "slide": 11,
@@ -863,7 +863,7 @@
   "tables": [],
   "images": 0,
   "figures": [],
-  "notes": "Colchicine works on the cell's cytoskeleton, so its effect builds in the early hours of a flare."
+  "notes": "Colchicine works on the cell's cytoskeleton, so its effect builds in the early hours of a flare.\n\nInstructor script:\n\nNarrow window; CYP3A4 and P-gp interactions."
  },
  {
   "slide": 12,
@@ -953,7 +953,7 @@
   "tables": [],
   "images": 1,
   "figures": [],
-  "notes": "HLA-B*5801 is a direct callback to the pharmacogenomics section from Lecture 1 — ask students to make that connection themselves before you state it."
+  "notes": "HLA-B*5801 is a direct callback to the pharmacogenomics section from Lecture 1 — ask students to make that connection themselves before you state it.\n\nInstructor script:\n\nHLA-B*58:01, renal dosing, azathioprine interaction."
  },
  {
   "slide": 13,
@@ -1043,7 +1043,7 @@
   "tables": [],
   "images": 0,
   "figures": [],
-  "notes": "Both drugs sit on the same enzyme; the choice turns on safety profile and tolerability."
+  "notes": "Both drugs sit on the same enzyme; the choice turns on safety profile and tolerability.\n\nInstructor script:\n\nFebuxostat boxed warning."
  },
  {
   "slide": 14,
@@ -1251,7 +1251,7 @@
   "tables": [],
   "images": 0,
   "figures": [],
-  "notes": "Uricosurics block reabsorption; uricases remove uric acid enzymatically, which is why they suit refractory disease."
+  "notes": "Uricosurics block reabsorption; uricases remove uric acid enzymatically, which is why they suit refractory disease.\n\nInstructor script:\n\nURAT1 blockade and kidney stones; pegloticase in refractory gout and G6PD."
  },
  {
   "slide": 16,
@@ -1663,7 +1663,7 @@
   "tables": [],
   "images": 1,
   "figures": [],
-  "notes": ""
+  "notes": "Section transition.\n\nNext, skeletal muscle relaxants: different drugs quiet spasm, spasticity and rigidity by acting at different sites."
  },
  {
   "slide": 21,
@@ -1891,7 +1891,7 @@
   "tables": [],
   "images": 0,
   "figures": [],
-  "notes": ""
+  "notes": "Walk from upper motor neuron to muscle fiber."
  },
  {
   "slide": 23,
@@ -1981,7 +1981,7 @@
   "tables": [],
   "images": 1,
   "figures": [],
-  "notes": ""
+  "notes": "Dantrolene is the peripheral exception."
  },
  {
   "slide": 24,
@@ -2268,7 +2268,7 @@
   "tables": [],
   "images": 1,
   "figures": [],
-  "notes": ""
+  "notes": "GABA-B; never stop abruptly."
  },
  {
   "slide": 28,
@@ -2462,7 +2462,7 @@
   "tables": [],
   "images": 1,
   "figures": [],
-  "notes": ""
+  "notes": "Alpha-2; CYP1A2 interactions and liver tests."
  },
  {
   "slide": 30,
@@ -2656,7 +2656,7 @@
   "tables": [],
   "images": 1,
   "figures": [],
-  "notes": ""
+  "notes": "Tricyclic-related; anticholinergic; serotonin syndrome."
  },
  {
   "slide": 32,
@@ -2867,7 +2867,7 @@
   "tables": [],
   "images": 1,
   "figures": [],
-  "notes": "These agents round out the \"centrally-acting\" category beyond the three first-line drugs, and botulinum toxin introduces a third mechanism entirely — neuromuscular junction blockade — distinct from both the CNS-acting and dantrolene’s sarcoplasmic-reticulum mechanisms."
+  "notes": "These agents round out the \"centrally-acting\" category beyond the three first-line drugs, and botulinum toxin introduces a third mechanism entirely — neuromuscular junction blockade — distinct from both the CNS-acting and dantrolene’s sarcoplasmic-reticulum mechanisms.\n\nInstructor script:\n\nCarisoprodol dependence."
  },
  {
   "slide": 34,
@@ -2940,7 +2940,7 @@
   "tables": [],
   "images": 1,
   "figures": [],
-  "notes": "Dantrolene’s role in malignant hyperthermia is a must-know, high-stakes fact — a perioperative emergency where this drug is literally life-saving."
+  "notes": "Dantrolene’s role in malignant hyperthermia is a must-know, high-stakes fact — a perioperative emergency where this drug is literally life-saving.\n\nInstructor script:\n\nRyR1; malignant hyperthermia."
  },
  {
   "slide": 35,
@@ -3332,7 +3332,7 @@
   ],
   "images": 0,
   "figures": [],
-  "notes": ""
+  "notes": "Pair students: name the first-line class and the biggest safety check."
  },
  {
   "slide": 39,
@@ -3389,7 +3389,7 @@
   "tables": [],
   "images": 1,
   "figures": [],
-  "notes": ""
+  "notes": "Section transition.\n\nLast, bone pharmacology: balancing bone formation against bone resorption."
  },
  {
   "slide": 40,
@@ -3463,7 +3463,7 @@
   "tables": [],
   "images": 1,
   "figures": [],
-  "notes": "Nearly every osteoporosis drug on the following slides works by shifting this balance one way or the other — either slowing osteoclasts or stimulating osteoblasts."
+  "notes": "Nearly every osteoporosis drug on the following slides works by shifting this balance one way or the other — either slowing osteoclasts or stimulating osteoblasts.\n\nInstructor script:\n\nOsteoblasts build and osteoclasts resorb."
  },
  {
   "slide": 41,
@@ -3675,7 +3675,7 @@
   "tables": [],
   "images": 1,
   "figures": [],
-  "notes": ""
+  "notes": "PTH, vitamin D and calcitonin."
  },
  {
   "slide": 43,
@@ -4036,7 +4036,7 @@
   "tables": [],
   "images": 1,
   "figures": [],
-  "notes": ""
+  "notes": "Osteoclast apoptosis."
  },
  {
   "slide": 48,
@@ -4487,7 +4487,7 @@
   "tables": [],
   "images": 1,
   "figures": [],
-  "notes": "The \"remain upright\" counseling point is extremely high-yield for both exams and real-world safety — esophageal injury is largely preventable with correct administration."
+  "notes": "The \"remain upright\" counseling point is extremely high-yield for both exams and real-world safety — esophageal injury is largely preventable with correct administration.\n\nInstructor script:\n\nOsteonecrosis of the jaw and atypical femur fracture."
  },
  {
   "slide": 53,
@@ -4601,7 +4601,7 @@
   "tables": [],
   "images": 0,
   "figures": [],
-  "notes": ""
+  "notes": "Administration rules."
  },
  {
   "slide": 54,
@@ -4699,7 +4699,7 @@
   "tables": [],
   "images": 1,
   "figures": [],
-  "notes": "Teriparatide/abaloparatide/romosozumab are the \"anabolic\" exception to the rule that most osteoporosis drugs just slow resorption — they actively build new bone. The next slide shows all of these (plus bisphosphonates) together on one balance diagram."
+  "notes": "Teriparatide/abaloparatide/romosozumab are the \"anabolic\" exception to the rule that most osteoporosis drugs just slow resorption — they actively build new bone. The next slide shows all of these (plus bisphosphonates) together on one balance diagram.\n\nInstructor script:\n\nDenosumab rebound; raloxifene VTE."
  },
  {
   "slide": 55,
@@ -4845,7 +4845,7 @@
   "tables": [],
   "images": 0,
   "figures": [],
-  "notes": ""
+  "notes": "Teriparatide 2 years; romosozumab boxed warning."
  },
  {
   "slide": 56,
@@ -5373,7 +5373,7 @@
   ],
   "images": 0,
   "figures": [],
-  "notes": ""
+  "notes": "Pair students: name the first-line class and the biggest safety check."
  },
  {
   "slide": 63,
@@ -5520,7 +5520,7 @@
   "tables": [],
   "images": 1,
   "figures": [],
-  "notes": "Have students work in pairs: for each patient, name a first-line drug class AND the single biggest safety concern to check before prescribing it."
+  "notes": "Have students work in pairs: for each patient, name a first-line drug class AND the single biggest safety concern to check before prescribing it.\n\nInstructor script:\n\nPair students: name the first-line class and the biggest safety check."
  },
  {
   "slide": 65,
@@ -5798,7 +5798,7 @@
   "tables": [],
   "images": 0,
   "figures": [],
-  "notes": "Close by connecting back to Lecture 1: every mechanism in this lecture (COX inhibition, CYP interactions, renal dosing, pharmacogenomics) was really just Lecture 1’s toolkit applied to one organ system."
+  "notes": "Close by connecting back to Lecture 1: every mechanism in this lecture (COX inhibition, CYP interactions, renal dosing, pharmacogenomics) was really just Lecture 1’s toolkit applied to one organ system.\n\nInstructor script:\n\nPair students: name the first-line class and the biggest safety check."
  },
  {
   "slide": 68,
@@ -5855,7 +5855,7 @@
   "tables": [],
   "images": 1,
   "figures": [],
-  "notes": ""
+  "notes": "Pair students: name the first-line class and the biggest safety check."
  },
  {
   "slide": 69,
@@ -6357,6 +6357,3737 @@
  },
  {
   "slide": 72,
+  "title": "Drug Profiles",
+  "items": [
+   {
+    "text": "STUDY REFERENCE",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "STUDY REFERENCE",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**STUDY REFERENCE**",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "Drug Profiles",
+    "level": 0,
+    "emphasis": [],
+    "md": "Drug Profiles",
+    "heading": true,
+    "size": 48.0
+   },
+   {
+    "text": "Study reference for the drugs covered in Session 2",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Study reference for the drugs covered in Session 2",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Study reference for the drugs covered in Session 2**",
+    "heading": false,
+    "size": 18.0
+   },
+   {
+    "text": "PO = by mouth",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "PO = by mouth",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**PO = by mouth**",
+    "heading": false,
+    "size": 11.0
+   },
+   {
+    "text": "IV = intravenous",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "IV = intravenous",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**IV = intravenous**",
+    "heading": false,
+    "size": 11.0
+   },
+   {
+    "text": "SC = subcutaneous",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "SC = subcutaneous",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**SC = subcutaneous**",
+    "heading": false,
+    "size": 11.0
+   },
+   {
+    "text": "BID/TID = twice / three times daily",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "BID/TID = twice / three times daily",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**BID/TID = twice / three times daily**",
+    "heading": false,
+    "size": 11.0
+   },
+   {
+    "text": "ER = extended release",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "ER = extended release",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**ER = extended release**",
+    "heading": false,
+    "size": 11.0
+   },
+   {
+    "text": "CNS = central nervous system",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "CNS = central nervous system",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**CNS = central nervous system**",
+    "heading": false,
+    "size": 11.0
+   },
+   {
+    "text": "GABA = gamma-aminobutyric acid",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "GABA = gamma-aminobutyric acid",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**GABA = gamma-aminobutyric acid**",
+    "heading": false,
+    "size": 11.0
+   },
+   {
+    "text": "CYP = cytochrome P450",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "CYP = cytochrome P450",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**CYP = cytochrome P450**",
+    "heading": false,
+    "size": 11.0
+   },
+   {
+    "text": "P-gp = P-glycoprotein",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "P-gp = P-glycoprotein",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**P-gp = P-glycoprotein**",
+    "heading": false,
+    "size": 11.0
+   },
+   {
+    "text": "HLA = human leukocyte antigen",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "HLA = human leukocyte antigen",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**HLA = human leukocyte antigen**",
+    "heading": false,
+    "size": 11.0
+   },
+   {
+    "text": "URAT1 = urate transporter 1",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "URAT1 = urate transporter 1",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**URAT1 = urate transporter 1**",
+    "heading": false,
+    "size": 11.0
+   },
+   {
+    "text": "G6PD = glucose-6-phosphate dehydrogenase",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "G6PD = glucose-6-phosphate dehydrogenase",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**G6PD = glucose-6-phosphate dehydrogenase**",
+    "heading": false,
+    "size": 11.0
+   },
+   {
+    "text": "RyR1 = ryanodine receptor 1",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "RyR1 = ryanodine receptor 1",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**RyR1 = ryanodine receptor 1**",
+    "heading": false,
+    "size": 11.0
+   },
+   {
+    "text": "RANKL = receptor activator of nuclear factor kappa-B ligand",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "RANKL = receptor activator of nuclear factor kappa-B ligand",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**RANKL = receptor activator of nuclear factor kappa-B ligand**",
+    "heading": false,
+    "size": 11.0
+   },
+   {
+    "text": "PTH = parathyroid hormone",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "PTH = parathyroid hormone",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**PTH = parathyroid hormone**",
+    "heading": false,
+    "size": 11.0
+   },
+   {
+    "text": "SERM = selective estrogen receptor modulator",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "SERM = selective estrogen receptor modulator",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**SERM = selective estrogen receptor modulator**",
+    "heading": false,
+    "size": 11.0
+   },
+   {
+    "text": "VTE = venous thromboembolism",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "VTE = venous thromboembolism",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**VTE = venous thromboembolism**",
+    "heading": false,
+    "size": 11.0
+   },
+   {
+    "text": "SSRI = selective serotonin reuptake inhibitor",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "SSRI = selective serotonin reuptake inhibitor",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**SSRI = selective serotonin reuptake inhibitor**",
+    "heading": false,
+    "size": 11.0
+   },
+   {
+    "text": "MAOI = monoamine oxidase inhibitor",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "MAOI = monoamine oxidase inhibitor",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**MAOI = monoamine oxidase inhibitor**",
+    "heading": false,
+    "size": 11.0
+   },
+   {
+    "text": "CrCl = creatinine clearance",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "CrCl = creatinine clearance",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**CrCl = creatinine clearance**",
+    "heading": false,
+    "size": 11.0
+   },
+   {
+    "text": "OTC = over the counter",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "OTC = over the counter",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**OTC = over the counter**",
+    "heading": false,
+    "size": 11.0
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": "Abbreviation key: PO = by mouth; IV = intravenous; SC = subcutaneous; BID/TID = twice / three times daily; ER = extended release; CNS = central nervous system; GABA = gamma-aminobutyric acid; CYP = cytochrome P450; P-gp = P-glycoprotein; HLA = human leukocyte antigen; URAT1 = urate transporter 1; G6PD = glucose-6-phosphate dehydrogenase; RyR1 = ryanodine receptor 1; RANKL = receptor activator of nuclear factor kappa-B ligand; PTH = parathyroid hormone; SERM = selective estrogen receptor modulator; VTE = venous thromboembolism; SSRI = selective serotonin reuptake inhibitor; MAOI = monoamine oxidase inhibitor; CrCl = creatinine clearance; OTC = over the counter.\n\nInstructor script:\n\nThese profiles are your study reference. Know the dose logic, the serious adverse effects, the contraindication that changes decisions and the toxicity you would need to recognize.\n\nClass activity (10 minutes): groups teach back two or three profiles in 60 seconds each.\n\nAbbreviation key: review RyR1, URAT1, RANKL, PTH and SERM.\n\nTeaching points: gout agents, central relaxants, dantrolene, bisphosphonates, denosumab, teriparatide, raloxifene.\n\nBloom's prompts: Remember: state colchicine dosing. Understand: explain why allopurinol does not treat a flare. Apply: counsel on alendronate. Analyze: explain tizanidine with ciprofloxacin. Evaluate: choose osteoporosis therapy in CKD."
+ },
+ {
+  "slide": 73,
+  "title": "Colchicine (Colcrys, Mitigare)",
+  "items": [
+   {
+    "text": "DRUG PROFILE",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "DRUG PROFILE",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**DRUG PROFILE**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Colchicine (Colcrys, Mitigare)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Colchicine (Colcrys, Mitigare)",
+    "heading": true,
+    "size": 30.0
+   },
+   {
+    "text": "ANTI-INFLAMMATORY (MICROTUBULE INHIBITOR)",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "ANTI-INFLAMMATORY (MICROTUBULE INHIBITOR)",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**ANTI-INFLAMMATORY (MICROTUBULE INHIBITOR)**",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "FORMULATION",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "FORMULATION",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**FORMULATION**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "DOSE (ADULT)",
+    "level": 0,
+    "emphasis": [],
+    "md": "DOSE (ADULT)",
+    "heading": true,
+    "size": 13.5
+   },
+   {
+    "text": "INDICATIONS",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "INDICATIONS",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**INDICATIONS**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Tablets 0.6 mg; capsules 0.6 mg",
+    "level": 0,
+    "emphasis": [],
+    "md": "Tablets 0.6 mg; capsules 0.6 mg",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Flare: 1.2 mg PO then 0.6 mg one hour later, within 24 hours of onset; prophylaxis: 0.6 mg once or twice daily",
+    "level": 0,
+    "emphasis": [],
+    "md": "Flare: 1.2 mg PO then 0.6 mg one hour later, within 24 hours of onset; prophylaxis: 0.6 mg once or twice daily",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Acute gout flare, flare prophylaxis, familial Mediterranean fever",
+    "level": 0,
+    "emphasis": [],
+    "md": "Acute gout flare, flare prophylaxis, familial Mediterranean fever",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "ADVERSE EFFECTS",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "ADVERSE EFFECTS",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**ADVERSE EFFECTS**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "CONTRAINDICATIONS",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "CONTRAINDICATIONS",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**CONTRAINDICATIONS**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "TOXICITY / OVERDOSE",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "TOXICITY / OVERDOSE",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**TOXICITY / OVERDOSE**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Diarrhea, nausea, vomiting, abdominal pain; myelosuppression and myopathy with toxicity",
+    "level": 0,
+    "emphasis": [],
+    "md": "Diarrhea, nausea, vomiting, abdominal pain; myelosuppression and myopathy with toxicity",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Severe renal or hepatic impairment with CYP3A4 or P-gp inhibitors; blood dyscrasias",
+    "level": 0,
+    "emphasis": [],
+    "md": "Severe renal or hepatic impairment with CYP3A4 or P-gp inhibitors; blood dyscrasias",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Narrow therapeutic window: severe GI toxicity, bone marrow suppression, multi-organ failure; avoid clarithromycin and strong CYP3A4/P-gp inhibitors",
+    "level": 0,
+    "emphasis": [],
+    "md": "Narrow therapeutic window: severe GI toxicity, bone marrow suppression, multi-organ failure; avoid clarithromycin and strong CYP3A4/P-gp inhibitors",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": "Colchicine (Colcrys, Mitigare)|Anti-inflammatory (microtubule inhibitor)|Tablets 0.6 mg; capsules 0.6 mg|Flare: 1.2 mg PO then 0.6 mg one hour later, within 24 hours of onset; prophylaxis: 0.6 mg once or twice daily|Acute gout flare, flare prophylaxis, familial Mediterranean fever|Diarrhea, nausea, vomiting, abdominal pain; myelosuppression and myopathy with toxicity|Severe renal or hepatic impairment with CYP3A4 or P-gp inhibitors; blood dyscrasias|Narrow therapeutic window: severe GI toxicity, bone marrow suppression, multi-organ failure; avoid clarithromycin and strong CYP3A4/P-gp inhibitors"
+ },
+ {
+  "slide": 74,
+  "title": "Allopurinol (Zyloprim)",
+  "items": [
+   {
+    "text": "DRUG PROFILE",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "DRUG PROFILE",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**DRUG PROFILE**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Allopurinol (Zyloprim)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Allopurinol (Zyloprim)",
+    "heading": true,
+    "size": 30.0
+   },
+   {
+    "text": "XANTHINE OXIDASE INHIBITOR",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "XANTHINE OXIDASE INHIBITOR",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**XANTHINE OXIDASE INHIBITOR**",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "FORMULATION",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "FORMULATION",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**FORMULATION**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "DOSE (ADULT)",
+    "level": 0,
+    "emphasis": [],
+    "md": "DOSE (ADULT)",
+    "heading": true,
+    "size": 13.5
+   },
+   {
+    "text": "INDICATIONS",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "INDICATIONS",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**INDICATIONS**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Tablets 100/300 mg",
+    "level": 0,
+    "emphasis": [],
+    "md": "Tablets 100/300 mg",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Start 50-100 mg PO daily, titrate every 2-5 weeks to serum urate under 6 mg/dL (usual 300-800 mg/day)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Start 50-100 mg PO daily, titrate every 2-5 weeks to serum urate under 6 mg/dL (usual 300-800 mg/day)",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Chronic gout, hyperuricemia, uric acid stones, tumor lysis prophylaxis",
+    "level": 0,
+    "emphasis": [],
+    "md": "Chronic gout, hyperuricemia, uric acid stones, tumor lysis prophylaxis",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "ADVERSE EFFECTS",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "ADVERSE EFFECTS",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**ADVERSE EFFECTS**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "CONTRAINDICATIONS",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "CONTRAINDICATIONS",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**CONTRAINDICATIONS**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "TOXICITY / OVERDOSE",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "TOXICITY / OVERDOSE",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**TOXICITY / OVERDOSE**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Rash, GI upset, flare at initiation, elevated liver enzymes",
+    "level": 0,
+    "emphasis": [],
+    "md": "Rash, GI upset, flare at initiation, elevated liver enzymes",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Prior severe reaction; HLA-B*58:01 carriers (higher risk); reduce dose in renal impairment",
+    "level": 0,
+    "emphasis": [],
+    "md": "Prior severe reaction; HLA-B*58:01 carriers (higher risk); reduce dose in renal impairment",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Allopurinol hypersensitivity syndrome (fever, rash, eosinophilia, organ injury); interacts with azathioprine and mercaptopurine",
+    "level": 0,
+    "emphasis": [],
+    "md": "Allopurinol hypersensitivity syndrome (fever, rash, eosinophilia, organ injury); interacts with azathioprine and mercaptopurine",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": "Allopurinol (Zyloprim)|Xanthine oxidase inhibitor|Tablets 100/300 mg|Start 50-100 mg PO daily, titrate every 2-5 weeks to serum urate under 6 mg/dL (usual 300-800 mg/day)|Chronic gout, hyperuricemia, uric acid stones, tumor lysis prophylaxis|Rash, GI upset, flare at initiation, elevated liver enzymes|Prior severe reaction; HLA-B*58:01 carriers (higher risk); reduce dose in renal impairment|Allopurinol hypersensitivity syndrome (fever, rash, eosinophilia, organ injury); interacts with azathioprine and mercaptopurine"
+ },
+ {
+  "slide": 75,
+  "title": "Febuxostat (Uloric)",
+  "items": [
+   {
+    "text": "DRUG PROFILE",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "DRUG PROFILE",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**DRUG PROFILE**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Febuxostat (Uloric)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Febuxostat (Uloric)",
+    "heading": true,
+    "size": 30.0
+   },
+   {
+    "text": "XANTHINE OXIDASE INHIBITOR (NON-PURINE)",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "XANTHINE OXIDASE INHIBITOR (NON-PURINE)",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**XANTHINE OXIDASE INHIBITOR (NON-PURINE)**",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "FORMULATION",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "FORMULATION",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**FORMULATION**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "DOSE (ADULT)",
+    "level": 0,
+    "emphasis": [],
+    "md": "DOSE (ADULT)",
+    "heading": true,
+    "size": 13.5
+   },
+   {
+    "text": "INDICATIONS",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "INDICATIONS",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**INDICATIONS**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Tablets 40/80 mg",
+    "level": 0,
+    "emphasis": [],
+    "md": "Tablets 40/80 mg",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "40 mg PO daily, increase to 80 mg if urate above 6 mg/dL after 2 weeks",
+    "level": 0,
+    "emphasis": [],
+    "md": "40 mg PO daily, increase to 80 mg if urate above 6 mg/dL after 2 weeks",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Chronic gout when allopurinol fails or is not tolerated",
+    "level": 0,
+    "emphasis": [],
+    "md": "Chronic gout when allopurinol fails or is not tolerated",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "ADVERSE EFFECTS",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "ADVERSE EFFECTS",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**ADVERSE EFFECTS**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "CONTRAINDICATIONS",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "CONTRAINDICATIONS",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**CONTRAINDICATIONS**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "TOXICITY / OVERDOSE",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "TOXICITY / OVERDOSE",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**TOXICITY / OVERDOSE**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Gout flare at initiation, nausea, rash, elevated liver enzymes, cardiovascular death",
+    "level": 0,
+    "emphasis": [],
+    "md": "Gout flare at initiation, nausea, rash, elevated liver enzymes, cardiovascular death",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Concurrent azathioprine or mercaptopurine; caution with cardiovascular disease",
+    "level": 0,
+    "emphasis": [],
+    "md": "Concurrent azathioprine or mercaptopurine; caution with cardiovascular disease",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Boxed warning for cardiovascular death; monitor liver tests",
+    "level": 0,
+    "emphasis": [],
+    "md": "Boxed warning for cardiovascular death; monitor liver tests",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Standard adult dosing for teaching; verify against current prescribing information.**",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": "Febuxostat (Uloric)|Xanthine oxidase inhibitor (non-purine)|Tablets 40/80 mg|40 mg PO daily, increase to 80 mg if urate above 6 mg/dL after 2 weeks|Chronic gout when allopurinol fails or is not tolerated|Gout flare at initiation, nausea, rash, elevated liver enzymes, cardiovascular death|Concurrent azathioprine or mercaptopurine; caution with cardiovascular disease|Boxed warning for cardiovascular death; monitor liver tests"
+ },
+ {
+  "slide": 76,
+  "title": "Probenecid",
+  "items": [
+   {
+    "text": "DRUG PROFILE",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "DRUG PROFILE",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**DRUG PROFILE**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Probenecid",
+    "level": 0,
+    "emphasis": [],
+    "md": "Probenecid",
+    "heading": true,
+    "size": 30.0
+   },
+   {
+    "text": "URICOSURIC (URAT1 INHIBITOR)",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "URICOSURIC (URAT1 INHIBITOR)",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**URICOSURIC (URAT1 INHIBITOR)**",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "FORMULATION",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "FORMULATION",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**FORMULATION**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "DOSE (ADULT)",
+    "level": 0,
+    "emphasis": [],
+    "md": "DOSE (ADULT)",
+    "heading": true,
+    "size": 13.5
+   },
+   {
+    "text": "INDICATIONS",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "INDICATIONS",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**INDICATIONS**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Tablets 500 mg",
+    "level": 0,
+    "emphasis": [],
+    "md": "Tablets 500 mg",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "250 mg PO twice daily for 1 week, then 500 mg twice daily; maximum 2 g/day",
+    "level": 0,
+    "emphasis": [],
+    "md": "250 mg PO twice daily for 1 week, then 500 mg twice daily; maximum 2 g/day",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Chronic gout with underexcretion of urate; adjunct to penicillin",
+    "level": 0,
+    "emphasis": [],
+    "md": "Chronic gout with underexcretion of urate; adjunct to penicillin",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "ADVERSE EFFECTS",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "ADVERSE EFFECTS",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**ADVERSE EFFECTS**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "CONTRAINDICATIONS",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "CONTRAINDICATIONS",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**CONTRAINDICATIONS**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "TOXICITY / OVERDOSE",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "TOXICITY / OVERDOSE",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**TOXICITY / OVERDOSE**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "GI upset, rash, headache, kidney stones, flare at start",
+    "level": 0,
+    "emphasis": [],
+    "md": "GI upset, rash, headache, kidney stones, flare at start",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Uric acid kidney stones, significant renal impairment (eGFR under 30), blood dyscrasias, during acute flare",
+    "level": 0,
+    "emphasis": [],
+    "md": "Uric acid kidney stones, significant renal impairment (eGFR under 30), blood dyscrasias, during acute flare",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Renal colic and stones; hydrate well and alkalinize urine; raises levels of penicillins, methotrexate and NSAIDs",
+    "level": 0,
+    "emphasis": [],
+    "md": "Renal colic and stones; hydrate well and alkalinize urine; raises levels of penicillins, methotrexate and NSAIDs",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "heading": false,
+    "size": 16.0
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": "Probenecid|Uricosuric (URAT1 inhibitor)|Tablets 500 mg|250 mg PO twice daily for 1 week, then 500 mg twice daily; maximum 2 g/day|Chronic gout with underexcretion of urate; adjunct to penicillin|GI upset, rash, headache, kidney stones, flare at start|Uric acid kidney stones, significant renal impairment (eGFR under 30), blood dyscrasias, during acute flare|Renal colic and stones; hydrate well and alkalinize urine; raises levels of penicillins, methotrexate and NSAIDs"
+ },
+ {
+  "slide": 77,
+  "title": "Pegloticase (Krystexxa)",
+  "items": [
+   {
+    "text": "DRUG PROFILE",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "DRUG PROFILE",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**DRUG PROFILE**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Pegloticase (Krystexxa)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Pegloticase (Krystexxa)",
+    "heading": true,
+    "size": 30.0
+   },
+   {
+    "text": "RECOMBINANT URICASE",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "RECOMBINANT URICASE",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**RECOMBINANT URICASE**",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "FORMULATION",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "FORMULATION",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**FORMULATION**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "DOSE (ADULT)",
+    "level": 0,
+    "emphasis": [],
+    "md": "DOSE (ADULT)",
+    "heading": true,
+    "size": 13.5
+   },
+   {
+    "text": "INDICATIONS",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "INDICATIONS",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**INDICATIONS**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "IV 8 mg/mL vial",
+    "level": 0,
+    "emphasis": [],
+    "md": "IV 8 mg/mL vial",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "8 mg IV every 2 weeks over at least 2 hours, with methotrexate co-therapy",
+    "level": 0,
+    "emphasis": [],
+    "md": "8 mg IV every 2 weeks over at least 2 hours, with methotrexate co-therapy",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Refractory chronic gout",
+    "level": 0,
+    "emphasis": [],
+    "md": "Refractory chronic gout",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "ADVERSE EFFECTS",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "ADVERSE EFFECTS",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**ADVERSE EFFECTS**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "CONTRAINDICATIONS",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "CONTRAINDICATIONS",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**CONTRAINDICATIONS**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "TOXICITY / OVERDOSE",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "TOXICITY / OVERDOSE",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**TOXICITY / OVERDOSE**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Infusion reaction, gout flares, anaphylaxis, nausea, anti-drug antibodies",
+    "level": 0,
+    "emphasis": [],
+    "md": "Infusion reaction, gout flares, anaphylaxis, nausea, anti-drug antibodies",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "G6PD deficiency; uncontrolled hypertension (caution); stop other urate-lowering drugs",
+    "level": 0,
+    "emphasis": [],
+    "md": "G6PD deficiency; uncontrolled hypertension (caution); stop other urate-lowering drugs",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Boxed warning for anaphylaxis, infusion reactions, hemolysis and methemoglobinemia in G6PD deficiency; premedicate and monitor serum urate",
+    "level": 0,
+    "emphasis": [],
+    "md": "Boxed warning for anaphylaxis, infusion reactions, hemolysis and methemoglobinemia in G6PD deficiency; premedicate and monitor serum urate",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Standard adult dosing for teaching; verify against current prescribing information.**",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": "Pegloticase (Krystexxa)|Recombinant uricase|IV 8 mg/mL vial|8 mg IV every 2 weeks over at least 2 hours, with methotrexate co-therapy|Refractory chronic gout|Infusion reaction, gout flares, anaphylaxis, nausea, anti-drug antibodies|G6PD deficiency; uncontrolled hypertension (caution); stop other urate-lowering drugs|Boxed warning for anaphylaxis, infusion reactions, hemolysis and methemoglobinemia in G6PD deficiency; premedicate and monitor serum urate"
+ },
+ {
+  "slide": 78,
+  "title": "Baclofen (Lioresal, Gablofen)",
+  "items": [
+   {
+    "text": "DRUG PROFILE",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "DRUG PROFILE",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**DRUG PROFILE**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Baclofen (Lioresal, Gablofen)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Baclofen (Lioresal, Gablofen)",
+    "heading": true,
+    "size": 30.0
+   },
+   {
+    "text": "CENTRALLY ACTING RELAXANT (GABA-B AGONIST)",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "CENTRALLY ACTING RELAXANT (GABA-B AGONIST)",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**CENTRALLY ACTING RELAXANT (GABA-B AGONIST)**",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "FORMULATION",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "FORMULATION",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**FORMULATION**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "DOSE (ADULT)",
+    "level": 0,
+    "emphasis": [],
+    "md": "DOSE (ADULT)",
+    "heading": true,
+    "size": 13.5
+   },
+   {
+    "text": "INDICATIONS",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "INDICATIONS",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**INDICATIONS**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Tablets 5/10/20 mg; oral solution; intrathecal pump",
+    "level": 0,
+    "emphasis": [],
+    "md": "Tablets 5/10/20 mg; oral solution; intrathecal pump",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "5 mg PO three times daily, increase every 3 days to 40-80 mg/day in divided doses",
+    "level": 0,
+    "emphasis": [],
+    "md": "5 mg PO three times daily, increase every 3 days to 40-80 mg/day in divided doses",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Spasticity from spinal cord injury or multiple sclerosis",
+    "level": 0,
+    "emphasis": [],
+    "md": "Spasticity from spinal cord injury or multiple sclerosis",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "ADVERSE EFFECTS",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "ADVERSE EFFECTS",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**ADVERSE EFFECTS**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "CONTRAINDICATIONS",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "CONTRAINDICATIONS",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**CONTRAINDICATIONS**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "TOXICITY / OVERDOSE",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "TOXICITY / OVERDOSE",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**TOXICITY / OVERDOSE**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Sedation, dizziness, weakness, nausea, confusion",
+    "level": 0,
+    "emphasis": [],
+    "md": "Sedation, dizziness, weakness, nausea, confusion",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Caution with renal impairment; avoid abrupt discontinuation",
+    "level": 0,
+    "emphasis": [],
+    "md": "Caution with renal impairment; avoid abrupt discontinuation",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Overdose: coma, respiratory depression; abrupt withdrawal causes seizures, hyperthermia and rebound spasticity",
+    "level": 0,
+    "emphasis": [],
+    "md": "Overdose: coma, respiratory depression; abrupt withdrawal causes seizures, hyperthermia and rebound spasticity",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": "Baclofen (Lioresal, Gablofen)|Centrally acting relaxant (GABA-B agonist)|Tablets 5/10/20 mg; oral solution; intrathecal pump|5 mg PO three times daily, increase every 3 days to 40-80 mg/day in divided doses|Spasticity from spinal cord injury or multiple sclerosis|Sedation, dizziness, weakness, nausea, confusion|Caution with renal impairment; avoid abrupt discontinuation|Overdose: coma, respiratory depression; abrupt withdrawal causes seizures, hyperthermia and rebound spasticity"
+ },
+ {
+  "slide": 79,
+  "title": "Tizanidine (Zanaflex)",
+  "items": [
+   {
+    "text": "DRUG PROFILE",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "DRUG PROFILE",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**DRUG PROFILE**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Tizanidine (Zanaflex)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Tizanidine (Zanaflex)",
+    "heading": true,
+    "size": 30.0
+   },
+   {
+    "text": "CENTRALLY ACTING RELAXANT (ALPHA-2 AGONIST)",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "CENTRALLY ACTING RELAXANT (ALPHA-2 AGONIST)",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**CENTRALLY ACTING RELAXANT (ALPHA-2 AGONIST)**",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "FORMULATION",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "FORMULATION",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**FORMULATION**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "DOSE (ADULT)",
+    "level": 0,
+    "emphasis": [],
+    "md": "DOSE (ADULT)",
+    "heading": true,
+    "size": 13.5
+   },
+   {
+    "text": "INDICATIONS",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "INDICATIONS",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**INDICATIONS**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Tablets 2/4 mg; capsules 2/4/6 mg",
+    "level": 0,
+    "emphasis": [],
+    "md": "Tablets 2/4 mg; capsules 2/4/6 mg",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "2 mg PO every 6-8 hours, titrate to 4-8 mg every 6-8 hours (maximum 36 mg/day)",
+    "level": 0,
+    "emphasis": [],
+    "md": "2 mg PO every 6-8 hours, titrate to 4-8 mg every 6-8 hours (maximum 36 mg/day)",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Spasticity, off-label for muscle spasm",
+    "level": 0,
+    "emphasis": [],
+    "md": "Spasticity, off-label for muscle spasm",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "ADVERSE EFFECTS",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "ADVERSE EFFECTS",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**ADVERSE EFFECTS**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "CONTRAINDICATIONS",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "CONTRAINDICATIONS",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**CONTRAINDICATIONS**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "TOXICITY / OVERDOSE",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "TOXICITY / OVERDOSE",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**TOXICITY / OVERDOSE**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Sedation, dry mouth, hypotension, bradycardia, hepatotoxicity",
+    "level": 0,
+    "emphasis": [],
+    "md": "Sedation, dry mouth, hypotension, bradycardia, hepatotoxicity",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Strong CYP1A2 inhibitors (ciprofloxacin, fluvoxamine); caution with antihypertensives and liver disease",
+    "level": 0,
+    "emphasis": [],
+    "md": "Strong CYP1A2 inhibitors (ciprofloxacin, fluvoxamine); caution with antihypertensives and liver disease",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Hypotension, bradycardia and CNS depression; check liver tests",
+    "level": 0,
+    "emphasis": [],
+    "md": "Hypotension, bradycardia and CNS depression; check liver tests",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": "Tizanidine (Zanaflex)|Centrally acting relaxant (alpha-2 agonist)|Tablets 2/4 mg; capsules 2/4/6 mg|2 mg PO every 6-8 hours, titrate to 4-8 mg every 6-8 hours (maximum 36 mg/day)|Spasticity, off-label for muscle spasm|Sedation, dry mouth, hypotension, bradycardia, hepatotoxicity|Strong CYP1A2 inhibitors (ciprofloxacin, fluvoxamine); caution with antihypertensives and liver disease|Hypotension, bradycardia and CNS depression; check liver tests"
+ },
+ {
+  "slide": 80,
+  "title": "Cyclobenzaprine (Flexeril)",
+  "items": [
+   {
+    "text": "DRUG PROFILE",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "DRUG PROFILE",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**DRUG PROFILE**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Cyclobenzaprine (Flexeril)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Cyclobenzaprine (Flexeril)",
+    "heading": true,
+    "size": 30.0
+   },
+   {
+    "text": "CENTRALLY ACTING RELAXANT (TRICYCLIC-RELATED)",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "CENTRALLY ACTING RELAXANT (TRICYCLIC-RELATED)",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**CENTRALLY ACTING RELAXANT (TRICYCLIC-RELATED)**",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "FORMULATION",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "FORMULATION",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**FORMULATION**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "DOSE (ADULT)",
+    "level": 0,
+    "emphasis": [],
+    "md": "DOSE (ADULT)",
+    "heading": true,
+    "size": 13.5
+   },
+   {
+    "text": "INDICATIONS",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "INDICATIONS",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**INDICATIONS**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Tablets 5/7.5/10 mg; ER capsules 15/30 mg",
+    "level": 0,
+    "emphasis": [],
+    "md": "Tablets 5/7.5/10 mg; ER capsules 15/30 mg",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "5-10 mg PO three times daily for 2-3 weeks (ER 15-30 mg daily)",
+    "level": 0,
+    "emphasis": [],
+    "md": "5-10 mg PO three times daily for 2-3 weeks (ER 15-30 mg daily)",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Acute muscle spasm from musculoskeletal conditions",
+    "level": 0,
+    "emphasis": [],
+    "md": "Acute muscle spasm from musculoskeletal conditions",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "ADVERSE EFFECTS",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "ADVERSE EFFECTS",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**ADVERSE EFFECTS**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "CONTRAINDICATIONS",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "CONTRAINDICATIONS",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**CONTRAINDICATIONS**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "TOXICITY / OVERDOSE",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "TOXICITY / OVERDOSE",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**TOXICITY / OVERDOSE**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Sedation, dry mouth, dizziness, blurred vision, urinary retention, confusion",
+    "level": 0,
+    "emphasis": [],
+    "md": "Sedation, dry mouth, dizziness, blurred vision, urinary retention, confusion",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "MAOIs within 14 days, arrhythmias, recent myocardial infarction, hyperthyroidism; Beers list for older adults",
+    "level": 0,
+    "emphasis": [],
+    "md": "MAOIs within 14 days, arrhythmias, recent myocardial infarction, hyperthyroidism; Beers list for older adults",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Serotonin syndrome with SSRIs and tramadol; tricyclic-type toxicity with arrhythmia, seizures in overdose",
+    "level": 0,
+    "emphasis": [],
+    "md": "Serotonin syndrome with SSRIs and tramadol; tricyclic-type toxicity with arrhythmia, seizures in overdose",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**Standard adult dosing for teaching; verify against current prescribing information.**",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": "Cyclobenzaprine (Flexeril)|Centrally acting relaxant (tricyclic-related)|Tablets 5/7.5/10 mg; ER capsules 15/30 mg|5-10 mg PO three times daily for 2-3 weeks (ER 15-30 mg daily)|Acute muscle spasm from musculoskeletal conditions|Sedation, dry mouth, dizziness, blurred vision, urinary retention, confusion|MAOIs within 14 days, arrhythmias, recent myocardial infarction, hyperthyroidism; Beers list for older adults|Serotonin syndrome with SSRIs and tramadol; tricyclic-type toxicity with arrhythmia, seizures in overdose"
+ },
+ {
+  "slide": 81,
+  "title": "Carisoprodol (Soma)",
+  "items": [
+   {
+    "text": "DRUG PROFILE",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "DRUG PROFILE",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**DRUG PROFILE**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Carisoprodol (Soma)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Carisoprodol (Soma)",
+    "heading": true,
+    "size": 30.0
+   },
+   {
+    "text": "CENTRALLY ACTING RELAXANT (MEPROBAMATE METABOLITE)",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "CENTRALLY ACTING RELAXANT (MEPROBAMATE METABOLITE)",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**CENTRALLY ACTING RELAXANT (MEPROBAMATE METABOLITE)**",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "FORMULATION",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "FORMULATION",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**FORMULATION**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "DOSE (ADULT)",
+    "level": 0,
+    "emphasis": [],
+    "md": "DOSE (ADULT)",
+    "heading": true,
+    "size": 13.5
+   },
+   {
+    "text": "INDICATIONS",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "INDICATIONS",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**INDICATIONS**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Tablets 250/350 mg",
+    "level": 0,
+    "emphasis": [],
+    "md": "Tablets 250/350 mg",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "250-350 mg PO three times daily and at bedtime for up to 2-3 weeks",
+    "level": 0,
+    "emphasis": [],
+    "md": "250-350 mg PO three times daily and at bedtime for up to 2-3 weeks",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Acute painful musculoskeletal conditions",
+    "level": 0,
+    "emphasis": [],
+    "md": "Acute painful musculoskeletal conditions",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "ADVERSE EFFECTS",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "ADVERSE EFFECTS",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**ADVERSE EFFECTS**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "CONTRAINDICATIONS",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "CONTRAINDICATIONS",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**CONTRAINDICATIONS**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "TOXICITY / OVERDOSE",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "TOXICITY / OVERDOSE",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**TOXICITY / OVERDOSE**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Drowsiness, dizziness, headache, dependence",
+    "level": 0,
+    "emphasis": [],
+    "md": "Drowsiness, dizziness, headache, dependence",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Acute intermittent porphyria; prior hypersensitivity; Schedule IV controlled substance",
+    "level": 0,
+    "emphasis": [],
+    "md": "Acute intermittent porphyria; prior hypersensitivity; Schedule IV controlled substance",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "CNS depression, especially with opioids and alcohol; dependence and withdrawal",
+    "level": 0,
+    "emphasis": [],
+    "md": "CNS depression, especially with opioids and alcohol; dependence and withdrawal",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": "Carisoprodol (Soma)|Centrally acting relaxant (meprobamate metabolite)|Tablets 250/350 mg|250-350 mg PO three times daily and at bedtime for up to 2-3 weeks|Acute painful musculoskeletal conditions|Drowsiness, dizziness, headache, dependence|Acute intermittent porphyria; prior hypersensitivity; Schedule IV controlled substance|CNS depression, especially with opioids and alcohol; dependence and withdrawal"
+ },
+ {
+  "slide": 82,
+  "title": "Methocarbamol (Robaxin)",
+  "items": [
+   {
+    "text": "DRUG PROFILE",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "DRUG PROFILE",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**DRUG PROFILE**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Methocarbamol (Robaxin)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Methocarbamol (Robaxin)",
+    "heading": true,
+    "size": 30.0
+   },
+   {
+    "text": "CENTRALLY ACTING RELAXANT",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "CENTRALLY ACTING RELAXANT",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**CENTRALLY ACTING RELAXANT**",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "FORMULATION",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "FORMULATION",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**FORMULATION**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "DOSE (ADULT)",
+    "level": 0,
+    "emphasis": [],
+    "md": "DOSE (ADULT)",
+    "heading": true,
+    "size": 13.5
+   },
+   {
+    "text": "INDICATIONS",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "INDICATIONS",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**INDICATIONS**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Tablets 500/750 mg; injection",
+    "level": 0,
+    "emphasis": [],
+    "md": "Tablets 500/750 mg; injection",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "1,500 mg PO four times daily for 2-3 days, then 750 mg four times daily",
+    "level": 0,
+    "emphasis": [],
+    "md": "1,500 mg PO four times daily for 2-3 days, then 750 mg four times daily",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Acute painful musculoskeletal conditions",
+    "level": 0,
+    "emphasis": [],
+    "md": "Acute painful musculoskeletal conditions",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "ADVERSE EFFECTS",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "ADVERSE EFFECTS",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**ADVERSE EFFECTS**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "CONTRAINDICATIONS",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "CONTRAINDICATIONS",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**CONTRAINDICATIONS**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "TOXICITY / OVERDOSE",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "TOXICITY / OVERDOSE",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**TOXICITY / OVERDOSE**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Drowsiness, dizziness, nausea, urine discoloration",
+    "level": 0,
+    "emphasis": [],
+    "md": "Drowsiness, dizziness, nausea, urine discoloration",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Hypersensitivity; IV form with renal impairment (polyethylene glycol)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Hypersensitivity; IV form with renal impairment (polyethylene glycol)",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "CNS depression; supportive care",
+    "level": 0,
+    "emphasis": [],
+    "md": "CNS depression; supportive care",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": "Methocarbamol (Robaxin)|Centrally acting relaxant|Tablets 500/750 mg; injection|1,500 mg PO four times daily for 2-3 days, then 750 mg four times daily|Acute painful musculoskeletal conditions|Drowsiness, dizziness, nausea, urine discoloration|Hypersensitivity; IV form with renal impairment (polyethylene glycol)|CNS depression; supportive care"
+ },
+ {
+  "slide": 83,
+  "title": "Dantrolene (Dantrium, Ryanodex)",
+  "items": [
+   {
+    "text": "DRUG PROFILE",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "DRUG PROFILE",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**DRUG PROFILE**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Dantrolene (Dantrium, Ryanodex)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Dantrolene (Dantrium, Ryanodex)",
+    "heading": true,
+    "size": 30.0
+   },
+   {
+    "text": "DIRECT-ACTING RELAXANT (RYR1 BLOCKER)",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "DIRECT-ACTING RELAXANT (RYR1 BLOCKER)",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**DIRECT-ACTING RELAXANT (RYR1 BLOCKER)**",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "FORMULATION",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "FORMULATION",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**FORMULATION**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "DOSE (ADULT)",
+    "level": 0,
+    "emphasis": [],
+    "md": "DOSE (ADULT)",
+    "heading": true,
+    "size": 13.5
+   },
+   {
+    "text": "INDICATIONS",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "INDICATIONS",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**INDICATIONS**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Capsules 25/50/100 mg; IV powder",
+    "level": 0,
+    "emphasis": [],
+    "md": "Capsules 25/50/100 mg; IV powder",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Spasticity: 25 mg PO daily, titrate to 100 mg up to four times daily; malignant hyperthermia: 2.5 mg/kg IV, repeat to 10 mg/kg",
+    "level": 0,
+    "emphasis": [],
+    "md": "Spasticity: 25 mg PO daily, titrate to 100 mg up to four times daily; malignant hyperthermia: 2.5 mg/kg IV, repeat to 10 mg/kg",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Malignant hyperthermia, chronic spasticity, neuroleptic malignant syndrome",
+    "level": 0,
+    "emphasis": [],
+    "md": "Malignant hyperthermia, chronic spasticity, neuroleptic malignant syndrome",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "ADVERSE EFFECTS",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "ADVERSE EFFECTS",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**ADVERSE EFFECTS**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "CONTRAINDICATIONS",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "CONTRAINDICATIONS",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**CONTRAINDICATIONS**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "TOXICITY / OVERDOSE",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "TOXICITY / OVERDOSE",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**TOXICITY / OVERDOSE**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Weakness, drowsiness, hepatotoxicity, diarrhea",
+    "level": 0,
+    "emphasis": [],
+    "md": "Weakness, drowsiness, hepatotoxicity, diarrhea",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Active liver disease (oral use); caution with calcium channel blockers (IV)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Active liver disease (oral use); caution with calcium channel blockers (IV)",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Boxed warning for hepatotoxicity (oral); generalized weakness; monitor liver enzymes",
+    "level": 0,
+    "emphasis": [],
+    "md": "Boxed warning for hepatotoxicity (oral); generalized weakness; monitor liver enzymes",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": "Dantrolene (Dantrium, Ryanodex)|Direct-acting relaxant (RyR1 blocker)|Capsules 25/50/100 mg; IV powder|Spasticity: 25 mg PO daily, titrate to 100 mg up to four times daily; malignant hyperthermia: 2.5 mg/kg IV, repeat to 10 mg/kg|Malignant hyperthermia, chronic spasticity, neuroleptic malignant syndrome|Weakness, drowsiness, hepatotoxicity, diarrhea|Active liver disease (oral use); caution with calcium channel blockers (IV)|Boxed warning for hepatotoxicity (oral); generalized weakness; monitor liver enzymes"
+ },
+ {
+  "slide": 84,
+  "title": "Alendronate (Fosamax)",
+  "items": [
+   {
+    "text": "DRUG PROFILE",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "DRUG PROFILE",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**DRUG PROFILE**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Alendronate (Fosamax)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Alendronate (Fosamax)",
+    "heading": true,
+    "size": 30.0
+   },
+   {
+    "text": "BISPHOSPHONATE",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "BISPHOSPHONATE",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**BISPHOSPHONATE**",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "FORMULATION",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "FORMULATION",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**FORMULATION**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "DOSE (ADULT)",
+    "level": 0,
+    "emphasis": [],
+    "md": "DOSE (ADULT)",
+    "heading": true,
+    "size": 13.5
+   },
+   {
+    "text": "INDICATIONS",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "INDICATIONS",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**INDICATIONS**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Tablets 5/10/35/70 mg; effervescent tablet; solution",
+    "level": 0,
+    "emphasis": [],
+    "md": "Tablets 5/10/35/70 mg; effervescent tablet; solution",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "70 mg PO once weekly (or 10 mg daily) fasting with 8 oz plain water, upright 30 minutes",
+    "level": 0,
+    "emphasis": [],
+    "md": "70 mg PO once weekly (or 10 mg daily) fasting with 8 oz plain water, upright 30 minutes",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Postmenopausal osteoporosis, glucocorticoid-induced osteoporosis, Paget disease",
+    "level": 0,
+    "emphasis": [],
+    "md": "Postmenopausal osteoporosis, glucocorticoid-induced osteoporosis, Paget disease",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "ADVERSE EFFECTS",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "ADVERSE EFFECTS",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**ADVERSE EFFECTS**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "CONTRAINDICATIONS",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "CONTRAINDICATIONS",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**CONTRAINDICATIONS**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "TOXICITY / OVERDOSE",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "TOXICITY / OVERDOSE",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**TOXICITY / OVERDOSE**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Esophagitis, dyspepsia, musculoskeletal pain, hypocalcemia",
+    "level": 0,
+    "emphasis": [],
+    "md": "Esophagitis, dyspepsia, musculoskeletal pain, hypocalcemia",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Esophageal stricture or achalasia, inability to sit upright, hypocalcemia, CrCl below 35 mL/min",
+    "level": 0,
+    "emphasis": [],
+    "md": "Esophageal stricture or achalasia, inability to sit upright, hypocalcemia, CrCl below 35 mL/min",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Esophageal injury, hypocalcemia; osteonecrosis of the jaw and atypical femur fracture with long-term use",
+    "level": 0,
+    "emphasis": [],
+    "md": "Esophageal injury, hypocalcemia; osteonecrosis of the jaw and atypical femur fracture with long-term use",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": "Alendronate (Fosamax)|Bisphosphonate|Tablets 5/10/35/70 mg; effervescent tablet; solution|70 mg PO once weekly (or 10 mg daily) fasting with 8 oz plain water, upright 30 minutes|Postmenopausal osteoporosis, glucocorticoid-induced osteoporosis, Paget disease|Esophagitis, dyspepsia, musculoskeletal pain, hypocalcemia|Esophageal stricture or achalasia, inability to sit upright, hypocalcemia, CrCl below 35 mL/min|Esophageal injury, hypocalcemia; osteonecrosis of the jaw and atypical femur fracture with long-term use"
+ },
+ {
+  "slide": 85,
+  "title": "Zoledronic acid (Reclast, Zometa)",
+  "items": [
+   {
+    "text": "DRUG PROFILE",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "DRUG PROFILE",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**DRUG PROFILE**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Zoledronic acid (Reclast, Zometa)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Zoledronic acid (Reclast, Zometa)",
+    "heading": true,
+    "size": 30.0
+   },
+   {
+    "text": "BISPHOSPHONATE (IV)",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "BISPHOSPHONATE (IV)",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**BISPHOSPHONATE (IV)**",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "FORMULATION",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "FORMULATION",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**FORMULATION**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "DOSE (ADULT)",
+    "level": 0,
+    "emphasis": [],
+    "md": "DOSE (ADULT)",
+    "heading": true,
+    "size": 13.5
+   },
+   {
+    "text": "INDICATIONS",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "INDICATIONS",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**INDICATIONS**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "IV 5 mg/100 mL (Reclast); 4 mg (Zometa)",
+    "level": 0,
+    "emphasis": [],
+    "md": "IV 5 mg/100 mL (Reclast); 4 mg (Zometa)",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "5 mg IV once yearly over at least 15 minutes (osteoporosis); once every 2 years for prevention",
+    "level": 0,
+    "emphasis": [],
+    "md": "5 mg IV once yearly over at least 15 minutes (osteoporosis); once every 2 years for prevention",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Osteoporosis, Paget disease, hypercalcemia of malignancy, skeletal metastases",
+    "level": 0,
+    "emphasis": [],
+    "md": "Osteoporosis, Paget disease, hypercalcemia of malignancy, skeletal metastases",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "ADVERSE EFFECTS",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "ADVERSE EFFECTS",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**ADVERSE EFFECTS**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "CONTRAINDICATIONS",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "CONTRAINDICATIONS",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**CONTRAINDICATIONS**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "TOXICITY / OVERDOSE",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "TOXICITY / OVERDOSE",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**TOXICITY / OVERDOSE**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Flu-like acute-phase reaction, hypocalcemia, renal injury, osteonecrosis of the jaw",
+    "level": 0,
+    "emphasis": [],
+    "md": "Flu-like acute-phase reaction, hypocalcemia, renal injury, osteonecrosis of the jaw",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "CrCl below 35 mL/min, uncorrected hypocalcemia, pregnancy",
+    "level": 0,
+    "emphasis": [],
+    "md": "CrCl below 35 mL/min, uncorrected hypocalcemia, pregnancy",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Acute kidney injury and hypocalcemia; hydrate; replete calcium and vitamin D first",
+    "level": 0,
+    "emphasis": [],
+    "md": "Acute kidney injury and hypocalcemia; hydrate; replete calcium and vitamin D first",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": "Zoledronic acid (Reclast, Zometa)|Bisphosphonate (IV)|IV 5 mg/100 mL (Reclast); 4 mg (Zometa)|5 mg IV once yearly over at least 15 minutes (osteoporosis); once every 2 years for prevention|Osteoporosis, Paget disease, hypercalcemia of malignancy, skeletal metastases|Flu-like acute-phase reaction, hypocalcemia, renal injury, osteonecrosis of the jaw|CrCl below 35 mL/min, uncorrected hypocalcemia, pregnancy|Acute kidney injury and hypocalcemia; hydrate; replete calcium and vitamin D first"
+ },
+ {
+  "slide": 86,
+  "title": "Denosumab (Prolia, Xgeva)",
+  "items": [
+   {
+    "text": "DRUG PROFILE",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "DRUG PROFILE",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**DRUG PROFILE**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Denosumab (Prolia, Xgeva)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Denosumab (Prolia, Xgeva)",
+    "heading": true,
+    "size": 30.0
+   },
+   {
+    "text": "RANKL INHIBITOR (MONOCLONAL ANTIBODY)",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "RANKL INHIBITOR (MONOCLONAL ANTIBODY)",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**RANKL INHIBITOR (MONOCLONAL ANTIBODY)**",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "FORMULATION",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "FORMULATION",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**FORMULATION**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "DOSE (ADULT)",
+    "level": 0,
+    "emphasis": [],
+    "md": "DOSE (ADULT)",
+    "heading": true,
+    "size": 13.5
+   },
+   {
+    "text": "INDICATIONS",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "INDICATIONS",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**INDICATIONS**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "SC prefilled syringe 60 mg/mL (Prolia); 120 mg (Xgeva)",
+    "level": 0,
+    "emphasis": [],
+    "md": "SC prefilled syringe 60 mg/mL (Prolia); 120 mg (Xgeva)",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "60 mg SC every 6 months (Prolia)",
+    "level": 0,
+    "emphasis": [],
+    "md": "60 mg SC every 6 months (Prolia)",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Postmenopausal osteoporosis, bone loss with androgen deprivation, skeletal events",
+    "level": 0,
+    "emphasis": [],
+    "md": "Postmenopausal osteoporosis, bone loss with androgen deprivation, skeletal events",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "ADVERSE EFFECTS",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "ADVERSE EFFECTS",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**ADVERSE EFFECTS**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "CONTRAINDICATIONS",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "CONTRAINDICATIONS",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**CONTRAINDICATIONS**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "TOXICITY / OVERDOSE",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "TOXICITY / OVERDOSE",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**TOXICITY / OVERDOSE**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Back and joint pain, hypocalcemia, infection, osteonecrosis of the jaw, atypical femur fracture",
+    "level": 0,
+    "emphasis": [],
+    "md": "Back and joint pain, hypocalcemia, infection, osteonecrosis of the jaw, atypical femur fracture",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Hypocalcemia, pregnancy; severe hypocalcemia boxed warning in advanced CKD",
+    "level": 0,
+    "emphasis": [],
+    "md": "Hypocalcemia, pregnancy; severe hypocalcemia boxed warning in advanced CKD",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Rebound multiple vertebral fractures if stopped or doses missed; transition to a bisphosphonate",
+    "level": 0,
+    "emphasis": [],
+    "md": "Rebound multiple vertebral fractures if stopped or doses missed; transition to a bisphosphonate",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": "Denosumab (Prolia, Xgeva)|RANKL inhibitor (monoclonal antibody)|SC prefilled syringe 60 mg/mL (Prolia); 120 mg (Xgeva)|60 mg SC every 6 months (Prolia)|Postmenopausal osteoporosis, bone loss with androgen deprivation, skeletal events|Back and joint pain, hypocalcemia, infection, osteonecrosis of the jaw, atypical femur fracture|Hypocalcemia, pregnancy; severe hypocalcemia boxed warning in advanced CKD|Rebound multiple vertebral fractures if stopped or doses missed; transition to a bisphosphonate"
+ },
+ {
+  "slide": 87,
+  "title": "Teriparatide (Forteo)",
+  "items": [
+   {
+    "text": "DRUG PROFILE",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "DRUG PROFILE",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**DRUG PROFILE**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Teriparatide (Forteo)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Teriparatide (Forteo)",
+    "heading": true,
+    "size": 30.0
+   },
+   {
+    "text": "ANABOLIC PTH(1-34) ANALOG",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "ANABOLIC PTH(1-34) ANALOG",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**ANABOLIC PTH(1-34) ANALOG**",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "FORMULATION",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "FORMULATION",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**FORMULATION**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "DOSE (ADULT)",
+    "level": 0,
+    "emphasis": [],
+    "md": "DOSE (ADULT)",
+    "heading": true,
+    "size": 13.5
+   },
+   {
+    "text": "INDICATIONS",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "INDICATIONS",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**INDICATIONS**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Prefilled pen 20 mcg/dose",
+    "level": 0,
+    "emphasis": [],
+    "md": "Prefilled pen 20 mcg/dose",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "20 mcg SC once daily in thigh or abdomen; lifetime use limited to 2 years",
+    "level": 0,
+    "emphasis": [],
+    "md": "20 mcg SC once daily in thigh or abdomen; lifetime use limited to 2 years",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Severe osteoporosis, high fracture risk, glucocorticoid-induced osteoporosis",
+    "level": 0,
+    "emphasis": [],
+    "md": "Severe osteoporosis, high fracture risk, glucocorticoid-induced osteoporosis",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "ADVERSE EFFECTS",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "ADVERSE EFFECTS",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**ADVERSE EFFECTS**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "CONTRAINDICATIONS",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "CONTRAINDICATIONS",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**CONTRAINDICATIONS**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "TOXICITY / OVERDOSE",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "TOXICITY / OVERDOSE",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**TOXICITY / OVERDOSE**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Orthostatic hypotension, leg cramps, nausea, hypercalcemia, dizziness",
+    "level": 0,
+    "emphasis": [],
+    "md": "Orthostatic hypotension, leg cramps, nausea, hypercalcemia, dizziness",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Paget disease, prior skeletal radiation, bone metastases, hypercalcemia, open epiphyses",
+    "level": 0,
+    "emphasis": [],
+    "md": "Paget disease, prior skeletal radiation, bone metastases, hypercalcemia, open epiphyses",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Hypercalcemia and orthostatic hypotension; follow with an antiresorptive to keep gains",
+    "level": 0,
+    "emphasis": [],
+    "md": "Hypercalcemia and orthostatic hypotension; follow with an antiresorptive to keep gains",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": "Teriparatide (Forteo)|Anabolic PTH(1-34) analog|Prefilled pen 20 mcg/dose|20 mcg SC once daily in thigh or abdomen; lifetime use limited to 2 years|Severe osteoporosis, high fracture risk, glucocorticoid-induced osteoporosis|Orthostatic hypotension, leg cramps, nausea, hypercalcemia, dizziness|Paget disease, prior skeletal radiation, bone metastases, hypercalcemia, open epiphyses|Hypercalcemia and orthostatic hypotension; follow with an antiresorptive to keep gains"
+ },
+ {
+  "slide": 88,
+  "title": "Raloxifene (Evista)",
+  "items": [
+   {
+    "text": "DRUG PROFILE",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "DRUG PROFILE",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**DRUG PROFILE**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Raloxifene (Evista)",
+    "level": 0,
+    "emphasis": [],
+    "md": "Raloxifene (Evista)",
+    "heading": true,
+    "size": 30.0
+   },
+   {
+    "text": "SERM",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "SERM",
+      "marks": [
+       "color"
+      ]
+     }
+    ],
+    "md": "**SERM**",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "FORMULATION",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "FORMULATION",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**FORMULATION**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "DOSE (ADULT)",
+    "level": 0,
+    "emphasis": [],
+    "md": "DOSE (ADULT)",
+    "heading": true,
+    "size": 13.5
+   },
+   {
+    "text": "INDICATIONS",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "INDICATIONS",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**INDICATIONS**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Tablets 60 mg",
+    "level": 0,
+    "emphasis": [],
+    "md": "Tablets 60 mg",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "60 mg PO once daily",
+    "level": 0,
+    "emphasis": [],
+    "md": "60 mg PO once daily",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Postmenopausal osteoporosis; reduction of invasive breast cancer risk",
+    "level": 0,
+    "emphasis": [],
+    "md": "Postmenopausal osteoporosis; reduction of invasive breast cancer risk",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "ADVERSE EFFECTS",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "ADVERSE EFFECTS",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**ADVERSE EFFECTS**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "CONTRAINDICATIONS",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "CONTRAINDICATIONS",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**CONTRAINDICATIONS**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "TOXICITY / OVERDOSE",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "TOXICITY / OVERDOSE",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**TOXICITY / OVERDOSE**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Hot flashes, leg cramps, venous thromboembolism, peripheral edema",
+    "level": 0,
+    "emphasis": [],
+    "md": "Hot flashes, leg cramps, venous thromboembolism, peripheral edema",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "History of VTE, pregnancy, breastfeeding; stroke risk (caution)",
+    "level": 0,
+    "emphasis": [],
+    "md": "History of VTE, pregnancy, breastfeeding; stroke risk (caution)",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Boxed warning for VTE and death from stroke; stop before prolonged immobilization",
+    "level": 0,
+    "emphasis": [],
+    "md": "Boxed warning for VTE and death from stroke; stop before prolonged immobilization",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Standard adult dosing for teaching; verify against current prescribing information.",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": "Raloxifene (Evista)|SERM|Tablets 60 mg|60 mg PO once daily|Postmenopausal osteoporosis; reduction of invasive breast cancer risk|Hot flashes, leg cramps, venous thromboembolism, peripheral edema|History of VTE, pregnancy, breastfeeding; stroke risk (caution)|Boxed warning for VTE and death from stroke; stop before prolonged immobilization"
+ },
+ {
+  "slide": 89,
+  "title": "Supporting Drugs at a Glance",
+  "items": [
+   {
+    "text": "CONTEXT",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "CONTEXT",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**CONTEXT**",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "Supporting Drugs at a Glance",
+    "level": 0,
+    "emphasis": [],
+    "md": "Supporting Drugs at a Glance",
+    "heading": true,
+    "size": 30.0
+   },
+   {
+    "text": "NSAIDs and corticosteroids",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "NSAIDs and corticosteroids",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**NSAIDs and corticosteroids**",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "Azathioprine and mercaptopurine",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Azathioprine and mercaptopurine",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Azathioprine and mercaptopurine**",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "Ciprofloxacin and fluvoxamine",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Ciprofloxacin and fluvoxamine",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Ciprofloxacin and fluvoxamine**",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "Alternative acute gout flare treatment",
+    "level": 0,
+    "emphasis": [],
+    "md": "Alternative acute gout flare treatment",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Allopurinol raises levels; reduce dose",
+    "level": 0,
+    "emphasis": [],
+    "md": "Allopurinol raises levels; reduce dose",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "CYP1A2 inhibitors; avoid with tizanidine",
+    "level": 0,
+    "emphasis": [],
+    "md": "CYP1A2 inhibitors; avoid with tizanidine",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Clarithromycin",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Clarithromycin",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Clarithromycin**",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "Thiazide and loop diuretics",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Thiazide and loop diuretics",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Thiazide and loop diuretics**",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "Opioids, benzodiazepines and alcohol",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Opioids, benzodiazepines and alcohol",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Opioids, benzodiazepines and alcohol**",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "CYP3A4/P-gp inhibitor raises colchicine toxicity",
+    "level": 0,
+    "emphasis": [],
+    "md": "CYP3A4/P-gp inhibitor raises colchicine toxicity",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Raise uric acid levels",
+    "level": 0,
+    "emphasis": [],
+    "md": "Raise uric acid levels",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Additive sedation with relaxants",
+    "level": 0,
+    "emphasis": [],
+    "md": "Additive sedation with relaxants",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Volatile anesthetics and succinylcholine",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Volatile anesthetics and succinylcholine",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Volatile anesthetics and succinylcholine**",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "Calcium and vitamin D",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Calcium and vitamin D",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Calcium and vitamin D**",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "Risedronate, ibandronate, romosozumab, abaloparatide, calcitonin",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Risedronate, ibandronate, romosozumab, abaloparatide, calcitonin",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Risedronate, ibandronate, romosozumab, abaloparatide, calcitonin**",
+    "heading": false,
+    "size": 13.0
+   },
+   {
+    "text": "Triggers of malignant hyperthermia",
+    "level": 0,
+    "emphasis": [],
+    "md": "Triggers of malignant hyperthermia",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Replete before and during osteoporosis therapy",
+    "level": 0,
+    "emphasis": [],
+    "md": "Replete before and during osteoporosis therapy",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Other osteoporosis agents",
+    "level": 0,
+    "emphasis": [],
+    "md": "Other osteoporosis agents",
+    "heading": false,
+    "size": 12.0
+   },
+   {
+    "text": "Listed for context; not profiled in detail.",
+    "level": 0,
+    "emphasis": [],
+    "md": "Listed for context; not profiled in detail.",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 0,
+  "figures": [],
+  "notes": "Supporting drugs at a glance. These drugs interact with or sit beside the profiled agents and are listed for context only: NSAIDs and corticosteroids for acute flares; azathioprine and mercaptopurine with allopurinol; ciprofloxacin and fluvoxamine with tizanidine; clarithromycin with colchicine; thiazide and loop diuretics raise uric acid; opioids, benzodiazepines and alcohol add sedation; volatile anesthetics and succinylcholine trigger malignant hyperthermia; calcium and vitamin D before osteoporosis therapy; other osteoporosis agents.\n\nInstructor script:\n\nSupporting drugs: clarithromycin, azathioprine, ciprofloxacin, diuretics, calcium and vitamin D explain interactions."
+ },
+ {
+  "slide": 90,
   "title": "Image Attribution",
   "items": [
    {
@@ -6411,6 +10142,6 @@
   "tables": [],
   "images": 1,
   "figures": [],
-  "notes": "This slide documents AI-tool use for original figure generation per university citation requirements. It covers every original diagram in this deck (Figures 4–8); none are reproduced from any textbook."
+  "notes": "This slide documents AI-tool use for original figure generation per university citation requirements. It covers every original diagram in this deck (Figures 4–8); none are reproduced from any textbook.\n\nInstructor script:\n\nPoint out the AI-tool disclosure for the original figures before closing."
  }
 ]

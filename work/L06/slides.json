@@ -4492,18 +4492,18 @@
   "title": "Drug Profiles",
   "items": [
    {
-    "text": "APPENDIX",
+    "text": "APPENDIX 1",
     "level": 0,
     "emphasis": [
      {
-      "text": "APPENDIX",
+      "text": "APPENDIX 1",
       "marks": [
        "bold",
        "color"
       ]
      }
     ],
-    "md": "**APPENDIX**",
+    "md": "**APPENDIX 1**",
     "heading": false,
     "size": 13.0
    },
@@ -10413,11 +10413,19 @@
   "title": "Supporting Drugs at a Glance",
   "items": [
    {
-    "text": "DRUG PROFILE · SUPPORTING",
+    "text": "Appendix 2: DRUG PROFILE · SUPPORTING",
     "level": 0,
-    "emphasis": [],
-    "md": "DRUG PROFILE · SUPPORTING",
-    "heading": true,
+    "emphasis": [
+     {
+      "text": "Appendix 2: DRUG PROFILE · SUPPORTING",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Appendix 2: DRUG PROFILE · SUPPORTING**",
+    "heading": false,
     "size": 12.0
    },
    {
@@ -10689,10 +10697,10 @@
   "title": "Image Attribution",
   "items": [
    {
-    "text": "APPENDIX",
+    "text": "APPENDIX 3",
     "level": 0,
     "emphasis": [],
-    "md": "APPENDIX",
+    "md": "APPENDIX 3",
     "heading": true,
     "size": 12.0
    },

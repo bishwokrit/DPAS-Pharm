@@ -1,9 +1,189 @@
 {
  "lecture": "L04",
  "passed": true,
- "units_checked": 2676,
+ "units_checked": 2899,
  "missing": [],
  "uncited": [
+  {
+   "ref": "S2",
+   "text": "Today has three stories: crystals, muscle tone and bone balance.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S3",
+   "text": "Section transition.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S3",
+   "text": "Gout is a crystal-driven arthritis with two very different treatment phases, so we start with how uric acid becomes crystals.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S5",
+   "text": "Each drug targets one step.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S7",
+   "text": "Prompt: have students decide which drug lowers uric acid production and which increases renal excretion before you reveal the answer.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S20",
+   "text": "Section transition.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S20",
+   "text": "Next, skeletal muscle relaxants: different drugs quiet spasm, spasticity and rigidity by acting at different sites.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S38",
+   "text": "Pair students: name the first-line class and the biggest safety check.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S39",
+   "text": "Section transition.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S62",
+   "text": "Pair students: name the first-line class and the biggest safety check.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S67",
+   "text": "Pair students: name the first-line class and the biggest safety check.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S68",
+   "text": "Pair students: name the first-line class and the biggest safety check.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S72",
+   "text": "Study reference for the drugs covered in Session 2",
+   "kind": "slide"
+  },
+  {
+   "ref": "S72",
+   "text": "Know the dose logic, the serious adverse effects, the contraindication that changes decisions and the toxicity you would need to recognize.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S72",
+   "text": "Class activity (10 minutes): groups teach back two or three profiles in 60 seconds each.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S72",
+   "text": "Teaching points: gout agents, central relaxants, dantrolene, bisphosphonates, denosumab, teriparatide, raloxifene.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S72",
+   "text": "Understand: explain why allopurinol does not treat a flare.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S72",
+   "text": "Apply: counsel on alendronate.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S72",
+   "text": "Analyze: explain tizanidine with ciprofloxacin.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S72",
+   "text": "Evaluate: choose osteoporosis therapy in CKD.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S74",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S75",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S76",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S77",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S78",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S79",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S80",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S81",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S82",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S83",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S84",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S85",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S86",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S87",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S88",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S90",
+   "text": "Point out the AI-tool disclosure for the original figures before closing.",
+   "kind": "speaker note"
+  },
   {
    "ref": "SG:U2-M",
    "text": "For each drug, write its primary mechanism of action.",
@@ -74,6 +254,24 @@
   },
   {
    "ref": "S72",
+   "text": "Bloom's prompts: Remember: state colchicine dosing.",
+   "kind": "speaker note",
+   "reason": "teaching instruction (Bloom's prompts)"
+  },
+  {
+   "ref": "S89",
+   "text": "Listed for context; not profiled in detail.",
+   "kind": "slide",
+   "reason": "table note; stated in the supporting-drugs table title"
+  },
+  {
+   "ref": "S89",
+   "text": "Supporting drugs at a glance.",
+   "kind": "speaker note",
+   "reason": "speaker-note restatement of the supporting-drugs table"
+  },
+  {
+   "ref": "S90",
    "text": "This slide documents AI-tool use for original figure generation per university citation requirements.",
    "kind": "speaker note",
    "reason": "administrative note on AI-tool citation"

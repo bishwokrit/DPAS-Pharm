@@ -2,13 +2,32 @@
 
 **Result: PASS ✅ nothing missing**
 
-Checked 2271 source lines (51 slides; 8 study-guide items; 54 textbook pages read; 1 textbook sentences used, the rest left out as not needed for this lecture (info only).)
+Checked 2308 source lines (59 slides; 8 study-guide items; 54 textbook pages read; 1 textbook sentences used, the rest left out as not needed for this lecture (info only).)
 
 ## Missing from the study materials
 - None ✅
 
 ## Covered but cited to a different slide/page (check citation)
-- None ✅
+- S11: Alpha1 receptors at the bladder neck and proximal urethra.
+- S11: Why:  Sympathetic norepinephrine acting on alpha1 receptors at the bladder neck and proximal urethra produces smooth muscle contraction, keeping the outlet clos
+- S11: Answer: alpha-1 at the bladder neck.
+- S18: Which overactive bladder medication is generally preferred in an older adult already taking multiple anticholinergic medications?
+- S18: Oxybutynin, for its high potency
+- S18: Any antimuscarinic agent, since they are interchangeable
+- S18: No pharmacologic therapy should be used in older adults
+- S18: Ask the class: which agent fits an older adult with OAB and high anticholinergic burden?
+- S19: Mirabegron, a beta3 agonist with no anticholinergic activity.
+- S19: Why:  Because mirabegron works by enhancing beta3-mediated detrusor relaxation rather than blocking muscarinic receptors, it avoids adding to a patient's cumula
+- S19: Answer: mirabegron.
+- S30: Nitrates block the PDE5 enzyme, making PDE5 inhibitors ineffective
+- S30: The combination has no significant interaction and is commonly prescribed together
+- S30: PDE5 inhibitors increase nitrate metabolism, reducing anti-anginal efficacy
+- S30: Ask the class what nitrates and PDE5 inhibitors have in common.
+- S31: Both drugs independently raise NO/cGMP signaling, and together can cause life-threatening hypotension.
+- S31: Why:  Nitrates raise NO/cGMP systemically (the mechanism behind their anti-anginal effect), while PDE5 inhibitors prevent cGMP breakdown. Combined, these two in
+- S31: Answer: both raise NO/cGMP signaling.
+- S37: Both reflect genitourinary drug classes acting on receptor families (adrenergic, NO-cGMP) that are shared with the systemic vasculature.
+- S37: Why:  Alpha1 blockers act on the same receptor family in the bladder neck/prostate and in blood vessels, and PDE5 inhibitors/nitrates both converge on the same 
 
 ## Left out on purpose (no study content)
 - S1: Diane S. Allen-Gipson, Ph.D., M.S., Course Director — _faculty identifier (site policy: no school or instructor identifiers)_
@@ -23,42 +42,45 @@ Checked 2271 source lines (51 slides; 8 study-guide items; 54 textbook pages rea
 - S7: Norepinephrine acts on alpha-1 (outlet closes) and beta-3 (reservoir relaxes). — _presenter script; taught from S7_
 - S9: Use this slide as the consolidating recap before the quick check — students should be able to generate this tw — _teaching instruction_
 - S9: Students should generate the two-column table from memory. — _teaching instruction_
-- S10: Section transition. — _section divider_
-- S13: The "no anticholinergic burden" advantage is the single most important comparison point versus antimuscarinics — _teaching instruction_
-- S14: Reinforce that these are complementary, not competing, mechanisms — this is the mechanistic basis for combinat — _teaching instruction_
-- S14: Complementary mechanisms. — _presenter script_
-- S15: This case is designed to make the Section 5 comparison concrete and clinical — a good checkpoint before the qu — _teaching instruction_
-- S16: Section transition. — _section divider_
-- S17: The Unit 5 cross-reference here is deliberate and worth stating explicitly — tamsulosin and doxazosin are not  — _teaching instruction_
-- S17: Tamsulosin and silodosin are uroselective; doxazosin and terazosin lower BP more. — _presenter script; taught from S17_
-- S18: Point explicitly to the side note about systemic alpha1 blockade and orthostatic hypotension — this is the fig — _teaching instruction_
-- S18: Same receptor family as in blood vessels. — _presenter script_
-- S19: Explicitly call back to Session 1 here — students met finasteride/dutasteride already for hirsutism; this slid — _teaching instruction_
-- S19: Finasteride, dutasteride; benefit takes 3-6 months; PSA falls by half; pregnancy caution. — _presenter script; taught from S19_
-- S21: This figure is the direct application of the Chapter 6 "non-adrenergic, noncholinergic neurons" content named  — _teaching instruction_
-- S21: Slow down on the nitrate warning box; it is the highest-stakes safety point in the entire unit. — _teaching instruction_
-- S21: Slow down on the nitrate warning. — _teaching instruction_
-- S22: Make the connection explicit rather than assuming they will make it themselves. — _teaching instruction_
-- S24: Never prescribe together. — _presenter script; taught from S24_
-- S25: Nitrates and PDE5 inhibitors both raise cGMP; never prescribe together. — _presenter script; taught from S25_
-- S26: Drug names reveal the class: -osin, -terodine, -fenacin, -begron, -afil, -steride, and nitrates. — _presenter script; the stems are taught in Part 3_
-- S28: This capstone figure is the visual summary of the entire session's unifying theme — use it to set up the fourC — _teaching instruction; the theme is taught from S28_
-- S28: Receptor families are shared with the vasculature. — _presenter script; taught from S28_
-- S29: Work through these as a rapid-fire discussion. — _teaching instruction_
-- S29: Pairs: first-line approach and biggest safety check. — _teaching instruction_
-- S30: Common thread: receptor families shared with the systemic vasculature. — _presenter script; taught from S30_
-- S35: Class activity (10 minutes): groups teach back two or three profiles in 60 seconds each. — _teaching instruction_
-- S35: Abbreviation key: review BPH, PSA, ED, PAH, QT, CYP and PDE5. — _teaching instruction_
-- S35: Teaching points: antimuscarinics (oxybutynin, tolterodine, solifenacin, darifenacin), mirabegron, alpha-1 bloc — _teaching instruction; the drugs are in the profiles_
-- S35: Bloom's prompts: Remember: state tamsulosin dosing. — _Bloom's teaching prompt; rebuilt as practice questions_
-- S35: Understand: explain mirabegron versus oxybutynin. — _Bloom's teaching prompt; rebuilt as practice questions_
-- S35: Apply: counsel a man starting doxazosin. — _Bloom's teaching prompt; rebuilt as practice questions_
-- S35: Analyze: explain bradycardia on metoprolol plus mirabegron. — _Bloom's teaching prompt; rebuilt as practice questions_
-- S35: Evaluate: choose therapy for an older adult with BPH and OAB. — _Bloom's teaching prompt; rebuilt as practice questions_
-- S50: Supporting drugs listed for context only: nitrates and riociguat with PDE5 inhibitors; other anticholinergics  — _presenter script; the table covers it_
-- S50: Supporting drugs: nitrates and riociguat, other anticholinergics, cholinesterase inhibitors and CYP3A4 inhibit — _presenter script; the table covers it_
-- S51: This slide documents AI-tool use for original figure generation per university citation requirements. — _administrative note on AI-tool citation_
-- S51: Original Claude-generated diagrams and illustrative mechanism schematics. — _administrative note on AI-tool citation_
+- S10: Quick Check. — _teaching instruction; the quick check is rebuilt as a question_
+- S12: Section transition. — _section divider_
+- S15: The "no anticholinergic burden" advantage is the single most important comparison point versus antimuscarinics — _teaching instruction_
+- S16: Reinforce that these are complementary, not competing, mechanisms — this is the mechanistic basis for combinat — _teaching instruction_
+- S16: Complementary mechanisms. — _presenter script_
+- S17: This case is designed to make the Section 5 comparison concrete and clinical — a good checkpoint before the qu — _teaching instruction_
+- S18: Quick Check. — _teaching instruction; the quick check is rebuilt as a question_
+- S20: Section transition. — _section divider_
+- S21: The Unit 5 cross-reference here is deliberate and worth stating explicitly — tamsulosin and doxazosin are not  — _teaching instruction_
+- S21: Tamsulosin and silodosin are uroselective; doxazosin and terazosin lower BP more. — _presenter script; taught from S21_
+- S22: Point explicitly to the side note about systemic alpha1 blockade and orthostatic hypotension — this is the fig — _teaching instruction_
+- S22: Same receptor family as in blood vessels. — _presenter script_
+- S23: Explicitly call back to Session 1 here — students met finasteride/dutasteride already for hirsutism; this slid — _teaching instruction_
+- S23: Finasteride, dutasteride; benefit takes 3-6 months; PSA falls by half; pregnancy caution. — _presenter script; taught from S23_
+- S25: This figure is the direct application of the Chapter 6 "non-adrenergic, noncholinergic neurons" content named  — _teaching instruction_
+- S25: Slow down on the nitrate warning box; it is the highest-stakes safety point in the entire unit. — _teaching instruction_
+- S25: Slow down on the nitrate warning. — _teaching instruction_
+- S26: Make the connection explicit rather than assuming they will make it themselves. — _teaching instruction_
+- S28: Never prescribe together. — _presenter script; taught from S28_
+- S29: Nitrates and PDE5 inhibitors both raise cGMP; never prescribe together. — _presenter script; taught from S29_
+- S30: Quick Check. — _teaching instruction; the quick check is rebuilt as a question_
+- S32: Drug names reveal the class: -osin, -terodine, -fenacin, -begron, -afil, -steride, and nitrates. — _presenter script; the stems are taught in Part 3_
+- S34: This capstone figure is the visual summary of the entire session's unifying theme — use it to set up the fourC — _teaching instruction; the theme is taught from S34_
+- S34: Receptor families are shared with the vasculature. — _presenter script; taught from S34_
+- S35: Work through these as a rapid-fire discussion. — _teaching instruction_
+- S35: Pairs: first-line approach and biggest safety check. — _teaching instruction_
+- S38: Common thread: receptor families shared with the systemic vasculature. — _presenter script; taught from S38_
+- S43: Class activity (10 minutes): groups teach back two or three profiles in 60 seconds each. — _teaching instruction_
+- S43: Abbreviation key: review BPH, PSA, ED, PAH, QT, CYP and PDE5. — _teaching instruction_
+- S43: Teaching points: antimuscarinics (oxybutynin, tolterodine, solifenacin, darifenacin), mirabegron, alpha-1 bloc — _teaching instruction; the drugs are in the profiles_
+- S43: Bloom's prompts: Remember: state tamsulosin dosing. — _Bloom's teaching prompt; rebuilt as practice questions_
+- S43: Understand: explain mirabegron versus oxybutynin. — _Bloom's teaching prompt; rebuilt as practice questions_
+- S43: Apply: counsel a man starting doxazosin. — _Bloom's teaching prompt; rebuilt as practice questions_
+- S43: Analyze: explain bradycardia on metoprolol plus mirabegron. — _Bloom's teaching prompt; rebuilt as practice questions_
+- S43: Evaluate: choose therapy for an older adult with BPH and OAB. — _Bloom's teaching prompt; rebuilt as practice questions_
+- S58: Supporting drugs listed for context only: nitrates and riociguat with PDE5 inhibitors; other anticholinergics  — _presenter script; the table covers it_
+- S58: Supporting drugs: nitrates and riociguat, other anticholinergics, cholinesterase inhibitors and CYP3A4 inhibit — _presenter script; the table covers it_
+- S59: This slide documents AI-tool use for original figure generation per university citation requirements. — _administrative note on AI-tool citation_
+- S59: Original Claude-generated diagrams and illustrative mechanism schematics. — _administrative note on AI-tool citation_
 
 ## Assigned-reading sections not taught in the guide
 - None ✅
@@ -138,7 +160,7 @@ Checked 2271 source lines (51 slides; 8 study-guide items; 54 textbook pages rea
 - None ✅
 
 ## Practice questions
-14 questions · 6 vignette / 8 mechanism · answer letters {'A': 3, 'B': 2, 'C': 3, 'D': 3, 'E': 3}
+16 questions · 6 vignette / 10 mechanism · answer letters {'A': 4, 'B': 3, 'C': 3, 'D': 3, 'E': 3}
 - None ✅
 
 ## Objectives with thin coverage

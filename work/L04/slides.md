@@ -1,4 +1,4 @@
-# Extracted slides: Lecture_2_Session_2_Musculoskeletal-Pharmacology_Final_Class_version_Oct_29.pptx
+# Extracted slides: Lecture_2_Session_2_Unit_2_Musculoskeletal_Pharmacology1_Final_Oct_29.pptx
 
 Bold = emphasized on the slide (bold/underline/highlight/colored text).
 
@@ -25,6 +25,10 @@ _[1 small image(s)/icons]_
 
 > Speaker notes: Briefly recap Session 1 (Oct 27) before diving in: musculoskeletal pain, acetaminophen, NSAIDs, and OA/RA pharmacotherapy including DMARDs. Today picks up with gout (Section 5) and runs through bone pharmacology, integration, and the cumulative recall quiz.
 
+Instructor script:
+
+Recap Session 1 in a minute. Today has three stories: crystals, muscle tone and bone balance.
+
 ## Slide 3: 05
 - **SECTION**
 - [heading] 05
@@ -32,6 +36,10 @@ _[1 small image(s)/icons]_
 - **A crystal-driven inflammatory arthritis with two very different treatment phases.**
 
 _[1 small image(s)/icons]_
+
+> Speaker notes: Section transition.
+
+Gout is a crystal-driven arthritis with two very different treatment phases, so we start with how uric acid becomes crystals.
 
 ## Slide 4: How Gout Develops
 - [heading] PATHOPHYSIOLOGY
@@ -47,6 +55,10 @@ _[1 small image(s)/icons]_
 _[1 small image(s)/icons]_
 
 > Speaker notes: Everything downstream — colchicine, allopurinol, febuxostat, probenecid — targets a specific point along this chain. The next slide builds this out with the specific drugs and their targets.
+
+Instructor script:
+
+Purine metabolism to uric acid to urate crystals to inflammation.
 
 ## Slide 5: Uric Acid Crystals Trigger the Inflammatory Response
 - [heading] MECHANISM & DEPTH
@@ -65,6 +77,10 @@ _[1 small image(s)/icons]_
 - [heading] Acute flare
 
 > Speaker notes: Walk the chain left to right, then top to bottom: each step sets up the next, and the flare is the end of the cascade.
+
+Instructor script:
+
+Each drug targets one step.
 
 ## Slide 6: Gout: From Purine Metabolism to Joint Inflammation
 - [heading] ORIGINAL ILLUSTRATION · FIGURE 4
@@ -90,6 +106,10 @@ _[figure(s) saved: S6_1.jpg]_
 
 _[1 small image(s)/icons]_
 
+> Speaker notes: Instructor script:
+
+Prompt: have students decide which drug lowers uric acid production and which increases renal excretion before you reveal the answer.
+
 ## Slide 8: Answer
 - [heading] ANSWER · FIGURE 4
 - [heading] Answer
@@ -98,6 +118,10 @@ _[1 small image(s)/icons]_
 - **Why:** Figure 4 shows allopurinol (and febuxostat) acting as xanthine oxidase inhibitors that reduce uric acid production, while probenecid acts at the kidney to increase renal excretion of uric acid that has already been produced — two different strategies for the same goal of lowering serum uric acid.
 
 _[1 small image(s)/icons]_
+
+> Speaker notes: Instructor script:
+
+Probenecid raises excretion; allopurinol lowers production.
 
 ## Slide 9: Acute Gout vs. Chronic Urate-Lowering Therapy
 - [heading] TWO DIFFERENT GOALS
@@ -115,6 +139,10 @@ _[1 small image(s)/icons]_
 
 > Speaker notes: This acute-vs-chronic distinction is one of the single most testable concepts in gout pharmacology — starting or changing a urate-lowering drug during an acute flare can actually prolong it.
 
+Instructor script:
+
+Treat the flare first; do not start or change urate-lowering therapy during a flare.
+
 ## Slide 10: Colchicine
 - [heading] ACUTE TREATMENT
 - [heading] Colchicine
@@ -124,6 +152,8 @@ _[1 small image(s)/icons]_
 - **Narrow therapeutic window — GI adverse effects are common and dose-limiting.**
 
 _[1 small image(s)/icons]_
+
+> Speaker notes: Blocks microtubules in neutrophils; start early.
 
 ## Slide 11: Colchicine: Blocking Neutrophil Response
 - [heading] MECHANISM & DEPTH
@@ -138,6 +168,10 @@ _[1 small image(s)/icons]_
 - [heading] Less inflammation at the crystal site
 
 > Speaker notes: Colchicine works on the cell's cytoskeleton, so its effect builds in the early hours of a flare.
+
+Instructor script:
+
+Narrow window; CYP3A4 and P-gp interactions.
 
 ## Slide 12: Allopurinol vs. Febuxostat
 - [heading] URATE-LOWERING THERAPY
@@ -155,6 +189,10 @@ _[1 small image(s)/icons]_
 
 > Speaker notes: HLA-B*5801 is a direct callback to the pharmacogenomics section from Lecture 1 — ask students to make that connection themselves before you state it.
 
+Instructor script:
+
+HLA-B*58:01, renal dosing, azathioprine interaction.
+
 ## Slide 13: Xanthine Oxidase Inhibitors: Where They Act
 - [heading] MECHANISM & DEPTH
 - [heading] Xanthine Oxidase Inhibitors: Where They Act
@@ -168,6 +206,10 @@ _[1 small image(s)/icons]_
 - [heading] Allopurinol (via oxypurinol) and febuxostat block xanthine oxidase
 
 > Speaker notes: Both drugs sit on the same enzyme; the choice turns on safety profile and tolerability.
+
+Instructor script:
+
+Febuxostat boxed warning.
 
 ## Slide 14: Other Urate-Lowering & Refractory Gout Agents
 - [heading] OTHER OPTIONS
@@ -198,6 +240,10 @@ _[1 small image(s)/icons]_
 - [heading] Allantoin is soluble and excreted
 
 > Speaker notes: Uricosurics block reabsorption; uricases remove uric acid enzymatically, which is why they suit refractory disease.
+
+Instructor script:
+
+URAT1 blockade and kidney stones; pegloticase in refractory gout and G6PD.
 
 ## Slide 16: Acute Treatment or Urate-Lowering Therapy?
 - [heading] CLINICAL CASE
@@ -261,6 +307,10 @@ _[1 small image(s)/icons]_
 
 _[1 small image(s)/icons]_
 
+> Speaker notes: Section transition.
+
+Next, skeletal muscle relaxants: different drugs quiet spasm, spasticity and rigidity by acting at different sites.
+
 ## Slide 21: Spasm vs. Spasticity vs. Rigidity
 - [heading] NOT THE SAME THING
 - [heading] Spasm vs. Spasticity vs. Rigidity
@@ -292,6 +342,8 @@ _[1 small image(s)/icons]_
 - ▼
 - [heading] Muscle fiber contraction (SR Ca²⁺ release)
 
+> Speaker notes: Walk from upper motor neuron to muscle fiber.
+
 ## Slide 23: Centrally vs. Peripherally Acting Agents
 - [heading] CLASSIFICATION
 - [heading] Centrally vs. Peripherally Acting Agents
@@ -305,6 +357,8 @@ _[1 small image(s)/icons]_
 - Useful when a central mechanism is not desired (or not safe)
 
 _[1 small image(s)/icons]_
+
+> Speaker notes: Dantrolene is the peripheral exception.
 
 ## Slide 24: Skeletal Muscle Relaxants: Central vs. Peripheral Site of Action
 - [heading] ORIGINAL ILLUSTRATION · FIGURE 5
@@ -349,6 +403,8 @@ _[1 small image(s)/icons]_
 
 _[1 small image(s)/icons]_
 
+> Speaker notes: GABA-B; never stop abruptly.
+
 ## Slide 28: Baclofen: GABA-B Agonism in the Spinal Cord
 - **MECHANISM & DEPTH**
 - [heading] Baclofen: GABA-B Agonism in the Spinal Cord
@@ -374,6 +430,8 @@ _[1 small image(s)/icons]_
 
 _[1 small image(s)/icons]_
 
+> Speaker notes: Alpha-2; CYP1A2 interactions and liver tests.
+
 ## Slide 30: Tizanidine: Central Alpha-2 Agonism
 - **MECHANISM & DEPTH**
 - [heading] Tizanidine: Central Alpha-2 Agonism
@@ -398,6 +456,8 @@ _[1 small image(s)/icons]_
 - **Anticholinergic effects: dry mouth, blurred vision, urinary retention — use caution in older adults.**
 
 _[1 small image(s)/icons]_
+
+> Speaker notes: Tricyclic-related; anticholinergic; serotonin syndrome.
 
 ## Slide 32: Cyclobenzaprine: Brainstem Action and Anticholinergic Effects
 - **MECHANISM & DEPTH**
@@ -428,6 +488,10 @@ _[1 small image(s)/icons]_
 
 > Speaker notes: These agents round out the "centrally-acting" category beyond the three first-line drugs, and botulinum toxin introduces a third mechanism entirely — neuromuscular junction blockade — distinct from both the CNS-acting and dantrolene’s sarcoplasmic-reticulum mechanisms.
 
+Instructor script:
+
+Carisoprodol dependence.
+
 ## Slide 34: Dantrolene
 - [heading] PERIPHERALLY ACTING
 - [heading] Dantrolene
@@ -439,6 +503,10 @@ _[1 small image(s)/icons]_
 _[1 small image(s)/icons]_
 
 > Speaker notes: Dantrolene’s role in malignant hyperthermia is a must-know, high-stakes fact — a perioperative emergency where this drug is literally life-saving.
+
+Instructor script:
+
+RyR1; malignant hyperthermia.
 
 ## Slide 35: Dantrolene: Blocking Calcium Release at the Muscle
 - **MECHANISM & DEPTH**
@@ -496,6 +564,8 @@ _[1 small image(s)/icons]_
 | -trolene (hydantoin derivative) | Blocks RyR1 in the muscle fiber | Dantrolene |
 | -toxin | Blocks presynaptic ACh release | Botulinum toxin |
 
+> Speaker notes: Pair students: name the first-line class and the biggest safety check.
+
 ## Slide 39: 07
 - **SECTION**
 - [heading] 07
@@ -503,6 +573,10 @@ _[1 small image(s)/icons]_
 - **Balancing bone formation and bone resorption.**
 
 _[1 small image(s)/icons]_
+
+> Speaker notes: Section transition.
+
+Last, bone pharmacology: balancing bone formation against bone resorption.
 
 ## Slide 40: Bone Remodeling
 - [heading] THE BASICS
@@ -517,6 +591,10 @@ _[1 small image(s)/icons]_
 _[1 small image(s)/icons]_
 
 > Speaker notes: Nearly every osteoporosis drug on the following slides works by shifting this balance one way or the other — either slowing osteoclasts or stimulating osteoblasts.
+
+Instructor script:
+
+Osteoblasts build and osteoclasts resorb.
 
 ## Slide 41: RANKL/OPG Controls Osteoclast Activity
 - **MECHANISM & DEPTH**
@@ -546,6 +624,8 @@ _[1 small image(s)/icons]_
 - Lowers serum calcium; opposes PTH
 
 _[1 small image(s)/icons]_
+
+> Speaker notes: PTH, vitamin D and calcitonin.
 
 ## Slide 43: Calcium Homeostasis: The PTH Feedback Loop
 - [heading] ORIGINAL ILLUSTRATION · FIGURE 6
@@ -603,6 +683,8 @@ _[1 small image(s)/icons]_
 - First-line for most patients with osteoporosis.
 
 _[1 small image(s)/icons]_
+
+> Speaker notes: Osteoclast apoptosis.
 
 ## Slide 48: Bisphosphonates: Osteoclast Apoptosis
 - **MECHANISM & DEPTH**
@@ -671,6 +753,10 @@ _[1 small image(s)/icons]_
 
 > Speaker notes: The "remain upright" counseling point is extremely high-yield for both exams and real-world safety — esophageal injury is largely preventable with correct administration.
 
+Instructor script:
+
+Osteonecrosis of the jaw and atypical femur fracture.
+
 ## Slide 53: Why Oral Bisphosphonates Need Strict Administration Rules
 - **MECHANISM & DEPTH**
 - [heading] Why Oral Bisphosphonates Need Strict Administration Rules
@@ -684,6 +770,8 @@ _[1 small image(s)/icons]_
 - [heading] Take fasting with plain water; stay upright 30 minutes
 - ▼
 - [heading] Lowers esophageal irritation risk
+
+> Speaker notes: Administration rules.
 
 ## Slide 54: Other Osteoporosis Therapies
 - [heading] BEYOND BISPHOSPHONATES
@@ -702,6 +790,10 @@ _[1 small image(s)/icons]_
 
 > Speaker notes: Teriparatide/abaloparatide/romosozumab are the "anabolic" exception to the rule that most osteoporosis drugs just slow resorption — they actively build new bone. The next slide shows all of these (plus bisphosphonates) together on one balance diagram.
 
+Instructor script:
+
+Denosumab rebound; raloxifene VTE.
+
 ## Slide 55: Anabolic vs Antiresorptive Mechanisms
 - **MECHANISM & DEPTH**
 - [heading] Anabolic vs Antiresorptive Mechanisms
@@ -719,6 +811,8 @@ _[1 small image(s)/icons]_
 - ▼
 - [heading] Increases formation, decreases resorption
 - [heading] BMD up, fracture risk down
+
+> Speaker notes: Teriparatide 2 years; romosozumab boxed warning.
 
 ## Slide 56: How Osteoporosis Drugs Shift the Remodeling Balance
 - [heading] ORIGINAL ILLUSTRATION · FIGURE 8
@@ -803,6 +897,8 @@ _[1 small image(s)/icons]_
 | -tide (peptide) | PTH analogs (anabolic) | Teriparatide, abaloparatide |
 | No shared stem | Calcitonin (hormone) | Calcitonin |
 
+> Speaker notes: Pair students: name the first-line class and the biggest safety check.
+
 ## Slide 63: 08
 - **SECTION**
 - [heading] 08
@@ -826,6 +922,10 @@ _[1 small image(s)/icons]_
 _[1 small image(s)/icons]_
 
 > Speaker notes: Have students work in pairs: for each patient, name a first-line drug class AND the single biggest safety concern to check before prescribing it.
+
+Instructor script:
+
+Pair students: name the first-line class and the biggest safety check.
 
 ## Slide 65: Quick Check
 - [heading] QUICK CHECK · PUTTING IT ALL TOGETHER
@@ -867,6 +967,10 @@ _[1 small image(s)/icons]_
 
 > Speaker notes: Close by connecting back to Lecture 1: every mechanism in this lecture (COX inhibition, CYP interactions, renal dosing, pharmacogenomics) was really just Lecture 1’s toolkit applied to one organ system.
 
+Instructor script:
+
+Pair students: name the first-line class and the biggest safety check.
+
 ## Slide 68: 09
 - **SECTION**
 - [heading] 09
@@ -874,6 +978,8 @@ _[1 small image(s)/icons]_
 - **A cumulative self-test — use this to review before exams.**
 
 _[1 small image(s)/icons]_
+
+> Speaker notes: Pair students: name the first-line class and the biggest safety check.
 
 ## Slide 69: Lecture Recall Quiz (1 of 2)
 - [heading] LECTURE RECALL QUIZ
@@ -929,7 +1035,396 @@ _[1 small image(s)/icons]_
 
 > Speaker notes: Encourage students to revisit this quiz on their own before the exam — it is designed as a standalone recall resource, separate from the in-lecture quick checks.
 
-## Slide 72: Image Attribution
+## Slide 72: Drug Profiles
+- **STUDY REFERENCE**
+- [heading] Drug Profiles
+- **Study reference for the drugs covered in Session 2**
+- **PO = by mouth**
+- **IV = intravenous**
+- **SC = subcutaneous**
+- **BID/TID = twice / three times daily**
+- **ER = extended release**
+- **CNS = central nervous system**
+- **GABA = gamma-aminobutyric acid**
+- **CYP = cytochrome P450**
+- **P-gp = P-glycoprotein**
+- **HLA = human leukocyte antigen**
+- **URAT1 = urate transporter 1**
+- **G6PD = glucose-6-phosphate dehydrogenase**
+- **RyR1 = ryanodine receptor 1**
+- **RANKL = receptor activator of nuclear factor kappa-B ligand**
+- **PTH = parathyroid hormone**
+- **SERM = selective estrogen receptor modulator**
+- **VTE = venous thromboembolism**
+- **SSRI = selective serotonin reuptake inhibitor**
+- **MAOI = monoamine oxidase inhibitor**
+- **CrCl = creatinine clearance**
+- **OTC = over the counter**
+
+> Speaker notes: Abbreviation key: PO = by mouth; IV = intravenous; SC = subcutaneous; BID/TID = twice / three times daily; ER = extended release; CNS = central nervous system; GABA = gamma-aminobutyric acid; CYP = cytochrome P450; P-gp = P-glycoprotein; HLA = human leukocyte antigen; URAT1 = urate transporter 1; G6PD = glucose-6-phosphate dehydrogenase; RyR1 = ryanodine receptor 1; RANKL = receptor activator of nuclear factor kappa-B ligand; PTH = parathyroid hormone; SERM = selective estrogen receptor modulator; VTE = venous thromboembolism; SSRI = selective serotonin reuptake inhibitor; MAOI = monoamine oxidase inhibitor; CrCl = creatinine clearance; OTC = over the counter.
+
+Instructor script:
+
+These profiles are your study reference. Know the dose logic, the serious adverse effects, the contraindication that changes decisions and the toxicity you would need to recognize.
+
+Class activity (10 minutes): groups teach back two or three profiles in 60 seconds each.
+
+Abbreviation key: review RyR1, URAT1, RANKL, PTH and SERM.
+
+Teaching points: gout agents, central relaxants, dantrolene, bisphosphonates, denosumab, teriparatide, raloxifene.
+
+Bloom's prompts: Remember: state colchicine dosing. Understand: explain why allopurinol does not treat a flare. Apply: counsel on alendronate. Analyze: explain tizanidine with ciprofloxacin. Evaluate: choose osteoporosis therapy in CKD.
+
+## Slide 73: Colchicine (Colcrys, Mitigare)
+- **DRUG PROFILE**
+- [heading] Colchicine (Colcrys, Mitigare)
+- **ANTI-INFLAMMATORY (MICROTUBULE INHIBITOR)**
+- **FORMULATION**
+- [heading] DOSE (ADULT)
+- **INDICATIONS**
+- Tablets 0.6 mg; capsules 0.6 mg
+- [heading] Flare: 1.2 mg PO then 0.6 mg one hour later, within 24 hours of onset; prophylaxis: 0.6 mg once or twice daily
+- Acute gout flare, flare prophylaxis, familial Mediterranean fever
+- **ADVERSE EFFECTS**
+- **CONTRAINDICATIONS**
+- **TOXICITY / OVERDOSE**
+- Diarrhea, nausea, vomiting, abdominal pain; myelosuppression and myopathy with toxicity
+- Severe renal or hepatic impairment with CYP3A4 or P-gp inhibitors; blood dyscrasias
+- Narrow therapeutic window: severe GI toxicity, bone marrow suppression, multi-organ failure; avoid clarithromycin and strong CYP3A4/P-gp inhibitors
+- Standard adult dosing for teaching; verify against current prescribing information.
+
+> Speaker notes: Colchicine (Colcrys, Mitigare)|Anti-inflammatory (microtubule inhibitor)|Tablets 0.6 mg; capsules 0.6 mg|Flare: 1.2 mg PO then 0.6 mg one hour later, within 24 hours of onset; prophylaxis: 0.6 mg once or twice daily|Acute gout flare, flare prophylaxis, familial Mediterranean fever|Diarrhea, nausea, vomiting, abdominal pain; myelosuppression and myopathy with toxicity|Severe renal or hepatic impairment with CYP3A4 or P-gp inhibitors; blood dyscrasias|Narrow therapeutic window: severe GI toxicity, bone marrow suppression, multi-organ failure; avoid clarithromycin and strong CYP3A4/P-gp inhibitors
+
+## Slide 74: Allopurinol (Zyloprim)
+- **DRUG PROFILE**
+- [heading] Allopurinol (Zyloprim)
+- **XANTHINE OXIDASE INHIBITOR**
+- **FORMULATION**
+- [heading] DOSE (ADULT)
+- **INDICATIONS**
+- Tablets 100/300 mg
+- [heading] Start 50-100 mg PO daily, titrate every 2-5 weeks to serum urate under 6 mg/dL (usual 300-800 mg/day)
+- Chronic gout, hyperuricemia, uric acid stones, tumor lysis prophylaxis
+- **ADVERSE EFFECTS**
+- **CONTRAINDICATIONS**
+- **TOXICITY / OVERDOSE**
+- Rash, GI upset, flare at initiation, elevated liver enzymes
+- Prior severe reaction; HLA-B*58:01 carriers (higher risk); reduce dose in renal impairment
+- Allopurinol hypersensitivity syndrome (fever, rash, eosinophilia, organ injury); interacts with azathioprine and mercaptopurine
+- Standard adult dosing for teaching; verify against current prescribing information.
+
+> Speaker notes: Allopurinol (Zyloprim)|Xanthine oxidase inhibitor|Tablets 100/300 mg|Start 50-100 mg PO daily, titrate every 2-5 weeks to serum urate under 6 mg/dL (usual 300-800 mg/day)|Chronic gout, hyperuricemia, uric acid stones, tumor lysis prophylaxis|Rash, GI upset, flare at initiation, elevated liver enzymes|Prior severe reaction; HLA-B*58:01 carriers (higher risk); reduce dose in renal impairment|Allopurinol hypersensitivity syndrome (fever, rash, eosinophilia, organ injury); interacts with azathioprine and mercaptopurine
+
+## Slide 75: Febuxostat (Uloric)
+- **DRUG PROFILE**
+- [heading] Febuxostat (Uloric)
+- **XANTHINE OXIDASE INHIBITOR (NON-PURINE)**
+- **FORMULATION**
+- [heading] DOSE (ADULT)
+- **INDICATIONS**
+- Tablets 40/80 mg
+- [heading] 40 mg PO daily, increase to 80 mg if urate above 6 mg/dL after 2 weeks
+- Chronic gout when allopurinol fails or is not tolerated
+- **ADVERSE EFFECTS**
+- **CONTRAINDICATIONS**
+- **TOXICITY / OVERDOSE**
+- Gout flare at initiation, nausea, rash, elevated liver enzymes, cardiovascular death
+- Concurrent azathioprine or mercaptopurine; caution with cardiovascular disease
+- Boxed warning for cardiovascular death; monitor liver tests
+- **Standard adult dosing for teaching; verify against current prescribing information.**
+
+> Speaker notes: Febuxostat (Uloric)|Xanthine oxidase inhibitor (non-purine)|Tablets 40/80 mg|40 mg PO daily, increase to 80 mg if urate above 6 mg/dL after 2 weeks|Chronic gout when allopurinol fails or is not tolerated|Gout flare at initiation, nausea, rash, elevated liver enzymes, cardiovascular death|Concurrent azathioprine or mercaptopurine; caution with cardiovascular disease|Boxed warning for cardiovascular death; monitor liver tests
+
+## Slide 76: Probenecid
+- **DRUG PROFILE**
+- [heading] Probenecid
+- **URICOSURIC (URAT1 INHIBITOR)**
+- **FORMULATION**
+- [heading] DOSE (ADULT)
+- **INDICATIONS**
+- Tablets 500 mg
+- [heading] 250 mg PO twice daily for 1 week, then 500 mg twice daily; maximum 2 g/day
+- Chronic gout with underexcretion of urate; adjunct to penicillin
+- **ADVERSE EFFECTS**
+- **CONTRAINDICATIONS**
+- **TOXICITY / OVERDOSE**
+- GI upset, rash, headache, kidney stones, flare at start
+- Uric acid kidney stones, significant renal impairment (eGFR under 30), blood dyscrasias, during acute flare
+- Renal colic and stones; hydrate well and alkalinize urine; raises levels of penicillins, methotrexate and NSAIDs
+- Standard adult dosing for teaching; verify against current prescribing information.
+
+> Speaker notes: Probenecid|Uricosuric (URAT1 inhibitor)|Tablets 500 mg|250 mg PO twice daily for 1 week, then 500 mg twice daily; maximum 2 g/day|Chronic gout with underexcretion of urate; adjunct to penicillin|GI upset, rash, headache, kidney stones, flare at start|Uric acid kidney stones, significant renal impairment (eGFR under 30), blood dyscrasias, during acute flare|Renal colic and stones; hydrate well and alkalinize urine; raises levels of penicillins, methotrexate and NSAIDs
+
+## Slide 77: Pegloticase (Krystexxa)
+- **DRUG PROFILE**
+- [heading] Pegloticase (Krystexxa)
+- **RECOMBINANT URICASE**
+- **FORMULATION**
+- [heading] DOSE (ADULT)
+- **INDICATIONS**
+- IV 8 mg/mL vial
+- [heading] 8 mg IV every 2 weeks over at least 2 hours, with methotrexate co-therapy
+- Refractory chronic gout
+- **ADVERSE EFFECTS**
+- **CONTRAINDICATIONS**
+- **TOXICITY / OVERDOSE**
+- Infusion reaction, gout flares, anaphylaxis, nausea, anti-drug antibodies
+- G6PD deficiency; uncontrolled hypertension (caution); stop other urate-lowering drugs
+- Boxed warning for anaphylaxis, infusion reactions, hemolysis and methemoglobinemia in G6PD deficiency; premedicate and monitor serum urate
+- **Standard adult dosing for teaching; verify against current prescribing information.**
+
+> Speaker notes: Pegloticase (Krystexxa)|Recombinant uricase|IV 8 mg/mL vial|8 mg IV every 2 weeks over at least 2 hours, with methotrexate co-therapy|Refractory chronic gout|Infusion reaction, gout flares, anaphylaxis, nausea, anti-drug antibodies|G6PD deficiency; uncontrolled hypertension (caution); stop other urate-lowering drugs|Boxed warning for anaphylaxis, infusion reactions, hemolysis and methemoglobinemia in G6PD deficiency; premedicate and monitor serum urate
+
+## Slide 78: Baclofen (Lioresal, Gablofen)
+- **DRUG PROFILE**
+- [heading] Baclofen (Lioresal, Gablofen)
+- **CENTRALLY ACTING RELAXANT (GABA-B AGONIST)**
+- **FORMULATION**
+- [heading] DOSE (ADULT)
+- **INDICATIONS**
+- Tablets 5/10/20 mg; oral solution; intrathecal pump
+- [heading] 5 mg PO three times daily, increase every 3 days to 40-80 mg/day in divided doses
+- Spasticity from spinal cord injury or multiple sclerosis
+- **ADVERSE EFFECTS**
+- **CONTRAINDICATIONS**
+- **TOXICITY / OVERDOSE**
+- Sedation, dizziness, weakness, nausea, confusion
+- Caution with renal impairment; avoid abrupt discontinuation
+- Overdose: coma, respiratory depression; abrupt withdrawal causes seizures, hyperthermia and rebound spasticity
+- Standard adult dosing for teaching; verify against current prescribing information.
+
+> Speaker notes: Baclofen (Lioresal, Gablofen)|Centrally acting relaxant (GABA-B agonist)|Tablets 5/10/20 mg; oral solution; intrathecal pump|5 mg PO three times daily, increase every 3 days to 40-80 mg/day in divided doses|Spasticity from spinal cord injury or multiple sclerosis|Sedation, dizziness, weakness, nausea, confusion|Caution with renal impairment; avoid abrupt discontinuation|Overdose: coma, respiratory depression; abrupt withdrawal causes seizures, hyperthermia and rebound spasticity
+
+## Slide 79: Tizanidine (Zanaflex)
+- **DRUG PROFILE**
+- [heading] Tizanidine (Zanaflex)
+- **CENTRALLY ACTING RELAXANT (ALPHA-2 AGONIST)**
+- **FORMULATION**
+- [heading] DOSE (ADULT)
+- **INDICATIONS**
+- Tablets 2/4 mg; capsules 2/4/6 mg
+- [heading] 2 mg PO every 6-8 hours, titrate to 4-8 mg every 6-8 hours (maximum 36 mg/day)
+- Spasticity, off-label for muscle spasm
+- **ADVERSE EFFECTS**
+- **CONTRAINDICATIONS**
+- **TOXICITY / OVERDOSE**
+- Sedation, dry mouth, hypotension, bradycardia, hepatotoxicity
+- Strong CYP1A2 inhibitors (ciprofloxacin, fluvoxamine); caution with antihypertensives and liver disease
+- Hypotension, bradycardia and CNS depression; check liver tests
+- Standard adult dosing for teaching; verify against current prescribing information.
+
+> Speaker notes: Tizanidine (Zanaflex)|Centrally acting relaxant (alpha-2 agonist)|Tablets 2/4 mg; capsules 2/4/6 mg|2 mg PO every 6-8 hours, titrate to 4-8 mg every 6-8 hours (maximum 36 mg/day)|Spasticity, off-label for muscle spasm|Sedation, dry mouth, hypotension, bradycardia, hepatotoxicity|Strong CYP1A2 inhibitors (ciprofloxacin, fluvoxamine); caution with antihypertensives and liver disease|Hypotension, bradycardia and CNS depression; check liver tests
+
+## Slide 80: Cyclobenzaprine (Flexeril)
+- **DRUG PROFILE**
+- [heading] Cyclobenzaprine (Flexeril)
+- **CENTRALLY ACTING RELAXANT (TRICYCLIC-RELATED)**
+- **FORMULATION**
+- [heading] DOSE (ADULT)
+- **INDICATIONS**
+- Tablets 5/7.5/10 mg; ER capsules 15/30 mg
+- [heading] 5-10 mg PO three times daily for 2-3 weeks (ER 15-30 mg daily)
+- Acute muscle spasm from musculoskeletal conditions
+- **ADVERSE EFFECTS**
+- **CONTRAINDICATIONS**
+- **TOXICITY / OVERDOSE**
+- Sedation, dry mouth, dizziness, blurred vision, urinary retention, confusion
+- MAOIs within 14 days, arrhythmias, recent myocardial infarction, hyperthyroidism; Beers list for older adults
+- Serotonin syndrome with SSRIs and tramadol; tricyclic-type toxicity with arrhythmia, seizures in overdose
+- **Standard adult dosing for teaching; verify against current prescribing information.**
+
+> Speaker notes: Cyclobenzaprine (Flexeril)|Centrally acting relaxant (tricyclic-related)|Tablets 5/7.5/10 mg; ER capsules 15/30 mg|5-10 mg PO three times daily for 2-3 weeks (ER 15-30 mg daily)|Acute muscle spasm from musculoskeletal conditions|Sedation, dry mouth, dizziness, blurred vision, urinary retention, confusion|MAOIs within 14 days, arrhythmias, recent myocardial infarction, hyperthyroidism; Beers list for older adults|Serotonin syndrome with SSRIs and tramadol; tricyclic-type toxicity with arrhythmia, seizures in overdose
+
+## Slide 81: Carisoprodol (Soma)
+- **DRUG PROFILE**
+- [heading] Carisoprodol (Soma)
+- **CENTRALLY ACTING RELAXANT (MEPROBAMATE METABOLITE)**
+- **FORMULATION**
+- [heading] DOSE (ADULT)
+- **INDICATIONS**
+- Tablets 250/350 mg
+- [heading] 250-350 mg PO three times daily and at bedtime for up to 2-3 weeks
+- Acute painful musculoskeletal conditions
+- **ADVERSE EFFECTS**
+- **CONTRAINDICATIONS**
+- **TOXICITY / OVERDOSE**
+- Drowsiness, dizziness, headache, dependence
+- Acute intermittent porphyria; prior hypersensitivity; Schedule IV controlled substance
+- CNS depression, especially with opioids and alcohol; dependence and withdrawal
+- Standard adult dosing for teaching; verify against current prescribing information.
+
+> Speaker notes: Carisoprodol (Soma)|Centrally acting relaxant (meprobamate metabolite)|Tablets 250/350 mg|250-350 mg PO three times daily and at bedtime for up to 2-3 weeks|Acute painful musculoskeletal conditions|Drowsiness, dizziness, headache, dependence|Acute intermittent porphyria; prior hypersensitivity; Schedule IV controlled substance|CNS depression, especially with opioids and alcohol; dependence and withdrawal
+
+## Slide 82: Methocarbamol (Robaxin)
+- **DRUG PROFILE**
+- [heading] Methocarbamol (Robaxin)
+- **CENTRALLY ACTING RELAXANT**
+- **FORMULATION**
+- [heading] DOSE (ADULT)
+- **INDICATIONS**
+- Tablets 500/750 mg; injection
+- [heading] 1,500 mg PO four times daily for 2-3 days, then 750 mg four times daily
+- Acute painful musculoskeletal conditions
+- **ADVERSE EFFECTS**
+- **CONTRAINDICATIONS**
+- **TOXICITY / OVERDOSE**
+- Drowsiness, dizziness, nausea, urine discoloration
+- Hypersensitivity; IV form with renal impairment (polyethylene glycol)
+- CNS depression; supportive care
+- Standard adult dosing for teaching; verify against current prescribing information.
+
+> Speaker notes: Methocarbamol (Robaxin)|Centrally acting relaxant|Tablets 500/750 mg; injection|1,500 mg PO four times daily for 2-3 days, then 750 mg four times daily|Acute painful musculoskeletal conditions|Drowsiness, dizziness, nausea, urine discoloration|Hypersensitivity; IV form with renal impairment (polyethylene glycol)|CNS depression; supportive care
+
+## Slide 83: Dantrolene (Dantrium, Ryanodex)
+- **DRUG PROFILE**
+- [heading] Dantrolene (Dantrium, Ryanodex)
+- **DIRECT-ACTING RELAXANT (RYR1 BLOCKER)**
+- **FORMULATION**
+- [heading] DOSE (ADULT)
+- **INDICATIONS**
+- Capsules 25/50/100 mg; IV powder
+- [heading] Spasticity: 25 mg PO daily, titrate to 100 mg up to four times daily; malignant hyperthermia: 2.5 mg/kg IV, repeat to 10 mg/kg
+- Malignant hyperthermia, chronic spasticity, neuroleptic malignant syndrome
+- **ADVERSE EFFECTS**
+- **CONTRAINDICATIONS**
+- **TOXICITY / OVERDOSE**
+- Weakness, drowsiness, hepatotoxicity, diarrhea
+- Active liver disease (oral use); caution with calcium channel blockers (IV)
+- Boxed warning for hepatotoxicity (oral); generalized weakness; monitor liver enzymes
+- Standard adult dosing for teaching; verify against current prescribing information.
+
+> Speaker notes: Dantrolene (Dantrium, Ryanodex)|Direct-acting relaxant (RyR1 blocker)|Capsules 25/50/100 mg; IV powder|Spasticity: 25 mg PO daily, titrate to 100 mg up to four times daily; malignant hyperthermia: 2.5 mg/kg IV, repeat to 10 mg/kg|Malignant hyperthermia, chronic spasticity, neuroleptic malignant syndrome|Weakness, drowsiness, hepatotoxicity, diarrhea|Active liver disease (oral use); caution with calcium channel blockers (IV)|Boxed warning for hepatotoxicity (oral); generalized weakness; monitor liver enzymes
+
+## Slide 84: Alendronate (Fosamax)
+- **DRUG PROFILE**
+- [heading] Alendronate (Fosamax)
+- **BISPHOSPHONATE**
+- **FORMULATION**
+- [heading] DOSE (ADULT)
+- **INDICATIONS**
+- Tablets 5/10/35/70 mg; effervescent tablet; solution
+- [heading] 70 mg PO once weekly (or 10 mg daily) fasting with 8 oz plain water, upright 30 minutes
+- Postmenopausal osteoporosis, glucocorticoid-induced osteoporosis, Paget disease
+- **ADVERSE EFFECTS**
+- **CONTRAINDICATIONS**
+- **TOXICITY / OVERDOSE**
+- Esophagitis, dyspepsia, musculoskeletal pain, hypocalcemia
+- Esophageal stricture or achalasia, inability to sit upright, hypocalcemia, CrCl below 35 mL/min
+- Esophageal injury, hypocalcemia; osteonecrosis of the jaw and atypical femur fracture with long-term use
+- Standard adult dosing for teaching; verify against current prescribing information.
+
+> Speaker notes: Alendronate (Fosamax)|Bisphosphonate|Tablets 5/10/35/70 mg; effervescent tablet; solution|70 mg PO once weekly (or 10 mg daily) fasting with 8 oz plain water, upright 30 minutes|Postmenopausal osteoporosis, glucocorticoid-induced osteoporosis, Paget disease|Esophagitis, dyspepsia, musculoskeletal pain, hypocalcemia|Esophageal stricture or achalasia, inability to sit upright, hypocalcemia, CrCl below 35 mL/min|Esophageal injury, hypocalcemia; osteonecrosis of the jaw and atypical femur fracture with long-term use
+
+## Slide 85: Zoledronic acid (Reclast, Zometa)
+- **DRUG PROFILE**
+- [heading] Zoledronic acid (Reclast, Zometa)
+- **BISPHOSPHONATE (IV)**
+- **FORMULATION**
+- [heading] DOSE (ADULT)
+- **INDICATIONS**
+- IV 5 mg/100 mL (Reclast); 4 mg (Zometa)
+- [heading] 5 mg IV once yearly over at least 15 minutes (osteoporosis); once every 2 years for prevention
+- Osteoporosis, Paget disease, hypercalcemia of malignancy, skeletal metastases
+- **ADVERSE EFFECTS**
+- **CONTRAINDICATIONS**
+- **TOXICITY / OVERDOSE**
+- Flu-like acute-phase reaction, hypocalcemia, renal injury, osteonecrosis of the jaw
+- CrCl below 35 mL/min, uncorrected hypocalcemia, pregnancy
+- Acute kidney injury and hypocalcemia; hydrate; replete calcium and vitamin D first
+- Standard adult dosing for teaching; verify against current prescribing information.
+
+> Speaker notes: Zoledronic acid (Reclast, Zometa)|Bisphosphonate (IV)|IV 5 mg/100 mL (Reclast); 4 mg (Zometa)|5 mg IV once yearly over at least 15 minutes (osteoporosis); once every 2 years for prevention|Osteoporosis, Paget disease, hypercalcemia of malignancy, skeletal metastases|Flu-like acute-phase reaction, hypocalcemia, renal injury, osteonecrosis of the jaw|CrCl below 35 mL/min, uncorrected hypocalcemia, pregnancy|Acute kidney injury and hypocalcemia; hydrate; replete calcium and vitamin D first
+
+## Slide 86: Denosumab (Prolia, Xgeva)
+- **DRUG PROFILE**
+- [heading] Denosumab (Prolia, Xgeva)
+- **RANKL INHIBITOR (MONOCLONAL ANTIBODY)**
+- **FORMULATION**
+- [heading] DOSE (ADULT)
+- **INDICATIONS**
+- SC prefilled syringe 60 mg/mL (Prolia); 120 mg (Xgeva)
+- [heading] 60 mg SC every 6 months (Prolia)
+- Postmenopausal osteoporosis, bone loss with androgen deprivation, skeletal events
+- **ADVERSE EFFECTS**
+- **CONTRAINDICATIONS**
+- **TOXICITY / OVERDOSE**
+- Back and joint pain, hypocalcemia, infection, osteonecrosis of the jaw, atypical femur fracture
+- Hypocalcemia, pregnancy; severe hypocalcemia boxed warning in advanced CKD
+- Rebound multiple vertebral fractures if stopped or doses missed; transition to a bisphosphonate
+- Standard adult dosing for teaching; verify against current prescribing information.
+
+> Speaker notes: Denosumab (Prolia, Xgeva)|RANKL inhibitor (monoclonal antibody)|SC prefilled syringe 60 mg/mL (Prolia); 120 mg (Xgeva)|60 mg SC every 6 months (Prolia)|Postmenopausal osteoporosis, bone loss with androgen deprivation, skeletal events|Back and joint pain, hypocalcemia, infection, osteonecrosis of the jaw, atypical femur fracture|Hypocalcemia, pregnancy; severe hypocalcemia boxed warning in advanced CKD|Rebound multiple vertebral fractures if stopped or doses missed; transition to a bisphosphonate
+
+## Slide 87: Teriparatide (Forteo)
+- **DRUG PROFILE**
+- [heading] Teriparatide (Forteo)
+- **ANABOLIC PTH(1-34) ANALOG**
+- **FORMULATION**
+- [heading] DOSE (ADULT)
+- **INDICATIONS**
+- Prefilled pen 20 mcg/dose
+- [heading] 20 mcg SC once daily in thigh or abdomen; lifetime use limited to 2 years
+- Severe osteoporosis, high fracture risk, glucocorticoid-induced osteoporosis
+- **ADVERSE EFFECTS**
+- **CONTRAINDICATIONS**
+- **TOXICITY / OVERDOSE**
+- Orthostatic hypotension, leg cramps, nausea, hypercalcemia, dizziness
+- Paget disease, prior skeletal radiation, bone metastases, hypercalcemia, open epiphyses
+- Hypercalcemia and orthostatic hypotension; follow with an antiresorptive to keep gains
+- Standard adult dosing for teaching; verify against current prescribing information.
+
+> Speaker notes: Teriparatide (Forteo)|Anabolic PTH(1-34) analog|Prefilled pen 20 mcg/dose|20 mcg SC once daily in thigh or abdomen; lifetime use limited to 2 years|Severe osteoporosis, high fracture risk, glucocorticoid-induced osteoporosis|Orthostatic hypotension, leg cramps, nausea, hypercalcemia, dizziness|Paget disease, prior skeletal radiation, bone metastases, hypercalcemia, open epiphyses|Hypercalcemia and orthostatic hypotension; follow with an antiresorptive to keep gains
+
+## Slide 88: Raloxifene (Evista)
+- **DRUG PROFILE**
+- [heading] Raloxifene (Evista)
+- **SERM**
+- **FORMULATION**
+- [heading] DOSE (ADULT)
+- **INDICATIONS**
+- Tablets 60 mg
+- [heading] 60 mg PO once daily
+- Postmenopausal osteoporosis; reduction of invasive breast cancer risk
+- **ADVERSE EFFECTS**
+- **CONTRAINDICATIONS**
+- **TOXICITY / OVERDOSE**
+- Hot flashes, leg cramps, venous thromboembolism, peripheral edema
+- History of VTE, pregnancy, breastfeeding; stroke risk (caution)
+- Boxed warning for VTE and death from stroke; stop before prolonged immobilization
+- Standard adult dosing for teaching; verify against current prescribing information.
+
+> Speaker notes: Raloxifene (Evista)|SERM|Tablets 60 mg|60 mg PO once daily|Postmenopausal osteoporosis; reduction of invasive breast cancer risk|Hot flashes, leg cramps, venous thromboembolism, peripheral edema|History of VTE, pregnancy, breastfeeding; stroke risk (caution)|Boxed warning for VTE and death from stroke; stop before prolonged immobilization
+
+## Slide 89: Supporting Drugs at a Glance
+- **CONTEXT**
+- [heading] Supporting Drugs at a Glance
+- **NSAIDs and corticosteroids**
+- **Azathioprine and mercaptopurine**
+- **Ciprofloxacin and fluvoxamine**
+- Alternative acute gout flare treatment
+- Allopurinol raises levels; reduce dose
+- CYP1A2 inhibitors; avoid with tizanidine
+- **Clarithromycin**
+- **Thiazide and loop diuretics**
+- **Opioids, benzodiazepines and alcohol**
+- CYP3A4/P-gp inhibitor raises colchicine toxicity
+- Raise uric acid levels
+- Additive sedation with relaxants
+- **Volatile anesthetics and succinylcholine**
+- **Calcium and vitamin D**
+- **Risedronate, ibandronate, romosozumab, abaloparatide, calcitonin**
+- Triggers of malignant hyperthermia
+- Replete before and during osteoporosis therapy
+- Other osteoporosis agents
+- Listed for context; not profiled in detail.
+
+> Speaker notes: Supporting drugs at a glance. These drugs interact with or sit beside the profiled agents and are listed for context only: NSAIDs and corticosteroids for acute flares; azathioprine and mercaptopurine with allopurinol; ciprofloxacin and fluvoxamine with tizanidine; clarithromycin with colchicine; thiazide and loop diuretics raise uric acid; opioids, benzodiazepines and alcohol add sedation; volatile anesthetics and succinylcholine trigger malignant hyperthermia; calcium and vitamin D before osteoporosis therapy; other osteoporosis agents.
+
+Instructor script:
+
+Supporting drugs: clarithromycin, azathioprine, ciprofloxacin, diuretics, calcium and vitamin D explain interactions.
+
+## Slide 90: Image Attribution
 - [heading] APPENDIX
 - [heading] Image Attribution
 - **●  Original figures in this deck:** Figures 4–8 (Gout: From Purine Metabolism to Joint Inflammation; Skeletal Muscle Relaxants: Central vs. Peripheral Site of Action; Calcium Homeostasis: The PTH Feedback Loop; Bisphosphonate Dosing Frequency; How Osteoporosis Drugs Shift the Remodeling Balance) were generated by the course director using the AI tool Claude to illustrate standard, non-copyrighted pharmacologic concepts. They are original diagrams, not reproduced from Katzung’s Basic and Clinical Pharmacology or any other copyrighted source.
@@ -938,3 +1433,7 @@ _[1 small image(s)/icons]_
 _[1 small image(s)/icons]_
 
 > Speaker notes: This slide documents AI-tool use for original figure generation per university citation requirements. It covers every original diagram in this deck (Figures 4–8); none are reproduced from any textbook.
+
+Instructor script:
+
+Point out the AI-tool disclosure for the original figures before closing.

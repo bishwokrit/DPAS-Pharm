@@ -1,17 +1,47 @@
 {
  "lecture": "L03",
  "passed": true,
- "units_checked": 2743,
+ "units_checked": 2966,
  "missing": [],
  "uncited": [
   {
-   "ref": "S16",
-   "text": "A small fraction goes through CYP2E1 to NAPQI, which glutathione neutralizes at normal doses.\"",
+   "ref": "S1",
+   "text": "Today's organizing idea is the pain pathway.",
    "kind": "speaker note"
   },
   {
-   "ref": "S17",
-   "text": "Once glutathione is depleted, NAPQI injures hepatocytes.",
+   "ref": "S1",
+   "text": "Every drug in this session either blocks prostaglandin synthesis, modifies the immune process behind arthritis, or treats the toxicity those drugs can cause.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S4",
+   "text": "Now we move from the pathway to the pain itself.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S7",
+   "text": "Inflammatory mediators sensitize nociceptors, so pain and inflammation are related but distinct.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S11",
+   "text": "Reveal the answer after the class has committed to one.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S13",
+   "text": "Reveal the answer after the class has committed to one.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S14",
+   "text": "Next, acetaminophen, the simplest drug on the pathway.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S16",
+   "text": "A small fraction goes through CYP2E1 to NAPQI, which glutathione neutralizes at normal doses.\"",
    "kind": "speaker note"
   },
   {
@@ -20,29 +50,34 @@
    "kind": "speaker note"
   },
   {
+   "ref": "S18",
+   "text": "Use the Rumack-Matthew nomogram.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S20",
+   "text": "What changes the risk in a chronic drinker?",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S22",
+   "text": "Reveal the answer after the class has committed to one.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S23",
+   "text": "Now we turn to the NSAIDs, which act on the same pathway.",
+   "kind": "speaker note"
+  },
+  {
    "ref": "S25",
-   "text": "Effect: reduced prostaglandins give analgesia, antipyresis and anti-inflammation.",
+   "text": "Figure 6. NSAIDs block COX, reducing prostaglandin and TXA2 synthesis.",
    "kind": "slide"
   },
   {
-   "ref": "S27",
-   "text": "Stomach mucosal protection ↓",
-   "kind": "slide table"
-  },
-  {
-   "ref": "S27",
-   "text": "COX-1 keeps protective prostaglandins; COX-2 is induced by inflammation.",
+   "ref": "S29",
+   "text": "Celecoxib is contraindicated with sulfonamide allergy.",
    "kind": "speaker note"
-  },
-  {
-   "ref": "S27",
-   "text": "Say: \"COX-1 is the housekeeper: stomach lining, platelets, kidney.",
-   "kind": "speaker note"
-  },
-  {
-   "ref": "S30",
-   "text": "↓ Fewer inflammatory prostaglandins → less pain and inflammation",
-   "kind": "slide"
   },
   {
    "ref": "S33",
@@ -50,13 +85,23 @@
    "kind": "speaker note"
   },
   {
+   "ref": "S33",
+   "text": "Reveal the answer after the class has committed to one.",
+   "kind": "speaker note"
+  },
+  {
    "ref": "S34",
-   "text": "Say: \"Lose prostaglandins and you lose mucosal protection, renal afferent dilation and normal platelet function.\"",
+   "text": "\"Lose prostaglandins and you lose mucosal protection, renal afferent dilation and normal platelet function.\"",
    "kind": "speaker note"
   },
   {
    "ref": "S35",
-   "text": "Say: \"Lose prostaglandins and you lose mucosal protection, renal afferent dilation and normal platelet function.\"\n\nKnow: GI (ulcer, bleeding), renal (AKI, fluid retention), cardiovascular (hypertension, events).",
+   "text": "\"Lose prostaglandins and you lose mucosal protection, renal afferent dilation and normal platelet function.\"",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S35",
+   "text": "Prostaglandin loss in the kidney reduces afferent blood flow: stress the triple whammy with ACE inhibitors and diuretics.",
    "kind": "speaker note"
   },
   {
@@ -67,6 +112,21 @@
   {
    "ref": "S36",
    "text": "Know (interactions): NSAID plus anticoagulant means more bleeding.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S39",
+   "text": "\"Now the same drugs in the setting of arthritis.\"",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S39",
+   "text": "Reveal the answer after the class has committed to one.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S40",
+   "text": "Now we apply these drugs to osteoarthritis and rheumatoid arthritis.",
    "kind": "speaker note"
   },
   {
@@ -86,13 +146,188 @@
   },
   {
    "ref": "S46",
-   "text": "Say: \"A DMARD changes the course of RA.",
+   "text": "\"A DMARD changes the course of RA.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S46",
+   "text": "An NSAID only masks symptoms.\"",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S52",
+   "text": "Figure 16. Biologic DMARDs intercept distinct steps of the immune cascade.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S55",
+   "text": "Reveal the answer after the class has committed to one.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S57",
+   "text": "Schematic (illustrative)",
+   "kind": "slide"
+  },
+  {
+   "ref": "S57",
+   "text": "Figure 18. Immunosuppression lowers defences against latent TB and opportunistic infection.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S57",
+   "text": "\"The theme is immunosuppression, so infection risk.\"",
    "kind": "speaker note"
   },
   {
    "ref": "S57",
    "text": "Counsel patients to report fevers early.",
    "kind": "speaker note"
+  },
+  {
+   "ref": "S57",
+   "text": "Fever is infection until proven otherwise.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S59",
+   "text": "Reveal the answer after the class has committed to one.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S61",
+   "text": "Five points to repeat if time runs short:",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S62",
+   "text": "Study reference for the drugs covered in Session 1",
+   "kind": "slide"
+  },
+  {
+   "ref": "S62",
+   "text": "Abbreviation key for the drug profile slides: PO = by mouth; IV = intravenous; IM = intramuscular; SC = subcutaneous; BID = twice daily; TID = three times daily; ER = extended release; DR = delayed release; NSAID = nonsteroidal anti-inflammatory drug; COX = cyclooxygenase; GI = gastrointestinal; DMARD = disease-modifying antirheumatic drug; TNF = tumor necrosis factor; IL-6 = interleukin-6; DHFR = dihydrofolate reductase; DHODH = dihydroorotate dehydrogenase; CBC = complete blood count; TB = tuberculosis; CABG = coronary artery bypass graft; NAPQI = N-acetyl-p-benzoquinone imine; NAC = N-acetylcysteine; OTC = over the counter; CYP = cytochrome P450; eGFR/CrCl = renal function; JIA = juvenile idiopathic arthritis; PML = progressive multifocal leukoencephalopathy.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S62",
+   "text": "Move from the main lecture to the drug profiles as a study reference.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S62",
+   "text": "Know the dose logic, the serious adverse effect, the contraindication that changes decisions and the toxicity you would need to recognize.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S62",
+   "text": "Class activity (10 minutes): Groups teach back two or three profiles in 60 seconds each.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S62",
+   "text": "Abbreviation key: Review DMARD, TNF, DHFR, NAPQI and NAC.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S62",
+   "text": "Teaching points: acetaminophen, NSAIDs, methotrexate, other conventional DMARDs, TNF inhibitors, other biologics.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S62",
+   "text": "Supporting drugs: PPIs, warfarin, ACE inhibitors, lithium, steroids and live vaccines explain interactions.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S62",
+   "text": "Understand: explain why NSAIDs cause ulcers.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S62",
+   "text": "Apply: counsel a patient starting adalimumab.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S62",
+   "text": "Evaluate: choose analgesia for CKD with heart failure.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S64",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S65",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S66",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S67",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S68",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S69",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S70",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S71",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S72",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S73",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S74",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S75",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S76",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S77",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S78",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
   }
  ],
  "emphasis_not_bold": [
@@ -102,76 +337,6 @@
    "marks": [
     "underline",
     "color"
-   ]
-  },
-  {
-   "ref": "S7",
-   "text": "Injury releases mediators:",
-   "marks": [
-    "bold"
-   ]
-  },
-  {
-   "ref": "S7",
-   "text": "Where drugs act:",
-   "marks": [
-    "bold"
-   ]
-  },
-  {
-   "ref": "S25",
-   "text": "Adverse effects:",
-   "marks": [
-    "bold"
-   ]
-  },
-  {
-   "ref": "S30",
-   "text": "GI benefit:",
-   "marks": [
-    "bold"
-   ]
-  },
-  {
-   "ref": "S42",
-   "text": "Key RA cytokines:",
-   "marks": [
-    "bold"
-   ]
-  },
-  {
-   "ref": "S44",
-   "text": "Oral or topical NSAIDs:",
-   "marks": [
-    "bold"
-   ]
-  },
-  {
-   "ref": "S44",
-   "text": "Intra-articular steroid:",
-   "marks": [
-    "bold"
-   ]
-  },
-  {
-   "ref": "S47",
-   "text": "Methotrexate — the anchor drug for most RA regimens (next slide)",
-   "marks": [
-    "bold"
-   ]
-  },
-  {
-   "ref": "S50",
-   "text": "Low-dose RA effect:",
-   "marks": [
-    "bold"
-   ]
-  },
-  {
-   "ref": "S52",
-   "text": "IL-6 blockers:",
-   "marks": [
-    "bold"
    ]
   }
  ],
@@ -197,6 +362,12 @@
   {
    "ref": "S3",
    "text": "One sentence only.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S4",
+   "text": "Section transition.",
    "kind": "speaker note",
    "reason": "teaching instruction"
   },
@@ -231,22 +402,34 @@
    "reason": "teaching instruction (quick-check timing)"
   },
   {
+   "ref": "S10",
+   "text": "Pause for the class to commit to an answer before you reveal it.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; the quick check is rebuilt as a question"
+  },
+  {
    "ref": "S12",
    "text": "Quick check: give 30 seconds, take a show of hands, then reveal.",
    "kind": "speaker note",
    "reason": "teaching instruction (quick-check timing)"
   },
   {
-   "ref": "S13",
-   "text": "Say: \"That's the pathway.",
+   "ref": "S12",
+   "text": "Pause for the class to commit to an answer before you reveal it.",
    "kind": "speaker note",
-   "reason": "presenter transition"
+   "reason": "teaching instruction; the quick check is rebuilt as a question"
   },
   {
    "ref": "S13",
    "text": "Now the simplest drug on it: acetaminophen.\"",
    "kind": "speaker note",
    "reason": "presenter transition"
+  },
+  {
+   "ref": "S14",
+   "text": "Section transition.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
   },
   {
    "ref": "S20",
@@ -259,6 +442,18 @@
    "text": "Quick check: give 30 seconds, take a show of hands, then reveal.",
    "kind": "speaker note",
    "reason": "teaching instruction (quick-check timing)"
+  },
+  {
+   "ref": "S21",
+   "text": "Pause for the class to commit to an answer before you reveal it.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; the quick check is rebuilt as a question"
+  },
+  {
+   "ref": "S23",
+   "text": "Section transition.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
   },
   {
    "ref": "S30",
@@ -285,6 +480,12 @@
    "reason": "teaching instruction (quick-check timing)"
   },
   {
+   "ref": "S32",
+   "text": "Pause for the class to commit to an answer before you reveal it.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; the quick check is rebuilt as a question"
+  },
+  {
    "ref": "S37",
    "text": "Excellent exam-style vignette — ask students to name all three risk factors independently before revealing the answer.",
    "kind": "speaker note",
@@ -297,10 +498,16 @@
    "reason": "teaching instruction (quick-check timing)"
   },
   {
-   "ref": "S39",
-   "text": "Say: \"Now the same drugs in the setting of arthritis.\"",
+   "ref": "S38",
+   "text": "Pause for the class to commit to an answer before you reveal it.",
    "kind": "speaker note",
-   "reason": "presenter transition"
+   "reason": "teaching instruction; the quick check is rebuilt as a question"
+  },
+  {
+   "ref": "S40",
+   "text": "Section transition.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
   },
   {
    "ref": "S46",
@@ -339,10 +546,28 @@
    "reason": "teaching instruction (quick-check timing)"
   },
   {
+   "ref": "S54",
+   "text": "Pause for the class to commit to an answer before you reveal it.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; the quick check is rebuilt as a question"
+  },
+  {
    "ref": "S58",
    "text": "Quick check: give 30 seconds, take a show of hands, then reveal.",
    "kind": "speaker note",
    "reason": "teaching instruction (quick-check timing)"
+  },
+  {
+   "ref": "S58",
+   "text": "Pause for the class to commit to an answer before you reveal it.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; the quick check is rebuilt as a question"
+  },
+  {
+   "ref": "S60",
+   "text": "Cue the suffixes: -coxib, -profen, -mab, -cept, -trexate.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; the suffix table is taught from S60"
   },
   {
    "ref": "S61",
@@ -358,6 +583,36 @@
   },
   {
    "ref": "S62",
+   "text": "Section transition.",
+   "kind": "speaker note",
+   "reason": "teaching instruction"
+  },
+  {
+   "ref": "S62",
+   "text": "Use these as a study reference.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; the profiles are taught as tables"
+  },
+  {
+   "ref": "S62",
+   "text": "Bloom's prompts: Remember: state methotrexate dosing frequency.",
+   "kind": "speaker note",
+   "reason": "teaching instruction (Bloom's prompts)"
+  },
+  {
+   "ref": "S62",
+   "text": "Analyze: explain methotrexate and TMP-SMX toxicity.",
+   "kind": "speaker note",
+   "reason": "teaching instruction (Bloom's prompts)"
+  },
+  {
+   "ref": "S79",
+   "text": "Listed for context; not profiled in detail.",
+   "kind": "slide",
+   "reason": "table note; stated in the supporting-drugs table title"
+  },
+  {
+   "ref": "S80",
    "text": "This slide documents AI-tool use for original figure generation per university citation requirements.",
    "kind": "speaker note",
    "reason": "administrative note on AI-tool citation"

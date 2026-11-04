@@ -2,7 +2,7 @@
 
 **Result: PASS ✅ nothing missing**
 
-Checked 2540 source lines (62 slides; 9 study-guide items; 51 textbook pages read; 15 textbook sentences used, the rest left out as not needed for this lecture (info only).)
+Checked 2609 source lines (72 slides; 9 study-guide items; 51 textbook pages read; 15 textbook sentences used, the rest left out as not needed for this lecture (info only).)
 
 ## Missing from the study materials
 - None ✅
@@ -13,32 +13,89 @@ Checked 2540 source lines (62 slides; 9 study-guide items; 51 textbook pages rea
 - S6: A gastrinoma drives extreme acid output.
 - S7: pylori) is largely the same across all three.
 - S8: This is the conceptual spine for the whole antisecretory-agent section that follows.
-- S11: Cimetidine — effective, but a potent CYP450 inhibitor (ties back to the drug-metabolism concepts from Lecture 1) and carries antiandrogenic effects (gynecomasti
-- S11: Less pump activity
-- S14: The pump stays off until the cell makes new pumps.
-- S16: Misoprostol’s pregnancy contraindication is a must-know, high-stakes safety point — this is also the drug’s other well-known clinical use (labor induction/medic
-- S16: Misoprostol: contraindicated in pregnancy because it causes uterine contractions.
-- S17: Gastric lumen (acid)
-- S18: pylori eradication, which combines several of these agents together.
-- S19: Multi-drug regimens like this are a classic source of adherence problems — worth pausing to ask students what patient-counseling points would most improve compl
-- S20: Metronidazole adds another mechanism.
-- S22: -prazole Proton pump inhibitors Omeprazole, esomeprazole, pantoprazole, lansoprazole Irreversibly block H+/K+ ATPase Stem Drug class Examples Key point
-- S22: -prostol Prostaglandin analogs Misoprostol PGE1 analog; protects the mucosa Stem Drug class Examples Key point
-- S22: None shared Mucosal protectants Sucralfate, bismuth subsalicylate Name does not reveal the class Stem Drug class Examples Key point
-- S26: Antihistamines and scopolamine
-- S26: Do not duplicate the same mechanism.
-- S28: Metoclopramide’s boxed warning is one of the highest-yield patient-safety facts in this whole session — many students only remember "it helps nausea" without kn
-- S29: Less nausea and vomiting
-- S30: This is a good moment to flag that cannabinoid pharmacology is an expanding area in the newest edition of Katzung — worth a brief mention that this mechanism cl
-- S31: They also stimulate appetite.
-- S32: Use this to connect back to the Nutrition half of the unit (pyridoxine is a vitamin) — a preview of the Session 2 material on vitamins and supplements.
-- S34: pylori needs multiple drugs.
-- S34: Antiemetics follow receptor systems.
-- S35: Formulation, dose, indications, adverse effects, contraindications and toxicity for each drug in this lecture
-- S49: Strength/recommended dose: H.
-- S50: Strength/recommended dose: H.
-- S51: Strength/recommended dose: H.
-- S52: Strength/recommended dose: H.
+- S9: Based on Figure 1, why do PPIs achieve more complete acid suppression than H2 receptor antagonists?
+- S9: PPIs block the final common pathway (the proton pump itself), so they work regardless of which upstream signal is driving acid secretion
+- S9: PPIs block only the gastrin pathway, which is the strongest stimulus
+- S9: H2RAs block the proton pump directly, while PPIs act upstream
+- S9: There is no mechanistic difference between the two classes
+- S9: Quick check: Give 30 seconds.
+- S10: PPIs block the final common pathway itself, regardless of which upstream signal drove it.
+- S10: Why:  H2RAs block only one of three inputs to the parietal cell (histamine), so gastrin and acetylcholine can still drive acid secretion. PPIs irreversibly inhi
+- S10: Answer A: PPIs block the final common pathway regardless of which signal drove it.
+- S13: Cimetidine — effective, but a potent CYP450 inhibitor (ties back to the drug-metabolism concepts from Lecture 1) and carries antiandrogenic effects (gynecomasti
+- S13: Less pump activity
+- S16: The pump stays off until the cell makes new pumps.
+- S18: A patient taking clopidogrel after a cardiac stent is started on omeprazole for GERD. What is the primary concern with this combination?
+- S18: Omeprazole increases clopidogrel absorption, raising bleeding risk
+- S18: There is no clinically relevant interaction between these two drugs
+- S18: Omeprazole should never be combined with any cardiac medication
+- S18: Quick check: Omeprazole plus clopidogrel.
+- S19: Omeprazole may reduce CYP2C19-mediated activation of clopidogrel.
+- S19: Why:  Clopidogrel is a prodrug that requires CYP2C19 activation. Omeprazole inhibits CYP2C19, which can reduce clopidogrel’s active metabolite and blunt its ant
+- S19: Answer A: omeprazole may reduce CYP2C19-mediated activation of clopidogrel.
+- S19: If a PPI is needed, pantoprazole is the usual choice.
+- S20: Misoprostol’s pregnancy contraindication is a must-know, high-stakes safety point — this is also the drug’s other well-known clinical use (labor induction/medic
+- S20: Misoprostol: contraindicated in pregnancy because it causes uterine contractions.
+- S21: Gastric lumen (acid)
+- S22: pylori eradication, which combines several of these agents together.
+- S23: Multi-drug regimens like this are a classic source of adherence problems — worth pausing to ask students what patient-counseling points would most improve compl
+- S24: Metronidazole adds another mechanism.
+- S27: Is there any possibility of pregnancy?
+- S27: Why:  Misoprostol is a potent uterotonic and is contraindicated in pregnancy due to abortifacient risk — pregnancy status must be ruled out (and reliable contra
+- S27: Answer B: ask about possible pregnancy.
+- S28: -prazole Proton pump inhibitors Omeprazole, esomeprazole, pantoprazole, lansoprazole Irreversibly block H+/K+ ATPase Stem Drug class Examples Key point
+- S28: -prostol Prostaglandin analogs Misoprostol PGE1 analog; protects the mucosa Stem Drug class Examples Key point
+- S28: None shared Mucosal protectants Sucralfate, bismuth subsalicylate Name does not reveal the class Stem Drug class Examples Key point
+- S32: Antihistamines and scopolamine
+- S32: Do not duplicate the same mechanism.
+- S34: A patient with motion sickness needs prophylaxis before a cruise. Based on Figure 9, which drug class targets the pathway most relevant to this cause of nausea?
+- S34: H1 / M1 antagonists (e.g., meclizine, scopolamine) — targeting the vestibular system
+- S34: 5-HT3 antagonists (e.g., ondansetron) — targeting gut/chemo input
+- S34: NK1 antagonists (e.g., aprepitant) — targeting the CTZ
+- S34: D2 antagonists (e.g., metoclopramide) — targeting the CTZ
+- S35: H1 / M1 antagonists (meclizine, scopolamine) — targeting the vestibular system.
+- S35: Why:  Motion sickness is driven primarily by vestibular system input, which signals through histamine (H1) and muscarinic (M1) receptors — exactly the pathway m
+- S35: Answer A: H1/M1 antagonists such as meclizine and scopolamine.
+- S36: Metoclopramide’s boxed warning is one of the highest-yield patient-safety facts in this whole session — many students only remember "it helps nausea" without kn
+- S37: Less nausea and vomiting
+- S38: This is a good moment to flag that cannabinoid pharmacology is an expanding area in the newest edition of Katzung — worth a brief mention that this mechanism cl
+- S39: They also stimulate appetite.
+- S40: Use this to connect back to the Nutrition half of the unit (pyridoxine is a vitamin) — a preview of the Session 2 material on vitamins and supplements.
+- S42: Tardive dyskinesia.
+- S42: Why:  Metoclopramide carries a boxed warning for tardive dyskinesia, with risk increasing with duration of use and cumulative dose — therapy should generally be
+- S42: Answer B: tardive dyskinesia.
+- S44: pylori needs multiple drugs.
+- S44: Antiemetics follow receptor systems.
+- S45: Formulation, dose, indications, adverse effects, contraindications and toxicity for each drug in this lecture
+- S46: Standard adult dosing for teaching; verify against current prescribing information.
+- S47: Standard adult dosing for teaching; verify against current prescribing information.
+- S48: Standard adult dosing for teaching; verify against current prescribing information.
+- S49: Standard adult dosing for teaching; verify against current prescribing information.
+- S50: Standard adult dosing for teaching; verify against current prescribing information.
+- S51: Standard adult dosing for teaching; verify against current prescribing information.
+- S52: Standard adult dosing for teaching; verify against current prescribing information.
+- S53: Standard adult dosing for teaching; verify against current prescribing information.
+- S54: Standard adult dosing for teaching; verify against current prescribing information.
+- S55: Standard adult dosing for teaching; verify against current prescribing information.
+- S56: Standard adult dosing for teaching; verify against current prescribing information.
+- S57: Standard adult dosing for teaching; verify against current prescribing information.
+- S58: Standard adult dosing for teaching; verify against current prescribing information.
+- S59: Standard adult dosing for teaching; verify against current prescribing information.
+- S59: Strength/recommended dose: H.
+- S60: Standard adult dosing for teaching; verify against current prescribing information.
+- S60: Strength/recommended dose: H.
+- S61: Standard adult dosing for teaching; verify against current prescribing information.
+- S61: Strength/recommended dose: H.
+- S62: Standard adult dosing for teaching; verify against current prescribing information.
+- S62: Strength/recommended dose: H.
+- S63: Standard adult dosing for teaching; verify against current prescribing information.
+- S64: Standard adult dosing for teaching; verify against current prescribing information.
+- S65: Standard adult dosing for teaching; verify against current prescribing information.
+- S66: Standard adult dosing for teaching; verify against current prescribing information.
+- S67: Standard adult dosing for teaching; verify against current prescribing information.
+- S68: Standard adult dosing for teaching; verify against current prescribing information.
+- S69: Standard adult dosing for teaching; verify against current prescribing information.
+- S70: Standard adult dosing for teaching; verify against current prescribing information.
 - SG:U3-R3: difficile risk — e.g., reduced acid impairs B12 release from dietary protein.
 - SG:U3-M: Match each drug to the receptor/pathway it blocks.
 
@@ -54,29 +111,31 @@ Checked 2540 source lines (62 slides; 9 study-guide items; 51 textbook pages rea
 - S5: pylori and NSAIDs push one way. — _presenter script (continuation)_
 - S6: Walk the four boxes top to bottom. — _teaching instruction; the four boxes are taught from S6_
 - S7: Define each in one sentence. — _teaching instruction_
-- S9: Section transition. — _section divider_
-- S9: Section 02: Antisecretory and mucosal-protective agents (slides 11-28). — _section divider_
-- S15: This is the quantified version of the mechanistic point just made — more complete blockade (Figure 1) translat — _teaching instruction; Figure 4 caption covers it_
-- S15: Figure 4: Remind the class that the bars are illustrative relative values, not trial data. — _teaching instruction; the caption says the values are illustrative_
-- S18: Use this table as the organizing summary before moving into H. — _teaching instruction_
-- S18: Slide at a glance: Read across the table row by row. — _teaching instruction_
-- S18: This is a good review point. — _teaching instruction_
-- S21: This vignette forces students to apply two separate exclusion criteria at once — a good checkpoint for whether — _teaching instruction_
-- S22: Drug-name stems: -prazole is a PPI, -tidine is an H2 blocker, -prostol is a prostaglandin analog, -cillin is a — _teaching instruction; the stems table covers it_
-- S23: Section transition. — _section divider_
-- S23: Section 03: Antiemetics (slides 29-43). — _section divider_
-- S24: Each class corresponds to a different input feeding the vomiting center — the next slide shows these same four — _teaching instruction (pointer to the next slide)_
-- S24: Name the four target groups: 5-HT3, D2, NK1, and H1/M1. — _teaching instruction_
-- S27: Have students match each generic drug name to its input pathway on this diagram before revealing the labels —  — _teaching instruction; the matching is the Figure 9 interactive_
-- S32: First-trimester nausea unresponsive to diet. — _presenter script; the case is rebuilt as a practice question_
-- S32: Let the class discuss. — _teaching instruction_
-- S33: Drug-name stems: -setron is a 5-HT3 antagonist, -pitant is an NK1 antagonist, -azine is a phenothiazine, -izin — _teaching instruction; the stems table covers it_
-- S34: Close Session 1 by previewing Session 2 explicitly — students should leave knowing acid-peptic disease and ant — _teaching instruction_
-- S34: Recap: Read the five points. — _teaching instruction; the recap is in the high-yield lists_
-- S35: Section transition: appendix of drug profiles for the agents in this lecture. — _section divider_
-- S61: Listed for context; not profiled in detail. — _slide label (the supporting drugs themselves are in the table)_
-- S61: Listed for context; not profiled in detail. — _slide label (the supporting drugs themselves are in the table)_
-- S62: This slide documents AI-tool use for original figure generation per university citation requirements. — _administrative note on AI-tool citation_
+- S11: Section transition. — _section divider_
+- S11: Section 02: Antisecretory and mucosal-protective agents (slides 11-28). — _section divider_
+- S17: This is the quantified version of the mechanistic point just made — more complete blockade (Figure 1) translat — _teaching instruction; Figure 4 caption covers it_
+- S17: Figure 4: Remind the class that the bars are illustrative relative values, not trial data. — _teaching instruction; the caption says the values are illustrative_
+- S22: Use this table as the organizing summary before moving into H. — _teaching instruction_
+- S22: Slide at a glance: Read across the table row by row. — _teaching instruction_
+- S22: This is a good review point. — _teaching instruction_
+- S25: This vignette forces students to apply two separate exclusion criteria at once — a good checkpoint for whether — _teaching instruction_
+- S26: Quick check: Misoprostol. — _teaching instruction; the quick check is rebuilt as a question_
+- S28: Drug-name stems: -prazole is a PPI, -tidine is an H2 blocker, -prostol is a prostaglandin analog, -cillin is a — _teaching instruction; the stems table covers it_
+- S29: Section transition. — _section divider_
+- S29: Section 03: Antiemetics (slides 29-43). — _section divider_
+- S30: Each class corresponds to a different input feeding the vomiting center — the next slide shows these same four — _teaching instruction (pointer to the next slide)_
+- S30: Name the four target groups: 5-HT3, D2, NK1, and H1/M1. — _teaching instruction_
+- S33: Have students match each generic drug name to its input pathway on this diagram before revealing the labels —  — _teaching instruction; the matching is the Figure 9 interactive_
+- S34: Quick check. — _teaching instruction; the quick check is rebuilt as a question_
+- S40: First-trimester nausea unresponsive to diet. — _presenter script; the case is rebuilt as a practice question_
+- S40: Let the class discuss. — _teaching instruction_
+- S43: Drug-name stems: -setron is a 5-HT3 antagonist, -pitant is an NK1 antagonist, -azine is a phenothiazine, -izin — _teaching instruction; the stems table covers it_
+- S44: Close Session 1 by previewing Session 2 explicitly — students should leave knowing acid-peptic disease and ant — _teaching instruction_
+- S44: Recap: Read the five points. — _teaching instruction; the recap is in the high-yield lists_
+- S45: Section transition: appendix of drug profiles for the agents in this lecture. — _section divider_
+- S71: Listed for context; not profiled in detail. — _slide label (the supporting drugs themselves are in the table)_
+- S71: Listed for context; not profiled in detail. — _slide label (the supporting drugs themselves are in the table)_
+- S72: This slide documents AI-tool use for original figure generation per university citation requirements. — _administrative note on AI-tool citation_
 
 ## Assigned-reading sections not taught in the guide
 - None ✅
@@ -144,7 +203,7 @@ Checked 2540 source lines (62 slides; 9 study-guide items; 51 textbook pages rea
 - None ✅
 
 ## Practice questions
-23 questions · 13 vignette / 10 mechanism · answer letters {'A': 5, 'B': 4, 'C': 5, 'D': 5, 'E': 4}
+25 questions · 14 vignette / 11 mechanism · answer letters {'A': 5, 'B': 5, 'C': 5, 'D': 5, 'E': 5}
 - None ✅
 
 ## Objectives with thin coverage

@@ -1,4 +1,4 @@
-# Extracted slides: Student_version_GI-and-Nutrition-Pharmacology-Session-1.pptx
+# Extracted slides: Lecture_3_Session_1_Unit_3_GI_and_Nutrition_Pharmacology_Final_Nov_31.pptx
 
 Bold = emphasized on the slide (bold/underline/highlight/colored text).
 
@@ -138,7 +138,35 @@ Instructor script:
 
 Say: Gastrin, histamine and acetylcholine all converge on the parietal cell proton pump. H2 blockers cut one input. PPIs block the last step.
 
-## Slide 9: 02
+## Slide 9: Quick Check
+- [heading] QUICK CHECK · FIGURE 1
+- [heading] Quick Check
+- **Based on Figure 1, why do PPIs achieve more complete acid suppression than H2 receptor antagonists?**
+- **PPIs block the final common pathway (the proton pump itself), so they work regardless of which upstream signal is driving acid secretion**
+- [heading] A
+- [heading] B
+- **PPIs block only the gastrin pathway, which is the strongest stimulus**
+- **H2RAs block the proton pump directly, while PPIs act upstream**
+- [heading] C
+- [heading] D
+- **There is no mechanistic difference between the two classes**
+
+_[1 small image(s)/icons]_
+
+> Speaker notes: Quick check: Give 30 seconds.
+
+## Slide 10: Answer
+- [heading] ANSWER · FIGURE 1
+- [heading] Answer
+- [heading] A
+- **PPIs block the final common pathway itself, regardless of which upstream signal drove it.**
+- **Why:** **H2RAs block only one of three inputs to the parietal cell (histamine), so gastrin and acetylcholine can still drive acid secretion. PPIs irreversibly inhibit the H⁺/K⁺-ATPase proton pump — the single convergence point for all three signals — producing more complete and longer-lasting acid suppression.**
+
+_[1 small image(s)/icons]_
+
+> Speaker notes: Answer A: PPIs block the final common pathway regardless of which signal drove it.
+
+## Slide 11: 02
 - **SECTION**
 - [heading] 02
 - [heading] Antisecretory & Mucosal-Protective Agents
@@ -150,7 +178,7 @@ _[1 small image(s)/icons]_
 
 Section 02: Antisecretory and mucosal-protective agents (slides 11-28).
 
-## Slide 10: Antacids
+## Slide 12: Antacids
 - [heading] FIRST-LINE, SHORT-TERM
 - [heading] Antacids
 - **Mechanism: directly neutralize existing gastric acid (do not reduce acid production).**
@@ -166,7 +194,6 @@ Section 02: Antisecretory and mucosal-protective agents (slides 11-28).
 - **Higher gastric pH**
 - ▶
 - [heading] Rapid but short relief; no effect on acid production
-- **12**
 
 _[1 small image(s)/icons]_
 
@@ -182,7 +209,7 @@ Aluminum constipates, magnesium causes diarrhea, calcium carbonate constipates a
 
 They bind other drugs. Separate dosing by at least 2 hours.
 
-## Slide 11: H2 Receptor Antagonists
+## Slide 13: H2 Receptor Antagonists
 - [heading] REVERSIBLE BLOCKADE
 - [heading] H2 Receptor Antagonists
 - **Mechanism: competitively block histamine at the H2 receptor on parietal cells.**
@@ -199,7 +226,6 @@ They bind other drugs. Separate dosing by at least 2 hours.
 - Less pump activity
 - **▼**
 - [heading] Reduced acid
-- **13**
 
 _[1 small image(s)/icons]_
 
@@ -217,7 +243,7 @@ Famotidine needs renal dose adjustment and can cause confusion in older adults w
 
 Cimetidine inhibits CYP450 (1A2, 2C19, 3A4) and has antiandrogenic effects, including gynecomastia.
 
-## Slide 12: H2 Blockers: Blocking the Histamine Signal
+## Slide 14: H2 Blockers: Blocking the Histamine Signal
 - [heading] MECHANISM & DEPTH
 - [heading] H2 Blockers: Blocking the Histamine Signal
 - **Schematic (illustrative)**
@@ -235,13 +261,12 @@ Cimetidine inhibits CYP450 (1A2, 2C19, 3A4) and has antiandrogenic effects, incl
 - **Famotidine: renal dose adjustment; confusion risk in older adults**
 - **Cimetidine inhibits CYP450 (1A2, 2C19, 3A4); antiandrogenic effects**
 - [heading] H2 blocker occupies the receptor competitively, so less acid
-- **14**
 
-_[figure(s) saved: S12_1.jpg]_
+_[figure(s) saved: S14_1.jpg]_
 
 > Speaker notes: Say: Histamine from the ECL cell binds the H2 receptor, cAMP rises, and the pump turns on. Famotidine competes at that receptor.
 
-## Slide 13: Proton Pump Inhibitors (PPIs)
+## Slide 15: Proton Pump Inhibitors (PPIs)
 - [heading] MOST POTENT ACID SUPPRESSION
 - [heading] Proton Pump Inhibitors (PPIs)
 - **Mechanism: irreversibly inhibit the H⁺/K⁺-ATPase proton pump — the final common pathway of acid secretion.**
@@ -257,7 +282,6 @@ _[figure(s) saved: S12_1.jpg]_
 - **Final step of acid secretion blocked**
 - **▼**
 - [heading] Profound, prolonged acid suppression
-- **15**
 
 _[1 small image(s)/icons]_
 
@@ -275,7 +299,7 @@ Omeprazole and esomeprazole inhibit CYP2C19 and can blunt clopidogrel activation
 
 CYP2C19 genotype changes PPI exposure. Ultrarapid metabolizers may need higher doses.
 
-## Slide 14: PPIs: Irreversible Pump Inhibition
+## Slide 16: PPIs: Irreversible Pump Inhibition
 - [heading] MECHANISM & DEPTH
 - [heading] PPIs: Irreversible Pump Inhibition
 - **Schematic (illustrative)**
@@ -293,19 +317,17 @@ CYP2C19 genotype changes PPI exposure. Ultrarapid metabolizers may need higher d
 - **Omeprazole and esomeprazole inhibit CYP2C19 (clopidogrel interaction)**
 - **CYP2C19 genotype alters exposure; ultrarapids may need higher doses**
 - [heading] Pump irreversibly blocked until new pumps are made
-- **16**
 
-_[figure(s) saved: S14_1.jpg]_
+_[figure(s) saved: S16_1.jpg]_
 
 > Speaker notes: Say: A PPI is an enteric-coated prodrug. It reaches the canaliculus, acid activates it, and it binds a cysteine on the H+/K+ ATPase covalently. The pump stays off until the cell makes new pumps.
 
-## Slide 15: PPIs vs. H2 Receptor Antagonists: Potency and Duration
+## Slide 17: PPIs vs. H2 Receptor Antagonists: Potency and Duration
 - [heading] ORIGINAL ILLUSTRATION · FIGURE 4
 - [heading] PPIs vs. H2 Receptor Antagonists: Potency and Duration
 - **Figure 4. Original illustrative comparison (illustrative relative values, not from Katzung): PPIs achieve substantially greater acid-suppression potency and longer duration of effect than H2 receptor antagonists.**
-- **17**
 
-_[figure(s) saved: S15_1.jpg]_
+_[figure(s) saved: S17_1.jpg]_
 
 > Speaker notes: This is the quantified version of the mechanistic point just made — more complete blockade (Figure 1) translates into both higher potency and longer duration here.
 
@@ -313,7 +335,35 @@ Instructor script:
 
 Figure 4: Remind the class that the bars are illustrative relative values, not trial data. PPIs give greater and longer suppression than H2 blockers.
 
-## Slide 16: Mucosal Protective Agents
+## Slide 18: Quick Check
+- [heading] QUICK CHECK · ANTISECRETORY AGENTS
+- [heading] Quick Check
+- **A patient taking clopidogrel after a cardiac stent is started on omeprazole for GERD. What is the primary concern with this combination?**
+- [heading] A
+- **Omeprazole may reduce CYP2C19-mediated activation of clopidogrel, blunting its antiplatelet effect**
+- [heading] B
+- **Omeprazole increases clopidogrel absorption, raising bleeding risk**
+- **There is no clinically relevant interaction between these two drugs**
+- **Omeprazole should never be combined with any cardiac medication**
+- [heading] C
+- [heading] D
+
+_[1 small image(s)/icons]_
+
+> Speaker notes: Quick check: Omeprazole plus clopidogrel.
+
+## Slide 19: Answer
+- [heading] ANSWER · ANTISECRETORY AGENTS
+- [heading] Answer
+- [heading] A
+- **Omeprazole may reduce CYP2C19-mediated activation of clopidogrel.**
+- **Why:** **Clopidogrel is a prodrug that requires CYP2C19 activation. Omeprazole inhibits CYP2C19, which can reduce clopidogrel’s active metabolite and blunt its antiplatelet effect — a clinically important interaction, especially soon after stent placement.**
+
+_[1 small image(s)/icons]_
+
+> Speaker notes: Answer A: omeprazole may reduce CYP2C19-mediated activation of clopidogrel. If a PPI is needed, pantoprazole is the usual choice.
+
+## Slide 20: Mucosal Protective Agents
 - [heading] SHIELDING THE MUCOSA
 - [heading] Mucosal Protective Agents
 - [heading] Sucralfate
@@ -325,7 +375,6 @@ Figure 4: Remind the class that the bars are illustrative relative values, not t
 - **–   Used specifically to prevent NSAID-induced ulcers**
 - **–   Contraindicated in pregnancy — potent uterotonic/abortifacient effect**
 - **–   Common adverse effect: diarrhea**
-- **20**
 
 _[1 small image(s)/icons]_
 
@@ -339,7 +388,7 @@ Sucralfate: separate from other drugs by 2 hours, aluminum accumulates in CKD, c
 
 Misoprostol: contraindicated in pregnancy because it causes uterine contractions. Diarrhea and cramping are common.
 
-## Slide 17: Sucralfate and Misoprostol: Strengthening Defense
+## Slide 21: Sucralfate and Misoprostol: Strengthening Defense
 - [heading] MECHANISM & DEPTH
 - [heading] Sucralfate and Misoprostol: Strengthening Defense
 - Gastric lumen (acid)
@@ -369,16 +418,14 @@ Misoprostol: contraindicated in pregnancy because it causes uterine contractions
 - **Aluminum accumulates in CKD; constipation is common**
 - **Misoprostol is contraindicated in pregnancy (uterine contractions)**
 - **Diarrhea and cramping are common with misoprostol**
-- **21**
 
-_[figure(s) saved: S17_1.jpg]_
+_[figure(s) saved: S21_1.jpg]_
 
 > Speaker notes: Say: Sucralfate polymerizes in acid, sticks to the ulcer base and forms a barrier. Misoprostol is a PGE1 analog. It acts on EP receptors to cut acid and raise mucus and bicarbonate.
 
-## Slide 18: Acid-Peptic Disease Agents at a Glance
+## Slide 22: Acid-Peptic Disease Agents at a Glance
 - [heading] HIGH-YIELD COMPARISON · TABLE 1
 - [heading] Acid-Peptic Disease Agents at a Glance
-- **22**
 
 | Class | Example Agent(s) | Key Teaching Point |
 |---|---|---|
@@ -395,7 +442,7 @@ Instructor script:
 
 Slide at a glance: Read across the table row by row. This is a good review point.
 
-## Slide 19: H. pylori Eradication Therapy
+## Slide 23: H. pylori Eradication Therapy
 - [heading] TREATING THE CAUSE
 - [heading] H. pylori Eradication Therapy
 - **H. pylori is the leading identifiable cause of peptic ulcer disease — eradication, not just acid suppression, is the goal.**
@@ -403,7 +450,6 @@ Slide at a glance: Read across the table row by row. This is a good review point
 - **Bismuth quadruple therapy: PPI (or H2RA) + bismuth subsalicylate + metronidazole + tetracycline — preferred where clarithromycin resistance is a concern or with recent macrolide exposure.**
 - **Penicillin allergy: substitute metronidazole for amoxicillin in triple therapy.**
 - **Confirm eradication with testing (e.g., urea breath test or stool antigen) after completing therapy, not during PPI therapy, which can cause false negatives.**
-- **23**
 
 _[1 small image(s)/icons]_
 
@@ -421,7 +467,7 @@ Confirm eradication at least 4 weeks after therapy and with the PPI held for 2 w
 
 Clarithromycin inhibits CYP3A4 (statins). Metronidazole plus alcohol causes a disulfiram-like reaction. Avoid tetracycline in pregnancy and in children.
 
-## Slide 20: Why H. pylori Needs Multiple Drugs
+## Slide 24: Why H. pylori Needs Multiple Drugs
 - [heading] MECHANISM & DEPTH
 - [heading] Why H. pylori Needs Multiple Drugs
 - PPI raises gastric pH
@@ -436,19 +482,17 @@ Clarithromycin inhibits CYP3A4 (statins). Metronidazole plus alcohol causes a di
 - **Usual duration 14 days; test of cure 4+ weeks after, off PPI 2 weeks**
 - **Clarithromycin resistance; penicillin allergy means bismuth quadruple**
 - **Interactions: CYP3A4 (statins), alcohol; avoid tetracycline in pregnancy**
-- **24**
 
-_[figure(s) saved: S20_1.jpg]_
+_[figure(s) saved: S24_1.jpg]_
 
 > Speaker notes: Say: The goal is eradication, not only acid suppression. A PPI raises gastric pH, which makes antibiotics work better. Amoxicillin blocks the cell wall. Clarithromycin hits the 50S ribosome. Metronidazole adds another mechanism.
 
-## Slide 21: Choosing an H. pylori Regimen
+## Slide 25: Choosing an H. pylori Regimen
 - [heading] CLINICAL CASE
 - [heading] Choosing an H. pylori Regimen
 - **A patient with confirmed H. pylori infection reports a penicillin allergy and received a macrolide antibiotic for a respiratory infection two months ago.**
 - **Ask yourself:** **Which eradication regimen is more appropriate for this patient, and why?**
 - **Clinical pearl:** **Recent macrolide exposure raises concern for clarithromycin resistance, and the penicillin allergy rules out standard triple therapy — bismuth quadruple therapy (PPI + bismuth + metronidazole + tetracycline) avoids both problems.**
-- **25**
 
 _[1 small image(s)/icons]_
 
@@ -458,10 +502,37 @@ Instructor script:
 
 Ask: "Penicillin allergy and a macrolide two months ago. Which regimen?" Answer: bismuth quadruple therapy.
 
-## Slide 22: Drug Names Reveal the Class: Acid-Peptic Disease
+## Slide 26: Quick Check
+- [heading] QUICK CHECK · ACID-PEPTIC DISEASE
+- [heading] Quick Check
+- **A patient is started on misoprostol for NSAID-induced ulcer prevention. What is the single most important question to ask before prescribing?**
+- [heading] A
+- **Is the patient taking any antacids?**
+- [heading] B
+- **Is there any possibility of pregnancy?**
+- [heading] C
+- **Does the patient have a penicillin allergy?**
+- [heading] D
+- **Is the patient on a PPI already?**
+
+_[1 small image(s)/icons]_
+
+> Speaker notes: Quick check: Misoprostol.
+
+## Slide 27: Answer
+- [heading] ANSWER · ACID-PEPTIC DISEASE
+- [heading] Answer
+- [heading] B
+- **Is there any possibility of pregnancy?**
+- **Why:** **Misoprostol is a potent uterotonic and is contraindicated in pregnancy due to abortifacient risk — pregnancy status must be ruled out (and reliable contraception confirmed) before starting therapy.**
+
+_[1 small image(s)/icons]_
+
+> Speaker notes: Answer B: ask about possible pregnancy.
+
+## Slide 28: Drug Names Reveal the Class: Acid-Peptic Disease
 - [heading] MECHANISM & DEPTH
 - [heading] Drug Names Reveal the Class: Acid-Peptic Disease
-- **28**
 
 | Stem | Drug class | Examples | Key point |
 |---|---|---|---|
@@ -476,7 +547,7 @@ _[1 small image(s)/icons]_
 
 > Speaker notes: Drug-name stems: -prazole is a PPI, -tidine is an H2 blocker, -prostol is a prostaglandin analog, -cillin is a penicillin, -thromycin is a macrolide. Sucralfate and bismuth subsalicylate have no stem.
 
-## Slide 23: 03
+## Slide 29: 03
 - **SECTION**
 - [heading] 03
 - [heading] Antiemetics
@@ -488,7 +559,7 @@ _[1 small image(s)/icons]_
 
 Section 03: Antiemetics (slides 29-43).
 
-## Slide 24: Antiemetic Drug Classes
+## Slide 30: Antiemetic Drug Classes
 - [heading] CLASSIFICATION BY TARGET
 - [heading] Antiemetic Drug Classes
 - [heading] 5-HT3 Antagonists
@@ -503,7 +574,6 @@ Section 03: Antiemetics (slides 29-43).
 - **–   Example: aprepitant**
 - **–   Block histamine/acetylcholine from the vestibular system**
 - **–   Examples: meclizine, scopolamine**
-- **30**
 
 _[1 small image(s)/icons]_
 
@@ -513,7 +583,7 @@ Instructor script:
 
 Name the four target groups: 5-HT3, D2, NK1, and H1/M1.
 
-## Slide 25: Ondansetron: Blocking Serotonin at 5-HT3
+## Slide 31: Ondansetron: Blocking Serotonin at 5-HT3
 - [heading] MECHANISM & DEPTH
 - [heading] Ondansetron: Blocking Serotonin at 5-HT3
 - Chemotherapy or gut irritation damages enterochromaffin cells
@@ -531,9 +601,8 @@ Name the four target groups: 5-HT3, D2, NK1, and H1/M1.
 - **Common effects: constipation, headache; serotonin syndrome risk with serotonergic drugs**
 - **CYP2D6 ultrarapid metabolizers may respond less well**
 - [heading] Ondansetron blocks 5-HT3, so no signal reaches the vomiting center
-- **31**
 
-_[figure(s) saved: S25_1.jpg]_
+_[figure(s) saved: S31_1.jpg]_
 
 > Speaker notes: Say: Chemotherapy injures enterochromaffin cells. They release serotonin. Serotonin binds 5-HT3 on vagal afferents and the chemoreceptor trigger zone. Ondansetron blocks that receptor.
 
@@ -547,7 +616,7 @@ Constipation and headache are common. Serotonin syndrome risk with other seroton
 
 CYP2D6 ultrarapid metabolizers may respond less well.
 
-## Slide 26: Receptors in the Vomiting Pathway
+## Slide 32: Receptors in the Vomiting Pathway
 - [heading] MECHANISM & DEPTH
 - [heading] Receptors in the Vomiting Pathway
 - **Schematic (illustrative)**
@@ -567,21 +636,19 @@ CYP2D6 ultrarapid metabolizers may respond less well.
 - **Match drug to cause: gut/vagal triggers respond to 5-HT3; CTZ to D2 or NK1**
 - **Avoid duplicating the same mechanism in one regimen**
 - [heading] Emesis
-- **32**
 
-_[figure(s) saved: S26_1.jpg]_
+_[figure(s) saved: S32_1.jpg]_
 
 > Speaker notes: Say: Four inputs reach the vomiting center in the medulla: the gut through the vagus, the trigger zone, the vestibular system and the cortex. Match the drug to the cause.
 
 Know: For chemotherapy, combine drugs with different targets, such as a 5-HT3 antagonist, an NK1 antagonist and dexamethasone. Do not duplicate the same mechanism.
 
-## Slide 27: The Vomiting Reflex: Where Antiemetics Act
+## Slide 33: The Vomiting Reflex: Where Antiemetics Act
 - [heading] ORIGINAL ILLUSTRATION · FIGURE 9
 - [heading] The Vomiting Reflex: Where Antiemetics Act
 - **Figure 9. Original illustrative diagram (not from Katzung): serotonin, dopamine/neurokinin, and histamine/acetylcholine signals converge on the vomiting center; ondansetron, metoclopramide/prochlorperazine/aprepitant, and meclizine/scopolamine each block a different input.**
-- **33**
 
-_[figure(s) saved: S27_1.jpg]_
+_[figure(s) saved: S33_1.jpg]_
 
 > Speaker notes: Have students match each generic drug name to its input pathway on this diagram before revealing the labels — this is the single most testable concept in the antiemetic section.
 
@@ -589,7 +656,35 @@ Instructor script:
 
 Motion sickness is vestibular.
 
-## Slide 28: Metoclopramide: Antiemetic and Prokinetic
+## Slide 34: Quick Check
+- [heading] QUICK CHECK · FIGURE 9
+- [heading] Quick Check
+- **A patient with motion sickness needs prophylaxis before a cruise. Based on Figure 9, which drug class targets the pathway most relevant to this cause of nausea?**
+- [heading] A
+- **H1 / M1 antagonists (e.g., meclizine, scopolamine) — targeting the vestibular system**
+- [heading] B
+- **5-HT3 antagonists (e.g., ondansetron) — targeting gut/chemo input**
+- [heading] C
+- **NK1 antagonists (e.g., aprepitant) — targeting the CTZ**
+- [heading] D
+- **D2 antagonists (e.g., metoclopramide) — targeting the CTZ**
+
+_[1 small image(s)/icons]_
+
+> Speaker notes: Quick check.
+
+## Slide 35: Answer
+- [heading] ANSWER · FIGURE 9
+- [heading] Answer
+- [heading] A
+- **H1 / M1 antagonists (meclizine, scopolamine) — targeting the vestibular system.**
+- **Why:** **Motion sickness is driven primarily by vestibular system input, which signals through histamine (H1) and muscarinic (M1) receptors — exactly the pathway meclizine and scopolamine block in Figure 9. The other classes target gut/chemo (5-HT3) or CTZ (D2, NK1) inputs, which are not the primary driver here.**
+
+_[1 small image(s)/icons]_
+
+> Speaker notes: Answer A: H1/M1 antagonists such as meclizine and scopolamine.
+
+## Slide 36: Metoclopramide: Antiemetic and Prokinetic
 - [heading] DUAL MECHANISM
 - [heading] Metoclopramide: Antiemetic and Prokinetic
 - **Mechanism: D2 antagonism (antiemetic effect) plus enhancement of upper-GI motility (prokinetic effect).**
@@ -604,7 +699,6 @@ Motion sickness is vestibular.
 - **More acetylcholine**
 - **▼**
 - [heading] Faster gastric emptying
-- **36**
 
 _[1 small image(s)/icons]_
 
@@ -622,7 +716,7 @@ Contraindicated in GI obstruction. Avoid in Parkinson disease.
 
 Renal dose adjustment. CYP2D6 poor metabolizers have higher exposure.
 
-## Slide 29: Metoclopramide: D2 Blockade and 5-HT4 Agonism
+## Slide 37: Metoclopramide: D2 Blockade and 5-HT4 Agonism
 - [heading] MECHANISM & DEPTH
 - [heading] Metoclopramide: D2 Blockade and 5-HT4 Agonism
 - D2 antagonism in the chemoreceptor trigger zone
@@ -640,13 +734,12 @@ Renal dose adjustment. CYP2D6 poor metabolizers have higher exposure.
 - **Acute dystonia is treated with diphenhydramine or benztropine**
 - **Contraindicated in GI obstruction; avoid in Parkinson disease**
 - **Renal dosing needed; CYP2D6 poor metabolizers need lower doses**
-- **37**
 
-_[figure(s) saved: S29_1.jpg]_
+_[figure(s) saved: S37_1.jpg]_
 
 > Speaker notes: Say: D2 blockade in the trigger zone reduces nausea. In the gut, D2 blockade plus 5-HT4 agonism raises acetylcholine release and speeds gastric emptying.
 
-## Slide 30: Cannabinoids for Chemotherapy-Induced Nausea
+## Slide 38: Cannabinoids for Chemotherapy-Induced Nausea
 - [heading] A THIRD PATHWAY
 - [heading] Cannabinoids for Chemotherapy-Induced Nausea
 - **Dronabinol — a synthetic cannabinoid (CB1 receptor agonist) used for refractory chemotherapy-induced nausea/vomiting and appetite stimulation.**
@@ -655,9 +748,8 @@ _[figure(s) saved: S29_1.jpg]_
 - **Adverse effects: sedation, dizziness, mood/perception changes — counsel patients accordingly.**
 - **Schematic (illustrative)**
 - **Figure 11. Oral dronabinol is absorbed, crosses the blood-brain barrier and activates CB1 receptors in the vomiting center and hypothalamus, reducing nausea and stimulating appetite.**
-- **38**
 
-_[figure(s) saved: S30_1.jpg]_
+_[figure(s) saved: S38_1.jpg]_
 
 > Speaker notes: This is a good moment to flag that cannabinoid pharmacology is an expanding area in the newest edition of Katzung — worth a brief mention that this mechanism class is distinct from everything else in this lecture.
 
@@ -671,7 +763,7 @@ Dizziness, euphoria or dysphoria, tachycardia, orthostatic hypotension, additive
 
 Use caution in older adults. Dronabinol is Schedule III and nabilone is Schedule II.
 
-## Slide 31: Cannabinoids: CB1 Activation in the Brain
+## Slide 39: Cannabinoids: CB1 Activation in the Brain
 - [heading] MECHANISM & DEPTH
 - [heading] Cannabinoids: CB1 Activation in the Brain
 - **Schematic (illustrative)**
@@ -687,19 +779,17 @@ Use caution in older adults. Dronabinol is Schedule III and nabilone is Schedule
 - **Orthostatic hypotension; additive CNS depression with sedatives and alcohol**
 - **Use with caution in older adults**
 - **Dronabinol is Schedule III; nabilone is Schedule II**
-- **39**
 
-_[figure(s) saved: S31_1.jpg]_
+_[figure(s) saved: S39_1.jpg]_
 
 > Speaker notes: Say: Dronabinol and nabilone activate CB1 receptors in the vomiting center and trigger zone. They reduce neurotransmitter release. They also stimulate appetite.
 
-## Slide 32: Which Antiemetic for This Patient?
+## Slide 40: Which Antiemetic for This Patient?
 - [heading] CLINICAL CASE
 - [heading] Which Antiemetic for This Patient?
 - **A patient in her first trimester of pregnancy presents with persistent nausea and vomiting that has not responded to dietary modification.**
 - **Ask yourself:** **Which antiemetic class has the most established safety profile for use in this patient?**
 - **Clinical pearl:** **Pyridoxine (vitamin B6), often combined with doxylamine, is typically first-line for nausea in pregnancy; ondansetron is commonly used as well, though data on first-trimester use continue to evolve — always weigh maternal benefit against fetal risk and consult current guidance.**
-- **40**
 
 _[1 small image(s)/icons]_
 
@@ -709,10 +799,37 @@ Instructor script:
 
 First-trimester nausea unresponsive to diet. Let the class discuss. Pyridoxine (vitamin B6), often with doxylamine, is the usual first-line approach.
 
-## Slide 33: Drug Names Reveal the Class: Antiemetics
+## Slide 41: Quick Check
+- [heading] QUICK CHECK · ANTIEMETICS
+- [heading] Quick Check
+- **A patient has been on metoclopramide for gastroparesis for several months. What is the primary long-term safety concern that should limit duration of therapy?**
+- [heading] A
+- **Hepatotoxicity**
+- [heading] B
+- **Tardive dyskinesia**
+- [heading] C
+- **QT prolongation**
+- [heading] D
+- **Nephrotoxicity**
+
+_[1 small image(s)/icons]_
+
+> Speaker notes: Quick check: Long-term metoclopramide.
+
+## Slide 42: Answer
+- [heading] ANSWER · ANTIEMETICS
+- [heading] Answer
+- [heading] B
+- **Tardive dyskinesia.**
+- **Why:** **Metoclopramide carries a boxed warning for tardive dyskinesia, with risk increasing with duration of use and cumulative dose — therapy should generally be limited to the shortest effective duration (typically no more than 12 weeks).**
+
+_[1 small image(s)/icons]_
+
+> Speaker notes: Answer B: tardive dyskinesia.
+
+## Slide 43: Drug Names Reveal the Class: Antiemetics
 - [heading] MECHANISM & DEPTH
 - [heading] Drug Names Reveal the Class: Antiemetics
-- **43**
 
 | Stem | Drug class | Examples | Key point |
 |---|---|---|---|
@@ -729,7 +846,7 @@ _[1 small image(s)/icons]_
 
 > Speaker notes: Drug-name stems: -setron is a 5-HT3 antagonist, -pitant is an NK1 antagonist, -azine is a phenothiazine, -izine is an H1 antihistamine, -pramide is a benzamide D2 antagonist, -sone is a corticosteroid. Dronabinol, nabilone and scopolamine have no shared stem.
 
-## Slide 34: Session 1 Recap — To Be Continued
+## Slide 44: Session 1 Recap — To Be Continued
 - [heading] BIG PICTURE
 - [heading] Session 1 Recap — To Be Continued
 - [heading] 1
@@ -749,7 +866,7 @@ Instructor script:
 
 Recap: Read the five points. Acid-peptic disease is a balance. PPIs block the final common pathway. H. pylori needs multiple drugs. Antiemetics follow receptor systems. Session 2 continues with lower-GI motility and nutrition.
 
-## Slide 35: Drug Profiles
+## Slide 45: Drug Profiles
 - **APPENDIX**
 - [heading] Drug Profiles
 - **DR = delayed-release**
@@ -783,7 +900,7 @@ Recap: Read the five points. Acid-peptic disease is a balance. PPIs block the fi
 
 Abbreviation key: DR = delayed-release; ER = extended-release; ODT = orally disintegrating tablet; OTC = over the counter; PO = by mouth; PR = by rectum; IV = intravenous; IM = intramuscular; BID / TID / QID = two / three / four times daily; CrCl = creatinine clearance; CKD = chronic kidney disease; CNS = central nervous system; GERD = gastroesophageal reflux disease; NSAID = nonsteroidal anti-inflammatory drug; CINV = chemotherapy-induced nausea and vomiting; PONV = postoperative nausea and vomiting; H2 = histamine-2; 5-HT3 = serotonin type 3; D2 = dopamine type 2; NK1 = neurokinin-1; QT = QT interval on ECG; CYP / P-gp = cytochrome P450 / P-glycoprotein; BPH = benign prostatic hyperplasia; mcg = microgram; m2 = square meter of body surface area.
 
-## Slide 36: Omeprazole (Prilosec)
+## Slide 46: Omeprazole (Prilosec)
 - [heading] DRUG PROFILE
 - [heading] Omeprazole (Prilosec)
 - [heading] Proton pump inhibitor
@@ -799,7 +916,7 @@ Abbreviation key: DR = delayed-release; ER = extended-release; ODT = orally disi
 - Headache, diarrhea, abdominal pain, nausea; long-term: low B12 and Mg, fractures, C. difficile
 - Hypersensitivity to PPIs; rilpivirine co-use
 - Overdose rare (flushing, tachycardia, confusion); long-term hypomagnesemia; reduces clopidogrel activation (CYP2C19)
-- **46**
+- Standard adult dosing for teaching; verify against current prescribing information.
 
 > Speaker notes: Formulation: DR capsule 10/20/40 mg; OTC 20 mg tablet; oral suspension packets
 
@@ -813,7 +930,7 @@ Contraindications: Hypersensitivity to PPIs; rilpivirine co-use
 
 Toxicity: Overdose rare (flushing, tachycardia, confusion); long-term hypomagnesemia; reduces clopidogrel activation (CYP2C19)
 
-## Slide 37: Esomeprazole (Nexium)
+## Slide 47: Esomeprazole (Nexium)
 - [heading] DRUG PROFILE
 - [heading] Esomeprazole (Nexium)
 - [heading] Proton pump inhibitor
@@ -829,7 +946,7 @@ Toxicity: Overdose rare (flushing, tachycardia, confusion); long-term hypomagnes
 - Headache, diarrhea, nausea; long-term: low B12 and Mg, fractures
 - Hypersensitivity to PPIs; rilpivirine co-use
 - Same class toxicities as omeprazole; hypomagnesemia, C. difficile; supportive care for overdose
-- **47**
+- Standard adult dosing for teaching; verify against current prescribing information.
 
 > Speaker notes: Formulation: DR capsule 20/40 mg; granule packets; IV vial 20/40 mg
 
@@ -843,7 +960,7 @@ Contraindications: Hypersensitivity to PPIs; rilpivirine co-use
 
 Toxicity: Same class toxicities as omeprazole; hypomagnesemia, C. difficile; supportive care for overdose
 
-## Slide 38: Pantoprazole (Protonix)
+## Slide 48: Pantoprazole (Protonix)
 - [heading] DRUG PROFILE
 - [heading] Pantoprazole (Protonix)
 - [heading] Proton pump inhibitor
@@ -859,7 +976,7 @@ Toxicity: Same class toxicities as omeprazole; hypomagnesemia, C. difficile; sup
 - Headache, diarrhea, nausea; long-term: low B12 and Mg, fractures
 - Hypersensitivity to PPIs; rilpivirine co-use
 - Class toxicities; fewer CYP drug interactions than omeprazole; supportive care for overdose
-- **48**
+- Standard adult dosing for teaching; verify against current prescribing information.
 
 > Speaker notes: Formulation: DR tablet 20/40 mg; granule packets; IV vial 40 mg
 
@@ -873,7 +990,7 @@ Contraindications: Hypersensitivity to PPIs; rilpivirine co-use
 
 Toxicity: Class toxicities; fewer CYP drug interactions than omeprazole; supportive care for overdose
 
-## Slide 39: Lansoprazole (Prevacid)
+## Slide 49: Lansoprazole (Prevacid)
 - [heading] DRUG PROFILE
 - [heading] Lansoprazole (Prevacid)
 - [heading] Proton pump inhibitor
@@ -889,7 +1006,7 @@ Toxicity: Class toxicities; fewer CYP drug interactions than omeprazole; support
 - Diarrhea, abdominal pain, nausea, headache; long-term: low B12 and Mg
 - Hypersensitivity to PPIs; rilpivirine co-use
 - Class toxicities; ODT contains phenylalanine; supportive care for overdose
-- **49**
+- Standard adult dosing for teaching; verify against current prescribing information.
 
 > Speaker notes: Formulation: DR capsule 15/30 mg; orally disintegrating tablet 15/30 mg
 
@@ -903,7 +1020,7 @@ Contraindications: Hypersensitivity to PPIs; rilpivirine co-use
 
 Toxicity: Class toxicities; ODT contains phenylalanine; supportive care for overdose
 
-## Slide 40: Dexlansoprazole (Dexilant)
+## Slide 50: Dexlansoprazole (Dexilant)
 - [heading] DRUG PROFILE
 - [heading] Dexlansoprazole (Dexilant)
 - [heading] Proton pump inhibitor
@@ -919,7 +1036,7 @@ Toxicity: Class toxicities; ODT contains phenylalanine; supportive care for over
 - Diarrhea, abdominal pain, nausea, headache; long-term: low B12 and Mg
 - Hypersensitivity to PPIs; rilpivirine co-use
 - Class toxicities; supportive care for overdose
-- **50**
+- Standard adult dosing for teaching; verify against current prescribing information.
 
 > Speaker notes: Formulation: DR capsule 30/60 mg
 
@@ -933,7 +1050,7 @@ Contraindications: Hypersensitivity to PPIs; rilpivirine co-use
 
 Toxicity: Class toxicities; supportive care for overdose
 
-## Slide 41: Famotidine (Pepcid)
+## Slide 51: Famotidine (Pepcid)
 - [heading] DRUG PROFILE
 - [heading] Famotidine (Pepcid)
 - [heading] H2 receptor antagonist
@@ -949,7 +1066,7 @@ Toxicity: Class toxicities; supportive care for overdose
 - Headache, dizziness, constipation or diarrhea; confusion in older or renally impaired patients
 - Hypersensitivity to H2 blockers
 - Overdose rare: CNS effects, tachycardia, hypotension; accumulates in CKD; tolerance with continued use
-- **51**
+- Standard adult dosing for teaching; verify against current prescribing information.
 
 > Speaker notes: Formulation: Tablet 10 mg (OTC), 20/40 mg; IV 10 mg/mL; oral suspension
 
@@ -963,7 +1080,7 @@ Contraindications: Hypersensitivity to H2 blockers
 
 Toxicity: Overdose rare: CNS effects, tachycardia, hypotension; accumulates in CKD; tolerance with continued use
 
-## Slide 42: Cimetidine (Tagamet)
+## Slide 52: Cimetidine (Tagamet)
 - [heading] DRUG PROFILE
 - [heading] Cimetidine (Tagamet)
 - [heading] H2 receptor antagonist
@@ -979,7 +1096,7 @@ Toxicity: Overdose rare: CNS effects, tachycardia, hypotension; accumulates in C
 - Headache, dizziness, confusion, gynecomastia, impotence
 - Hypersensitivity to H2 blockers
 - Strong CYP inhibitor: raises warfarin, phenytoin, theophylline levels; CNS toxicity in older adults
-- **52**
+- Standard adult dosing for teaching; verify against current prescribing information.
 
 > Speaker notes: Formulation: Tablet 200/300/400/800 mg; oral liquid; IV
 
@@ -993,7 +1110,7 @@ Contraindications: Hypersensitivity to H2 blockers
 
 Toxicity: Strong CYP inhibitor: raises warfarin, phenytoin, theophylline levels; CNS toxicity in older adults
 
-## Slide 43: Calcium carbonate (Tums)
+## Slide 53: Calcium carbonate (Tums)
 - [heading] DRUG PROFILE
 - [heading] Calcium carbonate (Tums)
 - [heading] Antacid and calcium supplement
@@ -1009,7 +1126,7 @@ Toxicity: Strong CYP inhibitor: raises warfarin, phenytoin, theophylline levels;
 - Constipation, belching, gas; hypercalcemia with excess
 - Hypercalcemia, kidney stones (caution), severe renal impairment
 - Milk-alkali syndrome (hypercalcemia, alkalosis, AKI); acid rebound; binds levothyroxine, quinolones, tetracyclines, iron
-- **53**
+- Standard adult dosing for teaching; verify against current prescribing information.
 
 > Speaker notes: Formulation: Chewable tablet 500-1,000 mg; suspension
 
@@ -1023,7 +1140,7 @@ Contraindications: Hypercalcemia, kidney stones (caution), severe renal impairme
 
 Toxicity: Milk-alkali syndrome (hypercalcemia, alkalosis, AKI); acid rebound; binds levothyroxine, quinolones, tetracyclines, iron
 
-## Slide 44: Magnesium hydroxide (Milk of Magnesia)
+## Slide 54: Magnesium hydroxide (Milk of Magnesia)
 - [heading] DRUG PROFILE
 - [heading] Magnesium hydroxide (Milk of Magnesia)
 - [heading] Antacid and osmotic laxative
@@ -1039,7 +1156,7 @@ Toxicity: Milk-alkali syndrome (hypercalcemia, alkalosis, AKI); acid rebound; bi
 - Diarrhea, abdominal cramping
 - Severe renal impairment, bowel obstruction
 - Hypermagnesemia in CKD: hypotension, absent reflexes, respiratory depression, cardiac arrest
-- **54**
+- Standard adult dosing for teaching; verify against current prescribing information.
 
 > Speaker notes: Formulation: Suspension 400 mg/5 mL; chewable tablet
 
@@ -1053,7 +1170,7 @@ Contraindications: Severe renal impairment, bowel obstruction
 
 Toxicity: Hypermagnesemia in CKD: hypotension, absent reflexes, respiratory depression, cardiac arrest
 
-## Slide 45: Aluminum hydroxide (Amphojel)
+## Slide 55: Aluminum hydroxide (Amphojel)
 - [heading] DRUG PROFILE
 - [heading] Aluminum hydroxide (Amphojel)
 - [heading] Antacid and phosphate binder
@@ -1069,7 +1186,7 @@ Toxicity: Hypermagnesemia in CKD: hypotension, absent reflexes, respiratory depr
 - Constipation, hypophosphatemia with prolonged use
 - Bowel obstruction; caution in CKD
 - Aluminum accumulation in CKD: osteomalacia, encephalopathy, anemia; binds other drugs
-- **55**
+- Standard adult dosing for teaching; verify against current prescribing information.
 
 > Speaker notes: Formulation: Suspension 320 mg/5 mL; tablet
 
@@ -1083,7 +1200,7 @@ Contraindications: Bowel obstruction; caution in CKD
 
 Toxicity: Aluminum accumulation in CKD: osteomalacia, encephalopathy, anemia; binds other drugs
 
-## Slide 46: Sucralfate (Carafate)
+## Slide 56: Sucralfate (Carafate)
 - [heading] DRUG PROFILE
 - [heading] Sucralfate (Carafate)
 - [heading] Mucosal protectant
@@ -1099,7 +1216,7 @@ Toxicity: Aluminum accumulation in CKD: osteomalacia, encephalopathy, anemia; bi
 - Constipation, dry mouth, nausea
 - Hypersensitivity; caution in CKD and dysphagia
 - Aluminum accumulation in CKD; bezoar risk; binds other drugs (separate by 2 hours); hyperglycemia in diabetes
-- **56**
+- Standard adult dosing for teaching; verify against current prescribing information.
 
 > Speaker notes: Formulation: Tablet 1 g; suspension 1 g/10 mL
 
@@ -1113,7 +1230,7 @@ Contraindications: Hypersensitivity; caution in CKD and dysphagia
 
 Toxicity: Aluminum accumulation in CKD; bezoar risk; binds other drugs (separate by 2 hours); hyperglycemia in diabetes
 
-## Slide 47: Misoprostol (Cytotec)
+## Slide 57: Misoprostol (Cytotec)
 - [heading] DRUG PROFILE
 - [heading] Misoprostol (Cytotec)
 - [heading] Prostaglandin E1 analog
@@ -1129,7 +1246,7 @@ Toxicity: Aluminum accumulation in CKD; bezoar risk; binds other drugs (separate
 - Diarrhea, abdominal cramps, nausea, menstrual-type bleeding
 - Pregnancy (boxed warning), prostaglandin hypersensitivity
 - Miscarriage, uterine rupture and birth defects; overdose: fever, tachycardia, hypotension, seizures
-- **57**
+- Standard adult dosing for teaching; verify against current prescribing information.
 
 > Speaker notes: Formulation: Tablet 100/200 mcg
 
@@ -1143,7 +1260,7 @@ Contraindications: Pregnancy (boxed warning), prostaglandin hypersensitivity
 
 Toxicity: Miscarriage, uterine rupture and birth defects; overdose: fever, tachycardia, hypotension, seizures
 
-## Slide 48: Bismuth subsalicylate (Pepto-Bismol)
+## Slide 58: Bismuth subsalicylate (Pepto-Bismol)
 - [heading] DRUG PROFILE
 - [heading] Bismuth subsalicylate (Pepto-Bismol)
 - [heading] Antisecretory, antimicrobial, mucosal agent
@@ -1159,7 +1276,7 @@ Toxicity: Miscarriage, uterine rupture and birth defects; overdose: fever, tachy
 - Black stool and tongue, constipation
 - Salicylate allergy, bleeding disorders, anticoagulants, children or teens with viral illness (Reye syndrome)
 - Salicylism: tinnitus, rapid breathing; bismuth neurotoxicity with prolonged high use
-- **58**
+- Standard adult dosing for teaching; verify against current prescribing information.
 
 > Speaker notes: Formulation: Chewable tablet 262 mg; suspension 262 or 525 mg/15 mL
 
@@ -1173,7 +1290,7 @@ Contraindications: Salicylate allergy, bleeding disorders, anticoagulants, child
 
 Toxicity: Salicylism: tinnitus, rapid breathing; bismuth neurotoxicity with prolonged high use
 
-## Slide 49: Amoxicillin (Amoxil)
+## Slide 59: Amoxicillin (Amoxil)
 - [heading] DRUG PROFILE
 - [heading] Amoxicillin (Amoxil)
 - [heading] Aminopenicillin
@@ -1189,7 +1306,7 @@ Toxicity: Salicylism: tinnitus, rapid breathing; bismuth neurotoxicity with prol
 - Diarrhea, nausea, rash; C. difficile infection
 - Penicillin allergy
 - Anaphylaxis in allergic patients; overdose causes GI upset; rarely crystalluria
-- **59**
+- Standard adult dosing for teaching; verify against current prescribing information.
 
 > Speaker notes: Formulation: Capsule/tablet 250/500/875 mg; suspension
 
@@ -1203,7 +1320,7 @@ Contraindications: Penicillin allergy
 
 Toxicity: Anaphylaxis in allergic patients; overdose causes GI upset; rarely crystalluria
 
-## Slide 50: Clarithromycin (Biaxin)
+## Slide 60: Clarithromycin (Biaxin)
 - [heading] DRUG PROFILE
 - [heading] Clarithromycin (Biaxin)
 - [heading] Macrolide antibiotic
@@ -1219,7 +1336,7 @@ Toxicity: Anaphylaxis in allergic patients; overdose causes GI upset; rarely cry
 - Taste change, nausea, diarrhea; QT prolongation
 - Macrolide allergy; QT history; co-use with simvastatin, lovastatin, ergotamine
 - Strong CYP3A4 and P-gp inhibitor; torsades, hepatotoxicity; avoid if prior macrolide exposure
-- **60**
+- Standard adult dosing for teaching; verify against current prescribing information.
 
 > Speaker notes: Formulation: Tablet 250/500 mg; ER tablet 500 mg; suspension
 
@@ -1233,7 +1350,7 @@ Contraindications: Macrolide allergy; QT history; co-use with simvastatin, lovas
 
 Toxicity: Strong CYP3A4 and P-gp inhibitor; torsades, hepatotoxicity; avoid if prior macrolide exposure
 
-## Slide 51: Metronidazole (Flagyl)
+## Slide 61: Metronidazole (Flagyl)
 - [heading] DRUG PROFILE
 - [heading] Metronidazole (Flagyl)
 - [heading] Nitroimidazole antimicrobial
@@ -1249,7 +1366,7 @@ Toxicity: Strong CYP3A4 and P-gp inhibitor; torsades, hepatotoxicity; avoid if p
 - Metallic taste, nausea, headache; disulfiram-like reaction with alcohol
 - Alcohol use during and for 3 days after, recent disulfiram, Cockayne syndrome
 - Neurotoxicity: neuropathy, encephalopathy, seizures with prolonged or high dosing
-- **61**
+- Standard adult dosing for teaching; verify against current prescribing information.
 
 > Speaker notes: Formulation: Tablet 250/500 mg; IV; topical/vaginal forms
 
@@ -1263,7 +1380,7 @@ Contraindications: Alcohol use during and for 3 days after, recent disulfiram, C
 
 Toxicity: Neurotoxicity: neuropathy, encephalopathy, seizures with prolonged or high dosing
 
-## Slide 52: Tetracycline (Sumycin)
+## Slide 62: Tetracycline (Sumycin)
 - [heading] DRUG PROFILE
 - [heading] Tetracycline (Sumycin)
 - [heading] Tetracycline antibiotic
@@ -1279,7 +1396,7 @@ Toxicity: Neurotoxicity: neuropathy, encephalopathy, seizures with prolonged or 
 - Nausea, esophagitis, photosensitivity
 - Pregnancy, children under 8 years, hypersensitivity
 - Tooth discoloration and bone effects in children; hepatotoxicity at high dose; chelated by dairy, antacids, iron
-- **62**
+- Standard adult dosing for teaching; verify against current prescribing information.
 
 > Speaker notes: Formulation: Capsule 250/500 mg
 
@@ -1293,7 +1410,7 @@ Contraindications: Pregnancy, children under 8 years, hypersensitivity
 
 Toxicity: Tooth discoloration and bone effects in children; hepatotoxicity at high dose; chelated by dairy, antacids, iron
 
-## Slide 53: Ondansetron (Zofran)
+## Slide 63: Ondansetron (Zofran)
 - [heading] DRUG PROFILE
 - [heading] Ondansetron (Zofran)
 - [heading] 5-HT3 receptor antagonist
@@ -1309,7 +1426,7 @@ Toxicity: Tooth discoloration and bone effects in children; hepatotoxicity at hi
 - Headache, constipation, dizziness; QT prolongation
 - Congenital long QT syndrome; apomorphine co-use
 - QT prolongation and torsades; serotonin syndrome (rare); transient vision loss
-- **63**
+- Standard adult dosing for teaching; verify against current prescribing information.
 
 > Speaker notes: Formulation: Tablet 4/8 mg; ODT 4/8 mg; oral film; IV/IM 2 mg/mL
 
@@ -1323,7 +1440,7 @@ Contraindications: Congenital long QT syndrome; apomorphine co-use
 
 Toxicity: QT prolongation and torsades; serotonin syndrome (rare); transient vision loss
 
-## Slide 54: Metoclopramide (Reglan)
+## Slide 64: Metoclopramide (Reglan)
 - [heading] DRUG PROFILE
 - [heading] Metoclopramide (Reglan)
 - [heading] Dopamine D2 antagonist, prokinetic
@@ -1339,7 +1456,7 @@ Toxicity: QT prolongation and torsades; serotonin syndrome (rare); transient vis
 - Drowsiness, restlessness, diarrhea; depression
 - GI obstruction, perforation or bleeding; pheochromocytoma; seizure disorder; history of tardive dyskinesia
 - Boxed warning: tardive dyskinesia (may be irreversible); acute dystonia (diphenhydramine or benztropine); neuroleptic malignant syndrome
-- **64**
+- Standard adult dosing for teaching; verify against current prescribing information.
 
 > Speaker notes: Formulation: Tablet 5/10 mg; ODT; oral solution; IV/IM 5 mg/mL
 
@@ -1353,7 +1470,7 @@ Contraindications: GI obstruction, perforation or bleeding; pheochromocytoma; se
 
 Toxicity: Boxed warning: tardive dyskinesia (may be irreversible); acute dystonia (diphenhydramine or benztropine); neuroleptic malignant syndrome
 
-## Slide 55: Aprepitant (Emend)
+## Slide 65: Aprepitant (Emend)
 - [heading] DRUG PROFILE
 - [heading] Aprepitant (Emend)
 - [heading] NK1 receptor antagonist
@@ -1369,7 +1486,7 @@ Toxicity: Boxed warning: tardive dyskinesia (may be irreversible); acute dystoni
 - Fatigue, constipation, hiccups, raised liver enzymes
 - Pimozide co-use; hypersensitivity
 - CYP3A4 substrate and moderate inhibitor: lowers warfarin and hormonal contraceptive effect; overdose drowsiness, headache
-- **65**
+- Standard adult dosing for teaching; verify against current prescribing information.
 
 > Speaker notes: Formulation: Capsule 40/80/125 mg; IV fosaprepitant 150 mg
 
@@ -1383,7 +1500,7 @@ Contraindications: Pimozide co-use; hypersensitivity
 
 Toxicity: CYP3A4 substrate and moderate inhibitor: lowers warfarin and hormonal contraceptive effect; overdose drowsiness, headache
 
-## Slide 56: Meclizine (Antivert)
+## Slide 66: Meclizine (Antivert)
 - [heading] DRUG PROFILE
 - [heading] Meclizine (Antivert)
 - [heading] H1 antihistamine, anticholinergic
@@ -1399,7 +1516,7 @@ Toxicity: CYP3A4 substrate and moderate inhibitor: lowers warfarin and hormonal 
 - Drowsiness, dry mouth, blurred vision, urinary retention
 - Hypersensitivity; caution in glaucoma, BPH, asthma, older adults
 - Anticholinergic toxicity: agitation, hallucinations, tachycardia, seizures; additive sedation
-- **66**
+- Standard adult dosing for teaching; verify against current prescribing information.
 
 > Speaker notes: Formulation: Tablet 12.5/25/50 mg; chewable tablet
 
@@ -1413,7 +1530,7 @@ Contraindications: Hypersensitivity; caution in glaucoma, BPH, asthma, older adu
 
 Toxicity: Anticholinergic toxicity: agitation, hallucinations, tachycardia, seizures; additive sedation
 
-## Slide 57: Scopolamine (Transderm Scop)
+## Slide 67: Scopolamine (Transderm Scop)
 - [heading] DRUG PROFILE
 - [heading] Scopolamine (Transderm Scop)
 - [heading] Muscarinic antagonist
@@ -1429,7 +1546,7 @@ Toxicity: Anticholinergic toxicity: agitation, hallucinations, tachycardia, seiz
 - Dry mouth, drowsiness, blurred vision, dizziness
 - Narrow-angle glaucoma; hypersensitivity
 - Anticholinergic toxicity; withdrawal nausea and dizziness; wash hands to avoid dilated pupils
-- **67**
+- Standard adult dosing for teaching; verify against current prescribing information.
 
 > Speaker notes: Formulation: Transdermal patch 1.5 mg (about 1 mg over 3 days)
 
@@ -1443,7 +1560,7 @@ Contraindications: Narrow-angle glaucoma; hypersensitivity
 
 Toxicity: Anticholinergic toxicity; withdrawal nausea and dizziness; wash hands to avoid dilated pupils
 
-## Slide 58: Prochlorperazine (Compazine)
+## Slide 68: Prochlorperazine (Compazine)
 - [heading] DRUG PROFILE
 - [heading] Prochlorperazine (Compazine)
 - [heading] Phenothiazine D2 antagonist
@@ -1459,7 +1576,7 @@ Toxicity: Anticholinergic toxicity; withdrawal nausea and dizziness; wash hands 
 - Sedation, hypotension, dry mouth, extrapyramidal symptoms
 - Children under 2 years, coma, dementia-related psychosis (boxed warning)
 - Acute dystonia, tardive dyskinesia, neuroleptic malignant syndrome, QT prolongation, sedation
-- **68**
+- Standard adult dosing for teaching; verify against current prescribing information.
 
 > Speaker notes: Formulation: Tablet 5/10 mg; suppository 25 mg; IV/IM 5 mg/mL
 
@@ -1473,7 +1590,7 @@ Contraindications: Children under 2 years, coma, dementia-related psychosis (box
 
 Toxicity: Acute dystonia, tardive dyskinesia, neuroleptic malignant syndrome, QT prolongation, sedation
 
-## Slide 59: Dronabinol (Marinol) and nabilone (Cesamet)
+## Slide 69: Dronabinol (Marinol) and nabilone (Cesamet)
 - [heading] DRUG PROFILE
 - [heading] Dronabinol (Marinol) and nabilone (Cesamet)
 - [heading] Cannabinoids
@@ -1489,7 +1606,7 @@ Toxicity: Acute dystonia, tardive dyskinesia, neuroleptic malignant syndrome, QT
 - Dizziness, euphoria, drowsiness, tachycardia
 - Hypersensitivity; sesame oil allergy (dronabinol capsule)
 - Psychoactive: anxiety, paranoia, tachycardia, hypotension; additive CNS depression; misuse potential
-- **69**
+- Standard adult dosing for teaching; verify against current prescribing information.
 
 > Speaker notes: Formulation: Dronabinol capsule 2.5/5/10 mg, solution; nabilone capsule 1 mg
 
@@ -1503,7 +1620,7 @@ Contraindications: Hypersensitivity; sesame oil allergy (dronabinol capsule)
 
 Toxicity: Psychoactive: anxiety, paranoia, tachycardia, hypotension; additive CNS depression; misuse potential
 
-## Slide 60: Dexamethasone (Decadron)
+## Slide 70: Dexamethasone (Decadron)
 - [heading] DRUG PROFILE
 - [heading] Dexamethasone (Decadron)
 - [heading] Corticosteroid
@@ -1519,7 +1636,7 @@ Toxicity: Psychoactive: anxiety, paranoia, tachycardia, hypotension; additive CN
 - Insomnia, hyperglycemia, mood change, fluid retention
 - Systemic fungal infection; hypersensitivity
 - Adrenal suppression with prolonged use; infection, hyperglycemia, psychosis; taper after long courses
-- **70**
+- Standard adult dosing for teaching; verify against current prescribing information.
 
 > Speaker notes: Formulation: Tablet 0.5-6 mg; oral solution; IV 4 mg/mL
 
@@ -1533,7 +1650,7 @@ Contraindications: Systemic fungal infection; hypersensitivity
 
 Toxicity: Adrenal suppression with prolonged use; infection, hyperglycemia, psychosis; taper after long courses
 
-## Slide 61: Supporting Drugs at a Glance
+## Slide 71: Supporting Drugs at a Glance
 - [heading] DRUG PROFILE · SUPPORTING
 - [heading] Supporting Drugs at a Glance
 - **Diphenhydramine and benztropine**
@@ -1553,17 +1670,15 @@ Toxicity: Adrenal suppression with prolonged use; infection, hyperglycemia, psyc
 - **Penicillin**
 - Allergy rules out amoxicillin in H. pylori regimens
 - Listed for context; not profiled in detail.
-- **71**
 
 > Speaker notes: Listed for context; not profiled in detail.
 
-## Slide 62: Image Attribution
+## Slide 72: Image Attribution
 - [heading] APPENDIX
 - [heading] Image Attribution
 - **●  Original figures in this deck:** **Figures 1, 4 and 9 (Gastric Acid Secretion: Where Antisecretory Drugs Act; PPIs vs. H2 Receptor Antagonists: Potency and Duration; The Vomiting Reflex: Where Antiemetics Act) were generated by the course director using the AI tool Claude to illustrate standard, non-copyrighted pharmacologic concepts. They are original diagrams, not reproduced from Katzung’s Basic and Clinical Pharmacology or any other copyrighted source.**
 - **●  Reference:** **Anthropic. (2026). Claude (Sonnet 5) [Large language model]. https://claude.ai**
 - **●  Mechanism illustrations:** **(AI-generated, illustrative, not reproduced from copyrighted sources): H2 blocker action on the parietal cell (Figure 2, slide 14); PPI irreversible pump inhibition (Figure 3, slide 16); sucralfate and misoprostol (Figure 5, slide 21); H. pylori multidrug rationale (Figure 6, slide 24); ondansetron and 5-HT3 blockade (Figure 7, slide 31); receptors in the vomiting pathway (Figure 8, slide 32); metoclopramide D2 blockade and 5-HT4 agonism (Figure 10, slide 37); cannabinoids for chemotherapy-induced nausea (Figure 11, slide 38); cannabinoid CB1 activation (Figure 12, slide 39). Created with an AI image generator under the course director’s direction for educational use; the pictures are schematic and not to scale.**
-- **72**
 
 _[1 small image(s)/icons]_
 

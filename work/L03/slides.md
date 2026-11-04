@@ -1,4 +1,4 @@
-# Extracted slides: Lecture_2_Session_1_Musculoskeletal_Final_Class_version_Oct_27_R.pptx
+# Extracted slides: Student_version_Lecture_2_Session_1_Unit_2_Musculoskeletal_Pharmacology1_R_Final_Oct27.pptx
 
 Bold = emphasized on the slide (bold/underline/highlight/colored text).
 
@@ -12,6 +12,10 @@ Bold = emphasized on the slide (bold/underline/highlight/colored text).
 _[1 small image(s)/icons]_
 
 > Speaker notes: Opening. Say: "Today's question is simple: how do we treat musculoskeletal pain safely? We'll follow one pathway, arachidonic acid, and see where each drug class steps in."
+
+Instructor script:
+
+Today's organizing idea is the pain pathway. Every drug in this session either blocks prostaglandin synthesis, modifies the immune process behind arthritis, or treats the toxicity those drugs can cause.
 
 ## Slide 2: Learning Objectives — Session 1
 - [heading] BY THE END OF THIS LECTURE
@@ -57,6 +61,10 @@ Readings: Katzung 16th ed.; the Unit 2 chapters. One sentence only.
 - **Where the pain comes from shapes how we treat it.**
 
 _[1 small image(s)/icons]_
+
+> Speaker notes: Section transition.
+
+Now we move from the pathway to the pain itself.
 
 ## Slide 5: What Causes Musculoskeletal Pain?
 - [heading] CLASSIFICATION
@@ -107,6 +115,12 @@ Know: Prostaglandins sensitize nociceptors, so they are the main NSAID target.
 
 Know: Bradykinin, histamine and cytokines are not blocked by NSAIDs.
 
+Instructor script:
+
+Know: Inflammatory mediators sensitize nociceptors, so pain and inflammation are related but distinct.
+
+Ask: Which mediators lower the pain threshold?
+
 ## Slide 8: Therapeutic Targets in the Pain Pathway
 - [heading] WHERE DRUGS INTERVENE
 - [heading] Therapeutic Targets in the Pain Pathway
@@ -136,6 +150,10 @@ _[figure(s) saved: S9_1.jpg]_
 
 Figure 1: Corticosteroids block phospholipase A2 upstream. NSAIDs block COX one step later.
 
+Instructor script:
+
+Walk the pathway: phospholipids to arachidonic acid, COX-1 and COX-2, prostaglandins and thromboxane. Mark where corticosteroids, NSAIDs and acetaminophen act.
+
 ## Slide 10: Quick Check
 - [heading] QUICK CHECK · FIGURE 1
 - [heading] Quick Check
@@ -153,6 +171,10 @@ _[1 small image(s)/icons]_
 
 > Speaker notes: Quick check: give 30 seconds, take a show of hands, then reveal.
 
+Instructor script:
+
+Pause for the class to commit to an answer before you reveal it.
+
 ## Slide 11: Answer
 - [heading] ANSWER · FIGURE 1
 - [heading] Answer
@@ -163,6 +185,10 @@ _[1 small image(s)/icons]_
 _[1 small image(s)/icons]_
 
 > Speaker notes: Answer: corticosteroids act upstream of NSAIDs.
+
+Instructor script:
+
+Reveal the answer after the class has committed to one.
 
 ## Slide 12: Quick Check
 - [heading] QUICK CHECK · UNDERSTANDING MUSCULOSKELETAL PAIN
@@ -181,6 +207,10 @@ _[1 small image(s)/icons]_
 
 > Speaker notes: Quick check: give 30 seconds, take a show of hands, then reveal.
 
+Instructor script:
+
+Pause for the class to commit to an answer before you reveal it.
+
 ## Slide 13: Answer
 - [heading] ANSWER · UNDERSTANDING MUSCULOSKELETAL PAIN
 - [heading] Answer
@@ -194,6 +224,10 @@ _[1 small image(s)/icons]_
 
 Say: "That's the pathway. Now the simplest drug on it: acetaminophen."
 
+Instructor script:
+
+Reveal the answer after the class has committed to one.
+
 ## Slide 14: 02
 - **SECTION**
 - [heading] 02
@@ -201,6 +235,10 @@ Say: "That's the pathway. Now the simplest drug on it: acetaminophen."
 - **Effective analgesia, with a narrow margin in overdose.**
 
 _[1 small image(s)/icons]_
+
+> Speaker notes: Section transition.
+
+Next, acetaminophen, the simplest drug on the pathway.
 
 ## Slide 15: Acetaminophen
 - [heading] MECHANISM & EFFECTS
@@ -220,9 +258,6 @@ Know: It is not an anti-inflammatory drug.
 ## Slide 16: Acetaminophen: Safe vs. Toxic Metabolism
 - **MECHANISM & DEPTH**
 - [heading] Acetaminophen: Safe vs. Toxic Metabolism
-- **Mechanism:**  analgesia and antipyresis are mainly central via reduced CNS prostaglandin synthesis; peripheral anti-inflammatory action is minimal.
-- **Major route:**  glucuronidation and sulfation handle about 90% of the dose, giving safe urinary excretion.
-- **Minor route:**  CYP2E1 converts a small fraction to NAPQI (N-acetyl-p-benzoquinone-imine), normally neutralized by glutathione.
 - [heading] Oral acetaminophen → Liver
 - [heading] Major route (~90%)
 - [heading] Minor route (~5–10%)
@@ -233,32 +268,45 @@ Know: It is not an anti-inflammatory drug.
 - ↓
 - ↓
 - [heading] Safe urinary excretion
-- [heading] NAPQI (toxic metabolite)
+- [heading] NAPQI (toxic)
 - ↓
-- [heading] GSH conjugation → safe excretion (at therapeutic doses)
+- [heading] GSH conjugation → safe excretion
+- **Schematic (illustrative)**
+- **Major route:**  glucuronidation and sulfation handle ~90% safely.
+- **Minor route:**  CYP2E1 makes NAPQI, normally neutralized by glutathione.
+- Figure 19. Acetaminophen metabolism: major glucuronidation and sulfation route versus minor CYP2E1 route to NAPQI.
+
+_[figure(s) saved: S16_1.jpg]_
 
 > Speaker notes: Explain the major safe route first, then the minor CYP2E1 route, where NAPQI is normally neutralized by glutathione conjugation at therapeutic doses.
 
 Say: "About 90% goes down the safe route of glucuronidation and sulfation. A small fraction goes through CYP2E1 to NAPQI, which glutathione neutralizes at normal doses."
 
+Instructor script:
+
+Know: Therapeutic doses are conjugated; overdose saturates conjugation and CYP2E1 makes NAPQI.
+
 ## Slide 17: Acetaminophen Overdose and NAC Rescue
 - **MECHANISM & DEPTH**
 - [heading] Acetaminophen Overdose and NAC Rescue
-- **Overdose:**  glutathione is exhausted, so NAPQI injures hepatocytes.
-- **Antidote:**  NAC replenishes glutathione; give early for best effect.
-- **Pearl:**  chronic alcohol use and fasting lower GSH and raise risk; both also induce CYP2E1.
-- **Monitoring:**  plot the acetaminophen level on the Rumack-Matthew nomogram for acute single ingestion; check AST/ALT.
 - [heading] Overdose: saturated glucuronidation/sulfation
 - ↓
 - [heading] More drug shunted to CYP2E1
 - ↓
-- [heading] More NAPQI; glutathione (GSH) depleted
-- [heading] N-acetylcysteine (NAC) replenishes GSH
+- [heading] More NAPQI; GSH depleted
 - ←
+- [heading] NAC replenishes GSH
 - ↓
 - [heading] NAPQI binds hepatocyte proteins
 - ↓
 - [heading] Centrilobular liver necrosis
+- Schematic (illustrative)
+- **Overdose:**  GSH exhausted; NAPQI injures hepatocytes.
+- **Antidote:**  NAC replenishes GSH; give early.
+- **Pearl:**  alcohol and fasting lower GSH; both induce CYP2E1.
+- Figure 4. Overdose saturates safe conjugation, shunting drug to CYP2E1; NAC restores glutathione.
+
+_[figure(s) saved: S17_1.jpg]_
 
 > Speaker notes: Overdose saturates glucuronidation and sulfation, shunting more drug to CYP2E1 and producing more NAPQI. Once glutathione is depleted, NAPQI injures hepatocytes. Give N-acetylcysteine early.
 
@@ -269,6 +317,10 @@ Know: The antidote is N-acetylcysteine (NAC), given early.
 Know: Chronic alcohol use and fasting raise the risk.
 
 Know: Use the Rumack-Matthew nomogram for acute single ingestions, and check AST/ALT.
+
+Instructor script:
+
+Know: N-acetylcysteine replenishes glutathione.
 
 ## Slide 18: Rumack-Matthew Nomogram: Assessing Toxicity
 - **MECHANISM & DEPTH**
@@ -285,6 +337,10 @@ _[figure(s) saved: S18_1.jpg]_
 > Speaker notes: The nomogram predicts hepatotoxicity risk after a single acute ingestion; if time of ingestion is unknown or ingestion is chronic, do not rely on it. Start NAC without waiting if presentation is late or the level is unavailable and ingestion is significant.
 
 After 24 hours the nomogram is not used: 4.7 mcg/mL is only where the treatment line ends, not a safe cutoff. Get AST/ALT; a detectable level or elevated AST/ALT guides NAC, per protocol or poison control.
+
+Instructor script:
+
+Know: Use the Rumack-Matthew nomogram.
 
 ## Slide 19: Acetaminophen Toxicity
 - [heading] OVERDOSE MECHANISM
@@ -317,6 +373,10 @@ _[1 small image(s)/icons]_
 
 Hidden overdose case (slides 18-19): see the Ask on the previous slide.
 
+Instructor script:
+
+Ask: What changes the risk in a chronic drinker?
+
 ## Slide 21: Quick Check
 - [heading] QUICK CHECK · ACETAMINOPHEN
 - [heading] Quick Check
@@ -334,6 +394,10 @@ _[1 small image(s)/icons]_
 
 > Speaker notes: Quick check: give 30 seconds, take a show of hands, then reveal.
 
+Instructor script:
+
+Pause for the class to commit to an answer before you reveal it.
+
 ## Slide 22: Answer
 - [heading] ANSWER · ACETAMINOPHEN
 - [heading] Answer
@@ -347,6 +411,10 @@ _[1 small image(s)/icons]_
 
 Say: "Acetaminophen leaves inflammation alone. NSAIDs go after it directly."
 
+Instructor script:
+
+Reveal the answer after the class has committed to one.
+
 ## Slide 23: 03
 - **SECTION**
 - [heading] 03
@@ -354,6 +422,10 @@ Say: "Acetaminophen leaves inflammation alone. NSAIDs go after it directly."
 - **Powerful anti-inflammatory effect, with real systemic risk.**
 
 _[1 small image(s)/icons]_
+
+> Speaker notes: Section transition.
+
+Now we turn to the NSAIDs, which act on the same pathway.
 
 ## Slide 24: How NSAIDs Work
 - [heading] MECHANISM
@@ -372,21 +444,24 @@ _[1 small image(s)/icons]_
 ## Slide 25: NSAIDs Block COX and Prostaglandin Synthesis
 - **MECHANISM & DEPTH**
 - [heading] NSAIDs Block COX and Prostaglandin Synthesis
-- **Pathway:**  arachidonic acid is converted by COX to prostaglandins and thromboxane A2.
-- **Effect:**  reduced prostaglandins give analgesia, antipyresis and anti-inflammation.
-- **Adverse effects:**  GI injury, platelet inhibition and renal effects.
 - [heading] Membrane phospholipids
 - ↓
 - [heading] Arachidonic acid
 - ↓
-- [heading] COX-1 / COX-2
 - ↓
+- [heading] COX-1 / COX-2
 - [heading] Prostaglandins and TXA2
 - ↓
 - [heading] NSAIDs block COX
 - ↓
 - [heading] Less prostaglandin: pain and fever fall
 - [heading] Less TXA2: bleeding risk
+- **Pathway:**  COX turns arachidonic acid into prostaglandins and TXA2.
+- **Effect:**  less pain, fever and inflammation.
+- Schematic (illustrative)
+- Figure 6. NSAIDs block COX, reducing prostaglandin and TXA2 synthesis.
+
+_[figure(s) saved: S25_1.jpg]_
 
 > Speaker notes: Explain the COX step first; every NSAID shares this mechanism, and the side effects follow from losing protective prostaglandins.
 
@@ -413,32 +488,35 @@ Say: "COX-1 is the housekeeper: stomach lining, platelets, kidney. COX-2 is indu
 ## Slide 27: COX-1 vs. COX-2: Constitutive vs. Inducible
 - **MECHANISM & DEPTH**
 - [heading] COX-1 vs. COX-2: Constitutive vs. Inducible
+- [heading] Arachidonic acid
+- [heading] Nonselective NSAIDs block both COX-1 and COX-2 → GI and renal risk
 - **COX-1:**  constitutive; gastric mucosa, platelets, kidney.
 - **COX-2:**  inducible in inflamed tissue; pain, swelling, fever.
 - **Nonselective NSAIDs**  block both, so GI injury is common.
-- **Celecoxib**  spares COX-1 at therapeutic doses.
-- [heading] Arachidonic acid
-- [heading] Nonselective NSAIDs block both COX-1 and COX-2 → GI and renal risk
+- **Schematic (illustrative)**
+- Figure 7. COX-1 protects; COX-2 is induced at inflamed sites.
 
 | ↓ |
 |---|
 | COX-1 (constitutive) |
-| Stomach mucosal protection |
-| Platelet TXA2 (clotting) |
-| Renal blood flow |
+| Stomach mucosal protection Platelet TXA2 (clotting) Renal blood flow |
 
 | ↓ |
 |---|
 | COX-2 (inducible, at inflamed tissue) |
-| Inflammation |
-| Pain |
-| Fever |
+| Inflammation Pain Fever |
+
+_[figure(s) saved: S27_1.jpg]_
 
 > Speaker notes: COX-1 keeps protective prostaglandins; COX-2 is induced by inflammation. Selectivity trades anti-inflammatory benefit against GI and platelet protection.
 
 Say: "COX-1 is the housekeeper: stomach lining, platelets, kidney. COX-2 is induced at sites of inflammation."
 
 Know: Nonselective NSAIDs block both, which is why GI injury is common.
+
+Instructor script:
+
+Know: COX-1 inhibition causes GI and platelet effects; COX-2 selectivity spares the stomach but not the cardiovascular risk.
 
 ## Slide 28: Nonselective NSAIDs
 - [heading] AGENTS
@@ -468,13 +546,13 @@ _[1 small image(s)/icons]_
 
 Say: "Celecoxib spares COX-1, so the GI risk is lower. The trade-off is lower PGI2 without a matching drop in TXA2, which raises cardiovascular risk. The kidney is still affected."
 
+Instructor script:
+
+Know: Celecoxib is contraindicated with sulfonamide allergy.
+
 ## Slide 30: Celecoxib: Sparing COX-1 While Blocking COX-2
 - **MECHANISM & DEPTH**
 - [heading] Celecoxib: Sparing COX-1 While Blocking COX-2
-- **Mechanism:**  selectively inhibits inducible COX-2, the main source of inflammatory prostaglandins.
-- **GI benefit:**  COX-1 in gastric mucosa is largely spared, lowering ulcer and bleeding risk.
-- **Trade-off:**  suppressed PGI2 without matched TXA2 loss raises cardiovascular event risk.
-- **Renal:**  kidney prostaglandins are still affected; renal risk is not eliminated.
 - [heading] Arachidonic acid
 - [heading] COX-2
 - [heading] COX-1
@@ -482,7 +560,14 @@ Say: "Celecoxib spares COX-1, so the GI risk is lower. The trade-off is lower PG
 - [heading] Spared by celecoxib
 - [heading] ↓ Fewer inflammatory prostaglandins → less pain and inflammation
 - [heading] ↓ Stomach and platelet protection continues
-- [heading] ↓ PGI₂ falls, TXA₂ preserved → cardiovascular risk
+- [heading] ↓ PGI₂ falls, TXA₂ kept → cardiovascular risk
+- Schematic (illustrative)
+- Figure 8. Celecoxib spares COX-1 while blocking COX-2.
+- **Mechanism:**  blocks inflammatory COX-2.
+- **GI benefit:**  stomach COX-1 is spared, lowering ulcer risk.
+- **Trade-off:**  PGI2 falls, TXA2 kept, raising CV risk.
+
+_[figure(s) saved: S30_1.jpg]_
 
 > Speaker notes: Use the diagram to show that selectivity separates the GI benefit from the cardiovascular trade-off. Link back to the nonselective NSAID comparison on the previous slide.
 
@@ -516,6 +601,10 @@ _[1 small image(s)/icons]_
 
 > Speaker notes: Quick check: give 30 seconds, take a show of hands, then reveal.
 
+Instructor script:
+
+Pause for the class to commit to an answer before you reveal it.
+
 ## Slide 33: Answer
 - [heading] ANSWER · FIGURE 2
 - [heading] Answer
@@ -526,6 +615,10 @@ _[1 small image(s)/icons]_
 _[1 small image(s)/icons]_
 
 > Speaker notes: Answer: lower GI risk, with some increase in cardiovascular risk. These risk values are illustrative, not clinical data.
+
+Instructor script:
+
+Reveal the answer after the class has committed to one.
 
 ## Slide 34: NSAID Adverse Effects
 - [heading] ORGANIZED BY SYSTEM · TABLE 1
@@ -555,6 +648,10 @@ _[figure(s) saved: S35_1.jpg]_
 > Speaker notes: Say: "Lose prostaglandins and you lose mucosal protection, renal afferent dilation and normal platelet function."
 
 Know: GI (ulcer, bleeding), renal (AKI, fluid retention), cardiovascular (hypertension, events).
+
+Instructor script:
+
+Prostaglandin loss in the kidney reduces afferent blood flow: stress the triple whammy with ACE inhibitors and diuretics.
 
 ## Slide 36: NSAID Contraindications & Interactions
 - [heading] PRESCRIBING SAFELY
@@ -609,6 +706,10 @@ _[1 small image(s)/icons]_
 
 > Speaker notes: Quick check: give 30 seconds, take a show of hands, then reveal.
 
+Instructor script:
+
+Pause for the class to commit to an answer before you reveal it.
+
 ## Slide 39: Answer
 - [heading] ANSWER · NSAIDS
 - [heading] Answer
@@ -622,6 +723,10 @@ _[1 small image(s)/icons]_
 
 Say: "Now the same drugs in the setting of arthritis."
 
+Instructor script:
+
+Reveal the answer after the class has committed to one.
+
 ## Slide 40: 04
 - **SECTION**
 - [heading] 04
@@ -629,6 +734,10 @@ Say: "Now the same drugs in the setting of arthritis."
 - **Two very different diseases that both affect the joint.**
 
 _[1 small image(s)/icons]_
+
+> Speaker notes: Section transition.
+
+Now we apply these drugs to osteoarthritis and rheumatoid arthritis.
 
 ## Slide 41: Osteoarthritis vs. Rheumatoid Arthritis
 - [heading] TWO DIFFERENT DISEASES
@@ -658,6 +767,10 @@ Say: "OA is degenerative and mechanical, with cartilage wear and bone remodeling
 _[figure(s) saved: S42_1.jpg]_
 
 > Speaker notes: Say: "OA is degenerative and mechanical, with cartilage wear and bone remodeling. RA is autoimmune, with synovitis, pannus, and TNF-alpha and IL-6 driving erosion."
+
+Instructor script:
+
+Know: OA is mechanical and degenerative; RA is autoimmune.
 
 ## Slide 43: Pharmacologic Treatment of Osteoarthritis
 - [heading] OA MANAGEMENT
@@ -713,6 +826,10 @@ Say: "A DMARD changes the course of RA. An NSAID only masks symptoms."
 
 Know: DMARDs take weeks to months to work. Judge them over months, not at the first visit. The curve is a schematic, not data.
 
+Instructor script:
+
+Know: Analgesics treat symptoms; DMARDs slow joint destruction.
+
 ## Slide 47: Conventional (Non-Biologic) DMARDs
 - [heading] CONVENTIONAL DMARDS
 - [heading] Conventional (Non-Biologic) DMARDs
@@ -725,20 +842,27 @@ _[1 small image(s)/icons]_
 
 > Speaker notes: Methotrexate (anchor drug, blocks DHFR), hydroxychloroquine (milder disease), sulfasalazine, leflunomide (blocks DHODH, pyrimidine synthesis).
 
+Instructor script:
+
+Methotrexate once weekly with folic acid; hydroxychloroquine needs eye exams; sulfasalazine; leflunomide is teratogenic.
+
 ## Slide 48: Conventional DMARDs: Where Each Drug Acts
 - **MECHANISM & DEPTH**
 - [heading] Conventional DMARDs: Where Each Drug Acts
-- **Methotrexate:**  blocks DHFR and folate metabolism.
-- **Hydroxychloroquine:**  alters lysosomal and TLR signaling.
-- **Sulfasalazine:**  reduces cytokine and prostaglandin production.
-- **Leflunomide:**  inhibits DHODH, blocking pyrimidine synthesis.
+- **Methotrexate:**  blocks DHFR.
+- **Hydroxychloroquine:**  alters lysosome and TLR signals.
+- **Sulfasalazine:**  cuts cytokine output.
+- Schematic (illustrative)
+- Figure 14. Conventional DMARDs act at different intracellular and immune-pathway targets.
 
 | Drug | Target / action | Effect |
 |---|---|---|
-| Methotrexate | Inhibits DHFR; disrupts folate metabolism | Slower immune-cell growth |
-| Hydroxychloroquine | Alters lysosomal and TLR signaling | Less antigen signaling |
-| Sulfasalazine | Reduces cytokine and prostaglandin production | Less inflammation |
-| Leflunomide | Inhibits DHODH; limits pyrimidine synthesis | Slower T-cell growth |
+| Methotrexate | Inhibits DHFR (folate) | Slower immune-cell growth |
+| Hydroxychloroquine | Alters lysosome, TLR signals | Less antigen signaling |
+| Sulfasalazine | Cuts cytokines, prostaglandins | Less inflammation |
+| Leflunomide | Inhibits DHODH | Slower T-cell growth |
+
+_[figure(s) saved: S48_1.png]_
 
 > Speaker notes: These drugs act inside cells or on broad immune pathways, with a slower onset than biologics.
 
@@ -762,16 +886,19 @@ Know: methotrexate is dosed WEEKLY, not daily. Daily dosing has caused fatal tox
 ## Slide 50: Methotrexate: Folate Pathway and Low-Dose Action
 - **MECHANISM & DEPTH**
 - [heading] Methotrexate: Folate Pathway and Low-Dose Action
-- **Target:**  inhibits dihydrofolate reductase (DHFR), blocking folate-dependent purine and thymidylate synthesis.
-- **Low-dose RA effect:**  likely anti-inflammatory via adenosine release, not cytotoxicity.
-- **Pearl:**  weekly dosing only; daily dosing has caused fatal toxicity.
-- **Toxicity:**  folic acid co-therapy reduces liver, marrow, lung and GI effects.
 - [heading] Dihydrofolate (DHF) ↓
 - [heading] DHFR enzyme ↓
 - [heading] THF for DNA synthesis
 - [heading] Methotrexate blocks DHFR ↓
 - [heading] Low dose: anti-inflammatory ↓
 - [heading] Weekly dosing only
+- **Target:**  inhibits dihydrofolate reductase (DHFR), blocking folate-dependent purine and thymidylate synthesis.
+- **Low-dose RA effect:**  likely anti-inflammatory via adenosine release, not cytotoxicity.
+- **Pearl:**  weekly dosing only; daily dosing has caused fatal toxicity.
+- **Schematic (illustrative)**
+- Figure 15. Methotrexate blocks DHFR in the folate pathway; low-dose action is anti-inflammatory.
+
+_[figure(s) saved: S50_1.jpg]_
 
 > Speaker notes: Walk through the diagram left to right: folate is reduced to THF through DHF, and methotrexate blocks the DHFR step. Emphasize the weekly-dosing safety point.
 
@@ -802,20 +929,27 @@ Say: "Four classes by target." TNF inhibitors (infliximab, adalimumab, etanercep
 ## Slide 52: Biologic DMARDs: Mechanism by Target
 - **MECHANISM & DEPTH**
 - [heading] Biologic DMARDs: Mechanism by Target
-- **TNF inhibitors:**  antibodies and etanercept, a receptor fusion, neutralize soluble and membrane TNF-α. First-line biologic; watch for reactivation of latent TB.
-- **IL-6 blockers:**  tocilizumab blocks both membrane and soluble IL-6 receptor, and works as monotherapy. Can raise lipids and liver enzymes.
-- **Abatacept:**  selective costimulation modulator that acts early, at T-cell activation. Generally a lower infection signal.
-- **Rituximab:**  anti-CD20 depletes B cells for months. Used after TNF-inhibitor failure; check hepatitis B before starting.
+- Schematic (illustrative)
+- Figure 16. Biologic DMARDs intercept distinct steps of the immune cascade.
+- **TNF inhibitors:**  antibodies and etanercept neutralize soluble and membrane TNF-α. Watch for latent TB.
+- **IL-6 blockers:**  tocilizumab blocks the IL-6 receptor. Can raise lipids and liver enzymes.
+- **Abatacept:**  blocks costimulation at T-cell activation. Lower infection signal.
 
-| TNF inhibitors Infliximab, adalimumab, etanercept | Bind soluble or membrane TNF-α, preventing TNFR activation. |
+| TNF inhibitors Infliximab, adalimumab, etanercept | Block soluble and membrane TNF-α. |
 |---|---|
-| IL-6 inhibitor Tocilizumab | Blocks the IL-6 receptor, reducing inflammatory signaling. |
-| Abatacept CTLA-4-Ig | Binds CD80/86; blocks CD28 costimulation of T cells. |
+| IL-6 inhibitor Tocilizumab | Blocks the IL-6 receptor. |
+| Abatacept CTLA-4-Ig | Blocks CD28 costimulation of T cells. |
 | Rituximab Anti-CD20 | Binds CD20 and depletes B cells. |
+
+_[figure(s) saved: S52_1.jpg]_
 
 > Speaker notes: Each biologic intercepts a different step of the immune cascade; match the target to the drug class.
 
 Say: "Four classes by target." TNF inhibitors (infliximab, adalimumab, etanercept), IL-6 blockers (tocilizumab), abatacept (CTLA-4-Ig, blocks CD28 costimulation), rituximab (anti-CD20, depletes B cells).
+
+Instructor script:
+
+Know: TNF inhibitors, IL-6 blockade, abatacept and rituximab.
 
 ## Slide 53: Biologic DMARDs: Where Each Class Intercepts the Immune Cascade
 - [heading] ORIGINAL ILLUSTRATION · FIGURE 3
@@ -845,6 +979,10 @@ _[1 small image(s)/icons]_
 
 > Speaker notes: Quick check: give 30 seconds, take a show of hands, then reveal.
 
+Instructor script:
+
+Pause for the class to commit to an answer before you reveal it.
+
 ## Slide 55: Answer
 - [heading] ANSWER · FIGURE 3
 - [heading] Answer
@@ -855,6 +993,10 @@ _[1 small image(s)/icons]_
 _[1 small image(s)/icons]_
 
 > Speaker notes: Answer: abatacept acts earliest.
+
+Instructor script:
+
+Reveal the answer after the class has committed to one.
 
 ## Slide 56: DMARD Safety: Immunosuppression
 - [heading] SHARED RISK
@@ -869,21 +1011,30 @@ _[1 small image(s)/icons]_
 
 > Speaker notes: Say: "The theme is immunosuppression, so infection risk."
 
+Instructor script:
+
+Screen for TB and hepatitis B.
+
 ## Slide 57: Immune Suppression Raises Infection Risk
 - **MECHANISM & DEPTH**
 - [heading] Immune Suppression Raises Infection Risk
+- Schematic (illustrative)
+- Figure 18. Immunosuppression lowers defences against latent TB and opportunistic infection.
 - **Risk:**  suppressed immunity lets latent TB and opportunistic infections emerge.
 - **Screen first:**  TB test and hepatitis B and C serology before starting.
 - **Vaccines:**  update non-live vaccines before treatment.
-- **Monitor:**  CBC and liver and kidney labs every 1–3 months.
 
-_[figure(s) saved: S57_1.jpg]_
+_[figure(s) saved: S57_1.png]_
 
 > Speaker notes: Screen for TB and hepatitis B and C before starting; update non-live vaccines; monitor blood counts and organ function regularly, and act early on fever or infection signs.
 
 Say: "The theme is immunosuppression, so infection risk."
 
 Know: Screen for TB and hepatitis B/C before biologics. Update vaccines first, especially live vaccines. Monitor CBC and liver and kidney tests. Counsel patients to report fevers early.
+
+Instructor script:
+
+Fever is infection until proven otherwise.
 
 ## Slide 58: Quick Check
 - [heading] QUICK CHECK · OSTEOARTHRITIS & RHEUMATOID ARTHRITIS
@@ -902,6 +1053,10 @@ _[1 small image(s)/icons]_
 
 > Speaker notes: Quick check: give 30 seconds, take a show of hands, then reveal.
 
+Instructor script:
+
+Pause for the class to commit to an answer before you reveal it.
+
 ## Slide 59: Answer
 - [heading] ANSWER · OSTEOARTHRITIS & RHEUMATOID ARTHRITIS
 - [heading] Answer
@@ -912,6 +1067,10 @@ _[1 small image(s)/icons]_
 _[1 small image(s)/icons]_
 
 > Speaker notes: Answer: a DMARD modifies the disease process, while an NSAID only masks symptoms.
+
+Instructor script:
+
+Reveal the answer after the class has committed to one.
 
 ## Slide 60: Drug Names Reveal the Class: Read the Stem
 - **MECHANISM & DEPTH**
@@ -933,6 +1092,10 @@ _[1 small image(s)/icons]_
 > Speaker notes: Teach students to read the stem first: it reveals mechanism class before the drug is recalled.
 
 Say: "Read the stem and you know the class." -mab is a monoclonal antibody. -zumab is humanized, -ximab chimeric, -umab fully human. -cept is a receptor fusion protein. -nib/-tinib is a kinase inhibitor (for example tofacitinib, JAK). -coxib is COX-2 selective. -profen, -fenac and -oxicam are NSAID subclasses.
+
+Instructor script:
+
+Cue the suffixes: -coxib, -profen, -mab, -cept, -trexate.
 
 ## Slide 61: Session 1 Recap — To Be Continued
 - [heading] BIG PICTURE
@@ -966,7 +1129,375 @@ Five points to repeat if time runs short:
 
 5. DMARDs change disease. Methotrexate is weekly, and screen for TB and hepatitis before biologics.
 
-## Slide 62: Image Attribution
+## Slide 62: Drug Profiles
+- **STUDY REFERENCE**
+- [heading] Drug Profiles
+- **Study reference for the drugs covered in Session 1**
+
+> Speaker notes: Abbreviation key for the drug profile slides: PO = by mouth; IV = intravenous; IM = intramuscular; SC = subcutaneous; BID = twice daily; TID = three times daily; ER = extended release; DR = delayed release; NSAID = nonsteroidal anti-inflammatory drug; COX = cyclooxygenase; GI = gastrointestinal; DMARD = disease-modifying antirheumatic drug; TNF = tumor necrosis factor; IL-6 = interleukin-6; DHFR = dihydrofolate reductase; DHODH = dihydroorotate dehydrogenase; CBC = complete blood count; TB = tuberculosis; CABG = coronary artery bypass graft; NAPQI = N-acetyl-p-benzoquinone imine; NAC = N-acetylcysteine; OTC = over the counter; CYP = cytochrome P450; eGFR/CrCl = renal function; JIA = juvenile idiopathic arthritis; PML = progressive multifocal leukoencephalopathy.
+
+Instructor script:
+
+Section transition. Move from the main lecture to the drug profiles as a study reference.
+
+Use these as a study reference. Know the dose logic, the serious adverse effect, the contraindication that changes decisions and the toxicity you would need to recognize.
+
+Class activity (10 minutes): Groups teach back two or three profiles in 60 seconds each.
+
+Abbreviation key: Review DMARD, TNF, DHFR, NAPQI and NAC.
+
+Teaching points: acetaminophen, NSAIDs, methotrexate, other conventional DMARDs, TNF inhibitors, other biologics.
+
+Supporting drugs: PPIs, warfarin, ACE inhibitors, lithium, steroids and live vaccines explain interactions.
+
+Bloom's prompts: Remember: state methotrexate dosing frequency. Understand: explain why NSAIDs cause ulcers. Apply: counsel a patient starting adalimumab. Analyze: explain methotrexate and TMP-SMX toxicity. Evaluate: choose analgesia for CKD with heart failure.
+
+## Slide 63: Acetaminophen (Tylenol)
+- [heading] DRUG PROFILE
+- [heading] Acetaminophen (Tylenol)
+- **ANALGESIC / ANTIPYRETIC**
+- [heading] FORMULATION
+- [heading] DOSE (ADULT)
+- [heading] INDICATIONS
+- Tablets 325/500 mg; ER 650 mg; liquid; suppository; IV 1,000 mg
+- [heading] 650-1,000 mg PO every 6 hours (maximum 3-4 g/day; 2-3 g/day with chronic alcohol use or liver disease)
+- Mild to moderate pain, fever, osteoarthritis pain
+- [heading] ADVERSE EFFECTS
+- [heading] CONTRAINDICATIONS
+- [heading] TOXICITY / OVERDOSE
+- Rare at therapeutic doses; rash; hepatotoxicity with excess
+- Severe hepatic impairment; caution with chronic alcohol use
+- Hepatotoxicity from NAPQI after overdose; treat with N-acetylcysteine, ideally within 8 hours; use the Rumack-Matthew nomogram
+- **Standard adult dosing for teaching; verify against current prescribing information.**
+
+> Speaker notes: Acetaminophen (Tylenol)|Analgesic / antipyretic|Tablets 325/500 mg; ER 650 mg; liquid; suppository; IV 1,000 mg|650-1,000 mg PO every 6 hours (maximum 3-4 g/day; 2-3 g/day with chronic alcohol use or liver disease)|Mild to moderate pain, fever, osteoarthritis pain|Rare at therapeutic doses; rash; hepatotoxicity with excess|Severe hepatic impairment; caution with chronic alcohol use|Hepatotoxicity from NAPQI after overdose; treat with N-acetylcysteine, ideally within 8 hours; use the Rumack-Matthew nomogram
+
+## Slide 64: Ibuprofen (Advil, Motrin)
+- [heading] DRUG PROFILE
+- [heading] Ibuprofen (Advil, Motrin)
+- **NONSELECTIVE NSAID**
+- [heading] FORMULATION
+- [heading] DOSE (ADULT)
+- [heading] INDICATIONS
+- Tablets 200/400/600/800 mg; suspension; IV
+- [heading] 200-800 mg PO every 6-8 hours with food (maximum 3,200 mg/day Rx; 1,200 mg OTC)
+- Pain, inflammation, fever, osteoarthritis, rheumatoid arthritis, dysmenorrhea
+- [heading] ADVERSE EFFECTS
+- [heading] CONTRAINDICATIONS
+- [heading] TOXICITY / OVERDOSE
+- GI upset, ulcer and bleeding, renal injury, hypertension, fluid retention, platelet inhibition
+- Active GI bleed, NSAID-triggered asthma, CABG setting, advanced renal disease, third trimester pregnancy, heart failure (caution)
+- GI bleeding, acute kidney injury, metabolic acidosis, seizures in large overdose; supportive care
+- Standard adult dosing for teaching; verify against current prescribing information.
+
+> Speaker notes: Ibuprofen (Advil, Motrin)|Nonselective NSAID|Tablets 200/400/600/800 mg; suspension; IV|200-800 mg PO every 6-8 hours with food (maximum 3,200 mg/day Rx; 1,200 mg OTC)|Pain, inflammation, fever, osteoarthritis, rheumatoid arthritis, dysmenorrhea|GI upset, ulcer and bleeding, renal injury, hypertension, fluid retention, platelet inhibition|Active GI bleed, NSAID-triggered asthma, CABG setting, advanced renal disease, third trimester pregnancy, heart failure (caution)|GI bleeding, acute kidney injury, metabolic acidosis, seizures in large overdose; supportive care
+
+## Slide 65: Naproxen (Naprosyn, Aleve)
+- [heading] DRUG PROFILE
+- [heading] Naproxen (Naprosyn, Aleve)
+- **NONSELECTIVE NSAID**
+- [heading] FORMULATION
+- [heading] DOSE (ADULT)
+- [heading] INDICATIONS
+- Tablets 220/250/375/500 mg; DR and ER forms; suspension
+- [heading] 250-500 mg PO twice daily with food (maximum 1,250 mg/day)
+- Osteoarthritis, rheumatoid arthritis, gout flare, tendinitis, dysmenorrhea
+- [heading] ADVERSE EFFECTS
+- [heading] CONTRAINDICATIONS
+- [heading] TOXICITY / OVERDOSE
+- GI upset and bleeding, renal injury, hypertension, fluid retention, cardiovascular risk
+- Active GI bleed, NSAID-triggered asthma, CABG setting, severe renal impairment, third trimester
+- GI bleeding, renal injury, lethargy and seizures in overdose; activated charcoal and supportive care
+- **Standard adult dosing for teaching; verify against current prescribing information.**
+
+> Speaker notes: Naproxen (Naprosyn, Aleve)|Nonselective NSAID|Tablets 220/250/375/500 mg; DR and ER forms; suspension|250-500 mg PO twice daily with food (maximum 1,250 mg/day)|Osteoarthritis, rheumatoid arthritis, gout flare, tendinitis, dysmenorrhea|GI upset and bleeding, renal injury, hypertension, fluid retention, cardiovascular risk|Active GI bleed, NSAID-triggered asthma, CABG setting, severe renal impairment, third trimester|GI bleeding, renal injury, lethargy and seizures in overdose; activated charcoal and supportive care
+
+## Slide 66: Diclofenac (Voltaren, Cataflam)
+- [heading] DRUG PROFILE
+- [heading] Diclofenac (Voltaren, Cataflam)
+- **NONSELECTIVE NSAID (COX-2 PREFERRING)**
+- [heading] FORMULATION
+- [heading] DOSE (ADULT)
+- [heading] INDICATIONS
+- Tablets 50 mg; DR 75 mg; ER 100 mg; 1% gel; ophthalmic; patch
+- [heading] 50 mg PO two to three times daily or 75 mg twice daily (maximum 150 mg/day); gel 2-4 g to joint up to four times daily
+- Osteoarthritis, rheumatoid arthritis, acute pain, topical for knee and hand osteoarthritis
+- [heading] ADVERSE EFFECTS
+- [heading] CONTRAINDICATIONS
+- [heading] TOXICITY / OVERDOSE
+- GI upset and bleeding, elevated liver enzymes, hypertension, renal injury, cardiovascular risk
+- Active GI bleed, CABG setting, severe renal or hepatic impairment, NSAID-triggered asthma
+- Hepatotoxicity, GI bleeding, renal injury; topical form has much lower systemic exposure
+- Standard adult dosing for teaching; verify against current prescribing information.
+
+> Speaker notes: Diclofenac (Voltaren, Cataflam)|Nonselective NSAID (COX-2 preferring)|Tablets 50 mg; DR 75 mg; ER 100 mg; 1% gel; ophthalmic; patch|50 mg PO two to three times daily or 75 mg twice daily (maximum 150 mg/day); gel 2-4 g to joint up to four times daily|Osteoarthritis, rheumatoid arthritis, acute pain, topical for knee and hand osteoarthritis|GI upset and bleeding, elevated liver enzymes, hypertension, renal injury, cardiovascular risk|Active GI bleed, CABG setting, severe renal or hepatic impairment, NSAID-triggered asthma|Hepatotoxicity, GI bleeding, renal injury; topical form has much lower systemic exposure
+
+## Slide 67: Ketorolac (Toradol)
+- [heading] DRUG PROFILE
+- [heading] Ketorolac (Toradol)
+- **NONSELECTIVE NSAID (SHORT-TERM, POTENT)**
+- [heading] FORMULATION
+- [heading] DOSE (ADULT)
+- [heading] INDICATIONS
+- Tablets 10 mg; injection 15/30 mg; nasal spray
+- [heading] 15-30 mg IV/IM every 6 hours (maximum 120 mg/day) or 10 mg PO every 4-6 hours; total course 5 days or less
+- Short-term management of moderately severe acute pain
+- [heading] ADVERSE EFFECTS
+- [heading] CONTRAINDICATIONS
+- [heading] TOXICITY / OVERDOSE
+- GI bleeding, renal injury, bleeding, hypertension
+- Active GI bleed, renal impairment, high bleeding risk, perioperative CABG, labor and delivery, pregnancy, age 65+ (reduce dose)
+- Boxed warnings for GI bleeding, renal failure, bleeding and cardiovascular events; limit to 5 days
+- **Standard adult dosing for teaching; verify against current prescribing information.**
+
+> Speaker notes: Ketorolac (Toradol)|Nonselective NSAID (short-term, potent)|Tablets 10 mg; injection 15/30 mg; nasal spray|15-30 mg IV/IM every 6 hours (maximum 120 mg/day) or 10 mg PO every 4-6 hours; total course 5 days or less|Short-term management of moderately severe acute pain|GI bleeding, renal injury, bleeding, hypertension|Active GI bleed, renal impairment, high bleeding risk, perioperative CABG, labor and delivery, pregnancy, age 65+ (reduce dose)|Boxed warnings for GI bleeding, renal failure, bleeding and cardiovascular events; limit to 5 days
+
+## Slide 68: Celecoxib (Celebrex)
+- [heading] DRUG PROFILE
+- [heading] Celecoxib (Celebrex)
+- **SELECTIVE COX-2 INHIBITOR**
+- [heading] FORMULATION
+- [heading] DOSE (ADULT)
+- [heading] INDICATIONS
+- Capsules 50/100/200/400 mg
+- [heading] 200 mg PO once daily or 100 mg twice daily (rheumatoid arthritis 100-200 mg twice daily)
+- Osteoarthritis, rheumatoid arthritis, acute pain, ankylosing spondylitis
+- [heading] ADVERSE EFFECTS
+- [heading] CONTRAINDICATIONS
+- [heading] TOXICITY / OVERDOSE
+- Dyspepsia, hypertension, edema, renal injury, cardiovascular thrombotic risk
+- Sulfonamide allergy, CABG setting, active GI bleed, advanced renal disease, aspirin-triggered asthma (caution)
+- Boxed warning for cardiovascular and GI risk; renal injury in overdose; supportive care
+- **Standard adult dosing for teaching; verify against current prescribing information.**
+
+> Speaker notes: Celecoxib (Celebrex)|Selective COX-2 inhibitor|Capsules 50/100/200/400 mg|200 mg PO once daily or 100 mg twice daily (rheumatoid arthritis 100-200 mg twice daily)|Osteoarthritis, rheumatoid arthritis, acute pain, ankylosing spondylitis|Dyspepsia, hypertension, edema, renal injury, cardiovascular thrombotic risk|Sulfonamide allergy, CABG setting, active GI bleed, advanced renal disease, aspirin-triggered asthma (caution)|Boxed warning for cardiovascular and GI risk; renal injury in overdose; supportive care
+
+## Slide 69: Methotrexate (Trexall, Otrexup)
+- [heading] DRUG PROFILE
+- [heading] Methotrexate (Trexall, Otrexup)
+- **CONVENTIONAL DMARD (ANTIMETABOLITE, DHFR INHIBITOR)**
+- [heading] FORMULATION
+- [heading] DOSE (ADULT)
+- [heading] INDICATIONS
+- Tablets 2.5 mg; subcutaneous autoinjector; injection
+- [heading] 7.5-25 mg ONCE WEEKLY PO or SC, with folic acid 1 mg daily
+- Rheumatoid arthritis (anchor DMARD), psoriatic arthritis, psoriasis
+- [heading] ADVERSE EFFECTS
+- [heading] CONTRAINDICATIONS
+- [heading] TOXICITY / OVERDOSE
+- Nausea, mucositis, hepatotoxicity, myelosuppression, pneumonitis, teratogenicity
+- Pregnancy, significant liver disease, severe renal impairment, active infection, heavy alcohol use
+- Daily dosing by mistake causes severe toxicity; leucovorin rescue; monitor CBC, liver tests and creatinine
+- **Standard adult dosing for teaching; verify against current prescribing information.**
+
+> Speaker notes: Methotrexate (Trexall, Otrexup)|Conventional DMARD (antimetabolite, DHFR inhibitor)|Tablets 2.5 mg; subcutaneous autoinjector; injection|7.5-25 mg ONCE WEEKLY PO or SC, with folic acid 1 mg daily|Rheumatoid arthritis (anchor DMARD), psoriatic arthritis, psoriasis|Nausea, mucositis, hepatotoxicity, myelosuppression, pneumonitis, teratogenicity|Pregnancy, significant liver disease, severe renal impairment, active infection, heavy alcohol use|Daily dosing by mistake causes severe toxicity; leucovorin rescue; monitor CBC, liver tests and creatinine
+
+## Slide 70: Hydroxychloroquine (Plaquenil)
+- [heading] DRUG PROFILE
+- [heading] Hydroxychloroquine (Plaquenil)
+- **CONVENTIONAL DMARD (ANTIMALARIAL)**
+- [heading] FORMULATION
+- [heading] DOSE (ADULT)
+- [heading] INDICATIONS
+- Tablets 200 mg
+- [heading] 200-400 mg PO daily (maximum 5 mg/kg/day actual body weight)
+- Rheumatoid arthritis (mild), lupus, malaria
+- [heading] ADVERSE EFFECTS
+- [heading] CONTRAINDICATIONS
+- [heading] TOXICITY / OVERDOSE
+- Nausea, rash, headache, retinopathy with long use, QT prolongation
+- Known retinal disease, hypersensitivity; caution with QT-prolonging drugs
+- Retinal toxicity with long-term use (baseline and annual eye exams); cardiotoxicity and arrhythmia in overdose
+- **Standard adult dosing for teaching; verify against current prescribing information.**
+
+> Speaker notes: Hydroxychloroquine (Plaquenil)|Conventional DMARD (antimalarial)|Tablets 200 mg|200-400 mg PO daily (maximum 5 mg/kg/day actual body weight)|Rheumatoid arthritis (mild), lupus, malaria|Nausea, rash, headache, retinopathy with long use, QT prolongation|Known retinal disease, hypersensitivity; caution with QT-prolonging drugs|Retinal toxicity with long-term use (baseline and annual eye exams); cardiotoxicity and arrhythmia in overdose
+
+## Slide 71: Sulfasalazine (Azulfidine)
+- [heading] DRUG PROFILE
+- [heading] Sulfasalazine (Azulfidine)
+- **CONVENTIONAL DMARD**
+- [heading] FORMULATION
+- [heading] DOSE (ADULT)
+- [heading] INDICATIONS
+- Tablets 500 mg; DR 500 mg
+- [heading] 500 mg PO daily, titrate to 1,000 mg twice daily
+- Rheumatoid arthritis, ulcerative colitis
+- [heading] ADVERSE EFFECTS
+- [heading] CONTRAINDICATIONS
+- [heading] TOXICITY / OVERDOSE
+- Nausea, rash, headache, myelosuppression, hepatotoxicity, orange urine, reversible oligospermia
+- Sulfa or salicylate allergy, intestinal or urinary obstruction, porphyria; G6PD deficiency (caution)
+- Agranulocytosis and hemolysis; monitor CBC and liver tests
+- **Standard adult dosing for teaching; verify against current prescribing information.**
+
+> Speaker notes: Sulfasalazine (Azulfidine)|Conventional DMARD|Tablets 500 mg; DR 500 mg|500 mg PO daily, titrate to 1,000 mg twice daily|Rheumatoid arthritis, ulcerative colitis|Nausea, rash, headache, myelosuppression, hepatotoxicity, orange urine, reversible oligospermia|Sulfa or salicylate allergy, intestinal or urinary obstruction, porphyria; G6PD deficiency (caution)|Agranulocytosis and hemolysis; monitor CBC and liver tests
+
+## Slide 72: Leflunomide (Arava)
+- [heading] DRUG PROFILE
+- [heading] Leflunomide (Arava)
+- **CONVENTIONAL DMARD (DHODH INHIBITOR)**
+- [heading] FORMULATION
+- [heading] DOSE (ADULT)
+- [heading] INDICATIONS
+- Tablets 10/20 mg
+- [heading] 20 mg PO daily (loading 100 mg daily for 3 days optional)
+- Rheumatoid arthritis
+- [heading] ADVERSE EFFECTS
+- [heading] CONTRAINDICATIONS
+- [heading] TOXICITY / OVERDOSE
+- Diarrhea, hepatotoxicity, hypertension, alopecia, neuropathy, teratogenicity
+- Pregnancy, severe liver disease, concurrent hepatotoxic drugs
+- Boxed warning for hepatotoxicity and embryo-fetal toxicity; cholestyramine washout
+- **Standard adult dosing for teaching; verify against current prescribing information.**
+
+> Speaker notes: Leflunomide (Arava)|Conventional DMARD (DHODH inhibitor)|Tablets 10/20 mg|20 mg PO daily (loading 100 mg daily for 3 days optional)|Rheumatoid arthritis|Diarrhea, hepatotoxicity, hypertension, alopecia, neuropathy, teratogenicity|Pregnancy, severe liver disease, concurrent hepatotoxic drugs|Boxed warning for hepatotoxicity and embryo-fetal toxicity; cholestyramine washout
+
+## Slide 73: Adalimumab (Humira)
+- [heading] DRUG PROFILE
+- [heading] Adalimumab (Humira)
+- **BIOLOGIC DMARD (TNF INHIBITOR)**
+- [heading] FORMULATION
+- [heading] DOSE (ADULT)
+- [heading] INDICATIONS
+- Prefilled syringe or pen 40 mg/0.8 mL
+- [heading] 40 mg SC every other week (weekly for some patients)
+- Rheumatoid arthritis, psoriatic arthritis, ankylosing spondylitis, Crohn disease
+- [heading] ADVERSE EFFECTS
+- [heading] CONTRAINDICATIONS
+- [heading] TOXICITY / OVERDOSE
+- Injection-site reaction, infection, headache, rash, demyelination (rare), lymphoma (rare)
+- Active serious infection, untreated latent TB, demyelinating disease, NYHA III-IV heart failure
+- Boxed warning for serious infections and malignancy; screen for TB and hepatitis B before starting
+- **Standard adult dosing for teaching; verify against current prescribing information.**
+
+> Speaker notes: Adalimumab (Humira)|Biologic DMARD (TNF inhibitor)|Prefilled syringe or pen 40 mg/0.8 mL|40 mg SC every other week (weekly for some patients)|Rheumatoid arthritis, psoriatic arthritis, ankylosing spondylitis, Crohn disease|Injection-site reaction, infection, headache, rash, demyelination (rare), lymphoma (rare)|Active serious infection, untreated latent TB, demyelinating disease, NYHA III-IV heart failure|Boxed warning for serious infections and malignancy; screen for TB and hepatitis B before starting
+
+## Slide 74: Etanercept (Enbrel)
+- [heading] DRUG PROFILE
+- [heading] Etanercept (Enbrel)
+- **BIOLOGIC DMARD (SOLUBLE TNF RECEPTOR)**
+- [heading] FORMULATION
+- [heading] DOSE (ADULT)
+- [heading] INDICATIONS
+- Prefilled syringe or pen 25/50 mg; vial
+- [heading] 50 mg SC once weekly (or 25 mg twice weekly)
+- Rheumatoid arthritis, psoriatic arthritis, ankylosing spondylitis, plaque psoriasis
+- [heading] ADVERSE EFFECTS
+- [heading] CONTRAINDICATIONS
+- [heading] TOXICITY / OVERDOSE
+- Injection-site reaction, infection, headache, demyelination (rare)
+- Active serious infection, sepsis, untreated latent TB
+- Boxed warning for serious infections and malignancy; screen for TB and hepatitis B
+- **Standard adult dosing for teaching; verify against current prescribing information.**
+
+> Speaker notes: Etanercept (Enbrel)|Biologic DMARD (soluble TNF receptor)|Prefilled syringe or pen 25/50 mg; vial|50 mg SC once weekly (or 25 mg twice weekly)|Rheumatoid arthritis, psoriatic arthritis, ankylosing spondylitis, plaque psoriasis|Injection-site reaction, infection, headache, demyelination (rare)|Active serious infection, sepsis, untreated latent TB|Boxed warning for serious infections and malignancy; screen for TB and hepatitis B
+
+## Slide 75: Infliximab (Remicade)
+- [heading] DRUG PROFILE
+- [heading] Infliximab (Remicade)
+- **BIOLOGIC DMARD (CHIMERIC TNF ANTIBODY)**
+- [heading] FORMULATION
+- [heading] DOSE (ADULT)
+- [heading] INDICATIONS
+- IV vial 100 mg; biosimilars
+- [heading] 3 mg/kg IV at weeks 0, 2 and 6, then every 8 weeks, with methotrexate
+- Rheumatoid arthritis, Crohn disease, ulcerative colitis, ankylosing spondylitis
+- [heading] ADVERSE EFFECTS
+- [heading] CONTRAINDICATIONS
+- [heading] TOXICITY / OVERDOSE
+- Infusion reaction, infection, headache, anti-drug antibodies, hepatotoxicity
+- Active serious infection, untreated latent TB, NYHA III-IV heart failure at high dose
+- Boxed warning for serious infections and malignancy; infusion reactions treated by slowing or stopping
+- **Standard adult dosing for teaching; verify against current prescribing information.**
+
+> Speaker notes: Infliximab (Remicade)|Biologic DMARD (chimeric TNF antibody)|IV vial 100 mg; biosimilars|3 mg/kg IV at weeks 0, 2 and 6, then every 8 weeks, with methotrexate|Rheumatoid arthritis, Crohn disease, ulcerative colitis, ankylosing spondylitis|Infusion reaction, infection, headache, anti-drug antibodies, hepatotoxicity|Active serious infection, untreated latent TB, NYHA III-IV heart failure at high dose|Boxed warning for serious infections and malignancy; infusion reactions treated by slowing or stopping
+
+## Slide 76: Tocilizumab (Actemra)
+- [heading] DRUG PROFILE
+- [heading] Tocilizumab (Actemra)
+- **BIOLOGIC DMARD (IL-6 RECEPTOR ANTAGONIST)**
+- [heading] FORMULATION
+- [heading] DOSE (ADULT)
+- [heading] INDICATIONS
+- IV 20 mg/mL; SC prefilled syringe or pen 162 mg
+- [heading] IV 4-8 mg/kg every 4 weeks; SC 162 mg every other week to weekly
+- Rheumatoid arthritis, giant cell arteritis, systemic JIA
+- [heading] ADVERSE EFFECTS
+- [heading] CONTRAINDICATIONS
+- [heading] TOXICITY / OVERDOSE
+- Infection, elevated liver enzymes, neutropenia, hyperlipidemia, GI perforation (rare)
+- Active serious infection, untreated latent TB; caution with diverticulitis
+- Boxed warning for serious infections; monitor CBC, liver enzymes and lipids
+- **Standard adult dosing for teaching; verify against current prescribing information.**
+
+> Speaker notes: Tocilizumab (Actemra)|Biologic DMARD (IL-6 receptor antagonist)|IV 20 mg/mL; SC prefilled syringe or pen 162 mg|IV 4-8 mg/kg every 4 weeks; SC 162 mg every other week to weekly|Rheumatoid arthritis, giant cell arteritis, systemic JIA|Infection, elevated liver enzymes, neutropenia, hyperlipidemia, GI perforation (rare)|Active serious infection, untreated latent TB; caution with diverticulitis|Boxed warning for serious infections; monitor CBC, liver enzymes and lipids
+
+## Slide 77: Abatacept (Orencia)
+- [heading] DRUG PROFILE
+- [heading] Abatacept (Orencia)
+- **BIOLOGIC DMARD (T-CELL COSTIMULATION MODULATOR)**
+- [heading] FORMULATION
+- [heading] DOSE (ADULT)
+- [heading] INDICATIONS
+- IV 250 mg vial; SC prefilled syringe 125 mg
+- [heading] IV by weight (500-1,000 mg) at weeks 0, 2, 4 then every 4 weeks; SC 125 mg weekly
+- Rheumatoid arthritis, psoriatic arthritis, polyarticular JIA
+- [heading] ADVERSE EFFECTS
+- [heading] CONTRAINDICATIONS
+- [heading] TOXICITY / OVERDOSE
+- Headache, infection, nasopharyngitis, infusion reaction
+- Active serious infection; caution in COPD
+- Infection risk; do not combine with TNF inhibitors; screen for TB and hepatitis B
+- **Standard adult dosing for teaching; verify against current prescribing information.**
+
+> Speaker notes: Abatacept (Orencia)|Biologic DMARD (T-cell costimulation modulator)|IV 250 mg vial; SC prefilled syringe 125 mg|IV by weight (500-1,000 mg) at weeks 0, 2, 4 then every 4 weeks; SC 125 mg weekly|Rheumatoid arthritis, psoriatic arthritis, polyarticular JIA|Headache, infection, nasopharyngitis, infusion reaction|Active serious infection; caution in COPD|Infection risk; do not combine with TNF inhibitors; screen for TB and hepatitis B
+
+## Slide 78: Rituximab (Rituxan)
+- [heading] DRUG PROFILE
+- [heading] Rituximab (Rituxan)
+- **BIOLOGIC DMARD (ANTI-CD20 ANTIBODY)**
+- [heading] FORMULATION
+- [heading] DOSE (ADULT)
+- [heading] INDICATIONS
+- IV 100/500 mg vials
+- [heading] 1,000 mg IV on days 1 and 15, repeated no sooner than every 16-24 weeks, with methotrexate
+- Rheumatoid arthritis (after TNF inhibitor failure), lymphoma, vasculitis
+- [heading] ADVERSE EFFECTS
+- [heading] CONTRAINDICATIONS
+- [heading] TOXICITY / OVERDOSE
+- Infusion reaction, infection, hypogammaglobulinemia, hepatitis B reactivation
+- Active serious infection, severe heart failure; screen hepatitis B first
+- Boxed warnings for infusion reactions, hepatitis B reactivation and PML; premedicate with acetaminophen, antihistamine and steroid
+- **Standard adult dosing for teaching; verify against current prescribing information.**
+
+> Speaker notes: Rituximab (Rituxan)|Biologic DMARD (anti-CD20 antibody)|IV 100/500 mg vials|1,000 mg IV on days 1 and 15, repeated no sooner than every 16-24 weeks, with methotrexate|Rheumatoid arthritis (after TNF inhibitor failure), lymphoma, vasculitis|Infusion reaction, infection, hypogammaglobulinemia, hepatitis B reactivation|Active serious infection, severe heart failure; screen hepatitis B first|Boxed warnings for infusion reactions, hepatitis B reactivation and PML; premedicate with acetaminophen, antihistamine and steroid
+
+## Slide 79: Supporting Drugs at a Glance
+- [heading] CONTEXT
+- [heading] Supporting Drugs at a Glance
+- **PPIs and misoprostol**
+- **Warfarin and anticoagulants**
+- **ACE inhibitors, ARBs and diuretics**
+- GI protection with long-term NSAIDs
+- NSAIDs raise bleeding risk
+- NSAIDs add kidney injury ("triple whammy")
+- **Lithium**
+- **Systemic corticosteroids**
+- **Folic acid and leucovorin**
+- NSAIDs raise lithium levels
+- Flare bridge; bone loss and GI risk with NSAIDs
+- Lower methotrexate toxicity
+- **Isoniazid and rifampin**
+- **Tramadol and opioids**
+- **Live vaccines**
+- Latent TB treatment before biologics
+- Add-on analgesia for osteoarthritis
+- Avoid on biologic or immunosuppressive therapy
+- **Listed for context; not profiled in detail.**
+
+> Speaker notes: Supporting drugs: PPIs, warfarin, ACE inhibitors, lithium, steroids and live vaccines explain interactions.
+
+## Slide 80: Image Attribution
 - [heading] APPENDIX
 - [heading] Image Attribution
 - **●  Original figures in this deck:** Figures 1–3 (The Arachidonic Acid Pathway: Where Analgesics Act; Nonselective NSAIDs vs. COX-2 Selective Inhibition; Biologic DMARDs: Where Each Class Intercepts the Immune Cascade) were generated by the course director using the AI tool Claude to illustrate standard, non-copyrighted pharmacologic concepts. The mechanism diagrams added for acetaminophen (including the Rumack-Matthew nomogram schematic), methotrexate and celecoxib, and the NSAID, COX-1 vs. COX-2, conventional DMARD, biologic DMARD and drug-name nomenclature diagrams, are also original illustrative diagrams, created with AI assistance for this course. Companion diagrams for inflammatory mediators, NSAID adverse effects, osteoarthritis vs. rheumatoid arthritis, osteoarthritis pharmacotherapy, disease-modifying drug concepts and DMARD immunosuppression are original illustrative diagrams created with AI assistance for this course as well. They are original diagrams, not reproduced from Katzung’s Basic and Clinical Pharmacology or any other copyrighted source.
@@ -975,3 +1506,7 @@ Five points to repeat if time runs short:
 _[1 small image(s)/icons]_
 
 > Speaker notes: This slide documents AI-tool use for original figure generation per university citation requirements. It covers every original diagram in this deck (Figures 1–3); none are reproduced from any textbook.
+
+Instructor script:
+
+Point to the attribution: Figures 1–3 are original diagrams made with AI tools, not reproduced from any textbook.

@@ -2,7 +2,7 @@
 
 **Result: PASS ✅ nothing missing**
 
-Checked 2661 source lines (71 slides; 6 study-guide items; 51 textbook pages read; 31 textbook sentences used, the rest left out as not needed for this lecture (info only).)
+Checked 2662 source lines (71 slides; 6 study-guide items; 51 textbook pages read; 31 textbook sentences used, the rest left out as not needed for this lecture (info only).)
 
 ## Missing from the study materials
 - None ✅
@@ -25,6 +25,7 @@ Checked 2661 source lines (71 slides; 6 study-guide items; 51 textbook pages rea
 - S39: G6PD = glucose-6-phosphate dehydrogenase
 - S39: CYP / P-gp = cytochrome P450 / P-glycoprotein
 - S39: SSRI = selective serotonin reuptake inhibitor
+- S70: Appendix 2: DRUG PROFILE · SUPPORTING
 - SG:U3-S: next steps are discontinuing the supplement (or adjusting the warfarin dose) with close INR monitoring.
 - SG:U3-S: The preventive practice: ask every patient about supplement/OTC use at every visit, as a required part of medication reconciliation.
 
@@ -123,7 +124,7 @@ Checked 2661 source lines (71 slides; 6 study-guide items; 51 textbook pages rea
 - (skipped) p. 1203: Candy Tsourounis, PharmD — _Chapter author byline (no teaching content; no names on the site)_
 
 ## Emphasized on slides but not bold in deck
-- None ✅
+- S70: "Appendix 2: DRUG PROFILE · SUPPORTING" (bold, color)
 
 ## Facts that did not reach the deck / NotebookLM
 - None ✅

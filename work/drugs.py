@@ -616,31 +616,31 @@ for _d in DRUGS:
 import profiles as _profiles
 
 _MOA = {
-    "Omeprazole": ("Irreversibly inhibits the H⁺/K⁺-ATPase proton pump — the final common pathway of acid secretion (acid-activated prodrug, covalent bond).", "L05 S13-14; SG U3-R2"),
-    "Esomeprazole": ("PPI: irreversibly inhibits the H⁺/K⁺-ATPase proton pump (S-isomer of omeprazole).", "L05 S13; p. 1157"),
-    "Pantoprazole": ("PPI: irreversibly inhibits the H⁺/K⁺-ATPase proton pump.", "L05 S13"),
-    "Lansoprazole": ("PPI: irreversibly inhibits the H⁺/K⁺-ATPase proton pump.", "L05 S13"),
-    "Dexlansoprazole": ("PPI: irreversibly inhibits the H⁺/K⁺-ATPase proton pump (R-isomer of lansoprazole).", "L05 S13; p. 1157"),
-    "Famotidine": ("Competitively blocks histamine at the parietal-cell H2 receptor → less cAMP → less pump activity → less acid.", "L05 S11-12"),
-    "Cimetidine": ("Competitively blocks histamine at the parietal-cell H2 receptor.", "L05 S11-12"),
-    "Calcium carbonate": ("Antacid: directly neutralizes existing gastric acid; does not reduce acid production.", "L05 S10"),
-    "Magnesium hydroxide": ("Antacid: neutralizes existing acid; also an osmotic laxative (draws water into the lumen).", "L05 S10; L06 S4"),
-    "Aluminum hydroxide": ("Antacid: neutralizes existing acid; also binds phosphate.", "L05 S10; S45"),
-    "Sucralfate": ("Polymerizes in acid (pH below 4) and binds the ulcer base, forming a protective barrier; minimal systemic absorption.", "L05 S16-17; SG U3-R5"),
-    "Misoprostol": ("PGE1 analog: acts on EP receptors to cut acid and raise mucus and bicarbonate — restores the prostaglandin tone NSAIDs suppress.", "L05 S16-17; SG U3-R5"),
+    "Omeprazole": ("Irreversibly inhibits the H⁺/K⁺-ATPase proton pump — the final common pathway of acid secretion (acid-activated prodrug, covalent bond).", "L05 S15-16; SG U3-R2"),
+    "Esomeprazole": ("PPI: irreversibly inhibits the H⁺/K⁺-ATPase proton pump (S-isomer of omeprazole).", "L05 S15; p. 1157"),
+    "Pantoprazole": ("PPI: irreversibly inhibits the H⁺/K⁺-ATPase proton pump.", "L05 S15"),
+    "Lansoprazole": ("PPI: irreversibly inhibits the H⁺/K⁺-ATPase proton pump.", "L05 S15"),
+    "Dexlansoprazole": ("PPI: irreversibly inhibits the H⁺/K⁺-ATPase proton pump (R-isomer of lansoprazole).", "L05 S15; p. 1157"),
+    "Famotidine": ("Competitively blocks histamine at the parietal-cell H2 receptor → less cAMP → less pump activity → less acid.", "L05 S13-14"),
+    "Cimetidine": ("Competitively blocks histamine at the parietal-cell H2 receptor.", "L05 S13-14"),
+    "Calcium carbonate": ("Antacid: directly neutralizes existing gastric acid; does not reduce acid production.", "L05 S12"),
+    "Magnesium hydroxide": ("Antacid: neutralizes existing acid; also an osmotic laxative (draws water into the lumen).", "L05 S12; L06 S4"),
+    "Aluminum hydroxide": ("Antacid: neutralizes existing acid; also binds phosphate.", "L05 S12; S55"),
+    "Sucralfate": ("Polymerizes in acid (pH below 4) and binds the ulcer base, forming a protective barrier; minimal systemic absorption.", "L05 S20-21; SG U3-R5"),
+    "Misoprostol": ("PGE1 analog: acts on EP receptors to cut acid and raise mucus and bicarbonate — restores the prostaglandin tone NSAIDs suppress.", "L05 S20-21; SG U3-R5"),
     "Bismuth subsalicylate": ("Antisecretory, mild antimicrobial, and anti-inflammatory; coats ulcers.", "L06 S7; p. 1162"),
-    "Amoxicillin": ("Penicillin: blocks bacterial cell wall synthesis (H. pylori triple therapy).", "L05 S20; S22"),
-    "Clarithromycin": ("Macrolide: binds the 50S ribosome (H. pylori triple therapy).", "L05 S20 (notes)"),
-    "Metronidazole": ("Nitroimidazole: adds a second antibiotic mechanism in H. pylori regimens.", "L05 S20"),
-    "Tetracycline": ("Tetracycline antibiotic in bismuth quadruple therapy.", "L05 S19-20"),
-    "Ondansetron": ("Blocks serotonin 5-HT3 receptors on gut vagal afferents and the chemoreceptor trigger zone, so no signal reaches the vomiting center.", "L05 S24-25; SG U3-M"),
-    "Metoclopramide": ("D2 antagonism in the CTZ (antiemetic) plus D2 blockade and 5-HT4 agonism in the gut → more acetylcholine → faster gastric emptying (prokinetic).", "L05 S28-29; SG U3-M"),
-    "Aprepitant": ("Blocks substance P/neurokinin at NK1 receptors in the CTZ.", "L05 S24; SG U3-M"),
-    "Meclizine": ("Blocks histamine H1 (and acetylcholine) signals from the vestibular system.", "L05 S24; SG U3-M"),
-    "Scopolamine": ("Muscarinic antagonist: blocks acetylcholine from the vestibular system.", "L05 S24; S33; SG U3-M"),
-    "Prochlorperazine": ("Phenothiazine: blocks dopamine D2 at the CTZ (and other receptors).", "L05 S24; S33"),
-    "Dronabinol": ("Synthetic cannabinoid: activates CB1 receptors in the vomiting center and CTZ, reducing neurotransmitter release; also stimulates appetite — a pathway distinct from 5-HT3, D2, NK1, H1/M1.", "L05 S30-31; SG U3-M"),
-    "Dexamethasone": ("Corticosteroid that adds to other antiemetics in chemotherapy regimens.", "L05 S26; S33"),
+    "Amoxicillin": ("Penicillin: blocks bacterial cell wall synthesis (H. pylori triple therapy).", "L05 S24; S28"),
+    "Clarithromycin": ("Macrolide: binds the 50S ribosome (H. pylori triple therapy).", "L05 S24 (notes)"),
+    "Metronidazole": ("Nitroimidazole: adds a second antibiotic mechanism in H. pylori regimens.", "L05 S24"),
+    "Tetracycline": ("Tetracycline antibiotic in bismuth quadruple therapy.", "L05 S23-24"),
+    "Ondansetron": ("Blocks serotonin 5-HT3 receptors on gut vagal afferents and the chemoreceptor trigger zone, so no signal reaches the vomiting center.", "L05 S30-31; SG U3-M"),
+    "Metoclopramide": ("D2 antagonism in the CTZ (antiemetic) plus D2 blockade and 5-HT4 agonism in the gut → more acetylcholine → faster gastric emptying (prokinetic).", "L05 S36-37; SG U3-M"),
+    "Aprepitant": ("Blocks substance P/neurokinin at NK1 receptors in the CTZ.", "L05 S30; SG U3-M"),
+    "Meclizine": ("Blocks histamine H1 (and acetylcholine) signals from the vestibular system.", "L05 S30; SG U3-M"),
+    "Scopolamine": ("Muscarinic antagonist: blocks acetylcholine from the vestibular system.", "L05 S30; S43; SG U3-M"),
+    "Prochlorperazine": ("Phenothiazine: blocks dopamine D2 at the CTZ (and other receptors).", "L05 S30; S43"),
+    "Dronabinol": ("Synthetic cannabinoid: activates CB1 receptors in the vomiting center and CTZ, reducing neurotransmitter release; also stimulates appetite — a pathway distinct from 5-HT3, D2, NK1, H1/M1.", "L05 S38-39; SG U3-M"),
+    "Dexamethasone": ("Corticosteroid that adds to other antiemetics in chemotherapy regimens.", "L05 S32; S43"),
     "Polyethylene glycol 3350": ("Osmotic laxative: draws water into the lumen.", "L06 S4-5"),
     "Psyllium": ("Bulk-forming laxative: absorbs water, increases stool bulk and transit.", "L06 S4-5"),
     "Methylcellulose": ("Bulk-forming laxative: holds water and expands stool.", "L06 S4-5"),
@@ -665,26 +665,26 @@ _MOA = {
     "Fish oil": ("Omega-3 fatty acids; raise bleeding risk at high doses with anticoagulants.", "L06 S30; S69"),
 }
 _PT = {
-    "Omeprazole": [("Take 30-60 minutes before the first meal (works on actively secreting pumps).", "L05 S13-14"),
-                   ("Omeprazole and esomeprazole inhibit CYP2C19 and can blunt clopidogrel activation.", "L05 S13; SG U3-R4"),
-                   ("Long-term risks: C. difficile, fractures, hypomagnesemia, B12 deficiency, pneumonia, acute interstitial nephritis; rebound acid on stopping.", "L05 S14; SG U3-R3")],
-    "Esomeprazole": [("Like omeprazole, inhibits CYP2C19 (clopidogrel interaction).", "L05 S14")],
-    "Pantoprazole": [("Fewer CYP drug interactions than omeprazole — textbook: preferred with clopidogrel.", "L05 S38; p. 1161")],
-    "Famotidine": [("Most commonly used H2 blocker; minimal CYP450 interaction; renal dose adjustment; confusion risk in older adults.", "L05 S11-12")],
-    "Cimetidine": [("Potent CYP450 inhibitor (1A2, 2C19, 3A4) and antiandrogenic (gynecomastia) — raises warfarin, phenytoin, theophylline.", "L05 S11-12; S42")],
-    "Calcium carbonate": [("Separate from other oral drugs by at least 2 hours.", "L05 S10")],
-    "Magnesium hydroxide": [("Diarrhea; caution in renal impairment (magnesium accumulation).", "L05 S10; L06 S4")],
-    "Aluminum hydroxide": [("Constipating.", "L05 S10")],
-    "Sucralfate": [("Needs acid to activate — empty stomach, separated from antacids/PPIs and other drugs by 2 hours; aluminum accumulates in CKD.", "L05 S16-17")],
-    "Misoprostol": [("Contraindicated in pregnancy — potent uterotonic/abortifacient; diarrhea and cramping common.", "L05 S16-17; SG U3-R5")],
-    "Clarithromycin": [("Strong CYP3A4 inhibitor (statins); recent macrolide exposure raises resistance concern → bismuth quadruple therapy.", "L05 S19-21; SG U3-R6")],
-    "Metronidazole": [("Disulfiram-like reaction with alcohol; substitutes for amoxicillin with penicillin allergy.", "L05 S19; SG U3-R6")],
-    "Tetracycline": [("Avoid in pregnancy and children.", "L05 S19")],
-    "Amoxicillin": [("Penicillin allergy rules it out — substitute metronidazole or use bismuth quadruple therapy.", "L05 S19; S21; SG U3-R6")],
-    "Ondansetron": [("Give before chemotherapy; QT prolongation; CYP2D6 ultrarapid metabolizers may respond less well.", "L05 S25")],
-    "Metoclopramide": [("Boxed warning: tardive dyskinesia — avoid beyond 12 weeks; acute dystonia → diphenhydramine or benztropine; avoid in Parkinson disease; renal dosing; CYP2D6 poor metabolizers need lower doses.", "L05 S28-29; SG U3-R8")],
-    "Meclizine": [("Motion sickness is vestibular — H1/M1 blockers fit.", "L05 S27; SG U3-R7")],
-    "Dronabinol": [("Reserved for refractory CINV; dronabinol Schedule III, nabilone Schedule II; caution in older adults.", "L05 S30-31")],
+    "Omeprazole": [("Take 30-60 minutes before the first meal (works on actively secreting pumps).", "L05 S15-16"),
+                   ("Omeprazole and esomeprazole inhibit CYP2C19 and can blunt clopidogrel activation.", "L05 S15; SG U3-R4"),
+                   ("Long-term risks: C. difficile, fractures, hypomagnesemia, B12 deficiency, pneumonia, acute interstitial nephritis; rebound acid on stopping.", "L05 S16; SG U3-R3")],
+    "Esomeprazole": [("Like omeprazole, inhibits CYP2C19 (clopidogrel interaction).", "L05 S16")],
+    "Pantoprazole": [("Fewer CYP drug interactions than omeprazole — textbook: preferred with clopidogrel.", "L05 S48; p. 1161")],
+    "Famotidine": [("Most commonly used H2 blocker; minimal CYP450 interaction; renal dose adjustment; confusion risk in older adults.", "L05 S13-14")],
+    "Cimetidine": [("Potent CYP450 inhibitor (1A2, 2C19, 3A4) and antiandrogenic (gynecomastia) — raises warfarin, phenytoin, theophylline.", "L05 S13-14; S52")],
+    "Calcium carbonate": [("Separate from other oral drugs by at least 2 hours.", "L05 S12")],
+    "Magnesium hydroxide": [("Diarrhea; caution in renal impairment (magnesium accumulation).", "L05 S12; L06 S4")],
+    "Aluminum hydroxide": [("Constipating.", "L05 S12")],
+    "Sucralfate": [("Needs acid to activate — empty stomach, separated from antacids/PPIs and other drugs by 2 hours; aluminum accumulates in CKD.", "L05 S20-21")],
+    "Misoprostol": [("Contraindicated in pregnancy — potent uterotonic/abortifacient; diarrhea and cramping common.", "L05 S20-21; SG U3-R5")],
+    "Clarithromycin": [("Strong CYP3A4 inhibitor (statins); recent macrolide exposure raises resistance concern → bismuth quadruple therapy.", "L05 S23-25; SG U3-R6")],
+    "Metronidazole": [("Disulfiram-like reaction with alcohol; substitutes for amoxicillin with penicillin allergy.", "L05 S23; SG U3-R6")],
+    "Tetracycline": [("Avoid in pregnancy and children.", "L05 S23")],
+    "Amoxicillin": [("Penicillin allergy rules it out — substitute metronidazole or use bismuth quadruple therapy.", "L05 S23; S25; SG U3-R6")],
+    "Ondansetron": [("Give before chemotherapy; QT prolongation; CYP2D6 ultrarapid metabolizers may respond less well.", "L05 S31")],
+    "Metoclopramide": [("Boxed warning: tardive dyskinesia — avoid beyond 12 weeks; acute dystonia → diphenhydramine or benztropine; avoid in Parkinson disease; renal dosing; CYP2D6 poor metabolizers need lower doses.", "L05 S36-37; SG U3-R8")],
+    "Meclizine": [("Motion sickness is vestibular — H1/M1 blockers fit.", "L05 S33; SG U3-R7")],
+    "Dronabinol": [("Reserved for refractory CINV; dronabinol Schedule III, nabilone Schedule II; caution in older adults.", "L05 S38-39")],
     "Polyethylene glycol 3350": [("First-line for chronic constipation; fast, reliable onset.", "L06 S4-5")],
     "Psyllium": [("Slowest onset, safest long term; needs adequate fluids; avoid in obstruction.", "L06 S4-5")],
     "Senna": [("Short-term or breakthrough use; cramping.", "L06 S4-5")],
@@ -871,27 +871,27 @@ _IX.update({"Anastrozole": [("Bisphosphonates and calcium with vitamin D protect
             "Letrozole": [("Bisphosphonates and calcium with vitamin D protect bone.", "L11 S45")],
             "Bicalutamide": [("Combined with leuprolide (GnRH agonist) in prostate cancer.", "L11 S45")],
             "Flutamide": [("Combined with a GnRH agonist in prostate cancer.", "L11 S15; S45")]})
-_AM = ("Antimuscarinic: blocks M3 (and M2) receptors on the detrusor → fewer involuntary contractions, larger functional capacity.", "L12 S11-12; SG U6-R12")
-_AM_PT = [("Dry mouth, constipation, blurred vision, confusion (older adults); anticholinergic burden is cumulative; avoid in narrow-angle glaucoma and urinary retention.", "L12 S11")]
-_AM_IX = [("Other anticholinergics add burden; cholinesterase inhibitors (donepezil) oppose the effect.", "L12 S50")]
-_A1 = ("Alpha1 blocker: relaxes bladder-neck, prostatic and proximal-urethral smooth muscle → better urinary flow in BPH; the same receptors set vascular tone.", "L12 S17-18")
-_A1_IX = [("Additive hypotension with antihypertensives and PDE5 inhibitors.", "L12 S22; S50")]
-_P5 = ("PDE5 inhibitor: blocks cGMP breakdown, prolonging corpus cavernosum relaxation (needs sexual stimulation).", "L12 S22-23")
-_P5_PT = [("Absolute contraindication with any nitrate (or riociguat) — life-threatening hypotension; caution with alpha1 blockers; headache, flushing, dyspepsia.", "L12 S22; S24; SG U6-R16")]
-_P5_IX = [("Nitrates, riociguat: contraindicated. Strong CYP3A4 inhibitors (ketoconazole, clarithromycin) raise levels.", "L12 S22; S50")]
+_AM = ("Antimuscarinic: blocks M3 (and M2) receptors on the detrusor → fewer involuntary contractions, larger functional capacity.", "L12 S13-14; SG U6-R12")
+_AM_PT = [("Dry mouth, constipation, blurred vision, confusion (older adults); anticholinergic burden is cumulative; avoid in narrow-angle glaucoma and urinary retention.", "L12 S13")]
+_AM_IX = [("Other anticholinergics add burden; cholinesterase inhibitors (donepezil) oppose the effect.", "L12 S58")]
+_A1 = ("Alpha1 blocker: relaxes bladder-neck, prostatic and proximal-urethral smooth muscle → better urinary flow in BPH; the same receptors set vascular tone.", "L12 S21-22")
+_A1_IX = [("Additive hypotension with antihypertensives and PDE5 inhibitors.", "L12 S26; S58")]
+_P5 = ("PDE5 inhibitor: blocks cGMP breakdown, prolonging corpus cavernosum relaxation (needs sexual stimulation).", "L12 S26-27")
+_P5_PT = [("Absolute contraindication with any nitrate (or riociguat) — life-threatening hypotension; caution with alpha1 blockers; headache, flushing, dyspepsia.", "L12 S26; S28; SG U6-R16")]
+_P5_IX = [("Nitrates, riociguat: contraindicated. Strong CYP3A4 inhibitors (ketoconazole, clarithromycin) raise levels.", "L12 S26; S58")]
 _MOA.update({"Oxybutynin": _AM, "Tolterodine": _AM, "Solifenacin": _AM, "Darifenacin": _AM,
-             "Mirabegron": ("Beta3 agonist: enhances detrusor relaxation during filling, with no anticholinergic activity.", "L12 S13; SG U6-R13"),
+             "Mirabegron": ("Beta3 agonist: enhances detrusor relaxation during filling, with no anticholinergic activity.", "L12 S15; SG U6-R13"),
              "Tamsulosin": _A1, "Silodosin": _A1, "Doxazosin": _A1, "Terazosin": _A1, "Sildenafil": _P5, "Tadalafil": _P5, "Vardenafil": _P5})
-_PT.update({"Oxybutynin": [("Highest CNS anticholinergic burden of the class — avoid in older adults or dementia risk; switch to mirabegron if confused.", "L12 S11; S15"), *_AM_PT],
-            "Tolterodine": _AM_PT, "Solifenacin": [*_AM_PT, ("Strong CYP3A4 inhibitors raise levels.", "L12 S50")], "Darifenacin": _AM_PT,
-            "Mirabegron": [("Preferred in older adults or patients on other anticholinergics; may raise blood pressure; can combine with an antimuscarinic.", "L12 S13; S15")],
-            "Tamsulosin": [("Uroselective — less vascular effect; still orthostasis, first-dose effect, floppy iris in cataract surgery.", "L12 S17; SG U6-R14")],
-            "Silodosin": [("Highly uroselective; avoid with CrCl below 30 mL/min.", "L12 S17; S42")],
-            "Doxazosin": [("Less selective — lowers blood pressure more; first dose at bedtime (first-dose hypotension).", "L12 S17")],
-            "Terazosin": [("Less selective — lowers blood pressure more; first-dose effect.", "L12 S17")],
-            "Sildenafil": [*_P5_PT, ("Blue-tinged vision.", "L12 S22")], "Tadalafil": [*_P5_PT, ("Longer half-life, flexible dosing.", "L12 S22")], "Vardenafil": _P5_PT})
+_PT.update({"Oxybutynin": [("Highest CNS anticholinergic burden of the class — avoid in older adults or dementia risk; switch to mirabegron if confused.", "L12 S13; S17"), *_AM_PT],
+            "Tolterodine": _AM_PT, "Solifenacin": [*_AM_PT, ("Strong CYP3A4 inhibitors raise levels.", "L12 S58")], "Darifenacin": _AM_PT,
+            "Mirabegron": [("Preferred in older adults or patients on other anticholinergics; may raise blood pressure; can combine with an antimuscarinic.", "L12 S15; S17")],
+            "Tamsulosin": [("Uroselective — less vascular effect; still orthostasis, first-dose effect, floppy iris in cataract surgery.", "L12 S21; SG U6-R14")],
+            "Silodosin": [("Highly uroselective; avoid with CrCl below 30 mL/min.", "L12 S21; S50")],
+            "Doxazosin": [("Less selective — lowers blood pressure more; first dose at bedtime (first-dose hypotension).", "L12 S21")],
+            "Terazosin": [("Less selective — lowers blood pressure more; first-dose effect.", "L12 S21")],
+            "Sildenafil": [*_P5_PT, ("Blue-tinged vision.", "L12 S26")], "Tadalafil": [*_P5_PT, ("Longer half-life, flexible dosing.", "L12 S26")], "Vardenafil": _P5_PT})
 _IX.update({"Oxybutynin": _AM_IX, "Tolterodine": _AM_IX, "Solifenacin": _AM_IX, "Darifenacin": _AM_IX,
-            "Mirabegron": [("Inhibits CYP2D6.", "L12 S13 (notes)")], "Tamsulosin": _A1_IX, "Silodosin": _A1_IX, "Doxazosin": _A1_IX, "Terazosin": _A1_IX,
+            "Mirabegron": [("Inhibits CYP2D6.", "L12 S15 (notes)")], "Tamsulosin": _A1_IX, "Silodosin": _A1_IX, "Doxazosin": _A1_IX, "Terazosin": _A1_IX,
             "Sildenafil": _P5_IX, "Tadalafil": _P5_IX, "Vardenafil": _P5_IX})
 _SSA = ("Somatostatin analog: binds somatostatin receptors and lowers GH release (IGF-1 falls).", "L07 S6-7")
 _DA = ("Dopamine D2 agonist (ergot-derived): restores dopamine’s brake on prolactin; tumor often shrinks.", "L07 S8-9; SG U4-R3")
@@ -940,14 +940,16 @@ _IX.update({
     "Hydrocortisone": [("Azole antifungals raise exposure (CYP3A4); insulin and oral agents need adjusting.", "L07 S52")],
 })
 _SAME = {"calcium carbonate or citrate": "calcium carbonate"}
-_UNIT = {"L05": 3, "L06": 3, "L07": 4, "L08": 4, "L09": 5, "L10": 5, "L11": 6, "L12": 6}
-_TAG = {"L05": "GI", "L06": "GI & nutrition", "L07": "Endocrine", "L08": "Endocrine", "L09": "Renal", "L10": "Cardiorenal", "L11": "Reproductive", "L12": "Genitourinary"}
-for _lec in ("L05", "L06", "L07", "L08", "L09", "L10", "L11", "L12"):
+_UNIT = {"L03": 2, "L04": 2, "L05": 3, "L06": 3, "L07": 4, "L08": 4, "L09": 5, "L10": 5, "L11": 6, "L12": 6}
+_TAG = {"L03": "Musculoskeletal", "L04": "Musculoskeletal", "L05": "GI", "L06": "GI & nutrition", "L07": "Endocrine", "L08": "Endocrine", "L09": "Renal", "L10": "Cardiorenal", "L11": "Reproductive", "L12": "Genitourinary"}
+for _lec in ("L03", "L04", "L05", "L06", "L07", "L08", "L09", "L10", "L11", "L12"):
     for _p in _profiles.read(_lec):
         _c = f"{_lec} S{_p['slide']}"
         _f = [("ind", _p.get("ind"), _c), ("ae", _p.get("ae"), _c), ("contra", _p.get("contra"), _c),
               ("ae", "Toxicity/overdose: " + _p["tox"] if _p.get("tox") else None, _c),
               ("extra", f"Formulation: {_p.get('form', '')}. Adult dose: {_p.get('dose', '')}.", _c)]
+        if _lec in ("L03", "L04"):  # these cards were written in full from the lecture; the profiles add dosing, toxicity and profile contraindications
+            _f = [("contra", "Profile contraindications: " + _p["contra"] if _p.get("contra") else None, _c), _f[3], _f[4]]
         if _p["name"] in _MOA:
             _f.insert(0, ("moa", *_MOA[_p["name"]]))
         _f += [("pt", t, s) for t, s in _PT.get(_p["name"], [])]

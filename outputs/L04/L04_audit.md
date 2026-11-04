@@ -2,12 +2,48 @@
 
 **Result: PASS ✅ nothing missing**
 
-Checked 2676 source lines (72 slides; 7 study-guide items; 69 textbook pages read; 63 textbook sentences used, the rest left out as not needed for this lecture (info only).)
+Checked 2899 source lines (90 slides; 7 study-guide items; 69 textbook pages read; 63 textbook sentences used, the rest left out as not needed for this lecture (info only).)
 
 ## Missing from the study materials
 - None ✅
 
 ## Covered but cited to a different slide/page (check citation)
+- S2: Today has three stories: crystals, muscle tone and bone balance.
+- S3: Section transition.
+- S3: Gout is a crystal-driven arthritis with two very different treatment phases, so we start with how uric acid becomes crystals.
+- S5: Each drug targets one step.
+- S7: Prompt: have students decide which drug lowers uric acid production and which increases renal excretion before you reveal the answer.
+- S20: Section transition.
+- S20: Next, skeletal muscle relaxants: different drugs quiet spasm, spasticity and rigidity by acting at different sites.
+- S38: Pair students: name the first-line class and the biggest safety check.
+- S39: Section transition.
+- S62: Pair students: name the first-line class and the biggest safety check.
+- S67: Pair students: name the first-line class and the biggest safety check.
+- S68: Pair students: name the first-line class and the biggest safety check.
+- S72: Study reference for the drugs covered in Session 2
+- S72: Know the dose logic, the serious adverse effects, the contraindication that changes decisions and the toxicity you would need to recognize.
+- S72: Class activity (10 minutes): groups teach back two or three profiles in 60 seconds each.
+- S72: Teaching points: gout agents, central relaxants, dantrolene, bisphosphonates, denosumab, teriparatide, raloxifene.
+- S72: Understand: explain why allopurinol does not treat a flare.
+- S72: Apply: counsel on alendronate.
+- S72: Analyze: explain tizanidine with ciprofloxacin.
+- S72: Evaluate: choose osteoporosis therapy in CKD.
+- S74: Standard adult dosing for teaching; verify against current prescribing information.
+- S75: Standard adult dosing for teaching; verify against current prescribing information.
+- S76: Standard adult dosing for teaching; verify against current prescribing information.
+- S77: Standard adult dosing for teaching; verify against current prescribing information.
+- S78: Standard adult dosing for teaching; verify against current prescribing information.
+- S79: Standard adult dosing for teaching; verify against current prescribing information.
+- S80: Standard adult dosing for teaching; verify against current prescribing information.
+- S81: Standard adult dosing for teaching; verify against current prescribing information.
+- S82: Standard adult dosing for teaching; verify against current prescribing information.
+- S83: Standard adult dosing for teaching; verify against current prescribing information.
+- S84: Standard adult dosing for teaching; verify against current prescribing information.
+- S85: Standard adult dosing for teaching; verify against current prescribing information.
+- S86: Standard adult dosing for teaching; verify against current prescribing information.
+- S87: Standard adult dosing for teaching; verify against current prescribing information.
+- S88: Standard adult dosing for teaching; verify against current prescribing information.
+- S90: Point out the AI-tool disclosure for the original figures before closing.
 - SG:U2-M: For each drug, write its primary mechanism of action.
 
 ## Left out on purpose (no study content)
@@ -21,7 +57,10 @@ Checked 2676 source lines (72 slides; 7 study-guide items; 69 textbook pages rea
 - S56: Ask students to sort each named drug into "inhibits resorption" vs. — _teaching instruction; the sort is the Figure 8 interactive_
 - S56: "stimulates formation" before revealing the diagram’s labels. — _teaching instruction (second half of the sorting prompt)_
 - S71: Encourage students to revisit this quiz on their own before the exam — it is designed as a standalone recall r — _teaching instruction_
-- S72: This slide documents AI-tool use for original figure generation per university citation requirements. — _administrative note on AI-tool citation_
+- S72: Bloom's prompts: Remember: state colchicine dosing. — _teaching instruction (Bloom's prompts)_
+- S89: Listed for context; not profiled in detail. — _table note; stated in the supporting-drugs table title_
+- S89: Supporting drugs at a glance. — _speaker-note restatement of the supporting-drugs table_
+- S90: This slide documents AI-tool use for original figure generation per university citation requirements. — _administrative note on AI-tool citation_
 
 ## Assigned-reading sections not taught in the guide
 - None ✅
