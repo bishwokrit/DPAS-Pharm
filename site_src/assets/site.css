@@ -2010,3 +2010,6 @@ figure.vz-arrive { animation: vz-arrive 1.3s cubic-bezier(.2,.8,.2,1); }
 .vz-sc-cb1 { fill: none; stroke: var(--vz-2); stroke-width: 2; stroke-dasharray: 4 4; }
 .vz-sc-food { fill: var(--vz-3); }
 @media (max-width: 560px) { .vz-chip { font-size: 13px; padding: 7px 12px 7px 9px; } }
+.vz-top .vz-style { flex: none; padding: 2px; border-radius: 99px; }
+.vz-top .vz-style button { font: 600 12px var(--font); padding: 4px 11px; border-radius: 99px; }
+@media (max-width: 560px) { .vz-top { flex-wrap: wrap; } .vz-top .vz-hint { flex-basis: 100%; order: 9; } }

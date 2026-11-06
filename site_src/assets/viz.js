@@ -550,12 +550,27 @@
   };
 
   // ---- enhance every figure that has an interactive twin; the original image stays one tap away
+  // Picture (physiology scene) or Words (labelled pathway): one choice for the whole site, remembered on this device
+  const STYLE_K = "vz:style", getStyle = () => { try { return localStorage.getItem(STYLE_K) || "pic"; } catch { return "pic"; } };
   function enhance(fig) {
-    const key = fig.dataset.viz, make = V[key];
+    const hasAlt = fig.dataset.vizAlt && V[fig.dataset.vizAlt], words = hasAlt && getStyle() === "words";
+    const key = words ? fig.dataset.vizAlt : fig.dataset.viz, make = V[key];
     if (!make || fig.dataset.vizOn) return;
     fig.dataset.vizOn = 1;
-    let cfg = {}; try { cfg = JSON.parse(fig.dataset.vizCfg || "{}"); } catch { /* bad config: defaults */ }
+    let cfg = {}; try { cfg = JSON.parse((words ? fig.dataset.vizAltCfg : fig.dataset.vizCfg) || "{}"); } catch { /* bad config: defaults */ }
     make(fig, cfg);
+    if (hasAlt) {
+      const sw = document.createElement("div");
+      sw.className = "seg vz-style"; sw.setAttribute("role", "group"); sw.setAttribute("aria-label", "Diagram style");
+      sw.innerHTML = `<button type="button" data-s="pic" class="${words ? "" : "on"}" title="Physiology picture you can play with">Picture</button><button type="button" data-s="words" class="${words ? "on" : ""}" title="Labelled boxes and arrows">Words</button>`;
+      fig.querySelector(".vz-top")?.insertBefore(sw, fig.querySelector(".vz-top .vz-pager, .vz-top .vz-reset"));
+      sw.onclick = (e) => {
+        const b = e.target.closest("[data-s]");
+        if (!b || b.classList.contains("on")) return;
+        try { localStorage.setItem(STYLE_K, b.dataset.s); } catch { /* private mode: this page only */ }
+        document.querySelectorAll("figure[data-viz-alt][data-viz-on]").forEach((f) => { f.querySelector(".viz")?.remove(); f.querySelector(".vz-back")?.remove(); f.classList.remove("vz-orig"); delete f.dataset.vizOn; enhance(f); });
+      };
+    }
     const t = fig.querySelector(".vz-swap");
     t.onclick = () => { const o = fig.classList.toggle("vz-orig"); t.textContent = o ? "Interactive" : "Original"; };
     // with the original showing, the header stays so you can switch back

@@ -70,7 +70,7 @@ LINES = [
     {"t": "Practice isn't the thing you do once you're good. It's the thing you do that makes you good.", "by": "Malcolm Gladwell"},
     {"t": "Energy and persistence conquer all things. Including renal dosing.", "by": "Benjamin Franklin"},
     {"t": "Diligence is the mother of good luck. Nobody gets lucky on a pharm final.", "by": "Benjamin Franklin"},
-    {"t": "It always seems impossible until it's done. Unit 1 did too, a week ago.", "by": "Nelson Mandela"},
+    {"t": "It always seems impossible until it's done. So did every unit you've already finished.", "by": "Nelson Mandela (attributed)"},
     {"t": "A river cuts through rock not because of its power, but because of its persistence. Keep dosing.", "by": "Jim Watkins"},
     {"t": "Fall seven times, stand up eight. Every missed question shows you exactly where to aim next.", "by": "Japanese proverb"},
     {"t": "Talent doesn't titrate the dose. Practice does. Every question you answer today is one less guess at the bedside."},

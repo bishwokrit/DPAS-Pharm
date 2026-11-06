@@ -287,7 +287,14 @@
   if (td && tp) {
     const list = JSON.parse(td.textContent);
     const pick = list.length ? list[closest(list.map((x) => x.date))] : null;
-    if (pick) tp.textContent = pick.text;
+    if (pick) {
+      // the teaser is written as "Today: …"; say when that lecture really is
+      const t0 = new Date(); t0.setHours(0, 0, 0, 0);
+      const ld = new Date(pick.date + "T00:00"), d = Math.round((t0 - ld) / 864e5);
+      const wd = ld.toLocaleDateString(undefined, { weekday: "long" });
+      const when = d === 0 ? "Today" : d === 1 ? "Yesterday" : d === -1 ? "Tomorrow" : d < 0 ? `Coming up ${wd}` : `Last ${wd}`;
+      tp.textContent = pick.text.replace(/^Today:/, `${when}:`);
+    }
   }
 
   // home: a lecture with several hands-on figures shows one at a time; the dots switch, and after 2 minutes without

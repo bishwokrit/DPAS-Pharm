@@ -75,10 +75,17 @@ def _scenes():
 def viz_attrs(fig, lid=None):
     """data-viz picks the figure's interactive version: a physiology scene (work/scenes.py) when there is one, else a
     reusable type named in its "viz" field, or one built for that image."""
-    v = (_scenes().get(lid) or {}).get(fig["image"]) or fig.get("viz") or {}
+    scene = (_scenes().get(lid) or {}).get(fig["image"])
+    v = scene or fig.get("viz") or {}
     key = v.get("type") or re.sub(r"_1$", "", fig["image"].rsplit(".", 1)[0])
     cfg = {k: x for k, x in v.items() if k != "type"}
-    return f'data-viz="{key}"' + (f" data-viz-cfg='{html.escape(json.dumps(cfg, ensure_ascii=False), quote=True)}'" if cfg else "")
+    out = f'data-viz="{key}"' + (f" data-viz-cfg='{html.escape(json.dumps(cfg, ensure_ascii=False), quote=True)}'" if cfg else "")
+    # the word-style diagram stays available: the reader picks Picture or Words (remembered site-wide)
+    alt = fig.get("viz") or {}
+    if scene and alt.get("type"):
+        acfg = {k: x for k, x in alt.items() if k != "type"}
+        out += f' data-viz-alt="{alt["type"]}" data-viz-alt-cfg=\'{html.escape(json.dumps(acfg, ensure_ascii=False), quote=True)}\''
+    return out
 
 
 def slug(text):
