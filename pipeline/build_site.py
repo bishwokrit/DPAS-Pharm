@@ -78,7 +78,7 @@ def viz_attrs(fig, lid=None):
     v = (_scenes().get(lid) or {}).get(fig["image"]) or fig.get("viz") or {}
     key = v.get("type") or re.sub(r"_1$", "", fig["image"].rsplit(".", 1)[0])
     cfg = {k: x for k, x in v.items() if k != "type"}
-    return f'data-viz="{key}"' + (f" data-viz-cfg='{html.escape(json.dumps(cfg, ensure_ascii=False), quote=False)}'" if cfg else "")
+    return f'data-viz="{key}"' + (f" data-viz-cfg='{html.escape(json.dumps(cfg, ensure_ascii=False), quote=True)}'" if cfg else "")
 
 
 def slug(text):
