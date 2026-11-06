@@ -1937,3 +1937,76 @@ figure.vz-arrive { animation: vz-arrive 1.3s cubic-bezier(.2,.8,.2,1); }
 @keyframes fc-pulse { 50% { opacity: .55; } }
 @media (prefers-reduced-motion: reduce) { .fc-listen { animation: none; } }
 .fc-study [hidden] { display: none !important; }
+
+/* quiz hints */
+.qm-hintbox { margin: -6px 0 18px; display: grid; gap: 10px; justify-items: start; }
+.qm-hintcard { width: 100%; background: var(--warn-soft); border-radius: 14px; padding: 12px 16px; display: grid; gap: 6px; font-size: 16px; line-height: 1.5; }
+.qm-hintcard .label { font-size: 12px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase; color: var(--warn); }
+.qm-blank { display: inline-block; min-width: 3.2em; border-bottom: 2px solid currentColor; color: transparent; line-height: 1; }
+.qm-opt.out { opacity: .38; text-decoration: line-through; }
+
+/* ---------------------------------------------------------------- physiology scenes (scenes.js) */
+.vz-scene svg { cursor: default; touch-action: auto; }
+.vz-scene svg.vz-drop { outline: 2px dashed color-mix(in srgb, var(--vz-1) 60%, transparent); outline-offset: 6px; border-radius: 18px; }
+.vz-modes { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin: 0 0 10px; }
+.vz-tray { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 0; }
+.vz-chip { display: inline-flex; align-items: center; gap: 8px; border: 1.5px solid color-mix(in srgb, var(--c) 45%, transparent); background: var(--surface); color: var(--text);
+  font: 600 13.5px var(--font); padding: 8px 14px 8px 10px; border-radius: 99px; cursor: grab; touch-action: none; user-select: none; -webkit-user-select: none;
+  transition: background .2s, border-color .2s, transform .15s, box-shadow .2s; }
+.vz-chip i { width: 18px; height: 10px; border-radius: 5px; background: linear-gradient(90deg, var(--c) 50%, color-mix(in srgb, var(--c) 35%, #fff) 50%); flex: none; }
+.vz-chip:hover { box-shadow: 0 4px 14px color-mix(in srgb, var(--c) 25%, transparent); }
+.vz-chip:active { cursor: grabbing; transform: scale(.97); }
+.vz-chip.on { background: color-mix(in srgb, var(--c) 16%, var(--surface)); border-color: var(--c); }
+.vz-chip.on::after { content: "✓"; font-size: 12px; color: var(--c); margin-left: 2px; }
+.vz-ghost { position: fixed; z-index: 200; pointer-events: none; transform: translate(-50%, -60%) rotate(-4deg) scale(1.06); box-shadow: 0 12px 30px rgba(0,0,0,.25); }
+.vz-meter-t { display: block; margin-top: 6px; color: var(--text); font-weight: 500; }
+.vz-hide { opacity: 0; pointer-events: none; }
+.vz-scene svg * { transition: opacity .45s ease, fill .4s ease; }
+.vz-sc-l, .vz-sc-s, .vz-sc-r, .vz-sc-h, .vz-sc-m, .vz-sc-wl, .vz-sc-bt { font-family: var(--font); }
+.vz-sc-h { font-size: 13px; font-weight: 700; fill: var(--vz-text); letter-spacing: .01em; }
+.vz-sc-s { font-size: 11.5px; font-weight: 500; fill: var(--vz-ink); }
+.vz-sc-r { font-size: 12px; font-weight: 600; fill: var(--vz-text); }
+.vz-sc-m { font-size: 11px; font-weight: 600; fill: var(--vz-ink); font-style: italic; }
+.vz-sc-red { fill: var(--vz-2); } .vz-sc-green { fill: var(--vz-5); }
+.vz-sc-win { font-size: 15px; }
+.vz-sc-lumen { fill: color-mix(in srgb, var(--vz-2) 6%, var(--vz-bg)); }
+.vz-sc-cell { fill: color-mix(in srgb, var(--vz-4) 7%, var(--vz-bg)); stroke: color-mix(in srgb, var(--vz-4) 45%, transparent); stroke-width: 2; }
+.vz-sc-cell2 { fill: none; stroke: color-mix(in srgb, var(--vz-4) 30%, transparent); stroke-width: 1; stroke-dasharray: 2 4; }
+.vz-sc-nuc { fill: color-mix(in srgb, var(--vz-4) 14%, var(--vz-bg)); stroke: color-mix(in srgb, var(--vz-4) 35%, transparent); }
+.vz-sc-src { fill: color-mix(in srgb, var(--c) 18%, var(--vz-bg)); stroke: var(--c); stroke-width: 1.6; }
+.vz-sc-nerve { stroke: var(--vz-5); stroke-width: 3; fill: none; stroke-linecap: round; opacity: .6; }
+.vz-sc-rec { fill: none; stroke: var(--c); stroke-width: 3.2; stroke-linecap: round; }
+.vz-sc-path { fill: none; stroke: color-mix(in srgb, var(--vz-3) 40%, transparent); stroke-width: 1.4; stroke-dasharray: 3 5; }
+.vz-sc-pump { fill: color-mix(in srgb, var(--vz-2) 16%, var(--vz-bg)); stroke: var(--vz-2); stroke-width: 2; }
+.vz-sc-rotor { stroke: var(--vz-2); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; fill: none; transition: none !important; } .vz-sc-rotor.k { stroke: var(--vz-5); }
+.vz-idle .vz-sc-pump { fill: var(--vz-bg); stroke: var(--vz-ink); stroke-dasharray: 3 3; } .vz-idle .vz-sc-rotor { stroke: var(--vz-ink); }
+.vz-sc-lock { fill: var(--vz-3); } .vz-sc-lockarc { fill: none; stroke: var(--vz-3); stroke-width: 2.2; }
+.vz-sc-ion { font: 700 10.5px var(--font); fill: var(--vz-2); }
+.vz-sc-base { fill: var(--vz-5); opacity: .7; }
+.vz-sc-mtrack { fill: color-mix(in srgb, var(--vz-text) 7%, transparent); }
+.vz-sc-mfill { fill: var(--vz-2); opacity: .8; transition: none !important; }
+.vz-bk-c { filter: drop-shadow(0 2px 3px rgba(0,0,0,.25)); }
+.vz-block { transition: opacity .35s ease; }
+.vz-sc-fulcrum { fill: color-mix(in srgb, var(--vz-text) 14%, var(--vz-bg)); }
+.vz-sc-ground { fill: color-mix(in srgb, var(--vz-text) 10%, transparent); }
+.vz-sc-beam { fill: color-mix(in srgb, var(--vz-text) 55%, var(--vz-bg)); }
+.vz-sc-wt rect { fill: color-mix(in srgb, var(--c) 18%, var(--vz-bg)); stroke: var(--c); stroke-width: 1.5; }
+.vz-sc-wt.drug rect { stroke-dasharray: 5 3; }
+.vz-sc-wl { font-size: 11.5px; font-weight: 600; fill: var(--vz-text); }
+.vz-sc-mucus { fill: color-mix(in srgb, var(--vz-5) 14%, var(--vz-bg)); }
+.vz-sc-epi { fill: color-mix(in srgb, var(--vz-2) 12%, var(--vz-bg)); stroke: color-mix(in srgb, var(--vz-2) 30%, transparent); }
+.vz-sc-bug { fill: none; stroke: var(--vz-3); stroke-width: 4; stroke-linecap: round; }
+.vz-sc-flag { fill: none; stroke: var(--vz-3); stroke-width: 1.2; }
+.vz-sc-nh3 { font: 600 8.5px var(--font); fill: var(--vz-ink); }
+.vz-sc-brain { fill: color-mix(in srgb, var(--vz-4) 8%, var(--vz-bg)); stroke: color-mix(in srgb, var(--vz-4) 40%, transparent); stroke-width: 1.6; }
+.vz-sc-vc { fill: color-mix(in srgb, var(--vz-2) 14%, var(--vz-bg)); stroke: var(--vz-2); stroke-width: 1.6; }
+.vz-sc-vcg { fill: var(--vz-2); transition: none !important; }
+.vz-sc-ear, .vz-sc-stomach { fill: color-mix(in srgb, var(--vz-3) 10%, var(--vz-bg)); stroke: color-mix(in srgb, var(--vz-3) 55%, transparent); stroke-width: 2; }
+.vz-sc-ear { fill: none; stroke-width: 3; stroke-linecap: round; }
+.vz-sc-nervep { fill: none; stroke: color-mix(in srgb, var(--vz-text) 18%, transparent); stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+.vz-sc-badge rect { fill: var(--vz-bg); stroke: color-mix(in srgb, var(--vz-text) 25%, transparent); }
+.vz-sc-badge.vz-dim { opacity: .35; }
+.vz-sc-bt { font-size: 10.5px; font-weight: 700; fill: var(--vz-text); }
+.vz-sc-cb1 { fill: none; stroke: var(--vz-2); stroke-width: 2; stroke-dasharray: 4 4; }
+.vz-sc-food { fill: var(--vz-3); }
+@media (max-width: 560px) { .vz-chip { font-size: 13px; padding: 7px 12px 7px 9px; } }

@@ -12,6 +12,10 @@ def body(slide):
     return [it["text"].strip() for it in slide["items"] if not it.get("heading")]
 
 
+def _norm(t):
+    return re.sub(r"[^a-z0-9]+", " ", t.lower()).strip()
+
+
 def quick_checks(slides):
     out = []
     for i, s in enumerate(slides[:-1]):
@@ -23,8 +27,12 @@ def quick_checks(slides):
         letters = [it["text"].strip() for it in nxt["items"] if re.fullmatch(r"[A-E]", it["text"].strip())]
         ans_items = body(nxt)
         why = next((t for t in ans_items if t.startswith("Why:")), "")
-        out.append({"src": f"S{s['slide']}-{nxt['slide']}", "stem": stem,
-                    "options": dict(zip("ABCDE", opts)), "answer": letters[0] if letters else "",
+        options = dict(zip("ABCDE", opts))
+        # trust the answer's words over its letter: a slide can carry the right text under the wrong letter
+        stated = next((t for t in ans_items if not t.startswith("Why:")), "")
+        by_text = [L for L, o in options.items() if _norm(o) and (_norm(o) == _norm(stated) or _norm(o) in _norm(stated))]
+        answer = by_text[0] if len(by_text) == 1 else (letters[0] if letters else "")
+        out.append({"src": f"S{s['slide']}-{nxt['slide']}", "stem": stem, "options": options, "answer": answer,
                     "why": why.replace("Why:", "", 1).strip()})
     return out
 
