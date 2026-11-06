@@ -76,6 +76,8 @@ def viz_attrs(fig, lid=None):
     """data-viz picks the figure's interactive version: a physiology scene (work/scenes.py) when there is one, else a
     reusable type named in its "viz" field, or one built for that image."""
     scene = (_scenes().get(lid) or {}).get(fig["image"])
+    if not scene and (fig.get("viz") or {}).get("type") == "pathway":  # every labelled pathway also gets its pictured version
+        scene = {**fig["viz"], "type": "factory"}
     v = scene or fig.get("viz") or {}
     key = v.get("type") or re.sub(r"_1$", "", fig["image"].rsplit(".", 1)[0])
     cfg = {k: x for k, x in v.items() if k != "type"}

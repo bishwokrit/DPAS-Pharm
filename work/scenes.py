@@ -72,3 +72,208 @@ SCENES = {
                       "read": "Drag dronabinol onto the vomiting center."},
     },
 }
+
+# ---------------------------------------------------------------- tissue maps (act = turned on, block = receptor/enzyme blocked, risk = harm)
+COX_TISSUES = [{"id": "st", "label": "Stomach", "icon": "stomach", "rec": "COX-1 · mucus, bicarbonate"}, {"id": "pl", "label": "Platelets", "icon": "drop", "rec": "COX-1 · TXA₂ clotting"},
+               {"id": "kd", "label": "Kidney", "icon": "kidney", "rec": "prostaglandins · afferent flow"}, {"id": "jt", "label": "Inflamed joint", "icon": "joint", "rec": "COX-2 · pain, swelling"},
+               {"id": "vs", "label": "Blood vessel wall", "icon": "vessel", "rec": "COX-2 · PGI₂"}]
+COX_DRUGS = [
+    {"id": "ns", "label": "Nonselective NSAID", "fx": {"st": ["risk", "ulcer, bleeding"], "pl": ["risk", "less TXA₂ → bleeding"], "kd": ["risk", "↓ renal blood flow → AKI"], "jt": ["block", "less pain, swelling"]},
+     "note": "Blocks COX-1 and COX-2: relief in the joint, but GI injury, lower renal blood flow and bleeding risk come with it. (S27; S34–S35)"},
+    {"id": "cx", "label": "Celecoxib", "fx": {"st": ["none", "COX-1 spared"], "pl": ["none", "TXA₂ kept"], "kd": ["risk", "renal risk remains"], "jt": ["block", "less pain, swelling"], "vs": ["risk", "PGI₂ falls → CV risk"]},
+     "note": "Blocks inflammatory COX-2 and spares COX-1, so the stomach and platelets keep their protection — but PGI₂ falls while TXA₂ is kept (cardiovascular risk), and the kidney is not spared. Contraindicated with sulfonamide allergy. (S29–S30)"},
+]
+SERM_TISSUES = [{"id": "br", "label": "Breast", "icon": "breast", "rec": "estrogen receptor"}, {"id": "bn", "label": "Bone", "icon": "bone", "rec": "estrogen receptor"}, {"id": "en", "label": "Endometrium", "icon": "uterus", "rec": "estrogen receptor"}]
+
+SCENES["L03"] = {
+    "S27_1.jpg": {"type": "tissues", "tissues": COX_TISSUES, "drugs": COX_DRUGS, "point": "COX-1 keeps house (stomach, platelets, kidney); COX-2 is switched on in inflamed tissue. Pick a drug and see every organ it touches.",
+                  "base": {"st": "protected", "pl": "clot normally", "kd": "normal flow", "jt": "inflamed", "vs": "PGI₂ made"}},
+    "S30_1.jpg": {"type": "tissues", "tissues": COX_TISSUES, "drugs": COX_DRUGS[::-1], "point": "Celecoxib's trade: stomach and platelets spared, cardiovascular risk added.",
+                  "base": {"st": "protected", "pl": "clot normally", "kd": "normal flow", "jt": "inflamed", "vs": "PGI₂ made"}},
+    "S35_1.jpg": {"type": "tissues", "tissues": COX_TISSUES[:4], "drugs": COX_DRUGS, "point": "Lose prostaglandins and you lose mucosal protection, renal afferent dilation and normal platelet function.",
+                  "base": {"st": "protected", "pl": "clot normally", "kd": "normal flow", "jt": "inflamed"}},
+    "S44_1.jpg": {"type": "tissues", "point": "Each osteoarthritis option works somewhere different.",
+                  "tissues": [{"id": "cns", "label": "Brain & spinal cord", "icon": "brain", "rec": "central COX"}, {"id": "kn", "label": "Knee joint", "icon": "joint", "rec": "COX in synovium, cartilage"}, {"id": "one", "label": "One flaring joint", "icon": "joint", "rec": "local inflammation"}],
+                  "base": {"cns": "pain signals", "kn": "painful, swollen", "one": "acute flare"},
+                  "drugs": [{"id": "apap", "label": "Acetaminophen", "fx": {"cns": ["act", "analgesia, antipyresis"], "kn": ["none", "little anti-inflammation"]}, "note": "Acts centrally: a reasonable first-line for mild OA pain, but little anti-inflammatory effect in the joint. (S43–S44)"},
+                            {"id": "nsaid", "label": "Oral or topical NSAID", "fx": {"kn": ["block", "less prostaglandin, pain, swelling"]}, "note": "Block COX in joint tissue. Topical NSAIDs give effective relief with much lower systemic exposure. (S43–S44)"},
+                            {"id": "ia", "label": "Intra-articular steroid", "fx": {"one": ["block", "calms local inflammation"]}, "note": "Short-term relief for a flare in a single joint. (S43–S44)"}]},
+}
+
+SCENES["L04"] = {
+    "S24_1.jpg": {"type": "tissues", "point": "One question sorts them all: does it act in the CNS, or in the muscle? Dantrolene is the only muscle-side drug.",
+                  "tissues": [{"id": "bs", "label": "Brainstem", "icon": "brain", "rec": "descending pathways"}, {"id": "sc", "label": "Spinal cord", "icon": "nerve", "rec": "interneurons (GABA, α2)"},
+                              {"id": "nmj", "label": "Neuromuscular junction", "icon": "nerve", "rec": "ACh release"}, {"id": "mf", "label": "Muscle fiber", "icon": "muscle", "rec": "SR Ca²⁺ via RyR1"}],
+                  "base": {"bs": "drives tone", "sc": "excites motor neurons", "nmj": "ACh released", "mf": "contracts"},
+                  "drugs": [{"id": "bac", "label": "Baclofen", "fx": {"sc": ["block", "GABA-B: less excitation"]}, "note": "GABA-B agonist in the spinal cord: presynaptic inhibition, fewer motor neuron impulses. Spasticity (MS, spinal cord injury); never stop intrathecal abruptly. (S27–S28)"},
+                            {"id": "tiz", "label": "Tizanidine", "fx": {"sc": ["block", "α2: less excitatory release"]}, "note": "Central α2 agonist: less excitatory amino acid release. Hypotension, sedation, LFTs; ciprofloxacin/fluvoxamine contraindicated. (S29–S30)"},
+                            {"id": "cyc", "label": "Cyclobenzaprine", "fx": {"bs": ["block", "less tonic motor drive"]}, "note": "Acts in the brainstem (5-HT2, descending pathways). Acute local spasm, 2–3 weeks; anticholinergic, Beers list. (S31–S32)"},
+                            {"id": "bot", "label": "Botulinum toxin", "fx": {"nmj": ["block", "no ACh release"]}, "note": "Blocks presynaptic acetylcholine release at the neuromuscular junction — focal spasticity or dystonia; local, temporary, repeat injections. (S33)"},
+                            {"id": "dan", "label": "Dantrolene", "fx": {"mf": ["block", "RyR1: less Ca²⁺ → relaxes"]}, "note": "Blocks RyR1 in the muscle fiber itself: less Ca²⁺ released. Malignant hyperthermia emergency. (S34–S35; SG U2-R11)"}]},
+    "S56_1.jpg": {"type": "seesaw", "title": "Bone remodeling balance",
+                  "point": "Osteoclasts chew bone; osteoblasts build it. Osteoporosis = the chewing side wins. Load the drugs and tip it back.",
+                  "left": {"title": "Resorption (osteoclasts)", "items": [{"id": "oc", "label": "Osteoclast activity", "w": 2.6}]},
+                  "right": {"title": "Formation (osteoblasts)", "items": [{"id": "ob", "label": "Osteoblast activity", "w": 1.6}]},
+                  "drugs": [
+                      {"id": "gc", "label": "Chronic glucocorticoids", "col": "var(--vz-2)", "side": "L", "add": "Glucocorticoids", "w": 1, "scale": [["ob", 0.6]], "note": "Increase osteoclast-mediated resorption and suppress osteoblast-driven formation — bone loss. (S46; S71)"},
+                      {"id": "bp", "label": "Bisphosphonate", "col": "var(--vz-1)", "scale": [["oc", 0.35]], "note": "Osteoclast apoptosis (FPP synthase). First-line; upright 30 min; drug holiday after 3–5 years. (S47–S53)"},
+                      {"id": "dmab", "label": "Denosumab", "col": "var(--vz-1)", "scale": [["oc", 0.3]], "note": "RANKL antibody: osteoclasts never form. Stopping causes rebound vertebral fractures. (S54–S55)"},
+                      {"id": "ral", "label": "Raloxifene / calcitonin", "col": "var(--vz-4)", "scale": [["oc", 0.7]], "note": "Antiresorptive; raloxifene raises VTE risk, may lower breast cancer risk. (S54–S55)"},
+                      {"id": "ter", "label": "Teriparatide / abaloparatide", "col": "var(--vz-5)", "side": "R", "add": "PTH analog (anabolic)", "w": 1.6, "note": "Anabolic PTH analogs stimulate osteoblasts: new bone. 2-year limit, then an antiresorptive. (S54–S55)"},
+                      {"id": "rom", "label": "Romosozumab", "col": "var(--vz-5)", "side": "R", "add": "Romosozumab (anabolic)", "w": 1.3, "scale": [["oc", 0.75]], "note": "Sclerostin antibody: builds bone and limits resorption. Boxed warning: MI, stroke, CV death. (S54–S55)"}],
+                  "verdict": {"left": "Net bone loss → fracture risk", "right": "Net bone gain → BMD up, fracture risk down (S55)", "even": "Balanced."},
+                  "steps": [{"label": "Add a bisphosphonate", "on": ["bp"]}, {"label": "Anabolic first", "on": ["ter"]}, {"label": "On chronic steroids", "on": ["gc"]}],
+                  "read": "Load drugs onto the balance."},
+}
+
+SCENES["L06"] = {
+    "S5_1.jpg": {"type": "colon", "point": "Four routes to the same goal: more water in the stool, faster transit.",
+                 "drugs": [{"id": "psy", "label": "Psyllium (bulk)", "fx": "bulk", "note": "Bulk-forming: holds water and expands the stool. Slowest, safest long term; needs fluids; not with obstruction. (S4–S5)"},
+                           {"id": "peg", "label": "PEG / lactulose (osmotic)", "fx": "osm", "note": "Osmotic: draws water into the lumen. PEG is first-line for chronic constipation; magnesium laxatives need caution in CKD. (S5)"},
+                           {"id": "sen", "label": "Senna / bisacodyl (stimulant)", "fx": "stim", "note": "Stimulant: activates enteric nerves → stronger contractions. Short-term or breakthrough; cramping. (S4–S5)"},
+                           {"id": "lin", "label": "Linaclotide / lubiprostone", "fx": "sec", "note": "Secretagogue: the lining secretes chloride and fluid. Chronic constipation, IBS-C; linaclotide diarrhea, lubiprostone nausea. (S4–S5)"}]},
+    "S8_1.jpg": {"type": "colon", "point": "Loperamide puts an opioid brake on the gut wall: fewer squeezes, more time to pull water back out.",
+                 "drugs": [{"id": "lop", "label": "Loperamide", "fx": "opioid", "note": "Binds mu-opioid receptors on enteric neurons: less acetylcholine, slower peristalsis, firmer stool. P-gp keeps it out of the CNS; very high doses → QT prolongation; not in C. difficile. (S7–S8)"},
+                           {"id": "dip", "label": "Diphenoxylate/atropine", "fx": "opioid", "note": "Same opioid brake; Schedule V; the atropine deters misuse. (S7; SG U3-R10)"}]},
+}
+
+SCENES["L07"] = {
+    "S5_1.jpg": {"type": "axis", "point": "One template for three axes: each level drives the next, and the end hormone switches the top two off.",
+                 "axes": [{"id": "thy", "label": "Thyroid", "top": "Hypothalamus", "topH": "TRH", "mid": "Pituitary", "midH": "TSH", "gland": "Thyroid", "glandIcon": "thyroid", "hormone": "T4/T3", "effect": "Metabolism"},
+                          {"id": "adr", "label": "Adrenal", "top": "Hypothalamus", "topH": "CRH", "mid": "Pituitary", "midH": "ACTH", "gland": "Adrenal", "glandIcon": "gland", "hormone": "Cortisol", "effect": "Glucocorticoid effects"},
+                          {"id": "gon", "label": "Gonadal", "top": "Hypothalamus", "topH": "GnRH", "mid": "Pituitary", "midH": "LH/FSH", "gland": "Ovary", "glandIcon": "uterus", "hormone": "Estrogen/progesterone", "effect": "Ovulation"}],
+                 "drugs": [{"id": "lt4", "label": "Levothyroxine", "kind": "exo", "axis": "thy", "note": "Exogenous hormone feeds back → TSH falls. (S12)"},
+                           {"id": "pred", "label": "Chronic prednisone", "kind": "exo", "axis": "adr", "note": "Suppresses CRH/ACTH → taper when stopping. (S22)"},
+                           {"id": "pill", "label": "Combined pill", "kind": "exo", "axis": "gon", "note": "Suppresses GnRH/FSH/LH — no surge, no ovulation. (Session 2; L08 S4–S5)"}],
+                 "read": "Pick an axis, then add its drug."},
+    "S9_1.jpg": {"type": "axis", "point": "Prolactin is the odd one: the hypothalamus holds it down with dopamine — a brake, not an accelerator.",
+                 "axes": [{"id": "prl", "label": "Prolactin", "top": "Hypothalamus", "topH": "Dopamine", "mid": "Lactotroph", "midH": "Prolactin", "gland": "Blood", "glandIcon": "drop", "hormone": "Prolactin", "effect": "Galactorrhea, infertility", "brake": True}],
+                 "drugs": [{"id": "cab", "label": "Cabergoline", "kind": "agonist", "note": "Dopamine agonist: restores the brake → prolactin falls. Twice weekly, better tolerated. (S9)"},
+                           {"id": "ap", "label": "Antipsychotic / metoclopramide", "kind": "antag", "note": "Blocks dopamine → the brake comes off → prolactin rises. (S9; S52)"}]},
+    "S22_1.jpg": {"type": "axis", "point": "Weeks of prednisone switch the axis off and the adrenal shrinks. Stop suddenly and nothing is left to make cortisol.",
+                  "axes": [{"id": "adr", "label": "Adrenal", "top": "Hypothalamus", "topH": "CRH", "mid": "Pituitary", "midH": "ACTH", "gland": "Adrenal", "glandIcon": "gland", "hormone": "Cortisol", "effect": "Glucocorticoid effects"}],
+                  "drugs": [{"id": "pred", "label": "Chronic prednisone", "kind": "exo", "note": "Feedback suppresses CRH/ACTH; over weeks the adrenal shrinks. Stopping abruptly → adrenal crisis. (S22)"},
+                            {"id": "tap", "label": "Slow taper", "kind": "taper", "note": "The dose falls gradually, giving the axis time to recover. (S22; S28)"}],
+                  "steps": [{"label": "Weeks of prednisone", "on": ["pred"]}, {"label": "Stop abruptly", "on": []}, {"label": "Taper instead", "on": ["tap"]}]},
+}
+
+SCENES["L08"] = {
+    "S4_1.jpg": {"type": "axis", "point": "Estrogen + progestin from the pill switch the HPG axis off: no LH surge, no ovulation.",
+                 "axes": [{"id": "gon", "label": "Gonadal", "top": "Hypothalamus", "topH": "GnRH", "mid": "Pituitary", "midH": "FSH/LH", "gland": "Ovary", "glandIcon": "uterus", "hormone": "Estrogen/progestin", "effect": "Ovulation"}],
+                 "drugs": [{"id": "coc", "label": "Combined pill", "kind": "exo", "note": "Estrogen + progestin feedback: no surge, no ovulation. (S4–S5)"},
+                           {"id": "rif", "label": "Rifampin (inducer)", "kind": "inducer", "note": "Lowers the pill's hormone levels — use backup contraception. (S6; S67)"}],
+                 "steps": [{"label": "Combined pill", "on": ["coc"]}, {"label": "Pill + rifampin", "on": ["coc", "rif"]}]},
+    "S8_1.jpg": {"type": "tissues", "tissues": SERM_TISSUES, "point": "One estrogen receptor, three tissues — and each SERM is an agonist in some, an antagonist in others.",
+                 "base": {"br": "estrogen drives growth", "bn": "estrogen protects", "en": "estrogen proliferates"},
+                 "drugs": [{"id": "tam", "label": "Tamoxifen", "fx": {"br": ["block", "blocked"], "bn": ["act", "agonist: protects"], "en": ["risk", "agonist → cancer risk"]}, "note": "Blocks breast; activates bone and endometrium — report abnormal bleeding. (S7–S8)"},
+                           {"id": "ral", "label": "Raloxifene", "fx": {"br": ["block", "blocked"], "bn": ["act", "agonist: protects"], "en": ["block", "neutral/blocked"]}, "note": "Blocks breast and endometrium; activates bone. (S7–S8)"}]},
+    "S16_1.png": {"type": "nephron", "point": "SGLT2 normally pulls nearly all filtered glucose back in the proximal tubule. Block it and glucose — with water — leaves in the urine.",
+                  "segments": [{"id": "pt", "label": "Proximal tubule (SGLT2 here)", "frac": 0.65}, {"id": "tal", "label": "Loop", "frac": 0.25}, {"id": "dct", "label": "Distal tubule", "frac": 0.07}, {"id": "cd", "label": "Collecting duct", "frac": 0.03}],
+                  "show": ["glu", "water"], "read": "Glucose (amber) is filtered with sodium (blue); SGLT2 in the proximal tubule pulls nearly all of it back into the blood.", "drugs": [{"id": "emp", "label": "Empagliflozin", "seg": "sglt2", "glu": True, "water": -1, "note": "SGLT2 inhibitor: glucose and water in the urine — glucose, weight and BP fall. Heart failure and CKD benefit; yeast infections, euglycemic DKA. (S16)"}]},
+    "S17_1.jpg": {"type": "tissues", "point": "Each glucose-lowering class works in a different organ.",
+                  "tissues": [{"id": "b", "label": "Pancreas β-cell", "icon": "pancreas", "rec": "insulin release"}, {"id": "l", "label": "Liver", "icon": "liver", "rec": "glucose output"}, {"id": "m", "label": "Muscle & fat", "icon": "muscle", "rec": "insulin sensitivity"},
+                              {"id": "k", "label": "Kidney", "icon": "kidney", "rec": "glucose reabsorption"}, {"id": "g", "label": "Gut", "icon": "gut", "rec": "incretins (GLP-1)"}],
+                  "drugs": [{"id": "gli", "label": "Glipizide", "fx": {"b": ["act", "secretagogue: more insulin"]}, "note": "Secretagogue — highest oral hypoglycemia risk. (S14)"},
+                            {"id": "met", "label": "Metformin", "fx": {"l": ["block", "↓ gluconeogenesis"]}, "note": "↓ hepatic gluconeogenesis; first line. (S15)"},
+                            {"id": "pio", "label": "Pioglitazone", "fx": {"m": ["act", "↑ insulin sensitivity"]}, "note": "↑ insulin sensitivity. (S14)"},
+                            {"id": "emp", "label": "Empagliflozin", "fx": {"k": ["block", "glucosuria"]}, "note": "Glucosuria. (S16)"},
+                            {"id": "sem", "label": "Semaglutide / sitagliptin", "fx": {"g": ["act", "incretin axis ↑"], "b": ["act", "glucose-dependent insulin"]}, "note": "Incretin axis: glucose-dependent insulin release. (S18–S19)"}]},
+}
+
+NEPH4 = [{"id": "pt", "label": "Proximal tubule", "frac": 0.65, "tr": "Na⁺/HCO₃⁻"}, {"id": "tal", "label": "Thick ascending limb", "frac": 0.25, "tr": "NKCC2"},
+         {"id": "dct", "label": "Distal tubule", "frac": 0.07, "tr": "NCC"}, {"id": "cd", "label": "Collecting duct", "frac": 0.03, "tr": "ENaC · aldosterone"}]
+LOOP = {"id": "furo", "label": "Furosemide (loop)", "seg": "tal", "k": -1, "ca": 1, "note": "Blocks NKCC2 in the thick ascending limb — the most potent class. More Ca²⁺ and Mg²⁺ excreted (useful in hypercalcemia); potassium is lost. (S7; S10–S11; S38)"}
+THZ = {"id": "hctz", "label": "Hydrochlorothiazide", "seg": "dct", "k": -1, "ca": -1, "note": "Blocks the Na-Cl cotransporter (NCC) in the distal tubule. Urinary Ca²⁺ falls; loses efficacy at GFR < 30. (S7; S12–S13)"}
+KSP = {"id": "spir", "label": "Spironolactone / amiloride", "seg": "cd", "k": 1, "note": "Potassium-sparing: aldosterone receptor block (spironolactone) or ENaC block (amiloride) — hyperkalemia risk. (S7; S17–S18)"}
+SCENES["L09"] = {
+    "S6_1.png": {"type": "renaldose", "point": "As GFR falls, a renally cleared drug builds up with every dose. Lower the dose or stretch the interval to stay in the window.",
+                 "drugs": [{"id": "std", "label": "Usual dose and interval", "note": "Same regimen as normal kidneys: with falling GFR the drug or its active metabolite builds up toward toxicity. Check CrCl before any renally cleared drug. (S6; S8)"},
+                           {"id": "dose", "label": "Lower the maintenance dose", "note": "For concentration-dependent drugs; the loading dose is often unchanged. (S6; S8)"},
+                           {"id": "int", "label": "Extend the interval", "note": "For long half-life drugs; monitor after each change. (S6)"}],
+                 "steps": [{"label": "Severe CKD, usual dose", "mode": "25", "on": ["std"]}, {"label": "Lower the dose", "mode": "25", "on": ["dose"]}, {"label": "Extend the interval", "mode": "25", "on": ["int"]}]},
+    "S7_1.jpg": {"type": "nephron", "segments": NEPH4, "point": "Each diuretic class blocks sodium reabsorption at a different stop along the nephron. The further upstream and the bigger the share, the stronger the diuresis.",
+                 "drugs": [{"id": "acz", "label": "Acetazolamide", "seg": "pt", "note": "Blocks Na⁺/HCO₃⁻ reabsorption in the proximal tubule; weak diuretic. (S7; S19)"},
+                           {"id": "man", "label": "Mannitol", "seg": "pt", "note": "Osmotic; acts throughout, most prominently in the proximal tubule. (S7)"}, LOOP, THZ, KSP]},
+    "S11_1.jpg": {"type": "nephron", "segments": NEPH4, "point": "The loop target: NKCC2 in the thick ascending limb carries a quarter of filtered sodium.", "drugs": [LOOP, {"id": "bum", "label": "Bumetanide / torsemide", "seg": "tal", "k": -1, "ca": 1, "note": "Same target; bumetanide ~40× furosemide mg for mg. (S28)"}]},
+    "S13_1.png": {"type": "nephron", "segments": NEPH4, "point": "Thiazides block NCC in the distal tubule — and calcium is pulled back in.", "drugs": [THZ, {"id": "chl", "label": "Chlorthalidone", "seg": "dct", "k": -1, "ca": -1, "note": "Same site, longer action (40–60 h). (S24; S31)"}, LOOP]},
+    "S18_1.png": {"type": "nephron", "segments": NEPH4, "point": "The collecting duct trades sodium for potassium. Block it and potassium is kept.",
+                  "drugs": [{"id": "spi", "label": "Spironolactone", "seg": "cd", "k": 1, "note": "Aldosterone receptor blocker; antiandrogen effects (gynecomastia); hyperkalemia. (S17–S18)"},
+                            {"id": "epl", "label": "Eplerenone", "seg": "cd", "k": 1, "note": "Selective; fewer antiandrogen effects; CYP3A4 inhibitors raise levels. (S17; S33)"},
+                            {"id": "ami", "label": "Amiloride / triamterene", "seg": "cd", "k": 1, "note": "Block ENaC independent of aldosterone; hyperkalemia. (S17–S18)"}, LOOP], "show": ["na", "k"]},
+}
+
+TRIPLE = [{"id": "nsaid", "label": "NSAID", "aff": 0.6, "note": "Constricts the afferent arteriole (less prostaglandin-driven dilation): less blood in. (S23–S24)"},
+          {"id": "acei", "label": "Lisinopril or losartan", "eff": 1.55, "note": "Dilates the efferent arteriole: pressure in the glomerulus falls. (S23–S24)"},
+          {"id": "diu", "label": "Diuretic", "vol": 0.62, "note": "Volume depletion: less plasma reaching the kidney. (S23–S24)"}]
+SCENES["L10"] = {
+    "S9_1.png": {"type": "glomerulus", "protein": True, "point": "Angiotensin II squeezes the outflow (efferent) arteriole. Remove it and glomerular pressure falls — less proteinuria, and a small creatinine rise.",
+                 "drugs": [{"id": "acei", "label": "Lisinopril or losartan", "eff": 1.55, "note": "Removes the efferent signal: the benefit (less proteinuria) and the creatinine rise (up to ~30%) are the same action. (S8–S9)"},
+                           {"id": "dry", "label": "Volume depletion (sick day)", "vol": 0.6, "note": "Hold the ACEi/ARB: pressure can fall too far → AKI. (S8–S9)"}],
+                 "steps": [{"label": "Start an ACEi/ARB", "on": ["acei"]}, {"label": "Then a vomiting illness", "on": ["acei", "dry"]}]},
+    "S13_1.png": {"type": "tissues", "point": "Calcium channel blockers and beta-blockers lower BP through different organs.",
+                  "tissues": [{"id": "art", "label": "Arterioles", "icon": "vessel", "rec": "L-type Ca²⁺ channels"}, {"id": "hrt", "label": "Heart", "icon": "heart", "rec": "rate, contractility"}, {"id": "kid", "label": "Kidney", "icon": "kidney", "rec": "renin release"}],
+                  "drugs": [{"id": "aml", "label": "Amlodipine (DHP)", "fx": {"art": ["act", "dilate → afterload ↓"]}, "note": "Arteriolar dilation; peripheral edema. (S12–S13)"},
+                            {"id": "dil", "label": "Diltiazem / verapamil", "fx": {"hrt": ["block", "↓ HR, contractility"], "art": ["act", "some dilation"]}, "note": "↓ HR and contractility; avoid with beta-blockers (AV block). (S13)"},
+                            {"id": "met", "label": "Metoprolol", "fx": {"hrt": ["block", "↓ HR, contractility"], "kid": ["block", "↓ renin"]}, "note": "↓ HR, contractility and renin. (S12)"}]},
+    "S21_1.jpg": {"type": "seesaw", "title": "Oxygen supply vs demand", "point": "Angina = the heart's oxygen demand outruns its supply. Each drug lightens a different weight.",
+                  "left": {"title": "O₂ demand", "items": [{"id": "pre", "label": "Preload", "w": 1.3}, {"id": "aft", "label": "Afterload", "w": 1.3}, {"id": "hr", "label": "Heart rate, contractility", "w": 1.4}]},
+                  "right": {"title": "O₂ supply", "items": [{"id": "cor", "label": "Coronary flow", "w": 2.6}]},
+                  "drugs": [{"id": "nit", "label": "Nitrates", "col": "var(--vz-1)", "scale": [["pre", 0.35]], "note": "Venodilation reduces preload — less O₂ demand. (S19–S21)"},
+                            {"id": "aml", "label": "Amlodipine (DHP)", "col": "var(--vz-4)", "scale": [["aft", 0.45]], "note": "Reduces afterload. (S21–S22)"},
+                            {"id": "dil", "label": "Diltiazem / verapamil", "col": "var(--vz-3)", "scale": [["hr", 0.5]], "side": "R", "add": "↑ coronary flow", "w": 0.6, "note": "↓ HR/contractility and ↑ coronary flow. (S21–S22)"},
+                            {"id": "met", "label": "Metoprolol", "col": "var(--vz-5)", "scale": [["hr", 0.5]], "note": "↓ HR and contractility. (S21)"}],
+                  "verdict": {"left": "Demand > supply → angina (S21)", "right": "Supply meets demand.", "even": "Just balanced."}, "read": "Lighten the demand side."},
+    "S23_1.jpg": {"type": "glomerulus", "drugs": TRIPLE, "point": "Three hits on glomerular pressure: less in (NSAID), more out (ACEi/ARB), less volume (diuretic). One is fine — all three together cause AKI.",
+                  "steps": [{"label": "ACEi alone", "on": ["acei"]}, {"label": "+ diuretic", "on": ["acei", "diu"]}, {"label": "+ NSAID: triple whammy", "on": ["acei", "diu", "nsaid"]}]},
+    "S24_1.png": {"type": "glomerulus", "drugs": TRIPLE, "point": "Take one hit away and pressure recovers: stop the OTC NSAID; hold the ACEi/ARB on sick days.",
+                  "start": None, "steps": [{"label": "Triple whammy", "on": ["acei", "diu", "nsaid"]}, {"label": "Stop the NSAID", "on": ["acei", "diu"]}]},
+    "S26_1.jpg": {"type": "cycle", "point": "Hypertension damages the kidney; the damaged kidney raises blood pressure. A loop that feeds itself.",
+                  "nodes": [{"id": "htn", "label": "Hypertension", "icon": "vessel"}, {"id": "inj", "label": "Glomerular injury,\nnephrosclerosis", "icon": "kidney"}, {"id": "ckd", "label": "CKD", "icon": "kidney"}, {"id": "vol", "label": "Volume overload,\nRAAS activation", "icon": "drop"}],
+                  "drugs": [{"id": "acei", "label": "ACE inhibitor / ARB", "at": "vol", "note": "Interrupts both directions at once. (S26)"}]},
+}
+
+SCENES["L11"] = {
+    "S8_1.jpg": {"type": "axis", "point": "Hormonal drugs act at every level of the HPG axis.",
+                 "axes": [{"id": "gon", "label": "HPG", "top": "Hypothalamus", "topH": "GnRH", "mid": "Pituitary", "midH": "FSH/LH", "gland": "Gonad", "glandIcon": "uterus", "hormone": "Estrogen/testosterone", "effect": "Tissue receptors"}],
+                 "drugs": [{"id": "coc", "label": "Combined pill", "kind": "exo", "note": "Feedback suppression of FSH/LH. (S9)"},
+                           {"id": "leu", "label": "Leuprolide (GnRH agonist)", "kind": "gnrh", "note": "Continuous GnRH agonist suppresses FSH/LH; used with antiandrogens in prostate cancer. (S45)"},
+                           {"id": "ana", "label": "Anastrozole", "kind": "synth", "note": "Blocks peripheral estrogen synthesis (aromatase). (S14)"},
+                           {"id": "tam", "label": "Tamoxifen / bicalutamide", "kind": "receptor", "note": "Receptor-level blockers: hormone still made, but the tissue can't respond. (S11; S16)"}]},
+    "S12_1.png": {"type": "tissues", "tissues": SERM_TISSUES, "point": "One estrogen receptor, three tissues: tamoxifen and raloxifene differ at the endometrium.",
+                  "base": {"br": "estrogen drives growth", "bn": "estrogen protects", "en": "estrogen proliferates"},
+                  "drugs": [{"id": "tam", "label": "Tamoxifen", "fx": {"br": ["block", "blocked"], "bn": ["act", "agonist"], "en": ["risk", "agonist → cancer risk"]}, "note": "Breast blocked; bone and endometrium activated. (S11–S12)"},
+                            {"id": "ral", "label": "Raloxifene", "fx": {"br": ["block", "blocked"], "bn": ["act", "agonist"], "en": ["none", "essentially neutral"]}, "note": "Breast blocked; bone activated; endometrium neutral. (S11–S12)"}]},
+    "S21_1.jpg": {"type": "cycle", "point": "PCOS feeds itself: high insulin drives ovarian androgens, which worsen insulin resistance.",
+                  "nodes": [{"id": "ir", "label": "Insulin resistance,\nhigh insulin", "icon": "pancreas"}, {"id": "and", "label": "Ovarian androgens ↑,\nSHBG ↓", "icon": "uterus"}, {"id": "ft", "label": "Free testosterone ↑:\nhirsutism, anovulation", "icon": "effect"}, {"id": "wr", "label": "Worsens insulin\nresistance", "icon": "fat"}],
+                  "drugs": [{"id": "met", "label": "Metformin", "at": "ir", "note": "Lowers insulin → androgens fall; ovulation can return. (S22–S23)"},
+                            {"id": "coc", "label": "Combined contraception", "at": "ft", "note": "Direct cycle and hirsutism control. (S22; S25)"},
+                            {"id": "spi", "label": "Spironolactone", "at": "ft", "note": "Androgen receptor block for hirsutism/acne. (S15; S24)"}]},
+}
+
+GU_TISSUES = [{"id": "m3", "label": "Detrusor", "icon": "bladder", "rec": "M3 · contract (void)"}, {"id": "b3", "label": "Detrusor", "icon": "bladder", "rec": "β3 · relax (store)"},
+              {"id": "a1", "label": "Bladder neck, prostate", "icon": "prostate", "rec": "α1 · close the outlet"}, {"id": "ves", "label": "Blood vessels", "icon": "vessel", "rec": "α1, NO-cGMP · tone"}]
+SCENES["L12"] = {
+    "S4_1.jpg": {"type": "tissues", "tissues": GU_TISSUES[:3], "point": "Three nerve supplies, three receptors, three drug classes.",
+                 "base": {"m3": "contracts to void", "b3": "relaxes to store", "a1": "outlet closed"},
+                 "drugs": [{"id": "oxy", "label": "Oxybutynin", "fx": {"m3": ["block", "fewer contractions"]}, "note": "Blocks M3 — overactive bladder. (S13)"},
+                           {"id": "mir", "label": "Mirabegron", "fx": {"b3": ["act", "more relaxation"]}, "note": "Stimulates beta3 — overactive bladder. (S15)"},
+                           {"id": "tam", "label": "Tamsulosin", "fx": {"a1": ["block", "outlet opens"]}, "note": "Blocks alpha1 — BPH. (S21)"}]},
+    "S14_1.png": {"type": "tissues", "point": "Antimuscarinics calm the bladder — and block muscarinic receptors everywhere else too.",
+                  "tissues": [{"id": "bl", "label": "Bladder", "icon": "bladder", "rec": "M3"}, {"id": "br", "label": "Brain", "icon": "brain", "rec": "muscarinic"}, {"id": "mo", "label": "Mouth, gut", "icon": "gut", "rec": "muscarinic"}],
+                  "base": {"bl": "urgency", "br": "clear", "mo": "normal"},
+                  "drugs": [{"id": "oxy", "label": "Oxybutynin", "fx": {"bl": ["block", "fewer contractions"], "br": ["risk", "confusion"], "mo": ["risk", "dry mouth, constipation"]}, "note": "Highest CNS burden — confusion in older adults. (S13–S14)"},
+                            {"id": "mir", "label": "Mirabegron", "fx": {"bl": ["act", "relaxes (β3)"], "br": ["none", "no anticholinergic burden"], "mo": ["none", "unaffected"]}, "note": "Same goal through beta3, no anticholinergic burden. (S14–S15)"}]},
+    "S22_1.jpg": {"type": "tissues", "tissues": [GU_TISSUES[2], GU_TISSUES[3]], "point": "Alpha1 receptors sit in the prostate and in blood vessels. Uroselective agents spare the vessels more.",
+                  "base": {"a1": "outflow narrowed", "ves": "normal tone"},
+                  "drugs": [{"id": "tam", "label": "Tamsulosin / silodosin", "fx": {"a1": ["block", "outflow opens"], "ves": ["none", "less BP effect"]}, "note": "Uroselective; less BP effect. (S21)"},
+                            {"id": "dox", "label": "Doxazosin / terazosin", "fx": {"a1": ["block", "outflow opens"], "ves": ["risk", "BP falls — first-dose effect"]}, "note": "Also lower BP — first-dose effect. (S21)"}]},
+    "S34_1.jpg": {"type": "tissues", "multi": True, "point": "The same receptor families run the bladder, prostate, penis and blood vessels — which is why GU drugs have cardiovascular effects.",
+                  "tissues": [GU_TISSUES[0], GU_TISSUES[2], {"id": "cc", "label": "Corpus cavernosum", "icon": "vessel", "rec": "NO → cGMP"}, GU_TISSUES[3]],
+                  "base": {"m3": "contracts", "a1": "outlet closed", "cc": "cGMP broken down by PDE5", "ves": "normal tone"},
+                  "drugs": [{"id": "oxy", "label": "Oxybutynin", "fx": {"m3": ["block", "M3 blocked + body-wide burden"]}, "note": "Blocks M3 — and muscarinic receptors body-wide: anticholinergic burden. (S14)"},
+                            {"id": "tam", "label": "Tamsulosin", "fx": {"a1": ["block", "outlet opens"], "ves": ["risk", "orthostatic hypotension"]}, "note": "Blocks alpha1 — vessels too: orthostatic hypotension, first-dose effect. (S22; S34)"},
+                            {"id": "sil", "label": "Sildenafil", "fx": {"cc": ["act", "cGMP kept → erection"], "ves": ["act", "dilation"]}, "note": "Keeps cGMP high — with a nitrate, profound hypotension. (S29; S34)"},
+                            {"id": "ntg", "label": "Nitroglycerin", "fx": {"ves": ["act", "NO/cGMP ↑, dilation"]}, "note": "Raises NO/cGMP systemically — never with a PDE5 inhibitor: together they cause life-threatening hypotension. (S29)"}],
+                  "combos": [{"ids": ["sil", "ntg"], "fx": {"ves": ["risk", "profound hypotension"]}}],
+                  "steps": [{"label": "Sildenafil", "on": ["sil"]}, {"label": "Sildenafil + nitrate", "on": ["sil", "ntg"]}]},
+}

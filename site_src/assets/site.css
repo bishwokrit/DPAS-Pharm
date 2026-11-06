@@ -2013,3 +2013,50 @@ figure.vz-arrive { animation: vz-arrive 1.3s cubic-bezier(.2,.8,.2,1); }
 .vz-top .vz-style { flex: none; padding: 2px; border-radius: 99px; }
 .vz-top .vz-style button { font: 600 12px var(--font); padding: 4px 11px; border-radius: 99px; }
 @media (max-width: 560px) { .vz-top { flex-wrap: wrap; } .vz-top .vz-hint { flex-basis: 100%; order: 9; } }
+/* factory (pictured pathway) */
+.vz-fx-line { fill: none; stroke: color-mix(in srgb, var(--vz-text) 16%, transparent); stroke-width: 2.4; stroke-linecap: round; }
+.vz-fx-arrow { fill: none; stroke: color-mix(in srgb, var(--vz-text) 35%, transparent); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.vz-fx-card { fill: color-mix(in srgb, var(--c) 9%, var(--vz-bg)); stroke: color-mix(in srgb, var(--c) 40%, transparent); stroke-width: 1.4; filter: drop-shadow(0 4px 10px rgba(0,0,0,.06)); }
+.vz-fx-node { transition: opacity .5s ease; }
+.vz-fx-t { font: 600 12px var(--font); fill: var(--vz-text); letter-spacing: -.005em; } .vz-fx-t.lg { font-size: 17px; }
+.vz-fx-gt { fill: var(--vz-bg); stroke: color-mix(in srgb, var(--vz-text) 10%, transparent); stroke-width: 4; }
+.vz-fx-gr { fill: none; stroke: var(--vz-5); stroke-width: 4; stroke-linecap: round; transition: none !important; }
+.vz-fx-gp { font: 700 9px var(--font); fill: var(--vz-text); }
+.vz-fx-down { font: 800 13px var(--font); fill: var(--vz-2); }
+.vz-fx-dock { filter: drop-shadow(0 3px 6px rgba(0,0,0,.25)); }
+/* nephron */
+.vz-nx-tube { fill: none; stroke: color-mix(in srgb, var(--vz-3) 45%, transparent); stroke-width: 26; stroke-linecap: round; stroke-linejoin: round; }
+.vz-nx-lumen { fill: none; stroke: color-mix(in srgb, var(--vz-3) 10%, var(--vz-bg)); stroke-width: 18; stroke-linecap: round; stroke-linejoin: round; }
+.vz-nx-glom { fill: color-mix(in srgb, var(--vz-2) 10%, var(--vz-bg)); stroke: color-mix(in srgb, var(--vz-2) 50%, transparent); stroke-width: 2; }
+.vz-nx-cap { fill: none; stroke: var(--vz-2); stroke-width: 2; opacity: .6; }
+.vz-nx-blood { fill: color-mix(in srgb, var(--vz-2) 6%, var(--vz-bg)); stroke: color-mix(in srgb, var(--vz-2) 25%, transparent); stroke-dasharray: 4 5; }
+.vz-nx-na { fill: var(--vz-1); } .vz-nx-glu { fill: var(--vz-3); }
+/* glomerulus */
+.vz-gl-caps { fill: color-mix(in srgb, var(--vz-3) 7%, var(--vz-bg)); stroke: color-mix(in srgb, var(--vz-3) 50%, transparent); stroke-width: 2; }
+.vz-gl-vessel { fill: color-mix(in srgb, var(--vz-2) 14%, var(--vz-bg)); stroke: var(--vz-2); stroke-width: 2; transition: none !important; }
+.vz-gl-loop { fill: color-mix(in srgb, var(--vz-2) 10%, var(--vz-bg)); stroke: color-mix(in srgb, var(--vz-2) 60%, transparent); stroke-width: 1.6; }
+.vz-gl-gt { fill: none; stroke: color-mix(in srgb, var(--vz-text) 12%, transparent); stroke-width: 9; stroke-linecap: round; }
+.vz-gl-needle { stroke: var(--vz-text); stroke-width: 3; stroke-linecap: round; transition: none !important; } .vz-gl-hub { fill: var(--vz-text); }
+/* axis */
+.vz-ax-fb { fill: none; stroke: color-mix(in srgb, var(--vz-3) 55%, transparent); stroke-width: 2; stroke-dasharray: 5 5; }
+/* tissues */
+.vz-ts-card { fill: color-mix(in srgb, var(--vz-text) 3%, var(--vz-bg)); stroke: color-mix(in srgb, var(--vz-text) 10%, transparent); stroke-width: 1.4; transition: fill .4s, stroke .4s; }
+.vz-ts-card.act { fill: color-mix(in srgb, var(--vz-5) 10%, var(--vz-bg)); stroke: var(--vz-5); } .vz-ts-card.block { fill: color-mix(in srgb, var(--vz-2) 8%, var(--vz-bg)); stroke: var(--vz-2); }
+.vz-ts-glow { fill: transparent; transition: fill .4s; } .vz-ts-glow.act { fill: color-mix(in srgb, var(--vz-5) 22%, transparent); } .vz-ts-glow.block { fill: color-mix(in srgb, var(--vz-2) 12%, transparent); }
+.vz-ts-fx { font: 600 11.5px var(--font); fill: var(--vz-ink); text-anchor: middle; } .vz-ts-fx.act { fill: var(--vz-5); } .vz-ts-fx.block { fill: var(--vz-2); }
+/* cycle */
+.vz-cy-ring { fill: none; stroke: color-mix(in srgb, var(--vz-2) 25%, transparent); stroke-width: 10; }
+.vz-cy-node { fill: var(--vz-bg); stroke: color-mix(in srgb, var(--vz-text) 15%, transparent); stroke-width: 1.5; filter: drop-shadow(0 4px 10px rgba(0,0,0,.08)); }
+.vz-cy-dot { fill: var(--vz-2); transition: none !important; }
+/* colon */
+.vz-co-wall { fill: color-mix(in srgb, var(--vz-2) 12%, var(--vz-bg)); stroke: color-mix(in srgb, var(--vz-2) 35%, transparent); }
+.vz-co-lumen { fill: color-mix(in srgb, var(--vz-3) 5%, var(--vz-bg)); }
+.vz-co-nerve { fill: color-mix(in srgb, var(--vz-4) 40%, transparent); } .vz-co-nerve.on { fill: var(--vz-4); }
+.vz-co-wave { fill: none; stroke: var(--vz-2); stroke-width: 10; transition: none !important; }
+.vz-co-stool { fill: color-mix(in srgb, var(--vz-3) 55%, #6b4a2b); transition: none !important; }
+.vz-co-drop { font-size: 11px; } .vz-co-drop.cl { font: 700 10px var(--font); fill: var(--vz-4); }
+/* renal dosing */
+.vz-rd-win { fill: color-mix(in srgb, var(--vz-5) 10%, transparent); } .vz-rd-tox { stroke: var(--vz-2); stroke-dasharray: 5 4; stroke-width: 1.5; }
+.vz-rd-ax { stroke: color-mix(in srgb, var(--vz-text) 35%, transparent); } .vz-rd-line { fill: none; stroke: var(--vz-1); stroke-width: 2.6; stroke-linejoin: round; }
+.vz-ts-card.block { fill: color-mix(in srgb, var(--vz-1) 8%, var(--vz-bg)); stroke: var(--vz-1); } .vz-ts-glow.block { fill: color-mix(in srgb, var(--vz-1) 14%, transparent); } .vz-ts-fx.block { fill: var(--vz-1); }
+.vz-ts-card.risk { fill: color-mix(in srgb, var(--vz-2) 9%, var(--vz-bg)); stroke: var(--vz-2); } .vz-ts-glow.risk { fill: color-mix(in srgb, var(--vz-2) 18%, transparent); } .vz-ts-fx.risk { fill: var(--vz-2); }
