@@ -10,7 +10,7 @@
   const calm = matchMedia("(prefers-reduced-motion: reduce)").matches;
   const NAMES = { exam: (i) => `Exam ${i + 1}`, final: () => "Final", quiz: (i) => `Quiz ${i + 1}`, db: (i) => `DB ${i + 1}`, case: (i) => `Case ${i + 1}` };
   const letterOf = (pts) => (D.scale.find(([, min]) => pts >= min) || D.scale[D.scale.length - 1]);
-  const trunc1 = (x) => (Math.floor(x * 10) / 10).toFixed(1);  // the syllabus never rounds up
+  const trunc1 = (x) => (Math.floor(x * 10 + 1e-7) / 10).toFixed(1);  // the syllabus never rounds up (the tiny nudge only absorbs floating-point error: 799.99999… is 800)
   let S = load();
 
   // ---------------------------------------------------------------- donut: where the points come from
@@ -52,9 +52,14 @@
           <div class="gs-h"><span class="gs-dot"></span>${it.label}<span>${it.weight}%</span></div>
           <div class="gs-in" style="--n:${it.count}">${Array.from({ length: it.count }, (_, i) => `<input type="number" inputmode="decimal" min="0" max="100" step="0.1" placeholder="${NAMES[it.key](i).replace(/^(\w+) (\d+)$/, (m, a, n) => (it.key === "db" ? "DB " : a.slice(0, 1) + "") + n)}" aria-label="${NAMES[it.key](i)} percent" data-k="${it.key}" data-i="${i}">`).join("")}</div></div>`).join("")}
         <div class="gs-sec" style="--c:var(--c-bonus)"><div class="gs-h"><span class="gs-dot"></span>Bonus checkpoints<span id="bonus-pts">+0</span></div>
-          <div class="gs-in gs-cp" style="--n:${D.bonus.count}">${Array.from({ length: D.bonus.count }, (_, i) => `<label title="Checkpoint ${i + 1}: ≥90%"><input type="checkbox" data-cp="${i}"><i>${i + 1}</i></label>`).join("")}</div></div></div>
+          <div class="gs-cp2">${Array.from({ length: D.bonus.count }, (_, i) => `<div class="gs-cpc" data-cpc="${i}"><span class="gs-cpn">Checkpoint ${i + 1}</span>
+            <input type="number" inputmode="decimal" min="0" max="100" step="0.1" placeholder="1st %" aria-label="Checkpoint ${i + 1}, attempt 1 percent" data-cp="${i}" data-a="0">
+            <input type="number" inputmode="decimal" min="0" max="100" step="0.1" placeholder="2nd %" aria-label="Checkpoint ${i + 1}, attempt 2 percent" data-cp="${i}" data-a="1">
+            <b class="gs-cps" data-cps="${i}"></b></div>`).join("")}</div>
+          <p class="gs-cpnote">${D.bonus.points_each} points for each checkpoint with ≥90% on either attempt (best attempt counts), up to ${D.bonus.max}. Added after the required total; the course score is capped at 1,000.</p></div></div>
       <div class="gs-chart">
         <div class="gs-sum"><div><div class="gs-big" id="pd-big" aria-live="polite">—</div><div class="gs-lbl">Projected grade</div></div><div class="gs-pct" id="pd-pct">—</div></div>
+        <div class="gs-math" id="pd-math"></div>
         <div class="gs-plot"><div class="gs-grid"><div class="gs-line base" style="bottom:0"><span>50</span></div>${ticks.map(([L, min]) => `<div class="gs-line" style="bottom:${(min / 10 - 50) * 2}%"><span>${L} ${min / 10}</span></div>`).join("")}</div>
           ${cats.map((it) => `<div class="gs-col" style="--c:var(--c-${it.key})"><span class="gs-val" data-avg="${it.key}"></span><div class="gs-bar" data-bar="${it.key}"></div></div>`).join("")}</div>
         <div class="gs-axis"><span>100</span><span>50</span></div><div class="gs-x">${cats.map((it) => `<span>${SHORT[it.key] || it.label}</span>`).join("")}</div>
@@ -77,9 +82,17 @@
         saveAll(S); calc();
       });
     });
-    root.querySelectorAll("input[data-cp]").forEach((cb) => {
-      cb.checked = !!S.cp?.[cb.dataset.cp];
-      cb.addEventListener("change", () => { (S.cp ||= [])[cb.dataset.cp] = cb.checked; saveAll(S); calc(); });
+    // checkpoints: best of two attempts; an older saved "checked" box counts as a 90% attempt
+    if (S.cp && !S.cps) { S.cps = S.cp.map((on) => (on ? [90, null] : [null, null])); delete S.cp; saveAll(S); }
+    S.cps ||= [];
+    root.querySelectorAll("input[data-cp]").forEach((inp) => {
+      const v = S.cps[inp.dataset.cp]?.[inp.dataset.a];
+      if (v !== undefined && v !== null) inp.value = v;
+      inp.addEventListener("input", () => {
+        const row = (S.cps[inp.dataset.cp] ||= [null, null]);
+        row[inp.dataset.a] = inp.value === "" ? null : Math.max(0, Math.min(100, +inp.value));
+        saveAll(S); calc();
+      });
     });
     root.querySelectorAll("#assume button").forEach((b) => b.addEventListener("click", () => { S.assume = S.assume === +b.dataset.v ? "avg" : +b.dataset.v; saveAll(S); calc(); }));
     const fin = froot?.querySelector("#fn-in");
@@ -90,8 +103,8 @@
     if (fin) { fin.value = S.fxTry ?? 85; fin.addEventListener("input", () => { S.fxTry = +fin.value; saveAll(S); calc(); glow(); }); fin.addEventListener("pointerdown", glow); }
     root.querySelector("[data-clear]").addEventListener("click", () => {
       if (!confirm("Clear all scores?")) return;
-      S = { assume: S.assume, fxTry: S.fxTry }; saveAll(S);
-      all.forEach((i) => (i.value = "")); root.querySelectorAll("input[data-cp]").forEach((c) => (c.checked = false));
+      S = { assume: S.assume, fxTry: S.fxTry, cps: [] }; saveAll(S);
+      all.forEach((i) => (i.value = "")); root.querySelectorAll("input[data-cp]").forEach((c) => (c.value = ""));
       calc();
     });
     // focusing a section highlights its column
@@ -114,22 +127,35 @@
         for (let i = 0; i < it.count; i++) {
           const v = S[it.key]?.[i], has = v !== null && v !== undefined && v !== "";
           if (has) { n++; sum += v; }
-          if (it.key !== "final") projNoFinal += ((has ? v : assume) / 100) * it.points_each;
+          if (it.key !== "final") projNoFinal += ((has ? v : assume) / 100) * ((it.weight * 10) / it.count);
         }
         const bar = root.querySelector(`[data-bar="${it.key}"]`);
         if (bar) {
-          bar.style.height = `${Math.max(2, ((n ? sum / n : assume) - 50) * 2)}%`;  // axis runs 50–100% bar.classList.toggle("est", !n);
+          bar.style.height = `${Math.max(2, ((n ? sum / n : assume) - 50) * 2)}%`;  // axis runs 50–100%
+          bar.classList.toggle("est", !n);
           bar.parentElement.querySelector(".gs-val").textContent = n ? `${Math.round(sum / n)}` : "—";
         }
       }
       root.querySelector("#gs-hint").hidden = D.items.some((it) => (S[it.key] || []).some((v) => v !== null && v !== undefined && v !== ""));
-      const bonus = Math.min(D.bonus.max, (S.cp || []).filter(Boolean).length * D.bonus.points_each);
+      // a checkpoint earns its bonus when the better of its two attempts is at least 90%
+      let earned = 0;
+      for (let i = 0; i < D.bonus.count; i++) {
+        const a = (S.cps[i] || []).filter((v) => v !== null && v !== undefined), best = a.length ? Math.max(...a) : null, ok = best !== null && best >= 90;
+        if (ok) earned++;
+        const cell = root.querySelector(`[data-cpc="${i}"]`), st = root.querySelector(`[data-cps="${i}"]`);
+        cell.classList.toggle("ok", ok); cell.classList.toggle("miss", best !== null && !ok);
+        st.textContent = best === null ? "" : ok ? `✓ +${D.bonus.points_each}` : `best ${best}% · needs 90`;
+      }
+      const bonus = Math.min(D.bonus.max, earned * D.bonus.points_each);
       root.querySelector("#bonus-pts").textContent = `+${+bonus.toFixed(2)}`;
-      const total = (f) => Math.min(1000, projNoFinal + (f / 100) * final.points_each + bonus);
+      const required = (f) => Math.round((projNoFinal + (f / 100) * final.points_each) * 1e6) / 1e6;  // drop floating-point noise before any cutoff
+      const total = (f) => Math.min(1000, required(f) + bonus);
       const letter = (f) => (f < 75 || total(f) < 750 ? "F" : letterOf(total(f))[0]);
       const projF = hasFinal ? finalScore : assume, pl = letter(projF);
       const big = root.querySelector("#pd-big"); big.textContent = pl; big.style.color = LC[pl];
       root.querySelector("#pd-pct").textContent = `${trunc1(total(projF) / 10)}%`;
+      const rq = required(projF), capped = rq + bonus > 1000;
+      root.querySelector("#pd-math").textContent = `Required ${trunc1(rq)} + bonus ${bonus.toFixed(2).replace(/\.?0+$/, "")} = ${trunc1(Math.min(1000, rq + bonus))} / 1,000${capped ? " (capped)" : ""}`;
 
       if (!froot) return;
       const tryF = hasFinal ? finalScore : +fin.value, fl = letter(tryF);

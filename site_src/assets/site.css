@@ -2060,3 +2060,14 @@ figure.vz-arrive { animation: vz-arrive 1.3s cubic-bezier(.2,.8,.2,1); }
 .vz-rd-ax { stroke: color-mix(in srgb, var(--vz-text) 35%, transparent); } .vz-rd-line { fill: none; stroke: var(--vz-1); stroke-width: 2.6; stroke-linejoin: round; }
 .vz-ts-card.block { fill: color-mix(in srgb, var(--vz-1) 8%, var(--vz-bg)); stroke: var(--vz-1); } .vz-ts-glow.block { fill: color-mix(in srgb, var(--vz-1) 14%, transparent); } .vz-ts-fx.block { fill: var(--vz-1); }
 .vz-ts-card.risk { fill: color-mix(in srgb, var(--vz-2) 9%, var(--vz-bg)); stroke: var(--vz-2); } .vz-ts-glow.risk { fill: color-mix(in srgb, var(--vz-2) 18%, transparent); } .vz-ts-fx.risk { fill: var(--vz-2); }
+/* checkpoint bonus: two attempts each, best counts */
+.gs-cp2 { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+@media (max-width: 640px) { .gs-cp2 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.gs-cpc { display: grid; grid-template-columns: 1fr 1fr; gap: 4px; padding: 7px; border-radius: 11px; background: var(--surface-2); transition: background .2s, box-shadow .2s; }
+.gs-cpc.ok { background: color-mix(in srgb, var(--c) 18%, var(--surface-2)); box-shadow: inset 0 0 0 1.5px var(--c); }
+.gs-cpn { grid-column: 1 / -1; font: 600 11.5px var(--font); color: var(--text-2); }
+.gs-cpc input { width: 100%; min-width: 0; font: 500 13px var(--font); padding: 5px 6px; border-radius: 7px; border: 1px solid var(--hair); background: var(--surface); color: var(--text); }
+.gs-cps { grid-column: 1 / -1; font: 600 11px var(--font); color: var(--text-2); min-height: 1.2em; }
+.gs-cpc.ok .gs-cps { color: var(--text); } .gs-cpc.miss .gs-cps { color: var(--warn); }
+.gs-cpnote { margin: 8px 0 0; font-size: 12px; color: var(--text-2); line-height: 1.45; }
+.gs-math { font-size: 12.5px; color: var(--text-2); margin: -4px 0 10px; font-variant-numeric: tabular-nums; }
