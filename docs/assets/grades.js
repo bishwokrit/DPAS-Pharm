@@ -52,11 +52,7 @@
           <div class="gs-h"><span class="gs-dot"></span>${it.label}<span>${it.weight}%</span></div>
           <div class="gs-in" style="--n:${it.count}">${Array.from({ length: it.count }, (_, i) => `<input type="number" inputmode="decimal" min="0" max="100" step="0.1" placeholder="${NAMES[it.key](i).replace(/^(\w+) (\d+)$/, (m, a, n) => (it.key === "db" ? "DB " : a.slice(0, 1) + "") + n)}" aria-label="${NAMES[it.key](i)} percent" data-k="${it.key}" data-i="${i}">`).join("")}</div></div>`).join("")}
         <div class="gs-sec" style="--c:var(--c-bonus)"><div class="gs-h"><span class="gs-dot"></span>Bonus checkpoints<span id="bonus-pts">+0</span></div>
-          <div class="gs-cp2">${Array.from({ length: D.bonus.count }, (_, i) => `<div class="gs-cpc" data-cpc="${i}"><span class="gs-cpn">Checkpoint ${i + 1}</span>
-            <input type="number" inputmode="decimal" min="0" max="100" step="0.1" placeholder="1st %" aria-label="Checkpoint ${i + 1}, attempt 1 percent" data-cp="${i}" data-a="0">
-            <input type="number" inputmode="decimal" min="0" max="100" step="0.1" placeholder="2nd %" aria-label="Checkpoint ${i + 1}, attempt 2 percent" data-cp="${i}" data-a="1">
-            <b class="gs-cps" data-cps="${i}"></b></div>`).join("")}</div>
-          <p class="gs-cpnote">${D.bonus.points_each} points for each checkpoint with ≥90% on either attempt (best attempt counts), up to ${D.bonus.max}. Added after the required total; the course score is capped at 1,000.</p></div></div>
+          <div class="gs-in gs-cpin" style="--n:${D.bonus.count}">${Array.from({ length: D.bonus.count }, (_, i) => `<input type="number" inputmode="decimal" min="0" max="100" step="0.1" placeholder="CP${i + 1}" title="Checkpoint ${i + 1}: your highest score (≥90% earns ${D.bonus.points_each})" aria-label="Checkpoint ${i + 1} highest percent" data-cp="${i}">`).join("")}</div></div></div>
       <div class="gs-chart">
         <div class="gs-sum"><div><div class="gs-big" id="pd-big" aria-live="polite">—</div><div class="gs-lbl">Projected grade</div></div><div class="gs-pct" id="pd-pct">—</div></div>
         <div class="gs-math" id="pd-math"></div>
@@ -82,17 +78,16 @@
         saveAll(S); calc();
       });
     });
-    // checkpoints: best of two attempts; an older saved "checked" box counts as a 90% attempt
-    if (S.cp && !S.cps) { S.cps = S.cp.map((on) => (on ? [90, null] : [null, null])); delete S.cp; saveAll(S); }
-    S.cps ||= [];
+    // checkpoints: one box each for your highest score. Earlier saves (checked boxes, or two attempts) carry over.
+    if (!S.cpb) {
+      S.cpb = S.cps ? S.cps.map((r) => { const a = (r || []).filter((v) => v !== null && v !== undefined); return a.length ? Math.max(...a) : null; })
+        : S.cp ? S.cp.map((on) => (on ? 90 : null)) : [];
+      delete S.cps; delete S.cp; saveAll(S);
+    }
     root.querySelectorAll("input[data-cp]").forEach((inp) => {
-      const v = S.cps[inp.dataset.cp]?.[inp.dataset.a];
+      const v = S.cpb[inp.dataset.cp];
       if (v !== undefined && v !== null) inp.value = v;
-      inp.addEventListener("input", () => {
-        const row = (S.cps[inp.dataset.cp] ||= [null, null]);
-        row[inp.dataset.a] = inp.value === "" ? null : Math.max(0, Math.min(100, +inp.value));
-        saveAll(S); calc();
-      });
+      inp.addEventListener("input", () => { S.cpb[inp.dataset.cp] = inp.value === "" ? null : Math.max(0, Math.min(100, +inp.value)); saveAll(S); calc(); });
     });
     root.querySelectorAll("#assume button").forEach((b) => b.addEventListener("click", () => { S.assume = S.assume === +b.dataset.v ? "avg" : +b.dataset.v; saveAll(S); calc(); }));
     const fin = froot?.querySelector("#fn-in");
@@ -103,7 +98,7 @@
     if (fin) { fin.value = S.fxTry ?? 85; fin.addEventListener("input", () => { S.fxTry = +fin.value; saveAll(S); calc(); glow(); }); fin.addEventListener("pointerdown", glow); }
     root.querySelector("[data-clear]").addEventListener("click", () => {
       if (!confirm("Clear all scores?")) return;
-      S = { assume: S.assume, fxTry: S.fxTry, cps: [] }; saveAll(S);
+      S = { assume: S.assume, fxTry: S.fxTry, cpb: [] }; saveAll(S);
       all.forEach((i) => (i.value = "")); root.querySelectorAll("input[data-cp]").forEach((c) => (c.value = ""));
       calc();
     });
@@ -138,16 +133,15 @@
       }
       root.querySelector("#gs-hint").hidden = D.items.some((it) => (S[it.key] || []).some((v) => v !== null && v !== undefined && v !== ""));
       // a checkpoint earns its bonus when the better of its two attempts is at least 90%
+      // syllabus: 3.75 points for each checkpoint scored ≥90% on either attempt; all 8 → 30 points (3%), capped at 30
       let earned = 0;
-      for (let i = 0; i < D.bonus.count; i++) {
-        const a = (S.cps[i] || []).filter((v) => v !== null && v !== undefined), best = a.length ? Math.max(...a) : null, ok = best !== null && best >= 90;
+      root.querySelectorAll("input[data-cp]").forEach((inp) => {
+        const v = S.cpb[inp.dataset.cp], has = v !== null && v !== undefined, ok = has && v >= 90;
         if (ok) earned++;
-        const cell = root.querySelector(`[data-cpc="${i}"]`), st = root.querySelector(`[data-cps="${i}"]`);
-        cell.classList.toggle("ok", ok); cell.classList.toggle("miss", best !== null && !ok);
-        st.textContent = best === null ? "" : ok ? `✓ +${D.bonus.points_each}` : `best ${best}% · needs 90`;
-      }
+        inp.classList.toggle("ok", ok); inp.classList.toggle("miss", has && !ok);
+      });
       const bonus = Math.min(D.bonus.max, earned * D.bonus.points_each);
-      root.querySelector("#bonus-pts").textContent = `+${+bonus.toFixed(2)}`;
+      root.querySelector("#bonus-pts").textContent = `+${+bonus.toFixed(2)} (${earned}/${D.bonus.count} at ≥90%)`;
       const required = (f) => Math.round((projNoFinal + (f / 100) * final.points_each) * 1e6) / 1e6;  // drop floating-point noise before any cutoff
       const total = (f) => Math.min(1000, required(f) + bonus);
       const letter = (f) => (f < 75 || total(f) < 750 ? "F" : letterOf(total(f))[0]);
