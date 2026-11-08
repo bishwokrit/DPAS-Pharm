@@ -1,4 +1,4 @@
-"""Home page and syllabus page (schedule, grading, grade calculator)."""
+"""Home page and syllabus page (schedule, grading, grade calculator, class stats)."""
 import html
 import json
 import re
@@ -307,9 +307,9 @@ def syllabus_page(syl, sched, built):
     facts = [("3", "credit hours"), ("2×", "a week · 2.5 h"), ("1,000", "points"), ("6 + 1", "unit exams + final"), ("75%", "to pass")]
     body = f"""<header class="hero wrap syl-hero"><p class="eyebrow appear">Syllabus · v5 · October 9, 2026</p>
 <h1 class="appear" style="--d:.05s">Clinical<br><span class="accent-text">Pharmacology I</span></h1>
-<p class="lede appear" style="--d:.12s">Fall 2026 · schedule, grading, and a calculator in one place.</p>
+<p class="lede appear" style="--d:.12s">Fall 2026 · schedule, grading, a grade calculator and class stats in one place.</p>
 <div class="fact-pills appear" style="--d:.2s">{"".join(f'<div><strong>{a}</strong><span>{b}</span></div>' for a, b in facts)}</div>
-<div class="btns noprint appear" style="--d:.28s"><a class="btn" href="#calc">Grade calculator</a><a class="btn ghost" href="#schedule">Schedule</a></div></header>
+<div class="btns noprint appear" style="--d:.28s"><a class="btn" href="#calc">Grade calculator</a><a class="btn ghost" href="#class">Class stats</a><a class="btn ghost" href="#schedule">Schedule</a></div></header>
 <section class="section" id="next"><div class="wrap"><p class="kicker">Coming up</p><h2>What's due next</h2><div class="upnext" id="upnext"></div></div></section>
 <section class="section" id="schedule"><div class="wrap"><p class="kicker">Schedule</p><h2>Week by week</h2><p class="muted">From the course syllabus; subject to revision. Any material covered in lecture or assigned as reading is testable.</p>
 <div class="sch-chips noprint">{chips}</div>
