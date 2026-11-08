@@ -72,11 +72,23 @@ def _scenes():
     return scenes.SCENES
 
 
+def _anat():
+    sys.path.insert(0, str(ROOT / "work"))
+    import scenes
+    return getattr(scenes, "ANAT", {})
+
+
 def viz_attrs(fig, lid=None):
     """data-viz picks the figure's interactive version: a physiology scene (work/scenes.py) when there is one, else a
     reusable type named in its "viz" field, or one built for that image."""
     scene = (_scenes().get(lid) or {}).get(fig["image"])
-    if not scene and (fig.get("viz") or {}).get("type") == "pathway":  # every labelled pathway also gets its pictured version
+    an = (_anat().get(lid) or {}).get(fig["image"])
+    if not scene and an and (fig.get("viz") or {}).get("type") == "pathway":  # the pathway drawn on its anatomy
+        v = fig["viz"]
+        nodes = [{**n, "label": an.get("labels", {}).get(n["id"], n["label"])} for n in v["nodes"]]
+        drugs = [{**d, **an.get("fix", {}).get(i, {})} for i, d in enumerate(v.get("drugs", []))]
+        scene = {**v, "type": "anat", "nodes": nodes, "drugs": drugs, "h": an.get("h", 380), **{k: an[k] for k in ("bg", "opts", "pos", "organ", "lab", "bend") if k in an}}
+    if not scene and (fig.get("viz") or {}).get("type") == "pathway":  # every other labelled pathway gets its pictured version
         scene = {**fig["viz"], "type": "factory"}
     v = scene or fig.get("viz") or {}
     key = v.get("type") or re.sub(r"_1$", "", fig["image"].rsplit(".", 1)[0])

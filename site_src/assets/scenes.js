@@ -647,7 +647,7 @@
 // ================================================================ organ-level scenes
 (function () {
   const V = window.dpasViz; if (!V || !V._k || !V._icons) return;
-  const { mk, stream, show, esc, label, blocker, cite, clamp, lerp, calm } = V._k, { ICON } = V._icons;
+  const { mk, stream, show, esc, label, blocker, cite, clamp, lerp, calm } = V._k, { ICON, iconFor } = V._icons;
   const W = 640;
   const drugList = (ds) => ds.map((d, i) => ({ col: ["var(--vz-1)", "var(--vz-2)", "var(--vz-4)", "var(--vz-3)", "var(--vz-5)"][i % 5], ...d }));
   const noteOf = (S, drugs) => { const d = drugs.find((x) => x.id === S.last) || drugs.find((x) => S.on.has(x.id)); return d ? `<b>${esc(d.label)}.</b> ${d.note || ""} ` : ""; };
@@ -661,98 +661,123 @@
   };
   const icon = (g, name, x, y, col, s = 1) => { const e = mk("g", { transform: `translate(${x},${y}) scale(${s})` }, g); e.innerHTML = ICON[name](col); return e; };
 
-  // ---------------------------------------------------------------- NEPHRON: where each diuretic acts and what leaves in the urine
-  // cfg: {segments:[{id,label,frac,tr}], drugs:[{id,label,seg,k:+1|-1,ca:+1|-1,glu:true,water:+1|-1,note}], show:["na","k","ca","glu","water"]}
+  // ---------------------------------------------------------------- NEPHRON: anatomical nephron (cortex/medulla), transporters where they sit
+  // cfg: {segments:[{id:pt|tal|dct|cd,label,frac,tr}], drugs:[{id,label,seg,k,ca,glu,water,fe,note}], show:["na","k","ca","glu","water"]}
+  // Na⁺ in urine accounts for downstream compensation: block the proximal tubule and the loop recaptures most of it.
+  const hbar = (g, x, y, w, title) => {
+    label(g, x, y, title, { a: "start", cls: "vz-sc-r" });
+    mk("rect", { x, y: y + 7, width: w, height: 9, rx: 4.5, class: "vz-sc-mtrack" }, g);
+    const f = mk("rect", { x, y: y + 7, width: 0, height: 9, rx: 4.5, class: "vz-sc-mfill" }, g);
+    const t = label(g, x, y + 32, "", { a: "start", cls: "vz-sc-s" });
+    let v = 0.5;
+    return { set(target, dt, txt, col) { v += (target - v) * Math.min(1, dt * 3); f.setAttribute("width", w * clamp(v, 0.02, 1)); f.style.fill = col || ""; t.textContent = txt; } };
+  };
   V.nephron = (host, cfg = {}) => {
-    const H = 380;
+    const H = 440;
     const SEG = cfg.segments || [{ id: "pt", label: "Proximal tubule", frac: 0.65, tr: "" }, { id: "tal", label: "Thick ascending limb", frac: 0.25, tr: "" }, { id: "dct", label: "Distal tubule", frac: 0.07, tr: "" }, { id: "cd", label: "Collecting duct", frac: 0.03, tr: "" }];
+    const PASS = { pt: 0.08, tal: 0.85, dct: 0.9, cd: 1 };  // share of the extra Na⁺ that escapes recapture downstream
     const drugs = drugList(cfg.drugs || []), showM = cfg.show || ["na", "k", "ca"];
+    const siteOf = (d) => (d.seg === "sglt2" ? "pt" : d.seg);
     const st = V._stage(host, {
-      h: H, drugs, multi: !!cfg.multi, label: "Nephron", point: cfg.point, hint: "Drag a drug onto the nephron, or tap it", steps: cfg.steps,
-      target: (id) => { const d = drugs.find((x) => x.id === id); return SP[d.seg]?.at || [320, 190]; },
+      h: H, drugs, multi: !!cfg.multi, label: "Nephron: cortex to medulla, with each diuretic's transporter", point: cfg.point, hint: "Drag a drug onto the nephron, or tap it", steps: cfg.steps,
+      target: (id) => { const d = drugs.find((x) => x.id === id); return SITE[siteOf(d)] || [240, 200]; },
       read(S) {
-        const m = model(S);
-        const bits = [];
+        const m = model(S), bits = [];
         if (showM.includes("na")) bits.push(`Na⁺ in urine: <b>${m.naTxt}</b>`);
         if (showM.includes("water")) bits.push(`Urine water: <b>${m.waterTxt}</b>`);
         if (showM.includes("k")) bits.push(`Serum K⁺: <b>${m.kTxt}</b>`);
         if (showM.includes("ca")) bits.push(`Urine Ca²⁺: <b>${m.caTxt}</b>`);
         if (showM.includes("glu")) bits.push(`Urine glucose: <b>${m.gluTxt}</b>`);
-        return `${noteOf(S, drugs) || esc(cfg.read || "Each segment pulls sodium back into the blood. Block a segment and that sodium — and the water with it — stays in the urine.")}<span class="vz-meter-t">${bits.join(" · ")}</span>`;
+        return `${noteOf(S, drugs) || esc(cfg.read || "Each segment pulls sodium back into the peritubular capillary. Block a segment's transporter and that sodium — and the water that follows it — stays in the urine.")}<span class="vz-meter-t">${bits.join(" · ")}</span>`;
       },
     });
     const { svg } = st;
+    const naBlocked = (S) => new Set(drugs.filter((d) => S.on.has(d.id) && d.seg !== "sglt2").map((d) => d.seg));
     function model(S) {
-      const on = drugs.filter((d) => S.on.has(d.id)), blocked = new Set(on.map((d) => d.seg));
-      let na = 1; SEG.forEach((s) => { if (!blocked.has(s.id)) na -= s.frac; });
+      const on = drugs.filter((d) => S.on.has(d.id)), bl = naBlocked(S);
+      let na = 0.01;
+      SEG.forEach((sg) => { if (bl.has(sg.id)) { const d = on.find((x) => x.seg === sg.id && x.fe != null); na += d ? d.fe : sg.frac * (PASS[sg.id] ?? 1); } });
       na = clamp(na, 0.01, 1);
       const k = on.reduce((a, d) => a + (d.k || 0), 0), ca = on.reduce((a, d) => a + (d.ca || 0), 0), glu = on.some((d) => d.glu), water = on.reduce((a, d) => a + (d.water || 0), 0);
-      const naTxt = na < 0.02 ? "~1%" : `~${Math.round(na * 100)}%`;
+      const naTxt = na < 0.02 ? "~1% (normal)" : `~${Math.round(na * 100)}%`;
       return { na, k, ca, glu, water, naTxt, kTxt: k < 0 ? "falls (K⁺ lost)" : k > 0 ? "rises (K⁺ kept)" : "normal", caTxt: ca > 0 ? "up" : ca < 0 ? "down (Ca²⁺ kept)" : "normal",
-        gluTxt: glu ? "glucose spills" : "none", waterTxt: water > 0 ? "more water kept (concentrated)" : water < 0 ? "more water lost (dilute)" : na > 0.1 ? "up" : "normal" };
+        gluTxt: glu ? "glucose spills" : "none", waterTxt: water > 0 ? "less (concentrated)" : water < 0 ? "more water lost" : na > 0.1 ? "more" : "normal" };
     }
-    // the tubule: glomerulus → PT → loop (down, up) → DCT → collecting duct → urine
-    const path = [[78, 62], [110, 62], [140, 46], [170, 76], [200, 46], [230, 70], [252, 80], [252, 300], [276, 330], [300, 300], [300, 110], [326, 88], [356, 112], [386, 88], [416, 104], [440, 104], [440, 330], [440, 362]];
-    const SP = {};
-    const segPts = { pt: [1, 6], tal: [9, 10], dct: [10, 15], cd: [15, 16] };
+    // ---- anatomy: cortex / medulla, glomerulus in Bowman's capsule, PCT → thin descending → hairpin → thin ascending → TAL → macula densa → DCT → collecting duct
     const g0 = mk("g", {}, svg);
-    mk("path", { d: `M${path.map((p) => p.join(",")).join("L")}`, class: "vz-nx-tube" }, g0);
-    mk("path", { d: `M${path.map((p) => p.join(",")).join("L")}`, class: "vz-nx-lumen" }, g0);
-    mk("circle", { cx: 54, cy: 62, r: 24, class: "vz-nx-glom" }, g0);
-    for (let i = 0; i < 5; i++) mk("circle", { cx: 54 + Math.cos(i * 1.3) * 9, cy: 62 + Math.sin(i * 1.3) * 9, r: 7, class: "vz-nx-cap" }, g0);
-    label(g0, 54, 102, "Glomerulus", { cls: "vz-sc-s" });
-    label(g0, 470, 372, "Urine", { a: "start", cls: "vz-sc-h" });
-    mk("rect", { x: 16, y: 130, width: 214, height: 230, rx: 18, class: "vz-nx-blood" }, g0);
-    label(g0, 30, 152, "Back to the blood", { a: "start", cls: "vz-sc-s" });
-    SEG.forEach((s) => {
-      const [a, b] = segPts[s.id] || [2, 6], mid = path[Math.round((a + b) / 2)];
-      const [lx, ly, an] = { pt: [150, 22, "middle"], tal: [314, 210, "start"], dct: [372, 64, "middle"], cd: [456, 230, "start"] }[s.id] || [320, 20, "middle"];
-      SP[s.id] = { at: mid, i0: a, i1: b };
-      const g = mk("g", {}, g0);
-      label(g, lx, ly, s.label, { cls: "vz-sc-r", a: an });
-      label(g, lx, ly + 14, `${s.tr ? s.tr + " · " : ""}~${Math.round(s.frac * 100)}% of Na⁺`, { cls: "vz-sc-s", a: an });
-      const bxy = { pt: [170, 44], tal: [300, 200], dct: [370, 96], cd: [440, 230] }[s.id] || mid;
-      SP[s.id].at = bxy;
-      const x = blocker(g0, bxy[0], bxy[1], "var(--vz-2)");
-      SP[s.id].x = x;
+    mk("rect", { x: 0, y: 0, width: 470, height: 196, rx: 16, class: "vz-nx-cortex" }, g0);
+    mk("rect", { x: 0, y: 196, width: 470, height: H - 196, rx: 16, class: "vz-nx-medulla" }, g0);
+    label(g0, 462, 188, "CORTEX", { a: "end", cls: "vz-nx-zone" }); label(g0, 462, 214, "MEDULLA", { a: "end", cls: "vz-nx-zone" });
+    const path = [[176, 86], [154, 66], [134, 92], [114, 64], [94, 92], [76, 84], [62, 110], [62, 384], [92, 408], [122, 384], [122, 300], [122, 150], [134, 124], [160, 114],
+      [212, 112], [236, 92], [262, 122], [288, 92], [314, 120], [340, 100], [372, 100], [372, 420]];
+    const IDX = { pt: [1, 6], tal: [10, 12], dct: [14, 19], cd: [20, 21] };
+    const d = `M${path.map((p) => p.join(",")).join("L")}`;
+    // peritubular capillary running beside the tubule (where reabsorbed ions go)
+    mk("path", { d: "M44,100 L44,372 M140,160 L140,330 M210,130 C250,142 300,142 350,130 M388,112 L388,404", class: "vz-nx-ptc" }, g0);
+    mk("path", { d: "M200,6 L200,44", class: "vz-nx-art" }, g0);
+    label(g0, 208, 22, "afferent arteriole", { a: "start", cls: "vz-sc-s" });
+    mk("path", { d, class: "vz-nx-tube" }, g0);
+    mk("path", { d: "M122,300 L122,150 L134,124 L160,114", class: "vz-nx-thick" }, g0);  // TAL: thicker epithelium
+    mk("path", { d, class: "vz-nx-lumen" }, g0);
+    mk("circle", { cx: 200, cy: 72, r: 30, class: "vz-nx-bowman" }, g0);
+    for (let i = 0; i < 6; i++) mk("circle", { cx: 200 + Math.cos(i * 1.05) * 11, cy: 70 + Math.sin(i * 1.05) * 11, r: 7, class: "vz-nx-cap" }, g0);
+    mk("ellipse", { cx: 166, cy: 106, rx: 9, ry: 5, class: "vz-nx-md" }, g0);
+    label(g0, 236, 62, "Glomerulus", { a: "start", cls: "vz-sc-s" });
+    label(g0, 176, 154, "macula densa", { a: "middle", cls: "vz-sc-m" });
+    label(g0, 372, H - 4, "→ urine", { a: "start", cls: "vz-sc-h" });
+    label(g0, 30, 300, "thin descending limb", { a: "middle", cls: "vz-sc-m" }).setAttribute("transform", "rotate(-90 30 300)");
+    // transporter sites + labels
+    const SITE = { pt: [114, 64], tal: [122, 236], dct: [288, 92], cd: [372, 290] };
+    const LAB = { pt: [100, 30, "middle"], tal: [142, 230, "start"], dct: [300, 168, "middle"], cd: [358, 330, "end"] };
+    const X = {};
+    SEG.forEach((sg) => {
+      const [sx, sy] = SITE[sg.id] || [240, 200];
+      mk("rect", { x: sx - 9, y: sy - 6, width: 18, height: 12, rx: 6, class: "vz-nx-site" }, g0);
+      const [lx, ly, an] = LAB[sg.id] || [240, 20, "middle"];
+      label(g0, lx, ly, sg.label, { cls: "vz-sc-r", a: an });
+      label(g0, lx, ly + 14, `${sg.tr ? sg.tr + " · " : ""}~${Math.round(sg.frac * 100)}% of Na⁺`, { cls: "vz-sc-s", a: an });
+      X[sg.id] = blocker(g0, sx, sy, "var(--vz-2)");
     });
-    // particles: Na⁺ (and glucose) travel the tubule; some leave at each open segment
-    const flow = mk("g", {}, svg), ps = [];
-    const segLen = []; let tot = 0;
+    // ---- flowing filtrate: Na⁺ (blue) and glucose (amber); reabsorbed ions hop into the capillary
+    const flow = mk("g", {}, svg), ps = [], segLen = []; let tot = 0;
     for (let i = 1; i < path.length; i++) { const l = Math.hypot(path[i][0] - path[i - 1][0], path[i][1] - path[i - 1][1]); segLen.push(l); tot += l; }
-    const posAt = (d) => { let k = 0; while (k < segLen.length - 1 && d > segLen[k]) { d -= segLen[k]; k++; } const t = clamp(d / segLen[k], 0, 1); return { k, p: [lerp(path[k][0], path[k + 1][0], t), lerp(path[k][1], path[k + 1][1], t)] }; };
-    const cut = {}; SEG.forEach((s) => (cut[s.id] = s.frac));
+    const posAt = (dd) => { let k = 0; while (k < segLen.length - 1 && dd > segLen[k]) { dd -= segLen[k]; k++; } const t = clamp(dd / segLen[k], 0, 1); return { k, p: [lerp(path[k][0], path[k + 1][0], t), lerp(path[k][1], path[k + 1][1], t)] }; };
     const urine = mk("g", {}, svg);
+    // ---- readout panel (horizontal bars; never overlaps the anatomy)
     const bars = mk("g", {}, svg), M = {};
-    let bx = 498;
-    const mtr = (key, title) => { if (!showM.includes(key)) return; M[key] = bar(bars, bx, 150, 20, 120, title); bx += 54; };
-    mtr("na", "Na⁺ out"); mtr("water", "Water out"); mtr("k", "K⁺ (blood)"); mtr("ca", "Ca²⁺ out"); mtr("glu", "Glucose out");
-    st.changed = () => { const S = st.S, blocked = new Set(drugs.filter((d) => S.on.has(d.id)).map((d) => d.seg)); SEG.forEach((s) => show(SP[s.id].x, blocked.has(s.id))); };
+    let by = 40;
+    const mtr = (key, title) => { if (!showM.includes(key)) return; M[key] = hbar(bars, 488, by, 140, title); by += 62; };
+    mtr("na", "Na⁺ in urine"); mtr("water", "Urine water"); mtr("k", "Serum K⁺"); mtr("ca", "Urine Ca²⁺"); mtr("glu", "Urine glucose");
+    st.changed = () => { const on = drugs.filter((dd) => st.S.on.has(dd.id)); SEG.forEach((sg) => show(X[sg.id], on.some((dd) => siteOf(dd) === sg.id))); };
     st.tick = (dt) => {
-      const S = st.S, m = model(S), blocked = new Set(drugs.filter((d) => S.on.has(d.id)).map((d) => d.seg));
-      if (Math.random() < dt * 9) ps.push({ d: 0, c: mk("circle", { r: 3.6, class: "vz-nx-na" }, flow), out: null, glu: showM.includes("glu") && Math.random() < 0.35 });
+      const S = st.S, m = model(S), bl = naBlocked(S);
+      if (Math.random() < dt * 9) ps.push({ d: 0, c: mk("circle", { r: 3.4, class: "vz-nx-na" }, flow), out: null, glu: showM.includes("glu") && Math.random() < 0.35 });
       for (let i = ps.length - 1; i >= 0; i--) {
         const p = ps[i];
-        if (p.out) { p.out.t += dt * 1.6; p.c.setAttribute("cx", lerp(p.out.x, p.out.tx, p.out.t)); p.c.setAttribute("cy", lerp(p.out.y, p.out.ty, p.out.t)); p.c.setAttribute("opacity", 1 - p.out.t); if (p.out.t >= 1) { p.c.remove(); ps.splice(i, 1); } continue; }
+        if (p.out) { p.out.t += dt * 1.8; p.c.setAttribute("cx", lerp(p.out.x, p.out.tx, p.out.t)); p.c.setAttribute("cy", lerp(p.out.y, p.out.ty, p.out.t)); p.c.setAttribute("opacity", 1 - p.out.t); if (p.out.t >= 1) { p.c.remove(); ps.splice(i, 1); } continue; }
         p.d += dt * 120;
         const { k, p: xy } = posAt(p.d);
         p.c.setAttribute("cx", xy[0]); p.c.setAttribute("cy", xy[1]);
         if (p.glu) p.c.setAttribute("class", "vz-nx-glu");
-        for (const s of SEG) {
-          const sp = SP[s.id];
-          if (k === sp.i0 && !p[s.id]) {
-            p[s.id] = 1;
-            const keep = p.glu ? (s.id === "pt" && !m.glu ? 1 : 0) : blocked.has(s.id) ? 0 : cut[s.id] / Math.max(0.01, SEG.filter((x) => SEG.indexOf(x) >= SEG.indexOf(s)).reduce((a, x) => a + x.frac, 0) + (1 - SEG.reduce((a, x) => a + x.frac, 0)));
-            if (Math.random() < keep) { p.out = { t: 0, x: xy[0], y: xy[1], tx: 40 + Math.random() * 170, ty: 170 + Math.random() * 170 }; break; }
+        for (const sg of SEG) {
+          const [a, b] = IDX[sg.id] || [1, 2];
+          if (k >= a && k < b && !p[sg.id]) {
+            p[sg.id] = 1;
+            // remaining share of filtered Na⁺ at this point, so each segment takes its taught fraction; a blocked segment lets most of it pass,
+            // and later segments recapture part (compensation)
+            const left = SEG.slice(SEG.indexOf(sg)).reduce((s2, x) => s2 + x.frac, 0) + 0.01;
+            let keep = p.glu ? (sg.id === "pt" && !m.glu ? 1 : 0) : bl.has(sg.id) ? 0 : sg.frac / left;
+            if (!p.glu && !bl.has(sg.id) && sg.id === "tal" && bl.has("pt")) keep = Math.min(1, keep * 1.35);
+            if (Math.random() < keep) { const off = sg.id === "cd" ? [14, 0] : sg.id === "dct" ? [0, 20] : sg.id === "tal" ? [12, 0] : [-12, 10]; p.out = { t: 0, x: xy[0], y: xy[1], tx: xy[0] + off[0], ty: xy[1] + off[1] }; break; }
           }
         }
-        if (p.d >= tot) { p.c.remove(); ps.splice(i, 1); const u = mk("circle", { cx: 440 + (Math.random() - 0.5) * 24, cy: 366 + Math.random() * 8, r: 3, class: p.glu ? "vz-nx-glu" : "vz-nx-na" }, urine); setTimeout(() => u.remove(), 900); }
+        if (p.d >= tot) { p.c.remove(); ps.splice(i, 1); const u = mk("circle", { cx: 372 + (Math.random() - 0.5) * 16, cy: H - 16 + Math.random() * 6, r: 3, class: p.glu ? "vz-nx-glu" : "vz-nx-na" }, urine); setTimeout(() => u.remove(), 900); }
       }
       M.na?.set(clamp(m.na * 3.5, 0.03, 1), dt, m.naTxt);
-      M.water?.set(m.water > 0 ? 0.15 : m.water < 0 ? 0.9 : clamp(m.na * 3.5, 0.05, 1), dt, m.water > 0 ? "less" : m.water < 0 ? "more" : m.na > 0.1 ? "more" : "normal");
-      M.k?.set(0.5 + m.k * 0.3, dt, m.kTxt.split(" ")[0], m.k < 0 ? "var(--vz-3)" : m.k > 0 ? "var(--vz-2)" : "");
-      M.ca?.set(0.5 + m.ca * 0.3, dt, m.ca > 0 ? "up" : m.ca < 0 ? "down" : "normal");
-      M.glu?.set(m.glu ? 0.85 : 0.04, dt, m.glu ? "spills" : "none");
+      M.water?.set(m.water > 0 ? 0.15 : m.water < 0 ? 0.9 : clamp(m.na * 3.5, 0.05, 1), dt, m.waterTxt);
+      M.k?.set(0.5 + m.k * 0.3, dt, m.kTxt, m.k < 0 ? "var(--vz-3)" : m.k > 0 ? "var(--vz-2)" : "");
+      M.ca?.set(0.5 + m.ca * 0.3, dt, m.caTxt);
+      M.glu?.set(m.glu ? 0.85 : 0.04, dt, m.gluTxt);
     };
     st.changed();
     return st;
@@ -890,7 +915,7 @@
       glandI.setAttribute("transform", `translate(${X},${G.y}) scale(${1.5 * (0.55 + 0.45 * m.gland)})`);
       B.top.set(m.top / 2, dt, ""); B.mid.set(m.mid / 2, dt, ""); B.hor.set(m.hor / 2, dt, "");
       tissue.setAttribute("opacity", 0.35 + 0.65 * clamp(eff, 0, 1));
-      if (Math.random() < dt) st.paint();
+      sim.pt = (sim.pt || 0) + dt; if (sim.pt > 0.3) { sim.pt = 0; st.paint(); }  // readout follows the bars
     };
     relabel(); st.changed({ reset: true });
     return st;
@@ -904,43 +929,261 @@
     words.forEach((w) => { if ((lines[lines.length - 1] + " " + w).trim().length > n && lines.length < 2 && lines[lines.length - 1]) lines.push(w); else lines[lines.length - 1] = (lines[lines.length - 1] + " " + w).trim(); });
     lines.forEach((l, i) => { const sp = mk("tspan", { x: t.getAttribute("x"), dy: i ? "1.2em" : 0 }, t); sp.textContent = l; });
   };
+  // ---------------------------------------------------------------- BODY MAP: each tissue drawn where it sits in the body, its effect card beside it
+  const ORG = {  // [x, y] in a 260×400 body, and the drawing (line art, centred on 0,0)
+    brain: [130, 36, '<path d="M-19,3 C-21,-13 -7,-21 0,-17 C7,-21 21,-13 19,3 C17,13 7,15 0,13 C-7,15 -17,13 -19,3Z"/><path class="ln" d="M0,-17V13M-12,-6c4,2 6,0 8,4M12,-6c-4,2 -6,0 -8,4M-13,6c4,-1 6,1 8,-2M13,6c-4,-1 -6,1 -8,-2"/>'],
+    stem: [130, 64, '<path d="M-5,-8 C-6,0 -4,8 -3,14 H3 C4,8 6,0 5,-8Z"/>'],
+    mouth: [130, 54, '<path d="M-9,0 C-4,-4 4,-4 9,0 C4,5 -4,5 -9,0Z"/>'],
+    cord: [130, 150, '<path class="ln" d="M0,-80V80"/><path d="M-3,-20h6v40h-6z"/>'],
+    breast: [148, 126, '<path d="M-14,-2 C-12,10 12,10 14,-2"/><circle r="2.2" cx="0" cy="4"/>'],
+    heart: [140, 140, '<path d="M-2,-12 C-12,-22 -26,-8 -16,6 L0,20 C12,8 20,-6 10,-14 C6,-17 0,-16 -2,-12Z"/><path class="ln" d="M-4,-14 C-4,-24 8,-26 10,-18"/>'],
+    liver: [112, 166, '<path d="M-26,-4 C-20,-15 12,-14 24,-8 C28,-5 22,1 12,5 C0,11 -16,12 -24,7 C-29,3 -29,-1 -26,-4Z"/>'],
+    stomach: [150, 172, '<path d="M-6,-16 C-1,-9 -4,0 -9,6 C-13,14 -2,20 8,16 C19,11 20,1 14,-5 C10,-9 6,-10 4,-17Z"/>'],
+    pancreas: [132, 188, '<path d="M-22,2 C-22,-6 -10,-6 0,-4 C10,-3 18,-5 23,-1 C20,3 10,4 0,4 C-10,6 -22,9 -22,2Z"/>'],
+    kidney: [152, 200, '<path d="M-4,-13 C8,-15 12,-2 10,6 C8,15 -4,15 -6,8 C-2,4 -2,-4 -6,-8 C-8,-11 -6,-13 -4,-13Z"/>'],
+    kidneyL: [108, 200, '<path d="M4,-13 C-8,-15 -12,-2 -10,6 C-8,15 4,15 6,8 C2,4 2,-4 6,-8 C8,-11 6,-13 4,-13Z"/>'],
+    gut: [130, 226, '<path d="M-22,14 V-12 C-22,-15 -19,-16 -16,-16 H16 C19,-16 22,-15 22,-12 V14"/><path class="ln" d="M-12,-6 c6,-4 10,4 16,0 s10,4 0,8 s-14,2 -10,8 s10,2 14,-2"/>'],
+    uterus: [130, 250, '<path d="M-14,-10 C-6,-4 6,-4 14,-10 C12,0 6,8 2,14 H-2 C-6,8 -12,0 -14,-10Z"/><path class="ln" d="M-14,-10 C-20,-12 -22,-6 -18,-4M14,-10 C20,-12 22,-6 18,-4"/>'],
+    bladder: [130, 262, '<path d="M-13,-6 C-13,-17 13,-17 13,-6 C13,6 6,12 0,12 C-6,12 -13,6 -13,-6Z"/>'],
+    prostate: [130, 280, '<ellipse rx="9" ry="6"/><path class="ln" d="M0,-6V6"/>'],
+    penis: [130, 298, '<rect x="-5" y="-9" width="10" height="20" rx="5"/>'],
+    femur: [110, 316, '<path d="M-3,-26 C-8,-30 -10,-24 -6,-20 L-3,20 C-7,25 -3,30 2,26 C6,30 9,24 5,20 L3,-20 C8,-24 5,-30 -1,-26Z"/>'],
+    knee: [110, 350, '<path d="M-7,-16 V-6 C-9,-2 9,-2 7,-6 V-16M-7,16 V6 C-9,2 9,2 7,6 V16"/><path class="ln" d="M-11,-8 C-15,0 -15,0 -11,8M11,-8 C15,0 15,0 11,8"/>'],
+    knee2: [150, 350, '<path d="M-7,-16 V-6 C-9,-2 9,-2 7,-6 V-16M-7,16 V6 C-9,2 9,2 7,6 V16"/><path class="ln" d="M-11,-8 C-15,0 -15,0 -11,8M11,-8 C15,0 15,0 11,8"/>'],
+    muscle: [150, 312, '<path d="M0,-24 C10,-14 10,14 0,24 C-10,14 -10,-14 0,-24Z"/><path class="ln" d="M-5,-10H5M-6,0H6M-5,10H5"/>'],
+    armmuscle: [62, 150, '<path d="M0,-22 C9,-12 9,12 0,22 C-9,12 -9,-12 0,-22Z"/><path class="ln" d="M-4,-8H4M-5,0H5M-4,8H4"/>'],
+    nmj: [62, 178, '<path class="ln" d="M-16,-14 C-8,-10 -4,-6 -2,-2"/><circle r="4"/><path d="M-10,6 H10 V10 H-10Z"/>'],
+    artery: [198, 160, '<path d="M-5,-26 C-3,-8 -3,8 -5,26M5,-26 C7,-8 7,8 5,26" class="ln2"/><path class="ln" d="M0,-20V20"/>'],
+    lungs: [130, 132, '<path d="M-6,-22 C-20,-20 -26,0 -24,18 C-18,22 -10,20 -6,14Z"/><path d="M6,-22 C20,-20 26,0 24,18 C18,22 10,20 6,14Z"/>'],
+    adrenal: [152, 184, '<path d="M-8,4 C-6,-6 4,-8 8,2 Z"/>'],
+    thyroid: [130, 82, '<path d="M-3,0 C-6,-8 -14,-8 -14,2 C-14,10 -6,10 -3,4 H3 C6,10 14,10 14,2 C14,-8 6,-8 3,0Z"/>'],
+    pituitary: [130, 50, '<path class="ln" d="M0,-8V-2"/><circle r="5"/>'],
+    hypothal: [130, 34, '<ellipse rx="10" ry="6"/>'],
+    ovary: [150, 254, '<ellipse rx="7" ry="5"/>'],
+    testis: [130, 312, '<ellipse cx="-6" rx="5" ry="7"/><ellipse cx="6" rx="5" ry="7"/>'],
+    ileum: [116, 232, '<path class="ln2" d="M-12,-6 c6,-6 12,6 18,0 s6,8 -2,10"/>'],
+    fat: [150, 228, '<ellipse rx="10" ry="7"/><ellipse cx="8" cy="6" rx="7" ry="5"/>'],
+    toe: [146, 396, '<path d="M-8,-4 C-8,-9 8,-9 8,-4 V3 C8,7 -8,7 -8,3Z"/>'],
+    parathyroid: [130, 82, '<path class="ln" d="M-3,0 C-6,-8 -14,-8 -14,2 C-14,10 -6,10 -3,4 H3 C6,10 14,10 14,2 C14,-8 6,-8 3,0Z"/><circle cx="-9" cy="-3" r="2.8"/><circle cx="9" cy="-3" r="2.8"/><circle cx="-9" cy="5" r="2.8"/><circle cx="9" cy="5" r="2.8"/>'],
+    face: [130, 48, '<path d="M-9,6 C-4,10 4,10 9,6"/><path class="ln" d="M-8,-4h4M4,-4h4"/>'],
+    blood: [202, 206, '<path d="M-5,-14 C-3,-4 -3,4 -5,14M5,-14 C7,-4 7,4 5,14" class="ln2"/><ellipse cx="0" cy="-5" rx="3" ry="1.6"/><ellipse cx="1" cy="3" rx="3" ry="1.6"/>'],
+  };
+  function organOf(t) {
+    if (t.organ && ORG[t.organ]) return t.organ;
+    const L = String(t.label).toLowerCase();
+    const K = [["brainstem", "stem"], ["spinal cord", "cord"], ["neuromuscular", "nmj"], ["muscle fiber", "armmuscle"], ["muscle", "muscle"], ["platelet", "blood"], ["corpus", "penis"],
+      ["mouth", "mouth"], ["flaring", "knee2"], ["knee", "knee"], ["joint", "knee"], ["endometri", "uterus"], ["β-cell", "pancreas"], ["pancrea", "pancreas"], ["prostate", "prostate"],
+      ["detrusor", "bladder"], ["bladder", "bladder"], ["arteriol", "artery"], ["vessel", "artery"], ["kidney", "kidney"], ["stomach", "stomach"], ["liver", "liver"], ["gut", "gut"],
+      ["heart", "heart"], ["breast", "breast"], ["bone", "femur"], ["brain", "brain"]];
+    const hit = K.find(([k]) => L.includes(k));
+    return hit ? hit[1] : { stomach: "stomach", drop: "blood", kidney: "kidney", joint: "knee", vessel: "artery", brain: "brain", nerve: "cord", muscle: "muscle", breast: "breast", bone: "femur", uterus: "uterus", pancreas: "pancreas", liver: "liver", gut: "gut", heart: "heart", bladder: "bladder", prostate: "prostate" }[t.icon] || "gut";
+  }
+  const BODY = '<circle cx="130" cy="40" r="25"/><path d="M118,64 h24 v12 C168,78 190,86 196,100 L214,206 C216,216 206,220 202,212 L184,124 L178,190 C182,226 184,262 178,290 L170,394 C168,402 154,402 154,394 L148,300 H112 L106,394 C106,402 92,402 90,394 L82,290 C76,262 78,226 82,190 L76,124 L58,212 C54,220 44,216 46,206 L64,100 C70,86 92,78 118,76Z"/>';
   V.tissues = (host, cfg = {}) => {
-    const TS = cfg.tissues, drugs = drugList(cfg.drugs || []), n = TS.length, cols = n > 4 ? 3 : n, rows = Math.ceil(n / cols), H = 40 + rows * 150;
+    const TS = cfg.tissues, drugs = drugList(cfg.drugs || []), n = TS.length, rowH = n > 4 ? 72 : 84, H = Math.max(400, 24 + n * rowH);
+    const sb = (H - 8) / 404, BX = 8;
     const st = V._stage(host, {
-      h: H, drugs, multi: !!cfg.multi, label: "Tissue map", point: cfg.point, hint: "Drag a drug onto the body, or tap it", steps: cfg.steps,
-      target: () => [320, H / 2],
+      h: H, drugs, multi: !!cfg.multi, label: "Body map: where the drug acts, organ by organ", point: cfg.point, hint: "Drag a drug onto the body, or tap it", steps: cfg.steps,
+      target: () => [BX + 130 * sb, H / 2],
       read(S) { return `${noteOf(S, drugs) || esc(cfg.read || "Pick a drug to see what it does in each tissue.")}${cfg.meter ? `<span class="vz-meter-t">${cfg.meter.label}: <b>${meter(S)}</b></span>` : ""}`; },
     });
     const { svg } = st;
     const meter = (S) => { const on = drugs.filter((d) => S.on.has(d.id)); const v = on.reduce((a, d) => a + (d.m || 0), 0); return cfg.meter.text?.[clamp(v, 0, cfg.meter.text.length - 1)] || v; };
-    const cw = (W - 20) / cols; const T = TS.map((t, i) => {
-      const x = 10 + (i % cols) * cw, y = 20 + Math.floor(i / cols) * 150, g = mk("g", { transform: `translate(${x},${y})` }, svg);
-      const card = mk("rect", { x: 6, y: 0, width: cw - 12, height: 144, rx: 20, class: "vz-ts-card" }, g);
-      const ic = mk("g", { transform: `translate(${cw / 2},48) scale(1.5)` }, g); ic.innerHTML = ICON[t.icon || "cell"]("var(--vz-4)");
-      label(g, cw / 2, 92, t.label, { cls: "vz-sc-r" });
-      if (t.rec) label(g, cw / 2, 106, t.rec, { cls: "vz-sc-s" });
-      const fx = label(g, cw / 2, 124, cfg.base?.[t.id] || "", { cls: "vz-ts-fx" });
-      const x2 = blocker(g, cw / 2 + 30, 22, "var(--vz-2)");
-      const glow = mk("circle", { cx: cw / 2, cy: 48, r: 34, class: "vz-ts-glow" }, g); g.insertBefore(glow, ic);
-      return { t, card, fx, x2, glow, ic };
+    const body = mk("g", { transform: `translate(${BX},4) scale(${sb})` }, svg);
+    const sil = mk("g", { class: "vz-bm-body" }, body); sil.innerHTML = BODY;
+    const used = new Set(TS.map(organOf));
+    if (used.has("cord") || used.has("stem")) { const c = mk("g", { class: "vz-bm-org faint", transform: "translate(130,150)" }, body); c.innerHTML = '<path class="ln" d="M0,-80V80"/>'; }
+    const leaders = mk("g", {}, svg), cardsL = mk("g", {}, svg);
+    const CX = 300, CW = W - CX - 6;
+    const T = TS.map((t, i) => {
+      const key = organOf(t), [ox, oy, art] = ORG[key];
+      const og = mk("g", { class: "vz-bm-org", transform: `translate(${ox},${oy}) scale(1.3)` }, body);
+      const halo = mk("circle", { r: 26, class: "vz-bm-halo" }, og);
+      const draw = mk("g", {}, og); draw.innerHTML = art;
+      const px = BX + ox * sb, py = 4 + oy * sb;
+      const y = 12 + i * rowH, cy = y + (rowH - 10) / 2;
+      const lead = mk("path", { d: `M${px + 14},${py} C${px + 70},${py} ${CX - 50},${cy} ${CX},${cy}`, class: "vz-bm-lead" }, leaders);
+      const dot = mk("circle", { cx: px, cy: py, r: 3, class: "vz-bm-dot" }, leaders);
+      const g = mk("g", { transform: `translate(${CX},${y})` }, cardsL);
+      const card = mk("rect", { x: 0, y: 0, width: CW, height: rowH - 10, rx: 14, class: "vz-ts-card" }, g);
+      label(g, 14, 20, t.label, { a: "start", cls: "vz-sc-r" });
+      if (t.rec) label(g, 14, 35, t.rec, { a: "start", cls: "vz-sc-s" });
+      const fx = label(g, 14, t.rec ? 52 : 38, cfg.base?.[t.id] || "", { a: "start", cls: "vz-ts-fx" });
+      const x2 = blocker(svg, px + 14, py - 12, "var(--vz-1)");
+      return { t, og, halo, card, fx, x2, lead, dot };
     });
     st.changed = () => {
       const S = st.S, on = drugs.filter((d) => S.on.has(d.id));
       T.forEach((o) => {
         const fxs = on.map((d) => d.fx?.[o.t.id]).filter(Boolean);
-        const combo0 = (cfg.combos || []).find((c) => c.ids.every((id) => S.on.has(id)) && c.fx[o.t.id]);
-        if (combo0) fxs.splice(0, fxs.length, combo0.fx[o.t.id]);
-        const kind = ["risk", "block", "act"].find((k) => fxs.some((f) => f[0] === k)) || (fxs.length ? "none" : "");
-        show(o.x2, kind === "block");
-        o.glow.setAttribute("class", `vz-ts-glow ${kind}`);
-        o.card.setAttribute("class", `vz-ts-card ${kind}`);
         const combo = (cfg.combos || []).find((c) => c.ids.every((id) => S.on.has(id)) && c.fx[o.t.id]);
         if (combo) fxs.splice(0, fxs.length, combo.fx[o.t.id]);
-        wrap(o.fx, fxs.length ? fxs.map((f) => f[1]).join(" · ") : cfg.base?.[o.t.id] || "", Math.floor((cw - 24) / 6.4));
-        o.fx.setAttribute("class", `vz-ts-fx ${kind}`);
+        const kind = ["risk", "block", "act"].find((k) => fxs.some((f) => f[0] === k)) || (fxs.length ? "none" : "");
+        show(o.x2, kind === "block");
+        o.og.setAttribute("class", `vz-bm-org ${kind}`);
+        o.card.setAttribute("class", `vz-ts-card ${kind}`);
+        o.lead.setAttribute("class", `vz-bm-lead ${kind}`); o.dot.setAttribute("class", `vz-bm-dot ${kind}`);
+        wrap(o.fx, fxs.length ? fxs.map((f) => f[1]).join(" · ") : cfg.base?.[o.t.id] || "", Math.floor((CW - 24) / 6.3));
+        o.fx.setAttribute("class", `vz-ts-fx ${kind} l`);
       });
     };
-    st.tick = (dt) => { const t = performance.now() / 600; T.forEach((o, i) => o.glow.setAttribute("r", 32 + Math.sin(t + i) * 3)); };
+    st.tick = () => { const t = performance.now() / 600; T.forEach((o, i) => o.halo.setAttribute("r", 22 + Math.sin(t + i) * 3)); };
+    st.changed();
+    return st;
+  };
+
+  // ---------------------------------------------------------------- ANAT: a pathway drawn on the anatomy where it happens
+  // Same config as "pathway" (nodes, edges, drugs with at/off/less/more) plus bg (body|cell|joint|gut|vessel|bladder|nerve),
+  // opts (backdrop labels), pos {node:[x,y]} or organ {node: ORG key}, lab {node: "l"|"r"|"t"|"b"}. Steps are markers on the
+  // anatomy, molecules flow between them, a drug docks where it acts; "more" raises a step (↑), off/less quiet it.
+  const BG = {
+    cell(g, H, o) {
+      const R = o.right ? 470 : 600, L = o.left === false ? 20 : 150;
+      if (o.left !== false) { mk("rect", { x: 0, y: 0, width: L - 8, height: H, rx: 16, class: `vz-an-ext ${o.leftCls || "blood"}` }, g); label(g, 12, 22, (o.left || "Blood").toUpperCase(), { a: "start", cls: "vz-nx-zone" }); }
+      if (o.right) { mk("rect", { x: R + 8, y: 0, width: W - R - 8, height: H, rx: 16, class: `vz-an-ext ${o.rightCls || "lumen"}` }, g); label(g, W - 12, 22, o.right.toUpperCase(), { a: "end", cls: "vz-nx-zone" }); }
+      mk("rect", { x: L, y: 14, width: R - L, height: H - 28, rx: 44, class: "vz-an-cell" }, g);
+      mk("rect", { x: L + 6, y: 20, width: R - L - 12, height: H - 40, rx: 38, class: "vz-an-cell2" }, g);
+      if (o.nuc) { mk("ellipse", { cx: o.nuc[0], cy: o.nuc[1], rx: 58, ry: 40, class: "vz-an-nuc" }, g); label(g, o.nuc[0], o.nuc[1] + 56, "nucleus", { cls: "vz-sc-m" }); }
+      label(g, R - 22, H - 30, o.name || "Cell", { a: "end", cls: "vz-sc-h" });
+    },
+    body(g, H, o, ctx) {
+      const sb = (H - 8) / 404, bx = (o.x ?? 320) - 130 * sb;
+      const b = mk("g", { transform: `translate(${bx},4) scale(${sb})` }, g);
+      mk("g", { class: "vz-bm-body" }, b).innerHTML = BODY;
+      ctx.toXY = (key) => { const q = ORG[key]; return q ? [bx + q[0] * sb, 4 + q[1] * sb] : [320, H / 2]; };
+      (o.organs || []).forEach((k) => { const q = ORG[k]; if (!q) return; const og = mk("g", { class: "vz-bm-org", transform: `translate(${q[0]},${q[1]}) scale(1.3)` }, b); og.innerHTML = q[2]; });
+    },
+    joint(g, H) {
+      mk("path", { d: `M200,0 H440 V120 C440,165 390,178 320,170 C250,178 200,165 200,120 Z`, class: "vz-an-bone" }, g);
+      mk("path", { d: `M210,${H} H430 V${H - 120} C430,${H - 160} 380,${H - 168} 320,${H - 164} C260,${H - 168} 210,${H - 160} 210,${H - 120} Z`, class: "vz-an-bone" }, g);
+      mk("path", { d: `M206,132 C214,166 262,178 320,172 C378,178 426,166 434,132`, class: "vz-an-cart" }, g);
+      mk("path", { d: `M216,${H - 126} C226,${H - 158} 270,${H - 166} 320,${H - 162} C370,${H - 166} 414,${H - 158} 424,${H - 126}`, class: "vz-an-cart" }, g);
+      mk("path", { d: `M196,110 C150,150 150,${H - 150} 206,${H - 110} M444,110 C490,150 490,${H - 150} 434,${H - 110}`, class: "vz-an-syn" }, g);
+      label(g, 320, 40, "BONE", { cls: "vz-nx-zone" }); label(g, 320, H - 28, "BONE", { cls: "vz-nx-zone" });
+      label(g, 320, H / 2 + 4, "joint fluid", { cls: "vz-sc-m" }); label(g, 150, H / 2 - 64, "SYNOVIUM", { cls: "vz-nx-zone" }); label(g, 470, 196, "cartilage", { a: "start", cls: "vz-sc-m" });
+    },
+    gut(g, H, o) {
+      mk("rect", { x: 0, y: 0, width: W, height: 104, rx: 14, class: "vz-an-ext lumen" }, g);
+      label(g, 12, 22, (o.lumen || "Gut lumen").toUpperCase(), { a: "start", cls: "vz-nx-zone" });
+      for (let x = 6; x < W - 10; x += 34) mk("rect", { x, y: 100, width: 30, height: 58, rx: 10, class: "vz-an-epi" }, g);
+      mk("rect", { x: 0, y: 162, width: W, height: H - 162, rx: 14, class: "vz-an-lp" }, g);
+      label(g, 12, 182, "LAMINA PROPRIA (mucosa)", { a: "start", cls: "vz-nx-zone" });
+      mk("rect", { x: 0, y: H - 56, width: W, height: 34, rx: 17, class: "vz-an-ves" }, g);
+      label(g, W - 12, H - 34, "blood vessel", { a: "end", cls: "vz-sc-m" });
+      label(g, W - 12, 150, "epithelium", { a: "end", cls: "vz-sc-m" });
+    },
+    vessel(g, H, o) {
+      mk("rect", { x: 0, y: 40, width: W, height: 74, class: "vz-an-smc" }, g);
+      for (let x = 10; x < W; x += 46) mk("ellipse", { cx: x + 20, cy: 77, rx: 20, ry: 7, class: "vz-an-spindle" }, g);
+      mk("rect", { x: 0, y: 114, width: W, height: 8, class: "vz-an-endo" }, g);
+      mk("rect", { x: 0, y: 122, width: W, height: H - 160, class: "vz-an-ext blood" }, g);
+      label(g, 12, 30, (o.wall || "Vascular smooth muscle").toUpperCase(), { a: "start", cls: "vz-nx-zone" });
+      label(g, W - 12, 136, "endothelium", { a: "end", cls: "vz-sc-m" });
+      label(g, 12, 144, (o.lumen || "Blood").toUpperCase(), { a: "start", cls: "vz-nx-zone" });
+    },
+    bladder(g, H) {
+      mk("path", { d: "M180,150 C180,40 460,40 460,150 C460,232 392,262 352,272 L346,300 H294 L288,272 C248,262 180,232 180,150Z", class: "vz-an-detr" }, g);
+      mk("path", { d: "M206,150 C206,66 434,66 434,150 C434,216 380,240 340,250 H300 C260,240 206,216 206,150Z", class: "vz-an-urine" }, g);
+      mk("ellipse", { cx: 320, cy: 312, rx: 66, ry: 34, class: "vz-an-pros" }, g);
+      mk("rect", { x: 312, y: 250, width: 16, height: H - 250, rx: 8, class: "vz-an-ureth" }, g);
+      label(g, 320, 150, "urine", { cls: "vz-sc-m" }); label(g, 470, 110, "DETRUSOR (bladder wall)", { a: "start", cls: "vz-nx-zone" });
+      label(g, 400, 350, "PROSTATE", { a: "start", cls: "vz-nx-zone" }); label(g, 352, 284, "bladder neck", { a: "start", cls: "vz-sc-m" }); label(g, 334, H - 10, "urethra", { a: "start", cls: "vz-sc-m" });
+    },
+    nerve(g, H) {
+      mk("rect", { x: 0, y: 0, width: 330, height: H, rx: 16, class: "vz-an-ext tissue" }, g);
+      for (let i = 0; i < 9; i++) mk("circle", { cx: 40 + (i % 3) * 90, cy: 70 + Math.floor(i / 3) * 110, r: 30, class: "vz-an-tcell" }, g);
+      mk("path", { d: `M600,${H / 2} C470,${H / 2} 420,${H / 2} 330,${H / 2} M360,${H / 2} C320,${H / 2 - 40} 290,${H / 2 - 90} 250,${H / 2 - 110} M360,${H / 2} C320,${H / 2 + 30} 300,${H / 2 + 90} 240,${H / 2 + 120} M330,${H / 2} C300,${H / 2} 260,${H / 2 + 10} 200,${H / 2 - 6}`, class: "vz-an-axon" }, g);
+      label(g, 12, 22, "INFLAMED TISSUE", { a: "start", cls: "vz-nx-zone" }); label(g, W - 12, H / 2 - 14, "→ spinal cord, brain", { a: "end", cls: "vz-sc-m" });
+      label(g, 470, H / 2 + 22, "nociceptor (pain fiber)", { cls: "vz-sc-m" });
+    },
+  };
+  V.anat = (host, cfg = {}) => {
+    const H = cfg.h || 380, N = (cfg.nodes || []).map((n) => ({ col: "teal", ...n })), E = cfg.edges || [], D = cfg.drugs || [], O = cfg.opts || {};
+    const COLV = { teal: "var(--vz-1)", coral: "var(--vz-2)", amber: "var(--vz-3)", blue: "var(--vz-4)", sage: "var(--vz-5)", deep: "var(--vz-text)", ink: "var(--vz-ink)" };
+    const by = Object.fromEntries(N.map((n) => [n.id, n]));
+    const outs = new Set(E.map((e) => e[0])), terminal = N.filter((n) => !outs.has(n.id) && E.some((e) => e[1] === n.id)).map((n) => n.id);
+    const drugs = D.map((d, i) => ({ id: `d${i}`, label: d.label, note: d.note, col: ["var(--vz-1)", "var(--vz-2)", "var(--vz-4)", "var(--vz-3)", "var(--vz-5)"][i % 5], src: d }));
+    const ctx = {};
+    const P = (id) => by[id]._xy;
+    const st = V._stage(host, {
+      h: H, drugs, label: cfg.title || "Pathway on the anatomy", point: cfg.point, hint: "Drag a drug onto the picture, or tap it",
+      target: (id) => { const d = drugs.find((x) => x.id === id).src; if (!d.at) return [320, H / 2]; if (d.at.includes(">")) { const [a, b] = d.at.split(">"); return mid(a, b); } return by[d.at] ? P(d.at) : [320, H / 2]; },
+      read(S) {
+        const d = drugs.find((x) => S.on.has(x.id));
+        const lv = terminal.map((id) => { const v = level(S, id); return `${by[id].label.replace(/\n/g, " ")}: <b>${v > 1 ? "↑ more" : Math.round(v * 100) + "%"}</b>`; }).join(" · ");
+        return `${d ? `<b>${esc(d.label)}.</b> ${d.note || ""}` : esc(cfg.read || "Drag a drug onto the picture to see where it acts and what changes downstream.")}${d && lv ? `<span class="vz-meter-t">${lv}</span>` : ""}`;
+      },
+    });
+    const { svg } = st;
+    const cur = (S) => drugs.find((x) => S.on.has(x.id))?.src;
+    function level(S, id) { const d = cur(S); if (!d) return 1; return (d.off || []).includes(id) ? 0.12 : (d.less || []).includes(id) ? 0.55 : (d.more || []).includes(id) ? 1.6 : 1; }
+    const L = { bg: mk("g", {}, svg), lines: mk("g", {}, svg), flow: mk("g", {}, svg), nodes: mk("g", {}, svg), top: mk("g", {}, svg) };
+    (BG[cfg.bg] || BG.cell)(L.bg, H, O, ctx);
+    N.forEach((n) => { n._xy = cfg.organ?.[n.id] && ctx.toXY ? ctx.toXY(cfg.organ[n.id]) : cfg.pos?.[n.id] || [n.x + 65, n.y + 30]; n._mk = n._xy; });
+    // body map: an organ's marker sits outside the body, joined to the organ by a leader; flows still run organ to organ
+    if (ctx.toXY) {
+      ["l", "r"].forEach((side) => {
+        const list = N.filter((n) => cfg.organ?.[n.id] && (cfg.lab?.[n.id] || "r") === side).sort((a, b) => a._xy[1] - b._xy[1]);
+        let last = -99;
+        list.forEach((n) => { const y = Math.max(n._xy[1], last + 50); last = y; n._mk = [side === "l" ? 190 : 450, y]; });
+      });
+    }
+    function mid(a, b) { const [ax, ay] = P(a), [bx, bY] = P(b); return [(ax + bx) / 2, (ay + bY) / 2]; }
+    const streams = E.map(([a, b]) => {
+      const [ax, ay] = P(a), [bx, bY] = P(b), dx = bx - ax, dy = bY - ay, len = Math.hypot(dx, dy) || 1, bend = (cfg.bend?.[`${a}>${b}`] ?? 0.12) * len;
+      const c = [(ax + bx) / 2 - (dy / len) * bend, (ay + bY) / 2 + (dx / len) * bend];
+      const q = (t) => [(1 - t) ** 2 * ax + 2 * (1 - t) * t * c[0] + t * t * bx, (1 - t) ** 2 * ay + 2 * (1 - t) * t * c[1] + t * t * bY];
+      const tEnd = 1 - 24 / len, tStart = 22 / len;
+      const poly = Array.from({ length: 15 }, (_, i) => q(tStart + (tEnd - tStart) * i / 14));
+      mk("path", { d: `M${poly.map((p) => p.join(",")).join("L")}`, class: "vz-an-line" }, L.lines);
+      const e = poly[14], e0 = poly[13];
+      mk("path", { d: "M-6,-5L1,0L-6,5", class: "vz-fx-arrow", transform: `translate(${e[0]},${e[1]}) rotate(${Math.atan2(e[1] - e0[1], e[0] - e0[0]) * 180 / Math.PI})` }, L.lines);
+      const col = COLV[by[a].col] || "var(--vz-1)";
+      return { a, b, s: stream(L.flow, poly, { col: () => getComputedStyle(st.el).getPropertyValue(col.slice(4, -1)) || "#888", rate: 1.8, speed: 50, r: 3.6, jitter: 2 }) };
+    });
+    const NODE = N.map((n) => {
+      const col = COLV[n.col] || "var(--vz-1)", [x, y] = n._mk, g = mk("g", { class: "vz-an-node", transform: `translate(${x},${y})` }, L.nodes);
+      if (n._mk !== n._xy) {  // leader from the organ to its marker, and a glowing dot on the organ
+        const [ox, oy] = n._xy;
+        mk("path", { d: `M${ox - x},${oy - y} C${(ox - x) * 0.5},${oy - y} ${(ox - x) * 0.3},0 ${ox > x ? 19 : -19},0`, class: "vz-an-lead", style: `--c:${col}` }, g);
+        mk("circle", { cx: ox - x, cy: oy - y, r: 9, class: "vz-an-orgdot", style: `--c:${col}` }, g);
+      }
+      mk("circle", { r: 19, class: "vz-an-mk", style: `--c:${col}` }, g);
+      const ic = mk("g", { transform: "scale(0.62)" }, g); ic.innerHTML = ICON[iconFor(n)](col);
+      const side = cfg.lab?.[n.id] || (x > 470 ? "l" : "r"), ls = String(n.label).split("\n");
+      const [tx, ty, an] = side === "l" ? [-26, 4, "end"] : side === "t" ? [0, -28 - (ls.length - 1) * 14, "middle"] : side === "b" ? [0, 36, "middle"] : [26, 4, "start"];
+      const t = mk("text", { x: tx, y: ty - (side === "l" || side === "r" ? (ls.length - 1) * 7 : 0), "text-anchor": an, class: "vz-an-t" }, g);
+      ls.forEach((l, i) => { const sp = mk("tspan", { x: tx, dy: i ? "1.15em" : 0 }, t); sp.textContent = l; });
+      let ring = null;
+      if (terminal.includes(n.id)) {
+        mk("circle", { cx: 15, cy: -15, r: 10, class: "vz-fx-gt" }, g);
+        ring = mk("circle", { cx: 15, cy: -15, r: 10, class: "vz-fx-gr", "stroke-dasharray": `${2 * Math.PI * 10}`, transform: "rotate(-90 15 -15)" }, g);
+        ring.lv = 1;
+      }
+      const badge = mk("text", { x: 0, y: 34, "text-anchor": "middle", class: "vz-an-badge" }, g);
+      if (side === "b") badge.setAttribute("y", -26);
+      return { n, g, ring, badge };
+    });
+    const dock = mk("g", { class: "vz-hide" }, L.top);
+    const dockPill = mk("rect", { x: -18, y: -9, width: 36, height: 18, rx: 9, class: "vz-fx-dock" }, dock);
+    const dockMark = mk("path", { d: "M-5,-5L5,5M5,-5L-5,5", stroke: "#fff", "stroke-width": 2.6, "stroke-linecap": "round" }, dock);
+    st.changed = () => {
+      const S = st.S, d = cur(S), dd = drugs.find((x) => S.on.has(x.id));
+      // an agonist / enhancer docks with "+", a blocker with "×"
+      dockMark.setAttribute("d", d?.act === "up" ? "M0,-5.5V5.5M-5.5,0H5.5" : "M-5,-5L5,5M5,-5L-5,5");
+      NODE.forEach(({ n, g, badge }) => { const lv = level(S, n.id); g.style.opacity = lv < 0.2 ? 0.38 : lv < 1 ? 0.72 : 1; g.classList.toggle("up", lv > 1); badge.textContent = lv > 1 ? "↑ more" : lv < 1 ? (lv < 0.2 ? "↓↓ off" : "↓ less") : ""; });
+      show(dock, !!d?.at);
+      if (d?.at) { const [x, y] = st._target(dd.id); dock.setAttribute("transform", `translate(${x},${y})`); dockPill.style.fill = dd.col; }
+      streams.forEach((s) => {
+        const cut = d && (d.at === `${s.a}>${s.b}` || d.at === s.b && (d.off || []).length);
+        const quiet = d && ((d.off || []).includes(s.a) || (d.off || []).includes(s.b));
+        s.s.stop = cut ? 0.72 : null; s.s.rate = quiet && !cut ? 0.25 : (d?.less || []).includes(s.b) ? 0.9 : (d?.more || []).includes(s.b) ? 3.4 : 1.8;
+      });
+    };
+    st.tick = (dt) => {
+      streams.forEach((s) => s.s.tick(dt));
+      NODE.forEach(({ n, ring }) => { if (!ring) return; const t = Math.min(1, level(st.S, n.id)); ring.lv += (t - ring.lv) * Math.min(1, dt * 3); ring.setAttribute("stroke-dashoffset", `${2 * Math.PI * 10 * (1 - ring.lv)}`); });
+    };
     st.changed();
     return st;
   };

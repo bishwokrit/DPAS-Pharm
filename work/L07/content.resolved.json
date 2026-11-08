@@ -1556,6 +1556,7 @@
         "label": "Iodine (after PTU)",
         "at": "rel",
         "off": [
+         "rel",
          "conv"
         ],
         "less": [],
@@ -1641,6 +1642,7 @@
         "label": "Iodine (≥1 h after PTU)",
         "at": "rel",
         "off": [
+         "rel",
          "conv"
         ],
         "less": [],

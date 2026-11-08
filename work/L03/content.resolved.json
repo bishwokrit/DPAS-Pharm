@@ -1272,9 +1272,7 @@
        {
         "label": "Chronic alcohol / fasting",
         "at": "",
-        "off": [
-         "out"
-        ],
+        "off": [],
         "less": [],
         "note": "Glutathione is lower and CYP2E1 is induced — more NAPQI, less protection (S17)."
        }
@@ -3273,11 +3271,7 @@
         "label": "Analgesics (OA)",
         "at": "",
         "off": [],
-        "less": [
-         "r1",
-         "r2",
-         "r3"
-        ],
+        "less": [],
         "note": "OA’s goal is pain control and function: acetaminophen, oral or topical NSAIDs, intra-articular steroids (S41; S43)."
        },
        {
@@ -3287,11 +3281,7 @@
          "r2",
          "r3"
         ],
-        "less": [
-         "o1",
-         "o2",
-         "o3"
-        ],
+        "less": [],
         "note": "RA’s goal is to suppress disease activity: DMARDs slow or halt immune-mediated joint destruction (S41; S45)."
        },
        {
@@ -3300,11 +3290,7 @@
         "off": [
          "r3"
         ],
-        "less": [
-         "o1",
-         "o2",
-         "o3"
-        ],
+        "less": [],
         "note": "TNF inhibitors and tocilizumab block the cytokines that drive joint erosion (S42; S51)."
        }
       ],
