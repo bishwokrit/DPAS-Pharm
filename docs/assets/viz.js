@@ -617,7 +617,10 @@
       if (Math.abs(wx) > 80) { const d = wx > 0 ? 1 : -1; wx = 0; wlock = Date.now() + 900; go(fig, d); }
     }, { passive: true });
   }
-  const io = "IntersectionObserver" in window ? new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { io.unobserve(e.target); enhance(e.target); } }), { rootMargin: "300px" }) : null;
-  document.querySelectorAll("[data-viz]").forEach((f) => (io ? io.observe(f) : enhance(f)));
+  // a figure whose drawing code (scenes.js) has not arrived yet stays watched; scenes.js calls dpasVizRefresh when it has
+  const io = "IntersectionObserver" in window ? new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { enhance(e.target); if (e.target.dataset.vizOn) io.unobserve(e.target); } }), { rootMargin: "300px" }) : null;
+  const watch = () => document.querySelectorAll("[data-viz]:not([data-viz-on])").forEach((f) => { if (io) { io.unobserve(f); io.observe(f); } else enhance(f); });
+  watch();
+  window.dpasVizRefresh = watch;
   window.dpasViz = V;
 })();

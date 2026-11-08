@@ -1050,4 +1050,5 @@
     st.changed();
     return st;
   };
+  window.dpasVizRefresh?.();  // draw any figure that came into view before this file loaded
 })();
