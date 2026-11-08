@@ -303,6 +303,7 @@ def syllabus_page(syl, sched, built):
                      f'<p class="small"><strong>Reading:</strong> {html.escape(sched["readings"].get(u, ""))}</p>'
                      + (f'<ul>{"".join(f"<li><strong>{k}</strong> {html.escape(v)}</li>" for k, v in objs.items())}</ul>' if objs else '<p class="small muted">Objectives listed in the syllabus PDF.</p>') + "</details>")
     data = json.dumps({"items": g["items"], "bonus": g["bonus"], "scale": g["scale"], "due": sched["due"]}, ensure_ascii=False).replace("</", "<\\/")
+    cstats = (ROOT / "work" / "class_stats.json").read_text().replace("</", "<\\/")
     facts = [("3", "credit hours"), ("2×", "a week · 2.5 h"), ("1,000", "points"), ("6 + 1", "unit exams + final"), ("75%", "to pass")]
     body = f"""<header class="hero wrap syl-hero"><p class="eyebrow appear">Syllabus · v5 · October 9, 2026</p>
 <h1 class="appear" style="--d:.05s">Clinical<br><span class="accent-text">Pharmacology I</span></h1>
@@ -327,6 +328,10 @@ def syllabus_page(syl, sched, built):
 <script type="application/json" id="grade-data">{data}</script></div></section>
 <section class="section" id="final"><div class="wrap"><p class="kicker">The final</p><h2>What you need on the final</h2>
 <div id="finalapp"></div></div></section>
+<section class="section" id="class"><div class="wrap"><p class="kicker">Class performance</p><h2>How the class has done</h2>
+<p class="muted">Class-wide numbers from course announcements, compared side by side. Curves, counts and percentiles are statistical models — never real student scores.</p>
+<div id="csapp"></div>
+<script type="application/json" id="class-stats-data">{cstats}</script></div></section>
 <section class="section" id="units"><div class="wrap"><p class="kicker">Units</p><h2>Readings &amp; objectives</h2><div class="grid two">{"".join(units)}</div></div></section>
 <section class="section" id="outcomes"><div class="wrap narrow"><p class="kicker">Outcomes</p><h2>Course goal &amp; outcomes</h2>
 <p>By the end of this course, students will integrate foundational pharmacologic principles with therapeutic reasoning to select, evaluate, and communicate safe, effective, evidence-based pharmacotherapy for common conditions encountered in clinical practice.</p>
@@ -336,8 +341,8 @@ def syllabus_page(syl, sched, built):
 <h3 style="margin-top:28px">Policies (summary)</h3><ul class="small"><li>Program policies (attendance, grading, progression): PA Studies Student Program Guide.</li>
 <li>Religious observances: notify the course in the first week.</li><li>Accommodations: contact your disability services office first, then share your letter with the course.</li>
 <li>Grade concerns go to the course first. AI use: follow each assignment's instructions.</li><li>Class cancellations are announced through official email.</li></ul></div></section>
-<script src="../assets/grades.js"></script>"""
-    nav = '<a href="#next">Coming up</a><a href="#schedule">Schedule</a><a href="#grading">Grading</a><a href="#calc">Calculator</a><a href="#units">Units</a><a href="#outcomes">Outcomes</a>'
+<script src="../assets/grades.js"></script><script src="../assets/classstats.js"></script>"""
+    nav = '<a href="#next">Coming up</a><a href="#schedule">Schedule</a><a href="#grading">Grading</a><a href="#calc">Calculator</a><a href="#class">Class stats</a><a href="#units">Units</a><a href="#outcomes">Outcomes</a>'
     return page(f"Syllabus · {SITE_NAME}", body, depth=1, nav_links=nav, active="syllabus", subtitle="Syllabus")
 
 
