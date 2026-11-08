@@ -392,8 +392,8 @@
    }
   },
   "link": {
-   "href": "../../L05/index.html#antiemetics",
-   "label": "Study this: L05 · Part 4 →"
+   "href": "../../L05/index.html#mucosal-protectants-h-pylori-eradication",
+   "label": "Study this: L05 · Part 3 →"
   }
  },
  {
@@ -493,7 +493,7 @@
   "why_correct": "St. John’s wort adds serotonin syndrome risk with antidepressants and induces CYP3A4 (lowers many drug levels).",
   "takeaway": "Ask about supplements every visit.",
   "discriminator": "Warfarin + St. John’s wort → INR falls.",
-  "src": "L06 S26; S31; p. 1214; SG U3-S",
+  "src": "L06 S34; S41; p. 1214; SG U3-S",
   "id": "FINAL-044",
   "answer": "A",
   "options": {
@@ -819,7 +819,7 @@
   "why_correct": "Lubiprostone activates ClC-2 → more chloride and fluid secretion; nausea is classic.",
   "takeaway": "Secretagogues: lubiprostone (ClC-2), linaclotide (GC-C).",
   "discriminator": "Linaclotide: diarrhea; not under age 2.",
-  "src": "L06 S5; S46",
+  "src": "L06 S5; S60",
   "id": "FINAL-035",
   "answer": "B",
   "options": {
@@ -1554,7 +1554,7 @@
   "why_correct": "Azathioprine/6-MP are maintenance drugs with slow onset; steroids induce remission during flares.",
   "takeaway": "Fast but short (steroids) vs. slow but lasting (thiopurines).",
   "discriminator": "Test TPMT/NUDT15 first.",
-  "src": "L06 S14; S15",
+  "src": "L06 S18; S19",
   "id": "FINAL-040",
   "answer": "B",
   "options": {
@@ -2046,8 +2046,8 @@
    }
   },
   "link": {
-   "href": "../../L05/index.html#mucosal-protectants-h-pylori-eradication",
-   "label": "Study this: L05 · Part 3 →"
+   "href": "../../L05/index.html#antacids-h2-blockers-proton-pump-inhibitors",
+   "label": "Study this: L05 · Part 2 →"
   }
  },
  {
@@ -3106,8 +3106,8 @@
    }
   },
   "link": {
-   "href": "../../L05/index.html#antiemetics",
-   "label": "Study this: L05 · Part 4 →"
+   "href": "../../L05/index.html#mucosal-protectants-h-pylori-eradication",
+   "label": "Study this: L05 · Part 3 →"
   }
  },
  {
@@ -3929,7 +3929,7 @@
   "why_correct": "Before biologics: TB and hepatitis B/C screening, vaccines (especially live) updated first, then regular labs.",
   "takeaway": "Biologic risk = infection, across organ systems.",
   "discriminator": "Same framework as the RA biologics in Unit 2.",
-  "src": "L06 S18; L03 S56",
+  "src": "L06 S24; L03 S56",
   "id": "FINAL-047",
   "answer": "A",
   "options": {
@@ -4257,7 +4257,7 @@
   "why_correct": "Keep vitamin K intake consistent rather than avoiding it; INR is dosed against usual intake.",
   "takeaway": "Steady intake, steady INR.",
   "discriminator": "Ginkgo and fish oil raise bleeding risk.",
-  "src": "L06 S27",
+  "src": "L06 S35",
   "id": "FINAL-037",
   "answer": "B",
   "options": {
@@ -4487,8 +4487,8 @@
    }
   },
   "link": {
-   "href": "../../L12/index.html#putting-it-all-together-gu-toolkit",
-   "label": "Study this: L12 · Part 4 →"
+   "href": "../../L12/index.html#bph-erectile-dysfunction-pde5-inhibitors",
+   "label": "Study this: L12 · Part 3 →"
   }
  },
  {
@@ -5317,7 +5317,7 @@
   "why_correct": "This is concerning for C. difficile; avoid antimotility agents and treat with oral vancomycin or fidaxomicin.",
   "takeaway": "Bloody, febrile, or post-antibiotic diarrhea → no antimotility agents.",
   "discriminator": "Clindamycin is the classic C. difficile antibiotic.",
-  "src": "L06 S7; S9; SG U3-R10",
+  "src": "L06 S9; S11; SG U3-R10",
   "id": "FINAL-042",
   "answer": "C",
   "options": {
@@ -5645,7 +5645,7 @@
   "why_correct": "Long-term PPI and metformin use impair B12 (less acid release; impaired ileal uptake); deficiency causes megaloblastic anemia and neuropathy.",
   "takeaway": "Monitor B12 in long-term PPI or metformin users.",
   "discriminator": "Iron deficiency → microcytic; B12/folate → megaloblastic.",
-  "src": "L06 S24; S25; SG U3-R12",
+  "src": "L06 S32; S33; SG U3-R12",
   "id": "FINAL-051",
   "answer": "C",
   "options": {
@@ -6599,8 +6599,8 @@
    }
   },
   "link": {
-   "href": "../../L05/index.html#antiemetics",
-   "label": "Study this: L05 · Part 4 →"
+   "href": "../../L05/index.html#mucosal-protectants-h-pylori-eradication",
+   "label": "Study this: L05 · Part 3 →"
   }
  }
 ]

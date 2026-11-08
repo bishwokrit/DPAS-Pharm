@@ -1,7 +1,7 @@
 {
  "lecture": "L06",
  "passed": true,
- "units_checked": 2662,
+ "units_checked": 2752,
  "missing": [],
  "uncited": [
   {
@@ -15,83 +15,313 @@
    "kind": "speaker note"
   },
   {
-   "ref": "S11",
+   "ref": "S12",
+   "text": "To treat the underlying cause of diarrhea",
+   "kind": "slide"
+  },
+  {
+   "ref": "S12",
+   "text": "To discourage intentional overdose/misuse of the opioid component",
+   "kind": "slide"
+  },
+  {
+   "ref": "S12",
+   "text": "To increase the antidiarrheal effect of diphenoxylate",
+   "kind": "slide"
+  },
+  {
+   "ref": "S12",
+   "text": "To prevent constipation",
+   "kind": "slide"
+  },
+  {
+   "ref": "S12",
+   "text": "Quick check: Atropine in diphenoxylate.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S13",
+   "text": "To discourage intentional overdose/misuse of the opioid component.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S13",
+   "text": "Why:  At therapeutic doses, the atropine dose is too low to produce significant anticholinergic effects, but at supratherapeutic (misuse) doses, unpleasant anticholinergic effects (tachycardia, dry mouth, flushing) emerge — an intentional deterrent against abuse of the opioid agonist diphenoxylate.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S15",
    "text": "This escalation ladder is the organizing framework for every drug class in this section — ask students where each drug they learn next \"lives\" on this ladder.",
    "kind": "speaker note"
   },
   {
-   "ref": "S14",
+   "ref": "S18",
    "text": "\"slow but sustainable\" contrast here directly parallels the acute-vs-chronic gout framework from Lecture 2 — point that out explicitly if students took that unit.",
    "kind": "speaker note"
   },
   {
-   "ref": "S16",
+   "ref": "S20",
    "text": "Example: vedolizumab",
    "kind": "slide"
   },
   {
-   "ref": "S16",
+   "ref": "S20",
    "text": "Example: ustekinumab",
    "kind": "slide"
   },
   {
-   "ref": "S16",
+   "ref": "S20",
    "text": "Example: tofacitinib",
    "kind": "slide"
   },
   {
-   "ref": "S16",
+   "ref": "S20",
    "text": "The next slide shows this full set as a mechanism diagram.",
    "kind": "speaker note"
   },
   {
-   "ref": "S18",
+   "ref": "S22",
+   "text": "In Figure 7, which biologic agent acts by a mechanism that is gut-selective rather than systemically immunosuppressive in the same way as the others?",
+   "kind": "slide"
+  },
+  {
+   "ref": "S24",
    "text": "Monitor labs.",
    "kind": "speaker note"
   },
   {
-   "ref": "S22",
+   "ref": "S30",
    "text": "This distinction is the organizing concept for the whole vitamin section — \"can it accumulate to toxic levels\" is the single most useful question to ask about any vitamin.",
    "kind": "speaker note"
   },
   {
-   "ref": "S23",
+   "ref": "S31",
    "text": "Vitamin D and A toxicity (from excessive supplementation) are the clearest clinical examples to cite here — both are seen in real practice from over-the-counter supplement overuse.",
    "kind": "speaker note"
   },
   {
-   "ref": "S26",
+   "ref": "S34",
    "text": "This figure ties the whole unit together: a dietary nutrient and an herbal supplement both working against the same drug, through two completely different mechanisms (pharmacodynamic antagonism vs.",
    "kind": "speaker note"
   },
   {
-   "ref": "S29",
+   "ref": "S36",
+   "text": "Based on Figure 10, a patient stable on warfarin starts taking a St. John’s Wort supplement for mood. What is the expected effect on anticoagulation?",
+   "kind": "slide"
+  },
+  {
+   "ref": "S36",
+   "text": "Decreased anticoagulant effect, due to increased warfarin metabolism via CYP3A4 induction",
+   "kind": "slide"
+  },
+  {
+   "ref": "S36",
+   "text": "Increased anticoagulant effect, due to CYP3A4 inhibition",
+   "kind": "slide"
+  },
+  {
+   "ref": "S36",
+   "text": "No effect, since herbal supplements do not interact with prescription drugs",
+   "kind": "slide"
+  },
+  {
+   "ref": "S36",
+   "text": "Increased vitamin K levels directly counteracting warfarin",
+   "kind": "slide"
+  },
+  {
+   "ref": "S37",
+   "text": "Decreased anticoagulant effect, due to increased warfarin metabolism via CYP3A4 induction.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S37",
+   "text": "Why:  St. John’s Wort is a well-known CYP3A4 inducer, which increases warfarin metabolism and lowers its anticoagulant effect (a pharmacokinetic interaction) — a distinct mechanism from dietary vitamin K, which opposes warfarin pharmacodynamically by supporting clotting factor synthesis.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S37",
+   "text": "Answer A: decreased anticoagulant effect from CYP induction.",
+   "kind": "speaker note"
+  },
+  {
+   "ref": "S39",
    "text": "Parenteral nutrition (IV): monitor electrolytes and line infection",
    "kind": "slide"
   },
   {
-   "ref": "S39",
+   "ref": "S47",
+   "text": "Why:  Long-term PPI use carries real, well-documented risks. Best practice is not indefinite, unexamined continuation — it is periodic reassessment of ongoing need, attempting dose reduction or discontinuation when clinically appropriate, while still treating confirmed indications adequately.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S53",
    "text": "BID / TID / QID = two / three / four times daily",
    "kind": "slide"
   },
   {
-   "ref": "S39",
+   "ref": "S53",
    "text": "G6PD = glucose-6-phosphate dehydrogenase",
    "kind": "slide"
   },
   {
-   "ref": "S39",
+   "ref": "S53",
    "text": "CYP / P-gp = cytochrome P450 / P-glycoprotein",
    "kind": "slide"
   },
   {
-   "ref": "S39",
+   "ref": "S53",
    "text": "SSRI = selective serotonin reuptake inhibitor",
    "kind": "slide"
   },
   {
+   "ref": "S54",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S55",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S56",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S57",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S58",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S59",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S60",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S61",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S62",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S63",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S64",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S65",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S66",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S67",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S68",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S69",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
    "ref": "S70",
-   "text": "Appendix 2: DRUG PROFILE · SUPPORTING",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S71",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S72",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S73",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S74",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S75",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S76",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S77",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S78",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S79",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S80",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S81",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S82",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
+   "kind": "slide"
+  },
+  {
+   "ref": "S83",
+   "text": "Standard adult dosing for teaching; verify against current prescribing information.",
    "kind": "slide"
   },
   {
@@ -105,16 +335,7 @@
    "kind": "study guide"
   }
  ],
- "emphasis_not_bold": [
-  {
-   "ref": "S70",
-   "text": "Appendix 2: DRUG PROFILE · SUPPORTING",
-   "marks": [
-    "bold",
-    "color"
-   ]
-  }
- ],
+ "emphasis_not_bold": [],
  "skipped": [
   {
    "ref": "S1",
@@ -159,289 +380,331 @@
    "reason": "teaching instruction; the caption says the values are illustrative"
   },
   {
-   "ref": "S9",
+   "ref": "S7",
+   "text": "Quick check: pause for students to answer before revealing slide 8.",
+   "kind": "speaker note",
+   "reason": "teaching instruction (class-version quick check; the question is rebuilt on the site)"
+  },
+  {
+   "ref": "S11",
    "text": "Great opportunity to connect back to the antibiotic-associated-diarrhea concept and reinforce that \"stopping diarrhea\" is not always the correct first move.",
    "kind": "speaker note",
    "reason": "teaching instruction"
   },
   {
-   "ref": "S9",
+   "ref": "S11",
    "text": "Case: Diarrhea and fever after clindamycin.",
    "kind": "speaker note",
    "reason": "presenter script; the case is rebuilt as a practice question"
   },
   {
-   "ref": "S10",
+   "ref": "S12",
+   "text": "Pause for students to answer before revealing slide 13.",
+   "kind": "speaker note",
+   "reason": "teaching instruction (class-version quick check; the question is rebuilt on the site)"
+  },
+  {
+   "ref": "S14",
    "text": "Section transition.",
    "kind": "speaker note",
    "reason": "section divider"
   },
   {
-   "ref": "S11",
-   "text": "\"Step therapy.",
-   "kind": "speaker note",
-   "reason": "presenter script; taught from S11"
-  },
-  {
-   "ref": "S13",
-   "text": "\"Sulfasalazine reaches the colon.",
-   "kind": "speaker note",
-   "reason": "presenter script; taught from S13"
-  },
-  {
-   "ref": "S14",
-   "text": "\"Fast but not for the long term versus slow but sustainable.\" Budesonide has high first-pass metabolism, so less systemic exposure than prednisone.",
-   "kind": "speaker note",
-   "reason": "presenter script; taught from S14"
-  },
-  {
    "ref": "S15",
-   "text": "\"Azathioprine becomes 6-mercaptopurine, then thioguanine nucleotides, which block purine synthesis in lymphocytes.\"",
+   "text": "\"Step therapy.",
    "kind": "speaker note",
    "reason": "presenter script; taught from S15"
   },
   {
-   "ref": "S16",
-   "text": "Targets: TNF-alpha (infliximab, adalimumab), integrin (vedolizumab), IL-12/23 (ustekinumab), JAK (tofacitinib).",
+   "ref": "S17",
+   "text": "\"Sulfasalazine reaches the colon.",
    "kind": "speaker note",
-   "reason": "duplicate of the S16 slide content"
+   "reason": "presenter script; taught from S17"
   },
   {
-   "ref": "S17",
-   "text": "Have students sort each drug into its target before revealing labels — the same exercise used for the DMARD figure in Lecture 2, now applied to a new organ system.",
+   "ref": "S18",
+   "text": "\"Fast but not for the long term versus slow but sustainable.\" Budesonide has high first-pass metabolism, so less systemic exposure than prednisone.",
+   "kind": "speaker note",
+   "reason": "presenter script; taught from S18"
+  },
+  {
+   "ref": "S19",
+   "text": "\"Azathioprine becomes 6-mercaptopurine, then thioguanine nucleotides, which block purine synthesis in lymphocytes.\"",
+   "kind": "speaker note",
+   "reason": "presenter script; taught from S19"
+  },
+  {
+   "ref": "S20",
+   "text": "Targets: TNF-alpha (infliximab, adalimumab), integrin (vedolizumab), IL-12/23 (ustekinumab), JAK (tofacitinib).",
+   "kind": "speaker note",
+   "reason": "duplicate of the S20 slide content"
+  },
+  {
+   "ref": "S21",
+   "text": "Have students sort each drug into its target before revealing labels — the s\name exercise used for the DMARD figure in Lecture 2, now applied to a new organ system.",
    "kind": "speaker note",
    "reason": "teaching instruction; the sorting is the Figure 7 interactive"
   },
   {
-   "ref": "S17",
+   "ref": "S21",
    "text": "Sort each drug into its target before revealing labels: TNF-alpha (infliximab, adalimumab), integrin (vedolizumab), IL-12/23 (ustekinumab), JAK (tofacitinib).",
    "kind": "speaker note",
    "reason": "teaching instruction"
   },
   {
-   "ref": "S18",
-   "text": "This is almost a direct repeat of the DMARD-safety slide from Lecture 2 — a deliberate, explicit callback to reinforce that \"biologic\" as a drug category carries this risk profile regardless of the organ system being treated.",
+   "ref": "S22",
+   "text": "Quick check: pause for students to answer before revealing slide 23.",
    "kind": "speaker note",
-   "reason": "teaching instruction; the shared-risk point is taught from S18"
+   "reason": "teaching instruction (class-version quick check; the question is rebuilt on the site)"
   },
   {
-   "ref": "S19",
+   "ref": "S24",
+   "text": "This is almost a direct repeat of the DMARD-safety slide from Lecture 2 — a deliberate, explicit callback to reinforce that \"biologic\" as a drug category carries this risk profile regardless of the organ system being treated.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; the shared-risk point is taught from S24"
+  },
+  {
+   "ref": "S25",
    "text": "A good patient-communication exercise (IO3.6) — have students practice explaining step therapy in plain language, not just reciting the drug ladder.",
    "kind": "speaker note",
    "reason": "teaching instruction"
   },
   {
-   "ref": "S19",
+   "ref": "S25",
    "text": "Case: Mild ulcerative colitis starts with mesalamine, not a biologic.",
    "kind": "speaker note",
    "reason": "presenter script; the case is rebuilt as a practice question"
   },
   {
-   "ref": "S20",
+   "ref": "S26",
+   "text": "Quick check: pause for students to answer before revealing slide 27.",
+   "kind": "speaker note",
+   "reason": "teaching instruction (class-version quick check; the question is rebuilt on the site)"
+  },
+  {
+   "ref": "S28",
    "text": "\"-ximab chimeric, -umab human, -zumab humanized, -tinib kinase inhibitor, -sone corticosteroid, -tide peptide.",
    "kind": "speaker note",
    "reason": "presenter script; the stems table covers it"
   },
   {
-   "ref": "S21",
+   "ref": "S29",
    "text": "Section transition.",
    "kind": "speaker note",
    "reason": "section divider"
   },
   {
-   "ref": "S21",
-   "text": "Ask one question about any vitamin: can it build up to toxic levels?",
-   "kind": "speaker note",
-   "reason": "presenter script; taught from S21"
-  },
-  {
-   "ref": "S22",
-   "text": "\"Ask one question about any vitamin: can it build up to toxic levels?",
-   "kind": "speaker note",
-   "reason": "presenter script; taught from S22"
-  },
-  {
-   "ref": "S23",
-   "text": "The figure values are illustrative.",
-   "kind": "speaker note",
-   "reason": "teaching instruction; the caption says so"
-  },
-  {
-   "ref": "S25",
-   "text": "Dietary B12 is bound to food protein",
-   "kind": "slide",
-   "reason": "presenter script; taught from S25"
-  },
-  {
-   "ref": "S25",
-   "text": "\"Dietary B12 is bound to protein.",
-   "kind": "speaker note",
-   "reason": "presenter script; taught from S25"
-  },
-  {
-   "ref": "S26",
-   "text": "\"Two different ways to lower warfarin's effect.",
-   "kind": "speaker note",
-   "reason": "presenter script; taught from S26"
-  },
-  {
-   "ref": "S27",
-   "text": "Warfarin blocks VKORC1, which recycles vitamin K.",
-   "kind": "speaker note",
-   "reason": "presenter script; taught from S27"
-  },
-  {
-   "ref": "S28",
-   "text": "The \"if the gut works, use it\" principle is a simple, memorable rule students can apply across many clinical contexts — worth stating explicitly as the single takeaway from this slide.",
-   "kind": "speaker note",
-   "reason": "teaching instruction; the rule is taught from S28"
-  },
-  {
-   "ref": "S28",
-   "text": "\"If the gut works, use it.\"",
-   "kind": "speaker note",
-   "reason": "presenter script; taught from S28"
-  },
-  {
    "ref": "S29",
-   "text": "Refeeding: carbohydrate raises insulin, phosphate, potassium and magnesium shift into cells, and levels fall dangerously.",
+   "text": "Ask one question about any vitamin: can it build up to toxic levels?",
    "kind": "speaker note",
    "reason": "presenter script; taught from S29"
   },
   {
    "ref": "S30",
-   "text": "Supplements are not held to the same FDA premarket efficacy/safety standards as prescription drugs — potency and purity can vary by product.",
-   "kind": "slide",
+   "text": "\"Ask one question about any vitamin: can it build up to toxic levels?",
+   "kind": "speaker note",
    "reason": "presenter script; taught from S30"
   },
   {
-   "ref": "S30",
+   "ref": "S31",
+   "text": "The figure values are illustrative.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; the caption says so"
+  },
+  {
+   "ref": "S33",
+   "text": "Dietary B12 is bound to food protein",
+   "kind": "slide",
+   "reason": "presenter script; taught from S33"
+  },
+  {
+   "ref": "S33",
+   "text": "\"Dietary B12 is bound to protein.",
+   "kind": "speaker note",
+   "reason": "presenter script; taught from S33"
+  },
+  {
+   "ref": "S34",
+   "text": "\"Two different ways to lower warfarin's effect.",
+   "kind": "speaker note",
+   "reason": "presenter script; taught from S34"
+  },
+  {
+   "ref": "S35",
+   "text": "Warfarin blocks VKORC1, which recycles vitamin K.",
+   "kind": "speaker note",
+   "reason": "presenter script; taught from S35"
+  },
+  {
+   "ref": "S36",
+   "text": "Quick check: pause for students to answer before revealing slide 37.",
+   "kind": "speaker note",
+   "reason": "teaching instruction (class-version quick check; the question is rebuilt on the site)"
+  },
+  {
+   "ref": "S38",
+   "text": "The \"if the gut works, use it\" principle is a simple, memorable rule students can apply across many clinical contexts — worth stating explicitly as the single takeaway from this slide.",
+   "kind": "speaker note",
+   "reason": "teaching instruction; the rule is taught from S38"
+  },
+  {
+   "ref": "S38",
+   "text": "\"If the gut works, use it.\"",
+   "kind": "speaker note",
+   "reason": "presenter script; taught from S38"
+  },
+  {
+   "ref": "S39",
+   "text": "Refeeding: carbohydrate raises insulin, phosphate, potassium and magnesium shift into cells, and levels fall dangerously.",
+   "kind": "speaker note",
+   "reason": "presenter script; taught from S39"
+  },
+  {
+   "ref": "S40",
+   "text": "Supplements are not held to the same FDA premarket efficacy/safety standards as prescription drugs — potency and purity can vary by product.",
+   "kind": "slide",
+   "reason": "presenter script; taught from S40"
+  },
+  {
+   "ref": "S40",
    "text": "This slide operationalizes IO3.6 (patient communication/safety) directly — the counseling point about \"ask specifically\" is something students can apply in every future patient encounter, not just GI/nutrition cases.",
    "kind": "speaker note",
    "reason": "teaching instruction"
   },
   {
-   "ref": "S30",
+   "ref": "S40",
    "text": "Supplements are not held to premarket efficacy or safety standards.",
    "kind": "speaker note",
-   "reason": "presenter script; taught from S30"
+   "reason": "presenter script; taught from S40"
   },
   {
-   "ref": "S30",
+   "ref": "S40",
    "text": "Always ask specifically.",
    "kind": "speaker note",
-   "reason": "presenter script; taught from S30"
+   "reason": "presenter script; taught from S40"
   },
   {
-   "ref": "S30",
+   "ref": "S40",
    "text": "Have patients tell every prescriber and pharmacist.",
    "kind": "speaker note",
-   "reason": "presenter script; taught from S30"
+   "reason": "presenter script; taught from S40"
   },
   {
-   "ref": "S31",
+   "ref": "S41",
    "text": "This case is the direct clinical application of Figure 10 — a great closing vignette for the nutrition section.",
    "kind": "speaker note",
    "reason": "teaching instruction"
   },
   {
-   "ref": "S31",
+   "ref": "S41",
    "text": "Case: Subtherapeutic INR after starting St.",
    "kind": "speaker note",
    "reason": "presenter script; the case is rebuilt as a practice question"
   },
   {
-   "ref": "S32",
+   "ref": "S42",
+   "text": "Pause for students to answer before revealing slide 43.",
+   "kind": "speaker note",
+   "reason": "teaching instruction (class-version quick check; the question is rebuilt on the site)"
+  },
+  {
+   "ref": "S44",
    "text": "Section transition.",
    "kind": "speaker note",
    "reason": "section divider"
   },
   {
-   "ref": "S32",
+   "ref": "S44",
    "text": "Pairs of students name a first-line approach and the biggest safety check for each patient.",
    "kind": "speaker note",
    "reason": "teaching instruction"
   },
   {
-   "ref": "S33",
+   "ref": "S45",
    "text": "Have students work in pairs: for each patient, name a first-line approach AND the single biggest safety concern to check before prescribing/counseling.",
    "kind": "speaker note",
    "reason": "teaching instruction"
   },
   {
-   "ref": "S34",
+   "ref": "S46",
+   "text": "Pause for students to answer before revealing slide 47.",
+   "kind": "speaker note",
+   "reason": "teaching instruction (class-version quick check; the question is rebuilt on the site)"
+  },
+  {
+   "ref": "S48",
    "text": "Read the five points.",
    "kind": "speaker note",
    "reason": "teaching instruction"
   },
   {
-   "ref": "S34",
+   "ref": "S48",
    "text": "Link biologics back to the DMARD lecture and interactions back to the metabolism lecture.",
    "kind": "speaker note",
    "reason": "teaching instruction"
   },
   {
-   "ref": "S35",
+   "ref": "S49",
    "text": "Section transition.",
    "kind": "speaker note",
    "reason": "section divider"
   },
   {
-   "ref": "S35",
+   "ref": "S49",
    "text": "Give students the six recall questions for self-testing and walk through the answer key.",
    "kind": "speaker note",
    "reason": "teaching instruction"
   },
   {
-   "ref": "S36",
+   "ref": "S50",
    "text": "Give students the six recall questions for self-testing.",
    "kind": "speaker note",
    "reason": "teaching instruction"
   },
   {
-   "ref": "S37",
+   "ref": "S51",
    "text": "Give students the six recall questions for self-testing.",
    "kind": "speaker note",
    "reason": "teaching instruction"
   },
   {
-   "ref": "S38",
+   "ref": "S52",
    "text": "Encourage students to revisit this quiz on their own before the exam — it is designed as a standalone recall resource, separate from the in-lecture quick checks.",
    "kind": "speaker note",
    "reason": "teaching instruction"
   },
   {
-   "ref": "S38",
+   "ref": "S52",
    "text": "Walk through the answer key.",
    "kind": "speaker note",
    "reason": "teaching instruction"
   },
   {
-   "ref": "S39",
+   "ref": "S53",
    "text": "Section transition.",
    "kind": "speaker note",
    "reason": "section divider"
   },
   {
-   "ref": "S70",
+   "ref": "S84",
    "text": "Listed for context; not profiled in detail.",
    "kind": "slide",
    "reason": "slide label (the supporting drugs are in the table)"
   },
   {
-   "ref": "S70",
+   "ref": "S84",
    "text": "Listed for context; not profiled in detail.",
    "kind": "speaker note",
    "reason": "slide label (the supporting drugs are in the table)"
   },
   {
-   "ref": "S70",
+   "ref": "S84",
    "text": "Ten compact rows cover the supporting drugs: antibiotics and antidotes for C.",
    "kind": "speaker note",
    "reason": "teaching instruction describing the table"
   },
   {
-   "ref": "S71",
+   "ref": "S85",
    "text": "This slide documents AI-tool use for original figure generation per university citation requirements.",
    "kind": "speaker note",
    "reason": "administrative note on AI-tool citation"
@@ -452,15 +715,15 @@
  "layout_problems": [],
  "question_issues": [],
  "question_stats": {
-  "count": 20,
+  "count": 24,
   "letters": {
-   "A": 4,
-   "B": 4,
-   "C": 4,
+   "A": 5,
+   "B": 5,
+   "C": 5,
    "D": 4,
-   "E": 4
+   "E": 5
   },
-  "vignette": 11,
+  "vignette": 15,
   "mechanism": 9
  },
  "thin_objectives": [],

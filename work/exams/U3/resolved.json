@@ -63,8 +63,8 @@
    }
   },
   "link": {
-   "href": "../../L05/index.html#mucosal-protectants-h-pylori-eradication",
-   "label": "Study this: L05 · Part 3 →"
+   "href": "../../L05/index.html#antacids-h2-blockers-proton-pump-inhibitors",
+   "label": "Study this: L05 · Part 2 →"
   }
  },
  {
@@ -97,7 +97,7 @@
   "why_correct": "Sulfasalazine’s sulfapyridine causes hemolysis in G6PD deficiency, rash, agranulocytosis and folate deficiency.",
   "takeaway": "Sulfa part → sulfa problems.",
   "discriminator": "Mesalamine: monitor renal function.",
-  "src": "L06 S12; S13",
+  "src": "L06 S16; S17",
   "id": "U3-043",
   "answer": "E",
   "options": {
@@ -194,8 +194,8 @@
    }
   },
   "link": {
-   "href": "../../L05/index.html#mucosal-protectants-h-pylori-eradication",
-   "label": "Study this: L05 · Part 3 →"
+   "href": "../../L05/index.html#antacids-h2-blockers-proton-pump-inhibitors",
+   "label": "Study this: L05 · Part 2 →"
   }
  },
  {
@@ -230,7 +230,7 @@
   "why_correct": "Fat-soluble vitamins are stored in fat and liver and accumulate; water-soluble vitamins are renally excreted and rarely toxic.",
   "takeaway": "ADEK stay; B and C wash away.",
   "discriminator": "Vitamin D toxicity: hypercalcemia, kidney stones.",
-  "src": "L06 S22; S23; SG U3-R12",
+  "src": "L06 S30; S31; SG U3-R12",
   "id": "U3-025",
   "answer": "E",
   "options": {
@@ -328,8 +328,8 @@
    }
   },
   "link": {
-   "href": "../../L05/index.html#antacids-h2-blockers-proton-pump-inhibitors",
-   "label": "Study this: L05 · Part 2 →"
+   "href": "../../L05/index.html#antiemetics",
+   "label": "Study this: L05 · Part 4 →"
   }
  },
  {
@@ -362,7 +362,7 @@
   "why_correct": "Azathioprine/6-MP are maintenance drugs with slow onset; steroids induce remission during flares.",
   "takeaway": "Fast but short (steroids) vs. slow but lasting (thiopurines).",
   "discriminator": "Test TPMT/NUDT15 first.",
-  "src": "L06 S14; S15",
+  "src": "L06 S18; S19",
   "id": "U3-045",
   "answer": "B",
   "options": {
@@ -461,8 +461,8 @@
    }
   },
   "link": {
-   "href": "../../L05/index.html#acid-peptic-disease-gastric-acid-secretion",
-   "label": "Study this: L05 · Part 1 →"
+   "href": "../../L05/index.html#antacids-h2-blockers-proton-pump-inhibitors",
+   "label": "Study this: L05 · Part 2 →"
   }
  },
  {
@@ -495,7 +495,7 @@
   "why_correct": "Keep vitamin K intake consistent rather than avoiding it; INR is dosed against usual intake.",
   "takeaway": "Steady intake, steady INR.",
   "discriminator": "Ginkgo and fish oil raise bleeding risk.",
-  "src": "L06 S27",
+  "src": "L06 S35",
   "id": "U3-028",
   "answer": "A",
   "options": {
@@ -591,8 +591,8 @@
    }
   },
   "link": {
-   "href": "../../L05/index.html#antiemetics",
-   "label": "Study this: L05 · Part 4 →"
+   "href": "../../L05/index.html#mucosal-protectants-h-pylori-eradication",
+   "label": "Study this: L05 · Part 3 →"
   }
  },
  {
@@ -625,7 +625,7 @@
   "why_correct": "Very high loperamide doses cause QT prolongation, torsades and cardiac arrest; naloxone reverses CNS depression.",
   "takeaway": "Loperamide: safe at normal doses, cardiotoxic at abuse doses.",
   "discriminator": "P-gp normally keeps it out of the CNS.",
-  "src": "L06 S7; S8; S48",
+  "src": "L06 S9; S10; S62",
   "id": "U3-019",
   "answer": "A",
   "options": {
@@ -755,7 +755,7 @@
   "why_correct": "Allopurinol blocks thiopurine metabolism; reduce the thiopurine dose by about two-thirds to three-quarters (febuxostat avoided).",
   "takeaway": "Allopurinol + thiopurine → big dose cut.",
   "discriminator": "Same interaction appears in Unit 2 (gout).",
-  "src": "L06 S15; S70; L04 S13",
+  "src": "L06 S19; S84; L04 S13",
   "id": "U3-023",
   "answer": "A",
   "options": {
@@ -888,7 +888,7 @@
   "why_correct": "Ginkgo (and fish oil) can increase bleeding risk, especially with anticoagulants/antiplatelets; stop before surgery.",
   "takeaway": "Bleeding supplements: ginkgo, fish oil (textbook adds garlic, ginseng).",
   "discriminator": "St. John’s wort lowers drug levels; ginkgo adds bleeding.",
-  "src": "L06 S30; S68; p. 1210",
+  "src": "L06 S40; S82; p. 1210",
   "id": "U3-030",
   "answer": "C",
   "options": {
@@ -985,8 +985,8 @@
    }
   },
   "link": {
-   "href": "../../L05/index.html#antiemetics",
-   "label": "Study this: L05 · Part 4 →"
+   "href": "../../L05/index.html#mucosal-protectants-h-pylori-eradication",
+   "label": "Study this: L05 · Part 3 →"
   }
  },
  {
@@ -1153,7 +1153,7 @@
   "why_correct": "Budesonide is extensively metabolized on first pass, so less reaches the systemic circulation.",
   "takeaway": "Budesonide = local steroid.",
   "discriminator": "Steroids are for flares, not maintenance.",
-  "src": "L06 S14",
+  "src": "L06 S18",
   "id": "U3-044",
   "answer": "D",
   "options": {
@@ -1249,8 +1249,8 @@
    }
   },
   "link": {
-   "href": "../../L05/index.html",
-   "label": "Study this: L05 →"
+   "href": "../../L05/index.html#antiemetics",
+   "label": "Study this: L05 · Part 4 →"
   }
  },
  {
@@ -1286,7 +1286,7 @@
   "why_correct": "St. John’s wort induces CYP3A4, speeding warfarin metabolism and lowering INR; check INR when starting or stopping any supplement.",
   "takeaway": "Ask about supplements at every medication reconciliation.",
   "discriminator": "Vitamin K lowers INR pharmacodynamically; St. John’s wort pharmacokinetically.",
-  "src": "L06 S26; S27; S31; SG U3-R13",
+  "src": "L06 S34; S35; S41; SG U3-R13",
   "id": "U3-027",
   "answer": "D",
   "options": {
@@ -1382,8 +1382,8 @@
    }
   },
   "link": {
-   "href": "../../L05/index.html#antiemetics",
-   "label": "Study this: L05 · Part 4 →"
+   "href": "../../L05/index.html#mucosal-protectants-h-pylori-eradication",
+   "label": "Study this: L05 · Part 3 →"
   }
  },
  {
@@ -1419,7 +1419,7 @@
   "why_correct": "This is concerning for C. difficile; avoid antimotility agents and treat with oral vancomycin or fidaxomicin.",
   "takeaway": "Bloody, febrile, or post-antibiotic diarrhea → no antimotility agents.",
   "discriminator": "Clindamycin is the classic C. difficile antibiotic.",
-  "src": "L06 S7; S9; SG U3-R10",
+  "src": "L06 S9; S11; SG U3-R10",
   "id": "U3-017",
   "answer": "C",
   "options": {
@@ -1518,8 +1518,8 @@
    }
   },
   "link": {
-   "href": "../../L05/index.html#mucosal-protectants-h-pylori-eradication",
-   "label": "Study this: L05 · Part 3 →"
+   "href": "../../L05/index.html#antacids-h2-blockers-proton-pump-inhibitors",
+   "label": "Study this: L05 · Part 2 →"
   }
  },
  {
@@ -1586,8 +1586,8 @@
    }
   },
   "link": {
-   "href": "../../L05/index.html#antacids-h2-blockers-proton-pump-inhibitors",
-   "label": "Study this: L05 · Part 2 →"
+   "href": "../../L05/index.html#antiemetics",
+   "label": "Study this: L05 · Part 4 →"
   }
  },
  {
@@ -1622,7 +1622,7 @@
   "why_correct": "5-ASA agents are first-line for mild-to-moderate UC with a favorable safety profile; biologics are reserved for moderate-to-severe disease.",
   "takeaway": "Match therapy to severity (step therapy).",
   "discriminator": "Monitor mesalamine renal function.",
-  "src": "L06 S11; S12; S19; SG U3-R11",
+  "src": "L06 S15; S16; S25; SG U3-R11",
   "id": "U3-020",
   "answer": "C",
   "options": {
@@ -1687,7 +1687,7 @@
   "why_correct": "Carbohydrate raises insulin, which drives phosphate, potassium and magnesium into cells — dangerous lows.",
   "takeaway": "Refeed slowly, thiamine first, daily labs.",
   "discriminator": "If the gut works, use it.",
-  "src": "L06 S29",
+  "src": "L06 S39",
   "id": "U3-047",
   "answer": "C",
   "options": {
@@ -1754,7 +1754,7 @@
   "why_correct": "Atropine is included at a subtherapeutic dose specifically to discourage misuse/overdose; the product is Schedule V.",
   "takeaway": "Lomotil: opioid + deterrent atropine.",
   "discriminator": "Loperamide stays out of the CNS via P-gp efflux.",
-  "src": "L06 S7; S8; SG U3-R10",
+  "src": "L06 S9; S10; SG U3-R10",
   "id": "U3-018",
   "answer": "B",
   "options": {
@@ -1919,8 +1919,8 @@
    }
   },
   "link": {
-   "href": "../../L05/index.html#antiemetics",
-   "label": "Study this: L05 · Part 4 →"
+   "href": "../../L05/index.html#mucosal-protectants-h-pylori-eradication",
+   "label": "Study this: L05 · Part 3 →"
   }
  },
  {
@@ -2083,7 +2083,7 @@
   "why_correct": "Test TPMT and NUDT15 before thiopurines; low activity raises myelosuppression risk.",
   "takeaway": "Thiopurines: gene-test first, then CBC and LFTs.",
   "discriminator": "Allopurinol cuts thiopurine breakdown — reduce dose by about two-thirds to three-quarters.",
-  "src": "L06 S15; S54",
+  "src": "L06 S19; S68",
   "id": "U3-022",
   "answer": "A",
   "options": {
@@ -2217,7 +2217,7 @@
   "why_correct": "St. John’s wort adds serotonin syndrome risk with antidepressants and induces CYP3A4 (lowers many drug levels).",
   "takeaway": "Ask about supplements every visit.",
   "discriminator": "Warfarin + St. John’s wort → INR falls.",
-  "src": "L06 S26; S31; p. 1214; SG U3-S",
+  "src": "L06 S34; S41; p. 1214; SG U3-S",
   "id": "U3-048",
   "answer": "E",
   "options": {
@@ -2582,8 +2582,8 @@
    }
   },
   "link": {
-   "href": "../../L05/index.html#antiemetics",
-   "label": "Study this: L05 · Part 4 →"
+   "href": "../../L05/index.html#mucosal-protectants-h-pylori-eradication",
+   "label": "Study this: L05 · Part 3 →"
   }
  },
  {
@@ -2616,7 +2616,7 @@
   "why_correct": "Iron absorption is enhanced by vitamin C and impaired by antacids and PPIs.",
   "takeaway": "Iron + acid suppression = poor absorption.",
   "discriminator": "Separate antacids from iron.",
-  "src": "L06 S24",
+  "src": "L06 S32",
   "id": "U3-046",
   "answer": "B",
   "options": {
@@ -2683,7 +2683,7 @@
   "why_correct": "Vedolizumab blocks α4β7 integrin-mediated leukocyte gut-homing — less systemic immunosuppression.",
   "takeaway": "α4β7 = the gut’s address tag.",
   "discriminator": "-zumab humanized (vedolizumab); -ximab chimeric (infliximab).",
-  "src": "L06 S16; S38; SG U3-R11",
+  "src": "L06 S20; S52; SG U3-R11",
   "id": "U3-021",
   "answer": "B",
   "options": {
@@ -2781,8 +2781,8 @@
    }
   },
   "link": {
-   "href": "../../L05/index.html#mucosal-protectants-h-pylori-eradication",
-   "label": "Study this: L05 · Part 3 →"
+   "href": "../../L05/index.html#antacids-h2-blockers-proton-pump-inhibitors",
+   "label": "Study this: L05 · Part 2 →"
   }
  },
  {
@@ -3083,7 +3083,7 @@
   "why_correct": "Use the gut if it works; refeed slowly, give thiamine before feeding, and check phosphate, potassium and magnesium daily at the start.",
   "takeaway": "If the gut works, use it — slowly.",
   "discriminator": "Refeeding: insulin drives phosphate, potassium, magnesium into cells.",
-  "src": "L06 S28; S29",
+  "src": "L06 S38; S39",
   "id": "U3-029",
   "answer": "B",
   "options": {
@@ -3148,7 +3148,7 @@
   "why_correct": "Lubiprostone activates ClC-2 → more chloride and fluid secretion; nausea is classic.",
   "takeaway": "Secretagogues: lubiprostone (ClC-2), linaclotide (GC-C).",
   "discriminator": "Linaclotide: diarrhea; not under age 2.",
-  "src": "L06 S5; S46",
+  "src": "L06 S5; S60",
   "id": "U3-042",
   "answer": "E",
   "options": {
@@ -3213,7 +3213,7 @@
   "why_correct": "Before biologics: TB and hepatitis B/C screening, vaccines (especially live) updated first, then regular labs.",
   "takeaway": "Biologic risk = infection, across organ systems.",
   "discriminator": "Same framework as the RA biologics in Unit 2.",
-  "src": "L06 S18; L03 S56",
+  "src": "L06 S24; L03 S56",
   "id": "U3-024",
   "answer": "D",
   "options": {
@@ -3280,7 +3280,7 @@
   "why_correct": "Long-term PPI and metformin use impair B12 (less acid release; impaired ileal uptake); deficiency causes megaloblastic anemia and neuropathy.",
   "takeaway": "Monitor B12 in long-term PPI or metformin users.",
   "discriminator": "Iron deficiency → microcytic; B12/folate → megaloblastic.",
-  "src": "L06 S24; S25; SG U3-R12",
+  "src": "L06 S32; S33; SG U3-R12",
   "id": "U3-026",
   "answer": "D",
   "options": {

@@ -132,9 +132,9 @@ SCENES["L06"] = {
                            {"id": "peg", "label": "PEG / lactulose (osmotic)", "fx": "osm", "note": "Osmotic: draws water into the lumen. PEG is first-line for chronic constipation; magnesium laxatives need caution in CKD. (S5)"},
                            {"id": "sen", "label": "Senna / bisacodyl (stimulant)", "fx": "stim", "note": "Stimulant: activates enteric nerves → stronger contractions. Short-term or breakthrough; cramping. (S4–S5)"},
                            {"id": "lin", "label": "Linaclotide / lubiprostone", "fx": "sec", "note": "Secretagogue: the lining secretes chloride and fluid. Chronic constipation, IBS-C; linaclotide diarrhea, lubiprostone nausea. (S4–S5)"}]},
-    "S8_1.jpg": {"type": "colon", "point": "Loperamide puts an opioid brake on the gut wall: fewer squeezes, more time to pull water back out.",
-                 "drugs": [{"id": "lop", "label": "Loperamide", "fx": "opioid", "note": "Binds mu-opioid receptors on enteric neurons: less acetylcholine, slower peristalsis, firmer stool. P-gp keeps it out of the CNS; very high doses → QT prolongation; not in C. difficile. (S7–S8)"},
-                           {"id": "dip", "label": "Diphenoxylate/atropine", "fx": "opioid", "note": "Same opioid brake; Schedule V; the atropine deters misuse. (S7; SG U3-R10)"}]},
+    "S10_1.jpg": {"type": "colon", "point": "Loperamide puts an opioid brake on the gut wall: fewer squeezes, more time to pull water back out.",
+                 "drugs": [{"id": "lop", "label": "Loperamide", "fx": "opioid", "note": "Binds mu-opioid receptors on enteric neurons: less acetylcholine, slower peristalsis, firmer stool. P-gp keeps it out of the CNS; very high doses → QT prolongation; not in C. difficile. (S9–S10)"},
+                           {"id": "dip", "label": "Diphenoxylate/atropine", "fx": "opioid", "note": "Same opioid brake; Schedule V; the atropine deters misuse. (S9; SG U3-R10)"}]},
 }
 
 SCENES["L07"] = {

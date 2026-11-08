@@ -32,7 +32,7 @@
   "why_correct": "Diphenoxylate/atropine is contraindicated under 6 years (respiratory depression and anticholinergic toxicity, especially in children). The atropine is a subtherapeutic dose to deter misuse.",
   "takeaway": "Lomotil: not under 6; atropine deters abuse.",
   "discriminator": "Know why the atropine is there — and that it is not a safety net.",
-  "src": "L06 S8; S49; SG U3-R10",
+  "src": "L06 S10; S63; SG U3-R10",
   "id": "U3B-018",
   "answer": "D",
   "options": {
@@ -166,7 +166,7 @@
   "why_correct": "Test TPMT and NUDT15 before thiopurines: low activity raises myelosuppression risk. Monitor CBC and liver tests; onset takes weeks to months — a Unit 1 pharmacogenomics principle.",
   "takeaway": "Low TPMT/NUDT15 → myelosuppression with azathioprine or 6-MP.",
   "discriminator": "Poor metabolizer → more active drug → more toxicity.",
-  "src": "L06 S15; S54; SG U3-R11",
+  "src": "L06 S19; S68; SG U3-R11",
   "id": "U3B-026",
   "answer": "A",
   "options": {
@@ -369,7 +369,7 @@
   "why_correct": "Mesalamine (5-ASA) is first-line for mild UC; its key toxicity is interstitial nephritis, so creatinine is monitored. Acute intolerance syndrome mimics a flare.",
   "takeaway": "Mesalamine: monitor creatinine (interstitial nephritis).",
   "discriminator": "Separate the kidney toxicity from the flare-like intolerance syndrome.",
-  "src": "L06 S12; S13; S50; SG U3-R11",
+  "src": "L06 S16; S17; S64; SG U3-R11",
   "id": "U3B-022",
   "answer": "E",
   "options": {
@@ -436,7 +436,7 @@
   "why_correct": "Linaclotide (a secretagogue) has a boxed warning against use in children under 2 years — severe dehydration and deaths; also mechanical GI obstruction is a contraindication.",
   "takeaway": "Linaclotide: boxed warning under 2 years.",
   "discriminator": "Secretagogues pull fluid into the gut — dangerous in small children.",
-  "src": "L06 S4; S5; S47; SG U3-R9",
+  "src": "L06 S4; S5; S61; SG U3-R9",
   "id": "U3B-019",
   "answer": "A",
   "options": {
@@ -571,7 +571,7 @@
   "why_correct": "PPIs and metformin impair B12 absorption. Folate alone can correct the anemia while neurologic damage from B12 deficiency progresses and can become irreversible. Check and replace B12.",
   "takeaway": "Long-term PPI or metformin → check B12; never folate alone.",
   "discriminator": "A fixed blood count does not mean the cause is fixed.",
-  "src": "L06 S24; S25; S62; S63; SG U3-R12; L05 S15",
+  "src": "L06 S32; S33; S76; S77; SG U3-R12; L05 S15",
   "id": "U3B-028",
   "answer": "C",
   "options": {
@@ -706,7 +706,7 @@
   "why_correct": "Xanthine oxidase metabolizes thiopurines. Allopurinol requires a major thiopurine dose cut (about two-thirds to three-quarters) with CBC monitoring; febuxostat use with azathioprine is contraindicated.",
   "takeaway": "Thiopurine + allopurinol → cut the thiopurine dose; + febuxostat → contraindicated.",
   "discriminator": "A Unit 2 drug and a Unit 3 drug meeting at xanthine oxidase.",
-  "src": "L06 S15; S54; S55; L04 S74; S75",
+  "src": "L06 S19; S68; S69; L04 S74; S75",
   "id": "U3B-025",
   "answer": "D",
   "options": {
@@ -773,7 +773,7 @@
   "why_correct": "Bulk-forming laxatives (psyllium, methylcellulose) can obstruct the esophagus or intestine without enough fluid and are contraindicated with dysphagia. PEG 3350 is an osmotic agent mixed into fluid.",
   "takeaway": "Dysphagia → avoid bulk-formers; choose an osmotic (PEG).",
   "discriminator": "Patient factor first, then the class.",
-  "src": "L06 S4; S5; S40; S41; S42; S43; S44; SG U3-R9",
+  "src": "L06 S4; S5; S54; S55; S56; S57; S58; SG U3-R9",
   "id": "U3B-020",
   "answer": "E",
   "options": {
@@ -1043,7 +1043,7 @@
   "why_correct": "Budesonide's high first-pass metabolism (CYP3A4) keeps systemic exposure low. Strong CYP3A4 inhibitors (ketoconazole, grapefruit juice) remove that protection → hypercortisolism.",
   "takeaway": "Budesonide + CYP3A4 inhibitor → Cushingoid effects.",
   "discriminator": "First-pass metabolism is the safety feature an inhibitor removes (Unit 1).",
-  "src": "L06 S14; S52",
+  "src": "L06 S18; S66",
   "id": "U3B-024",
   "answer": "A",
   "options": {
@@ -1314,7 +1314,7 @@
   "why_correct": "Sulfasalazine is contraindicated with sulfa or salicylate allergy and causes hemolysis in G6PD deficiency (plus agranulocytosis, SJS, folate deficiency). Mesalamine delivers 5-ASA without the sulfa component.",
   "takeaway": "Sulfa allergy or G6PD → avoid sulfasalazine; mesalamine is the 5-ASA alternative.",
   "discriminator": "Same active moiety (5-ASA), different carrier — the carrier carries the sulfa risk.",
-  "src": "L06 S12; S50; S51; SG U3-R11",
+  "src": "L06 S16; S64; S65; SG U3-R11",
   "id": "U3B-023",
   "answer": "B",
   "options": {
@@ -1382,7 +1382,7 @@
   "why_correct": "St. John's wort induces CYP3A4, increasing warfarin metabolism and lowering the INR. That is why supplement use is a required part of medication reconciliation.",
   "takeaway": "St. John's wort ↓ INR (induction); ginkgo/fish oil ↑ bleeding.",
   "discriminator": "Inducer → lower level → less effect (Unit 1).",
-  "src": "L06 S26; S27; S31; S67; SG U3-R13",
+  "src": "L06 S34; S35; S41; S81; SG U3-R13",
   "id": "U3B-029",
   "answer": "A",
   "options": {
@@ -1449,7 +1449,7 @@
   "why_correct": "Lactulose for hepatic encephalopathy is titrated to 2–3 soft stools a day; over-use causes dehydration and hypernatremia.",
   "takeaway": "Lactulose target: 2–3 soft stools/day.",
   "discriminator": "The stool count is the dosing gauge.",
-  "src": "L06 S5; S43; SG U3-R9",
+  "src": "L06 S5; S57; SG U3-R9",
   "id": "U3B-021",
   "answer": "C",
   "options": {
@@ -1651,7 +1651,7 @@
   "why_correct": "Carbohydrate feeding raises insulin, shifting phosphate, potassium and magnesium into cells — dangerously low levels with heart, muscle and breathing problems. Feed slowly, monitor daily, give thiamine first.",
   "takeaway": "Refeeding: thiamine first, start low, phosphate/K/Mg daily.",
   "discriminator": "Insulin drives the electrolytes into cells.",
-  "src": "L06 S28; S29",
+  "src": "L06 S38; S39",
   "id": "U3B-030",
   "answer": "E",
   "options": {
@@ -1788,7 +1788,7 @@
   "why_correct": "Tofacitinib (JAK inhibitor) carries boxed warnings for serious infections, mortality, malignancy, major adverse cardiovascular events (MACE) and thrombosis — highest stakes in an older smoker with prior MI. It is used after TNF-inhibitor failure.",
   "takeaway": "Tofacitinib: boxed MACE, thrombosis, malignancy, infection.",
   "discriminator": "The patient's CV history is the filter.",
-  "src": "L06 S16; S17; S60",
+  "src": "L06 S20; S21; S74",
   "id": "U3B-027",
   "answer": "C",
   "options": {
@@ -1855,7 +1855,7 @@
   "why_correct": "Recent antibiotics + fever + profuse watery diarrhea suggests C. difficile; antimotility agents (loperamide, diphenoxylate) are avoided because slowing transit can worsen toxin-mediated injury. Treat the cause.",
   "takeaway": "Fever, bloody stool or C. difficile → no antimotility agents.",
   "discriminator": "The red flags (fever, recent antibiotic) turn a routine request into a contraindication.",
-  "src": "L06 S7; S9; S48; S49; SG U3-R10",
+  "src": "L06 S9; S11; S62; S63; SG U3-R10",
   "id": "U3B-016",
   "answer": "D",
   "options": {
@@ -1990,7 +1990,7 @@
   "why_correct": "Loperamide maximum is 16 mg/day Rx (8 mg OTC). High doses cause QT prolongation, torsades and cardiac arrest; CNS depression in overdose may need repeated naloxone.",
   "takeaway": "Loperamide misuse → QT/torsades: get an ECG.",
   "discriminator": "Peripheral at normal doses ≠ safe at 5× the maximum.",
-  "src": "L06 S8; S48",
+  "src": "L06 S10; S62",
   "id": "U3B-017",
   "answer": "B",
   "options": {

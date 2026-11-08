@@ -2,12 +2,65 @@
   "cohort": 33,
   "program": "Physician Assistant · Class of 2028",
   "assessments": [
-    {"id": "u1", "label": "Unit 1 Exam", "short": "Unit 1", "type": "exam", "mean": 96.76, "sd": 5.80, "min": 80, "max": 100,
-     "quote": "Congratulations on completing your first Unit 1 examination! I am very pleased to share that the class performed exceptionally well."},
-    {"id": "u2", "label": "Unit 2 Exam 2", "short": "Unit 2", "type": "exam", "mean": 93.21, "sd": 4.95, "min": 74, "max": 100,
-     "date": "November 6, 2026", "quote": "I am very pleased to share that the class continues to perform exceptionally well."},
-    {"id": "q1", "label": "In-Class Quiz 1", "short": "Quiz 1", "type": "quiz", "mean": null, "sd": null, "min": null, "max": null,
-     "quote": "Everyone is on track to maintain their 'A' grade in the course post Quiz 1."},
-    {"id": "q2", "label": "In-Class Quiz 2", "short": "Quiz 2", "type": "quiz", "mean": 83.24, "sd": 11.56, "min": 60, "max": 100}
+    {
+      "id": "u1",
+      "label": "Unit 1 Exam",
+      "short": "Unit 1",
+      "type": "exam",
+      "mean": 96.76,
+      "sd": 5.8,
+      "min": 80,
+      "max": 100,
+      "quote": "Congratulations on completing your first Unit 1 examination! I am very pleased to share that the class performed exceptionally well.",
+      "calc": [
+        "exam",
+        0
+      ]
+    },
+    {
+      "id": "u2",
+      "label": "Unit 2 Exam 2",
+      "short": "Unit 2",
+      "type": "exam",
+      "mean": 93.21,
+      "sd": 4.95,
+      "min": 74,
+      "max": 100,
+      "date": "November 6, 2026",
+      "quote": "I am very pleased to share that the class continues to perform exceptionally well.",
+      "calc": [
+        "exam",
+        1
+      ]
+    },
+    {
+      "id": "q1",
+      "label": "In-Class Quiz 1",
+      "short": "Quiz 1",
+      "type": "quiz",
+      "mean": null,
+      "sd": null,
+      "min": null,
+      "max": null,
+      "quote": "Everyone is on track to maintain their 'A' grade in the course post Quiz 1.",
+      "calc": [
+        "quiz",
+        0
+      ]
+    },
+    {
+      "id": "q2",
+      "label": "In-Class Quiz 2",
+      "short": "Quiz 2",
+      "type": "quiz",
+      "mean": 83.24,
+      "sd": 11.56,
+      "min": 60,
+      "max": 100,
+      "calc": [
+        "quiz",
+        1
+      ]
+    }
   ]
 }

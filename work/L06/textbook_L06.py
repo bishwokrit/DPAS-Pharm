@@ -55,19 +55,19 @@ ADD = {
 CONFLICTS = {
     LAX: [
         {"topic": "Age cutoff for diphenoxylate/atropine",
-         "slides": {"text": "Avoid in children under 2 (S7 notes); under 6 (S8, S49).", "src": "S7 (notes); S8; S49"},
+         "slides": {"text": "Avoid in children under 2 (S9 notes); under 6 (S10, S63).", "src": "S9 (notes); S10; S63"},
          "textbook": {"text": "Small amounts of atropine are added to discourage overdosage (no age cutoff given).", "src": "p. 1166"}},
     ],
     IBD: [
         {"topic": "Thiopurine onset",
-         "slides": {"text": "Onset takes weeks to months (azathioprine 8–12 weeks).", "src": "S15; S54"},
+         "slides": {"text": "Onset takes weeks to months (azathioprine 8–12 weeks).", "src": "S19; S68"},
          "textbook": {"text": "A median delay of 17 weeks before benefit.", "src": "p. 1175"}},
     ],
 }
 
 DISCREPANCIES = [
-    ("**Diphenoxylate/atropine age limit:** the speaker notes say under 2; the depth slide and drug profile say under 6. Use under 6 (the profile).", "S7 (notes); S8; S49"),
-    ("**Thiopurine onset:** slides say weeks to months (8–12 weeks on the profile); the textbook gives a median of 17 weeks. Either way, not for acute flares.", "S14; S54; p. 1175"),
+    ("**Diphenoxylate/atropine age limit:** the speaker notes say under 2; the depth slide and drug profile say under 6. Use under 6 (the profile).", "S9 (notes); S10; S63"),
+    ("**Thiopurine onset:** slides say weeks to months (8–12 weeks on the profile); the textbook gives a median of 17 weeks. Either way, not for acute flares.", "S18; S68; p. 1175"),
 ]
 
 CRAM = [

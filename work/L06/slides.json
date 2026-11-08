@@ -569,6 +569,178 @@
  },
  {
   "slide": 7,
+  "title": "Quick Check",
+  "items": [
+   {
+    "text": "QUICK CHECK · FIGURE 2",
+    "level": 0,
+    "emphasis": [],
+    "md": "QUICK CHECK · FIGURE 2",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Quick Check",
+    "level": 0,
+    "emphasis": [],
+    "md": "Quick Check",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Based on Figure 2, a hospitalized patient needs constipation relief within a few hours. Which class is the most appropriate choice?",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Based on Figure 2, a hospitalized patient needs constipation relief within a few hours. Which class is the most appropriate choice?",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Based on Figure 2, a hospitalized patient needs constipation relief within a few hours. Which class is the most appropriate choice?**",
+    "heading": false,
+    "size": 18.5
+   },
+   {
+    "text": "A",
+    "level": 0,
+    "emphasis": [],
+    "md": "A",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Bulk-forming",
+    "level": 0,
+    "emphasis": [],
+    "md": "Bulk-forming",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "B",
+    "level": 0,
+    "emphasis": [],
+    "md": "B",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Stool softener",
+    "level": 0,
+    "emphasis": [],
+    "md": "Stool softener",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "C",
+    "level": 0,
+    "emphasis": [],
+    "md": "C",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Osmotic or stimulant",
+    "level": 0,
+    "emphasis": [],
+    "md": "Osmotic or stimulant",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "D",
+    "level": 0,
+    "emphasis": [],
+    "md": "D",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "None of these act quickly enough",
+    "level": 0,
+    "emphasis": [],
+    "md": "None of these act quickly enough",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Quick check: pause for students to answer before revealing slide 8."
+ },
+ {
+  "slide": 8,
+  "title": "Answer",
+  "items": [
+   {
+    "text": "ANSWER · FIGURE 2",
+    "level": 0,
+    "emphasis": [],
+    "md": "ANSWER · FIGURE 2",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Answer",
+    "level": 0,
+    "emphasis": [],
+    "md": "Answer",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "C",
+    "level": 0,
+    "emphasis": [],
+    "md": "C",
+    "heading": true,
+    "size": 26.0
+   },
+   {
+    "text": "Osmotic or stimulant laxatives.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Osmotic or stimulant laxatives.",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Osmotic or stimulant laxatives.**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Why:  Figure 2 shows osmotic agents (~2 hours) and stimulant agents (~8 hours) acting far faster than bulk-forming agents or stool softeners (~2–2.5 days) — appropriate choices when relief is needed within hours rather than days.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Why:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Why:** Figure 2 shows osmotic agents (~2 hours) and stimulant agents (~8 hours) acting far faster than bulk-forming agents or stool softeners (~2–2.5 days) — appropriate choices when relief is needed within hours rather than days.",
+    "heading": false,
+    "size": 15.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Answer C: osmotic or stimulant for relief within hours."
+ },
+ {
+  "slide": 9,
   "title": "Antidiarrheal Agents",
   "items": [
    {
@@ -633,21 +805,6 @@
     "md": "**Avoid antimotility agents (loperamide, diphenoxylate/atropine) in suspected infectious/inflammatory diarrhea (e.g., C. difficile, invasive bacterial infection) — can worsen outcomes by delaying toxin/pathogen clearance.**",
     "heading": false,
     "size": 16.0
-   },
-   {
-    "text": "9",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "9",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**9**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
@@ -656,7 +813,7 @@
   "notes": "The \"avoid in infectious diarrhea\" caution is one of the highest-yield safety points in this section — slowing transit in an infectious or inflammatory process can actually worsen the clinical picture (e.g., toxic megacolon risk in C. difficile).\n\nInstructor script:\n\nKnow: Loperamide has limited CNS entry because of P-gp efflux. Very high doses can cause cardiac toxicity (QT prolongation).\n\nKnow: Diphenoxylate/atropine is Schedule V. Atropine is there at a low dose to discourage misuse. Avoid in children under 2.\n\nKnow: Bismuth subsalicylate: salicylate warning, can darken stool and tongue.\n\nKnow: Avoid antimotility agents in suspected C. difficile and in bloody or febrile diarrhea."
  },
  {
-  "slide": 8,
+  "slide": 10,
   "title": "Loperamide and Diphenoxylate: Opioid Brake on the Gut",
   "items": [
    {
@@ -799,32 +956,17 @@
     "md": "Bismuth subsalicylate: salicylate warning; can darken stool and tongue.",
     "heading": false,
     "size": 12.0
-   },
-   {
-    "text": "10",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "10",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**10**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
   "images": 2,
   "figures": [
-   "S8_1.jpg"
+   "S10_1.jpg"
   ],
   "notes": "Say: \"Loperamide and diphenoxylate are opioid agonists. They bind mu receptors on enteric neurons, reduce acetylcholine release, slow peristalsis and give more time for water absorption.\""
  },
  {
-  "slide": 9,
+  "slide": 11,
   "title": "Is an Antimotility Agent Safe Here?",
   "items": [
    {
@@ -895,21 +1037,6 @@
     "md": "**Clinical pearl:** **This presentation is concerning for C. difficile infection — antimotility agents should generally be avoided, since slowing transit can worsen toxin-mediated colonic injury. Treatment should target the underlying infection (e.g., oral vancomycin or fidaxomicin), not just the symptom.**",
     "heading": false,
     "size": 14.0
-   },
-   {
-    "text": "11",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "11",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**11**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
@@ -918,7 +1045,179 @@
   "notes": "Great opportunity to connect back to the antibiotic-associated-diarrhea concept and reinforce that \"stopping diarrhea\" is not always the correct first move.\n\nInstructor script:\n\nCase: Diarrhea and fever after clindamycin. Ask: \"Is loperamide appropriate?\" Answer: no, think C. difficile and treat the infection (oral vancomycin or fidaxomicin)."
  },
  {
-  "slide": 10,
+  "slide": 12,
+  "title": "Quick Check",
+  "items": [
+   {
+    "text": "QUICK CHECK · LAXATIVES & ANTIDIARRHEALS",
+    "level": 0,
+    "emphasis": [],
+    "md": "QUICK CHECK · LAXATIVES & ANTIDIARRHEALS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Quick Check",
+    "level": 0,
+    "emphasis": [],
+    "md": "Quick Check",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Why is a subtherapeutic dose of atropine included in the diphenoxylate/atropine combination product?",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Why is a subtherapeutic dose of atropine included in the diphenoxylate/atropine combination product?",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Why is a subtherapeutic dose of atropine included in the diphenoxylate/atropine combination product?**",
+    "heading": false,
+    "size": 18.5
+   },
+   {
+    "text": "A",
+    "level": 0,
+    "emphasis": [],
+    "md": "A",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "To treat the underlying cause of diarrhea",
+    "level": 0,
+    "emphasis": [],
+    "md": "To treat the underlying cause of diarrhea",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "B",
+    "level": 0,
+    "emphasis": [],
+    "md": "B",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "To discourage intentional overdose/misuse of the opioid component",
+    "level": 0,
+    "emphasis": [],
+    "md": "To discourage intentional overdose/misuse of the opioid component",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "C",
+    "level": 0,
+    "emphasis": [],
+    "md": "C",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "To increase the antidiarrheal effect of diphenoxylate",
+    "level": 0,
+    "emphasis": [],
+    "md": "To increase the antidiarrheal effect of diphenoxylate",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "D",
+    "level": 0,
+    "emphasis": [],
+    "md": "D",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "To prevent constipation",
+    "level": 0,
+    "emphasis": [],
+    "md": "To prevent constipation",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Quick check: Atropine in diphenoxylate. Pause for students to answer before revealing slide 13."
+ },
+ {
+  "slide": 13,
+  "title": "Answer",
+  "items": [
+   {
+    "text": "ANSWER · LAXATIVES & ANTIDIARRHEALS",
+    "level": 0,
+    "emphasis": [],
+    "md": "ANSWER · LAXATIVES & ANTIDIARRHEALS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Answer",
+    "level": 0,
+    "emphasis": [],
+    "md": "Answer",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "B",
+    "level": 0,
+    "emphasis": [],
+    "md": "B",
+    "heading": true,
+    "size": 26.0
+   },
+   {
+    "text": "To discourage intentional overdose/misuse of the opioid component.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "To discourage intentional overdose/misuse of the opioid component.",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**To discourage intentional overdose/misuse of the opioid component.**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Why:  At therapeutic doses, the atropine dose is too low to produce significant anticholinergic effects, but at supratherapeutic (misuse) doses, unpleasant anticholinergic effects (tachycardia, dry mouth, flushing) emerge — an intentional deterrent against abuse of the opioid agonist diphenoxylate.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Why:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Why:** At therapeutic doses, the atropine dose is too low to produce significant anticholinergic effects, but at supratherapeutic (misuse) doses, unpleasant anticholinergic effects (tachycardia, dry mouth, flushing) emerge — an intentional deterrent against abuse of the opioid agonist diphenoxylate.",
+    "heading": false,
+    "size": 15.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Answer B: it discourages overdose or misuse."
+ },
+ {
+  "slide": 14,
   "title": "05",
   "items": [
    {
@@ -975,7 +1274,7 @@
   "notes": "Section transition.\n\nStep therapy. Match the drug to the severity: 5-ASA for mild, steroids for flares, immunomodulators for maintenance, biologics and small molecules for moderate to severe disease."
  },
  {
-  "slide": 11,
+  "slide": 15,
   "title": "Step Therapy in Inflammatory Bowel Disease",
   "items": [
    {
@@ -1008,32 +1307,17 @@
     "md": "**Figure 4. Original illustrative diagram (not from Katzung): therapy escalates from 5-ASA agents for mild disease, through short-term corticosteroids for flares and immunomodulators for maintenance, to biologics/small molecules for moderate-to-severe disease.**",
     "heading": false,
     "size": 13.5
-   },
-   {
-    "text": "15",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "15",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**15**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
   "images": 2,
   "figures": [
-   "S11_1.jpg"
+   "S15_1.jpg"
   ],
   "notes": "This escalation ladder is the organizing framework for every drug class in this section — ask students where each drug they learn next \"lives\" on this ladder.\n\nInstructor script:\n\nSay: \"Step therapy. Match the drug to the severity: 5-ASA for mild, steroids for flares, immunomodulators for maintenance, biologics and small molecules for moderate to severe disease.\""
  },
  {
-  "slide": 12,
+  "slide": 16,
   "title": "Aminosalicylates (5-ASA Agents)",
   "items": [
    {
@@ -1090,21 +1374,6 @@
     "md": "Generally well tolerated; a favorable long-term safety profile relative to steroids and immunomodulators.",
     "heading": false,
     "size": 16.0
-   },
-   {
-    "text": "16",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "16",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**16**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
@@ -1113,7 +1382,7 @@
   "notes": "Know: Sulfapyridine causes most adverse effects: rash, hemolysis in G6PD deficiency, agranulocytosis, folate deficiency (give folic acid). Caution in sulfa allergy.\n\nKnow: Mesalamine: monitor renal function (interstitial nephritis).\n\nKnow: Delayed-release forms target the ileum or colon. Enemas and suppositories treat distal disease."
  },
  {
-  "slide": 13,
+  "slide": 17,
   "title": "5-ASA: Local Anti-Inflammatory Action",
   "items": [
    {
@@ -1279,32 +1548,17 @@
     "md": "Enemas and suppositories treat distal disease.",
     "heading": false,
     "size": 12.0
-   },
-   {
-    "text": "17",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "17",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**17**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
   "images": 2,
   "figures": [
-   "S13_1.jpg"
+   "S17_1.jpg"
   ],
   "notes": "Say: \"Sulfasalazine reaches the colon. Bacteria cleave the azo bond and release 5-ASA and sulfapyridine. 5-ASA acts on the mucosa.\""
  },
  {
-  "slide": 14,
+  "slide": 18,
   "title": "Corticosteroids and Immunomodulators",
   "items": [
    {
@@ -1386,21 +1640,6 @@
     "md": "Require monitoring for bone marrow suppression and hepatotoxicity",
     "heading": false,
     "size": 14.0
-   },
-   {
-    "text": "18",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "18",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**18**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
@@ -1409,7 +1648,7 @@
   "notes": "The \"fast but not for long-term\" vs. \"slow but sustainable\" contrast here directly parallels the acute-vs-chronic gout framework from Lecture 2 — point that out explicitly if students took that unit.\n\nInstructor script:\n\nSay: \"Fast but not for the long term versus slow but sustainable.\" Budesonide has high first-pass metabolism, so less systemic exposure than prednisone."
  },
  {
-  "slide": 15,
+  "slide": 19,
   "title": "Azathioprine and 6-MP: Purine Antimetabolites",
   "items": [
    {
@@ -1575,32 +1814,17 @@
     "md": "Increased infection and lymphoma risk.",
     "heading": false,
     "size": 12.0
-   },
-   {
-    "text": "19",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "19",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**19**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
   "images": 2,
   "figures": [
-   "S15_1.jpg"
+   "S19_1.jpg"
   ],
   "notes": "Say: \"Azathioprine becomes 6-mercaptopurine, then thioguanine nucleotides, which block purine synthesis in lymphocytes.\"\n\nKnow: Test TPMT and NUDT15 before starting. Low activity raises myelosuppression risk.\n\nKnow: Allopurinol blocks metabolism. Reduce the thiopurine dose by about two-thirds to three-quarters.\n\nKnow: Monitor CBC and liver tests. Onset takes weeks to months. Infection and lymphoma risk rise."
  },
  {
-  "slide": 16,
+  "slide": 20,
   "title": "Biologic & Small-Molecule Agents in IBD",
   "items": [
    {
@@ -1714,21 +1938,6 @@
     "md": "Example: tofacitinib",
     "heading": false,
     "size": 13.0
-   },
-   {
-    "text": "20",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "20",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**20**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
@@ -1737,7 +1946,7 @@
   "notes": "TNF-α inhibitors are a direct callback to the biologic DMARDs from Lecture 2 — the same generic drugs (infliximab, adalimumab) reappear here treating a different organ system through the same mechanism. The next slide shows this full set as a mechanism diagram.\n\nInstructor script:\n\nKnow: Targets: TNF-alpha (infliximab, adalimumab), integrin (vedolizumab), IL-12/23 (ustekinumab), JAK (tofacitinib)."
  },
  {
-  "slide": 17,
+  "slide": 21,
   "title": "Biologic & Targeted Therapies in IBD: Where Each Class Acts",
   "items": [
    {
@@ -1770,32 +1979,189 @@
     "md": "**Figure 7. Original illustrative diagram (not from Katzung): infliximab/adalimumab block TNF-α, vedolizumab blocks leukocyte gut-homing, ustekinumab blocks IL-12/23, and tofacitinib blocks JAK signaling — four distinct points of intervention in chronic mucosal inflammation.**",
     "heading": false,
     "size": 13.5
-   },
-   {
-    "text": "21",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "21",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**21**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
   "images": 2,
   "figures": [
-   "S17_1.jpg"
+   "S21_1.jpg"
   ],
-  "notes": "Have students sort each drug into its target before revealing labels — the same exercise used for the DMARD figure in Lecture 2, now applied to a new organ system.\n\nInstructor script:\n\nSort each drug into its target before revealing labels: TNF-alpha (infliximab, adalimumab), integrin (vedolizumab), IL-12/23 (ustekinumab), JAK (tofacitinib)."
+  "notes": "Have students sort each drug into its target before revealing labels — the s\name exercise used for the DMARD figure in Lecture 2, now applied to a new organ system.\n\nInstructor script:\n\nSort each drug into its target before revealing labels: TNF-alpha (infliximab, adalimumab), integrin (vedolizumab), IL-12/23 (ustekinumab), JAK (tofacitinib)."
  },
  {
-  "slide": 18,
+  "slide": 22,
+  "title": "Quick Check",
+  "items": [
+   {
+    "text": "QUICK CHECK · FIGURE 7",
+    "level": 0,
+    "emphasis": [],
+    "md": "QUICK CHECK · FIGURE 7",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Quick Check",
+    "level": 0,
+    "emphasis": [],
+    "md": "Quick Check",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "In Figure 7, which biologic agent acts by a mechanism that is gut-selective rather than systemically immunosuppressive in the same way as the others?",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "In Figure 7, which biologic agent acts by a mechanism that is gut-selective rather than systemically immunosuppressive in the same way as the others?",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**In Figure 7, which biologic agent acts by a mechanism that is gut-selective rather than systemically immunosuppressive in the same way as the others?**",
+    "heading": false,
+    "size": 18.5
+   },
+   {
+    "text": "A",
+    "level": 0,
+    "emphasis": [],
+    "md": "A",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Infliximab",
+    "level": 0,
+    "emphasis": [],
+    "md": "Infliximab",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "B",
+    "level": 0,
+    "emphasis": [],
+    "md": "B",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Adalimumab",
+    "level": 0,
+    "emphasis": [],
+    "md": "Adalimumab",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "C",
+    "level": 0,
+    "emphasis": [],
+    "md": "C",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Vedolizumab",
+    "level": 0,
+    "emphasis": [],
+    "md": "Vedolizumab",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "D",
+    "level": 0,
+    "emphasis": [],
+    "md": "D",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Tofacitinib",
+    "level": 0,
+    "emphasis": [],
+    "md": "Tofacitinib",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Quick check: pause for students to answer before revealing slide 23."
+ },
+ {
+  "slide": 23,
+  "title": "Answer",
+  "items": [
+   {
+    "text": "ANSWER · FIGURE 7",
+    "level": 0,
+    "emphasis": [],
+    "md": "ANSWER · FIGURE 7",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Answer",
+    "level": 0,
+    "emphasis": [],
+    "md": "Answer",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "C",
+    "level": 0,
+    "emphasis": [],
+    "md": "C",
+    "heading": true,
+    "size": 26.0
+   },
+   {
+    "text": "Vedolizumab.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Vedolizumab.",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Vedolizumab.**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Why:  Vedolizumab blocks α4β7 integrin, which is relatively selective for gut-homing leukocyte trafficking — giving it a more gut-selective safety profile compared with TNF-α inhibitors or JAK inhibitors, which act more broadly on systemic immune signaling.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Why:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Why:** Vedolizumab blocks α4β7 integrin, which is relatively selective for gut-homing leukocyte trafficking — giving it a more gut-selective safety profile compared with TNF-α inhibitors or JAK inhibitors, which act more broadly on systemic immune signaling.",
+    "heading": false,
+    "size": 15.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Answer C: vedolizumab is gut-selective because it blocks alpha4beta7 integrin."
+ },
+ {
+  "slide": 24,
   "title": "IBD Therapy Safety: Immunosuppression",
   "items": [
    {
@@ -1861,21 +2227,6 @@
     "md": "This is the same safety framework covered for biologic DMARDs in Lecture 2 — the shared mechanism class carries a shared risk profile.",
     "heading": false,
     "size": 16.0
-   },
-   {
-    "text": "24",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "24",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**24**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
@@ -1884,7 +2235,7 @@
   "notes": "This is almost a direct repeat of the DMARD-safety slide from Lecture 2 — a deliberate, explicit callback to reinforce that \"biologic\" as a drug category carries this risk profile regardless of the organ system being treated.\n\nInstructor script:\n\nSafety: Screen for TB and hepatitis B and C before starting a biologic. Update vaccines, especially live vaccines, first. Monitor labs."
  },
  {
-  "slide": 19,
+  "slide": 25,
   "title": "Matching Therapy to Disease Severity",
   "items": [
    {
@@ -1955,21 +2306,6 @@
     "md": "**Clinical pearl:** **Therapy is matched to disease severity: mild disease responds well to 5-ASA agents with a favorable safety profile, while biologics are reserved for moderate-to-severe or refractory disease given their cost, administration burden, and immunosuppression-related risks.**",
     "heading": false,
     "size": 14.0
-   },
-   {
-    "text": "25",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "25",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**25**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
@@ -1978,7 +2314,179 @@
   "notes": "A good patient-communication exercise (IO3.6) — have students practice explaining step therapy in plain language, not just reciting the drug ladder.\n\nInstructor script:\n\nCase: Mild ulcerative colitis starts with mesalamine, not a biologic."
  },
  {
-  "slide": 20,
+  "slide": 26,
+  "title": "Quick Check",
+  "items": [
+   {
+    "text": "QUICK CHECK · INFLAMMATORY BOWEL DISEASE",
+    "level": 0,
+    "emphasis": [],
+    "md": "QUICK CHECK · INFLAMMATORY BOWEL DISEASE",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Quick Check",
+    "level": 0,
+    "emphasis": [],
+    "md": "Quick Check",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "A patient with Crohn disease has been in remission on azathioprine for maintenance but now has an acute flare. What is the most appropriate immediate addition to therapy?",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "A patient with Crohn disease has been in remission on azathioprine for maintenance but now has an acute flare. What is the most appropriate immediate addition to therapy?",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**A patient with Crohn disease has been in remission on azathioprine for maintenance but now has an acute flare. What is the most appropriate immediate addition to therapy?**",
+    "heading": false,
+    "size": 18.5
+   },
+   {
+    "text": "A",
+    "level": 0,
+    "emphasis": [],
+    "md": "A",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Increase the azathioprine dose only",
+    "level": 0,
+    "emphasis": [],
+    "md": "Increase the azathioprine dose only",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "B",
+    "level": 0,
+    "emphasis": [],
+    "md": "B",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Add a short course of corticosteroids to induce remission",
+    "level": 0,
+    "emphasis": [],
+    "md": "Add a short course of corticosteroids to induce remission",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "C",
+    "level": 0,
+    "emphasis": [],
+    "md": "C",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Switch directly to a stimulant laxative",
+    "level": 0,
+    "emphasis": [],
+    "md": "Switch directly to a stimulant laxative",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "D",
+    "level": 0,
+    "emphasis": [],
+    "md": "D",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Discontinue all therapy until symptoms resolve on their own",
+    "level": 0,
+    "emphasis": [],
+    "md": "Discontinue all therapy until symptoms resolve on their own",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Quick check: pause for students to answer before revealing slide 27."
+ },
+ {
+  "slide": 27,
+  "title": "Answer",
+  "items": [
+   {
+    "text": "ANSWER · INFLAMMATORY BOWEL DISEASE",
+    "level": 0,
+    "emphasis": [],
+    "md": "ANSWER · INFLAMMATORY BOWEL DISEASE",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Answer",
+    "level": 0,
+    "emphasis": [],
+    "md": "Answer",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "B",
+    "level": 0,
+    "emphasis": [],
+    "md": "B",
+    "heading": true,
+    "size": 26.0
+   },
+   {
+    "text": "Add a short course of corticosteroids to induce remission.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Add a short course of corticosteroids to induce remission.",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Add a short course of corticosteroids to induce remission.**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Why:  Immunomodulators like azathioprine have a slow onset and are not effective for acute flares. Corticosteroids provide faster induction of remission during a flare, while the immunomodulator continues for long-term maintenance.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Why:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Why:** Immunomodulators like azathioprine have a slow onset and are not effective for acute flares. Corticosteroids provide faster induction of remission during a flare, while the immunomodulator continues for long-term maintenance.",
+    "heading": false,
+    "size": 15.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Answer B: Crohn flare on azathioprine: add a short steroid course."
+ },
+ {
+  "slide": 28,
   "title": "Drug Names Reveal the Class: Bowel Disorders and IBD",
   "items": [
    {
@@ -2324,21 +2832,6 @@
     "md": "A stem is a memory aid, not a rule: where no shared stem exists, learn the class name instead.",
     "heading": false,
     "size": 11.0
-   },
-   {
-    "text": "28",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "28",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**28**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
@@ -2347,7 +2840,7 @@
   "notes": "Say: \"-ximab chimeric, -umab human, -zumab humanized, -tinib kinase inhibitor, -sone corticosteroid, -tide peptide. 5-ASA agents, thiopurines and the opioid antidiarrheals share no stem.\""
  },
  {
-  "slide": 21,
+  "slide": 29,
   "title": "06",
   "items": [
    {
@@ -2404,7 +2897,7 @@
   "notes": "Section transition.\n\nAsk one question about any vitamin: can it build up to toxic levels?"
  },
  {
-  "slide": 22,
+  "slide": 30,
   "title": "Fat-Soluble vs. Water-Soluble Vitamins",
   "items": [
    {
@@ -2486,21 +2979,6 @@
     "md": "Deficiency develops more quickly without ongoing intake",
     "heading": false,
     "size": 14.0
-   },
-   {
-    "text": "30",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "30",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**30**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
@@ -2509,7 +2987,7 @@
   "notes": "This distinction is the organizing concept for the whole vitamin section — \"can it accumulate to toxic levels\" is the single most useful question to ask about any vitamin.\n\nInstructor script:\n\nSay: \"Ask one question about any vitamin: can it build up to toxic levels? Fat-soluble A, D, E, K store and can accumulate. Water-soluble B and C are excreted.\""
  },
  {
-  "slide": 23,
+  "slide": 31,
   "title": "Fat-Soluble vs. Water-Soluble Vitamins: Storage and Toxicity Risk",
   "items": [
    {
@@ -2542,32 +3020,17 @@
     "md": "**Figure 8. Original illustrative comparison (illustrative storage/toxicity-risk index, not from Katzung): fat-soluble vitamins A and D show substantially higher illustrative tissue-storage and toxicity-risk scores than water-soluble vitamins C and B-complex.**",
     "heading": false,
     "size": 13.5
-   },
-   {
-    "text": "31",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "31",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**31**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
   "images": 2,
   "figures": [
-   "S23_1.jpg"
+   "S31_1.jpg"
   ],
   "notes": "Vitamin D and A toxicity (from excessive supplementation) are the clearest clinical examples to cite here — both are seen in real practice from over-the-counter supplement overuse.\n\nInstructor script:\n\nSay: The figure values are illustrative."
  },
  {
-  "slide": 24,
+  "slide": 32,
   "title": "Vitamin & Mineral Deficiency Syndromes",
   "items": [
    {
@@ -2665,21 +3128,6 @@
     "md": "**●  Iron:** deficiency causes microcytic anemia; absorption is enhanced by vitamin C and impaired by concurrent antacid or PPI use.",
     "heading": false,
     "size": 16.0
-   },
-   {
-    "text": "32",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "32",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**32**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
@@ -2688,7 +3136,7 @@
   "notes": "The B12/PPI link and the vitamin K/clotting-factor link are the two points most worth emphasizing, since both connect directly back to earlier drug classes in this very unit.\n\nInstructor script:\n\nKnow: Deficiency causes megaloblastic anemia and neuropathy that can become irreversible.\n\nKnow: Folate: neural tube defects in pregnancy. Vitamin D: rickets and osteomalacia. Vitamin K: factors II, VII, IX, X. Iron: microcytic anemia, absorption helped by vitamin C and hurt by antacids and PPIs."
  },
  {
-  "slide": 25,
+  "slide": 33,
   "title": "Vitamin B12 Absorption: Where PPIs and Metformin Interfere",
   "items": [
    {
@@ -2854,32 +3302,17 @@
     "md": "Treat with intramuscular or high-dose oral B12.",
     "heading": false,
     "size": 12.0
-   },
-   {
-    "text": "33",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "33",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**33**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
   "images": 2,
   "figures": [
-   "S25_1.png"
+   "S33_1.png"
   ],
   "notes": "Say: \"Dietary B12 is bound to protein. Stomach acid and pepsin release it. It binds intrinsic factor and is absorbed in the terminal ileum.\"\n\nKnow: PPIs and H2 blockers reduce acid. Metformin impairs ileal uptake. Bariatric surgery, older age and vegan diets add risk.\n\nKnow: Monitor B12 in long-term PPI or metformin users. Treat with intramuscular or high-dose oral B12."
  },
  {
-  "slide": 26,
+  "slide": 34,
   "title": "Vitamin K and CYP3A4 Inducers: A Classic Drug-Nutrient Interaction",
   "items": [
    {
@@ -2912,32 +3345,17 @@
     "md": "**Figure 10. Original illustrative diagram (not from Katzung): dietary vitamin K opposes warfarin’s anticoagulant effect by supporting clotting factor synthesis, while CYP3A4-inducing herbal supplements (e.g., St. John’s Wort) increase warfarin metabolism — both lowering anticoagulant effect through different mechanisms.**",
     "heading": false,
     "size": 12.0
-   },
-   {
-    "text": "34",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "34",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**34**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
   "images": 2,
   "figures": [
-   "S26_1.jpg"
+   "S34_1.jpg"
   ],
   "notes": "This figure ties the whole unit together: a dietary nutrient and an herbal supplement both working against the same drug, through two completely different mechanisms (pharmacodynamic antagonism vs. pharmacokinetic induction).\n\nInstructor script:\n\nSay: \"Two different ways to lower warfarin's effect. Vitamin K opposes it pharmacodynamically. St. John's wort induces CYP enzymes and speeds clearance, a pharmacokinetic interaction.\""
  },
  {
-  "slide": 27,
+  "slide": 35,
   "title": "Warfarin: Vitamin K Cycle and Herbal Interactions",
   "items": [
    {
@@ -3117,32 +3535,189 @@
     "md": "Ginkgo and fish oil raise bleeding risk.",
     "heading": false,
     "size": 12.0
-   },
-   {
-    "text": "35",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "35",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**35**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
   "images": 2,
   "figures": [
-   "S27_1.png"
+   "S35_1.png"
   ],
   "notes": "Say: Warfarin blocks VKORC1, which recycles vitamin K.\n\nKnow: Keep vitamin K intake consistent. Do not tell patients to avoid it.\n\nKnow: Check INR when starting or stopping any supplement. Stopping St. John's wort can raise INR.\n\nKnow: St. John's wort also lowers oral contraceptive and some antiretroviral levels. Ginkgo and fish oil raise bleeding risk."
  },
  {
-  "slide": 28,
+  "slide": 36,
+  "title": "Quick Check",
+  "items": [
+   {
+    "text": "QUICK CHECK · FIGURE 10",
+    "level": 0,
+    "emphasis": [],
+    "md": "QUICK CHECK · FIGURE 10",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Quick Check",
+    "level": 0,
+    "emphasis": [],
+    "md": "Quick Check",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "Based on Figure 10, a patient stable on warfarin starts taking a St. John’s Wort supplement for mood. What is the expected effect on anticoagulation?",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Based on Figure 10, a patient stable on warfarin starts taking a St. John’s Wort supplement for mood. What is the expected effect on anticoagulation?",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Based on Figure 10, a patient stable on warfarin starts taking a St. John’s Wort supplement for mood. What is the expected effect on anticoagulation?**",
+    "heading": false,
+    "size": 18.5
+   },
+   {
+    "text": "A",
+    "level": 0,
+    "emphasis": [],
+    "md": "A",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Decreased anticoagulant effect, due to increased warfarin metabolism via CYP3A4 induction",
+    "level": 0,
+    "emphasis": [],
+    "md": "Decreased anticoagulant effect, due to increased warfarin metabolism via CYP3A4 induction",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "B",
+    "level": 0,
+    "emphasis": [],
+    "md": "B",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Increased anticoagulant effect, due to CYP3A4 inhibition",
+    "level": 0,
+    "emphasis": [],
+    "md": "Increased anticoagulant effect, due to CYP3A4 inhibition",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "No effect, since herbal supplements do not interact with prescription drugs",
+    "level": 0,
+    "emphasis": [],
+    "md": "No effect, since herbal supplements do not interact with prescription drugs",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "C",
+    "level": 0,
+    "emphasis": [],
+    "md": "C",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "D",
+    "level": 0,
+    "emphasis": [],
+    "md": "D",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Increased vitamin K levels directly counteracting warfarin",
+    "level": 0,
+    "emphasis": [],
+    "md": "Increased vitamin K levels directly counteracting warfarin",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Quick check: pause for students to answer before revealing slide 37."
+ },
+ {
+  "slide": 37,
+  "title": "Answer",
+  "items": [
+   {
+    "text": "ANSWER · FIGURE 10",
+    "level": 0,
+    "emphasis": [],
+    "md": "ANSWER · FIGURE 10",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Answer",
+    "level": 0,
+    "emphasis": [],
+    "md": "Answer",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "A",
+    "level": 0,
+    "emphasis": [],
+    "md": "A",
+    "heading": true,
+    "size": 26.0
+   },
+   {
+    "text": "Decreased anticoagulant effect, due to increased warfarin metabolism via CYP3A4 induction.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Decreased anticoagulant effect, due to increased warfarin metabolism via CYP3A4 induction.",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Decreased anticoagulant effect, due to increased warfarin metabolism via CYP3A4 induction.**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Why:  St. John’s Wort is a well-known CYP3A4 inducer, which increases warfarin metabolism and lowers its anticoagulant effect (a pharmacokinetic interaction) — a distinct mechanism from dietary vitamin K, which opposes warfarin pharmacodynamically by supporting clotting factor synthesis.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Why:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Why:** St. John’s Wort is a well-known CYP3A4 inducer, which increases warfarin metabolism and lowers its anticoagulant effect (a pharmacokinetic interaction) — a distinct mechanism from dietary vitamin K, which opposes warfarin pharmacodynamically by supporting clotting factor synthesis.",
+    "heading": false,
+    "size": 15.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Answer A: decreased anticoagulant effect from CYP induction."
+ },
+ {
+  "slide": 38,
   "title": "Enteral & Parenteral Nutrition: The Basics",
   "items": [
    {
@@ -3224,21 +3799,6 @@
     "md": "Requires close monitoring — electrolyte shifts, refeeding syndrome, catheter-related infection risk",
     "heading": false,
     "size": 14.0
-   },
-   {
-    "text": "38",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "38",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**38**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
@@ -3247,7 +3807,7 @@
   "notes": "The \"if the gut works, use it\" principle is a simple, memorable rule students can apply across many clinical contexts — worth stating explicitly as the single takeaway from this slide.\n\nInstructor script:\n\nSay: \"If the gut works, use it.\""
  },
  {
-  "slide": 29,
+  "slide": 39,
   "title": "Choosing the Nutrition Route and Avoiding Refeeding Syndrome",
   "items": [
    {
@@ -3416,21 +3976,6 @@
     "md": "Catheter-related infection is the main parenteral risk.",
     "heading": false,
     "size": 12.0
-   },
-   {
-    "text": "39",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "39",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**39**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
@@ -3439,7 +3984,7 @@
   "notes": "Say: Refeeding: carbohydrate raises insulin, phosphate, potassium and magnesium shift into cells, and levels fall dangerously.\n\nKnow: Start slowly in malnourished patients. Check phosphate, potassium and magnesium daily at first. Give thiamine before feeding. Catheter infection is the main parenteral risk."
  },
  {
-  "slide": 30,
+  "slide": 40,
   "title": "Herbal & Dietary Supplement Safety Counseling",
   "items": [
    {
@@ -3518,21 +4063,6 @@
     "md": "Counsel patients to disclose all supplement use to every prescriber and pharmacist involved in their care.",
     "heading": false,
     "size": 16.0
-   },
-   {
-    "text": "40",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "40",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**40**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
@@ -3541,7 +4071,7 @@
   "notes": "This slide operationalizes IO3.6 (patient communication/safety) directly — the counseling point about \"ask specifically\" is something students can apply in every future patient encounter, not just GI/nutrition cases.\n\nInstructor script:\n\nSay: Supplements are not held to premarket efficacy or safety standards. Always ask specifically. Have patients tell every prescriber and pharmacist."
  },
  {
-  "slide": 31,
+  "slide": 41,
   "title": "The Supplement No One Asked About",
   "items": [
    {
@@ -3612,21 +4142,6 @@
     "md": "**Clinical pearl:** **St. John’s Wort induces CYP3A4, increasing warfarin metabolism and lowering the INR — this is exactly why asking about supplement use is a required part of every medication reconciliation, not an optional extra.**",
     "heading": false,
     "size": 14.0
-   },
-   {
-    "text": "41",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "41",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**41**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
@@ -3635,7 +4150,179 @@
   "notes": "This case is the direct clinical application of Figure 10 — a great closing vignette for the nutrition section.\n\nInstructor script:\n\nCase: Subtherapeutic INR after starting St. John's wort."
  },
  {
-  "slide": 32,
+  "slide": 42,
+  "title": "Quick Check",
+  "items": [
+   {
+    "text": "QUICK CHECK · NUTRITION & DIETARY SUPPLEMENTS",
+    "level": 0,
+    "emphasis": [],
+    "md": "QUICK CHECK · NUTRITION & DIETARY SUPPLEMENTS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Quick Check",
+    "level": 0,
+    "emphasis": [],
+    "md": "Quick Check",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "A patient on long-term omeprazole therapy is found to have megaloblastic anemia and neurologic symptoms. Which deficiency is most likely, and why?",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "A patient on long-term omeprazole therapy is found to have megaloblastic anemia and neurologic symptoms. Which deficiency is most likely, and why?",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**A patient on long-term omeprazole therapy is found to have megaloblastic anemia and neurologic symptoms. Which deficiency is most likely, and why?**",
+    "heading": false,
+    "size": 18.5
+   },
+   {
+    "text": "A",
+    "level": 0,
+    "emphasis": [],
+    "md": "A",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Vitamin B12 deficiency, due to reduced acid-dependent absorption",
+    "level": 0,
+    "emphasis": [],
+    "md": "Vitamin B12 deficiency, due to reduced acid-dependent absorption",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "B",
+    "level": 0,
+    "emphasis": [],
+    "md": "B",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Vitamin C deficiency, due to increased renal excretion",
+    "level": 0,
+    "emphasis": [],
+    "md": "Vitamin C deficiency, due to increased renal excretion",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "C",
+    "level": 0,
+    "emphasis": [],
+    "md": "C",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Vitamin K deficiency, due to reduced dietary intake",
+    "level": 0,
+    "emphasis": [],
+    "md": "Vitamin K deficiency, due to reduced dietary intake",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "D",
+    "level": 0,
+    "emphasis": [],
+    "md": "D",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Vitamin A deficiency, due to fat malabsorption",
+    "level": 0,
+    "emphasis": [],
+    "md": "Vitamin A deficiency, due to fat malabsorption",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Quick check: Long-term omeprazole with megaloblastic anemia and neurologic symptoms. Pause for students to answer before revealing slide 43."
+ },
+ {
+  "slide": 43,
+  "title": "Answer",
+  "items": [
+   {
+    "text": "ANSWER · NUTRITION & DIETARY SUPPLEMENTS",
+    "level": 0,
+    "emphasis": [],
+    "md": "ANSWER · NUTRITION & DIETARY SUPPLEMENTS",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Answer",
+    "level": 0,
+    "emphasis": [],
+    "md": "Answer",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "A",
+    "level": 0,
+    "emphasis": [],
+    "md": "A",
+    "heading": true,
+    "size": 26.0
+   },
+   {
+    "text": "Vitamin B12 deficiency, due to reduced acid-dependent absorption.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Vitamin B12 deficiency, due to reduced acid-dependent absorption.",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Vitamin B12 deficiency, due to reduced acid-dependent absorption.**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Why:  Long-term PPI use reduces gastric acid, which is needed to release B12 from dietary protein for absorption. This is one of the well-documented long-term PPI adverse effects covered in Session 1 and explains the megaloblastic anemia and neurologic symptoms here.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Why:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Why:** Long-term PPI use reduces gastric acid, which is needed to release B12 from dietary protein for absorption. This is one of the well-documented long-term PPI adverse effects covered in Session 1 and explains the megaloblastic anemia and neurologic symptoms here.",
+    "heading": false,
+    "size": 15.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Answer A: B12 deficiency."
+ },
+ {
+  "slide": 44,
   "title": "07",
   "items": [
    {
@@ -3692,7 +4379,7 @@
   "notes": "Section transition.\n\nPairs of students name a first-line approach and the biggest safety check for each patient."
  },
  {
-  "slide": 33,
+  "slide": 45,
   "title": "Which Drug Would You Choose?",
   "items": [
    {
@@ -3774,21 +4461,6 @@
     "md": "Warfarin patient starting an herbal mood supplement",
     "heading": false,
     "size": 13.0
-   },
-   {
-    "text": "45",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "45",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**45**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
@@ -3797,7 +4469,179 @@
   "notes": "Have students work in pairs: for each patient, name a first-line approach AND the single biggest safety concern to check before prescribing/counseling.\n\nInstructor script:\n\nSuggested answers: A, an antacid for occasional relief or an H2 blocker or PPI if frequent. B, bismuth quadruple therapy. C, a biologic or small molecule such as an anti-TNF agent. D, counsel on St. John's wort and check INR."
  },
  {
-  "slide": 34,
+  "slide": 46,
+  "title": "Quick Check",
+  "items": [
+   {
+    "text": "QUICK CHECK · PUTTING IT ALL TOGETHER",
+    "level": 0,
+    "emphasis": [],
+    "md": "QUICK CHECK · PUTTING IT ALL TOGETHER",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Quick Check",
+    "level": 0,
+    "emphasis": [],
+    "md": "Quick Check",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "A patient with well-controlled GERD on a PPI for three years asks whether they should keep taking it indefinitely. What is the most appropriate response?",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "A patient with well-controlled GERD on a PPI for three years asks whether they should keep taking it indefinitely. What is the most appropriate response?",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**A patient with well-controlled GERD on a PPI for three years asks whether they should keep taking it indefinitely. What is the most appropriate response?**",
+    "heading": false,
+    "size": 18.5
+   },
+   {
+    "text": "Periodically reassess the need for continued therapy, given long-term risks such as B12 deficiency, hypomagnesemia, fracture, and C. difficile risk",
+    "level": 0,
+    "emphasis": [],
+    "md": "Periodically reassess the need for continued therapy, given long-term risks such as B12 deficiency, hypomagnesemia, fracture, and C. difficile risk",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "A",
+    "level": 0,
+    "emphasis": [],
+    "md": "A",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "PPIs have no long-term risks, so continuing indefinitely is always fine",
+    "level": 0,
+    "emphasis": [],
+    "md": "PPIs have no long-term risks, so continuing indefinitely is always fine",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "B",
+    "level": 0,
+    "emphasis": [],
+    "md": "B",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "C",
+    "level": 0,
+    "emphasis": [],
+    "md": "C",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "PPIs should never be used for more than one week",
+    "level": 0,
+    "emphasis": [],
+    "md": "PPIs should never be used for more than one week",
+    "heading": false,
+    "size": 13.5
+   },
+   {
+    "text": "D",
+    "level": 0,
+    "emphasis": [],
+    "md": "D",
+    "heading": true,
+    "size": 16.0
+   },
+   {
+    "text": "Switch immediately to an antacid with no further discussion",
+    "level": 0,
+    "emphasis": [],
+    "md": "Switch immediately to an antacid with no further discussion",
+    "heading": false,
+    "size": 13.5
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Quick check: Long-term PPI for GERD. Pause for students to answer before revealing slide 47."
+ },
+ {
+  "slide": 47,
+  "title": "Answer",
+  "items": [
+   {
+    "text": "ANSWER · PUTTING IT ALL TOGETHER",
+    "level": 0,
+    "emphasis": [],
+    "md": "ANSWER · PUTTING IT ALL TOGETHER",
+    "heading": true,
+    "size": 12.0
+   },
+   {
+    "text": "Answer",
+    "level": 0,
+    "emphasis": [],
+    "md": "Answer",
+    "heading": true,
+    "size": 28.0
+   },
+   {
+    "text": "B",
+    "level": 0,
+    "emphasis": [],
+    "md": "B",
+    "heading": true,
+    "size": 26.0
+   },
+   {
+    "text": "Periodically reassess the need for continued therapy.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Periodically reassess the need for continued therapy.",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Periodically reassess the need for continued therapy.**",
+    "heading": false,
+    "size": 16.0
+   },
+   {
+    "text": "Why:  Long-term PPI use carries real, well-documented risks. Best practice is not indefinite, unexamined continuation — it is periodic reassessment of ongoing need, attempting dose reduction or discontinuation when clinically appropriate, while still treating confirmed indications adequately.",
+    "level": 0,
+    "emphasis": [
+     {
+      "text": "Why:",
+      "marks": [
+       "bold",
+       "color"
+      ]
+     }
+    ],
+    "md": "**Why:** Long-term PPI use carries real, well-documented risks. Best practice is not indefinite, unexamined continuation — it is periodic reassessment of ongoing need, attempting dose reduction or discontinuation when clinically appropriate, while still treating confirmed indications adequately.",
+    "heading": false,
+    "size": 15.0
+   }
+  ],
+  "tables": [],
+  "images": 1,
+  "figures": [],
+  "notes": "Answer B: reassess the need periodically."
+ },
+ {
+  "slide": 48,
   "title": "Key Takeaways",
   "items": [
    {
@@ -3903,7 +4747,7 @@
   "notes": "Close by connecting back to earlier lectures: biologic mechanisms (Lecture 2) and drug-metabolism/interaction concepts (Lecture 1) both reappear here in a new organ system — pharmacology is cumulative, not siloed by unit.\n\nInstructor script:\n\nRead the five points. Link biologics back to the DMARD lecture and interactions back to the metabolism lecture."
  },
  {
-  "slide": 35,
+  "slide": 49,
   "title": "08",
   "items": [
    {
@@ -3960,7 +4804,7 @@
   "notes": "Section transition.\n\nGive students the six recall questions for self-testing and walk through the answer key."
  },
  {
-  "slide": 36,
+  "slide": 50,
   "title": "Lecture Recall Quiz (1 of 2)",
   "items": [
    {
@@ -4122,21 +4966,6 @@
     "md": "D.  Metoclopramide — H1 receptor",
     "heading": false,
     "size": 12.5
-   },
-   {
-    "text": "50",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "50",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**50**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
@@ -4145,7 +4974,7 @@
   "notes": "Give students the six recall questions for self-testing."
  },
  {
-  "slide": 37,
+  "slide": 51,
   "title": "Lecture Recall Quiz (2 of 2)",
   "items": [
    {
@@ -4307,21 +5136,6 @@
     "md": "D.  Increased GI absorption of warfarin",
     "heading": false,
     "size": 12.5
-   },
-   {
-    "text": "51",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "51",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**51**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
@@ -4330,7 +5144,7 @@
   "notes": "Give students the six recall questions for self-testing."
  },
  {
-  "slide": 38,
+  "slide": 52,
   "title": "Lecture Recall Quiz — Answer Key",
   "items": [
    {
@@ -4488,22 +5302,22 @@
   "notes": "Encourage students to revisit this quiz on their own before the exam — it is designed as a standalone recall resource, separate from the in-lecture quick checks.\n\nInstructor script:\n\nWalk through the answer key."
  },
  {
-  "slide": 39,
+  "slide": 53,
   "title": "Drug Profiles",
   "items": [
    {
-    "text": "APPENDIX 1",
+    "text": "APPENDIX",
     "level": 0,
     "emphasis": [
      {
-      "text": "APPENDIX 1",
+      "text": "APPENDIX",
       "marks": [
        "bold",
        "color"
       ]
      }
     ],
-    "md": "**APPENDIX 1**",
+    "md": "**APPENDIX**",
     "heading": false,
     "size": 13.0
    },
@@ -4769,7 +5583,7 @@
   "notes": "Section transition.\n\nAbbreviation key: DR = delayed-release; ER / XR = extended-release; OTC = over the counter; PO = by mouth; PR = by rectum; IV = intravenous; IM = intramuscular; SC = subcutaneous; BID / TID / QID = two / three / four times daily; CrCl = creatinine clearance; CKD = chronic kidney disease; CNS = central nervous system; IBD = inflammatory bowel disease; UC = ulcerative colitis; IBS-C = irritable bowel syndrome with constipation; CIC = chronic idiopathic constipation; TNF = tumor necrosis factor; JAK = Janus kinase; TPMT / NUDT15 = thiopurine-metabolizing enzymes (tested before thiopurines); G6PD = glucose-6-phosphate dehydrogenase; INR = international normalized ratio; PCC = prothrombin complex concentrate; MACE = major adverse cardiovascular events; PML = progressive multifocal leukoencephalopathy; CYP / P-gp = cytochrome P450 / P-glycoprotein; SSRI = selective serotonin reuptake inhibitor; NTD = neural tube defect; EPA / DHA = omega-3 fatty acids; C-V = DEA Schedule V."
  },
  {
-  "slide": 40,
+  "slide": 54,
   "title": "Polyethylene glycol 3350 (MiraLAX)",
   "items": [
    {
@@ -4936,17 +5750,17 @@
     "size": 12.0
    },
    {
-    "text": "54",
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
     "level": 0,
     "emphasis": [
      {
-      "text": "54",
+      "text": "Standard adult dosing for teaching; verify against current prescribing information.",
       "marks": [
        "color"
       ]
      }
     ],
-    "md": "**54**",
+    "md": "**Standard adult dosing for teaching; verify against current prescribing information.**",
     "heading": false,
     "size": 10.0
    }
@@ -4957,7 +5771,7 @@
   "notes": "Drug: Polyethylene glycol 3350 (MiraLAX)\n\nClass: Osmotic laxative\n\nFormulation: Powder for solution (17 g scoop); large-volume bowel-prep kits\n\nDose (adult): 17 g in 4-8 oz fluid PO once daily; OTC use up to 7 days\n\nIndications: Chronic and occasional constipation; bowel preparation (higher volumes)\n\nAdverse effects: Bloating, nausea, gas, loose stools\n\nContraindications: Bowel obstruction, perforation, ileus, toxic megacolon\n\nToxicity / overdose: Dehydration and electrolyte loss with excess or bowel-prep volumes; rare allergic reactions"
  },
  {
-  "slide": 41,
+  "slide": 55,
   "title": "Psyllium (Metamucil)",
   "items": [
    {
@@ -5124,17 +5938,17 @@
     "size": 12.0
    },
    {
-    "text": "55",
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
     "level": 0,
     "emphasis": [
      {
-      "text": "55",
+      "text": "Standard adult dosing for teaching; verify against current prescribing information.",
       "marks": [
        "color"
       ]
      }
     ],
-    "md": "**55**",
+    "md": "**Standard adult dosing for teaching; verify against current prescribing information.**",
     "heading": false,
     "size": 10.0
    }
@@ -5145,7 +5959,7 @@
   "notes": "Drug: Psyllium (Metamucil)\n\nClass: Bulk-forming laxative\n\nFormulation: Powder, capsules, wafers\n\nDose (adult): About 3.4-6 g PO 1-3 times daily with at least 8 oz water\n\nIndications: Constipation, IBS, mild cholesterol lowering\n\nAdverse effects: Bloating, gas, abdominal fullness\n\nContraindications: Bowel obstruction, fecal impaction, dysphagia\n\nToxicity / overdose: Esophageal or intestinal obstruction if taken with too little fluid; allergy; separate from other drugs by 2 hours"
  },
  {
-  "slide": 42,
+  "slide": 56,
   "title": "Methylcellulose (Citrucel)",
   "items": [
    {
@@ -5312,17 +6126,17 @@
     "size": 12.0
    },
    {
-    "text": "56",
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
     "level": 0,
     "emphasis": [
      {
-      "text": "56",
+      "text": "Standard adult dosing for teaching; verify against current prescribing information.",
       "marks": [
        "color"
       ]
      }
     ],
-    "md": "**56**",
+    "md": "**Standard adult dosing for teaching; verify against current prescribing information.**",
     "heading": false,
     "size": 10.0
    }
@@ -5333,7 +6147,7 @@
   "notes": "Drug: Methylcellulose (Citrucel)\n\nClass: Bulk-forming laxative\n\nFormulation: Powder; caplets 500 mg\n\nDose (adult): About 2 g PO in 8 oz water 1-3 times daily; onset 12-72 hours\n\nIndications: Constipation, stool bulking\n\nAdverse effects: Bloating, gas\n\nContraindications: Bowel obstruction, dysphagia\n\nToxicity / overdose: Obstruction if taken without adequate fluid; may slow absorption of other drugs"
  },
  {
-  "slide": 43,
+  "slide": 57,
   "title": "Lactulose",
   "items": [
    {
@@ -5500,17 +6314,17 @@
     "size": 12.0
    },
    {
-    "text": "57",
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
     "level": 0,
     "emphasis": [
      {
-      "text": "57",
+      "text": "Standard adult dosing for teaching; verify against current prescribing information.",
       "marks": [
        "color"
       ]
      }
     ],
-    "md": "**57**",
+    "md": "**Standard adult dosing for teaching; verify against current prescribing information.**",
     "heading": false,
     "size": 10.0
    }
@@ -5521,7 +6335,7 @@
   "notes": "Drug: Lactulose\n\nClass: Osmotic laxative, ammonia-lowering agent\n\nFormulation: Oral solution 10 g/15 mL\n\nDose (adult): Constipation: 15-30 mL PO daily; hepatic encephalopathy: 30-45 mL PO 3-4 times daily, titrated to 2-3 soft stools\n\nIndications: Constipation, hepatic encephalopathy\n\nAdverse effects: Gas, bloating, cramps, diarrhea\n\nContraindications: Galactosemia, bowel obstruction\n\nToxicity / overdose: Dehydration and hypernatremia with over-use; worsens diabetes control slightly"
  },
  {
-  "slide": 44,
+  "slide": 58,
   "title": "Senna (Senokot)",
   "items": [
    {
@@ -5688,17 +6502,17 @@
     "size": 12.0
    },
    {
-    "text": "58",
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
     "level": 0,
     "emphasis": [
      {
-      "text": "58",
+      "text": "Standard adult dosing for teaching; verify against current prescribing information.",
       "marks": [
        "color"
       ]
      }
     ],
-    "md": "**58**",
+    "md": "**Standard adult dosing for teaching; verify against current prescribing information.**",
     "heading": false,
     "size": 10.0
    }
@@ -5709,7 +6523,7 @@
   "notes": "Drug: Senna (Senokot)\n\nClass: Stimulant laxative\n\nFormulation: Tablet 8.6 mg sennosides; liquid\n\nDose (adult): 8.6-17.2 mg PO at bedtime (max 34 mg/day); onset 6-12 hours\n\nIndications: Short-term constipation, opioid-induced constipation\n\nAdverse effects: Cramping, diarrhea, urine discoloration, melanosis coli\n\nContraindications: Bowel obstruction, appendicitis, undiagnosed abdominal pain\n\nToxicity / overdose: Hypokalemia and dehydration with chronic use; laxative dependence"
  },
  {
-  "slide": 45,
+  "slide": 59,
   "title": "Bisacodyl (Dulcolax)",
   "items": [
    {
@@ -5876,17 +6690,17 @@
     "size": 12.0
    },
    {
-    "text": "59",
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
     "level": 0,
     "emphasis": [
      {
-      "text": "59",
+      "text": "Standard adult dosing for teaching; verify against current prescribing information.",
       "marks": [
        "color"
       ]
      }
     ],
-    "md": "**59**",
+    "md": "**Standard adult dosing for teaching; verify against current prescribing information.**",
     "heading": false,
     "size": 10.0
    }
@@ -5897,7 +6711,7 @@
   "notes": "Drug: Bisacodyl (Dulcolax)\n\nClass: Stimulant laxative\n\nFormulation: DR tablet 5 mg; suppository 10 mg\n\nDose (adult): 5-15 mg PO at bedtime; 10 mg PR once daily; PO onset 6-12 hours, PR 15-60 min\n\nIndications: Constipation, bowel preparation\n\nAdverse effects: Cramping, nausea, rectal irritation\n\nContraindications: Bowel obstruction, appendicitis, acute abdomen\n\nToxicity / overdose: Do not crush; avoid with antacids or milk; excess causes diarrhea, hypokalemia"
  },
  {
-  "slide": 46,
+  "slide": 60,
   "title": "Lubiprostone (Amitiza)",
   "items": [
    {
@@ -6064,17 +6878,17 @@
     "size": 12.0
    },
    {
-    "text": "60",
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
     "level": 0,
     "emphasis": [
      {
-      "text": "60",
+      "text": "Standard adult dosing for teaching; verify against current prescribing information.",
       "marks": [
        "color"
       ]
      }
     ],
-    "md": "**60**",
+    "md": "**Standard adult dosing for teaching; verify against current prescribing information.**",
     "heading": false,
     "size": 10.0
    }
@@ -6085,7 +6899,7 @@
   "notes": "Drug: Lubiprostone (Amitiza)\n\nClass: Chloride channel (ClC-2) activator\n\nFormulation: Capsule 8/24 mcg\n\nDose (adult): Chronic constipation: 24 mcg PO BID with food; IBS-C (women): 8 mcg BID\n\nIndications: Chronic idiopathic constipation, IBS-C, opioid-induced constipation\n\nAdverse effects: Nausea, diarrhea, headache, abdominal pain\n\nContraindications: Mechanical GI obstruction\n\nToxicity / overdose: Dizziness, syncope or dyspnea (rare); overdose: nausea, diarrhea; avoid in pregnancy unless needed"
  },
  {
-  "slide": 47,
+  "slide": 61,
   "title": "Linaclotide (Linzess)",
   "items": [
    {
@@ -6252,17 +7066,17 @@
     "size": 12.0
    },
    {
-    "text": "61",
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
     "level": 0,
     "emphasis": [
      {
-      "text": "61",
+      "text": "Standard adult dosing for teaching; verify against current prescribing information.",
       "marks": [
        "color"
       ]
      }
     ],
-    "md": "**61**",
+    "md": "**Standard adult dosing for teaching; verify against current prescribing information.**",
     "heading": false,
     "size": 10.0
    }
@@ -6273,7 +7087,7 @@
   "notes": "Drug: Linaclotide (Linzess)\n\nClass: Guanylate cyclase-C agonist\n\nFormulation: Capsule 72/145/290 mcg\n\nDose (adult): CIC: 72-145 mcg PO daily; IBS-C: 290 mcg daily; 30 minutes before the first meal\n\nIndications: Chronic idiopathic constipation, IBS-C\n\nAdverse effects: Diarrhea, abdominal pain, gas, bloating\n\nContraindications: Boxed: children under 2 years; mechanical GI obstruction\n\nToxicity / overdose: Severe dehydration (deaths in young children); severe diarrhea; stop if severe or prolonged"
  },
  {
-  "slide": 48,
+  "slide": 62,
   "title": "Loperamide (Imodium)",
   "items": [
    {
@@ -6440,17 +7254,17 @@
     "size": 12.0
    },
    {
-    "text": "62",
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
     "level": 0,
     "emphasis": [
      {
-      "text": "62",
+      "text": "Standard adult dosing for teaching; verify against current prescribing information.",
       "marks": [
        "color"
       ]
      }
     ],
-    "md": "**62**",
+    "md": "**Standard adult dosing for teaching; verify against current prescribing information.**",
     "heading": false,
     "size": 10.0
    }
@@ -6461,7 +7275,7 @@
   "notes": "Drug: Loperamide (Imodium)\n\nClass: Peripheral mu-opioid agonist\n\nFormulation: Capsule 2 mg; tablet 2 mg; oral liquid\n\nDose (adult): 4 mg PO first dose, then 2 mg after each loose stool; max 16 mg/day Rx, 8 mg/day OTC\n\nIndications: Acute and chronic diarrhea, traveler's diarrhea\n\nAdverse effects: Constipation, cramps, dizziness, nausea\n\nContraindications: Bloody stool or high fever, C. difficile, children under 2, ileus\n\nToxicity / overdose: High doses: QT prolongation, torsades, cardiac arrest; CNS depression in overdose (naloxone, repeated)"
  },
  {
-  "slide": 49,
+  "slide": 63,
   "title": "Diphenoxylate/atropine (Lomotil)",
   "items": [
    {
@@ -6628,17 +7442,17 @@
     "size": 12.0
    },
    {
-    "text": "63",
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
     "level": 0,
     "emphasis": [
      {
-      "text": "63",
+      "text": "Standard adult dosing for teaching; verify against current prescribing information.",
       "marks": [
        "color"
       ]
      }
     ],
-    "md": "**63**",
+    "md": "**Standard adult dosing for teaching; verify against current prescribing information.**",
     "heading": false,
     "size": 10.0
    }
@@ -6649,7 +7463,7 @@
   "notes": "Drug: Diphenoxylate/atropine (Lomotil)\n\nClass: Opioid antidiarrheal (C-V) plus anticholinergic\n\nFormulation: Tablet 2.5 mg/0.025 mg; oral liquid 2.5 mg/5 mL\n\nDose (adult): 5 mg (2 tablets) PO QID initially; max 20 mg/day; reduce as controlled\n\nIndications: Adjunct for diarrhea\n\nAdverse effects: Drowsiness, dry mouth, tachycardia, urinary retention\n\nContraindications: Children under 6 years, obstructive jaundice, C. difficile or infectious diarrhea\n\nToxicity / overdose: Respiratory depression (especially children) and anticholinergic toxicity; naloxone, with monitoring for relapse"
  },
  {
-  "slide": 50,
+  "slide": 64,
   "title": "Mesalamine (Lialda, Asacol HD, Pentasa)",
   "items": [
    {
@@ -6816,17 +7630,17 @@
     "size": 12.0
    },
    {
-    "text": "64",
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
     "level": 0,
     "emphasis": [
      {
-      "text": "64",
+      "text": "Standard adult dosing for teaching; verify against current prescribing information.",
       "marks": [
        "color"
       ]
      }
     ],
-    "md": "**64**",
+    "md": "**Standard adult dosing for teaching; verify against current prescribing information.**",
     "heading": false,
     "size": 10.0
    }
@@ -6837,7 +7651,7 @@
   "notes": "Drug: Mesalamine (Lialda, Asacol HD, Pentasa)\n\nClass: 5-ASA aminosalicylate\n\nFormulation: DR tablet 800 mg/1.2 g; capsule; suppository 1,000 mg; enema 4 g/60 mL\n\nDose (adult): Mild-moderate UC: 2.4-4.8 g/day PO once daily or divided; 1,000 mg PR at bedtime for proctitis\n\nIndications: Induction and maintenance in ulcerative colitis; mild Crohn disease (some forms)\n\nAdverse effects: Headache, nausea, abdominal pain, flatulence\n\nContraindications: Salicylate hypersensitivity\n\nToxicity / overdose: Interstitial nephritis (monitor creatinine); acute intolerance syndrome (cramps, bloody diarrhea); hepatotoxicity rare"
  },
  {
-  "slide": 51,
+  "slide": 65,
   "title": "Sulfasalazine (Azulfidine)",
   "items": [
    {
@@ -7004,17 +7818,17 @@
     "size": 12.0
    },
    {
-    "text": "65",
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
     "level": 0,
     "emphasis": [
      {
-      "text": "65",
+      "text": "Standard adult dosing for teaching; verify against current prescribing information.",
       "marks": [
        "color"
       ]
      }
     ],
-    "md": "**65**",
+    "md": "**Standard adult dosing for teaching; verify against current prescribing information.**",
     "heading": false,
     "size": 10.0
    }
@@ -7025,7 +7839,7 @@
   "notes": "Drug: Sulfasalazine (Azulfidine)\n\nClass: Sulfapyridine plus 5-ASA prodrug\n\nFormulation: Tablet 500 mg; EN-tabs DR 500 mg\n\nDose (adult): Active UC: start 1-2 g/day, titrate to 3-4 g/day in divided doses; maintenance 2 g/day; folic acid 1 mg daily\n\nIndications: Ulcerative colitis, rheumatoid arthritis (EN-tabs)\n\nAdverse effects: Nausea, headache, rash, orange urine, reversible low sperm count\n\nContraindications: Sulfa or salicylate allergy, intestinal or urinary obstruction, porphyria\n\nToxicity / overdose: Agranulocytosis, hemolysis in G6PD deficiency, Stevens-Johnson syndrome, hepatitis; folate deficiency"
  },
  {
-  "slide": 52,
+  "slide": 66,
   "title": "Budesonide (Entocort EC, Uceris)",
   "items": [
    {
@@ -7192,17 +8006,17 @@
     "size": 12.0
    },
    {
-    "text": "66",
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
     "level": 0,
     "emphasis": [
      {
-      "text": "66",
+      "text": "Standard adult dosing for teaching; verify against current prescribing information.",
       "marks": [
        "color"
       ]
      }
     ],
-    "md": "**66**",
+    "md": "**Standard adult dosing for teaching; verify against current prescribing information.**",
     "heading": false,
     "size": 10.0
    }
@@ -7213,7 +8027,7 @@
   "notes": "Drug: Budesonide (Entocort EC, Uceris)\n\nClass: Locally acting corticosteroid\n\nFormulation: Capsule 3 mg; ER tablet 9 mg; foam\n\nDose (adult): Crohn disease: 9 mg PO every morning for up to 8 weeks; UC: 9 mg ER tablet daily for 8 weeks\n\nIndications: Mild-moderate ileocecal Crohn disease, mild-moderate UC\n\nAdverse effects: Headache, nausea, acne, adrenal suppression with long courses\n\nContraindications: Hypersensitivity\n\nToxicity / overdose: Hypercortisolism with CYP3A4 inhibitors (ketoconazole, grapefruit juice); infection risk"
  },
  {
-  "slide": 53,
+  "slide": 67,
   "title": "Prednisone",
   "items": [
    {
@@ -7380,17 +8194,17 @@
     "size": 12.0
    },
    {
-    "text": "67",
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
     "level": 0,
     "emphasis": [
      {
-      "text": "67",
+      "text": "Standard adult dosing for teaching; verify against current prescribing information.",
       "marks": [
        "color"
       ]
      }
     ],
-    "md": "**67**",
+    "md": "**Standard adult dosing for teaching; verify against current prescribing information.**",
     "heading": false,
     "size": 10.0
    }
@@ -7401,7 +8215,7 @@
   "notes": "Drug: Prednisone\n\nClass: Systemic corticosteroid\n\nFormulation: Tablet 1/2.5/5/10/20/50 mg; oral solution\n\nDose (adult): Flare: 40-60 mg PO daily, then taper over weeks; short-term induction only\n\nIndications: Induction of remission in IBD flares; many inflammatory conditions\n\nAdverse effects: Hyperglycemia, insomnia, mood change, weight gain, infection risk\n\nContraindications: Systemic fungal infection; live vaccines at high dose\n\nToxicity / overdose: Adrenal suppression and adrenal crisis on abrupt stopping; osteoporosis, cataracts, Cushingoid features"
  },
  {
-  "slide": 54,
+  "slide": 68,
   "title": "Azathioprine (Imuran)",
   "items": [
    {
@@ -7568,17 +8382,17 @@
     "size": 12.0
    },
    {
-    "text": "68",
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
     "level": 0,
     "emphasis": [
      {
-      "text": "68",
+      "text": "Standard adult dosing for teaching; verify against current prescribing information.",
       "marks": [
        "color"
       ]
      }
     ],
-    "md": "**68**",
+    "md": "**Standard adult dosing for teaching; verify against current prescribing information.**",
     "heading": false,
     "size": 10.0
    }
@@ -7589,7 +8403,7 @@
   "notes": "Drug: Azathioprine (Imuran)\n\nClass: Purine antimetabolite\n\nFormulation: Tablet 50/75/100 mg; IV\n\nDose (adult): IBD maintenance: 1.5-2.5 mg/kg PO daily after TPMT/NUDT15 testing; onset 8-12 weeks\n\nIndications: Maintenance of remission in Crohn disease and UC (off-label), organ transplant\n\nAdverse effects: Nausea, leukopenia, hepatotoxicity, pancreatitis, infection\n\nContraindications: Hypersensitivity; prior alkylating therapy; use with febuxostat\n\nToxicity / overdose: Myelosuppression (higher with low TPMT), lymphoma and hepatosplenic T-cell lymphoma; allopurinol requires major dose cut"
  },
  {
-  "slide": 55,
+  "slide": 69,
   "title": "Mercaptopurine (6-MP, Purinethol)",
   "items": [
    {
@@ -7756,17 +8570,17 @@
     "size": 12.0
    },
    {
-    "text": "69",
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
     "level": 0,
     "emphasis": [
      {
-      "text": "69",
+      "text": "Standard adult dosing for teaching; verify against current prescribing information.",
       "marks": [
        "color"
       ]
      }
     ],
-    "md": "**69**",
+    "md": "**Standard adult dosing for teaching; verify against current prescribing information.**",
     "heading": false,
     "size": 10.0
    }
@@ -7777,7 +8591,7 @@
   "notes": "Drug: Mercaptopurine (6-MP, Purinethol)\n\nClass: Purine antimetabolite\n\nFormulation: Tablet 50 mg; oral suspension\n\nDose (adult): IBD (off-label): 1-1.5 mg/kg PO daily after TPMT/NUDT15 testing\n\nIndications: Maintenance in Crohn disease and UC; acute lymphoblastic leukemia\n\nAdverse effects: Nausea, leukopenia, hepatotoxicity, pancreatitis\n\nContraindications: Hypersensitivity; use with febuxostat\n\nToxicity / overdose: Myelosuppression, hepatotoxicity, lymphoma risk; reduce dose with allopurinol"
  },
  {
-  "slide": 56,
+  "slide": 70,
   "title": "Infliximab (Remicade)",
   "items": [
    {
@@ -7944,17 +8758,17 @@
     "size": 12.0
    },
    {
-    "text": "70",
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
     "level": 0,
     "emphasis": [
      {
-      "text": "70",
+      "text": "Standard adult dosing for teaching; verify against current prescribing information.",
       "marks": [
        "color"
       ]
      }
     ],
-    "md": "**70**",
+    "md": "**Standard adult dosing for teaching; verify against current prescribing information.**",
     "heading": false,
     "size": 10.0
    }
@@ -7965,7 +8779,7 @@
   "notes": "Drug: Infliximab (Remicade)\n\nClass: Chimeric anti-TNF-alpha antibody\n\nFormulation: IV 100 mg vial; SC 120 mg syringe (Zymfentra)\n\nDose (adult): Induction 5 mg/kg IV at weeks 0, 2, 6, then every 8 weeks; dose may be escalated\n\nIndications: Crohn disease, ulcerative colitis, rheumatoid arthritis, psoriasis\n\nAdverse effects: Infusion reactions, headache, infections, rash\n\nContraindications: Hypersensitivity to murine proteins; high doses in moderate-severe heart failure\n\nToxicity / overdose: TB and hepatitis B reactivation, serious infections, demyelination, hepatosplenic T-cell lymphoma; anti-drug antibodies"
  },
  {
-  "slide": 57,
+  "slide": 71,
   "title": "Adalimumab (Humira)",
   "items": [
    {
@@ -8132,17 +8946,17 @@
     "size": 12.0
    },
    {
-    "text": "71",
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
     "level": 0,
     "emphasis": [
      {
-      "text": "71",
+      "text": "Standard adult dosing for teaching; verify against current prescribing information.",
       "marks": [
        "color"
       ]
      }
     ],
-    "md": "**71**",
+    "md": "**Standard adult dosing for teaching; verify against current prescribing information.**",
     "heading": false,
     "size": 10.0
    }
@@ -8153,7 +8967,7 @@
   "notes": "Drug: Adalimumab (Humira)\n\nClass: Human anti-TNF-alpha antibody\n\nFormulation: SC pen or syringe 40 mg/0.4 mL\n\nDose (adult): Crohn disease and UC: 160 mg SC day 1, 80 mg day 15, then 40 mg every 2 weeks\n\nIndications: Crohn disease, ulcerative colitis, rheumatoid arthritis, psoriasis\n\nAdverse effects: Injection-site reactions, infections, headache, rash\n\nContraindications: Hypersensitivity; active serious infection\n\nToxicity / overdose: TB and hepatitis B reactivation, serious infections, malignancy, demyelination, lupus-like syndrome"
  },
  {
-  "slide": 58,
+  "slide": 72,
   "title": "Vedolizumab (Entyvio)",
   "items": [
    {
@@ -8320,17 +9134,17 @@
     "size": 12.0
    },
    {
-    "text": "72",
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
     "level": 0,
     "emphasis": [
      {
-      "text": "72",
+      "text": "Standard adult dosing for teaching; verify against current prescribing information.",
       "marks": [
        "color"
       ]
      }
     ],
-    "md": "**72**",
+    "md": "**Standard adult dosing for teaching; verify against current prescribing information.**",
     "heading": false,
     "size": 10.0
    }
@@ -8341,7 +9155,7 @@
   "notes": "Drug: Vedolizumab (Entyvio)\n\nClass: Humanized alpha4beta7 integrin antibody\n\nFormulation: IV 300 mg vial; SC pen 108 mg\n\nDose (adult): 300 mg IV at weeks 0, 2, 6, then every 8 weeks; SC 108 mg every 2 weeks after IV induction\n\nIndications: Moderate-severe ulcerative colitis and Crohn disease\n\nAdverse effects: Nasopharyngitis, headache, arthralgia, infusion reactions\n\nContraindications: Hypersensitivity\n\nToxicity / overdose: Infections and rare liver injury; PML not reported to date but vigilance advised; gut-selective with less systemic immunosuppression"
  },
  {
-  "slide": 59,
+  "slide": 73,
   "title": "Ustekinumab (Stelara)",
   "items": [
    {
@@ -8508,17 +9322,17 @@
     "size": 12.0
    },
    {
-    "text": "73",
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
     "level": 0,
     "emphasis": [
      {
-      "text": "73",
+      "text": "Standard adult dosing for teaching; verify against current prescribing information.",
       "marks": [
        "color"
       ]
      }
     ],
-    "md": "**73**",
+    "md": "**Standard adult dosing for teaching; verify against current prescribing information.**",
     "heading": false,
     "size": 10.0
    }
@@ -8529,7 +9343,7 @@
   "notes": "Drug: Ustekinumab (Stelara)\n\nClass: Human anti-IL-12/23 antibody\n\nFormulation: IV 130 mg/26 mL vial; SC 45/90 mg\n\nDose (adult): IV induction by weight (260 mg under 55 kg, 390 mg 55-85 kg, 520 mg over 85 kg), then 90 mg SC every 8 weeks\n\nIndications: Crohn disease, ulcerative colitis, psoriasis\n\nAdverse effects: Nasopharyngitis, injection-site reactions, headache, fatigue\n\nContraindications: Hypersensitivity\n\nToxicity / overdose: Serious infections, TB, reversible posterior leukoencephalopathy (rare), hypersensitivity"
  },
  {
-  "slide": 60,
+  "slide": 74,
   "title": "Tofacitinib (Xeljanz)",
   "items": [
    {
@@ -8696,17 +9510,17 @@
     "size": 12.0
    },
    {
-    "text": "74",
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
     "level": 0,
     "emphasis": [
      {
-      "text": "74",
+      "text": "Standard adult dosing for teaching; verify against current prescribing information.",
       "marks": [
        "color"
       ]
      }
     ],
-    "md": "**74**",
+    "md": "**Standard adult dosing for teaching; verify against current prescribing information.**",
     "heading": false,
     "size": 10.0
    }
@@ -8717,7 +9531,7 @@
   "notes": "Drug: Tofacitinib (Xeljanz)\n\nClass: JAK inhibitor\n\nFormulation: Tablet 5/10 mg; XR tablet 11/22 mg\n\nDose (adult): UC: 10 mg PO BID for at least 8 weeks, then 5 mg BID (lowest effective dose)\n\nIndications: Ulcerative colitis, rheumatoid arthritis, psoriatic arthritis\n\nAdverse effects: Headache, nasopharyngitis, raised lipids, herpes zoster\n\nContraindications: Hypersensitivity; severe hepatic impairment; active serious infection\n\nToxicity / overdose: Boxed: serious infections, mortality, malignancy, MACE, thrombosis; cytopenias, GI perforation; use after TNF-inhibitor failure"
  },
  {
-  "slide": 61,
+  "slide": 75,
   "title": "Warfarin (Coumadin, Jantoven)",
   "items": [
    {
@@ -8884,17 +9698,17 @@
     "size": 12.0
    },
    {
-    "text": "75",
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
     "level": 0,
     "emphasis": [
      {
-      "text": "75",
+      "text": "Standard adult dosing for teaching; verify against current prescribing information.",
       "marks": [
        "color"
       ]
      }
     ],
-    "md": "**75**",
+    "md": "**Standard adult dosing for teaching; verify against current prescribing information.**",
     "heading": false,
     "size": 10.0
    }
@@ -8905,7 +9719,7 @@
   "notes": "Drug: Warfarin (Coumadin, Jantoven)\n\nClass: Vitamin K antagonist (VKORC1 inhibitor)\n\nFormulation: Tablet 1/2/2.5/3/4/5/6/7.5/10 mg\n\nDose (adult): Start 2-5 mg PO daily, adjust to INR goal (usually 2-3)\n\nIndications: Venous thromboembolism, atrial fibrillation, mechanical heart valves\n\nAdverse effects: Bleeding, bruising, hair loss, skin necrosis (rare)\n\nContraindications: Pregnancy (most cases), active bleeding, recent CNS surgery, uncontrolled hypertension\n\nToxicity / overdose: Hemorrhage; reversal with vitamin K and 4-factor PCC; many interactions (St. John's wort lowers INR)"
  },
  {
-  "slide": 62,
+  "slide": 76,
   "title": "Cyanocobalamin (vitamin B12)",
   "items": [
    {
@@ -9072,17 +9886,17 @@
     "size": 12.0
    },
    {
-    "text": "76",
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
     "level": 0,
     "emphasis": [
      {
-      "text": "76",
+      "text": "Standard adult dosing for teaching; verify against current prescribing information.",
       "marks": [
        "color"
       ]
      }
     ],
-    "md": "**76**",
+    "md": "**Standard adult dosing for teaching; verify against current prescribing information.**",
     "heading": false,
     "size": 10.0
    }
@@ -9093,7 +9907,7 @@
   "notes": "Drug: Cyanocobalamin (vitamin B12)\n\nClass: Vitamin\n\nFormulation: Tablet 100-1,000 mcg; IM injection 1,000 mcg/mL; nasal gel\n\nDose (adult): Deficiency: 1,000 mcg IM daily for 1 week, then weekly, then monthly; or 1,000-2,000 mcg PO daily\n\nIndications: B12 deficiency, pernicious anemia, PPI or metformin-related deficiency\n\nAdverse effects: Injection-site pain, mild diarrhea, itching; early low potassium when treating severe anemia\n\nContraindications: Cobalt allergy, Leber hereditary optic neuropathy\n\nToxicity / overdose: Low toxicity; excess is excreted; folate alone can mask B12 anemia while neuropathy progresses"
  },
  {
-  "slide": 63,
+  "slide": 77,
   "title": "Folic acid (vitamin B9)",
   "items": [
    {
@@ -9260,17 +10074,17 @@
     "size": 12.0
    },
    {
-    "text": "77",
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
     "level": 0,
     "emphasis": [
      {
-      "text": "77",
+      "text": "Standard adult dosing for teaching; verify against current prescribing information.",
       "marks": [
        "color"
       ]
      }
     ],
-    "md": "**77**",
+    "md": "**Standard adult dosing for teaching; verify against current prescribing information.**",
     "heading": false,
     "size": 10.0
    }
@@ -9281,7 +10095,7 @@
   "notes": "Drug: Folic acid (vitamin B9)\n\nClass: Water-soluble vitamin\n\nFormulation: Tablet 0.4/0.8/1 mg; injection\n\nDose (adult): Deficiency 1 mg PO daily; 0.4 mg daily for neural tube defect prevention (4 mg if prior NTD)\n\nIndications: Megaloblastic anemia, pregnancy, sulfasalazine and methotrexate therapy\n\nAdverse effects: Nausea, bloating, rash (rare)\n\nContraindications: Untreated B12 deficiency (can mask anemia)\n\nToxicity / overdose: Low toxicity; high doses may mask B12 deficiency and worsen neurologic injury"
  },
  {
-  "slide": 64,
+  "slide": 78,
   "title": "Vitamin D (cholecalciferol)",
   "items": [
    {
@@ -9448,17 +10262,17 @@
     "size": 12.0
    },
    {
-    "text": "78",
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
     "level": 0,
     "emphasis": [
      {
-      "text": "78",
+      "text": "Standard adult dosing for teaching; verify against current prescribing information.",
       "marks": [
        "color"
       ]
      }
     ],
-    "md": "**78**",
+    "md": "**Standard adult dosing for teaching; verify against current prescribing information.**",
     "heading": false,
     "size": 10.0
    }
@@ -9469,7 +10283,7 @@
   "notes": "Drug: Vitamin D (cholecalciferol)\n\nClass: Fat-soluble vitamin\n\nFormulation: Capsule/tablet 400-5,000 IU; 50,000 IU capsule\n\nDose (adult): Maintenance 600-800 IU PO daily; deficiency 50,000 IU weekly for about 8 weeks\n\nIndications: Rickets, osteomalacia, osteoporosis support, deficiency\n\nAdverse effects: Usually none; nausea and constipation with excess\n\nContraindications: Hypercalcemia, hypervitaminosis D\n\nToxicity / overdose: Toxicity: hypercalcemia, kidney stones, calcification; fat-soluble so accumulates"
  },
  {
-  "slide": 65,
+  "slide": 79,
   "title": "Phytonadione (vitamin K1)",
   "items": [
    {
@@ -9636,17 +10450,17 @@
     "size": 12.0
    },
    {
-    "text": "79",
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
     "level": 0,
     "emphasis": [
      {
-      "text": "79",
+      "text": "Standard adult dosing for teaching; verify against current prescribing information.",
       "marks": [
        "color"
       ]
      }
     ],
-    "md": "**79**",
+    "md": "**Standard adult dosing for teaching; verify against current prescribing information.**",
     "heading": false,
     "size": 10.0
    }
@@ -9657,7 +10471,7 @@
   "notes": "Drug: Phytonadione (vitamin K1)\n\nClass: Fat-soluble vitamin\n\nFormulation: Tablet 5 mg; injection 10 mg/mL\n\nDose (adult): Warfarin over-anticoagulation: 1-10 mg PO or slow IV by INR; newborn prophylaxis 0.5-1 mg IM\n\nIndications: Warfarin reversal, vitamin K deficiency bleeding, malabsorption\n\nAdverse effects: Injection-site reactions; flushing\n\nContraindications: Hypersensitivity\n\nToxicity / overdose: IV: boxed warning for anaphylaxis (infuse slowly); overcorrection causes warfarin resistance"
  },
  {
-  "slide": 66,
+  "slide": 80,
   "title": "Ferrous sulfate",
   "items": [
    {
@@ -9824,17 +10638,17 @@
     "size": 12.0
    },
    {
-    "text": "80",
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
     "level": 0,
     "emphasis": [
      {
-      "text": "80",
+      "text": "Standard adult dosing for teaching; verify against current prescribing information.",
       "marks": [
        "color"
       ]
      }
     ],
-    "md": "**80**",
+    "md": "**Standard adult dosing for teaching; verify against current prescribing information.**",
     "heading": false,
     "size": 10.0
    }
@@ -9845,7 +10659,7 @@
   "notes": "Drug: Ferrous sulfate\n\nClass: Iron supplement\n\nFormulation: Tablet 325 mg (65 mg elemental); liquid\n\nDose (adult): 325 mg PO once daily or every other day, ideally with vitamin C\n\nIndications: Iron-deficiency anemia\n\nAdverse effects: Constipation, nausea, dark stools, abdominal pain\n\nContraindications: Hemochromatosis, hemosiderosis, hemolytic anemia\n\nToxicity / overdose: Acute iron overdose is a pediatric emergency: GI bleeding, shock, liver failure; chelate with deferoxamine"
  },
  {
-  "slide": 67,
+  "slide": 81,
   "title": "St. John's wort (Hypericum perforatum)",
   "items": [
    {
@@ -10012,17 +10826,17 @@
     "size": 12.0
    },
    {
-    "text": "81",
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
     "level": 0,
     "emphasis": [
      {
-      "text": "81",
+      "text": "Standard adult dosing for teaching; verify against current prescribing information.",
       "marks": [
        "color"
       ]
      }
     ],
-    "md": "**81**",
+    "md": "**Standard adult dosing for teaching; verify against current prescribing information.**",
     "heading": false,
     "size": 10.0
    }
@@ -10033,7 +10847,7 @@
   "notes": "Drug: St. John's wort (Hypericum perforatum)\n\nClass: Herbal supplement (CYP/P-gp inducer)\n\nFormulation: Capsule/tablet 300 mg (0.3% hypericin); tea\n\nDose (adult): Commonly 300 mg PO TID; not FDA-approved for treatment\n\nIndications: Self-treated mild depression (limited evidence)\n\nAdverse effects: Photosensitivity, GI upset, dizziness, dry mouth\n\nContraindications: With SSRIs, transplant drugs, HIV protease inhibitors, oral contraceptives, warfarin\n\nToxicity / overdose: Serotonin syndrome with serotonergic drugs; lowers levels of warfarin, cyclosporine, contraceptives"
  },
  {
-  "slide": 68,
+  "slide": 82,
   "title": "Ginkgo biloba",
   "items": [
    {
@@ -10200,17 +11014,17 @@
     "size": 12.0
    },
    {
-    "text": "82",
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
     "level": 0,
     "emphasis": [
      {
-      "text": "82",
+      "text": "Standard adult dosing for teaching; verify against current prescribing information.",
       "marks": [
        "color"
       ]
      }
     ],
-    "md": "**82**",
+    "md": "**Standard adult dosing for teaching; verify against current prescribing information.**",
     "heading": false,
     "size": 10.0
    }
@@ -10221,7 +11035,7 @@
   "notes": "Drug: Ginkgo biloba\n\nClass: Herbal supplement\n\nFormulation: Capsule/tablet 40-120 mg\n\nDose (adult): 120-240 mg/day PO in divided doses; not FDA-approved for treatment\n\nIndications: Self-treated memory complaints (limited evidence)\n\nAdverse effects: Headache, GI upset, dizziness\n\nContraindications: Bleeding disorders; stop before surgery\n\nToxicity / overdose: Increased bleeding with warfarin, antiplatelets, NSAIDs; seizures with seed ingestion"
  },
  {
-  "slide": 69,
+  "slide": 83,
   "title": "Fish oil (omega-3 fatty acids)",
   "items": [
    {
@@ -10388,17 +11202,17 @@
     "size": 12.0
    },
    {
-    "text": "83",
+    "text": "Standard adult dosing for teaching; verify against current prescribing information.",
     "level": 0,
     "emphasis": [
      {
-      "text": "83",
+      "text": "Standard adult dosing for teaching; verify against current prescribing information.",
       "marks": [
        "color"
       ]
      }
     ],
-    "md": "**83**",
+    "md": "**Standard adult dosing for teaching; verify against current prescribing information.**",
     "heading": false,
     "size": 10.0
    }
@@ -10409,23 +11223,15 @@
   "notes": "Drug: Fish oil (omega-3 fatty acids)\n\nClass: Dietary supplement\n\nFormulation: Capsule 300-1,000 mg EPA/DHA; Rx icosapent ethyl 1 g\n\nDose (adult): 1-4 g/day EPA plus DHA PO; Rx forms for hypertriglyceridemia\n\nIndications: Hypertriglyceridemia, cardiovascular risk reduction (Rx)\n\nAdverse effects: Fishy aftertaste, belching, diarrhea\n\nContraindications: Hypersensitivity; fish or shellfish allergy (caution)\n\nToxicity / overdose: Bleeding risk at high doses with anticoagulants; atrial fibrillation at high doses"
  },
  {
-  "slide": 70,
+  "slide": 84,
   "title": "Supporting Drugs at a Glance",
   "items": [
    {
-    "text": "Appendix 2: DRUG PROFILE · SUPPORTING",
+    "text": "DRUG PROFILE · SUPPORTING",
     "level": 0,
-    "emphasis": [
-     {
-      "text": "Appendix 2: DRUG PROFILE · SUPPORTING",
-      "marks": [
-       "bold",
-       "color"
-      ]
-     }
-    ],
-    "md": "**Appendix 2: DRUG PROFILE · SUPPORTING**",
-    "heading": false,
+    "emphasis": [],
+    "md": "DRUG PROFILE · SUPPORTING",
+    "heading": true,
     "size": 12.0
    },
    {
@@ -10670,21 +11476,6 @@
     "md": "**Listed for context; not profiled in detail.**",
     "heading": false,
     "size": 10.0
-   },
-   {
-    "text": "84",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "84",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**84**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],
@@ -10693,14 +11484,14 @@
   "notes": "Listed for context; not profiled in detail.\n\nTen compact rows cover the supporting drugs: antibiotics and antidotes for C. difficile, opioid overdose, iron and warfarin reversal, thiopurine and B12 interactions, St. John's wort interactions, folate antagonism, and CYP3A4 inhibition of budesonide."
  },
  {
-  "slide": 71,
+  "slide": 85,
   "title": "Image Attribution",
   "items": [
    {
-    "text": "APPENDIX 3",
+    "text": "APPENDIX",
     "level": 0,
     "emphasis": [],
-    "md": "APPENDIX 3",
+    "md": "APPENDIX",
     "heading": true,
     "size": 12.0
    },
@@ -10759,21 +11550,6 @@
     "md": "**●  Reference:** Anthropic. (2026). Claude (Sonnet 5) [Large language model]. https://claude.ai",
     "heading": false,
     "size": 16.0
-   },
-   {
-    "text": "85",
-    "level": 0,
-    "emphasis": [
-     {
-      "text": "85",
-      "marks": [
-       "color"
-      ]
-     }
-    ],
-    "md": "**85**",
-    "heading": false,
-    "size": 10.0
    }
   ],
   "tables": [],

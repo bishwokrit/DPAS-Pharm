@@ -1,4 +1,4 @@
-# Extracted slides: Student_GI-and-Nutrition-Pharmacology-Session-2_Nov_5.pptx
+# Extracted slides: Lecture_3_Session_2_Unit_3_GI_and_Nutrition_Pharmacology_Final_Class_version_Nov_5.pptx
 
 Bold = emphasized on the slide (bold/underline/highlight/colored text).
 
@@ -113,14 +113,41 @@ Instructor script:
 
 Say: The values are illustrative onset times, not trial data.
 
-## Slide 7: Antidiarrheal Agents
+## Slide 7: Quick Check
+- [heading] QUICK CHECK · FIGURE 2
+- [heading] Quick Check
+- **Based on Figure 2, a hospitalized patient needs constipation relief within a few hours. Which class is the most appropriate choice?**
+- [heading] A
+- Bulk-forming
+- [heading] B
+- Stool softener
+- [heading] C
+- Osmotic or stimulant
+- [heading] D
+- None of these act quickly enough
+
+_[1 small image(s)/icons]_
+
+> Speaker notes: Quick check: pause for students to answer before revealing slide 8.
+
+## Slide 8: Answer
+- [heading] ANSWER · FIGURE 2
+- [heading] Answer
+- [heading] C
+- **Osmotic or stimulant laxatives.**
+- **Why:** Figure 2 shows osmotic agents (~2 hours) and stimulant agents (~8 hours) acting far faster than bulk-forming agents or stool softeners (~2–2.5 days) — appropriate choices when relief is needed within hours rather than days.
+
+_[1 small image(s)/icons]_
+
+> Speaker notes: Answer C: osmotic or stimulant for relief within hours.
+
+## Slide 9: Antidiarrheal Agents
 - [heading] STOPPING THE FLOW
 - [heading] Antidiarrheal Agents
 - **Loperamide — a peripheral opioid-receptor agonist that slows GI motility without significant CNS (opioid) effects at normal doses.**
 - Diphenoxylate/atropine — a combination opioid-receptor agonist; atropine is included at a subtherapeutic dose specifically to discourage misuse/overdose.
 - Bismuth subsalicylate — has antisecretory, mild antimicrobial, and anti-inflammatory effects; also used for dyspepsia.
 - **Avoid antimotility agents (loperamide, diphenoxylate/atropine) in suspected infectious/inflammatory diarrhea (e.g., C. difficile, invasive bacterial infection) — can worsen outcomes by delaying toxin/pathogen clearance.**
-- **9**
 
 _[1 small image(s)/icons]_
 
@@ -136,7 +163,7 @@ Know: Bismuth subsalicylate: salicylate warning, can darken stool and tongue.
 
 Know: Avoid antimotility agents in suspected C. difficile and in bloody or febrile diarrhea.
 
-## Slide 8: Loperamide and Diphenoxylate: Opioid Brake on the Gut
+## Slide 10: Loperamide and Diphenoxylate: Opioid Brake on the Gut
 - [heading] MECHANISM & DEPTH
 - [heading] Loperamide and Diphenoxylate: Opioid Brake on the Gut
 - [heading] Opioid agonist binds mu receptors on enteric neurons
@@ -152,19 +179,17 @@ Know: Avoid antimotility agents in suspected C. difficile and in bloody or febri
 - Diphenoxylate/atropine is Schedule V and is avoided in children under 6.
 - Avoid antimotility agents in C. difficile and in bloody or febrile diarrhea.
 - Bismuth subsalicylate: salicylate warning; can darken stool and tongue.
-- **10**
 
-_[figure(s) saved: S8_1.jpg]_
+_[figure(s) saved: S10_1.jpg]_
 
 > Speaker notes: Say: "Loperamide and diphenoxylate are opioid agonists. They bind mu receptors on enteric neurons, reduce acetylcholine release, slow peristalsis and give more time for water absorption."
 
-## Slide 9: Is an Antimotility Agent Safe Here?
+## Slide 11: Is an Antimotility Agent Safe Here?
 - [heading] CLINICAL CASE
 - [heading] Is an Antimotility Agent Safe Here?
 - A patient develops profuse watery diarrhea and fever three days after completing a course of clindamycin for a dental infection.
 - **Ask yourself:** **Is loperamide an appropriate choice for symptomatic relief in this patient?**
 - **Clinical pearl:** **This presentation is concerning for C. difficile infection — antimotility agents should generally be avoided, since slowing transit can worsen toxin-mediated colonic injury. Treatment should target the underlying infection (e.g., oral vancomycin or fidaxomicin), not just the symptom.**
-- **11**
 
 _[1 small image(s)/icons]_
 
@@ -174,7 +199,35 @@ Instructor script:
 
 Case: Diarrhea and fever after clindamycin. Ask: "Is loperamide appropriate?" Answer: no, think C. difficile and treat the infection (oral vancomycin or fidaxomicin).
 
-## Slide 10: 05
+## Slide 12: Quick Check
+- [heading] QUICK CHECK · LAXATIVES & ANTIDIARRHEALS
+- [heading] Quick Check
+- **Why is a subtherapeutic dose of atropine included in the diphenoxylate/atropine combination product?**
+- [heading] A
+- To treat the underlying cause of diarrhea
+- [heading] B
+- To discourage intentional overdose/misuse of the opioid component
+- [heading] C
+- To increase the antidiarrheal effect of diphenoxylate
+- [heading] D
+- To prevent constipation
+
+_[1 small image(s)/icons]_
+
+> Speaker notes: Quick check: Atropine in diphenoxylate. Pause for students to answer before revealing slide 13.
+
+## Slide 13: Answer
+- [heading] ANSWER · LAXATIVES & ANTIDIARRHEALS
+- [heading] Answer
+- [heading] B
+- **To discourage intentional overdose/misuse of the opioid component.**
+- **Why:** At therapeutic doses, the atropine dose is too low to produce significant anticholinergic effects, but at supratherapeutic (misuse) doses, unpleasant anticholinergic effects (tachycardia, dry mouth, flushing) emerge — an intentional deterrent against abuse of the opioid agonist diphenoxylate.
+
+_[1 small image(s)/icons]_
+
+> Speaker notes: Answer B: it discourages overdose or misuse.
+
+## Slide 14: 05
 - **SECTION**
 - [heading] 05
 - [heading] Inflammatory Bowel Disease
@@ -186,13 +239,12 @@ _[1 small image(s)/icons]_
 
 Step therapy. Match the drug to the severity: 5-ASA for mild, steroids for flares, immunomodulators for maintenance, biologics and small molecules for moderate to severe disease.
 
-## Slide 11: Step Therapy in Inflammatory Bowel Disease
+## Slide 15: Step Therapy in Inflammatory Bowel Disease
 - [heading] ORIGINAL ILLUSTRATION · FIGURE 4
 - [heading] Step Therapy in Inflammatory Bowel Disease
 - **Figure 4. Original illustrative diagram (not from Katzung): therapy escalates from 5-ASA agents for mild disease, through short-term corticosteroids for flares and immunomodulators for maintenance, to biologics/small molecules for moderate-to-severe disease.**
-- **15**
 
-_[figure(s) saved: S11_1.jpg]_
+_[figure(s) saved: S15_1.jpg]_
 
 > Speaker notes: This escalation ladder is the organizing framework for every drug class in this section — ask students where each drug they learn next "lives" on this ladder.
 
@@ -200,14 +252,13 @@ Instructor script:
 
 Say: "Step therapy. Match the drug to the severity: 5-ASA for mild, steroids for flares, immunomodulators for maintenance, biologics and small molecules for moderate to severe disease."
 
-## Slide 12: Aminosalicylates (5-ASA Agents)
+## Slide 16: Aminosalicylates (5-ASA Agents)
 - [heading] STEP 1
 - [heading] Aminosalicylates (5-ASA Agents)
 - **Mesalamine, sulfasalazine — anti-inflammatory action local to the GI mucosa.**
 - First-line for mild-to-moderate ulcerative colitis; more limited role in Crohn disease.
 - Sulfasalazine is metabolized to mesalamine plus sulfapyridine — the sulfapyridine component is responsible for most adverse effects (and is why sulfa-allergic patients need caution).
 - Generally well tolerated; a favorable long-term safety profile relative to steroids and immunomodulators.
-- **16**
 
 _[1 small image(s)/icons]_
 
@@ -217,7 +268,7 @@ Know: Mesalamine: monitor renal function (interstitial nephritis).
 
 Know: Delayed-release forms target the ileum or colon. Enemas and suppositories treat distal disease.
 
-## Slide 13: 5-ASA: Local Anti-Inflammatory Action
+## Slide 17: 5-ASA: Local Anti-Inflammatory Action
 - [heading] MECHANISM & DEPTH
 - [heading] 5-ASA: Local Anti-Inflammatory Action
 - [heading] Sulfasalazine reaches the colon
@@ -235,13 +286,12 @@ Know: Delayed-release forms target the ileum or colon. Enemas and suppositories 
 - Mesalamine: monitor renal function for interstitial nephritis.
 - Delayed-release formulations target the ileum or colon.
 - Enemas and suppositories treat distal disease.
-- **17**
 
-_[figure(s) saved: S13_1.jpg]_
+_[figure(s) saved: S17_1.jpg]_
 
 > Speaker notes: Say: "Sulfasalazine reaches the colon. Bacteria cleave the azo bond and release 5-ASA and sulfapyridine. 5-ASA acts on the mucosa."
 
-## Slide 14: Corticosteroids and Immunomodulators
+## Slide 18: Corticosteroids and Immunomodulators
 - [heading] FLARE VS. MAINTENANCE
 - [heading] Corticosteroids and Immunomodulators
 - [heading] Immunomodulators (e.g., azathioprine, 6-mercaptopurine)
@@ -252,7 +302,6 @@ _[figure(s) saved: S13_1.jpg]_
 - Used for long-term maintenance of remission
 - Onset is slow (weeks to months) — not useful for acute flares
 - Require monitoring for bone marrow suppression and hepatotoxicity
-- **18**
 
 _[1 small image(s)/icons]_
 
@@ -262,7 +311,7 @@ Instructor script:
 
 Say: "Fast but not for the long term versus slow but sustainable." Budesonide has high first-pass metabolism, so less systemic exposure than prednisone.
 
-## Slide 15: Azathioprine and 6-MP: Purine Antimetabolites
+## Slide 19: Azathioprine and 6-MP: Purine Antimetabolites
 - [heading] MECHANISM & DEPTH
 - [heading] Azathioprine and 6-MP: Purine Antimetabolites
 - [heading] Azathioprine converted to 6-mercaptopurine
@@ -280,9 +329,8 @@ Say: "Fast but not for the long term versus slow but sustainable." Budesonide ha
 - Allopurinol blocks metabolism, so reduce the thiopurine dose by about two-thirds to three-quarters.
 - Monitor CBC and liver tests; onset takes weeks to months.
 - Increased infection and lymphoma risk.
-- **19**
 
-_[figure(s) saved: S15_1.jpg]_
+_[figure(s) saved: S19_1.jpg]_
 
 > Speaker notes: Say: "Azathioprine becomes 6-mercaptopurine, then thioguanine nucleotides, which block purine synthesis in lymphocytes."
 
@@ -292,7 +340,7 @@ Know: Allopurinol blocks metabolism. Reduce the thiopurine dose by about two-thi
 
 Know: Monitor CBC and liver tests. Onset takes weeks to months. Infection and lymphoma risk rise.
 
-## Slide 16: Biologic & Small-Molecule Agents in IBD
+## Slide 20: Biologic & Small-Molecule Agents in IBD
 - [heading] STEP 4 — TARGETED THERAPY
 - [heading] Biologic & Small-Molecule Agents in IBD
 - [heading] TNF-α Inhibitors
@@ -307,7 +355,6 @@ Know: Monitor CBC and liver tests. Onset takes weeks to months. Infection and ly
 - Example: ustekinumab
 - Blocks intracellular JAK signaling
 - Example: tofacitinib
-- **20**
 
 _[1 small image(s)/icons]_
 
@@ -317,21 +364,49 @@ Instructor script:
 
 Know: Targets: TNF-alpha (infliximab, adalimumab), integrin (vedolizumab), IL-12/23 (ustekinumab), JAK (tofacitinib).
 
-## Slide 17: Biologic & Targeted Therapies in IBD: Where Each Class Acts
+## Slide 21: Biologic & Targeted Therapies in IBD: Where Each Class Acts
 - [heading] ORIGINAL ILLUSTRATION · FIGURE 7
 - [heading] Biologic & Targeted Therapies in IBD: Where Each Class Acts
 - **Figure 7. Original illustrative diagram (not from Katzung): infliximab/adalimumab block TNF-α, vedolizumab blocks leukocyte gut-homing, ustekinumab blocks IL-12/23, and tofacitinib blocks JAK signaling — four distinct points of intervention in chronic mucosal inflammation.**
-- **21**
 
-_[figure(s) saved: S17_1.jpg]_
+_[figure(s) saved: S21_1.jpg]_
 
-> Speaker notes: Have students sort each drug into its target before revealing labels — the same exercise used for the DMARD figure in Lecture 2, now applied to a new organ system.
+> Speaker notes: Have students sort each drug into its target before revealing labels — the s
+ame exercise used for the DMARD figure in Lecture 2, now applied to a new organ system.
 
 Instructor script:
 
 Sort each drug into its target before revealing labels: TNF-alpha (infliximab, adalimumab), integrin (vedolizumab), IL-12/23 (ustekinumab), JAK (tofacitinib).
 
-## Slide 18: IBD Therapy Safety: Immunosuppression
+## Slide 22: Quick Check
+- [heading] QUICK CHECK · FIGURE 7
+- [heading] Quick Check
+- **In Figure 7, which biologic agent acts by a mechanism that is gut-selective rather than systemically immunosuppressive in the same way as the others?**
+- [heading] A
+- Infliximab
+- [heading] B
+- Adalimumab
+- [heading] C
+- Vedolizumab
+- [heading] D
+- Tofacitinib
+
+_[1 small image(s)/icons]_
+
+> Speaker notes: Quick check: pause for students to answer before revealing slide 23.
+
+## Slide 23: Answer
+- [heading] ANSWER · FIGURE 7
+- [heading] Answer
+- [heading] C
+- **Vedolizumab.**
+- **Why:** Vedolizumab blocks α4β7 integrin, which is relatively selective for gut-homing leukocyte trafficking — giving it a more gut-selective safety profile compared with TNF-α inhibitors or JAK inhibitors, which act more broadly on systemic immune signaling.
+
+_[1 small image(s)/icons]_
+
+> Speaker notes: Answer C: vedolizumab is gut-selective because it blocks alpha4beta7 integrin.
+
+## Slide 24: IBD Therapy Safety: Immunosuppression
 - [heading] SHARED RISK
 - [heading] IBD Therapy Safety: Immunosuppression
 - **The major safety theme across immunomodulators and biologics: immunosuppression → increased infection risk.**
@@ -339,7 +414,6 @@ Sort each drug into its target before revealing labels: TNF-alpha (infliximab, a
 - Vaccination — update vaccines, especially live vaccines, before starting therapy.
 - Ongoing monitoring — regular labs to catch cytopenias, hepatotoxicity, or infection early.
 - This is the same safety framework covered for biologic DMARDs in Lecture 2 — the shared mechanism class carries a shared risk profile.
-- **24**
 
 _[1 small image(s)/icons]_
 
@@ -349,13 +423,12 @@ Instructor script:
 
 Safety: Screen for TB and hepatitis B and C before starting a biologic. Update vaccines, especially live vaccines, first. Monitor labs.
 
-## Slide 19: Matching Therapy to Disease Severity
+## Slide 25: Matching Therapy to Disease Severity
 - [heading] CLINICAL CASE
 - [heading] Matching Therapy to Disease Severity
 - A patient with newly diagnosed, mild ulcerative colitis asks why their provider is starting mesalamine rather than one of the biologic drugs they read about online.
 - **Ask yourself:** **How would you explain the step-therapy rationale to this patient?**
 - **Clinical pearl:** **Therapy is matched to disease severity: mild disease responds well to 5-ASA agents with a favorable safety profile, while biologics are reserved for moderate-to-severe or refractory disease given their cost, administration burden, and immunosuppression-related risks.**
-- **25**
 
 _[1 small image(s)/icons]_
 
@@ -365,7 +438,35 @@ Instructor script:
 
 Case: Mild ulcerative colitis starts with mesalamine, not a biologic.
 
-## Slide 20: Drug Names Reveal the Class: Bowel Disorders and IBD
+## Slide 26: Quick Check
+- [heading] QUICK CHECK · INFLAMMATORY BOWEL DISEASE
+- [heading] Quick Check
+- **A patient with Crohn disease has been in remission on azathioprine for maintenance but now has an acute flare. What is the most appropriate immediate addition to therapy?**
+- [heading] A
+- Increase the azathioprine dose only
+- [heading] B
+- Add a short course of corticosteroids to induce remission
+- [heading] C
+- Switch directly to a stimulant laxative
+- [heading] D
+- Discontinue all therapy until symptoms resolve on their own
+
+_[1 small image(s)/icons]_
+
+> Speaker notes: Quick check: pause for students to answer before revealing slide 27.
+
+## Slide 27: Answer
+- [heading] ANSWER · INFLAMMATORY BOWEL DISEASE
+- [heading] Answer
+- [heading] B
+- **Add a short course of corticosteroids to induce remission.**
+- **Why:** Immunomodulators like azathioprine have a slow onset and are not effective for acute flares. Corticosteroids provide faster induction of remission during a flare, while the immunomodulator continues for long-term maintenance.
+
+_[1 small image(s)/icons]_
+
+> Speaker notes: Answer B: Crohn flare on azathioprine: add a short steroid course.
+
+## Slide 28: Drug Names Reveal the Class: Bowel Disorders and IBD
 - [heading] MECHANISM & DEPTH
 - [heading] Drug Names Reveal the Class: Bowel Disorders and IBD
 - [heading] Stem
@@ -409,13 +510,12 @@ Case: Mild ulcerative colitis starts with mesalamine, not a biologic.
 - loperamide, diphenoxylate
 - Slows motility
 - A stem is a memory aid, not a rule: where no shared stem exists, learn the class name instead.
-- **28**
 
 _[1 small image(s)/icons]_
 
 > Speaker notes: Say: "-ximab chimeric, -umab human, -zumab humanized, -tinib kinase inhibitor, -sone corticosteroid, -tide peptide. 5-ASA agents, thiopurines and the opioid antidiarrheals share no stem."
 
-## Slide 21: 06
+## Slide 29: 06
 - **SECTION**
 - [heading] 06
 - [heading] Nutrition & Dietary Supplements
@@ -427,7 +527,7 @@ _[1 small image(s)/icons]_
 
 Ask one question about any vitamin: can it build up to toxic levels?
 
-## Slide 22: Fat-Soluble vs. Water-Soluble Vitamins
+## Slide 30: Fat-Soluble vs. Water-Soluble Vitamins
 - [heading] A KEY DISTINCTION
 - [heading] Fat-Soluble vs. Water-Soluble Vitamins
 - [heading] Fat-Soluble (A, D, E, K)
@@ -438,7 +538,6 @@ Ask one question about any vitamin: can it build up to toxic levels?
 - Not significantly stored — excreted renally
 - Toxicity is rare except at very high supplemental doses
 - Deficiency develops more quickly without ongoing intake
-- **30**
 
 _[1 small image(s)/icons]_
 
@@ -448,13 +547,12 @@ Instructor script:
 
 Say: "Ask one question about any vitamin: can it build up to toxic levels? Fat-soluble A, D, E, K store and can accumulate. Water-soluble B and C are excreted."
 
-## Slide 23: Fat-Soluble vs. Water-Soluble Vitamins: Storage and Toxicity Risk
+## Slide 31: Fat-Soluble vs. Water-Soluble Vitamins: Storage and Toxicity Risk
 - [heading] ORIGINAL ILLUSTRATION · FIGURE 8
 - [heading] Fat-Soluble vs. Water-Soluble Vitamins: Storage and Toxicity Risk
 - **Figure 8. Original illustrative comparison (illustrative storage/toxicity-risk index, not from Katzung): fat-soluble vitamins A and D show substantially higher illustrative tissue-storage and toxicity-risk scores than water-soluble vitamins C and B-complex.**
-- **31**
 
-_[figure(s) saved: S23_1.jpg]_
+_[figure(s) saved: S31_1.jpg]_
 
 > Speaker notes: Vitamin D and A toxicity (from excessive supplementation) are the clearest clinical examples to cite here — both are seen in real practice from over-the-counter supplement overuse.
 
@@ -462,7 +560,7 @@ Instructor script:
 
 Say: The figure values are illustrative.
 
-## Slide 24: Vitamin & Mineral Deficiency Syndromes
+## Slide 32: Vitamin & Mineral Deficiency Syndromes
 - [heading] HIGH-YIELD DEFICIENCIES
 - [heading] Vitamin & Mineral Deficiency Syndromes
 - **●  Vitamin B12:** deficiency causes megaloblastic anemia and neurologic symptoms; at risk with long-term PPI use, metformin use, or after bariatric surgery (ties back to the PPI adverse-effect discussion from Session 1).
@@ -470,7 +568,6 @@ Say: The figure values are illustrative.
 - **●  Vitamin D:** deficiency causes impaired bone mineralization (rickets in children, osteomalacia in adults) — connects directly to the bone pharmacology unit.
 - **●  Vitamin K:** deficiency impairs synthesis of clotting factors II, VII, IX, and X, increasing bleeding risk.
 - **●  Iron:** deficiency causes microcytic anemia; absorption is enhanced by vitamin C and impaired by concurrent antacid or PPI use.
-- **32**
 
 _[1 small image(s)/icons]_
 
@@ -482,7 +579,7 @@ Know: Deficiency causes megaloblastic anemia and neuropathy that can become irre
 
 Know: Folate: neural tube defects in pregnancy. Vitamin D: rickets and osteomalacia. Vitamin K: factors II, VII, IX, X. Iron: microcytic anemia, absorption helped by vitamin C and hurt by antacids and PPIs.
 
-## Slide 25: Vitamin B12 Absorption: Where PPIs and Metformin Interfere
+## Slide 33: Vitamin B12 Absorption: Where PPIs and Metformin Interfere
 - [heading] MECHANISM & DEPTH
 - [heading] Vitamin B12 Absorption: Where PPIs and Metformin Interfere
 - [heading] Dietary B12 is bound to food protein
@@ -500,9 +597,8 @@ Know: Folate: neural tube defects in pregnancy. Vitamin D: rickets and osteomala
 - Neurologic damage can become irreversible if treatment is delayed.
 - Monitor B12 in long-term PPI or metformin users.
 - Treat with intramuscular or high-dose oral B12.
-- **33**
 
-_[figure(s) saved: S25_1.png]_
+_[figure(s) saved: S33_1.png]_
 
 > Speaker notes: Say: "Dietary B12 is bound to protein. Stomach acid and pepsin release it. It binds intrinsic factor and is absorbed in the terminal ileum."
 
@@ -510,13 +606,12 @@ Know: PPIs and H2 blockers reduce acid. Metformin impairs ileal uptake. Bariatri
 
 Know: Monitor B12 in long-term PPI or metformin users. Treat with intramuscular or high-dose oral B12.
 
-## Slide 26: Vitamin K and CYP3A4 Inducers: A Classic Drug-Nutrient Interaction
+## Slide 34: Vitamin K and CYP3A4 Inducers: A Classic Drug-Nutrient Interaction
 - [heading] ORIGINAL ILLUSTRATION · FIGURE 10
 - [heading] Vitamin K and CYP3A4 Inducers: A Classic Drug-Nutrient Interaction
 - **Figure 10. Original illustrative diagram (not from Katzung): dietary vitamin K opposes warfarin’s anticoagulant effect by supporting clotting factor synthesis, while CYP3A4-inducing herbal supplements (e.g., St. John’s Wort) increase warfarin metabolism — both lowering anticoagulant effect through different mechanisms.**
-- **34**
 
-_[figure(s) saved: S26_1.jpg]_
+_[figure(s) saved: S34_1.jpg]_
 
 > Speaker notes: This figure ties the whole unit together: a dietary nutrient and an herbal supplement both working against the same drug, through two completely different mechanisms (pharmacodynamic antagonism vs. pharmacokinetic induction).
 
@@ -524,7 +619,7 @@ Instructor script:
 
 Say: "Two different ways to lower warfarin's effect. Vitamin K opposes it pharmacodynamically. St. John's wort induces CYP enzymes and speeds clearance, a pharmacokinetic interaction."
 
-## Slide 27: Warfarin: Vitamin K Cycle and Herbal Interactions
+## Slide 35: Warfarin: Vitamin K Cycle and Herbal Interactions
 - [heading] MECHANISM & DEPTH
 - [heading] Warfarin: Vitamin K Cycle and Herbal Interactions
 - [heading] Reduced vitamin K is recycled by VKORC1
@@ -542,9 +637,8 @@ Say: "Two different ways to lower warfarin's effect. Vitamin K opposes it pharma
 - Check INR when starting or stopping any supplement; stopping St. John's wort can raise INR.
 - St. John's wort also lowers oral contraceptive and some antiretroviral levels.
 - Ginkgo and fish oil raise bleeding risk.
-- **35**
 
-_[figure(s) saved: S27_1.png]_
+_[figure(s) saved: S35_1.png]_
 
 > Speaker notes: Say: Warfarin blocks VKORC1, which recycles vitamin K.
 
@@ -554,7 +648,35 @@ Know: Check INR when starting or stopping any supplement. Stopping St. John's wo
 
 Know: St. John's wort also lowers oral contraceptive and some antiretroviral levels. Ginkgo and fish oil raise bleeding risk.
 
-## Slide 28: Enteral & Parenteral Nutrition: The Basics
+## Slide 36: Quick Check
+- [heading] QUICK CHECK · FIGURE 10
+- [heading] Quick Check
+- **Based on Figure 10, a patient stable on warfarin starts taking a St. John’s Wort supplement for mood. What is the expected effect on anticoagulation?**
+- [heading] A
+- Decreased anticoagulant effect, due to increased warfarin metabolism via CYP3A4 induction
+- [heading] B
+- Increased anticoagulant effect, due to CYP3A4 inhibition
+- No effect, since herbal supplements do not interact with prescription drugs
+- [heading] C
+- [heading] D
+- Increased vitamin K levels directly counteracting warfarin
+
+_[1 small image(s)/icons]_
+
+> Speaker notes: Quick check: pause for students to answer before revealing slide 37.
+
+## Slide 37: Answer
+- [heading] ANSWER · FIGURE 10
+- [heading] Answer
+- [heading] A
+- **Decreased anticoagulant effect, due to increased warfarin metabolism via CYP3A4 induction.**
+- **Why:** St. John’s Wort is a well-known CYP3A4 inducer, which increases warfarin metabolism and lowers its anticoagulant effect (a pharmacokinetic interaction) — a distinct mechanism from dietary vitamin K, which opposes warfarin pharmacodynamically by supporting clotting factor synthesis.
+
+_[1 small image(s)/icons]_
+
+> Speaker notes: Answer A: decreased anticoagulant effect from CYP induction.
+
+## Slide 38: Enteral & Parenteral Nutrition: The Basics
 - [heading] NUTRITION SUPPORT
 - [heading] Enteral & Parenteral Nutrition: The Basics
 - [heading] Enteral Nutrition
@@ -565,7 +687,6 @@ Know: St. John's wort also lowers oral contraceptive and some antiretroviral lev
 - Delivered intravenously, bypassing the GI tract entirely
 - Reserved for patients with a non-functional or inaccessible GI tract
 - Requires close monitoring — electrolyte shifts, refeeding syndrome, catheter-related infection risk
-- **38**
 
 _[1 small image(s)/icons]_
 
@@ -575,7 +696,7 @@ Instructor script:
 
 Say: "If the gut works, use it."
 
-## Slide 29: Choosing the Nutrition Route and Avoiding Refeeding Syndrome
+## Slide 39: Choosing the Nutrition Route and Avoiding Refeeding Syndrome
 - [heading] MECHANISM & DEPTH
 - [heading] Choosing the Nutrition Route and Avoiding Refeeding Syndrome
 - [heading] Is the GI tract functional?
@@ -595,7 +716,6 @@ Say: "If the gut works, use it."
 - Check phosphate, potassium and magnesium daily at the start.
 - Give thiamine before feeding begins.
 - Catheter-related infection is the main parenteral risk.
-- **39**
 
 _[1 small image(s)/icons]_
 
@@ -603,7 +723,7 @@ _[1 small image(s)/icons]_
 
 Know: Start slowly in malnourished patients. Check phosphate, potassium and magnesium daily at first. Give thiamine before feeding. Catheter infection is the main parenteral risk.
 
-## Slide 30: Herbal & Dietary Supplement Safety Counseling
+## Slide 40: Herbal & Dietary Supplement Safety Counseling
 - [heading] COUNSELING PATIENTS
 - [heading] Herbal & Dietary Supplement Safety Counseling
 - **Supplements are not held to the same FDA premarket efficacy/safety standards as prescription drugs — potency and purity can vary by product.**
@@ -611,7 +731,6 @@ Know: Start slowly in malnourished patients. Check phosphate, potassium and magn
 - **St. John’s Wort — CYP3A4 induction; reduces effectiveness of many drugs (warfarin, oral contraceptives, some antiretrovirals).**
 - **Ginkgo biloba and fish oil — can increase bleeding risk, especially combined with anticoagulants/antiplatelets.**
 - Counsel patients to disclose all supplement use to every prescriber and pharmacist involved in their care.
-- **40**
 
 _[1 small image(s)/icons]_
 
@@ -621,13 +740,12 @@ Instructor script:
 
 Say: Supplements are not held to premarket efficacy or safety standards. Always ask specifically. Have patients tell every prescriber and pharmacist.
 
-## Slide 31: The Supplement No One Asked About
+## Slide 41: The Supplement No One Asked About
 - [heading] CLINICAL CASE
 - [heading] The Supplement No One Asked About
 - A patient on warfarin for atrial fibrillation presents with a subtherapeutic INR despite consistent medication adherence. On further questioning, the patient mentions starting a St. John’s Wort supplement for mood three weeks ago.
 - **Ask yourself:** **How does this explain the subtherapeutic INR, and what should happen next?**
 - **Clinical pearl:** **St. John’s Wort induces CYP3A4, increasing warfarin metabolism and lowering the INR — this is exactly why asking about supplement use is a required part of every medication reconciliation, not an optional extra.**
-- **41**
 
 _[1 small image(s)/icons]_
 
@@ -637,7 +755,35 @@ Instructor script:
 
 Case: Subtherapeutic INR after starting St. John's wort.
 
-## Slide 32: 07
+## Slide 42: Quick Check
+- [heading] QUICK CHECK · NUTRITION & DIETARY SUPPLEMENTS
+- [heading] Quick Check
+- **A patient on long-term omeprazole therapy is found to have megaloblastic anemia and neurologic symptoms. Which deficiency is most likely, and why?**
+- [heading] A
+- Vitamin B12 deficiency, due to reduced acid-dependent absorption
+- [heading] B
+- Vitamin C deficiency, due to increased renal excretion
+- [heading] C
+- Vitamin K deficiency, due to reduced dietary intake
+- [heading] D
+- Vitamin A deficiency, due to fat malabsorption
+
+_[1 small image(s)/icons]_
+
+> Speaker notes: Quick check: Long-term omeprazole with megaloblastic anemia and neurologic symptoms. Pause for students to answer before revealing slide 43.
+
+## Slide 43: Answer
+- [heading] ANSWER · NUTRITION & DIETARY SUPPLEMENTS
+- [heading] Answer
+- [heading] A
+- **Vitamin B12 deficiency, due to reduced acid-dependent absorption.**
+- **Why:** Long-term PPI use reduces gastric acid, which is needed to release B12 from dietary protein for absorption. This is one of the well-documented long-term PPI adverse effects covered in Session 1 and explains the megaloblastic anemia and neurologic symptoms here.
+
+_[1 small image(s)/icons]_
+
+> Speaker notes: Answer A: B12 deficiency.
+
+## Slide 44: 07
 - **SECTION**
 - [heading] 07
 - [heading] Putting It All Together
@@ -649,7 +795,7 @@ _[1 small image(s)/icons]_
 
 Pairs of students name a first-line approach and the biggest safety check for each patient.
 
-## Slide 33: Which Drug Would You Choose?
+## Slide 45: Which Drug Would You Choose?
 - [heading] APPLY IT
 - [heading] Which Drug Would You Choose?
 - [heading] Patient A
@@ -660,7 +806,6 @@ Pairs of students name a first-line approach and the biggest safety check for ea
 - [heading] Patient D
 - Moderate-to-severe Crohn disease, inadequately controlled on azathioprine
 - Warfarin patient starting an herbal mood supplement
-- **45**
 
 _[1 small image(s)/icons]_
 
@@ -670,7 +815,35 @@ Instructor script:
 
 Suggested answers: A, an antacid for occasional relief or an H2 blocker or PPI if frequent. B, bismuth quadruple therapy. C, a biologic or small molecule such as an anti-TNF agent. D, counsel on St. John's wort and check INR.
 
-## Slide 34: Key Takeaways
+## Slide 46: Quick Check
+- [heading] QUICK CHECK · PUTTING IT ALL TOGETHER
+- [heading] Quick Check
+- **A patient with well-controlled GERD on a PPI for three years asks whether they should keep taking it indefinitely. What is the most appropriate response?**
+- Periodically reassess the need for continued therapy, given long-term risks such as B12 deficiency, hypomagnesemia, fracture, and C. difficile risk
+- [heading] A
+- PPIs have no long-term risks, so continuing indefinitely is always fine
+- [heading] B
+- [heading] C
+- PPIs should never be used for more than one week
+- [heading] D
+- Switch immediately to an antacid with no further discussion
+
+_[1 small image(s)/icons]_
+
+> Speaker notes: Quick check: Long-term PPI for GERD. Pause for students to answer before revealing slide 47.
+
+## Slide 47: Answer
+- [heading] ANSWER · PUTTING IT ALL TOGETHER
+- [heading] Answer
+- [heading] B
+- **Periodically reassess the need for continued therapy.**
+- **Why:** Long-term PPI use carries real, well-documented risks. Best practice is not indefinite, unexamined continuation — it is periodic reassessment of ongoing need, attempting dose reduction or discontinuation when clinically appropriate, while still treating confirmed indications adequately.
+
+_[1 small image(s)/icons]_
+
+> Speaker notes: Answer B: reassess the need periodically.
+
+## Slide 48: Key Takeaways
 - [heading] BIG PICTURE
 - [heading] Key Takeaways
 - [heading] 1
@@ -690,7 +863,7 @@ Instructor script:
 
 Read the five points. Link biologics back to the DMARD lecture and interactions back to the metabolism lecture.
 
-## Slide 35: 08
+## Slide 49: 08
 - **SECTION**
 - [heading] 08
 - [heading] Lecture Recall Quiz
@@ -702,7 +875,7 @@ _[1 small image(s)/icons]_
 
 Give students the six recall questions for self-testing and walk through the answer key.
 
-## Slide 36: Lecture Recall Quiz (1 of 2)
+## Slide 50: Lecture Recall Quiz (1 of 2)
 - [heading] LECTURE RECALL QUIZ
 - [heading] Lecture Recall Quiz (1 of 2)
 - **1.  Why do PPIs provide more complete acid suppression than H2 receptor antagonists?**
@@ -720,13 +893,12 @@ Give students the six recall questions for self-testing and walk through the ans
 - B.  Aprepitant — NK1 receptor
 - C.  Meclizine — 5-HT3 receptor
 - D.  Metoclopramide — H1 receptor
-- **50**
 
 _[1 small image(s)/icons]_
 
 > Speaker notes: Give students the six recall questions for self-testing.
 
-## Slide 37: Lecture Recall Quiz (2 of 2)
+## Slide 51: Lecture Recall Quiz (2 of 2)
 - [heading] LECTURE RECALL QUIZ
 - [heading] Lecture Recall Quiz (2 of 2)
 - **4.  A patient with suspected C. difficile infection asks for something to stop their diarrhea. What is the main concern with giving loperamide here?**
@@ -744,13 +916,12 @@ _[1 small image(s)/icons]_
 - B.  CYP3A4 inhibition, decreasing warfarin metabolism
 - C.  Direct vitamin K supplementation
 - D.  Increased GI absorption of warfarin
-- **51**
 
 _[1 small image(s)/icons]_
 
 > Speaker notes: Give students the six recall questions for self-testing.
 
-## Slide 38: Lecture Recall Quiz — Answer Key
+## Slide 52: Lecture Recall Quiz — Answer Key
 - [heading] ANSWER KEY
 - [heading] Lecture Recall Quiz — Answer Key
 - **1.  B —** **PPIs block the H⁺/K⁺-ATPase proton pump itself — the final common pathway for gastrin, histamine, and acetylcholine signals — unlike H2RAs, which block only the histamine input.**
@@ -766,8 +937,8 @@ Instructor script:
 
 Walk through the answer key.
 
-## Slide 39: Drug Profiles
-- **APPENDIX 1**
+## Slide 53: Drug Profiles
+- **APPENDIX**
 - [heading] Drug Profiles
 - **Formulation, dose, indications, adverse effects, contraindications and toxicity for each drug in this lecture**
 - [heading] DR = delayed-release
@@ -804,7 +975,7 @@ Walk through the answer key.
 
 Abbreviation key: DR = delayed-release; ER / XR = extended-release; OTC = over the counter; PO = by mouth; PR = by rectum; IV = intravenous; IM = intramuscular; SC = subcutaneous; BID / TID / QID = two / three / four times daily; CrCl = creatinine clearance; CKD = chronic kidney disease; CNS = central nervous system; IBD = inflammatory bowel disease; UC = ulcerative colitis; IBS-C = irritable bowel syndrome with constipation; CIC = chronic idiopathic constipation; TNF = tumor necrosis factor; JAK = Janus kinase; TPMT / NUDT15 = thiopurine-metabolizing enzymes (tested before thiopurines); G6PD = glucose-6-phosphate dehydrogenase; INR = international normalized ratio; PCC = prothrombin complex concentrate; MACE = major adverse cardiovascular events; PML = progressive multifocal leukoencephalopathy; CYP / P-gp = cytochrome P450 / P-glycoprotein; SSRI = selective serotonin reuptake inhibitor; NTD = neural tube defect; EPA / DHA = omega-3 fatty acids; C-V = DEA Schedule V.
 
-## Slide 40: Polyethylene glycol 3350 (MiraLAX)
+## Slide 54: Polyethylene glycol 3350 (MiraLAX)
 - [heading] DRUG PROFILE
 - [heading] Polyethylene glycol 3350 (MiraLAX)
 - **Osmotic laxative**
@@ -820,7 +991,7 @@ Abbreviation key: DR = delayed-release; ER / XR = extended-release; OTC = over t
 - **Bloating, nausea, gas, loose stools**
 - **Bowel obstruction, perforation, ileus, toxic megacolon**
 - **Dehydration and electrolyte loss with excess or bowel-prep volumes; rare allergic reactions**
-- **54**
+- **Standard adult dosing for teaching; verify against current prescribing information.**
 
 > Speaker notes: Drug: Polyethylene glycol 3350 (MiraLAX)
 
@@ -838,7 +1009,7 @@ Contraindications: Bowel obstruction, perforation, ileus, toxic megacolon
 
 Toxicity / overdose: Dehydration and electrolyte loss with excess or bowel-prep volumes; rare allergic reactions
 
-## Slide 41: Psyllium (Metamucil)
+## Slide 55: Psyllium (Metamucil)
 - [heading] DRUG PROFILE
 - [heading] Psyllium (Metamucil)
 - **Bulk-forming laxative**
@@ -854,7 +1025,7 @@ Toxicity / overdose: Dehydration and electrolyte loss with excess or bowel-prep 
 - **Bloating, gas, abdominal fullness**
 - **Bowel obstruction, fecal impaction, dysphagia**
 - **Esophageal or intestinal obstruction if taken with too little fluid; allergy; separate from other drugs by 2 hours**
-- **55**
+- **Standard adult dosing for teaching; verify against current prescribing information.**
 
 > Speaker notes: Drug: Psyllium (Metamucil)
 
@@ -872,7 +1043,7 @@ Contraindications: Bowel obstruction, fecal impaction, dysphagia
 
 Toxicity / overdose: Esophageal or intestinal obstruction if taken with too little fluid; allergy; separate from other drugs by 2 hours
 
-## Slide 42: Methylcellulose (Citrucel)
+## Slide 56: Methylcellulose (Citrucel)
 - [heading] DRUG PROFILE
 - [heading] Methylcellulose (Citrucel)
 - **Bulk-forming laxative**
@@ -888,7 +1059,7 @@ Toxicity / overdose: Esophageal or intestinal obstruction if taken with too litt
 - **Bloating, gas**
 - **Bowel obstruction, dysphagia**
 - **Obstruction if taken without adequate fluid; may slow absorption of other drugs**
-- **56**
+- **Standard adult dosing for teaching; verify against current prescribing information.**
 
 > Speaker notes: Drug: Methylcellulose (Citrucel)
 
@@ -906,7 +1077,7 @@ Contraindications: Bowel obstruction, dysphagia
 
 Toxicity / overdose: Obstruction if taken without adequate fluid; may slow absorption of other drugs
 
-## Slide 43: Lactulose
+## Slide 57: Lactulose
 - [heading] DRUG PROFILE
 - [heading] Lactulose
 - **Osmotic laxative, ammonia-lowering agent**
@@ -922,7 +1093,7 @@ Toxicity / overdose: Obstruction if taken without adequate fluid; may slow absor
 - **Gas, bloating, cramps, diarrhea**
 - **Galactosemia, bowel obstruction**
 - **Dehydration and hypernatremia with over-use; worsens diabetes control slightly**
-- **57**
+- **Standard adult dosing for teaching; verify against current prescribing information.**
 
 > Speaker notes: Drug: Lactulose
 
@@ -940,7 +1111,7 @@ Contraindications: Galactosemia, bowel obstruction
 
 Toxicity / overdose: Dehydration and hypernatremia with over-use; worsens diabetes control slightly
 
-## Slide 44: Senna (Senokot)
+## Slide 58: Senna (Senokot)
 - [heading] DRUG PROFILE
 - [heading] Senna (Senokot)
 - **Stimulant laxative**
@@ -956,7 +1127,7 @@ Toxicity / overdose: Dehydration and hypernatremia with over-use; worsens diabet
 - **Cramping, diarrhea, urine discoloration, melanosis coli**
 - **Bowel obstruction, appendicitis, undiagnosed abdominal pain**
 - **Hypokalemia and dehydration with chronic use; laxative dependence**
-- **58**
+- **Standard adult dosing for teaching; verify against current prescribing information.**
 
 > Speaker notes: Drug: Senna (Senokot)
 
@@ -974,7 +1145,7 @@ Contraindications: Bowel obstruction, appendicitis, undiagnosed abdominal pain
 
 Toxicity / overdose: Hypokalemia and dehydration with chronic use; laxative dependence
 
-## Slide 45: Bisacodyl (Dulcolax)
+## Slide 59: Bisacodyl (Dulcolax)
 - [heading] DRUG PROFILE
 - [heading] Bisacodyl (Dulcolax)
 - **Stimulant laxative**
@@ -990,7 +1161,7 @@ Toxicity / overdose: Hypokalemia and dehydration with chronic use; laxative depe
 - **Cramping, nausea, rectal irritation**
 - **Bowel obstruction, appendicitis, acute abdomen**
 - **Do not crush; avoid with antacids or milk; excess causes diarrhea, hypokalemia**
-- **59**
+- **Standard adult dosing for teaching; verify against current prescribing information.**
 
 > Speaker notes: Drug: Bisacodyl (Dulcolax)
 
@@ -1008,7 +1179,7 @@ Contraindications: Bowel obstruction, appendicitis, acute abdomen
 
 Toxicity / overdose: Do not crush; avoid with antacids or milk; excess causes diarrhea, hypokalemia
 
-## Slide 46: Lubiprostone (Amitiza)
+## Slide 60: Lubiprostone (Amitiza)
 - [heading] DRUG PROFILE
 - [heading] Lubiprostone (Amitiza)
 - **Chloride channel (ClC-2) activator**
@@ -1024,7 +1195,7 @@ Toxicity / overdose: Do not crush; avoid with antacids or milk; excess causes di
 - **Nausea, diarrhea, headache, abdominal pain**
 - **Mechanical GI obstruction**
 - **Dizziness, syncope or dyspnea (rare); overdose: nausea, diarrhea; avoid in pregnancy unless needed**
-- **60**
+- **Standard adult dosing for teaching; verify against current prescribing information.**
 
 > Speaker notes: Drug: Lubiprostone (Amitiza)
 
@@ -1042,7 +1213,7 @@ Contraindications: Mechanical GI obstruction
 
 Toxicity / overdose: Dizziness, syncope or dyspnea (rare); overdose: nausea, diarrhea; avoid in pregnancy unless needed
 
-## Slide 47: Linaclotide (Linzess)
+## Slide 61: Linaclotide (Linzess)
 - [heading] DRUG PROFILE
 - [heading] Linaclotide (Linzess)
 - **Guanylate cyclase-C agonist**
@@ -1058,7 +1229,7 @@ Toxicity / overdose: Dizziness, syncope or dyspnea (rare); overdose: nausea, dia
 - **Diarrhea, abdominal pain, gas, bloating**
 - **Boxed: children under 2 years; mechanical GI obstruction**
 - **Severe dehydration (deaths in young children); severe diarrhea; stop if severe or prolonged**
-- **61**
+- **Standard adult dosing for teaching; verify against current prescribing information.**
 
 > Speaker notes: Drug: Linaclotide (Linzess)
 
@@ -1076,7 +1247,7 @@ Contraindications: Boxed: children under 2 years; mechanical GI obstruction
 
 Toxicity / overdose: Severe dehydration (deaths in young children); severe diarrhea; stop if severe or prolonged
 
-## Slide 48: Loperamide (Imodium)
+## Slide 62: Loperamide (Imodium)
 - [heading] DRUG PROFILE
 - [heading] Loperamide (Imodium)
 - **Peripheral mu-opioid agonist**
@@ -1092,7 +1263,7 @@ Toxicity / overdose: Severe dehydration (deaths in young children); severe diarr
 - **Constipation, cramps, dizziness, nausea**
 - **Bloody stool or high fever, C. difficile, children under 2, ileus**
 - **High doses: QT prolongation, torsades, cardiac arrest; CNS depression in overdose (naloxone, repeated)**
-- **62**
+- **Standard adult dosing for teaching; verify against current prescribing information.**
 
 > Speaker notes: Drug: Loperamide (Imodium)
 
@@ -1110,7 +1281,7 @@ Contraindications: Bloody stool or high fever, C. difficile, children under 2, i
 
 Toxicity / overdose: High doses: QT prolongation, torsades, cardiac arrest; CNS depression in overdose (naloxone, repeated)
 
-## Slide 49: Diphenoxylate/atropine (Lomotil)
+## Slide 63: Diphenoxylate/atropine (Lomotil)
 - [heading] DRUG PROFILE
 - [heading] Diphenoxylate/atropine (Lomotil)
 - **Opioid antidiarrheal (C-V) plus anticholinergic**
@@ -1126,7 +1297,7 @@ Toxicity / overdose: High doses: QT prolongation, torsades, cardiac arrest; CNS 
 - **Drowsiness, dry mouth, tachycardia, urinary retention**
 - **Children under 6 years, obstructive jaundice, C. difficile or infectious diarrhea**
 - **Respiratory depression (especially children) and anticholinergic toxicity; naloxone, with monitoring for relapse**
-- **63**
+- **Standard adult dosing for teaching; verify against current prescribing information.**
 
 > Speaker notes: Drug: Diphenoxylate/atropine (Lomotil)
 
@@ -1144,7 +1315,7 @@ Contraindications: Children under 6 years, obstructive jaundice, C. difficile or
 
 Toxicity / overdose: Respiratory depression (especially children) and anticholinergic toxicity; naloxone, with monitoring for relapse
 
-## Slide 50: Mesalamine (Lialda, Asacol HD, Pentasa)
+## Slide 64: Mesalamine (Lialda, Asacol HD, Pentasa)
 - [heading] DRUG PROFILE
 - [heading] Mesalamine (Lialda, Asacol HD, Pentasa)
 - **5-ASA aminosalicylate**
@@ -1160,7 +1331,7 @@ Toxicity / overdose: Respiratory depression (especially children) and anticholin
 - **Headache, nausea, abdominal pain, flatulence**
 - **Salicylate hypersensitivity**
 - **Interstitial nephritis (monitor creatinine); acute intolerance syndrome (cramps, bloody diarrhea); hepatotoxicity rare**
-- **64**
+- **Standard adult dosing for teaching; verify against current prescribing information.**
 
 > Speaker notes: Drug: Mesalamine (Lialda, Asacol HD, Pentasa)
 
@@ -1178,7 +1349,7 @@ Contraindications: Salicylate hypersensitivity
 
 Toxicity / overdose: Interstitial nephritis (monitor creatinine); acute intolerance syndrome (cramps, bloody diarrhea); hepatotoxicity rare
 
-## Slide 51: Sulfasalazine (Azulfidine)
+## Slide 65: Sulfasalazine (Azulfidine)
 - [heading] DRUG PROFILE
 - [heading] Sulfasalazine (Azulfidine)
 - **Sulfapyridine plus 5-ASA prodrug**
@@ -1194,7 +1365,7 @@ Toxicity / overdose: Interstitial nephritis (monitor creatinine); acute intolera
 - **Nausea, headache, rash, orange urine, reversible low sperm count**
 - **Sulfa or salicylate allergy, intestinal or urinary obstruction, porphyria**
 - **Agranulocytosis, hemolysis in G6PD deficiency, Stevens-Johnson syndrome, hepatitis; folate deficiency**
-- **65**
+- **Standard adult dosing for teaching; verify against current prescribing information.**
 
 > Speaker notes: Drug: Sulfasalazine (Azulfidine)
 
@@ -1212,7 +1383,7 @@ Contraindications: Sulfa or salicylate allergy, intestinal or urinary obstructio
 
 Toxicity / overdose: Agranulocytosis, hemolysis in G6PD deficiency, Stevens-Johnson syndrome, hepatitis; folate deficiency
 
-## Slide 52: Budesonide (Entocort EC, Uceris)
+## Slide 66: Budesonide (Entocort EC, Uceris)
 - [heading] DRUG PROFILE
 - [heading] Budesonide (Entocort EC, Uceris)
 - **Locally acting corticosteroid**
@@ -1228,7 +1399,7 @@ Toxicity / overdose: Agranulocytosis, hemolysis in G6PD deficiency, Stevens-John
 - **Headache, nausea, acne, adrenal suppression with long courses**
 - **Hypersensitivity**
 - **Hypercortisolism with CYP3A4 inhibitors (ketoconazole, grapefruit juice); infection risk**
-- **66**
+- **Standard adult dosing for teaching; verify against current prescribing information.**
 
 > Speaker notes: Drug: Budesonide (Entocort EC, Uceris)
 
@@ -1246,7 +1417,7 @@ Contraindications: Hypersensitivity
 
 Toxicity / overdose: Hypercortisolism with CYP3A4 inhibitors (ketoconazole, grapefruit juice); infection risk
 
-## Slide 53: Prednisone
+## Slide 67: Prednisone
 - [heading] DRUG PROFILE
 - [heading] Prednisone
 - **Systemic corticosteroid**
@@ -1262,7 +1433,7 @@ Toxicity / overdose: Hypercortisolism with CYP3A4 inhibitors (ketoconazole, grap
 - **Hyperglycemia, insomnia, mood change, weight gain, infection risk**
 - **Systemic fungal infection; live vaccines at high dose**
 - **Adrenal suppression and adrenal crisis on abrupt stopping; osteoporosis, cataracts, Cushingoid features**
-- **67**
+- **Standard adult dosing for teaching; verify against current prescribing information.**
 
 > Speaker notes: Drug: Prednisone
 
@@ -1280,7 +1451,7 @@ Contraindications: Systemic fungal infection; live vaccines at high dose
 
 Toxicity / overdose: Adrenal suppression and adrenal crisis on abrupt stopping; osteoporosis, cataracts, Cushingoid features
 
-## Slide 54: Azathioprine (Imuran)
+## Slide 68: Azathioprine (Imuran)
 - [heading] DRUG PROFILE
 - [heading] Azathioprine (Imuran)
 - **Purine antimetabolite**
@@ -1296,7 +1467,7 @@ Toxicity / overdose: Adrenal suppression and adrenal crisis on abrupt stopping; 
 - **Nausea, leukopenia, hepatotoxicity, pancreatitis, infection**
 - **Hypersensitivity; prior alkylating therapy; use with febuxostat**
 - **Myelosuppression (higher with low TPMT), lymphoma and hepatosplenic T-cell lymphoma; allopurinol requires major dose cut**
-- **68**
+- **Standard adult dosing for teaching; verify against current prescribing information.**
 
 > Speaker notes: Drug: Azathioprine (Imuran)
 
@@ -1314,7 +1485,7 @@ Contraindications: Hypersensitivity; prior alkylating therapy; use with febuxost
 
 Toxicity / overdose: Myelosuppression (higher with low TPMT), lymphoma and hepatosplenic T-cell lymphoma; allopurinol requires major dose cut
 
-## Slide 55: Mercaptopurine (6-MP, Purinethol)
+## Slide 69: Mercaptopurine (6-MP, Purinethol)
 - [heading] DRUG PROFILE
 - [heading] Mercaptopurine (6-MP, Purinethol)
 - **Purine antimetabolite**
@@ -1330,7 +1501,7 @@ Toxicity / overdose: Myelosuppression (higher with low TPMT), lymphoma and hepat
 - **Nausea, leukopenia, hepatotoxicity, pancreatitis**
 - **Hypersensitivity; use with febuxostat**
 - **Myelosuppression, hepatotoxicity, lymphoma risk; reduce dose with allopurinol**
-- **69**
+- **Standard adult dosing for teaching; verify against current prescribing information.**
 
 > Speaker notes: Drug: Mercaptopurine (6-MP, Purinethol)
 
@@ -1348,7 +1519,7 @@ Contraindications: Hypersensitivity; use with febuxostat
 
 Toxicity / overdose: Myelosuppression, hepatotoxicity, lymphoma risk; reduce dose with allopurinol
 
-## Slide 56: Infliximab (Remicade)
+## Slide 70: Infliximab (Remicade)
 - [heading] DRUG PROFILE
 - [heading] Infliximab (Remicade)
 - **Chimeric anti-TNF-alpha antibody**
@@ -1364,7 +1535,7 @@ Toxicity / overdose: Myelosuppression, hepatotoxicity, lymphoma risk; reduce dos
 - **Infusion reactions, headache, infections, rash**
 - **Hypersensitivity to murine proteins; high doses in moderate-severe heart failure**
 - **TB and hepatitis B reactivation, serious infections, demyelination, hepatosplenic T-cell lymphoma; anti-drug antibodies**
-- **70**
+- **Standard adult dosing for teaching; verify against current prescribing information.**
 
 > Speaker notes: Drug: Infliximab (Remicade)
 
@@ -1382,7 +1553,7 @@ Contraindications: Hypersensitivity to murine proteins; high doses in moderate-s
 
 Toxicity / overdose: TB and hepatitis B reactivation, serious infections, demyelination, hepatosplenic T-cell lymphoma; anti-drug antibodies
 
-## Slide 57: Adalimumab (Humira)
+## Slide 71: Adalimumab (Humira)
 - [heading] DRUG PROFILE
 - [heading] Adalimumab (Humira)
 - **Human anti-TNF-alpha antibody**
@@ -1398,7 +1569,7 @@ Toxicity / overdose: TB and hepatitis B reactivation, serious infections, demyel
 - **Injection-site reactions, infections, headache, rash**
 - **Hypersensitivity; active serious infection**
 - **TB and hepatitis B reactivation, serious infections, malignancy, demyelination, lupus-like syndrome**
-- **71**
+- **Standard adult dosing for teaching; verify against current prescribing information.**
 
 > Speaker notes: Drug: Adalimumab (Humira)
 
@@ -1416,7 +1587,7 @@ Contraindications: Hypersensitivity; active serious infection
 
 Toxicity / overdose: TB and hepatitis B reactivation, serious infections, malignancy, demyelination, lupus-like syndrome
 
-## Slide 58: Vedolizumab (Entyvio)
+## Slide 72: Vedolizumab (Entyvio)
 - [heading] DRUG PROFILE
 - [heading] Vedolizumab (Entyvio)
 - **Humanized alpha4beta7 integrin antibody**
@@ -1432,7 +1603,7 @@ Toxicity / overdose: TB and hepatitis B reactivation, serious infections, malign
 - **Nasopharyngitis, headache, arthralgia, infusion reactions**
 - **Hypersensitivity**
 - **Infections and rare liver injury; PML not reported to date but vigilance advised; gut-selective with less systemic immunosuppression**
-- **72**
+- **Standard adult dosing for teaching; verify against current prescribing information.**
 
 > Speaker notes: Drug: Vedolizumab (Entyvio)
 
@@ -1450,7 +1621,7 @@ Contraindications: Hypersensitivity
 
 Toxicity / overdose: Infections and rare liver injury; PML not reported to date but vigilance advised; gut-selective with less systemic immunosuppression
 
-## Slide 59: Ustekinumab (Stelara)
+## Slide 73: Ustekinumab (Stelara)
 - [heading] DRUG PROFILE
 - [heading] Ustekinumab (Stelara)
 - **Human anti-IL-12/23 antibody**
@@ -1466,7 +1637,7 @@ Toxicity / overdose: Infections and rare liver injury; PML not reported to date 
 - **Nasopharyngitis, injection-site reactions, headache, fatigue**
 - **Hypersensitivity**
 - **Serious infections, TB, reversible posterior leukoencephalopathy (rare), hypersensitivity**
-- **73**
+- **Standard adult dosing for teaching; verify against current prescribing information.**
 
 > Speaker notes: Drug: Ustekinumab (Stelara)
 
@@ -1484,7 +1655,7 @@ Contraindications: Hypersensitivity
 
 Toxicity / overdose: Serious infections, TB, reversible posterior leukoencephalopathy (rare), hypersensitivity
 
-## Slide 60: Tofacitinib (Xeljanz)
+## Slide 74: Tofacitinib (Xeljanz)
 - [heading] DRUG PROFILE
 - [heading] Tofacitinib (Xeljanz)
 - **JAK inhibitor**
@@ -1500,7 +1671,7 @@ Toxicity / overdose: Serious infections, TB, reversible posterior leukoencephalo
 - **Headache, nasopharyngitis, raised lipids, herpes zoster**
 - **Hypersensitivity; severe hepatic impairment; active serious infection**
 - **Boxed: serious infections, mortality, malignancy, MACE, thrombosis; cytopenias, GI perforation; use after TNF-inhibitor failure**
-- **74**
+- **Standard adult dosing for teaching; verify against current prescribing information.**
 
 > Speaker notes: Drug: Tofacitinib (Xeljanz)
 
@@ -1518,7 +1689,7 @@ Contraindications: Hypersensitivity; severe hepatic impairment; active serious i
 
 Toxicity / overdose: Boxed: serious infections, mortality, malignancy, MACE, thrombosis; cytopenias, GI perforation; use after TNF-inhibitor failure
 
-## Slide 61: Warfarin (Coumadin, Jantoven)
+## Slide 75: Warfarin (Coumadin, Jantoven)
 - [heading] DRUG PROFILE
 - [heading] Warfarin (Coumadin, Jantoven)
 - **Vitamin K antagonist (VKORC1 inhibitor)**
@@ -1534,7 +1705,7 @@ Toxicity / overdose: Boxed: serious infections, mortality, malignancy, MACE, thr
 - **Bleeding, bruising, hair loss, skin necrosis (rare)**
 - **Pregnancy (most cases), active bleeding, recent CNS surgery, uncontrolled hypertension**
 - **Hemorrhage; reversal with vitamin K and 4-factor PCC; many interactions (St. John's wort lowers INR)**
-- **75**
+- **Standard adult dosing for teaching; verify against current prescribing information.**
 
 > Speaker notes: Drug: Warfarin (Coumadin, Jantoven)
 
@@ -1552,7 +1723,7 @@ Contraindications: Pregnancy (most cases), active bleeding, recent CNS surgery, 
 
 Toxicity / overdose: Hemorrhage; reversal with vitamin K and 4-factor PCC; many interactions (St. John's wort lowers INR)
 
-## Slide 62: Cyanocobalamin (vitamin B12)
+## Slide 76: Cyanocobalamin (vitamin B12)
 - [heading] DRUG PROFILE
 - [heading] Cyanocobalamin (vitamin B12)
 - **Vitamin**
@@ -1568,7 +1739,7 @@ Toxicity / overdose: Hemorrhage; reversal with vitamin K and 4-factor PCC; many 
 - **Injection-site pain, mild diarrhea, itching; early low potassium when treating severe anemia**
 - **Cobalt allergy, Leber hereditary optic neuropathy**
 - **Low toxicity; excess is excreted; folate alone can mask B12 anemia while neuropathy progresses**
-- **76**
+- **Standard adult dosing for teaching; verify against current prescribing information.**
 
 > Speaker notes: Drug: Cyanocobalamin (vitamin B12)
 
@@ -1586,7 +1757,7 @@ Contraindications: Cobalt allergy, Leber hereditary optic neuropathy
 
 Toxicity / overdose: Low toxicity; excess is excreted; folate alone can mask B12 anemia while neuropathy progresses
 
-## Slide 63: Folic acid (vitamin B9)
+## Slide 77: Folic acid (vitamin B9)
 - [heading] DRUG PROFILE
 - [heading] Folic acid (vitamin B9)
 - **Water-soluble vitamin**
@@ -1602,7 +1773,7 @@ Toxicity / overdose: Low toxicity; excess is excreted; folate alone can mask B12
 - **Nausea, bloating, rash (rare)**
 - **Untreated B12 deficiency (can mask anemia)**
 - **Low toxicity; high doses may mask B12 deficiency and worsen neurologic injury**
-- **77**
+- **Standard adult dosing for teaching; verify against current prescribing information.**
 
 > Speaker notes: Drug: Folic acid (vitamin B9)
 
@@ -1620,7 +1791,7 @@ Contraindications: Untreated B12 deficiency (can mask anemia)
 
 Toxicity / overdose: Low toxicity; high doses may mask B12 deficiency and worsen neurologic injury
 
-## Slide 64: Vitamin D (cholecalciferol)
+## Slide 78: Vitamin D (cholecalciferol)
 - [heading] DRUG PROFILE
 - [heading] Vitamin D (cholecalciferol)
 - **Fat-soluble vitamin**
@@ -1636,7 +1807,7 @@ Toxicity / overdose: Low toxicity; high doses may mask B12 deficiency and worsen
 - **Usually none; nausea and constipation with excess**
 - **Hypercalcemia, hypervitaminosis D**
 - **Toxicity: hypercalcemia, kidney stones, calcification; fat-soluble so accumulates**
-- **78**
+- **Standard adult dosing for teaching; verify against current prescribing information.**
 
 > Speaker notes: Drug: Vitamin D (cholecalciferol)
 
@@ -1654,7 +1825,7 @@ Contraindications: Hypercalcemia, hypervitaminosis D
 
 Toxicity / overdose: Toxicity: hypercalcemia, kidney stones, calcification; fat-soluble so accumulates
 
-## Slide 65: Phytonadione (vitamin K1)
+## Slide 79: Phytonadione (vitamin K1)
 - [heading] DRUG PROFILE
 - [heading] Phytonadione (vitamin K1)
 - **Fat-soluble vitamin**
@@ -1670,7 +1841,7 @@ Toxicity / overdose: Toxicity: hypercalcemia, kidney stones, calcification; fat-
 - **Injection-site reactions; flushing**
 - **Hypersensitivity**
 - **IV: boxed warning for anaphylaxis (infuse slowly); overcorrection causes warfarin resistance**
-- **79**
+- **Standard adult dosing for teaching; verify against current prescribing information.**
 
 > Speaker notes: Drug: Phytonadione (vitamin K1)
 
@@ -1688,7 +1859,7 @@ Contraindications: Hypersensitivity
 
 Toxicity / overdose: IV: boxed warning for anaphylaxis (infuse slowly); overcorrection causes warfarin resistance
 
-## Slide 66: Ferrous sulfate
+## Slide 80: Ferrous sulfate
 - [heading] DRUG PROFILE
 - [heading] Ferrous sulfate
 - **Iron supplement**
@@ -1704,7 +1875,7 @@ Toxicity / overdose: IV: boxed warning for anaphylaxis (infuse slowly); overcorr
 - **Constipation, nausea, dark stools, abdominal pain**
 - **Hemochromatosis, hemosiderosis, hemolytic anemia**
 - **Acute iron overdose is a pediatric emergency: GI bleeding, shock, liver failure; chelate with deferoxamine**
-- **80**
+- **Standard adult dosing for teaching; verify against current prescribing information.**
 
 > Speaker notes: Drug: Ferrous sulfate
 
@@ -1722,7 +1893,7 @@ Contraindications: Hemochromatosis, hemosiderosis, hemolytic anemia
 
 Toxicity / overdose: Acute iron overdose is a pediatric emergency: GI bleeding, shock, liver failure; chelate with deferoxamine
 
-## Slide 67: St. John's wort (Hypericum perforatum)
+## Slide 81: St. John's wort (Hypericum perforatum)
 - [heading] DRUG PROFILE
 - [heading] St. John's wort (Hypericum perforatum)
 - **Herbal supplement (CYP/P-gp inducer)**
@@ -1738,7 +1909,7 @@ Toxicity / overdose: Acute iron overdose is a pediatric emergency: GI bleeding, 
 - **Photosensitivity, GI upset, dizziness, dry mouth**
 - **With SSRIs, transplant drugs, HIV protease inhibitors, oral contraceptives, warfarin**
 - **Serotonin syndrome with serotonergic drugs; lowers levels of warfarin, cyclosporine, contraceptives**
-- **81**
+- **Standard adult dosing for teaching; verify against current prescribing information.**
 
 > Speaker notes: Drug: St. John's wort (Hypericum perforatum)
 
@@ -1756,7 +1927,7 @@ Contraindications: With SSRIs, transplant drugs, HIV protease inhibitors, oral c
 
 Toxicity / overdose: Serotonin syndrome with serotonergic drugs; lowers levels of warfarin, cyclosporine, contraceptives
 
-## Slide 68: Ginkgo biloba
+## Slide 82: Ginkgo biloba
 - [heading] DRUG PROFILE
 - [heading] Ginkgo biloba
 - **Herbal supplement**
@@ -1772,7 +1943,7 @@ Toxicity / overdose: Serotonin syndrome with serotonergic drugs; lowers levels o
 - **Headache, GI upset, dizziness**
 - **Bleeding disorders; stop before surgery**
 - **Increased bleeding with warfarin, antiplatelets, NSAIDs; seizures with seed ingestion**
-- **82**
+- **Standard adult dosing for teaching; verify against current prescribing information.**
 
 > Speaker notes: Drug: Ginkgo biloba
 
@@ -1790,7 +1961,7 @@ Contraindications: Bleeding disorders; stop before surgery
 
 Toxicity / overdose: Increased bleeding with warfarin, antiplatelets, NSAIDs; seizures with seed ingestion
 
-## Slide 69: Fish oil (omega-3 fatty acids)
+## Slide 83: Fish oil (omega-3 fatty acids)
 - [heading] DRUG PROFILE
 - [heading] Fish oil (omega-3 fatty acids)
 - **Dietary supplement**
@@ -1806,7 +1977,7 @@ Toxicity / overdose: Increased bleeding with warfarin, antiplatelets, NSAIDs; se
 - **Fishy aftertaste, belching, diarrhea**
 - **Fish or shellfish allergy (caution)**
 - **Bleeding risk at high doses with anticoagulants; atrial fibrillation at high doses**
-- **83**
+- **Standard adult dosing for teaching; verify against current prescribing information.**
 
 > Speaker notes: Drug: Fish oil (omega-3 fatty acids)
 
@@ -1824,8 +1995,8 @@ Contraindications: Hypersensitivity; fish or shellfish allergy (caution)
 
 Toxicity / overdose: Bleeding risk at high doses with anticoagulants; atrial fibrillation at high doses
 
-## Slide 70: Supporting Drugs at a Glance
-- **Appendix 2: DRUG PROFILE · SUPPORTING**
+## Slide 84: Supporting Drugs at a Glance
+- [heading] DRUG PROFILE · SUPPORTING
 - [heading] Supporting Drugs at a Glance
 - **Vancomycin and fidaxomicin** **— oral treatment for C. difficile infection**
 - **Vitamin K and 4-factor PCC** **— reverse warfarin**
@@ -1838,19 +2009,17 @@ Toxicity / overdose: Bleeding risk at high doses with anticoagulants; atrial fib
 - **Deferoxamine** **— chelator used for iron overdose**
 - **Ketoconazole** **— CYP3A4 inhibitor that raises budesonide exposure**
 - **Listed for context; not profiled in detail.**
-- **84**
 
 > Speaker notes: Listed for context; not profiled in detail.
 
 Ten compact rows cover the supporting drugs: antibiotics and antidotes for C. difficile, opioid overdose, iron and warfarin reversal, thiopurine and B12 interactions, St. John's wort interactions, folate antagonism, and CYP3A4 inhibition of budesonide.
 
-## Slide 71: Image Attribution
-- [heading] APPENDIX 3
+## Slide 85: Image Attribution
+- [heading] APPENDIX
 - [heading] Image Attribution
 - **●  Original figures in this deck:** Figures 2, 4, 7, 8 and 10 (Laxative Onset of Action by Mechanism; Step Therapy in Inflammatory Bowel Disease; Biologic & Targeted Therapies in IBD: Where Each Class Acts; Fat-Soluble vs. Water-Soluble Vitamins: Storage and Toxicity Risk; Vitamin K and CYP3A4 Inducers: A Classic Drug-Nutrient Interaction) were generated by the course director using the AI tool Claude to illustrate standard, non-copyrighted pharmacologic concepts. They are original diagrams, not reproduced from Katzung’s Basic and Clinical Pharmacology or any other copyrighted source.
 - **●  Mechanism illustrations** (AI-generated, illustrative, not reproduced from copyrighted sources; schematic and not to scale): laxative classes (Figure 1, slide 5); loperamide and diphenoxylate (Figure 3, slide 10); 5-ASA (Figure 5, slide 17); azathioprine and 6-MP (Figure 6, slide 19); vitamin B12 absorption (Figure 9, slide 33); warfarin and vitamin K cycle (Figure 11, slide 35).
 - **●  Reference:** Anthropic. (2026). Claude (Sonnet 5) [Large language model]. https://claude.ai
-- **85**
 
 _[1 small image(s)/icons]_
 
