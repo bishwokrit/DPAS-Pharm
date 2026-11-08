@@ -2165,3 +2165,44 @@ figure.vz-arrive { animation: vz-arrive 1.3s cubic-bezier(.2,.8,.2,1); }
 .cs-val.zero { fill: var(--text-2); font-weight: 500; }
 @media (max-width: 600px) { .cs-kpis, .cs-cards { grid-template-columns: 1fr 1fr; gap: 10px; } .cs-kpi, .cs-card { padding: 12px 14px; } .cs-kpi strong, .cs-big { font-size: 22px; } .cs-kpi .cs-kpi-w { font-size: 19px; } .cs-ch { font-size: 13px; } }
 .cs-foot a { text-decoration: underline; text-underline-offset: 2px; }
+.cs-ctl-l { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.cs-hit.ro { cursor: default; }
+.cs-yourtag { font-size: 12px; font-weight: 700; padding: 2px 9px; border-radius: 980px; background: var(--surface); color: var(--text); border: 1.5px solid var(--c); }
+.cs-exc.na a { text-decoration: underline; text-underline-offset: 2px; }
+/* standing: badges, rings, celebration */
+.cs-below { opacity: .32; transition: opacity .2s; }
+.cs-you .halo { opacity: .35; transform-box: fill-box; transform-origin: center; animation: cs-halo 2.2s ease-out infinite; }
+@keyframes cs-halo { 0% { transform: scale(1); opacity: .45; } 100% { transform: scale(2.6); opacity: 0; } }
+.cs-standing { display: flex; align-items: center; gap: 10px; margin: 4px 0 12px; padding: 11px 14px; border-radius: 14px; background: var(--surface-2); font-size: 14.5px; }
+.cs-standing svg { flex: none; width: 18px; height: 18px; color: var(--text-2); }
+.cs-standing.up { background: color-mix(in srgb, var(--good) 14%, var(--surface)); } .cs-standing.up svg { color: var(--good); }
+.cs-standing.top { background: linear-gradient(100deg, color-mix(in srgb, #ffb340 22%, var(--surface)), color-mix(in srgb, var(--violet) 16%, var(--surface))); } .cs-standing.top svg { color: #e09a1a; }
+.cs-exc { position: relative; transition: box-shadow .35s, background .35s; }
+.cs-exc.tier-top { box-shadow: 0 0 0 1.5px color-mix(in srgb, #f5b335 70%, transparent), 0 8px 26px color-mix(in srgb, #f5b335 22%, transparent); }
+.cs-exc.tier-up { box-shadow: 0 0 0 1.5px color-mix(in srgb, var(--good) 45%, transparent); }
+.cs-row { display: flex; align-items: center; gap: 14px; margin-top: 8px; }
+.cs-ring-w { position: relative; width: 74px; height: 74px; flex: none; }
+.cs-ring { width: 100%; height: 100%; transform: rotate(-90deg); }
+.cs-ring circle { fill: none; stroke-width: 6; }
+.cs-ring .trk { stroke: color-mix(in srgb, var(--text) 10%, transparent); }
+.cs-ring .val { stroke: var(--c); stroke-linecap: round; transition: stroke-dashoffset .45s cubic-bezier(.2,.8,.2,1); }
+.tier-top .cs-ring .val { stroke: #f0a92a; }
+.cs-ring-t { position: absolute; inset: 0; display: grid; place-content: center; text-align: center; line-height: 1; }
+.cs-ring-t .cs-pn { font-size: 19px; font-weight: 750; letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+.cs-ring-t small { font-size: 10px; color: var(--text-2); margin-top: 2px; }
+.cs-info { min-width: 0; display: flex; flex-direction: column; gap: 5px; }
+.cs-badge { align-self: flex-start; display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 700; padding: 4px 10px 4px 8px; border-radius: 980px; background: var(--surface); color: var(--text); cursor: help; }
+.tier-top .cs-badge { background: linear-gradient(100deg, #ffcf5c, #f5a524); color: #3a2400; }
+.tier-up .cs-badge { background: color-mix(in srgb, var(--good) 20%, var(--surface)); }
+.tier-up .cs-badge svg { color: var(--good); }
+.tier-par .cs-badge svg { color: var(--accent); }
+.tier-low .cs-badge svg { color: var(--text-2); }
+.cs-badge.pop { animation: cs-pop .45s cubic-bezier(.3,1.6,.5,1); }
+@keyframes cs-pop { 0% { transform: scale(.85); } 100% { transform: scale(1); } }
+.cs-next { margin: 0; font-size: 12.5px; color: var(--text-2); } .cs-next strong { color: var(--text); font-weight: 650; }
+.cs-sub { gap: 2px 10px; }
+.cs-spark { position: absolute; left: 50%; top: 50%; width: 6px; height: 6px; margin: -3px; border-radius: 50%; background: #f5b335; pointer-events: none; animation: cs-spark .85s cubic-bezier(.15,.7,.3,1) forwards; }
+.cs-spark.alt { background: var(--c); width: 4px; height: 4px; margin: -2px; }
+@keyframes cs-spark { 0% { transform: translate(0,0) scale(1); opacity: 1; } 100% { transform: translate(var(--dx), var(--dy)) scale(.3); opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .cs-you .halo, .cs-badge.pop { animation: none; } .cs-ring .val { transition: none; } }
+.cs-slide[hidden], .cs-presets[hidden], .cs-standing[hidden], .cs-edge[hidden] { display: none; }

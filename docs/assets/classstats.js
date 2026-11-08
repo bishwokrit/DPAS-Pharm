@@ -67,11 +67,12 @@
   <div class="cs-vtabs" role="tablist" aria-label="Choose a view">${[["curve", "Curves"], ["bands", "Score bands"], ["compare", "Compare"], ["table", "All stats"]].map(([v, l], i) => `<button type="button" role="tab" data-view="${v}" aria-selected="${!i}">${l}</button>`).join("")}</div>
 
   <div class="cs-view" data-view="curve">
-    <div class="cs-ctl">${seg("group", [["exam", "Exams"], ["quiz", "Quizzes"]], "exam", "Assessment group")}
+    <div class="cs-ctl"><div class="cs-ctl-l">${seg("group", [["exam", "Exams"], ["quiz", "Quizzes"]], "exam", "Assessment group")}${seg("mode", [["try", "Try a score"], ["mine", "My scores"]], Object.keys(mine()).length ? "mine" : "try", "Which score to show")}</div>
       <div class="cs-ctl-r">${seg("zoom", [["all", "Full"], ["mid", "85–100"], ["top", "90–100"]], "all", "Zoom")}</div></div>
     <div class="cs-chart" id="cs-dist"></div>
     <div class="cs-slide"><label for="cs-score">Try a score</label><input type="range" id="cs-score" min="0" max="100" step="0.5" value="90"><output id="cs-score-out">90%</output></div>
     <div class="cs-presets">${[60, 70, 80, 85, 90, 95, 98, 100].map((s) => `<button type="button" class="sch-chip" data-s="${s}">${s}</button>`).join("")}</div>
+    <p class="cs-standing" id="cs-standing" hidden></p>
     <div class="cs-ex" id="cs-ex"></div>
     <p class="cs-foot small muted" id="cs-foot"></p>
   </div>
@@ -140,7 +141,7 @@
   }
 
   // ---- Curves view: curves + score line + "You" dots ----
-  let group = "exam", zoom = "all", sdFor = null;
+  let group = "exam", zoom = "all", sdFor = null, mode = Object.keys(mine()).length ? "mine" : "try";
   const slider = root.querySelector("#cs-score");
   const ZOOM = { exam: { mid: [85, "85–100"], top: [90, "90–100"] }, quiz: { mid: [70, "70–100"], top: [85, "85–100"] } };
   const domain = () => (zoom !== "all" ? [ZOOM[group][zoom][0], model === "normal" ? 105 : 100] : model === "normal" ? [group === "quiz" ? 40 : 60, 112] : group === "quiz" ? [50, 100] : [70, 100]);
@@ -159,15 +160,23 @@
     if (g) [-2, -1, 1, 2].forEach((k) => { const x = g.mean + k * g.sd; if (x >= x0 && x <= x1) s += `<line x1="${X(x)}" x2="${X(x)}" y1="${P.t + 14}" y2="${h - P.b}" style="stroke:${COLOR[g.id]}" class="cs-sdl"/><text x="${X(x)}" y="${h - P.b - 4}" text-anchor="middle" class="cs-sdt" style="fill:${COLOR[g.id]}">${k > 0 ? "+" : "−"}${Math.abs(k)}SD</text>`; });
     series.forEach(({ a, pts }, si) => {
       const c = COLOR[a.id], d = pts.map((p, i) => `${i ? "L" : "M"}${X(p[0]).toFixed(1)},${Y(p[1]).toFixed(1)}`).join("");
-      s += `<path d="${d}L${X(x1)},${Y(0)}L${X(x0)},${Y(0)}Z" style="fill:${c}" class="cs-area"/><path d="${d}" style="stroke:${c}" class="cs-line"/>`;
+      s += `<path d="${d}L${X(x1)},${Y(0)}L${X(x0)},${Y(0)}Z" style="fill:${c}" class="cs-area"/>`;
+      // the share of the class below the score, shaded
+      const xs = mode === "try" ? score : me[a.id];
+      if (xs !== undefined && xs > x0) {
+        const below = pts.filter((p) => p[0] <= xs), m2 = M(a), xe = Math.min(xs, x1);
+        below.push([xe, m2.pdf(xe)]);
+        s += `<path d="${below.map((p, i) => `${i ? "L" : "M"}${X(p[0]).toFixed(1)},${Y(p[1]).toFixed(1)}`).join("")}L${X(xe)},${Y(0)}L${X(x0)},${Y(0)}Z" style="fill:${c}" class="cs-below"/>`;
+      }
+      s += `<path d="${d}" style="stroke:${c}" class="cs-line"/>`;
       if (a.mean >= x0 && a.mean <= x1) s += `<line x1="${X(a.mean)}" x2="${X(a.mean)}" y1="${Y(0)}" y2="${P.t + 6 + si * 14}" style="stroke:${c}" class="cs-mean"/>${w > 520 ? `<text x="${X(a.mean) - 5}" y="${P.t + 10 + si * 14}" text-anchor="end" class="cs-ml" style="fill:${c}">avg ${f(a.mean, 1)}</text>` : ""}`;
     });
     s += `<line x1="${P.l}" x2="${w - P.r}" y1="${Y(0)}" y2="${Y(0)}" class="cs-axis"/>`;
     // your calculator scores, on their own curve
-    series.forEach(({ a, m }) => { const v = me[a.id]; if (v === undefined || v < x0 || v > x1) return; s += `<g class="cs-you"><circle cx="${X(v)}" cy="${Y(m.pdf(v))}" r="7" style="stroke:${COLOR[a.id]}"/><text x="${X(v)}" y="${Y(m.pdf(v)) - 12}" text-anchor="middle">You ${f(v, 0)}</text></g>`; });
+    if (mode === "mine") series.forEach(({ a, m }) => { const v = me[a.id]; if (v === undefined || v < x0 || v > x1) return; s += `<g class="cs-you"><circle cx="${X(v)}" cy="${Y(m.pdf(v))}" r="7" class="halo" style="fill:${COLOR[a.id]}"/><circle cx="${X(v)}" cy="${Y(m.pdf(v))}" r="7" style="stroke:${COLOR[a.id]}"/><text x="${X(v)}" y="${Y(m.pdf(v)) - 12}" text-anchor="${X(v) > w - 40 ? "end" : X(v) < 40 ? "start" : "middle"}">You ${f(v, 0)}</text></g>`; });
     // the hypothetical score line
-    if (score >= x0 && score <= x1) s += `<g class="cs-pin"><line x1="${X(score)}" x2="${X(score)}" y1="${P.t - 6}" y2="${h - P.b}"/><rect x="${X(score) - 22}" y="${P.t - 24}" width="44" height="20" rx="10"/><text x="${X(score)}" y="${P.t - 10}" text-anchor="middle">${f(score, score % 1 ? 1 : 0)}%</text>${series.map(({ a, m }) => `<circle cx="${X(score)}" cy="${Y(m.pdf(score))}" r="4.5" style="fill:${COLOR[a.id]}"/>`).join("")}</g>`;
-    s += `<rect x="${P.l}" y="${P.t - 26}" width="${w - P.l - P.r}" height="${h - P.t - P.b + 26}" fill="transparent" class="cs-hit"/></svg>`;
+    if (mode === "try" && score >= x0 && score <= x1) s += `<g class="cs-pin"><line x1="${X(score)}" x2="${X(score)}" y1="${P.t - 6}" y2="${h - P.b}"/><rect x="${X(score) - 22}" y="${P.t - 24}" width="44" height="20" rx="10"/><text x="${X(score)}" y="${P.t - 10}" text-anchor="middle">${f(score, score % 1 ? 1 : 0)}%</text>${series.map(({ a, m }) => `<circle cx="${X(score)}" cy="${Y(m.pdf(score))}" r="4.5" style="fill:${COLOR[a.id]}"/>`).join("")}</g>`;
+    s += `<rect x="${P.l}" y="${P.t - 26}" width="${w - P.l - P.r}" height="${h - P.t - P.b + 26}" fill="transparent" class="cs-hit${mode === "mine" ? " ro" : ""}"/></svg>`;
     s += `<div class="cs-legend">${series.map(({ a }) => `<button type="button" class="cs-lg${sdFor === a.id ? " on" : ""}" data-sd="${a.id}" style="--c:${COLOR[a.id]}" title="Show ±1 and ±2 SD for ${a.label}"><i></i>${a.label}<span>avg ${f(a.mean, 1)} · ±SD</span></button>`).join("")}${group === "quiz" ? `<span class="cs-lg na"><i></i>${byId.q1.label} · no numbers</span>` : ""}<span class="cs-lg-note">${tag("mod")} curves, not real grades</span></div>`;
     box.innerHTML = s;
     box.querySelectorAll("[data-sd]").forEach((b) => b.addEventListener("click", () => { sdFor = sdFor === b.dataset.sd ? null : b.dataset.sd; dist(); }));
@@ -175,39 +184,121 @@
     const xAt = (e) => { const r = svg.getBoundingClientRect(); return x0 + (Math.min(w - P.r, Math.max(P.l, (e.clientX - r.left) * w / r.width)) - P.l) / (w - P.l - P.r) * (x1 - x0); };
     let drag = false;
     const setScore = (x) => { slider.value = Math.max(0, Math.min(100, Math.round(x * 2) / 2)); update(); };
-    hit.addEventListener("pointerdown", (e) => { drag = true; hit.setPointerCapture(e.pointerId); setScore(xAt(e)); hideTip(); });
+    hit.addEventListener("pointerdown", (e) => { if (mode !== "try") return; drag = true; hit.setPointerCapture(e.pointerId); setScore(xAt(e)); hideTip(); });
     hit.addEventListener("pointermove", (e) => {
       const x = xAt(e);
       if (drag) return setScore(x);
       if (e.pointerType !== "mouse") return;
-      showTip(`<strong>${f(x, 1)}%</strong>${x > 100 ? " · impossible" : ""}<br>${series.map(({ a, m }) => `<span class="cs-dot" style="background:${COLOR[a.id]}"></span>${a.short}: about ${f(100 * m.pdf(x), 1)}% of the class per point <span class="muted">(density ${m.pdf(x).toFixed(3)})</span>`).join("<br>")}<br><span class="muted">Click or drag to move your score.</span>`, e.clientX, e.clientY);
+      showTip(`<strong>${f(x, 1)}%</strong>${x > 100 ? " · impossible" : ""}<br>${series.map(({ a, m }) => `<span class="cs-dot" style="background:${COLOR[a.id]}"></span>${a.short}: about ${f(100 * m.pdf(x), 1)}% of the class per point <span class="muted">(density ${m.pdf(x).toFixed(3)})</span>`).join("<br>")}<br><span class="muted">${mode === "try" ? "Click or drag to move the score." : "Switch to Try a score to drag."}</span>`, e.clientX, e.clientY);
     });
     const stop = () => (drag = false);
     hit.addEventListener("pointerup", stop); hit.addEventListener("pointercancel", stop);
     hit.addEventListener("pointerleave", hideTip);
   }
+  // ---- standing: a badge per score, the next tier to aim for, and a small celebration for your own strong scores ----
+  const calm = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const ICON = {
+    crown: '<path d="M3 17h18l-1.5-9-4.5 4-3-6-3 6-4.5-4z" fill="currentColor"/>',
+    star: '<path d="M12 3l2.6 5.6 6.1.7-4.5 4.1 1.2 6-5.4-3-5.4 3 1.2-6-4.5-4.1 6.1-.7z" fill="currentColor"/>',
+    up: '<path d="M12 5l7 7h-4.5v7h-5v-7H5z" fill="currentColor"/>',
+    par: '<path d="M5 9h14M5 15h14" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" fill="none"/>',
+    climb: '<path d="M4 19l6-7 4 3 6-8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M15 7h5v5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>',
+  };
+  const icon = (k) => `<svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true">${ICON[k]}</svg>`;
+  const quantile = (m, q) => { let lo = 0, hi = 100; for (let k = 0; k < 40; k++) { const mid = (lo + hi) / 2; m.cdf(mid) < q ? (lo = mid) : (hi = mid); } return (lo + hi) / 2; };
+  function tierOf(a, sc, m) {
+    const p = m.cdf(sc), z = (sc - a.mean) / a.sd;
+    const T = [
+      { k: "top", ic: "crown", t: "Top score", hint: "matches the class's highest reported score", at: a.max },
+      { k: "top", ic: "star", t: "Top tier", hint: "about the top 10% under the model", at: quantile(m, 0.9) },
+      { k: "up", ic: "up", t: "Above the class", hint: "clearly above the class average (a quarter SD or more)", at: a.mean + 0.25 * a.sd },
+      { k: "par", ic: "par", t: "Right at the average", hint: "within a quarter SD of the class average", at: a.mean - 0.25 * a.sd },
+      { k: "low", ic: "climb", t: "Room to climb", hint: "below the class average", at: -Infinity },
+    ];
+    const i = sc >= a.max ? 0 : T.findIndex((x, n) => n > 0 && sc >= x.at);
+    const next = i > 0 ? T[i - 1] : null;
+    return { ...T[i], p, z, next: next && next.at <= 100 && next.at > sc ? { t: next.t, at: next.at } : null };
+  }
+  const R = 24, CIRC = 2 * Math.PI * R;
+  const shown = {};  // last number shown per card, for the count-up
+  function countTo(el, id, to) {
+    const from = shown[id] ?? to; shown[id] = to;
+    if (calm || Math.abs(to - from) < 0.5) { el.textContent = ord(to); return; }
+    const t0 = performance.now(), dur = 380;
+    cancelAnimationFrame(el._raf);
+    const step = (t) => { const k = Math.min(1, (t - t0) / dur), e = 1 - (1 - k) ** 3; el.textContent = ord(from + (to - from) * e); if (k < 1) el._raf = requestAnimationFrame(step); };
+    el._raf = requestAnimationFrame(step);
+  }
+  function burst(card) {
+    if (calm) return;
+    const box = card.querySelector(".cs-ring-w");
+    for (let k = 0; k < 16; k++) {
+      const sp = document.createElement("i"), ang = (k / 16) * 2 * Math.PI + Math.random() * 0.3, d = 34 + Math.random() * 22;
+      sp.className = "cs-spark"; sp.style.setProperty("--dx", `${Math.cos(ang) * d}px`); sp.style.setProperty("--dy", `${Math.sin(ang) * d}px`); sp.style.animationDelay = `${Math.random() * 80}ms`;
+      if (k % 3 === 0) sp.classList.add("alt");
+      box.append(sp); setTimeout(() => sp.remove(), 1000);
+    }
+  }
+  const celebrated = new Set();
+  let sig = "";
   function results() {
-    const s = +slider.value, me = mine();
-    root.querySelector("#cs-score-out").textContent = `${s}%`;
-    root.querySelectorAll(".cs-presets button").forEach((b) => b.classList.toggle("on", +b.dataset.s === s));
-    const ids = GROUPS[group].ids;
-    root.querySelector("#cs-ex").innerHTML = ids.map((id) => {
-      const a = byId[id];
-      if (a.mean === null) return `<div class="cs-exc na" style="--c:${COLOR[id]}"><strong>${a.label}</strong><p class="small muted">No numbers released — can't estimate.</p></div>`;
-      const m = M(a), p = m.cdf(s), z = (s - a.mean) / a.sd, you = me[id];
-      const edge = s < a.min ? "below the lowest reported score" : s >= a.max ? "top score — likely shared, not a rank" : "";
-      return `<div class="cs-exc" style="--c:${COLOR[id]}"><div class="cs-ch"><strong>${a.label}</strong></div>
-        <div class="cs-pv"><span class="cs-pn">${ord(100 * p)}</span><span class="small muted">est. percentile</span></div>
-        <div class="cs-pbar" aria-hidden="true"><span style="width:${(100 * p).toFixed(1)}%"></span></div>
-        <p class="cs-sub"><span title="Difference from the class average">${sgn(s - a.mean)} vs avg</span><span title="Z-score: (score − average) ÷ SD">z ${sgn(z, 2)}</span><span title="Estimated students scoring below / above (of ${N} assumed)">≈${f(N * p, 0)} below · ≈${f(N * (1 - p), 0)} above</span></p>
-        ${edge ? `<p class="small muted cs-edge">${edge}</p>` : ""}
-        ${you !== undefined ? `<p class="cs-yours"><span>Your ${f(you, 1).replace(/\.0$/, "")}%</span> ≈ ${ord(100 * m.cdf(you))} percentile</p>` : ""}</div>`;
-    }).join("");
+    const s0 = +slider.value, me = mine(), mineMode = mode === "mine";
+    root.querySelector("#cs-score-out").textContent = `${s0}%`;
+    root.querySelector(".cs-slide").hidden = root.querySelector(".cs-presets").hidden = mineMode;
+    root.querySelectorAll(".cs-presets button").forEach((b) => b.classList.toggle("on", +b.dataset.s === s0));
+    const ids = GROUPS[group].ids, box = root.querySelector("#cs-ex");
+    const scoreOf = (id) => (mineMode ? me[id] : s0);
+    const newSig = `${group}|${mode}|${ids.map((id) => (byId[id].mean === null ? "n" : scoreOf(id) === undefined ? "u" : "s")).join("")}`;
+    if (newSig !== sig) {
+      sig = newSig;
+      box.innerHTML = ids.map((id) => {
+        const a = byId[id];
+        if (a.mean === null) return `<div class="cs-exc na" style="--c:${COLOR[id]}"><strong>${a.label}</strong><p class="small muted">No numbers released, so no estimate.</p></div>`;
+        if (scoreOf(id) === undefined) return `<div class="cs-exc na" style="--c:${COLOR[id]}"><strong>${a.label}</strong><p class="small muted">No score entered yet. <a href="#calc">Add it in the calculator</a>.</p></div>`;
+        return `<div class="cs-exc" data-id="${id}" style="--c:${COLOR[id]}">
+          <div class="cs-ch"><strong>${a.label}</strong>${mineMode ? '<span class="cs-yourtag"></span>' : ""}</div>
+          <div class="cs-row"><div class="cs-ring-w"><svg class="cs-ring" viewBox="0 0 60 60" aria-hidden="true"><circle cx="30" cy="30" r="${R}" class="trk"/><circle cx="30" cy="30" r="${R}" class="val" style="stroke-dasharray:${CIRC};stroke-dashoffset:${CIRC}"/></svg><div class="cs-ring-t"><span class="cs-pn"></span><small>pct.</small></div></div>
+          <div class="cs-info"><span class="cs-badge"></span><p class="cs-sub"></p><p class="cs-next"></p></div></div>
+          <p class="small muted cs-edge" hidden></p></div>`;
+      }).join("");
+      shown.length = 0; Object.keys(shown).forEach((k) => delete shown[k]);
+    }
+    const tiers = [];
+    box.querySelectorAll(".cs-exc[data-id]").forEach((card) => {
+      const id = card.dataset.id, a = byId[id], sc = scoreOf(id), m = M(a), T = tierOf(a, sc, m);
+      tiers.push([a, T]);
+      card.className = `cs-exc tier-${T.k}`;
+      card.querySelector(".cs-ring .val").style.strokeDashoffset = CIRC * (1 - T.p);
+      const atTop = sc >= a.max;
+      if (atTop) { card.querySelector(".cs-pn").textContent = "Top"; shown[id] = 100; } else countTo(card.querySelector(".cs-pn"), id, 100 * T.p);
+      const tg = card.querySelector(".cs-yourtag"); if (tg) tg.textContent = `You · ${f(sc, 1).replace(/\.0$/, "")}%`;
+      const bd = card.querySelector(".cs-badge"), was = bd.dataset.k;
+      bd.innerHTML = `${icon(T.ic)}${T.t}`; bd.title = `${T.hint} (estimate)`; bd.dataset.k = T.t;
+      if (was && was !== T.t) { bd.classList.remove("pop"); void bd.offsetWidth; bd.classList.add("pop"); }
+      card.querySelector(".cs-sub").innerHTML = `<span title="Difference from the class average">${sgn(sc - a.mean)} vs avg</span>${atTop ? "<span>ties the highest score</span>" : `<span title="Estimated students below you, of ${N} assumed">≈${f(N * T.p, 0)} of ${N} below</span>`}`;
+      card.querySelector(".cs-next").innerHTML = T.next ? `Next: <strong>${T.next.t}</strong> at ≈${f(T.next.at, 1)}%` : T.k === "top" ? "Nothing higher to reach" : "";
+      const edge = card.querySelector(".cs-edge"), et = sc < a.min ? "Below the lowest reported score." : sc >= a.max ? "Several students may share the top score, so this isn't a rank." : "";
+      edge.hidden = !et; edge.textContent = et;
+      const key = `${id}:${sc}`;
+      if (mineMode && (T.k === "top" || T.k === "up") && !celebrated.has(key) && card.offsetParent) { celebrated.add(key); setTimeout(() => burst(card), 250); }
+    });
+    // one-line standing summary for your own scores
+    const st = root.querySelector("#cs-standing");
+    const names = (k) => tiers.filter(([, T]) => T.k === k).map(([a]) => a.label);
+    const list = (xs) => (xs.length > 1 ? `${xs.slice(0, -1).join(", ")} and ${xs[xs.length - 1]}` : xs[0]);
+    let msg = "";
+    if (mineMode && tiers.length) {
+      if (names("top").length) msg = `${icon("star")}<span><strong>Outstanding.</strong> ${list(names("top"))}: top tier of the class.${names("up").length ? ` Above the class on ${list(names("up"))}.` : ""}</span>`;
+      else if (names("up").length) msg = `${icon("up")}<span><strong>Nice work.</strong> Above the class on ${list(names("up"))}.</span>`;
+      else if (names("par").length) msg = `${icon("par")}<span><strong>Right at the class average</strong> on ${list(names("par"))}. A few points moves you up a tier.</span>`;
+      else msg = `${icon("climb")}<span><strong>Room to climb.</strong> Your next tier is marked on each card.</span>`;
+    }
+    st.hidden = !msg; st.className = `cs-standing ${names("top").length ? "top" : names("up").length ? "up" : ""}`; st.innerHTML = msg;
     const any = ALL.some((a) => me[a.id] !== undefined);
     const ex = GROUPS[group].ids.map((i) => byId[i]).filter((a) => a.mean !== null);
     let rel = "";
-    if (ex.length > 1) { const zs = ex.map((a) => [a, (s - a.mean) / a.sd]).sort((x, y) => y[1] - x[1]); rel = `Against each exam's own class, ${s}% stands higher on ${zs[0][0].short} than on ${zs[1][0].short}. `; }
-    root.querySelector("#cs-foot").innerHTML = `${rel}${tag("mod")} Estimates from the ${MODELS[model].short.toLowerCase()} curve, ${N} students assumed — not real ranks.${any ? "" : ` <a href="#calc">Enter your scores in the calculator</a> to see where you sit.`}`;
+    if (!mineMode && ex.length > 1) { const zs = ex.map((a) => [a, (s0 - a.mean) / a.sd]).sort((x, y) => y[1] - x[1]); rel = `Against each exam's own class, ${s0}% stands higher on ${zs[0][0].short} than on ${zs[1][0].short}. `; }
+    root.querySelector("#cs-foot").innerHTML = `${rel}${tag("mod")} Estimates from the ${MODELS[model].short.toLowerCase()} curve, ${N} students assumed — not real ranks.${any || mineMode ? "" : ` <a href="#calc">Enter your scores in the calculator</a>, then pick My scores.`}`;
   }
   const update = () => { dist(); results(); hist(); };
   slider.addEventListener("input", update);
@@ -295,6 +386,7 @@
     if (k === "model") { model = v; moments(); update(); compare(); }
     if (k === "group") { group = v; sdFor = null; zoom = "all"; root.querySelectorAll('[data-seg="zoom"] button').forEach((x) => { x.classList.toggle("on", x.dataset.v === "all"); x.setAttribute("aria-pressed", x.dataset.v === "all"); if (x.dataset.v !== "all") x.textContent = ZOOM[v][x.dataset.v][1]; }); dist(); results(); }
     if (k === "zoom") { zoom = v; dist(); }
+    if (k === "mode") { mode = v; dist(); results(); }
     if (k === "hist") { histA = v; hist(); }
     if (k === "cmp") { cmp = v; compare(); }
   }));
