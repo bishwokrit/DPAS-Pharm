@@ -2324,3 +2324,16 @@ html[data-pmotion="off"] .vz-ch { animation: none; opacity: 1; }
 .dx-nonesum dd .dx-none::first-letter { text-transform: uppercase; }
 @media print { .dx-card .dx-row.is-none { display: grid; } .dx-nonesum { display: none; } }
 .vz-ch.on > i { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 35%, var(--surface)); }
+.vz-an-lane { fill: color-mix(in srgb, var(--vz-text, #888) 5%, transparent); stroke: color-mix(in srgb, var(--vz-text, #888) 10%, transparent); }
+.vz-an-stairs { fill: color-mix(in srgb, var(--vz-1, #0a84ff) 8%, transparent); stroke: color-mix(in srgb, var(--vz-1, #0a84ff) 30%, transparent); stroke-width: 1.5; stroke-linejoin: round; }
+.vz-an-lane { fill: color-mix(in srgb, var(--vz-text, #888) 5%, transparent); stroke: color-mix(in srgb, var(--vz-text, #888) 10%, transparent); }
+.vz-an-stairs { fill: color-mix(in srgb, var(--vz-1, #0a84ff) 8%, transparent); stroke: color-mix(in srgb, var(--vz-1, #0a84ff) 30%, transparent); stroke-width: 1.5; stroke-linejoin: round; }
+
+/* home, first screen: the headline, the three status cards and the start of this week's lecture all fit above the fold */
+@media screen and (min-width: 761px) {
+  .first-screen { min-height: 0; justify-content: flex-start; padding: clamp(40px, 7svh, 76px) 0 12px; }
+  .first-screen .home-hero { padding-bottom: 22px; }
+  .first-screen .hero-title { font-size: clamp(44px, 6.2vw, 72px); }
+  .first-screen + .section { padding-top: 34px; }
+  .first-screen .scroll-cue { display: none; }
+}

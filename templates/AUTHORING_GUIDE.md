@@ -102,6 +102,21 @@ Every figure needs a `caption` and an interactive twin. Either a dedicated diagr
 `site_src/assets/viz.js`, or give the figure `"viz": {"type": "dose-response"}` (types are listed in the brief;
 `"bars"` takes your own numbers: `{"type": "bars", "title": …, "unit": "%", "bars": [{"label", "value", "note"}]}`).
 
+A `"pathway"` figure (nodes, edges, drugs) is the workhorse. Rules that keep it accurate and teachable:
+- **Every drug shows a consequence.** Give each drug `at` (the node or `"a>b"` edge it acts on) and what follows:
+  `off` (switched off), `less`, `more`, or, for a drug that drives its own sequence, the `ON` steps in `work/scenes.py`.
+  A drug that docks and changes nothing teaches nothing.
+- **Never infer an effect.** List only what the figure's own slide states. If the slide does not say which way a
+  downstream value moves, leave it out and say so in the drug's `note`.
+- **Labels that already carry a direction** ("Gluconeogenesis falls") are lit as steps (`ON`), never marked more/less.
+- **The end of the chain is the clinical point.** The last node is what the student should be able to predict
+  (the lab value, the symptom, the adverse effect).
+- **Draw it where it happens.** Add the figure to `ANAT` in `work/scenes.py` with a backdrop (`cell`, `body`, `gut`,
+  `vessel`, `joint`, `bladder`, `nerve`). Concept figures that are not pathways use `steps` (a treatment ladder) or
+  `plain` (labelled lanes) with `noring`, and a `verb` such as "Sits on" or "Treats".
+- **Say what is illustrative.** Captions for original diagrams start "Schematic (illustrative)"; meters show direction,
+  not measured amounts.
+
 ## After writing
 Run `./run.sh new <LEC>`. It builds the deck, NotebookLM pack, audit, standard checks, practice exam,
 website and site checks, and ends with a PASS/FAIL report card. Read `outputs/<LEC>/<LEC>_audit.md`

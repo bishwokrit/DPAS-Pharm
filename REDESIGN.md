@@ -14,12 +14,20 @@ A running record of the design overhaul, so any session can pick it up.
 - **Drug cards.** Fields not taught yet fold into one line instead of repeating the same sentence.
 - **Accuracy.** ADH figure now shows sodium falling with desmopressin and rising with tolvaptan.
 
+- **Concept figures.** Step therapy (L06) is a ladder, DMARD screening (L03) a checklist and parathyroid strategies (L08)
+  two lanes, instead of the generic boxes.
+- **Hormone axis.** Stronger feedback, and with an outside hormone the readout separates "hormone + drug" from what the
+  gland itself makes.
+- **Ulcer balance.** H. pylori alone now tips it toward injury. **PTH loop.** Teriparatide no longer docks on resorption.
+- **Home.** Headline, the three status cards and this week's lecture fit on the first screen.
+- **Sidekick prompt.** Tutors in a chain (target, change, effect, predicted adverse effect) and explains wrong answers.
+- **Rules.** Diagram rules added to `CLAUDE.md` and `templates/AUTHORING_GUIDE.md`.
+- **Practice.** Harder B sets for Units 4, 5 and 6 (20 questions, 24 minutes each).
+
 ## Next (highest value first)
-1. Teriparatide (L04 S43) still shows no downstream change: needs a formation step in the figure's nodes.
-2. Emesis, hormone-axis and seesaw scenes: redraw on anatomy, add the same causal chain.
-3. Three figures still on the generic layout: L06 S15 step therapy, L03 S57 screening, L08 S24 parathyroid.
-4. Home page: tighten the first screen (three status cards + this week's lecture above the fold).
-5. Harder practice sets for Units 4–6.
+1. Grow the Unit 4–6 B sets from 20 to 30 questions to match Units 2 and 3.
+2. Seesaw and cycle figures: add the same in-words causal chain the anatomy figures have.
+3. Emesis and hormone-axis scenes: richer anatomy (currently schematic organs).
 
 ## Rules of the road
 - Diagram facts come only from the slide the figure cites. Never infer a downstream effect: list it in `work/scenes.py`.

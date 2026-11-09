@@ -1,0 +1,1334 @@
+[
+ {
+  "topic": "Potassium-sparing diuretics",
+  "objectives": [
+   "IO5.2",
+   "IO5.3"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A 55-year-old man with resistant hypertension did well on spironolactone but has painful breast enlargement. Potassium is normal. Which change keeps the benefit and addresses the complaint?",
+  "correct": "Switch to eplerenone",
+  "distractors": [
+   {
+    "text": "Switch to amiloride plus a potassium supplement",
+    "why": "Supplements add hyperkalemia risk with potassium-sparing drugs."
+   },
+   {
+    "text": "Switch to triamterene and add trimethoprim",
+    "why": "Trimethoprim adds hyperkalemia risk."
+   },
+   {
+    "text": "Continue spironolactone and add finasteride",
+    "why": "That does not address the antiandrogen effect."
+   },
+   {
+    "text": "Switch to acetazolamide for the same receptor effect",
+    "why": "It acts in the proximal tubule, not at the aldosterone receptor."
+   }
+  ],
+  "why_correct": "Spironolactone has antiandrogen effects (gynecomastia, menstrual irregularities) that eplerenone largely avoids. Both block the aldosterone receptor.",
+  "takeaway": "Gynecomastia on spironolactone: eplerenone.",
+  "discriminator": "Same receptor, fewer antiandrogen effects.",
+  "src": "S17",
+  "id": "U5B-009",
+  "answer": "B",
+  "options": {
+   "A": {
+    "text": "Continue spironolactone and add finasteride",
+    "why": "That does not address the antiandrogen effect.",
+    "correct": false
+   },
+   "B": {
+    "text": "Switch to eplerenone",
+    "why": "Spironolactone has antiandrogen effects (gynecomastia, menstrual irregularities) that eplerenone largely avoids. Both block the aldosterone receptor.",
+    "correct": true
+   },
+   "C": {
+    "text": "Switch to acetazolamide for the same receptor effect",
+    "why": "It acts in the proximal tubule, not at the aldosterone receptor.",
+    "correct": false
+   },
+   "D": {
+    "text": "Switch to amiloride plus a potassium supplement",
+    "why": "Supplements add hyperkalemia risk with potassium-sparing drugs.",
+    "correct": false
+   },
+   "E": {
+    "text": "Switch to triamterene and add trimethoprim",
+    "why": "Trimethoprim adds hyperkalemia risk.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L09/index.html#potassium-sparing-cai-osmotic-diuretics",
+   "label": "Study this: L09 · Part 3 →"
+  }
+ },
+ {
+  "topic": "Calcium channel blockers",
+  "objectives": [
+   "IO5.6",
+   "IO5.2"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A 66-year-old on metoprolol after a myocardial infarction needs a calcium channel blocker for blood pressure. Which choice avoids a conduction problem, and what should she be told to expect?",
+  "correct": "Amlodipine; ankle swelling can occur",
+  "distractors": [
+   {
+    "text": "Verapamil; constipation can occur",
+    "why": "Verapamil with a beta-blocker risks bradycardia and AV block."
+   },
+   {
+    "text": "Diltiazem; ankle swelling can occur",
+    "why": "Diltiazem with a beta-blocker carries the same conduction risk."
+   },
+   {
+    "text": "Amlodipine; a slow pulse can occur",
+    "why": "Dihydropyridines cause reflex tachycardia, not bradycardia."
+   },
+   {
+    "text": "Verapamil; reflex tachycardia can occur",
+    "why": "Verapamil slows the heart."
+   }
+  ],
+  "why_correct": "Diltiazem or verapamil with a beta-blocker risks bradycardia and AV block; dihydropyridines pair with beta-blockers without that risk. Dihydropyridines cause peripheral edema and reflex tachycardia.",
+  "takeaway": "With a beta-blocker, choose a dihydropyridine.",
+  "discriminator": "Vessel-selective vs heart-slowing CCBs.",
+  "src": "S13; S22",
+  "id": "U5B-016",
+  "answer": "C",
+  "options": {
+   "A": {
+    "text": "Verapamil; constipation can occur",
+    "why": "Verapamil with a beta-blocker risks bradycardia and AV block.",
+    "correct": false
+   },
+   "B": {
+    "text": "Amlodipine; a slow pulse can occur",
+    "why": "Dihydropyridines cause reflex tachycardia, not bradycardia.",
+    "correct": false
+   },
+   "C": {
+    "text": "Amlodipine; ankle swelling can occur",
+    "why": "Diltiazem or verapamil with a beta-blocker risks bradycardia and AV block; dihydropyridines pair with beta-blockers without that risk. Dihydropyridines cause peripheral edema and reflex tachycardia.",
+    "correct": true
+   },
+   "D": {
+    "text": "Diltiazem; ankle swelling can occur",
+    "why": "Diltiazem with a beta-blocker carries the same conduction risk.",
+    "correct": false
+   },
+   "E": {
+    "text": "Verapamil; reflex tachycardia can occur",
+    "why": "Verapamil slows the heart.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L09/index.html#loop-thiazide-diuretics",
+   "label": "Study this: L09 · Part 2 →"
+  }
+ },
+ {
+  "topic": "Triple whammy",
+  "objectives": [
+   "IO5.6",
+   "IO5.5"
+  ],
+  "sg": [
+   "U5-R12"
+  ],
+  "kind": "vignette",
+  "stem": "A 74-year-old takes losartan and furosemide. After a week of over-the-counter ibuprofen for knee pain, creatinine has doubled. Which explanation is most complete?",
+  "correct": "Afferent constriction, efferent dilation and volume loss together",
+  "distractors": [
+   {
+    "text": "Ibuprofen alone is directly toxic to the renal tubules",
+    "why": "The lecture's point is the three combined hemodynamic hits."
+   },
+   {
+    "text": "Losartan caused bradykinin build-up in the glomerulus",
+    "why": "ARBs do not act through bradykinin."
+   },
+   {
+    "text": "Furosemide caused hyperkalemia that injured the kidney",
+    "why": "Loops lower potassium."
+   },
+   {
+    "text": "Efferent constriction from ibuprofen raised filtration",
+    "why": "NSAIDs constrict the afferent arteriole and filtration falls."
+   }
+  ],
+  "why_correct": "NSAID (afferent constriction) + ACE inhibitor or ARB (efferent dilation) + diuretic (volume depletion): filtration pressure collapses. Common, often missed and preventable; ask about OTC NSAIDs.",
+  "takeaway": "ACEi/ARB + diuretic + NSAID = AKI.",
+  "discriminator": "Each drug alone is tolerated; the three together are not.",
+  "src": "S23; S24; SG U5-R12",
+  "id": "U5B-014",
+  "answer": "B",
+  "options": {
+   "A": {
+    "text": "Furosemide caused hyperkalemia that injured the kidney",
+    "why": "Loops lower potassium.",
+    "correct": false
+   },
+   "B": {
+    "text": "Afferent constriction, efferent dilation and volume loss together",
+    "why": "NSAID (afferent constriction) + ACE inhibitor or ARB (efferent dilation) + diuretic (volume depletion): filtration pressure collapses. Common, often missed and preventable; ask about OTC NSAIDs.",
+    "correct": true
+   },
+   "C": {
+    "text": "Efferent constriction from ibuprofen raised filtration",
+    "why": "NSAIDs constrict the afferent arteriole and filtration falls.",
+    "correct": false
+   },
+   "D": {
+    "text": "Ibuprofen alone is directly toxic to the renal tubules",
+    "why": "The lecture's point is the three combined hemodynamic hits.",
+    "correct": false
+   },
+   "E": {
+    "text": "Losartan caused bradykinin build-up in the glomerulus",
+    "why": "ARBs do not act through bradykinin.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L09/index.html#potassium-sparing-cai-osmotic-diuretics",
+   "label": "Study this: L09 · Part 3 →"
+  }
+ },
+ {
+  "topic": "Potassium-sparing diuretics",
+  "objectives": [
+   "IO5.4",
+   "IO5.6"
+  ],
+  "sg": [
+   "U5-R5"
+  ],
+  "kind": "vignette",
+  "stem": "A 72-year-old with heart failure and CKD takes lisinopril. Spironolactone is added. Which monitoring plan matches the lecture?",
+  "correct": "Potassium and creatinine within 1 week",
+  "distractors": [
+   {
+    "text": "Potassium and creatinine at the next annual visit",
+    "why": "Hyperkalemia here can be life-threatening and early."
+   },
+   {
+    "text": "Sodium and glucose within 1 week",
+    "why": "Those are the thiazide labs."
+   },
+   {
+    "text": "Magnesium and hearing tests within 1 month",
+    "why": "Those concerns belong to loops."
+   },
+   {
+    "text": "Serum osmolality and electrolytes each day",
+    "why": "That is mannitol monitoring."
+   }
+  ],
+  "why_correct": "Spironolactone: monitor potassium and creatinine within 1 week. Hyperkalemia risk rises sharply with an ACE inhibitor or ARB, or in CKD.",
+  "takeaway": "Spironolactone + ACE inhibitor + CKD: potassium in a week.",
+  "discriminator": "Each diuretic class has its own lab set.",
+  "src": "S17; S32; SG U5-R5",
+  "id": "U5B-008",
+  "answer": "E",
+  "options": {
+   "A": {
+    "text": "Serum osmolality and electrolytes each day",
+    "why": "That is mannitol monitoring.",
+    "correct": false
+   },
+   "B": {
+    "text": "Potassium and creatinine at the next annual visit",
+    "why": "Hyperkalemia here can be life-threatening and early.",
+    "correct": false
+   },
+   "C": {
+    "text": "Magnesium and hearing tests within 1 month",
+    "why": "Those concerns belong to loops.",
+    "correct": false
+   },
+   "D": {
+    "text": "Sodium and glucose within 1 week",
+    "why": "Those are the thiazide labs.",
+    "correct": false
+   },
+   "E": {
+    "text": "Potassium and creatinine within 1 week",
+    "why": "Spironolactone: monitor potassium and creatinine within 1 week. Hyperkalemia risk rises sharply with an ACE inhibitor or ARB, or in CKD.",
+    "correct": true
+   }
+  },
+  "link": {
+   "href": "../../L09/index.html#potassium-sparing-cai-osmotic-diuretics",
+   "label": "Study this: L09 · Part 3 →"
+  }
+ },
+ {
+  "topic": "Other antihypertensives",
+  "objectives": [
+   "IO5.2",
+   "IO5.4"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A 52-year-old on clonidine three times daily runs out while travelling. Two days later blood pressure is 212/124 with headache and tremor. Which statement is correct?",
+  "correct": "Rebound hypertension from abrupt clonidine withdrawal",
+  "distractors": [
+   {
+    "text": "Reflex tachycardia and fluid retention from clonidine",
+    "why": "Those are hydralazine effects."
+   },
+   {
+    "text": "Nitrate tolerance from continuous dosing without a break",
+    "why": "He takes clonidine, not a nitrate."
+   },
+   {
+    "text": "Bradykinin accumulation after stopping the drug",
+    "why": "Bradykinin belongs to ACE inhibitors."
+   },
+   {
+    "text": "Loss of thiazide effect because GFR fell below 30",
+    "why": "No diuretic or renal change is described."
+   }
+  ],
+  "why_correct": "Abrupt clonidine withdrawal causes rebound hypertension.",
+  "takeaway": "Never stop clonidine abruptly.",
+  "discriminator": "Withdrawal effect vs adverse effect on the drug.",
+  "src": "S16; S16 (notes)",
+  "id": "U5B-018",
+  "answer": "C",
+  "options": {
+   "A": {
+    "text": "Loss of thiazide effect because GFR fell below 30",
+    "why": "No diuretic or renal change is described.",
+    "correct": false
+   },
+   "B": {
+    "text": "Bradykinin accumulation after stopping the drug",
+    "why": "Bradykinin belongs to ACE inhibitors.",
+    "correct": false
+   },
+   "C": {
+    "text": "Rebound hypertension from abrupt clonidine withdrawal",
+    "why": "Abrupt clonidine withdrawal causes rebound hypertension.",
+    "correct": true
+   },
+   "D": {
+    "text": "Reflex tachycardia and fluid retention from clonidine",
+    "why": "Those are hydralazine effects.",
+    "correct": false
+   },
+   "E": {
+    "text": "Nitrate tolerance from continuous dosing without a break",
+    "why": "He takes clonidine, not a nitrate.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L09/index.html#potassium-sparing-cai-osmotic-diuretics",
+   "label": "Study this: L09 · Part 3 →"
+  }
+ },
+ {
+  "topic": "Nitrates",
+  "objectives": [
+   "IO5.6",
+   "IO5.2"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A 64-year-old with stable angina took sildenafil last evening. He now has chest pain and reaches for his sublingual nitroglycerin. Why is this dangerous?",
+  "correct": "Both raise cGMP: life-threatening hypotension",
+  "distractors": [
+   {
+    "text": "Sildenafil blocks nitrate absorption under the tongue",
+    "why": "The interaction is additive vasodilation."
+   },
+   {
+    "text": "Both cause reflex bradycardia and AV block",
+    "why": "That is the verapamil or diltiazem with beta-blocker risk."
+   },
+   {
+    "text": "Sildenafil causes nitrate tolerance within hours",
+    "why": "Tolerance comes from continuous nitrate exposure."
+   },
+   {
+    "text": "Both constrict the afferent arteriole: kidney injury",
+    "why": "That is the NSAID mechanism."
+   }
+  ],
+  "why_correct": "Nitrates donate NO and raise cGMP; PDE5 inhibitors block cGMP breakdown. Together they cause life-threatening hypotension.",
+  "takeaway": "Nitrate + PDE5 inhibitor: never.",
+  "discriminator": "Make more cGMP + stop its breakdown.",
+  "src": "S19; S20",
+  "id": "U5B-019",
+  "answer": "C",
+  "options": {
+   "A": {
+    "text": "Both constrict the afferent arteriole: kidney injury",
+    "why": "That is the NSAID mechanism.",
+    "correct": false
+   },
+   "B": {
+    "text": "Sildenafil blocks nitrate absorption under the tongue",
+    "why": "The interaction is additive vasodilation.",
+    "correct": false
+   },
+   "C": {
+    "text": "Both raise cGMP: life-threatening hypotension",
+    "why": "Nitrates donate NO and raise cGMP; PDE5 inhibitors block cGMP breakdown. Together they cause life-threatening hypotension.",
+    "correct": true
+   },
+   "D": {
+    "text": "Both cause reflex bradycardia and AV block",
+    "why": "That is the verapamil or diltiazem with beta-blocker risk.",
+    "correct": false
+   },
+   "E": {
+    "text": "Sildenafil causes nitrate tolerance within hours",
+    "why": "Tolerance comes from continuous nitrate exposure.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L09/index.html#potassium-sparing-cai-osmotic-diuretics",
+   "label": "Study this: L09 · Part 3 →"
+  }
+ },
+ {
+  "topic": "CCB interactions",
+  "objectives": [
+   "IO5.6"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A 77-year-old stable on digoxin starts verapamil for rate control. Ten days later she has nausea, anorexia and a pulse of 44. Which mechanism is most likely?",
+  "correct": "Verapamil raised her digoxin level",
+  "distractors": [
+   {
+    "text": "Verapamil lowered her digoxin level",
+    "why": "A lower level would not cause toxicity."
+   },
+   {
+    "text": "Grapefruit juice raised her verapamil level",
+    "why": "Grapefruit raises dihydropyridine levels; none is mentioned."
+   },
+   {
+    "text": "Rifampin-like induction cleared the verapamil",
+    "why": "Induction lowers CCB levels and would not slow the pulse."
+   },
+   {
+    "text": "Verapamil caused hypokalemia like a loop diuretic",
+    "why": "Verapamil does not waste potassium."
+   }
+  ],
+  "why_correct": "Verapamil and diltiazem raise digoxin levels; both drugs also slow the heart.",
+  "takeaway": "Verapamil or diltiazem + digoxin: expect a higher digoxin level.",
+  "discriminator": "Loops harm through potassium; verapamil through the level.",
+  "src": "S55; S55 (notes)",
+  "id": "U5B-017",
+  "answer": "E",
+  "options": {
+   "A": {
+    "text": "Rifampin-like induction cleared the verapamil",
+    "why": "Induction lowers CCB levels and would not slow the pulse.",
+    "correct": false
+   },
+   "B": {
+    "text": "Verapamil caused hypokalemia like a loop diuretic",
+    "why": "Verapamil does not waste potassium.",
+    "correct": false
+   },
+   "C": {
+    "text": "Verapamil lowered her digoxin level",
+    "why": "A lower level would not cause toxicity.",
+    "correct": false
+   },
+   "D": {
+    "text": "Grapefruit juice raised her verapamil level",
+    "why": "Grapefruit raises dihydropyridine levels; none is mentioned.",
+    "correct": false
+   },
+   "E": {
+    "text": "Verapamil raised her digoxin level",
+    "why": "Verapamil and diltiazem raise digoxin levels; both drugs also slow the heart.",
+    "correct": true
+   }
+  },
+  "link": {
+   "href": "../../L09/index.html",
+   "label": "Study this: L09 →"
+  }
+ },
+ {
+  "topic": "Calcium handling",
+  "objectives": [
+   "IO5.1",
+   "IO5.3"
+  ],
+  "sg": [
+   "U5-R3"
+  ],
+  "kind": "vignette",
+  "stem": "A 46-year-old with hypertension has recurrent calcium kidney stones. A 68-year-old with hypertension has symptomatic hypercalcemia. Which pairing of diuretic to patient is correct?",
+  "correct": "Thiazide for the stone former; a loop for the hypercalcemia",
+  "distractors": [
+   {
+    "text": "A loop for the stone former; thiazide for the hypercalcemia",
+    "why": "Loops raise urinary calcium; thiazides raise serum calcium."
+   },
+   {
+    "text": "Thiazide for both, since it lowers calcium everywhere",
+    "why": "It lowers urinary calcium but raises serum calcium."
+   },
+   {
+    "text": "A loop for both, since it is the most potent class",
+    "why": "More urinary calcium worsens stones."
+   },
+   {
+    "text": "Acetazolamide for both, since it prevents kidney stones",
+    "why": "Acetazolamide is a cause of kidney stones."
+   }
+  ],
+  "why_correct": "Loops raise urinary calcium excretion; thiazides lower it. That makes a thiazide useful in calcium stones and a loop useful when serum calcium is high.",
+  "takeaway": "Loops lose calcium; thiazides keep it.",
+  "discriminator": "Same electrolyte, opposite direction.",
+  "src": "S12; S14; SG U5-R3",
+  "id": "U5B-006",
+  "answer": "B",
+  "options": {
+   "A": {
+    "text": "Acetazolamide for both, since it prevents kidney stones",
+    "why": "Acetazolamide is a cause of kidney stones.",
+    "correct": false
+   },
+   "B": {
+    "text": "Thiazide for the stone former; a loop for the hypercalcemia",
+    "why": "Loops raise urinary calcium excretion; thiazides lower it. That makes a thiazide useful in calcium stones and a loop useful when serum calcium is high.",
+    "correct": true
+   },
+   "C": {
+    "text": "Thiazide for both, since it lowers calcium everywhere",
+    "why": "It lowers urinary calcium but raises serum calcium.",
+    "correct": false
+   },
+   "D": {
+    "text": "A loop for both, since it is the most potent class",
+    "why": "More urinary calcium worsens stones.",
+    "correct": false
+   },
+   "E": {
+    "text": "A loop for the stone former; thiazide for the hypercalcemia",
+    "why": "Loops raise urinary calcium; thiazides raise serum calcium.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L09/index.html#loop-thiazide-diuretics",
+   "label": "Study this: L09 · Part 2 →"
+  }
+ },
+ {
+  "topic": "Nitrates",
+  "objectives": [
+   "IO5.3",
+   "IO5.4"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A 70-year-old wears a nitroglycerin patch 24 hours a day. After a month his angina has returned at the same exertion. Adherence is perfect. Which change is best?",
+  "correct": "Schedule a nitrate-free interval, typically overnight",
+  "distractors": [
+   {
+    "text": "Double the patch strength and keep 24-hour wear",
+    "why": "More continuous exposure deepens tolerance."
+   },
+   {
+    "text": "Add sildenafil to boost the nitrate's cGMP signal",
+    "why": "That combination causes life-threatening hypotension."
+   },
+   {
+    "text": "Stop the patch abruptly because of rebound hypertension",
+    "why": "Rebound hypertension is the clonidine issue."
+   },
+   {
+    "text": "Add verapamil to his metoprolol for more rate control",
+    "why": "That pair risks bradycardia and AV block."
+   }
+  ],
+  "why_correct": "Tolerance develops with continuous nitrate exposure. A nitrate-free interval, typically overnight, is required to maintain efficacy with long-acting formulations.",
+  "takeaway": "Long-acting nitrate: build in a nitrate-free interval.",
+  "discriminator": "Lost effect from tolerance, not from under-dosing.",
+  "src": "S19; S20",
+  "id": "U5B-020",
+  "answer": "A",
+  "options": {
+   "A": {
+    "text": "Schedule a nitrate-free interval, typically overnight",
+    "why": "Tolerance develops with continuous nitrate exposure. A nitrate-free interval, typically overnight, is required to maintain efficacy with long-acting formulations.",
+    "correct": true
+   },
+   "B": {
+    "text": "Double the patch strength and keep 24-hour wear",
+    "why": "More continuous exposure deepens tolerance.",
+    "correct": false
+   },
+   "C": {
+    "text": "Stop the patch abruptly because of rebound hypertension",
+    "why": "Rebound hypertension is the clonidine issue.",
+    "correct": false
+   },
+   "D": {
+    "text": "Add sildenafil to boost the nitrate's cGMP signal",
+    "why": "That combination causes life-threatening hypotension.",
+    "correct": false
+   },
+   "E": {
+    "text": "Add verapamil to his metoprolol for more rate control",
+    "why": "That pair risks bradycardia and AV block.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L09/index.html#potassium-sparing-cai-osmotic-diuretics",
+   "label": "Study this: L09 · Part 3 →"
+  }
+ },
+ {
+  "topic": "Renal dosing",
+  "objectives": [
+   "IO5.5"
+  ],
+  "sg": [
+   "U5-R1"
+  ],
+  "kind": "vignette",
+  "stem": "An 84-year-old with CKD is admitted with a serious infection and needs a renally cleared antibiotic. Her creatinine clearance is markedly reduced. Which dosing approach matches the lecture?",
+  "correct": "Usual loading dose, then a reduced maintenance dose",
+  "distractors": [
+   {
+    "text": "Reduced loading dose, then the usual maintenance dose",
+    "why": "Loading is often unchanged; maintenance is what is adjusted."
+   },
+   {
+    "text": "Usual loading and usual maintenance, with levels if toxic",
+    "why": "A renally cleared drug accumulates when GFR is low."
+   },
+   {
+    "text": "No loading dose, then double the interval and the dose",
+    "why": "Skipping the load delays effect; doubling the dose defeats the cut."
+   },
+   {
+    "text": "Avoid every renally cleared drug in any patient with CKD",
+    "why": "The drugs are adjusted, not banned."
+   }
+  ],
+  "why_correct": "As GFR falls, renally cleared drugs accumulate. Check creatinine clearance, then lower the maintenance dose, extend the interval, or both. Loading doses are often unchanged.",
+  "takeaway": "Low GFR: keep the load, cut the maintenance.",
+  "discriminator": "Loading fills the volume; maintenance replaces what is cleared.",
+  "src": "S6; S8; SG U5-R1",
+  "id": "U5B-001",
+  "answer": "A",
+  "options": {
+   "A": {
+    "text": "Usual loading dose, then a reduced maintenance dose",
+    "why": "As GFR falls, renally cleared drugs accumulate. Check creatinine clearance, then lower the maintenance dose, extend the interval, or both. Loading doses are often unchanged.",
+    "correct": true
+   },
+   "B": {
+    "text": "No loading dose, then double the interval and the dose",
+    "why": "Skipping the load delays effect; doubling the dose defeats the cut.",
+    "correct": false
+   },
+   "C": {
+    "text": "Usual loading and usual maintenance, with levels if toxic",
+    "why": "A renally cleared drug accumulates when GFR is low.",
+    "correct": false
+   },
+   "D": {
+    "text": "Reduced loading dose, then the usual maintenance dose",
+    "why": "Loading is often unchanged; maintenance is what is adjusted.",
+    "correct": false
+   },
+   "E": {
+    "text": "Avoid every renally cleared drug in any patient with CKD",
+    "why": "The drugs are adjusted, not banned.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L09/index.html#renal-dosing-diuretic-sites",
+   "label": "Study this: L09 · Part 1 →"
+  }
+ },
+ {
+  "topic": "Loop vs thiazide",
+  "objectives": [
+   "IO5.3",
+   "IO5.5"
+  ],
+  "sg": [
+   "U5-R4"
+  ],
+  "kind": "vignette",
+  "stem": "A 70-year-old with CKD (GFR 24) has worsening leg edema and blood pressure 162/94 on hydrochlorothiazide 25 mg, lisinopril and amlodipine. He takes all three reliably. Which change is most likely to help?",
+  "correct": "Replace hydrochlorothiazide with a loop diuretic",
+  "distractors": [
+   {
+    "text": "Double the hydrochlorothiazide to 50 mg each day",
+    "why": "Thiazides fade below a GFR of about 30."
+   },
+   {
+    "text": "Add clonidine as a fourth antihypertensive class",
+    "why": "The problem is an ineffective diuretic, not a missing class."
+   },
+   {
+    "text": "Add hydralazine alone for its arteriolar dilation",
+    "why": "It needs a beta-blocker and a diuretic, and does not fix volume."
+   },
+   {
+    "text": "Stop lisinopril because the GFR is now under 30",
+    "why": "Nothing here says the ACE inhibitor is the problem."
+   }
+  ],
+  "why_correct": "Thiazides lose efficacy below a GFR of about 30. In resistant hypertension with CKD, first confirm the diuretic is adequate; switching to a loop is often the most effective single change.",
+  "takeaway": "GFR under ~30: thiazide out, loop in.",
+  "discriminator": "A new class vs fixing the diuretic you already have.",
+  "src": "S15; SG U5-R4",
+  "id": "U5B-002",
+  "answer": "D",
+  "options": {
+   "A": {
+    "text": "Add clonidine as a fourth antihypertensive class",
+    "why": "The problem is an ineffective diuretic, not a missing class.",
+    "correct": false
+   },
+   "B": {
+    "text": "Stop lisinopril because the GFR is now under 30",
+    "why": "Nothing here says the ACE inhibitor is the problem.",
+    "correct": false
+   },
+   "C": {
+    "text": "Add hydralazine alone for its arteriolar dilation",
+    "why": "It needs a beta-blocker and a diuretic, and does not fix volume.",
+    "correct": false
+   },
+   "D": {
+    "text": "Replace hydrochlorothiazide with a loop diuretic",
+    "why": "Thiazides lose efficacy below a GFR of about 30. In resistant hypertension with CKD, first confirm the diuretic is adequate; switching to a loop is often the most effective single change.",
+    "correct": true
+   },
+   "E": {
+    "text": "Double the hydrochlorothiazide to 50 mg each day",
+    "why": "Thiazides fade below a GFR of about 30.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L09/index.html#loop-thiazide-diuretics",
+   "label": "Study this: L09 · Part 2 →"
+  }
+ },
+ {
+  "topic": "CAI and osmotic diuretics",
+  "objectives": [
+   "IO5.2",
+   "IO5.3"
+  ],
+  "sg": [
+   "U5-R6"
+  ],
+  "kind": "vignette",
+  "stem": "A 63-year-old with decompensated heart failure and pulmonary edema has a head injury with raised intracranial pressure. A resident suggests mannitol. What is the main concern?",
+  "correct": "Mannitol expands extracellular volume and can worsen overload",
+  "distractors": [
+   {
+    "text": "Mannitol causes metabolic acidosis and potassium loss",
+    "why": "That is acetazolamide."
+   },
+   {
+    "text": "Mannitol causes hyperkalemia with ACE inhibitors",
+    "why": "That is the potassium-sparing class."
+   },
+   {
+    "text": "Mannitol loses efficacy once GFR is below about 30",
+    "why": "That is the thiazide cutoff."
+   },
+   {
+    "text": "Mannitol causes gynecomastia through antiandrogen action",
+    "why": "That is spironolactone."
+   }
+  ],
+  "why_correct": "Mannitol is used for raised intracranial or intraocular pressure, but it expands extracellular volume: avoid it in heart failure and volume depletion. Monitor osmolality and electrolytes.",
+  "takeaway": "Mannitol: right for ICP, wrong for a failing heart.",
+  "discriminator": "It pulls water into the vessels before it leaves.",
+  "src": "S19; S20; S37",
+  "id": "U5B-011",
+  "answer": "E",
+  "options": {
+   "A": {
+    "text": "Mannitol loses efficacy once GFR is below about 30",
+    "why": "That is the thiazide cutoff.",
+    "correct": false
+   },
+   "B": {
+    "text": "Mannitol causes metabolic acidosis and potassium loss",
+    "why": "That is acetazolamide.",
+    "correct": false
+   },
+   "C": {
+    "text": "Mannitol causes gynecomastia through antiandrogen action",
+    "why": "That is spironolactone.",
+    "correct": false
+   },
+   "D": {
+    "text": "Mannitol causes hyperkalemia with ACE inhibitors",
+    "why": "That is the potassium-sparing class.",
+    "correct": false
+   },
+   "E": {
+    "text": "Mannitol expands extracellular volume and can worsen overload",
+    "why": "Mannitol is used for raised intracranial or intraocular pressure, but it expands extracellular volume: avoid it in heart failure and volume depletion. Monitor osmolality and electrolytes.",
+    "correct": true
+   }
+  },
+  "link": {
+   "href": "../../L09/index.html#potassium-sparing-cai-osmotic-diuretics",
+   "label": "Study this: L09 · Part 3 →"
+  }
+ },
+ {
+  "topic": "Thiazides",
+  "objectives": [
+   "IO5.2",
+   "IO5.4"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "An 80-year-old woman started chlorthalidone 3 weeks ago. Her daughter reports new confusion and unsteadiness. Which lab abnormality is the most likely cause?",
+  "correct": "Hyponatremia, which can be significant in older adults",
+  "distractors": [
+   {
+    "text": "Hypocalcemia, because thiazides waste calcium in urine",
+    "why": "Thiazides lower urinary calcium and can raise serum calcium."
+   },
+   {
+    "text": "Hyperkalemia, because thiazides spare potassium",
+    "why": "Thiazides cause hypokalemia."
+   },
+   {
+    "text": "Hypoglycemia, because thiazides raise insulin release",
+    "why": "They cause hyperglycemia."
+   },
+   {
+    "text": "Hypermagnesemia, because thiazides block its excretion",
+    "why": "This is not a taught thiazide effect."
+   }
+  ],
+  "why_correct": "Thiazide adverse effects: hyponatremia (can be significant, especially in older adults), hypokalemia, hyperglycemia, hyperuricemia and hypercalcemia. Monitor sodium, potassium, calcium and glucose.",
+  "takeaway": "Older adult + new thiazide + confusion = check sodium.",
+  "discriminator": "Thiazide lows: Na, K. Thiazide highs: glucose, uric acid, Ca.",
+  "src": "S12; S30",
+  "id": "U5B-005",
+  "answer": "D",
+  "options": {
+   "A": {
+    "text": "Hypocalcemia, because thiazides waste calcium in urine",
+    "why": "Thiazides lower urinary calcium and can raise serum calcium.",
+    "correct": false
+   },
+   "B": {
+    "text": "Hyperkalemia, because thiazides spare potassium",
+    "why": "Thiazides cause hypokalemia.",
+    "correct": false
+   },
+   "C": {
+    "text": "Hypoglycemia, because thiazides raise insulin release",
+    "why": "They cause hyperglycemia.",
+    "correct": false
+   },
+   "D": {
+    "text": "Hyponatremia, which can be significant in older adults",
+    "why": "Thiazide adverse effects: hyponatremia (can be significant, especially in older adults), hypokalemia, hyperglycemia, hyperuricemia and hypercalcemia. Monitor sodium, potassium, calcium and glucose.",
+    "correct": true
+   },
+   "E": {
+    "text": "Hypermagnesemia, because thiazides block its excretion",
+    "why": "This is not a taught thiazide effect.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L09/index.html#loop-thiazide-diuretics",
+   "label": "Study this: L09 · Part 2 →"
+  }
+ },
+ {
+  "topic": "Sick-day rules",
+  "objectives": [
+   "IO5.4",
+   "IO5.5"
+  ],
+  "sg": [
+   "U5-R9"
+  ],
+  "kind": "vignette",
+  "stem": "A 69-year-old on lisinopril and hydrochlorothiazide has had vomiting and diarrhea for 2 days and is light-headed on standing. She asks what to do with her medicines. Which advice fits?",
+  "correct": "Hold the ACE inhibitor until she is eating and drinking again",
+  "distractors": [
+   {
+    "text": "Continue everything; missed doses cause rebound hypertension",
+    "why": "Rebound is the clonidine warning."
+   },
+   {
+    "text": "Double the lisinopril to protect the kidney while ill",
+    "why": "RAAS blockade plus low perfusion can cause AKI."
+   },
+   {
+    "text": "Add ibuprofen for the aches and keep all the others",
+    "why": "That completes the triple whammy."
+   },
+   {
+    "text": "Stop lisinopril permanently and never restart it",
+    "why": "It is held during the illness, not abandoned."
+   }
+  ],
+  "why_correct": "Sick-day rules: hold the ACE inhibitor or ARB during vomiting, diarrhea or dehydration, because RAAS blockade with reduced renal perfusion can precipitate AKI.",
+  "takeaway": "Vomiting or diarrhea: pause the ACE inhibitor or ARB.",
+  "discriminator": "Temporary hold vs permanent stop.",
+  "src": "S8; S9; SG U5-R9",
+  "id": "U5B-015",
+  "answer": "A",
+  "options": {
+   "A": {
+    "text": "Hold the ACE inhibitor until she is eating and drinking again",
+    "why": "Sick-day rules: hold the ACE inhibitor or ARB during vomiting, diarrhea or dehydration, because RAAS blockade with reduced renal perfusion can precipitate AKI.",
+    "correct": true
+   },
+   "B": {
+    "text": "Add ibuprofen for the aches and keep all the others",
+    "why": "That completes the triple whammy.",
+    "correct": false
+   },
+   "C": {
+    "text": "Double the lisinopril to protect the kidney while ill",
+    "why": "RAAS blockade plus low perfusion can cause AKI.",
+    "correct": false
+   },
+   "D": {
+    "text": "Stop lisinopril permanently and never restart it",
+    "why": "It is held during the illness, not abandoned.",
+    "correct": false
+   },
+   "E": {
+    "text": "Continue everything; missed doses cause rebound hypertension",
+    "why": "Rebound is the clonidine warning.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L09/index.html#renal-dosing-diuretic-sites",
+   "label": "Study this: L09 · Part 1 →"
+  }
+ },
+ {
+  "topic": "Thiazide interactions",
+  "objectives": [
+   "IO5.6"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A 44-year-old stable on lithium for bipolar disorder starts hydrochlorothiazide. Two weeks later he has a coarse tremor, vomiting and ataxia. What happened?",
+  "correct": "The thiazide raised his lithium level",
+  "distractors": [
+   {
+    "text": "The thiazide lowered his lithium level",
+    "why": "Lower levels would cause relapse, not toxicity."
+   },
+   {
+    "text": "Lithium raised the thiazide level and caused hyponatremia",
+    "why": "The taught direction is thiazide raising lithium."
+   },
+   {
+    "text": "The pair caused hyperkalemia through aldosterone blockade",
+    "why": "Neither drug blocks aldosterone."
+   },
+   {
+    "text": "An NSAID effect: the thiazide blunted lithium clearance",
+    "why": "NSAIDs blunt diuretics; no NSAID is involved here."
+   }
+  ],
+  "why_correct": "Lithium levels rise with thiazides. New neurologic and GI symptoms after the diuretic is added are lithium toxicity.",
+  "takeaway": "Thiazide + lithium = lithium toxicity.",
+  "discriminator": "Which drug's level moved: lithium's.",
+  "src": "S38; S38 (notes)",
+  "id": "U5B-007",
+  "answer": "B",
+  "options": {
+   "A": {
+    "text": "The thiazide lowered his lithium level",
+    "why": "Lower levels would cause relapse, not toxicity.",
+    "correct": false
+   },
+   "B": {
+    "text": "The thiazide raised his lithium level",
+    "why": "Lithium levels rise with thiazides. New neurologic and GI symptoms after the diuretic is added are lithium toxicity.",
+    "correct": true
+   },
+   "C": {
+    "text": "Lithium raised the thiazide level and caused hyponatremia",
+    "why": "The taught direction is thiazide raising lithium.",
+    "correct": false
+   },
+   "D": {
+    "text": "The pair caused hyperkalemia through aldosterone blockade",
+    "why": "Neither drug blocks aldosterone.",
+    "correct": false
+   },
+   "E": {
+    "text": "An NSAID effect: the thiazide blunted lithium clearance",
+    "why": "NSAIDs blunt diuretics; no NSAID is involved here.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L09/index.html#loop-thiazide-diuretics",
+   "label": "Study this: L09 · Part 2 →"
+  }
+ },
+ {
+  "topic": "RAAS blockers",
+  "objectives": [
+   "IO5.4",
+   "IO5.2"
+  ],
+  "sg": [
+   "U5-R9"
+  ],
+  "kind": "vignette",
+  "stem": "A 58-year-old with diabetic kidney disease starts lisinopril. Two weeks later creatinine has risen from 1.4 to 1.7 mg/dL and potassium is 4.8 mEq/L. He feels well and is eating and drinking normally. What is the best action?",
+  "correct": "Continue lisinopril and recheck; a rise up to ~30% is expected",
+  "distractors": [
+   {
+    "text": "Stop lisinopril; any creatinine rise means kidney injury",
+    "why": "This is the classic trap: the rise is hemodynamic."
+   },
+   {
+    "text": "Switch to losartan, which does not change creatinine",
+    "why": "ARBs dilate the efferent arteriole too."
+   },
+   {
+    "text": "Add an NSAID to restore afferent arteriolar tone",
+    "why": "NSAIDs constrict the afferent arteriole and raise AKI risk."
+   },
+   {
+    "text": "Add spironolactone to protect the kidney further",
+    "why": "That adds hyperkalemia risk and does not address this."
+   }
+  ],
+  "why_correct": "An initial creatinine rise of up to about 30% reflects reduced intraglomerular pressure, not nephrotoxicity. Monitor potassium and renal function within 1–2 weeks; a larger rise warrants evaluation.",
+  "takeaway": "Up to ~30% creatinine rise on an ACE inhibitor: keep going.",
+  "discriminator": "The benefit and the creatinine bump are the same action.",
+  "src": "S5; S8; SG U5-R9",
+  "id": "U5B-012",
+  "answer": "D",
+  "options": {
+   "A": {
+    "text": "Switch to losartan, which does not change creatinine",
+    "why": "ARBs dilate the efferent arteriole too.",
+    "correct": false
+   },
+   "B": {
+    "text": "Add spironolactone to protect the kidney further",
+    "why": "That adds hyperkalemia risk and does not address this.",
+    "correct": false
+   },
+   "C": {
+    "text": "Stop lisinopril; any creatinine rise means kidney injury",
+    "why": "This is the classic trap: the rise is hemodynamic.",
+    "correct": false
+   },
+   "D": {
+    "text": "Continue lisinopril and recheck; a rise up to ~30% is expected",
+    "why": "An initial creatinine rise of up to about 30% reflects reduced intraglomerular pressure, not nephrotoxicity. Monitor potassium and renal function within 1–2 weeks; a larger rise warrants evaluation.",
+    "correct": true
+   },
+   "E": {
+    "text": "Add an NSAID to restore afferent arteriolar tone",
+    "why": "NSAIDs constrict the afferent arteriole and raise AKI risk.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L09/index.html#renal-dosing-diuretic-sites",
+   "label": "Study this: L09 · Part 1 →"
+  }
+ },
+ {
+  "topic": "Loop diuretics",
+  "objectives": [
+   "IO5.2",
+   "IO5.4"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A 59-year-old receiving gentamicin for sepsis develops pulmonary edema. A colleague plans IV furosemide 80 mg as a 1-minute push. Which concern is most specific to this plan?",
+  "correct": "Additive ototoxicity; give IV furosemide no faster than 4 mg/min",
+  "distractors": [
+   {
+    "text": "Hyperkalemia; check potassium before any loop diuretic",
+    "why": "Loops lower potassium."
+   },
+   {
+    "text": "Lithium-like toxicity; loops raise aminoglycoside levels",
+    "why": "Lithium levels rise with thiazides; this is a different issue."
+   },
+   {
+    "text": "Hypercalcemia; loops reduce urinary calcium excretion",
+    "why": "Loops raise urinary calcium; thiazides lower it."
+   },
+   {
+    "text": "Metabolic acidosis; loops waste bicarbonate in the urine",
+    "why": "Loops cause metabolic alkalosis."
+   }
+  ],
+  "why_correct": "Loop ototoxicity occurs with rapid IV administration or high doses and is additive with aminoglycosides. IV furosemide is given slowly, no faster than 4 mg/min.",
+  "takeaway": "Loop + aminoglycoside, or a fast push: ears at risk.",
+  "discriminator": "Rate and co-drug, not the diuretic alone.",
+  "src": "S10; S27; S38",
+  "id": "U5B-004",
+  "answer": "E",
+  "options": {
+   "A": {
+    "text": "Lithium-like toxicity; loops raise aminoglycoside levels",
+    "why": "Lithium levels rise with thiazides; this is a different issue.",
+    "correct": false
+   },
+   "B": {
+    "text": "Metabolic acidosis; loops waste bicarbonate in the urine",
+    "why": "Loops cause metabolic alkalosis.",
+    "correct": false
+   },
+   "C": {
+    "text": "Hyperkalemia; check potassium before any loop diuretic",
+    "why": "Loops lower potassium.",
+    "correct": false
+   },
+   "D": {
+    "text": "Hypercalcemia; loops reduce urinary calcium excretion",
+    "why": "Loops raise urinary calcium; thiazides lower it.",
+    "correct": false
+   },
+   "E": {
+    "text": "Additive ototoxicity; give IV furosemide no faster than 4 mg/min",
+    "why": "Loop ototoxicity occurs with rapid IV administration or high doses and is additive with aminoglycosides. IV furosemide is given slowly, no faster than 4 mg/min.",
+    "correct": true
+   }
+  },
+  "link": {
+   "href": "../../L09/index.html#loop-thiazide-diuretics",
+   "label": "Study this: L09 · Part 2 →"
+  }
+ },
+ {
+  "topic": "RAAS blockers",
+  "objectives": [
+   "IO5.2",
+   "IO5.3"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A 61-year-old on lisinopril for 3 months has a dry, nagging cough with clear lungs. A second patient on lisinopril arrives with lip and tongue swelling. Which pair of actions is correct?",
+  "correct": "Cough: switch to an ARB. Swelling: stop the drug now",
+  "distractors": [
+   {
+    "text": "Cough: stop all RAAS blockade. Swelling: switch to an ARB",
+    "why": "Cough alone is the commonest reason to switch, not abandon."
+   },
+   {
+    "text": "Cough: add an antihistamine. Swelling: lower the dose",
+    "why": "The cough is bradykinin-mediated, not allergic."
+   },
+   {
+    "text": "Cough: continue unchanged. Swelling: add a diuretic",
+    "why": "Angioedema can be life-threatening: stop the drug."
+   },
+   {
+    "text": "Cough: switch to amlodipine. Swelling: switch to verapamil",
+    "why": "An ARB keeps RAAS blockade without the bradykinin effect."
+   }
+  ],
+  "why_correct": "ACE inhibitors let bradykinin accumulate: dry cough (the most common reason to switch to an ARB) and, rarely, angioedema, which requires stopping the drug.",
+  "takeaway": "Cough → ARB. Angioedema → stop.",
+  "discriminator": "Both are bradykinin; only one is dangerous.",
+  "src": "S5; S6",
+  "id": "U5B-013",
+  "answer": "A",
+  "options": {
+   "A": {
+    "text": "Cough: switch to an ARB. Swelling: stop the drug now",
+    "why": "ACE inhibitors let bradykinin accumulate: dry cough (the most common reason to switch to an ARB) and, rarely, angioedema, which requires stopping the drug.",
+    "correct": true
+   },
+   "B": {
+    "text": "Cough: add an antihistamine. Swelling: lower the dose",
+    "why": "The cough is bradykinin-mediated, not allergic.",
+    "correct": false
+   },
+   "C": {
+    "text": "Cough: stop all RAAS blockade. Swelling: switch to an ARB",
+    "why": "Cough alone is the commonest reason to switch, not abandon.",
+    "correct": false
+   },
+   "D": {
+    "text": "Cough: continue unchanged. Swelling: add a diuretic",
+    "why": "Angioedema can be life-threatening: stop the drug.",
+    "correct": false
+   },
+   "E": {
+    "text": "Cough: switch to amlodipine. Swelling: switch to verapamil",
+    "why": "An ARB keeps RAAS blockade without the bradykinin effect.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L09/index.html#renal-dosing-diuretic-sites",
+   "label": "Study this: L09 · Part 1 →"
+  }
+ },
+ {
+  "topic": "Loop diuretics",
+  "objectives": [
+   "IO5.2",
+   "IO5.6"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A 67-year-old with heart failure takes digoxin and has had furosemide increased twice this month. She now has nausea, visual changes and new ectopy. Potassium is 3.0 mEq/L. Which statement explains this?",
+  "correct": "Loop-induced hypokalemia has increased digoxin toxicity",
+  "distractors": [
+   {
+    "text": "Furosemide has raised digoxin levels by blocking CYP3A4",
+    "why": "The taught link is through potassium, not CYP."
+   },
+   {
+    "text": "Loop-induced hyperkalemia has blocked digoxin's effect",
+    "why": "Loops lower potassium."
+   },
+   {
+    "text": "Furosemide ototoxicity is causing the visual symptoms",
+    "why": "Ototoxicity affects hearing and follows rapid IV or high doses."
+   },
+   {
+    "text": "Digoxin has caused the low potassium by wasting it",
+    "why": "The diuretic is the cause of the potassium loss."
+   }
+  ],
+  "why_correct": "Loops cause hypokalemia and hypomagnesemia. Hypokalemia increases digoxin toxicity, so potassium, magnesium and creatinine are monitored.",
+  "takeaway": "Loop + digoxin: watch potassium.",
+  "discriminator": "The diuretic sets up the toxicity; digoxin delivers it.",
+  "src": "S10; S38; S38 (notes)",
+  "id": "U5B-003",
+  "answer": "D",
+  "options": {
+   "A": {
+    "text": "Furosemide ototoxicity is causing the visual symptoms",
+    "why": "Ototoxicity affects hearing and follows rapid IV or high doses.",
+    "correct": false
+   },
+   "B": {
+    "text": "Loop-induced hyperkalemia has blocked digoxin's effect",
+    "why": "Loops lower potassium.",
+    "correct": false
+   },
+   "C": {
+    "text": "Digoxin has caused the low potassium by wasting it",
+    "why": "The diuretic is the cause of the potassium loss.",
+    "correct": false
+   },
+   "D": {
+    "text": "Loop-induced hypokalemia has increased digoxin toxicity",
+    "why": "Loops cause hypokalemia and hypomagnesemia. Hypokalemia increases digoxin toxicity, so potassium, magnesium and creatinine are monitored.",
+    "correct": true
+   },
+   "E": {
+    "text": "Furosemide has raised digoxin levels by blocking CYP3A4",
+    "why": "The taught link is through potassium, not CYP.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L09/index.html#loop-thiazide-diuretics",
+   "label": "Study this: L09 · Part 2 →"
+  }
+ },
+ {
+  "topic": "Potassium-sparing interactions",
+  "objectives": [
+   "IO5.6"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A 76-year-old on losartan and spironolactone is treated for a urinary infection with trimethoprim-sulfamethoxazole. Five days later she is weak with peaked T waves. Which mechanism explains this?",
+  "correct": "Trimethoprim added to two drugs that already raise potassium",
+  "distractors": [
+   {
+    "text": "Sulfamethoxazole displaced losartan and dropped her pressure",
+    "why": "The finding is hyperkalemia, not hypotension."
+   },
+   {
+    "text": "Trimethoprim induced the metabolism of spironolactone",
+    "why": "Lower spironolactone effect would lower potassium."
+   },
+   {
+    "text": "The antibiotic caused hypokalemia through diarrhea",
+    "why": "Peaked T waves point to high potassium."
+   },
+   {
+    "text": "Losartan caused bradykinin build-up and angioedema",
+    "why": "ARBs avoid the bradykinin effect, and this is not angioedema."
+   }
+  ],
+  "why_correct": "Potassium supplements and trimethoprim cause hyperkalemia with potassium-sparing diuretics, and with ACE inhibitors and ARBs. Three potassium-raising drugs together is the setup.",
+  "takeaway": "Trimethoprim counts as a potassium-raising drug.",
+  "discriminator": "Count the potassium raisers before adding one.",
+  "src": "S38; S55",
+  "id": "U5B-010",
+  "answer": "C",
+  "options": {
+   "A": {
+    "text": "Trimethoprim induced the metabolism of spironolactone",
+    "why": "Lower spironolactone effect would lower potassium.",
+    "correct": false
+   },
+   "B": {
+    "text": "The antibiotic caused hypokalemia through diarrhea",
+    "why": "Peaked T waves point to high potassium.",
+    "correct": false
+   },
+   "C": {
+    "text": "Trimethoprim added to two drugs that already raise potassium",
+    "why": "Potassium supplements and trimethoprim cause hyperkalemia with potassium-sparing diuretics, and with ACE inhibitors and ARBs. Three potassium-raising drugs together is the setup.",
+    "correct": true
+   },
+   "D": {
+    "text": "Losartan caused bradykinin build-up and angioedema",
+    "why": "ARBs avoid the bradykinin effect, and this is not angioedema.",
+    "correct": false
+   },
+   "E": {
+    "text": "Sulfamethoxazole displaced losartan and dropped her pressure",
+    "why": "The finding is hyperkalemia, not hypotension.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L09/index.html#loop-thiazide-diuretics",
+   "label": "Study this: L09 · Part 2 →"
+  }
+ }
+]

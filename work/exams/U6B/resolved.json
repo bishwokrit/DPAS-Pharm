@@ -1,0 +1,1334 @@
+[
+ {
+  "topic": "SERMs",
+  "objectives": [
+   "IO6.1",
+   "IO6.2"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A 58-year-old has taken tamoxifen for 3 years after breast cancer. She mentions light vaginal spotting for 2 weeks and wonders whether to wait until her next annual visit. What is the best response?",
+  "correct": "Arrange prompt gynecologic evaluation for endometrial disease",
+  "distractors": [
+   {
+    "text": "Reassure her; spotting is expected and needs no workup",
+    "why": "Bleeding on tamoxifen should not be dismissed."
+   },
+   {
+    "text": "Switch to raloxifene, which treats the endometrium",
+    "why": "Raloxifene is endometrium-neutral; the bleeding still needs evaluation."
+   },
+   {
+    "text": "Add estradiol alone to stabilize the uterine lining",
+    "why": "Unopposed estrogen adds endometrial risk."
+   },
+   {
+    "text": "Check hematocrit and PSA, then review in 6 months",
+    "why": "Those are testosterone monitoring items."
+   }
+  ],
+  "why_correct": "Tamoxifen is an antagonist in breast but an agonist in endometrium, raising the risk of hyperplasia and cancer. Abnormal bleeding needs prompt gynecologic evaluation.",
+  "takeaway": "Bleeding on tamoxifen: evaluate now.",
+  "discriminator": "Same drug, opposite action in two tissues.",
+  "src": "S11; SG U6-S",
+  "id": "U6B-005",
+  "answer": "E",
+  "options": {
+   "A": {
+    "text": "Check hematocrit and PSA, then review in 6 months",
+    "why": "Those are testosterone monitoring items.",
+    "correct": false
+   },
+   "B": {
+    "text": "Reassure her; spotting is expected and needs no workup",
+    "why": "Bleeding on tamoxifen should not be dismissed.",
+    "correct": false
+   },
+   "C": {
+    "text": "Add estradiol alone to stabilize the uterine lining",
+    "why": "Unopposed estrogen adds endometrial risk.",
+    "correct": false
+   },
+   "D": {
+    "text": "Switch to raloxifene, which treats the endometrium",
+    "why": "Raloxifene is endometrium-neutral; the bleeding still needs evaluation.",
+    "correct": false
+   },
+   "E": {
+    "text": "Arrange prompt gynecologic evaluation for endometrial disease",
+    "why": "Tamoxifen is an antagonist in breast but an agonist in endometrium, raising the risk of hyperplasia and cancer. Abnormal bleeding needs prompt gynecologic evaluation.",
+    "correct": true
+   }
+  },
+  "link": {
+   "href": "../../L11/index.html#serms-aromatase-inhibitors-androgens",
+   "label": "Study this: L11 · Part 2 →"
+  }
+ },
+ {
+  "topic": "PDE5 inhibitors",
+  "objectives": [
+   "IO6.6",
+   "IO6.3"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A 67-year-old with stable angina takes isosorbide mononitrate daily and asks for sildenafil. Which response matches the lecture?",
+  "correct": "Do not prescribe; involve his cardiologist about the nitrate first",
+  "distractors": [
+   {
+    "text": "Prescribe sildenafil and space it 4 hours from the nitrate",
+    "why": "Spacing is for alpha1 blockers; nitrates are an absolute contraindication."
+   },
+   {
+    "text": "Prescribe tadalafil instead, which is safe with nitrates",
+    "why": "The whole class is contraindicated with nitrates."
+   },
+   {
+    "text": "Prescribe sildenafil at half dose with close monitoring",
+    "why": "No dose makes the combination acceptable."
+   },
+   {
+    "text": "Stop the nitrate yourself today and start sildenafil",
+    "why": "Any change to anginal therapy involves his cardiologist."
+   }
+  ],
+  "why_correct": "Nitrates raise NO and cGMP; PDE5 inhibitors stop cGMP breakdown. Together: profound hypotension and syncope. It is an absolute contraindication, and ED treatment decisions involve the cardiologist.",
+  "takeaway": "Nitrate on board: no PDE5 inhibitor.",
+  "discriminator": "Absolute with nitrates; caution with alpha1 blockers.",
+  "src": "S29; SG U6-S",
+  "id": "U6B-017",
+  "answer": "D",
+  "options": {
+   "A": {
+    "text": "Stop the nitrate yourself today and start sildenafil",
+    "why": "Any change to anginal therapy involves his cardiologist.",
+    "correct": false
+   },
+   "B": {
+    "text": "Prescribe sildenafil and space it 4 hours from the nitrate",
+    "why": "Spacing is for alpha1 blockers; nitrates are an absolute contraindication.",
+    "correct": false
+   },
+   "C": {
+    "text": "Prescribe tadalafil instead, which is safe with nitrates",
+    "why": "The whole class is contraindicated with nitrates.",
+    "correct": false
+   },
+   "D": {
+    "text": "Do not prescribe; involve his cardiologist about the nitrate first",
+    "why": "Nitrates raise NO and cGMP; PDE5 inhibitors stop cGMP breakdown. Together: profound hypotension and syncope. It is an absolute contraindication, and ED treatment decisions involve the cardiologist.",
+    "correct": true
+   },
+   "E": {
+    "text": "Prescribe sildenafil at half dose with close monitoring",
+    "why": "No dose makes the combination acceptable.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L11/index.html",
+   "label": "Study this: L11 →"
+  }
+ },
+ {
+  "topic": "Overactive bladder",
+  "objectives": [
+   "IO6.2",
+   "IO6.6"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A 64-year-old with blood pressure 168/102 despite two drugs is offered mirabegron for overactive bladder. He also takes a drug cleared by CYP2D6. Which two cautions apply?",
+  "correct": "It can raise blood pressure, and it inhibits CYP2D6",
+  "distractors": [
+   {
+    "text": "It causes confusion, and it is opposed by donepezil",
+    "why": "Those are antimuscarinic issues."
+   },
+   {
+    "text": "It causes first-dose hypotension and floppy iris syndrome",
+    "why": "Those are alpha1-blocker issues."
+   },
+   {
+    "text": "It halves PSA, and it lowers libido over months",
+    "why": "Those are 5-alpha-reductase inhibitor effects."
+   },
+   {
+    "text": "It is raised by CYP3A4 inhibitors, like solifenacin is",
+    "why": "The taught mirabegron interaction is its own CYP2D6 inhibition."
+   }
+  ],
+  "why_correct": "Mirabegron can raise blood pressure (monitor in uncontrolled hypertension) and inhibits CYP2D6.",
+  "takeaway": "Mirabegron: check the blood pressure and the CYP2D6 list.",
+  "discriminator": "Beta3 agonist cautions vs antimuscarinic cautions.",
+  "src": "S15; S58",
+  "id": "U6B-013",
+  "answer": "A",
+  "options": {
+   "A": {
+    "text": "It can raise blood pressure, and it inhibits CYP2D6",
+    "why": "Mirabegron can raise blood pressure (monitor in uncontrolled hypertension) and inhibits CYP2D6.",
+    "correct": true
+   },
+   "B": {
+    "text": "It causes first-dose hypotension and floppy iris syndrome",
+    "why": "Those are alpha1-blocker issues.",
+    "correct": false
+   },
+   "C": {
+    "text": "It is raised by CYP3A4 inhibitors, like solifenacin is",
+    "why": "The taught mirabegron interaction is its own CYP2D6 inhibition.",
+    "correct": false
+   },
+   "D": {
+    "text": "It halves PSA, and it lowers libido over months",
+    "why": "Those are 5-alpha-reductase inhibitor effects.",
+    "correct": false
+   },
+   "E": {
+    "text": "It causes confusion, and it is opposed by donepezil",
+    "why": "Those are antimuscarinic issues.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L11/index.html#serms-aromatase-inhibitors-androgens",
+   "label": "Study this: L11 · Part 2 →"
+  }
+ },
+ {
+  "topic": "Contraceptive interactions",
+  "objectives": [
+   "IO6.6"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A 22-year-old on a combined pill starts carbamazepine for a seizure disorder and St. John's wort on her own. Which statement is correct?",
+  "correct": "Both are inducers that lower contraceptive efficacy",
+  "distractors": [
+   {
+    "text": "Both are inhibitors that raise her estrogen and clot risk",
+    "why": "They are enzyme inducers."
+   },
+   {
+    "text": "Only carbamazepine matters; the herbal product is inert",
+    "why": "St. John's wort is a named inducer."
+   },
+   {
+    "text": "Both block CYP2D6 and stop the pill being activated",
+    "why": "CYP2D6 inhibition is the tamoxifen issue."
+   },
+   {
+    "text": "Both raise INR, so warfarin-style monitoring is needed",
+    "why": "INR rises with testosterone or tamoxifen plus warfarin."
+   }
+  ],
+  "why_correct": "Enzyme inducers (rifampin, carbamazepine, phenytoin, St. John's wort) lower combined contraceptive efficacy.",
+  "takeaway": "Inducers, including St. John's wort, weaken the pill.",
+  "discriminator": "Induction lowers hormone levels.",
+  "src": "S45; S45 (notes)",
+  "id": "U6B-004",
+  "answer": "A",
+  "options": {
+   "A": {
+    "text": "Both are inducers that lower contraceptive efficacy",
+    "why": "Enzyme inducers (rifampin, carbamazepine, phenytoin, St. John's wort) lower combined contraceptive efficacy.",
+    "correct": true
+   },
+   "B": {
+    "text": "Both raise INR, so warfarin-style monitoring is needed",
+    "why": "INR rises with testosterone or tamoxifen plus warfarin.",
+    "correct": false
+   },
+   "C": {
+    "text": "Both block CYP2D6 and stop the pill being activated",
+    "why": "CYP2D6 inhibition is the tamoxifen issue.",
+    "correct": false
+   },
+   "D": {
+    "text": "Only carbamazepine matters; the herbal product is inert",
+    "why": "St. John's wort is a named inducer.",
+    "correct": false
+   },
+   "E": {
+    "text": "Both are inhibitors that raise her estrogen and clot risk",
+    "why": "They are enzyme inducers.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L11/index.html#serms-aromatase-inhibitors-androgens",
+   "label": "Study this: L11 · Part 2 →"
+  }
+ },
+ {
+  "topic": "Aromatase inhibitors",
+  "objectives": [
+   "IO6.1",
+   "IO6.3"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A 44-year-old premenopausal woman with estrogen receptor–positive breast cancer asks why she was not given anastrozole alone like her 68-year-old aunt. Which explanation is correct?",
+  "correct": "Her ovaries still make estrogen, so it is not enough alone",
+  "distractors": [
+   {
+    "text": "Aromatase inhibitors only work when the uterus is absent",
+    "why": "The issue is ovarian estrogen, not the uterus."
+   },
+   {
+    "text": "Aromatase inhibitors raise endometrial cancer risk before menopause",
+    "why": "That risk belongs to tamoxifen."
+   },
+   {
+    "text": "Aromatase inhibitors need CYP2D6, which falls after menopause",
+    "why": "CYP2D6 activation is the tamoxifen story."
+   },
+   {
+    "text": "Her bones are too strong for an aromatase inhibitor to act",
+    "why": "Bone loss is an adverse effect, not a requirement."
+   }
+  ],
+  "why_correct": "Aromatase inhibitors block peripheral estrogen synthesis. Before menopause the ovary still makes estrogen, so an aromatase inhibitor alone is insufficient.",
+  "takeaway": "Aromatase inhibitors alone are for after menopause.",
+  "discriminator": "Peripheral synthesis vs ovarian synthesis.",
+  "src": "S13; S14",
+  "id": "U6B-007",
+  "answer": "D",
+  "options": {
+   "A": {
+    "text": "Aromatase inhibitors raise endometrial cancer risk before menopause",
+    "why": "That risk belongs to tamoxifen.",
+    "correct": false
+   },
+   "B": {
+    "text": "Aromatase inhibitors only work when the uterus is absent",
+    "why": "The issue is ovarian estrogen, not the uterus.",
+    "correct": false
+   },
+   "C": {
+    "text": "Her bones are too strong for an aromatase inhibitor to act",
+    "why": "Bone loss is an adverse effect, not a requirement.",
+    "correct": false
+   },
+   "D": {
+    "text": "Her ovaries still make estrogen, so it is not enough alone",
+    "why": "Aromatase inhibitors block peripheral estrogen synthesis. Before menopause the ovary still makes estrogen, so an aromatase inhibitor alone is insufficient.",
+    "correct": true
+   },
+   "E": {
+    "text": "Aromatase inhibitors need CYP2D6, which falls after menopause",
+    "why": "CYP2D6 activation is the tamoxifen story.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L11/index.html#serms-aromatase-inhibitors-androgens",
+   "label": "Study this: L11 · Part 2 →"
+  }
+ },
+ {
+  "topic": "BPH",
+  "objectives": [
+   "IO6.4",
+   "IO6.5"
+  ],
+  "sg": [
+   "U6-R15"
+  ],
+  "kind": "vignette",
+  "stem": "A 68-year-old has taken dutasteride for 3 years. His PSA was 3.0 ng/mL before treatment and is 2.6 ng/mL now. How should the PA interpret this?",
+  "correct": "Concerning: on a 5-ARI a PSA of 2.6 reads as about 5.2",
+  "distractors": [
+   {
+    "text": "Reassuring: the PSA has fallen from 3.0 to 2.6",
+    "why": "It should have fallen by about half."
+   },
+   {
+    "text": "Reassuring: 5-ARIs do not change PSA values",
+    "why": "They lower PSA by roughly half."
+   },
+   {
+    "text": "Concerning: on a 5-ARI a PSA of 2.6 reads as about 1.3",
+    "why": "The correction is to double, not halve."
+   },
+   {
+    "text": "Uninterpretable: PSA cannot be used on dutasteride",
+    "why": "It can be used once adjusted."
+   }
+  ],
+  "why_correct": "5-alpha-reductase inhibitors lower PSA by roughly half with long-term therapy, so the value is read accordingly. A PSA that has barely fallen is effectively higher than baseline.",
+  "takeaway": "On finasteride or dutasteride, double the PSA.",
+  "discriminator": "Compare the adjusted value with baseline.",
+  "src": "S23; S24; SG U6-R15",
+  "id": "U6B-016",
+  "answer": "B",
+  "options": {
+   "A": {
+    "text": "Reassuring: 5-ARIs do not change PSA values",
+    "why": "They lower PSA by roughly half.",
+    "correct": false
+   },
+   "B": {
+    "text": "Concerning: on a 5-ARI a PSA of 2.6 reads as about 5.2",
+    "why": "5-alpha-reductase inhibitors lower PSA by roughly half with long-term therapy, so the value is read accordingly. A PSA that has barely fallen is effectively higher than baseline.",
+    "correct": true
+   },
+   "C": {
+    "text": "Concerning: on a 5-ARI a PSA of 2.6 reads as about 1.3",
+    "why": "The correction is to double, not halve.",
+    "correct": false
+   },
+   "D": {
+    "text": "Reassuring: the PSA has fallen from 3.0 to 2.6",
+    "why": "It should have fallen by about half.",
+    "correct": false
+   },
+   "E": {
+    "text": "Uninterpretable: PSA cannot be used on dutasteride",
+    "why": "It can be used once adjusted.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L11/index.html#pcos-the-reproductive-metabolic-overlap",
+   "label": "Study this: L11 · Part 3 →"
+  }
+ },
+ {
+  "topic": "SERMs",
+  "objectives": [
+   "IO6.1",
+   "IO6.5"
+  ],
+  "sg": [],
+  "kind": "mechanism",
+  "stem": "Two women take a SERM. One takes tamoxifen after breast cancer; the other takes raloxifene for osteoporosis. Which risk do both drugs share, and which belongs to only one?",
+  "correct": "Shared: VTE. Tamoxifen only: endometrial cancer",
+  "distractors": [
+   {
+    "text": "Shared: endometrial cancer. Raloxifene only: VTE",
+    "why": "Raloxifene is endometrium-neutral; VTE is shared."
+   },
+   {
+    "text": "Shared: bone loss. Tamoxifen only: joint pain",
+    "why": "Bone loss and joint pain are aromatase-inhibitor effects."
+   },
+   {
+    "text": "Shared: VTE. Raloxifene only: endometrial cancer",
+    "why": "The endometrial agonist is tamoxifen."
+   },
+   {
+    "text": "Shared: erythrocytosis. Tamoxifen only: hepatotoxicity",
+    "why": "Those belong to testosterone."
+   }
+  ],
+  "why_correct": "Both SERMs carry increased VTE risk, similar to estrogen therapy. Tamoxifen's endometrial agonism adds endometrial hyperplasia and cancer risk; raloxifene does not.",
+  "takeaway": "Both clot; only tamoxifen acts on the endometrium.",
+  "discriminator": "Tissue-specific agonism explains the difference.",
+  "src": "S11; S12",
+  "id": "U6B-006",
+  "answer": "B",
+  "options": {
+   "A": {
+    "text": "Shared: VTE. Raloxifene only: endometrial cancer",
+    "why": "The endometrial agonist is tamoxifen.",
+    "correct": false
+   },
+   "B": {
+    "text": "Shared: VTE. Tamoxifen only: endometrial cancer",
+    "why": "Both SERMs carry increased VTE risk, similar to estrogen therapy. Tamoxifen's endometrial agonism adds endometrial hyperplasia and cancer risk; raloxifene does not.",
+    "correct": true
+   },
+   "C": {
+    "text": "Shared: bone loss. Tamoxifen only: joint pain",
+    "why": "Bone loss and joint pain are aromatase-inhibitor effects.",
+    "correct": false
+   },
+   "D": {
+    "text": "Shared: erythrocytosis. Tamoxifen only: hepatotoxicity",
+    "why": "Those belong to testosterone.",
+    "correct": false
+   },
+   "E": {
+    "text": "Shared: endometrial cancer. Raloxifene only: VTE",
+    "why": "Raloxifene is endometrium-neutral; VTE is shared.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L11/index.html#serms-aromatase-inhibitors-androgens",
+   "label": "Study this: L11 · Part 2 →"
+  }
+ },
+ {
+  "topic": "Aromatase inhibitors",
+  "objectives": [
+   "IO6.2",
+   "IO6.4"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A 66-year-old on letrozole for 18 months reports aching in her hands and knees. Her DXA scan shows a drop in bone density. Which plan fits the lecture?",
+  "correct": "Expected effects; add a bisphosphonate, calcium and vitamin D",
+  "distractors": [
+   {
+    "text": "Unexpected effects; switch to tamoxifen to avoid VTE risk",
+    "why": "Tamoxifen carries VTE risk; these effects are expected."
+   },
+   {
+    "text": "Expected effects; add estradiol alone to rebuild bone",
+    "why": "Adding estrogen defeats the treatment."
+   },
+   {
+    "text": "Unexpected effects; check hematocrit for erythrocytosis",
+    "why": "That is testosterone monitoring."
+   },
+   {
+    "text": "Expected effects; add DMPA, which strengthens bone",
+    "why": "DMPA causes bone density loss."
+   }
+  ],
+  "why_correct": "Aromatase inhibitor adverse effects are bone loss and joint pain. Bisphosphonates and calcium with vitamin D protect bone.",
+  "takeaway": "Aromatase inhibitor: joints ache, bones thin.",
+  "discriminator": "Tamoxifen spares bone; aromatase inhibitors do not.",
+  "src": "S14; S45",
+  "id": "U6B-008",
+  "answer": "C",
+  "options": {
+   "A": {
+    "text": "Expected effects; add DMPA, which strengthens bone",
+    "why": "DMPA causes bone density loss.",
+    "correct": false
+   },
+   "B": {
+    "text": "Unexpected effects; switch to tamoxifen to avoid VTE risk",
+    "why": "Tamoxifen carries VTE risk; these effects are expected.",
+    "correct": false
+   },
+   "C": {
+    "text": "Expected effects; add a bisphosphonate, calcium and vitamin D",
+    "why": "Aromatase inhibitor adverse effects are bone loss and joint pain. Bisphosphonates and calcium with vitamin D protect bone.",
+    "correct": true
+   },
+   "D": {
+    "text": "Expected effects; add estradiol alone to rebuild bone",
+    "why": "Adding estrogen defeats the treatment.",
+    "correct": false
+   },
+   "E": {
+    "text": "Unexpected effects; check hematocrit for erythrocytosis",
+    "why": "That is testosterone monitoring.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L11/index.html#serms-aromatase-inhibitors-androgens",
+   "label": "Study this: L11 · Part 2 →"
+  }
+ },
+ {
+  "topic": "PCOS",
+  "objectives": [
+   "IO6.2",
+   "IO6.4"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A 29-year-old with PCOS starts metformin. After 5 days she has nausea and loose stools and wants to stop. Her renal function is normal. What is the best advice?",
+  "correct": "Common and often transient; take it with meals",
+  "distractors": [
+   {
+    "text": "A sign of lactic acidosis; stop it and go to the hospital",
+    "why": "Lactic acidosis is rare and tied to renal impairment."
+   },
+   {
+    "text": "An allergy; switch to a sulfonylurea to avoid GI effects",
+    "why": "This is an expected effect, not an allergy."
+   },
+   {
+    "text": "Expected; take it on an empty stomach to absorb it better",
+    "why": "Meals reduce the GI upset."
+   },
+   {
+    "text": "A sign of B12 deficiency; check a level this week",
+    "why": "B12 deficiency follows long-term use."
+   }
+  ],
+  "why_correct": "Metformin's common early effect is GI upset (nausea, diarrhea), often transient; take with meals. Lactic acidosis is rare but serious and linked to renal impairment.",
+  "takeaway": "Early metformin GI upset: with meals, and wait.",
+  "discriminator": "Common and early vs rare and renal.",
+  "src": "S22; S23",
+  "id": "U6B-011",
+  "answer": "B",
+  "options": {
+   "A": {
+    "text": "An allergy; switch to a sulfonylurea to avoid GI effects",
+    "why": "This is an expected effect, not an allergy.",
+    "correct": false
+   },
+   "B": {
+    "text": "Common and often transient; take it with meals",
+    "why": "Metformin's common early effect is GI upset (nausea, diarrhea), often transient; take with meals. Lactic acidosis is rare but serious and linked to renal impairment.",
+    "correct": true
+   },
+   "C": {
+    "text": "A sign of B12 deficiency; check a level this week",
+    "why": "B12 deficiency follows long-term use.",
+    "correct": false
+   },
+   "D": {
+    "text": "A sign of lactic acidosis; stop it and go to the hospital",
+    "why": "Lactic acidosis is rare and tied to renal impairment.",
+    "correct": false
+   },
+   "E": {
+    "text": "Expected; take it on an empty stomach to absorb it better",
+    "why": "Meals reduce the GI upset.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L11/index.html#pcos-the-reproductive-metabolic-overlap",
+   "label": "Study this: L11 · Part 3 →"
+  }
+ },
+ {
+  "topic": "Menopausal hormone therapy",
+  "objectives": [
+   "IO6.2",
+   "IO6.3"
+  ],
+  "sg": [
+   "U6-R2"
+  ],
+  "kind": "vignette",
+  "stem": "A 53-year-old with severe hot flashes has an intact uterus. A 55-year-old with the same symptoms had a hysterectomy. Which regimens match the lecture's rule?",
+  "correct": "Estrogen plus a progestin for the first; estrogen alone for the second",
+  "distractors": [
+   {
+    "text": "Estrogen alone for the first; estrogen plus progestin for the second",
+    "why": "Unopposed estrogen with a uterus raises endometrial cancer risk."
+   },
+   {
+    "text": "Estrogen alone for both, at the lowest effective dose",
+    "why": "The uterus needs progestin protection whatever the dose."
+   },
+   {
+    "text": "Tamoxifen for both, since it protects the endometrium",
+    "why": "Tamoxifen is an endometrial agonist."
+   },
+   {
+    "text": "An aromatase inhibitor for both, to steady estrogen levels",
+    "why": "That lowers estrogen and would worsen hot flashes."
+   }
+  ],
+  "why_correct": "Unopposed estrogen in a patient with a uterus significantly increases endometrial cancer risk, so a progestin is added. Without a uterus there is no endometrium to protect.",
+  "takeaway": "Uterus present: never estrogen alone.",
+  "discriminator": "The progestin is there for the endometrium.",
+  "src": "S6; S7; SG U6-R2",
+  "id": "U6B-003",
+  "answer": "E",
+  "options": {
+   "A": {
+    "text": "An aromatase inhibitor for both, to steady estrogen levels",
+    "why": "That lowers estrogen and would worsen hot flashes.",
+    "correct": false
+   },
+   "B": {
+    "text": "Estrogen alone for both, at the lowest effective dose",
+    "why": "The uterus needs progestin protection whatever the dose.",
+    "correct": false
+   },
+   "C": {
+    "text": "Estrogen alone for the first; estrogen plus progestin for the second",
+    "why": "Unopposed estrogen with a uterus raises endometrial cancer risk.",
+    "correct": false
+   },
+   "D": {
+    "text": "Tamoxifen for both, since it protects the endometrium",
+    "why": "Tamoxifen is an endometrial agonist.",
+    "correct": false
+   },
+   "E": {
+    "text": "Estrogen plus a progestin for the first; estrogen alone for the second",
+    "why": "Unopposed estrogen in a patient with a uterus significantly increases endometrial cancer risk, so a progestin is added. Without a uterus there is no endometrium to protect.",
+    "correct": true
+   }
+  },
+  "link": {
+   "href": "../../L11/index.html#estrogens-progestins-contraception",
+   "label": "Study this: L11 · Part 1 →"
+  }
+ },
+ {
+  "topic": "PDE5 inhibitors",
+  "objectives": [
+   "IO6.6",
+   "IO6.4"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A 62-year-old takes tamsulosin for BPH and wants to start tadalafil for erectile dysfunction. He takes no nitrates. Which statement is correct?",
+  "correct": "Additive hypotension: space the doses or monitor closely",
+  "distractors": [
+   {
+    "text": "Absolutely contraindicated, exactly as with nitrates",
+    "why": "The alpha1-blocker interaction is less severe."
+   },
+   {
+    "text": "No interaction, because the two act on different tissues",
+    "why": "Both lower blood pressure."
+   },
+   {
+    "text": "Tamsulosin blocks tadalafil's effect on cGMP entirely",
+    "why": "They add to each other's hypotension."
+   },
+   {
+    "text": "Tadalafil raises tamsulosin levels through CYP2D6",
+    "why": "CYP2D6 inhibition is mirabegron's interaction."
+   }
+  ],
+  "why_correct": "Alpha1 blockers and PDE5 inhibitors together cause additive hypotension: less severe than with nitrates, but it warrants spacing doses or careful monitoring.",
+  "takeaway": "Alpha1 blocker + PDE5 inhibitor: caution, not a ban.",
+  "discriminator": "Nitrates: never. Alpha1 blockers: carefully.",
+  "src": "S26; S29; SG U6-S",
+  "id": "U6B-018",
+  "answer": "A",
+  "options": {
+   "A": {
+    "text": "Additive hypotension: space the doses or monitor closely",
+    "why": "Alpha1 blockers and PDE5 inhibitors together cause additive hypotension: less severe than with nitrates, but it warrants spacing doses or careful monitoring.",
+    "correct": true
+   },
+   "B": {
+    "text": "Absolutely contraindicated, exactly as with nitrates",
+    "why": "The alpha1-blocker interaction is less severe.",
+    "correct": false
+   },
+   "C": {
+    "text": "No interaction, because the two act on different tissues",
+    "why": "Both lower blood pressure.",
+    "correct": false
+   },
+   "D": {
+    "text": "Tadalafil raises tamsulosin levels through CYP2D6",
+    "why": "CYP2D6 inhibition is mirabegron's interaction.",
+    "correct": false
+   },
+   "E": {
+    "text": "Tamsulosin blocks tadalafil's effect on cGMP entirely",
+    "why": "They add to each other's hypotension.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L11/index.html#pcos-the-reproductive-metabolic-overlap",
+   "label": "Study this: L11 · Part 3 →"
+  }
+ },
+ {
+  "topic": "Matching drug to site",
+  "objectives": [
+   "IO6.1",
+   "IO6.5"
+  ],
+  "sg": [],
+  "kind": "mechanism",
+  "stem": "A man has both urgency with small frequent voids and a weak stream with hesitancy. Which pairing of drug, site and problem treated is correct?",
+  "correct": "Mirabegron: beta3 on detrusor, urgency. Tamsulosin: alpha1 at outlet, weak stream",
+  "distractors": [
+   {
+    "text": "Mirabegron: alpha1 at outlet, weak stream. Tamsulosin: beta3 on detrusor, urgency",
+    "why": "The sites are reversed."
+   },
+   {
+    "text": "Oxybutynin: M3 on detrusor, weak stream. Finasteride: alpha1 at outlet, urgency",
+    "why": "Oxybutynin treats urgency; finasteride blocks 5-alpha-reductase."
+   },
+   {
+    "text": "Sildenafil: beta3 on detrusor, urgency. Tamsulosin: PDE5 at outlet, weak stream",
+    "why": "Sildenafil inhibits PDE5; tamsulosin blocks alpha1."
+   },
+   {
+    "text": "Mirabegron: M3 block on detrusor, urgency. Tamsulosin: 5-ARI in prostate, weak stream",
+    "why": "Mirabegron is a beta3 agonist; tamsulosin is an alpha1 blocker."
+   }
+  ],
+  "why_correct": "Mirabegron stimulates beta3 on the detrusor to relax the reservoir (storage symptoms). Tamsulosin is a uroselective alpha1 antagonist that opens the outlet (voiding symptoms).",
+  "takeaway": "Storage problem: detrusor drug. Voiding problem: outlet drug.",
+  "discriminator": "Match the symptom to the site.",
+  "src": "S8; S15; SG U6-M",
+  "id": "U6B-020",
+  "answer": "D",
+  "options": {
+   "A": {
+    "text": "Mirabegron: alpha1 at outlet, weak stream. Tamsulosin: beta3 on detrusor, urgency",
+    "why": "The sites are reversed.",
+    "correct": false
+   },
+   "B": {
+    "text": "Oxybutynin: M3 on detrusor, weak stream. Finasteride: alpha1 at outlet, urgency",
+    "why": "Oxybutynin treats urgency; finasteride blocks 5-alpha-reductase.",
+    "correct": false
+   },
+   "C": {
+    "text": "Mirabegron: M3 block on detrusor, urgency. Tamsulosin: 5-ARI in prostate, weak stream",
+    "why": "Mirabegron is a beta3 agonist; tamsulosin is an alpha1 blocker.",
+    "correct": false
+   },
+   "D": {
+    "text": "Mirabegron: beta3 on detrusor, urgency. Tamsulosin: alpha1 at outlet, weak stream",
+    "why": "Mirabegron stimulates beta3 on the detrusor to relax the reservoir (storage symptoms). Tamsulosin is a uroselective alpha1 antagonist that opens the outlet (voiding symptoms).",
+    "correct": true
+   },
+   "E": {
+    "text": "Sildenafil: beta3 on detrusor, urgency. Tamsulosin: PDE5 at outlet, weak stream",
+    "why": "Sildenafil inhibits PDE5; tamsulosin blocks alpha1.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L11/index.html#serms-aromatase-inhibitors-androgens",
+   "label": "Study this: L11 · Part 2 →"
+  }
+ },
+ {
+  "topic": "BPH",
+  "objectives": [
+   "IO6.2",
+   "IO6.4"
+  ],
+  "sg": [
+   "U6-R14"
+  ],
+  "kind": "vignette",
+  "stem": "A 71-year-old starts tamsulosin for BPH and is scheduled for cataract surgery next month. He also takes two antihypertensives. Which pair of counseling points is correct?",
+  "correct": "First-dose dizziness on standing; tell the eye surgeon",
+  "distractors": [
+   {
+    "text": "PSA will halve; double the value at the next screening",
+    "why": "That is the 5-alpha-reductase inhibitor rule."
+   },
+   {
+    "text": "Libido may fall; the prostate shrinks over 6 months",
+    "why": "Those describe finasteride and dutasteride."
+   },
+   {
+    "text": "Blue-tinged vision; avoid all nitrates while taking it",
+    "why": "Those are PDE5-inhibitor points."
+   },
+   {
+    "text": "Dry mouth and confusion; avoid diphenhydramine at night",
+    "why": "Those are antimuscarinic points."
+   }
+  ],
+  "why_correct": "Alpha1 blockers cause orthostatic hypotension and a first-dose effect, additive with antihypertensives. Floppy iris syndrome is an intraoperative complication of cataract surgery in patients on alpha1 blockers.",
+  "takeaway": "Tamsulosin: stand up slowly, and tell the cataract surgeon.",
+  "discriminator": "Alpha1 is on vessels and the iris, not only the prostate.",
+  "src": "S21; S58; SG U6-R14",
+  "id": "U6B-015",
+  "answer": "D",
+  "options": {
+   "A": {
+    "text": "Dry mouth and confusion; avoid diphenhydramine at night",
+    "why": "Those are antimuscarinic points.",
+    "correct": false
+   },
+   "B": {
+    "text": "Libido may fall; the prostate shrinks over 6 months",
+    "why": "Those describe finasteride and dutasteride.",
+    "correct": false
+   },
+   "C": {
+    "text": "PSA will halve; double the value at the next screening",
+    "why": "That is the 5-alpha-reductase inhibitor rule.",
+    "correct": false
+   },
+   "D": {
+    "text": "First-dose dizziness on standing; tell the eye surgeon",
+    "why": "Alpha1 blockers cause orthostatic hypotension and a first-dose effect, additive with antihypertensives. Floppy iris syndrome is an intraoperative complication of cataract surgery in patients on alpha1 blockers.",
+    "correct": true
+   },
+   "E": {
+    "text": "Blue-tinged vision; avoid all nitrates while taking it",
+    "why": "Those are PDE5-inhibitor points.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L11/index.html#pcos-the-reproductive-metabolic-overlap",
+   "label": "Study this: L11 · Part 3 →"
+  }
+ },
+ {
+  "topic": "Androgens",
+  "objectives": [
+   "IO6.4",
+   "IO6.6"
+  ],
+  "sg": [
+   "U6-R7"
+  ],
+  "kind": "vignette",
+  "stem": "A 61-year-old on warfarin for atrial fibrillation starts testosterone gel for confirmed hypogonadism. Which monitoring set is most complete for the first months?",
+  "correct": "Hematocrit, PSA and a closer watch on INR",
+  "distractors": [
+   {
+    "text": "Potassium and creatinine within 1 week of starting",
+    "why": "That is spironolactone monitoring."
+   },
+   {
+    "text": "Bone density and calcium with vitamin D levels",
+    "why": "That is aromatase-inhibitor care."
+   },
+   {
+    "text": "Hematocrit and PSA only; warfarin is unaffected",
+    "why": "Testosterone raises INR with warfarin."
+   },
+   {
+    "text": "Prolactin and a pregnancy test before each refill",
+    "why": "That is dopamine-agonist monitoring."
+   }
+  ],
+  "why_correct": "Testosterone therapy needs hematocrit (erythrocytosis) and PSA monitoring. Testosterone and tamoxifen raise INR with warfarin.",
+  "takeaway": "Testosterone: hematocrit, PSA, and INR if on warfarin.",
+  "discriminator": "Routine monitoring plus the interaction.",
+  "src": "S15; S45; SG U6-R7",
+  "id": "U6B-009",
+  "answer": "A",
+  "options": {
+   "A": {
+    "text": "Hematocrit, PSA and a closer watch on INR",
+    "why": "Testosterone therapy needs hematocrit (erythrocytosis) and PSA monitoring. Testosterone and tamoxifen raise INR with warfarin.",
+    "correct": true
+   },
+   "B": {
+    "text": "Hematocrit and PSA only; warfarin is unaffected",
+    "why": "Testosterone raises INR with warfarin.",
+    "correct": false
+   },
+   "C": {
+    "text": "Potassium and creatinine within 1 week of starting",
+    "why": "That is spironolactone monitoring.",
+    "correct": false
+   },
+   "D": {
+    "text": "Bone density and calcium with vitamin D levels",
+    "why": "That is aromatase-inhibitor care.",
+    "correct": false
+   },
+   "E": {
+    "text": "Prolactin and a pregnancy test before each refill",
+    "why": "That is dopamine-agonist monitoring.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L11/index.html#serms-aromatase-inhibitors-androgens",
+   "label": "Study this: L11 · Part 2 →"
+  }
+ },
+ {
+  "topic": "Overactive bladder",
+  "objectives": [
+   "IO6.6"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A 70-year-old stable on solifenacin starts clarithromycin. Four days later he has a very dry mouth, constipation and blurred vision. What is the mechanism?",
+  "correct": "Clarithromycin inhibits CYP3A4 and raises solifenacin levels",
+  "distractors": [
+   {
+    "text": "Clarithromycin induces CYP3A4 and lowers solifenacin levels",
+    "why": "Lower levels would reduce, not increase, effects."
+   },
+   {
+    "text": "Clarithromycin inhibits CYP2D6, as mirabegron also does",
+    "why": "The solifenacin interaction is CYP3A4."
+   },
+   {
+    "text": "Clarithromycin adds its own antimuscarinic blockade",
+    "why": "It is not an anticholinergic."
+   },
+   {
+    "text": "Clarithromycin opposes solifenacin like donepezil does",
+    "why": "Opposition would lessen the effects."
+   }
+  ],
+  "why_correct": "Strong CYP3A4 inhibitors (ketoconazole, clarithromycin) raise solifenacin levels, so antimuscarinic effects increase.",
+  "takeaway": "CYP3A4 inhibitor + solifenacin = more anticholinergic effect.",
+  "discriminator": "Higher level of the same drug, not a second anticholinergic.",
+  "src": "S58; S58 (notes)",
+  "id": "U6B-014",
+  "answer": "C",
+  "options": {
+   "A": {
+    "text": "Clarithromycin inhibits CYP2D6, as mirabegron also does",
+    "why": "The solifenacin interaction is CYP3A4.",
+    "correct": false
+   },
+   "B": {
+    "text": "Clarithromycin induces CYP3A4 and lowers solifenacin levels",
+    "why": "Lower levels would reduce, not increase, effects.",
+    "correct": false
+   },
+   "C": {
+    "text": "Clarithromycin inhibits CYP3A4 and raises solifenacin levels",
+    "why": "Strong CYP3A4 inhibitors (ketoconazole, clarithromycin) raise solifenacin levels, so antimuscarinic effects increase.",
+    "correct": true
+   },
+   "D": {
+    "text": "Clarithromycin opposes solifenacin like donepezil does",
+    "why": "Opposition would lessen the effects.",
+    "correct": false
+   },
+   "E": {
+    "text": "Clarithromycin adds its own antimuscarinic blockade",
+    "why": "It is not an anticholinergic.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L11/index.html",
+   "label": "Study this: L11 →"
+  }
+ },
+ {
+  "topic": "Contraception",
+  "objectives": [
+   "IO6.2",
+   "IO6.4"
+  ],
+  "sg": [
+   "U6-R4"
+  ],
+  "kind": "vignette",
+  "stem": "A 26-year-old has used DMPA injections for 4 years and wants to continue long term. She has irregular spotting and asks about any lasting risks. Which point should be covered?",
+  "correct": "Bone mineral density loss with prolonged use, which is reversible",
+  "distractors": [
+   {
+    "text": "Endometrial cancer risk from unopposed progestin exposure",
+    "why": "The endometrial risk is from unopposed estrogen."
+   },
+   {
+    "text": "Venous thromboembolism risk equal to a combined pill",
+    "why": "VTE is the estrogen concern."
+   },
+   {
+    "text": "Erythrocytosis, so hematocrit is monitored each year",
+    "why": "That is testosterone therapy."
+   },
+   {
+    "text": "Permanent infertility after more than 2 years of use",
+    "why": "This is not a taught DMPA effect."
+   }
+  ],
+  "why_correct": "Progestin-only methods cause irregular bleeding, especially early, and mood changes. DMPA specifically causes reversible bone mineral density loss with prolonged use.",
+  "takeaway": "DMPA long term: think bone density.",
+  "discriminator": "Class effect (spotting) vs DMPA-specific effect (bone).",
+  "src": "S6; S9; SG U6-R4",
+  "id": "U6B-002",
+  "answer": "E",
+  "options": {
+   "A": {
+    "text": "Venous thromboembolism risk equal to a combined pill",
+    "why": "VTE is the estrogen concern.",
+    "correct": false
+   },
+   "B": {
+    "text": "Endometrial cancer risk from unopposed progestin exposure",
+    "why": "The endometrial risk is from unopposed estrogen.",
+    "correct": false
+   },
+   "C": {
+    "text": "Permanent infertility after more than 2 years of use",
+    "why": "This is not a taught DMPA effect.",
+    "correct": false
+   },
+   "D": {
+    "text": "Erythrocytosis, so hematocrit is monitored each year",
+    "why": "That is testosterone therapy.",
+    "correct": false
+   },
+   "E": {
+    "text": "Bone mineral density loss with prolonged use, which is reversible",
+    "why": "Progestin-only methods cause irregular bleeding, especially early, and mood changes. DMPA specifically causes reversible bone mineral density loss with prolonged use.",
+    "correct": true
+   }
+  },
+  "link": {
+   "href": "../../L11/index.html#estrogens-progestins-contraception",
+   "label": "Study this: L11 · Part 1 →"
+  }
+ },
+ {
+  "topic": "Androgens",
+  "objectives": [
+   "IO6.2",
+   "IO6.5"
+  ],
+  "sg": [
+   "U6-R7"
+  ],
+  "kind": "vignette",
+  "stem": "A 31-year-old man using testosterone from a gym contact has been trying to conceive for a year. Semen analysis shows a very low sperm count. What is the mechanism?",
+  "correct": "Exogenous testosterone suppresses the testis's own function",
+  "distractors": [
+   {
+    "text": "Testosterone is converted to DHT, which destroys sperm",
+    "why": "The taught effect is suppression of endogenous function."
+   },
+   {
+    "text": "Testosterone blocks 5-alpha-reductase in the testis",
+    "why": "That is finasteride and dutasteride."
+   },
+   {
+    "text": "Testosterone raises prolactin by blocking dopamine",
+    "why": "That is antipsychotics and metoclopramide."
+   },
+   {
+    "text": "Testosterone causes erythrocytosis that blocks the ducts",
+    "why": "Erythrocytosis is real but unrelated to fertility."
+   }
+  ],
+  "why_correct": "Testosterone causes erythrocytosis, hepatotoxicity with oral forms, and suppression of endogenous testicular function and fertility.",
+  "takeaway": "Testosterone lowers fertility.",
+  "discriminator": "Giving the end hormone switches off its own axis.",
+  "src": "S15; SG U6-R7",
+  "id": "U6B-010",
+  "answer": "C",
+  "options": {
+   "A": {
+    "text": "Testosterone causes erythrocytosis that blocks the ducts",
+    "why": "Erythrocytosis is real but unrelated to fertility.",
+    "correct": false
+   },
+   "B": {
+    "text": "Testosterone is converted to DHT, which destroys sperm",
+    "why": "The taught effect is suppression of endogenous function.",
+    "correct": false
+   },
+   "C": {
+    "text": "Exogenous testosterone suppresses the testis's own function",
+    "why": "Testosterone causes erythrocytosis, hepatotoxicity with oral forms, and suppression of endogenous testicular function and fertility.",
+    "correct": true
+   },
+   "D": {
+    "text": "Testosterone blocks 5-alpha-reductase in the testis",
+    "why": "That is finasteride and dutasteride.",
+    "correct": false
+   },
+   "E": {
+    "text": "Testosterone raises prolactin by blocking dopamine",
+    "why": "That is antipsychotics and metoclopramide.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L11/index.html#serms-aromatase-inhibitors-androgens",
+   "label": "Study this: L11 · Part 2 →"
+  }
+ },
+ {
+  "topic": "Contraception",
+  "objectives": [
+   "IO6.2",
+   "IO6.3"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A 38-year-old who smokes a pack a day asks for 'the regular pill' for contraception. Her mother had a pulmonary embolism at 45. Which option is most appropriate?",
+  "correct": "A progestin-only method, because estrogen is contraindicated",
+  "distractors": [
+   {
+    "text": "A combined pill, because her VTE risk is only theoretical",
+    "why": "Smoking, age over 35 and family VTE history move her to contraindicated."
+   },
+   {
+    "text": "A combined pill plus low-dose aspirin to offset clot risk",
+    "why": "The lecture's answer is to avoid estrogen, not to offset it."
+   },
+   {
+    "text": "Estradiol alone, because the dose is lower than the pill",
+    "why": "It is still estrogen, and unopposed with a uterus."
+   },
+   {
+    "text": "Raloxifene, because it avoids the endometrial cancer risk",
+    "why": "It is not a contraceptive and carries VTE risk itself."
+   }
+  ],
+  "why_correct": "Estrogen raises VTE risk, more with smoking and age over 35, or a personal or family VTE history. Those factors shift a patient from candidate to contraindicated; progestin-only methods avoid estrogen.",
+  "takeaway": "Smoker over 35 or VTE history: no estrogen.",
+  "discriminator": "Risk factors change the answer, not the dose.",
+  "src": "S5; S5 (notes)",
+  "id": "U6B-001",
+  "answer": "C",
+  "options": {
+   "A": {
+    "text": "Raloxifene, because it avoids the endometrial cancer risk",
+    "why": "It is not a contraceptive and carries VTE risk itself.",
+    "correct": false
+   },
+   "B": {
+    "text": "A combined pill plus low-dose aspirin to offset clot risk",
+    "why": "The lecture's answer is to avoid estrogen, not to offset it.",
+    "correct": false
+   },
+   "C": {
+    "text": "A progestin-only method, because estrogen is contraindicated",
+    "why": "Estrogen raises VTE risk, more with smoking and age over 35, or a personal or family VTE history. Those factors shift a patient from candidate to contraindicated; progestin-only methods avoid estrogen.",
+    "correct": true
+   },
+   "D": {
+    "text": "Estradiol alone, because the dose is lower than the pill",
+    "why": "It is still estrogen, and unopposed with a uterus.",
+    "correct": false
+   },
+   "E": {
+    "text": "A combined pill, because her VTE risk is only theoretical",
+    "why": "Smoking, age over 35 and family VTE history move her to contraindicated.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L11/index.html#estrogens-progestins-contraception",
+   "label": "Study this: L11 · Part 1 →"
+  }
+ },
+ {
+  "topic": "PDE5 inhibitors",
+  "objectives": [
+   "IO6.2",
+   "IO6.6"
+  ],
+  "sg": [],
+  "kind": "vignette",
+  "stem": "A 59-year-old on sildenafil starts ketoconazole. After his next dose he has a pounding headache, marked flushing and a blue tint to his vision. What explains the stronger effects?",
+  "correct": "Ketoconazole inhibits CYP3A4 and raises sildenafil levels",
+  "distractors": [
+   {
+    "text": "Ketoconazole induces CYP3A4 and lowers sildenafil levels",
+    "why": "Lower levels would weaken the effects."
+   },
+   {
+    "text": "Ketoconazole donates NO and raises cGMP like a nitrate",
+    "why": "It is not a nitrate."
+   },
+   {
+    "text": "Ketoconazole blocks alpha1 receptors in vessel walls",
+    "why": "That is tamsulosin."
+   },
+   {
+    "text": "The blue vision shows an allergy unrelated to dose",
+    "why": "Visual change is a known, dose-related PDE5 effect."
+   }
+  ],
+  "why_correct": "Strong CYP3A4 inhibitors (ketoconazole, clarithromycin) raise PDE5 inhibitor levels. Headache, flushing, dyspepsia and blue-tinged vision are the class adverse effects, more notable with sildenafil.",
+  "takeaway": "CYP3A4 inhibitor + PDE5 inhibitor = exaggerated effects.",
+  "discriminator": "Expected adverse effects, at a higher level.",
+  "src": "S26; S58",
+  "id": "U6B-019",
+  "answer": "E",
+  "options": {
+   "A": {
+    "text": "The blue vision shows an allergy unrelated to dose",
+    "why": "Visual change is a known, dose-related PDE5 effect.",
+    "correct": false
+   },
+   "B": {
+    "text": "Ketoconazole induces CYP3A4 and lowers sildenafil levels",
+    "why": "Lower levels would weaken the effects.",
+    "correct": false
+   },
+   "C": {
+    "text": "Ketoconazole donates NO and raises cGMP like a nitrate",
+    "why": "It is not a nitrate.",
+    "correct": false
+   },
+   "D": {
+    "text": "Ketoconazole blocks alpha1 receptors in vessel walls",
+    "why": "That is tamsulosin.",
+    "correct": false
+   },
+   "E": {
+    "text": "Ketoconazole inhibits CYP3A4 and raises sildenafil levels",
+    "why": "Strong CYP3A4 inhibitors (ketoconazole, clarithromycin) raise PDE5 inhibitor levels. Headache, flushing, dyspepsia and blue-tinged vision are the class adverse effects, more notable with sildenafil.",
+    "correct": true
+   }
+  },
+  "link": {
+   "href": "../../L11/index.html#pcos-the-reproductive-metabolic-overlap",
+   "label": "Study this: L11 · Part 3 →"
+  }
+ },
+ {
+  "topic": "Overactive bladder",
+  "objectives": [
+   "IO6.2",
+   "IO6.3"
+  ],
+  "sg": [
+   "U6-R12"
+  ],
+  "kind": "vignette",
+  "stem": "An 82-year-old with mild dementia on donepezil has urge incontinence. She also takes diphenhydramine nightly. Her blood pressure is well controlled. Which plan is best?",
+  "correct": "Stop diphenhydramine and choose mirabegron over oxybutynin",
+  "distractors": [
+   {
+    "text": "Start oxybutynin; it has the least CNS effect in the class",
+    "why": "Oxybutynin has the highest CNS anticholinergic burden."
+   },
+   {
+    "text": "Start solifenacin and continue diphenhydramine for sleep",
+    "why": "Anticholinergic burden is cumulative across her drugs."
+   },
+   {
+    "text": "Start oxybutynin; donepezil will cancel its side effects",
+    "why": "Donepezil opposes antimuscarinics; they work against each other."
+   },
+   {
+    "text": "Start tamsulosin to relax the bladder outlet instead",
+    "why": "Her problem is storage, not outlet obstruction."
+   }
+  ],
+  "why_correct": "Antimuscarinics cause confusion in older adults, and the burden adds up across drugs such as diphenhydramine. Oxybutynin carries the highest CNS burden; cholinesterase inhibitors oppose antimuscarinics. Mirabegron, a beta3 agonist, avoids this.",
+  "takeaway": "Dementia + urge incontinence: avoid oxybutynin, cut other anticholinergics.",
+  "discriminator": "Count the whole anticholinergic load.",
+  "src": "S13; S14; S58; SG U6-R12",
+  "id": "U6B-012",
+  "answer": "B",
+  "options": {
+   "A": {
+    "text": "Start solifenacin and continue diphenhydramine for sleep",
+    "why": "Anticholinergic burden is cumulative across her drugs.",
+    "correct": false
+   },
+   "B": {
+    "text": "Stop diphenhydramine and choose mirabegron over oxybutynin",
+    "why": "Antimuscarinics cause confusion in older adults, and the burden adds up across drugs such as diphenhydramine. Oxybutynin carries the highest CNS burden; cholinesterase inhibitors oppose antimuscarinics. Mirabegron, a beta3 agonist, avoids this.",
+    "correct": true
+   },
+   "C": {
+    "text": "Start tamsulosin to relax the bladder outlet instead",
+    "why": "Her problem is storage, not outlet obstruction.",
+    "correct": false
+   },
+   "D": {
+    "text": "Start oxybutynin; donepezil will cancel its side effects",
+    "why": "Donepezil opposes antimuscarinics; they work against each other.",
+    "correct": false
+   },
+   "E": {
+    "text": "Start oxybutynin; it has the least CNS effect in the class",
+    "why": "Oxybutynin has the highest CNS anticholinergic burden.",
+    "correct": false
+   }
+  },
+  "link": {
+   "href": "../../L11/index.html#serms-aromatase-inhibitors-androgens",
+   "label": "Study this: L11 · Part 2 →"
+  }
+ }
+]

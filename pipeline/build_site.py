@@ -87,7 +87,7 @@ def viz_attrs(fig, lid=None):
         v = fig["viz"]
         nodes = [{**n, "label": an.get("labels", {}).get(n["id"], n["label"])} for n in v["nodes"]]
         drugs = [{**d, **an.get("fix", {}).get(i, {})} for i, d in enumerate(v.get("drugs", []))]
-        scene = {**v, "type": "anat", "nodes": nodes, "drugs": drugs, "h": an.get("h", 380), **{k: an[k] for k in ("bg", "opts", "pos", "organ", "lab", "bend") if k in an}}
+        scene = {**v, "type": "anat", "nodes": nodes, "drugs": drugs, "h": an.get("h", 380), **{k: an[k] for k in ("bg", "opts", "pos", "organ", "lab", "bend", "verb", "noring", "normal") if k in an}}
     if not scene and (fig.get("viz") or {}).get("type") == "pathway":  # every other labelled pathway gets its pictured version
         scene = {**fig["viz"], "type": "factory"}
     v = scene or fig.get("viz") or {}

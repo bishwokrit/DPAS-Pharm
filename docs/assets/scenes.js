@@ -843,7 +843,7 @@
       read(S) {
         const a = ax(S), m = sim.cur;
         const lv = (v) => (v > 1.25 ? "high" : v < 0.6 ? (v < 0.25 ? "very low" : "low") : "normal");
-        return `${noteOf(S, drugs) || esc(cfg.read || "Each level drives the next; the final hormone switches the top two off — negative feedback.")}<span class="vz-meter-t">${a.topH}: <b>${lv(m.top)}</b> · ${a.midH}: <b>${lv(m.mid)}</b> · ${a.hormone}: <b>${lv(m.hor)}</b>${m.gland < 0.7 ? ` · ${a.gland}: <b>shrunken</b>` : ""}${m.hor < 0.4 && m.gland < 0.7 && !drugs.some((d) => S.on.has(d.id) && (d.kind === "exo")) ? " — <b>crisis risk</b>" : ""}</span>`;
+        return `${noteOf(S, drugs) || esc(cfg.read || "Each level drives the next; the final hormone switches the top two off — negative feedback.")}<span class="vz-meter-t">${a.topH}: <b>${lv(m.top)}</b> · ${a.midH}: <b>${lv(m.mid)}</b>${a.brake ? "" : m.exo > 0.1 ? ` · ${a.hormone} + drug: <b>${lv(m.hor)}</b> · made by the ${String(a.gland).toLowerCase()}: <b>${lv(m.made ?? 1)}</b>` : ` · ${a.hormone}: <b>${lv(m.hor)}</b>`}${m.gland < 0.7 ? ` · ${a.gland}: <b>shrunken</b>` : ""}${m.hor < 0.4 && m.gland < 0.7 && !drugs.some((d) => S.on.has(d.id) && (d.kind === "exo")) ? " — <b>crisis risk</b>" : ""}</span>`;
       },
     });
     const { svg } = st;
@@ -898,7 +898,7 @@
       if (has("inducer")) exo *= 0.45;
       m.exo += (exo - m.exo) * Math.min(1, dt * 2);
       const fbk = clamp(m.hor - 1, -0.6, 3);
-      let top = a.brake ? 1 : clamp(1 - 0.55 * fbk, 0.05, 2.2);
+      let top = a.brake ? 1 : clamp(1 - 0.9 * fbk, 0.05, 2.2);
       if (has("agonist")) top *= a.brake ? 1.8 : 0.5;
       if (has("antag")) top *= a.brake ? 0.25 : 1;
       let mid = a.brake ? clamp(1.6 - top * 0.6, 0.05, 2.5) : clamp(top * (1 - 0.35 * fbk), 0.05, 2.5);
@@ -908,6 +908,8 @@
       m.gland += (clamp(mid, 0.15, 1.3) - m.gland) * Math.min(1, dt * 0.18);
       let made = a.brake ? 0 : m.gland * clamp(mid, 0, 2) * (has("synth") ? 0.2 : 1);
       if (a.brake) made = 0;
+      m.made = (m.made ?? 1) + (made - (m.made ?? 1)) * Math.min(1, dt * 1.5);
+      const exoOn = m.exo > 0.1; if (exoOn !== sim.exoOn) { sim.exoOn = exoOn; bT[2].textContent = exoOn ? `${a.hormone} + drug` : a.hormone; }
       const horT = a.brake ? mid : made + m.exo;
       m.hor += (horT - m.hor) * Math.min(1, dt * 1.5);
       m.top += (top - m.top) * Math.min(1, dt * 1.5); m.mid += (mid - m.mid) * Math.min(1, dt * 1.5);
@@ -1039,6 +1041,14 @@
   // opts (backdrop labels), pos {node:[x,y]} or organ {node: ORG key}, lab {node: "l"|"r"|"t"|"b"}. Steps are markers on the
   // anatomy, molecules flow between them, a drug docks where it acts; "more" raises a step (↑), off/less quiet it.
   const BG = {
+    // concept figures (a treatment ladder, a checklist, a two-way choice) get a quiet backdrop instead of anatomy
+    plain(g, H, o) { (o.lanes || []).forEach(([y, t, h]) => { mk("rect", { x: 14, y: y - (h || 70) / 2, width: W - 28, height: h || 70, rx: 18, class: "vz-an-lane" }, g); label(g, 30, y - (h || 70) / 2 + 18, String(t).toUpperCase(), { a: "start", cls: "vz-nx-zone" }); }); },
+    steps(g, H, o) {
+      const n = o.n || 4, x0 = 40, x1 = W - 40, y0 = H - 40, y1 = 70, dx = (x1 - x0) / n, dy = (y0 - y1) / n;
+      let d = `M${x0},${y0}`; for (let i = 0; i < n; i++) d += `H${x0 + dx * (i + 1)}${i < n - 1 ? `V${y0 - dy * (i + 1)}` : ""}`;
+      mk("path", { d: `${d}V${H - 14}H${x0}Z`, class: "vz-an-stairs" }, g);
+      if (o.axis) label(g, x0 + 4, H - 20, String(o.axis).toUpperCase(), { a: "start", cls: "vz-nx-zone" });
+    },
     cell(g, H, o) {
       const R = o.right ? 470 : 600, L = o.left === false ? 20 : 150;
       if (o.left !== false) { mk("rect", { x: 0, y: 0, width: L - 8, height: H, rx: 16, class: `vz-an-ext ${o.leftCls || "blood"}` }, g); label(g, 12, 22, (o.left || "Blood").toUpperCase(), { a: "start", cls: "vz-nx-zone" }); }
@@ -1112,8 +1122,8 @@
       target: (id) => { const d = drugs.find((x) => x.id === id).src; if (!d.at) return [320, H / 2]; if (d.at.includes(">")) { const [a, b] = d.at.split(">"); return mid(a, b); } return by[d.at] ? P(d.at) : [320, H / 2]; },
       read(S) {
         const d = drugs.find((x) => S.on.has(x.id));
-        const lv = terminal.filter((id) => !isOn(S, id)).map((id) => { const v = level(S, id); return `${by[id].label.replace(/\n/g, " ")}: <b>${v > 1 ? "↑ more" : Math.round(v * 100) + "%"}</b>`; }).join(" · ");
-        return `${d ? `<b>${esc(d.label)}.</b> ${d.note || ""}` : esc(cfg.read || "Drag a drug onto the picture to see where it acts and what changes downstream.")}${chain(S)}${d && lv ? `<span class="vz-meter-t">${lv}</span>` : ""}`;
+        const lv = (cfg.noring ? [] : terminal).filter((id) => !isOn(S, id)).map((id) => { const v = level(S, id); return `${by[id].label.replace(/\n/g, " ")}: <b>${v > 1 ? "↑ more" : Math.round(v * 100) + "%"}</b>`; }).join(" · ");
+        return `${d ? `<b>${esc(d.label)}.</b> ${d.note || ""}` : esc(cfg.read || "Drag a drug onto the picture to see where it acts and what changes downstream.")}${chain(S)}${d && lv && [d.src.off, d.src.less, d.src.more].some((x) => (x || []).length) ? `<span class="vz-meter-t">${lv}</span>` : ""}`;
       },
     });
     const { svg } = st;
@@ -1129,17 +1139,17 @@
     const nm = (id) => esc(String(by[id].label).replace(/\n/g, " "));
     function chain(S) {
       const d = cur(S), row = (cls, id, html, i) => `<span class="vz-ch ${cls}"${id ? ` data-n="${id}"` : ""} style="--i:${i}"><i></i><span>${html}</span></span>`;
-      if (!d) return N.length < 2 ? "" : `<span class="vz-chain"><span class="vz-ch-h">Normal pathway</span>${order.map((id, i) => row("", id, nm(id), i)).join("")}</span>`;
+      if (!d) return N.length < 2 ? "" : `<span class="vz-chain"><span class="vz-ch-h">${esc(cfg.normal || "Normal pathway")}</span>${order.map((id, i) => row("", id, nm(id), i)).join("")}</span>`;
       const rows = []; let i = 0;
       if (d.at) {
         const [a, b] = d.at.split(">");
         const lv = b ? 1 : level(S, a), tag = lv === 1 ? "" : ` <b class="${lv > 1 ? "up" : "dn"}">${lv > 1 ? "↑ more" : lv < 0.2 ? "↓↓ off" : "↓ less"}</b>`;
-        if (by[a] && (!b || by[b])) rows.push(row("at", b ? "" : a, `<em>${d.act === "up" ? "Starts at" : "Acts at"}</em> ${b ? `${nm(a)} → ${nm(b)}` : nm(a)}${tag}`, i++));
+        if (by[a] && (!b || by[b])) rows.push(row("at", b ? "" : a, `<em>${cfg.verb || (d.act === "up" ? "Starts at" : "Acts at")}</em> ${b ? `${nm(a)} → ${nm(b)}` : nm(a)}${tag}`, i++));
       }
       order.forEach((id) => { const lv = level(S, id); if (id === d.at && by[id]) return;
         if (isOn(S, id)) return rows.push(row("on", id, nm(id), i++));
         if (lv === 1) return; rows.push(row(lv > 1 ? "up" : "dn", id, `${nm(id)} <b>${lv > 1 ? "↑ more" : lv < 0.2 ? "↓↓ off" : "↓ less"}</b>`, i++)); });
-      return rows.length ? `<span class="vz-chain"><span class="vz-ch-h">${(d.on || []).length ? "What happens, in order" : "What changes, in order"}</span>${rows.join("")}</span>` : "";
+      return rows.length ? `<span class="vz-chain"><span class="vz-ch-h">${rows.length === 1 ? "Where it fits" : (d.on || []).length ? "What happens, in order" : "What changes, in order"}</span>${rows.join("")}</span>` : "";
     }
     const hl = (e, on) => { const r = e.target.closest?.(".vz-ch[data-n]"); if (!r) return; NODE.find((x) => x.n.id === r.dataset.n)?.g.classList.toggle("hl", on); };
     st.el.addEventListener("pointerover", (e) => hl(e, true)); st.el.addEventListener("pointerout", (e) => hl(e, false));
@@ -1184,7 +1194,7 @@
       const t = mk("text", { x: tx, y: ty - (side === "l" || side === "r" ? (ls.length - 1) * 7 : 0), "text-anchor": an, class: "vz-an-t" }, g);
       ls.forEach((l, i) => { const sp = mk("tspan", { x: tx, dy: i ? "1.15em" : 0 }, t); sp.textContent = l; });
       let ring = null;
-      if (terminal.includes(n.id)) {
+      if (terminal.includes(n.id) && !cfg.noring) {
         mk("circle", { cx: 15, cy: -15, r: 10, class: "vz-fx-gt" }, g);
         ring = mk("circle", { cx: 15, cy: -15, r: 10, class: "vz-fx-gr", "stroke-dasharray": `${2 * Math.PI * 10}`, transform: "rotate(-90 15 -15)" }, g);
         ring.lv = 1;

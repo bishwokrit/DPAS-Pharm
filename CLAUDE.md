@@ -33,6 +33,8 @@ Never weaken a gate to make it pass. Fix the content. `audit_skip` / `READING_SK
 - Textbook facts are `("text", "p. N")` with ’ for apostrophes so `./run.sh check` can verify every number on its page.
 - Questions: ~50/50 vignette/mechanism, 5 balanced options, every slide quick-check rebuilt.
 - Every figure has a caption and an interactive version (`"viz": {"type": …}`; types listed in the brief).
+- Diagrams teach the mechanism: normal pathway first, then where the drug acts and what changes after it, ending on the
+  clinical result. Every effect shown comes from the figure's own slide; never infer one (rules in the authoring guide).
 - Design: Apple-like, minimal, sleek, professional, smooth motion, never cartoonish. Diagrams rich but readable.
   Interactive figures use the site palette, reset after 30 s idle, and have Try-it steps.
 
@@ -44,6 +46,10 @@ Never weaken a gate to make it pass. Fix the content. `audit_skip` / `READING_SK
 - Put school, course-director or instructor names on the site.
 - Use the owner's API key: AI chat runs on each student's own key, in their browser.
 - Put model names in commits.
+
+## Site design
+`REDESIGN.md` is the running log of the design overhaul: what is done, what is next, and the rules of the road. Read it
+before changing layout, motion or diagrams, and update it when you finish.
 
 ## Commands
 `./run.sh status` · `./run.sh new L05` · `./run.sh L05` (lecture only) · `./run.sh site` · `./run.sh exam U1` · `./run.sh check`

@@ -19,7 +19,7 @@ SEESAW_MUCOSA = {
     "left": {"title": "Aggressive factors", "items": [{"id": "acid", "label": "Gastric acid (HCl)", "w": 2}, {"id": "pep", "label": "Pepsin", "w": 1}]},
     "right": {"title": "Mucosal defense", "items": [{"id": "muc", "label": "Mucus–bicarbonate", "w": 1.5}, {"id": "pg", "label": "Prostaglandins", "w": 1.5}, {"id": "epi", "label": "Epithelial turnover", "w": 1}]},
     "drugs": [
-        {"id": "hp", "label": "H. pylori infection", "col": "var(--vz-2)", "side": "L", "add": "H. pylori (ammonia)", "w": 1.5,
+        {"id": "hp", "label": "H. pylori infection", "col": "var(--vz-2)", "side": "L", "add": "H. pylori (ammonia)", "w": 2,
          "note": "H. pylori urease makes ammonia, which injures the mucosa. (S5–S6)"},
         {"id": "nsaid", "label": "NSAID use", "col": "var(--vz-2)", "side": "L", "add": "NSAIDs", "w": 1, "remove": ["pg"],
          "note": "NSAIDs block COX-1 prostaglandins — the prostaglandin weight falls off the defense side. (S5–S6)"},
@@ -470,3 +470,22 @@ for (_l, _img), _m in ON.items():
     _f = ANAT[_l][_img].setdefault("fix", {})
     for _i, _ids in _m.items():
         _f.setdefault(_i, {})["on"] = _ids
+
+# Teriparatide is a PTH analog, but given intermittently it favors formation, the opposite of this loop's resorption arm:
+# it gets no dock on the loop, so the picture never implies it raises resorption (S41; S55).
+ANAT["L04"]["S43_1.jpg"].setdefault("fix", {}).setdefault(3, {}).update({"at": None})
+
+# Concept figures (not pathways): a treatment ladder, a screening checklist and a two-way choice, on a quiet backdrop.
+ANAT.setdefault("L06", {})["S15_1.jpg"] = {
+    "bg": "steps", "opts": {"n": 4, "axis": "Disease severity →"}, "h": 360, "verb": "Sits on", "noring": True, "normal": "The ladder, mild to severe",
+    "pos": {"a": [112, 268], "b": [252, 198], "c": [392, 128], "d": [532, 58]}, "lab": {"a": "b", "b": "b", "c": "b", "d": "b"},
+    "fix": {i: {"act": "up"} for i in range(4)}}
+ANAT.setdefault("L03", {})["S57_1.png"] = {
+    "bg": "plain", "opts": {"lanes": [[200, "Why", 110]]}, "h": 400, "noring": True, "normal": "Why screening comes first",
+    "pos": {"d": [70, 215], "inf": [215, 215], "scr": [360, 215], "tb": [480, 60], "hep": [480, 150], "vac": [480, 250], "lab": [480, 340]},
+    "lab": {"d": "b", "inf": "b", "scr": "b", "tb": "r", "hep": "r", "vac": "r", "lab": "r"},
+    "fix": {0: {"at": None, "less": [], "on": ["tb", "hep", "vac"]}, 1: {"at": None, "less": [], "on": ["lab"]}}}
+ANAT.setdefault("L08", {})["S24_1.jpg"] = {
+    "bg": "plain", "opts": {"lanes": [[110, "Too much PTH", 130], [280, "Too little PTH", 130]]}, "h": 380, "verb": "Treats", "noring": True, "normal": "Two opposite problems",
+    "pos": {"hyper": [150, 122], "low": [460, 122], "hypo": [150, 292], "up": [460, 292]}, "lab": {"hyper": "b", "low": "b", "hypo": "b", "up": "b"},
+    "fix": {0: {"act": "up", "on": ["low"]}, 1: {"act": "up", "on": ["up"]}, 2: {"act": "up", "on": ["up"]}}}
