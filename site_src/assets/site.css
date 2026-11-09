@@ -2260,3 +2260,67 @@ figure.vz-arrive { animation: vz-arrive 1.3s cubic-bezier(.2,.8,.2,1); }
 .vz-an-orgdot { fill: color-mix(in srgb, var(--c) 28%, transparent); stroke: var(--c); stroke-width: 2; animation: vz-an-pulse 2.4s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
 @keyframes vz-an-pulse { 50% { transform: scale(1.35); } }
 @media (prefers-reduced-motion: reduce) { .vz-an-orgdot { animation: none; } }
+
+/* ---- part reader: one labelled row per field (same shape as a drug card). The label stays in view while its
+   facts scroll, lines keep a readable measure, and "Lecture only" folds the textbook-only facts away. ---- */
+.rd-bar { display: flex; align-items: center; justify-content: space-between; gap: 12px 18px; flex-wrap: wrap; margin: 4px 0 12px; }
+.rd-sum { font-size: 13px; color: var(--text-2); font-variant-numeric: tabular-nums; }
+.rd-depth button { padding: 6px 12px; font-size: 12.5px; }
+.rd-depth button[aria-pressed="true"] { background: var(--surface); color: var(--text); box-shadow: 0 1px 3px rgba(0,0,0,.16); }
+.rd { background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow); padding: 2px clamp(18px, 2.4vw, 32px); border-top: 2px solid color-mix(in srgb, var(--pc) calc(35% + 45% * var(--glow, 0)), transparent); }
+.rd-row { display: grid; grid-template-columns: minmax(150px, 220px) minmax(0, 1fr); gap: 8px clamp(20px, 3vw, 44px); padding: 22px 0; border-top: 1px solid var(--hair); }
+.rd-row:first-child { border-top: 0; }
+.rd-k { position: sticky; top: calc(var(--rd-top, 112px) + 12px); align-self: start; margin: 2px 0 0; display: flex; align-items: baseline; gap: 9px; font-size: 12.5px; line-height: 1.35; font-weight: 650; letter-spacing: .07em; text-transform: uppercase; color: var(--text-2); transition: color .3s; }
+.rd-k .dot { width: 8px; height: 8px; background: var(--sc); transform: translateY(-1px); box-shadow: 0 0 0 3px color-mix(in srgb, var(--sc) 16%, transparent); }
+.rd-n { margin-left: auto; font-size: 11.5px; letter-spacing: 0; font-weight: 600; color: var(--text-2); background: var(--surface-2); border-radius: 980px; padding: 1px 8px; font-variant-numeric: tabular-nums; }
+.rd-row:hover .rd-k, .rd-row:focus-within .rd-k { color: var(--text); }
+.rd-v ul { list-style: none; margin: 0; padding: 0; max-width: 78ch; }
+.rd-v li { position: relative; padding-left: 20px; margin: 0 0 11px; line-height: 1.5; break-inside: avoid; }
+.rd-v li:last-child { margin-bottom: 0; }
+.rd-v li::before { content: ""; position: absolute; left: 2px; top: .66em; width: 5px; height: 5px; border-radius: 50%; background: color-mix(in srgb, var(--sc) 55%, var(--text-2)); }
+.rd-v li:has(> .tag.tb)::before { background: var(--tb); border-radius: 1.5px; }
+.rd-v .empty { margin: 0; font-size: 15px; }
+.rd-row.is-empty { padding: 14px 0; }
+.rd-more { display: none; margin: 0; font-size: 13.5px; color: var(--text-2); }
+html[data-pdepth="core"] .rd-v li:has(> .tag.tb) { display: none; }
+html[data-pdepth="core"] .rd-more { display: block; }
+html[data-pdepth="core"] .rd-v ul:not(:has(> li:not(:has(> .tag.tb)))) { display: none; }
+html[data-pdepth="core"] .rd-v ul:has(> li:not(:has(> .tag.tb))) + .rd-more { margin-top: 10px; }
+.rd-more button { border: 0; background: none; color: var(--accent); font: inherit; cursor: pointer; padding: 0; }
+@media screen and (min-width: 1500px) { .rd-v ul { max-width: none; columns: 2 44ch; column-gap: 52px; } }
+@media (max-width: 760px) {
+  .rd { padding: 2px 16px; } .rd-row { grid-template-columns: 1fr; padding: 16px 0; gap: 8px; }
+  .rd-k { position: static; } .rd-n { margin-left: 4px; }
+}
+@media print {
+  .rd { display: grid; grid-template-columns: 1fr 1fr; gap: 8pt; background: none; box-shadow: none; padding: 0; border: 0; }
+  .rd-row { display: block; border: 1px solid #d9d9de; border-radius: 9pt; padding: 9pt 11pt; break-inside: auto; }
+  .rd-row:first-child { border-top: 1px solid #d9d9de; }
+  .rd-k { position: static; margin-bottom: 4pt; } .rd-n { display: none; } .rd-v li { margin-bottom: 3pt; padding-left: 12pt; }
+  .rd-v ul { columns: auto; max-width: none; } .rd-more { display: none !important; } .rd-v li { display: list-item !important; } .rd-v ul { display: block !important; }
+}
+
+/* figure readout: the causal chain in words, one step lighting up after another; pointing at a step lights its structure */
+.vz-chain { display: block; margin: 12px 0 2px; }
+.vz-ch-h { display: block; font-size: 11.5px; font-weight: 650; letter-spacing: .07em; text-transform: uppercase; color: var(--text-2); margin-bottom: 6px; }
+.vz-ch { display: flex; align-items: baseline; gap: 10px; position: relative; padding: 3px 0 3px 2px; font-size: 14px; line-height: 1.4; color: var(--text); cursor: default; opacity: 0; animation: vz-ch-in .55s cubic-bezier(.2,.8,.2,1) forwards; animation-delay: calc(var(--i) * .2s + .1s); }
+.vz-ch > i { flex: none; width: 9px; height: 9px; border-radius: 50%; border: 2px solid color-mix(in srgb, var(--text-2) 55%, transparent); background: var(--surface); transform: translateY(1px); position: relative; z-index: 1; transition: transform .25s, border-color .25s; }
+.vz-ch + .vz-ch::before { content: ""; position: absolute; left: 6px; top: -9px; height: 16px; width: 1.5px; background: color-mix(in srgb, var(--text-2) 30%, transparent); }
+.vz-ch.at > i { border-color: var(--accent); background: var(--accent); }
+.vz-ch.dn > i { border-color: var(--vz-2, #ff5a7a); } .vz-ch.dn b { color: var(--vz-2, #ff5a7a); }
+.vz-ch.up > i { border-color: var(--good); } .vz-ch.up b { color: var(--good); }
+.vz-ch em { font-style: normal; color: var(--text-2); }
+.vz-ch b { font-weight: 600; font-size: 12.5px; white-space: nowrap; margin-left: 2px; }
+.vz-ch[data-n]:hover > i { transform: translateY(1px) scale(1.35); }
+.vz-an-node .vz-an-mk { transition: stroke-width .25s, filter .25s; }
+.vz-an-node.hl .vz-an-mk { stroke-width: 3.5; filter: drop-shadow(0 0 7px var(--c)); }
+@keyframes vz-ch-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .vz-ch { animation: none; opacity: 1; } }
+html[data-pmotion="off"] .vz-ch { animation: none; opacity: 1; }
+.vz-ch b.dn { color: var(--vz-2, #ff5a7a); } .vz-ch b.up { color: var(--good); }
+/* drug card: fields with nothing taught yet fold into one quiet line instead of repeating the same sentence */
+.dx-card .dx-row.is-none { display: none; }
+.dx-nonesum dd .dx-none { font-style: normal; text-transform: none; }
+.dx-nonesum dd .dx-none::first-letter { text-transform: uppercase; }
+@media print { .dx-card .dx-row.is-none { display: grid; } .dx-nonesum { display: none; } }
+.vz-ch.on > i { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 35%, var(--surface)); }

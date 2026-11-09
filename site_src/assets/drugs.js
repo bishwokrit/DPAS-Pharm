@@ -22,7 +22,8 @@
       <div class="dx-row"><dt>Generic name</dt><dd><strong>${esc(d.name)}</strong>${d.aliases.filter((a) => /^[A-Z]/.test(a) && a !== d.name && !/^NAPQI$/.test(a)).length ? ` <span class="muted">(${d.aliases.filter((a) => /^[A-Z]/.test(a) && !/^NAPQI$/.test(a)).map(esc).join(", ")})</span>` : ""}</dd></div>
       <div class="dx-row"><dt>Drug class</dt><dd>${clsLine(d)}</dd></div>
       ${(d.sg || []).length ? `<div class="dx-row"><dt>In the study guide</dt><dd>${d.sg.map((k) => `<span class="cite">SG ${esc(k)}</span>`).join(" ")}</dd></div>` : ""}
-      ${SECS.map(([k, label]) => `<div class="dx-row"><dt>${label}</dt><dd>${lis(secFacts(d, k))}</dd></div>`).join("")}
+      ${SECS.map(([k, label]) => `<div class="dx-row${secFacts(d, k).length ? "" : " is-none"}"><dt>${label}</dt><dd>${lis(secFacts(d, k))}</dd></div>`).join("")}
+      ${SECS.some(([k]) => !secFacts(d, k).length) ? `<div class="dx-row dx-nonesum"><dt>Not covered yet</dt><dd><p class="dx-none">${SECS.filter(([k]) => !secFacts(d, k).length).map(([, l]) => l.toLowerCase().replace(/ \/ .*/, "")).join(" · ")}</p></dd></div>` : ""}
     </dl>`;
 
   // ---- sorting: A–Z, Z–A, by drug class (grouped), by unit (grouped), most mentioned, most complete card; remembered per browser

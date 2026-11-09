@@ -43,8 +43,8 @@ def N(id, label, glyph, x, y, w, col):
     return {"id": id, "label": label, "glyph": glyph, "x": x, "y": y, "w": w, "col": col}
 
 
-def Dg(label, at, note, off=(), less=()):
-    return {"label": label, "at": at, "off": list(off), "less": list(less), "note": note}
+def Dg(label, at, note, off=(), less=(), more=()):
+    return {"label": label, "at": at, "off": list(off), "less": list(less), "more": list(more), "note": note}
 
 
 objectives = [
@@ -165,8 +165,8 @@ t1 = {
          "viz": path([N("adh", "ADH binds V2\n(collecting duct)", "membrane", 10, 55, 150, "blue"), N("aqp", "Aquaporin-2\ninserted", "membrane", 180, 55, 140, "teal"),
                       N("w", "Water\nreabsorbed", "effect", 340, 55, 130, "sage"), N("na", "Serum sodium", "molecule", 490, 55, 130, "amber")],
                      [["adh", "aqp"], ["aqp", "w"], ["w", "na"]],
-                     [Dg("Desmopressin (central DI)", "adh", "Keeps water — watch hyponatremia (S10)."),
-                      Dg("Tolvaptan (SIADH)", "adh", "Lets water go — start in hospital (S10).", off=["aqp", "w"])],
+                     [Dg("Desmopressin (central DI)", "adh", "Keeps water, so sodium is diluted — watch hyponatremia (S10).", less=["na"], more=["aqp", "w"]),
+                      Dg("Tolvaptan (SIADH)", "adh", "Lets water go, so sodium rises — overcorrection risk; start in hospital (S10).", off=["aqp", "w"], more=["na"])],
                      "Which way does free water move?")},
     ],
     "comparisons": [

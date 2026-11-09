@@ -456,3 +456,17 @@ for (_l, _img), _ix in UP.items():
         _f.setdefault(_i, {})["act"] = "up"
 ANAT["L06"]["S35_1.png"].setdefault("fix", {})[1] = {"at": None}  # ginkgo / fish oil add bleeding risk; they don't act on clotting-factor synthesis
 ANAT["L11"]["S14_1.png"].setdefault("fix", {})[1] = {"at": None}  # "before menopause" is a situation, not a drug
+
+# Steps a drug sets in motion on its own pathway (each from the figure's slide): shown lit, in order, when the drug is added.
+ON = {("L06", "S17_1.jpg"): {0: ["asa", "out"], 1: ["out"]}, ("L07", "S13_1.jpg"): {1: ["abs", "t3", "tsh"]},
+      ("L07", "S21_1.jpg"): {0: ["gr", "nuc", "out"], 1: ["gr", "nuc", "out"]},
+      ("L08", "S6_1.jpg"): {0: ["axis", "ovu", "muc", "prev"], 1: ["prev"]}, ("L08", "S9_1.png"): {1: ["dht", "eff"]},
+      ("L08", "S11_1.jpg"): {0: ["ca", "ins"], 1: ["ca", "ins"], 2: ["ins"]}, ("L08", "S15_1.jpg"): {0: ["ampk", "gng", "fg"]},
+      ("L08", "S19_1.png"): {0: ["out"]}, ("L10", "S6_1.png"): {0: ["bk", "cough"]},
+      ("L10", "S16_1.png"): {0: ["sym", "bp"], 1: ["sym", "bp"], 2: ["bp", "ref"]},
+      ("L10", "S20_1.png"): {0: ["gc", "cg", "ven"], 1: ["gc", "cg", "ven"], 2: ["ven"]},
+      ("L11", "S7_1.jpg"): {0: ["p", "h"]}, ("L12", "S8_1.png"): {0: ["st"]}}
+for (_l, _img), _m in ON.items():
+    _f = ANAT[_l][_img].setdefault("fix", {})
+    for _i, _ids in _m.items():
+        _f.setdefault(_i, {})["on"] = _ids

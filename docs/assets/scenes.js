@@ -587,6 +587,8 @@
     });
     const { svg } = st;
     const cur = (S) => drugs.find((x) => S.on.has(x.id))?.src;
+    // "on": a step the drug sets in motion (its label already says which way things go), shown lit rather than as more/less
+    const isOn = (S, id) => (cur(S)?.on || []).includes(id);
     function level(S, id) { const d = cur(S); if (!d) return 1; return (d.off || []).includes(id) ? 0.12 : (d.less || []).includes(id) ? 0.55 : 1; }
     const L = { lines: mk("g", {}, svg), flow: mk("g", {}, svg), nodes: mk("g", {}, svg), top: mk("g", {}, svg) };
     const streams = E.map(([a, b]) => {
@@ -1110,12 +1112,39 @@
       target: (id) => { const d = drugs.find((x) => x.id === id).src; if (!d.at) return [320, H / 2]; if (d.at.includes(">")) { const [a, b] = d.at.split(">"); return mid(a, b); } return by[d.at] ? P(d.at) : [320, H / 2]; },
       read(S) {
         const d = drugs.find((x) => S.on.has(x.id));
-        const lv = terminal.map((id) => { const v = level(S, id); return `${by[id].label.replace(/\n/g, " ")}: <b>${v > 1 ? "↑ more" : Math.round(v * 100) + "%"}</b>`; }).join(" · ");
-        return `${d ? `<b>${esc(d.label)}.</b> ${d.note || ""}` : esc(cfg.read || "Drag a drug onto the picture to see where it acts and what changes downstream.")}${d && lv ? `<span class="vz-meter-t">${lv}</span>` : ""}`;
+        const lv = terminal.filter((id) => !isOn(S, id)).map((id) => { const v = level(S, id); return `${by[id].label.replace(/\n/g, " ")}: <b>${v > 1 ? "↑ more" : Math.round(v * 100) + "%"}</b>`; }).join(" · ");
+        return `${d ? `<b>${esc(d.label)}.</b> ${d.note || ""}` : esc(cfg.read || "Drag a drug onto the picture to see where it acts and what changes downstream.")}${chain(S)}${d && lv ? `<span class="vz-meter-t">${lv}</span>` : ""}`;
       },
     });
     const { svg } = st;
     const cur = (S) => drugs.find((x) => S.on.has(x.id))?.src;
+    // the causal chain in words, in pathway order: the normal sequence first, then where the drug acts and what changes after it
+    const order = (() => {
+      const ind = Object.fromEntries(N.map((n) => [n.id, 0])); E.forEach(([, b]) => { if (b in ind) ind[b]++; });
+      const q = N.filter((n) => !ind[n.id]).map((n) => n.id), seen = new Set(q), out = [];
+      while (q.length) { const a = q.shift(); out.push(a); E.forEach(([x, y]) => { if (x === a && !seen.has(y) && by[y]) { seen.add(y); q.push(y); } }); }
+      N.forEach((n) => { if (!seen.has(n.id)) out.push(n.id); });
+      return out;
+    })();
+    const nm = (id) => esc(String(by[id].label).replace(/\n/g, " "));
+    function chain(S) {
+      const d = cur(S), row = (cls, id, html, i) => `<span class="vz-ch ${cls}"${id ? ` data-n="${id}"` : ""} style="--i:${i}"><i></i><span>${html}</span></span>`;
+      if (!d) return N.length < 2 ? "" : `<span class="vz-chain"><span class="vz-ch-h">Normal pathway</span>${order.map((id, i) => row("", id, nm(id), i)).join("")}</span>`;
+      const rows = []; let i = 0;
+      if (d.at) {
+        const [a, b] = d.at.split(">");
+        const lv = b ? 1 : level(S, a), tag = lv === 1 ? "" : ` <b class="${lv > 1 ? "up" : "dn"}">${lv > 1 ? "↑ more" : lv < 0.2 ? "↓↓ off" : "↓ less"}</b>`;
+        if (by[a] && (!b || by[b])) rows.push(row("at", b ? "" : a, `<em>${d.act === "up" ? "Starts at" : "Acts at"}</em> ${b ? `${nm(a)} → ${nm(b)}` : nm(a)}${tag}`, i++));
+      }
+      order.forEach((id) => { const lv = level(S, id); if (id === d.at && by[id]) return;
+        if (isOn(S, id)) return rows.push(row("on", id, nm(id), i++));
+        if (lv === 1) return; rows.push(row(lv > 1 ? "up" : "dn", id, `${nm(id)} <b>${lv > 1 ? "↑ more" : lv < 0.2 ? "↓↓ off" : "↓ less"}</b>`, i++)); });
+      return rows.length ? `<span class="vz-chain"><span class="vz-ch-h">${(d.on || []).length ? "What happens, in order" : "What changes, in order"}</span>${rows.join("")}</span>` : "";
+    }
+    const hl = (e, on) => { const r = e.target.closest?.(".vz-ch[data-n]"); if (!r) return; NODE.find((x) => x.n.id === r.dataset.n)?.g.classList.toggle("hl", on); };
+    st.el.addEventListener("pointerover", (e) => hl(e, true)); st.el.addEventListener("pointerout", (e) => hl(e, false));
+    // "on": a step the drug sets in motion (its label already says which way things go), shown lit rather than as more/less
+    const isOn = (S, id) => (cur(S)?.on || []).includes(id);
     function level(S, id) { const d = cur(S); if (!d) return 1; return (d.off || []).includes(id) ? 0.12 : (d.less || []).includes(id) ? 0.55 : (d.more || []).includes(id) ? 1.6 : 1; }
     const L = { bg: mk("g", {}, svg), lines: mk("g", {}, svg), flow: mk("g", {}, svg), nodes: mk("g", {}, svg), top: mk("g", {}, svg) };
     (BG[cfg.bg] || BG.cell)(L.bg, H, O, ctx);
@@ -1171,13 +1200,13 @@
       const S = st.S, d = cur(S), dd = drugs.find((x) => S.on.has(x.id));
       // an agonist / enhancer docks with "+", a blocker with "×"
       dockMark.setAttribute("d", d?.act === "up" ? "M0,-5.5V5.5M-5.5,0H5.5" : "M-5,-5L5,5M5,-5L-5,5");
-      NODE.forEach(({ n, g, badge }) => { const lv = level(S, n.id); g.style.opacity = lv < 0.2 ? 0.38 : lv < 1 ? 0.72 : 1; g.classList.toggle("up", lv > 1); badge.textContent = lv > 1 ? "↑ more" : lv < 1 ? (lv < 0.2 ? "↓↓ off" : "↓ less") : ""; });
+      NODE.forEach(({ n, g, badge }) => { const lv = level(S, n.id); g.style.opacity = lv < 0.2 ? 0.38 : lv < 1 ? 0.72 : 1; g.classList.toggle("up", lv > 1 || isOn(S, n.id)); badge.textContent = lv > 1 ? "↑ more" : lv < 1 ? (lv < 0.2 ? "↓↓ off" : "↓ less") : ""; });
       show(dock, !!d?.at);
       if (d?.at) { const [x, y] = st._target(dd.id); dock.setAttribute("transform", `translate(${x},${y})`); dockPill.style.fill = dd.col; }
       streams.forEach((s) => {
         const cut = d && (d.at === `${s.a}>${s.b}` || d.at === s.b && (d.off || []).length);
         const quiet = d && ((d.off || []).includes(s.a) || (d.off || []).includes(s.b));
-        s.s.stop = cut ? 0.72 : null; s.s.rate = quiet && !cut ? 0.25 : (d?.less || []).includes(s.b) ? 0.9 : (d?.more || []).includes(s.b) ? 3.4 : 1.8;
+        s.s.stop = cut ? 0.72 : null; s.s.rate = quiet && !cut ? 0.25 : (d?.less || []).includes(s.b) ? 0.9 : (d?.more || []).includes(s.b) || (d?.on || []).includes(s.b) ? 3.4 : 1.8;
       });
     };
     st.tick = (dt) => {

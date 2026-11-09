@@ -397,6 +397,7 @@
         "less": [
          "p"
         ],
+        "more": [],
         "note": "Exogenous hormone feeds back → TSH falls (S12)."
        },
        {
@@ -408,6 +409,7 @@
          "p",
          "g"
         ],
+        "more": [],
         "note": "Suppresses CRH/ACTH → taper (S22)."
        },
        {
@@ -418,6 +420,7 @@
          "h",
          "p"
         ],
+        "more": [],
         "note": "Suppresses GnRH/FSH/LH (Session 2)."
        }
       ],
@@ -496,6 +499,7 @@
          "igf",
          "acro"
         ],
+        "more": [],
         "note": "Lower GH release; GI upset, gallstones, bradycardia (S7)."
        },
        {
@@ -506,6 +510,7 @@
          "acro"
         ],
         "less": [],
+        "more": [],
         "note": "Blocks the receptor; GH rises — monitor IGF-1, LFTs (S7)."
        }
       ],
@@ -583,6 +588,7 @@
          "prl",
          "out"
         ],
+        "more": [],
         "note": "Twice weekly, better tolerated (S9)."
        },
        {
@@ -590,6 +596,7 @@
         "at": "da",
         "off": [],
         "less": [],
+        "more": [],
         "note": "Blocks dopamine → prolactin rises (S9; S52)."
        }
       ],
@@ -663,8 +670,14 @@
         "label": "Desmopressin (central DI)",
         "at": "adh",
         "off": [],
-        "less": [],
-        "note": "Keeps water — watch hyponatremia (S10)."
+        "less": [
+         "na"
+        ],
+        "more": [
+         "aqp",
+         "w"
+        ],
+        "note": "Keeps water, so sodium is diluted — watch hyponatremia (S10)."
        },
        {
         "label": "Tolvaptan (SIADH)",
@@ -674,7 +687,10 @@
          "w"
         ],
         "less": [],
-        "note": "Lets water go — start in hospital (S10)."
+        "more": [
+         "na"
+        ],
+        "note": "Lets water go, so sodium rises — overcorrection risk; start in hospital (S10)."
        }
       ],
       "read": "Pick a drug to see where it acts."
@@ -1312,6 +1328,7 @@
          "tsh"
         ],
         "less": [],
+        "more": [],
         "note": "Binds the dose — separate by 4 hours (S12–S13)."
        },
        {
@@ -1319,6 +1336,7 @@
         "at": "tab",
         "off": [],
         "less": [],
+        "more": [],
         "note": "30–60 min before breakfast; TSH at 6–8 weeks (S12–S13)."
        }
       ],
@@ -1395,6 +1413,7 @@
          "rel"
         ],
         "less": [],
+        "more": [],
         "note": "First line, once daily (S15)."
        },
        {
@@ -1405,6 +1424,7 @@
          "conv"
         ],
         "less": [],
+        "more": [],
         "note": "Also blocks conversion — storm, first trimester (S14–S15)."
        },
        {
@@ -1415,6 +1435,7 @@
          "conv"
         ],
         "less": [],
+        "more": [],
         "note": "Blocks release (S16)."
        }
       ],
@@ -1491,6 +1512,7 @@
          "rel"
         ],
         "less": [],
+        "more": [],
         "note": "Blocks synthesis and conversion (S16–S17)."
        },
        {
@@ -1501,6 +1523,7 @@
          "conv"
         ],
         "less": [],
+        "more": [],
         "note": "Blocks release (S16–S17)."
        },
        {
@@ -1510,6 +1533,7 @@
         "less": [
          "beta"
         ],
+        "more": [],
         "note": "Rate, tremor; also less conversion; avoid in asthma (S17)."
        },
        {
@@ -1519,6 +1543,7 @@
         "less": [
          "conv"
         ],
+        "more": [],
         "note": "Blunts conversion; covers adrenal insufficiency (S16–S17)."
        }
       ],
@@ -2181,6 +2206,7 @@
         "at": "st",
         "off": [],
         "less": [],
+        "more": [],
         "note": "Morning with food; bone and GI protection (S21)."
        },
        {
@@ -2188,6 +2214,7 @@
         "at": "st",
         "off": [],
         "less": [],
+        "more": [],
         "note": "Long-acting (S21)."
        },
        {
@@ -2198,6 +2225,7 @@
          "out"
         ],
         "less": [],
+        "more": [],
         "note": "Blocks the receptor; cortisol rises (S24)."
        }
       ],
@@ -2276,6 +2304,7 @@
          "acth",
          "adr"
         ],
+        "more": [],
         "note": "Feedback suppresses CRH/ACTH (S22)."
        },
        {
@@ -2283,6 +2312,7 @@
         "at": "adr",
         "off": [],
         "less": [],
+        "more": [],
         "note": "Gives the axis time to recover (S22; S28)."
        }
       ],
@@ -2386,6 +2416,7 @@
          "ald"
         ],
         "less": [],
+        "more": [],
         "note": "Several enzymes; liver, QT, CYP3A4 (S23–S24)."
        },
        {
@@ -2395,6 +2426,7 @@
          "cort"
         ],
         "less": [],
+        "more": [],
         "note": "Last cortisol step (S23–S24)."
        },
        {
@@ -2404,6 +2436,7 @@
          "gr"
         ],
         "less": [],
+        "more": [],
         "note": "Receptor block; cortisol stays high (S24)."
        },
        {
@@ -2413,6 +2446,7 @@
          "mr"
         ],
         "less": [],
+        "more": [],
         "note": "Hyperkalemia (S24)."
        }
       ],

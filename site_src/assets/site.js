@@ -72,6 +72,20 @@
   applyTheme(theme);
   const prefs = store.get("prefs", {});
   const setPref = (k, v, def) => { if (v === def) delete prefs[k]; else prefs[k] = v; store.set("prefs", prefs); if (v === def) root.removeAttribute("data-p" + k); else root.setAttribute("data-p" + k, v); };
+  // part reader: "Everything" or "Lecture only" (textbook-only facts fold away); one choice for every lecture
+  {
+    const paint = () => { const d = prefs.depth || "all"; document.querySelectorAll(".rd-depth button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.depth === d))); };
+    paint();
+    const go = (d) => { const run = () => { setPref("depth", d, "all"); paint(); };
+      document.startViewTransition && !matchMedia("(prefers-reduced-motion: reduce)").matches && root.dataset.pmotion !== "off" ? document.startViewTransition(run) : run(); };
+    document.addEventListener("click", (e) => {
+      const b = e.target.closest(".rd-depth button, .rd-more button"); if (!b) return;
+      const y = b.getBoundingClientRect().top; go(b.dataset.depth || "all");
+      requestAnimationFrame(() => scrollBy(0, b.getBoundingClientRect().top - y));  // keep the switch under the pointer
+    });
+    document.querySelectorAll(".rd-more").forEach((m) => { m.innerHTML = `${m.textContent} hidden · <button type="button">Show</button>`; });
+    const bar = document.querySelector(".subnav"); if (bar && document.querySelector(".rd")) root.style.setProperty("--rd-top", `${document.querySelector(".topbar")?.offsetHeight || 98}px`);
+  }
   const gear = document.querySelector(".set-btn");
   if (gear) {
     const pop = document.createElement("div");

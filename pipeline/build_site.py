@@ -251,18 +251,26 @@ def part_html(c, cl, n, lec_dir, pending):
     kind = "Topic" if cl.get("template") == "concept" else "Drug class"
     empty = "Not covered in slides · textbook pending" if pending else "Not covered in materials"
     callout_keys = {"clinical": ("clin", "Clinical"), "traps": ("trap", "Trap"), "pearls": ("why", "Clinical pearl / why")}
-    cards = []
+    cards, n_all, n_tb = [], 0, 0
     for key, label in secs.items():
         if key in callout_keys:
             continue
         facts = cl["sections"].get(key, [])
         body = f"<ul>{''.join(fact(f) for f in facts)}</ul>" if facts else f'<p class="empty">{empty}</p>'
-        cards.append(f'<div class="card" style="--sc:#{STYLE.get(key, "4472C4")}"><h3><span class="dot"></span>{html.escape(label)}</h3>{body}</div>')
+        ntb = sum(1 for f in facts if f.get("tb"))
+        n_all += len(facts); n_tb += ntb
+        # one labelled row per field (the same shape as a drug card): the label stays in view while its facts scroll
+        cards.append(f'<div class="rd-row{"" if facts else " is-empty"}" data-n="{len(facts)}" data-tb="{ntb}" style="--sc:#{STYLE.get(key, "4472C4")}">'
+                     f'<h3 class="rd-k"><span class="dot"></span><span>{html.escape(label)}</span>{f"<span class=rd-n>{len(facts)}</span>" if facts else ""}</h3>'
+                     f'<div class="rd-v">{body}{f"<p class=rd-more>+{ntb} from the textbook</p>" if ntb else ""}</div></div>')
     out = [f'<section class="section part-start part-sec" id="{slug(cl["name"])}" style="--pc:var(--p{(n - 1) % 6})"><div class="wrap">',
            f'<div class="part"><span class="pnum">{n}</span>Part {n} · {kind}</div><h2>{md(cl["name"])}</h2>',
            '<div class="chips">' + "".join(f'<span class="chip">{o}</span>' for o in cl.get("objectives", [])) + "</div>",
            deeper_html(cl.get("deeper")),
-           f'<div class="grid two">{"".join(cards)}</div>']
+           (f'<div class="rd-bar noprint"><span class="rd-sum">{n_all} facts · {n_all - n_tb} from the lecture · {n_tb} textbook-only</span>'
+            '<span class="seg rd-depth" role="group" aria-label="How much to show"><button type="button" data-depth="all" aria-pressed="true">Everything</button>'
+            '<button type="button" data-depth="core" aria-pressed="false">Lecture only</button></span></div>' if n_tb else ""),
+           f'<div class="rd">{"".join(cards)}</div>']
     for key, (cls, label) in callout_keys.items():
         if key in secs:
             facts = cl["sections"].get(key, [])
