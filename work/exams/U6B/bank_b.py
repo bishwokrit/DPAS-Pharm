@@ -37,7 +37,7 @@ BANK_B = [
        ("A PDE5 inhibitor used with a nitrate", "That combination is contraindicated."),
        ("A GnRH agonist used with testosterone replacement", "Testosterone would oppose the aim.")],
       "Leuprolide (a GnRH agonist) is used with antiandrogens in prostate cancer; bicalutamide is a receptor-level blocker.",
-      "Leuprolide + bicalutamide: axis plus receptor.", "Two levels of the same pathway.", "S16; S45"),
+      "Leuprolide + bicalutamide: axis plus receptor.", "Two levels of the same pathway.", "S15; S45"),
     Q("5-alpha-reductase inhibitors", ["IO6.2", "IO6.5"], ["U6-R15"], "vignette",
       "A 59-year-old on finasteride for 8 months reports lower libido and erectile difficulty. His urinary flow is better. Which statement is correct?",
       "These are known effects of blocking 5-alpha-reductase",

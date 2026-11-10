@@ -251,7 +251,7 @@ def part_html(c, cl, n, lec_dir, pending):
     kind = "Topic" if cl.get("template") == "concept" else "Drug class"
     empty = "Not covered in slides · textbook pending" if pending else "Not covered in materials"
     callout_keys = {"clinical": ("clin", "Clinical"), "traps": ("trap", "Trap"), "pearls": ("why", "Clinical pearl / why")}
-    cards, n_all, n_tb = [], 0, 0
+    cards, n_all, n_tb, jumps, pid = [], 0, 0, [], slug(cl["name"])
     for key, label in secs.items():
         if key in callout_keys:
             continue
@@ -260,12 +260,21 @@ def part_html(c, cl, n, lec_dir, pending):
         ntb = sum(1 for f in facts if f.get("tb"))
         n_all += len(facts); n_tb += ntb
         # one labelled row per field (the same shape as a drug card): the label stays in view while its facts scroll
-        cards.append(f'<div class="rd-row{"" if facts else " is-empty"}" data-n="{len(facts)}" data-tb="{ntb}" style="--sc:#{STYLE.get(key, "4472C4")}">'
+        if facts:
+            jumps.append((f"{pid}-{key}", label, len(facts)))
+        cards.append(f'<div class="rd-row{"" if facts else " is-empty"}" id="{pid}-{key}" data-n="{len(facts)}" data-tb="{ntb}" style="--sc:#{STYLE.get(key, "4472C4")}">'
                      f'<h3 class="rd-k"><span class="dot"></span><span>{html.escape(label)}</span>{f"<span class=rd-n>{len(facts)}</span>" if facts else ""}</h3>'
                      f'<div class="rd-v">{body}{f"<p class=rd-more>+{ntb} from the textbook</p>" if ntb else ""}</div></div>')
-    out = [f'<section class="section part-start part-sec" id="{slug(cl["name"])}" style="--pc:var(--p{(n - 1) % 6})"><div class="wrap">',
-           f'<div class="part"><span class="pnum">{n}</span>Part {n} · {kind}</div><h2>{md(cl["name"])}</h2>',
+    # time-efficient order: what to know cold first, a jump bar to any field, then the full detail (nothing is dropped)
+    words = len(re.sub(r"<[^>]+>", " ", "".join(cards)).split())
+    hy = callout("hy", "High-yield · know this cold", [fact(f) for f in cl.get("high_yield", [])])
+    extra = [(f"{pid}-figs", f"Figures", len(cl.get("figures", []))), (f"{pid}-tables", "Compare tables", len(cl.get("comparisons", [])))]
+    jump = "".join(f'<a href="#{i}">{html.escape(l)}<span>{n}</span></a>' for i, l, n in jumps + [e for e in extra if e[2]])
+    out = [f'<section class="section part-start part-sec" id="{pid}" style="--pc:var(--p{(n - 1) % 6})"><div class="wrap">',
+           f'<div class="part"><span class="pnum">{n}</span>Part {n} · {kind}<span class="rd-time">about {max(1, round(words / 180))} min read</span></div><h2>{md(cl["name"])}</h2>',
            '<div class="chips">' + "".join(f'<span class="chip">{o}</span>' for o in cl.get("objectives", [])) + "</div>",
+           hy,
+           f'<nav class="rd-jump noprint" aria-label="Jump within this part">{jump}</nav>' if jump else "",
            deeper_html(cl.get("deeper")),
            (f'<div class="rd-bar noprint"><span class="rd-sum">{n_all} facts · {n_all - n_tb} from the lecture · {n_tb} textbook-only</span>'
             '<span class="seg rd-depth" role="group" aria-label="How much to show"><button type="button" data-depth="all" aria-pressed="true">Everything</button>'
@@ -277,12 +286,16 @@ def part_html(c, cl, n, lec_dir, pending):
             out.append(callout(cls, label, [fact(f) for f in facts]) if facts else f'<div class="callout {cls}"><div class="label">{label}</div><p class="empty" style="margin:0">{empty}</p></div>')
     if cl.get("flows"):
         out.append("<h3 style='margin-top:26px'>Step by step</h3>" + flows_html(cl["flows"]))
-    for fig in cl.get("figures", []):
+    for fi, fig in enumerate(cl.get("figures", [])):
+        if fi == 0:
+            out.append(f'<span id="{pid}-figs" class="rd-anchor"></span>')
         shutil.copy(ROOT / "work" / c["lecture"]["id"] / "figures" / fig["image"], lec_dir / fig["image"])
         w, h = Image.open(lec_dir / fig["image"]).size  # fixed size so lazy images don't shift links mid-scroll
         out.append(f'<figure {viz_attrs(fig, c["lecture"]["id"])}><img src="{fig["image"]}" width="{w}" height="{h}" style="height:auto" alt="{html.escape(fig.get("title", ""))}" loading="lazy">'
                    f'<figcaption>{"<span class=\"tag tb\">TB</span>" if fig.get("tb") else ""}<strong>{md(fig.get("title", ""))}.</strong> {md(fig["caption"])}{cite(fig.get("src", ""))}</figcaption></figure>')
     for i, t in enumerate(cl.get("comparisons", [])):
+        if i == 0:
+            out.append(f'<span id="{pid}-tables" class="rd-anchor"></span>')
         out.append(table_html(t, i))
     for cf in cl.get("conflicts", []):
         out.append(callout("disc", "Slide discrepancy", [f"<li><strong>{md(cf['topic'])}</strong></li>",
@@ -292,7 +305,6 @@ def part_html(c, cl, n, lec_dir, pending):
     mnems = [f"<li>{md(h['text'])}{cite(h.get('src', ''))}</li>" for h in cl.get("hooks", []) if h["kind"] == "mnemonic"]
     out.append(callout("why", "Why it happens", whys))
     out.append(callout("mnem", "Mnemonic (memory aid)", mnems))
-    out.append(callout("hy", "High-yield", [fact(f) for f in cl.get("high_yield", [])]))
     out.append("</div></section>")
     return "".join(out)
 

@@ -856,7 +856,7 @@
       modes: AX.length > 1 ? { label: "Axis", opts: AX.map((a) => [a.id, a.label]) } : null, start: { mode: AX[0].id },
       target: (id) => { const d = drugs.find((x) => x.id === id); return d.kind === "exo" || d.kind === "inducer" || d.kind === "taper" ? [250, 280] : d.kind === "synth" ? [250, 240] : d.kind === "receptor" ? [470, 300] : [250, 150]; },
       read(S) {
-        const a = ax(S), m = sim.cur;
+        const a = ax(S), m = settled(S);
         const lv = (v) => (v > 1.25 ? "high" : v < 0.6 ? (v < 0.25 ? "very low" : "low") : "normal");
         return `${noteOf(S, drugs) || esc(cfg.read || "Each level drives the next; the final hormone switches the top two off — negative feedback.")}<span class="vz-meter-t">${a.topH}: <b>${lv(m.top)}</b> · ${a.midH}: <b>${lv(m.mid)}</b>${a.brake ? "" : m.exo > 0.1 ? ` · ${a.hormone} + drug: <b>${lv(m.hor)}</b> · made by the ${String(a.gland).toLowerCase()}: <b>${lv(m.made ?? 1)}</b>` : ` · ${a.hormone}: <b>${lv(m.hor)}</b>`}${m.gland < 0.7 ? ` · ${a.gland}: <b>shrunken</b>` : ""}${m.hor < 0.4 && m.gland < 0.7 && !drugs.some((d) => S.on.has(d.id) && (d.kind === "exo")) ? " — <b>crisis risk</b>" : ""}</span>`;
       },
@@ -910,12 +910,12 @@
       show(exoP, !!exo); exoL.textContent = exo ? exo.label : "";
       if (why?.drug && A.some((d) => d.id === why.drug && d.kind === "taper")) sim.taperT = 0;
     };
-    st.tick = (dt) => {
-      const S = st.S, a = ax(S), A = act(S), m = sim.cur;
-      const has = (k) => A.some((d) => d.kind === k);
+    // one step of the model; the picture animates it, and the readout runs it ahead to where it settles
+    function advance(m, S, dt, T) {
+      const a = ax(S), A = act(S), has = (k) => A.some((d) => d.kind === k);
       // exogenous hormone: on, or fading during a taper; an inducer lowers it
       let exo = A.filter((d) => d.kind === "exo").reduce((s, d) => s + (d.amt || 1.4), 0);
-      if (has("taper")) { sim.taperT += dt; exo = Math.max(0, 1.4 * (1 - sim.taperT / 14)); }
+      if (has("taper")) { T.taperT += dt; exo = Math.max(0, 1.4 * (1 - T.taperT / 14)); }
       if (has("inducer")) exo *= 0.45;
       m.exo += (exo - m.exo) * Math.min(1, dt * 2);
       const fbk = clamp(m.hor - 1, -0.6, 3);
@@ -930,11 +930,22 @@
       let made = a.brake ? 0 : m.gland * clamp(mid, 0, 2) * (has("synth") ? 0.2 : 1);
       if (a.brake) made = 0;
       m.made = (m.made ?? 1) + (made - (m.made ?? 1)) * Math.min(1, dt * 1.5);
-      const exoOn = m.exo > 0.1; if (exoOn !== sim.exoOn) { sim.exoOn = exoOn; bT[2].textContent = exoOn ? `${a.hormone} + drug` : a.hormone; }
+      const exoOn = m.exo > 0.1; if (m === sim.cur && exoOn !== sim.exoOn) { sim.exoOn = exoOn; bT[2].textContent = exoOn ? `${a.hormone} + drug` : a.hormone; }
       const horT = a.brake ? mid : made + m.exo;
       m.hor += (horT - m.hor) * Math.min(1, dt * 1.5);
       m.top += (top - m.top) * Math.min(1, dt * 1.5); m.mid += (mid - m.mid) * Math.min(1, dt * 1.5);
       const eff = has("receptor") ? 0.15 : clamp(m.hor, 0, 2);
+      return { made, eff };
+    }
+    const settled = (S) => {
+      const A = act(S); if (A.some((d) => d.kind === "taper")) return sim.cur;  // a taper is watched live
+      const key = `${S.mode}|${[...S.on].sort().join(",")}`; if (sim.sKey === key) return sim.sVal;
+      const m = { ...sim.cur }, T = { taperT: 0 }; for (let i = 0; i < 400; i++) advance(m, S, 0.25, T);
+      sim.sKey = key; sim.sVal = m; return m;
+    };
+    st.tick = (dt) => {
+      const S = st.S, a = ax(S), m = sim.cur;
+      const { made, eff } = advance(m, S, dt, sim);
       s1.rate = 4 * m.top; s2.rate = 4 * m.mid; s3.rate = 4 * clamp(made + (a.brake ? m.mid : 0), 0, 2); exoS.rate = 4 * m.exo; fbs.rate = a.brake ? 0 : 2.5 * clamp(m.hor, 0, 2);
       [s1, s2, s3, exoS, fbs].forEach((s) => s.tick(dt));
       glandI.setAttribute("transform", `translate(${X},${G.y}) scale(${1.5 * (0.55 + 0.45 * m.gland)})`);
@@ -1174,6 +1185,8 @@
     }
     const hl = (e, on) => { const r = e.target.closest?.(".vz-ch[data-n]"); if (!r) return; NODE.find((x) => x.n.id === r.dataset.n)?.g.classList.toggle("hl", on); };
     st.el.addEventListener("pointerover", (e) => hl(e, true)); st.el.addEventListener("pointerout", (e) => hl(e, false));
+    st.el.addEventListener("click", (e) => { const r = e.target.closest?.(".vz-ch[data-n]"); if (!r) return; const hit = NODE.find((x) => x.n.id === r.dataset.n); if (!hit) return;
+      const was = hit.g.classList.contains("spot"); NODE.forEach((x) => x.g.classList.remove("spot")); L.nodes.classList.toggle("spotting", !was); hit.g.classList.toggle("spot", !was); });
     // "on": a step the drug sets in motion (its label already says which way things go), shown lit rather than as more/less
     const isOn = (S, id) => (cur(S)?.on || []).includes(id);
     function level(S, id) { const d = cur(S); if (!d) return 1; return (d.off || []).includes(id) ? 0.12 : (d.less || []).includes(id) ? 0.55 : (d.more || []).includes(id) ? 1.6 : 1; }
@@ -1195,11 +1208,11 @@
       const q = (t) => [(1 - t) ** 2 * ax + 2 * (1 - t) * t * c[0] + t * t * bx, (1 - t) ** 2 * ay + 2 * (1 - t) * t * c[1] + t * t * bY];
       const tEnd = 1 - 24 / len, tStart = 22 / len;
       const poly = Array.from({ length: 15 }, (_, i) => q(tStart + (tEnd - tStart) * i / 14));
-      mk("path", { d: `M${poly.map((p) => p.join(",")).join("L")}`, class: "vz-an-line" }, L.lines);
+      const line = mk("path", { d: `M${poly.map((p) => p.join(",")).join("L")}`, class: "vz-an-line" }, L.lines);
       const e = poly[14], e0 = poly[13];
       mk("path", { d: "M-6,-5L1,0L-6,5", class: "vz-fx-arrow", transform: `translate(${e[0]},${e[1]}) rotate(${Math.atan2(e[1] - e0[1], e[0] - e0[0]) * 180 / Math.PI})` }, L.lines);
       const col = COLV[by[a].col] || "var(--vz-1)";
-      return { a, b, s: stream(L.flow, poly, { col: () => getComputedStyle(st.el).getPropertyValue(col.slice(4, -1)) || "#888", rate: 1.8, speed: 50, r: 3.6, jitter: 2 }) };
+      return { a, b, line, s: stream(L.flow, poly, { col: () => getComputedStyle(st.el).getPropertyValue(col.slice(4, -1)) || "#888", rate: 1.8, speed: 50, r: 3.6, jitter: 2 }) };
     });
     const NODE = N.map((n) => {
       const col = COLV[n.col] || "var(--vz-1)", [x, y] = n._mk, g = mk("g", { class: "vz-an-node", transform: `translate(${x},${y})` }, L.nodes);
@@ -1208,6 +1221,7 @@
         mk("path", { d: `M${ox - x},${oy - y} C${(ox - x) * 0.5},${oy - y} ${(ox - x) * 0.3},0 ${ox > x ? 19 : -19},0`, class: "vz-an-lead", style: `--c:${col}` }, g);
         mk("circle", { cx: ox - x, cy: oy - y, r: 9, class: "vz-an-orgdot", style: `--c:${col}` }, g);
       }
+      const pulse = mk("circle", { r: 19, class: "vz-an-pulse" }, g), ringS = mk("circle", { r: 24.5, class: "vz-an-state" }, g);
       mk("circle", { r: 19, class: "vz-an-mk", style: `--c:${col}` }, g);
       const ic = mk("g", { transform: "scale(0.62)" }, g); ic.innerHTML = ICON[iconFor(n)](col);
       const side = cfg.lab?.[n.id] || (x > 470 ? "l" : "r"), ls = String(n.label).split("\n");
@@ -1222,7 +1236,7 @@
       }
       const badge = mk("text", { x: 0, y: 34, "text-anchor": "middle", class: "vz-an-badge" }, g);
       if (side === "b") badge.setAttribute("y", -26);
-      return { n, g, ring, badge };
+      return { n, g, ring, badge, pulse, ringS };
     });
     const dock = mk("g", { class: "vz-hide" }, L.top);
     const dockPill = mk("rect", { x: -18, y: -9, width: 36, height: 18, rx: 9, class: "vz-fx-dock" }, dock);
@@ -1231,7 +1245,22 @@
       const S = st.S, d = cur(S), dd = drugs.find((x) => S.on.has(x.id));
       // an agonist / enhancer docks with "+", a blocker with "×"
       dockMark.setAttribute("d", d?.act === "up" ? "M0,-5.5V5.5M-5.5,0H5.5" : "M-5,-5L5,5M5,-5L-5,5");
-      NODE.forEach(({ n, g, badge }) => { const lv = level(S, n.id); g.style.opacity = lv < 0.2 ? 0.38 : lv < 1 ? 0.72 : 1; g.classList.toggle("up", lv > 1 || isOn(S, n.id)); badge.textContent = lv > 1 ? "↑ more" : lv < 1 ? (lv < 0.2 ? "↓↓ off" : "↓ less") : ""; });
+      const rank = Object.fromEntries(order.map((id, i) => [id, i])), first = d?.at ? Math.min(...String(d.at).split(">").map((x) => rank[x] ?? 0)) : 0;
+      (st._casc || []).forEach(clearTimeout); st._casc = [];
+      const calm = matchMedia("(prefers-reduced-motion: reduce)").matches || document.documentElement.dataset.pmotion === "off";
+      NODE.forEach(({ n, g, badge, pulse, ringS }) => {
+        const lv = level(S, n.id), on = isOn(S, n.id), state = on ? "on" : lv > 1 ? "up" : lv < 0.2 ? "off" : lv < 1 ? "dn" : "";
+        const apply = () => {
+          g.style.opacity = lv < 0.2 ? 0.45 : lv < 1 ? 0.78 : 1; g.classList.toggle("up", lv > 1 || on);
+          badge.textContent = on ? "✓ happens" : lv > 1 ? "↑ more" : lv < 1 ? (lv < 0.2 ? "↓↓ off" : "↓ less") : "";
+          badge.setAttribute("class", `vz-an-badge ${state}`); ringS.setAttribute("class", `vz-an-state ${state}`);
+          if (state && !calm) { pulse.setAttribute("class", "vz-an-pulse"); void pulse.getBBox(); pulse.setAttribute("class", `vz-an-pulse go ${state}`); }
+        };
+        const wait = d && !calm ? Math.max(0, (rank[n.id] ?? 0) - first) * 260 + 120 : 0;
+        if (wait) st._casc.push(setTimeout(apply, wait)); else apply();
+      });
+      streams.forEach((x) => { const lb = d ? level(S, x.b) : 1, cut = d && (d.at === `${x.a}>${x.b}` || d.at === x.b && (d.off || []).length);
+        x.line.setAttribute("class", `vz-an-line ${cut ? "cut" : lb < 1 ? "weak" : lb > 1 || (d && isOn(S, x.b)) ? "strong" : ""}`); });
       show(dock, !!d?.at);
       if (d?.at) { const [x, y] = st._target(dd.id); dock.setAttribute("transform", `translate(${x},${y})`); dockPill.style.fill = dd.col; }
       streams.forEach((s) => {

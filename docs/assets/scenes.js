@@ -856,7 +856,7 @@
       modes: AX.length > 1 ? { label: "Axis", opts: AX.map((a) => [a.id, a.label]) } : null, start: { mode: AX[0].id },
       target: (id) => { const d = drugs.find((x) => x.id === id); return d.kind === "exo" || d.kind === "inducer" || d.kind === "taper" ? [250, 280] : d.kind === "synth" ? [250, 240] : d.kind === "receptor" ? [470, 300] : [250, 150]; },
       read(S) {
-        const a = ax(S), m = sim.cur;
+        const a = ax(S), m = settled(S);
         const lv = (v) => (v > 1.25 ? "high" : v < 0.6 ? (v < 0.25 ? "very low" : "low") : "normal");
         return `${noteOf(S, drugs) || esc(cfg.read || "Each level drives the next; the final hormone switches the top two off — negative feedback.")}<span class="vz-meter-t">${a.topH}: <b>${lv(m.top)}</b> · ${a.midH}: <b>${lv(m.mid)}</b>${a.brake ? "" : m.exo > 0.1 ? ` · ${a.hormone} + drug: <b>${lv(m.hor)}</b> · made by the ${String(a.gland).toLowerCase()}: <b>${lv(m.made ?? 1)}</b>` : ` · ${a.hormone}: <b>${lv(m.hor)}</b>`}${m.gland < 0.7 ? ` · ${a.gland}: <b>shrunken</b>` : ""}${m.hor < 0.4 && m.gland < 0.7 && !drugs.some((d) => S.on.has(d.id) && (d.kind === "exo")) ? " — <b>crisis risk</b>" : ""}</span>`;
       },
@@ -910,12 +910,12 @@
       show(exoP, !!exo); exoL.textContent = exo ? exo.label : "";
       if (why?.drug && A.some((d) => d.id === why.drug && d.kind === "taper")) sim.taperT = 0;
     };
-    st.tick = (dt) => {
-      const S = st.S, a = ax(S), A = act(S), m = sim.cur;
-      const has = (k) => A.some((d) => d.kind === k);
+    // one step of the model; the picture animates it, and the readout runs it ahead to where it settles
+    function advance(m, S, dt, T) {
+      const a = ax(S), A = act(S), has = (k) => A.some((d) => d.kind === k);
       // exogenous hormone: on, or fading during a taper; an inducer lowers it
       let exo = A.filter((d) => d.kind === "exo").reduce((s, d) => s + (d.amt || 1.4), 0);
-      if (has("taper")) { sim.taperT += dt; exo = Math.max(0, 1.4 * (1 - sim.taperT / 14)); }
+      if (has("taper")) { T.taperT += dt; exo = Math.max(0, 1.4 * (1 - T.taperT / 14)); }
       if (has("inducer")) exo *= 0.45;
       m.exo += (exo - m.exo) * Math.min(1, dt * 2);
       const fbk = clamp(m.hor - 1, -0.6, 3);
@@ -930,11 +930,22 @@
       let made = a.brake ? 0 : m.gland * clamp(mid, 0, 2) * (has("synth") ? 0.2 : 1);
       if (a.brake) made = 0;
       m.made = (m.made ?? 1) + (made - (m.made ?? 1)) * Math.min(1, dt * 1.5);
-      const exoOn = m.exo > 0.1; if (exoOn !== sim.exoOn) { sim.exoOn = exoOn; bT[2].textContent = exoOn ? `${a.hormone} + drug` : a.hormone; }
+      const exoOn = m.exo > 0.1; if (m === sim.cur && exoOn !== sim.exoOn) { sim.exoOn = exoOn; bT[2].textContent = exoOn ? `${a.hormone} + drug` : a.hormone; }
       const horT = a.brake ? mid : made + m.exo;
       m.hor += (horT - m.hor) * Math.min(1, dt * 1.5);
       m.top += (top - m.top) * Math.min(1, dt * 1.5); m.mid += (mid - m.mid) * Math.min(1, dt * 1.5);
       const eff = has("receptor") ? 0.15 : clamp(m.hor, 0, 2);
+      return { made, eff };
+    }
+    const settled = (S) => {
+      const A = act(S); if (A.some((d) => d.kind === "taper")) return sim.cur;  // a taper is watched live
+      const key = `${S.mode}|${[...S.on].sort().join(",")}`; if (sim.sKey === key) return sim.sVal;
+      const m = { ...sim.cur }, T = { taperT: 0 }; for (let i = 0; i < 400; i++) advance(m, S, 0.25, T);
+      sim.sKey = key; sim.sVal = m; return m;
+    };
+    st.tick = (dt) => {
+      const S = st.S, a = ax(S), m = sim.cur;
+      const { made, eff } = advance(m, S, dt, sim);
       s1.rate = 4 * m.top; s2.rate = 4 * m.mid; s3.rate = 4 * clamp(made + (a.brake ? m.mid : 0), 0, 2); exoS.rate = 4 * m.exo; fbs.rate = a.brake ? 0 : 2.5 * clamp(m.hor, 0, 2);
       [s1, s2, s3, exoS, fbs].forEach((s) => s.tick(dt));
       glandI.setAttribute("transform", `translate(${X},${G.y}) scale(${1.5 * (0.55 + 0.45 * m.gland)})`);

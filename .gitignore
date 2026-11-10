@@ -10,3 +10,4 @@ inputs/textbook/
 # Extracted textbook text (copyrighted)
 work/*/textbook.json
 work/*/textbook.md
+tests/looks/*.new.jpg

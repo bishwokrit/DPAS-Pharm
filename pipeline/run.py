@@ -213,6 +213,9 @@ if __name__ == "__main__":
     elif arg == "check":
         import check
         check.main()
+    elif arg == "looks":  # picture comparison of key screens; "./run.sh looks accept" saves the current look as the reference
+        import subprocess
+        subprocess.run(["node", str(ROOT / "tests" / "looks.mjs")] + sys.argv[2:3])
     elif arg == "site":
         import build_site
         build_site.main()

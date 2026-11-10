@@ -63,7 +63,10 @@ def main():
     ok &= subprocess.run(["node", str(ROOT / "tests" / "ai.mjs")]).returncode == 0
     ok &= subprocess.run(["node", str(ROOT / "tests" / "a11y.mjs")]).returncode == 0
     ok &= subprocess.run([sys.executable, str(ROOT / "tests" / "data_qc.py")]).returncode == 0
+    ok &= subprocess.run([sys.executable, str(ROOT / "tests" / "diagrams.py")]).returncode == 0
+    ok &= subprocess.run([sys.executable, str(ROOT / "tests" / "content_kept.py")]).returncode == 0
     ok &= subprocess.run(["node", str(ROOT / "tests" / "qc.mjs")]).returncode == 0
+    subprocess.run(["node", str(ROOT / "tests" / "looks.mjs")])  # reports screens whose look changed; never blocks
     print("All checks passed." if ok else "Some checks FAILED — fix before publishing.")
     sys.exit(0 if ok else 1)
 
