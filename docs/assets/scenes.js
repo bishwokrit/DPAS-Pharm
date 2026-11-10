@@ -267,6 +267,9 @@
   };
 
   // ================================================================ SEESAW: aggressive vs protective (or any two-sided balance)
+  // the story in words, one step lighting up after another (shared by every scene's readout)
+  const chainHTML = (title, rows) => (rows.length ? `<span class="vz-chain"><span class="vz-ch-h">${esc(title)}</span>${rows.map(([cls, html], i) => `<span class="vz-ch ${cls}" style="--i:${i}"><i></i><span>${html}</span></span>`).join("")}</span>` : "");
+  V._chain = chainHTML;
   V.seesaw = (host, cfg = {}) => {
     const H = cfg.h || 300, left = cfg.left, right = cfg.right;  // {title, items:[{id,label,w}]}
     const st = stage(host, {
@@ -276,7 +279,13 @@
       read(S) {
         const t = tilt(S), d = cfg.drugs.filter((x) => S.on.has(x.id)), last = cfg.drugs.find((x) => x.id === S.last);
         const verdict = t > 0.15 ? cfg.verdict?.left || "Tipped toward injury." : t < -0.15 ? cfg.verdict?.right || "Defenses win." : cfg.verdict?.even || "Balanced.";
-        return `${last ? `<b>${esc(last.label)}.</b> ${last.note || ""} ` : d.length ? "" : cfg.read || ""}<span class="vz-meter-t">${verdict}</span>`;
+        const nameOf = (id) => esc([...left.items, ...right.items].find((x) => x.id === id)?.label || id), rows = [];
+        d.forEach((x) => {
+          if (x.add) rows.push([x.side === "L" ? "dn" : "up", `<em>Adds</em> ${esc(x.add)} <em>to</em> ${esc((x.side === "L" ? left : right).title || "")}`]);
+          (x.remove || []).forEach((id) => rows.push(["dn", `<em>${esc(x.label)} removes</em> ${nameOf(id)}`]));
+          (x.scale || []).forEach(([id, k]) => rows.push(["at", `<em>${esc(x.label)}:</em> ${nameOf(id)} <b class="${k < 1 ? "dn" : "up"}">${k < 1 ? "↓ less" : "↑ more"}</b>`]));
+        });
+        return `${last ? `<b>${esc(last.label)}.</b> ${last.note || ""} ` : d.length ? "" : cfg.read || ""}${chainHTML("What is on the scale now", rows)}<span class="vz-meter-t">${verdict}</span>`;
       },
     });
     const { svg } = st;
@@ -424,7 +433,7 @@
       read(S) {
         const n = Math.round(level(S) * 100), last = drugs.find((d) => d.id === S.last);
         const mism = last && !last.cb1 && !last.blocks.some((b) => TRIG[S.mode][b.split(":")[0]]);
-        return `${last ? `<b>${esc(last.label)}.</b> ${last.note || ""}${mism ? ` <b>It doesn't touch this cause</b> — the signal comes in through a different input.` : ""}` : esc(cfg.read || "")} <span class="vz-meter-t">Nausea signal: <b>${n}%</b>${S.on.has("meto") ? " · Gastric emptying: <b>faster</b>" : ""}</span>`;
+        return `${last ? `<b>${esc(last.label)}.</b> ${last.note || ""}${mism ? ` <b>It doesn't touch this cause</b> — the signal comes in through a different input.` : ""}` : esc(cfg.read || "")}${chainHTML("Signal paths for this cause", [...Object.keys(TRIG[S.mode]).map((k) => { const bl = blockedSet(S), rs = IN[k].rec, off = rs.filter((r) => bl.has(`${k}:${r}`)); return [off.length ? "dn" : "on", `${esc(IN[k].name)}${rs[0] === "anx" ? "" : ` <em>(${rs.join(", ").replace(/5HT3/g, "5-HT3")})</em>`}${off.length ? ` <b class="dn">${off.length === rs.length ? "blocked" : `${off.join(", ").replace(/5HT3/g, "5-HT3")} blocked`}</b>` : ""}`]; }), ["at", "Vomiting center (medulla)"]])} <span class="vz-meter-t">Nausea signal: <b>${n}%</b>${S.on.has("meto") ? " · Gastric emptying: <b>faster</b>" : ""}</span>`;
       },
     });
     const { svg } = st;
@@ -438,6 +447,12 @@
     }
     // anatomy: head outline, brain, brainstem, ear, stomach
     const G = mk("g", {}, svg);
+    mk("path", { d: "M186,26 C262,-14 420,-6 462,62 C496,112 494,176 458,212 L430,236 C398,254 340,262 312,256 L304,372", class: "vz-sc-skull" }, G);
+    mk("path", { d: "M246,270 C240,300 242,340 246,372", class: "vz-sc-skull" }, G);
+    mk("path", { d: "M330,232 C352,214 414,208 434,224 C444,240 420,256 384,258 C356,258 336,250 330,232Z", class: "vz-sc-cbl" }, G);
+    mk("path", { d: "M344,236 C372,228 404,228 424,236 M350,246 C376,240 400,240 416,246", class: "vz-sc-cbl ln" }, G);
+    mk("path", { d: "M262,274 C262,310 266,340 268,372 M284,266 C286,310 288,340 290,372", class: "vz-sc-cord" }, G);
+    label(G, 372, 276, "Cerebellum", { cls: "vz-sc-s" }); label(G, 318, 352, "Spinal cord", { a: "start", cls: "vz-sc-s" });
     mk("path", { d: "M200,40 C270,6 400,10 440,70 C470,110 470,160 440,190 L410,215 C380,230 330,236 300,232 L290,260 C285,276 270,282 258,276 C238,266 222,250 214,230 C180,210 170,150 176,110 C180,80 188,52 200,40Z", class: "vz-sc-brain" }, G);
     label(G, 360, 60, "Brain", { cls: "vz-sc-s" });
     mk("ellipse", { cx: 270, cy: 205, rx: 26, ry: 18, class: "vz-sc-vc" }, G);
@@ -853,6 +868,11 @@
     // drawing
     const g = mk("g", {}, svg), dyn = mk("g", {}, svg);
     const T = { y: 60 }, Mi = { y: 160 }, G = { y: 265 }, X = 250;
+    // anatomy backdrop: the brain in side view with the hypothalamus at its base, and the pituitary hanging below on its stalk
+    mk("path", { d: `M${X - 104},${T.y + 6} C${X - 110},${T.y - 42} ${X - 52},${T.y - 68} ${X + 6},${T.y - 64} C${X + 72},${T.y - 62} ${X + 112},${T.y - 30} ${X + 108},${T.y + 2} C${X + 106},${T.y + 22} ${X + 88},${T.y + 32} ${X + 72},${T.y + 30} C${X + 74},${T.y + 46} ${X + 54},${T.y + 54} ${X + 44},${T.y + 44} L${X + 42},${T.y + 70} C${X + 40},${T.y + 82} ${X + 26},${T.y + 82} ${X + 25},${T.y + 70} L${X + 22},${T.y + 36} C${X - 20},${T.y + 40} ${X - 96},${T.y + 40} ${X - 104},${T.y + 6}Z`, class: "vz-sc-brain vz-ax-brain" }, g);
+    mk("path", { d: `M${X + 46},${T.y + 34} C${X + 56},${T.y + 30} ${X + 66},${T.y + 32} ${X + 72},${T.y + 30} M${X - 70},${T.y - 20} C${X - 50},${T.y - 36} ${X - 30},${T.y - 20} ${X - 10},${T.y - 34} M${X + 10},${T.y - 30} C${X + 30},${T.y - 44} ${X + 54},${T.y - 26} ${X + 76},${T.y - 34}`, class: "vz-sc-cbl ln" }, g);
+    mk("path", { d: `M${X},${T.y + 24} V${Mi.y - 22}`, class: "vz-ax-stalk" }, g);
+    label(g, X + 12, (T.y + Mi.y) / 2 + 8, "stalk", { a: "start", cls: "vz-sc-s" }); label(g, X + 12, (Mi.y + G.y) / 2 + 4, "bloodstream", { a: "start", cls: "vz-sc-s" });
     const brainI = mk("g", { transform: `translate(${X},${T.y}) scale(1.6)` }, g);
     const pitI = mk("g", { transform: `translate(${X},${Mi.y}) scale(1.3)` }, g);
     const glandI = mk("g", { transform: `translate(${X},${G.y}) scale(1.5)` }, g);
@@ -875,7 +895,8 @@
     const bT = [label(bars, 569, 32, "", { cls: "vz-sc-s" }), label(bars, 569, 132, "", { cls: "vz-sc-s" }), label(bars, 569, 232, "", { cls: "vz-sc-s" })];
     function relabel() {
       const a = ax(st.S);
-      brainI.innerHTML = ICON.brain("var(--vz-4)"); pitI.innerHTML = ICON.gland("var(--vz-4)"); glandI.innerHTML = ICON[a.glandIcon || "gland"]("var(--vz-3)");
+      brainI.innerHTML = '<ellipse rx="9" ry="5.5" class="vz-ax-hyp"/>'; pitI.innerHTML = ICON.gland("var(--vz-4)"); const org = { thyroid: "thyroid", adrenal: "adrenal", ovary: "ovary", gonad: "ovary", testis: "testis" }[String(a.gland).toLowerCase()];
+      glandI.innerHTML = org ? `<g class="vz-bm-org vz-ax-org" transform="scale(${org === "thyroid" ? 1.35 : 2})">${org === "adrenal" ? '<path class="ln" d="M-7,4 C-12,12 -10,24 -2,26 C8,26 12,14 8,6"/>' : ""}${ORG[org][2]}</g>` : ICON[a.glandIcon || "gland"]("var(--vz-3)");
       tLab.textContent = `${a.top} · ${a.topH}${a.brake ? " (brake)" : ""}`; mLab.textContent = `${a.mid} · ${a.midH}`; gLab.textContent = `${a.gland} · ${a.hormone}`;
       tissue.innerHTML = ICON[a.effectIcon || "effect"]("var(--vz-5)"); effL.textContent = a.effect;
       bT[0].textContent = a.topH; bT[1].textContent = a.midH; bT[2].textContent = a.hormone;
@@ -1233,7 +1254,10 @@
     const st = V._stage(host, {
       h: H, drugs, multi: true, label: "Vicious cycle", point: cfg.point, hint: "Break the cycle: drag a drug onto a step", steps: cfg.steps,
       target: (id) => { const d = drugs.find((x) => x.id === id), i = N.findIndex((n) => n.id === d.at); return pos(i); },
-      read(S) { const b = drugs.filter((d) => S.on.has(d.id)).length; return `${noteOf(S, drugs) || esc(cfg.read || "Each step feeds the next, all the way around.")}<span class="vz-meter-t">Cycle: <b>${b ? "broken — it slows down" : "spinning"}</b></span>`; },
+      read(S) { const act = drugs.filter((d) => S.on.has(d.id)), b = act.length, nm = (n) => esc(String(n.label).replace(/\n/g, " "));
+        const rows = N.map((n) => { const ds = act.filter((d) => d.at === n.id); return [ds.length ? "at" : b ? "dn" : "", `${nm(n)}${ds.length ? ` <b class="dn">× ${ds.map((d) => esc(d.label)).join(", ")}</b>` : ""}`]; });
+        if (!b) rows.push(["", `<em>…which feeds</em> ${nm(N[0])} <em>again</em>`]);
+        return `${noteOf(S, drugs) || esc(cfg.read || "Each step feeds the next, all the way around.")}${V._chain(b ? "Where the loop is broken" : "The loop, in order", rows)}<span class="vz-meter-t">Cycle: <b>${b ? "broken — it slows down" : "spinning"}</b></span>`; },
     });
     const { svg } = st;
     const pos = (i) => { const a = -Math.PI / 2 + (i * 2 * Math.PI) / N.length; return [C0[0] + R * Math.cos(a), C0[1] + R * Math.sin(a)]; };

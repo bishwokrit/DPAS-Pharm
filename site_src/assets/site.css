@@ -2337,3 +2337,11 @@ html[data-pmotion="off"] .vz-ch { animation: none; opacity: 1; }
   .first-screen + .section { padding-top: 34px; }
   .first-screen .scroll-cue { display: none; }
 }
+/* nausea and hormone-axis scenes: quiet anatomy behind the working parts */
+.vz-sc-skull, .vz-sc-cord { fill: none; stroke: color-mix(in srgb, var(--vz-text, #888) 22%, transparent); stroke-width: 1.6; stroke-linecap: round; }
+.vz-sc-cord { stroke: color-mix(in srgb, var(--vz-4) 35%, transparent); }
+.vz-sc-cbl { fill: color-mix(in srgb, var(--vz-4) 6%, var(--vz-bg)); stroke: color-mix(in srgb, var(--vz-4) 34%, transparent); stroke-width: 1.4; } .vz-sc-cbl.ln { fill: none; stroke-width: 1; }
+.vz-ax-brain { opacity: .75; } .vz-ax-stalk { stroke: color-mix(in srgb, var(--vz-4) 45%, transparent); stroke-width: 7; stroke-linecap: round; fill: none; }
+.vz-ax-hyp { fill: color-mix(in srgb, var(--vz-4) 30%, var(--vz-bg)); stroke: var(--vz-4); stroke-width: 1.2; }
+.vz-ax-org path, .vz-ax-org ellipse, .vz-ax-org circle { fill: color-mix(in srgb, var(--vz-3) 22%, var(--vz-bg)) !important; stroke: var(--vz-3) !important; stroke-width: 1.1 !important; }
+.vz-ax-org .ln { fill: none !important; stroke: color-mix(in srgb, var(--vz-3) 45%, transparent) !important; }

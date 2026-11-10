@@ -40,8 +40,8 @@ EXAMS = {"U1": {"slug": "unit1", "title": "Unit 1 Practice Exam — Introduction
                 "short": "Unit 4 Practice Exam", "lectures": ["L07", "L08"], "seed": 1104, "unit": 4,
                 "about": "Built only from the Unit 4 slides, study guide, and assigned Katzung chapters (textbook questions are cited by page). Covers pituitary, thyroid and adrenal drugs (Session 1), then contraception, SERMs, androgens, insulin and glucose-lowering drugs, and parathyroid disorders (Session 2). Mostly patient cases that ask what you would do."},
          "U4B": {"slug": "unit4b", "title": "Unit 4 Practice Exam B — Harder, Exam Conditions",
-                 "short": "Unit 4 Practice Exam B · harder (20 Q · 24 min)", "lectures": ["L07", "L08"], "seed": 1114, "unit": 4, "minutes": 24,
-                 "about": "20 harder questions: longer patient cases where two or three details matter, every option a real drug or plan from the lecture, and earlier-unit principles applied to endocrine drugs (absorption, CYP, feedback). Best taken timed: 24 minutes."},
+                 "short": "Unit 4 Practice Exam B · harder (30 Q · 36 min)", "lectures": ["L07", "L08"], "seed": 1203, "unit": 4, "minutes": 36,
+                 "about": "30 harder questions: longer patient cases where two or three details matter, every option a real drug or plan from the lecture, and earlier-unit principles applied to endocrine drugs (absorption, CYP, feedback). Best taken timed: 36 minutes."},
          "FINAL": {"slug": "final", "title": "Comprehensive Final Mock — All Units",
                    "short": "Comprehensive Final Mock (100 Q · 100 min)", "lectures": ["L01", "L02", "L03", "L04", "L05", "L06", "L07", "L08", "L09", "L10", "L11", "L12"],
                    "seed": 1211, "unit": 0, "minutes": 100,
@@ -50,14 +50,14 @@ EXAMS = {"U1": {"slug": "unit1", "title": "Unit 1 Practice Exam — Introduction
                 "short": "Unit 5 Practice Exam", "lectures": ["L09", "L10"], "seed": 1105, "unit": 5,
                 "about": "Built only from the Unit 5 slides, study guide, and assigned Katzung chapters (textbook questions are cited by page). Covers renal dosing and the five diuretic classes (Session 1), then RAAS blockers, antihypertensives in CKD, nitrates and angina, and the triple whammy (Session 2). Mostly patient cases that ask what you would do."},
          "U5B": {"slug": "unit5b", "title": "Unit 5 Practice Exam B — Harder, Exam Conditions",
-                 "short": "Unit 5 Practice Exam B · harder (20 Q · 24 min)", "lectures": ["L09", "L10"], "seed": 1115, "unit": 5, "minutes": 24,
-                 "about": "20 harder questions: longer patient cases where two or three details matter, every option a real drug or plan from the lecture, and earlier-unit principles applied to renal and cardiorenal drugs (renal dosing, potassium, the triple whammy). Best taken timed: 24 minutes."},
+                 "short": "Unit 5 Practice Exam B · harder (30 Q · 36 min)", "lectures": ["L09", "L10"], "seed": 1115, "unit": 5, "minutes": 36,
+                 "about": "30 harder questions: longer patient cases where two or three details matter, every option a real drug or plan from the lecture, and earlier-unit principles applied to renal and cardiorenal drugs (renal dosing, potassium, the triple whammy). Best taken timed: 36 minutes."},
          "U6": {"slug": "unit6", "title": "Unit 6 Practice Exam — Genitourinary & Reproductive",
                 "short": "Unit 6 Practice Exam", "lectures": ["L11", "L12"], "seed": 1106, "unit": 6,
                 "about": "Built only from the Unit 6 slides, study guide, and assigned Katzung chapters. Covers estrogens, progestins, contraception, SERMs, aromatase inhibitors, androgens and PCOS (Session 1), then bladder receptors, overactive bladder, BPH and PDE5 inhibitors (Session 2). Mostly patient cases that ask what you would do."},
          "U6B": {"slug": "unit6b", "title": "Unit 6 Practice Exam B — Harder, Exam Conditions",
-                 "short": "Unit 6 Practice Exam B · harder (20 Q · 24 min)", "lectures": ["L11", "L12"], "seed": 1126, "unit": 6, "minutes": 24,
-                 "about": "20 harder questions: longer patient cases where two or three details matter, every option a real drug or plan from the lecture, and earlier-unit principles applied to reproductive and urologic drugs (CYP, anticholinergic burden, nitrates). Best taken timed: 24 minutes."}}
+                 "short": "Unit 6 Practice Exam B · harder (30 Q · 36 min)", "lectures": ["L11", "L12"], "seed": 1200, "unit": 6, "minutes": 36,
+                 "about": "30 harder questions: longer patient cases where two or three details matter, every option a real drug or plan from the lecture, and earlier-unit principles applied to reproductive and urologic drugs (CYP, anticholinergic burden, nitrates). Best taken timed: 36 minutes."}}
 
 
 def load_bank(exam_id):
@@ -256,9 +256,6 @@ def as_quiz(q):
     """The shared focus-quiz format (assets/quizmode.js)."""
     return {"id": q["id"], "stem": q["stem"], "options": {L: o["text"] for L, o in q["options"].items()}, "answer": q["answer"],
             "why": q["options"][q["answer"]]["why"], "whys": {L: o["why"] for L, o in q["options"].items() if not o["correct"]},
-         "U6B": {"slug": "unit6b", "title": "Unit 6 Practice Exam B — Harder, Exam Conditions",
-                 "short": "Unit 6 Practice Exam B · harder (20 Q · 24 min)", "lectures": ["L11", "L12"], "seed": 1126, "unit": 6, "minutes": 24,
-                 "about": "20 harder questions: longer patient cases where two or three details matter, every option a real drug or plan from the lecture, and earlier-unit principles applied to reproductive and urologic drugs (CYP, anticholinergic burden, nitrates). Best taken timed: 24 minutes."},
             "takeaway": q["takeaway"], "discriminator": q["discriminator"], "src": q["src"], "topic": q["topic"], "kind": q["kind"],
             "link": q.get("link")}
 

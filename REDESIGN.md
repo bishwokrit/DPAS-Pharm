@@ -24,10 +24,11 @@ A running record of the design overhaul, so any session can pick it up.
 - **Rules.** Diagram rules added to `CLAUDE.md` and `templates/AUTHORING_GUIDE.md`.
 - **Practice.** Harder B sets for Units 4, 5 and 6 (20 questions, 24 minutes each).
 
-## Next (highest value first)
-1. Grow the Unit 4–6 B sets from 20 to 30 questions to match Units 2 and 3.
-2. Seesaw and cycle figures: add the same in-words causal chain the anatomy figures have.
-3. Emesis and hormone-axis scenes: richer anatomy (currently schematic organs).
+- **B sets** for Units 4–6 are now 30 questions, 36 minutes.
+- **Balance, cycle and nausea figures** list the story in words; nausea and hormone-axis figures sit on drawn anatomy.
+
+## Next
+See the critique list agreed with the owner (performance, question review, Words mode, progress backup).
 
 ## Rules of the road
 - Diagram facts come only from the slide the figure cites. Never infer a downstream effect: list it in `work/scenes.py`.
