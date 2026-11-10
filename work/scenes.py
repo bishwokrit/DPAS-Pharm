@@ -343,7 +343,7 @@ ANAT = {
                       "lab": {"inf": "t", "il": "b", "jak": "b", "tnf": "r", "home": "t"},
                       "labels": {"il": "IL-12 / IL-23", "jak": "JAK signaling\n(inside cell)", "home": "Leukocyte gut-homing\n(α4β7)", "inf": "Mucosal inflammation"}},
         "S33_1.png": {"bg": "body", "opts": {"organs": ["stomach", "gut", "ileum"]},
-                      "organ": {"food": "mouth", "acid": "stomach", "il": "ileum"}, "pos": {"if": [360, 205]},
+                      "organ": {"food": "mouth", "acid": "stomach", "il": "ileum"}, "pos": {"if": [450, 326]},
                       "lab": {"food": "r", "acid": "r", "if": "r", "il": "l"},
                       "labels": {"food": "B12 bound to\nfood protein", "acid": "Acid + pepsin\nrelease B12", "if": "Binds intrinsic\nfactor", "il": "Terminal ileum\nabsorbs"}},
         "S34_1.jpg": {"bg": "cell", "opts": {**HEP, "right": "Blood (clotting)"},
@@ -489,3 +489,6 @@ ANAT.setdefault("L08", {})["S24_1.jpg"] = {
     "bg": "plain", "opts": {"lanes": [[110, "Too much PTH", 130], [280, "Too little PTH", 130]]}, "h": 380, "verb": "Treats", "noring": True, "normal": "Two opposite problems",
     "pos": {"hyper": [150, 122], "low": [460, 122], "hypo": [150, 292], "up": [460, 292]}, "lab": {"hyper": "b", "low": "b", "hypo": "b", "up": "b"},
     "fix": {0: {"act": "up", "on": ["low"]}, 1: {"act": "up", "on": ["up"]}, 2: {"act": "up", "on": ["up"]}}}
+
+# B12 absorption: acid suppression frees less B12 (the slide says "less", not none), so the acid step dims rather than switches off.
+ANAT["L06"]["S33_1.png"].setdefault("fix", {}).setdefault(0, {}).update({"off": [], "less": ["acid", "if", "il"]})

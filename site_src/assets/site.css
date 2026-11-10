@@ -2306,9 +2306,9 @@ html[data-pdepth="core"] .rd-v ul:has(> li:not(:has(> .tag.tb))) + .rd-more { ma
 .vz-ch { display: flex; align-items: baseline; gap: 10px; position: relative; padding: 3px 0 3px 2px; font-size: 14px; line-height: 1.4; color: var(--text); cursor: default; opacity: 0; animation: vz-ch-in .55s cubic-bezier(.2,.8,.2,1) forwards; animation-delay: calc(var(--i) * .2s + .1s); }
 .vz-ch > i { flex: none; width: 9px; height: 9px; border-radius: 50%; border: 2px solid color-mix(in srgb, var(--text-2) 55%, transparent); background: var(--surface); transform: translateY(1px); position: relative; z-index: 1; transition: transform .25s, border-color .25s; }
 .vz-ch + .vz-ch::before { content: ""; position: absolute; left: 6px; top: -9px; height: 16px; width: 1.5px; background: color-mix(in srgb, var(--text-2) 30%, transparent); }
-.vz-ch.at > i { border-color: var(--accent); background: var(--accent); }
-.vz-ch.dn > i { border-color: var(--vz-2, #ff5a7a); } .vz-ch.dn b { color: var(--vz-2, #ff5a7a); }
-.vz-ch.up > i { border-color: var(--good); } .vz-ch.up b { color: var(--good); }
+.vz-ch.is-at > i { border-color: var(--accent); background: var(--accent); }
+.vz-ch.is-dn > i { border-color: var(--vz-2, #ff5a7a); } .vz-ch.is-dn b { color: var(--vz-2, #ff5a7a); }
+.vz-ch.is-up > i { border-color: var(--good); } .vz-ch.is-up b { color: var(--good); }
 .vz-ch em { font-style: normal; color: var(--text-2); }
 .vz-ch b { font-weight: 600; font-size: 12.5px; white-space: nowrap; margin-left: 2px; }
 .vz-ch[data-n]:hover > i { transform: translateY(1px) scale(1.35); }
@@ -2317,13 +2317,13 @@ html[data-pdepth="core"] .rd-v ul:has(> li:not(:has(> .tag.tb))) + .rd-more { ma
 @keyframes vz-ch-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
 @media (prefers-reduced-motion: reduce) { .vz-ch { animation: none; opacity: 1; } }
 html[data-pmotion="off"] .vz-ch { animation: none; opacity: 1; }
-.vz-ch b.dn { color: var(--vz-2, #ff5a7a); } .vz-ch b.up { color: var(--good); }
+.vz-ch b.t-dn { color: var(--vz-2, #ff5a7a); } .vz-ch b.t-up { color: var(--good); }
 /* drug card: fields with nothing taught yet fold into one quiet line instead of repeating the same sentence */
 .dx-card .dx-row.is-none { display: none; }
 .dx-nonesum dd .dx-none { font-style: normal; text-transform: none; }
 .dx-nonesum dd .dx-none::first-letter { text-transform: uppercase; }
 @media print { .dx-card .dx-row.is-none { display: grid; } .dx-nonesum { display: none; } }
-.vz-ch.on > i { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 35%, var(--surface)); }
+.vz-ch.is-on > i { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 35%, var(--surface)); }
 .vz-an-lane { fill: color-mix(in srgb, var(--vz-text, #888) 5%, transparent); stroke: color-mix(in srgb, var(--vz-text, #888) 10%, transparent); }
 .vz-an-stairs { fill: color-mix(in srgb, var(--vz-1, #0a84ff) 8%, transparent); stroke: color-mix(in srgb, var(--vz-1, #0a84ff) 30%, transparent); stroke-width: 1.5; stroke-linejoin: round; }
 .vz-an-lane { fill: color-mix(in srgb, var(--vz-text, #888) 5%, transparent); stroke: color-mix(in srgb, var(--vz-text, #888) 10%, transparent); }

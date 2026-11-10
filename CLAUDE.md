@@ -54,6 +54,8 @@ before changing layout, motion or diagrams, and update it when you finish.
 ## Commands
 `./run.sh status` · `./run.sh new L05` · `./run.sh L05` (lecture only) · `./run.sh site` · `./run.sh exam U1` · `./run.sh check`
 (`check` takes a few minutes: run it in the background).
+`check` also proves no fact left a study-guide page, checks every diagram's wiring and sources, and reports screens whose
+look changed (`./run.sh looks accept` once a change is intended). After diagram work also run `node tests/figures_legible.mjs`.
 
 ## Commits
 Every commit is authored by the owner: `bishwokrit <bishwokrit@gmail.com>` (set in this repo's git config).

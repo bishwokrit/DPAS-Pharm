@@ -27,8 +27,22 @@ A running record of the design overhaul, so any session can pick it up.
 - **B sets** for Units 4–6 are now 30 questions, 36 minutes.
 - **Balance, cycle and nausea figures** list the story in words; nausea and hormone-axis figures sit on drawn anatomy.
 
+- **Study guides, faster.** Each part opens with its High-yield box, a jump bar to any field and a read time; the detail
+  follows unchanged. `tests/content_kept.py` proves every fact, table cell, step and caption is still on its page.
+- **Diagram checks.** `tests/diagrams.py` (wiring, every drug has an effect, drugs named in the lecture, slide numbers
+  exist) runs in `./run.sh check`. `node tests/figures_legible.mjs` opens every figure, adds every drug and reports
+  clipped or colliding labels (run it after diagram work; it takes a few minutes).
+- **Look changes.** `./run.sh looks` compares 21 key screens with saved pictures in `tests/looks/`; `./run.sh check`
+  reports any that changed. After an intended change: `./run.sh looks accept`.
+- **Anatomy figures.** A change now travels down the pathway in order with a pulse; each structure wears a state ring and
+  badge; lines show cut, weaker or stronger; tapping a step in the words spotlights its structure. The target reads
+  "blocked", downstream reads "much less".
+- **Hormone axis** readout shows the settled state at once. **Harder B-set questions** (90) were checked against the
+  lecture facts one by one.
+
 ## Next
-See the critique list agreed with the owner (performance, question review, Words mode, progress backup).
+1. Tissue (body-map), nephron, glomerulus, parietal and colon scenes: same cascade and state styling as the anatomy figures.
+2. Units 1–2 figures: the same pass Units 3–6 had.
 
 ## Rules of the road
 - Diagram facts come only from the slide the figure cites. Never infer a downstream effect: list it in `work/scenes.py`.

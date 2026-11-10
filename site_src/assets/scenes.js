@@ -268,7 +268,7 @@
 
   // ================================================================ SEESAW: aggressive vs protective (or any two-sided balance)
   // the story in words, one step lighting up after another (shared by every scene's readout)
-  const chainHTML = (title, rows) => (rows.length ? `<span class="vz-chain"><span class="vz-ch-h">${esc(title)}</span>${rows.map(([cls, html], i) => `<span class="vz-ch ${cls}" style="--i:${i}"><i></i><span>${html}</span></span>`).join("")}</span>` : "");
+  const chainHTML = (title, rows) => (rows.length ? `<span class="vz-chain"><span class="vz-ch-h">${esc(title)}</span>${rows.map(([cls, html], i) => `<span class="vz-ch ${cls ? "is-" + cls : ""}" style="--i:${i}"><i></i><span>${html}</span></span>`).join("")}</span>` : "");
   V._chain = chainHTML;
   V.seesaw = (host, cfg = {}) => {
     const H = cfg.h || 300, left = cfg.left, right = cfg.right;  // {title, items:[{id,label,w}]}
@@ -283,7 +283,7 @@
         d.forEach((x) => {
           if (x.add) rows.push([x.side === "L" ? "dn" : "up", `<em>Adds</em> ${esc(x.add)} <em>to</em> ${esc((x.side === "L" ? left : right).title || "")}`]);
           (x.remove || []).forEach((id) => rows.push(["dn", `<em>${esc(x.label)} removes</em> ${nameOf(id)}`]));
-          (x.scale || []).forEach(([id, k]) => rows.push(["at", `<em>${esc(x.label)}:</em> ${nameOf(id)} <b class="${k < 1 ? "dn" : "up"}">${k < 1 ? "↓ less" : "↑ more"}</b>`]));
+          (x.scale || []).forEach(([id, k]) => rows.push(["at", `<em>${esc(x.label)}:</em> ${nameOf(id)} <b class="${k < 1 ? "t-dn" : "t-up"}">${k < 1 ? "↓ less" : "↑ more"}</b>`]));
         });
         return `${last ? `<b>${esc(last.label)}.</b> ${last.note || ""} ` : d.length ? "" : cfg.read || ""}${chainHTML("What is on the scale now", rows)}<span class="vz-meter-t">${verdict}</span>`;
       },
@@ -433,7 +433,7 @@
       read(S) {
         const n = Math.round(level(S) * 100), last = drugs.find((d) => d.id === S.last);
         const mism = last && !last.cb1 && !last.blocks.some((b) => TRIG[S.mode][b.split(":")[0]]);
-        return `${last ? `<b>${esc(last.label)}.</b> ${last.note || ""}${mism ? ` <b>It doesn't touch this cause</b> — the signal comes in through a different input.` : ""}` : esc(cfg.read || "")}${chainHTML("Signal paths for this cause", [...Object.keys(TRIG[S.mode]).map((k) => { const bl = blockedSet(S), rs = IN[k].rec, off = rs.filter((r) => bl.has(`${k}:${r}`)); return [off.length ? "dn" : "on", `${esc(IN[k].name)}${rs[0] === "anx" ? "" : ` <em>(${rs.join(", ").replace(/5HT3/g, "5-HT3")})</em>`}${off.length ? ` <b class="dn">${off.length === rs.length ? "blocked" : `${off.join(", ").replace(/5HT3/g, "5-HT3")} blocked`}</b>` : ""}`]; }), ["at", "Vomiting center (medulla)"]])} <span class="vz-meter-t">Nausea signal: <b>${n}%</b>${S.on.has("meto") ? " · Gastric emptying: <b>faster</b>" : ""}</span>`;
+        return `${last ? `<b>${esc(last.label)}.</b> ${last.note || ""}${mism ? ` <b>It doesn't touch this cause</b> — the signal comes in through a different input.` : ""}` : esc(cfg.read || "")}${chainHTML("Signal paths for this cause", [...Object.keys(TRIG[S.mode]).map((k) => { const bl = blockedSet(S), rs = IN[k].rec, off = rs.filter((r) => bl.has(`${k}:${r}`)); return [off.length ? "dn" : "on", `${esc(IN[k].name)}${rs[0] === "anx" ? "" : ` <em>(${rs.join(", ").replace(/5HT3/g, "5-HT3")})</em>`}${off.length ? ` <b class="t-dn">${off.length === rs.length ? "blocked" : `${off.join(", ").replace(/5HT3/g, "5-HT3")} blocked`}</b>` : ""}`]; }), ["at", "Vomiting center (medulla)"]])} <span class="vz-meter-t">Nausea signal: <b>${n}%</b>${S.on.has("meto") ? " · Gastric emptying: <b>faster</b>" : ""}</span>`;
       },
     });
     const { svg } = st;
@@ -466,7 +466,7 @@
     const badges = {}, streams = {};
     Object.entries(IN).forEach(([k, inp]) => {
       mk("path", { d: `M${inp.path.map((p) => p.join(",")).join("L")}`, class: "vz-sc-nervep" }, G);
-      label(G, inp.at[0] + (k === "ves" ? 46 : k === "gut" ? -60 : 0), inp.at[1] + (k === "cor" ? -14 : k === "ctz" ? -14 : 4), inp.name, { cls: "vz-sc-r", a: k === "gut" ? "end" : k === "ves" ? "start" : "middle" });
+      label(G, k === "gut" ? 14 : inp.at[0] + (k === "ves" ? 46 : 0), inp.at[1] + (k === "cor" ? -14 : k === "ctz" ? -14 : 4), inp.name, { cls: "vz-sc-r", a: k === "gut" || k === "ves" ? "start" : "middle" });
       inp.rec.forEach((r, j) => {
         if (r === "anx") return;
         const x = inp.at[0] + (j - (inp.rec.length - 1) / 2) * 44 + (k === "ctz" ? 0 : 0), y = inp.at[1] + (k === "ctz" ? -2 : 0) + (k === "gut" ? -30 : 0) + (k === "ves" ? 22 : 0);
@@ -930,7 +930,7 @@
       let made = a.brake ? 0 : m.gland * clamp(mid, 0, 2) * (has("synth") ? 0.2 : 1);
       if (a.brake) made = 0;
       m.made = (m.made ?? 1) + (made - (m.made ?? 1)) * Math.min(1, dt * 1.5);
-      const exoOn = m.exo > 0.1; if (m === sim.cur && exoOn !== sim.exoOn) { sim.exoOn = exoOn; bT[2].textContent = exoOn ? `${a.hormone} + drug` : a.hormone; }
+      const exoOn = m.exo > 0.1; if (m === sim.cur && exoOn !== sim.exoOn) { sim.exoOn = exoOn; bT[2].textContent = exoOn ? (String(a.hormone).length > 10 ? "Hormone + drug" : `${a.hormone} + drug`) : a.hormone; }
       const horT = a.brake ? mid : made + m.exo;
       m.hor += (horT - m.hor) * Math.min(1, dt * 1.5);
       m.top += (top - m.top) * Math.min(1, dt * 1.5); m.mid += (mid - m.mid) * Math.min(1, dt * 1.5);
@@ -1104,7 +1104,7 @@
       mk("path", { d: `M216,${H - 126} C226,${H - 158} 270,${H - 166} 320,${H - 162} C370,${H - 166} 414,${H - 158} 424,${H - 126}`, class: "vz-an-cart" }, g);
       mk("path", { d: `M196,110 C150,150 150,${H - 150} 206,${H - 110} M444,110 C490,150 490,${H - 150} 434,${H - 110}`, class: "vz-an-syn" }, g);
       label(g, 320, 40, "BONE", { cls: "vz-nx-zone" }); label(g, 320, H - 28, "BONE", { cls: "vz-nx-zone" });
-      label(g, 320, H / 2 + 4, "joint fluid", { cls: "vz-sc-m" }); label(g, 150, H / 2 - 64, "SYNOVIUM", { cls: "vz-nx-zone" }); label(g, 470, 196, "cartilage", { a: "start", cls: "vz-sc-m" });
+      label(g, 320, H / 2 + 4, "joint fluid", { cls: "vz-sc-m" }); label(g, 150, H / 2 - 64, "SYNOVIUM", { cls: "vz-nx-zone" }); label(g, 626, H - 14, "cartilage", { a: "end", cls: "vz-sc-m" });
     },
     gut(g, H, o) {
       mk("rect", { x: 0, y: 0, width: W, height: 104, rx: 14, class: "vz-an-ext lumen" }, g);
@@ -1160,6 +1160,8 @@
     });
     const { svg } = st;
     const cur = (S) => drugs.find((x) => S.on.has(x.id))?.src;
+    // the drug's own target is "blocked"; anything further down is "much less" (a block upstream rarely abolishes an effect)
+    const offTxt = (S, id) => (String(cur(S)?.at || "").split(">").includes(id) ? "✕ blocked" : "↓↓ much less");
     // the causal chain in words, in pathway order: the normal sequence first, then where the drug acts and what changes after it
     const order = (() => {
       const ind = Object.fromEntries(N.map((n) => [n.id, 0])); E.forEach(([, b]) => { if (b in ind) ind[b]++; });
@@ -1170,17 +1172,17 @@
     })();
     const nm = (id) => esc(String(by[id].label).replace(/\n/g, " "));
     function chain(S) {
-      const d = cur(S), row = (cls, id, html, i) => `<span class="vz-ch ${cls}"${id ? ` data-n="${id}"` : ""} style="--i:${i}"><i></i><span>${html}</span></span>`;
+      const d = cur(S), row = (cls, id, html, i) => `<span class="vz-ch ${cls ? "is-" + cls : ""}"${id ? ` data-n="${id}"` : ""} style="--i:${i}"><i></i><span>${html}</span></span>`;
       if (!d) return N.length < 2 ? "" : `<span class="vz-chain"><span class="vz-ch-h">${esc(cfg.normal || "Normal pathway")}</span>${order.map((id, i) => row("", id, nm(id), i)).join("")}</span>`;
       const rows = []; let i = 0;
       if (d.at) {
         const [a, b] = d.at.split(">");
-        const lv = b ? 1 : level(S, a), tag = lv === 1 ? "" : ` <b class="${lv > 1 ? "up" : "dn"}">${lv > 1 ? "↑ more" : lv < 0.2 ? "↓↓ off" : "↓ less"}</b>`;
+        const lv = b ? 1 : level(S, a), tag = lv === 1 ? "" : ` <b class="${lv > 1 ? "t-up" : "t-dn"}">${lv > 1 ? "↑ more" : lv < 0.2 ? offTxt(S, a) : "↓ less"}</b>`;
         if (by[a] && (!b || by[b])) rows.push(row("at", b ? "" : a, `<em>${cfg.verb || (d.act === "up" ? "Starts at" : "Acts at")}</em> ${b ? `${nm(a)} → ${nm(b)}` : nm(a)}${tag}`, i++));
       }
       order.forEach((id) => { const lv = level(S, id); if (id === d.at && by[id]) return;
         if (isOn(S, id)) return rows.push(row("on", id, nm(id), i++));
-        if (lv === 1) return; rows.push(row(lv > 1 ? "up" : "dn", id, `${nm(id)} <b>${lv > 1 ? "↑ more" : lv < 0.2 ? "↓↓ off" : "↓ less"}</b>`, i++)); });
+        if (lv === 1) return; rows.push(row(lv > 1 ? "up" : "dn", id, `${nm(id)} <b>${lv > 1 ? "↑ more" : lv < 0.2 ? offTxt(S, id) : "↓ less"}</b>`, i++)); });
       return rows.length ? `<span class="vz-chain"><span class="vz-ch-h">${rows.length === 1 ? "Where it fits" : (d.on || []).length ? "What happens, in order" : "What changes, in order"}</span>${rows.join("")}</span>` : "";
     }
     const hl = (e, on) => { const r = e.target.closest?.(".vz-ch[data-n]"); if (!r) return; NODE.find((x) => x.n.id === r.dataset.n)?.g.classList.toggle("hl", on); };
@@ -1198,7 +1200,10 @@
       ["l", "r"].forEach((side) => {
         const list = N.filter((n) => cfg.organ?.[n.id] && (cfg.lab?.[n.id] || "r") === side).sort((a, b) => a._xy[1] - b._xy[1]);
         let last = -99;
-        list.forEach((n) => { const y = Math.max(n._xy[1], last + 50); last = y; n._mk = [side === "l" ? 190 : 450, y]; });
+        // markers keep 56 apart and stay on the canvas: when the lowest would run off, the column slides up
+        const ys = []; list.forEach((n) => { const y = Math.max(n._xy[1], last + 56); last = y; ys.push(y); });
+        const over = Math.max(0, (ys[ys.length - 1] || 0) - (H - 52));
+        list.forEach((n, i) => { n._mk = [side === "l" ? 190 : 450, Math.max(30, ys[i] - over)]; });
       });
     }
     function mid(a, b) { const [ax, ay] = P(a), [bx, bY] = P(b); return [(ax + bx) / 2, (ay + bY) / 2]; }
@@ -1252,7 +1257,7 @@
         const lv = level(S, n.id), on = isOn(S, n.id), state = on ? "on" : lv > 1 ? "up" : lv < 0.2 ? "off" : lv < 1 ? "dn" : "";
         const apply = () => {
           g.style.opacity = lv < 0.2 ? 0.45 : lv < 1 ? 0.78 : 1; g.classList.toggle("up", lv > 1 || on);
-          badge.textContent = on ? "✓ happens" : lv > 1 ? "↑ more" : lv < 1 ? (lv < 0.2 ? "↓↓ off" : "↓ less") : "";
+          badge.textContent = on ? "✓ happens" : lv > 1 ? "↑ more" : lv < 1 ? (lv < 0.2 ? offTxt(S, n.id) : "↓ less") : "";
           badge.setAttribute("class", `vz-an-badge ${state}`); ringS.setAttribute("class", `vz-an-state ${state}`);
           if (state && !calm) { pulse.setAttribute("class", "vz-an-pulse"); void pulse.getBBox(); pulse.setAttribute("class", `vz-an-pulse go ${state}`); }
         };
@@ -1279,12 +1284,12 @@
 
   // ---------------------------------------------------------------- CYCLE: a vicious circle you can break
   V.cycle = (host, cfg = {}) => {
-    const H = 360, N = cfg.nodes, drugs = drugList(cfg.drugs || []), R = 120, C0 = [250, 180];
+    const H = 392, N = cfg.nodes, drugs = drugList(cfg.drugs || []), R = 120, C0 = [320, 184];
     const st = V._stage(host, {
       h: H, drugs, multi: true, label: "Vicious cycle", point: cfg.point, hint: "Break the cycle: drag a drug onto a step", steps: cfg.steps,
       target: (id) => { const d = drugs.find((x) => x.id === id), i = N.findIndex((n) => n.id === d.at); return pos(i); },
       read(S) { const act = drugs.filter((d) => S.on.has(d.id)), b = act.length, nm = (n) => esc(String(n.label).replace(/\n/g, " "));
-        const rows = N.map((n) => { const ds = act.filter((d) => d.at === n.id); return [ds.length ? "at" : b ? "dn" : "", `${nm(n)}${ds.length ? ` <b class="dn">× ${ds.map((d) => esc(d.label)).join(", ")}</b>` : ""}`]; });
+        const rows = N.map((n) => { const ds = act.filter((d) => d.at === n.id); return [ds.length ? "at" : b ? "dn" : "", `${nm(n)}${ds.length ? ` <b class="t-dn">× ${ds.map((d) => esc(d.label)).join(", ")}</b>` : ""}`]; });
         if (!b) rows.push(["", `<em>…which feeds</em> ${nm(N[0])} <em>again</em>`]);
         return `${noteOf(S, drugs) || esc(cfg.read || "Each step feeds the next, all the way around.")}${V._chain(b ? "Where the loop is broken" : "The loop, in order", rows)}<span class="vz-meter-t">Cycle: <b>${b ? "broken — it slows down" : "spinning"}</b></span>`; },
     });
@@ -1303,7 +1308,7 @@
     });
     const dots = Array.from({ length: 14 }, (_, k) => ({ a: (k / 14) * Math.PI * 2, c: mk("circle", { r: 4.5, class: "vz-cy-dot" }, svg) }));
     let speed = 1;
-    const bars = mk("g", {}, svg), sp = bar(bars, 520, 90, 22, 180, "Cycle speed");
+    const bars = mk("g", {}, svg), sp = bar(bars, C0[0] - 10, C0[1] - 38, 20, 86, "Cycle speed");
     st.changed = () => { const S = st.S, on = new Set(drugs.filter((d) => S.on.has(d.id)).map((d) => d.at)); N.forEach((n) => show(X[n.id], on.has(n.id))); };
     st.tick = (dt) => {
       const S = st.S, br = drugs.filter((d) => S.on.has(d.id)).length, target = br ? Math.max(0.08, 0.35 - 0.12 * (br - 1)) : 1;
