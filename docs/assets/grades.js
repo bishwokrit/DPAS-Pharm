@@ -56,6 +56,7 @@
       <div class="gs-chart">
         <div class="gs-sum"><div><div class="gs-big" id="pd-big" aria-live="polite">—</div><div class="gs-lbl">Projected grade</div></div><div class="gs-pct" id="pd-pct">—</div></div>
         <div class="gs-math" id="pd-math"></div>
+        <div class="gs-prog" id="pd-prog" aria-live="polite"></div>
         <div class="gs-plot"><div class="gs-grid"><div class="gs-line base" style="bottom:0"><span>50</span></div>${ticks.map(([L, min]) => `<div class="gs-line" style="bottom:${(min / 10 - 50) * 2}%"><span>${L} ${min / 10}</span></div>`).join("")}</div>
           ${cats.map((it) => `<div class="gs-col" style="--c:var(--c-${it.key})"><span class="gs-val" data-avg="${it.key}"></span><div class="gs-bar" data-bar="${it.key}"></div></div>`).join("")}</div>
         <div class="gs-axis"><span>100</span><span>50</span></div><div class="gs-x">${cats.map((it) => `<span>${SHORT[it.key] || it.label}</span>`).join("")}</div>
@@ -130,6 +131,18 @@
           bar.classList.toggle("est", !n);
           bar.parentElement.querySelector(".gs-val").textContent = n ? `${Math.round(sum / n)}` : "—";
         }
+      }
+      // semester progress: how much of the course grade is already graded (by weight), and how much is still to come
+      {
+        const has = (v) => v !== null && v !== undefined && v !== "";
+        const rows = D.items.map((it) => { const vs = Array.from({ length: it.count }, (_, i) => S[it.key]?.[i]).filter(has), each = (it.weight * 10) / it.count;
+          return { it, n: vs.length, done: vs.length * each, got: vs.reduce((a, v) => a + (v / 100) * each, 0) }; });
+        const done = rows.reduce((a, r) => a + r.done, 0), got = rows.reduce((a, r) => a + r.got, 0), pct = done / 10, left = 100 - pct;
+        const f1 = (x) => (Math.round(x * 10) / 10).toString();
+        root.querySelector("#pd-prog").innerHTML = done ? `<div class="gs-prog-h"><span><strong>${f1(pct)}%</strong> of the semester graded</span><span><strong>${f1(left)}%</strong> still to come</span></div>
+          <div class="gs-prog-bar" role="img" aria-label="${f1(pct)} percent of the course grade is graded, ${f1(left)} percent is still to come">${rows.filter((r) => r.done).map((r) => `<i style="width:${r.done / 10}%;--c:var(--c-${r.it.key})" title="${r.it.label}: ${r.n} of ${r.it.count} graded"></i>`).join("")}</div>
+          <div class="gs-prog-f">You have earned <strong>${f1(got)}</strong> of the ${f1(done)} points graded so far (${f1((got / done) * 100)}%). ${left > 0 ? `<strong>${f1(1000 - done)}</strong> points are still open: ${rows.filter((r) => r.n < r.it.count).map((r) => r.it.key === "final" ? "the final" : `${r.it.count - r.n} ${r.it.count - r.n === 1 ? (SHORT[r.it.key] || "final").replace(/(zes|s)$/, (m) => (m === "zes" ? "z" : "")).toLowerCase() : (SHORT[r.it.key] || "final").toLowerCase()}`).join(", ")}.` : "Everything is graded."}</div>`
+          : `<div class="gs-prog-f">Enter a score and this shows how much of the semester is graded and how much is still to come.</div>`;
       }
       root.querySelector("#gs-hint").hidden = D.items.some((it) => (S[it.key] || []).some((v) => v !== null && v !== undefined && v !== ""));
       // a checkpoint earns its bonus when the better of its two attempts is at least 90%

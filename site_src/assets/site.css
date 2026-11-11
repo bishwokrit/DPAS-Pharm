@@ -2378,3 +2378,13 @@ html[data-pmotion="off"] .vz-ch { animation: none; opacity: 1; }
 .vz-ch[data-n] { cursor: pointer; }
 .spotting .vz-an-node:not(.spot) { opacity: .28 !important; } .vz-an-node.spot .vz-an-mk { stroke-width: 4; filter: drop-shadow(0 0 9px var(--c)); }
 @media (prefers-reduced-motion: reduce) { .vz-an-pulse.go { animation: none; stroke: transparent; } }
+
+/* grade calculator: how much of the semester is graded (by weight) and how much is still to come */
+.gs-prog { margin: 2px 0 14px; }
+.gs-prog-h { display: flex; justify-content: space-between; gap: 12px; font-size: 13px; color: var(--text-2); margin-bottom: 6px; font-variant-numeric: tabular-nums; }
+.gs-prog-h strong { color: var(--text); font-size: 15px; font-weight: 700; }
+.gs-prog-bar { display: flex; height: 10px; border-radius: 980px; overflow: hidden; background: var(--surface-2); gap: 2px; }
+.gs-prog-bar i { display: block; height: 100%; background: var(--c, var(--accent)); min-width: 3px; transition: width .6s cubic-bezier(.2,.8,.2,1); }
+.gs-prog-f { font-size: 12.5px; line-height: 1.5; color: var(--text-2); margin-top: 7px; font-variant-numeric: tabular-nums; }
+.gs-prog-f strong { color: var(--text); font-weight: 650; }
+@media (prefers-reduced-motion: reduce) { .gs-prog-bar i { transition: none; } }
