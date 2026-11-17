@@ -92,6 +92,20 @@
         "quiz",
         2
       ]
+    },
+    {
+      "id": "q4",
+      "label": "In-Class Quiz 4",
+      "short": "Quiz 4",
+      "type": "quiz",
+      "mean": 92.06,
+      "sd": 7.58,
+      "min": 80,
+      "max": 100,
+      "calc": [
+        "quiz",
+        3
+      ]
     }
   ]
 }
