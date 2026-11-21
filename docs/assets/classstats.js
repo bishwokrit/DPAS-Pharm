@@ -8,8 +8,12 @@
   const D = JSON.parse(src.textContent), N = D.cohort;
   const ALL = D.assessments, NUM = ALL.filter((a) => a.mean !== null);
   const byId = Object.fromEntries(ALL.map((a) => [a.id, a]));
-  const COLOR = { u1: "var(--accent)", u2: "var(--violet)", q1: "var(--text-2)", q2: "var(--warn)" };
   const GROUPS = { exam: { label: "Exams", ids: ALL.filter((a) => a.type === "exam").map((a) => a.id) }, quiz: { label: "Quizzes", ids: ALL.filter((a) => a.type === "quiz").map((a) => a.id) } };
+  // each assessment gets its own colour, in order within its group (exams cool, quizzes warm); Quiz 1 released no numbers
+  const PAL = { exam: ["var(--accent)", "var(--violet)", "var(--p1)", "var(--p4)", "var(--p0)", "var(--p2)"], quiz: ["var(--text-2)", "var(--warn)", "var(--p5)", "var(--p3)", "var(--bad)", "var(--p2)"] };
+  const COLOR = Object.fromEntries(Object.entries(GROUPS).flatMap(([g, G]) => G.ids.map((id, i) => [id, PAL[g][i % PAL[g].length]])));
+  // the lowest and highest score are not always released; then the curve is cut off at 0% and 100% instead
+  const hasRange = (a) => a.min !== null && a.min !== undefined && a.max !== null && a.max !== undefined;
   const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
   const f = (x, d = 2) => (Math.round(x * 10 ** d) / 10 ** d).toFixed(d);
   const pct = (x) => `${f(x)}%`;
@@ -24,7 +28,7 @@
   }
   const Phi = (z) => 0.5 * (1 + erf(z / Math.SQRT2));
   const MODELS = {
-    range: { name: "Normal, cut off at each reported min and max", short: "Reported range", bounds: (a) => [a.min, a.max] },
+    range: { name: "Normal, cut off at each reported min and max", short: "Reported range", bounds: (a) => (hasRange(a) ? [a.min, a.max] : [0, 100]) },
     scale: { name: "Normal, cut off at 0% and 100%", short: "0–100% scale", bounds: () => [0, 100] },
     normal: { name: "Plain normal curve, not cut off (reference only)", short: "Not cut off", bounds: () => [-Infinity, Infinity] },
   };
@@ -91,8 +95,8 @@
 
   <div class="cs-view" data-view="table" hidden>
     <div class="table-wrap"><table class="cs-table"><thead><tr><th></th>${ALL.map((a) => `<th>${a.label}</th>`).join("")}<th></th></tr></thead><tbody>
-    ${[["Average", (a) => pct(a.mean), "rep"], ["Standard deviation", (a) => f(a.sd), "rep"], ["Lowest grade", (a) => `${a.min}%`, "rep"], ["Highest grade", (a) => `${a.max}%`, "rep"],
-       ["Class size", () => `${N}*`, "rep"], ["Range width", (a) => `${a.max - a.min} pts`, "calc"], ["Mean − 2 SD", (a) => pct(a.mean - 2 * a.sd), "calc"], ["Mean − 1 SD", (a) => pct(a.mean - a.sd), "calc"],
+    ${[["Average", (a) => pct(a.mean), "rep"], ["Standard deviation", (a) => f(a.sd), "rep"], ["Lowest grade", (a) => (hasRange(a) ? `${a.min}%` : '<span class="muted">—</span>'), "rep"], ["Highest grade", (a) => (hasRange(a) ? `${a.max}%` : '<span class="muted">—</span>'), "rep"],
+       ["Class size", () => `${N}*`, "rep"], ["Range width", (a) => (hasRange(a) ? `${a.max - a.min} pts` : '<span class="muted">—</span>'), "calc"], ["Mean − 2 SD", (a) => pct(a.mean - 2 * a.sd), "calc"], ["Mean − 1 SD", (a) => pct(a.mean - a.sd), "calc"],
        ["Mean + 1 SD", (a) => pct(a.mean + a.sd) + (a.mean + a.sd > 100 ? "†" : ""), "calc"], ["Mean + 2 SD", (a) => pct(a.mean + 2 * a.sd) + (a.mean + 2 * a.sd > 100 ? "†" : ""), "calc"],
        ["Relative spread (SD ÷ mean)", (a) => pct(100 * a.sd / a.mean), "calc"]]
       .map(([n, fn, k]) => `<tr><td>${n}</td>${ALL.map((a) => `<td>${a.mean === null && n !== "Class size" ? '<span class="muted">—</span>' : fn(a)}</td>`).join("")}<td>${tag(k)}</td></tr>`).join("")}
@@ -108,7 +112,7 @@
   <div class="cs-kpi"><span class="cs-k">${byId.q1.label}</span><strong class="cs-kpi-w">On track</strong><span class="small muted">everyone still at an A overall</span></div>
 </div>
 <div class="cs-cards">${ALL.map((a) => `<div class="cs-card${a.mean === null ? " na" : ""}" style="--c:${COLOR[a.id]}"><div class="cs-ch"><strong>${a.label}</strong>${typeBadge(a)}</div>
-  ${a.mean === null ? `<div class="cs-big">—</div><p class="small muted">No numbers released</p>` : `<div class="cs-big">${pct(a.mean)}</div><p class="small muted">SD ${f(a.sd, 1)} · ${a.min}–${a.max}%</p>`}</div>`).join("")}</div>
+  ${a.mean === null ? `<div class="cs-big">—</div><p class="small muted">No numbers released</p>` : `<div class="cs-big">${pct(a.mean)}</div><p class="small muted">SD ${f(a.sd, 1)} · ${hasRange(a) ? `${a.min}–${a.max}%` : "range not released"}</p>`}</div>`).join("")}</div>
 
 <details class="cs-more"><summary>About the model</summary><div class="cs-more-in">
   <p class="small">Each curve is a normal (bell) curve built from the reported average and SD. Real grades stop at 100% and pile up near the top, so the curves are sketches, not the real shape. ${tag("mod")}</p>
@@ -121,7 +125,7 @@
   <p class="small"><strong>It doesn't tell us</strong> that everyone scored an A on Quiz 1 itself, or any average, spread or lowest score — so Quiz 1 is left out of every chart.</p>
 </div></details>
 <details class="cs-more"><summary>What the numbers mean</summary><div class="cs-more-in cs-interp">
-  <div><h4>Exams</h4><p class="small">Both exam averages were above 93% with small spreads: most of the class sat near the top. ${examHi.label} averaged ${f(examHi.mean - examLo.mean)} points higher than ${examLo.label}; ${byId.u2.sd < byId.u1.sd ? `${byId.u2.label} scores were slightly more bunched (SD ${f(byId.u2.sd)} vs ${f(byId.u1.sd)})` : ""}.</p></div>
+  <div><h4>Exams</h4><p class="small">All ${exams.length} exam averages were above ${f(Math.floor(examLo.mean), 0)}% with small spreads: most of the class sat near the top. ${examHi.label} averaged ${f(examHi.mean - examLo.mean)} points higher than ${examLo.label}; ${byId.u2.sd < byId.u1.sd ? `${byId.u2.label} scores were slightly more bunched (SD ${f(byId.u2.sd)} vs ${f(byId.u1.sd)})` : ""}.</p></div>
   <div><h4>Quizzes</h4><p class="small">${byId.q2.label} averaged ${pct(byId.q2.mean)} with an SD of ${f(byId.q2.sd)} — scores were spread widely, from ${byId.q2.min}% to ${byId.q2.max}%. ${byId.q1.label} released no numbers, so there is nothing to compare it with.</p></div>
   <div><h4>Standard deviation, plainly</h4><p class="small">The typical distance from the average. On ${byId.u2.label} most scores sat within about ${f(byId.u2.sd, 0)} points of ${f(byId.u2.mean, 0)}%; on ${byId.q2.label}, within about ${f(byId.q2.sd, 0)} points of ${f(byId.q2.mean, 0)}%.</p></div>
   <div><h4>Ceiling effect</h4><p class="small">With an average near ${f(byId.u1.mean, 0)}%, many scores are pressed against 100% and the exam can't spread them out further. "Average + 1 SD" on ${byId.u1.label} is ${pct(byId.u1.mean + byId.u1.sd)}, a score nobody can earn — a sign the scores are lopsided toward the top, not bell-shaped.</p></div>
@@ -209,13 +213,13 @@
   function tierOf(a, sc, m) {
     const p = m.cdf(sc), z = (sc - a.mean) / a.sd;
     const T = [
-      { k: "top", ic: "crown", t: "Top score", hint: "matches the class's highest reported score", at: a.max },
+      { k: "top", ic: "crown", t: "Top score", hint: "matches the class's highest reported score", at: hasRange(a) ? a.max : Infinity },
       { k: "top", ic: "star", t: "Top tier", hint: "about the top 10% under the model", at: quantile(m, 0.9) },
       { k: "up", ic: "up", t: "Above the class", hint: "clearly above the class average (a quarter SD or more)", at: a.mean + 0.25 * a.sd },
       { k: "par", ic: "par", t: "Right at the average", hint: "within a quarter SD of the class average", at: a.mean - 0.25 * a.sd },
       { k: "low", ic: "climb", t: "Room to climb", hint: "below the class average", at: -Infinity },
     ];
-    const i = sc >= a.max ? 0 : T.findIndex((x, n) => n > 0 && sc >= x.at);
+    const i = hasRange(a) && sc >= a.max ? 0 : T.findIndex((x, n) => n > 0 && sc >= x.at);
     const next = i > 0 ? T[i - 1] : null;
     return { ...T[i], p, z, next: next && next.at <= 100 && next.at > sc ? { t: next.t, at: next.at } : null };
   }
@@ -269,7 +273,7 @@
       tiers.push([a, T]);
       card.className = `cs-exc tier-${T.k}`;
       card.querySelector(".cs-ring .val").style.strokeDashoffset = CIRC * (1 - T.p);
-      const atTop = sc >= a.max;
+      const atTop = hasRange(a) && sc >= a.max;
       if (atTop) { card.querySelector(".cs-pn").textContent = "Top"; shown[id] = 100; } else countTo(card.querySelector(".cs-pn"), id, 100 * T.p);
       const tg = card.querySelector(".cs-yourtag"); if (tg) tg.textContent = `You · ${f(sc, 1).replace(/\.0$/, "")}%`;
       const bd = card.querySelector(".cs-badge"), was = bd.dataset.k;
@@ -277,7 +281,7 @@
       if (was && was !== T.t) { bd.classList.remove("pop"); void bd.offsetWidth; bd.classList.add("pop"); }
       card.querySelector(".cs-sub").innerHTML = `<span title="Difference from the class average">${sgn(sc - a.mean)} vs avg</span>${atTop ? "<span>ties the highest score</span>" : `<span title="Estimated students below you, of ${N} assumed">≈${f(N * T.p, 0)} of ${N} below</span>`}`;
       card.querySelector(".cs-next").innerHTML = T.next ? `Next: <strong>${T.next.t}</strong> at ≈${f(T.next.at, 1)}%` : T.k === "top" ? "Nothing higher to reach" : "";
-      const edge = card.querySelector(".cs-edge"), et = sc < a.min ? "Below the lowest reported score." : sc >= a.max ? "Several students may share the top score, so this isn't a rank." : "";
+      const edge = card.querySelector(".cs-edge"), et = !hasRange(a) ? "" : sc < a.min ? "Below the lowest reported score." : sc >= a.max ? "Several students may share the top score, so this isn't a rank." : "";
       edge.hidden = !et; edge.textContent = et;
       const key = `${id}:${sc}`;
       if (mineMode && (T.k === "top" || T.k === "up") && !celebrated.has(key) && card.offsetParent) { celebrated.add(key); setTimeout(() => burst(card), 250); }
@@ -348,6 +352,7 @@
         const y = i * rowH + 6, bh = rowH - 16, c = COLOR[a.id];
         s += `<text x="${P.l - 10}" y="${y + bh / 2 + 4}" text-anchor="end" class="cs-rowl">${a.label}</text>`;
         if (a.mean === null) { s += `<rect x="${P.l}" y="${y}" width="${w - P.l - P.r}" height="${bh}" rx="7" class="cs-nabar"/><text x="${P.l + 10}" y="${y + bh / 2 + 4}" class="cs-ax">no numbers released</text>`; return; }
+        if (cmp === "range" && !hasRange(a)) { s += `<rect x="${P.l}" y="${y}" width="${w - P.l - P.r}" height="${bh}" rx="7" class="cs-nabar"/><line x1="${X(a.mean)}" x2="${X(a.mean)}" y1="${y - 3}" y2="${y + bh + 3}" class="cs-meanmark"/><text x="${P.l + 10}" y="${y + bh / 2 + 4}" class="cs-ax">range not released · tick = average ${pct(a.mean)}</text>`; return; }
         const v = C.v(a), xa = cmp === "range" ? X(a.min) : X(C.lo);
         s += `<g class="cs-cbar" data-tip="<strong>${a.label}</strong><br>${C.t.split(" · ")[0]}: ${C.fmt(v, a)}"><rect x="${xa}" y="${y}" width="${Math.max(2, X(v) - xa)}" height="${bh}" rx="7" style="fill:${c}" class="cs-cb"/>`
           + (cmp === "range" ? `<line x1="${X(a.mean)}" x2="${X(a.mean)}" y1="${y - 3}" y2="${y + bh + 3}" class="cs-meanmark"/>` : "")
@@ -355,12 +360,13 @@
       });
       s += `</svg>`;
       let diff = "";
-      const nums = list.filter((a) => a.mean !== null);
-      if (nums.length === 2) {
-        const [p, q] = nums, d = C.v(p) - C.v(q);
+      // the latest result against the one before it (for the range view, the latest two that released a range)
+      const nums = list.filter((a) => a.mean !== null && (cmp !== "range" || hasRange(a)));
+      if (nums.length >= 2) {
+        const [q, p] = nums.slice(-2), d = C.v(p) - C.v(q);
         diff = cmp === "range" ? `${p.short} ${p.max - p.min} pts wide vs ${q.short} ${q.max - q.min} pts` : `${p.short} − ${q.short}: <strong>${sgn(d, 2)}${cmp === "sd" ? " pts" : cmp === "mean" ? " pts" : " points of %"}</strong>`;
       }
-      html += `<div class="cs-grp"><div class="cs-grp-h"><span class="cs-type ${G.ids[0] && byId[G.ids[0]].type}">${G.label}</span>${diff ? `<span class="small">${diff} ${tag("calc")}</span>` : `<span class="small muted">only one with numbers — nothing to compare yet</span>`}</div>${s}</div>`;
+      html += `<div class="cs-grp"><div class="cs-grp-h"><span class="cs-type ${G.ids[0] && byId[G.ids[0]].type}">${G.label}</span>${diff ? `<span class="small">${diff} ${tag("calc")}</span>` : `<span class="small muted">${cmp === "range" ? "fewer than two with a released range — nothing to compare yet" : "only one with numbers — nothing to compare yet"}</span>`}</div>${s}</div>`;
     });
     box.innerHTML = html;
     box.querySelectorAll(".cs-cbar").forEach((gg) => { gg.addEventListener("pointermove", (e) => showTip(gg.dataset.tip, e.clientX, e.clientY)); gg.addEventListener("pointerleave", hideTip); });
