@@ -64,6 +64,20 @@
       ]
     },
     {
+      "id": "u5",
+      "label": "Unit 5 Exam",
+      "short": "Unit 5",
+      "type": "exam",
+      "mean": 94.12,
+      "sd": 3.68,
+      "min": null,
+      "max": null,
+      "calc": [
+        "exam",
+        4
+      ]
+    },
+    {
       "id": "q1",
       "label": "In-Class Quiz 1",
       "short": "Quiz 1",

@@ -2111,7 +2111,7 @@ figure.vz-arrive { animation: vz-arrive 1.3s cubic-bezier(.2,.8,.2,1); }
 .cs-slide output { font-size: 24px; font-weight: 700; min-width: 3.2em; text-align: right; font-variant-numeric: tabular-nums; letter-spacing: -.02em; }
 .cs-presets { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
 .cs-presets .sch-chip { min-width: 44px; justify-content: center; }
-.cs-ex { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--cs-gap); }
+.cs-ex { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: var(--cs-gap); }
 .cs-exc { background: var(--surface-2); border-radius: 16px; padding: 14px 16px; border-left: 3px solid var(--c); }
 .cs-exc.na { border-left-style: dashed; } .cs-exc.na p { margin: 6px 0 0; }
 .cs-pv { display: flex; align-items: baseline; gap: 8px; margin-top: 4px; } .cs-pn { font-size: 30px; font-weight: 700; letter-spacing: -.02em; font-variant-numeric: tabular-nums; }

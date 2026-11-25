@@ -10,7 +10,7 @@
   const byId = Object.fromEntries(ALL.map((a) => [a.id, a]));
   const GROUPS = { exam: { label: "Exams", ids: ALL.filter((a) => a.type === "exam").map((a) => a.id) }, quiz: { label: "Quizzes", ids: ALL.filter((a) => a.type === "quiz").map((a) => a.id) } };
   // each assessment gets its own colour, in order within its group (exams cool, quizzes warm); Quiz 1 released no numbers
-  const PAL = { exam: ["var(--accent)", "var(--violet)", "var(--p1)", "var(--p4)", "var(--p0)", "var(--p2)"], quiz: ["var(--text-2)", "var(--warn)", "var(--p5)", "var(--p3)", "var(--bad)", "var(--p2)"] };
+  const PAL = { exam: ["var(--accent)", "var(--violet)", "var(--p1)", "var(--p4)", "var(--p3)", "var(--p5)"], quiz: ["var(--text-2)", "var(--warn)", "var(--p5)", "var(--p2)", "var(--p1)", "var(--p4)"] };
   const COLOR = Object.fromEntries(Object.entries(GROUPS).flatMap(([g, G]) => G.ids.map((id, i) => [id, PAL[g][i % PAL[g].length]])));
   // the lowest and highest score are not always released; then the curve is cut off at 0% and 100% instead
   const hasRange = (a) => a.min !== null && a.min !== undefined && a.max !== null && a.max !== undefined;
@@ -107,7 +107,7 @@
 
 <div class="cs-kpis">
   <div class="cs-kpi"><span class="cs-k">Class size</span><strong>${N}<sup>*</sup></strong><span class="small muted">assumed</span></div>
-  <div class="cs-kpi"><span class="cs-k">Exam averages</span><strong>${f(examLo.mean, 0)}–${f(examHi.mean, 0)}%</strong><span class="small muted">${exams.map((a) => a.short).join(" & ")}</span></div>
+  <div class="cs-kpi"><span class="cs-k">Exam averages</span><strong>${f(examLo.mean, 0)}–${f(examHi.mean, 0)}%</strong><span class="small muted">${exams.length > 2 ? `${exams.length} unit exams so far` : exams.map((a) => a.short).join(" & ")}</span></div>
   <div class="cs-kpi"><span class="cs-k">${byId.q2.label} average</span><strong>${f(byId.q2.mean, 0)}%</strong><span class="small muted">widest spread · SD ${f(byId.q2.sd, 1)}</span></div>
   <div class="cs-kpi"><span class="cs-k">${byId.q1.label}</span><strong class="cs-kpi-w">On track</strong><span class="small muted">everyone still at an A overall</span></div>
 </div>
